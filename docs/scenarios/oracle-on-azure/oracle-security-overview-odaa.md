@@ -32,7 +32,7 @@ Consider the following guidance when you design security measures for Oracle Exa
     > [!NOTE]
     > Oracle Exadata Database@Azure doesn't have inbound or outbound internet access by default.
 
-- The Oracle Exadata Database@Azure solution uses a predefined list of [Transmission Control Protocol (TCP) ports](https://docs.public.content.oci.oraclecloud.com/en-us/iaas/exadatacloud/doc/ecs-security-guide.html#ECSCM-GUID-93DD9F98-AC6F-4538-AE78-13399C1C02A7). By default, these ports are inaccessible from other subnets because the NSGs within OCI manage them. 
+- The Oracle Exadata Database@Azure solution uses a predefined list of [Transmission Control Protocol (TCP) ports](https://docs.public.content.oci.oraclecloud.com/iaas/exadatacloud/doc/ecs-security-guide.html#ECSCM-GUID-93DD9F98-AC6F-4538-AE78-13399C1C02A7). By default, these ports are inaccessible from other subnets because the NSGs within OCI manage them. 
 
 - By default, Oracle Exadata Database@Azure enables data-at-rest encryption. It applies encryption at the database layer via the transparent data encryption feature. This encryption helps secure the container (CDB$ROOT) and pluggable databases.
 
@@ -48,13 +48,13 @@ Consider the following security recommendations when you design your Oracle Exad
 
 - Separate infrastructure access and data services access, especially when different teams access multiple databases on the same infrastructure for various reasons. To achieve network and management isolation at the workload level, deploy VM clusters in a different virtual network.
 
-- Use [Advanced Networking](https://learn.microsoft.com/en-us/azure/oracle/oracle-db/oracle-database-network-plan#constraints) Network Security Group (NSG) rules to limit the source IP address range, which helps secure the data plane and virtual network access. To prevent unauthorized access, only open the ports that you require for secure communication, and apply the [principle of least privilege](/entra/identity-platform/secure-least-privileged-access).
+- Use [Advanced Networking](https://learn.microsoft.com/azure/oracle/oracle-db/oracle-database-network-plan#constraints) Network Security Group (NSG) rules to limit the source IP address range, which helps secure the data plane and virtual network access. To prevent unauthorized access, only open the ports that you require for secure communication, and apply the [principle of least privilege](/entra/identity-platform/secure-least-privileged-access).
 
 - Configure network address translation (NAT) or use a proxy like Azure Firewall or a non-Microsoft network virtual appliance if you require outbound internet access. 
 
 - Install non-Microsoft or Oracle agents on Oracle Exadata Database@Azure in locations where database or grid infrastructure patches don't interfere with them. 
 
-- Store Oracle Transparent Data Encryption (TDE) master encryption keys (MEKs) in [Azure Key Vault](https://learn.microsoft.com/en-us/azure/oracle/oracle-db/manage-oracle-transparent-data-encryption-azure-key-vault).  Follow [best practices](https://microsoft-my.sharepoint.com/:w:/p/temandin/EQY8I1PYJxpMmMjEswWaL30BoPCoYIXSdzInoAxIF28vjA?CID=bf837309-fe35-eab4-1bfc-cfb8101bdadf&e=flgQCr&wdLOR=c9847C52B-9E51-4263-A301-BE1932B0E9D0) for using Azure Key Vault. 
+- Store Oracle Transparent Data Encryption (TDE) master encryption keys (MEKs) in [Azure Key Vault](https://learn.microsoft.com/azure/oracle/oracle-db/manage-oracle-transparent-data-encryption-azure-key-vault).  Follow [best practices](https://microsoft-my.sharepoint.com/:w:/p/temandin/EQY8I1PYJxpMmMjEswWaL30BoPCoYIXSdzInoAxIF28vjA?CID=bf837309-fe35-eab4-1bfc-cfb8101bdadf&e=flgQCr&wdLOR=c9847C52B-9E51-4263-A301-BE1932B0E9D0) for using Azure Key Vault. 
 
 ## Next steps
 
