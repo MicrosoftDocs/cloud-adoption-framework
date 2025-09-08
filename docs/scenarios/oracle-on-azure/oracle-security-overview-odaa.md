@@ -48,13 +48,13 @@ Consider the following security recommendations when you design your Oracle Exad
 
 - Separate infrastructure access and data services access, especially when different teams access multiple databases on the same infrastructure for various reasons. To achieve network and management isolation at the workload level, deploy VM clusters in a different virtual network.
 
-- Use [Advanced Networking](https://learn.microsoft.com/azure/oracle/oracle-db/oracle-database-network-plan#constraints) Network Security Group (NSG) rules to limit the source IP address range, which helps secure the data plane and virtual network access. To prevent unauthorized access, only open the ports that you require for secure communication, and apply the [principle of least privilege](/entra/identity-platform/secure-least-privileged-access).
+- Use [Advanced Networking](/azure/oracle/oracle-db/oracle-database-network-plan#constraints) Network Security Group (NSG) rules to limit the source IP address range, which helps secure the data plane and virtual network access. To prevent unauthorized access, only open the ports that you require for secure communication, and apply the [principle of least privilege](/entra/identity-platform/secure-least-privileged-access).
 
 - Configure network address translation (NAT) or use a proxy like Azure Firewall or a non-Microsoft network virtual appliance if you require outbound internet access. 
 
 - Install non-Microsoft or Oracle agents on Oracle Exadata Database@Azure in locations where database or grid infrastructure patches don't interfere with them. 
 
-- Store Oracle Transparent Data Encryption (TDE) master encryption keys (MEKs) in [Azure Key Vault](https://learn.microsoft.com/azure/oracle/oracle-db/manage-oracle-transparent-data-encryption-azure-key-vault).  Follow [best practices](https://microsoft-my.sharepoint.com/:w:/p/temandin/EQY8I1PYJxpMmMjEswWaL30BoPCoYIXSdzInoAxIF28vjA?CID=bf837309-fe35-eab4-1bfc-cfb8101bdadf&e=flgQCr&wdLOR=c9847C52B-9E51-4263-A301-BE1932B0E9D0) for using Azure Key Vault. 
+- Store Oracle Transparent Data Encryption (TDE) master encryption keys (MEKs) in [Azure Key Vault](/azure/oracle/oracle-db/manage-oracle-transparent-data-encryption-azure-key-vault).  Follow [best practices](https://microsoft-my.sharepoint.com/:w:/p/temandin/EQY8I1PYJxpMmMjEswWaL30BoPCoYIXSdzInoAxIF28vjA?CID=bf837309-fe35-eab4-1bfc-cfb8101bdadf&e=flgQCr&wdLOR=c9847C52B-9E51-4263-A301-BE1932B0E9D0) for using Azure Key Vault. 
 
 ## Next steps
 
