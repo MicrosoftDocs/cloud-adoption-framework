@@ -37,6 +37,7 @@ Create content that is:
 ### 4. **Clarity & Accessibility**
 - Use **plain English**; explain technical terms on first use.  
 - Avoid unnecessary jargon.  
+- Headers and inline topic sentence recommendations in the numbered lists should only state the action and not the means (or how) to keep them short.
 - ✅ *“Debouncing delays a function call until activity stops.”*  
 
 ---
