@@ -11,7 +11,7 @@ ms.topic: conceptual
 
 This article provides design considerations and recommendations for network topology and connectivity that you can apply when you use the Azure Integration Services (AIS) landing zone accelerator. Networking is central to almost everything in a landing zone.
 
-The network topology and connectivity considerations for this architecture depend on the requirements of the workloads being hosted and on the security and compliance requirements of your organization.
+The network topology and connectivity considerations for this architecture depend on the requirements of the workloads and on the security and compliance requirements of your organization.
 
 ## Design considerations
 
@@ -51,17 +51,17 @@ Enterprise deployments of AIS should include the use of [Private Endpoints](/azu
 
 - Some AIS services require [dedicated subnets](/azure/virtual-network/virtual-network-for-azure-services#services-that-can-be-deployed-into-a-virtual-network) to enable private networking (sometimes for ingress, always for egress)
 
-- [API Management](/azure/api-management/api-management-using-with-vnet?toc=%2Fazure%2Fvirtual-network%2Ftoc.json&tabs=stv2#enable-vnet-connectivity-using-the-azure-portal-stv2-compute-platform)
-    
-    - [Logic Apps](/azure/logic-apps/secure-single-tenant-workflow-virtual-network-private-endpoint#prerequisites)
-    
-    - You can designate a given subnet t0 a given service to create instances of that service within the subnet. For example, you can designate a subnet to app service plans so that you can add additional apps over time.
-    
-    - Azure VPN Gateway can connect overlapping, on-premises sites with overlapping IP address spaces through its [network address translation (NAT) capability](/azure/vpn-gateway/nat-howto).
-
+  - [API Management](/azure/api-management/api-management-using-with-vnet?toc=%2Fazure%2Fvirtual-network%2Ftoc.json&tabs=stv2#enable-vnet-connectivity-using-the-azure-portal-stv2-compute-platform)
+  
+  - [Logic Apps](/azure/logic-apps/secure-single-tenant-workflow-virtual-network-private-endpoint#prerequisites)
+  
+  - You can designate a given subnet to a given service to create instances of that service within the subnet. For example, you can designate a subnet to App Service Plans so that you can add more apps over time.
+  
+  - Azure VPN Gateway can connect overlapping, on-premises sites with overlapping IP address spaces through its [network address translation (NAT) capability](/azure/vpn-gateway/nat-howto).
+  
 ## Custom DNS
 
-Most AIS services allow customers to use their own DNS names for public endpoints, either using their own DNS servers, or via the [Azure DNS](/azure/dns/dns-overview) offering. Configuration of these is done on a resource-by-resource basis, but the supported resources are listed below:
+Most AIS services allow customers to use their own DNS names for public endpoints, either using their own DNS servers, or via the [Azure DNS](/azure/dns/dns-overview) offering. Configuration is done on a resource-by-resource basis.
 
 - API Management supports [custom domains](/azure/api-management/configure-custom-domain?tabs=custom).
 
@@ -115,14 +115,14 @@ Many enterprise integration scenarios require connecting your on-premises system
 
 - Azure ExpressRoute and Azure VPN Gateway have [different capabilities, costs and performance](/azure/vpn-gateway/vpn-gateway-about-vpngateways#planningtable).
 
-- The [on-premises data gateway](/data-integration/gateway/service-gateway-onprem) (OPDG) or [Azure Hybrid Connections](/azure/app-service/app-service-hybrid-connections) can be used where ExpressRoute or VPN Gateway is not practical – OPDG/Hybrid Connections are both examples relay services, utilizing Service Bus to make connections outbound from your on-premises network to receive requests from Azure, without having to open ports in your external firewall/network.
+- The [on-premises data gateway](/data-integration/gateway/service-gateway-onprem) (OPDG) or [Azure Hybrid Connections](/azure/app-service/app-service-hybrid-connections) can be used where ExpressRoute or VPN Gateway is not practical. OPDG & Hybrid Connections are both examples of relay services. They make connections outbound from your on-premises network to Azure Service Bus to receive requests from Azure, without having to open ports in your external firewall/network.
 
     - OPDG is limited in the number of requests per minute it supports (the throttling limit), has specific data size limits, and only works with limited Azure resources (Logic Apps, Power BI, Power Apps, Power Automate, Analysis Services).
     
     - Hybrid connections work with App Services (Function Apps or Web Apps) and has its own throttling and sizing limits.
     
-    - [Azure Relay Hybrid Connections](/azure/azure-relay/relay-hybrid-connections-protocol) is a key part of Service Bus which allows for relays outside of App Services or OPDG.
-
+  - [Azure Relay Hybrid Connections](/azure/azure-relay/relay-hybrid-connections-protocol) is a key part of Service Bus, which allows for relays outside of App Services or OPDG.
+    
 ### Design recommendations
 
 - Use Azure **ExpressRoute** as the primary connectivity channel for connecting an on-premises network to Azure.
@@ -180,7 +180,7 @@ When using Private Link, traffic between your virtual network and the service tr
 
 - Decide if APIs are accessible externally, internally, or a hybrid of both.
 
-- Decide if you want to use the internal [API Management gateway](/azure/api-management/virtual-network-concepts?tabs=stv2#limitations) as your main endpoint, or if you want to use a Web Application Firewall (WAF) service like [Azure Application Gateway](/azure/web-application-firewall/ag/ag-overview) or [Azure Front Door](/azure/web-application-firewall/afds/afds-overview).
+- Decide if you want to use the internal [API Management gateway](/azure/api-management/virtual-network-concepts?tabs=stv2#limitations) as your main endpoint or if you want to use a Web Application Firewall (WAF) service like [Azure Application Gateway](/azure/web-application-firewall/ag/ag-overview) or [Azure Front Door](/azure/web-application-firewall/afds/afds-overview).
 
 - Decide if there should be multiple gateways deployed and how these are load balanced - for example, by using [Application Gateway in front of the API Management gateway](/azure/architecture/reference-architectures/apis/protect-apis).
 
@@ -212,19 +212,19 @@ Azure Storage is used as the storage solution for Azure Logic Apps and Azure Fun
 
 ## Network design for App Service Environments
 
-An [App Service Environment](/azure/app-service/environment/overview) (ASE) is a dedicated, isolated environment for running Web Apps, Function Apps, and Logic Apps (Standard). It is deployed in your VNet, and contains a number of App Service Plans, each of which are used to host your app services.
+An [App Service Environment](/azure/app-service/environment/overview) (ASE) is a dedicated, isolated environment for running App Services (web apps), Function Apps, and Logic Apps (Standard). It is deployed in your VNet, and contains App Service Plans, each of which are used to host your App Services, Function Apps & Logic Apps.
 
 ### Design considerations
 
 - An ASE is deployed onto a single subnet within your VNet. An ASE can be deployed using a Virtual IP Address (VIP) allowing external connections to use a publicly visible IP address, which can be added to a public DNS record.
 
-- Applications within an ASE will have access to all other resources within the Virtual Network, depending on network access rules. Access to resources in other VNets can be achieved using Virtual Network peering.
+- Applications within an ASE have access to all other resources within the Virtual Network, depending on network access rules. Access to resources in other VNets can be achieved using Virtual Network peering.
 
 - Applications within an ASE don’t need to be configured to belong to a VNet – they are automatically within the VNet by virtue of being deployed to the ASE. This means that instead of having to configure network access on a per-resource basis, you can configure it once at the ASE level.
 
 ### Design recommendations
 
-- Use ASE v3 where possible, as this gives the greatest amount of [network flexibility](/azure/app-service/environment/overview#virtual-network-support), while reducing configuration needed for individual resources within the ASE. ASE v3 also supports Zone Redundancy.
+- Use ASE v3 where possible, as it gives the greatest amount of [network flexibility](/azure/app-service/environment/overview#virtual-network-support), while reducing configuration needed for individual resources within the ASE. ASE v3 also supports Zone Redundancy.
 
 ## Network design for App Service Plans
 
@@ -242,7 +242,7 @@ When there is a need to connect from an App Service to on-premises, private, or 
 
 - Since subnet sizes can't be changed after assignment, use a subnet that is large enough to accommodate whatever scale your app might reach. To avoid any issues with subnet capacity, you should use a /26 suffix (64 addresses) for VNet integration.
 
-## Network design for Azure Data Factory
+## Network design for Azure Data Factory (ADF)
 
 ### Design considerations
 
@@ -264,13 +264,13 @@ When there is a need to connect from an App Service to on-premises, private, or 
 
 ### Design considerations
 
-- Inbound traffic to your logic apps will come through private endpoints. Refer to the [considerations for inbound traffic through private endpoints](/azure/logic-apps/secure-single-tenant-workflow-virtual-network-private-endpoint#considerations-for-inbound-traffic-through-private-endpoints) documentation when planning your Logic Apps networking design.
+- Inbound traffic to your Logic Apps comes through private endpoints. Refer to the [considerations for inbound traffic through private endpoints](/azure/logic-apps/secure-single-tenant-workflow-virtual-network-private-endpoint#considerations-for-inbound-traffic-through-private-endpoints) documentation when planning your Logic Apps networking design.
 
 - Place your private endpoint in its own dedicated subnet reserved for private endpoints.
 
 - Add a DNS record using private DNS zone for the private endpoint.
 
-- Outbound traffic from your logic apps flows through the VNet.  Refer to the [considerations for outbound traffic through virtual network integration](/azure/logic-apps/secure-single-tenant-workflow-virtual-network-private-endpoint#considerations-for-outbound-traffic-through-virtual-network-integration) documentation when planning your Logic Apps networking design.
+- Outbound traffic from your Logic Apps flows through the VNet. Refer to the [considerations for outbound traffic through virtual network integration](/azure/logic-apps/secure-single-tenant-workflow-virtual-network-private-endpoint#considerations-for-outbound-traffic-through-virtual-network-integration) documentation when planning your Logic Apps networking design.
 
 - Consider App Service Environment (ASE) hosting instead of multi-tenant hosting for simplified networking & more scaling options.
 
@@ -302,7 +302,7 @@ When there is a need to connect from an App Service to on-premises, private, or 
 
 - Public network access should be disabled.
 
-- Inbound traffic to your Function Apps will come through private endpoints. Refer to the [considerations for inbound traffic through private endpoints](/azure/azure-functions/functions-networking-options?tabs=azure-portal) documentation when planning your Function Apps networking design.
+- Inbound traffic to your Function Apps comes through private endpoints. Refer to the [considerations for inbound traffic through private endpoints](/azure/azure-functions/functions-networking-options?tabs=azure-portal) documentation when planning your Function Apps networking design.
 
 - Place your private endpoint in its own dedicated subnet reserved for private endpoints.
 
