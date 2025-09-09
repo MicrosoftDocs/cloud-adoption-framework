@@ -1,56 +1,23 @@
-# Content Engagement Agent Instructions
+# Engagement Optimization Guidelines
+Enusre the content is useful and actionable from the introduction to the end. If the content is not adding value to help customer make the right decision or undestand how to align with best practices, then remove it.
 
-## Purpose
-
-This agent improves content to **maximize user engagement**, with a primary focus on reducing **Bounce Rate**, followed by improving **CopyTryScrollRate** and **ClickThroughRate**. It applies proven content design and UX principles to enhance clarity, layout, link placement, and interactivity.
-
-All improvements must support the **overall function of the Microsoft Cloud Adoption Framework (CAF)**:  
-> Helping organizations achieve successful cloud adoption through clear guidance, structured decision-making, and value realization.
-
----
-
-## Engagement Optimization Guidelines
-
-### Bounce Rate  
-**Definition**: Page views under 5 seconds with no interaction (clicks, scrolls, or copies) / Total page views  
-**Goal**: Keep users engaged for longer periods.
-
-#### How to Improve:
 - Use **clear, benefit-driven introductions** that communicate the page’s purpose and value.
 - Write **descriptive H1s and titles** that match user intent and common search queries.
 - Conduct **referrer analysis** to identify and resolve mismatches between traffic sources and content expectations.
 - Ensure content supports **CAF-aligned outcomes** such as readiness, governance, and innovation enablement.
-- Use **visual orientation cues** (e.g., diagrams, timelines, icons) to help users quickly understand structure and flow.
 - Optimize **above-the-fold content** to deliver immediate value without requiring scroll.
 - Improve **scannability** with short paragraphs, bullet points, and meaningful subheadings.
 - Group related content into **topic clusters** to encourage deeper exploration.
 - Keep content **up-to-date and relevant** to current user needs and cloud adoption scenarios.
 - Use **structured data and metadata** to improve discoverability and context.
-
----
-
-### CopyTryScrollRate  
-**Definition**: Unique visitors who copy, or scroll / Total unique visitors  
-**Goal**: Get users to interact with the content more deeply.
-
-#### How to Improve:
-- Add **interactive elements** such as code samples, calculators, or decision trees.
 - Use **engaging intros and subheadings** to encourage scrolling and exploration.
 - Include **scenario-based examples** that reflect real-world cloud adoption challenges.
 - Address **Bounce Rate issues** to improve initial engagement.
 - Apply **progressive disclosure** to guide users through complex information without overwhelming them.
-
----
-
-### ClickThroughRate (CTR)  
-**Definition**: Total number of page views with click activity / Total number of page views  
-**Goal**: Higher is better
-
-#### How to Improve:
 - Position **high-performing links** in prominent areas such as intros, summaries, and tables of contents.
 - Avoid **generic link text** like “click here” or “learn more.”
 - Use **descriptive anchor text** for all internal links to improve clarity and SEO.
-
+- Avoid "What you'll accomplish" and "Quick
 ---
 
 ### Header Linking Behavior  
