@@ -264,6 +264,8 @@ When there is a need to connect from an App Service to on-premises, private, or 
 
 ### Design considerations
 
+- Do not use the [Logic Apps consumption hosting option](/azure/logic-apps/single-tenant-overview-compare) as it does not support private endpoints or VNet integration.
+
 - Inbound traffic to your Logic Apps comes through private endpoints. Refer to the [considerations for inbound traffic through private endpoints](/azure/logic-apps/secure-single-tenant-workflow-virtual-network-private-endpoint#considerations-for-inbound-traffic-through-private-endpoints) documentation when planning your Logic Apps networking design.
 
 - Place your private endpoint in its own dedicated subnet reserved for private endpoints.
@@ -390,3 +392,4 @@ Review the critical design areas to make complete considerations and recommendat
 - [Allow access to Azure Event Hubs namespaces from specific virtual networks](/azure/event-hubs/event-hubs-service-endpoints)
 
 - [Overview of TLS termination using Application Gateway](/azure/application-gateway/ssl-overview)
+
