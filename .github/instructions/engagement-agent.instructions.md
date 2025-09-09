@@ -25,7 +25,6 @@ Enusre the content is useful and actionable from the introduction to the end. If
 **Rationale**: The Learn platform automatically generates header anchors and handles TOC linking. Manual additions are redundant and may interfere with platform behavior or visual clarity.
 
 #### Instead, focus on:
-- Improving **introductory content** to encourage scroll and interaction.
 - Enhancing **section transitions** with contextual cues or summaries.
 - Using **inline links** where they add value (e.g., in examples, decision points, or next steps).
 - Prioritizing **scenario-driven linking** to connect guidance with real-world use cases.
