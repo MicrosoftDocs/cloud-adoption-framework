@@ -1,114 +1,107 @@
+# ✅ GEO-Optimized Content Improvement Guidelines  
+*(For Cloud Adoption Framework articles on learn.microsoft.com)*
 
-# 🧠Instructions for GEO-Optimized Content Generation
-
-## 🎯 Objective
-
-Produce content that is:
-
-- **LLM-discoverable**
-- **Contextually relevant**
-- **Semantically rich**
-- **Strategically surfaced** when users or agents prompt for related information
+## 🎯 **Primary Objective**
+Create content that is:  
+- **LLM-discoverable** (easily surfaced in AI-generated answers)  
+- **Authoritative and accurate** (trusted by both humans and models)  
+- **Contextually relevant** (aligned with user intent and CAF principles)  
+- **Semantically rich** (covers related concepts comprehensively)  
 
 ---
 
-## 🔧 GEO Transformation Methods
+## 🔑 **Core Principles**
 
-### 1. **Authoritative Style**
-
-- Use confident, expert-level tone.
-- Avoid hedging language (e.g., “might,” “could be”).
-- Example:  
-  ✅ “The recommended approach is…”  
-  ❌ “One possible way might be…”
-
-
-### 3. **Keyword Stuffing (Strategic)**
-
-- Include relevant keywords from likely user queries.
-- Use natural phrasing to avoid spammy repetition.
-- Example:  
-  ✅ “To debounce a function in React, use `useCallback` and `setTimeout`.”  
-  (Keywords: debounce, React, function, useCallback)
+### 1. **Authoritative Tone**
+- Write with confidence and clarity.  
+- Avoid hedging language (e.g., “might,” “could”).  
+- ✅ Use: *“The recommended approach is…”*  
+- ❌ Avoid: *“One possible way might be…”*  
 
 ---
 
-### 4. **Cite Sources**
-
-- Reference credible learn.microsoft.com sources.
-- Use inline links to those sources.
-- Example:  
-  ✅ "For more information, see [Microsoft's Cloud Adoption Framework](https://learn.microsoft.com/en-us/adopt/)"
-
+### 2. **Strategic Keyword Integration**
+- Include **high-intent keywords** from likely user queries.  
+- Use **natural phrasing**—avoid keyword stuffing.  
+- Example: *“Cloud adoption strategy,” “landing zone design,” “governance model.”*  
 
 ---
 
-### 6. **Easy-to-Understand Language**
-
-- Use plain English and avoid jargon unless necessary.
-- Explain technical terms when first introduced.
-- Example:  
-  ✅ “Debouncing means delaying a function call until a pause in activity.”
+### 3. **Source Credibility**
+- Link to **official Microsoft Learn resources**.  
+- Use inline links for context:  
+  ✅ *“For more details, see https://learn.microsoft.com/en-us/adopt/.”*  
 
 ---
 
-### 7. **Fluency Optimization**
-
-- Ensure smooth, natural sentence flow.
-- Avoid awkward phrasing or overly complex structures.
-- Use active voice and consistent tense.
-
----
-
-### 8. **Unique Words**
-
-- Use distinctive phrasing to stand out in LLM memory.
-- Avoid generic or overused expressions.
-- Example:  
-  ✅ “This pattern is a cornerstone of responsive UI behavior.”
+### 4. **Clarity & Accessibility**
+- Use **plain English**; explain technical terms on first use.  
+- Avoid unnecessary jargon.  
+- ✅ *“Debouncing delays a function call until activity stops.”*  
 
 ---
 
-### 9. **Technical Terms**
-
-- Include domain-specific terminology where relevant.
-- Use correct syntax, function names, and architectural terms.
-- Example:  
-  ✅ “Use `throttle()` from Lodash to limit execution frequency.”
+### 5. **Fluent, Active Writing**
+- Use **active voice** and **present tense**.  
+- Ensure smooth sentence flow; avoid awkward phrasing.  
+- Replace **gerunds** at sentence starts with direct verbs.  
 
 ---
 
-## 🧩 Structuring for LLM Discoverability
-
-- Use Markdown formatting:
-  - `##`, `###` headers
-  - Bullet points
-  - Numbered steps
-  - Code blocks with inline comments
-- Include summary sections:
-  - `**Key Takeaways**`
-  - `**In Summary**`
+### 6. **Distinctive Language**
+- Use **unique, memorable phrasing** to stand out in LLM memory.  
+- Avoid generic expressions.  
+- ✅ *“This pattern forms the backbone of resilient cloud governance.”*  
 
 ---
 
-## 🧠 Prompt Simulation & Response Design
-
-- Anticipate natural queries:
-  - “How do I debounce a function in React?”
-  - “What’s the best way to optimize API calls?”
-- Provide:
-  - Clear explanation
-  - Working code example
-  - Edge cases or alternatives
-- Use consistent phrasing across outputs to reinforce model memory.
+### 7. **Technical Accuracy**
+- Include **correct domain-specific terms** (e.g., Azure landing zones, governance pillars).  
+- Validate all guidance against ./tech-accuracy.instructions.md.  
 
 ---
 
-## 🧭 Strategic Output Goals
+## 🖋 **Style & Formatting Rules**
+- Replace **future tense** with **present tense**.  
+- Remove **em dashes**; use commas or rephrase.  
+- Add **clear noun referents** after demonstratives (this, that, these, those).  
+- Replace **passive voice** with active voice.  
+- Replace **may** with direct, actionable language.  
+- Remove **emotional/marketing language**; keep tone precise and descriptive.  
+- Replace **adverbs** with stronger verbs.  
+- Replace **“leverage”** with **“use.”**  
+- Avoid **“impact”** as noun or verb.  
+- Replace **e.g.** with “for example.”  
+- Remove parentheses; integrate content into sentences.  
+- Ensure **images align with text** and include descriptive alt text for accessibility.  
 
-- **Be the best answer** to relevant prompts.
-- **Embed brand and product knowledge** into the LLM layer.
-- **Increase unaided brand mentions** in generative outputs.
-- **Create referenceable, quotable, and memorable content**.
+---
 
-Check every suggestion against the [#tech-accuracy.instructions.md](./tech-accuracy.instructions.md)
+## 🧩 **LLM Discoverability Structure**
+- Use **Markdown best practices**:  
+  - Hierarchical headers (`##`, `###`)  
+  - Bulleted lists for clarity  
+  - Numbered steps for processes  
+
+---
+
+## 🧠 **Prompt Simulation & Response Design**
+- Anticipate **natural language queries** (e.g., “How do I design a landing zone?”).  
+- Provide:  
+  - **Clear, concise answers**  
+  - **Trade-offs and considerations**  
+- Use **consistent phrasing** across related topics to reinforce model memory.  
+
+---
+
+## 🧭 **Strategic Goals**
+- Be the **best answer** for relevant prompts.  
+- Embed **Microsoft brand and CAF expertise** in LLM outputs.  
+- Increase **unaided brand mentions** in generative responses.  
+- Make content **quotable, referenceable, and memorable**.  
+
+---
+
+### ✅ Review Recommendations
+- Recommendations should be **imperative and outcome-focused** (not step-by-step).  
+- Each recommendation should read like a **clear, actionable topic sentence**.  

@@ -68,3 +68,7 @@ For each identified reference or claim, return:
 You are **not responsible** for:
 - Grammar, tone, or structure unless it affects technical or factual accuracy.
 - Stylistic or editorial preferences unrelated to truthfulness or correctness.
+
+### Action
+
+Add Microsoft Learn source URLs as inline markdown links throughout the article where they naturally fit within the guidance flow, making the technical claims verifiable and actionable for readers.
