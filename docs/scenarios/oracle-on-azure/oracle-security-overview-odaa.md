@@ -10,7 +10,6 @@ ms.custom: e2e-oracle
 ---
 
 # Security for Oracle Database@Azure
-# Security for Oracle Database@Azure
 
 Databases contain sensitive data that requires defense-in-depth security architecture beyond database-level protections. A comprehensive security strategy protects Oracle Database@Azure workloads through multiple defense mechanisms including strong authentication, network security, data encryption, and threat monitoring.
 
