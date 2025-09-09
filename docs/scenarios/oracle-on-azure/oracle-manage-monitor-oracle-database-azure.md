@@ -1,3 +1,14 @@
+---
+title: Manage and monitor Oracle Database@Azure
+description: Learn about considerations and recommendations that you can use to manage and monitor your Oracle Database@Azure and Exadata Database services.
+author: sihbher
+ms.author: rajanaki
+ms.reviewer: bhbandam
+ms.date: 09/03/2025
+ms.topic: conceptual
+ms.custom: e2e-oracle
+---
+
 # Manage and monitor Oracle Database@Azure
 
 This article provides management and monitoring guidance for Oracle Database@Azure deployments. These recommendations enable comprehensive visibility, proactive issue resolution, and optimal performance across your Oracle Database@Azure infrastructure while integrating with Azure native monitoring capabilities.

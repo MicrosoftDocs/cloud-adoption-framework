@@ -10,6 +10,7 @@ ms.custom: e2e-oracle
 ---
 
 # Security for Oracle Database@Azure
+# Security for Oracle Database@Azure
 
 Databases contain sensitive data that requires defense-in-depth security architecture beyond database-level protections. A comprehensive security strategy protects Oracle Database@Azure workloads through multiple defense mechanisms including strong authentication, network security, data encryption, and threat monitoring.
 
@@ -98,9 +99,15 @@ Consider the following recommendations for integrating Microsoft Defender for Cl
 
 ## Next steps
 
+Implement the Oracle Database@Azure security framework through these complementary guidance areas:
+
+- [Azure Arc connectivity design for Oracle Database@Azure](azure-arc-connectivity-design.md)
 - [Identity and access management for Oracle Database@Azure](oracle-iam-odaa.md)
 - [Network topology and connectivity for Oracle Database@Azure](oracle-network-topology-odaa.md)
-- [Business continuity and disaster recovery for Oracle Database@Azure](oracle-disaster-recovery-oracle-database-azure.md)
 - [Manage and monitor Oracle Database@Azure](oracle-manage-monitor-oracle-database-azure.md)
+- [Business continuity and disaster recovery for Oracle Database@Azure](oracle-disaster-recovery-oracle-database-azure.md)
+
+For Microsoft security guidance:
 - [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction)
-- [Azure Arc-enabled servers](/azure/azure-arc/servers/overview) 
+- [Azure Arc-enabled servers](/azure/azure-arc/servers/overview)
+- [Azure security design area](../../ready/landing-zone/design-area/security.md) 
