@@ -67,12 +67,12 @@ Some examples of common Azure administration activities include:
 |--------------------------|-------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | App Service Plan         | Microsoft.Web/serverfarms           | Read, Join, Restart, Get VNet Connections                                                                                                                          |
 | API Connection           | Microsoft.Web/connections           | Update, Confirm                                                                                                                                                    |
-|Logic Apps and Functions | Microsoft.Web/sites                 | Read, Start, Stop, Restart, Swap, Update Config, Read Diagnostics, Get VNet Connections                                                                            |
-| Integration Account      | Microsoft.Logic/integrationAccounts | Read/Add/Update/Delete Assemblies, Read/Add/Update/Delete Maps, Read/Add/Update/Delete Schemas,   Read/Add/Update/Delete Agreements, Read/Add/Update/Delete Partners |
-| Service Bus              | Microsoft.ServiceBus                | Read, Get Connection String, Update Disaster Recovery Config, Read Queues, Read Topics, Read Subscriptions                                                                        |
+| Logic Apps and Functions | Microsoft.Web/sites                 | Read, Start, Stop, Restart, Swap, Update Config, Read Diagnostics, Get VNet Connections                                                                            |
+| Integration Account      | Microsoft.Logic/integrationAccounts | Read/Add/Update/Delete Assemblies, Read/Add/Update/Delete Maps, Read/Add/Update/Delete Schemas, Read/Add/Update/Delete Agreements, Read/Add/Update/Delete Partners |
+| Service Bus              | Microsoft.ServiceBus                | Read, Get Connection String, Update DR Config, Read Queues, Read Topics, Read Subscriptions                                                                        |
 | Storage Account          | Microsoft.Storage/storageAccounts   | Read, Change (for example workflow run history)                                                                                                                    |
 | API Management           | Microsoft.ApiManagement             | Register/Delete a User, Read APIs, Manage Authorizations, Manage Cache                                                                                             |
-| Key Vault                 | Microsoft.KeyVault/vaults           | Create a Vault, Edit Access Policies                                                                                                                               |
+| KeyVault                 | Microsoft.KeyVault/vaults           | Create a Vault, Edit Access Policies                                                                                                                               |
 
 ## Next step
 
