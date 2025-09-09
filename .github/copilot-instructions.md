@@ -97,15 +97,3 @@ Review all the content to ensure it aligns with the following template.
         Use as many {numbered imperative recommendations} as needed and follow the same structure for each.
 
     ## Add as many headings and sub headings as needed. Enforce the same style and format throughout.
-
-    ## Azure tools and resources [A collection of all  all the links in this article]
-
-    | Category | Tool | Description |
-    |----------|------|-------------|
-    | [Tool category 1] | [Tool or resource name with link that is present in this article] | [Brief description of how it supports the recommendations] |
-
-    ## Next steps
-    
-    > [!div class="nextstepaction"]
-    > [Next article](*.md)
-    },
