@@ -41,6 +41,8 @@ The following architecture diagram shows the reference architecture for an AIS e
 
 [![Diagram that shows Azure Integration Services landing zone accelerator architecture.](./media/integration-services-enterprise-deployment_highres.png)](./media/integration-services-enterprise-deployment_HighRes.png#lightbox)
 
+An AIS enterprise deployment that uses App Service Environment (ASE) to host the Logic Apps & Function Apps would be similar, but it would have a single subnet for the ASE, with all of the Logic Apps & Function Apps inside it instead of separate subnets for the 2 services.
+
 ## Plan for IP addressing
 
 Enterprise deployments of AIS should include the use of [Private Endpoints](/azure/private-link/private-endpoint-overview) and VNets. The following design considerations should be taken into account when planning your IP addressing:
