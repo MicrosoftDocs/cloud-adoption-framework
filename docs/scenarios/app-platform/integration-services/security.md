@@ -29,7 +29,7 @@ Good security is the cornerstone of any Azure application. Azure Integration Ser
 
 When designing your security model, there are two different design areas: **design-time security**, and **run-time security**.
 
-- **Design-time security** involves access to the management of and creation of Azure resources via the Azure portal, or the [Resource Manager API](/azure/templates/). Within Azure, we use Microsoft Entra ID and role-based access control (RBAC) to achieve this.
+- **Design-time security** involves access to the management of and creation of Azure resources via the Azure portal, or the [Resource Manager API](/azure/templates/). Within Azure, we use Microsoft Entra ID and role-based access control (RBAC).
 
 - **Run-Time security** involves access to endpoints and resources during the flow of an application - for example, authenticating and authorizing a user that calls a Logic App, or an API operation in API Management.
 
@@ -41,7 +41,7 @@ Decide early on if you need:
 
 - **Hybrid** - some resources are private, and some are public.
 
-The choice that you make will affect both the cost of your resources, along with how much security you can implement for your applications.
+The choice that you make affect both the cost of your resources, along with how much security you can implement for your applications.
 
 General security considerations include:
 
@@ -63,9 +63,9 @@ General security considerations include:
 
 ### Network design recommendations
 
-- Look at the use of an **Application Gateway** ([Azure Application Gateway](/azure/application-gateway/overview) or [Azure Front Door](/azure/frontdoor/front-door-overview)) with a **Web Application Firewall** (WAF) in front of your accessible endpoints; this will help with automatic encryption of data and allow you monitor and configure your endpoints more easily.
+- Look at the use of an **Application Gateway** (Azure Application Gateway or Azure Front Door) with a **Web Application Firewall** (WAF) in front of your accessible endpoints; this will help with automatic encryption of data and allow you monitor and configure your endpoints more easily.
 
-- [Front Door](/azure/frontdoor/front-door-overview) is an application delivery network that provides global load-balancing and site acceleration service for web applications. Front Door offers Layer 7 capabilities like SSL offload, path-based routing, fast failover, and caching to improve performance and availability of your applications.
+  - [Front Door](/azure/frontdoor/front-door-overview) is an application delivery network that provides global load-balancing and site acceleration service for web applications. Front Door offers Layer 7 capabilities like SSL offload, path-based routing, fast failover, and caching to improve performance and availability of your applications.
 
   - [Traffic Manager](/azure/traffic-manager/traffic-manager-overview) is a DNS-based traffic load balancer that lets you distribute traffic optimally to services across global Azure regions, while providing high availability and responsiveness. Because Traffic Manager is a DNS-based load-balancing service, it loads balances only at the domain level. For that reason, it can't fail over as quickly as Front Door because of common challenges around DNS caching and systems not honoring DNS TTL.
   
@@ -77,7 +77,7 @@ General security considerations include:
 
 - Protect your egress traffic with [Azure Firewall](/azure/firewall/overview)
 
-- Use IP Filtering to lock down your endpoints so they can only be accessed by known network addresses (this is applicable for Platform-as-a-Service (PaaS) services (such as Logic Apps, Function Apps, Service Bus) not integrated into VNets).
+- Use IP Filtering to lock down your endpoints so they are only accessed by known network addresses (this is applicable for Platform-as-a-Service (PaaS) services (such as Logic Apps, Function Apps, Service Bus) not integrated into VNets).
 
 - If you have resources available publicly, use DNS obfuscation to deter any attackers; obfuscation means either custom domain names, or specific Azure resource names that don’t reveal the purpose or owner of a resource.
 
@@ -97,18 +97,18 @@ General security considerations include:
 
 ### Authentication and access design recommendations
 
-- Always follow the principle of least privilege when assigning access: give an identity the minimum permissions it needs. Sometimes this will involve creating a [custom Microsoft Entra role](/azure/role-based-access-control/custom-roles). If there isn’t a built-in role with the minimal permissions you need, consider creating a custom role with just these permissions.
+- Always follow the principle of least privilege when assigning access: give an identity the minimum permissions it needs. If there isn’t a built-in role with the minimal permissions you need, consider creating a [custom role](/azure/role-based-access-control/custom-roles) with just these permissions.
 
-- Whenever possible, always use **Managed Identities** when a resource needs to access a service. For example, if your Logic App workflow needs to access Key Vault to retrieve a secret, use the [Managed Identity](/azure/logic-apps/create-managed-service-identity) of your Logic App to achieve this; Managed Identities provide a more secure, easier to manage mechanism to access resources, as Azure manages the identity on your behalf.
+- Whenever possible, always use **Managed Identities** when a resource needs to access a service. For example, if your Logic App workflow needs to access Key Vault to retrieve a secret, use the [Managed Identity](/azure/logic-apps/create-managed-service-identity) of your Logic Apps; Managed Identities provide a more secure, easier to manage mechanism to access resources, as Azure manages the identity on your behalf.
 
 - Use **OAuth 2.0** as the authentication mechanism between resource endpoints:
 
-  - In Logic Apps or Functions, enable Easy Auth, which requires all external callers to use an OAuth identity (usually Microsoft Entra ID, but could be any Identity provider).
-  
-  - In API Management, use the jwt-validation policy element to require an OAuth flow for connections to endpoints.
-  
-  - In Azure Storage and Key Vault, setup access policies to restrict access to specific identities.
-
+  - In [Logic Apps](/azure/logic-apps/logic-apps-securing-a-logic-app?tabs=azure-portal) or [Functions](/azure/app-service/overview-authentication-authorization), enable Easy Auth, which requires all external callers to use an OAuth identity (usually Microsoft Entra ID, but could be any Identity provider).
+    
+  - In API Management, use the `validate-jwt` [policy element](/azure/api-management/validate-jwt-policy) to require an OAuth flow for connections to endpoints.
+    
+  - In Azure Storage and Key Vault, set up access policies to restrict access to specific identities.
+    
 ### Governance design recommendations
 
 - Actively use [**Azure Policy**](/azure/governance/policy/overview) to look for security issues or flaws. For example, endpoints without IP Filtering.
