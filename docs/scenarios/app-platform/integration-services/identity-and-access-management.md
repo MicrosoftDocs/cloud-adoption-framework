@@ -13,9 +13,9 @@ This article builds on the guidance provided in the Azure landing zone article [
 
 ## Identity and access management (IAM) overview
 
-For the purposes of this article, Identity and Access Management (IAM) refers to the authentication and authorization options available for deploying or maintaining resources within Azure. In practice, this involves identifying which identities have permission to create, update, delete and manage resources either via the Azure portal, or via the Resource Manager API.
+For the purposes of this article, [Identity and Access Management](/entra/fundamentals/identity-fundamental-concepts) (IAM) refers to the authentication and authorization options available for deploying or maintaining resources within Azure. In practice, this involves identifying which identities have permission to create, update, delete and manage resources either via the Azure portal, or via the [Resource Manager API](/azure/templates/).
 
-IAM is a separate consideration from  endpoint security, which defines which identities can call into and access your services. Endpoint security is covered in the separate [Security](./security.md) article in this series.  That being said, sometimes the two design areas overlap: for some services in Azure, access to the endpoint is configured via the same RBAC controls used to manage access to the resources.
+IAM is a separate consideration from [endpoint security](/security/benchmark/azure/mcsb-endpoint-security), which defines which identities can call into and access your services. Endpoint security is covered in the separate [Security](./security.md) article in this series. That being said, sometimes the two design areas overlap: for some services in Azure, access to the endpoint is configured via the same RBAC controls used to manage access to the resources.
 
 ## Design considerations
 
@@ -25,16 +25,16 @@ IAM is a separate consideration from  endpoint security, which defines which ide
 
 ## Design recommendations
 
-- Use managed identities for integration services resources - see the [Security](./security.md) article in this series for a detailed description of this recommendation.
+- Use [managed identities](/entra/identity/managed-identities-azure-resources/overview) for integration services resources - see the [Security](./security.md) article in this series for a detailed description of this recommendation.
 
 - Use Microsoft Entra ID for authentication to integration services resources.
 
-- Consider the level of access needed by roles within your organization and apply the principle of least privilege by role. These roles can include platform owners, workload owners, devops engineers and system administrators, for example.
+- Consider the level of access needed by roles within your organization and apply the principle of least privilege by role. These roles can include platform owners, workload owners, DevOps engineers and system administrators, for example.
 
 - Using the principle of least privilege, consider what roles you'll need to manage and maintain your AIS applications.  Questions to ask in this regard:
 
-  - Who will need to view log files from sources like Application Insights, Log Analytics, and Storage Accounts?
-
+  - Who will need to view log files from sources like [Application Insights](/azure/azure-monitor/app/app-insights-overview), [Log Analytics](/azure/azure-monitor/logs/log-analytics-overview?tabs=simple), and [Storage Accounts](/azure/storage/common/storage-account-overview)?
+    
   - Does anyone need to view original request data (including sensitive data)?
 
   - Where can original request data be viewed from (for example, only from your corporate network)?
@@ -43,23 +43,23 @@ IAM is a separate consideration from  endpoint security, which defines which ide
 
   - Who can resubmit a failed run?
 
-  - Who needs access to API Management subscription keys?
-
-  - Who can view contents of a Service Bus Topic or Subscription, or see queue/topic metrics?
-
-  - Who needs to be able to administer Key Vault?
-
+  - Who needs access to [API Management subscription keys](/azure/api-management/api-management-subscriptions)?
+    
+  - Who can view contents of a [Service Bus Queue or Topic](/azure/service-bus-messaging/service-bus-queues-topics-subscriptions), or see queue/topic metrics?
+    
+  - Who needs to be able to administer [Key Vault](/azure/key-vault/general/overview)?
+    
   - Who needs to be able to add, edit, or delete keys, secrets and certificates in Key Vault?
 
   - Who needs to be able to view and read keys, secrets or certificates in Key Vault?
 
-  - Will the existing built-in Microsoft Entra roles and groups cover the requirements that you have identified?
+  - Will the existing [built-in Microsoft Entra roles](/azure/role-based-access-control/built-in-roles) and groups cover the requirements that you have identified?
+    
+- Create [custom roles](/azure/role-based-access-control/custom-roles) to either limit access, or to provide more granularity over permissions when built-in roles will not sufficiently lock down access. For example, access to the callback URL for a Logic App requires a single permission, but there is no built-in role for that type of access other than “Contributor” or “Owner”, which are too broad.
 
-- Create custom roles to either limit access, or to provide more granularity over permissions when built-in roles will not sufficiently lock down access. For example, access to the callback URL for a Logic App requires a single permission, but there is no built-in role for that type of access other than “Contributor” or “Owner”, which are too broad.
-  
-- Look at using Azure Policy to restrict access to certain resources or to enforce compliance with company policy. For example, you can create a policy that only allows deployment of API Management APIs that use encrypted protocols.
+- Look at using [Azure Policy](/azure/governance/policy/overview) to restrict access to certain resources or to enforce compliance with company policy. For example, you can create a policy that only allows deployment of API Management APIs that use encrypted protocols.
 
-- Review common activities involved in the administration and management of AIS on Azure and assign RBAC permissions appropriately.For more detail on the permissions available, see [resource provider operations](/azure/role-based-access-control/resource-provider-operations).
+- Review common activities involved in the administration and management of AIS on Azure and assign RBAC permissions appropriately. For more detail on the permissions available, see [resource provider operations](/azure/role-based-access-control/resource-provider-operations).
 
 Some examples of common Azure administration activities include:
 
@@ -67,12 +67,12 @@ Some examples of common Azure administration activities include:
 |--------------------------|-------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | App Service Plan         | Microsoft.Web/serverfarms           | Read, Join, Restart, Get VNet Connections                                                                                                                          |
 | API Connection           | Microsoft.Web/connections           | Update, Confirm                                                                                                                                                    |
-| Logic Apps and Functions | Microsoft.Web/sites                 | Read, Start, Stop, Restart, Swap, Update Config, Read Diagnostics, Get VNet Connections                                                                            |
-| Integration Account      | Microsoft.Logic/integrationAccounts | Read/Add/Update/Delete Assemblies, Read/Add/Update/Delete Maps, Read/Add/Update/Delete Schemas, Read/Add/Update/Delete Agreements, Read/Add/Update/Delete Partners |
+|Logic Apps and Functions | Microsoft.Web/sites                 | Read, Start, Stop, Restart, Swap, Update Config, Read Diagnostics, Get VNet Connections                                                                            |
+| Integration Account      | Microsoft.Logic/integrationAccounts | Read/Add/Update/Delete Assemblies, Read/Add/Update/Delete Maps, Read/Add/Update/Delete Schemas,   Read/Add/Update/Delete Agreements, Read/Add/Update/Delete Partners |
 | Service Bus              | Microsoft.ServiceBus                | Read, Get Connection String, Update DR Config, Read Queues, Read Topics, Read Subscriptions                                                                        |
 | Storage Account          | Microsoft.Storage/storageAccounts   | Read, Change (for example workflow run history)                                                                                                                    |
 | API Management           | Microsoft.ApiManagement             | Register/Delete a User, Read APIs, Manage Authorizations, Manage Cache                                                                                             |
-| KeyVault                 | Microsoft.KeyVault/vaults           | Create a Vault, Edit Access Policies                                                                                                                               |
+| Key Vault                 | Microsoft.KeyVault/vaults           | Create a Vault, Edit Access Policies                                                                                                                               |
 
 ## Next step
 
