@@ -11,6 +11,8 @@ CAF guidance should:
   - https://learn.microsoft.com/azure/architecture/ – for architecture implementation guidance and use-case scenarios with Azure.
   - https://learn.microsoft.com/ – for product-specific features, tools, and step-by-step instructions.
 
+- Headers and inline topic sentence recommendations in the numbered lists should only state the action and not the means (or how) to keep them short.
+
 ---
 
 ## **Scope of Changes**
