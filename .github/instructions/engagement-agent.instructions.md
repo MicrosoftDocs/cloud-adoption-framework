@@ -1,85 +1,50 @@
----
-applyTo:
-  - "content/"
-  - "src/pages/"
-  - "*.md"
-  - "*.html"
----
+# Engagement Optimization Guidelines
+Enusre the content is useful and actionable from the introduction to the end. If the content is not adding value to help customer make the right decision or undestand how to align with best practices, then remove it.
 
-# 📈 Content Engagement Agent Instructions
-
-## 🎯 Purpose
-This agent improves content to maximize user engagement across four key metrics: **ClickThroughRate**, **CopyTryScrollRate**, **BounceRate**, and **ExitRate**. It focuses on layout, clarity, link placement, and interactivity to ensure users find value and take action.
-
-> 🔁 For any SEO or geographic optimization tasks, defer to the instructions in `seo-geo-agent.instructions.md`.
-
----
-
-## 🛠️ Engagement Optimization Guidelines
-
-### 🔗 ClickThroughRate (CTR)
-**Definition**: Total number of page views with click activity / Total number of page views  
-**Goal**: Higher is better
-
-#### How to Improve:
-- Use **clear, outcome-driven link labels**.
-- Move **high-performing links** higher on the page.
-- Remove or revise links with low engagement.
-- Include **buttons and links** in key areas like intros, summaries, and TOCs.
-- Avoid generic link text like “click here” or “learn more”.
-
-### 🧪 CopyTryScrollRate
-**Definition**: Unique visitors who copy, click try, or scroll / Total unique visitors  
-**Goal**: Higher is better
-
-#### How to Improve:
-- Ensure **code blocks** are useful and well-labeled.
-- Add **interactive elements** like “Try it” buttons.
-- Use **engaging intros and subheadings** to encourage scrolling.
-- Address **BounceRate issues** to improve overall engagement.
-
-### 🚪 BounceRate
-**Definition**: Page views < 5 seconds with no clicks, scrolls, or copies / Total page views  
-**Goal**: Lower is better
-
-#### How to Improve:
-- Write **clear, benefit-driven intros** that set expectations.
-- Use **descriptive H1s and titles** that match user intent.
-- Perform **referrer analysis** to identify mismatched traffic sources.
-- Improve **SEO signals** (see `seo-geo-agent.instructions.md`).
-
-### 🧭 ExitRate
-**Definition**: Page views that are the last in a session / Total page views  
-**Goal**: Lower is better (especially for navigation pages)
-
-#### How to Improve:
-- Ensure **navigation pages** link to relevant, engaging content.
-- Move **popular links** higher on the page.
-- Remove or revise links that don’t lead to further engagement.
-- Use **semantic organization** to guide users through content hubs.
-
----
-
-## 🧠 Additional Best Practices
-
-- Use **descriptive anchor text** for all internal links.
+- Use **clear, benefit-driven introductions** that communicate the page’s purpose and value.
+- Write **descriptive H1s and titles** that match user intent and common search queries.
+- Conduct **referrer analysis** to identify and resolve mismatches between traffic sources and content expectations.
+- Ensure content supports **CAF-aligned outcomes** such as readiness, governance, and innovation enablement.
+- Optimize **above-the-fold content** to deliver immediate value without requiring scroll.
+- Improve **scannability** with short paragraphs, bullet points, and meaningful subheadings.
 - Group related content into **topic clusters** to encourage deeper exploration.
-- Ensure **mobile responsiveness** and fast load times.
-- Keep content **up-to-date** and relevant to current user needs.
-- Use **structured data** and metadata to improve discoverability and context.
+- Keep content **up-to-date and relevant** to current user needs and cloud adoption scenarios.
+- Use **structured data and metadata** to improve discoverability and context.
+- Use **engaging intros and subheadings** to encourage scrolling and exploration.
+- Include **scenario-based examples** that reflect real-world cloud adoption challenges.
+- Address **Bounce Rate issues** to improve initial engagement.
+- Apply **progressive disclosure** to guide users through complex information without overwhelming them.
+- Position **high-performing links** in prominent areas such as intros, summaries, and tables of contents.
+- Avoid **generic link text** like “click here” or “learn more.”
+- Use **descriptive anchor text** for all internal links to improve clarity and SEO.
+- Avoid "What you'll accomplish" and "Quick
+---
 
-> 🔁 For any SEO, metadata, structured data, or geo-targeting improvements, refer to `seo-geo-agent.instructions.md`.
+### Header Linking Behavior  
+**Do Not Add Manual Header Links**  
+**Rationale**: The Learn platform automatically generates header anchors and handles TOC linking. Manual additions are redundant and may interfere with platform behavior or visual clarity.
+
+#### Instead, focus on:
+- Enhancing **section transitions** with contextual cues or summaries.
+- Using **inline links** where they add value (e.g., in examples, decision points, or next steps).
+- Prioritizing **scenario-driven linking** to connect guidance with real-world use cases.
 
 ---
 
-## 🚫 Avoid
+## Avoid
+
 - Generic link labels or vague calls to action.
 - Overloading pages with too many links or buttons.
-- Misleading titles or headings that don’t match content.
+- Misleading titles or headings that don’t match the actual content.
 - Ignoring referrer or traffic source mismatches.
+- Creating content that lacks relevance to cloud adoption goals or user context.
+- Emojis
+- Gimmicky elements that detract from professionalism.
 
 ---
 
-## 📌 Notes
-- This agent should not modify code unless it directly affects engagement.
-- Focus on clarity, layout, and actionable content that drives interaction.
+## Notes
+
+- This agent should **not modify code** unless it directly improves engagement (e.g., layout or interactivity).
+- Focus on **clarity, layout, and actionable content** that drives meaningful interaction.
+- Ensure all changes support the broader goal of **helping organizations succeed in the cloud**, consistent with CAF guidance.

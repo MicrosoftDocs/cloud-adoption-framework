@@ -11,6 +11,8 @@ ms.topic: conceptual
 
 This article helps you create an AI adoption plan that transforms your organization's AI strategy into actionable steps. An AI adoption plan bridges the gap between AI vision and execution. The plan ensures alignment between AI initiatives and business goals while addressing skill gaps, resource requirements, and implementation timelines.
 
+:::image type="content" source="./images/ai-plan.svg" alt-text="Diagram that shows the 6 phases of AI adoption: Strategy, Plan, Ready, Govern, Secure, Manage." lightbox="./images/ai-plan.svg" border="false":::
+
 ## Assess AI skills
 
 Current capability assessment prevents resource misallocation and ensures realistic project planning aligned with organizational readiness. AI projects fail when organizations attempt implementations beyond their technical maturity or data availability. You must evaluate your skills, data assets, and infrastructure to establish a foundation for successful AI adoption. Here's how:
@@ -54,7 +56,7 @@ Clear access requirements and licensing strategies prevent deployment delays and
 
 Strategic prioritization ensures you focus resources on projects that deliver maximum value while matching your organizational capabilities. Use case prioritization reduces implementation risk and accelerates time to value. You must evaluate each use case against feasibility, strategic value, and resource requirements to create an achievable implementation roadmap. Here's how:
 
-1. **Evaluate use cases against your current AI maturity and available resources.** Realistic evaluation prevents overcommitting to projects beyond your current capabilities and ensures successful implementation. This assessment helps you focus on achievable goals that build momentum for future projects. Review your AI maturity level, data availability, technical infrastructure, and staffing capacity for each use case defined in your [AI Strategy](./strategy.md#identify-ai-use-cases).
+1. **Evaluate use cases against your current AI maturity and available resources.** Realistic evaluation prevents overcommitting to projects beyond your current capabilities and ensures successful implementation. This assessment helps you focus on achievable goals that build momentum for future projects. Review your AI maturity level, data availability, technical infrastructure, and staffing capacity for each use case defined in your [AI Strategy](./strategy.md#identify-ai-use-cases-for-maximum-business-impact).
 
 2. **Rank use cases by strategic value and implementation feasibility.** Strategic ranking helps you allocate limited resources to projects with the highest potential impact and success probability. This approach maximizes return on AI investments while building organizational confidence. Score each use case on business impact, technical complexity, resource requirements, and alignment with organizational goals.
 

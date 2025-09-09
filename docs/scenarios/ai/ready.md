@@ -11,6 +11,8 @@ ms.topic: conceptual
 
 This article outlines the organizational process for building AI workloads in Azure. The article provides recommendations for making key design and process decisions for adopting AI workloads at scale. It focuses on AI-specific guidance for resource organization and connectivity.
 
+:::image type="content" source="./images/ai-ready.svg" alt-text="Diagram that shows the 6 phases of AI adoption: Strategy, Plan, Ready, Govern, Secure, Manage." lightbox="./images/ai-ready.svg" border="false":::
+
 ## Establish governance boundaries for AI workloads
 
 AI governance requires proper resource organization and policy management to ensure secure, compliant, and cost-effective operations. You must create clear governance boundaries to protect sensitive data and control AI resource access effectively. Here's how:
