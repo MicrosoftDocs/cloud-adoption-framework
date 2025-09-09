@@ -29,15 +29,15 @@ Good security is the cornerstone of any Azure application. Azure Integration Ser
 
 When designing your security model, there are two different design areas: **design-time security**, and **run-time security**.
 
-- **Design-time security** involves access to the management of and creation of Azure resources via the Azure portal, or a management API. Within Azure, we use Microsoft Entra ID and role-based access control (RBAC) to achieve this.
+- **Design-time security** involves access to the management of and creation of Azure resources via the Azure portal, or the [Resource Manager API](/azure/templates/). Within Azure, we use Microsoft Entra ID and role-based access control (RBAC) to achieve this.
 
 - **Run-Time security** involves access to endpoints and resources during the flow of an application - for example, authenticating and authorizing a user that calls a Logic App, or an API operation in API Management.
 
 Decide early on if you need:
 
-- **Private Cloud** - all of your resources reside in a VNet and only use private addressing, with no access to or from the public internet, potentially available to your on-premises resources via VPN or ExpressRoute.
-  
-- **Public Cloud** - all of your public-facing resources have access to public internet, although locked to down to restrict access from the public internet.
+- **Private Cloud** - all of your resources reside in a Virtual Network (VNet) and only use private networking, with no access to or from the public Internet, potentially available to your on-premises resources via VPN or ExpressRoute.
+
+- **Public Cloud** - all of your public-facing resources have access to public internet, although locked to down to restrict access from the public Internet and only allow specific IP addresses/ranges.
 
 - **Hybrid** - some resources are private, and some are public.
 
@@ -45,9 +45,9 @@ The choice that you make will affect both the cost of your resources, along with
 
 General security considerations include:
 
-- Using Azure services to protect ingress and egress traffic.
+- Using Azure network services to protect ingress and egress traffic.
 
-- Using Microsoft Entra ID and OAuth 2.0 to manage authentication.
+- Using Microsoft Entra ID and OAuth 2.0 to manage authentication and authorization.
 
 - Enforcing governance policies with Azure Policy.
 
@@ -63,9 +63,9 @@ General security considerations include:
 
 ### Network design recommendations
 
-- Look at the use of an **Application Gateway** (Azure Application Gateway or Azure Front Door) with a **Web Application Firewall** (WAF) in front of your accessible endpoints; this will help with automatic encryption of data and allow you monitor and configure your endpoints more easily.
+- Look at the use of an **Application Gateway** ([Azure Application Gateway](/azure/application-gateway/overview) or [Azure Front Door](/azure/frontdoor/front-door-overview)) with a **Web Application Firewall** (WAF) in front of your accessible endpoints; this will help with automatic encryption of data and allow you monitor and configure your endpoints more easily.
 
-  - [Front Door](/azure/frontdoor/front-door-overview) is an application delivery network that provides global load-balancing and site acceleration service for web applications. Front Door offers Layer 7 capabilities like SSL offload, path-based routing, fast failover, and caching to improve performance and availability of your applications.
+- [Front Door](/azure/frontdoor/front-door-overview) is an application delivery network that provides global load-balancing and site acceleration service for web applications. Front Door offers Layer 7 capabilities like SSL offload, path-based routing, fast failover, and caching to improve performance and availability of your applications.
 
   - [Traffic Manager](/azure/traffic-manager/traffic-manager-overview) is a DNS-based traffic load balancer that lets you distribute traffic optimally to services across global Azure regions, while providing high availability and responsiveness. Because Traffic Manager is a DNS-based load-balancing service, it loads balances only at the domain level. For that reason, it can't fail over as quickly as Front Door because of common challenges around DNS caching and systems not honoring DNS TTL.
   
@@ -73,31 +73,31 @@ General security considerations include:
   
   - [Azure Load Balancer](/azure/load-balancer/load-balancer-overview) is a high-performance, ultra-low-latency Layer 4 inbound and outbound load-balancing service for all UDP and TCP protocols. Load Balancer handles millions of requests per second. Load Balancer is zone-redundant, ensuring high availability across Availability Zones.
 
-- Implement network isolation for your integration services resources by using VNet integration to place them in an isolated subnet combined with using [Azure private link](/azure/private-link/private-link-overview) and private endpoints. See the [Network topology and connectivity](./network-topology-and-connectivity.md) article in this series for a review of this design guidance.
+- Implement network isolation for your integration services resources by using VNet integration to place them in an isolated subnet combined with using [Azure PrivateLink](/azure/private-link/private-link-overview) and private endpoints. See the [Network topology and connectivity](./network-topology-and-connectivity.md) article in this series for a review of this design guidance.
 
 - Protect your egress traffic with [Azure Firewall](/azure/firewall/overview)
 
-- Use IP Filtering to lock down your endpoints so they can only be accessed by known network addresses (this is applicable for logic apps not integrated into VNets).
+- Use IP Filtering to lock down your endpoints so they can only be accessed by known network addresses (this is applicable for Platform-as-a-Service (PaaS) services (such as Logic Apps, Function Apps, Service Bus) not integrated into VNets).
 
 - If you have resources available publicly, use DNS obfuscation to deter any attackers; obfuscation means either custom domain names, or specific Azure resource names that don’t reveal the purpose or owner of a resource.
 
 ### Encryption design recommendations
 
-- When storing data (in Azure Storage or Azure SQL Server, for example), always enable **Encryption at Rest**. Lock down access to the data, ideally only to services and a limited number of administrators. Remember that this also applies to log data as well. For more information, see [Azure data encryption at rest](/azure/security/fundamentals/encryption-atrest) and [Azure encryption overview](/azure/security/fundamentals/encryption-overview).
+- When storing data (in Azure Storage or Azure SQL Server, for example) in Azure PaaS services, it always **Encrypted at Rest** using Microsoft-managed keys. Lock down access to the data, ideally only to services and a limited number of administrators. Remember that this also applies to log data as well. For more information, see [Azure data encryption at rest](/azure/security/fundamentals/encryption-atrest) and [Azure encryption overview](/azure/security/fundamentals/encryption-overview). Consider if using [Customer Managed Keys](/azure/security/fundamentals/key-management) (CMK) is necessary or if Microsoft-managed keys are sufficient.
 
 - Always use **Encryption in Transit** (TLS traffic, for example) when transferring data between resources; never send data over an unencrypted channel.
 
 - When using TLS protocols, always use TLS 1.2 or greater.
 
-- Keep secrets in [**Azure Key Vault**](/azure/key-vault/general/basic-concepts), and then link these to **App Settings** (Functions, Logic Apps), **Named Values** (API Management), or **Configuration Entries** (App Configuration).
+- Keep secrets in **[Azure Key Vault](/azure/key-vault/general/basic-concepts)**, and then link these to **[App Settings](/azure/app-service/app-service-key-vault-references?tabs=azure-cli)** (Functions, Logic Apps), **[Named Values](/azure/api-management/api-management-howto-properties?tabs=azure-portal)** (API Management), or **Configuration Entries** (App Configuration).
 
-- Implement a key rotation policy to ensure that all keys in use in your environment are regularly rotated to prevent against attacks using jeopardized keys
+- Implement a [key rotation policy](/azure/key-vault/keys/how-to-configure-key-rotation) to ensure that all keys in use in your environment are regularly rotated to prevent against attacks using jeopardized keys
 
 - For Logic App, [use obfuscation](/azure/logic-apps/logic-apps-securing-a-logic-app?tabs=azure-portal#secure-data-in-run-history-by-using-obfuscation) to secure data in run history.
 
 ### Authentication and access design recommendations
 
-- Always follow the principle of least privilege when assigning access: give an identity the minimum permissions it needs. Sometimes this will involve creating a custom Microsoft Entra role. If there isn’t a built-in role with the minimal permissions you need, consider creating a custom role with just these permissions.
+- Always follow the principle of least privilege when assigning access: give an identity the minimum permissions it needs. Sometimes this will involve creating a [custom Microsoft Entra role](/azure/role-based-access-control/custom-roles). If there isn’t a built-in role with the minimal permissions you need, consider creating a custom role with just these permissions.
 
 - Whenever possible, always use **Managed Identities** when a resource needs to access a service. For example, if your Logic App workflow needs to access Key Vault to retrieve a secret, use the [Managed Identity](/azure/logic-apps/create-managed-service-identity) of your Logic App to achieve this; Managed Identities provide a more secure, easier to manage mechanism to access resources, as Azure manages the identity on your behalf.
 
@@ -119,7 +119,7 @@ General security considerations include:
 
 - Consider the use of penetration testing to identify any weaknesses in your security design.
 
-- Use automated deployment processes to configure security. Where possible, use a CI/CD pipeline like Azure DevOps with Terraform to not only deploy your resources, but also to configure security. This ensures your resources will be automatically protected whenever they are deployed.
+- Use automated deployment processes to configure security. Where possible, use a CI/CD pipeline like [GitHub Actions](/azure/developer/github/github-actions) or [Azure DevOps Pipelines](/azure/devops/pipelines/overview-azure?view=azure-devops) and Infrastructure as Code tools such as [Bicep](/azure/azure-resource-manager/bicep/overview?tabs=bicep) or [Terraform](/azure/developer/terraform/overview) to not only deploy your resources, but also to configure security. This ensures your resources will be automatically protected whenever they are deployed.
 
 ## Next step
 
