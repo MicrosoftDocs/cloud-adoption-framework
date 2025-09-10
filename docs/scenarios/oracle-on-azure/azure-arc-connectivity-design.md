@@ -1,6 +1,6 @@
 ---
-title: Azure Arc connectivity design for Oracle Database@Azure
-description: Learn about network connectivity requirements and configuration guidance for enabling Azure Arc on Oracle Database@Azure infrastructure.
+title: Azure Arc connectivity design for Oracle Exadata Database@Azure
+description: Learn about network connectivity requirements and configuration guidance for enabling Azure Arc on Oracle Exadata Database@Azure infrastructure.
 author: sihbher
 ms.author: gereyeso
 ms.reviewer: bhbandam
@@ -9,23 +9,26 @@ ms.topic: conceptual
 ms.custom: e2e-oracle
 ---
 
-# Azure Arc connectivity design for Oracle Database@Azure
+# Azure Arc connectivity design for Oracle Exadata Database@Azure
 
 This article provides network connectivity guidance for enabling Azure Arc on Oracle Exadata Database@Azure infrastructure. These recommendations enable unified governance and security monitoring while preserving existing Oracle Cloud Infrastructure (OCI) management capabilities and database operations.
 
-Azure Arc extends Azure management capabilities to Oracle Database@Azure without requiring changes to existing network security controls or subnet delegation. Implement these connectivity patterns to gain comprehensive security monitoring through Microsoft Defender for Cloud and governance through Azure Policy while maintaining full compatibility with existing Oracle operations.
+Azure Arc extends Azure management capabilities to Oracle Exadata Database@Azure without requiring changes to existing network security controls or subnet delegation. Implement these connectivity patterns to gain comprehensive security monitoring through Microsoft Defender for Cloud and governance through Azure Policy while maintaining full compatibility with existing Oracle operations.
+
+> [!NOTE]
+> This guidance is specific to Oracle Exadata Database@Azure deployments. For Oracle Autonomous Database@Azure, Arc connectivity is not applicable as it is a fully managed service.
 
 ## Plan Arc integration strategy
 
-Before implementing Azure Arc connectivity, establish a comprehensive strategy that aligns with your existing Oracle Database@Azure architecture. This planning phase ensures successful integration without disrupting current operations.
+Before implementing Azure Arc connectivity, establish a comprehensive strategy that aligns with your existing Oracle Exadata Database@Azure architecture. This planning phase ensures successful integration without disrupting current operations.
 
 ### Select appropriate Azure regions for Arc connectivity
 
 Azure Arc service endpoints vary by Azure region and affect connectivity performance and compliance. Choose the optimal region configuration to minimize latency and meet regulatory requirements.
 
-1. **Deploy Arc connectivity in the same region as your Oracle Database@Azure infrastructure**. This approach minimizes latency for Arc agent communications and ensures optimal performance for monitoring and governance operations. For regional considerations, see [Azure regions and availability zones](/azure/reliability/availability-zones-overview).
+1. **Deploy Arc connectivity in the same region as your Oracle Exadata Database@Azure infrastructure**. This approach minimizes latency for Arc agent communications and ensures optimal performance for monitoring and governance operations. For regional considerations, see [Azure regions and availability zones](/azure/reliability/availability-zones-overview).
 
-2. **Validate Arc service endpoint availability in your target region**. Confirm that all required Arc service endpoints are available in your Oracle Database@Azure deployment region before implementing the integration. For service availability by region, see [Azure products by region](https://azure.microsoft.com/global-infrastructure/services/).
+2. **Validate Arc service endpoint availability in your target region**. Confirm that all required Arc service endpoints are available in your Oracle Exadata Database@Azure deployment region before implementing the integration. For service availability by region, see [Azure products by region](https://azure.microsoft.com/global-infrastructure/services/).
 
 3. **Assess cross-region connectivity implications when regions differ**. If your Oracle infrastructure and Arc management must operate in different regions, evaluate the latency impact on Arc agent operations and compliance requirements for cross-region data flows. For cross-region networking guidance, see [Cross-region replication in Azure](/azure/reliability/cross-region-replication-azure).
 
@@ -33,7 +36,7 @@ Azure Arc service endpoints vary by Azure region and affect connectivity perform
 
 ### Preserve existing network topology and security boundaries
 
-Azure Arc integration operates within Oracle Database@Azure network constraints without requiring changes to existing security configurations. For comprehensive network topology guidance, see [Network topology and connectivity for Oracle Database@Azure](oracle-network-topology-odaa.md).
+Azure Arc integration operates within Oracle Exadata Database@Azure network constraints without requiring changes to existing security configurations. For comprehensive network topology guidance, see [Network topology and connectivity for Oracle Database@Azure](oracle-network-topology-odaa.md).
 
 Arc-specific network preservation requirements include:
 
