@@ -15,6 +15,47 @@ We build the Microsoft Cloud Adoption Framework collaboratively with our custome
 
 Partner with us in our ongoing effort to develop the Cloud Adoption Framework.
 
+## September 2025
+
+### New articles
+
+- [Oracle Autonomous Database@Azure Business Continuity and Disaster Recovery Guide](../scenarios/oracle-on-azure/oracle-disaster-recovery-oracle-database-azure-autonomous.md): Learn how to implement business continuity and disaster recovery (BCDR) strategies like backup, high availability, and failover for Oracle Autonomous Database@Azure.
+
+### Updated articles
+
+- [Create your AI strategy](./scenarios/ai/strategy.md)  ([#1d1ba5239](https://github.com/MicrosoftDocs/cloud-adoption-framework/commit/1d1ba5239)): We added a new section that explains why structured planning matters. We added detailed guidance for identifying high-impact AI use cases, selecting service models, and developing responsible AI and data strategies. We also added a table of Azure tools and resources to support implementation.
+- [Business continuity and disaster recovery for Oracle Database@Azure Using Exadata Database Service](./scenarios/oracle-on-azure/oracle-disaster-recovery-oracle-database-azure.md)  ([#6026521ae](https://github.com/MicrosoftDocs/cloud-adoption-framework/commit/6026521ae))
+- [Microsoft Cloud Adoption Framework for Azure](.//overview.md)  ([#25c0c087e](https://github.com/MicrosoftDocs/cloud-adoption-framework/commit/25c0c087e))
+- [Enterprise-scale support for Azure Virtual Desktop](./scenarios/azure-virtual-desktop/enterprise-scale-landing-zone.md)  ([#89274622c](https://github.com/MicrosoftDocs/cloud-adoption-framework/commit/89274622c))
+- [Identity and access management for Azure Arc-enabled servers](./scenarios/hybrid/arc-enabled-servers/eslz-identity-and-access-management.md)  ([#7d57ca7d8](https://github.com/MicrosoftDocs/cloud-adoption-framework/commit/7d57ca7d8))
+- [Connectivity to Oracle Cloud Infrastructure (OCI)](./ready/azure-best-practices/connectivity-to-other-providers-oci.md)  ([#8b96f45d5](https://github.com/MicrosoftDocs/cloud-adoption-framework/commit/8b96f45d5))
+- [Connectivity to other cloud providers](./ready/azure-best-practices/connectivity-to-other-providers.md)  ([#8b96f45d5](https://github.com/MicrosoftDocs/cloud-adoption-framework/commit/8b96f45d5))
+- [Azure landing zone design principles](./ready/landing-zone/design-principles.md)  ([#5d9c0174e](https://github.com/MicrosoftDocs/cloud-adoption-framework/commit/5d9c0174e))
+
+## August 2025
+
+### New articles
+
+- [Capacity planning for Oracle Autonomous Database@Azure](./scenarios/oracle-on-azure/oracle-capacity-planning-oracle-database-azure-autonomous-database.md)
+- [Capacity planning for Oracle Database@Azure by using Exadata Database Service](./scenarios/oracle-on-azure/oracle-capacity-planning-oracle-database-azure-exadata.md)
+- [Set up identity in Azure](./ready/azure-setup-guide/identity.md)
+
+### Updated articles
+
+- [Manage access to resources in Azure](./ready/azure-setup-guide/manage-access.md)  ([#7e46b8205](https://github.com/MicrosoftDocs/cloud-adoption-framework/commit/7e46b8205))
+- [Create your AI strategy](./scenarios/ai/strategy.md)  ([#4fc972fa3](https://github.com/MicrosoftDocs/cloud-adoption-framework/commit/4fc972fa3))
+- [Sovereignty considerations for Azure landing zones](./ready/landing-zone/sovereign-landing-zone.md)  ([#ad61ffe93](https://github.com/MicrosoftDocs/cloud-adoption-framework/commit/ad61ffe93))
+- [Select Azure regions](./ready/azure-setup-guide/regions.md)  ([#34a1988dd](https://github.com/MicrosoftDocs/cloud-adoption-framework/commit/34a1988dd))
+- [Execute migration to cloud](./migrate/execute-migration.md)  ([#c343e64c3](https://github.com/MicrosoftDocs/cloud-adoption-framework/commit/c343e64c3))
+- [Organize Oracle Database@Azure Resources for Consistent Deployments](./scenarios/oracle-on-azure/oracle-resource-organization-oracle-database-azure.md)  ([#58b0c646c](https://github.com/MicrosoftDocs/cloud-adoption-framework/commit/58b0c646c))
+- [What&#x27;s new in the Microsoft Cloud Adoption Framework](./get-started/whats-new.md)  ([#e7524404b](https://github.com/MicrosoftDocs/cloud-adoption-framework/commit/e7524404b))
+- [Prepare workloads for cloud migration to Azure](./migrate/prepare-workloads-cloud.md)  ([#ed7d55661](https://github.com/MicrosoftDocs/cloud-adoption-framework/commit/ed7d55661))
+- [Select Azure Platform as a Service (PaaS) Solutions for AI](./scenarios/ai/platform/resource-selection.md)  ([#34c03d400](https://github.com/MicrosoftDocs/cloud-adoption-framework/commit/34c03d400))
+- [Establish an AI Center of Excellence](./scenarios/ai/center-of-excellence.md)  ([#72a93be6f](https://github.com/MicrosoftDocs/cloud-adoption-framework/commit/72a93be6f))
+- [Capacity Planning for Migrating Oracle Workloads to Azure Virtual Machines](./scenarios/oracle-on-azure/oracle-capacity-planning.md)  ([#0dac6c1a0](https://github.com/MicrosoftDocs/cloud-adoption-framework/commit/0dac6c1a0))
+
+
+
 ## July 2025
 
 ### Updated methodologies
