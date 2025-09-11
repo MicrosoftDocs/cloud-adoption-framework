@@ -481,6 +481,8 @@ items:
             href: scenarios/azure-virtual-desktop/enterprise-scale-landing-zone.md
           - name: Azure VMware Solution
             href: scenarios/azure-vmware/enterprise-scale-landing-zone.md
+          - name: Azure Virtual Machines
+            href: /azure/architecture/virtual-machines/baseline-landing-zone
           - name: High-performance computing
             href: scenarios/azure-hpc/enterprise-scale-landing-zone.md
           - name: Oracle on Azure
