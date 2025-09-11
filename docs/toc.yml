@@ -478,7 +478,7 @@ items:
           - name: Azure VMware Solution
             href: scenarios/azure-vmware/enterprise-scale-landing-zone.md
           - name: Oracle on Azure
-            href: scenarios/oracle/oracle-landing-zone-accelerator.md
+            href: scenarios/oracle-on-azure/oracle-landing-zone-accelerator.md
           - name: SAP on Azure
             href: scenarios/sap/enterprise-scale-landing-zone.md
 
