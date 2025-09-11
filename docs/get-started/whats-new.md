@@ -1,9 +1,9 @@
 ---
-title: What's new in the Microsoft Cloud Adoption Framework
+title: What's New in the Microsoft Cloud Adoption Framework
 description: Learn about recent updates to the Microsoft Cloud Adoption Framework for Azure.
 author: stephen-sumner
 ms.author: pnp
-ms.date: 08/07/2025
+ms.date: 09/11/2025
 ms.update-cycle: 180-days
 ms.topic: conceptual
 ms.custom: UpdateFrequency.5, historical
@@ -15,6 +15,8 @@ We build the Microsoft Cloud Adoption Framework collaboratively with our custome
 
 Partner with us in our ongoing effort to develop the Cloud Adoption Framework.
 
+<!-- I wasn't thinking and also updated September. Commenting this section out and leaving it here--ready to be published later.
+
 ## September 2025
 
 ### New articles
@@ -24,37 +26,33 @@ Partner with us in our ongoing effort to develop the Cloud Adoption Framework.
 ### Updated articles
 
 - [Create your AI strategy](./scenarios/ai/strategy.md)  ([#1d1ba5239](https://github.com/MicrosoftDocs/cloud-adoption-framework/commit/1d1ba5239)): We added a new section that explains why structured planning matters. We added detailed guidance for identifying high-impact AI use cases, selecting service models, and developing responsible AI and data strategies. We also added a table of Azure tools and resources to support implementation.
-- [Business continuity and disaster recovery for Oracle Database@Azure Using Exadata Database Service](./scenarios/oracle-on-azure/oracle-disaster-recovery-oracle-database-azure.md)  ([#6026521ae](https://github.com/MicrosoftDocs/cloud-adoption-framework/commit/6026521ae))
-- [Microsoft Cloud Adoption Framework for Azure](.//overview.md)  ([#25c0c087e](https://github.com/MicrosoftDocs/cloud-adoption-framework/commit/25c0c087e))
-- [Enterprise-scale support for Azure Virtual Desktop](./scenarios/azure-virtual-desktop/enterprise-scale-landing-zone.md)  ([#89274622c](https://github.com/MicrosoftDocs/cloud-adoption-framework/commit/89274622c))
-- [Identity and access management for Azure Arc-enabled servers](./scenarios/hybrid/arc-enabled-servers/eslz-identity-and-access-management.md)  ([#7d57ca7d8](https://github.com/MicrosoftDocs/cloud-adoption-framework/commit/7d57ca7d8))
-- [Connectivity to Oracle Cloud Infrastructure (OCI)](./ready/azure-best-practices/connectivity-to-other-providers-oci.md)  ([#8b96f45d5](https://github.com/MicrosoftDocs/cloud-adoption-framework/commit/8b96f45d5))
-- [Connectivity to other cloud providers](./ready/azure-best-practices/connectivity-to-other-providers.md)  ([#8b96f45d5](https://github.com/MicrosoftDocs/cloud-adoption-framework/commit/8b96f45d5))
-- [Azure landing zone design principles](./ready/landing-zone/design-principles.md)  ([#5d9c0174e](https://github.com/MicrosoftDocs/cloud-adoption-framework/commit/5d9c0174e))
-
+- [Business continuity and disaster recovery for Oracle Database@Azure Using Exadata Database Service](../scenarios/oracle-on-azure/oracle-disaster-recovery-oracle-database-azure.md)  ([#6026521ae](https://github.com/MicrosoftDocs/cloud-adoption-framework/commit/6026521ae))
+- [Microsoft Cloud Adoption Framework for Azure](../overview.md)  ([#25c0c087e](https://github.com/MicrosoftDocs/cloud-adoption-framework/commit/25c0c087e)): We updated the introduction to position the framework as the authoritative Azure adoption blueprint, streamlined problem and audience value messaging, expanded scenarios to map challenges to ideal use cases, and added concise key takeaways that summarize return on investment (RO), risk reduction, scalability, industry breadth, and continuous value.
+- [Enterprise-scale support for Azure Virtual Desktop](../scenarios/azure-virtual-desktop/enterprise-scale-landing-zone.md)  ([#89274622c](https://github.com/MicrosoftDocs/cloud-adoption-framework/commit/89274622c)): We refocused the article around an action-oriented flow. The flow includes the foundation (landing zone), deployment (accelerator), expansion (capacity or proximity), then optimization (design areas and tools). We also condensed regional guidance and added a compact tools table.
+- [Identity and access management for Azure Arc-enabled servers](../scenarios/hybrid/arc-enabled-servers/eslz-identity-and-access-management.md)  ([#7d57ca7d8](https://github.com/MicrosoftDocs/cloud-adoption-framework/commit/7d57ca7d8)): We redesigned this guidance to clarify outcomes up front, turn passive text into step-by-step actions (managed identities, RBAC, onboarding, and security controls), add role separation and certificate-based authentication recommendations, and consolidate all links into an Azure tools table so you can scan, decide, and implement faster.
+- [Connectivity to Oracle Cloud Infrastructure (OCI)](../ready/azure-best-practices/connectivity-to-other-providers-oci.md)  ([#8b96f45d5](https://github.com/MicrosoftDocs/cloud-adoption-framework/commit/8b96f45d5)): We turned a bullet list into a phased, action-first guide for Azure and OCI connectivity. We added clear sections, numbered steps with rationale, FastPath and availability zone guidance, operational access options, and cost and governance cues. We also consolidated links into a tools table, improved visuals, and merged prior recommendations into outcome-driven instructions.
+- [Connectivity to other cloud providers](../ready/azure-best-practices/connectivity-to-other-providers.md)  ([#8b96f45d5](https://github.com/MicrosoftDocs/cloud-adoption-framework/commit/8b96f45d5)): We changed a considerations list into a prescriptive, sectioned guide that helps you choose and implement the right cross‑cloud connectivity pattern fast. We added clear option evaluation, numbered steps for planning, FastPath performance guidance, and implementation and optimization patterns. We consolidated links into a concise tools table and upgraded diagrams with accessible, descriptive context.
+- [Azure landing zone design principles](../ready/landing-zone/design-principles.md)  ([#5d9c0174e](https://github.com/MicrosoftDocs/cloud-adoption-framework/commit/5d9c0174e)): We expanded subscription democratization into clear numbered actions. We also strengthened policy-driven governance by tying Azure Policy to security, compliance, and safe self-service. -->
 ## August 2025
 
 ### New articles
 
-- [Capacity planning for Oracle Autonomous Database@Azure](./scenarios/oracle-on-azure/oracle-capacity-planning-oracle-database-azure-autonomous-database.md)
-- [Capacity planning for Oracle Database@Azure by using Exadata Database Service](./scenarios/oracle-on-azure/oracle-capacity-planning-oracle-database-azure-exadata.md)
-- [Set up identity in Azure](./ready/azure-setup-guide/identity.md)
+- [Capacity planning for Oracle Autonomous Database@Azure](../scenarios/oracle-on-azure/oracle-capacity-planning-oracle-database-azure-autonomous-database.md): Learn about planning compute (ECPUs), storage, and autoscaling to optimize performance and cost for Oracle Autonomous Database@Azure. Independently scale compute and storage, schedule noncritical downtime, and enable storage and compute autoscaling for variable workloads. Align capacity decisions with workload patterns and disaster recovery requirements, including Autonomous Data Guard parity.
+- [Capacity planning for Oracle Database@Azure by using Exadata Database Service](../scenarios/oracle-on-azure/oracle-capacity-planning-oracle-database-azure-exadata.md): Learn about planning network, delegated subnets, and Exadata infrastructure sizing for Oracle Database@Azure by using Exadata. Optimize capacity by using independent scaling, online expansion, symmetric VM cluster adjustments, and cost controls like scaling to zero. Make early storage and backup layout choices that support resilience, external backups, and future growth without rework.
+- [Set up identity in Azure](../ready/azure-setup-guide/identity.md): Learn about establishing a secure identity foundation in Azure by creating individual user accounts, assigning least‑privilege roles, and enforcing multifactor authentication (MFA). Apply built-in roles with just-in-time elevation via Microsoft Entra Privileged Identity Management (PIM) and restrict Global Administrator use. Use security defaults or Conditional Access policies to balance protection and flexibility.
 
 ### Updated articles
 
-- [Manage access to resources in Azure](./ready/azure-setup-guide/manage-access.md)  ([#7e46b8205](https://github.com/MicrosoftDocs/cloud-adoption-framework/commit/7e46b8205))
-- [Create your AI strategy](./scenarios/ai/strategy.md)  ([#4fc972fa3](https://github.com/MicrosoftDocs/cloud-adoption-framework/commit/4fc972fa3))
-- [Sovereignty considerations for Azure landing zones](./ready/landing-zone/sovereign-landing-zone.md)  ([#ad61ffe93](https://github.com/MicrosoftDocs/cloud-adoption-framework/commit/ad61ffe93))
-- [Select Azure regions](./ready/azure-setup-guide/regions.md)  ([#34a1988dd](https://github.com/MicrosoftDocs/cloud-adoption-framework/commit/34a1988dd))
-- [Execute migration to cloud](./migrate/execute-migration.md)  ([#c343e64c3](https://github.com/MicrosoftDocs/cloud-adoption-framework/commit/c343e64c3))
-- [Organize Oracle Database@Azure Resources for Consistent Deployments](./scenarios/oracle-on-azure/oracle-resource-organization-oracle-database-azure.md)  ([#58b0c646c](https://github.com/MicrosoftDocs/cloud-adoption-framework/commit/58b0c646c))
-- [What&#x27;s new in the Microsoft Cloud Adoption Framework](./get-started/whats-new.md)  ([#e7524404b](https://github.com/MicrosoftDocs/cloud-adoption-framework/commit/e7524404b))
-- [Prepare workloads for cloud migration to Azure](./migrate/prepare-workloads-cloud.md)  ([#ed7d55661](https://github.com/MicrosoftDocs/cloud-adoption-framework/commit/ed7d55661))
-- [Select Azure Platform as a Service (PaaS) Solutions for AI](./scenarios/ai/platform/resource-selection.md)  ([#34c03d400](https://github.com/MicrosoftDocs/cloud-adoption-framework/commit/34c03d400))
-- [Establish an AI Center of Excellence](./scenarios/ai/center-of-excellence.md)  ([#72a93be6f](https://github.com/MicrosoftDocs/cloud-adoption-framework/commit/72a93be6f))
-- [Capacity Planning for Migrating Oracle Workloads to Azure Virtual Machines](./scenarios/oracle-on-azure/oracle-capacity-planning.md)  ([#0dac6c1a0](https://github.com/MicrosoftDocs/cloud-adoption-framework/commit/0dac6c1a0))
-
-
+- [Manage access to resources in Azure](../ready/azure-setup-guide/manage-access.md)  ([#7e46b8205](https://github.com/MicrosoftDocs/cloud-adoption-framework/commit/7e46b8205)): We restructured the article around three actions: apply least privilege (start with built‑in job-function roles at the right scope), use Microsoft Entra ID groups instead of individual assignments, and run regular access reviews. We added prescriptive tables and steps, and explicit Owner role limits. We removed duplicated portal walkthroughs, zone variants, and passive introductory text.
+- [Create your AI strategy](../scenarios/ai/strategy.md)  ([#4fc972fa3](https://github.com/MicrosoftDocs/cloud-adoption-framework/commit/4fc972fa3)): We surfaced the decision tree earlier to guide service model choices up front. We split Copilot consumption from low-code agent building for clearer paths. We streamlined wording in tables and headings for faster scanning.
+- [Sovereignty considerations for Azure landing zones](../ready/landing-zone/sovereign-landing-zone.md)  ([#ad61ffe93](https://github.com/MicrosoftDocs/cloud-adoption-framework/commit/ad61ffe93))
+- [Select Azure regions](../ready/azure-setup-guide/regions.md)  ([#34a1988dd](https://github.com/MicrosoftDocs/cloud-adoption-framework/commit/34a1988dd)): We focus region selection on five steps: confirm compliance boundaries, minimize latency, validate service, pricing, zones, pairs, and capacity, decide if multi‑region adds real value, then apply flexible pairing. We simplified language and tables to map each scenario directly to an action. We clarified that paired regions are optional and updated multi‑region guidance.
+- [Execute migration to cloud](../migrate/execute-migration.md)  ([#c343e64c3](https://github.com/MicrosoftDocs/cloud-adoption-framework/commit/c343e64c3)): We added new guidance to help organizations migrate from Azure Analysis Services, Azure Synapse Analytics, and non-Microsoft business intelligence (BI) tools to Power BI and Microsoft Fabric. These updates streamline data and analytics transitions, provide step-by-step support for moving assets like pipelines and notebooks, and provide strategic planning resources to accelerate adoption and unlock the full value of the Microsoft unified data platform.
+- [Organize Oracle Database@Azure Resources for Consistent Deployments](../scenarios/oracle-on-azure/oracle-resource-organization-oracle-database-azure.md)  ([#58b0c646c](https://github.com/MicrosoftDocs/cloud-adoption-framework/commit/58b0c646c)): We added prescriptive naming and tagging guidance with Oracle-specific constraints and examples. We expanded security and isolation into clear actions, such as environment RBAC, network segmentation, monitoring, and Microsoft Sentinel integration. To reduce operational risk, we formalized multi‑subscription architecture, such as onboarding permissions, provider registration, billing consolidation, zone mapping, and Exadata sharing. We centralized tooling in a resources table so that teams can implement faster.
+- [Prepare workloads for cloud migration to Azure](../migrate/prepare-workloads-cloud.md)  ([#ed7d55661](https://github.com/MicrosoftDocs/cloud-adoption-framework/commit/ed7d55661)): We streamlined how organizations prepare workloads for Azure migration. Key improvements include renaming and restructuring sections for clarity, consolidating deployment steps, and aligning instructions with real-world practices. These changes make the content easier to follow and more actionable for cloud migrations.
+- [Select Azure Platform as a Service (PaaS) Solutions for AI](../scenarios/ai/platform/resource-selection.md)  ([#34c03d400](https://github.com/MicrosoftDocs/cloud-adoption-framework/commit/34c03d400)): We updated terminology to improve clarify, improved descriptions of services, and updated links. We also reorganized the content to separate workflows from resource selection steps, which makes the guidance easier to follow and apply. 
+- [Establish an AI Center of Excellence](../scenarios/ai/center-of-excellence.md)  ([#72a93be6f](https://github.com/MicrosoftDocs/cloud-adoption-framework/commit/72a93be6f))
+- [Capacity planning for migrating Oracle workloads to Azure Virtual Machines](./scenarios/oracle-on-azure/oracle-capacity-planning.md)  ([#0dac6c1a0](https://github.com/MicrosoftDocs/cloud-adoption-framework/commit/0dac6c1a0)): We improved clarity and alignment with current Azure best practices for migrating Oracle workloads. We simplified language throughout and reorganized guidance for storage planning. We also improved explanations for AWR reports, VM sizing, and disk configurations to help teams make informed decisions during migration.
 
 ## July 2025
 
@@ -457,21 +455,3 @@ We made updates to the following articles for clarity and accessibility:
 - [Network connectivity for Azure Arc-enabled servers](../scenarios/hybrid/arc-enabled-servers/eslz-arc-servers-connectivity.md)
 - [Security governance and compliance for Citrix on Azure](../scenarios/azure-virtual-desktop/landing-zone-citrix/citrix-security-governance-compliance.md)
 - [Security guidelines for Oracle Database@Azure](../scenarios/oracle-on-azure/oracle-security-overview-odaa.md)
-
-## August 2024
-
-### Updated articles
-
-- [Responsible and trusted AI adoption](../strategy/responsible-ai.md): Explore new guidance about how to develop AI responsibly and build safer systems with Azure AI Content Safety. Learn about the importance of responsible AI and the features of the Responsible AI dashboard for Azure Machine Learning.
-- [Landing zone identity and access management](../ready/landing-zone/design-area/identity-access-landing-zones.md): Find new guidance about built-in and custom RBAC roles, least-privelage access, and conditions.
-- [Security guidelines for Oracle Database@Azure](../scenarios/oracle-on-azure/oracle-security-overview-odaa.md): Explore new updates about network security group rules and Oracle Data Safe.
-- [Business continuity and disaster recovery for an SAP migration](../scenarios/sap/eslz-business-continuity-and-disaster-recovery.md): Learn about the benefits of using Azure Backup to back up databases that have SAP HANA System Replication enabled.
-
-We made updates to the following articles for clarity:
-- [Network considerations for Azure VMware Solution dual-region deployments](../scenarios/azure-vmware/eslz-dual-region-network-topology.md)
-- [What is a data product?](../scenarios/cloud-scale-analytics/architectures/what-is-data-product.md)
-- [Cloud adoption scenarios](../scenarios/index.md)
-- [Oracle on Azure IaaS landing zone accelerator](../scenarios/oracle-on-azure/oracle-landing-zone-accelerator.md)
-- [Security governance and compliance for Citrix on Azure](../scenarios/azure-virtual-desktop/landing-zone-citrix/citrix-security-governance-compliance.md)
-
-<!-- docutune:ignoreNextStep -->
