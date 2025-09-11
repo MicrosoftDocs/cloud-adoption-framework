@@ -458,21 +458,21 @@ items:
       - name: Application landing zone accelerators
         items:
           - name: AI
-            href: scenarios/ai/ready.md
+            href: scenarios/ai/platform/architectures.md
           - name: Azure API Management
-            href: scenarios/api-management/landing-zone-accelerator.md
+            href: scenarios/app-platform/api-management/landing-zone-accelerator.md
           - name: Azure App Service
-            href: scenarios/app-services/landing-zone-accelerator.md
+            href: scenarios/app-platform/app-services/landing-zone-accelerator.md
           - name: Azure Container apps
-            href: scenarios/container-apps/landing-zone-accelerator.md
+            href: scenarios/app-platform/container-apps/landing-zone-accelerator.md
           - name: Azure Kubernetes Service
-            href: scenarios/aks/landing-zone-accelerator.md
+            href: scenarios/app-platform/aks/landing-zone-accelerator.md
           - name: Azure Integration Services
-            href: scenarios/integration-services/landing-zone-accelerator.md
+            href: scenarios/app-platform/integration-services/landing-zone-accelerator.md
           - name: Azure Red Hat Openshift
-            href: scenarios/azure-red-hat-openshift/landing-zone-accelerator.md
+            href: scenarios/app-platform/azure-red-hat-openshift/landing-zone-accelerator.md
           - name: Azure Red Hat Enterprise Linux
-            href: scenarios/azure-red-hat-enterprise-linux/landing-zone-accelerator.md
+            href: scenarios/app-platform/azure-red-hat-enterprise-linux/landing-zone-accelerator.md
           - name: Azure Virtual Desktop
             href: scenarios/azure-virtual-desktop/enterprise-scale-landing-zone.md
           - name: Azure VMware Solution
