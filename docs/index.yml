@@ -36,7 +36,7 @@ highlightedContent:
       url: ./ready/landing-zone/index.md    
     - title: Scenarios
       itemType: get-started
-      url: ./overview.md##what-specific-scenarios-does-the-cloud-adoption-framework-address
+      url: ./overview.md#what-specific-scenarios-does-the-cloud-adoption-framework-address
 
 # Card with summary style
 
