@@ -492,7 +492,6 @@ items:
           - name: SAP on Azure
             href: scenarios/sap/enterprise-scale-landing-zone.md
 
-
     - name: Govern
       items:
       - name: Overview
