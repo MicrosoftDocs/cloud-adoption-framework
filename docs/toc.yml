@@ -486,7 +486,7 @@ items:
           - name: Citrix on Azure
             href: scenarios/azure-virtual-desktop/landing-zone-citrix/citrix-enterprise-scale-landing-zone.md
           - name: High-performance computing
-            href: scenarios/azure-hpc/enterprise-scale-landing-zone.md
+            href: scenarios/azure-hpc/azure-hpc-landing-zone-accelerator.md
           - name: Oracle on Azure
             href: scenarios/oracle-on-azure/oracle-landing-zone-accelerator.md
           - name: SAP on Azure
