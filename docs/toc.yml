@@ -459,14 +459,20 @@ items:
         items:
           - name: AI
             href: scenarios/ai/ready.md
+          - name: Azure API Management
+            href: scenarios/api-management/landing-zone-accelerator.md
+          - name: Azure App Service
+            href: scenarios/app-services/landing-zone-accelerator.md
+          - name: Azure Container apps
+            href: scenarios/container-apps/landing-zone-accelerator.md
           - name: Azure Kubernetes Service
             href: scenarios/aks/landing-zone-accelerator.md
-          - name: API Management
-            href: scenarios/api-management/landing-zone-accelerator.md
-          - name: App Service
-            href: scenarios/app-services/landing-zone-accelerator.md
-          - name: Container apps
-            href: scenarios/container-apps/landing-zone-accelerator.md
+          - name: Azure Integration Services
+            href: scenarios/integration-services/landing-zone-accelerator.md
+          - name: Azure Red Hat Openshift
+            href: scenarios/azure-red-hat-openshift/landing-zone-accelerator.md
+          - name: Azure Red Hat Enterprise Linux
+            href: scenarios/azure-red-hat-enterprise-linux/landing-zone-accelerator.md
           - name: Azure Virtual Desktop
             href: scenarios/azure-virtual-desktop/enterprise-scale-landing-zone.md
           - name: Azure VMware Solution
@@ -475,12 +481,7 @@ items:
             href: scenarios/oracle/oracle-landing-zone-accelerator.md
           - name: SAP on Azure
             href: scenarios/sap/enterprise-scale-landing-zone.md
-          - name: Azure Red Hat Openshift
-            href: scenarios/azure-red-hat-openshift/landing-zone-accelerator.md
-          - name: Azure Red Hat Enterprise Linux
-            href: scenarios/azure-red-hat-enterprise-linux/landing-zone-accelerator.md
-          - name: Azure integration services
-            href: scenarios/integration-services/landing-zone-accelerator.md
+
 
     - name: Govern
       items:
