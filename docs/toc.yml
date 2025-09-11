@@ -458,7 +458,7 @@ items:
       - name: Application landing zone accelerators
         items:
           - name: AI
-            href: scenarios/ai/platform/architectures.md
+            href: /azure/architecture/ai-ml/architecture/baseline-azure-ai-foundry-landing-zone
           - name: Azure API Management
             href: scenarios/app-platform/api-management/landing-zone-accelerator.md
           - name: Azure App Service
@@ -483,6 +483,8 @@ items:
             href: scenarios/azure-vmware/enterprise-scale-landing-zone.md
           - name: Azure Virtual Machines
             href: /azure/architecture/virtual-machines/baseline-landing-zone
+          - name: Citrix on Azure
+            href: scenarios/azure-virtual-desktop/landing-zone-citrix/citrix-enterprise-scale-landing-zone.md
           - name: High-performance computing
             href: scenarios/azure-hpc/enterprise-scale-landing-zone.md
           - name: Oracle on Azure
