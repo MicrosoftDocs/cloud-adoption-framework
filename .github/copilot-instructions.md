@@ -1,99 +1,49 @@
-# Copilot instructions for the Cloud Adoption Framework for Azure
-This template enables Copilot agents to **create, review, and refine guidance** aligned with Microsoft’s **Cloud Adoption Framework (CAF)**.
+Improve the clarity of content for the Cloud Adoption Framework for Azure to ensure it's clear, accurate, helpful, and actionable for customers looking to adopt Azure.
 
-CAF offers a **self-service roadmap** to help organizations of all sizes **start, succeed, and mature in Azure**.
+Ensure technical accuracy of every claim about a Microsoft or Azure product against Microsoft Docs. 
 
-CAF guidance should:
-- Help customers **navigate the cloud adoption lifecycle** and understand **what to do next**.
-- Provide **actionable recommendations** for organizing teams, building skills, and managing processes across the **entire cloud estate**.
-- Act as a **resource hub**, linking to deeper technical content:
-  - https://learn.microsoft.com/azure/well-architected/ – for workload design principles: reliability, security, performance efficiency, operational excellence, and cost optimization.
-  - https://learn.microsoft.com/azure/architecture/ – for architecture implementation guidance and use-case scenarios with Azure.
-  - https://learn.microsoft.com/ – for product-specific features, tools, and step-by-step instructions.
+Use clear language and ensure you explain the rationale behind our recommendations to help new users understand how to be successful in Azure.
 
-- Headers and inline topic sentence recommendations in the numbered lists should only state the action and not the means (or how) to keep them short.
-
----
-
-## **Scope of Changes**
-- **Do not add** new recommendations.
-- **Do not remove** existing recommendations.
-- Focus on improving:
-  - **Clarity**
-  - **Consistency**
-  - **Actionable value** for **technical leadership** and **cloud solution architects**.
-
--- 
-## **Tone and Style**
-- Use **clear, professional, and customer-focused language**.
-- Assume the audience includes **business and technical decision-makers**.
-- Keep guidance **practical, scenario-driven, and roadmap-oriented**.
-
-## Customer needs
-
-- ✅ **What to preserve**: Elements users consistently value and trust.
-- ⚠️ **What to improve**: Areas where users request more clarity, support, or prescriptive guidance.
-
-### **Usability**
-✅ **What to preserve:**
-- Step-by-step structure makes adoption manageable.
-- Covers both technical and organizational aspects.
-
-⚠️ **What to improve:**
-- Initial learning curve is steep.
-- Requires cross-team coordination, which can feel daunting.
-
-### **Clarity**
-✅ **What to preserve:**
-- Clear phases (Strategy, Plan, Ready, Adopt, Govern, Manage) provide intuitive structure.
-- Expert-authored guidance feels trustworthy.
-
-⚠️ **What to improve:**
-- Not prescriptive enough in some areas.
-- Leaves many decisions to the user, causing uncertainty.
-
-### **Completeness**
-✅ **What to preserve:**
-- Broad coverage of cloud adoption themes.
-- Regular updates include new topics (AI, DevOps, etc.).
-
-⚠️ **What to improve:**
-- Earlier gaps (e.g., hybrid/data governance).
-- Needs WAF for workload-level optimization.
-
-### **Relevance**
-✅ **What to preserve:**
-- Built on real-world lessons from Microsoft and customers.
-- Frequently updated to stay current.
-
-⚠️ **What to improve:**
-- Needs more tailored guidance for SMBs and niche industries.
-- Multi-cloud clarity requested.
-
-### **Implementation Support**
-✅ **What to preserve:**
-- Includes tools, templates, and reference implementations.
-- Microsoft and partner support is valued.
-
-⚠️ **What to improve:**
-- Organizational change is challenging.
-- Users want more prescriptive assets (e.g., sample policies, scripts).
+## Purpose of the Cloud Adoption Framework for Azure
+The Cloud Adoption Framework for Azure helps customers of all sizes to adopt Azure, succeed in Azure, and mature in Azure.
+The Cloud Adoption Framework for Azure provides prescriptive recommendations that help new and current customers make the right decisions for their people, process, and technology faster. 
 
 ## Template
 Review all the content to ensure it aligns with the following template. 
 
     Template:{
 
-    # {article title}
+    ## Each {heading} must be an {imperative recommendation}.
 
-    State what the article is about.State why this guidance is important in one or two sentences without stating "is it important/crucial/critical because".
+    The first sentence uses a declarative sentence that starts with an article or noun to explain this {imperative recommendation} in {heading} is important in the context of this article, but it must not with a gerund (verb ending in -ing). The next sentence must descriptive states why this {heading} is important in the context of this {title}. The next sentence states what "You must/need/should'' do to reach the {goal} implied by the {heading}." Use numbered lists to enforce sequentially. 
 
-    ## Each {heading} must be an {imperative recommendation}. Use sentence case.
+    1. **Start with a {concise numbered imperative recommendation 1} that indicates how to reach the {goal}, which must be logically first compared to the of the numbered imperative recommendations.** Next state what this {concise numbered imperative recommendation 1} is about and use a declarative sentence that doesn't start with a pronoun. Next state why this {numbered imperative recommendation} is important and note any tradeoffs that are present. Nex explain how to follow this recommendation.
 
-    The first sentence uses a declarative sentence that starts with an article or noun to explain this {imperative recommendation} in {heading} is important in the context of this article, but it must not with a gerund (verb ending in -ing). The next sentence must descriptive states why this {heading} is important in the context of this article. Use numbered lists to enforce sequentially and review to ensure recommendations are logically sequential.
+    Use as many {numbered imperative recommendations} as needed and follow the same structure for each.
 
-    1. **Start with a concise numbered imperative recommendation that indicates how to reach the goal, which must be logically first compared to the of the numbered imperative recommendations.** Next clarify what this {concise numbered imperative recommendation 1} means in this context, using a declarative sentence that doesn't start with a pronoun. Next explain how to follow this recommendation, making it actionable and noting any tradeoffs that are present to help users make the right decision fast. Take any "Design considerations" section and integrate it into the recommendations to help users weigh tradeoffs. If there's no corresponding recommendation then create into a recommendation.
+    ## Add as many headings and sub headings as needed. But enforce this style and format throughout.
+    }
 
-        Use as many {numbered imperative recommendations} as needed and follow the same structure for each.
+## Style and formatting guidelines:    
+Replace all gerunds (verbs ending in -ing) with more direct and active structures to enhance clarity and engagement.
+Replace all content in the future tense with the present tense.
+Replace all em dashes with alternative punctuation or phrasing to improve readability.
+Add a logical noun referent after all demonstrative pronouns (this, that, these, those) to clarify the subject.
+Convert all passive voice constructions into active voice.
+Replace all instances of 'may' with direct and actionable instructions.
+Replace any emotional or marketing language with precise and descriptive terminology.
+Replace all adverbs with more precise verbs to enhance clarity and directness in the writing.
+Replace 'leverage' or 'leverages' with 'use' or 'uses'.
+Review all images to ensure their content aligns with the written guidance and supports the recommendations.
+Ensure it is descriptive and provides context for the image content, enhancing accessibility.
+Ensure the content is concise.
+Fix all grammatical errors and typos throughout.
 
-    ## Add as many headings and sub headings as needed. Enforce the same style and format throughout.
+## Accessibility guidelines
+
+:::image type="content" source="review image at this source" alt-text="[add detailed image description here]." lightbox="./images/govern.svg" border="false":::
+
+## Product truth
+
+If there's an inaccuracy, provide a suggestion for improvement and an explanation of why 
+Check every link, review the page that's linked to, and ensure the linked page provides the information that's promised here. 
