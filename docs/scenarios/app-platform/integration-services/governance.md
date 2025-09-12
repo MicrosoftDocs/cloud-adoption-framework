@@ -8,7 +8,7 @@ ms.topic: conceptual
 ---
 # Governance considerations for the Azure Integration Services landing zone accelerator
 
-Governance involves making sure any policies you have in place are being followed, and that you can show your applications are compliant with any legal, financial, regulatory, or internal requirements they are subject to. For smaller applications, governance may be a manual process; for larger applications, automation is essential. Azure contains several offerings designed to make the compliance and governance process easier.
+Governance involves making sure any policies you have in place are followed, and that you can show your applications are compliant with any legal, financial, regulatory, or internal requirements they are subject to. For smaller applications, governance may be a manual process; for larger applications, automation is essential. Azure contains several offerings designed to make the compliance and governance process easier.
 
 This article deals with the [Control Plane](/azure/azure-resource-manager/management/control-plane-and-data-plane) only - meaning how we create, manage, and configure the resources in Azure (generally via the **Azure Resource Manager**). This article does not deal with governance of the Data Plane - meaning how the endpoints for your resources are governed or secured or monitored.
 
@@ -28,9 +28,9 @@ This article deals with the [Control Plane](/azure/azure-resource-manager/manage
 
 ## Design recommendations
 
-- Use **[Azure Policy](/azure/governance/policy/overview)** to enforce organizational standards, and help you assess compliance. Azure Policy can provide you with an aggregated view, enabling to evaluate the overall state of your environment, with the ability to drill down to per-resource per-policy granularity. For example, you can have policies that look for unauthorized or expensive resources; or which look for resources that are provisioned without adequate  security.
+- Use **[Azure Policy](/azure/governance/policy/overview)** to enforce organizational standards and help you assess compliance. Azure Policy can provide you with an aggregated view, enabling to evaluate the overall state of your environment, with the ability to drill down to per-resource per-policy granularity. For example, you can have policies that look for unauthorized or expensive resources; or which look for resources that are provisioned without adequate security.
 
-- Automate your deployments using a **Continuous Integration/Continuous Deployment** (CI/CD) tool like Azure DevOps and Terraform. This helps ensure that any policies you have in place are followed, without the need for manual configuration.
+- Automate your deployments using a **Continuous Integration/Continuous Deployment** (CI/CD) tool like [GitHub Actions](/azure/developer/github/github-actions) or [Azure DevOps Pipelines](/azure/devops/pipelines/overview-azure). Use Infrastructure as Code tools such as [Bicep](/azure/azure-resource-manager/bicep/overview) or [Terraform](/azure/developer/terraform/overview). This helps ensure that any policies you have in place are followed, without the need for manual configuration.
 
 - Use **[Automation tasks](/azure/logic-apps/create-automation-tasks-azure-resources)** to automate tasks like sending alerts on weekly or monthly spend on resources; or to archive or delete old data. Automation tasks use Logic Apps (Consumption) workflows to perform the tasks.
 
@@ -47,3 +47,10 @@ This article deals with the [Control Plane](/azure/azure-resource-manager/manage
 - [Manage Azure resources and monitor costs by creating automation tasks](/azure/logic-apps/create-automation-tasks-azure-resources)
 
 - [Azure RBAC documentation](/azure/role-based-access-control/)
+
+- [Logic Apps Multi-Region Disaster Recovery](/azure/logic-apps/multi-region-disaster-recovery)
+
+- [Function Apps Disaster Recovery](/azure/reliability/reliability-functions?tabs=azure-portal&pivots=flex-consumption-plan)
+
+- [Data Factory Disaster Recovery](/azure/reliability/reliability-data-factory)
+
