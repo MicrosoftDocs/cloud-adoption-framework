@@ -1,25 +1,23 @@
 ---
 title: Define your naming convention
-description: Learn about the considerations for naming your Azure resources and assets, and review example names for resources and assets in Azure.
+description: Learn how to create a standardized naming convention for Azure resources that ensures clarity, consistency, and compliance with Azure naming requirements across your cloud environment.
 author: stephen-sumner
 ms.author: pnp
-ms.date: 07/01/2025
+ms.date: 09/12/2025
 ms.topic: conceptual
 ---
 
 # Define your naming convention
 
-A well-defined naming and tagging strategy forms the foundation of effective Azure cloud governance and security. These conventions enable you to maintain an inventory of Azure resources, track and allocate costs, and respond to incidents by quickly identifying affected resources. Define your naming and tagging strategy early to ensure consistency and clarity across your environment. This article provides recommendations for creating a naming convention. For tagging guidance, see [Define a tagging strategy](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-tagging).
+Naming conventions provide standardized formats for assigning names to Azure resources. Every organization needs a tailored naming convention that meets both Azure requirements and specific cloud adoption needs. This guidance provides a foundation that you can adapt to align with your organizational requirements.
 
-## Why use a naming convention?
-
-An Azure naming convention is a standardized format used to assign names to Azure resources. It ensures clarity, consistency, and adherence to Azure's naming rules, such as length requirements, valid characters, and scope uniqueness. A naming convention must be tailored to your specific needs, as no single naming convention meets the requirements of every environment.
+**See examples:** [Example Azure resource names](#example-azure-resource-names)
 
 ## Understand resource names in Azure
 
-An Azure resource name is the identifier assigned to a specific instance of an Azure resource, such as a web app, database, or storage account. To establish a consistent naming convention, you need to understand how Azure works. Here's what you need to know:
+An Azure resource name is the identifier assigned to a specific instance of an Azure resource, such as a web app, database, or storage account. To establish a consistent Azure naming convention, you need to understand how Azure works. Here's what you need to know:
 
-1. **Understand name permanence.** Azure resource names can't be changed after creation. Include only information that remains constant in the name. Use tags to capture other details.
+1. **Understand name permanence.** Most Azure resource names can't be changed after creation. Include only information that remains constant in the name. Use tags to capture other details.
 
 1. **Understand Azure naming rules.** There are [naming rules for every Azure resource](/azure/azure-resource-manager/management/resource-name-rules). Not all Azure resource names can follow the same patterns. Make sure you understand the limitations of the resource types you're working with. Azure names must follow three general principles:
 
@@ -37,21 +35,19 @@ An Azure resource name is the identifier assigned to a specific instance of an A
 
 ## Choose naming components
 
-When you construct your naming convention, identify the key pieces of information that you want to capture in a resource name. Different information is relevant for different resource types, and not all established naming components can be used for each resource type. Establish a standard naming convention for your environment that is easy to follow, concise, and useful for recognizing information that's relevant to the deployed resource. The following list provides examples of naming components that are useful when you construct resource names:
+The following list provides examples of naming components (what to include in the name) that are useful for constructing Azure resource names:
 
-| Naming component | Description |
-|--|--|
-| **Organization** | Top-level name of the organization, normally utilized as the top management group or, in smaller organizations, part of the naming convention. Example: `contoso` |
-| **Business unit or department** | Top-level division of your company that owns the subscription or the workload that the resource belongs to. In smaller organizations, this component might represent a single corporate, top-level organizational element. Examples: `fin`, `mktg`, `product`, `it`, `corp` |
-| **Resource type** | An abbreviation that represents the type of Azure resource or asset. This component is often a prefix or suffix in the name. For more information, see [Recommended abbreviations for Azure resource types](./resource-abbreviations.md). Examples: `rg`, `vm` |
-| **Workload, application, or project** | Name of a workload, application, or project that the resource is a part of. Examples: `navigator`, `emissions`, `sharepoint`, `hadoop` |
-| **Environment** | The stage of the development lifecycle for the workload that the resource supports. Examples: `prod`, `dev`, `qa`, `stage`, `test` |
-| **Region** | The region or cloud provider where the resource is deployed. Examples:  `westus`, `eastus2`, `westeu`, `usva`, `ustx` |
-| **Instance** | The instance count for a specific resource, to differentiate it from other resources that have the same naming convention and naming components. Examples, `01`, `001` |
+| Naming component | Description | Example component | Example Azure resource |
+|--|--|--|--|
+| **Resource type** | An [abbreviation](./resource-abbreviations.md) that represents the type of Azure resource or asset. | `rg`, `vm`, `st`, `app` | `rg-navigator-prod-001`, `vm-web-prod-001` |
+| **Workload, application, or project** | Name of a workload, application, or project that the resource is a part of. | `navigator`, `emissions`, `sharepoint`, `hadoop` | `app-navigator-prod`, `vm-sharepoint-dev-001` |
+| **Environment** | Production, development, quality assurance, stage, test. | `prod`, `dev`, `qa`, `stage`, `test` | `app-navigator-prod`, `sqldb-dev` |
+| **Region** | The [Azure region](/azure/reliability/availability-zones-service-support) or cloud provider location where the resource is deployed. | `westus`, `eastus2`, `westeu`, `usva`, `ustx` | `vnet-shared-eastus2-001`, `pip-hadoop-prod-westus-001` |
+| **Instance number** | The instance count for a specific resource, to differentiate it from other resources that have the same naming convention and naming components. | `01`, `001` | `vm-sql-test-001`, `vm-sql-test-002` |
 
 ### Develop your naming convention
 
-When you construct your naming convention, identify the key pieces of information that you want to reflect in a resource name. Different information is relevant for different resource types.
+To construct your Azure naming convention, identify the key pieces of information that you want to reflect in a resource name. Different information is relevant for different resource types.
 
 1. **Standardize component order.** In addition to defining the naming components, you must also consider the order in which the naming components are listed.
 
@@ -59,13 +55,11 @@ When you construct your naming convention, identify the key pieces of informatio
 
 1. **Use abbreviations.** Use [Azure resource abbreviations](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-abbreviations) to keep resource names within length limits.
 
-1. **Use the Azure Naming Tool**: The Azure Naming Tool is a tool that helps you generate names for Azure resources. You configure the tool to use your preferred naming convention, and it generates names for your Azure resources. For more information, see [Azure Naming Tool](https://github.com/mspnp/AzureNamingTool).
-
-1. **Consider naming consistency for VMs.** If you're working with VMs in Azure, we recommend keeping names consistent even though VM names in Azure can be longer than the allowed NetBIOS name of the VM. For more information and for other restrictions, see [Naming conventions in Active Directory for computers, domains, sites, and OUs - Computer names](/troubleshoot/windows-server/identity/naming-conventions-for-computer-domain-site-ou#computer-names).
+1. **Use the Azure Naming Tool.** The Azure Naming Tool is a tool that helps you generate names for Azure resources. You configure the tool to use your preferred naming convention, and it generates names for your Azure resources. For more information, see [Azure Naming Tool](https://github.com/mspnp/AzureNamingTool).
 
 ## Example Azure resource names
 
-Consider these examples when you define your naming convention. The examples are based on the naming components and considerations that are described in this article.
+Consider these examples when you define your Azure naming convention. The examples are based on the naming components and considerations that are described in this article.
 
 ### AI and machine learning
 
@@ -79,7 +73,6 @@ Consider these examples when you define your naming convention. The examples are
 
 | Asset type | Scope | Format and examples |
 |--|--|--|
-| **Azure Analysis Services** | Global | *as\<app name>\<environment>* <br><br> <li> `asnavigatorprod` <li> `asemissionsdev` |
 | **Azure Data Factory** | Global | *adf-\<workload,&nbsp;application,&nbsp;or&nbsp;project>-\<environment>* <br><br> <li> `adf-navigator-prod` <li> `adf-emissions-dev` |
 | **Data Lake Storage account** | Global | *dls\<workload,&nbsp;application,&nbsp;or&nbsp;project>\<environment>* <br><br> <li> `dlsnavigatorprod` <li> `dlsemissionsdev` |
 | **IoT hub** | Global | *iot-\<workload,&nbsp;application,&nbsp;or&nbsp;project>-\<environment>* <br><br> <li> `iot-navigator-prod` <li> `iot-emissions-dev` |
@@ -113,9 +106,9 @@ Consider these examples when you define your naming convention. The examples are
 
 | Asset type | Scope | Format and examples |
 |--|--|--|
-| **Management group** | Business unit and/or <br> environment | *mg-\<business unit>[-\<environment>]* <br><br> <li> `mg-mktg` <li> `mg-hr` <li> `mg-corp-prod` <li> `mg-fin-client` |
-| **Subscription** | Account / enterprise agreement | *\<business&nbsp;unit>-\<subscription&nbsp;purpose>-\<###>* <br><br> <li> `mktg-prod-001` <li> `corp-shared-001` <li> `fin-client-001` |
-| **Resource group** | Subscription | *rg-\<app&nbsp;or&nbsp;service&nbsp;name>-<subscription&nbsp;purpose>-\<###>* <br><br> <li> `rg-mktgsharepoint-prod-001` <li> `rg-acctlookupsvc-shared-001` <li> `rg-ad-dir-services-shared-001` |
+| **Management group** | Tenant | Provide a globally unique identifier (GUID) for the management group ID. Display names are editable and should represent the platform function or workload types within them. |
+| **Subscription** | Azure account or Enterprise agreement | Descriptive name that aligns with IT standards. You can change the display name. Example: *(Business Unit (optional)) (Function or Workload) (Environment)* <br><br> <li> `Marketing Web App Production` <li> `Connectivity` <li> `Security` |
+| **Resource group** | Subscription | *rg-workload name/type-workload component (optional)-environment (optional)* <br><br> <li> `rg-webapp-prod` <li> `rg-webapp-database-dev` |
 
 ### Networking
 
@@ -144,7 +137,6 @@ Consider these examples when you define your naming convention. The examples are
 | Asset type | Scope | Format and examples |
 |--|--|--|
 | **Storage account (general use)** | Global | *st\<workload,&nbsp;application,&nbsp;or&nbsp;project>\<###>* <br><br> <li> `stnavigatordata001` <li> `stemissionsoutput001` |
-| **Azure StorSimple** | Global | *ssimp\<workload,&nbsp;application,&nbsp;or&nbsp;project>\<environment>* <br><br> <li> `ssimpnavigatorprod` <li> `ssimpemissionsdev` |
 | **Azure Container Registry** | Global | *cr\<workload,&nbsp;application,&nbsp;or&nbsp;project>\<environment>\<###>* <br><br> <li> `crnavigatorprod001` |
 
 ## Next step
