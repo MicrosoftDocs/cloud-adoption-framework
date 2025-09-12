@@ -9,7 +9,7 @@ ms.topic: conceptual
 
 # Define your naming convention
 
-A naming convention is a standardized format used to assign names to Azure resources. A naming convention must be tailored to your specific cloud adoption needs and meet Azure requirements. No single naming convention meets the requirements of every business.
+Naming conventions provide standardized formats for assigning names to Azure resources. Every organization needs a tailored naming convention that meets both Azure requirements and specific cloud adoption needs. This guidance provides a foundation that you can adapt to align with your organizational requirements.
 
 **See examples:** [Example Azure resource names](#example-azure-resource-names)
 
