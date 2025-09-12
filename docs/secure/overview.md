@@ -25,13 +25,13 @@ Integrate identity strengthening, segmentation, just-in-time and least-privilege
 
 Incident preparation and response form a primary control layer that limits attacker dwell time and business disruption. This capability matters because even mature preventive controls can't eliminate intrusion attempts. You should implement and continuously improve an end-to-end incident lifecycle covering readiness, detection, triage, containment, eradication, recovery, and post-incident learning.
 
-Codify roles, communication channels, evidence handling, and decision authority. Instrument telemetry ingestion and alert fidelity improvements to cut false positives and accelerate mean time to detect (MTTD). Use [Azure incident response guidance](/azure/security/fundamentals/incident-response) to refine runbooks, practice tabletop simulations, and automate containment actions (for example, isolate hosts, revoke tokens, quarantine storage) through orchestrated workflows.
+Codify roles, communication channels, evidence handling, and decision authority. Instrument telemetry ingestion and alert fidelity improvements to cut false positives and accelerate mean time to detect (MTTD). Use Azure incident response guidance to refine runbooks, practice tabletop simulations, and automate containment actions (for example, isolate hosts, revoke tokens, quarantine storage) through orchestrated workflows.
 
 ## Adopt CIA Triad principles
 
 CIA Triad principles (confidentiality, integrity, availability) provide a concise model for comprehensive information protection. This model matters here because gaps in any single principle create cascading weaknesses. You should map controls, processes, telemetry, and metrics explicitly to each principle for every phase.
 
-- **Confidentiality** restricts access to sensitive data; encryption, key management, identity, access policies, network segmentation, and data classification controls enforce it (see [data encryption overview](/azure/security/fundamentals/data-encryption-overview)).
+- **Confidentiality** restricts access to sensitive data; encryption, key management, identity, access policies, network segmentation, and data classification controls enforce it.
 - **Integrity** preserves data correctness and completeness; hashing, signing, immutable storage patterns, version control, and secure update supply chains enforce trustworthy state.
 - **Availability** maintains timely access to services and data; redundancy design, fault domain isolation, autoscaling, health probes, chaos testing, backup, and disaster recovery orchestration sustain accessibility.
 
