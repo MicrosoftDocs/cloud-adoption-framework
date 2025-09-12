@@ -473,10 +473,10 @@ items:
             href: scenarios/app-platform/aks/landing-zone-accelerator.md
           - name: Azure Integration Services
             href: scenarios/app-platform/integration-services/landing-zone-accelerator.md
-          - name: Azure Red Hat Openshift
-            href: scenarios/app-platform/azure-red-hat-openshift/landing-zone-accelerator.md
           - name: Azure Red Hat Enterprise Linux
             href: scenarios/app-platform/azure-red-hat-enterprise-linux/landing-zone-accelerator.md
+          - name: Azure Red Hat Openshift
+            href: scenarios/app-platform/azure-red-hat-openshift/landing-zone-accelerator.md
           - name: Azure Virtual Desktop
             href: scenarios/azure-virtual-desktop/enterprise-scale-landing-zone.md
           - name: Azure VMware Solution
