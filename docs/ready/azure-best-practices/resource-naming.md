@@ -109,8 +109,8 @@ Consider these examples when you define your Azure naming convention. The exampl
 | Asset type | Scope | Format and examples |
 |--|--|--|
 | **Management group** | Tenant | Provide a globally unique identifier (GUID) for the management group ID. Display names are editable and should represent the platform function or workload types within them. |
-| **Subscription** | Azure account or Enterprise agreement | Descriptive name that aligns with IT standards. You can change the display name. Example: *<Business Unit (optional)> <Function or Workload> <Environment>* <br><br> <li> `Marketing Web App Production` <li> `Connectivity` <li> `Security` |
-| **Resource group** | Subscription | *rg-<workload>-<workload component (optional)>-<environment>* <br><br> <li> `rg-webapp-prod` <li> `rg-webapp-database-dev` <li> `rg-ad-dir-services-shared-001` |
+| **Subscription** | Azure account or Enterprise agreement | Descriptive name that aligns with IT standards. You can change the display name. Example: *(Business Unit (optional)) (Function or Workload) (Environment)* <br><br> <li> `Marketing Web App Production` <li> `Connectivity` <li> `Security` |
+| **Resource group** | Subscription | *rg-workload name/type-workload component (optional)-environment (optional)* <br><br> <li> `rg-webapp-prod` <li> `rg-webapp-database-dev` |
 
 ### Networking
 
