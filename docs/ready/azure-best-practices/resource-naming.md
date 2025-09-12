@@ -17,7 +17,7 @@ An Azure naming convention is a standardized format used to assign names to Azur
 
 An Azure resource name is the identifier assigned to a specific instance of an Azure resource, such as a web app, database, or storage account. To establish a consistent Azure naming convention, you need to understand how Azure works. Here's what you need to know:
 
-1. **Understand name permanence.** Azure resource names can't be changed after creation. Include only information that remains constant in the name. Use tags to capture other details.
+1. **Understand name permanence.** Most Azure resource names can't be changed after creation. Include only information that remains constant in the name. Use tags to capture other details.
 
 1. **Understand Azure naming rules.** There are [naming rules for every Azure resource](/azure/azure-resource-manager/management/resource-name-rules). Not all Azure resource names can follow the same patterns. Make sure you understand the limitations of the resource types you're working with. Azure names must follow three general principles:
 
@@ -35,7 +35,7 @@ An Azure resource name is the identifier assigned to a specific instance of an A
 
 ## Choose naming components
 
-To construct your Azure naming convention, identify the key pieces of information that you want to capture in a resource name. Different information is relevant for different resource types, and not all established naming components can be used for each resource type. Establish a standard naming convention for your environment that is easy to follow, concise, and useful for recognizing information that's relevant to the deployed resource. The following list provides examples of naming components that are useful for constructing resource names:
+The following list provides examples of naming components (what to include in the name) that are useful for constructing Azure resource names:
 
 | Naming component | Description | Example component | Example Azure resource |
 |--|--|--|--|
@@ -56,8 +56,6 @@ To construct your Azure naming convention, identify the key pieces of informatio
 1. **Use abbreviations.** Use [Azure resource abbreviations](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-abbreviations) to keep resource names within length limits.
 
 1. **Use the Azure Naming Tool.** The Azure Naming Tool is a tool that helps you generate names for Azure resources. You configure the tool to use your preferred naming convention, and it generates names for your Azure resources. For more information, see [Azure Naming Tool](https://github.com/mspnp/AzureNamingTool).
-
-1. **Consider naming consistency for VMs.** If you're working with VMs in Azure, we recommend keeping names consistent even though VM names in Azure can be longer than the allowed NetBIOS name of the VM. For more information and for other restrictions, see [Naming conventions in Active Directory for computers, domains, sites, and OUs - Computer names](/troubleshoot/windows-server/identity/naming-conventions-for-computer-domain-site-ou#computer-names).
 
 ## Example Azure resource names
 
