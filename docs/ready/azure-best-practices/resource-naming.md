@@ -43,9 +43,9 @@ To construct your Azure naming convention, identify the key pieces of informatio
 
 | Naming component | Description | Example component | Example Azure resource |
 |--|--|--|--|
-| **Organization** | Top-level name of the organization, normally used as the intermediate management group under the tenant root group. | `Contoso` | `Contoso` |
-| **Business unit or department** | Top-level division of your company that owns the subscription | `fin`, `mktg`, `product`, `it`, `corp` | `fin-` |
-| **Resource type** | An abbreviation that represents the type of Azure resource or asset. See [Recommended abbreviations for Azure resource types](./resource-abbreviations.md). | `rg`, `vm`, `st`, `app` | `rg-navigator-prod-001`, `vm-web-prod-001` |
+| **Organization** | Name of the organization | Used in intermediate management group under the tenant root group. | `Contoso` |
+| **Business unit or department** | Division of your company that owns the subscription | `fin`, `mktg`, `product`, `it`, `corp` | `fin-` |
+| **Resource type** | An [abbreviation](./resource-abbreviations.md) that represents the type of Azure resource or asset. | `rg`, `vm`, `st`, `app` | `rg-navigator-prod-001`, `vm-web-prod-001` |
 | **Workload, application, or project** | Name of a workload, application, or project that the resource is a part of. | `navigator`, `emissions`, `sharepoint`, `hadoop` | `app-navigator-prod-001`, `vm-sharepoint-dev-001` |
 | **Environment** | The stage of the development lifecycle for the workload that the resource supports (for example, production versus test). | `prod`, `dev`, `qa`, `stage`, `test` | `app-navigator-prod-001`, `sqldb-users-dev` |
 | **Region** | The [Azure region](/azure/reliability/availability-zones-service-support) or cloud provider location where the resource is deployed. | `westus`, `eastus2`, `westeu`, `usva`, `ustx` | `vnet-shared-eastus2-001`, `pip-hadoop-prod-westus-001` |
@@ -114,9 +114,9 @@ Consider these examples when you define your Azure naming convention. The exampl
 
 | Asset type | Scope | Format and examples |
 |--|--|--|
-| **Management group** | Business unit and/or <br> environment | *mg-\<business unit>[-\<environment>]* <br><br> <li> `mg-mktg` <li> `mg-hr` <li> `mg-corp-prod` <li> `mg-fin-client` |
-| **Subscription** | Account / enterprise agreement | *\<business&nbsp;unit>-\<subscription&nbsp;purpose>-\<###>* <br><br> <li> `mktg-prod-001` <li> `corp-shared-001` <li> `fin-client-001` |
-| **Resource group** | Subscription | *rg-\<app&nbsp;or&nbsp;service&nbsp;name>-<subscription&nbsp;purpose>-\<###>* <br><br> <li> `rg-mktgsharepoint-prod-001` <li> `rg-acctlookupsvc-shared-001` <li> `rg-ad-dir-services-shared-001` |
+| **Management group** | Tenant | Provide a globally unique identifier (GUID) for the management group ID. Display names are editable and should represent the platform function or workload types within them. |
+| **Subscription** | Azure account or Enterprise agreement | Descriptive name that aligns with IT standards. You can change the display name. Example: *<Business Unit (optional)> <Function or Workload> <Environment>* <br><br> <li> `Marketing Web App Production` <li> `Connectivity` <li> `Security` |
+| **Resource group** | Subscription | *rg-<workload>-<workload component (optional)>-<environment>* <br><br> <li> `rg-webapp-prod` <li> `rg-webapp-database-dev` <li> `rg-ad-dir-services-shared-001` |
 
 ### Networking
 
