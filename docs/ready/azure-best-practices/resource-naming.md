@@ -1,21 +1,17 @@
 ---
 title: Define your naming convention
-description: Learn about the considerations for naming your Azure resources and assets, and review example names for resources and assets in Azure.
+description: Learn how to create a standardized naming convention for Azure resources that ensures clarity, consistency, and compliance with Azure naming requirements across your cloud environment.
 author: stephen-sumner
 ms.author: pnp
-ms.date: 09/10/2025
+ms.date: 09/12/2025
 ms.topic: conceptual
 ---
 
 # Define your naming convention
 
-A well-defined naming and tagging strategy forms the foundation of effective Azure cloud governance and security. These conventions enable you to maintain an inventory of Azure resources, track and allocate costs, and respond to incidents by quickly identifying affected resources. Define your naming and [tagging](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-tagging) strategy early to ensure consistency and clarity across your cloud adoption framework implementation. This article provides recommendations for creating a comprehensive Azure naming convention.
-
-**Quickstart:** [Example Azure resource names](#example-azure-resource-names)
-
-## Why use a naming convention?
-
 An Azure naming convention is a standardized format used to assign names to Azure resources. The naming convention ensures clarity, consistency, and adherence to Azure's naming rules, such as length requirements, valid characters, and scope uniqueness. A naming convention must be tailored to your specific cloud adoption needs, as no single naming convention meets the requirements of every Azure environment.
+
+**See examples:** [Example Azure resource names](#example-azure-resource-names)
 
 ## Understand resource names in Azure
 
@@ -43,13 +39,11 @@ To construct your Azure naming convention, identify the key pieces of informatio
 
 | Naming component | Description | Example component | Example Azure resource |
 |--|--|--|--|
-| **Organization** | Name of the organization | Used in intermediate management group under the tenant root group. | `Contoso` |
-| **Business unit or department** | Division of your company that owns the subscription | `fin`, `mktg`, `product`, `it`, `corp` | `fin-` |
 | **Resource type** | An [abbreviation](./resource-abbreviations.md) that represents the type of Azure resource or asset. | `rg`, `vm`, `st`, `app` | `rg-navigator-prod-001`, `vm-web-prod-001` |
-| **Workload, application, or project** | Name of a workload, application, or project that the resource is a part of. | `navigator`, `emissions`, `sharepoint`, `hadoop` | `app-navigator-prod-001`, `vm-sharepoint-dev-001` |
-| **Environment** | The stage of the development lifecycle for the workload that the resource supports (for example, production versus test). | `prod`, `dev`, `qa`, `stage`, `test` | `app-navigator-prod-001`, `sqldb-users-dev` |
+| **Workload, application, or project** | Name of a workload, application, or project that the resource is a part of. | `navigator`, `emissions`, `sharepoint`, `hadoop` | `app-navigator-prod`, `vm-sharepoint-dev-001` |
+| **Environment** | Production, development, quality assurance, stage, test. | `prod`, `dev`, `qa`, `stage`, `test` | `app-navigator-prod`, `sqldb-dev` |
 | **Region** | The [Azure region](/azure/reliability/availability-zones-service-support) or cloud provider location where the resource is deployed. | `westus`, `eastus2`, `westeu`, `usva`, `ustx` | `vnet-shared-eastus2-001`, `pip-hadoop-prod-westus-001` |
-| **Instance number** | The instance count for a specific resource, to differentiate it from other resources that have the same naming convention and naming components. | `01`, `001` | `vm-sql-test-001`, `rg-mktgsharepoint-prod-001` |
+| **Instance number** | The instance count for a specific resource, to differentiate it from other resources that have the same naming convention and naming components. | `01`, `001` | `vm-sql-test-001`, `vm-sql-test-002` |
 
 ### Develop your naming convention
 
