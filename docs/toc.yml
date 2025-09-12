@@ -455,7 +455,43 @@ items:
           href: cloud-native/deploy-cloud-native-solutions.md
         - name: 4. Optimize cloud-native solutions
           href: cloud-native/optimize-cloud-native-solutions.md
-     
+      - name: Application landing zone accelerators
+        items:
+          - name: AI
+            href: /azure/architecture/ai-ml/architecture/baseline-azure-ai-foundry-landing-zone
+          - name: Azure API Management
+            href: scenarios/app-platform/api-management/landing-zone-accelerator.md
+          - name: Azure App Service
+            href: scenarios/app-platform/app-services/landing-zone-accelerator.md
+          - name: Azure Arc
+            href: scenarios/hybrid/ready.md
+          - name: Azure Container Apps
+            href: scenarios/app-platform/container-apps/landing-zone-accelerator.md
+          - name: Azure Data Factory
+            href: /azure/architecture/databases/architecture/azure-data-factory-on-azure-landing-zones-baseline
+          - name: Azure Kubernetes Service
+            href: scenarios/app-platform/aks/landing-zone-accelerator.md
+          - name: Azure Integration Services
+            href: scenarios/app-platform/integration-services/landing-zone-accelerator.md
+          - name: Azure Red Hat Enterprise Linux
+            href: scenarios/app-platform/azure-red-hat-enterprise-linux/landing-zone-accelerator.md
+          - name: Azure Red Hat Openshift
+            href: scenarios/app-platform/azure-red-hat-openshift/landing-zone-accelerator.md
+          - name: Azure Virtual Desktop
+            href: scenarios/azure-virtual-desktop/enterprise-scale-landing-zone.md
+          - name: Azure VMware Solution
+            href: scenarios/azure-vmware/enterprise-scale-landing-zone.md
+          - name: Azure Virtual Machines
+            href: /azure/architecture/virtual-machines/baseline-landing-zone
+          - name: Citrix on Azure
+            href: scenarios/azure-virtual-desktop/landing-zone-citrix/citrix-enterprise-scale-landing-zone.md
+          - name: High-performance computing
+            href: scenarios/azure-hpc/azure-hpc-landing-zone-accelerator.md
+          - name: Oracle on Azure
+            href: scenarios/oracle-on-azure/oracle-landing-zone-accelerator.md
+          - name: SAP on Azure
+            href: scenarios/sap/enterprise-scale-landing-zone.md
+
     - name: Govern
       items:
       - name: Overview
