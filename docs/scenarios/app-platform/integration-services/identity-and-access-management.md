@@ -1,9 +1,9 @@
 ---
 title: Identity and access management considerations for the Azure Integration Services landing zone accelerator
 description: Learn about design considerations and recommendations for identity and access management in the Azure Integration Services landing zone accelerator.
-author: claytonsiemens77
-ms.author: csiemens
-ms.date: 03/15/2023
+author: jordanbean-msft
+ms.author: pnp
+ms.date: 09/12/2025
 ms.topic: conceptual
 ---
 
