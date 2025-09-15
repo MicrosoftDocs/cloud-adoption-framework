@@ -9,7 +9,7 @@ items:
     - name: Azure products
       href: toolchain.md
 
-  - name: Strategic impact
+  - name: Define hybrid/multicloud strategy
     href: strategy.md
   - name: Technical planning
     href: plan.md
