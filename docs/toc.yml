@@ -409,8 +409,6 @@ items:
           href: ready/azure-best-practices/resource-tagging.md
         - name: Skills relevant to ready and landing zones
           href: ready/suggested-skills.md
-        - name: Ready antipatterns
-          href: antipatterns/ready-antipatterns.md
 
     - name: Adopt
       expanded: true
@@ -589,13 +587,8 @@ items:
         href: organize/raci-alignment.md
       - name: Creating a cost-conscious organization
         href: organize/cost-conscious-organization.md
-
-      - name: Organize antipatterns
-        items:
-        - name: Organizational antipatterns
-          href: antipatterns/organize-antipatterns.md
-        - name: IT fiefdoms and IT silos
-          href: organize/fiefdoms-silos.md
+      - name: IT fiefdoms and IT silos
+        href: organize/fiefdoms-silos.md
     - name: Tools
       href: resources/tools-templates.md
     - name: Additional resources
