@@ -50,17 +50,23 @@ After resolving compatibility issues, ensure your workloads function correctly i
 
 ### Validate network connectivity
 
+Reliable network connectivity ensures that all application components and external dependencies can communicate as intended in Azure. Misconfigured networking can cause critical failures in production.
+
 1. **Test connectivity between all components.** Use [Azure Network Watcher connection troubleshoot](/azure/network-watcher/connection-troubleshoot-manage?tabs=portal) to verify that application tiers can communicate with each other and with external services. This validation confirms that network security groups, routing tables, and DNS configurations allow required traffic flow. This tool provides detailed insights into connectivity issues and identifies specific configuration problems that prevent communication.
 
 1. **Verify external service connectivity.** Test connections to external APIs, databases, and external services that your workload depends on. Use Network Watcher to validate that outbound connectivity works correctly and that firewall rules allow required traffic. Document any connectivity requirements for production deployment.
 
 ### Validate authentication flows
 
+Authentication is critical for security and access control. Validating these flows ensures users and services can authenticate without issues in the Azure environment.
+
 1. **Test user authentication flows.** Use test user accounts to verify that identity providers like Microsoft Entra ID are accessible and that authentication works correctly. Test different authentication scenarios including single sign-on, multifactor authentication, and password reset flows to ensure complete functionality.
 
 2. **Validate service-to-service authentication.** Test authentication between application components using service principals and managed identities. Confirm that Azure role-based access control (RBAC) permissions are correctly configured and that services can authenticate to required resources like databases and storage accounts.
 
 ### Conduct functional and performance testing
+
+Functional and performance testing ensures the workload meets business requirements and performs reliably under expected conditions before going live.
 
 1. **Execute comprehensive functional testing.** Conduct user acceptance testing (UAT), integration testing, and regression testing to confirm that the application meets business and technical requirements. Test all critical user workflows and business processes to ensure they work correctly in the Azure environment. Document any functional issues and resolve them before production deployment.
 
