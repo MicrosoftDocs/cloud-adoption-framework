@@ -9,27 +9,31 @@ ms.topic: conceptual
 
 # Prepare workloads for the cloud
 
-A workload must be cloud-ready before migration to Azure. Cloud readiness reduces cutover risk and ensures compatibility with Azure services. You should validate, secure, and automate workloads in Azure before production cutover. Use your [Azure architecture plan](../plan/estimate-total-cost-of-ownership.md#plan-your-azure-architecture) and your [workload assessment](../plan/assess-workloads-for-cloud-migration.md).
+Before migrating to Azure, workloads must be cloud-ready. Cloud readiness reduces cutover risk and ensures compatibility with Azure services. Validate, secure, and automate workloads in Azure before production cutover. Use your [Azure architecture plan](../plan/estimate-total-cost-of-ownership.md#plan-your-azure-architecture) and your [workload assessment](../plan/assess-workloads-for-cloud-migration.md) to guide preparation.
 
 ## Fix compatibility issues in Azure
 
-Azure compatibility issues block workload migration and must be resolved before production deployment. Azure environments require specific configurations, supported operating systems, and current drivers to function correctly. You should address these issues systematically to ensure successful execution of your migration.
+Compatibility issues can block workload migration and must be resolved before production deployment. Azure requires specific configurations, supported operating systems, and current drivers. Address these issues systematically to ensure a successful migration.
 
 ### Deploy all workload resources
 
+After planning your cloud architecture and preparing your landing zones, the next step is to deploy all workload components into Azure. This phase ensures that your environments are properly isolated, governed, and aligned with your architecture plan. Once deployed, validate the completeness of the test environment to ensure readiness for production.
+
 1. **Create Azure subscriptions for workload environments.** Create separate subscriptions for development, test, and production environments to ensure proper isolation, cost tracking, and governance. Place subscriptions in the appropriate management group and apply environment-specific governance policies, role-based access control assignments, and cost management budgets. For more information, see [Create your subscriptions](/azure/cloud-adoption-framework/ready/azure-best-practices/initial-subscriptions).
 
-2. **Use your architecture plan.** Use the architecture plan you created during cloud adoption planning to deploy the right Azure architecture. Ensure that the architecture aligns with any updated workload requirements. For architecture planning, see [Azure architecture planning](../plan/estimate-total-cost-of-ownership.md#plan-your-azure-architecture).
+2. **Use your architecture plan.** Deploy the Azure architecture defined during cloud adoption planning. Ensure it reflects any updated workload requirements. For guidance, see [Azure architecture planning](../plan/estimate-total-cost-of-ownership.md#plan-your-azure-architecture).
 
-3. **Deploy all workload components.** In a test subscription, create compute (virtual machines, web apps, containers) datastores (databases, storage accounts), load balancers, managed identities, virtual networks, and DNS resources.
+3. **Deploy all workload components.** In a test environment (subscription), deploy all required components: compute (VMs, web apps, containers), datastores (databases, storage accounts), load balancers, managed identities, virtual networks, and DNS resources.
 
 4. **Validate the completeness of the test environment.** Confirm that all dependencies, configurations, and integrations are present. Missing components can lead to false positives or undetected issues during testing.
 
 ### Resolve compatibility issues
 
-1. **Review the documented compatibility requirements and known issues.** Use the [workload assessment](../plan/assess-workloads-for-cloud-migration.md) from the CAF Plan phase. This assessment identifies unsupported configurations and dependencies that must be remediated.
+Before moving workloads into production, identify and resolve any compatibility issues that could impact performance, security, or supportability. Use assessment data from the planning phase to guide remediation efforts, and apply fixes in the test environment using Azure-native solutions.
 
-1. **Resolve each compatibility issue using Azure solutions.** Apply the following remediations in the test environment:  completed during the CAF Plan phase to understand documented compatibility requirements Address compatibility issues within your Azure test environment rather than modifying your source environment. See the following common compatibility problems:
+1. **Review the documented compatibility requirements and known issues.** Use the [workload assessment](../plan/assess-workloads-for-cloud-migration.md) from the CAF Plan phase to identify unsupported configurations and dependencies that must be remediated.
+
+1. **Resolve each compatibility issue using Azure solutions.** Apply remediations in the Azure test environment rather than modifying the source environment. Common compatibility issues include:
 
 | Compatibility issue | Solution | Why it matters |
 |---------------------|----------------|------------------|
