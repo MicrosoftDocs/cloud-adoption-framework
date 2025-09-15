@@ -527,7 +527,7 @@ items:
     - name: Manage
       items:
       - name: 1. Ready operations
-        href: manage/ready.md  
+        href: manage/ready-cloud-operations.md  
       - name: 2. Administer Azure
         href: manage/administer.md  
       - name: 3. Monitor Azure
