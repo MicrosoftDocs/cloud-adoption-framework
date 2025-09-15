@@ -3829,6 +3829,16 @@
          "source_path": "docs/ready/azure-setup-guide/index.md",
          "redirect_url": "/azure/cloud-adoption-framework/ready/azure-setup-guide/identity",
          "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/antipatterns/manage-antipatterns.md",
+         "redirect_url": "/azure/cloud-adoption-framework/manage/ready",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/antipatterns/organize-antipatterns.md",
+         "redirect_url": "/azure/cloud-adoption-framework/plan/prepare-organization-for-cloud#choose-how-to-manage-the-cloud",
+         "redirect_document_id": false
       }
    ]   
 }
