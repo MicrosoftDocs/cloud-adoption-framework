@@ -10,17 +10,19 @@ ms.custom: UpdateFrequency2
 
 # Ready your Azure cloud operations
 
-This article helps you establish and maintain effective operations for managing your Azure cloud estate. Successful cloud operations require clearly defined responsibilities and processes for every cloud management area.
+Managing your Azure environment isn’t just about keeping the lights on. It’s about maintaining governance and security while ensuring your cloud stays aligned with business goals over time. As your environment grows, you need to prevent configuration drift, improve deployments through infrastructure as code, and manage change effectively.
+
+The Cloud Adoption Framework (CAF) Manage methodology introduces the RAMP approach (Ready, Administer, Monitor, Protect) to help you build these capabilities. RAMP provides a structured way to organize teams, define responsibilities, and implement the processes and tools that keep your Azure operations secure, compliant, and resilient. From day-to-day administration to monitoring health and protecting against disruptions, RAMP helps you establish a strong operational foundation for long-term success.
 
 :::image type="content" source="./media/caf-manage-ready.svg" alt-text="Diagram showing the CAF Manage process: ready, administer, monitor, and protect (RAMP)." lightbox="./media/caf-manage-ready.svg" border="false":::
 
 ## Identify your management responsibilities
 
-Effectively managing your Azure environment involves central (platform-wide) responsibilities and workload responsibilities. Central responsibilities support your entire Azure cloud estate. Workload responsibilities focus on an individual workload. Use *Table 1* to ensure your operations account for essential cloud operations responsibilities.
+Effective Azure management spans two layers of accountability: **central (platform)** responsibilities and **workload** responsibilities. Central responsibilities apply across the entire cloud estate. Workload responsibilities focus on individual applications or services. Use *Table 1* to ensure your operating model covers the essential areas of cloud management
 
 *Table 1. Primary cloud management responsibilities*
 
-| Cloud management areas | Central responsibilities | Workload responsibilities |
+| Cloud management areas | Central (platform) responsibilities | Workload responsibilities |
 |------|----|-----|
 | Compliance                               | ▪ Define [operational procedures](#document-operational-procedures).<br>▪ Enforce [governance policies](/azure/cloud-adoption-framework/govern/).<br>▪ [Monitor compliance](./monitor.md#monitor-compliance) and remediate or escalate as required. | ▪ Follow operational procedures.<br>▪ Align design with governance policies. |
 | Security                                 | ▪ Manage organization-wide [security operations](./protect.md#manage-security-operations).<br>▪ Manage identities in [Microsoft Entra ID](/entra/identity/).<br>▪ Grant [access](/azure/role-based-access-control/overview) to Azure subscriptions.<br>▪ Define and maintain security baselines via Azure Policy and Microsoft Defender for Cloud.<br>▪ Oversee threat protection and incident response integration with Microsoft Sentinel. | ▪ Implement [secure workload design](/azure/well-architected/security/checklist#checklist).<br>▪ Respond to workload-specific security alerts and incidents.<br>▪ Continuously assess vulnerabilities within the workload. |
@@ -36,12 +38,7 @@ Effectively managing your Azure environment involves central (platform-wide) res
 
 Use the responsibilities outlined in *Table 1* to build an effective operational foundation. Clearly define teams, standards, and processes by following these steps:
 
-1. ***Define your cloud operations model.*** Choose a centralized or shared management model based on your organization's size and maturity, outlined in the following table:
-
-    | Operations approach | Responsibilities and scope | Best for | Pros | Cons |
-    |---------------------|----------------------------|----------|------|------|
-    | Centralized         | A single team manages all tasks. | Startups or small cloud footprint. | Simplifies cloud management. | Risks creating bottlenecks. |
-    | Shared management   | Separate central (platform) and workload teams | Organizations with diverse workloads. | Balances governance and agility. | Requires clear assignment of responsibility |
+1. ***Define your cloud operations model.*** Choose a centralized, shared management, or decentralized cloud operating model based on your organization's size and maturity. For guidance, see [Choose a cloud operating model](/azure/cloud-adoption-framework/plan/prepare-organization-for-cloud#choose-a-cloud-operating-model)
 
 1. ***Establish central responsibilities.*** Form a dedicated team to handle central management tasks. Develop a skills matrix from *Table 1* to identify required expertise.
 
