@@ -241,7 +241,7 @@ For more information, see [Manage incident response (CAF Secure)](/azure/cloud-a
 | Industrial security              | [Microsoft Defender for IoT](/azure/defender-for-iot/)                             |
 | Data backup security             | [Azure Backup security](/azure/backup/security-overview) |
 
-## Next steps
+## Next step
 
 > [!div class="nextstepaction"]
-> [CAF Manage checklist](./index.md#cloud-management-checklist)
+> [Ready your Azure operations](./index.md#cloud-management-checklist)

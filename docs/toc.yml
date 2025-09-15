@@ -526,15 +526,13 @@ items:
 
     - name: Manage
       items:
-      - name: Checklist
-        href: manage/index.md
-      - name: Ready operations
-        href: manage/ready.md  
-      - name: Administer Azure
+      - name: 1. Ready operations
+        href: manage/ready-cloud-operations.md  
+      - name: 2. Administer Azure
         href: manage/administer.md  
-      - name: Monitor Azure
+      - name: 3. Monitor Azure
         href: manage/monitor.md
-      - name: Protect Azure
+      - name: 4. Protect Azure
         href: manage/protect.md
     
   - name: Adoption scenarios
