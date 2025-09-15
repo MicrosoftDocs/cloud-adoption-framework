@@ -524,7 +524,7 @@ items:
       - name: Manage  
         href: secure/manage.md
 
-    - name: Manage (RAMP)
+    - name: Manage
       items:
       - name: 1. Ready operations
         href: manage/ready.md  
