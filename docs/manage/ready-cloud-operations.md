@@ -40,13 +40,9 @@ Use the responsibilities outlined in *Table 1* to build an effective operational
 
 1. ***Define your cloud operations model.*** Choose a centralized, shared management, or decentralized cloud operating model based on your organization's size and maturity. For guidance, see [Choose a cloud operating model](/azure/cloud-adoption-framework/plan/prepare-organization-for-cloud#choose-a-cloud-operating-model)
 
-1. ***Establish central responsibilities.*** Form a dedicated team to handle central management tasks. Develop a skills matrix from *Table 1* to identify required expertise.
+1. ***Assign central platform responsibilities.*** Form a dedicated team to handle central management tasks. Develop a skills matrix from *Table 1* to identify required expertise.
 
-1. ***Establish workload responsibilities.*** Set up specialized teams for workload-specific tasks. Identify responsibilities using *Table 1* then recruit accordingly.
-
-    - ***Conduct an Azure Well-Architected Review.*** Use the [Well-Architected Assessment tool](/azure/well-architected/what-is-well-architected-framework#assessment) to reassess each workload while developing and testing design changes.
-
-    - ***Use the Azure Well-Architected Framework.*** Use the [Operational excellence](/azure/well-architected/operational-excellence/) pillar to guide your workload management responsibilities.
+1. ***Assign workload responsibilities.*** Set up specialized teams for workload-specific tasks. Identify responsibilities using *Table 1* then recruit accordingly. Use the Azure Well-Architected Framework.*** Use the [Operational excellence](/azure/well-architected/operational-excellence/) pillar to guide your workload management responsibilities.
 
 1. ***Assign responsibility.*** Name specific owners for all cloud management responsibilities. In a shared management model, workload teams should have autonomy to manage their subscriptions.
 
@@ -161,6 +157,3 @@ Optimize your Azure cloud environment by promoting continuous improvement. Regul
 
 > [!div class="nextstepaction"]
 > [Administer your Azure cloud estate](./administer.md)
-
-> [!div class="nextstepaction"]
-> [CAF Manage checklist](./index.md#cloud-management-checklist)
