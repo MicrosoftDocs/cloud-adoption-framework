@@ -8,9 +8,11 @@ ms.topic: conceptual
 ms.custom: e2e-hybrid, think-tank
 ---
 
-# Strategic considerations of hybrid and multicloud operations
+# Define a strategy for hybrid and multicloud operations
 
-Best practices encourage customers to create a single centralized cloud adoption strategy by using the [Cloud Adoption Framework for Azure Strategy methodology](../../strategy/index.md). This article introduces some technical considerations about hybrid and multicloud operations that might affect your strategy.
+Hybrid cloud refers to a mix of on‑premises/private and public cloud resources working together, while multicloud means using multiple cloud providers concurrently. This framework provides an end-to-end, prescriptive guide to help enterprise architects, IT decision-makers, and cloud engineers plan and execute a successful hybrid and multicloud adoption. It is organized into sequential phases, from defining strategy through optimizing at full maturity. The guidance is cloud-provider neutral (with Azure-specific examples like Azure Arc highlighted) and emphasizes consistent operations and governance across environments for an authoritative, unified approach.
+
+Each phase builds on the previous, ensuring that technology decisions are driven by business needs and implemented with unified management to avoid complexity. Unified operations and governance are key themes. The goal is maintaining one set of tools and processes for all environments prevents the cloud diversity from multiplying cost and risk. Following this framework will help you capture the flexibility and innovation of hybrid/multicloud setups while minimizing chaos.
 
 ## Common motivations for a hybrid and multicloud scenario
 
