@@ -3849,6 +3849,16 @@
          "source_path": "docs/manage/ready.md",
          "redirect_url": "/azure/cloud-adoption-framework/manage/ready-cloud-operations",
          "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/organize/cloud-migration.md",
+         "redirect_url": "/azure/cloud-adoption-framework/migrate/plan-migration",
+         "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/organize/cloud-governance.md",
+         "redirect_url": "/azure/cloud-adoption-framework/govern/build-cloud-governance-team",
+         "redirect_document_id": true
       }
    ]   
 }
