@@ -3859,6 +3859,11 @@
          "source_path": "docs/organize/cloud-governance.md",
          "redirect_url": "/azure/cloud-adoption-framework/govern/build-cloud-governance-team",
          "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/organize/fiefdoms-silos.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/hybrid/strategy",
+         "redirect_document_id": true
       }
    ]   
 }
