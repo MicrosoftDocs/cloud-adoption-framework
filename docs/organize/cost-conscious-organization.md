@@ -38,7 +38,7 @@ Building cost consciousness into cloud-adoption efforts starts at the leadership
 
 - **Visibility:** The cloud strategy team and cloud governance team need to know the actual costs of the cloud-adoption efforts. Given the executive-level view of this team, they should have access to multiple cost scopes to analyze spending decisions. Typically, an executive needs visibility into the total costs across all *cloud spend*. But as active members of the cloud strategy team, they should also be able to view costs per business unit or per billing unit to validate showback, chargeback, or other cloud accounting models.
 
-- **Accountability:** Budgets should be established between the cloud strategy, [cloud governance](./cloud-governance.md), and cloud adoption teams based on expected adoption activities. When deviations from budget occur, the cloud strategy team and the cloud governance team must partner to quickly determine the best course of action to remediate the deviations.
+- **Accountability:** Budgets should be established between the cloud strategy, cloud governance, and cloud adoption teams based on expected adoption activities. When deviations from budget occur, the cloud strategy team and the cloud governance team must partner to quickly determine the best course of action to remediate the deviations.
 
 - **Optimization:** During optimization efforts, the cloud strategy team can represent the investment and return value of specific workloads. If a workload has strategic value or financial impact on the business, cost-optimization efforts should be monitored closely. If there's no strategic impact on the organization and no inherent cost for poor performance of a workload, the cloud strategy team may approve over-optimization. To drive these decisions, the team must be able to view costs on a per-project scope.
 
@@ -57,7 +57,7 @@ The cloud adoption team is at the center of all adoption activities. So, they're
 
 ## Cloud governance team
 
-Generally, the [cloud governance team](./cloud-governance.md) establishes guardrails for cost management across the cloud. This effort focuses on the following activities that are related to the development of a cost-conscious organization:
+Generally, the cloud governance team establishes guardrails for cost management across the cloud. This effort focuses on the following activities that are related to the development of a cost-conscious organization:
 
 - **Visibility:** The cloud governance team works as a peer of the cloud strategy team to plan cloud-adoption budgets. These two teams also work together to regularly review actual expenses. The cloud governance team is responsible for ensuring consistent, reliable cost reporting and performance telemetry.
 

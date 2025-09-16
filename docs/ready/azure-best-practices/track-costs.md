@@ -72,7 +72,7 @@ The following scope and role settings will create the required visibility into c
 
   - Assign Cost Management Reader access to this team at the management group, which ensures ongoing visibility into all deployments associated with the subscriptions governed by that management group hierarchy.
 
-- [Cloud governance team](../../organize/cloud-governance.md). Responsibilities for managing cost, budget alignment, and reporting across all adoption efforts requires [Cost Management Contributor](/azure/role-based-access-control/built-in-roles#cost-management-contributor) access at the root level of the management group hierarchy.
+- Cloud governance team. Responsibilities for managing cost, budget alignment, and reporting across all adoption efforts requires [Cost Management Contributor](/azure/role-based-access-control/built-in-roles#cost-management-contributor) access at the root level of the management group hierarchy.
 
   - In a well-managed environment, the cloud governance team likely has a higher degree of access already, making additional scope assignment for Cost Management Contributor unnecessary.
 
