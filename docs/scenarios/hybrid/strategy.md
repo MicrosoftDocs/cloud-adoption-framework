@@ -3,7 +3,7 @@ title: Strategy for adopting unified operations
 description: Learn about strategic considerations of hybrid and multicloud operations.
 author: stephen-sumner
 ms.author: pnp
-ms.date: 04/21/2021
+ms.date: 09/15/2025
 ms.topic: conceptual
 ms.custom: e2e-hybrid, think-tank
 ---
@@ -13,23 +13,6 @@ ms.custom: e2e-hybrid, think-tank
 Hybrid cloud refers to a mix of on-premises/private infrastructure and public cloud services working together, while multicloud means using multiple cloud providers concurrently. Many enterprises today have siloed teams, distributed sites, and systems spread across on-prem datacenters and various clouds. The challenge is to unify these environments in a secure, well-managed way that enables modernization from cloud to edge. This guidance provides a prescriptive end-to-end framework for unifying and managing hybrid and multicloud environments with Azure as the central control plane.
 
 We explain how Azure solutions, like Azure Arc, Azure Monitor, Azure Kubernetes Service, Microsoft Fabric, Azure IoT, and Azure Local, help consolidate control and modernize IT across all environments, while maintaining security and compliance. The goal is to establish a standard operational model that breaks down silos and delivers consistent practices everywhere. We’ll detail how to secure, manage, and modernize resources from cloud to edge, unifying previously isolated teams and systems under one Azure-driven strategy.
-
-## Azure solutions for unified hybrid and multicloud operations
-
-Azure provides the industry's most comprehensive platform for managing hybrid and multicloud environments. These solutions extend Azure's native capabilities to any infrastructure, enabling consistent operations regardless of where your workloads run.
-
-| Azure solution | Strategic value for hybrid and multicloud operations |
-| --- | --- |
-| [Azure Arc](https://learn.microsoft.com/azure/azure-arc/) | Extends Azure's management and security to any infrastructure, on-premises or other clouds. Azure Arc projects existing servers, Kubernetes clusters, and databases into Azure Resource Manager as Azure resources, which enables consistent policy, RBAC, inventory, and monitoring. With Arc, you can secure, develop, and operate workloads with Azure services anywhere, which enables central policy, monitoring, and automation across diverse platforms. |
-| [Azure Arc-enabled servers](https://learn.microsoft.com/azure/azure-arc/servers/overview) | Azure Arc-enabled servers lets you manage Windows and Linux physical servers and virtual machines hosted outside of Azure, on your corporate network, or other cloud provider. For the purposes of Azure Arc, these machines hosted outside of Azure are considered hybrid machines. The management of hybrid machines in Azure Arc is designed to be consistent with how you manage native Azure virtual machines, using standard Azure constructs such as Azure Policy and applying tags.|
-| [Azure Arc-enabled Kubernetes](https://learn.microsoft.com/azure/azure-arc/kubernetes/overview) | Azure Arc-enabled Kubernetes allows you to attach Kubernetes clusters running anywhere so that you can manage and configure them in Azure. By managing all of your Kubernetes resources in a single control plane, you can enable a more consistent development and operation experience, helping you run cloud-native apps anywhere and on any Kubernetes platform. When the Azure Arc agents are deployed to the cluster, an outbound connection to Azure is initiated, using industry-standard SSL to secure data in transit. Clusters that you connect to Azure are represented as their own resources in Azure Resource Manager, and they can be organized using resource groups and tagging.|
-| [Azure Monitor](https://learn.microsoft.com/azure/azure-monitor/) | Provides end-to-end observability across applications, infrastructure, and networks in every environment. Azure Monitor unifies metrics, logs, and traces (via Application Insights) from Azure and Arc-connected resources into one view, so teams get complete insight into distributed systems. This solution helps break down operational silos by allowing a single monitoring toolset for all workloads, whether running in Azure, on-premises, or other clouds, which improves cross-team visibility and faster troubleshooting. |
-| [Azure Kubernetes Service (AKS)](https://learn.microsoft.com/azure/aks/) | Azure's managed Kubernetes platform for the deployment and scaling of containerized applications. AKS in Azure provides managed cluster operations and integrates with Microsoft Entra ID and Azure Monitor for consistency. Use AKS hybrid options (AKS on Azure Local/Azure Stack HCI, AKS on Windows Server, or AKS Edge Essentials for edge) and manage all Kubernetes clusters with Azure Arc for consistent governance. This solution enables teams to use a common Kubernetes-based approach for microservices in any location, which unifies the application platform and development processes. |
-| [Microsoft Fabric](https://learn.microsoft.com/fabric/) | Unified SaaS analytics platform that combines data engineering, data warehousing, real-time analytics, data science, and business intelligence. Microsoft Fabric breaks down data silos by integration of data engineering, warehousing, Power BI, and analytics into one environment. In a hybrid context, Fabric integrates on-premises and multicloud data sources via connectors to deliver consistent analytics and governance. This unified data foundation means insights and BI dashboards can span across distributed sites, which is crucial for a modern data-driven organization. |
-| [Azure IoT Operations](https://learn.microsoft.com/azure/iot-operations/) | A comprehensive IoT platform for the creation of interoperable solutions that bridge physical operations with the cloud. Azure IoT Operations (part of Azure's IoT suite, some capabilities may be in preview) lets you connect and manage IoT devices and edge gateways at scale, while it normalizes data and runs analytics at the edge. It integrates with Azure Arc for unified management of IoT infrastructure, so your operational technology (factories, retail stores, remote sites) can be secured and governed like the rest of IT. This solution unifies OT and IT teams, which brings previously siloed operational systems into the cloud-managed fold. |
-| [Azure Local](https://learn.microsoft.com/azure/azure-local/) | Azure hybrid service (Azure Stack HCI is now part of Azure Local) that runs virtual machines, containers, and selected Azure services on customer-owned infrastructure. Azure Local integrates with Azure Arc for unified governance and is managed via Azure portal and familiar tools. This solution allows you to extend Azure capabilities to edge or local datacenters while you maintain control at your sites. Azure Local brings Azure's hybrid capabilities to wherever you need them, from factory floors to branch offices, and ensures those resources are part of your unified Azure management and security framework. |
-
-With these Azure solutions, you can unify all IT elements: developers and operators share common tools, central IT gains visibility over all assets, and modernization initiatives (containers, data analytics, IoT, etc.) proceed in a coordinated manner. In the framework below, each step shows how to use these Azure capabilities to achieve a secure, well-managed, and modern hybrid/multicloud environment. This step-by-step approach will help break down silos and establish Azure as the backbone of your unified operations.
 
 ## Establish Azure as your unified control plane
 
@@ -85,47 +68,48 @@ Decide which cloud platforms including on-premises will be part of your strategy
 
 3. **Design your unified operating model.** Envision how IT operations will function in this hybrid/multicloud setup. Define processes that work across all environments. For instance: “All servers (Azure VMs, on-prem servers, AWS EC2) will be inventoried and configured via Azure Arc and Azure Policy. CI/CD pipelines in GitHub Actions/Azure DevOps will deploy applications to any target environment using approved templates. Our network operations will treat Azure as the hub linking other sites/clouds, and our security team will use Microsoft Sentinel to watch everything.” By describing this target operating model, you set expectations that silos, like separate ops teams for each cloud, will be replaced with unified operations. It prepares the organization for changes in day-to-day work and clarifies how consistency will be achieved.
 
-4. **Establish unified teams to support cross-platform operations.** Document your strategic intent to cross-train teams and consolidate functions under common governance. For example: "We establish a Cloud Center of Excellence to govern all cloud usage (Azure and others) and train our traditional IT staff on Azure services so they can manage cloud resources with their existing on-premises knowledge." This signals that siloed teams (such as separate teams for IoT or each cloud platform) must work together under unified governance as you adopt this framework. The Azure Adaptive Cloud approach specifically supports team unification and process standardization across technology platforms.
+4. **Establish unified teams to support cross-platform operations.** Alongside technology, plan the human aspect. Declare intentions such as: “We will establish enabling teams that include members from traditional IT, cloud teams, and security, to govern all cloud usage. We will train our on-prem IT staff in Azure and cloud skills so they can manage resources in any environment via Azure’s tools.” This signals that you expect collaboration and cross-training. In some cases, it might mean reorganizing: maybe merging separate cloud teams, or having centralized platform engineering that serves all business units. Making this part of the strategy ensures the operational model is supported by the org structure.
 
-## Map Azure services to your strategic objectives
+## Map Azure services to strategic objectives
 
-As you conclude the strategy phase, identify the Azure services that will be instrumental in achieving your goals (many of which we outlined above). This ensures your strategy is actionable and aligned with Microsoft’s offerings:
+As you finalize the strategy, identify which Azure services and technologies will help achieve your specific goals. This creates a bridge from high-level strategy to actionable implementation. Consider all key areas of your tech stack and map them to Azure solutions:
 
-| Technology stack area | Azure solution |
-|----------------------|----------------|
-| Hybrid and multicloud resource management | Azure Arc to project all infrastructure into a unified control plane |
-| Identity and access management | Microsoft Entra ID as the unified identity system across all clouds through federation or synchronization |
-| Observability and monitoring | Azure Monitor for consolidated visibility across all environments and Azure Automation or Azure Automanage for routine operations |
-| Container orchestration and modernization | Azure Kubernetes Service (AKS) and Azure Container Apps for containerization, with Arc to manage Kubernetes clusters anywhere |
-| Data analytics and intelligence | Microsoft Fabric to create a unified analytics layer across on-premises SQL, Azure Data Lake, and third-party cloud data sources |
-| IoT and edge computing | Azure IoT Hub, Azure IoT Edge, and Azure IoT Operations to manage IoT devices and data, integrated with Arc for unified management |
-| On-premises modern infrastructure | Azure Local for new hardware investments to ensure integration with Azure services |
-| Security and compliance | Microsoft Defender for Cloud for multi-cloud security posture management (CSPM) and cloud workload protection (CWP) across Azure, AWS, and Google Cloud Platform, with Azure Policy (via Arc) to apply governance to Arc-enabled servers, Kubernetes clusters, and data services |
+| Technology Area            | Azure Solution                                                                                                                                            |
+|----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Hybrid & multicloud management | **Azure Arc** – Project all infrastructure (servers, clusters, databases) into Azure for a unified control plane. This enables central management and policy enforcement across on-prem and other clouds. |
+| Identity & access management  | **Microsoft Entra ID** – Use it as the unified identity platform across all environments via synchronization or federation. This provides single sign-on and unified credential management for Azure, on-prem AD, AWS, Google Cloud, and SaaS apps. |
+| Observability & monitoring    | **Azure Monitor** – Consolidate logs, metrics, and traces from every environment into Azure Monitor. Use Log Analytics workspaces and Azure Monitor agents/Arc to ingest data from on-prem and other clouds. Complement with Azure Automation/Automanage for routine ops (backup, patching) tasks across resources. |
+| Container orchestration       | **Azure Kubernetes Service (AKS)** – Standardize on AKS for containerized workloads. Use AKS in Azure and AKS on Azure Local (or Arc-enabled K8s on other infra) so that Kubernetes clusters everywhere are managed consistently. Also consider Azure Container Apps for serverless containers where appropriate. |
+| Data & analytics              | **Microsoft Fabric** – Create a unified analytics layer across the enterprise. Fabric can connect to on-prem SQL databases, Azure Data Lakes, and even third-party cloud data sources to provide one integrated data estate for BI and AI. (Also use Azure Data Factory or Synapse pipelines to move or sync data as needed.) |
+| IoT & edge computing          | **Azure IoT Hub and Azure IoT Edge** – Manage IoT devices and edge processing using Azure IoT services. Integrate IoT deployments with Azure Arc (via IoT Operations) to apply the same governance and security. This ensures IoT devices and edge compute (in factories, retail sites) are part of your unified cloud management rather than stand-alone. |
+| On-premises infrastructure    | **Azure Local** – For any new on-prem hardware investment or private cloud needs, use Azure Local (Azure Stack HCI) to ensure it seamlessly integrates with Azure services. Azure Local allows running VMs and even Azure services on-prem, enabled by Azure Arc for unified management. |
+| Security & compliance         | **Microsoft Defender for Cloud** – Use this for unified Cloud Security Posture Management and threat protection across Azure, AWS, and GCP resources. It identifies misconfigurations and threats in any cloud. Combine with Azure Policy (extended via Arc) to enforce governance rules on Arc-enabled servers, Kubernetes clusters, and data services everywhere. Also consider Microsoft Sentinel for SIEM across logs from all environments. |
 
-Document these service selections with specific use cases and required skills. For example, Microsoft Fabric implementation requires data engineers familiar with Power BI, while Arc-enabled Kubernetes deployment needs Kubernetes expertise. This technical blueprint guides skill development planning and implementation priorities while it ensures your strategy translates into concrete technology choices.
+Documenting this mapping ensures your strategy includes a concrete Azure-centric technology game plan. It also helps in identifying skill gaps and tooling needs early. For example, if you plan to use Microsoft Fabric for analytics, you know you’ll need data integration skills and Power BI expertise. If Azure Arc is central (which it is), you’ll plan training for your ops teams on Arc. This step translates your strategic intentions into actionable Azure services that will make it happen.
 
-## Next step
+## Outcome
 
-By the end of Step 1, you should have a Hybrid/Multicloud Strategy Brief that captures:
+At the end of Step 1, produce a Hybrid/Multicloud Strategy Brief that captures all the above elements. It should summarize your decisions so far:
 
-- **Business drivers and scope**: "Global expansion and 24/7 uptime require multi-cloud; manufacturing sites require hybrid edge; need to unify IT."
-- **Success metrics**: Quantifiable targets (cost savings, reliability, deployment speed, etc.).
-- **Guiding principles**: On lock-in, cloud selection, use of Azure as hub, etc.
-- **Cloud mix**: Which clouds and environments are in play, and which is primary (Azure).
-- **Key Azure (and any other) technologies**: To be adopted for execution.
+- **Business drivers & scope**: Unify IT operations, uptime requirements for multicloud, edge requirements.
+- **Vision statement**: Azure is the primary platform and control plane, integrating other clouds and on-prem systems to provide a unified, agile digital infrastructure.
+- **Success metrics**: Specific targets for availability, deployment speed, cost savings, and compliance.
+- **Guiding principles**: Stances on avoiding lock-in, defaulting to Azure, using cloud-neutral designs where needed.
+- **Cloud mix**: Which environments will be used (Azure, on-prem via Azure Local, and minimal use of others with Azure as hub) and why.
+- **Key technologies**: The Azure and any non-Azure services decided upon to execute the strategy.
 
-**Example strategy conclusion:**
+To illustrate, here’s an example excerpt of how a strategy might be summarized:
 
-"The organization pursues an adaptive hybrid/multicloud approach to unify IT operations while using the best capabilities of cloud.
+- Example Strategy Summary: “The organization will pursue an adaptive hybrid/multicloud approach to unify IT operations while using the best cloud capabilities for each need.”
+- **Drivers**: Avoid downtime (target < 1 hour/year); meet EU data residency laws; break down ops silos to improve efficiency (target 20% OPEX reduction).
+- **Vision**: Azure is our primary cloud and control plane integrating all other environments. We will improve global coverage using Azure plus one secondary cloud and Azure Local for on-prem needs.
+- **Cloud principles**: Design core systems to be cloud-agnostic (containerized, portable databases) where necessary, but embrace Azure-native services for differentiation and speed. Default new deployments to Azure unless a compelling requirement dictates otherwise.
+- **Cloud mix**: Currently ~50% on-prem to be modernized with Azure Local, 40% Azure, 10% AWS for a specific use case. Long-term aim: 70% Azure, with remaining on-prem running via Azure Local and only niche use of other clouds.
+- **Key Azure technologies**: Azure Arc to unify resource management. Azure Monitor and Defender for end-to-end visibility and security;.Azure Local to extend cloud to on-prem. AKS for containers. Microsoft Fabric to unify data analytics. Azure IoT for edge devices. Entra ID for unified identity. Standardized DevOps pipelines for all deployments. Success will be measured by our ability to meet uptime and deployment frequency targets while maintaining strict security compliance across all platforms.
 
-**Business drivers**: Avoid downtime (target <1 hour/year), meet data residency in EU, and break down operational silos between datacenter and cloud teams to improve efficiency (target 20% OPEX reduction).
+## Next steps
 
-**Vision**: Azure is our primary cloud platform and control plane that integrates AWS resources and on-premises systems. We improve global coverage by use of Azure + one secondary cloud and local edge infrastructure for plants.
+Having this strategic brief approved by stakeholders ensures everyone is aligned before moving on. Now you can proceed to detailed planning with a solid Azure-focused game plan in hand.
 
-**Stance on vendor dependence**: Design core business systems to be cloud-agnostic (containers, multi-cloud DB) but allow cloud-native services for differentiating features (such as Azure AI for analytics).
 
-**Cloud mix**: Remain ~50% on-premises (but on Azure Local) for legacy in short term, 40% Azure, 10% AWS for specialized use. Long term aim for 70% Azure, with on-premises modernized via Azure Local and minimal AWS usage.
 
-**Key Azure technologies**: Azure Arc to unify resource management; Azure Monitor and Microsoft Defender for Cloud for end-to-end visibility; Azure Local to run Azure services on-premises; AKS for containerization; Microsoft Fabric to unify data analytics; Azure IoT for factory devices; Microsoft Entra ID for single identity; and DevOps pipelines (GitHub/Azure DevOps) for all deployments. Success is measured by meeting uptime and deployment frequency targets while maintaining security compliance across all platforms."
-
-With this strategic foundation agreed upon by stakeholders, you have a north star to guide the detailed planning.
