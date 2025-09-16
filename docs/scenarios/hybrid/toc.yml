@@ -1,14 +1,4 @@
 items:
-  - name: Hybrid and multicloud - Microsoft Cloud Adoption Framework for Azure
-    href: index.md
-    pdf_name: Hybrid and multicloud - Microsoft Cloud Adoption Framework for Azure
-  - name: Overview
-    items:
-    - name: Intro to unified operations
-      href: unified-operations.md
-    - name: Azure products
-      href: toolchain.md
-
   - name: Define hybrid/multicloud strategy
     href: strategy.md
   - name: Technical planning
