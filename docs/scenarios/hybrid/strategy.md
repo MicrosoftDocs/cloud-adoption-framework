@@ -1,6 +1,6 @@
 ---
 title: Unified hybrid and multicloud operations
-description: Azure hybrid and multicloud strategy. Learn to use Azure as unified control plane for on-premises, edge, AWS, and Google cloud to improve global resilience, compliance, and cost efficiency.
+description: Azure hybrid and multicloud strategy. Learn to use Azure as a unified control plane for on-premises, edge, AWS, and Google cloud to improve global resilience, compliance, and cost efficiency.
 author: stephen-sumner
 ms.author: pnp
 ms.date: 09/16/2025
@@ -48,7 +48,7 @@ Alongside the vision, define 2–5 key success metrics (KPIs) to measure progres
 
 By setting metrics, you create a shared definition of success. It aligns teams and provides a way to track the benefits of your hybrid/multicloud initiative over time.
 
-## 4. Set principles for for hybrid and multicloud
+## 4. Set principles for hybrid and multicloud
 
 Establish guiding principles for deciding which cloud or environment to use for different workloads. Clear principles prevent random or preference-driven choices that could increase complexity. They also balance the desire for portability against the benefits of cloud-specific services. Develop guidelines such as:
 
