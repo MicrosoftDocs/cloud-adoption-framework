@@ -548,7 +548,7 @@ items:
     - name: Hybrid and multicloud
       href: scenarios/hybrid/index.md
     - name: Modern application platform
-      href: scenarios/app-platform/index.md
+      href: scenarios/app-platform/strategy.md
     - name: Oracle
       href: scenarios/oracle-on-azure/index.md
     - name: SAP
@@ -568,8 +568,6 @@ items:
         href: organize/index.md
       - name: Required cloud functions
         items:
-        - name: Cloud governance functions
-          href: organize/cloud-governance.md
         - name: Cloud operations functions
           href: organize/cloud-operations.md
         - name: Cloud center of excellence functions
@@ -587,8 +585,6 @@ items:
         href: organize/raci-alignment.md
       - name: Creating a cost-conscious organization
         href: organize/cost-conscious-organization.md
-      - name: IT fiefdoms and IT silos
-        href: organize/fiefdoms-silos.md
     - name: Tools
       href: resources/tools-templates.md
     - name: Additional resources

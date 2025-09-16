@@ -1,160 +1,119 @@
 ---
-title: Strategy for adopting unified operations
-description: Learn about strategic considerations of hybrid and multicloud operations.
+title: Unified hybrid and multicloud operations
+description: Azure hybrid and multicloud strategy. Learn to use Azure as a unified control plane for on-premises, edge, AWS, and Google cloud to improve global resilience, compliance, and cost efficiency.
 author: stephen-sumner
 ms.author: pnp
-ms.date: 04/21/2021
+ms.date: 09/16/2025
 ms.topic: conceptual
-ms.custom: e2e-hybrid, think-tank
 ---
 
-# Strategic considerations of hybrid and multicloud operations
+# Unified hybrid and multicloud operations
 
-Best practices encourage customers to create a single centralized cloud adoption strategy by using the [Cloud Adoption Framework for Azure Strategy methodology](../../strategy/index.md). This article introduces some technical considerations about hybrid and multicloud operations that might affect your strategy.
+Hybrid cloud refers to a mix of on-premises/private infrastructure and public cloud services working together, while multicloud means using multiple cloud providers concurrently. Many enterprises today have siloed teams, distributed sites, and systems spread across on-premises datacenters and various clouds. The challenge is to unify these environments in a secure, well-managed way that enables modernization from cloud to edge. This guidance provides a prescriptive end-to-end framework for unifying and managing hybrid and multicloud environments with Azure as the central control plane.
 
-## Common motivations for a hybrid and multicloud scenario
+**Quickstart: [Azure hybrid and multicloud services](#6-map-azure-hybrid-and-multicloud-services-to-objectives)**
 
-A hybrid and multicloud scenario isn't a strategy. It's a technical approach with dependencies on specific architectures and tools that can accelerate business and technology strategies. The following common strategic motivations can be affected by using a hybrid and multicloud scenario:
+:::image type="content" source="./media/primary-cloud-provider-extended.png" alt-text="Diagram showing unified processes with a primary Azure cloud with the ability to integrate other clouds, on-premises, and edge IoT devices." lightbox="./media/primary-cloud-provider-extended.png" border="false":::
 
-- **Critical business events:** Responding to critical business events is a common driver for hybrid and multicloud adoption. The ability to *connect multiple environments with hybrid networks and move workloads between platforms* allows technology staff to respond rapidly and more effectively to:
+We explain how Azure solutions, like Azure Arc, Azure Monitor, Azure Kubernetes Service, Microsoft Fabric, Azure IoT, and Azure Local, help unify control and modernize IT across all environments. The goal is to establish a standard operational model that breaks down silos and delivers consistent practices everywhere. We detail how to secure, manage, and modernize resources from cloud to edge, unifying previously isolated teams and systems under one Azure-driven strategy.
 
-  - Business changes from a datacenter exit.
-  - Merger/acquisition events.
-  - Changes to regulatory compliance.
+The first step is to establish a clear strategy for hybrid and multicloud that aligns with your business goals and emphasizes unification. This alignment ensures business value (agility, resilience, cost optimization, innovation) drives your cloud adoption rather than ad-hoc decisions. Key activities in this phase include defining drivers and vision, setting guiding principles, determining your cloud mix, and mapping Azure services to objectives.
 
-- **Migration motivations:** Looking beyond immediate and critical events, migration and modernization motivations strive for midterm optimization of technology costs, operational complexity, and business agility. Connectivity between the current environment and the cloud provider allows for one-way migration capabilities. Use of abstraction layers, like containers, Kubernetes, or Azure Kubernetes Service (AKS), streamlines the migration process.
+## 1. Define business drivers for hybrid and multicloud
 
-- **Innovation motivations:** When you build solutions to drive long-term innovation, a hybrid and multicloud scenario might accelerate development efforts. Containers, Kubernetes, and AKS allow developers to build solutions with fewer dependencies on the features of any one cloud platform. Azure Local, Azure Stack Hub, and Azure Stack Edge allow developers to continue innovating with cloud native solutions, even in the local, on-premises datacenter. Conversely, connectivity across multiple clouds allows developers to maximize the use of cloud native services on their chosen platform while they integrate across those clouds for holistic enterprise environments.
+Start by identifying why your organization is adopting hybrid and multicloud. Business drivers provide focus and ensure the approach delivers measurable value. These drivers must link to concrete business outcomes or key performance indicators (KPIs) to guide decisions and prevent fragmented technology choices. Common drivers include:
 
-Review a detailed list of [common motivations](../../strategy/motivations.md) to see which of the preceding motivations most closely maps to your organization's strategy.
+- **Vendor flexibility**: Reduce dependence on any single provider to mitigate lock-in and allow cost optimization and best-of-breed service use. For example, avoid relying solely on one cloud’s features if an alternative could save cost or offer unique capabilities.
+- **Business unit diversity**: Accommodate different teams, acquisitions, or subsidiaries that use various platforms. A unified strategy prevents operational silos and establishes central governance across all environments while respecting existing investments.
+- **Compliance and data residency**: Meet regulatory mandates for data sovereignty or specific security controls. Use Azure Local, which Azure Stack HCI is now a part of, for workloads that must remain on-premises. Connect to Azure cloud services for other data and applications.
+- **Resilience and disaster recovery**: Improve availability by distributing workloads and establishing multi-environment failover. Design seamless recovery between Azure and secondary environments (other clouds or on-premises) with unified processes to ensure minimal downtime.
+- **Performance optimization**: Place workloads closer to users or data sources to reduce latency. For example, deploy Azure Local instances in factory locations for real-time processing, while maintaining centralized coordination through Azure cloud services.
+- **Modernization and innovation**: Use specialized cloud services to drive transformation. For example, use Azure’s AI services and Microsoft Fabric analytics while integrating data and apps across other clouds as needed.
+- **Unifying silos**: Eliminate internal silos between infrastructure, cloud, and application teams. Establish common tools and processes, like Azure Arc for resource management, Azure Monitor for observability, to create shared visibility and collaboration across formerly isolated groups.
 
-## Hybrid and multicloud outcomes
+For each business driver, link it to a specific business outcome or KPI. For example, if a driver is "avoid downtime," an outcome could be achieving 99.99% availability. If "support global expansion" is a driver, an outcome might be launching in some new geographies within a year. If unifying silos is a goal, an outcome could be 20% reduction in operational overhead by unifying IT processes. Grounding drivers in outcomes ensures the strategy focuses on delivering measurable value. Document these drivers and desired outcomes clearly, as they steer all subsequent decisions.
 
-Before you execute on any cloud strategy, the cloud strategy team should establish a clear set of [measurable business outcomes to track progress](../../strategy/business-outcomes/index.md). A hybrid and multicloud scenario alone is unlikely to deliver any of the common business outcomes. But enabling a hybrid and multicloud approach is often a required milestone and is often tracked as a key result required to unlock business outcomes.
+## 2. Create a clear vision statement for hybrid and multicloud
 
-A hybrid and multicloud scenario is also commonly used as a tactic to accelerate the following business outcomes:
+Craft a concise vision statement that describes the target state of your hybrid/multicloud environment and what success looks like. This vision statement provides direction and helps all stakeholders understand the end goal. The vision should articulate how the unified approach benefits the organization. For example:
 
-- **Agility, global reach, and customer outcomes:** The ability to move between cloud providers allows businesses to more easily deploy to the cloud platform that can best address these business outcomes.
-- **Application innovation, data innovation, and data democratization outcomes:** Each outcome is accelerated by allowing development and analytics teams to manage and work with applications and data, regardless of the chosen cloud platform.
+- "Build an adaptive cloud platform that unifies all infrastructure and teams, enabling any app to run where it best meets business needs." (Emphasizes flexibility and unity.)
+- "Deliver consistent customer experiences with 100% uptime through multicloud resilience." (Focuses on reliability and continuity.)
+- "Increase deployment frequency by 50% by standardizing DevOps across cloud and on-premises." (Focuses on agility and process improvement.)
+- "Reduce on-premises footprint by 50% in two years to cut costs, while extending cloud management to all remaining on-premises assets." (Emphasizes efficiency and cloud-first operations.)
 
-## Impact of cloud mix on your strategy
+## 3. Establish success metrics for hybrid and multicloud
 
-Your hybrid and multicloud strategy for applications and data will drive the answers to the following questions. Clearly identify what intended cloud mix is required, then consider the best configuration for your environments:
+Alongside the vision, define 2–5 key success metrics (KPIs) to measure progress. Each major driver from the previous step should map to at least one KPI. Make them specific and time-bound where possible. For example, if agility is a driver, a KPI might be provisioning time for infrastructure reduced from weeks to hours across all environments within 12 months. If cost optimization is a driver, a KPI might be to improve infrastructure utilization by 30% through cloud bursting and consolidation. Evaluate data egress and synchronization costs before adopting bursting. Include a security or compliance metric as well. For example, set a goal that 100% of onboarded and in-scope resources must be compliant with baseline security policies as measured via Azure Policy and Defender for Cloud.
 
-- What mixture of hybrid, edge, and multicloud environments do you support today?
-- What mixture best aligns with your strategy for the future?
-- Do you want to operate each platform independently or through a unified operations approach?
+By setting metrics, you create a shared definition of success. It aligns teams and provides a way to track the benefits of your hybrid/multicloud initiative over time.
 
-Consider the best configuration for your environments, with a clear understanding of your intended cloud mix.
+## 4. Set principles for hybrid and multicloud
 
-Review the range of decisions in the following chart, with examples of cloud mixes, and confirm what Azure landing zone option you have chosen. Before you configure any cloud environment, identify how it will support your specific mix of cloud hosting decisions.
+Establish guiding principles for deciding which cloud or environment to use for different workloads. Clear principles prevent random or preference-driven choices that could increase complexity. They also balance the desire for portability against the benefits of cloud-specific services. Develop guidelines such as:
 
-Each dark blue dot represents a workload, and each light blue circle a business process, supported by a distinct environment. Each cloud mix requires a different Azure environment configuration for each customer.
+1. **Determine cloud-neutral versus cloud-specific usage.** Determine where you want to build cloud-agnostic solutions versus using cloud-native services. For each workload, decide if portability is critical. For example, for core systems of record you might prioritize neutrality, using technologies like Azure Kubernetes Service, containers, or databases that run anywhere. In contrast, for customer-facing or innovation projects, you might use cloud-specific PaaS services, like Azure Functions, to accelerate development.
 
-![Three illustrations showing how different customers distribute workloads across cloud providers.](../../_images/hybrid/cloud-mix.png)
+2. **Use Azure as a unifying layer where possible.** Make Azure the central management and integration layer for all environments. Rather than maintaining parallel toolsets for each cloud, plan to manage other clouds through Azure. For example, if you run some VMs in AWS, onboard them to Azure via Arc and enforce policies through Azure Policy so you can manage them just like Azure resources. This unification ensures you don't have to use each cloud’s native management tools. Azure becomes the consistent overlay across your entire IT estate.
 
-- **Hybrid-first customer:** Most workloads stay on-premises, often in a mixture of traditional, hybrid, and portable asset-hosting models. A few specific workloads are deployed to the edge, Azure, or to other cloud providers.
+3. **Justify multicloud complexity.** A multicloud approach can introduce complexity, such as multiple skill sets, varying architectures, and potentially higher costs like data egress charges between clouds. Set a principle that using another cloud must have a clear justification. Default to Azure for new deployments unless a unique capability or business requirement mandates otherwise. If a secondary cloud is used, integrate it through Azure and revisit its necessity periodically. This intentional stance avoids a sprawl of unmanaged, siloed deployments on different platforms. If a developer proposes using a different data analytics technology, they must have a strong reason and plan to integrate it. Otherwise, they should use Azure’s analytics offerings like Microsoft Fabric.
 
-- **Azure-first customer:** Most workloads have been moved to Azure. A few workloads stay on-premises. Strategic decisions have led to a few workloads living on the edge or in multicloud environments.
+These principles provide architects and engineers with a decision framework. For example, when choosing a database service, the guidelines might steer them to Azure’s PaaS database for functionality rather than automatically picking a non-Azure service that doesn’t align with strategy. The overall aim is to encourage use of Azure as the backbone, minimize fragmentation, and only embrace multicloud elements when required.
 
-- **Multicloud-first customer:** Most workloads are currently hosted on a different public cloud, like Google Cloud or AWS. Strategic decisions have led to a few workloads living in Azure or on the edge. You may be moving from a *hybrid-first* mix to an *Azure-first* mix as your cloud strategy matures. We also support customers making strategic decisions to prioritize hybrid or multicloud mixes, and Azure plays a role in each mix.
+## 5. Select your cloud mix for hybrid and multicloud
 
-## Unified operations key considerations
+Decide which cloud platforms including on-premises should be part of your strategy, and establish Azure as the central management hub from the start:
 
-There might be diverse strategic impacts as a result of various hybrid and multicloud decisions. But there's one constant consideration in any strategy that involves a hybrid and multicloud scenario. Investments in unified operations and a single cloud control plane will reduce roadblocks to your hybrid and multicloud projects. The following key considerations are important for unified operations:
+1. **Choose your cloud portfolio based on requirements.** Evaluate business and technical needs to decide the mix of cloud platforms. Many enterprises use multiple public clouds to satisfy different needs or legacy investments. Document which platforms you should use and why. Also determine what role on-premises infrastructure plays going forward. For example, you might use Azure for most workloads and maintain on-premises systems for certain factory control systems using Azure Local. Be specific. Identify any critical workloads that must remain on-premises and plan to modernize them by hosting on Azure Local and onboard management via Azure Arc, and any exceptional cases for other clouds. Ensure this planned mix ties back to your drivers, such as using a secondary cloud for resilience or specialized capabilities.
 
-- **Improved visibility and control over the IT estate:** Organizations might need the ability to see all their resources in a single location and be able to query through them to gain insights.
-- **Cloud-based management:** Organizations might want the ability to modernize operations across platforms with the same cloud management services on resources in locations that are outside of Azure.
-- **Governance:** Organizations might want to ensure consistent configurations across all resources from one central location.
-- **DevOps and flexible, cloud-native application deployments:** Organizations gain the agility to deploy application infrastructure through templates and application configurations through GitOps.
-- **Increased flexibility with platform as a service (PaaS):** Organizations also benefit from the ability to run PaaS services on their infrastructures of choice.
+2. **Make Azure your primary control plane for all environments.** Clearly state that Azure should serve as the main hub for managing resources across all clouds and on-premises. This decision is strategic because Azure offers strong hybrid management via Azure Arc and related services. By projecting AWS, Google Cloud, and on-premises resources into Azure for management, you centralize expertise and tooling. In practice, this means you should manage AWS resources from Azure using Arc rather than managing Azure resources from AWS’s tools. Azure’s cross-cloud services (Arc, Microsoft Defender for Cloud, Azure Monitor) make it well-suited for this hub role, providing integration and consistency.
 
-Deploying a single enterprise control plane can accelerate hybrid and multicloud adoption. Organizations can develop cloud readiness with cloud skill-building efforts and process improvements that assume unified operations. Bring innovative cloud practices and technologies to on-premises environments, while you prepare other workloads for migration to the cloud. A single cloud operations management dashboard can help you to manage and govern your operations consistently across on-premises, multicloud, and edge environments. You gain greater visibility into assets scattered across environments, cross-team accountability, and faster, consistent, and at-scale deployments for developers.
+3. **Design your unified operating model.** Envision how IT operations should function in this hybrid/multicloud setup. Define processes that work across all environments. For instance, your policy should be that all servers (Azure VMs, on-premises servers, AWS EC2) should be inventoried. They should also be configured via Azure Arc and governed by Azure Policy for Azure and Arc-enabled resources. For AWS or Google Cloud, use Defender for Cloud multicloud connectors to surface posture since compliance surfaces through Defender for Cloud’s multicloud connectors, not direct Azure Policy assignment. You should use CI/CD pipelines in GitHub Actions/Azure DevOps deploy applications to any target environment using approved templates. Network operations should treat Azure as the hub linking other sites/clouds, and the security team should use Microsoft Sentinel to watch everything. By describing this target operating model, you set expectations that unified operations must replace silos, like separate ops teams for each cloud. It prepares the organization for changes in day-to-day work and clarifies how to achieve consistency.
 
-## Accelerate hybrid and multicloud adoption with unified operations
+4. **Establish unified teams to support cross-platform operations.** Alongside technology, plan the human aspect. Establish enabling teams to train and support platform and workload teams. Include members from traditional IT, cloud teams, and security. Train your on-premises IT staff in Azure and cloud skills so they can manage resources in any environment via Azure’s tools. This approach shows that you expect collaboration and cross-training. In some cases, it might mean reorganizing. Maybe merging separate cloud teams or having centralized platform that serves all business units. Making this part of the strategy ensures the organizational structure supports the operational model.
 
-Starting comprehensive cloud readiness and skill-building initiatives can accelerate cloud adoption and migration efforts across your organization. Assess and advance cloud readiness, implement innovative cloud practices in your workloads that will remain on-premises, and adopt cloud technologies to prepare other workloads that you might move to the cloud. Work with your cloud strategy team to build the necessary cloud skills and processes to prepare for your migration effort to a hybrid and multicloud environment.
+By deliberately selecting your cloud mix and choosing Azure as the anchor, you set a strong foundation for unified management. Everyone should understand what environments they should operate in and that Azure is how you tie them together. This understanding prevents uncontrolled proliferation of platforms and reinforces the earlier principles.
 
-How can unified operations transform your organization's cloud adoption and migration effort?
+## 6. Map Azure hybrid and multicloud services to objectives
 
-Azure Arc extends a single enterprise control plane with Azure management and services across hybrid, multicloud, and edge environments. Azure Arc allows for a consistent state across heterogeneous resource environments and infrastructures to:
+As you finalize the strategy, identify which Azure services and technologies help achieve your specific goals. This identification creates a bridge from high-level strategy to actionable implementation. Consider all key areas of your tech stack and map them to Azure solutions:
 
-- **Address data sovereignty and sensitivity.** Deliver data in the private and public cloud with minimal changes per platform.
-- **Practice frictionless development.** Support both disconnected and connected use cases.
-- **Bring innovative Azure services to any location.** Deploy faster and more consistently, and achieve elastic scale based on capacity.
-- **Empower developer teams across the enterprise with the ability to build cloud applications anywhere, at scale.** Code and ship applications to container and Kubernetes clusters anywhere.
-- **Consistently speed up development, at scale.** Use templatized deployment, configuration, and security, and reduce errors with policy-driven deployment and operations.
-- **Promote greater accountability for enterprise IT teams.** Extend a uniform enterprise control plane from Azure Arc by centralizing visibility, operations, and compliance across resources and locations.
-- **Organize, govern, and secure across on-premises, multicloud, and edge environments.** Support Windows, Linux, SQL Server, and Kubernetes.
-- **Maintain standardized management and security with unified operations.** Ensure consistency across data workloads.
-- **Perform virtual machine lifecycle and management operations.** Provision, resize, delete, and manage virtual machines based on [VMware vSphere](/azure/azure-arc/vmware-vsphere/overview), [System Center](/azure/azure-arc/system-center-virtual-machine-manager/overview), or [Azure Local](/azure-stack/hci/manage/azure-arc-vm-management-overview) environments.
+| Technology area            | Azure solution                                                                                                                                            |
+|----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Hybrid & multicloud management | **[Azure Arc](/azure/azure-arc/overview)** – Project servers, supported Kubernetes clusters, Azure Local infrastructure, and selected data services into Azure to create a unified control plane. Centralize inventory, management, and policy enforcement across on-premises and other clouds where Arc support exists. |
+| Identity & access management  | **[Microsoft Entra ID](/entra/fundamentals/what-is-entra)** – Use Entra ID as the unified identity platform across all environments via synchronization or federation. Provide single sign-on and centralized credential management for Azure, on-premises AD, AWS, Google Cloud, and SaaS apps. Apply conditional access and role-based access control (RBAC) consistently. |
+| Observability & monitoring    | **[Azure Monitor](/azure/azure-monitor/overview)** – Consolidate logs, metrics, and traces from every environment into Azure Monitor. Use Log Analytics workspaces and Azure Monitor agents or Arc to ingest data from on-premises and other clouds. |
+| Container orchestration       | **[Azure Kubernetes Service (AKS)](/azure/aks/what-is-aks)** – Standardize on AKS for containerized workloads and manage clusters consistently using Arc-enabled Kubernetes. Use **[Azure Container Apps](/azure/container-apps/overview)** for serverless containers when an event-driven, scale-to-zero model fits. |
+| Data & analytics              | **[Microsoft Fabric](/fabric/)** – Create a unified analytics layer that connects on-premises SQL, Azure data lakes, and third‑party cloud sources into a single data estate. |
+| IoT & edge computing          | **[Azure IoT Hub](/azure/iot-hub/about-iot-hub)** and **[Azure IoT Edge](/azure/iot-edge/about-iot-edge)** – Manage devices and run edge processing with Azure IoT services. Integrate IoT deployments with Azure Arc to enforce governance and secure edge compute while onboarding devices to the unified management plane. |
+| On-premises infrastructure    | **[Azure Local](/azure/azure-local/overview)** – Run VMs and selected Azure services on new on-premises hardware or private cloud using Azure Stack HCI. Integrate those systems with Azure via Arc for consistent management and policy control. |
+| Security & governance         | **[Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction)** – Use Defender for Cloud to manage cloud security posture and protect workloads across Azure, AWS, and GCP. Combine **[Azure Policy](/azure/governance/policy/overview)** to enforce policies on Azure and Arc-enabled resources, and use **[Microsoft Sentinel](/azure/sentinel/overview)** for SIEM and SOAR across logs from all environments. |
 
-A combination of hybrid and multicloud environments is the most common scenario found across today's enterprise IT landscape. For most customers, moving to a hybrid and multicloud scenario embraces market reality and is motivated by a sound business strategy. The next decision for your organization is to commit to a distributed cloud computing model that can increase the speed of your cloud adoption and migration efforts.
+Documenting this mapping ensures your strategy includes a concrete Azure-centric technology game plan. It also helps in identifying skill gaps and tooling needs early. For example, if you plan to use Microsoft Fabric for analytics, you know you need data integration skills and Power BI expertise. If Azure Arc is central, you plan training for your ops teams on Arc. This step translates your strategic intentions into actionable Azure services that make it happen.
 
-Initiating a cross-team effort to increase your cloud readiness with innovative cloud practices and technologies is the first step toward implementing a single enterprise control plane. You can consistently protect and monitor resources, standardize governance and security, and manage your operational processes in on-premises, multicloud, and edge environments. Consider a hybrid and multicloud environment to manage your overall digital estate if you're planning a hybrid strategy by design for the next 12 months or longer.
+## Strategy outcome
 
-Work with your [cloud strategy team](../../strategy/define-your-team.md) to build the necessary skill levels and processes to prepare the move to an enterprise control plane across a hybrid, multicloud, and edge environment that encourages greater accountability within IT teams, empowers developer teams, and extends Azure services to any infrastructure, anywhere.
+At the end of this phase, you should have a hybrid/multicloud strategy  that captures all the above elements. It should summarize your decisions so far:
 
-## Unified operations motivations
+- **Business drivers & scope**: Unify IT operations, uptime requirements for multicloud, edge requirements.
+- **Vision statement**: Azure is the primary platform and control plane, integrating other clouds and on-premises systems to provide a unified, agile digital infrastructure.
+- **Success metrics**: Specific targets for availability, deployment speed, cost savings, and compliance.
+- **Guiding principles**: Stances on avoiding lock-in, defaulting to Azure, using cloud-neutral designs where needed.
+- **Cloud mix**: Which environments are used (Azure, on-premises via Azure Local, other clouds) and why.
+- **Key technologies**: The Azure and any non-Azure services decided upon to execute the strategy.
 
-Various [motivations](../../strategy/motivations.md) might steer customers to adopt a hybrid and multicloud approach. Adopting the right cloud strategy depends on documenting what classification most these motivations are associated with. Are they related to critical business events, migration, or innovation?
+To illustrate, here’s an example excerpt of how a strategy might be summarized:
 
-Customers might have a digital estate that's bound by specific regulatory requirements and data localization laws that constrain in which geographic location it must reside. A particular industry might require low latency and high connectivity for efficient operational capacity, such as financial services. Low-latency and high-connectivity are common requirements for other industries like media, healthcare, education, and government.
+- **Example strategy summary**: The organization pursues an adaptive hybrid/multicloud approach to unify IT operations while using the best cloud capabilities for each need.
+- **Drivers**: Avoid downtime (target < 1 hour/year). Meet EU data residency laws. Break down ops silos to improve efficiency (target 20% OPEX reduction).
+- **Vision**: Azure is our primary cloud and control plane integrating all other environments. We must improve global coverage using Azure plus one secondary cloud and Azure Local for on-premises needs.
+- **Cloud principles**: Embrace Azure-native services for differentiation and speed. Default new deployments to Azure unless a compelling requirement dictates otherwise.
+- **Cloud mix**: Currently ~50% on-premises to be modernized with Azure Local, 40% Azure, 10% AWS for a specific use case. Long-term aim: 70% Azure, with remaining on-premises running via Azure Local and only niche use of other clouds.
+- **Key Azure technologies**: Azure Arc to unify resource management. Azure Monitor and Defender for end-to-end visibility and security. Azure Local to extend cloud to on-premises. AKS for containers. Microsoft Fabric to unify data analytics. Azure IoT for edge devices. Entra ID for unified identity. Standardized Azure Pipelines for all deployments. We must measure success by our ability to meet uptime and deployment frequency targets while maintaining strict security compliance across all platforms.
 
-A multinational organization, for example, might have globally distributed, legacy datacenters, with an aging infrastructure that's not compatible with a company-wide migration effort. Or, there might be corporations with even larger cloud estates that are sprawled across several cloud environments, where visibility and control of IT operations is challenging.
-
-## What are the overall benefits of a multicloud control plane?
-
-### Uniform governance and compliance
-
-Azure Arc provides:
-
-- A dashboard view of all your resources to capture and track an accurate inventory of IT assets. Resources include Windows, Linux, SQL servers, and Kubernetes containers.
-- A reduced risk in your organization by establishing a unified governance framework and applying a standard set of policies for all workloads.
-- For server and application owners, a view of the compliance status of servers, an ability to take necessary remediation steps from the Azure portal, and removal of management overhead from central IT departments for tracking and ensuring adherence to compliance standards.
-
-### Consistent deployments, change control, and DevOps everywhere
-
-With Azure Arc, you can adopt cloud practices on-premises. You can deploy applications by using a consistent approach with familiar tools and practices across your Kubernetes clusters, on any infrastructure. Standardize change control with declarative configuration management systems like GitOps. Easily adopt DevOps techniques like infrastructure as code (IaC), and empower developers with self-service access to a rich selection of tools.
-
-### Deploy and manage Azure data services anywhere
-
-Azure Arc enabled data services provide you with the flexibility to deploy fully managed Azure services on-premises or in the cloud. You can extend cloud benefits everywhere to provide scalability, fast deployment, and always up-to-date cloud innovation, while you adhere to regulatory requirements. Deploy and manage data services within on-premises environments or in customer regions, and reduce latency. Access the latest Azure features and capabilities for on-premises data workloads. Join our public preview to deploy evergreen SQL (SQL Managed Instance) and PostgreSQL hyperscale on any infrastructure. You can also benefit from automatic updates, patches, and upgrades with no application downtime.
-
-## What are the benefits of a multicloud control plane for IT departments?
-
-For IT administrators, Azure Arc brings consistency and a unified dashboard with a consistent view into thousands of servers across customer environments. Use existing tools on-premises to seamlessly interact with resources, without interfering with existing management tools.
-
-### Inventory management and resource organization
-
-Control resources at organizational, team, and personal levels. Bring them into a single system to organize and inventory through Azure scopes like management groups, subscriptions, and resource groups. Create, apply, and enforce standardized and custom tags to keep track of resources. Build powerful queries and search global portfolios by using Azure Resource Graph.
-
-### Extend cloud practices on-premises
-
-Easily adopt DevOps techniques like IaC. Empower developers with self-service access to a variety of tools and centralized IT governance and guidance. Standardize change control with declarative configuration management systems like GitOps.
-
-### Easily implement Azure security anywhere
-
-Access the system of unified infrastructure security management available in Microsoft Defender for Cloud. Strengthen your security posture with advanced threat protection across hybrid workloads in the cloud, no matter whether in Azure, multicloud, or on-premises environments. Centrally access and manage all resources with Azure role-based access control (RBAC). Centrally manage and enforce policy compliance, and simplify audit reporting with Azure Policy.
-
-### Governance and configuration of resources anywhere
-
-Standardize activities by creating, applying, and enforcing policies to Kubernetes applications, data, and infrastructure anywhere. Set guardrails across all resources with Azure Policy. Ensure consistent configurations to a single server, cluster, or data service, or at scale by using inheritance capabilities. Standardize RBAC across systems and different types of resources. Automate and delegate remediation of incidents to service teams without IT intervention. Enforce runtime conformance and audit resources with Azure Policy.
-
-### Unified tools and experiences across platforms
-
-Create a shared application and infrastructure lifecycle within teams traditionally siloed by location, skill, and job description. Simplify work with a unified, consistent view of resources across datacenters, edge locations, and multicloud environments through the Azure portal and Azure API Management. Connect and gain access to Windows and Linux virtual machines, physical servers, and any Kubernetes distribution within the Kubernetes ecosystem. Bring Azure data services to on-premises, multicloud, and edge environments with Azure Arc enabled data services. Establish clear roles and responsibilities for team members with clear separation of concerns, without losing visibility and access. Empower developers and application teams to self-serve VM operations on-demand using Azure role-based access control (RBAC).
-
-### Integrated DevOps and management capabilities
-
-Select another Azure Arc enabled service, Azure development, and operational tools that are developer tooling-agnostic. Access a unified enterprise dashboard that grants you a consistent view across environments via GitHub, Azure Monitor, Defender for Cloud, Azure update integration, and more. Deploy common templates to automate configurations, and deploy IaC to make safe and repeatable production deployments. Manage end-to-end identity and access across all users and resources with Microsoft Entra ID, enterprise identity service, and Azure Resource Manager.
+Having this strategic brief approved by stakeholders ensures everyone is aligned before moving on. Now you can proceed to detailed planning with a solid Azure-focused game plan in hand.
 
 ## Next steps
 
-For more guidance for your cloud adoption journey, see the following articles:
-
-- [Plan for hybrid and multicloud](./plan.md)
-- [Review your environment or Azure landing zones](./ready.md)
-- [Hybrid and multicloud migration](./migrate.md)
-- [Govern hybrid and multicloud environments](./govern.md)
-- [Manage hybrid and multicloud environments](./manage.md)
+> [!div class="nextstepaction"]
+> [Plan for hybrid and multicloud](plan.md)

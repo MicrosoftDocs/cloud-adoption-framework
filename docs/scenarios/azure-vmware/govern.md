@@ -26,7 +26,7 @@ All provisioned private clouds have vCenter Server, ESXi, vSAN, and NSX-T Data C
 
 VMware vSphere clusters reside on top of "share nothing" hyper-converged, bare-metal infrastructure. Azure VMware Solution cluster architecture is dedicated and isolated - meaning that networking, storage, or compute is not shared with any other tenant. VMware vSphere clusters are managed by Microsoft to meet performance, availability, security, and compliance requirements, at scale in Azure Cloud, providing unified management, networking, and operational controls.
 
-Because Azure VMware Solution run hybrid workloads across on-premises vSphere and private cloud, unified operations is the best approach to providing a single pane of glass for incrementally deploying required governance and operational management controls. Read the [introduction to unified operations](../hybrid/unified-operations.md) to get started.
+Because Azure VMware Solution run hybrid workloads across on-premises vSphere and private cloud, unified operations is the best approach to providing a single pane of glass for incrementally deploying required governance and operational management controls. Read the [Hybrid multicloud unified operations](../hybrid/strategy.md) to get started.
 
 ## Unified security and compliance
 
@@ -52,7 +52,7 @@ Integrating with Azure-native services in your Azure VMware Solution private clo
 
 ### Unified operational management controls
 
-We recommend a [unified operations](../hybrid/unified-operations.md) approach, so you can extend consistent Azure governance and operational management controls across your vSphere cluster, and seamlessly modernize your VMware vSphere workloads with native Azure services.
+We recommend a [unified operations](../hybrid/strategy.md) approach, so you can extend consistent Azure governance and operational management controls across your vSphere cluster, and seamlessly modernize your VMware vSphere workloads with native Azure services.
 
 Azure Resource Manager (ARM) is the operating system of Azure that, stretching across VMware vSphere resources, extends Azure-native governance and operational management controls across clusters, resource pools, and private clouds. For more information, see:
 
