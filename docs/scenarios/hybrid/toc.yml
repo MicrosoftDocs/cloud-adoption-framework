@@ -1,14 +1,16 @@
 items:
-  - name: Define hybrid/multicloud strategy
+  - name: Define a strategy
     href: strategy.md
-  - name: Technical planning
+  - name: Plan adoption
     href: plan.md
-  - name: Prepare your environment
+  - name: Ready environment
     items:
     - name: Azure landing zones
       href: ready.md
     - name: Introduction to Azure Arc landing zone accelerator for hybrid and multicloud
       href: enterprise-scale-landing-zone.md
+  - name: Adopt solutions
+    items:
     - name: Azure Arc-enabled servers
       items:
       - name: Identity and access management
@@ -47,26 +49,6 @@ items:
         href: arc-enabled-kubernetes/eslz-arc-kubernetes-services-observability.md
       - name: Cost governance
         href: arc-enabled-kubernetes/eslz-arc-kubernetes-cost-governance.md
-    - name: Azure Arc-enabled SQL Managed Instance
-      items:
-      - name: Identity and access management
-        href: arc-enabled-data-service-sql-managed-instance/eslz-arc-data-service-sql-managed-instance-identity-access-management.md
-      - name: Network topology and connectivity
-        href: arc-enabled-data-service-sql-managed-instance/eslz-arc-data-service-sql-managed-instance-network-connectivity.md
-      - name: Storage disciplines
-        href: arc-enabled-data-service-sql-managed-instance/eslz-arc-data-service-sql-managed-instance-storage-disciplines.md 
-      - name: Resource organization
-        href: arc-enabled-data-service-sql-managed-instance/eslz-arc-data-service-sql-managed-instance-resource-organization.md
-      - name: Governance and security disciplines
-        href: arc-enabled-data-service-sql-managed-instance/eslz-arc-data-service-sql-managed-instance-governance-disciplines.md
-      - name: Management disciplines
-        href: arc-enabled-data-service-sql-managed-instance/eslz-arc-data-service-sql-managed-instance-management-disciplines.md
-      - name: Business continuity and disaster recovery
-        href: arc-enabled-data-service-sql-managed-instance/eslz-arc-data-service-sql-managed-instance-business-continuity-disaster-recovery.md    
-      - name: Upgradeability disciplines
-        href: arc-enabled-data-service-sql-managed-instance/eslz-arc-data-service-sql-managed-instance-upgradeability-disciplines.md
-      - name: Cost governance
-        href: arc-enabled-data-service-sql-managed-instance/eslz-arc-data-service-sql-managed-instance-cost-governance.md    
     - name: Implementation options
       items:
       - name: Start with Azure Arc-enabled servers landing zone accelerator sandbox
@@ -86,32 +68,6 @@ items:
   - name: Hybrid architectures
     href: /azure/architecture/browse/?azure_categories=hybrid&bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
 
-  - name: Azure product documentation
-    items:
-    - name: All hybrid and multicloud products
-      href: /hybrid/?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
-    - name: Azure Arc
-      href: /azure/azure-arc/?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
-    - name: Azure Local
-      href: /azure-stack/hci/overview#azure-stack-hub?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
-    - name: Azure Modular Datacenter
-      href: /azure-stack/?toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json#azure-stack-hub
-    - name: Azure Local
-      href: /azure-stack/?toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json#azure-stack-hci
-    - name: Azure IoT Edge
-      href: /azure/iot-edge/?toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
-    - name: Azure Sphere
-      href: /azure-sphere/?toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
-    - name: Windows for IoT
-      href: /windows/iot-core/?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
-    - name: Virtual WAN
-      href: /azure/virtual-wan/?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
-    - name: ExpressRoute
-      href: /azure/expressroute/?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
-    - name: VPN Gateway
-      href: /azure/vpn-gateway/vpn-gateway-about-vpngateways?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
-    - name: Azure Firewall
-      href: /azure/firewall/overview?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json
   - name: Build skills on Learn
     items:
     - name: Hybrid cloud
