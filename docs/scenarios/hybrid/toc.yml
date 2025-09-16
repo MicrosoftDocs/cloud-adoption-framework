@@ -1,7 +1,7 @@
 items:
   - name: Hybrid and multicloud - Microsoft Cloud Adoption Framework
     href: strategy.md
-  - name: Plan adoption
+  - name: Technical planning
     href: plan.md
   - name: Ready environment
     items:
