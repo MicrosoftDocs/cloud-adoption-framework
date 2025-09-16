@@ -3849,6 +3849,26 @@
          "source_path": "docs/manage/ready.md",
          "redirect_url": "/azure/cloud-adoption-framework/manage/ready-cloud-operations",
          "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/scenarios/hybrid/toolchain.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/hybrid/strategy",
+         "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/scenarios/hybrid/unified-operations.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/hybrid/strategy",
+         "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/scenarios/hybrid/scenario-overview.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/hybrid/strategy",
+         "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/scenarios/hybrid/index.md",
+         "redirect_url": "/azure/cloud-adoption-framework/scenarios/hybrid/strategy",
+         "redirect_document_id": true
       }
    ]   
 }
