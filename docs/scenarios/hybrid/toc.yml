@@ -1,4 +1,5 @@
 items:
+  - name: Hybrid and multicloud - Microsoft Cloud Adoption Framework
   - name: Define a strategy
     href: strategy.md
   - name: Plan adoption
