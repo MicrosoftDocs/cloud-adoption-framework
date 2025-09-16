@@ -1,5 +1,5 @@
 ---
-title: Strategy for unified unified hybrid and multicloud operations
+title: Unified hybrid and multicloud operations
 description: Azure hybrid and multicloud strategy. Learn to use Azure as unified control plane for on-premises, edge, AWS, and Google cloud to improve global resilience, compliance, and cost efficiency.
 author: stephen-sumner
 ms.author: pnp
@@ -7,7 +7,7 @@ ms.date: 09/16/2025
 ms.topic: conceptual
 ---
 
-# Strategy for unified hybrid and multicloud operations
+# Unified hybrid and multicloud operations
 
 Hybrid cloud refers to a mix of on-premises/private infrastructure and public cloud services working together, while multicloud means using multiple cloud providers concurrently. Many enterprises today have siloed teams, distributed sites, and systems spread across on-premises datacenters and various clouds. The challenge is to unify these environments in a secure, well-managed way that enables modernization from cloud to edge. This guidance provides a prescriptive end-to-end framework for unifying and managing hybrid and multicloud environments with Azure as the central control plane.
 
@@ -19,7 +19,7 @@ We explain how Azure solutions, like Azure Arc, Azure Monitor, Azure Kubernetes 
 
 The first step is to establish a clear strategy for hybrid and multicloud that aligns with your business goals and emphasizes unification. This alignment ensures business value (agility, resilience, cost optimization, innovation) drives your cloud adoption rather than ad-hoc decisions. Key activities in this phase include defining drivers and vision, setting guiding principles, determining your cloud mix, and mapping Azure services to objectives.
 
-## Define business drivers for hybrid and multicloud
+## 1. Define business drivers for hybrid and multicloud
 
 Start by identifying why your organization is adopting hybrid and multicloud. Business drivers provide focus and ensure the approach delivers measurable value. These drivers must link to concrete business outcomes or key performance indicators (KPIs) to guide decisions and prevent fragmented technology choices. Common drivers include:
 
@@ -33,7 +33,7 @@ Start by identifying why your organization is adopting hybrid and multicloud. Bu
 
 For each business driver, link it to a specific business outcome or KPI. For example, if a driver is "avoid downtime," an outcome could be achieving 99.99% availability. If "support global expansion" is a driver, an outcome might be launching in some new geographies within a year. If unifying silos is a goal, an outcome could be 20% reduction in operational overhead by unifying IT processes. Grounding drivers in outcomes ensures the strategy focuses on delivering measurable value. Document these drivers and desired outcomes clearly, as they steer all subsequent decisions.
 
-## Create a clear vision statement for hybrid and multicloud
+## 2. Create a clear vision statement for hybrid and multicloud
 
 Craft a concise vision statement that describes the target state of your hybrid/multicloud environment and what success looks like. This vision statement provides direction and helps all stakeholders understand the end goal. The vision should articulate how the unified approach benefits the organization. For example:
 
@@ -42,13 +42,13 @@ Craft a concise vision statement that describes the target state of your hybrid/
 - "Increase deployment frequency by 50% by standardizing DevOps across cloud and on-premises." (Focuses on agility and process improvement.)
 - "Reduce on-premises footprint by 50% in two years to cut costs, while extending cloud management to all remaining on-premises assets." (Emphasizes efficiency and cloud-first operations.)
 
-## Establish success metrics for hybrid and multicloud
+## 3. Establish success metrics for hybrid and multicloud
 
 Alongside the vision, define 2–5 key success metrics (KPIs) to measure progress. Each major driver from the previous step should map to at least one KPI. Make them specific and time-bound where possible. For example, if agility is a driver, a KPI might be provisioning time for infrastructure reduced from weeks to hours across all environments within 12 months. If cost optimization is a driver, a KPI might be to improve infrastructure utilization by 30% through cloud bursting and consolidation. Evaluate data egress and synchronization costs before adopting bursting. Include a security or compliance metric as well. For example, set a goal that 100% of onboarded and in-scope resources must be compliant with baseline security policies as measured via Azure Policy and Defender for Cloud.
 
 By setting metrics, you create a shared definition of success. It aligns teams and provides a way to track the benefits of your hybrid/multicloud initiative over time.
 
-## Set principles for for hybrid and multicloud
+## 4. Set principles for for hybrid and multicloud
 
 Establish guiding principles for deciding which cloud or environment to use for different workloads. Clear principles prevent random or preference-driven choices that could increase complexity. They also balance the desire for portability against the benefits of cloud-specific services. Develop guidelines such as:
 
@@ -60,7 +60,7 @@ Establish guiding principles for deciding which cloud or environment to use for 
 
 These principles provide architects and engineers with a decision framework. For example, when choosing a database service, the guidelines might steer them to Azure’s PaaS database for functionality rather than automatically picking a non-Azure service that doesn’t align with strategy. The overall aim is to encourage use of Azure as the backbone, minimize fragmentation, and only embrace multicloud elements when required.
 
-## Select your cloud mix for hybrid and multicloud
+## 5. Select your cloud mix for hybrid and multicloud
 
 Decide which cloud platforms including on-premises should be part of your strategy, and establish Azure as the central management hub from the start:
 
@@ -74,7 +74,7 @@ Decide which cloud platforms including on-premises should be part of your strate
 
 By deliberately selecting your cloud mix and choosing Azure as the anchor, you set a strong foundation for unified management. Everyone should understand what environments they should operate in and that Azure is how you tie them together. This understanding prevents uncontrolled proliferation of platforms and reinforces the earlier principles.
 
-## Map Azure hybrid and multicloud services to objectives
+## 6. Map Azure hybrid and multicloud services to objectives
 
 As you finalize the strategy, identify which Azure services and technologies help achieve your specific goals. This identification creates a bridge from high-level strategy to actionable implementation. Consider all key areas of your tech stack and map them to Azure solutions:
 
