@@ -89,4 +89,4 @@ These skills enable platform teams to deliver scalable, secure, and consistent s
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Choose a cloud operating model](./prepare-organization-for-cloud.md#choose-how-to-manage-the-cloud)
+> [Choose a cloud operating model](./prepare-organization-for-cloud.md#choose-a-cloud-operating-model)

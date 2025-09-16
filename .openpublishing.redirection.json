@@ -3387,22 +3387,22 @@
       },
       {
          "source_path": "docs/operating-model/compare.md",
-         "redirect_url": "/azure/cloud-adoption-framework/plan/prepare-organization-for-cloud#choose-how-to-manage-the-cloud",
+         "redirect_url": "/azure/cloud-adoption-framework/plan/prepare-organization-for-cloud#choose-a-cloud-operating-model",
          "redirect_document_id": false
       },
       {
          "source_path": "docs/operating-model/define.md",
-         "redirect_url": "/azure/cloud-adoption-framework/plan/prepare-organization-for-cloud#choose-how-to-manage-the-cloud",
+         "redirect_url": "/azure/cloud-adoption-framework/plan/prepare-organization-for-cloud#choose-a-cloud-operating-model",
          "redirect_document_id": false
       },
       {
          "source_path": "docs/operating-model/index.md",
-         "redirect_url": "/azure/cloud-adoption-framework/plan/prepare-organization-for-cloud#choose-how-to-manage-the-cloud",
+         "redirect_url": "/azure/cloud-adoption-framework/plan/prepare-organization-for-cloud#choose-a-cloud-operating-model",
          "redirect_document_id": false
       },
       {
          "source_path": "docs/operating-model/terms.md",
-         "redirect_url": "/azure/cloud-adoption-framework/plan/prepare-organization-for-cloud#choose-how-to-manage-the-cloud",
+         "redirect_url": "/azure/cloud-adoption-framework/plan/prepare-organization-for-cloud#choose-a-cloud-operating-model",
          "redirect_document_id": false
       },
       {
@@ -3829,6 +3829,26 @@
          "source_path": "docs/ready/azure-setup-guide/index.md",
          "redirect_url": "/azure/cloud-adoption-framework/ready/azure-setup-guide/identity",
          "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/antipatterns/manage-antipatterns.md",
+         "redirect_url": "/azure/cloud-adoption-framework/manage/ready",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/antipatterns/organize-antipatterns.md",
+         "redirect_url": "/azure/cloud-adoption-framework/plan/prepare-organization-for-cloud#choose-a-cloud-operating-model",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/index.md",
+         "redirect_url": "/azure/cloud-adoption-framework/manage/ready-cloud-operations",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/manage/ready.md",
+         "redirect_url": "/azure/cloud-adoption-framework/manage/ready-cloud-operations",
+         "redirect_document_id": true
       }
    ]   
 }
