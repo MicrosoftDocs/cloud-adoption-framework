@@ -3,7 +3,7 @@ title: Enterprise enrollment design area for Azure Virtual Desktop
 description: Explore the enterprise enrollment design area and how to apply it to an Azure Virtual Desktop implementation
 author: stephen-sumner
 ms.author: pnp
-ms.date: 06/18/2021
+ms.date: 09/17/2025
 ms.topic: conceptual
 ms.custom: think-tank, e2e-avd
 ---
@@ -14,7 +14,7 @@ Standard best practices for deploying Azure landing zones rarely differ between 
 
 Make sure you understand any decisions your cloud platform team previously made, since that can help you identify existing [enterprise enrollment or Microsoft Entra tenant decisions](../../ready/landing-zone/design-area/azure-billing-microsoft-entra-tenant.md).
 
-- It is important for the cloud platform team to understand the existing [enterprise enrollment or Microsoft Entra tenant decisions](../../ready/landing-zone/design-area/azure-billing-microsoft entra-tenant.md).
+- It is important for the cloud platform team to understand the existing enterprise enrollment or Microsoft Entra tenant decisions.
 
 - To learn about applying an Active Directory tenant to your authentication and authorization solution design, see [Identity and access management considerations](./eslz-identity-and-access-management.md).
 
