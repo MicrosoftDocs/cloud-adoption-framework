@@ -10,9 +10,15 @@ ms.custom: internal, UpdateFrequency2
 
 # Build a cloud governance team
 
-This article shows you how to build a cloud governance team. A cloud governance team oversees cloud governance for the organization. This team is responsible for assessing risks, documenting cloud governance policies, and reporting on the progress of cloud governance. They need to understand the needs of teams across the business and ensure cloud governance policies minimize risks. The goal is to have people accountable for the success of cloud governance. To build a cloud governance team, complete these tasks.
+The CAF Govern methodology provides a structured approach for establishing and optimizing cloud governance in Azure. The guidance is relevant for organizations across any industry. It covers essential categories of cloud governance, such as regulatory compliance, security, operations, cost, data, resource management, and artificial intelligence (AI).
+
+Cloud governance is how you control cloud use across your organization. Cloud governance sets up guardrails that regulate cloud interactions. These guardrails are a framework of policies, procedures, and tools you use to establish control. Policies define acceptable and unacceptable cloud activity, and the procedures and tools you use ensure all cloud usage aligns with those policies. Successful cloud governance prevents all unauthorized or unmanaged cloud usage. Cloud governance is foundational to defining and sustaining the productive use of the cloud. Effective cloud governance regulates all cloud use, mitigates risks, and streamlines cloud interactions across the organization. It aligns cloud use with the broader cloud strategy and helps you reach business goals with fewer setbacks. Without cloud governance, your organization might encounter risks that cloud governance could prevent.
+
+Cloud governance is a continuous process. It requires ongoing monitoring, evaluation, and adjustments to adapt to evolving technologies, risks, and compliance requirements. The CAF Govern methodology divides cloud governance into five steps. Complete all five steps to establish cloud governance and regularly iterate on steps 2-5 to maintain cloud governance over time:
 
 :::image type="content" source="./images/build.svg" alt-text="Diagram showing the process to set up and maintain cloud governance. The diagram shows five sequential steps: build a cloud governance team, document cloud governance policies, enforce cloud governance policies, and monitor cloud governance. The first step you perform once. The last four steps you perform once to set up cloud governance and continuously to maintain cloud governance." lightbox="./images/build.svg" border="false":::
+
+This article shows you how to build a cloud governance team. A cloud governance team oversees cloud governance for the organization. This team is responsible for assessing risks, documenting cloud governance policies, and reporting on the progress of cloud governance. They need to understand the needs of teams across the business and ensure cloud governance policies minimize risks. The goal is to have people accountable for the success of cloud governance. To build a cloud governance team, complete these tasks.
 
 ## Define the functions of the cloud governance team
 
