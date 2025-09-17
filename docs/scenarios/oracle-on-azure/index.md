@@ -19,9 +19,7 @@ Oracle on Azure adoption scenarios provide two principal technology platform opt
 
 - **Oracle Database@Azure**: You can use Oracle Database@Azure to run Oracle Exadata infrastructure in Azure. Oracle Exadata is a high-performance database platform. Oracle Database@Azure supports tools, such as Oracle Real Application Clusters (RAC) and Oracle Data Guard. Oracle enterprise applications such as Siebel, PeopleSoft, JD Edwards, E-Business Suite, or customized WebLogic Server applications run on Azure VMs and can connect to Oracle Database@Azure.
 
-  Oracle Database@Azure can be integrated with [Azure Arc-enabled servers](/azure/azure-arc/servers/overview) to extend Azure management capabilities to the Oracle infrastructure, enabling unified governance, security monitoring through Microsoft Defender for Cloud, and policy compliance while maintaining existing OCI management operations. For detailed guidance on Arc connectivity, see [Azure Arc connectivity design for Oracle Database@Azure](azure-arc-connectivity-design.md).
-
-For more information, see [Oracle on Azure overview](/azure/oracle/oracle-azure-overview).
+  Oracle Database@Azure can be integrated with [Azure Arc-enabled servers](/azure/azure-arc/servers/overview) to extend Azure management capabilities to the Oracle infrastructure. This integration enables unified governance, security monitoring through Microsoft Defender for Cloud, and policy compliance while maintaining existing OCI management operations. For more information, see [Azure Arc connectivity design for Oracle Database@Azure](azure-arc-connectivity-design.md) and [Oracle on Azure overview](/azure/oracle/oracle-azure-overview).
 
 ## Oracle on Azure architectures
 
