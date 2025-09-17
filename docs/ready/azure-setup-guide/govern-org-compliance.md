@@ -23,7 +23,7 @@ Setting clear rules helps you stay consistent and avoiding mistakes as you build
 
 Once you defined your governance rules, use Azure tools to apply them automatically. These tools help you stay consistent and catch issues early.
 
-1. **Use Azure Policy to enforce rules.** Azure Policy is a free service that lets you define and apply rules across your Azure environment. These rules, called policies, can block certain actions or track them for review. Azure Policy supports four levels of scope:
+1. **Use Azure Policy to enforce rules.** [Azure Policy](https://review.learn.microsoft.com/en-us/azure/governance/policy/overview?branch=main) is a free service that lets you define and apply rules across your Azure environment. These rules, called policies, can block certain actions or track them for review. Azure Policy supports four levels of scope:
 
     | Policy scope | When to apply policies at this scope |
     | --- | --- |
@@ -36,11 +36,11 @@ Once you defined your governance rules, use Azure tools to apply them automatica
 
     - Require tags on resources and resource groups to help with tracking and organization.
     - Limit which regions you deploy to so you can manage costs and performance.
-    - Block expensive service tiers (SKUs) to avoid unexpected charges.
+    - [Disallow](/azure/governance/policy/tutorials/disallowed-resources) expensive resource types to avoid unexpected charges.
 
 3. **Apply policies.** To apply a policy, follow the [Assign a policy](/azure/governance/policy/assign-policy-portal) guide.
 
-3. **Use Microsoft Defender for Cloud to improve security.** Microsoft Defender for Cloud helps you spot and fix security issues in your Azure setup. It includes free tools that show you what actions to take to protect your environment. You can also connect it to Microsoft Defender XDR for more advanced protection. To get started, follow the [Connect Defender to your Azure subscription](/azure/defender-for-cloud/connect-azure-subscription).
+4. **Use Microsoft Defender for Cloud to improve security.** Microsoft Defender for Cloud helps you spot and fix security issues in your Azure setup. It includes free tools that show you what actions to take to protect your environment. You can also connect it to Microsoft Defender XDR for more advanced protection. To get started, follow the [Connect Defender to your Azure subscription](/azure/defender-for-cloud/connect-azure-subscription).
 
 For more information, see [Enforce cloud governance](/azure/cloud-adoption-framework/govern/enforce-cloud-governance-policies).
 
