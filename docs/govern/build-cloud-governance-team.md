@@ -12,9 +12,9 @@ ms.custom: internal, UpdateFrequency2
 
 Cloud governance is how an organization controls its use of cloud services by establishing guardrails. These guardrails are set of policies, procedures, and tools that define acceptable and unacceptable cloud activities. Effective cloud governance aligns cloud usage with business objectives, mitigates risks, ensures regulatory compliance, and prevents unmanaged or unauthorized cloud actions. In practice, cloud governance covers key domains such as security, regulatory compliance, operations, cost management, data management, resource provisioning, and even emerging areas like AI.
 
-**Governance process:** Cloud governance is not a one-time project, but a continuous process. After initial setup, it requires ongoing monitoring, evaluation, and updates to adapt to new technologies, evolving risks, and changing requirements. After establishing the governance foundation in Step 1, Steps 2–5 repeat in a cycle to sustain and improve governance over time.
+**Quick links:** [Azure governance tools](./enforce-cloud-governance-policies.md#azure-facilitation-enforcing-cloud-governance-policies-automatically) and [Example governance RACI matrix](#example-cloud-governance-raci-matrix)
 
-**Quick links:** [Azure governance tools](./enforce-cloud-governance-policies.md#azure-facilitation-enforcing-cloud-governance-policies-automatically) or [Example governance RACI matrix](#example-cloud-governance-raci-matrix)
+**Governance process:** Cloud governance is not a one-time project, but a continuous process. After initial setup, it requires ongoing monitoring, evaluation, and updates to adapt to new technologies, evolving risks, and changing requirements. After establishing the governance foundation in Step 1, Steps 2–5 repeat in a cycle to sustain and improve governance over time.
 
 :::image type="content" source="./images/build.png" alt-text="Diagram showing the process to set up and maintain cloud governance. The diagram shows five sequential steps: build a cloud governance team, document cloud governance policies, enforce cloud governance policies, and monitor cloud governance. The first step you perform once. The last four steps you perform once to set up cloud governance and continuously to maintain cloud governance." lightbox="./images/build.png" border="false":::
 
