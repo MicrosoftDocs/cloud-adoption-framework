@@ -1,17 +1,19 @@
 ---
-title: Monitor cloud governance
-description: Learn to monitor cloud governance to measure compliance over time. Automate monitoring and alerting for rapid remediation of noncompliance.
+title: Monitor cloud compliance
+description: Learn to monitor compliance to measure governance over time. Automate monitoring and alerting for rapid remediation of noncompliance.
 author: larzstridh
 ms.author: pnp
 ms.date: 05/22/2025
 ms.topic: conceptual
 ms.custom: internal, UpdateFrequency2
 ---
-# Monitor cloud governance
+# Monitor cloud compliance
 
-This article shows you how to monitor cloud governance. After you enforce cloud governance, you need to measure how aligned (compliant) your cloud environment is with your cloud governance policies. Start by taking an initial compliance measurement to identify areas that require improvement in order to align your cloud setup with your governance policies. Track compliance over time to see where cloud governance is effective and ineffective. The goal is to monitor governance and reduce noncompliance problems to zero.
+Monitoring is about continuously measuring how well the cloud environment complies with your governance policies and detecting when it drifts out of compliance. Effective monitoring lets you verify the impact of your governance efforts, provides visibility into risk levels, and triggers remediation processes promptly when needed. This stage involves configuring the right telemetry, alerts, and review processes to keep governance on track.
 
 :::image type="content" source="./images/monitor.png" alt-text="Diagram showing the process to set up and maintain cloud governance. The diagram shows five sequential steps: build a cloud governance team, document your cloud governance policies, enforce cloud governance policies, and monitor cloud governance. The first step you perform once. The last four steps you perform once to set up and to continuously maintain cloud governance." lightbox="./images/monitor.png" border="false":::
+
+After you enforce cloud governance, perform an initial baseline assessment of compliance. See which policies are being met and where there are gaps. Then track these metrics over time. The ultimate goal is to drive non-compliance to zero or as close as practical by iteratively improving policies and enforcement where monitoring shows issues.
 
 ## 1. Configure cloud governance monitoring
 

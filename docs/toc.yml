@@ -492,13 +492,13 @@ items:
 
     - name: Govern
       items:
-      - name: 1. Build a cloud governance team
+      - name: 1. Build governance team
         href: govern/build-cloud-governance-team.md
-      - name: 2. Assess cloud risks
+      - name: 2. Assess risks
         href: govern/assess-cloud-risks.md
-      - name: 3. Document cloud governance policies
+      - name: 3. Document policies
         href: govern/document-cloud-governance-policies.md
-      - name: 4. Enforce cloud governance policies
+      - name: 4. Enforce policies
         href: govern/enforce-cloud-governance-policies.md
       - name: 5. Monitor compliance
         href: govern/monitor-cloud-governance.md
