@@ -23,7 +23,7 @@ Setting clear rules helps you stay consistent and avoiding mistakes as you build
 
 Once you defined your governance rules, use Azure tools to apply them automatically. These tools help you stay consistent and catch issues early.
 
-1. **Use Azure Policy to enforce rules.** [Azure Policy](https://review.learn.microsoft.com/en-us/azure/governance/policy/overview?branch=main) is a free service that lets you define and apply rules across your Azure environment. These rules, called policies, can block certain actions or track them for review. Azure Policy supports four levels of scope:
+1. **Use Azure Policy to enforce rules.** [Azure Policy](/azure/governance/policy/overview) is a free service that lets you define and apply rules across your Azure environment. These rules, called policies, can block certain actions or track them for review. Azure Policy supports four levels of scope:
 
     | Policy scope | When to apply policies at this scope |
     | --- | --- |
