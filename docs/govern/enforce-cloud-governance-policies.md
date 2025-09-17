@@ -18,33 +18,33 @@ This article shows you how to enforce compliance with cloud governance policies.
 
 Establish a systematic strategy to enforce compliance with cloud governance policies. The goal is to use automated tools and manual oversight to enforce compliance efficiently. To define an enforcement approach, follow these recommendations:
 
-- **Delegate governance responsibilities.** Empower individuals and teams to enforce governance within their scope of responsibility. For example, platform teams should apply policies that the workloads inherit and workload teams should enforce governance for their workload. The cloud governance team shouldn't be responsible for applying enforcement controls.
+1. **Delegate governance responsibilities.** Empower individuals and teams to enforce governance within their scope of responsibility. For example, platform teams should apply policies that the workloads inherit and workload teams should enforce governance for their workload. The cloud governance team shouldn't be responsible for applying enforcement controls.
 
-- **Adopt an inheritance model.** Apply a hierarchical governance model where specific workloads inherit governance policies from the platform. This model helps ensure that organizational standards apply to the correct environments, such as purchasing requirements for cloud services. Follow the [design principles](/azure/cloud-adoption-framework/ready/landing-zone/design-principles) of Azure landing zones and its [resource organization](/azure/cloud-adoption-framework/ready/landing-zone/design-areas) design area to establish a proper inheritance model.
+2. **Adopt an inheritance model.** Apply a hierarchical governance model where specific workloads inherit governance policies from the platform. This model helps ensure that organizational standards apply to the correct environments, such as purchasing requirements for cloud services. Follow the [design principles](/azure/cloud-adoption-framework/ready/landing-zone/design-principles) of Azure landing zones and its [resource organization](/azure/cloud-adoption-framework/ready/landing-zone/design-areas) design area to establish a proper inheritance model.
 
-- **Discuss enforcement specifics.** Discuss where and how you apply governance policies. The goal is to find cost effective ways to enforce compliance that accelerates productivity. Without a discussion, you risk blocking the progress of specific teams. It's important to find a balance that supports the business objectives while managing risk effectively.
+3. **Discuss enforcement specifics.** Discuss where and how you apply governance policies. The goal is to find cost effective ways to enforce compliance that accelerates productivity. Without a discussion, you risk blocking the progress of specific teams. It's important to find a balance that supports the business objectives while managing risk effectively.
 
-- **Have a monitor-first stance.** Don't block actions unless you understand them first. For lower priority risk, start by monitoring compliance with cloud governance policies. After you understand the risk, you can move to more restrictive enforcement controls. A monitor-first approach gives you an opportunity to discuss the governance needs and realign the cloud governance policy and enforcement control to those needs.
+4. **Have a monitor-first stance.** Don't block actions unless you understand them first. For lower priority risk, start by monitoring compliance with cloud governance policies. After you understand the risk, you can move to more restrictive enforcement controls. A monitor-first approach gives you an opportunity to discuss the governance needs and realign the cloud governance policy and enforcement control to those needs.
 
-- **Prefer blocklists.** Prefer blocklists over allowlists. Blocklists prevent the deployment of specific services. It's better to have a small list of services that you shouldn't use than a long list of services you can use. To avoid lengthy blocklists, don't add new services to the blocklist by default.
+5. **Prefer blocklists.** Prefer blocklists over allowlists. Blocklists prevent the deployment of specific services. It's better to have a small list of services that you shouldn't use than a long list of services you can use. To avoid lengthy blocklists, don't add new services to the blocklist by default.
 
-- **Define a tagging and naming strategy.** Establish systematic guidelines for naming and tagging cloud resources. It provides a structured framework for resource categorization, cost management, security, and compliance across the cloud environment. Allow teams, such as development teams, to add other tags for their unique needs.
+6. **Define a tagging and naming strategy.** Establish systematic guidelines for naming and tagging cloud resources. It provides a structured framework for resource categorization, cost management, security, and compliance across the cloud environment. Allow teams, such as development teams, to add other tags for their unique needs.
 
 ## Enforce cloud governance policies automatically
 
 Use cloud management and governance tools to automate compliance with governance policies. These tools can help in setting up guardrails, monitoring configurations, and ensuring compliance. To set up automated enforcement, follow these recommendations:
 
-- **Start with a small set of automated policies.** Automate compliance on a small set of essential cloud governance policies. Implement and test automation to avoid operational disruptions. Expand your list of automated enforcement controls when ready.
+1. **Start with a small set of automated policies.** Automate compliance on a small set of essential cloud governance policies. Implement and test automation to avoid operational disruptions. Expand your list of automated enforcement controls when ready.
 
-- **Use cloud governance tools.** Use the tools available in your cloud environment to enforce compliance. Azure's primary governance tool is [Azure Policy](/azure/governance/policy/overview). Supplement Azure Policy with [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) (security), [Microsoft Purview](/purview/purview) (data), [Microsoft Entra ID Governance](/entra/id-governance/identity-governance-overview) (identity), [Azure Monitor](/azure/azure-monitor/overview) (operations), [management groups](/azure/governance/management-groups/overview) (resource management), [infrastructure as code (IaC)](/devops/deliver/what-is-infrastructure-as-code) (resource management), and configurations within each Azure service.
+2. **Use cloud governance tools.** Use the tools available in your cloud environment to enforce compliance. Azure's primary governance tool is [Azure Policy](/azure/governance/policy/overview). Supplement Azure Policy with [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) (security), [Microsoft Purview](/purview/purview) (data), [Microsoft Entra ID Governance](/entra/id-governance/identity-governance-overview) (identity), [Azure Monitor](/azure/azure-monitor/overview) (operations), [management groups](/azure/governance/management-groups/overview) (resource management), [infrastructure as code (IaC)](/devops/deliver/what-is-infrastructure-as-code) (resource management), and configurations within each Azure service.
 
-- **Apply governance policies at the right scope.** Use an inheritance system where policies are set at a higher level, such as management groups. Policies at higher levels automatically apply to lower levels, such as subscriptions and resource groups. Policies apply even when there are changes within the cloud environment, lowering management overhead.
+3. **Apply governance policies at the right scope.** Use an inheritance system where policies are set at a higher level, such as management groups. Policies at higher levels automatically apply to lower levels, such as subscriptions and resource groups. Policies apply even when there are changes within the cloud environment, lowering management overhead.
 
-- **Use policy enforcement points.** Set up policy enforcement points within your cloud environments that automatically apply governance rules. Consider predeployment checks, runtime monitoring, and automated remediation actions.
+4. **Use policy enforcement points.** Set up policy enforcement points within your cloud environments that automatically apply governance rules. Consider predeployment checks, runtime monitoring, and automated remediation actions.
 
-- **Use policy as code.** Use IaC tools to [enforce governance policies through code](/azure/governance/policy/concepts/policy-as-code). Policy as code enhances the automation of governance controls and ensures consistency across different environments. Consider using [Enterprise Azure Policy as Code](https://azure.github.io/enterprise-azure-policy-as-code/) (EPAC) to manage policies aligned with recommended Azure landing zone policies.
+5. **Use policy as code.** Use IaC tools to [enforce governance policies through code](/azure/governance/policy/concepts/policy-as-code). Policy as code enhances the automation of governance controls and ensures consistency across different environments. Consider using [Enterprise Azure Policy as Code](https://azure.github.io/enterprise-azure-policy-as-code/) (EPAC) to manage policies aligned with recommended Azure landing zone policies.
 
-- **Develop custom solutions as needed.** For custom governance actions, consider developing custom scripts or applications. Use Azure service APIs to gather data or manage resources directly.
+6. **Develop custom solutions as needed.** For custom governance actions, consider developing custom scripts or applications. Use Azure service APIs to gather data or manage resources directly.
 
 ### Azure facilitation: Enforcing cloud governance policies automatically
 
@@ -120,21 +120,21 @@ The following guidance can help you find the right tools to automate compliance 
 
 Sometimes a tool limitation or cost makes automated enforcement unpractical. In cases where you can't automate enforcement, enforce cloud governance policies manually. To manually enforce cloud governance, follow these recommendations:
 
-- **Use checklists.** Use governance checklists to make it easy for your teams to follow the cloud governance policies. For more information, see the [example compliance checklists](#example-cloud-governance-compliance-checklists).
+1. **Use checklists.** Use governance checklists to make it easy for your teams to follow the cloud governance policies. For more information, see the [example compliance checklists](#example-cloud-governance-compliance-checklists).
 
-- **Provide regular training.** Conduct frequent training sessions for all relevant team members to ensure they're aware of the governance policies.
+2. **Provide regular training.** Conduct frequent training sessions for all relevant team members to ensure they're aware of the governance policies.
 
-- **Schedule regular reviews.** Implement a schedule for regular reviews and audits of cloud resources and processes to ensure compliance with governance policies. These reviews are critical for identifying deviations from established policies and taking corrective actions.
+3. **Schedule regular reviews.** Implement a schedule for regular reviews and audits of cloud resources and processes to ensure compliance with governance policies. These reviews are critical for identifying deviations from established policies and taking corrective actions.
 
-- **Monitor manually.** Assign dedicated personnel to monitor the cloud environment for compliance with governance policies. Consider tracking the use of resources, managing access controls, and ensuring data protection measures are in place to align with the policies. For example, define a [comprehensive cost management approach](/azure/cost-management-billing/finops/) to govern cloud costs.
+4. **Monitor manually.** Assign dedicated personnel to monitor the cloud environment for compliance with governance policies. Consider tracking the use of resources, managing access controls, and ensuring data protection measures are in place to align with the policies. For example, define a [comprehensive cost management approach](/azure/cost-management-billing/finops/) to govern cloud costs.
 
 ## Review policy enforcement
 
 Regularly review and update compliance enforcement mechanisms. The goal is to keep cloud governance policy enforcement aligned with current needs, including developer, architect, workload, platform, and business requirements. To review policy enforcement, follow these recommendations:
 
-- **Engage with stakeholders.** Discuss the effectiveness of enforcement mechanisms with stakeholders. Ensure cloud governance enforcement aligns with business objectives and compliance requirements.
+1. **Engage with stakeholders.** Discuss the effectiveness of enforcement mechanisms with stakeholders. Ensure cloud governance enforcement aligns with business objectives and compliance requirements.
 
-- **Monitor requirements.** Update or remove enforcement mechanisms to align with new or updated requirements. Track changes in regulations and standards that require updates your enforcement mechanisms. For example, Azure landing zone recommended policies can change over time. You should [detect](https://github.com/Azure/Enterprise-Scale/wiki/Migrate-ALZ-Policies-to-Built%E2%80%90in#detect-updates-to-policy) those policy changes, [update](https://github.com/Azure/Enterprise-Scale/wiki/update-alz-custom-policies-to-latest) to the latest Azure landing zone custom policies, or [migrate](https://github.com/Azure/Enterprise-Scale/wiki/Migrate-ALZ-Policies-to-Built%E2%80%90in) to built-in policies as needed.
+2. **Monitor requirements.** Update or remove enforcement mechanisms to align with new or updated requirements. Track changes in regulations and standards that require updates your enforcement mechanisms. For example, Azure landing zone recommended policies can change over time. You should [detect](https://github.com/Azure/Enterprise-Scale/wiki/Migrate-ALZ-Policies-to-Built%E2%80%90in#detect-updates-to-policy) those policy changes, [update](https://github.com/Azure/Enterprise-Scale/wiki/update-alz-custom-policies-to-latest) to the latest Azure landing zone custom policies, or [migrate](https://github.com/Azure/Enterprise-Scale/wiki/Migrate-ALZ-Policies-to-Built%E2%80%90in) to built-in policies as needed.
 
 ## Example cloud governance compliance checklists
 
