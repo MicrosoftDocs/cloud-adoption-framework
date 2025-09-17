@@ -1,6 +1,6 @@
 ---
-title: Governance, security, and compliance in Azure
-description: Use the Cloud Adoption Framework for Azure to learn how to set up governance, security, and compliance for your Azure environment.
+title: Governance in Azure
+description: Use the Cloud Adoption Framework for Azure to learn how to govern your Azure environment.
 author: tvuylsteke
 ms.author: pnp
 ms.date: 05/07/2024
@@ -11,9 +11,9 @@ ms.custom: think-tank, fasttrack-edit, AQC, setup
 
 # Governance, security, and compliance in Azure
 
-You can use tools and services like Azure Policy and Microsoft Defender for Cloud to establish corporate policy and plan your governance strategies. These tools and services enforce and automate your organization's governance decisions. Use the [governance assessment](/assessments/b1891add-7646-4d60-a875-32a4ab26327e) before you start your governance planning to identify potential gaps in your organization's cloud governance approach. For more information about how to develop governance processes, see [Govern methodology](../../govern/build-cloud-governance-team.md).
+You can use tools and services like Azure Policy and Microsoft Defender for Cloud to establish corporate policy and plan your governance strategies. These tools and services enforce and automate your organization's governance decisions.
 
-## [Azure Policy](#tab/AzurePolicy)
+## Use Azure Policy
 
 Azure Policy helps you create, assign, and manage policies. These policies enforce rules on your resources so those resources stay compliant with your corporate standards and service-level agreements. Azure Policy scans your resources to identify resources that aren't compliant with corporate policies. For example, you can have a policy that lets only a specific virtual machine (VM) size to run in your environment. When you implement this policy, Azure Policy evaluates existing VMs in your environment and any new VMs that are deployed. The policy evaluation generates compliance events to use for monitoring and reporting.
 
@@ -24,16 +24,10 @@ Use common policies to:
 - Restrict expensive SKUs for specific resources.
 - Audit the use of important optional features like Azure-managed disks.
 
-::: zone target="chromeless"
 
 ### Action
 
 Assign a built-in policy to a management group, subscription, or resource group.
-
-
-::: zone-end
-
-::: zone target="docs"
 
 ### Apply a policy
 
@@ -50,9 +44,7 @@ To learn more, see:
 - [Cloud Adoption Framework: Define corporate policy ](../../govern/policy-compliance/policy-definition.md)
 - [Microsoft Sovereign Cloud policy portfolio](/industry/sovereignty/sovereignty-capabilities)
 
-::: zone-end
-
-## [Microsoft Defender for Cloud](#tab/AzureSecurityCenter)
+## Use Microsoft Defender for Cloud
 
 Microsoft Defender for Cloud plays an important part in your governance strategy. It helps you stay on top of security, because it:
 
@@ -66,8 +58,6 @@ Many security features, like security policy and recommendations, are available 
 > [!TIP]
 > Defender for Cloud is enabled by default in each subscription. We recommend that you enable data collection from virtual machines to allow Defender for Cloud to install its agent and begin gathering data.
 
-::: zone target="docs"
-
 To explore Defender for Cloud, go to the [Azure portal](https://portal.azure.com/#blade/Microsoft_Azure_Security/SecurityMenuBlade/SecurityMenuBlade/0).
 
 ### Learn more
@@ -78,9 +68,3 @@ For more information, see the following resources:
 - [Just-in-time VM access](/azure/security-center/security-center-just-in-time#how-does-just-in-time-access-work)
 - [Defender for Cloud pricing tiers](https://azure.microsoft.com/pricing/details/azure-defender/)
 - [Cloud Adoption Framework: Security Baseline discipline](../../govern/security-baseline/index.md)
-
-::: zone-end
-
-::: zone target="chromeless"
-
-::: zone-end
