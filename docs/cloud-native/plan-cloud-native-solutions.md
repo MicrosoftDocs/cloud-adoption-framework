@@ -14,7 +14,7 @@ A cloud-native solution creates new business value by building new workloads (ap
 **Prerequisites:** [Azure landing zone](/azure/cloud-adoption-framework/ready)
 
 :::image type="complex" source="./images/cloud-native-process.png" alt-text="Diagram showing Microsoft and Azure services with decision points for each service." lightbox="./images/cloud-native-process.png" border="false":::
-    On the left, three labeled boxes, Startups, Enterprises, and Existing workloads, are grouped under the heading "Create new business value." Arrows lead from these boxes to a vertical sequence of four steps: 1 Plan cloud-native, 0 Build cloud-native, 3 Deploy cloud-native, and 4 Optimize cloud-native. A final arrow points to an Azure indicated it's where "Cloud-native apps, workloads, & features" live.
+    On the left, three labeled boxes, Startups, Enterprises, and Existing workloads, are grouped under the heading "Create new business value." Arrows lead from these boxes to a vertical sequence of four steps: 1 Plan cloud-native, 2 Build cloud-native, 3 Deploy cloud-native, and 4 Optimize cloud-native. A final arrow points to an Azure indicated it's where "Cloud-native apps, workloads, & features" live.
 :::image-end:::
 
 ## Define business objectives for cloud-native solutions
