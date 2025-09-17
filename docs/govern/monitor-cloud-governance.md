@@ -13,7 +13,7 @@ This article shows you how to monitor cloud governance. After you enforce cloud 
 
 :::image type="content" source="./images/monitor.png" alt-text="Diagram showing the process to set up and maintain cloud governance. The diagram shows five sequential steps: build a cloud governance team, document your cloud governance policies, enforce cloud governance policies, and monitor cloud governance. The first step you perform once. The last four steps you perform once to set up and to continuously maintain cloud governance." lightbox="./images/monitor.png" border="false":::
 
-## Configure cloud governance monitoring
+## 1. Configure cloud governance monitoring
 
 Implement monitoring solutions to track compliance with your cloud governance policies. The goal is to have visibility on the teams responsible for enforcing compliance so you can remediate noncompliance quickly. To configure governance monitoring, follow these recommendations:
 
@@ -81,7 +81,7 @@ The following guidance is meant to help you configure cloud governance monitorin
 
 - **Red team AI systems.** Regularly [red team language models](/azure/ai-services/openai/concepts/red-teaming) to find harmful outputs. Use both manual tests and automated tools to review the risk baseline.
 
-## Configure cloud governance alerts
+## 2. Configure cloud governance alerts
 
 Configure alerts based on specific compliance metrics or events that indicate a deviation from your governance policies. To configure cloud governance alerts, follow these recommendations:
 
@@ -111,7 +111,7 @@ The following guidance helps you start configuring cloud governance alerts in Az
 
 - **AI governance alerts.** Configure alerts when are harmful inputs and outputs in your AI systems. For example, monitor emails from Azure OpenAI that notify you of [abusive behavior](/azure/ai-services/openai/concepts/abuse-monitoring).
 
-## Develop a remediation plan
+## 3. Develop a remediation plan
 
 Develop a targeted action plan to address any noncompliance events. When you detect noncompliance, perform the remediation plan to correct the deviations and minimize the risk and impact. Add the remediation details to the cloud governance policy for easy access. Follow these recommendations:
 
@@ -125,7 +125,7 @@ Develop a targeted action plan to address any noncompliance events. When you det
 
 5. **Update governance policies and enforcement mechanisms.** Based on the insights gained from the noncompliance event, update your governance policies and enforcement mechanisms. Updates might involve tightening policy definitions, enhancing monitoring capabilities, or refining alert thresholds to improve detection and response times.
 
-## Audit cloud governance regularly
+## 4. Audit cloud governance regularly
 
 Even with automated monitoring, conduct periodic manual reviews and audits to validate compliance monitoring processes and ensure that automation tools are functioning correctly. To audit cloud governance, follow these recommendations:
 

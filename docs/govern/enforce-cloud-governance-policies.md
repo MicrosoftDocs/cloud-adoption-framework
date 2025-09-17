@@ -14,7 +14,7 @@ This article shows you how to enforce compliance with cloud governance policies.
 
 :::image type="content" source="./images/enforce.png" alt-text="Diagram showing the process to set up and maintain cloud governance. The diagram shows five sequential steps: build a cloud governance team, document cloud governance policies, enforce cloud governance policies, and monitor cloud governance. The first step you perform once. The last four steps you perform once to set up cloud governance and continuously to maintain cloud governance." lightbox="./images/enforce.png" border="false":::
 
-## Define an approach for enforcing cloud governance policies
+## 1. Define an approach for enforcing cloud governance policies
 
 Establish a systematic strategy to enforce compliance with cloud governance policies. The goal is to use automated tools and manual oversight to enforce compliance efficiently. To define an enforcement approach, follow these recommendations:
 
@@ -30,7 +30,7 @@ Establish a systematic strategy to enforce compliance with cloud governance poli
 
 6. **Define a tagging and naming strategy.** Establish systematic guidelines for naming and tagging cloud resources. It provides a structured framework for resource categorization, cost management, security, and compliance across the cloud environment. Allow teams, such as development teams, to add other tags for their unique needs.
 
-## Enforce cloud governance policies automatically
+## 2. Enforce cloud governance policies automatically
 
 Use cloud management and governance tools to automate compliance with governance policies. These tools can help in setting up guardrails, monitoring configurations, and ensuring compliance. To set up automated enforcement, follow these recommendations:
 
@@ -116,7 +116,7 @@ The following guidance can help you find the right tools to automate compliance 
 
 - **Apply the AI security baseline.** Use the [Azure AI security baseline](/security/benchmark/azure/baselines/cognitive-services-security-baseline) to govern the security of AI systems.
 
-## Enforce cloud governance policies manually
+## 3. Enforce cloud governance policies manually
 
 Sometimes a tool limitation or cost makes automated enforcement unpractical. In cases where you can't automate enforcement, enforce cloud governance policies manually. To manually enforce cloud governance, follow these recommendations:
 
@@ -128,7 +128,7 @@ Sometimes a tool limitation or cost makes automated enforcement unpractical. In 
 
 4. **Monitor manually.** Assign dedicated personnel to monitor the cloud environment for compliance with governance policies. Consider tracking the use of resources, managing access controls, and ensuring data protection measures are in place to align with the policies. For example, define a [comprehensive cost management approach](/azure/cost-management-billing/finops/) to govern cloud costs.
 
-## Review policy enforcement
+## 4. Review policy enforcement
 
 Regularly review and update compliance enforcement mechanisms. The goal is to keep cloud governance policy enforcement aligned with current needs, including developer, architect, workload, platform, and business requirements. To review policy enforcement, follow these recommendations:
 

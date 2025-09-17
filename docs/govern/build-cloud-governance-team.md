@@ -14,7 +14,7 @@ Cloud governance is how an organization controls its use of cloud services by es
 
 **Governance process:** Cloud governance is not a one-time project, but a continuous process. After initial setup, it requires ongoing monitoring, evaluation, and updates to adapt to new technologies, evolving risks, and changing requirements. After establishing the governance foundation in Step 1, Steps 2–5 repeat in a cycle to sustain and improve governance over time.
 
-**Quick link:** [Azure governance tools](./enforce-cloud-governance-policies.md#azure-facilitation-enforcing-cloud-governance-policies-automatically)
+**Quick links:** [Azure governance tools](./enforce-cloud-governance-policies.md#azure-facilitation-enforcing-cloud-governance-policies-automatically) or [Example governance RACI matrix](#example-cloud-governance-raci-matrix)
 
 :::image type="content" source="./images/build.png" alt-text="Diagram showing the process to set up and maintain cloud governance. The diagram shows five sequential steps: build a cloud governance team, document cloud governance policies, enforce cloud governance policies, and monitor cloud governance. The first step you perform once. The last four steps you perform once to set up cloud governance and continuously to maintain cloud governance." lightbox="./images/build.png" border="false":::
 
@@ -52,13 +52,13 @@ Empower the cloud governance team with the mandate and support required to imple
 
 3. **Communicate authority**. The executive sponsor should communicate the authority of the cloud governance team to the entire organization. Include the importance of adhering to the cloud governance policies they create.
 
-## Define the team's scope
+## 4. Define the team's scope
 
 Establish the boundaries of the cloud governance team's responsibilities. The goal is to clarify areas of responsibility so the cloud governance team can focus on their defined functions. To define the scope, follow these recommendations:
 
-- **Define relationship with other teams**. Determine how the cloud governance team will interact with existing IT governance, on-premises infrastructure teams, or application teams. For example, in a hybrid environment, specify which aspects the cloud governance team handles versus traditional IT governance. Clearly delineating scope prevents confusion over who manages what.
+1. **Define relationship with other teams**. Determine how the cloud governance team will interact with existing IT governance, on-premises infrastructure teams, or application teams. For example, in a hybrid environment, specify which aspects the cloud governance team handles versus traditional IT governance. Clearly delineating scope prevents confusion over who manages what.
 
-- **Use a RACI matrix**. t can be helpful to create a RACI (Responsible, Accountable, Consulted, Informed) chart that maps out governance-related tasks and who is involved. For instance, the cloud governance team might be Accountable for developing policies, while cloud platform engineers are Responsible for implementing specific controls, and so on. A RACI matrix ensures everyone knows their part in cloud governance and how the governance team collaborates with other groups.
+2. **Use a RACI matrix**. t can be helpful to create a RACI (Responsible, Accountable, Consulted, Informed) chart that maps out governance-related tasks and who is involved. For instance, the cloud governance team might be Accountable for developing policies, while cloud platform engineers are Responsible for implementing specific controls, and so on. A RACI matrix ensures everyone knows their part in cloud governance and how the governance team collaborates with other groups.
 
 ## Example cloud governance RACI matrix
 

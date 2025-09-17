@@ -14,7 +14,7 @@ Once the governance team is in place, the next step is to identify and evaluate 
 
 :::image type="content" source="./images/assess.png" alt-text="Diagram showing the process to set up and maintain cloud governance. The diagram shows five sequential steps: build a cloud governance team, document cloud governance policies, enforce cloud governance policies, and monitor cloud governance. The first step you perform once. The last four steps you perform once to set up cloud governance and continuously to maintain cloud governance." lightbox="./images/assess.png" border="false":::
 
-## Identify cloud risks
+## 1. Identify cloud risks
 
 Begin by compiling a comprehensive list of risks that the organization faces in the cloud. Focus on risks of general applicability rather than extremely niche scenarios. You can start with obvious high-priority risks and expand the list over time.
 
@@ -44,7 +44,7 @@ The following guidance is meant to help you identify cloud risks in Azure. It pr
 
 - **Identify AI risks.** Regularly [red team language models](/azure/ai-services/openai/concepts/red-teaming). Manually test AI systems and supplement manual tests with [automated risk identification tools for AI](https://github.com/Azure/PyRIT#python-risk-identification-tool-for-generative-ai-pyrit). Look for common [human-AI interaction failures](https://www.microsoft.com/en-us/haxtoolkit/playbook/). Consider risks associated with use, access, and output of AI systems. Review the tenets of [responsible AI](https://www.microsoft.com/ai/responsible-ai) and the responsible AI [maturity model](https://www.microsoft.com/research/publication/responsible-ai-maturity-model/).
 
-## Analyze cloud risks
+## 2. Analyze cloud risks
 
 Assign a qualitative or quantitative ranking to each risk so you can prioritize them by severity. Risk prioritization combines risk probability and risk impact. Prefer quantitative risk analysis over qualitative for more precise risk prioritization. To analyze cloud risks, follow these strategies:
 
@@ -96,7 +96,7 @@ For each risk, identify appropriate risk treatment options, such as avoiding, mi
 
 Designate a primary risk owner for every risk. The risk owner has the responsibility of managing each risk. This person coordinates the risk management strategy across every team involved and is the initial point of contact for risk escalation.
 
-## Document cloud risks
+## 3. Document cloud risks
 
 Document each risk and the details of the risk analysis. Create a list of risks (risk register) that contains all the information you need to identify, categorize, prioritize, and manage risks. Develop standardized language for risk documentation so everyone can easily understand the cloud risks. Consider including these elements:
 
@@ -117,11 +117,11 @@ Document each risk and the details of the risk analysis. Create a list of risks 
 
 For more information, see [Risk list example](#example-risk-list).
 
-## Communicate cloud risks
+## 4. Communicate cloud risks
 
 Clearly convey identified cloud risks to the executive sponsor and executive-level management. The goal is to ensure the organization prioritizes cloud risks. Provide regular updates on cloud risk management and communicate when you need extra resources to manage risks. Promote a culture where managing cloud risks management and governance is a part of daily operations.
 
-## Review cloud risks
+## 5. Review cloud risks
 
 Review the current cloud risk list to ensure it's valid and accurate. Reviews should be regular and also in response to specific events. Maintain, update, or remove risks as needed. To review cloud risks, follow these recommendations:
 
