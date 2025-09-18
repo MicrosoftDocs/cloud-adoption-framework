@@ -58,7 +58,7 @@ Establish the boundaries of the cloud governance team's responsibilities. The go
 
 1. **Define relationship with other teams**. Determine how the cloud governance team will interact with existing IT governance, on-premises infrastructure teams, or application teams. For example, in a hybrid environment, specify which aspects the cloud governance team handles versus traditional IT governance. Clearly delineating scope prevents confusion over who manages what.
 
-2. **Use a RACI matrix**. t can be helpful to create a RACI (Responsible, Accountable, Consulted, Informed) chart that maps out governance-related tasks and who is involved. For instance, the cloud governance team might be Accountable for developing policies, while cloud platform engineers are Responsible for implementing specific controls, and so on. A RACI matrix ensures everyone knows their part in cloud governance and how the governance team collaborates with other groups.
+2. **Use a RACI matrix**. It can be helpful to create a RACI (Responsible, Accountable, Consulted, Informed) chart that maps out governance-related tasks and who is involved. For instance, the cloud governance team might be Accountable for developing policies, while cloud platform engineers are Responsible for implementing specific controls, and so on. A RACI matrix ensures everyone knows their part in cloud governance and how the governance team collaborates with other groups.
 
 ## Example cloud governance RACI matrix
 
