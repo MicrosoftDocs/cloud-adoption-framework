@@ -24,7 +24,9 @@ items:
           - name: BCDR connectivity design
             href: business-continuity-disaster-recovery-connectivity-design.md
           - name: Migration connectivity design
-            href: migration-connectivity-design.md   
+            href: migration-connectivity-design.md
+          - name: Azure Arc connectivity design
+            href: azure-arc-connectivity-design.md   
       - name: Identity and access management
         href: oracle-iam-odaa.md
       - name: Security
