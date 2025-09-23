@@ -3,9 +3,8 @@ title: Management and monitoring for Azure Arc-enabled servers
 description: Understand the design considerations and recommendations for management and monitoring of Azure Arc-enabled servers
 author: sebassem
 ms.author: sebassem
-ms.date: 09/20/2021
+ms.date: 09/23/2025
 ms.topic: conceptual
-ms.custom: e2e-hybrid, think-tank
 ---
 
 # Management and monitoring for Azure Arc-enabled servers
