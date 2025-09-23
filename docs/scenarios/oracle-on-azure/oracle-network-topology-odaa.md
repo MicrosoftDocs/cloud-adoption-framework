@@ -41,7 +41,7 @@ Configure network security groups (NSGs) that support Oracle Database@Azure requ
 
 1. **Use advanced networking features for enhanced capabilities.** Implement [Oracle Database@Azure advanced networking features](/azure/oracle/oracle-db/oracle-database-network-plan#advanced-networking-features) when your deployment requires enhanced networking capabilities beyond standard configurations. These features provide more flexibility for complex network requirements while maintaining security and performance standards.
 
-## Network design guidance areas
+## Next steps
 
 The following table outlines the sequential network design areas that support comprehensive Oracle Database@Azure connectivity.
 
@@ -53,15 +53,3 @@ The following table outlines the sequential network design areas that support co
 | [Migration connectivity design](migration-connectivity-design.md) | Integrate current source environment with Oracle Exadata Database@Azure | Step 4 – Enables data movement into target environment. |
 | [Azure Arc connectivity design](azure-arc-connectivity-design.md) | Enable Azure Arc on Oracle Database@Azure infrastructure | Step 5 – Completes hybrid management integration. |
 
-## Azure tools and resources
-
-| Category | Tool | Description |
-|----------|------|-------------|
-| Network planning | [Network planning for Oracle Database@Azure](/azure/oracle/oracle-db/oracle-database-network-plan) | Comprehensive network configuration guidance |
-| Landing zone design | [Network topology and connectivity](/azure/cloud-adoption-framework/ready/landing-zone/design-area/network-topology-and-connectivity) | Cloud Adoption Framework network design principles |
-| Security | [NSGs](/azure/virtual-network/network-security-groups-overview) | Azure network security configuration and management |
-| Advanced features | [Oracle Database@Azure advanced networking](/azure/oracle/oracle-db/oracle-database-network-plan#advanced-networking-features) | Enhanced networking capabilities for complex requirements |
-
-## Related resource
-
-- [Core network design](core-network-design.md)
