@@ -10,7 +10,11 @@ ms.custom: e2e-hybrid, think-tank
 
 # Network connectivity for Azure Arc-enabled SQL Managed Instance
 
-Azure Arc-enabled data services support two different connectivity modes. The [Directly connected and Indirectly connected](/azure/azure-arc/data/connectivity) modes deploy an Azure Arc-enabled SQL Managed Instance running on Azure Arc-enabled Kubernetes clusters with an Azure Arc control plane.
+Azure Arc-enabled data services requires connectivity to Azure.
+
+As of September 2025, [indirectly connected mode is retired](/azure/azure-arc/data/).
+
+Azure Arc-enabled data services deploy an Azure Arc-enabled SQL Managed Instance running on Azure Arc-enabled Kubernetes clusters with an Azure Arc control plane.
 
 The Arc-enabled data services components are:
 
@@ -38,7 +42,7 @@ The following scenario diagram shows an example of various consumer services sec
 
 * Review the [Network connectivity for Azure Arc-enabled Kubernetes](../arc-enabled-kubernetes/eslz-arc-kubernetes-network-connectivity.md) for understanding network architecture and recommendations to make right design decisions for deploying and operating Arc-enabled data services on Arc-enabled Kubernetes cluster. Arc-enabled data services use Azure Arc-enabled Kubernetes network connectivity for service deployment and operations.
 
-* Review the [Arc-enabled data services feature availability by connectivity-mode](/azure/azure-arc/data/connectivity#feature-availability-by-connectivity-mode) and [network requirements](/azure/azure-arc/data/connectivity) for Azure Arc-enabled data services. Decide if directly connected mode or indirectly connected mode aligns best with your organization network security policies of on-premises network or other cloud providers.
+* Review the [Arc-enabled data services feature availability by connectivity-mode](/azure/azure-arc/data/connectivity#feature-availability-by-connectivity-mode) and [network requirements](/azure/azure-arc/data/connectivity) for Azure Arc-enabled data services. Verify that your business requirements and environment support directly connected mode.
 
 * Directly Connected mode requires a direct connection to Azure and provides other benefits by nature of this connectivity. Consider the trade-offs needed to enable this [direct connection](/azure/azure-arc/data/connectivity#connectivity-modes) based on your organization security and compliance requirements.
 
