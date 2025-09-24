@@ -24,7 +24,6 @@ The following table lists example reference implementations based on the recomme
 | Enterprise-scale hub and spoke | Add a [hub and spoke](/azure/architecture/reference-architectures/hybrid-networking/hub-spoke) network module to the enterprise-scale foundation. | [Example in GitHub][GitHub-AdventureWorks] | [![Dta-button-adventureworks]][dta-adventureworks] |
 | Enterprise-scale Virtual WAN | Add a [Virtual WAN](/azure/virtual-wan/virtual-wan-global-transit-network-architecture) network module to the enterprise-scale foundation. | [Example in GitHub][GitHub-Contoso] | [![Dta-button-Contoso]][dta-Contoso] |
 | Enterprise-scale for small enterprises | Add a [hub and spoke](/azure/architecture/reference-architectures/hybrid-networking/hub-spoke) network architecture for small organizations. | [Example in GitHub][GitHub-TreyResearch] | [![Dta-button-treyresearch]][dta-treyresearch] |
-| Enterprise-scale for Azure Government | Reference implementation that can be deployed to Azure Government and includes all options in a converged portal experience. | [Example in GitHub][GitHub-AzureGov] | [![Dta-button-azuregov]][dta-azuregov] |
 
 Each reference implementation deploys platform resources to the selected target environment. Deployment details and an overview of the deployed resources can be found using the GitHub link in the table above.
 
