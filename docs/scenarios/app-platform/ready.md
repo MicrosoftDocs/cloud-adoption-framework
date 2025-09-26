@@ -13,7 +13,7 @@ To deploy application workloads in Azure successfully, you need to establish a s
 
 After you set up this environment, you can connect application landing zones directly to it. To help you deploy these zones faster, Microsoft offers Application Landing Zone Accelerators. These accelerators provide ready-to-deploy infrastructure that follows best practices.
 
-:::image type="content" source="../../_images/ready/azure-landing-zones-conceptual-architecture.png" alt-text="Diagram showing the conceptual components of your cloud environment as it aligns with Azure landing zones." lightbox="./../_images/ready/azure-landing-zones-conceptual-architecture.png" border="false":::
+:::image type="content" source="../../_images/ready/azure-landing-zones-conceptual-architecture.png" alt-text="Diagram showing the conceptual components of your cloud environment as it aligns with Azure landing zones." lightbox="../../_images/ready/azure-landing-zones-conceptual-architecture.png" border="false":::
 
 **Platform landing zones** are subscriptions that host shared services. These services include connectivity, identity, management, and security resources. You only need the platform landing zones that match your environment. If you work with a smaller or cloud-native footprint and don't require on-premises connectivity, you might not need many shared services.
 
