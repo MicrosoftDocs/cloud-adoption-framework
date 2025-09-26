@@ -5,10 +5,9 @@ items:
   - name: Overview
     href: ready.md
   - name: Application landing zone accelerators
+    expanded: true
     items:
-    - name: Azure Integration Services (AIS)
-      expanded: true
-      items:
+    - name: Azure Integration Services (AIS):
       - name: Azure Integration Services application landing zone accelerator
         href: integration-services/landing-zone-accelerator.md
       - name: Identity and access management
