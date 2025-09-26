@@ -161,7 +161,6 @@ items:
           href: /visualstudio/bridge/overview-bridge-to-kubernetes?toc=/azure/cloud-adoption-framework/scenarios/app-platform/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
         - name: Configure Bridge to Kubernetes
           href: /visualstudio/bridge/configure-bridge-to-kubernetes?toc=/azure/cloud-adoption-framework/scenarios/app-platform/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
-          items:
       - name: Multitenancy
         items:
         - name: Cluster isolation
@@ -436,13 +435,3 @@ items:
             href: /azure/azure-functions/create-first-function-vs-code-typescript?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/app-platform/toc.json
           - name: Other (Go/Rust)
             href: /azure/azure-functions/create-first-function-vs-code-other?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/app-platform/toc.json
-  - name: Build skills on Learn
-    items:
-    - name: Introduction to Kubernetes on Azure
-      href: /training/paths/intro-to-kubernetes-on-azure/
-    - name: Administer containers in Azure
-      href: /training/paths/administer-containers-in-azure/
-    - name: Develop and deploy applications on Kubernetes
-      href: /training/paths/develop-deploy-applications-kubernetes/
-    - name: Architect modern applications in Azure
-      href: /training/paths/architect-modern-apps/
