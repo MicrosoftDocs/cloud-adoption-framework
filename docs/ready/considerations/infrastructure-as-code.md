@@ -1,4 +1,13 @@
-# Deploy and manage Azure landing zones with infrastructure as code
+---
+title: Deploy and manage Azure with infrastructure as code
+description: Deploy and manage Azure with infrastructure as code
+author: stephen-sumner
+ms.author: pnp
+ms.date: 09/26/2025
+ms.topic: conceptual
+---
+
+# Deploy and manage Azure with infrastructure as code
 
 Infrastructure as Code (IaC) provides a programmatic approach to deploying and managing your Azure resources. IaC transforms infrastructure provisioning from manual, error-prone processes into automated, consistent, and repeatable deployments. This approach ensures your Azure environment remains aligned with organizational standards while enabling rapid scaling and reliable configuration management.
 
