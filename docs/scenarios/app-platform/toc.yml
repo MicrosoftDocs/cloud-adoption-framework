@@ -124,9 +124,6 @@ items:
           href: container-apps/security.md
         - name: Management and operations
           href: container-apps/management.md
-
-  - name: Container architectures
-    href: /azure/architecture/browse/?azure_categories=containers
   - name: Best practices
     items:
     - name: Multitenancy
