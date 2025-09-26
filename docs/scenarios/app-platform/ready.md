@@ -3,7 +3,6 @@ title: Azure application landing zone accelerators
 description: Learn about Azure application landing zone accelerators
 author: stephen-sumner
 ms.author: pnp
-ms.reviewer: tozimmergren
 ms.date: 09/26/2025
 ms.topic: conceptual
 ---
@@ -14,7 +13,9 @@ When you follow the guidance for Azure landing zones, you establish a robust fou
 
 **Platform landing zones** are subscriptions for shared services such as connectivity, identity, management, and security resources. You only need to deploy the ones that are relevant to your environment. For smaller or cloud-native footprints, especially those without on-premises connectivity, many shared services might not be necessary.
 
-**Application landing zones** are designed to plug directly into this foundation. They inherit and align with the architecture you have already built. This enables faster, more consistent, and more secure workload deployments. Each workload has one application landing zone for each environment. These environments include development, testing, and production.
+**Application landing zones** are designed to plug directly into this foundation. They subscriptions deployed under the appropriate management group. This ensures they inherit the Azure Policy assignments that enforce security, compliance, and operational standards. Workloads have multiple application landing zones. There should be one application landing zone for each development environment. These environments include development, testing, and production.
+
+To all subscriptions, configure Azure role-based access control (RBAC), Cost Management, Network Watcher, and Microsoft Defender for Cloud—must be explicitly applied to each subscription. These services should be consistently enabled across all subscriptions, including application landing zones and platform landing zones.
 
 :::image type="content" source="../../_images/ready/azure-landing-zones-conceptual-architecture.png" alt-text="Diagram showing the conceptual components of your cloud environment as it aligns with Azure landing zones." lightbox="./../_images/ready/azure-landing-zones-conceptual-architecture.png" border="false":::
 
@@ -22,18 +23,24 @@ When you follow the guidance for Azure landing zones, you establish a robust fou
 
 To help you deploy application landing zones faster and more reliably, Microsoft provides a set of Application Landing Zone Accelerators. These are opinionated and extensible reference implementations that align with Azure landing zone principles and best practices. They are infrastructure-as-code templates hosted in GitHub. You deploy these templates to your environment, followed by your application code and configurations on top of that infrastructure.
 
-- **Azure Integration Services:** Deploy integration workloads using Logic Apps, Service Bus, Event Grid, and API Management.
+- **[Azure Integration Services](./integration-services/landing-zone-accelerator.md):** Deploy integration workloads using Logic Apps, Service Bus, Event Grid, and API Management.
 
-- **Azure Kubernetes Service (AKS):** Run containerized applications at scale with built-in support for DevOps, monitoring, and security.
+- **[Azure Kubernetes Service (AKS)](./aks/landing-zone-accelerator.md):** Run containerized applications at scale with built-in support for DevOps, monitoring, and security.
 
-- **Azure API Management:** Manage, secure, and scale your APIs with a fully managed API gateway.
+- **[Azure API Management](./api-management/landing-zone-accelerator.md):** Manage, secure, and scale your APIs with a fully managed API gateway.
 
-- **Azure App Service:** Host web apps and APIs with built-in scaling, patching, and CI/CD integration.
+- **[Azure App Service](./app-services/landing-zone-accelerator.md):** Host web apps and APIs with built-in scaling, patching, and CI/CD integration.
 
-- **Azure Red Hat Enterprise Linux (RHEL):** Deploy enterprise-grade Linux workloads with Microsoft and Red Hat joint support.
+- **[Azure Red Hat Enterprise Linux (RHEL)](./azure-red-hat-enterprise-linux/):** Deploy enterprise-grade Linux workloads with Microsoft and Red Hat joint support.
 
-- **Azure Red Hat OpenShift (ARO):** Run OpenShift clusters with integrated Azure services and enterprise support.
+- **[Azure Red Hat OpenShift (ARO)](./azure-red-hat-openshift/landing-zone-accelerator.md):** Run OpenShift clusters with integrated Azure services and enterprise support.
 
-- **Azure Container Apps:** Build and deploy microservices and event-driven apps without managing Kubernetes.
+- **[Azure Container Apps](./container-apps/landing-zone-accelerator.md):** Build and deploy microservices and event-driven apps without managing Kubernetes.
 
 These accelerators help you move faster while maintaining alignment with enterprise architecture standards. Whether you are modernizing legacy applications or building new cloud-native solutions, application landing zones provide a consistent and scalable path forward.
+
+## Next step
+
+Explore our Application Landing Zone Accelerators to jumpstart your workload deployments with confidence and consistency.
+
+Prefer to build your own? You can design custom application landing zones from scratch using the [Azure Well-Architected Framework](/azure/well-architected/) and guidance from the [Azure Architecture Center](/azure/architecture/). These resources will help you align your architecture with best practices for reliability, security, performance, cost optimization, and operational excellence.
