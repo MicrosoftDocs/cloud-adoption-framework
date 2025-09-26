@@ -9,19 +9,23 @@ ms.topic: conceptual
 
 # Azure application landing zone accelerators
 
-When you follow the guidance for Azure landing zones, you establish a robust foundation that streamlines the deployment of application workloads. This foundational setup is the Azure environment architecture. It includes your Customer Agreement, identity and access management, resource hierarchy, governance, and platform landing zones as needed.
+To deploy application workloads in Azure successfully, you need to establish a solid foundation. When you follow Azure Landing Zone guidance, you create a well-architected environment that supports scalability, security, and operational consistency. This foundation includes your Customer Agreement, identity and access management, resource hierarchy, governance, and platform landing zones that host shared services.
 
-**Platform landing zones** are subscriptions for shared services such as connectivity, identity, management, and security resources. You only need to deploy the ones that are relevant to your environment. For smaller or cloud-native footprints, especially those without on-premises connectivity, many shared services might not be necessary.
-
-**Application landing zones** are designed to plug directly into this foundation. They subscriptions deployed under the appropriate management group. This ensures they inherit the Azure Policy assignments that enforce security, compliance, and operational standards. Workloads have multiple application landing zones. There should be one application landing zone for each development environment. These environments include development, testing, and production.
-
-To all subscriptions, configure Azure role-based access control (RBAC), Cost Management, Network Watcher, and Microsoft Defender for Cloud—must be explicitly applied to each subscription. These services should be consistently enabled across all subscriptions, including application landing zones and platform landing zones.
+After you set up this environment, you can connect application landing zones directly to it. To help you deploy these zones faster, Microsoft offers Application Landing Zone Accelerators. These accelerators provide ready-to-deploy infrastructure that follows best practices.
 
 :::image type="content" source="../../_images/ready/azure-landing-zones-conceptual-architecture.png" alt-text="Diagram showing the conceptual components of your cloud environment as it aligns with Azure landing zones." lightbox="./../_images/ready/azure-landing-zones-conceptual-architecture.png" border="false":::
 
+**Platform landing zones** are subscriptions that host shared services. These services include connectivity, identity, management, and security resources. You only need the platform landing zones that match your environment. If you work with a smaller or cloud-native footprint and don't require on-premises connectivity, you might not need many shared services.
+
+**Application landing zones** are subscriptions for your workload environments. You place these subscriptions under the appropriate management group. This setup ensures the subscriptions inherit Azure Policy assignments that enforce security, compliance, and operational standards. You should create one application landing zone for each workload environment, such as development, testing, and production.
+
+All subscriptions must be configured with Azure Role-Based Access Control, Cost Management, Network Watcher, and Microsoft Defender for Cloud. These services should be consistently enabled across all subscriptions, including both application and platform landing zones.
+
+For more information, see [Azure landing zones](../../ready/landing-zone/index.md).
+
 ## Application landing zone accelerators
 
-To help you deploy application landing zones faster and more reliably, Microsoft provides a set of Application Landing Zone Accelerators. These are opinionated and extensible reference implementations that align with Azure landing zone principles and best practices. They are infrastructure-as-code templates hosted in GitHub. You deploy these templates to your environment, followed by your application code and configurations on top of that infrastructure.
+Microsoft provides Application Landing Zone Accelerators to help you deploy application landing zones quickly and reliably. These accelerators are opinionated and extensible reference implementations that follow Azure Landing Zone principles and best practices. They're infrastructure-as-code templates hosted in GitHub. First, deploy the templates to your environment, then add your application code and configurations on top of the infrastructure.
 
 - **[Azure Integration Services](./integration-services/landing-zone-accelerator.md):** Deploy integration workloads using Logic Apps, Service Bus, Event Grid, and API Management.
 
@@ -37,10 +41,8 @@ To help you deploy application landing zones faster and more reliably, Microsoft
 
 - **[Azure Container Apps](./container-apps/landing-zone-accelerator.md):** Build and deploy microservices and event-driven apps without managing Kubernetes.
 
-These accelerators help you move faster while maintaining alignment with enterprise architecture standards. Whether you are modernizing legacy applications or building new cloud-native solutions, application landing zones provide a consistent and scalable path forward.
-
 ## Next step
 
-Explore our Application Landing Zone Accelerators to jumpstart your workload deployments with confidence and consistency.
+Start exploring the Application Landing Zone Accelerators to deploy your workloads with confidence and consistency.
 
-Prefer to build your own? You can design custom application landing zones from scratch using the [Azure Well-Architected Framework](/azure/well-architected/) and guidance from the [Azure Architecture Center](/azure/architecture/). These resources will help you align your architecture with best practices for reliability, security, performance, cost optimization, and operational excellence.
+If you prefer to build your own solution, you can design custom application landing zones from scratch. Use the [Azure Well-Architected Framework](/azure/well-architected/) and guidance from the [Azure Architecture Center](/azure/architecture/) to align your architecture with best practices for reliability, security, performance, cost optimization, and operational excellence.
