@@ -3,20 +3,11 @@ items:
     href: index.md
     pdf_name: Modern application platform - Microsoft Cloud Adoption Framework for Azure
   - name: Overview
-    items:
-    - name: Azure products
-      href: azure-products.md
-  - name: Strategic impact
-    href: strategy.md
-  - name: Technical planning
-    href: plan.md
-  - name: Landing zone accelerators
-    items:
-    - name: Azure landing zones
-      href: ready.md
+    href: ready.md
+  - name: Application landing zone accelerators
     - name: Azure Integration Services (AIS)
       items:
-      - name: Azure Integration Services landing zone accelerator
+      - name: Azure Integration Services application landing zone accelerator
         href: integration-services/landing-zone-accelerator.md
       - name: Identity and access management
         href: integration-services/identity-and-access-management.md
@@ -30,7 +21,7 @@ items:
         href: integration-services/governance.md
     - name: Azure Kubernetes Service (AKS)
       items:
-      - name: AKS landing zone accelerator
+      - name: AKS application landing zone accelerator
         href: aks/landing-zone-accelerator.md
       - name: Azure Billing and Active Directory tenant considerations
         href: aks/azure-billing-ad-tenant.md
@@ -52,13 +43,9 @@ items:
         href: aks/storage.md
       - name: Cost governance with Kubecost
         href: aks/cost-governance-with-kubecost.md
-#      - name: Reference Architecture (placeholder)
-#        href: aks/landing-zone-accelerator.md
-#      - name: Reference Implementation (placeholder)
-#        href: aks/landing-zone-accelerator.md
     - name: Azure API Management (APIM)
       items:
-      - name: API Management landing zone accelerator 
+      - name: API Management application landing zone accelerator 
         href: api-management/landing-zone-accelerator.md
       - name: Identity and access management
         href: api-management/identity-and-access-management.md
@@ -74,7 +61,7 @@ items:
         href: api-management/platform-automation-and-devops.md
     - name: Azure App Service
       items:
-      - name: Azure App Service landing zone accelerator 
+      - name: Azure App Service application landing zone accelerator 
         href: app-services/landing-zone-accelerator.md
       - name: Identity and access management
         href: app-services/identity-and-access-management.md
@@ -90,7 +77,7 @@ items:
         href: app-services/platform-automation-and-devops.md
     - name: Azure Red Hat Enterprise Linux (RHEL)
       items:
-      - name: Azure Red Hat Enterprise Linux landing zone accelerator
+      - name: Azure Red Hat Enterprise Linux application landing zone accelerator
         href: azure-red-hat-enterprise-linux\landing-zone-accelerator.md
       - name: Identity and access management
         href: azure-red-hat-enterprise-linux\identity-access-management.md
@@ -110,7 +97,7 @@ items:
         href: azure-red-hat-enterprise-linux\platform-automation-devops.md
     - name: Azure Red Hat OpenShift (ARO)
       items:
-      - name: Azure Red Hat OpenShift landing zone accelerator
+      - name: Azure Red Hat OpenShift application landing zone accelerator
         href: azure-red-hat-openshift\landing-zone-accelerator.md
       - name: Identity and access management
         href: azure-red-hat-openshift\identity-access-management.md
@@ -126,7 +113,7 @@ items:
         href: azure-red-hat-openshift\platform-automation-devops.md
     - name: Azure Container Apps
       items:
-        - name: Azure Container Apps landing zone accelerator
+        - name: Azure Container Apps application landing zone accelerator
           href: container-apps/landing-zone-accelerator.md
         - name: Identity
           href: container-apps/identity.md
@@ -136,35 +123,9 @@ items:
           href: container-apps/security.md
         - name: Management and operations
           href: container-apps/management.md
-  - name: Migrate to modern application platforms
-    href: migrate.md
-  - name: Innovation on modern application platforms
-    href: innovate.md
-  - name: Govern your portfolio
-    href: govern.md
-  - name: Manage your portfolio
-    href: manage.md
 
-  - name: Well-architected workloads on containers
-    items:
-    - name: Best practices for application developers
-      href: /azure/aks/developer-best-practices-resource-management?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/app-platform/toc.json
   - name: Container architectures
-    items:
-    - name: Container product decision tree
-      href: /azure/architecture/guide/technology-choices/compute-decision-tree?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/app-platform/toc.json
-    - name: AKS Baseline for microservices
-      href: /azure/architecture/reference-architectures/containers/aks-microservices/aks-microservices-advanced?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/app-platform/toc.json
-    - name: AKS Baseline for multi-region clusters
-      href: /azure/architecture/reference-architectures/containers/aks-multi-region/aks-multi-cluster?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/app-platform/toc.json
-    - name: AKS Baseline for PCI-DSS 3.2.1
-      href: /azure/architecture/reference-architectures/containers/aks-pci/aks-pci-intro?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/app-platform/toc.json
-    - name: Secure DevOps for AKS
-      href: /azure/architecture/solution-ideas/articles/secure-devops-for-kubernetes?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/app-platform/toc.json
-    - name: Build a telehealth system
-      href: /azure/architecture/example-scenario/apps/telehealth-system?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/app-platform/toc.json
-    - name: Browse more
-      href: /azure/architecture/browse/?azure_categories=containers
+    href: /azure/architecture/browse/?azure_categories=containers
   - name: Best practices
     items:
     - name: Multitenancy
