@@ -35,7 +35,7 @@ Microsoft provides Application Landing Zone Accelerators to help you deploy appl
 
 - **[Azure App Service](./app-services/landing-zone-accelerator.md):** Host web apps and APIs with built-in scaling, patching, and CI/CD integration.
 
-- **[Azure Red Hat Enterprise Linux (RHEL)](./azure-red-hat-enterprise-linux/):** Deploy enterprise-grade Linux workloads with Microsoft and Red Hat joint support.
+- **[Azure Red Hat Enterprise Linux (RHEL)](./azure-red-hat-enterprise-linux/landing-zone-accelerator.md):** Deploy enterprise-grade Linux workloads with Microsoft and Red Hat joint support.
 
 - **[Azure Red Hat OpenShift (ARO)](./azure-red-hat-openshift/landing-zone-accelerator.md):** Run OpenShift clusters with integrated Azure services and enterprise support.
 
