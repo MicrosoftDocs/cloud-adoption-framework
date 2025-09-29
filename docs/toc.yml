@@ -462,7 +462,7 @@ items:
           - name: Azure App Service
             href: scenarios/app-platform/app-services/landing-zone-accelerator.md
           - name: Azure Arc
-            href: scenarios/hybrid/ready.md
+            href: scenarios/hybrid/enterprise-scale-landing-zone.md
           - name: Azure Container Apps
             href: scenarios/app-platform/container-apps/landing-zone-accelerator.md
           - name: Azure Data Factory
