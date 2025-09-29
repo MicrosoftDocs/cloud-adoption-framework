@@ -49,8 +49,8 @@ items:
         href: arc-enabled-kubernetes/eslz-arc-kubernetes-services-observability.md
       - name: Cost governance
         href: arc-enabled-kubernetes/eslz-arc-kubernetes-cost-governance.md
-    - name: Migrate to the cloud
-      href: migrate.md
+  - name: Migrate to the cloud
+    href: migrate.md
   - name: Govern your portfolio
     href: govern.md
   - name: Manage your portfolio
