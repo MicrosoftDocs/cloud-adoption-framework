@@ -17,7 +17,7 @@ IaC helps reduce configuration drift, minimize deployment errors, and establish 
 
 Your choice between Azure-native and third-party tools influences deployment capabilities, support timelines, and integration with your existing technology stack.
 
-1. **Choose Azure-native tools for Azure-first organizations.** Use [Azure Resource Manager templates](/azure/azure-resource-manager/templates/overview) or [Bicep](/azure/azure-resource-manager/bicep/overview) when your organization focuses on Azure services. These tools typically support new Azure features earlier than third-party options and integrate well with [Azure DevOps](/azure/devops/pipelines/), [GitHub Actions](/azure/azure-resource-manager/bicep/deploy-github-actions), and other Microsoft development platforms. If your team already uses ARM templates, migrating to Bicep offers improved syntax while maintaining compatibility. Select Bicep over ARM templates for new Azure deployments. Bicep provides the same capabilities as ARM templates with simplified syntax that's easier to read, write, and maintain. Bicep compiles to ARM templates during deployment, ensuring full compatibility with existing Azure Resource Manager processes.
+1. **Choose Bicep and ARM templates for Azure-first environments.** Use [Bicep](/azure/azure-resource-manager/bicep/overview) or [Azure Resource Manager (ARM) templates](/azure/azure-resource-manager/templates/overview) when your organization focuses primarily on Azure services. These tools typically support new Azure features earlier than third-party options and integrate well with [Azure DevOps](/azure/devops/pipelines/), [GitHub Actions](/azure/azure-resource-manager/bicep/deploy-github-actions), and other Microsoft development platforms. If your team already uses ARM templates, migrating to Bicep offers improved syntax while maintaining compatibility. For new Azure deployments, select Bicep over ARM templates. Bicep provides the same capabilities as ARM templates with simplified syntax that's easier to read, write, and maintain.
 
 2. **Choose Terraform for multi-cloud or existing Terraform environments.** Use [Terraform](/azure/developer/terraform/overview) f your organization operates across multiple cloud providers like AWS or Google Cloud, or if you already have Terraform expertise and modules. Although Terraform supports Azure well through the AzureRM provider, new Azure features might take longer to become available. The [Azure landing zones Terraform module](../landing-zone/deploy-landing-zones-with-terraform.md) provides enterprise-ready templates for deploying foundational infrastructure.
 
@@ -37,7 +37,7 @@ Bicep supports modular development by allowing you to create and reuse modules. 
 - **Output values** to return results to a calling module.
 - **Resources:** to define one or more infrastructure objects for a module to manage.
 
-## Design Terraform modules
+### Design Terraform modules
 
 Terraform modules allow you to organize and reuse infrastructure code. Every Terraform configuration includes a root module, which consists of resources defined in `.tf` files. Modules can call other modules, including child modules, and can be reused across configurations. Common elements include:
 
@@ -45,20 +45,20 @@ Terraform modules allow you to organize and reuse infrastructure code. Every Ter
 - **Output values** to return results to a calling module.
 - **Resources** to define one or more infrastructure objects for a module to manage.
 
-## Establish module publishing and distribution strategies
+### Establish module publishing and distribution strategies
 
 Your strategy for distributing modules affects collaboration, version control, and deployment reliability. Use public registries when modules meet your requirements and trusted providers maintain them. For Bicep and Terraform, [Azure Verified Modules](https://azure.github.io/Azure-Verified-Modules/overview/introduction/) offer tested and supported implementations aligned with Azure best practices. Always verify the support and maintenance commitments before using external modules in production.
 
-### Bicep module publishing
+#### Bicep module publishing
 
 You can publish and share Bicep modules using several methods:
 
 - **Public registry** hosted in the [Microsoft Container Registry (MCR)](https://github.com/azure/bicep-registry-modules).
 - **Private registry** using Azure Container Registry (ACR) and CI/CD pipelines
-- [**Template Specs**](/azure/azure-resource-manager/templates/template-specs?tabs=azure-powershell) for deploying complete templates or modules
-- **Version control system** such as GitHub or Azure DevOps for collaborative development
+- [**Template Specs**](/azure/azure-resource-manager/templates/template-specs?tabs=azure-powershell) to store versioned ARM compiled from Bicep templates for reuse. They are not a registry for raw Bicep modules.
+- **Version control system** such as GitHub or Azure DevOps for collaborative development, then [reference](/azure/azure-resource-manager/bicep/modules#path-to-a-module) via local paths or publish to a registry or template spec.
 
-### Terraform module publishing
+#### Terraform module publishing
 
 Terraform modules can be published and shared through:
 
@@ -66,7 +66,7 @@ Terraform modules can be published and shared through:
 - **Private registry** including Terraform Cloud Private Registry or Azure Container Registry
 - **Version control system** like GitHub. For supported sources, see [Terraform module sources](https://www.terraform.io/language/modules/sources).
 
-## Deploy infrastructure through automated pipelines
+## Deploy infrastructure as code through pipelines
 
 Automated pipelines ensure consistent and repeatable deployments while providing visibility and enabling rapid recovery.
 
