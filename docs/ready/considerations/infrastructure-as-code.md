@@ -1,17 +1,19 @@
 ---
-title: Deploy and manage Azure with infrastructure as code
-description: Deploy and manage Azure with infrastructure as code
+title: Use infrastructure as code to deploy and manage your Azure environment
+description: Learn to use infrastructure as code to deploy and manage your Azure environment
 author: stephen-sumner
 ms.author: pnp
 ms.date: 09/29/2025
 ms.topic: conceptual
 ---
 
-# Deploy and manage Azure with infrastructure as code
+# Use infrastructure as code to deploy and manage your Azure environment
 
 Infrastructure as Code (IaC) offers a programmatic method for deploying and managing Azure resources. It transforms infrastructure provisioning from manual and error-prone tasks into automated, consistent, and repeatable deployments.
 
 IaC helps reduce configuration drift, minimize deployment errors, and establish version control across your entire Azure infrastructure. Its programmatic nature allows teams to track changes, roll back deployments, and maintain consistent environments across development, testing, and production stages.
+
+:::image type="content" source="./media/infrastructure-as-code-process.png" alt-text="Diagram showing the infrastructure as code process outlined in this article: select your infrastructure-as-code tools, design modules, and deploy through pipelines." lightbox="./media/infrastructure-as-code-process.png" border="false":::
 
 ## Select your infrastructure as code tools
 
@@ -19,7 +21,7 @@ Your choice between Azure-native and third-party tools influences deployment cap
 
 1. **Choose Bicep and ARM templates for Azure-first environments.** Use [Bicep](/azure/azure-resource-manager/bicep/overview) or [Azure Resource Manager (ARM) templates](/azure/azure-resource-manager/templates/overview) when your organization focuses primarily on Azure services. These tools typically support new Azure features earlier than third-party options and integrate well with [Azure DevOps](/azure/devops/pipelines/), [GitHub Actions](/azure/azure-resource-manager/bicep/deploy-github-actions), and other Microsoft development platforms. If your team already uses ARM templates, migrating to Bicep offers improved syntax while maintaining compatibility. For new Azure deployments, select Bicep over ARM templates. Bicep provides the same capabilities as ARM templates with simplified syntax that's easier to read, write, and maintain.
 
-2. **Choose Terraform for multi-cloud or existing Terraform environments.** Use [Terraform](/azure/developer/terraform/overview) f your organization operates across multiple cloud providers like AWS or Google Cloud, or if you already have Terraform expertise and modules. Although Terraform supports Azure well through the AzureRM provider, new Azure features might take longer to become available. The [Azure landing zones Terraform module](../landing-zone/deploy-landing-zones-with-terraform.md) provides enterprise-ready templates for deploying foundational infrastructure.
+2. **Choose Terraform for multi-cloud or existing Terraform environments.** Use [Terraform](/azure/developer/terraform/overview) if your organization operates across multiple cloud providers like AWS or Google Cloud, or if you already have Terraform expertise and modules. Although Terraform supports Azure well through the AzureRM provider, new Azure features might take longer to become available. The [Azure landing zones Terraform module](../landing-zone/deploy-landing-zones-with-terraform.md) provides enterprise-ready templates for deploying foundational infrastructure.
 
 3. **Understand tool-specific considerations for configuration management.** Each tool handles configuration drift and out-of-band changes differently. Bicep doesn't maintain state, but drift detection can be supported using [What-If](/azure/azure-resource-manager/bicep/deploy-what-if) and Azure Policy. Terraform requires you to [import out-of-band changes](/azure/developer/terraform/comparing-terraform-and-bicep#out-of-band-changes) into the state file and update the configuration code. For more information, see [Manage configuration drift](/azure/cloud-adoption-framework/manage/administer#manage-configuration-drift).
 
@@ -55,7 +57,7 @@ You can publish and share Bicep modules using several methods:
 
 - **Public registry** hosted in the [Microsoft Container Registry (MCR)](https://github.com/azure/bicep-registry-modules).
 - **Private registry** using Azure Container Registry (ACR) and CI/CD pipelines
-- [**Template Specs**](/azure/azure-resource-manager/templates/template-specs?tabs=azure-powershell) to store versioned ARM compiled from Bicep templates for reuse. They are not a registry for raw Bicep modules.
+- [**Template Specs**](/azure/azure-resource-manager/templates/template-specs?tabs=azure-powershell) to store versioned ARM templates compiled from Bicep templates for reuse. They aren't a registry for raw Bicep modules.
 - **Version control system** such as GitHub or Azure DevOps for collaborative development, then [reference](/azure/azure-resource-manager/bicep/modules#path-to-a-module) via local paths or publish to a registry or template spec.
 
 #### Terraform module publishing
