@@ -1,6 +1,6 @@
 ---
 title: Hybrid and multicloud adoption with Azure Arc and Azure landing zones
-description: Learn how Azure Arc can accelerate your adoption of a hybrid or multicloud with Azure landing zones.
+description: Learn how Azure Arc accelerates hybrid and multicloud adoption with Azure landing zones.
 author: stephen-sumner
 ms.author: pnp
 ms.date: 09/29/2025
@@ -43,7 +43,7 @@ Azure Arc resources integrate into application architectures to provide unified 
 
 3. **Extend Azure capabilities to edge locations with Azure Arc-enabled services.** Azure Arc-enabled data, application, and machine learning services extend Azure capabilities to edge locations where data sovereignty or latency requirements exist. This extension provides consistent Azure experiences regardless of physical location.
 
-Application landing zone subscriptions include both native Azure resources and Azure Arc-enabled resources. Azure Arc resources reside outside Azure and appear as metadata resources within the Azure platform. Treat Azure Arc resources like any other Azure resource in your landing zone (whether platform or application) aligned with the [design principles](../../ready/landing-zone/design-principles.md).
+Application landing zone subscriptions include both native Azure resources and Azure Arc-enabled resources. Azure Arc resources run outside Azure and are projected into Azure Resource Manager as Azure resources you manage with the same governance and security controls. Treat Azure Arc resources like any other Azure resource in your landing zone (whether platform or application) aligned with the [design principles](../../ready/landing-zone/design-principles.md).
 
 :::image type="complex" source="./media/landing-zone-design-revised.png" alt-text="Diagram showing landing zone design architecture.":::
 Landing zone design architecture with management groups, subscriptions, and resource groups organized hierarchically to support Azure Arc integration, demonstrating how Azure Arc resources integrate into application landing zones as metadata resources.
