@@ -13,6 +13,8 @@ Azure Arc landing zone accelerator enables organizations to implement scalable h
 
 This article helps you integrate Azure Arc resources into your Azure landing zones. This integration defines how to treat external resources as first-class citizens in Azure, and this approach ensures consistent management and compliance across all environments.
 
+**Quick link:** [Common patterns for Azure Arc resources in Azure landing zones](#apply-common-patterns-for-azure-arc-resources-in-azure-landing-zones)
+
 :::image type="complex" source="./media/arc-unified-operations.png" alt-text="Diagram showing Azure Arc unified operations.":::
 Azure Arc unified operations across Azure, on-premises, multicloud, and edge environments managed through a central Azure control plane with Azure Arc projecting external resources into Azure Resource Manager for centralized governance and operations.
 :::image-end:::
@@ -84,4 +86,6 @@ If organizations deploy Azure Landing Zones or already have Azure Landing Zones 
 
 ## Next step
 
-Learn how to [Deploy Azure Arc sandbox to accelerate adoption of hybrid or multicloud architectures](./arc-enabled-servers/enterprise-scale-landing-zone-sandbox.md).
+- Deploy a sandbox using [Arc Jumpstart](https://jumpstart.azure.com/azure_arc_jumpstart)
+- [Azure Arc-enabled servers](/azure/cloud-adoption-framework/scenarios/hybrid/arc-enabled-servers/eslz-identity-and-access-management) design areas
+- [Azure Arc-enabled servers](/azure/cloud-adoption-framework/scenarios/hybrid/arc-enabled-servers/eslz-identity-and-access-management) design areas
