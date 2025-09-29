@@ -3,7 +3,7 @@ title: Deploy and manage Azure with infrastructure as code
 description: Deploy and manage Azure with infrastructure as code
 author: stephen-sumner
 ms.author: pnp
-ms.date: 09/26/2025
+ms.date: 09/29/2025
 ms.topic: conceptual
 ---
 
