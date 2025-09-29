@@ -5,9 +5,7 @@ items:
     href: plan.md
   - name: Ready environment
     items:
-    - name: Azure landing zones
-      href: ready.md
-    - name: Introduction to Azure Arc landing zone accelerator for hybrid and multicloud
+    - name: Azure Arc landing zone accelerator
       href: enterprise-scale-landing-zone.md
   - name: Adopt solutions
     items:
