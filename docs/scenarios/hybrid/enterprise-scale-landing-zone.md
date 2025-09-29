@@ -9,27 +9,31 @@ ms.topic: conceptual
 
 # Implement hybrid and multicloud adoption with Azure Arc and Azure landing zones
 
-Azure Arc landing zone accelerator enables organizations to implement scalable hybrid and multicloud architectures. Azure Arc projects and manages resources that reside outside Azure, such as on-premises servers, Kubernetes clusters, and multicloud services, into the Azure control plane. This hybrid and multicloud approach provides unified governance, security, and operations across distributed environments.
+Azure Arc landing zone accelerator enables organizations to implement scalable hybrid and multicloud architectures. Azure Arc projects and manages resources that exist outside Azure, such as on-premises servers, Kubernetes clusters, and multicloud services, into the Azure control plane. This hybrid and multicloud approach provides unified governance, security, and operations across distributed environments.
 
 This article helps you integrate Azure Arc resources into your Azure landing zones. This integration defines how to treat external resources as first-class citizens in Azure, and this approach ensures consistent management and compliance across all environments.
 
-[![Diagram showing Azure Arc unified operations across Azure, on-premises, multicloud, and edge environments managed through a central Azure control plane with Azure Arc projecting external resources into Azure Resource Manager for centralized governance and operations.](./media/arc-unified-operations.png)](./media/arc-unified-operations.png#lightbox)
+:::image type="complex" source="./media/arc-unified-operations.png" alt-text="Diagram showing Azure Arc unified operations.":::
+Azure Arc unified operations across Azure, on-premises, multicloud, and edge environments managed through a central Azure control plane with Azure Arc projecting external resources into Azure Resource Manager for centralized governance and operations.
+:::image-end:::
 
-## Establish a foundational Azure environment
+## Establish a foundational Azure environment for hybrid and multicloud resources
 
-A well-structured Azure environment supports governance and management of hybrid and multicloud resources. Azure landing zones provide the foundation required for effective resource management.
+Organizations must establish a well-structured Azure environment to support governance and management of hybrid and multicloud resources. Azure landing zones provide the foundation required for effective resource management.
 
-1. **Deploy Azure landing zones for hybrid and multicloud scenarios.** [Azure landing zones](/azure/cloud-adoption-framework/ready/) (platform and application) establish a scalable and secure foundation for your environment. These landing zones include design areas such as identity, network topology, resource organization, and governance. Select a landing zone architecture that aligns with your organization's cloud strategy. Alignment ensures that your environment scales appropriately as your organization grows.
+1. **Deploy Azure landing zones to support hybrid and multicloud scenarios.** [Azure landing zones](/azure/cloud-adoption-framework/ready/) (platform and application) establish a scalable and secure foundation for your environment. These landing zones include design areas such as identity, network topology, resource organization, and governance. Select a landing zone architecture that aligns with your organization's cloud strategy. This alignment ensures that your environment scales appropriately as your organization grows.
 
-2. **Design network architectures to connect hybrid and multicloud environments.** [Networking](/azure/cloud-adoption-framework/ready/landing-zone/design-area/network-topology-and-connectivity) must support secure and reliable connectivity between Azure and external environments. Consider VPNs, ExpressRoute, and private endpoints to integrate on-premises and multicloud resources with Azure. Network design provides the foundation for secure data transfer and consistent performance across all environments.
+2. **Design network architectures to connect hybrid and multicloud environments.** [Network architecture](/azure/cloud-adoption-framework/ready/landing-zone/design-area/network-topology-and-connectivity) must support secure and reliable connectivity between Azure and external environments. Consider VPNs, ExpressRoute, and private endpoints to integrate on-premises and multicloud resources with Azure. Network design provides the foundation for secure data transfer and consistent performance across all environments.
 
 3. **Extend governance and operations with Azure Arc.** Azure Arc onboards external resources into Azure Resource Manager (ARM) to enable centralized management. Azure Arc enables centralized policy enforcement, monitoring, and automation using native Azure tools such as Azure Policy, Azure Monitor, and Microsoft Defender for Cloud. This centralized approach reduces operational complexity and ensures consistent governance across all environments.
 
-[![Flow chart showing Azure Arc landing zone guidance with decision points for organizations with and without existing Azure Landing Zones, outlining pathways for implementing Extended Security Updates through Azure Arc for on-premises servers.](./media/azure-arc-esu-landing-zone-flow-chart.png)](./media/azure-arc-esu-landing-zone-flow-chart.png#lightbox)
+:::image type="complex" source="./media/azure-arc-esu-landing-zone-flow-chart.png" alt-text="Flow chart showing Azure Arc landing zone guidance.":::
+Azure Arc landing zone guidance with decision points for organizations with and without existing Azure Landing Zones, outlining pathways for implementing Extended Security Updates through Azure Arc for on-premises servers.
+:::image-end:::
 
-## Integrate Azure Arc with application landing zones
+## Integrate Azure Arc resources with application landing zones
 
-Azure Arc resources integrate into any application architecture to provide unified management across environments. Common examples include Azure Arc-enabled servers, VMware vSphere, System Center Virtual Machine Manager, customer-managed Kubernetes clusters, and Azure Arc-enabled data services.
+Azure Arc resources integrate into application architectures to provide unified management across environments. Common examples include Azure Arc-enabled servers, VMware vSphere, System Center Virtual Machine Manager, customer-managed Kubernetes clusters, and Azure Arc-enabled data services.
 
 1. **Project on-premises IT assets into Azure with Azure Arc-enabled servers, VMware vSphere, and System Center Virtual Machine Manager.** These Azure Arc services project on-premises IT assets into the Azure control plane. This projection enables centralized management of on-premises infrastructure alongside Azure resources.
 
@@ -39,7 +43,9 @@ Azure Arc resources integrate into any application architecture to provide unifi
 
 Application landing zone subscriptions include both native Azure resources and Azure Arc-enabled resources. Azure Arc resources reside outside Azure and appear as metadata resources within the Azure platform. Treat Azure Arc resources like any other Azure resource in your landing zone (whether platform or application) aligned with [subscription democratization and application-centric, archetype-neutral principles](../../ready/landing-zone/design-principles.md).
 
-[![Diagram showing landing zone design architecture with management groups, subscriptions, and resource groups organized hierarchically to support Azure Arc integration, demonstrating how Azure Arc resources integrate into application landing zones as metadata resources.](./media/landing-zone-design-revised.png)](./media/landing-zone-design-revised.png#lightbox)
+:::image type="complex" source="./media/landing-zone-design-revised.png" alt-text="Diagram showing landing zone design architecture.":::
+Landing zone design architecture with management groups, subscriptions, and resource groups organized hierarchically to support Azure Arc integration, demonstrating how Azure Arc resources integrate into application landing zones as metadata resources.
+:::image-end:::
 
 ## Apply common patterns for Azure Arc resources in Azure landing zones
 
@@ -49,7 +55,7 @@ These examples demonstrate how to project Azure Arc resources as metadata resour
 
 Active Directory Domain Services (AD DS) deployments exist within most customer environments. Domain controllers are critical components of AD DS and the overall architecture that organizations rely on for identity services.
 
-Azure landing zone conceptual architecture includes a dedicated identity landing zone subscription designed to host identity-based resources. You can host identity resources in Azure with AD DS domain controller (DC) virtual machines (VMs), or you can project identity resources into Azure from any other location via Azure Arc-enabled servers. This flexibility allows organizations to maintain existing identity infrastructure while gaining centralized management capabilities.
+Azure landing zone conceptual architecture includes a dedicated identity landing zone subscription designed to host identity-based resources. You can host identity resources in Azure with AD DS domain controller (DC) virtual machines (VMs), or you can project identity resources into Azure from any other location through Azure Arc-enabled servers. This flexibility allows organizations to maintain existing identity infrastructure while gaining centralized management capabilities.
 
 ### Example two: Project on-premises datacenters into Azure
 
