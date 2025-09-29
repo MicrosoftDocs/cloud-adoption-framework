@@ -43,7 +43,7 @@ Azure Arc resources integrate into application architectures to provide unified 
 
 3. **Extend Azure capabilities to edge locations with Azure Arc-enabled services.** Azure Arc-enabled data, application, and machine learning services extend Azure capabilities to edge locations where data sovereignty or latency requirements exist. This extension provides consistent Azure experiences regardless of physical location.
 
-Application landing zone subscriptions include both native Azure resources and Azure Arc-enabled resources. Azure Arc resources reside outside Azure and appear as metadata resources within the Azure platform. Treat Azure Arc resources like any other Azure resource in your landing zone (whether platform or application) aligned with [subscription democratization and application-centric, archetype-neutral principles](../../ready/landing-zone/design-principles.md).
+Application landing zone subscriptions include both native Azure resources and Azure Arc-enabled resources. Azure Arc resources reside outside Azure and appear as metadata resources within the Azure platform. Treat Azure Arc resources like any other Azure resource in your landing zone (whether platform or application) aligned with the [design principles](../../ready/landing-zone/design-principles.md).
 
 :::image type="complex" source="./media/landing-zone-design-revised.png" alt-text="Diagram showing landing zone design architecture.":::
 Landing zone design architecture with management groups, subscriptions, and resource groups organized hierarchically to support Azure Arc integration, demonstrating how Azure Arc resources integrate into application landing zones as metadata resources.
@@ -55,9 +55,9 @@ These examples demonstrate how to project Azure Arc resources as metadata resour
 
 ### Example one: Project domain controllers outside of Azure
 
-Active Directory Domain Services (AD DS) deployments exist within most customer environments. Domain controllers are critical components of AD DS and the overall architecture that organizations rely on for identity services.
+Active Directory Domain Services (AD DS) deployments exist within most customer environments. Domain controllers are critical components of AD DS and the overall architecture that organizations use for identity services.
 
-Azure landing zone conceptual architecture includes a dedicated identity landing zone subscription designed to host identity-based resources. You can host identity resources in Azure with AD DS domain controller (DC) virtual machines (VMs), or you can project identity resources into Azure from any other location through Azure Arc-enabled servers. This flexibility allows organizations to maintain existing identity infrastructure while gaining centralized management capabilities.
+Azure landing zone conceptual architecture includes a dedicated identity landing zone subscription that hosts identity-based resources. You can host identity resources in Azure with AD DS domain controller (DC) virtual machines (VMs), or you can project identity resources into Azure from any other location through Azure Arc-enabled servers. This flexibility enables organizations to maintain existing identity infrastructure while they gain centralized management capabilities.
 
 ### Example two: Project on-premises datacenters into Azure
 
@@ -65,14 +65,14 @@ On-premises datacenters remain present in most customer environments. Datacenter
 
 Organizations can treat their on-premises datacenters as normal landing zones and place datacenter resources into new or existing landing zones based on organizational needs. Common approaches include:
 
-- Project resources into dedicated landing zone subscriptions for on-premises datacenter resources. In larger environments with multiple datacenters across the globe, organizations establish one landing zone per geopolitical region. These regional landing zones contain the resources from each region to provide logical separation of on-premises datacenters within Azure. This regional approach assists with security, governance, and compliance requirements for different on-premises datacenters.
+- Project resources into dedicated landing zone subscriptions for on-premises datacenter resources. In larger environments with multiple datacenters across the globe, organizations establish one landing zone per geopolitical region. These regional landing zones contain the resources from each region to provide logical separation of on-premises datacenters within Azure. This regional approach supports security, governance, and compliance requirements for different on-premises datacenters.
 - Project resources into separate landing zone subscriptions based on other Azure resources that support the same application or service. This application-centric approach ensures that all components of an application are managed together regardless of their physical location.
 
 ### Example three: Project remote application resources into Azure
 
 Organizations develop latency-sensitive applications or applications with data sovereignty requirements. These applications require resources to be hosted outside of Azure while maintaining centralized control, governance, security, and operations for all application components. Azure Arc enables organizations to achieve centralized management for distributed applications.
 
-Organizations should project Azure Arc resources for their applications into the same application landing zone subscription that hosts their Azure resources. Organizations can then apply one set of controls to all resources from a single control plane regardless of where the resources are physically located. This unified approach simplifies operations and ensures consistent governance across all application components.
+Organizations must project Azure Arc resources for their applications into the same application landing zone subscription that hosts their Azure resources. Organizations can then apply one set of controls to all resources from a single control plane regardless of where the resources are physically located. This unified approach simplifies operations and ensures consistent governance across all application components.
 
 ### Example four: Project on-premises servers that reached end of support into Azure to use Extended Security Updates delivered through Azure Arc
 
@@ -80,9 +80,9 @@ Windows Server versions reach end of support, and organizations cannot always me
 
 If organizations deploy Azure Landing Zones or already have Azure Landing Zones deployed, organizations can treat their on-premises datacenters as normal landing zones and place datacenter resources into new or existing landing zones based on their needs. Common approaches include:
 
-- Project resources into dedicated landing zone subscriptions for on-premises datacenter resources. In larger environments with multiple datacenters across the globe, organizations establish one landing zone per geopolitical region. These regional landing zones contain the resources from each region to provide logical separation of on-premises datacenters within Azure. This regional approach assists with security, governance, and compliance requirements for different on-premises datacenters.
+- Project resources into dedicated landing zone subscriptions for on-premises datacenter resources. In larger environments with multiple datacenters across the globe, organizations establish one landing zone per geopolitical region. These regional landing zones contain the resources from each region to provide logical separation of on-premises datacenters within Azure. This regional approach supports security, governance, and compliance requirements for different on-premises datacenters.
 - Project resources into separate landing zone subscriptions based on other Azure resources that support the same application or service.
-- Organizations should review the Azure Arc-enabled Servers landing zone accelerator guidance to understand design considerations and recommendations across critical design areas.
+- Organizations must review the Azure Arc-enabled Servers landing zone accelerator guidance to understand design considerations and recommendations across critical design areas.
 
 ## Next step
 
