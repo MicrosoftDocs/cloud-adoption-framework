@@ -13,11 +13,11 @@ Review all the content to ensure it aligns with the following template.
 
     Template:{
 
-    ## Each {heading} must be an {imperative recommendation}.
+    ## Each {heading} must be an {imperative recommendation} to reach a {goal} under the {title}.
 
     The first sentence uses a declarative sentence that starts with an article or noun to explain this {imperative recommendation} in {heading} is important in the context of this article, but it must not with a gerund (verb ending in -ing). The next sentence must descriptive states why this {heading} is important in the context of this {title}. Use numbered lists to enforce sequentially. 
 
-    1. **Start with a {concise numbered imperative recommendation 1} that indicates how to reach the {goal}, which must be logically first compared to the of the numbered imperative recommendations.** Next state what this {concise numbered imperative recommendation 1} is about and use a declarative sentence that doesn't start with a pronoun. Next state why this {numbered imperative recommendation} is important and note any tradeoffs that are present. Nex explain how to follow this recommendation.
+    1. **Start with a {numbered imperative recommendation 1} that represents an action to reach the {goal}. It must be logically first compared to the of the numbered imperative recommendations.** Next state what this {concise numbered imperative recommendation 1} is about and use a declarative sentence that doesn't start with a pronoun. Next state why this {numbered imperative recommendation} is important and note any tradeoffs that are present. Next explain how to follow this recommendation.
 
     Use as many {numbered imperative recommendations} as needed and follow the same structure for each.
 
