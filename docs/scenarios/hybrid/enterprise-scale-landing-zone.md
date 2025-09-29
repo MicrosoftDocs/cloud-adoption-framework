@@ -86,6 +86,4 @@ If organizations deploy Azure Landing Zones or already have Azure Landing Zones 
 
 ## Next step
 
-- Deploy a sandbox using [Arc Jumpstart](https://jumpstart.azure.com/azure_arc_jumpstart)
-- [Azure Arc-enabled servers](/azure/cloud-adoption-framework/scenarios/hybrid/arc-enabled-servers/eslz-identity-and-access-management) design areas
-- [Azure Arc-enabled servers](/azure/cloud-adoption-framework/scenarios/hybrid/arc-enabled-servers/eslz-identity-and-access-management) design areas
+Learn how to [Deploy Azure Arc sandbox to accelerate adoption of hybrid or multicloud architectures](./arc-enabled-servers/enterprise-scale-landing-zone-sandbox.md).
