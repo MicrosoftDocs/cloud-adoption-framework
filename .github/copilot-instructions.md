@@ -1,30 +1,27 @@
-Improve the clarity of content for the Cloud Adoption Framework for Azure to ensure it's clear, accurate, helpful, and actionable for customers looking to adopt Azure.
-
-Ensure technical accuracy of every claim about a Microsoft or Azure product against Microsoft Docs. 
-
-Use clear language and ensure you explain the rationale behind our recommendations to help new users understand how to be successful in Azure.
-
-## Purpose of the Cloud Adoption Framework for Azure
-The Cloud Adoption Framework for Azure helps customers of all sizes to adopt Azure, succeed in Azure, and mature in Azure.
-The Cloud Adoption Framework for Azure provides prescriptive recommendations that help new and current customers make the right decisions for their people, process, and technology faster. 
+Create guidance for Microsoft's Cloud Adoption Framework.
+The Cloud Adoption Framework is a self-service guide to help all customers of all sizes succeed and mature in Azure.
+Ensure technical accuracy against https://github.com/microsoftdocs/mcp. 
 
 ## Template
-Review all the content to ensure it aligns with the following template. 
+Review all the content to ensure it aligns with the following template. Don't make the content more concise. Just apply the template to what's there.
 
     Template:{
 
-    ## Each {heading} must be an {imperative recommendation} to reach a {goal} under the {title}.
+    # Article title must be goal oriented
+     If reviewing the entire article, start the article by stating what the article is about. Define any technical terms. Explain why the guidance in this article is important. Then the rest of the article details the major sequential steps to achieve the goal.
 
-    The first sentence uses a declarative sentence that starts with an article or noun to explain this {imperative recommendation} in {heading} is important in the context of this article, but it must not with a gerund (verb ending in -ing). The next sentence must descriptive states why this {heading} is important in the context of this {title}. Use numbered lists to enforce sequentially. 
+    ## Each heading must be a prescriptive recommendation that represents a significant milestone in the context of article.
 
-    1. **Give a prescriptive recommendation 1 to reach the {goal}. It must be logically first compared to the of the numbered imperative recommendations.** Next define any important terms in the prescriptive recommendation. Then provide any context needed to understand the recommendation. Next explain why this recommendation is important and note any tradeoffs or decision criteria to help technical decision makers make the right decision. Next explain how to act on this recommendation within the context of Azure or Microsoft adding any links to Microsoft Docs as needed.
+    Provide context about what, why, and how to implement this prescriptive recommendation. Don't state: what, why, or how. Address them implicitly. Define any terms to ensure clarity. Then tell customers how to act on this prescriptive recommendation in logical order. Start with what must come first and then next etc. Use numbered lists to enforce sequentially and review to ensure recommendations are logically sequential. Don't make this intro overly concise.
 
-    Use as many {numbered imperative recommendations} as needed and follow the same structure for each.
+    1. **Start** with a bold number prescriptive recommendation that indicates how to reach the {goal}, which must be logically first compared to the of the numbered imperative recommendations.** Provide context about what, why, and how to implement this prescriptive recommendation. Don't state: what, why, or how. Address them implicitly. Define any terms to ensure clarity. Then tell customers how to act on this prescriptive recommendation. Next explain how to follow this recommendation, making it actionable and noting any tradeoffs that are present to help users make the right decision fast. Provide enough context and explanation to make it easy to act on. Use prose narrative and ensure a nice flow for clarity.
 
-    ## Add as many headings and sub headings as needed. But enforce this style and format throughout.
+        Use as many {numbered imperative recommendations} as needed and follow the same instructions above for each.
+
+    ## Add as many headings and sub-headings as needed. Enforce the same style and format throughout.
     }
 
-## Style and formatting guidelines:    
+## Style and formatting instructions:    
 Replace all gerunds (verbs ending in -ing) with more direct and active structures to enhance clarity and engagement.
 Replace all content in the future tense with the present tense.
 Replace all em dashes with alternative punctuation or phrasing to improve readability.
@@ -35,15 +32,3 @@ Replace any emotional or marketing language with precise and descriptive termino
 Replace all adverbs with more precise verbs to enhance clarity and directness in the writing.
 Replace 'leverage' or 'leverages' with 'use' or 'uses'.
 Review all images to ensure their content aligns with the written guidance and supports the recommendations.
-Ensure it is descriptive and provides context for the image content, enhancing accessibility.
-Ensure the content is concise.
-Fix all grammatical errors and typos throughout.
-
-## Accessibility guidelines
-
-:::image type="content" source="review image at this source" alt-text="[add detailed image description here]." lightbox="./images/govern.svg" border="false":::
-
-## Product truth
-
-If there's an inaccuracy, provide a suggestion for improvement and an explanation of why 
-Check every link, review the page that's linked to, and ensure the linked page provides the information that's promised here. 

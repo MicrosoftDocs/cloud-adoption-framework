@@ -1,172 +1,79 @@
 ---
-title: Infrastructure as Code
-description: Infrastructure as Code for Azure Landing Zones
+title: Use infrastructure as code to deploy and manage your Azure environment
+description: Learn to use infrastructure as code to deploy and manage your Azure environment
 author: stephen-sumner
 ms.author: pnp
-ms.date: 05/22/2023
+ms.date: 09/29/2025
 ms.topic: conceptual
-ms.custom: internal
 ---
 
-# Infrastructure as Code
+# Use infrastructure as code to deploy and manage your Azure environment
 
-Infrastructure as Code (IaC) is a key DevOps practice that involves the management of infrastructure, such as networks, compute services, databases, storages, and connection topology, in a descriptive model. IaC allows teams to develop and release changes faster and with greater confidence. Benefits of IaC include:
+Infrastructure as Code (IaC) offers a programmatic method for deploying and managing Azure resources. It transforms infrastructure provisioning from manual and error-prone tasks into automated, consistent, and repeatable deployments.
 
-- Increased confidence in deployments
-- Ability to manage multiple environments
-- Improved understanding of the state of infrastructure
+IaC helps reduce configuration drift, minimize deployment errors, and establish version control across your entire Azure infrastructure. Its programmatic nature allows teams to track changes, roll back deployments, and maintain consistent environments across development, testing, and production stages.
 
-For more information about the benefits of using Infrastructure as Code, see [Repeatable infrastructure](/azure/architecture/framework/devops/automation-infrastructure).
+:::image type="content" source="./media/infrastructure-as-code-process.png" alt-text="Diagram showing the infrastructure as code process outlined in this article: select your infrastructure-as-code tools, design modules, and deploy through pipelines." lightbox="./media/infrastructure-as-code-process.png" border="false":::
 
-## Tooling
+## Select your infrastructure as code tools
 
-There are two approaches you can take when implementing Infrastructure as Code.
+Your choice between Azure-native and third-party tools influences deployment capabilities, support timelines, and integration with your existing technology stack.
 
-- **Imperative Infrastructure as Code** involves writing scripts in languages like Bash or PowerShell. You explicitly state commands that are executed to produce a desired outcome. When you use imperative deployments, it's up to you to manage the sequence of dependencies, error control, and resource updates.
-- **Declarative Infrastructure as Code** involves writing a definition that defines how you want your environment to look. In this definition, you specify a desired outcome rather than how you want it to be accomplished. The tooling figures out how to make the outcome happen by inspecting your current state, comparing it to your target state, and then applying the differences.
+1. **Choose Bicep and ARM templates for Azure-first environments.** Use [Bicep](/azure/azure-resource-manager/bicep/overview) or [Azure Resource Manager (ARM) templates](/azure/azure-resource-manager/templates/overview) when your organization focuses primarily on Azure services. These tools typically support new Azure features earlier than third-party options and integrate well with [Azure DevOps](/azure/devops/pipelines/), [GitHub Actions](/azure/azure-resource-manager/bicep/deploy-github-actions), and other Microsoft development platforms. If your team already uses ARM templates, migrating to Bicep offers improved syntax while maintaining compatibility. For new Azure deployments, select Bicep over ARM templates. Bicep provides the same capabilities as ARM templates with simplified syntax that's easier to read, write, and maintain.
 
-### ARM Templates
+2. **Choose Terraform for multi-cloud or existing Terraform environments.** Use [Terraform](/azure/developer/terraform/overview) if your organization operates across multiple cloud providers like AWS or Google Cloud, or if you already have Terraform expertise and modules. Although Terraform supports Azure well through the AzureRM provider, new Azure features might take longer to become available. The [Azure landing zones Terraform module](../landing-zone/deploy-landing-zones-with-terraform.md) provides enterprise-ready templates for deploying foundational infrastructure.
 
-Review information about Azure Resource Manager templates (ARM templates).
+3. **Understand tool-specific considerations for configuration management.** Each tool handles configuration drift and out-of-band changes differently. Bicep doesn't maintain state, but drift detection can be supported using [What-If](/azure/azure-resource-manager/bicep/deploy-what-if) and Azure Policy. Terraform requires you to [import out-of-band changes](/azure/developer/terraform/comparing-terraform-and-bicep#out-of-band-changes) into the state file and update the configuration code. For more information, see [Manage configuration drift](/azure/cloud-adoption-framework/manage/administer#manage-configuration-drift).
 
-- [What are ARM templates?](/azure/azure-resource-manager/templates/overview)
+4. **Use imperative tools for specific automation scenarios.** While declarative IaC tools like Bicep and Terraform should be your primary approach, [Azure CLI](/cli/azure/) and [Azure PowerShell](/powershell/azure/) are useful for custom scripts, complex workflows with conditional logic, or integration with procedural automation systems. These tools complement declarative templates by offering flexible scripting options.
 
-- [ARM Templates - Infrastructure as Code overview](/dotnet/architecture/cloud-native/infrastructure-as-code#azure-resource-manager-templates)
+## Use infrastructure as code modules
 
-### Bicep
+IaC modules are self-contained units of code that define a specific set of related resources to be deployed together. This approach promotes code reuse, simplifies maintenance, and enables teams to share proven patterns across deployments. The goal is to avoid duplicating work or creating multiple templates for similar tasks. Develop [Bicep modules](/azure/azure-resource-manager/bicep/modules) or [Terraform modules](/azure/developer/terraform/overview) that break complex templates into smaller, more manageable sets of code. Each module should focus on a specific task and contain resources meant to be deployed together.
 
-[Bicep](/azure/azure-resource-manager/bicep/overview?tabs=bicep) is a domain-specific language (DSL) that uses declarative syntax to deploy Azure resources. In Bicep files, you define the infrastructure you intend to deploy and its properties. Compared to ARM templates, Bicep files are easier to read and write for a non-developer audience because they use a concise syntax.
+### Design Bicep modules
 
-This sample Bicep code deploys an Azure Storage Account in the resource group's region. It applies Standard_LRS redundancy and the StorageV2 kind. The access tier is set to 'Hot' for frequent data access.
-
-```bicep
-param location string = resourceGroup().location
-param storageAccountName string = 'toylaunch${uniqueString(resourceGroup().id)}'
-resource storageAccount 'Microsoft.Storage/storageAccounts@2021-06-01' = {
-  name: storageAccountName
-  location: location
-  sku: {
-    name: 'Standard_LRS'
-  }
-  kind: 'StorageV2'
-  properties: {
-    accessTier: 'Hot'
-  }
-}
-```
-
-### Terraform
-
-Review information about Terraform.
-
-- [Overview of Terraform on Azure](/azure/developer/terraform/overview)
-
-- [Terraform - Infrastructure as Code overview](/dotnet/architecture/cloud-native/infrastructure-as-code#terraform)
-
-### Azure CLI
-
-Review information about Azure CLI.
-
-- [Azure Command-Line Interface (CLI)](/cli/azure/what-is-azure-cli)
-
-- [Azure CLI - Infrastructure as Code overview](/dotnet/architecture/cloud-native/infrastructure-as-code#azure-cli-scripts-and-tasks)
-
-## Infrastructure as Code modules
-
-One of the goals of using code to deploy infrastructure is to avoid duplicating work or creating multiple templates for the same or similar purposes. Infrastructure modules should be reusable and flexible and should have a clear purpose.
-
-Modules are independent files, typically containing set of resources meant to be deployed together. Modules allow you to break complex templates into smaller, more manageable sets of code. You can ensure that each module focuses on a specific task and that all modules are reusable for multiple deployments and workloads.
-
-### Bicep modules
-
-Bicep allows you to create and call modules. Once modules are created, they can be consumed from any other Bicep template. A high quality Bicep module should define multiple related resources. For example, when you define an Azure function, you typically deploy a particular application, a hosting plan for that application, and a storage account for that application´s metadata. These components are separately defined, but they form a logical grouping of resources, so you should consider defining them together as a module.
-
-Bicep modules commonly use:
+Bicep supports modular development by allowing you to create and reuse modules. Modules are self-contained units that define a set of related resources. Once created, a module can be called from any other Bicep template, promoting reuse and consistency across deployments. A well-designed Bicep module typically encapsulates multiple resources that logically belong together. Bicep modules commonly use:
 
 - **Parameters** to accept values from a calling module.
 - **Output values** to return results to a calling module.
-- **Resources** to define one or more infrastructure objects for a module to manage.
+- **Resources:** to define one or more infrastructure objects for a module to manage.
 
-#### Publish Bicep modules
+### Design Terraform modules
 
-You have several options for publishing and sharing Bicep modules.
-
-- **Public registry:** The public module registry is hosted in a Microsoft container registry (MCR). Its source code and the modules it contains are stored in [GitHub](https://github.com/azure/bicep-registry-modules).
-- **Private registry:** You can use Azure container registry to publish modules to a private registry. For information on publishing modules to a registry in a CI/CD pipeline, see [Bicep and GitHub Actions](/training/modules/publish-reusable-bicep-code-using-github-actions/), or if you prefer, [Bicep and Azure Pipelines](/training/modules/publish-reusable-bicep-code-using-azure-pipelines/).
-- **Template Spec:** You can use [template specs](/azure/azure-resource-manager/templates/template-specs?tabs=azure-powershell) to publish Bicep modules. Template specs are meant to be complete templates, but Bicep allows you to use template specs to deploy modules.
-- **Version control system:** You can load modules directly from version control tools like GitHub or Azure DevOps.
-
-### Terraform modules
-
-Terraform allows you to create and call modules. Each Terraform configuration has at least one module, known as its *root module*, consisting of resources defined in `.tf` files in your main working directory. Each module can call other modules, which allows you to include child modules in your main configuration file. Modules can also be called multiple times within the same configuration or from different configurations.
-
-Modules are defined with all of the same configuration language concepts. They most commonly use:
+Terraform modules allow you to organize and reuse infrastructure code. Every Terraform configuration includes a root module, which consists of resources defined in `.tf` files. Modules can call other modules, including child modules, and can be reused across configurations. Common elements include:
 
 - **Input variables** to accept values from a calling module.
 - **Output values** to return results to a calling module.
 - **Resources** to define one or more infrastructure objects for a module to manage.
 
-#### Publishing Terraform modules
+### Establish module publishing and distribution strategies
 
-You have several options for publishing and sharing Terraform modules:
+Your strategy for distributing modules affects collaboration, version control, and deployment reliability. Use public registries when modules meet your requirements and trusted providers maintain them. For Bicep and Terraform, [Azure Verified Modules](https://azure.github.io/Azure-Verified-Modules/overview/introduction/) offer tested and supported implementations aligned with Azure best practices. Always verify the support and maintenance commitments before using external modules in production.
 
-- **Public registry:** HashiCorp has their own Terraform Module Registry that allows users to generate sharable Terraform modules. There are currently several [Azure modules](https://registry.terraform.io/namespaces/Azure) published in the Terraform Module Registry.
-- **Private registry:** You can seamlessly publish Terraform modules to a private repository like Terraform Cloud Private Registry or Azure Container Registry.
-- **Version control system:** You can load private modules directly from version control tools like GitHub. For information on supported sources, see [Terraform module sources](https://www.terraform.io/language/modules/sources).
+#### Bicep module publishing
 
-## Design considerations
+You can publish and share Bicep modules using several methods:
 
-- Consider using IaC when deploying landing zone resources to Azure. IaC fully realizes deployment optimization, reduces configuration effort, and automates the entire environment´s deployments.
+- **Public registry** hosted in the [Microsoft Container Registry (MCR)](https://github.com/azure/bicep-registry-modules).
+- **Private registry** using Azure Container Registry (ACR) and CI/CD pipelines
+- [**Template Specs**](/azure/azure-resource-manager/templates/template-specs?tabs=azure-powershell) to store versioned ARM templates compiled from Bicep templates for reuse. They aren't a registry for raw Bicep modules.
+- **Version control system** such as GitHub or Azure DevOps for collaborative development, then [reference](/azure/azure-resource-manager/bicep/modules#path-to-a-module) via local paths or publish to a registry or template spec.
 
-- Determine whether you should take an imperative or declarative IaC approach.
+#### Terraform module publishing
 
-  - If taking an imperative approach, explicitly state commands to be executed that produce your desired outcome.
+Terraform modules can be published and shared through:
 
-  - If taking a declarative approach, specify your desired outcome rather than how you want it done.
+- **Public registry** such as the HashiCorp's Terraform Module Registry and [Azure modules](https://registry.terraform.io/namespaces/Azure) published in the Terraform Module Registry.
+- **Private registry** including Terraform Cloud Private Registry or Azure Container Registry
+- **Version control system** like GitHub. For supported sources, see [Terraform module sources](https://www.terraform.io/language/modules/sources).
 
-- Consider deployment scopes. Have a good understanding of [Azure management levels and hierarchy](../azure-setup-guide/organize-resources.md). Each IaC deployment must know the scope at which Azure resources are deployed.
+## Deploy infrastructure as code through pipelines
 
-- Determine whether you should use an Azure native or Azure non-native IaC tool. Some points to consider:
+Automated pipelines ensure consistent and repeatable deployments while providing visibility and enabling rapid recovery.
 
-  - Azure native tools like Azure CLI, ARM Templates, and Bicep are fully supported by Microsoft, which allows their new features to be integrated faster.
+1. **Implement CI/CD pipelines for all infrastructure deployments.** Platforms like [Azure DevOps](/azure/devops/pipelines/) or [GitHub Actions](/azure/azure-resource-manager/bicep/deploy-github-actions) help automate IaC deployments. Pipelines should include linting, security scanning, testing, and approval gates before production deployment. They help reduce errors, ensure consistency, and support compliance through audit trails.
 
-  - Non-native tools like Terraform allow you to manage infrastructure as code across multiple cloud providers like AWS or Google Cloud. However, new Azure features can take some time to be included in non-native. If your organization is multicloud or your organization is already using and well-versed in Terraform, consider using Terraform to deploy Azure landing zones.
+2. **Establish environment promotion strategies with appropriate testing.** Deploy infrastructure through development, testing, staging, and production environments with increasing validation. Use [deployment stacks](/azure/azure-resource-manager/bicep/deployment-stacks) or Terraform state management to track resource lifecycle and enable safe updates. Implement automated testing that validates infrastructure configuration, security posture, and functionality before promoting to the next environment. Test modules in isolation before integrating them into larger deployments. Use tools like [ARM template test toolkit](/azure/azure-resource-manager/templates/test-toolkit) and [Terratest](https://terratest.gruntwork.io/) for Terraform modules. Establish processes to verify module functionality, security, and compliance before publishing.
 
-- Since modules enable you to break complex templates into smaller sets of code, consider using IaC modules for resources that are commonly deployed together. You can ensure each module focuses on a specific task and is reusable for multiple deployments and workloads.
-
-- Consider adopting a publishing strategy for IaC modules by choosing between public registries, private registries or a version control system like a Git repository.
-
-- Consider using a CI/CD pipeline for IaC deployments. A pipeline enforces the reusable process you set to ensure the quality of your deployments and Azure environment.
-
-## Design recommendations
-
-- Adopt an IaC approach to deploying, managing, governing, and supporting Azure landing zone deployments.
-
-- Use Azure native tools for IaC in the following scenarios:
-
-  - You want to use only Azure native tools. Your organization might have prior ARM or Bicep template deployment experience.
-
-  - Your organization wants to have immediate support for all preview and GA versions of Azure services.
-
-- Use non-native tools for IaC in the following scenarios:
-
-  - Your organization currently uses Terraform to deploy infrastructure to other clouds like AWS or Google Cloud.
-
-  - Your organization doesn't need to have immediate support for all preview and GA versions of Azure services.
-
-- Use reusable IaC modules to avoid repetitive work. You can share modules across your organization to deploy multiple projects or workloads and manage less complex code.
-
-- Publish and use IaC modules from public registries in the following scenarios:
-
-  - You want to use modules for Azure Landing Zone already published to public registries. For more information, see [Azure landing zones Terraform module](../landing-zone/deploy-landing-zones-with-terraform.md).
-
-  - You want to use modules that are maintained, updated, and supported by Microsoft, Terraform, or other module providers.
-    - Make sure you check the support statement from any module provider you evaluate.
-
-- Publish and use IaC modules from private registries or version control systems in the following scenarios:
-
-  - You want to create your own modules based on your organizational requirements.
-
-  - You want to have full control of all features and maintain, update, and publish new versions of modules.
-
-- Use a CI/CD pipeline to deploy IaC artifacts and ensure the quality of your deployment and Azure environments.
+3. **Understand your deployment scopes before deploying.** Review the [Azure management levels and hierarchy](../azure-setup-guide/organize-resources.md) to understand where your resources need to be deployed. Each IaC template must target the appropriate scope, and different tools have varying capabilities at each scope level. For example, tenant-level deployments require specific permissions and support different resource types than resource group deployments.
