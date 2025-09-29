@@ -158,7 +158,7 @@ Planning efforts for unified operations and management assume that most assets f
 
 If unified operations is a core part of your strategy, you should start by lighting up Azure Arc for all resources before starting your Azure Migrate integration.
 
-Do you have to look at the existing estate differently? Or is a simple VM to VM migration sufficient? Review this article when you are [gathering inventory for your digital estate](../hybrid/ready.md).
+Do you have to look at the existing estate differently? Or is a simple VM to VM migration sufficient?
 
 ## Hybrid and multicloud adoption plan
 
@@ -172,7 +172,7 @@ Are there specific skills or extra training this team should take before getting
 
 The following list of articles will take you to guidance found at specific points throughout the cloud adoption journey to help you be successful in the cloud adoption scenario.
 
-- [Review your environment or Azure landing zones](./ready.md)
+- [Review your environment or Azure landing zones](./enterprise-scale-landing-zone.md)
 - [Hybrid and multicloud migration](./migrate.md)
 - [Govern hybrid and multicloud environments](./govern.md)
 - [Manage hybrid and multicloud environments](./manage.md)
