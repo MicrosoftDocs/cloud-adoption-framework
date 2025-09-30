@@ -1,63 +1,48 @@
 ---
-title: Introduction to the modern application platform scenario
-description: Learn about the modern application platform scenario of the Cloud Adoption Framework.
+title: Azure application landing zone accelerators
+description: Learn about Azure application landing zone accelerators
 author: stephen-sumner
 ms.author: pnp
-ms.date: 03/01/2021
+ms.date: 09/26/2025
 ms.topic: conceptual
-ms.custom: think-tank, e2e-aks
 ---
 
-# Introduction to the modern application platform scenario
+# Azure application landing zone accelerators
 
-As customers address larger, more sophisticated forms of cloud adoption, their journey to the cloud becomes more complex. Commonly, customers use orchestrated containers to manage pools of workloads in one or more centralized clusters. This article series combines technical and non-technical considerations required to prepare for Kubernetes and container integration into centralized operations and your broader cloud strategy.
+To deploy application workloads in Azure successfully, you need to establish a solid foundation. When you follow Azure landing zone guidance, you create an Azure environment that supports scalability, security, and operational consistency. The foundation of your Azure environment is your customer agreement, identity and access management, resource hierarchy, governance, and platform landing zones that host shared services.
 
-Organizations include managed services, application services, and containers in their overall strategy to accelerate developer productivity, reduce operating overhead, make workloads more portable, and modernize legacy workloads.
+After you set up your Azure environment, you can connect **application landing zones** directly to it. To help you deploy application landing zones faster, Microsoft offers **application landing zone accelerators**. These accelerators provide ready-to-deploy infrastructure that follows best practices.
 
-- **Application platform:** A collection of application dependencies designed to support the execution of the application. Application platforms accelerate development by providing well-defined structures to address many common needs. Application platforms can also create constraints that affect how the application can be built.
-- **Application services (PaaS services):** Application services, or platform as a service (PaaS) options for developers, provide an application platform that maximizes the value each application can draw from a cloud environment. These services create a layer of abstraction between the application platform and the underlying cloud infrastructure. This layer of abstraction forces a specific and consistently defined set of application platform constraints, which can only run in specific environments.
-- **Containers:** Containers create a similar layer of abstraction between an application's runtime requirements and the underlying operating system and infrastructure. Unlike PaaS options, containers allow the application runtime to be configured for the needs of the application, regardless of the container host.
-- **Container orchestration:** A container orchestrator provides a consistent application runtime for an instance of a container host. This orchestration allows workload-focused operations teams to mature deployment and DevOps practices to facilitate multiple deployment and operations practices, reducing dependencies on centralized or human operations.
+:::image type="content" source="../../_images/ready/azure-landing-zones-conceptual-architecture.png" alt-text="Diagram showing the conceptual components of your cloud environment as it aligns with Azure landing zones." lightbox="../../_images/ready/azure-landing-zones-conceptual-architecture.png" border="false":::
 
-This article series will outline how application services and containers can be integrated into your cloud adoption strategy to delivery the following outcomes:
+**Platform landing zones** are subscriptions that host shared services. These services include connectivity, identity, management, and security resources. You only need the platform landing zones that match your environment. If you work with a smaller or cloud-native footprint and don't require on-premises connectivity, you might not need many shared services.
 
-- **Developer acceleration through abstraction:** Both containers and application services, accelerate developer productivity by allowing developers to focus more on code and less on host environment concerns.
-- **Reduce operations costs through abstraction:** Standardized container orchestration ensures consistent runtimes across all hosts, which streamlines operations regardless of the workloads developers may deploy. Through standardization, centralized operations teams can extend traditional support and operations practices to container hosts.
-- **Workload portability through abstraction:** Moving workloads between container orchestrators allows for workload portability. Some container orchestration platforms work in the public cloud. Other container orchestration platforms are designed for edge or private cloud deployment. Allowing for diverse container orchestration options allows for portability of workloads between container hosts across hybrid, multicloud, edge, and public cloud platforms.
-- **Modernize legacy workloads through abstraction:** Legacy workloads may require a layer of abstraction prior to migration or modernization. Customizing the runtime on a container host allows the legacy requirements to be met in a modern cloud environment.
+**Application landing zones** are subscriptions for your workload environments. You place these subscriptions under the appropriate management group. This setup ensures the subscriptions inherit Azure Policy assignments that enforce security, compliance, and operational standards. You should create one application landing zone for each workload environment, such as development, testing, and production.
 
-This article series outlines how you can integrate container and container management into your strategy, plan, adoption, and operation phases of your cloud journey.
+All subscriptions must be configured with Azure Role-Based Access Control, Cost Management, Network Watcher, and Microsoft Defender for Cloud. These services should be consistently enabled across all subscriptions, including both application and platform landing zones.
 
-## Components of the scenario
+For more information, see [Azure landing zones](../../ready/landing-zone/index.md).
 
-This scenario is designed to guide the end-to-end customer journey, throughout the cloud adoption lifecycle. Completing the journey requires a few key guidance sets:
+## Application landing zone accelerators
 
-- **Cloud Adoption Framework:** These articles walk through the smallest set of considerations and implementations of each CAF methodology. Use these articles to prepare decision makers, central IT, and the cloud center of excellence for adoption of containers and container management as a central part of your technology strategy.
-- **Azure Well-Architected Framework:** These articles outline the considerations that each workload owner should make when their workloads need to be deployed using containers or container management solutions like Kubernetes.
-- **Reference architectures:** These reference solutions aid in accelerating deployment of container solutions using Azure Kubernetes Service (AKS).
-- **Featured Azure products:** Learn more about the products that support your container and container management strategy in Azure.
-- **Learn modules:** Gain the hands-on skills required to implement, maintain, and support container and AKS solutions.
+Microsoft provides Application Landing Zone Accelerators to help you deploy application landing zones quickly and reliably. These accelerators are opinionated and extensible reference implementations that follow Azure Landing Zone principles and best practices. They're infrastructure-as-code templates hosted in GitHub. First, deploy the templates to your environment, then add your application code and configurations on top of the infrastructure.
 
-## Common customer journeys
+- **[Azure Integration Services](./integration-services/landing-zone-accelerator.md):** Deploy integration workloads using Logic Apps, Service Bus, Event Grid, and API Management.
 
-**AKS reference architectures:** The reference architectures listed in the left pane demonstrate how to deploy various proven architectures to manage your container and Kubernetes platforms with the help of Azure Kubernetes Service (AKS). These architectures are the suggested starting point for Kubernetes in Azure.
+- **[Azure Kubernetes Service (AKS)](./aks/landing-zone-accelerator.md):** Run containerized applications at scale with built-in support for DevOps, monitoring, and security.
 
-**Migrate existing workloads to AKS:** A common use case for AKS in Azure is to modernize existing web-based workloads directly to a container-based or cloud-native solution, instead of traditional migration efforts. The article on [migrating to containers](./migrate.md) will demonstrate how Azure Migrate can accelerate container migration within your standard migration processes.
+- **[Azure API Management](./api-management/landing-zone-accelerator.md):** Manage, secure, and scale your APIs with a fully managed API gateway.
 
-**Centralize deployment and management of containers:** The first set of articles in the left pane provides rich guidance on centralization of your container strategy. This article series intends to help central IT or cloud center of excellence teams understand how containers affect your cloud strategy and how to provide consistent centralized support.
+- **[Azure App Service](./app-services/landing-zone-accelerator.md):** Host web apps and APIs with built-in scaling, patching, and CI/CD integration.
 
-**Prepare for governance and operation of containers at scale:** The [AKS landing zone accelerator](./aks/landing-zone-accelerator.md) demonstrates how you can use enterprise-scale landing zones to ensure consistent governance, security, and operations across multiple landing zones for centralized management of containers at scale.
+- **[Azure Red Hat Enterprise Linux (RHEL)](./azure-red-hat-enterprise-linux/landing-zone-accelerator.md):** Deploy enterprise-grade Linux workloads with Microsoft and Red Hat joint support.
 
-**Implement specific Azure products:** Accelerate and improve container and Kubernetes capabilities using different kinds of Azure products outlined in the featured products section.
+- **[Azure Red Hat OpenShift (ARO)](./azure-red-hat-openshift/landing-zone-accelerator.md):** Run OpenShift clusters with integrated Azure services and enterprise support.
 
-## Next step: Integrate modern application platforms into your cloud adoption journey
+- **[Azure Container Apps](./container-apps/landing-zone-accelerator.md):** Build and deploy microservices and event-driven apps without managing Kubernetes.
 
-The following list of articles will take you to guidance at specific points in the cloud adoption journey to help you be successful in the cloud adoption scenario.
+## Next step
 
-- [Strategy for modern application platforms](./strategy.md)
-- [Plan for modern application platforms](./plan.md)
-- [Review your environment or Azure landing zones](./ready.md)
-- [Migrate workloads to modern application platforms](./migrate.md)
-- [Innovate using modern application platform solutions](./innovate.md)
-- [Govern modern application platform solutions](./govern.md)
-- [Manage modern application platform solutions](./manage.md)
+Start exploring the Application Landing Zone Accelerators to deploy your workloads with confidence and consistency.
+
+If you prefer to build your own solution, you can design custom application landing zones from scratch. Use the [Azure Well-Architected Framework](/azure/well-architected/) and guidance from the [Azure Architecture Center](/azure/architecture/) to align your architecture with best practices for reliability, security, performance, cost optimization, and operational excellence.

@@ -428,7 +428,7 @@
     {
       "source_path": "docs/scenarios/aks/index.md",
       "redirect_url": "/azure/cloud-adoption-framework/scenarios/app-platform/index",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "docs/scenarios/aks/innovate.md",
@@ -643,6 +643,11 @@
     {
         "source_path": "docs/scenarios/hybrid/ready.md",
         "redirect_url": "/azure/cloud-adoption-framework/scenarios/hybrid/enterprise-scale-landing-zone",
+        "redirect_document_id": true
+    },
+    {
+        "source_path": "docs/scenarios/app-platform/ready.md",
+        "redirect_url": "/azure/cloud-adoption-framework/scenarios/app-platform/",
         "redirect_document_id": true
     }
   ]
