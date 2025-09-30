@@ -19,9 +19,9 @@ A platform foundation provides shared services such as networking, identity, sec
 
 2. **Skip this step if your organization already has a platform foundation.** If you already have an Azure landing zone, proceed to deploy the AKS landing zone accelerator.
 
-## Deploy the AKS landing zone accelerator
+## AKS landing zone accelerator
 
-The AKS landing zone accelerator includes a reference architecture that support scalable AKS deployments.
+This AKS landing zone accelerator includes a reference architecture that support scalable AKS deployments.
 
 1. **Use the templates from the official GitHub repository.** Use the [AKS landing zone accelerator](https://aka.ms/aks-reference-implementation) repo to access ARM template, Bicep, and Terraform templates for deploying AKS infrastructure components fit your environment. Modify environment variables and parameters to align with your organization’s naming conventions, policies, and operational requirements.
 
