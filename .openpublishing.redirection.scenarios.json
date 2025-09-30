@@ -647,8 +647,8 @@
     },
     {
         "source_path": "docs/scenarios/app-platform/ready.md",
-        "redirect_url": "/azure/cloud-adoption-framework/scenarios/app-platform",
+        "redirect_url": "/azure/cloud-adoption-framework/scenarios/app-platform/",
         "redirect_document_id": true
     }
-  ]
+  
 }
