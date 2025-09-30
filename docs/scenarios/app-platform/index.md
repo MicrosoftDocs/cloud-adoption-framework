@@ -11,21 +11,17 @@ ms.topic: conceptual
 
 To deploy application workloads in Azure successfully, you need to establish a solid foundation. When you follow Azure landing zone guidance, you create an Azure environment that supports scalability, security, and operational consistency. The foundation of your Azure environment is your customer agreement, identity and access management, resource hierarchy, governance, and platform landing zones that host shared services.
 
-After you set up your Azure environment, you can connect **application landing zones** directly to it. To help you deploy application landing zones faster, Microsoft offers **application landing zone accelerators**. These accelerators provide ready-to-deploy infrastructure that follows best practices.
+After you set up your Azure environment, your **application landing zones** build on top of it. To help you deploy application landing zones faster, Microsoft offers **application landing zone accelerators**. Application landing zone accelerators provide design guidance and sometimes reference implementations that show you how to integrate workloads *in your Azure landing zone.*
 
 :::image type="content" source="../../_images/ready/azure-landing-zones-conceptual-architecture.png" alt-text="Diagram showing the conceptual components of your cloud environment as it aligns with Azure landing zones." lightbox="../../_images/ready/azure-landing-zones-conceptual-architecture.png" border="false":::
 
-**Platform landing zones** are subscriptions that host shared services. These services include connectivity, identity, management, and security resources. You only need the platform landing zones that match your environment. If you work with a smaller or cloud-native footprint and don't require on-premises connectivity, you might not need many shared services.
+An **application landing zone** is one or more subscriptions for each environment in your workload. You might need more than one subscription due to subscription limitations. You place these subscriptions under the appropriate management group. This setup ensures the application landing zone inherit Azure Policy assignments. You create one application landing zone for each workload environment, such as development, testing, and production.
 
-**Application landing zones** are subscriptions for your workload environments. You place these subscriptions under the appropriate management group. This setup ensures the subscriptions inherit Azure Policy assignments that enforce security, compliance, and operational standards. You should create one application landing zone for each workload environment, such as development, testing, and production.
+All subscriptions must be configured with Azure Role-Based Access Control, Cost Management, Network Watcher, and Microsoft Defender for Cloud. These services should be consistently enabled across all subscriptions, including both application and platform landing zones. For more information, see [Azure landing zones](../../ready/landing-zone/index.md).
 
-All subscriptions must be configured with Azure Role-Based Access Control, Cost Management, Network Watcher, and Microsoft Defender for Cloud. These services should be consistently enabled across all subscriptions, including both application and platform landing zones.
+## Find application landing zone accelerators
 
-For more information, see [Azure landing zones](../../ready/landing-zone/index.md).
-
-## Application landing zone accelerators
-
-Microsoft provides Application Landing Zone Accelerators to help you deploy application landing zones quickly and reliably. These accelerators are opinionated and extensible reference implementations that follow Azure Landing Zone principles and best practices. They're infrastructure-as-code templates hosted in GitHub. First, deploy the templates to your environment, then add your application code and configurations on top of the infrastructure.
+Here's a list of application landing zone accelerators to help you deploy application landing zones quickly and reliably. Where there's infrastructure-as-code templates hosted in GitHub deploy the templates to your application landing zone, then add your application code and configurations on top of the infrastructure.
 
 - **[Azure Integration Services](./integration-services/landing-zone-accelerator.md):** Deploy integration workloads using Logic Apps, Service Bus, Event Grid, and API Management.
 
