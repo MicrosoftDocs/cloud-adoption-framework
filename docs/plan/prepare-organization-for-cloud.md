@@ -49,7 +49,7 @@ Clearly defined responsibilities are essential for consistent governance, securi
 
 1. **Plan for cloud governance.** Establish a governance team to assess risks, define policies, and monitor progress. This team should be in place before deploying workloads. See [Build a cloud governance team](/azure/cloud-adoption-framework/govern/build-cloud-governance-team).
 
-2. **Plan for cloud security.** Embed security into every stage of the cloud lifecycle—from development to operations. A secure foundation protects against threats and ensures compliance. See [Security Teams, Roles, and Functions](/azure/cloud-adoption-framework/secure/teams-roles) to start your security plan.
+2. **Plan for cloud security.** Embed security into every stage of the cloud lifecycle from development to operations. A secure foundation protects against threats and ensures compliance. See [Security Teams, Roles, and Functions](/azure/cloud-adoption-framework/secure/teams-roles) to start your security plan.
 
 3. **Plan for cloud management.** Define operational processes to align cloud operations with business goals and ensure consistent service delivery. See [Ready your Azure cloud operations](/azure/cloud-adoption-framework/manage/ready) for a detailed list of responsibilities.
 
