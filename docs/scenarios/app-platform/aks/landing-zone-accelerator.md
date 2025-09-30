@@ -9,7 +9,11 @@ ms.topic: conceptual
 
 # Azure Kubernetes Services (AKS) landing zone accelerator
 
-The Azure Kubernetes Services (AKS) landing zone accelerator provides a modular, reference implementation that aligns with the Cloud Adoption Framework's Azure landing zones and design principles.
+The Azure Kubernetes Services (AKS) landing zone accelerator provides a reference implementation to help you deploy AKS in an Azure landing zones. The following architecture shows how AKS integrates with shared services and aligns with the design areas.
+
+:::image type="complex" source="./media/aks-enterprise-scale-landing-zone-architecture.svg" alt-text="Diagram that shows the AKS landing zone accelerator architecture." lightbox="./media/aks-enterprise-scale-landing-zone-architecture.svg" border="false":::
+    The diagram shows four management groups: platform subscriptions, sandbox subscriptions, decommissioned subscriptions, and application landing zone subscriptions. The AKS landing zone accelerator deploys to a subscription under the application landing zone management group. Customers connect to the AKS cluster through Azure Application Gateway, which is only accessible through a private virtual network. This private virtual network is peered with the hub connectivity subscription, which provides on-premises connectivity via ExpressRoute, VPN, and an Azure Firewall. The AKS cluster, User Node Pool, and System Node Pool are in a resource group with Azure Key Vault. A separate resource group contains Cosmos DB and MySQL databases behind a private endpoint. A third resource group is a Node Resource Group. The architecture includes Azure dashboards, recovery services vaults, shared services, Azure role-based access control assignments, Azure policy assignments, Network Watcher, Microsoft Defender for Cloud, Azure Container Registry, and Azure Monitor for Containers.
+:::image-end:::
 
 ## Establish a platform foundation
 
@@ -39,14 +43,6 @@ Design areas help you align your AKS implementation with Azure landing zone prin
 - [Management and business continuity and disaster recovery (BCDR)](./management.md)
 - [Platform automation and DevOps](./platform-automation-and-devops.md)
 - [Storage](./storage.md)
-
-## Example conceptual reference architecture
-
-The conceptual reference architecture shows how AKS integrates with shared services and aligns with the design areas.
-
-:::image type="complex" source="./media/aks-enterprise-scale-landing-zone-architecture.svg" alt-text="Diagram that shows the AKS landing zone accelerator architecture." lightbox="./media/aks-enterprise-scale-landing-zone-architecture.svg" border="false":::
-    The diagram shows four management groups: platform subscriptions, sandbox subscriptions, decommissioned subscriptions, and application landing zone subscriptions. The AKS landing zone accelerator deploys to a subscription under the application landing zone management group. Customers connect to the AKS cluster through Azure Application Gateway, which is only accessible through a private virtual network. This private virtual network is peered with the hub connectivity subscription, which provides on-premises connectivity via ExpressRoute, VPN, and an Azure Firewall. The AKS cluster, User Node Pool, and System Node Pool are in a resource group with Azure Key Vault. A separate resource group contains Cosmos DB and MySQL databases behind a private endpoint. A third resource group is a Node Resource Group. The architecture includes Azure dashboards, recovery services vaults, shared services, Azure role-based access control assignments, Azure policy assignments, Network Watcher, Microsoft Defender for Cloud, Azure Container Registry, and Azure Monitor for Containers.
-:::image-end:::
 
 ## Next steps
 
