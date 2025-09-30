@@ -42,7 +42,7 @@ Use the responsibilities outlined in *Table 1* to build an effective operational
 
 1. ***Assign central platform responsibilities.*** Form a dedicated team to handle central management tasks. Develop a skills matrix from *Table 1* to identify required expertise.
 
-1. ***Assign workload responsibilities.*** Set up specialized teams for workload-specific tasks. Identify responsibilities using *Table 1* then recruit accordingly. Use the Azure Well-Architected Framework.*** Use the [Operational excellence](/azure/well-architected/operational-excellence/) pillar to guide your workload management responsibilities.
+1. ***Assign workload responsibilities.*** Set up specialized teams for workload-specific tasks. Identify responsibilities using *Table 1* then recruit accordingly. Use the Azure Well-Architected Framework and its [Operational excellence](/azure/well-architected/operational-excellence/) pillar to guide your workload management responsibilities.
 
 1. ***Assign responsibility.*** Name specific owners for all cloud management responsibilities. In a shared management model, workload teams should have autonomy to manage their subscriptions.
 
