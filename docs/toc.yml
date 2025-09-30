@@ -546,7 +546,7 @@ items:
     - name: Hybrid and multicloud
       href: scenarios/hybrid/index.md
     - name: Modern application platform
-      href: scenarios/app-platform/strategy.md
+      href: scenarios/app-platform/index.md
     - name: Oracle
       href: scenarios/oracle-on-azure/index.md
     - name: SAP
