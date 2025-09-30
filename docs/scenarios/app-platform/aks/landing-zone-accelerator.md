@@ -11,7 +11,7 @@ ms.topic: conceptual
 
 The Azure Kubernetes Services (AKS) landing zone accelerator provides a modular, reference implementation that aligns with the Cloud Adoption Framework's Azure landing zones and design principles.
 
-## Establish a platform foundation before deploying AKS
+## Establish a platform foundation
 
 A platform foundation provides shared services such as networking, identity, security, and governance. This foundation supports consistent and secure AKS deployments across your environment.
 
