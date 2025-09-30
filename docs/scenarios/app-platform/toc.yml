@@ -1,6 +1,6 @@
 items:
   - name: Modern application platform - Microsoft Cloud Adoption Framework
-    href: ready.md
+    href: index.md
     pdf_name: Modern application platform - Microsoft Cloud Adoption Framework
   - name: Application landing zone accelerators
     expanded: true
