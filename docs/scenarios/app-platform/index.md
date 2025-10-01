@@ -9,7 +9,7 @@ ms.topic: conceptual
 
 # Azure application landing zone accelerators
 
-To deploy application workloads in Azure successfully, you need to establish a solid foundation. When you follow Azure landing zone guidance, you create an Azure environment that supports scalability, security, and operational consistency. The foundation of your Azure environment is your customer agreement, identity and access management, resource hierarchy, governance, and platform landing zones that host shared services.
+To deploy application workloads in Azure successfully, you need to establish a solid foundation. When you follow Azure landing zone guidance, you create an Azure environment that supports scalability, security, and operational consistency. The foundation of your Azure environment is your customer agreement, identity and access management, resource hierarchy, governance, and platform landing zone that host shared services.
 
 After you set up your Azure environment, your **application landing zones** build on top of it. To help you deploy application landing zones faster, Microsoft offers **application landing zone accelerators**. Application landing zone accelerators provide design guidance and sometimes reference implementations that show you how to integrate workloads *in your Azure landing zone.*
 
