@@ -53,7 +53,7 @@ additionalContent:
   # Supports up to 3 sections
   sections:
     - title: Cloud Adoption Framework methodologies  # < 60 chars (optional)
-      summary:   # < 160 chars (optional)
+      summary: Proven guidance for each phase of the cloud journey.  # < 160 chars (optional)
       items:
 
         # Card
