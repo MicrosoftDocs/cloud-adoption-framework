@@ -39,4 +39,4 @@ For deeper content that helps you stay current with Azure topics, review these r
 ## Next step
 
 > [!div class="nextstepaction"]
-> [CAF Build-cloud native](../../cloud-native/plan-cloud-native-solutions.md)
+> [Build-cloud native](../../cloud-native/plan-cloud-native-solutions.md)
