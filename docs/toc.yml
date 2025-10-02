@@ -533,7 +533,7 @@ items:
       href: ready/azure-setup-guide/staying-current.md  
   - name: Adoption scenarios
     items:
-    - name: AI adoption
+    - name: AI
       href: scenarios/ai/index.md
     - name: Azure VMware Solution
       href: scenarios/azure-vmware/index.md
