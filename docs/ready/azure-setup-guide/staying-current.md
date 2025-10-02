@@ -35,3 +35,8 @@ For deeper content that helps you stay current with Azure topics, review these r
 - [Azure Weekly](https://azureweekly.info): This newsletter provided by [endjin.com](https://endjin.com) includes a summary of the week's top news about Microsoft Azure. It also includes interesting historical content. Subscribe via the [Azure Weekly email](https://azureweekly.info). \*
 
 \* *These resources are provided by the community and are not officially maintained by Microsoft.*
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [CAF Overview](../../overview.md)
