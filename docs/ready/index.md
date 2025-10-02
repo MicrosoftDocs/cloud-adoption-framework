@@ -1,9 +1,9 @@
 ---
 title: Ready you environment for workloads
-description: Learn how to create a landing zone to host the workloads that you plan to build in the cloud or migrate to the cloud.
+description: Understand Azure landing zone and the process to use one. 
 author: stephen-sumner
 ms.author: pnp
-ms.date: 05/15/2025
+ms.date: 10/02/2025
 ms.topic: conceptual
 ms.custom: internal
 ms.update-cycle: 1095-days
