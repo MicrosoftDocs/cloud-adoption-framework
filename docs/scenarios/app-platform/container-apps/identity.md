@@ -15,7 +15,7 @@ Consider using [managed identity](/azure/container-apps/managed-identity) instea
 
 ## Recommendations
 
-- If authentication is required, use Azure Entra ID or [Azure Entra ID B2C](/entra/external-id/b2b-fundamentals) as an identity provider.
+- If authentication is required, use Microsoft Entra ID or [Entra External ID](/entra/external-id/customers/overview-customers-ciam) as an identity provider.
 
 - Use separate app registrations for the application environments. For example, create a different registration for development vs. test vs. production.
 
