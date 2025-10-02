@@ -37,14 +37,7 @@ This structure ensures that workloads are deployed in a controlled and consisten
 
 ## Configurations that apply across all subscriptions
 
-Whether a subscription belongs to the platform or an application landing zone, certain configurations should be enabled universally. These configurations include:
-
-- Azure Role-Based Access Control (RBAC)
-- Cost Management
-- Network Watcher
-- Microsoft Defender for Cloud
-
-These services help maintain visibility, security, and operational control across your entire Azure environment.
+Whether a subscription belongs to the platform or an application landing zone, certain configurations should be enabled universally. These configurations include: Azure Role-Based Access Control (RBAC), Cost Management, Network Watcher, and Microsoft Defender for Cloud. These services help maintain visibility, security, and operational control across your entire Azure environment.
 
 ## Azure landing zone journey
 
