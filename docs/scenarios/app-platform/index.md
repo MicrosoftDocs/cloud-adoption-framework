@@ -9,11 +9,11 @@ ms.topic: conceptual
 
 # Azure application landing zone accelerators
 
-To deploy application workloads in Azure successfully, you need to establish a solid foundation. When you follow Azure landing zone guidance, you create an Azure environment that supports scalability, security, and operational consistency. The foundation of your Azure environment is your customer agreement, identity and access management, resource hierarchy, governance, and platform landing zone that host shared services.
+To deploy workloads in Azure successfully, you need to establish a solid foundation. When you follow Azure landing zone guidance, you create an Azure environment that supports scalability, security, and operational consistency. The foundation of your Azure environment is your customer agreement, identity and access management, resource hierarchy, governance, and platform landing zone that host shared services.
 
 After you set up your Azure environment, your **application landing zones** build on top of it. To help you deploy application landing zones faster, Microsoft offers **application landing zone accelerators**. Application landing zone accelerators provide design guidance and sometimes reference implementations that show you how to integrate workloads *in your Azure landing zone.*
 
-:::image type="content" source="../../_images/ready/azure-landing-zones-conceptual-architecture.png" alt-text="Diagram showing the conceptual components of your cloud environment as it aligns with Azure landing zones." lightbox="../../_images/ready/azure-landing-zones-conceptual-architecture.png" border="false":::
+:::image type="content" source="../../_images/ready/application-landing-zone-accelerators-conceptual-diagram.png" alt-text="Diagram showing the conceptual components of your cloud environment as it aligns with Azure landing zones." lightbox="../../_images/ready/application-landing-zone-accelerators-conceptual-diagram.png" border="false":::
 
 An **application landing zone** is one or more subscriptions for each environment in your workload. You might need more than one subscription due to subscription limitations. You place these subscriptions under the appropriate management group. This setup ensures the application landing zone inherit Azure Policy assignments. You create one application landing zone for each workload environment, such as development, testing, and production.
 
