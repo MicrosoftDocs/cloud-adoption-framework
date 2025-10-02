@@ -19,19 +19,13 @@ An Azure landing zone helps you address key considerations such as identity and 
 
 ## Platform landing zone
 
-The platform landing zone serves as the backbone of your Azure environment. It establishes governance and central services that apply across your organization. Its functionality includes:
-
-- A management group hierarchy with Azure Policy enforcement across all resources.
-- Dedicated subscriptions for connectivity, identity, management, and security shared services.
+The platform landing zone serves as the backbone of your Azure environment. It establishes governance and central services that apply across your organization. Its functionality includes a management group hierarchy with Azure Policy enforcement across all resources. There are also dedicated subscriptions for connectivity, identity, management, and security shared services.
 
 Depending on your organization's size and cloud maturity, you might choose to implement all, some, or none of these centralized services. For smaller or cloud-native teams, a lightweight approach might be sufficient.
 
 ## Application landing zone
 
-The application landing zone is where your workloads live. Each application environment (development, testing, or production) has its own application landing zone. These zones:
-
-- Consist of one or more subscriptions to accommodate scaling and service limits.
-- Are nested under appropriate management groups, such as "Online" or "Corp," to inherit governance from the platform landing zone.
+The application landing zone is where you host workload resources. Each application environment (development, testing, or production) has its own application landing zone. They consist of one or more subscriptions to accommodate scaling and service limits. They are nested under appropriate management groups, such as "Online" or "Corp," to inherit governance from the platform landing zone.
 
 This structure ensures that workloads are deployed in a controlled and consistent manner, while still allowing flexibility for individual application needs.
 
