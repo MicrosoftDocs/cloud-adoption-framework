@@ -11,7 +11,7 @@ ms.update-cycle: 1095-days
 
 # Ready your Azure environment for workloads
 
-Before you can deploy workloads in Azure, it's important to prepare the underlying environment that will support them. This foundational setup is known as an [Azure landing zone](/azure/cloud-adoption-framework/ready/landing-zone/) is the recommended starting point to build your Azure environment. An Azure landing zone is a structured approach that helps you build a scalable, secure, and governed cloud environment from the start.
+Before you can deploy workloads in Azure, it's important to prepare the underlying environment that supports them. This foundational setup is known as an [Azure landing zone](/azure/cloud-adoption-framework/ready/landing-zone/) is the recommended starting point to build your Azure environment. An Azure landing zone is a structured approach that helps you build a scalable, secure, and governed cloud environment from the start.
 
 :::image type="content" source="../_images/ready/azure-landing-zone-conceptural-diagram.png" alt-text="Diagram showing the conceptual components of your cloud environment as it aligns with Azure landing zones." lightbox="../_images/ready/azure-landing-zone-conceptural-diagram.png" border="false":::
 
@@ -19,7 +19,7 @@ An Azure landing zone helps you address key considerations such as identity and 
 
 ## Platform landing zone
 
-The platform landing zone serves as the backbone of your Azure environment. It establishes governance and central services that apply across your organization. These include:
+The platform landing zone serves as the backbone of your Azure environment. It establishes governance and central services that apply across your organization. Its functionality includes:
 
 - A management group hierarchy with Azure Policy enforcement across all resources.
 - Dedicated subscriptions for connectivity, identity, management, and security shared services.
@@ -31,13 +31,13 @@ Depending on your organization's size and cloud maturity, you might choose to im
 The application landing zone is where your workloads live. Each application environment (development, testing, or production) has its own application landing zone. These zones:
 
 - Consist of one or more subscriptions to accommodate scaling and service limits.
-- Are nested under appropriate management groups, such as "Online" or "Corp", to inherit governance from the platform landing zone.
+- Are nested under appropriate management groups, such as "Online" or "Corp," to inherit governance from the platform landing zone.
 
 This structure ensures that workloads are deployed in a controlled and consistent manner, while still allowing flexibility for individual application needs.
 
-## Services that apply across all subscriptions
+## Configurations that apply across all subscriptions
 
-Whether a subscription belongs to the platform or an application landing zone, certain services should be enabled universally. These include:
+Whether a subscription belongs to the platform or an application landing zone, certain configurations should be enabled universally. These configurations include:
 
 - Azure Role-Based Access Control (RBAC)
 - Cost Management
@@ -54,7 +54,7 @@ As you work through the Ready guide, think of your progress as a journey toward 
 
 ### 1. Bootstrap your environment
 
-Start by creating the subscriptions that will host your resources. You can do this manually or programmatically:
+Whether you’re starting fresh (Greenfield) or modernizing an existing setup (Brownfield), the first step is to create the subscriptions that will host your resources. Implementing a new Azure landing zone environment based on best practices usually requires multiple subscriptions. You can create these subscriptions manually, programmatically, or by using automated vending modules:
 
 - [Create subscriptions manually](/azure/cost-management-billing/manage/create-subscription#create-a-subscription)
 - [Create subscriptions programatically](/azure/cost-management-billing/manage/programmatically-create-subscription)
@@ -62,7 +62,7 @@ Start by creating the subscriptions that will host your resources. You can do th
 
 ### 2. Deploy platform landing zone components
 
-Next, deploy the core components of your platform landing zone using one of several implementation options:
+Next, accelerate the deployment of your platform resources based on the Azure landing zone conceptual architecture. These components establish governance and shared services such as management group hierarchy, policy enforcement, connectivity, security, and monitoring. Deployment options include the Azure portal, Bicep, and Terraform:
 
 - [Accelerator portal](/azure/cloud-adoption-framework/ready/landing-zone/implementation-options#azure-landing-zone-accelerator-approach)
 - [Bicep modules](https://github.com/Azure/ALZ-Bicep)
@@ -71,16 +71,14 @@ Next, deploy the core components of your platform landing zone using one of seve
 
 ### 3. Subscription vending process
 
-Once your platform is in place, you can provision application landing zones using vending modules:
+Once your platform is in place, you’ll need to create individual application landing zones within your Azure tenant. A subscription vending solution is recommended to automate this process. Vending helps deploy subscriptions along with core resources such as networking. Both Bicep and Terraform modules are available:
 
 - [Vending module (Terraform)](https://github.com/Azure/terraform-azurerm-lz-vending)
 - [Vending module (Bicep)](https://github.com/Azure/bicep-registry-modules/tree/main/avm/ptn/lz/sub-vending)
 
-### 4. Deploy workload landing zone components
+### 4. Deploy application landing zone components
 
-Finally, deploy the components that support your specific workloads. These are often aligned with cloud adoption scenarios and supported by accelerators in each of the [CAF cloud adoption scenarios](../overview.md#what-specific-scenarios-does-the-cloud-adoption-framework-address)
-
-Each phase builds on the previous one, guiding you toward a well-architected Azure environment. The Ready guide walks you through these steps in more detail.
+Finally, deploy the components that support your workloads. Multiple application landing zone accelerators are available to provide reference architectures and implementation guidance for scenarios such as Azure Virtual Desktop, SAP, and Azure Kubernetes. These accelerators help prepare application landing zones in an Azure landing. See the [CAF cloud adoption scenarios](../overview.md#what-specific-scenarios-does-the-cloud-adoption-framework-address).
 
 ## Next steps
 
