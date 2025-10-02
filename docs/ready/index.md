@@ -44,7 +44,7 @@ Whether a subscription belongs to the platform or an application landing zone, c
 - Network Watcher
 - Microsoft Defender for Cloud
 
-These services help maintain visibility, security, and operational control across your entire Azure environment. For more details, see [Azure landing zones](../../ready/landing-zone/index.md).
+These services help maintain visibility, security, and operational control across your entire Azure environment.
 
 ## Azure landing zone journey
 
