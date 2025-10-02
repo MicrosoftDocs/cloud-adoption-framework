@@ -56,4 +56,4 @@ The phases and processes are covered in more detail as you progress through the 
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Azure setup guide](./azure-setup-guide/index.md)
+> [What is an Azure landing zone](./landing-zone/index.md)
