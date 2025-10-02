@@ -1,5 +1,5 @@
 ---
-title: Ready you environment for workloads
+title: Ready your Azure environment for workloads
 description: Understand Azure landing zone and the process to use one. 
 author: stephen-sumner
 ms.author: pnp
@@ -9,7 +9,7 @@ ms.custom: internal
 ms.update-cycle: 1095-days
 ---
 
-# Ready you environment for workloads
+# Ready your Azure environment for workloads
 
 Before you can deploy workloads in Azure, it's important to prepare the underlying environment that will support them. This foundational setup is known as an [Azure landing zone](/azure/cloud-adoption-framework/ready/landing-zone/) is the recommended starting point to build your Azure environment. An Azure landing zone is a structured approach that helps you build a scalable, secure, and governed cloud environment from the start.
 
