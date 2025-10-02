@@ -510,7 +510,8 @@ items:
         href: manage/monitor.md
       - name: 4. Protect Azure
         href: manage/protect.md
-  - name: Azure startup guide
+  
+  - name: Quick setup guide
     items:
     - name: Set up identity
       href: ready/azure-setup-guide/identity.md

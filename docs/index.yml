@@ -41,7 +41,7 @@ highlightedContent:
     - title: Claim startup credits
       itemType: get-started
       url: https://www.microsoft.com/en-us/startups
-    - title: Azure startup guide
+    - title: Quick setup guide
       itemType: how-to-guide
       url: ./ready/azure-setup-guide/identity.md
 
