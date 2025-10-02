@@ -15,8 +15,7 @@ Before you can deploy workloads in Azure, it's important to prepare the underlyi
 
 :::image type="content" source="../_images/ready/azure-landing-zone-conceptural-diagram.png" alt-text="Diagram showing the conceptual components of your cloud environment as it aligns with Azure landing zones." lightbox="../_images/ready/azure-landing-zone-conceptural-diagram.png" border="false":::
 
-An Azure landing zone helps you address key considerations such as identity and access management, customer agreements, and the configuration of core platform services. It provides a consistent framework for organizing both shared infrastructure and application-specific resources.
-At the heart of this model are two types of landing zones:
+An Azure landing zone helps you address key considerations such as identity and access management, customer agreements, and the configuration of core platform services. It provides a consistent framework for organizing both shared infrastructure and application-specific resources. At the heart of this model are two types of landing zones:
 
 ## Platform landing zone
 
