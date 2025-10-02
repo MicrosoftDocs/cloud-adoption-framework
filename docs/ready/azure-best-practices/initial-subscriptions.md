@@ -72,4 +72,4 @@ Ongoing monitoring and optimization ensure your subscription design continues to
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Azure landing zone subscription guidance](/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org-subscriptions)
+> [Select regions](../azure-setup-guide/regions.md)

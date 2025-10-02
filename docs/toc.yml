@@ -8,26 +8,6 @@ items:
       href: overview.md
     - name: What's new
       href: get-started/whats-new.md
-  - name: Azure startup guide
-    items:
-    - name: Set up identity
-      href: ready/azure-setup-guide/identity.md
-    - name: Organize resources
-      href: ready/azure-setup-guide/organize-resources.md
-    - name: Create subscriptions
-      href: ready/azure-best-practices/initial-subscriptions.md
-    - name: Select regions
-      href: ready/azure-setup-guide/regions.md
-    - name: Set up governance
-      href: ready/azure-setup-guide/govern-org-compliance.md
-    - name: Manage access
-      href: ready/azure-setup-guide/manage-access.md
-    - name: Manage costs and billing
-      href: ready/azure-setup-guide/manage-costs.md
-    - name: Set up monitoring
-      href: ready/azure-setup-guide/monitoring-reporting.md
-    - name: Stay current with Azure
-      href: ready/azure-setup-guide/staying-current.md
   - name: Methodologies (phases)
     items:
     - name: Strategy
@@ -530,7 +510,26 @@ items:
         href: manage/monitor.md
       - name: 4. Protect Azure
         href: manage/protect.md
-    
+  - name: Azure startup guide
+    items:
+    - name: Set up identity
+      href: ready/azure-setup-guide/identity.md
+    - name: Organize resources
+      href: ready/azure-setup-guide/organize-resources.md
+    - name: Set up governance
+      href: ready/azure-setup-guide/govern-org-compliance.md
+    - name: Create subscriptions
+      href: ready/azure-best-practices/initial-subscriptions.md
+    - name: Select regions
+      href: ready/azure-setup-guide/regions.md
+    - name: Manage access
+      href: ready/azure-setup-guide/manage-access.md
+    - name: Manage costs and billing
+      href: ready/azure-setup-guide/manage-costs.md
+    - name: Set up monitoring
+      href: ready/azure-setup-guide/monitoring-reporting.md
+    - name: Stay current with Azure
+      href: ready/azure-setup-guide/staying-current.md  
   - name: Adoption scenarios
     items:
     - name: AI adoption

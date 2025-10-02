@@ -10,9 +10,9 @@ ms.custom: think-tank, fasttrack-edit, AQC, setup
 
 # Manage costs and billing for your Azure resources
 
-Cost management is the process of effectively planning and controlling costs involved in your business. Cost management tasks are typically performed by finance, management, and application teams. Microsoft Cost Management can help you plan with cost in mind. It can also help you to analyze costs effectively and take action to optimize cloud spending.
+Cost management is the process of effectively planning and controlling costs involved in your business. Cost management tasks are typically performed by finance, management, and application teams. Microsoft Cost Management can help you plan with cost in mind. It can also help you to analyze costs effectively and take action to optimize cloud spending. For more information about integrating cloud cost management processes throughout your organization, see the Cloud Adoption Framework article on how to [track costs across business units, environments, or projects](../azure-best-practices/track-costs.md).
 
-For more information about integrating cloud cost management processes throughout your organization, see the Cloud Adoption Framework article on how to [track costs across business units, environments, or projects](../azure-best-practices/track-costs.md).
+**Prerequisite:** [Create an Azure account](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn). **Startups** see if you qualify for [Azure credits](https://www.microsoft.com/startups).
 
 ## Manage your costs with Microsoft Cost Management
 
@@ -95,3 +95,8 @@ To submit a new support request:
 2. Select **All support requests**.
 
 ::: zone-end
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Set up monitoring](./monitoring-reporting.md)

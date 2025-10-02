@@ -11,6 +11,8 @@ ms.topic: conceptual
 
 This article explains how to define and enforce governance rules in Azure using built-in tools like Azure Policy and Microsoft Defender for Cloud. Governance in Azure means setting up rules and controls that help you manage your cloud resources securely, efficiently, and in line with your goals. Whether you're working solo or running a small startup, these steps help you stay organized, avoid surprises, and build responsibly in the cloud.
 
+**Prerequisite:** [Create an Azure account](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn). **Startups** see if you qualify for [Azure credits](https://www.microsoft.com/startups).
+
 ## Establish governance policies
 
 Setting clear rules helps you stay consistent and avoiding mistakes as you build in the cloud. These rules guide how you use Azure and help you manage risks like overspending, misconfigurations, or security gaps.
@@ -46,7 +48,5 @@ For more information, see [Enforce cloud governance](/azure/cloud-adoption-frame
 
 ## Next step
 
-After setting up your rules and tools, make sure only the right people can access your resources. This access management helps you stay secure and avoid accidental changes.
-
 > [!div class="nextstepaction"]
-> [Manage access](./manage-access.md)
+> [Create subscriptions](ready/azure-best-practices/initial-subscriptions.md)

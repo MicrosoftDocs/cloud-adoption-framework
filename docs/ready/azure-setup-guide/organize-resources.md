@@ -12,6 +12,8 @@ ms.custom: AQC
 
 This article explains how to organize Azure resources for optimal security, management, and cost tracking. Proper resource organization enables consistent governance, simplified operations, and clear cost attribution across your workloads.
 
+**Prerequisite:** [Create an Azure account](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn). **Startups** see if you qualify for [Azure credits](https://www.microsoft.com/startups).
+
 ## Establish a consistent naming convention
 
 A naming convention provides standardized identification across Azure resources, billing statements, and automation scripts. Consistent resource naming reduces management overhead and prevents resource conflicts across teams. Here's how to define a naming convention.
@@ -68,4 +70,4 @@ For a more mature resource hierarchy, see [Azure landing zone resource organizat
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Management group design considerations and recommendations](../landing-zone/design-area/resource-org-management-groups.md)
+> [Set up governance](./govern-org-compliance.md)

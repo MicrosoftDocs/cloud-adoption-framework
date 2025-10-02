@@ -12,6 +12,8 @@ ms.custom: think-tank, fasttrack-new, AQC, setup
 
 Cloud platforms like Azure change faster than many organizations are accustomed to. This pace of change means that organizations have to adapt people and processes to a new cadence. If you're responsible for helping your organization keep up with change, you might feel overwhelmed at times. The resources listed in this section can help you stay up to date.
 
+**Prerequisite:** [Create an Azure account](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn). **Startups** see if you qualify for [Azure credits](https://www.microsoft.com/startups).
+
 ## [Top resources](#tab/TopResources)
 
 The following resources can help you stay current with Azure:

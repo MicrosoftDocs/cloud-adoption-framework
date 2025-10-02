@@ -14,6 +14,8 @@ products: azure-monitor
 
 Azure offers many services that together provide a comprehensive solution for collecting, analyzing, and acting on telemetry from your applications and the Azure resources that support them. These services can also monitor critical on-premises resources to provide a hybrid monitoring environment.
 
+**Prerequisite:** [Create an Azure account](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn). **Startups** see if you qualify for [Azure credits](https://www.microsoft.com/startups).
+
 ## [Azure Monitor](#tab/AzureMonitor)
 
 Azure Monitor provides a single unified hub for all monitoring and diagnostics data in Azure. You can use it to get visibility across your resources. With Azure Monitor, you can find and fix problems, optimize performance, and understand customer behavior.
@@ -170,3 +172,8 @@ To explore Microsoft Sentinel, go to the [Azure portal](https://portal.azure.com
 See [Microsoft Sentinel documentation](/azure/sentinel/) to learn more.
 
 ::: zone-end
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Stay current](./staying-current.md)
