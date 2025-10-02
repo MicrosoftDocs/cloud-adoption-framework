@@ -56,9 +56,9 @@ As you work through the Ready guide, think of your progress as a journey toward 
 
 Start by creating the subscriptions that will host your resources. You can do this manually or programmatically:
 
-  - [Create subscriptions manually](/azure/cost-management-billing/manage/create-subscription#create-a-subscription)
-  - [Create subscriptions programatically](/azure/cost-management-billing/manage/programmatically-create-subscription)
-  - [Subscription vending modules](/azure/cloud-adoption-framework/ready/landing-zone/design-area/subscription-vending)
+- [Create subscriptions manually](/azure/cost-management-billing/manage/create-subscription#create-a-subscription)
+- [Create subscriptions programatically](/azure/cost-management-billing/manage/programmatically-create-subscription)
+- [Subscription vending modules](/azure/cloud-adoption-framework/ready/landing-zone/design-area/subscription-vending)
 
 ### 2. Deploy platform landing zone components
 
@@ -78,9 +78,7 @@ Once your platform is in place, you can provision application landing zones usin
 
 ### 4. Deploy workload landing zone components
 
-Finally, deploy the components that support your specific workloads. These are often aligned with cloud adoption scenarios and supported by accelerators:
-
-[Cloud adoption scenarios](../overview.md#what-specific-scenarios-does-the-cloud-adoption-framework-address)
+Finally, deploy the components that support your specific workloads. These are often aligned with cloud adoption scenarios and supported by accelerators in each of the [CAF cloud adoption scenarios](../overview.md#what-specific-scenarios-does-the-cloud-adoption-framework-address)
 
 Each phase builds on the previous one, guiding you toward a well-architected Azure environment. The Ready guide walks you through these steps in more detail.
 
