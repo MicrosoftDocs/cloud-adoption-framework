@@ -13,7 +13,7 @@ ms.update-cycle: 1095-days
 
 Before you can deploy workloads in Azure, it's important to prepare the underlying environment that supports them. This foundational setup is known as an [Azure landing zone](/azure/cloud-adoption-framework/ready/landing-zone/) is the recommended starting point to build your Azure environment. An Azure landing zone is a structured approach that helps you build a scalable, secure, and governed cloud environment from the start.
 
-:::image type="content" source="../_images/ready/azure-landing-zone-conceptural-diagram.png" alt-text="Diagram showing the conceptual components of your cloud environment as it aligns with Azure landing zones." lightbox="../_images/ready/azure-landing-zone-conceptural-diagram.png" border="false":::
+:::image type="content" source="../_images/ready/azure-landing-zone-conceptual-diagram.png" alt-text="Diagram showing the conceptual components of your cloud environment as it aligns with Azure landing zones." lightbox="../_images/ready/azure-landing-zone-conceptual-diagram.png" border="false":::
 
 An Azure landing zone helps you address key considerations such as identity and access management, customer agreements, and the configuration of core platform services. It provides a consistent framework for organizing both shared infrastructure and application-specific resources. At the heart of this model are two types of landing zones:
 
