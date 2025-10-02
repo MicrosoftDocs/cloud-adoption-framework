@@ -1,12 +1,12 @@
 ### YamlMime:Hub
 
-title: Microsoft Cloud Adoption Framework for Azure
+title: Microsoft Cloud Adoption Framework
 summary: Proven guidance to be successful in Azure.
 brand: azure
 
 metadata:
 
-  title: Microsoft Cloud Adoption Framework for Azure
+  title: Microsoft Cloud Adoption Framework
   description: Proven guidance to be successful in Azure.
   services: cloud-adoption-framework
   author: stephen-sumner
@@ -38,7 +38,7 @@ highlightedContent:
     - title: Create an Azure account
       itemType: get-started
       url: https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn
-    - title: Microsoft for Startups
+    - title: Claim startup credits
       itemType: get-started
       url: https://www.microsoft.com/en-us/startups
     - title: Azure startup guide
