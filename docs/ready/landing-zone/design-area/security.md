@@ -27,7 +27,7 @@ Security is a core consideration for all customers, in every environment. When d
 
 The security design area focuses on considerations and recommendations for landing zone decisions. The [Secure methodology](../../../secure/overview.md) of the Cloud Adoption Framework also provides further in-depth guidance for holistic security processes and tools.
 
-**New (greenfield) cloud environment:** To start your cloud journey with a small set of subscriptions, see [Create your initial Azure subscriptions](../../azure-best-practices/initial-subscriptions.md). Also, consider using Bicep deployment templates in building out your Azure landing zones. For more information, see [Azure Landing Zones Bicep - Deployment Flow](https://github.com/Azure/ALZ-Bicep/wiki/DeploymentFlow).
+**New (greenfield) cloud environment:** To start your cloud journey with a small set of subscriptions, see [Create your initial Azure subscriptions](../../azure-setup-guide/initial-subscriptions.md). Also, consider using Bicep deployment templates in building out your Azure landing zones. For more information, see [Azure Landing Zones Bicep - Deployment Flow](https://github.com/Azure/ALZ-Bicep/wiki/DeploymentFlow).
 
 **Existing (brownfield) cloud environment:** Consider using the following [Microsoft Entra](https://www.microsoft.com/security/business/microsoft-entra) identity and access services if you are interested in applying the principles from security design area to existing Azure environments:
 

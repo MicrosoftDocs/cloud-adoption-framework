@@ -44,7 +44,7 @@ Also consider the following factors when you deploy your workload in multiple re
 - To ensure consistency and manageability, properly organize resources when you adopt a multiregion design.  
 - Depending on your requirements and desired governance model, you can organize multiregion resources at various levels, such as the [management group](resource-org-management-groups.md), [subscription and resource group](resource-org-subscriptions.md), [naming convention](../../azure-best-practices/resource-naming.md), and [tagging](../../azure-best-practices/resource-tagging.md) levels.
 
-**New cloud environment:** Start your cloud journey with a small set of subscriptions. For more information, see [Create your initial Azure subscriptions](../../azure-best-practices/initial-subscriptions.md).
+**New cloud environment:** Start your cloud journey with a small set of subscriptions. For more information, see [Create your initial Azure subscriptions](../../azure-setup-guide/initial-subscriptions.md).
 
 **Existing cloud environment:** If you have an existing cloud environment, consider the following guidance:
 

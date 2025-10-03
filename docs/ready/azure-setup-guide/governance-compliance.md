@@ -49,4 +49,4 @@ For more information, see [Enforce cloud governance](/azure/cloud-adoption-frame
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Create subscriptions](../azure-best-practices/initial-subscriptions.md)
+> [Create subscriptions](../azure-setup-guide/initial-subscriptions.md)
