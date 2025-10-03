@@ -1,12 +1,12 @@
 ### YamlMime:Hub
 
-title: Microsoft Cloud Adoption Framework for Azure
+title: Microsoft Cloud Adoption Framework
 summary: Proven guidance to be successful in Azure.
 brand: azure
 
 metadata:
 
-  title: Microsoft Cloud Adoption Framework for Azure
+  title: Microsoft Cloud Adoption Framework
   description: Proven guidance to be successful in Azure.
   services: cloud-adoption-framework
   author: stephen-sumner
@@ -24,19 +24,27 @@ highlightedContent:
 
     # Card
     - title: Cloud Adoption Framework overview
-      itemType: get-started
+      itemType: overview
       url: ./overview.md
-    
-    # Card
     - title: AI adoption
       itemType: how-to-guide
       url: ./scenarios/ai/index.md
     - title: Azure landing zone
-      itemType: how-to-guide
+      itemType: architecture
       url: ./ready/landing-zone/index.md    
-    - title: Scenarios
+    - title: Adoption scenarios
       itemType: get-started
       url: ./overview.md#what-specific-scenarios-does-the-cloud-adoption-framework-address
+    - title: Create an Azure account
+      itemType: get-started
+      url: https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn
+    - title: Claim startup credits
+      itemType: get-started
+      url: https://www.microsoft.com/en-us/startups
+    - title: Quick setup guide
+      itemType: how-to-guide
+      url: ./ready/azure-setup-guide/identity.md
+
 
 # Card with summary style
 
@@ -45,7 +53,7 @@ additionalContent:
   # Supports up to 3 sections
   sections:
     - title: Cloud Adoption Framework methodologies  # < 60 chars (optional)
-      summary: Use the methodologies to support your Azure adoption journey.  # < 160 chars (optional)
+      summary: Proven guidance for each phase of the cloud journey.  # < 160 chars (optional)
       items:
 
         # Card

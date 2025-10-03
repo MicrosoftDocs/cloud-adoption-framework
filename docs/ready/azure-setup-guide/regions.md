@@ -11,6 +11,8 @@ ms.topic: conceptual
 
 The right Azure region is critical for workload compliance, performance, and resiliency. Region selection affects availability, latency, cost, and regulatory alignment. This article provides guidance to help you make informed decisions.
 
+**Prerequisite:** [Create an Azure account](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn). **Startups** see if you qualify for [Azure credits](https://www.microsoft.com/startups).
+
 ## Check data residency and compliance
 
 Many countries and industries require data to stay within specific geographic boundaries. Violating these rules can lead to fines or service restrictions.
@@ -61,18 +63,10 @@ Single-region deployments can limit scalability and resiliency. Multi-region str
 
 1. **Pick regions that meet your requirements.** Previous guidance favored paired regions for distance (150+ miles apart), but this is no longer mandatory. Choose more regions based on latency, compliance, and resiliency needs. See [Using multiple Azure regions](/azure/reliability/regions-overview#using-multiple-azure-regions).
 
-## Azure resources for region selection
-
-| Category | Resource | Description |
-|----------|------|-------------|
-| Data residency | [Data residency for Azure geographies and regions](https://azure.microsoft.com//explore/global-infrastructure/data-residency/) | Details on data residency for each Azure geography and region |
-| Reliability workload design | [Regions and availability zones](/azure/well-architected/reliability/regions-availability-zones) | Design guidance for workloads using multiple regions and availability zones |
-| Regional Planning | [Azure Geo Map](https://azure.microsoft.com/global-infrastructure/geographies/) | Interactive map that displays Azure region locations, capabilities, and compliance certifications to support regional planning decisions |
-| Service availability | [Products available by region](https://azure.microsoft.com/global-infrastructure/services/) | Comprehensive list of Azure services offered in each region to validate service availability for workload requirements |
-| Cost Optimization | [Azure Pricing Calculator](https://azure.microsoft.com/pricing/calculator/) | Cost comparison tool that evaluates regional pricing differences to optimize deployment expenses across regions |
-| Latency testing | [Azure latency test](https://www.azurespeed.com/Azure/Latency) | Network performance tool that measures latency between your location and Azure regions to validate performance requirements |
-
 ## Next steps
+
+> [!div class="nextstepaction"]
+> [Build-cloud native](../../cloud-native/plan-cloud-native-solutions.md)
 
 > [!div class="nextstepaction"]
 > [Manage access](./manage-access.md)
