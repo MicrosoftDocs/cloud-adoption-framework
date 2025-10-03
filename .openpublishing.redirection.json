@@ -3869,6 +3869,16 @@
          "source_path": "docs/govern/index.md",
          "redirect_url": "/azure/cloud-adoption-framework/govern/build-cloud-governance-team",
          "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/ready/azure-best-practices/initial-subscriptions.md",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/azure-setup-guide/initial-subscriptions",
+         "redirect_document_id": true
+      },
+      {
+         "source_path": "docs/ready/azure-setup-guide/govern-org-compliance.md",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/azure-setup-guide/governance-compliance",
+         "redirect_document_id": true
       }
    ]   
 }
