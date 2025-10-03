@@ -58,16 +58,7 @@ A management hierarchy defines governance boundaries for Azure resources. Azure 
 
 For a more mature resource hierarchy, see [Azure landing zone resource organization](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-tagging).
 
-## Tools and resources
-
-| Category | Tool | Description |
-|----------|------|-------------|
-| Naming Strategy | [Resource abbreviations guide](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-abbreviations) | Provides standardized abbreviations for Azure resource types |
-| Management Groups | [Azure management groups](/azure/governance/management-groups/overview) | Enables hierarchical organization of subscriptions with inherited governance |
-| Resource Organization | [Azure Resource Manager](/azure/azure-resource-manager/management/overview) | Manages resource deployment and organization within subscriptions |
-| Tagging Strategy | [Azure resource tags](/azure/azure-resource-manager/management/tag-resources) | Supports metadata application for cost tracking and resource management |
-
-## Next steps
+## Next step
 
 > [!div class="nextstepaction"]
 > [Set up governance](./govern-org-compliance.md)

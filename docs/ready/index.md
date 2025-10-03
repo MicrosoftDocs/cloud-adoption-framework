@@ -19,7 +19,7 @@ An Azure landing zone helps you address key considerations such as identity and 
 
 ## Platform landing zone
 
-The platform landing zone serves as the backbone of your Azure environment. It establishes governance and central services that apply across your organization. Its functionality includes a management group hierarchy with Azure Policy enforcement across all resources. There are also dedicated subscriptions for connectivity, identity, management, and security shared services.
+The platform landing zone serves as the backbone of your Azure environment. It establishes governance and central services that apply across your organization. Its functionality includes a management group hierarchy with Azure Policy enforcement across subscriptions. There are also dedicated subscriptions for connectivity, identity, management, and security shared services.
 
 Depending on your organization's size and cloud maturity, you might choose to implement all, some, or none of these centralized services. For smaller or cloud-native teams, a lightweight approach might be sufficient.
 
@@ -67,7 +67,7 @@ Once your platform is in place, you’ll need to create individual application l
 
 Finally, deploy the components that support your workloads. Multiple application landing zone accelerators are available to provide reference architectures and implementation guidance for scenarios such as Azure Virtual Desktop, SAP, and Azure Kubernetes. These accelerators help prepare application landing zones in an Azure landing. See the [CAF cloud adoption scenarios](../overview.md#what-specific-scenarios-does-the-cloud-adoption-framework-address).
 
-## Next steps
+## Next step
 
 > [!div class="nextstepaction"]
 > [What is an Azure landing zone?](./landing-zone/index.md)

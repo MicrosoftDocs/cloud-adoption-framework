@@ -71,7 +71,7 @@ Ongoing monitoring and optimization ensure your subscription design continues to
 
 1. **Plan for subscription lifecycle management.** Define processes for decommissioning unused subscriptions, transferring resources, and maintaining compliance. Effective lifecycle management prevents sprawl and keeps your environment organized and cost-effective.
 
-## Next steps
+## Next step
 
 > [!div class="nextstepaction"]
 > [Select regions](../azure-setup-guide/regions.md)

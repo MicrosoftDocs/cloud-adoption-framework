@@ -94,4 +94,4 @@ Choose your optimal starting point based on your cloud maturity and business obj
 - **New to Azure cloud migration?** [Define your cloud strategy and business goals](/azure/cloud-adoption-framework/strategy/) to align stakeholders around measurable success metrics and ROI targets
 - **Ready to build secure cloud infrastructure?** [Set up Azure landing zones](./ready/landing-zone/index.md) for enterprise-grade, scalable cloud foundation with built-in governance
 - **Have legacy workloads to migrate?** [Plan your migration approach](/azure/cloud-adoption-framework/migrate/plan-migration) using proven migration strategies that minimize business disruption
-- **Looking for industry-specific solutions?** [Explore cloud adoption scenarios](#what-specific-scenarios-does-the-cloud-adoption-framework-address) for AI implementation, data analytics modernization, hybrid multi-cloud, and enterprise applications
+- **Looking for industry-specific solutions?** [Explore cloud adoption scenarios](#what-specific-scenarios-does-the-cloud-adoption-framework-address) for AI implementation, data analytics modernization, hybrid multicloud, and enterprise applications
