@@ -562,6 +562,8 @@ items:
       items:
       - name: Managing organization alignment
         href: organize/index.md
+      - name: IT fiefdoms and IT silos
+        href: organize/fiefdoms-silos.md
       - name: Required cloud functions
         items:
         - name: Cloud operations functions
