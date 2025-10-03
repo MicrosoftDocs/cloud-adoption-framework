@@ -12,6 +12,8 @@ ms.topic: conceptual
 
 Before anyone can use Azure, they need a secure and well-managed identity. Microsoft Entra ID is the backbone of identity and access management in Azure. This article walks you through the essential steps to establish a strong identity foundation. Whether you're setting up a new tenant or tightening security in an existing one, these best practices help you protect access to your cloud resources from day one.
 
+**Prerequisite:** [Create an Azure account](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn). **Startups** see if you qualify for [Azure credits](https://www.microsoft.com/startups).
+
 ## Create individual user accounts
 
 Every person who needs access to Azure should have their own user account in Microsoft Entra. This setup helps ensure accountability and makes it easier to track changes and enforce security policies.

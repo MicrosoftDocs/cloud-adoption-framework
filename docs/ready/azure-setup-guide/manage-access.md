@@ -11,6 +11,8 @@ ms.topic: conceptual
 
 Azure role-based access control (RBAC) defines who can access Azure resources, what actions they can perform, and where they can perform them. This structure improves governance, security, and operational clarity across your cloud environment.
 
+**Prerequisite:** [Create an Azure account](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn). **Startups** see if you qualify for [Azure credits](https://www.microsoft.com/startups).
+
 ## Apply least privilege to all access assignments
 
 The principle of least privilege ensures users receive only the permissions required to perform their tasks. This approach reduces risk and improves auditability.
