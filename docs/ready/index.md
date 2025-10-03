@@ -25,7 +25,7 @@ Depending on your organization's size and cloud maturity, you might choose to im
 
 ## Application landing zone
 
-An application landing zone is for workload resources. A workload should have an application landing zone for each environment (development, testing, or production). Each application landing zone consists of one or more subscriptions to accommodate scaling and service limits. They are nested under appropriate management groups, such as "Online" or "Corp," to inherit Azure Policy definitions from management group. This structure ensures that workloads are deployed in a controlled and consistent manner, while still allowing flexibility for individual application needs.
+An application landing zone is for workload resources. A workload should have an application landing zone for each environment (development, testing, or production). Each application landing zone consists of one or more subscriptions to accommodate scaling and service limits. They are nested under appropriate management groups, such as "Online" or "Corp," to inherit Azure Policy definitions from the parent management group(s). This structure ensures that workloads are deployed in a controlled and consistent manner, while still allowing flexibility for individual application needs.
 
 ## Configurations that apply across all subscriptions
 
