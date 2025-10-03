@@ -61,4 +61,4 @@ For a more mature resource hierarchy, see [Azure landing zone resource organizat
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Set up governance](./govern-org-compliance.md)
+> [Set up governance](./governance-compliance.md)

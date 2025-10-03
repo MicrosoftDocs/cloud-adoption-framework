@@ -148,7 +148,7 @@ items:
             - name: Design options for specific use cases
               items:
               - name: Create your initial subscriptions
-                href: ready/azure-best-practices/initial-subscriptions.md
+                href: ready/azure-setup-guide/initial-subscriptions.md
 
           - name: Network topology and connectivity
             items:
@@ -518,9 +518,9 @@ items:
     - name: Organize resources
       href: ready/azure-setup-guide/organize-resources.md
     - name: Set up governance
-      href: ready/azure-setup-guide/govern-org-compliance.md
+      href: ready/azure-setup-guide/governance-compliance.md
     - name: Create subscriptions
-      href: ready/azure-best-practices/initial-subscriptions.md
+      href: ready/azure-setup-guide/initial-subscriptions.md
     - name: Select regions
       href: ready/azure-setup-guide/regions.md
     - name: Manage access
