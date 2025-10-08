@@ -83,10 +83,10 @@ Azure Virtual WAN any-to-any transitive connectivity supports the following path
 
 1. **Consider secured virtual hubs.** A secured virtual hub is an Azure Virtual WAN Hub with associated security and routing policies configured by Azure Firewall Manager. Review the latest [constraints](/azure/firewall-manager/overview#known-issues) before deployment. Virtual WAN hub-to-hub traffic that goes through Azure Firewall in both source hubs and target hubs (secured virtual hubs) is supported when you enable routing intent and policies. Use [Virtual WAN hub routing intent and routing policies](/azure/virtual-wan/how-to-routing-policies) to support traffic that goes between secured hubs. Virtual WAN secured virtual hubs don't support Azure DDoS standard protection plans. For more information, see [Azure DDoS Protection](/azure/ddos-protection/ddos-protection-overview), [Azure Firewall Manager known issues](/azure/firewall-manager/overview#known-issues), and [Hub virtual network and secured virtual hub comparison](/azure/firewall-manager/vhubs-and-vnets#comparison).
 
-### Manage and monitor your deployment
+## Manage and monitor your deployment
 
 Configure Azure Monitor insights to monitor the end-to-end topology of your Virtual WAN. [Insights in Azure Monitor for Virtual WAN](/azure/virtual-wan/azure-monitor-insights) provide visibility into network status, connection health, and [key metrics](/azure/virtual-wan/azure-monitor-insights#detailed) for proactive management. Configure alerts for critical thresholds to detect and respond to issues before they affect users.
 
-### Migrate existing hub-and-spoke topologies
+## Migrate existing hub-and-spoke topologies
 
 For brownfield scenarios where you're migrating from a hub-and-spoke network topology not based on Virtual WAN, see [Migrate to Azure Virtual WAN](/azure/virtual-wan/migrate-from-hub-spoke-topology).
