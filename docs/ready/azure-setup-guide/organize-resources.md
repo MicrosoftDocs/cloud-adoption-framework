@@ -12,6 +12,8 @@ ms.custom: AQC
 
 This article explains how to organize Azure resources for optimal security, management, and cost tracking. Proper resource organization enables consistent governance, simplified operations, and clear cost attribution across your workloads.
 
+**Prerequisite:** [Create an Azure account](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn). **Startups** see if you qualify for [Azure credits](https://www.microsoft.com/startups).
+
 ## Establish a consistent naming convention
 
 A naming convention provides standardized identification across Azure resources, billing statements, and automation scripts. Consistent resource naming reduces management overhead and prevents resource conflicts across teams. Here's how to define a naming convention.
@@ -56,16 +58,7 @@ A management hierarchy defines governance boundaries for Azure resources. Azure 
 
 For a more mature resource hierarchy, see [Azure landing zone resource organization](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-tagging).
 
-## Tools and resources
-
-| Category | Tool | Description |
-|----------|------|-------------|
-| Naming Strategy | [Resource abbreviations guide](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-abbreviations) | Provides standardized abbreviations for Azure resource types |
-| Management Groups | [Azure management groups](/azure/governance/management-groups/overview) | Enables hierarchical organization of subscriptions with inherited governance |
-| Resource Organization | [Azure Resource Manager](/azure/azure-resource-manager/management/overview) | Manages resource deployment and organization within subscriptions |
-| Tagging Strategy | [Azure resource tags](/azure/azure-resource-manager/management/tag-resources) | Supports metadata application for cost tracking and resource management |
-
-## Next steps
+## Next step
 
 > [!div class="nextstepaction"]
-> [Management group design considerations and recommendations](../landing-zone/design-area/resource-org-management-groups.md)
+> [Set up governance](./governance-compliance.md)

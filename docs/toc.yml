@@ -8,7 +8,6 @@ items:
       href: overview.md
     - name: What's new
       href: get-started/whats-new.md
-
   - name: Methodologies (phases)
     items:
     - name: Strategy
@@ -69,28 +68,7 @@ items:
       items:
       - name: Overview
         href: ready/index.md
-      - name: Azure setup guide
-        items:
-        - name: Set up identity
-          href: ready/azure-setup-guide/identity.md
-        - name: Organize resources
-          href: ready/azure-setup-guide/organize-resources.md
-        - name: Create subscriptions
-          href: ready/azure-best-practices/initial-subscriptions.md
-        - name: Select regions
-          href: ready/azure-setup-guide/regions.md
-        - name: Set up governance
-          href: ready/azure-setup-guide/govern-org-compliance.md
-        - name: Manage access
-          href: ready/azure-setup-guide/manage-access.md
-        - name: Manage costs and billing
-          href: ready/azure-setup-guide/manage-costs.md
-        - name: Set up monitoring
-          href: ready/azure-setup-guide/monitoring-reporting.md
-        - name: Stay current with Azure
-          href: ready/azure-setup-guide/staying-current.md
-
-      - name: Azure landing zones
+      - name: Azure landing zone
         items:
         - name: What is an Azure landing zone?
           href: ready/landing-zone/index.md
@@ -170,7 +148,7 @@ items:
             - name: Design options for specific use cases
               items:
               - name: Create your initial subscriptions
-                href: ready/azure-best-practices/initial-subscriptions.md
+                href: ready/azure-setup-guide/initial-subscriptions.md
 
           - name: Network topology and connectivity
             items:
@@ -532,10 +510,30 @@ items:
         href: manage/monitor.md
       - name: 4. Protect Azure
         href: manage/protect.md
-    
+  
+  - name: Quick setup guide
+    items:
+    - name: Set up identity
+      href: ready/azure-setup-guide/identity.md
+    - name: Organize resources
+      href: ready/azure-setup-guide/organize-resources.md
+    - name: Set up governance
+      href: ready/azure-setup-guide/governance-compliance.md
+    - name: Create subscriptions
+      href: ready/azure-setup-guide/initial-subscriptions.md
+    - name: Select regions
+      href: ready/azure-setup-guide/regions.md
+    - name: Manage access
+      href: ready/azure-setup-guide/manage-access.md
+    - name: Manage costs and billing
+      href: ready/azure-setup-guide/manage-costs.md
+    - name: Set up monitoring
+      href: ready/azure-setup-guide/monitoring-reporting.md
+    - name: Stay current with Azure
+      href: ready/azure-setup-guide/staying-current.md  
   - name: Adoption scenarios
     items:
-    - name: AI adoption
+    - name: AI
       href: scenarios/ai/index.md
     - name: Azure VMware Solution
       href: scenarios/azure-vmware/index.md
@@ -546,7 +544,7 @@ items:
     - name: Hybrid and multicloud
       href: scenarios/hybrid/index.md
     - name: Modern application platform
-      href: scenarios/app-platform/strategy.md
+      href: scenarios/app-platform/index.md
     - name: Oracle
       href: scenarios/oracle-on-azure/index.md
     - name: SAP
@@ -564,6 +562,8 @@ items:
       items:
       - name: Managing organization alignment
         href: organize/index.md
+      - name: IT fiefdoms and IT silos
+        href: organize/fiefdoms-silos.md
       - name: Required cloud functions
         items:
         - name: Cloud operations functions

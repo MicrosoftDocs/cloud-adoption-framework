@@ -11,6 +11,8 @@ ms.topic: conceptual
 
 This article helps you create your subscriptions the right way from day one. Subscriptions are the foundation for organizing, securing, and managing your cloud resources. A thoughtful setup now saves you time, money, and effort as your business grows.
 
+**Prerequisite:** [Create an Azure account](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn). **Startups** see if you qualify for [Azure credits](https://www.microsoft.com/startups).
+
 ## Start with subscription policies
 
 Before you create your first subscription, it's important to define the appropriate way to deploy and manage them. Subscriptions help you manage access, costs, and security, so having a plan upfront helps you scale later. Here's how to get started:
@@ -69,7 +71,7 @@ Ongoing monitoring and optimization ensure your subscription design continues to
 
 1. **Plan for subscription lifecycle management.** Define processes for decommissioning unused subscriptions, transferring resources, and maintaining compliance. Effective lifecycle management prevents sprawl and keeps your environment organized and cost-effective.
 
-## Next steps
+## Next step
 
 > [!div class="nextstepaction"]
-> [Azure landing zone subscription guidance](/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org-subscriptions)
+> [Select regions](../azure-setup-guide/regions.md)
