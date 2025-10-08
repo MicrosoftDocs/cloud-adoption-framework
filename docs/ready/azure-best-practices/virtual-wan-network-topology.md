@@ -11,7 +11,9 @@ ms.topic: conceptual
 
 This article provides prescriptive guidance to design Azure Virtual WAN network topologies in an Azure landing zone. Azure Virtual WAN is a Microsoft-managed networking service that provides automated connectivity between Azure regions, virtual networks, and on-premises locations through a hub-and-spoke architecture. Use Virtual WAN for new large or global network deployments in Azure where you need global transit connectivity across Azure regions and on-premises locations. Virtual WAN eliminates the need to manually set up transitive routing for Azure networking, which simplifies network management and reduces operational complexity. The following figure shows a sample global enterprise deployment with datacenters spread across Europe and the United States. The deployment contains many branch offices within both regions.
 
-[![Diagram that illustrates a Virtual WAN network topology in an Azure landing zone.](./media/virtual-wan-topology.png)](./media/virtual-wan-topology.png#lightbox)
+:::image type="complex" source="./media/virtual-wan-topology.png" alt-text="Diagram that illustrates a Virtual WAN network topology in an Azure landing zone." lightbox="./media/virtual-wan-topology.png" border="false":::
+    Diagram showing Azure landing zone architecture with two main sections: Connectivity subscription on the left and Landing zone subscription on the right. The connectivity subscription includes Azure Firewall, DNS, DDoS protection, VPN/ExpressRoute gateways, and two VWAN hubs labeled Region 1 and Region N. Lines labeled ‘VWAN Hub Connection’ link these hubs to corresponding vNet regions in the landing zone subscription. Each vNet region contains resource groups, NSGs/ASGs, UDRs, and shared services like dashboards and managed identities. The diagram emphasizes secure connectivity between VWAN hubs and landing zone networks.
+:::image-end:::
 
 *Figure 1: Virtual WAN network topology. Download a [Visio file](https://github.com/MicrosoftDocs/cloud-adoption-framework/raw/main/docs/ready/enterprise-scale/media/enterprise-scale-architecture.vsdx) or [PDF file](https://github.com/MicrosoftDocs/cloud-adoption-framework/raw/main/docs/ready/enterprise-scale/media/enterprise-scale-architecture.pdf) of this architecture.*
 
@@ -19,7 +21,9 @@ This article provides prescriptive guidance to design Azure Virtual WAN network 
 
 Azure Virtual WAN simplifies end-to-end network connectivity in Azure and from on-premises to Azure by creating a [hub-and-spoke network architecture](/azure/virtual-wan/virtual-wan-global-transit-network-architecture). A hub-and-spoke architecture uses a central hub to connect multiple spoke virtual networks and on-premises locations, which enables efficient traffic routing and centralized management. This hub-and-spoke architecture scales to support multiple Azure regions and on-premises locations with any-to-any connectivity, as shown in the following figure:
 
-![Diagram that illustrates a global transit network with Virtual WAN.](./media/global-transit.png)
+:::image type="complex" source="./media/global-transit.png" alt-text="Diagram that illustrates a global transit network with Virtual WAN." border="false":::
+    Diagram of a global transit network using Azure Virtual WAN. It shows two regions, Region 1 and Region 2, each containing multiple VNets connected to a Virtual WAN hub. The hubs are linked by a hub-to-hub connection for inter-region communication. Below each hub, icons represent branch offices and connectivity endpoints, including ExpressRoute and user devices. The layout emphasizes centralized hub connectivity for VNets within regions and global transit between regions.
+:::image-end:::
 
 *Figure 2: Global transit network with Virtual WAN.*
 
@@ -55,7 +59,9 @@ Virtual WAN provides multiple connectivity options to integrate on-premises data
 
 1. **Connect on-premises datacenters to Virtual WAN hubs.** Connect Virtual WAN hubs to on-premises datacenters by using ExpressRoute. You can connect ExpressRoute circuits to a Virtual WAN hub by using a Local, Standard, or Premium SKU. For deployments in the same city, consider [ExpressRoute Metro](/azure/expressroute/metro) for dual high-availability connectivity within a metro region when you need resilient local paths. It can offer architectural and potential cost efficiencies depending on workload patterns. ExpressRoute Standard or Premium circuits, in locations supported by [ExpressRoute Global Reach](/azure/expressroute/expressroute-global-reach), can connect to a Virtual WAN ExpressRoute gateway. And they have all the Virtual WAN transit capabilities (VPN-to-VPN, VPN, and ExpressRoute transit). ExpressRoute Standard or Premium circuits that are in locations not supported by Global Reach can connect to Azure resources, but can't use Virtual WAN transit capabilities.
 
-    ![Diagram of a sample network topology.](./media/global-reach-topology.png)
+    :::image type="complex" source="./media/global-reach-topology.png" alt-text="Diagram of a sample network topology." border="false":::
+   Diagram of an Azure Virtual WAN topology connecting two regions: US and EMEA. Each region has a headquarters connected via ExpressRoute to a Virtual WAN hub. The hubs are linked through ExpressRoute Global Reach. Under each hub, multiple VNets and branch offices are shown. The US side includes two WAN hubs, VNets, and branch offices, while the EMEA side mirrors this structure with its own hubs, VNets, and branch offices.
+    :::image-end:::
 
     *Figure 3: Sample network topology.*
 
