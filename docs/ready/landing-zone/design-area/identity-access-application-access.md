@@ -4,7 +4,7 @@ description: Learn about recommendations that application owners and developers 
 author: soderholmd
 ms.author: dsoderholm
 ms.topic: conceptual
-ms.date: 11/28/2024
+ms.date: 10/02/2025
 ---
 
 # Application identity and access management
@@ -56,7 +56,7 @@ To help reduce the risk of unauthorized access to your applications, incorporate
 
 #### External users
 
-You can evaluate scenarios that involve setting up external users, customers, or partners so they can access resources. Determine whether these scenarios involve [Microsoft Entra B2B](/entra/external-id/what-is-b2b) or [Azure Active Directory B2C (Azure AD B2C)](/azure/active-directory-b2c/overview) configurations. For more information, see [Overview of Microsoft Entra External ID](/entra/external-id/external-identities-overview).
+You can evaluate scenarios that involve setting up external users, customers, or partners so they can access resources. Determine whether these scenarios involve [Microsoft Entra B2B](/entra/external-id/what-is-b2b) or [Microsoft Entra External ID](/entra/external-id/external-identities-overview).
 
 ## Design recommendations
 

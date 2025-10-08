@@ -118,7 +118,7 @@ If you do implement your own landing zone environments, we recommend that you us
 Each Azure landing zone and its management group hierarchy is rooted in a single Microsoft Entra tenant. This means that the first decision you need to make is which Microsoft Entra tenant to use as the source of identities for managing your Azure resources. Identities in the Microsoft Entra ID include users, groups, and service principals.
 
 > [!TIP]
-> The Microsoft Entra tenant you select for your landing zone doesn't affect your application-level authentication. You can still use other identity providers like Azure AD B2C regardless of which tenant you choose.
+> The Microsoft Entra tenant you select for your landing zone doesn't affect your application-level authentication. You can still use other identity providers like Microsoft Entra External ID regardless of which tenant you choose.
 
 The [guidance for Azure landing zones and Microsoft Entra tenants](./design-area/azure-ad-define.md) strongly recommends using a single Microsoft Entra tenant, and this is the correct approach for most situations. However, as a SaaS ISV, you might have reason to use two tenants.
 
