@@ -71,7 +71,7 @@ Azure Virtual WAN any-to-any transitive connectivity supports the following path
 
 ## Configure routing and traffic segmentation
 
-Configure [virtual hub routing]((/azure/virtual-wan/about-virtual-hub-routing)) to segment traffic between VNets and branches.Use Virtual WAN hub routing features to control traffic flow between VNets and branches. Create custom route tables to enforce security and compliance requirements. Ensure all Azure traffic remains on the Microsoft backbone network for optimal performance. For internet-bound traffic, configure outbound filtering through Azure Firewall.
+Configure [virtual hub routing](/azure/virtual-wan/about-virtual-hub-routing) to segment traffic between VNets and branches. Use Virtual WAN hub routing features to control traffic flow between VNets and branches. Create custom route tables to enforce security and compliance requirements. Ensure all Azure traffic remains on the Microsoft backbone network for optimal performance. For internet-bound traffic, configure outbound filtering through Azure Firewall.
 
 ## Implement security controls
 
