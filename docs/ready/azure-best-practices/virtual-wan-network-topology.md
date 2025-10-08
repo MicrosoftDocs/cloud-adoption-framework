@@ -43,7 +43,7 @@ Azure Virtual WAN any-to-any transitive connectivity supports the following path
 
 ## Plan your Virtual WAN deployment
 
-1. **Use one or more Virtual WAN Hubs per Azure region.** Use a Virtual WAN hub per Azure region. The goal is to connect multiple application landing zones together across Azure regions by way of a common global Azure Virtual WAN. Virtual WAN is subject to Azure subscription limits. You can deploy multiple Azure Virtual WAN hubs in the same region to scale beyond the single hub limits
+1. **Use one or more Virtual WAN Hubs per Azure region.** Use a Virtual WAN hub per Azure region. The goal is to connect multiple application landing zones together across Azure regions by way of a common global Azure Virtual WAN. Virtual WAN is subject to Azure subscription limits. You can deploy multiple Azure Virtual WAN hubs in the same region to scale beyond the single hub limits.
 
 1. **Use the connectivity subscription.** Place all Virtual WAN resources, Azure Firewall, and the Azure DDoS standard protection plan in the connectivity subscription of your Azure landing zone.
 
