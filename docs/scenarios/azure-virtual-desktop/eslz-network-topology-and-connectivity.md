@@ -3,7 +3,7 @@ title: Networking for Azure Virtual Desktop
 description: Use the Cloud Adoption Framework for Azure to identify networking capabilities that are required for your landing zone to support Azure Virtual Desktop workloads.
 author: danycontre
 ms.author: pnp
-ms.date: 10/27/2023
+ms.date: 10/09/2025
 ms.topic: conceptual
 ---
 
@@ -45,7 +45,7 @@ You can use RDP Shortpath in two ways:
 
 The RDP path extends RDP multi-transport capabilities. It doesn't replace the reverse connect transport but complements it. Initial session brokering is managed through the Azure Virtual Desktop service and the reverse connect transport, which is TCP-based. All connection attempts are ignored unless they match the reverse connect session first.
 
-RDP Shortpath, which is UDP-based, is established after authentication. If RDP Shortpath is successfully established, the reverse connect transport is dropped. Then all traffic flows over one of the RDP Shortpath methods that this section lists earlier. Using RDP Shortpath for public networks with TURN for Azure Virtual Desktop is currently in preview. For more information, see [RDP Shortpath for Azure Virtual Desktop](/azure/virtual-desktop/rdp-shortpath).
+RDP Shortpath, which is UDP-based, is established after authentication. If RDP Shortpath is successfully established, the reverse connect transport is dropped. Then all traffic flows over one of the RDP Shortpath methods that this section lists earlier. For more information, see [RDP Shortpath for Azure Virtual Desktop](/azure/virtual-desktop/rdp-shortpath).
 
 For more information, see [Implement Quality of Service (QoS) for Azure Virtual Desktop](/azure/virtual-desktop/rdp-quality-of-service-qos).
 
@@ -186,9 +186,6 @@ You can implement this scenario with:
 - Connections from session hosts to Azure Files storage accounts are established by using private endpoints.
 - Azure private DNS zones are used to resolve private endpoint namespaces.
 - Network filtering isn't enforced for this scenario. But network security groups are placed on all subnets so that you can monitor traffic and derive insights. In Network Watcher, traffic analytics and the network security group flow logging feature are used for these purposes.
-
-> [!NOTE]
-> Currently, Azure Virtual Desktop doesn't support using Private Link and RDP Shortpath at the same time.
 
 ## Scenario 3: Hub and spoke with public networks using RDP Shortpath
 
