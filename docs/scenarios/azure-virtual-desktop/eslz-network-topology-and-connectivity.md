@@ -3,9 +3,8 @@ title: Networking for Azure Virtual Desktop
 description: Use the Cloud Adoption Framework for Azure to identify networking capabilities that are required for your landing zone to support Azure Virtual Desktop workloads.
 author: danycontre
 ms.author: pnp
-ms.date: 10/27/2023
+ms.date: 10/09/2025
 ms.topic: conceptual
-ms.custom: think-tank, e2e-avd
 ---
 
 # Network topology and connectivity for Azure Virtual Desktop
@@ -25,12 +24,12 @@ The design foundations include:
 - A [**hub-spoke network topology**](/azure/architecture/reference-architectures/hybrid-networking/hub-spoke?tabs=cli) is a type of network architecture in which a hub virtual network acts as a central point of connectivity to several spoke virtual networks. The hub can also be the connectivity point to on-premises datacenters. The spoke virtual networks peer with the hub and help to isolate workloads.
 - [**Azure Virtual WAN**](/azure/virtual-wan/virtual-wan-about) is a networking service that brings networking, security, and routing functions together in a single operational interface.
 - A [**network virtual appliance (NVA)**](https://azure.microsoft.com/blog/azure-firewall-and-network-virtual-appliances/) is a network device that supports functions like connectivity, application delivery, wide-area network (WAN) optimization, and security. NVAs include Azure Firewall and Azure Load Balancer.
-- In a [**forced-tunneling**](/azure/vpn-gateway/about-site-to-site-tunneling) scenario, all internet-bound traffic that originates on Azure virtual machines (VMs) is routed, or forced, to go through an inspection and auditing appliance. Unauthorized internet access can potentially lead to information disclosure or other types of security breaches without the traffic inspection or audit.
 - [**Network security groups**](/azure/virtual-network/network-security-groups-overview) are used to filter network traffic to and from Azure resources in an Azure virtual network. A network security group contains security rules that allow or deny inbound network traffic to, or outbound network traffic from, several types of Azure resources.
 - [**Application security groups**](/azure/virtual-network/application-security-groups) provide a way for you to configure network security as a natural extension of an application's structure. You can use application security groups to group VMs and define network security policies that are based on those groups. You can reuse your security policy at scale without needing to manually maintain explicit IP addresses.
 - **[User-defined routes (UDRs)](/azure/virtual-network/virtual-networks-udr-overview)** can be used to override Azure default system routes. You can also use UDRs to add extra routes to a subnet route table.
 - **[Remote Desktop Protocol Shortpath (RDP Shortpath)](/azure/virtual-desktop/rdp-shortpath?tabs=managed-networks)** is a feature of Azure Virtual Desktop that's based on [Universal Rate Control Protocol (URCP)](https://www.microsoft.com/research/publication/urcp-universal-rate-control-protocol-for-real-time-communication-applications/). RDP Shortpath establishes a direct transport that's based on User Datagram Protocol (UDP) between a supported Windows Remote Desktop client and Azure Virtual Desktop session hosts. URCP enhances UDP connections by providing active monitoring of network conditions and quality-of-service (QoS) capabilities.
 - **[Azure Private Link with Azure Virtual Desktop (Preview)](/azure/virtual-desktop/private-link-overview)** provides a way for you to use a [private endpoint](/azure/private-link/private-endpoint-overview) in Azure to connect session hosts to the Azure Virtual Desktop service. With Private Link, traffic between your virtual network and the Azure Virtual Desktop service travels on the Microsoft *backbone* network. As a result, you don't need to connect to the public internet to access Azure Virtual Desktop services.
+- In a [**forced-tunneling**](/azure/vpn-gateway/about-site-to-site-tunneling) scenario, all internet-bound traffic that originates on Azure virtual machines (VMs) is routed, or forced, to go through an inspection and auditing appliance. Unauthorized internet access can potentially lead to information disclosure or other types of security breaches without the traffic inspection or audit.
 
 ## Networking scenarios
 
