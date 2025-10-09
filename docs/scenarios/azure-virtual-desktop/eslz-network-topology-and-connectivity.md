@@ -16,7 +16,7 @@ Use Virtual WAN when you require [transit connectivity between VPN and ExpressRo
 
 Azure Virtual Desktop session hosts have the same name resolution requirements as any other infrastructure as a service (IaaS) workload. As a result, connectivity to custom DNS servers or access via a virtual network link to Azure private DNS zones is required. Extra Azure private DNS zones are required to host the private endpoint namespaces of certain platform as a service (PaaS) services, such as storage accounts and key management services. For more information, see [Azure private endpoint DNS configuration](/azure/private-link/private-endpoint-dns).
 
-For classic RDS or legacy AVD scenarios, you can configure email-based feed discovery. Modern Azure Virtual Desktop clients typically discover workspaces via the AVD service endpoints without [custom DNS TXT records](/windows-server/remote/remote-desktop-services/rds-email-discovery). For more information, see [Set up email discovery to subscribe to your RDS feed](/windows-server/remote/remote-desktop-services/rds-email-discovery).
+You can optionally configure email-based feed discovery to simplify user onboarding. Modern Azure Virtual Desktop clients can also subscribe directly using workspace discovery via the service without DNS-based email discovery. SeeFor more information, see [Set up email discovery to subscribe to your RDS feed](/windows-server/remote/remote-desktop-services/rds-email-discovery).
 
 ### Optimize bandwidth and latency
 
@@ -31,6 +31,7 @@ RDP Shortpath for managed networks provides a direct UDP-based transport between
 You can use RDP Shortpath in two ways:
 
 - In **managed networks**, where direct connectivity is established between the client and the session host when you use a private connection, such as an ExpressRoute connection or a VPN.
+
 - In **public networks**, where direct connectivity is established between the client and the session host when you use a public connection. Examples of public connections include home networks, coffee shop networks, and hotel networks. There are two possible connection types when you use a public connection. **A direct UDP connection** between a client and a session host that uses the STUN protocol. **An indirect UDP connection** that uses the TURN protocol with a relay between an RDP client and a session host. This option is used if the gateway or router doesn't allow direct UDP connections.
 
 The RDP path extends RDP multi-transport capabilities. It doesn't replace the reverse connect transport but complements it. Initial session brokering is managed through the Azure Virtual Desktop service and the reverse connect transport, which is TCP-based. All connection attempts are ignored unless they match the reverse connect session first.
