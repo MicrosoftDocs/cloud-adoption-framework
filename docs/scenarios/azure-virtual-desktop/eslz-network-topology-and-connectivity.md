@@ -31,18 +31,11 @@ RDP Shortpath for managed networks provides a direct UDP-based transport between
 You can use RDP Shortpath in two ways:
 
 - In **managed networks**, where direct connectivity is established between the client and the session host when you use a private connection, such as an ExpressRoute connection or a VPN.
-- In **public networks**, where direct connectivity is established between the client and the session host when you use a public connection. Examples of public connections include home networks, coffee shop networks, and hotel networks. There are two possible connection types when you use a public connection:
-  - **A direct UDP connection** between a client and a session host that uses the STUN protocol.
-  - **An indirect UDP connection** that uses the TURN protocol with a relay between an RDP client and a session host. This option is used if the gateway or router doesn't allow direct UDP connections.
+- In **public networks**, where direct connectivity is established between the client and the session host when you use a public connection. Examples of public connections include home networks, coffee shop networks, and hotel networks. There are two possible connection types when you use a public connection. **A direct UDP connection** between a client and a session host that uses the STUN protocol. **An indirect UDP connection** that uses the TURN protocol with a relay between an RDP client and a session host. This option is used if the gateway or router doesn't allow direct UDP connections.
 
-    > [!NOTE]
-    > Using RDP Shortpath for public networks with TURN for Azure Virtual Desktop is currently in preview. For more information, see [RDP Shortpath for Azure Virtual Desktop](/azure/virtual-desktop/rdp-shortpath).
+The RDP path extends RDP multi-transport capabilities. It doesn't replace the reverse connect transport but complements it. Initial session brokering is managed through the Azure Virtual Desktop service and the reverse connect transport, which is TCP-based. All connection attempts are ignored unless they match the reverse connect session first.
 
-The RDP path extends RDP multi-transport capabilities. It doesn't replace the reverse connect transport but complements it.
-
-Initial session brokering is managed through the Azure Virtual Desktop service and the reverse connect transport, which is TCP-based. All connection attempts are ignored unless they match the reverse connect session first.
-
-RDP Shortpath, which is UDP-based, is established after authentication. If RDP Shortpath is successfully established, the reverse connect transport is dropped. Then all traffic flows over one of the RDP Shortpath methods that this section lists earlier.
+RDP Shortpath, which is UDP-based, is established after authentication. If RDP Shortpath is successfully established, the reverse connect transport is dropped. Then all traffic flows over one of the RDP Shortpath methods that this section lists earlier. Using RDP Shortpath for public networks with TURN for Azure Virtual Desktop is currently in preview. For more information, see [RDP Shortpath for Azure Virtual Desktop](/azure/virtual-desktop/rdp-shortpath).
 
 For more information, see [Implement Quality of Service (QoS) for Azure Virtual Desktop](/azure/virtual-desktop/rdp-quality-of-service-qos).
 
