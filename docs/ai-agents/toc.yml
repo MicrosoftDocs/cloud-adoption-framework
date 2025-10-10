@@ -1,18 +1,18 @@
 items:
   - name: Agents - Microsoft's Cloud Adoption Framework
     href: index.md
-  - name: Design agent strategy
+  - name: Design an agent strategy
     items:
       - name: Business strategy
         href: business-strategy.md
-      - name: Technical strategy
-        href: technical-strategy.md
+      - name: Technology strategy
+        href: technology-strategy.md
       - name: Data strategy
         href: data-strategy.md
       - name: People strategy
         href: people-strategy.md
-      - name: Governance and security
-        href: governance-security.md
+  - name: Governance and secure agents
+    href: governance-security.md
   - name: Build agents
     items:
       - name: Set up environment

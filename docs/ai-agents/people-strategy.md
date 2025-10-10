@@ -35,21 +35,31 @@ AI competency directly impacts business outcomes such as return on investment, r
 
 ### Assess current skills
 
-Begin by conducting a **skills assessment** across your organization. Identify the roles critical to AI success. Common roles include:
+Begin by conducting a **skills assessment** across your organization. Identify what new skills are needed to deliver and sustain AI agents, then evaluate your team’s proficiency in each area. Common skills include:
 
-- Data scientists and ML engineers to fine-tune models and analyze outputs.
-- Software engineers for integration and tool development.
-- UX designers for conversational experience design.
-- AI product managers for roadmap and delivery oversight.
-- Security and compliance experts for governance.
+- Prompt engineering: Crafting effective prompts and dialogues for LLMs.
+- Data science/ML engineering: Understanding how to fine-tune models, evaluate model outputs, and handle model-related issues.
+- Software integration: Skills to integrate AI with enterprise systems (APIs, cloud architecture).
+- User experience design: Conversational UX is a specialized skill – making interactions with the AI agent intuitive and friendly.
+- AI governance and ethics: Ability to interpret AI principles and ensure the agent’s design aligns with them (this might be within the CoE or compliance teams).
 
-Evaluate whether your teams have experience with large language models, AI-driven analytics, and conversational UX. Document gaps such as developers skilled in web applications but unfamiliar with AI integration. This assessment informs whether to train existing staff or hire new talent
+Document gaps such as developers skilled in web applications but unfamiliar with AI integration. This assessment informs whether to train existing staff or hire new talent
 
 ### Close agent skill gap
 
-Once gaps are identified, **launch structured training programs**. Use Microsoft Learn to upskill teams on Copilot Studio and Azure AI Foundry. Encourage certification through Azure AI learning paths. Organize internal workshops on topics like prompt engineering and agent design, and supplement with external consultants where needed. You should sponsor hackathons and pilot projects to give teams hands-on experience and build confidence.
+Decide where to train and where to hire. For each gap, determine if it’s feasible to upskill existing staff or faster to bring in new talent. Often, core development teams can be trained on prompt engineering and AI service usage, especially with Microsoft’s user-friendly tools. However, for highly specialized areas, you might hire an expert or use a consultant to avoid learning by costly mistakes.
 
-#### Start and build new skills in parallel
+**Launch a focused training program to build AI competency across teams.** Approach AI skills development with the same seriousness as adopting a new technology stack. Create a learning plan and use both internal and external resources:
+
+- **Use Microsoft’s free training resources.** Microsoft Learn offers modules and learning paths on AI services. There are also certifications like Azure AI Engineer. Encourage team members to complete relevant modules and perhaps achieve certifications. This builds foundational knowledge in a structured way.
+
+- **Hands-on workshops and hackathons.** Organize internal training sessions where teams practice on real scenarios. For example, a workshop on prompt engineering could involve taking a sample prompt and iteratively improving it with an instructor. Hackathons are a great way for multidisciplinary teams to collaborate and build a small prototype AI agent in 1-2 days, which teaches practical skills and sparks ideas.
+
+- **Vendor or partner-led training.** Consider bringing in Microsoft or a certified partner to run training sessions tailored to your context. This could be an onsite (or virtual) training where your actual use cases are used as examples. For instance, a partner could walk your team through building a prototype agent using your data, teaching them methods along the way. Such guided training often accelerates learning.
+
+- **Mentorship and peer learning.** If you have one or two people who’ve already built an AI agent, set up a mentorship or “office hours” scheme. Those people can coach others through their projects. Create a community channel (Teams chat) for AI practitioners in your company to ask questions and share tips spontaneously.
+
+### Start and build new skills in parallel
 
 In parallel, adopt a **phased skill-building strategy**. Start with platforms your teams already understand, such as Copilot Studio, and begin deploying agents. Simultaneously, send a subset of your staff for training on Azure AI Foundry to prepare for more advanced custom agents. Consider bringing in Microsoft partners to launch initial projects while your team shadows and learns.
 
