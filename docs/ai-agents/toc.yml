@@ -18,7 +18,7 @@ items:
       - name: Set up environment
         href: set-up-environment.md
       - name: Single or multi-agent systems
-        href: single-vs-multi-agent-systems.md
+        href: single-multi-agent-systems.md
       - name: Process to build agents
         href: process-to-build-agents.md
   - name: Deploy agents
