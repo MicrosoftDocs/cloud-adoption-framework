@@ -81,79 +81,48 @@ Data security is essential to prevent breaches and maintain compliance. Agents m
 
 ## Microsoft facilitation
 
-Governance must be operationalized through tooling and automation. Tools like Microsoft Purview, Azure Policy, and Defender for Cloud should be integrated into the agent development lifecycle. These tools can monitor data access, enforce labeling and retention policies, detect violations, and generate audit logs. Governance checks should be part of the CI/CD pipeline, ensuring that agents pass all compliance gates before deployment. Periodic re-reviews should be scheduled to account for changes in data sources, regulations, or agent behavior.
-
-- **Copilot Studio:** Encryption at rest and in transit is enabled by default. You can [Configure customer-managed encryption keys](/azure/microsoft-copilot-studio/admin-customer-managed-keys). [Review ISO, SOC, and HIPAA compliance.](/azure/microsoft-copilot-studio/admin-certification)
-- **Azure AI Foundry:** Encryption at rest and in transit is enabled by default. You can use [Customer-Managed Keys for Azure AI Foundry](/azure/ai-foundry/concepts/encryption-keys-portal?pivots=fdp-project). Use [Azure Policy](/azure/ai-foundry/how-to/azure-policy) and Microsoft Purview [**Compliance Manager**](/azure/purview/compliance-manager-cloud-settings) for automated compliance checks. Developers can integrate compliance checks with the [Microsoft Purview SDKs and APIs](/azure/purview/developer/secure-ai-with-purview). Review the guidance on [Data, privacy, and security for Azure AI Agent Service.](/azure/ai-foundry/responsible-ai/agents/data-privacy-security)
-
+Azure AI Foundry and Microsoft Copilot Studio provide comprehensive capabilities to implement data strategy, governance, and security for AI agents. Start by defining your use cases, ensure data is ready and accessible, establish governance policies, and continuously monitor compliance.
 
 ### Azure AI Foundry
 
-#### Data strategy - Align data with agent needs
-- [Define your AI project requirements and create a structured discovery phase](/azure/ai-foundry/concepts/planning) to identify business scenarios and data requirements for AI agents.
+Azure AI Foundry enables technical leaders to build custom AI agents with full control over data strategy and governance.
 
-#### Data strategy - Ensure data readiness  
-- [Use Microsoft Purview to scan, catalog, and classify data across your organization](/purview/data-governance-overview) to validate data meets governance policies.
-- [Implement Microsoft Purview SDKs to enforce compliance policies programmatically](/purview/developer/microsoft-purview-sdk-documentation-overview).
+1. **Define AI project requirements.** Begin your agent development by [planning your AI project](/azure/ai-foundry/concepts/planning) to identify business scenarios and define data requirements. This structured approach ensures alignment between agent capabilities and organizational data strategy.
 
-#### Data strategy - Ensure data accessibility
-- [Connect to Azure data sources using indexers for automated data import](/azure/search/search-data-sources-gallery) including Azure Blob Storage, Azure SQL Database, and Azure Cosmos DB.
-- [Integrate Azure AI Search indexes as knowledge sources](/microsoft-copilot-studio/knowledge-azure-ai-search) for agents to retrieve information.
+1. **Ensure data readiness and classification.** Use [Microsoft Purview to scan, catalog, and classify data](/purview/data-governance-overview) across your organization. Automated scanning validates that data meets governance policies before agent integration, reducing downstream compliance risks.
 
-#### Data strategy - Maintain data quality and freshness
-- [Configure automated data pipelines with change tracking](/azure/search/search-what-is-data-import#pulling-data-into-an-index) to refresh search indexes with the latest data.
+1. **Connect to data sources securely.** Integrate data by [connecting to Azure data sources using indexers](/azure/search/search-data-sources-gallery) for automated, secure data import from Azure Blob Storage, Azure SQL Database, and Azure Cosmos DB. This reduces manual data preparation and supports consistent refresh patterns.
 
-#### Data compliance
-- [Review Azure's GDPR and CCPA compliance guidance](/compliance/regulatory/gdpr-data-subject-requests) for handling personal data in AI systems.
+1. **Maintain data freshness automatically.** [Configure automated data pipelines with change tracking](/azure/search/search-what-is-data-import#pulling-data-into-an-index) to keep search indexes current, ensuring agents work with the latest information without manual intervention.
 
-#### Data sensitivity labeling
-- [Use Microsoft Purview to implement data classification and sensitivity labeling](/purview/ai-microsoft-purview) across AI applications.
-- [Apply sensitivity labels to protect data accessed by AI agents](/purview/sensitivity-labels).
+1. **Implement data security and compliance.** [Review data security and compliance protections for AI agents](/purview/ai-agents) to understand how Microsoft Purview manages sensitive data in AI interactions, including data classification and DLP policies. For developers, [integrate compliance checks using Microsoft Purview APIs](/purview/developer/secure-ai-with-purview) directly into agent workflows.
 
-#### Data privacy
-- [Implement Microsoft Purview to manage data security and compliance for AI agents](/purview/ai-agents) including data classification and DLP policies.
+1. **Apply sensitivity labels to protect data.** [Use Microsoft Purview information protection](/purview/ai-microsoft-purview#microsoft-purview-strengthens-information-protection-for-ai-apps) to apply sensitivity labels across AI applications, ensuring agents respect existing data protection policies and access controls.
 
-#### Data residency and sovereignty
-- [Configure allowed Azure regions to enforce data residency requirements](https://azure.microsoft.com/explore/global-infrastructure/data-residency/#overview).
-- [Review Azure Policy definitions to restrict resource deployment locations](/azure/governance/policy/tutorials/policy-devops-pipelines).
+1. **Configure data residency and sovereignty.** [Explore Azure global infrastructure data residency options](https://azure.microsoft.com/explore/global-infrastructure/data-residency/#overview) to select appropriate regions for your data. Then [use Azure Policy to restrict resource deployment locations](/azure/governance/policy/tutorials/policy-devops-pipelines) and enforce geographic compliance requirements.
 
-#### Data retention
-- [Configure lifecycle management policies in Azure Storage](/azure/storage/blobs/lifecycle-management-overview) to automatically delete data after retention periods.
-- [Create retention policies in Microsoft Purview](/purview/create-retention-policies) for AI interaction data.
+1. **Establish data retention policies.** [Configure lifecycle management policies in Azure Storage](/azure/storage/blobs/lifecycle-management-overview) to automatically delete data after retention periods expire. For AI interaction data, [create retention policies in Microsoft Purview](/purview/create-retention-policies) to manage how long prompts and responses are stored.
 
-#### Data security
-- [Grant access to Microsoft Graph using managed identities with least privilege permissions](/entra/identity-platform/multi-service-web-app-access-microsoft-graph-as-app#grant-access-to-microsoft-graph).
-- [Follow Azure RBAC best practices to grant only necessary access](/azure/role-based-access-control/best-practices#only-grant-the-access-users-need).
+1. **Grant least privilege access.** [Follow Azure RBAC best practices](/azure/role-based-access-control/best-practices#only-grant-the-access-users-need) to grant only necessary access. When agents need to access Microsoft Graph or other services, [use managed identities](/entra/identity/managed-identities-azure-resources/managed-identity-best-practice-recommendations#follow-the-principle-of-least-privilege-when-granting-access) to eliminate credential management and reduce security risks.
 
-#### Encryption and key management
-- [Configure customer-managed encryption keys in Azure AI Foundry](/azure/ai-foundry/concepts/encryption-keys-portal?pivots=fdp-project).
-- [Enable encryption at rest and in transit by default](/azure/ai-foundry/responsible-ai/openai/data-privacy#how-does-azure-ai-foundry-process-data-to-provide-azure-direct-models).
+1. **Enable customer-managed encryption keys.** [Configure customer-managed encryption keys in Azure AI Foundry](/azure/ai-foundry/concepts/encryption-keys-portal) when organizational policies require control over encryption key lifecycle. Note that [encryption at rest and in transit is enabled by default](/azure/ai-foundry/openai/encrypt-data-at-rest) for all Azure AI Foundry resources.
 
-#### Governance automation
-- [Use Azure Policy to enforce compliance checks automatically](/azure/ai-foundry/how-to/azure-policy).
-- [Integrate Microsoft Purview Compliance Manager for centralized compliance tracking](/purview/compliance-manager-cloud-settings).
+1. **Automate governance with Azure Policy.** [Use Azure Policy to enforce compliance checks](/azure/ai-foundry/how-to/azure-policy) automatically across your AI infrastructure, preventing deployment of noncompliant resources before they reach production.
+
+1. **Comply with data protection regulations.** [Review Azure GDPR and CCPA compliance guidance](/compliance/regulatory/gdpr-dsr-azure) to understand your obligations for handling personal data in AI systems, including data subject rights and deletion requirements.
 
 ### Microsoft Copilot Studio
 
-#### Data strategy - Ensure data accessibility
-- [Configure connections to enterprise data sources using connectors](/microsoft-copilot-studio/authoring-connections) for tools and knowledge.
-- [Add SharePoint as a knowledge source with appropriate access controls](/microsoft-copilot-studio/knowledge-add-sharepoint).
+Microsoft Copilot Studio provides low-code tools for building AI agents with built-in governance and security controls.
 
-#### Data compliance
-- [Review ISO, SOC, and HIPAA compliance certifications](/microsoft-copilot-studio/admin-certification) for Copilot Studio.
+1. **Connect to enterprise data securely.** [Configure connections to enterprise data sources](/microsoft-copilot-studio/authoring-connections) using prebuilt connectors, and [add SharePoint as a knowledge source](/microsoft-copilot-studio/knowledge-add-sharepoint) with appropriate access controls to ensure agents retrieve only authorized content.
 
-#### Data sensitivity labeling
-- [Enable Microsoft Purview data classification for Copilot Studio agents](/purview/ai-copilot-studio#capabilities-supported) to identify sensitive data in prompts and responses.
+1. **Enable data classification for agent interactions.** [Enable Microsoft Purview data classification for Copilot Studio agents](/purview/ai-copilot-studio#capabilities-supported) to automatically identify sensitive data in prompts and responses, supporting compliance monitoring and risk detection.
 
-#### Data privacy
-- [Review data security and geographic residency options](/microsoft-copilot-studio/geo-data-residency-security#data-residency-and-security-in-copilot-studio) to ensure local data protection compliance.
+1. **Review compliance certifications.** [Review ISO, SOC, and HIPAA compliance certifications](/microsoft-copilot-studio/admin-certification) for Copilot Studio to validate that the platform meets your industry-specific regulatory requirements.
 
-#### Data residency and sovereignty
-- [Configure data location settings to comply with regional requirements](/microsoft-copilot-studio/data-location).
+1. **Configure data location for regional compliance.** [Configure data location settings](/microsoft-copilot-studio/data-location) to comply with regional requirements, and [review data residency and security options](/microsoft-copilot-studio/geo-data-residency-security#data-residency-and-security-in-copilot-studio) to ensure local data protection compliance.
 
-#### Encryption and key management
-- [Configure customer-managed encryption keys for enhanced security](/microsoft-copilot-studio/admin-customer-managed-keys).
+1. **Use customer-managed encryption keys.** [Configure customer-managed encryption keys](/microsoft-copilot-studio/admin-customer-managed-keys) when you need control over encryption key management for enhanced security and compliance.
 
-#### Governance automation
-
-- [Capture agent audit logs in Microsoft Purview](/purview/audit-copilot) for compliance and monitoring.
+1. **Monitor agent activity with audit logs.** [Capture agent audit logs in Microsoft Purview](/purview/audit-copilot) for compliance monitoring, enabling security teams to track how agents are used and identify potential policy violations.

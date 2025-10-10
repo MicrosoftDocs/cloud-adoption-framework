@@ -27,7 +27,7 @@ Diversify how you implement AI agents, matching each project’s approach to its
 
 ### Buy prebuilt agents for individual efficiency (Microsoft Copilots)
 
-Explore Microsoft 365 Copilot, which includes prebuilt agents like Researcher and Analyst to support individual productivity. In addition, Microsoft offers in-product Copilots across services such as Azure, GitHub, Microsoft Fabric, and Power Platform. There are also role-based Copilots tailored for functions like security, finance, and sales. These agents are built to deliver immediate value with minimal setup. If a prebuilt Copilot aligns with your use case, it can be enabled and configured without custom development—making it the fastest way to integrate AI into your workflows. See [Overview of Microsoft Copilots](/azure/cloud-adoption-framework/scenarios/ai/strategy#adopt-microsoft-software-ai-services-saas-for-initial-outcomes) and [Agent Success Kit.](https://adoption.microsoft.com/ai-agents/success-kit/)
+Explore Microsoft 365 Copilot, which includes prebuilt agents like Researcher and Analyst to support individual productivity. In addition, Microsoft offers in-product Copilots across services such as Azure, GitHub, Microsoft Fabric, and Power Platform. There are also role-based Copilots tailored for functions like security, finance, and sales. These agents are built to deliver immediate value with minimal setup. If a prebuilt Copilot aligns with your use case, it can be enabled and configured without custom development, making it the fastest way to integrate AI into your workflows. See [Overview of Microsoft Copilots](/azure/cloud-adoption-framework/scenarios/ai/strategy#adopt-microsoft-software-ai-services-saas-for-initial-outcomes) and [Agent Success Kit.](https://adoption.microsoft.com/ai-agents/success-kit/)
 
 ### Build low-code agents for business teams (Microsoft Copilot Studio)
 
@@ -49,11 +49,22 @@ Before fully committing budget and time to a chosen approach (whether buy, low-c
 
 ## Microsoft Facilitation
 
-**Azure AI Foundry**
+This section guides technical decision makers through the practical implementation steps for adopting AI agents using Microsoft platforms. Start by exploring prebuilt solutions to understand what's available, then experiment with low-code platforms for departmental needs, and finally explore pro-code development for strategic investments. Each path offers different trade-offs between speed, customization, and investment.
 
-1. Test out the platform in the [Foundry agent playground](/azure/ai-foundry/concepts/concept-playgrounds#agents-playground)
+### Prebuilt agents (Microsoft 365 Copilot)
 
-**Microsoft Copilot Studio**
+**Explore and deploy prebuilt agents.** Start by reviewing [Microsoft 365 Copilot and prebuilt agents](/microsoft-365-copilot/extensibility/overview#extend-copilot-with-agents) to understand the range of ready-to-use solutions. These agents handle common scenarios like employee onboarding, IT helpdesk, and sales enablement. Review the [agents overview](/microsoft-365-copilot/extensibility/agents-overview) to understand how they extend Copilot's capabilities with specialized knowledge and workflows, then explore [installation and governance methods](/copilot/microsoft-365/copilot-agent-install#agent-installation-and-governance-methods) to deploy them to your organization.
 
-1. [Sign up for a trial Microsoft Copilot Studio](/azure/microsoft-copilot-studio/sign-up-individual)
-2. [Build no-code Agent](/azure/microsoft-365-copilot/extensibility/copilot-studio-lite-build) or build [low-code agents](/azure/microsoft-copilot-studio/authoring-first-bot?tabs=web)
+**Adopt and measure value.** Follow the [Microsoft 365 Copilot adoption guide](/copilot/microsoft-365/microsoft-365-copilot-enablement-resources) to plan your rollout, including license assignment, user training, and change management. Use the [Microsoft Adoption site](https://adoption.microsoft.com/copilot) for success kits, scenario libraries, and launch materials. Track usage and impact through the [Copilot setup guide](/copilot/microsoft-365/microsoft-365-copilot-setup) which covers deployment phases, pilot programs, and reporting.
+
+### Low-code agents (Microsoft Copilot Studio)
+
+**Start a trial and build your first agent.** Begin by [signing up for a Copilot Studio trial](/microsoft-copilot-studio/requirements-licensing-subscriptions#sign-up-for-a-copilot-studio-trial) to explore the platform at no cost. Then follow the [quickstart to create and deploy an agent](/microsoft-copilot-studio/fundamentals-get-started) which walks through adding knowledge, testing changes, and publishing to a demo website. For more structured guidance, explore [training modules on creating agents](/training/paths/create-extend-custom-copilots-microsoft-copilot-studio/) with exercises for building, managing topics, and working with variables.
+
+**Extend capabilities with connectors and tools.** Enhance your agents using [Power Platform connectors](/connectors/overview#use-connectors) to integrate with over 1,200 services and business systems. Review [how to extend agent capabilities with connectors](/microsoft-copilot-studio/copilot-connectors-in-copilot-studio) to add external data sources, trigger workflows, and connect to enterprise applications. Understand [connector overview for different products](/connectors/overview#use-connectors) including Copilot Studio, Power Automate, Power Apps, and Logic Apps to leverage the full ecosystem.
+
+### Pro-code agents (Azure AI Foundry)
+
+**Prototype in the playground and learn the fundamentals.** Start by exploring the [Azure AI Foundry playgrounds](/azure/ai-foundry/concepts/concept-playgrounds) which provide no-code environments to test agents, iterate on prompts, and validate ideas before writing code. Review [what Azure AI Foundry Agent Service is](/azure/ai-foundry/agents/overview) to understand the agent factory model, including how models, tools, orchestration, observability, and trust features work together to create production-ready agents.
+
+**Build custom agents with SDKs and frameworks.** Follow the [quickstart to create a new agent](/azure/ai-foundry/agents/quickstart) using Python, TypeScript, C#, or Java SDKs with step-by-step code examples. Explore [connected agents for multi-agent systems](/azure/ai-foundry/agents/how-to/connected-agents) to build collaborative workflows where specialized agents work together without custom orchestration logic. For advanced scenarios, review [agent orchestration patterns](/azure/architecture/ai-ml/guide/ai-agent-design-patterns) and implementation guidance for the [Microsoft Agent Framework](/agent-framework/user-guide/workflows/orchestrations/overview) to design sequential, concurrent, handoff, and complex multi-agent systems.
