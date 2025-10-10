@@ -11,29 +11,53 @@ ms.topic: conceptual
 
 This article explains how to design network topology and connectivity for Azure Virtual Desktop (AVD) in an enterprise-scale environment. These recommendations help technical leaders minimize risk, optimize cost, and ensure reliable performance for end users. Each section addresses critical design decisions that influence security, identity, DNS, bandwidth, and continuity strategies.
 
-## Network topology
+## AVD networking components
+
+### Core networking components
+
+- [**Azure Virtual Network**](/azure/virtual-network/virtual-networks-overview) is the fundamental building block for private networks in Azure. With Virtual Network, many types of Azure resources, such as Azure Virtual Machines, can communicate with each other, the internet, and on-premises datacenters. A virtual network is similar to a traditional network that you operate in your own datacenter. But a virtual network offers the Azure infrastructure benefits of scale, availability, and isolation.
+- A [**hub-spoke network topology**](/azure/architecture/reference-architectures/hybrid-networking/hub-spoke?tabs=cli) is a type of network architecture in which a hub virtual network acts as a central point of connectivity to several spoke virtual networks. The hub can also be the connectivity point to on-premises datacenters. The spoke virtual networks peer with the hub and help to isolate workloads.
+- [**Azure Virtual WAN**](/azure/virtual-wan/virtual-wan-about) is a networking service that brings networking, security, and routing functions together in a single operational interface.
+
+### Secure access and traffic control
+
+- [**Network security groups**](/azure/virtual-network/network-security-groups-overview) are used to filter network traffic to and from Azure resources in an Azure virtual network. A network security group contains security rules that allow or deny inbound network traffic to, or outbound network traffic from, several types of Azure resources.
+- [**Application security groups**](/azure/virtual-network/application-security-groups) provide a way for you to configure network security as a natural extension of an application's structure. You can use application security groups to group VMs and define network security policies that are based on those groups. You can reuse your security policy at scale without needing to manually maintain explicit IP addresses.
+- In a [**forced-tunneling**](/azure/vpn-gateway/about-site-to-site-tunneling) scenario, all internet-bound traffic that originates on Azure virtual machines (VMs) is routed, or forced, to go through an inspection and auditing appliance. Unauthorized internet access can potentially lead to information disclosure or other types of security breaches without the traffic inspection or audit.
+
+### Routing and optimization
+
+- A [**network virtual appliance (NVA)**](https://azure.microsoft.com/blog/azure-firewall-and-network-virtual-appliances/) is a network device that supports functions like connectivity, application delivery, wide-area network (WAN) optimization, and security. NVAs include Azure Firewall and Azure Load Balancer.
+- **[User-defined routes (UDRs)](/azure/virtual-network/virtual-networks-udr-overview)** can be used to override Azure default system routes. You can also use UDRs to add extra routes to a subnet route table.
+
+### Azure Virtual Desktop enhancements
+
+- **[Remote Desktop Protocol Shortpath (RDP Shortpath)](/azure/virtual-desktop/rdp-shortpath?tabs=managed-networks)** is a feature of Azure Virtual Desktop that's based on [Universal Rate Control Protocol (URCP)](https://www.microsoft.com/research/publication/urcp-universal-rate-control-protocol-for-real-time-communication-applications/). RDP Shortpath establishes a direct transport that's based on User Datagram Protocol (UDP) between a supported Windows Remote Desktop client and Azure Virtual Desktop session hosts. URCP enhances UDP connections by providing active monitoring of network conditions and quality-of-service (QoS) capabilities.
+- **[Azure Private Link with Azure Virtual Desktop](/azure/virtual-desktop/private-link-overview)** (optional) provides a way for you to use a [private endpoint](/azure/private-link/private-endpoint-overview) in Azure to connect session hosts to the Azure Virtual Desktop service. With Private Link, traffic between your virtual network and the Azure Virtual Desktop service travels on the Microsoft *backbone* network. As a result, you don't need to connect to the public internet to access Azure Virtual Desktop services.
+
+## Plan AVD network topology
 
 Use Virtual WAN when you require [transit connectivity between VPN and ExpressRoute](/azure/virtual-wan/virtual-wan-about#transit-er). Virtual WAN provides a Microsoft-managed hub-and-spoke model (virtual hubs + connected virtual networks) with built-in transitive routing. Use Virtual WAN when you need managed global transit and integrated routing/security.
 
-## Identity services
+## Configure AVD identity services
 
 - **Microsoft Entra Domain Services–joined VMs**: Ensure Azure Virtual Desktop networks have connectivity to the network hosting the identity service.
 
 - **[Microsoft Entra ID–joined VMs](/azure/virtual-desktop/azure-ad-joined-session-hosts)**: Azure Virtual Desktop session hosts create outbound connections to Microsoft Entra ID public endpoints. No private connectivity configurations are required.
 
-## Configure DNS
+## Configure AVD DNS
 
 Azure Virtual Desktop session hosts have the same name resolution requirements as any other infrastructure as a service (IaaS) workload. As a result, connectivity to custom DNS servers or access via a virtual network link to Azure private DNS zones is required. Extra Azure private DNS zones are required to host the private endpoint namespaces of certain platform as a service (PaaS) services, such as storage accounts and key management services. For more information, see [Azure private endpoint DNS configuration](/azure/private-link/private-endpoint-dns).
 
 You can optionally configure email-based feed discovery to simplify user onboarding. Modern Azure Virtual Desktop clients can also subscribe directly using workspace discovery via the service without DNS-based email discovery. SeeFor more information, see [Set up email discovery to subscribe to your RDS feed](/windows-server/remote/remote-desktop-services/rds-email-discovery).
 
-## Optimize bandwidth and latency
+## Optimize AVD bandwidth and latency
 
 Azure Virtual Desktop uses RDP. To learn more about RDP, see [Remote Desktop Protocol (RDP) bandwidth requirements](/azure/virtual-desktop/rdp-bandwidth).
 
 The connection latency varies, depending on the location of the users and the VMs. Azure Virtual Desktop services continuously roll out to new geographies to improve latency. To minimize the latency that Azure Virtual Desktop clients experience, use the [Azure Virtual Desktop Experience Estimator](https://azure.microsoft.com/services/virtual-desktop/assessment/). This tool provides round-trip time (RTT) samples from clients. You can use this information to place session hosts in the region that's closest to end users and has the lowest RTT. For information about interpreting results from the estimator tool, see [Analyze connection quality in Azure Virtual Desktop](/azure/virtual-desktop/connection-latency).
 
-## Implement QoS policies with RDP Shortpath
+## Implement AVD QoS policies with RDP Shortpath
 
 RDP Shortpath for managed networks provides a direct UDP-based transport between a Remote Desktop client and a session host. RDP Shortpath for managed networks provides a way to configure QoS policies for the RDP data. QoS in Azure Virtual Desktop allows real-time RDP traffic that's sensitive to network delays to "cut in line" in front of less sensitive traffic.
 
@@ -49,13 +73,13 @@ RDP Shortpath, which is UDP-based, is established after authentication. If RDP S
 
 For more information, see [Implement Quality of Service (QoS) for Azure Virtual Desktop](/azure/virtual-desktop/rdp-quality-of-service-qos).
 
-## Secure internet access
+## Secure AVD internet access
 
 Azure Virtual Desktop compute resources and clients require access to specific public endpoints, so they need internet-bound connections. Network scenarios, such as forced tunneling to enhance security and filtering, are supported when Azure Virtual Desktop requirements are met.
 
 To understand requirements for Azure Virtual Desktop session hosts and client devices, see [Required URLs for Azure Virtual Desktop](/azure/virtual-desktop/safe-url-list).
 
-## Validate port and protocol requirements
+## Validate AVD port and protocol requirements
 
 The Azure Virtual Desktop connection models use the following ports and protocols:
 
