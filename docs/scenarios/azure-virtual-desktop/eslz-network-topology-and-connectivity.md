@@ -7,30 +7,30 @@ ms.date: 10/09/2025
 ms.topic: conceptual
 ---
 
-# Azure Virtual Desktop networking recommendations
+# Azure Virtual Desktop Network Topology and Connectivity Design Guidance
 
-This article explains how to design network topology and connectivity for Azure Virtual Desktop (AVD) in an enterprise-scale environment. These recommendations help technical leaders minimize risk, optimize cost, and ensure reliable performance for end users. Each section addresses critical design decisions that influence security, identity, DNS, bandwidth, and continuity strategies.
+This article outlines how to design network topology and connectivity for Azure Virtual Desktop (AVD) within an Azure landing zone. It helps technical decision-makers understand the networking requirements their teams must follow to ensure secure and scalable connectivity across Azure, private networks, and the public internet. Before deploying AVD, an Azure landing zone must be in place. Then you deploy AVD resources into an application landing zone.
 
 ## AVD networking components
 
 ### Core networking components
 
 - [**Azure Virtual Network**](/azure/virtual-network/virtual-networks-overview) is the fundamental building block for private networks in Azure. With Virtual Network, many types of Azure resources, such as Azure Virtual Machines, can communicate with each other, the internet, and on-premises datacenters. A virtual network is similar to a traditional network that you operate in your own datacenter. But a virtual network offers the Azure infrastructure benefits of scale, availability, and isolation.
-- A [**hub-spoke network topology**](/azure/architecture/reference-architectures/hybrid-networking/hub-spoke?tabs=cli) is a type of network architecture in which a hub virtual network acts as a central point of connectivity to several spoke virtual networks. The hub can also be the connectivity point to on-premises datacenters. The spoke virtual networks peer with the hub and help to isolate workloads.
+- [**Hub-Spoke Network Topology**](/azure/architecture/reference-architectures/hybrid-networking/hub-spoke?tabs=cli) is a type of network architecture in which a hub virtual network acts as a central point of connectivity to several spoke virtual networks. The hub can also be the connectivity point to on-premises datacenters. The spoke virtual networks peer with the hub and help to isolate workloads.
 - [**Azure Virtual WAN**](/azure/virtual-wan/virtual-wan-about) is a networking service that brings networking, security, and routing functions together in a single operational interface.
 
 ### Secure access and traffic control
 
 - [**Network security groups**](/azure/virtual-network/network-security-groups-overview) are used to filter network traffic to and from Azure resources in an Azure virtual network. A network security group contains security rules that allow or deny inbound network traffic to, or outbound network traffic from, several types of Azure resources.
 - [**Application security groups**](/azure/virtual-network/application-security-groups) provide a way for you to configure network security as a natural extension of an application's structure. You can use application security groups to group VMs and define network security policies that are based on those groups. You can reuse your security policy at scale without needing to manually maintain explicit IP addresses.
-- In a [**forced-tunneling**](/azure/vpn-gateway/about-site-to-site-tunneling) scenario, all internet-bound traffic that originates on Azure virtual machines (VMs) is routed, or forced, to go through an inspection and auditing appliance. Unauthorized internet access can potentially lead to information disclosure or other types of security breaches without the traffic inspection or audit.
+- A [**NAT Gateway**](https://learn.microsoft.com/en-us/azure/nat-gateway/nat-overview) provide NAT service for private subnets egress traffic to the internet. It does not allow inbound traffic unless they are response packets. This provides Azure Virtual Desktop environments the ability to explicitly egress to the internet and also mitigate performance impact of sending AVD service traffic through a Firewall or NVA.
 
-### Routing and optimization
+### Routing and Optimization
 
-- A [**network virtual appliance (NVA)**](https://azure.microsoft.com/blog/azure-firewall-and-network-virtual-appliances/) is a network device that supports functions like connectivity, application delivery, wide-area network (WAN) optimization, and security. NVAs include Azure Firewall and Azure Load Balancer.
-- **[User-defined routes (UDRs)](/azure/virtual-network/virtual-networks-udr-overview)** can be used to override Azure default system routes. You can also use UDRs to add extra routes to a subnet route table.
+- An [**Azure Firewall or Network Virtual Appliance (NVA)**](https://azure.microsoft.com/blog/azure-firewall-and-network-virtual-appliances/) is a network device that supports functions like connectivity, application control, wide-area network (WAN) optimization, and security. NVAs include Azure Firewall and vendor network appliances found in the marketplace.
+- **[User-defined routes (UDRs)](/azure/virtual-network/virtual-networks-udr-overview)** can be used to override Azure default system routes. You can also use UDRs to add extra routes to a subnet route table which allows routing specific traffic and Azure services to desitnations across your networks and Azure.
 
-### Azure Virtual Desktop enhancements
+### Azure Virtual Desktop Enhancements
 
 - **[Remote Desktop Protocol Shortpath (RDP Shortpath)](/azure/virtual-desktop/rdp-shortpath?tabs=managed-networks)** is a feature of Azure Virtual Desktop that's based on [Universal Rate Control Protocol (URCP)](https://www.microsoft.com/research/publication/urcp-universal-rate-control-protocol-for-real-time-communication-applications/). RDP Shortpath establishes a direct transport that's based on User Datagram Protocol (UDP) between a supported Windows Remote Desktop client and Azure Virtual Desktop session hosts. URCP enhances UDP connections by providing active monitoring of network conditions and quality-of-service (QoS) capabilities.
 - **[Azure Private Link with Azure Virtual Desktop](/azure/virtual-desktop/private-link-overview)** (optional) provides a way for you to use a [private endpoint](/azure/private-link/private-endpoint-overview) in Azure to connect session hosts to the Azure Virtual Desktop service. With Private Link, traffic between your virtual network and the Azure Virtual Desktop service travels on the Microsoft *backbone* network. As a result, you don't need to connect to the public internet to access Azure Virtual Desktop services.
