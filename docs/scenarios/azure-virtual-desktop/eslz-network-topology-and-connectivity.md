@@ -213,11 +213,11 @@ You can implement this scenario with:
 - Azure private DNS zones are used to resolve private endpoint namespaces.
 - Network filtering isn't enforced for this scenario. But network security groups are placed on all subnets so that you can monitor traffic and derive insights. In Network Watcher, traffic analytics and the network security group flow logging feature are used for these purposes.
 
-## Scenario 3: Hub and spoke with public networks using RDP Shortpath
+### Scenario 3: Hub and spoke with public networks using RDP Shortpath
 
 For detailed deployment guidance, see [RDP Shortpath connectivity for public networks](/azure/virtual-desktop/rdp-shortpath?tabs=public-networks).
 
-### Customer profile for hub and spoke with public networks using RDP Shortpath
+#### Customer profile for hub and spoke with public networks using RDP Shortpath
 
 This scenario is ideal if:
 
@@ -231,7 +231,7 @@ This scenario is ideal if:
 - You don't need traffic inspection between Azure Virtual Desktop networks and on-premises datacenters.
 - You have pre-existing AD DS or DNS custom servers.
 
-### Architectural components for hub and spoke with public networks using RDP Shortpath
+#### Architectural components for hub and spoke with public networks using RDP Shortpath
 
 You can implement this scenario with:
 
@@ -247,7 +247,7 @@ You can implement this scenario with:
 
 :::image type="content" source="./media/eslz-network-topology-and-connectivity/rdp-shortpath-public.png" alt-text="Architecture diagram for the scenario that uses RDP Shortpath for public networks." lightbox="./media/eslz-network-topology-and-connectivity/rdp-shortpath-public.png" border="false":::
 
-### Considerations for hub and spoke with public networks using RDP Shortpath
+#### Considerations for hub and spoke with public networks using RDP Shortpath
 
 - Allow the following types of connections:
   - Outbound UDP connections from Azure Virtual Desktop session hosts to the Azure Virtual Desktop Session Traversal Utilities for NAT (STUN) and Traversal Using Relay NAT (TURN) services on port 3478
