@@ -1,0 +1,27 @@
+items:
+  - name: Agents - Microsoft's Cloud Adoption Framework
+    href: index.md
+  - name: Design agent strategy
+    items:
+      - name: Business strategy
+        href: business-strategy.md
+      - name: Technical strategy
+        href: technical-strategy.md
+      - name: Data strategy
+        href: data-strategy.md
+      - name: People strategy
+        href: people-strategy.md
+      - name: Governance and security
+        href: governance-security.md
+  - name: Build agents
+    items:
+      - name: Set up environment
+        href: set-up-environment.md
+      - name: Single or multi-agent systems
+        href: single-vs-multi-agent-systems.md
+      - name: Process to build agents
+        href: process-to-build-agents.md
+  - name: Deploy agents
+    href: deploy.md
+  - name: Manage agents
+    href: manage.md
