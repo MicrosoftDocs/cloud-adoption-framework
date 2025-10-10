@@ -11,23 +11,15 @@ ms.collection: ce-skilling-ai-copilot
 
 # Governance and security for AI agents
 
-This article explains how to create a governance and security framework for AI agents in your organization. Governance ensures compliance with laws, regulations, and organizational policies, while security protects sensitive data and prevents misuse. These measures are critical because AI agents interact with enterprise systems and data, making them high-value assets that require strict oversight. The following recommendations outline the major steps to implement governance and security effectively.
+Before your team writes a single line of code or launches an AI agent, put governance and security frameworks in place. Setting clear guardrails early will minimize the risk of incidents, ensure compliance with regulations, and maintain stakeholder trust. Rather than treating governance as a separate phase, weave these considerations throughout the design, build, deploy, and manage phases. However, it’s useful to plan and implement core governance mechanisms at the outset so they are ingrained in the project’s DNA.
 
 ## Regulatory compliance
 
 **All agents must comply with regulations and standards.** Teams must use tools that meet regulatory requirements. Before any agent deploys, it must pass a formal security and compliance review before deployment that includes scope, data access, privacy controls, identified risks, and safety test results. Use automated policy checks. Fallback to manual review workflows. Deploy through a CI/CD pipeline with these checks embedded. Document these reviews for accountability and repeat them periodically. Audit logs and outputs to confirm compliance with evolving laws and corporate policies, such as stricter data privacy rules or AI ethics guidelines. Update agents or usage policies immediately when new regulations take effect.
 
-See **Microsoft facilitation:**
-
-- **Microsoft Purview:** Use tools such as Microsoft’s AI Compliance Manager (in Purview) to map your controls to regulatory requirements.
-- **Copilot Studio:** See compliance with regulatory requirements, [Review ISO, SOC, and HIPAA compliance](/azure/microsoft-copilot-studio/admin-certification). Follow all data residency requirements, and deploy your agents to the right Microsoft datacenter, see [Data locations in Copilot Studio.](/azure/microsoft-copilot-studio/data-location) [**Governance and security best practices overview**](/azure/microsoft-copilot-studio/guidance/sec-gov-intro). [Microsoft Copilot Studio compliance](/azure/microsoft-copilot-studio/admin-certification). [Data locations in Copilot Studio.](/azure/microsoft-copilot-studio/data-location)
-- **Azure AI Foundry:** Apply [Azure Policy definitions](/azure/ai-foundry/how-to/azure-policy) that meet your governance policies to govern and audit hub and projects. Use the [Management center overview](/azure/ai-foundry/concepts/management-center) to govern hubs, projects, quotas, and access. [Control AI model deployment with built-in policies](/azure/ai-foundry/how-to/built-in-policy-model-deployment).
-
 ## Responsible AI
 
 **All agents must follow Responsible AI principles.** Conduct regular ethics reviews. Use tools like the Responsible AI Dashboard and Fairlearn to help identify bias in datasets. Review the outputs for fairness, especially if the agent’s decisions impact people. Ensure you’re not inadvertently breaking laws like equal opportunity laws due to biased AI suggestions
-
-Responsible AI.
 
 **All agents must have content filters.** Keep the content filters and safety nets up to date. As new kinds of inappropriate content emerge, new slang or evolving social issues, update the moderation rules or the model. Also, watch for any drift in the agent’s behavior. Models can change outputs over time due to upstream changes or new patterns in queries. If users start exploiting a loophole to get forbidden answers and you spot it, close that loophole. This could involve adjusting the prompt or adding that scenario to the forbidden list.
 
@@ -90,11 +82,6 @@ See **Microsoft Facilitation:**
 
 **All agent interactions must be logged in a tamper-evident format.** Logs must include timestamps, user IDs, and actions, and support forensic analysis in case of incidents.
 
-See **Microsoft facilitation:**
-
-- **Microsoft Copilot Studio:** [Monitor](/azure/microsoft-copilot-studio/admin-logging-copilot-studio) changes to the content and settings of an agent that can affect security and agent behavior.
-- **Azure AI Foundry:** [Continuously Evaluate your AI agents](/azure/ai-foundry/how-to/continuous-evaluation-agents). [Monitor model deployments](/azure/ai-foundry/foundry-models/how-to/monitor-models) and [Monitor your Generative AI Application](/azure/ai-foundry/how-to/monitor-applications) behavior to detect drift, misuse, or performance anomalies.
-
 ### Development
 
 **All agents deployments must use repeatable templates.** Templates standardize development and embed safeguards such as human handoff logic and permission checks. Make templates accessible through a shared repository or importable solution to simplify adoption. Review agents against the template and require teams to justify deviations. This approach accelerates development, improves consistency, and reduces governance overhead.
@@ -108,6 +95,17 @@ See **Microsoft facilitation:**
 **All agents must follow formal change management processes.** Significant changes to an agent’s functionality, scope, or underlying model require a documented change log and stakeholder sign-off. This governance step prevents unauthorized modifications, maintains compliance, and ensures accountability across teams.
 
 ## Microsoft facilitation
+
+See **Microsoft facilitation: regulatory**
+
+- **Microsoft Purview:** Use tools such as Microsoft’s AI Compliance Manager (in Purview) to map your controls to regulatory requirements.
+- **Copilot Studio:** See compliance with regulatory requirements, [Review ISO, SOC, and HIPAA compliance](/azure/microsoft-copilot-studio/admin-certification). Follow all data residency requirements, and deploy your agents to the right Microsoft datacenter, see [Data locations in Copilot Studio.](/azure/microsoft-copilot-studio/data-location) [**Governance and security best practices overview**](/azure/microsoft-copilot-studio/guidance/sec-gov-intro). [Microsoft Copilot Studio compliance](/azure/microsoft-copilot-studio/admin-certification). [Data locations in Copilot Studio.](/azure/microsoft-copilot-studio/data-location)
+- **Azure AI Foundry:** Apply [Azure Policy definitions](/azure/ai-foundry/how-to/azure-policy) that meet your governance policies to govern and audit hub and projects. Use the [Management center overview](/azure/ai-foundry/concepts/management-center) to govern hubs, projects, quotas, and access. [Control AI model deployment with built-in policies](/azure/ai-foundry/how-to/built-in-policy-model-deployment).
+
+See **Microsoft facilitation: Observability**
+
+- **Microsoft Copilot Studio:** [Monitor](/azure/microsoft-copilot-studio/admin-logging-copilot-studio) changes to the content and settings of an agent that can affect security and agent behavior.
+- **Azure AI Foundry:** [Continuously Evaluate your AI agents](/azure/ai-foundry/how-to/continuous-evaluation-agents). [Monitor model deployments](/azure/ai-foundry/foundry-models/how-to/monitor-models) and [Monitor your Generative AI Application](/azure/ai-foundry/how-to/monitor-applications) behavior to detect drift, misuse, or performance anomalies.
 
 ## Security Microsoft facilitation:
 

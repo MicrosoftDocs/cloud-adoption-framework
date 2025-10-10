@@ -41,53 +41,47 @@ Finally, the process must support reuse and scale. As more agents are developed,
 
 ## Data governance
 
-AI agents aggregate and expose data in new ways, which introduces compliance and security risks if not managed correctly. A robust governance framework ensures regulatory adherence, prevents data leaks, and protects organizational trust. Technical decision makers must treat governance as a strategic milestone, not a technical afterthought. The platform team enforces enterprise-wide policies and provides compliance tooling, while workload teams ensure their agents operate within these guardrails.
+Data governance for AI agents is not a feature to be added later. It is a foundational responsibility that must be embedded into every stage of agent design, deployment, and operation. The scope of governance must include both enterprise-wide content and workload-specific data, ensuring that agents operate securely, legally, and transparently across all environments.
+
+The first priority is to establish a unified governance policy that applies across all AI agents in the organization. This policy should be platform-agnostic, covering agents built with Microsoft Copilot, Copilot Studio, Azure AI, or any other tooling. It must clearly define how data is accessed, what classifications apply, and what obligations exist around privacy, retention, and compliance. Enforcement must be consistent, whether the agent is retrieving emails via Microsoft Graph, querying a SQL database, or grounding responses in Azure-hosted documents.
 
 ### Data compliance
 
-**Every agent must abide by data use laws.** Confirm that all data usage aligns with laws and internal standards. Engage legal and compliance officers early to avoid project delays or fines. Train teams on GDPR and similar frameworks:
+**Every agent must comply with applicable data laws and internal policies.** No agent should be deployed without a formal legal and compliance review. This review must evaluate the types of data the agent will access, the jurisdictions involved, and the applicable regulations such as GDPR, CCPA, HIPAA, or industry-specific mandates. If the agent interacts with personal data, the review must confirm whether consent is required, whether privacy notices need updating, and whether the agent’s behavior aligns with internal standards. These reviews must be documented and repeated whenever the agent’s data sources or capabilities change.
 
-- Do not use personal data beyond its original purpose without consent.
-- Honor user rights such as deletion, even in AI logs.
+### Data sensitivity labeling
 
-This step reduces risk of regulatory violations and protects organizational reputation.
+**All data used by AI agents must be classified and labeled.** Sensitivity labeling is essential to prevent unauthorized access and exposure of confidential information. All data used by AI agents must be classified according to the organization’s labeling scheme, whether it resides in SharePoint, Teams, SQL databases, or Azure Blob storage. Tools like Microsoft Purview should be used to automate classification and apply labels consistently. Agents must respect these labels at runtime, ensuring that sensitive content is not retrieved or surfaced unless explicitly permitted. This applies equally to retrieval-augmented generation scenarios and conversational agents with memory.
 
-#### Data sensitivity labeling
+### Data privacy
 
-**All business data must have sensitivity labels.** Mandate sensitivity labels for all enterprise data and ensure agents respect those labels. Agents must not index or use content marked “Confidential” unless explicitly approved. Use Microsoft Purview to automate classification and enforce policies. This measure prevents unauthorized exposure and supports audit readiness.
+**Privacy must be built into every agent that handles personal data.** PPrivacy must be built into every agent that interacts with personal data. Workload teams must ensure that agents apply data minimization principles, using only the information strictly necessary for their function. Training datasets, memory stores, and logs must be reviewed for privacy risks. Where possible, data should be anonymized or pseudonymized to reduce exposure. Agents must also support user rights, including the ability to request deletion of their data, and must comply with the organization’s privacy policy. This applies to agents using Microsoft Graph, storing conversation history, or processing customer records. [Use Microsoft Purview to manage data security & compliance for AI agents.](/azure/purview/ai-agents)
 
-#### Data privacy
+### Data residency and sovereignty
 
-**All agents must abide by privacy regulations.** If agents handle PII, confirm legal rights to use that data. For example, using customer chat logs for AI training may require updating privacy notices or obtaining consent. Apply data minimization and anonymize or pseudonymize data wherever possible. Use Microsoft Purview to classify and label sensitive data. For regulated industries (HIPAA, FINRA), ensure adherence to standards such as regional restrictions and audit logging. See [Use Microsoft Purview to manage data security & compliance for AI agents.](/azure/purview/ai-agents)
-
-#### Data residency and sovereignty
-
-**All agents must abide by data residency and sovereignty laws.** Confirm where data flows and design around residency laws. Use Azure regions or on-premises options when regulations require data to remain local. Opt out of unnecessary logging for sensitive workloads. Microsoft Azure AI services provide contractual assurances, such as no data used for model training—validate these against your compliance needs.
+**Agents must comply with data residency and sovereignty requirements.** Data residency and sovereignty requirements must be respected at every stage of agent development and deployment. Teams must understand where each data source resides, where the agent runs, and where logs or outputs are stored. Azure regions and on-premises environments should be selected based on residency needs. Logging of sensitive content should be disabled unless retention is explicitly required, and encryption must be applied when logging is necessary. Vendor guarantees must be reviewed to ensure they align with internal policies and regulatory obligations.
 
 #### Data retention
 
-**Agents must follow data retention policies.** Agents must follow enterprise retention policies. Do not keep transcripts or user data longer than necessary. Inform users that they interact with AI and provide mechanisms for deletion or anonymization upon request. Implement automatic log purging for general interactions and archive only what policy mandates. This step balances compliance with operational efficiency.
+**Agents must follow data retention policies.** AI agents often generate logs, memory, and training data that can persist indefinitely without proper controls. It is essential to define clear retention policies and enforce them rigorously. Technical leaders must help teams determine how long agent-related data should be retained and implement automated purging or anonymization after the retention period. Agents should only retain context that is necessary for their function. For example, a support agent may need to retain session history for troubleshooting purposes but should not store conversations beyond what is operationally required. Users must be informed about how long their data is stored and provided with mechanisms to request deletion.
 
 #### Data transparency
 
-**Agents must communicate clearly when AI uses user data.** For internal projects, notify employees; for customer-facing agents, include disclosures in terms of service. Require formal review for adding new data sources. Validate content, purpose, and connection security before integration. Notify stakeholders when sources become part of AI workflows to prevent accidental exposure.
+**Agents must communicate clearly when AI uses user data.** Transparency is critical to maintaining trust in AI systems. Users must be clearly informed when they are interacting with an AI agent and how their data is being used. Every agent interface should include a disclosure such as “This is an AI assistant.” Internal stakeholders must also be notified when their data is used for training or inference. Any new data source added to an agent must go through a formal review process to validate its content, assess legal permissions, and evaluate security risks. This ensures that agents are not inadvertently connected to sensitive systems without oversight.
 
 ### Data change management
 
-**Changing agent data sources must go through review process.** Require formal review for adding new data sources. Validate content, purpose, and connection security before integration. Notify stakeholders when sources become part of AI workflows to prevent accidental exposure.
+**Changes to agent data sources must go through a formal review process.** Changes to agent data sources must be governed through a formal review process. Before integrating any new source, teams must validate its content, intended use, and connection security. Stakeholders should be notified when new sources become part of AI workflows to prevent accidental exposure of sensitive or unapproved data. This process ensures that governance keeps pace with the evolving capabilities and integrations of AI agents.
 
 #### Data security
 
-Data security is critical to prevent breaches and maintain compliance. Apply these measures:
+Data security is essential to prevent breaches and maintain compliance. Agents must be granted only the minimum access required to perform their tasks. This means applying the **principle of least privilege**, using separate service accounts for isolation, and avoiding static credentials in favor of OAuth 2.0 or managed identities. When agents share outputs with one another, automated sanitization protocols must be in place to remove confidential fields and apply policy-based filters. Audit trails should be maintained to ensure accountability.
 
-- **Principle of Least Privilege:** Grant each agent the minimum access required. Use separate service accounts for isolation and monitor activity. Avoid static credentials; use OAuth 2.0 or managed identities.
-- **Sanitize Inter-Agent Communication:** When agents share outputs, enforce automated sanitization protocols to remove confidential fields and apply policy-based filters. Maintain audit trails for accountability.
-- **Isolate Sensitive Data:** Separate internal and public-facing content. Public-facing agents must only access validated public information. Implement isolation in storage and indexing layers.
-- **Validate External Sources:** Only use trusted and approved external data sources. Platform teams maintain a whitelist; workload teams confirm compliance and accuracy.
+**Sensitive data must be isolated from public-facing content**. Agents exposed to external users should only access validated public information, and isolation should be enforced at both the storage and indexing layers. External data sources must be vetted and approved. Platform teams should maintain a list of trusted sources, and workload teams must confirm that each source meets compliance and accuracy standards.
 
 ## Microsoft facilitation
 
-Data governance
+Governance must be operationalized through tooling and automation. Tools like Microsoft Purview, Azure Policy, and Defender for Cloud should be integrated into the agent development lifecycle. These tools can monitor data access, enforce labeling and retention policies, detect violations, and generate audit logs. Governance checks should be part of the CI/CD pipeline, ensuring that agents pass all compliance gates before deployment. Periodic re-reviews should be scheduled to account for changes in data sources, regulations, or agent behavior.
 
 - **Copilot Studio:** Encryption at rest and in transit is enabled by default. You can [Configure customer-managed encryption keys](/azure/microsoft-copilot-studio/admin-customer-managed-keys). [Review ISO, SOC, and HIPAA compliance.](/azure/microsoft-copilot-studio/admin-certification)
 - **Azure AI Foundry:** Encryption at rest and in transit is enabled by default. You can use [Customer-Managed Keys for Azure AI Foundry](/azure/ai-foundry/concepts/encryption-keys-portal?pivots=fdp-project). Use [Azure Policy](/azure/ai-foundry/how-to/azure-policy) and Microsoft Purview [**Compliance Manager**](/azure/purview/compliance-manager-cloud-settings) for automated compliance checks. Developers can integrate compliance checks with the [Microsoft Purview SDKs and APIs](/azure/purview/developer/secure-ai-with-purview). Review the guidance on [Data, privacy, and security for Azure AI Agent Service.](/azure/ai-foundry/responsible-ai/agents/data-privacy-security)
