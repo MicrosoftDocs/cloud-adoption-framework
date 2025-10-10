@@ -85,3 +85,5 @@ Governance must be operationalized through tooling and automation. Tools like Mi
 
 - **Copilot Studio:** Encryption at rest and in transit is enabled by default. You can [Configure customer-managed encryption keys](/azure/microsoft-copilot-studio/admin-customer-managed-keys). [Review ISO, SOC, and HIPAA compliance.](/azure/microsoft-copilot-studio/admin-certification)
 - **Azure AI Foundry:** Encryption at rest and in transit is enabled by default. You can use [Customer-Managed Keys for Azure AI Foundry](/azure/ai-foundry/concepts/encryption-keys-portal?pivots=fdp-project). Use [Azure Policy](/azure/ai-foundry/how-to/azure-policy) and Microsoft Purview [**Compliance Manager**](/azure/purview/compliance-manager-cloud-settings) for automated compliance checks. Developers can integrate compliance checks with the [Microsoft Purview SDKs and APIs](/azure/purview/developer/secure-ai-with-purview). Review the guidance on [Data, privacy, and security for Azure AI Agent Service.](/azure/ai-foundry/responsible-ai/agents/data-privacy-security)
+
+

@@ -159,3 +159,100 @@ Direct workload teams to integrate observability tools early. Define key perform
 
 - **Microsoft Copilot Studio:** [Use analytics](/azure/microsoft-copilot-studio/analytics-overview) to understand how well your agent is performing and to identify areas for improvement. For custom telemetry, [connect your Copilot Studio agent to Azure Application Insights](/azure/microsoft-copilot-studio/advanced-bot-framework-composer-capture-telemetry), and view telemetry in real-time.
 - **Azure AI Foundry:** Use [Foundry evaluators](/azure/ai-foundry/concepts/evaluation-evaluators/general-purpose-evaluators) to monitor and understand the behaviors of your agents. [Monitor](/azure/ai-foundry/agents/how-to/metrics) the Azure AI Foundry Agent Service. [View trace results](/azure/ai-foundry/how-to/develop/trace-agents-sdk) for agents you build on the platform. [Continuously Evaluate your AI agents.](/azure/ai-foundry/how-to/continuous-evaluation-agents) Evaluate your agents in [GitHub Actions](/azure/ai-foundry/how-to/evaluation-github-action?tabs=foundry-project) or [Azure DevOps](/azure/ai-foundry/how-to/evaluation-azure-devops?tabs=foundry-project). Conduct [AI red teaming](/azure/ai-foundry/concepts/ai-red-teaming-agent) on your AI agents before production [AI Red Teaming Agent](/azure/ai-foundry/concepts/ai-red-teaming-agent).
+
+## Microsoft facilitation
+
+### Azure AI Foundry
+
+#### Scoping the agent
+
+- [Set up your agent environment](/azure/ai-foundry/agents/environment-setup) to create projects and configure basic or standard setup configurations for agent scope and boundaries.
+- [Use the standard agent setup](/azure/ai-foundry/agents/concepts/standard-agent-setup) to store customer data in your own Azure resources with project-level data isolation.
+
+#### Defining agent instructions
+
+- [Define system messages and instruction sets](/azure/ai-foundry/agents/concepts/threads-runs-messages) for your agent configuration to enforce rules and fallback behaviors.
+- [Use function calling tools](/azure/ai-foundry/agents/how-to/tools/function-calling) to enforce deterministic behaviors and fallback logic in your agent.
+
+#### Choosing models
+
+- [Explore the AI Foundry model catalog](https://ai.azure.com/explore/models) to find and compare models suited for your agent tasks.
+- [Review model leaderboards in Azure AI Foundry](/azure/ai-foundry/concepts/model-benchmarks) to evaluate performance and cost trade-offs for model selection.
+- [Configure Model Router in Azure AI Foundry](/azure/ai-foundry/openai/concepts/model-router) to optimize cost dynamically for chat-based agents.
+
+#### Customizing agents
+
+- [Review threads, runs, and messages](/azure/ai-foundry/agents/concepts/threads-runs-messages) to understand how agents maintain context and conversation state.
+- [Use agent evaluators](/azure/ai-foundry/concepts/evaluation-evaluators/agent-evaluators) and the agent playground for iterative testing of agent behavior.
+- [Run AI red teaming scans locally](/azure/ai-foundry/how-to/develop/run-scans-ai-red-teaming-agent) or [in Azure](/azure/ai-foundry/how-to/develop/run-ai-red-teaming-cloud) to test for vulnerabilities such as prompt injection.
+- [Configure external stores like Azure Cosmos DB](/azure/ai-foundry/agents/concepts/standard-agent-setup) for persistent memory across threads.
+
+#### Adding tools for knowledge and actions
+
+- [Use knowledge tools](/azure/ai-foundry/agents/how-to/tools/overview) to connect approved data sources to your agents.
+- [Configure project-level data isolation](/azure/ai-foundry/agents/concepts/standard-agent-setup#project-level-data-isolation) for each project to secure data access.
+- [Use Azure AI Foundry action tools](/azure/ai-foundry/agents/how-to/tools/overview#action-tools) to enable agents to take actions and automate workflows.
+
+#### Choosing orchestration
+
+- [Review AI agent orchestration patterns](/azure/architecture/ai-ml/guide/ai-agent-design-patterns) for multi-agent systems.
+- [Use built-in orchestration for connected agents](/azure/ai-foundry/agents/how-to/connected-agents) for standard enterprise scenarios with multi-agent collaboration.
+- [Explore the Microsoft Agent Framework](https://devblogs.microsoft.com/foundry/introducing-microsoft-agent-framework-the-open-source-engine-for-agentic-ai-apps/) for advanced orchestration needs.
+
+#### Bringing your own services
+
+- [Use your own resources](/azure/ai-foundry/agents/how-to/use-your-own-resources) like Azure Storage, Azure AI Search, and Cosmos DB for thread storage in standard setup configurations.
+
+#### Configuring observability
+
+- [Use Foundry evaluators](/azure/ai-foundry/concepts/evaluation-evaluators/general-purpose-evaluators) to monitor and understand agent behaviors.
+- [Monitor the Azure AI Foundry Agent Service](/azure/ai-foundry/agents/how-to/metrics) to track agent performance metrics.
+- [View trace results for agents](/azure/ai-foundry/how-to/develop/trace-agents-sdk) built on the platform to debug and understand agent execution.
+- [Continuously evaluate your AI agents](/azure/ai-foundry/how-to/continuous-evaluation-agents) in production environments.
+- [Evaluate agents in GitHub Actions](/azure/ai-foundry/how-to/evaluation-github-action) or [Azure DevOps](/azure/ai-foundry/how-to/evaluation-azure-devops) as part of CI/CD pipelines.
+
+### Microsoft Copilot Studio
+
+#### Scoping the agent in Copilot Studio
+
+- [Use agent configuration in Copilot Studio](/microsoft-copilot-studio/authoring-first-bot) to define purpose and operational boundaries for your agent.
+- [Set up agent flows with distinct roles](/microsoft-copilot-studio/flow-agent) and approval checkpoints for multi-agent systems.
+
+#### Defining agent instructions in Copilot Studio
+
+- [Orchestrate agent behavior with generative AI](/microsoft-copilot-studio/advanced-generative-actions) to configure agent instructions and enable pause-and-review workflows for critical outputs.
+- [Use multistage and AI approvals in agent flows](/microsoft-copilot-studio/flows-advanced-approvals) to enforce deterministic behaviors for critical operations.
+
+#### Choosing models in Copilot Studio
+
+- [Select a primary AI model for your agent](/microsoft-copilot-studio/authoring-select-agent-model) from available models in Copilot Studio.
+- [Bring your own model for your prompts](/ai-builder/byom-for-your-prompts) to connect to Azure AI Foundry models and use them in your agent.
+
+#### Customizing agents in Copilot Studio
+
+- [Test your agent](/microsoft-copilot-studio/authoring-test-bot) using the test panel to see how the agent leads users through conversations.
+- [Analyze conversational agent effectiveness](/microsoft-copilot-studio/analytics-improve-agent-effectiveness) to understand how well your agent performs.
+- [Analyze user questions by theme](/microsoft-copilot-studio/analytics-themes) to identify patterns and improve agent responses.
+- [Use prompt modification to provide custom instructions](/microsoft-copilot-studio/nlu-generative-answers-prompt-modification) to your agent.
+
+#### Adding tools for knowledge and actions in Copilot Studio
+
+- [Use knowledge sources](/microsoft-copilot-studio/knowledge-copilot-studio) and [connectors](/microsoft-copilot-studio/advanced-connectors) to integrate approved content into your agent.
+- [Protect sensitive data](/microsoft-copilot-studio/security-and-governance) with data loss prevention policies, sensitivity labels, and access controls.
+- [View sensitivity labels for SharePoint data sources](/microsoft-copilot-studio/sensitivity-label-copilot-studio) to ensure compliance with organizational policies.
+- [Extend agent capabilities](/microsoft-copilot-studio/copilot-connectors-in-copilot-studio) using prebuilt or custom connectors to integrate documents, APIs, and databases.
+- [Orchestrate agent behavior with generative AI](/microsoft-copilot-studio/advanced-generative-actions) to enable agents to perform actions autonomously.
+
+#### Choosing orchestration in Copilot Studio
+
+- [Add other agents](/microsoft-copilot-studio/authoring-add-other-agents) to create multi-agent systems in Copilot Studio.
+- [Orchestrate agent behavior with generative AI](/microsoft-copilot-studio/advanced-generative-actions) for dynamic agent orchestration.
+
+#### Bringing your own services in Copilot Studio
+
+- [Use Editor and Viewer roles](/microsoft-copilot-studio/admin-sharing-controls-limits) to restrict access and manage shared environments.
+
+#### Configuring observability in Copilot Studio
+
+- [Use analytics](/microsoft-copilot-studio/analytics-overview) to understand agent performance and identify areas for improvement.
+- [Connect your Copilot Studio agent to Azure Application Insights](/microsoft-copilot-studio/advanced-bot-framework-composer-capture-telemetry) for custom telemetry and real-time monitoring.
