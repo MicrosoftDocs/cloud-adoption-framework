@@ -4,25 +4,25 @@ items:
   - name: 1. Design agent strategy
     expanded: true
     items:
-      - name: 1.1 Business strategy
+      - name: 1. Business strategy
         href: business-strategy.md
-      - name: 1.2 Technology strategy
+      - name: 2. Technology strategy
         href: technology-strategy.md
-      - name: 1.3 People strategy
+      - name: 3. People strategy
         href: people-strategy.md
-      - name: 1.4 Data strategy
+      - name: 4. Data strategy
         href: data-strategy.md
-      - name: 1.5 Governance and security strategy
+      - name: 5. Governance and security strategy
         href: governance-security.md
   - name: 2. Build agents
     expanded: true
     items:
-      - name: 2.1 Set up environment
+      - name: 1. Set up environment
         href: set-up-environment.md
-      - name: 2.2 Single or multi-agent systems
+      - name: 2. Single or multi-agent systems
         href: single-multi-agent-systems.md
-      - name: 2.3 Process to build agents
-        href: process-to-build-agents.md
+      - name: 3. Process to build agents
+        href: build-process.md
   - name: 3. Deploy agents
     href: deploy.md
   - name: 4. Manage agents
