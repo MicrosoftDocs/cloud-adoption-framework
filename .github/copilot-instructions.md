@@ -1,17 +1,18 @@
-Create guidance for Microsoft's Cloud Adoption Framework.
+ Ensure the target audience is implicitly technical decision makers (CIO, CTO, VP of technology, Directors of technology areas, founder of startup), not implementers. This means it should focus on driving business outcomes, like return on investment, relative level of effort and timelines for implementation, how to minimize risk, how to optimize cost, how to organize their people. When talking about designing or building a workload, it must speak to the technical decision makers and define what the responsibilities of the platform and the responsibilities of each workload.
+Create helpful guidance for Microsoft's Cloud Adoption Framework.
 The Cloud Adoption Framework is a self-service guide to help all customers of all sizes succeed and mature in Azure.
-Target audience is technical decision makers, not implementers.
 Ensure technical accuracy against https://github.com/microsoftdocs/mcp. 
+Do not add or remove recommendations
 
 ## Template
-Review all the content to ensure it aligns with the following template. Don't make the content more concise. Just apply the template to what's there.
+Review all the content to ensure it aligns with the following template. Don't make the content more concise. Just apply the template to what's there. Ensure the target audience is implicitly technical decision makers (CIO, CTO, VP of technology, Directors of technology areas, founder of startup), not implementers. This means it should focus on driving business outcomes, like return on investment, relative level of effort and timelines for implementation, how to minimize risk, how to optimize cost, how to organize their people. When talking about designing or building a workload, it must speak to the technical decision makers and define what the responsibilities of the platform and the responsibilities of each workload.
 
     Template:{
 
     # Article title must be goal oriented
-     If reviewing the entire article, start the article by stating what the article is about. Define any technical terms. Explain why the guidance in this article is important. Then the rest of the article details the major sequential steps to achieve the goal.
+     If reviewing the entire article, start the article by stating what the article is about. Define any technical terms. Explain why the guidance in this article is important. Then the rest of the article details the major sequential steps to achieve the goal. Ensure the target audience is implicitly technical decision makers (CIO, CTO, VP of technology, Directors of technology areas, founder of startup), not implementers. This means it should focus on driving business outcomes, like return on investment, relative level of effort and timelines for implementation, how to minimize risk, how to optimize cost, how to organize their people. When talking about designing or building a workload, it must speak to the technical decision makers and define what the responsibilities of the platform and the responsibilities of each workload.
 
-    ## Each heading must be a prescriptive recommendation that represents a significant milestone in the context of article.
+    ## Each heading must be a prescriptive recommendation that represents a significant milestone in the context of article. Ensure the target audience is implicitly technical decision makers (CIO, CTO, VP of technology, Directors of technology areas, founder of startup), not implementers. This means it should focus on driving business outcomes, like return on investment, relative level of effort and timelines for implementation, how to minimize risk, how to optimize cost, how to organize their people. When talking about designing or building a workload, it must speak to the technical decision makers and define what the responsibilities of the platform and the responsibilities of each workload.
 
     Provide context about what, why, and how to implement this prescriptive recommendation. Don't state: what, why, or how. Address them implicitly. Define any terms to ensure clarity. Then tell customers how to act on this prescriptive recommendation in logical order. Start with what must come first and then next etc. Use numbered lists to enforce sequentially and review to ensure recommendations are logically sequential. Don't make this intro overly concise.
 
