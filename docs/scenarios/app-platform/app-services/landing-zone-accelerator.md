@@ -1,19 +1,19 @@
 ---
-title: Deploy Azure App Service at scale with landing zone accelerator
-description: Implement Azure App Service with a landing zone accelerator that provides design guidance and reference implementations for scalable deployments.
+title: Deploy Azure App Service at scale with an application landing zone accelerator
+description: Implement Azure App Service with an application landing zone accelerator that provides design guidance and reference implementations for scalable deployments.
 author: stephen-sumner
 ms.author: pnp
 ms.date: 06/24/2025
 ms.topic: conceptual
 ---
 
-# Deploy Azure App Service at scale with the landing zone accelerator
+# Azure App Service application landing zone accelerator
 
-This article helps you accelerate Azure App Service deployments using architectural guidance and reference implementations. The landing zone accelerator provides infrastructure as code templates that prepare a scalable and secure environment for your app workloads, adhering to Cloud Adoption Framework best practices.
+This article helps you accelerate Azure App Service deployments in an Azure landing zone. An application landing zone accelerator provides infrastructure as code templates that prepare a scalable and secure environment for your app workloads.
 
 ## Use a modular approach for flexible implementation
 
-The Azure App Service landing zone accelerator offers a flexible foundation that works for both new implementations and existing App Service deployments. The modular architecture allows you to customize components based on your specific requirements. You need to evaluate your application needs and organizational constraints to create an effective landing zone. Here's how:
+The Azure App Service application landing zone accelerator offers a flexible foundation that works for both new implementations and existing App Service deployments. The modular architecture allows you to customize components based on your specific requirements. You need to evaluate your application needs and organizational constraints to create an effective landing zone. Here's how:
 
 1. **Determine your deployment type requirements.** Choose between multitenant App Service for cost-effectiveness or App Service Environment for complete isolation. The accelerator supports both deployment types with specific guidance for each scenario where needed.
 
@@ -25,7 +25,7 @@ A platform provides the shared services that support your App Service environmen
 
 ## Use the assets provided by the accelerator
 
-The landing zone accelerator provides resources to support your App Service implementation:
+The application landing zone accelerator provides resources to support your App Service implementation:
 
 1. **Tailor the modular architecture components.** Customize environment variables to match your specific workload requirements without rebuilding the entire solution.
 
@@ -50,7 +50,7 @@ Address these design areas when implementing your landing zone:
 
 ## Deploy the reference implementation
 
-Get started with the [Azure App Service landing zone accelerator reference implementation](https://github.com/Azure/appservice-landing-zone-accelerator) on GitHub. The repository contains infrastructure-as-code templates and detailed deployment instructions.
+Get started with the [Azure App Service application landing zone accelerator](https://github.com/Azure/appservice-landing-zone-accelerator) on GitHub. The repository contains infrastructure-as-code templates and detailed deployment instructions.
 
 ## Next steps
 
