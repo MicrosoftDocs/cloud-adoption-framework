@@ -12,7 +12,7 @@ items:
         href: people-strategy.md
       - name: 4. Data strategy
         href: data-strategy.md
-  - name: Governance
+  - name: Governance and security
     href: governance-security.md
   - name: Implementation roadmap
     expanded: true
