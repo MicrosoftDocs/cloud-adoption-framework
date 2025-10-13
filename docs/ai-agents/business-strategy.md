@@ -46,3 +46,8 @@ Before development begins, establish how you will measure success in business te
 2. **Establish a baseline.** Measure current performance of the process before the agent is introduced (“current average handle time is 10 minutes, error rate 5%”). A baseline allows you to definitively quantify the agent’s impact post-deployment. Without it, you risk debates later about whether the AI made a difference.
 
 3. **Use success criteria as go/no-go gates.** Use these metrics during the project. If early prototypes or pilot results are far off from targets, reassess the project’s viability. It’s better to pivot or cancel a weak initiative early than to deploy and maintain an agent that doesn’t justify its cost.
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Technology strategy](./technology-strategy.md)
