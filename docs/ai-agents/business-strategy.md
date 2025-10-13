@@ -35,8 +35,8 @@ Not all potential projects are equal. Focus on the “low-hanging fruit” that 
 
 3. **Evaluate change requirements.** AI agents often introduce new workflows and user experiences. Leaders must consider the time and effort required to manage these changes effectively. Assess Rollout Time and User Impact Use a change management matrix to evaluate each use case along two dimensions:
 
-- Rollout timeframe: How long does it take to implement and deploy the agent?
-- User impact: How significantly does the agent affect user behavior or workflows?
+    - Rollout timeframe: How long does it take to implement and deploy the agent?
+    - User impact: How significantly does the agent affect user behavior or workflows?
 
 Prioritize use cases with short rollout times and low user impact to minimize disruption and accelerate adoption. For high-impact or long-rollout scenarios, plan for phased implementation, stakeholder engagement, and training programs to ensure smooth transitions.
 
