@@ -15,13 +15,10 @@ This article provides a prescriptive framework for technical decision makers to 
 
 The guidance assumes governance and security controls are established. It focuses on how workload teams use platform capabilities at each phase while defining responsibilities between the enterprise platform and workload teams. This approach ensures predictable outcomes, cost efficiency, and compliance.
 
-**Prerequisite:** Workload teams must use and apply the principles of the Well-Architected Framework. There’s AI guidance that covers:
+**Prerequisite:**
 
-- [Application Design](/azure/well-architected/ai/application-design)
-- [Application Platform](/azure/well-architected/ai/application-platform)
-- [Design Training Data](/azure/well-architected/ai/training-data-design)
-- [Grounding Data](/azure/well-architected/ai/grounding-data-design)
-- [Data Platform](/azure/well-architected/ai/data-platform)
+1. **Set up your environment:** For **Azure AI Foundry** Start with an Azure landing zone, then use the application landing zone accelerator. For **Microsoft Copilot Studio setup,** [get access to Copilot Studio.](/azure/microsoft-copilot-studio/requirements-licensing-subscriptions) and [work with Power Platform environments](/azure/microsoft-copilot-studio/environments-first-run-experience).
+1. Workload teams must use and apply the principles of the Well-Architected Framework for [AI workloads](/azure/well-architected/ai/).
 
 ## 1. Scope the agent
 

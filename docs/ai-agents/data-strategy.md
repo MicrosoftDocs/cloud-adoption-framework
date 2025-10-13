@@ -11,7 +11,7 @@ ms.collection: ce-skilling-ai-copilot
 
 # Data strategy, governance, and security for AI agents
 
-Data is the foundation of any AI agent. Having a solid data strategy and strict data governance practices upfront accelerates implementation, improves outcomes, and controls risks. In this phase, you ensure your data is prepared and accessible for AI, and that all usage will comply with security and privacy requirements. As a technical leader, set expectations that your teams treat data preparation and governance as first-class requirements, not afterthoughts. This avoids costly rework and protects the business from regulatory or security issues down the line.
+**The data you need and how to structure it for agents.** Data is the foundation of any AI agent. Having a solid data strategy and strict data governance practices upfront accelerates implementation, improves outcomes, and controls risks. In this phase, you ensure your data is prepared and accessible for AI, and that all usage will comply with security and privacy requirements. As a technical leader, set expectations that your teams treat data preparation and governance as first-class requirements, not afterthoughts. This avoids costly rework and protects the business from regulatory or security issues down the line.
 
 ## Data strategy
 

@@ -17,13 +17,11 @@ items:
   - name: Implementation roadmap
     expanded: true
     items:
-      - name: 1. Set up environment
-        href: set-up-environment.md
-      - name: 2. Single or multi-agent systems
+      - name: 1. Single or multi-agent systems
         href: single-multi-agent-systems.md
-      - name: 3. Process to build agents
+      - name: 2. Process to build agents
         href: build-process.md
-      - name: 4. Deploy agents
+      - name: 3. Deploy agents
         href: deploy.md
   - name: Manage agents
     href: manage.md
