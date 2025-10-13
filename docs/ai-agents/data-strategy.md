@@ -19,25 +19,15 @@ As technical leaders begin shaping their organization’s AI agent strategy, whe
 
 Whether it lives in a domain-specific database, a data lake, or a business application, the presence of data does not guarantee it’s ready for agent use. Technical leadership should set clear expectations: if a team owns or manages data that will be used by an agent, they are responsible for ensuring it meets the organization’s standards for accessibility, governance, and quality.
 
-### Align data with agent needs
+1. **Align data with agent needs.** The process begins with use case scoping. Every agent initiative should start with a structured discovery phase that defines the business scenario, the tasks the agent will perform, and the data required to support those tasks. This includes identifying whether the data already exists within a workload team’s environment or needs to be sourced from enterprise systems. The goal is not to centralize all data, but to ensure that wherever it resides, it can be reliably accessed and used by agents.
 
-The process begins with use case scoping. Every agent initiative should start with a structured discovery phase that defines the business scenario, the tasks the agent will perform, and the data required to support those tasks. This includes identifying whether the data already exists within a workload team’s environment or needs to be sourced from enterprise systems. The goal is not to centralize all data, but to ensure that wherever it resides, it can be reliably accessed and used by agents.
+2. **Ensure data readiness.** Once data needs are identified, teams should assess readiness. This includes evaluating whether the data is structured, tagged, and clean enough to support retrieval, reasoning, or summarization. If the data is already in use within a workload, teams should validate that it complies with enterprise governance policies, such as access controls, retention rules, and sensitivity classifications. If the data is external or unstructured, platform teams may need to support enrichment or transformation.
 
-### Ensure data readiness
+3. **Ensure data accessibility.** Accessibility must be addressed consistently. Whether the data is in a local database or a cloud service, integration paths must be secure, documented, and scalable. There should be standardized patterns for connecting agents to data, via APIs, connectors, or semantic indexes. This ensures agents can retrieve the information they need without introducing risk or complexity.
 
-Once data needs are identified, teams should assess readiness. This includes evaluating whether the data is structured, tagged, and clean enough to support retrieval, reasoning, or summarization. If the data is already in use within a workload, teams should validate that it complies with enterprise governance policies, such as access controls, retention rules, and sensitivity classifications. If the data is external or unstructured, platform teams may need to support enrichment or transformation.
+4. **Maintain data quality and freshness.** Data freshness and quality are ongoing responsibilities. The process should include guidance for setting refresh schedules based on the nature of the data. Real-time sources may require streaming updates, while static content may only need periodic reviews. Platform teams should automate refresh pipelines and monitor for failures. Workload teams should validate that the data continues to support the agent’s logic and business outcomes over time.
 
-### Ensure data accessibility
-
-Accessibility must be addressed consistently. Whether the data is in a local database or a cloud service, integration paths must be secure, documented, and scalable. There should be standardized patterns for connecting agents to data, via APIs, connectors, or semantic indexes. This ensures agents can retrieve the information they need without introducing risk or complexity.
-
-### Maintain data quality and freshness
-
-Data freshness and quality are ongoing responsibilities. The process should include guidance for setting refresh schedules based on the nature of the data. Real-time sources may require streaming updates, while static content may only need periodic reviews. Platform teams should automate refresh pipelines and monitor for failures. Workload teams should validate that the data continues to support the agent’s logic and business outcomes over time.
-
-### Reuse and scale data
-
-Finally, the process must support reuse and scale. As more agents are developed, the organization should avoid duplicating effort. Encourage teams to contribute prepared datasets, integration patterns, and enrichment tools to a shared repository. This enables future agents to build on existing work and accelerates development across domains.
+5. **Reuse and scale data.** Finally, the process must support reuse and scale. As more agents are developed, the organization should avoid duplicating effort. Encourage teams to contribute prepared datasets, integration patterns, and enrichment tools to a shared repository. This enables future agents to build on existing work and accelerates development across domains.
 
 ## Data governance
 
