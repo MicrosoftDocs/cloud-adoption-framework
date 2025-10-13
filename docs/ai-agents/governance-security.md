@@ -9,7 +9,7 @@ ms.collection: ce-skilling-ai-copilot
 
 # Governance and security for AI agents
 
-Before your team writes a single line of code or launches an AI agent, put governance and security frameworks in place. Setting clear guardrails early will minimize the risk of incidents, ensure compliance with regulations, and maintain stakeholder trust. Rather than treating governance as a separate phase, weave these considerations throughout the design, build, deploy, and manage phases. However, it’s useful to plan and implement core governance mechanisms at the outset so they are ingrained in the project’s DNA.
+**How to protect, regulate, and ensure responsible use of that data and the agents.** Before your team writes a single line of code or launches an AI agent, put governance and security frameworks in place. Setting clear guardrails early will minimize the risk of incidents, ensure compliance with regulations, and maintain stakeholder trust. Rather than treating governance as a separate phase, weave these considerations throughout the design, build, deploy, and manage phases. However, it’s useful to plan and implement core governance mechanisms at the outset so they are ingrained in the project’s DNA.
 
 ## Regulatory compliance
 
