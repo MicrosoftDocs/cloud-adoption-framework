@@ -1,47 +1,36 @@
 ---
 title: Azure Integration Services landing zone accelerator
 description: The Azure Integration Services landing zone accelerator consist of a collection of ARM templates that you can use to automate the deployment of all of the resources needed for an enterprise-ready integration platform.
-author: claytonsiemens77
-ms.author: csiemens
-ms.date: 03/10/2023
+author: stephen-sumner
+ms.author: pnp
+ms.date: 10/13/2025
 ms.topic: conceptual
 ---
 
 # Azure Integration Services landing zone accelerator
 
-Azure Integration Services landing zone accelerator is intended for an **application team** that's **building and deploying an integration platform** in a typical enterprise landing zone design. As the workload owner, use the **architectural guidance** to achieve your target technical state with confidence.  
+This article provides strategic guidance for deploying Azure Integration Services (AIS) within an Azure landing zone. Azure Integration Services includes Logic Apps, API Management, Service Bus, and Event Grid. These services enable scalable integration across applications, data, and business processes. The AIS application landing zone accelerator automates the deployment of these services, which promotes consistency and scalability while aligning with Azure landing zone standards.
 
-## What's included in the accelerator
+## Establish an Azure landing zone
 
-The landing zone accelerator is a set of design considerations, reference architecture, backed by an implementation.
+**Start with an Azure landing zone.** Begin with a foundational [Azure landing zone](../../../ready/landing-zone/index.md) that includes shared services such as identity, networking, and monitoring. Centralized platform teams must own and operate these services to enforce governance, security, and compliance policies across all workloads. This separation of responsibilities allows workload teams to focus on delivering business value through application development without duplicating platform capabilities.
 
-- **Design areas** cover considerations and recommendations for common technical areas that integrate with the centralized services.
+**Understand integration points.** Integration workloads often depend on shared resources like virtual networks, identity providers, and observability tools. Establish clear communication channels between platform and workload teams to align on resource planning. For example, if a workload requires high throughput, the platform team must allocate sufficient IP address space and bandwidth early in the planning cycle. This coordination reduces rework and accelerates deployment timelines.
 
-    - [Identity and access management](./identity-and-access-management.md)
-    - [Network topology and connectivity](./network-topology-and-connectivity.md)
-    - [Security](./security.md)
-    - [Management](./management.md)
-    - [Governance](./governance.md)
+## How to use the AIS application landing zone accelerator
 
+**Review the architecture diagram.** The architecture diagram illustrates how AIS components integrate within an Azure landing zone. Review this visualization with stakeholders to evaluate tradeoffs in scalability, security, and maintainability. Use the diagram to guide decisions about service boundaries, data flow, and governance controls.
 
-- **Reference architecture** provides design guidance that applies the recommendations for an example workload.
+[![Diagram that shows Azure Integration Services landing zone accelerator architecture.](./media/integration-services-enterprise-deployment_highres.png)](./media/integration-services-enterprise-deployment_highres.png#lightbox)
 
-    [![Diagram that shows Azure Integration Services landing zone accelerator architecture.](./media/integration-services-enterprise-deployment_highres.png)](./media/integration-services-enterprise-deployment_highres.png#lightbox)
-
-- **Reference implementation** accompanies the architecture and demonstrates the best practices, deploying all the resources needed for an enterprise-ready AIS platform. Once deployed, all you need to do is upload your own code/workflows/files to start using this environment.
-
-    > [!IMPORTANT]
-    > ![GitHub logo](../../../scenarios/_images/github.svg) Refer to the [Azure Integration Services Reference Implementation](https://github.com/Azure/Integration-Services-Landing-Zone-Accelerator/blob/main/docs/scenario1/Reference%20Implementation.md).
-
-## Integration with platform landing zones
-
-The accelerator assumes that the enterprise (platform) landing zones are based on [Azure landing zone](../../../ready/landing-zone/index.md) guidance. The platform landing zones have shared services managed by centralized teams, so that you can focus your efforts on application development and workload resources. 
-
-It's highly recommended that you have a good understanding of the **integration points between the shared resources and workload resources**. If there are changes required in the platform, work with the centralized team to get the changes implemented with a **shared responsibility mindset**. For example, communicate the expected potential of the workload early so that the central networking team can allocate a virtual network with address space that's large enough to accommodate that growth.
+**Deploy the reference implementation.** The GitHub hosted [AIS application landing zone accelerator](https://github.com/Azure/Integration-Services-Landing-Zone-Accelerator/blob/main/docs/scenario1/Reference%20Implementation.md) provides a working environment that includes preconfigured services, governance policies, and automation scripts. Use this implementation to validate architecture decisions, onboard development teams, and begin integration development immediately. This approach reduces setup time and ensures alignment with enterprise standards.
 
 ## Next steps
 
-Review the critical design areas to make complete considerations and recommendations for your architecture. 
+The design areas provide recommendations across key technical domains that Integration workloads must align with enterprise governance models across identity, networking, security, management, and compliance. Use the following design area guidance to ensure consistency and reduce risk:
 
-> [!div class="nextstepaction"] 
-> [Identity and access management](./identity-and-access-management.md)
+- [Identity and access management](./identity-and-access-management.md)
+- [Network topology and connectivity](./network-topology-and-connectivity.md)
+- [Security](./security.md)
+- [Management](./management.md)
+- [Governance](./governance.md)
