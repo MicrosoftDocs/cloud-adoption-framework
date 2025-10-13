@@ -11,6 +11,8 @@ ms.topic: conceptual
 
 This article provides strategic guidance for deploying Azure Integration Services (AIS) within an Azure landing zone. Azure Integration Services includes Logic Apps, API Management, Service Bus, and Event Grid. These services enable scalable integration across applications, data, and business processes. The AIS application landing zone accelerator automates the deployment of these services, which promotes consistency and scalability while aligning with Azure landing zone standards.
 
+[![Diagram that shows Azure Integration Services landing zone accelerator architecture.](./media/integration-services-enterprise-deployment_highres.png)](./media/integration-services-enterprise-deployment_highres.png#lightbox)
+
 ## Establish an Azure landing zone
 
 **Start with an Azure landing zone.** Begin with a foundational [Azure landing zone](../../../ready/landing-zone/index.md) that includes shared services such as identity, networking, and monitoring. Centralized platform teams must own and operate these services to enforce governance, security, and compliance policies across all workloads. This separation of responsibilities allows workload teams to focus on delivering business value through application development without duplicating platform capabilities.
@@ -20,8 +22,6 @@ This article provides strategic guidance for deploying Azure Integration Service
 ## How to use the AIS application landing zone accelerator
 
 **Review the architecture diagram.** The architecture diagram illustrates how AIS components integrate within an Azure landing zone. Review this visualization with stakeholders to evaluate tradeoffs in scalability, security, and maintainability. Use the diagram to guide decisions about service boundaries, data flow, and governance controls.
-
-[![Diagram that shows Azure Integration Services landing zone accelerator architecture.](./media/integration-services-enterprise-deployment_highres.png)](./media/integration-services-enterprise-deployment_highres.png#lightbox)
 
 **Deploy the reference implementation.** The GitHub hosted [AIS application landing zone accelerator](https://github.com/Azure/Integration-Services-Landing-Zone-Accelerator/blob/main/docs/scenario1/Reference%20Implementation.md) provides a working environment that includes preconfigured services, governance policies, and automation scripts. Use this implementation to validate architecture decisions, onboard development teams, and begin integration development immediately. This approach reduces setup time and ensures alignment with enterprise standards.
 
