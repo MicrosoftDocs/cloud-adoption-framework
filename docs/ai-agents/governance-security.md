@@ -13,7 +13,9 @@ ms.collection: ce-skilling-ai-copilot
 
 ## Regulatory compliance
 
-**All agents must comply with regulations and standards.** Teams must use tools that meet regulatory requirements. Before any agent deploys, it must pass a formal security and compliance review before deployment that includes scope, data access, privacy controls, identified risks, and safety test results. Use automated policy checks. Fallback to manual review workflows. Deploy through a CI/CD pipeline with these checks embedded. Document these reviews for accountability and repeat them periodically. Audit logs and outputs to confirm compliance with evolving laws and corporate policies, such as stricter data privacy rules or AI ethics guidelines. Update agents or usage policies immediately when new regulations take effect.
+**Require regulatory compliance reviews before deployment.** Every AI agent must pass a formal security and compliance review before deployment. This review must include scope, data access, privacy controls, identified risks, and safety test results. Technical leaders must embed these reviews into the organization’s CI/CD pipelines and require documentation for audit readiness.
+Use Microsoft Purview to manage compliance assessments aligned with global AI regulations such as the EU AI Act, ISO/IEC 23894:2023, ISO/IEC 42001:2023, and the NIST AI Risk Management Framework. Use Data Security Posture Management to monitor AI activity and enforce compliance controls. Azure AI Foundry provides AI governance reports in PDF or SPDX formats to support audits. Microsoft Copilot Studio offers compliance documentation and data residency controls aligned with ISO, SOC, and HIPAA standards.
+By standardizing these reviews, organizations reduce the risk of non-compliance and ensure that all AI agents meet the same regulatory expectations, regardless of where or how they are developed.
 
 **Microsoft tools:**
 
@@ -22,6 +24,8 @@ ms.collection: ce-skilling-ai-copilot
 - **Microsoft Copilot Studio:** Verify compliance certifications and data residency requirements through [ISO, SOC, and HIPAA compliance documentation](/azure/microsoft-copilot-studio/admin-certification) and align deployment regions with organizational requirements via [Data locations in Copilot Studio](/azure/microsoft-copilot-studio/data-location).
 
 ## Responsible AI
+
+Operationalize responsible AI across the organization. Responsible AI must be a foundational principle, not an afterthought. Technical leaders must define and enforce policies that require ethics reviews, bias assessments, and content moderation for all AI agents.
 
 **All agents must follow Responsible AI principles.** Conduct regular ethics reviews. Use tools like the Responsible AI Dashboard and Fairlearn to help identify bias in datasets. Review the outputs for fairness, especially if the agent’s decisions impact people. Ensure you’re not inadvertently breaking laws like equal opportunity laws due to biased AI suggestions
 
@@ -34,8 +38,6 @@ Microsoft facilitation:
 - **Microsoft Copilot Studio:** Configure content moderation in your [Knowledge sources](/azure/microsoft-copilot-studio/knowledge-copilot-studio#content-moderation).
 - **Azure AI Foundry:** Use [Content Safety in Azure AI Foundry](/azure/ai-foundry/ai-services/content-safety-overview) and follow [Azure AI Foundry content filtering](/azure/ai-foundry/concepts/content-filtering) guidance.
 
-## Security
-
 ### Security review
 
 **All agents must pass a security review.** Agents must undergo penetration testing and static analysis to identify vulnerabilities such as open ports or injection flaws. Validate secure coding practices and confirm sensitive configurations are stored securely. Enable audit logging and identity management.
@@ -45,11 +47,11 @@ Microsoft facilitation:
 - **Azure AI Foundry:** Follow the [Azure security baseline for Azure AI Foundry](/azure/security/benchmark/azure/baselines/azure-ai-foundry-security-baseline) to implement comprehensive security controls and enable [AI threat protection](/azure/defender-for-cloud/ai-threat-protection) with Microsoft Defender for Cloud for layered security defenses.
 - **Microsoft Copilot Studio:** Utilize [Automatic security scan](/azure/microsoft-copilot-studio/security-scan) to identify security issues before deployment and monitor [Agent runtime protection status](/azure/microsoft-copilot-studio/security-agent-runtime-view) to maintain ongoing security posture.
 
-### Secure authentication and authorization
+## Secure authentication and authorization
 
 **All agents must use secure authentication mechanisms.** Authenticate agents using Microsoft Entra ID Managed Identities instead of access keys or passwords. Managed identities eliminate credential storage in code and support automatic rotation. Assign least-privilege roles using Azure Role-Based Access Control (RBAC). Avoid broad permissions such as “Reader” or “Contributor” unless justified.
 
-### Baseline infrastructure security
+## Baseline infrastructure security
 
 **Every agent must follow baseline security recommendations.** Apply standard security controls to containers and cloud services. Enable logging and monitoring at the infrastructure level to detect abnormal behavior such as unexpected outbound calls or resource spikes. Lock down the environment to prevent exploitation of underlying resources.
 
@@ -58,11 +60,11 @@ Microsoft facilitation:
 - **Azure AI Foundry:** Configure [secure networking with private link](/azure/ai-foundry/how-to/configure-private-link) to restrict data exfiltration and enforce private access to models while validating egress rules during security reviews.
 - **Microsoft Copilot Studio:** Follow [Security and governance guidelines](/azure/microsoft-copilot-studio/security-and-governance) to review access controls, connectors, and environment boundaries that minimize over-privileged operations.
 
-### Input sanitization
+## Input sanitization
 
 **All agents must sanitize all user inputs.** Treat user-supplied files as hostile. Implement virus scanning for uploads and validate new input types such as images. Enforce strict checks on file types, size limits, and data formats. Update filtering rules based on real-world usage and discovered injection attempts.
 
-### Security testing
+## Security testing
 
 **AI agents must undergo continuous security testing.** Include agents in regular penetration testing cycles. Cover traditional web-based attacks and AI-specific adversarial scenarios such as prompt injection and hidden command embedding. Remediate vulnerabilities promptly and add regression tests.
 
@@ -74,7 +76,7 @@ Microsoft facilitation:
 
 - **Azure AI Foundry:** Execute comprehensive adversarial testing using the [AI Red Teaming Agent](/azure/ai-foundry/concepts/ai-red-teaming-agent) with support for multiple [attack strategies](/azure/ai-foundry/concepts/ai-red-teaming-agent#supported-attack-strategies) and integrate these test cases into CI/CD workflows using [GitHub Actions evaluations](/azure/ai-foundry/how-to/evaluation-github-action?tabs=foundry-project) or [Azure DevOps evaluations](/azure/ai-foundry/how-to/evaluation-azure-devops?tabs=foundry-project).
 
-### Incident Response
+## Incident Response
 
 **All agents must have documented incident response and rollback procedures.** Define what qualifies as an incident, including data leaks, prompt injection, harmful outputs, or credential compromise. Document escalation paths and decision criteria. Include agent owner, technical expert, security lead, and compliance advisor in the response team.
 
@@ -86,7 +88,7 @@ See **Microsoft Facilitation:**
 
 - **Azure AI Foundry:** Follow guidance to set up [Customer enabled disaster recovery](/azure/ai-foundry/how-to/disaster-recovery). If you’re using an Azure OpenAI deployment, learn [How to use Risks & Safety monitoring](/azure/ai-foundry/openai/how-to/risks-safety-monitor) to check.
 
-### Observability and monitoring
+## Observability and monitoring
 
 **All agents must have a unique identity and be visible in the enterprise directory.** Agents created in Microsoft Copilot Studio and Azure AI Foundry automatically appear in Microsoft Entra ID. Navigate to Enterprise Applications and filter by Application type → Agent ID (Preview) to view agent identities. This identity ensures traceability and prevents rogue deployments.
 
@@ -105,7 +107,7 @@ See **Microsoft Facilitation:**
 - **Azure AI Foundry:** Track model health and drift with [Monitor model deployments](/azure/ai-foundry/foundry-models/how-to/monitor-models) and application-level behaviors using [Monitor generative AI applications](/azure/ai-foundry/how-to/monitor-applications) while consolidating evaluation outputs through [Continuous evaluation for agents](/azure/ai-foundry/how-to/continuous-evaluation-agents).
 - **Microsoft Copilot Studio:** Audit configuration modifications, publishing events, and component updates through [Monitor logging and auditing](/azure/microsoft-copilot-studio/admin-logging-copilot-studio) to maintain traceability and detect unauthorized changes to agent configurations.
 
-### Development
+## Development
 
 **All agents deployments must use repeatable templates.** Templates standardize development and embed safeguards such as human handoff logic and permission checks. Make templates accessible through a shared repository or importable solution to simplify adoption. Review agents against the template and require teams to justify deviations. This approach accelerates development, improves consistency, and reduces governance overhead.
 
@@ -116,7 +118,7 @@ See **Microsoft Facilitation:**
 - **Azure AI Foundry:** Automate quality and safety gates by integrating evaluation workflows via [GitHub Actions evaluations](/azure/ai-foundry/how-to/evaluation-github-action?tabs=foundry-project) or [Azure DevOps evaluations](/azure/ai-foundry/how-to/evaluation-azure-devops?tabs=foundry-project) and use the [Azure AI Foundry VS Code Agent development extension](/azure/ai-foundry/how-to/develop/vs-code-agents) to standardize local configuration and enforce policy compliance.
 - **Microsoft Copilot Studio:** Standardize lifecycle workflows using [Create and manage solution pipelines](/azure/microsoft-copilot-studio/authoring-solutions-overview#create-and-manage-solution-pipelines) to embed approval, testing, and security validation checkpoints while organizing validated building blocks in [Reusable component collections](/azure/microsoft-copilot-studio/authoring-export-import-copilot-components).
 
-### Operations
+## Operations
 
 **All agents must follow a defined lifecycle from development to retirement.** *Agents must follow a defined lifecycle from development to retirement. Require lifecycle documentation and approval checkpoints. Make sure you are aware of model changes, such as automatic model upgrades when an earlier version is deprecated, or new model releases that you can test and consider switching to.*
 

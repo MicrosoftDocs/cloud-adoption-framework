@@ -23,5 +23,5 @@ items:
         href: build-process.md
       - name: 3. Deploy agents
         href: deploy.md
-  - name: Manage agents
-    href: manage.md
+      - name: 4. Manage agents
+        href: manage.md
