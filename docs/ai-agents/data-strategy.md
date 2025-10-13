@@ -116,3 +116,8 @@ Microsoft Copilot Studio provides low-code tools for building AI agents with bui
 1. **Use customer-managed encryption keys.** [Configure customer-managed encryption keys](/microsoft-copilot-studio/admin-customer-managed-keys) when you need control over encryption key management for enhanced security and compliance.
 
 1. **Monitor agent activity with audit logs.** [Capture agent audit logs in Microsoft Purview](/purview/audit-copilot) for compliance monitoring, enabling security teams to track how agents are used and identify potential policy violations.
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Governance and security](./governance-security.md)

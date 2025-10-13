@@ -17,17 +17,11 @@ Adopting AI agents is not merely a technical initiative. It’s a strategic tran
 
 Start by establishing a **clear ownership model** for AI across the organization. Define who sets the AI strategy, who builds and maintains agents, and how teams collaborate. You should formalize this through a **platform-and-workload team structure.**
 
-### Platform team responsibilities
+1. **Platform team responsibilities:** The platform should be centrally managed typically within IT or engineering and responsible for delivering repeatable AI agent capabilities that workload teams need. The platform should also enforce governance policies across workload environments and have visibility into all agents performance and logs.
 
-The platform team should be centrally managed typically within IT or engineering and responsible for delivering repeatable AI agent capabilities that workload teams need. The platform should also enforce governance policies across workload environments and have visibility into all agents performance and logs.
+2. **Workload team responsibilities:** Workload teams, embedded within business units, should be empowered to innovate using these platform services. Your role is to ensure they have the autonomy to define agent requirements, build conversational flows, prepare domain-specific data, and integrate agents into local systems while staying within the guardrails provided by the platform team.
 
-### Workload team responsibilities
-
-Workload teams, embedded within business units, should be empowered to innovate using these platform services. Your role is to ensure they have the autonomy to define agent requirements, build conversational flows, prepare domain-specific data, and integrate agents into local systems while staying within the guardrails provided by the platform team.
-
-### Create enabling teams
-
-To accelerate adoption and reduce friction, you should establish an AI Center of Excellence (CoE). This is not a governance body. It’s an enabling function. Staff it with specialists who can provide reusable templates, training programs, and short-term project support. The CoE should host internal workshops, investigate emerging technologies, and share best practices across teams. As a leader, you must ensure the CoE has the authority and resources to act as a multiplier across the organization.
+3. **Enabling, support teams:** To accelerate adoption and reduce friction, you should establish an AI Center of Excellence (CoE). This is not a governance body. It’s an enabling function. Staff it with specialists who can provide reusable templates, training programs, and short-term project support. The CoE should host internal workshops, investigate emerging technologies, and share best practices across teams. As a leader, you must ensure the CoE has the authority and resources to act as a multiplier across the organization.
 
 ## Agent skill assessment and training
 
@@ -37,11 +31,13 @@ AI competency directly impacts business outcomes such as return on investment, r
 
 Begin by conducting a **skills assessment** across your organization. Identify what new skills are needed to deliver and sustain AI agents, then evaluate your team’s proficiency in each area. Common skills include:
 
-- Prompt engineering: Crafting effective prompts and dialogues for LLMs.
-- Data science/ML engineering: Understanding how to fine-tune models, evaluate model outputs, and handle model-related issues.
-- Software integration: Skills to integrate AI with enterprise systems (APIs, cloud architecture).
-- User experience design: Conversational UX is a specialized skill – making interactions with the AI agent intuitive and friendly.
-- AI governance and ethics: Ability to interpret AI principles and ensure the agent’s design aligns with them (this might be within the CoE or compliance teams).
+| Skill area | Description |
+| --- | --- |
+| Prompt engineering | Crafting effective prompts and dialogues for LLMs. |
+| Data science | Understanding how to fine-tune models, evaluate model outputs, and handle model-related issues. |
+| Software integration | Skills to integrate AI with enterprise systems (APIs, cloud architecture). |
+| User experience design |Conversational UX is a specialized skill – making interactions with the AI agent intuitive and friendly. |
+| AI governance and ethics | Ability to interpret AI principles and ensure the agent’s design aligns with them (this might be within the CoE or compliance teams). |
 
 Document gaps such as developers skilled in web applications but unfamiliar with AI integration. This assessment informs whether to train existing staff or hire new talent
 

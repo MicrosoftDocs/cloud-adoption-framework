@@ -2,16 +2,7 @@
 description: Learn Governance and security for AI agents
 author: stephen-sumner
 ms.author: pnp
-ms.date: 11/01/2### Operations
-
-**All agents must follow a defined lifecycle from development to retirement.** *Agents must follow a defined lifecycle from development to retirement. Require lifecycle documentation and approval checkpoints. Make sure you are aware of model changes, such as automatic model upgrades when an earlier version is deprecated, or new model releases that you can test and consider switching to.*
-
-**All agents must follow formal change management processes.** Significant changes to an agent's functionality, scope, or underlying model require a documented change log and stakeholder sign-off. This governance step prevents unauthorized modifications, maintains compliance, and ensures accountability across teams.
-
-**Microsoft tools:**
-
-- **Azure AI Foundry:** Combine automated policy enforcement, red teaming, and monitoring signals with manual architecture review checkpoints to maintain conformance to the [security baseline](/azure/security/benchmark/azure/baselines/azure-ai-foundry-security-baseline) and govern hubs and projects with [Azure Policy definitions](/azure/ai-foundry/how-to/azure-policy).
-- **Microsoft Copilot Studio:** Coordinate feature evolution and deprecation decisions under the governance processes outlined in the [Governance and security best practices overview](/azure/microsoft-copilot-studio/guidance/sec-gov-intro) and ensure each material change passes [security scan](/azure/microsoft-copilot-studio/security-scan) reassessment.ms.update-cycle: 180-days
+ms.date: 11/01/2025
 ms.topic: conceptual
 ms.collection: ce-skilling-ai-copilot
 ---

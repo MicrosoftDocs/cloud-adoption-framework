@@ -67,4 +67,5 @@ Before fully committing budget and time to a chosen approach (whether buy, low-c
 
 ## Next step
 
-
+> [!div class="nextstepaction"]
+> [People strategy](./people-strategy.md)
