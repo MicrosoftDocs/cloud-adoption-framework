@@ -1,13 +1,13 @@
 ---
-title: Azure Integration Services landing zone accelerator
-description: The Azure Integration Services landing zone accelerator consist of a collection of ARM templates that you can use to automate the deployment of all of the resources needed for an enterprise-ready integration platform.
+title: Azure Integration Services application landing zone accelerator
+description: Learn to deploy the Azure Integration Services application landing zone accelerator in an Azure landing zone.
 author: stephen-sumner
 ms.author: pnp
 ms.date: 10/13/2025
 ms.topic: conceptual
 ---
 
-# Azure Integration Services landing zone accelerator
+# Azure Integration Services application landing zone accelerator in an Azure landing zone
 
 This article provides strategic guidance for deploying Azure Integration Services (AIS) within an Azure landing zone. Azure Integration Services includes Logic Apps, API Management, Service Bus, and Event Grid. These services enable scalable integration across applications, data, and business processes. The AIS application landing zone accelerator automates the deployment of these services, which promotes consistency and scalability while aligning with Azure landing zone standards.
 
