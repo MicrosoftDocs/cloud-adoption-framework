@@ -173,3 +173,8 @@ Determine how you will enforce these governance rules. Automation is ideal. Use 
 10. Continuous monitoring and drift detection: Reassess security posture and behavioral alignment periodically by correlating runtime protection insights from the [Agent runtime protection status](/azure/microsoft-copilot-studio/security-agent-runtime-view) with audit event streams from [logging and auditing](/azure/microsoft-copilot-studio/admin-logging-copilot-studio).
 11. Operational readiness: Validate solution packaging and environment promotion paths using [Solution pipelines](/azure/microsoft-copilot-studio/authoring-solutions-overview#create-and-manage-solution-pipelines) while enforcing required compliance documentation updates at each release gate.
 12. Ongoing governance enforcement: Consolidate evidence from security scans, moderation outcomes, and runtime protection into compliance reviews leveraging the [Governance and security best practices overview](/azure/microsoft-copilot-studio/guidance/sec-gov-intro) as the authoritative checklist.
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Set up environment](./set-up-environment.md)
