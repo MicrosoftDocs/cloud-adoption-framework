@@ -1,5 +1,7 @@
 Review each header in the article. Add **Microsoft tools:** guidance within each header in the article. In each section of the article, where there's learn.microsoft.com product guidance or Well-architected Framework guidance that aligns with the article, provide the links in the format below. Provide context for the section and then provide the links in the format below. The guidance should read like prescriptive guidance to guide technical decision makers and anyone who doesn't know how to use the links. It needs to guide readers through it in sequential order rather than just listing links. Use prose narratively to guide the reader through the links.
 
+Don't update the yaml code or metadata. 
+
 ### 📌 Additional Requirements
 
 - **Do not include any links or guidance that are not from Learn.microsoft.com.**
@@ -25,4 +27,4 @@ continue as needed to provide high quality guidance and links where available th
 
 continue as needed to provide high quality guidance and links where available that aligns with the article structure. don't add sections that aren't in the article. and don't add fluff just to mirror the article structure.
 
-
+Don't update the yaml code or metadata. 

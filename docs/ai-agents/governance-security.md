@@ -1,10 +1,17 @@
 ---
-title: Governance and security for AI agents
 description: Learn Governance and security for AI agents
 author: stephen-sumner
 ms.author: pnp
-ms.date: 11/01/2025
-ms.update-cycle: 180-days
+ms.date: 11/01/2### Operations
+
+**All agents must follow a defined lifecycle from development to retirement.** *Agents must follow a defined lifecycle from development to retirement. Require lifecycle documentation and approval checkpoints. Make sure you are aware of model changes, such as automatic model upgrades when an earlier version is deprecated, or new model releases that you can test and consider switching to.*
+
+**All agents must follow formal change management processes.** Significant changes to an agent's functionality, scope, or underlying model require a documented change log and stakeholder sign-off. This governance step prevents unauthorized modifications, maintains compliance, and ensures accountability across teams.
+
+**Microsoft tools:**
+
+- **Azure AI Foundry:** Combine automated policy enforcement, red teaming, and monitoring signals with manual architecture review checkpoints to maintain conformance to the [security baseline](/azure/security/benchmark/azure/baselines/azure-ai-foundry-security-baseline) and govern hubs and projects with [Azure Policy definitions](/azure/ai-foundry/how-to/azure-policy).
+- **Microsoft Copilot Studio:** Coordinate feature evolution and deprecation decisions under the governance processes outlined in the [Governance and security best practices overview](/azure/microsoft-copilot-studio/guidance/sec-gov-intro) and ensure each material change passes [security scan](/azure/microsoft-copilot-studio/security-scan) reassessment.ms.update-cycle: 180-days
 ms.topic: conceptual
 ms.collection: ce-skilling-ai-copilot
 ---
@@ -42,6 +49,11 @@ Microsoft facilitation:
 
 **All agents must pass a security review.** Agents must undergo penetration testing and static analysis to identify vulnerabilities such as open ports or injection flaws. Validate secure coding practices and confirm sensitive configurations are stored securely. Enable audit logging and identity management.
 
+**Microsoft tools:**
+
+- **Azure AI Foundry:** Follow the [Azure security baseline for Azure AI Foundry](/azure/security/benchmark/azure/baselines/azure-ai-foundry-security-baseline) to implement comprehensive security controls and enable [AI threat protection](/azure/defender-for-cloud/ai-threat-protection) with Microsoft Defender for Cloud for layered security defenses.
+- **Microsoft Copilot Studio:** Utilize [Automatic security scan](/azure/microsoft-copilot-studio/security-scan) to identify security issues before deployment and monitor [Agent runtime protection status](/azure/microsoft-copilot-studio/security-agent-runtime-view) to maintain ongoing security posture.
+
 ### Secure authentication and authorization
 
 **All agents must use secure authentication mechanisms.** Authenticate agents using Microsoft Entra ID Managed Identities instead of access keys or passwords. Managed identities eliminate credential storage in code and support automatic rotation. Assign least-privilege roles using Azure Role-Based Access Control (RBAC). Avoid broad permissions such as “Reader” or “Contributor” unless justified.
@@ -49,6 +61,11 @@ Microsoft facilitation:
 ### Baseline infrastructure security
 
 **Every agent must follow baseline security recommendations.** Apply standard security controls to containers and cloud services. Enable logging and monitoring at the infrastructure level to detect abnormal behavior such as unexpected outbound calls or resource spikes. Lock down the environment to prevent exploitation of underlying resources.
+
+**Microsoft tools:**
+
+- **Azure AI Foundry:** Configure [secure networking with private link](/azure/ai-foundry/how-to/configure-private-link) to restrict data exfiltration and enforce private access to models while validating egress rules during security reviews.
+- **Microsoft Copilot Studio:** Follow [Security and governance guidelines](/azure/microsoft-copilot-studio/security-and-governance) to review access controls, connectors, and environment boundaries that minimize over-privileged operations.
 
 ### Input sanitization
 
@@ -61,6 +78,10 @@ Microsoft facilitation:
 - Test prompt hardening to ensure user instructions cannot override system rules.
 - Separate system instructions from user input using role-based message formatting.
 - Test jailbreak scenarios and implement adversarial input detection with anomaly detection or prompt injection classifiers.
+
+**Microsoft tools:**
+
+- **Azure AI Foundry:** Execute comprehensive adversarial testing using the [AI Red Teaming Agent](/azure/ai-foundry/concepts/ai-red-teaming-agent) with support for multiple [attack strategies](/azure/ai-foundry/concepts/ai-red-teaming-agent#supported-attack-strategies) and integrate these test cases into CI/CD workflows using [GitHub Actions evaluations](/azure/ai-foundry/how-to/evaluation-github-action?tabs=foundry-project) or [Azure DevOps evaluations](/azure/ai-foundry/how-to/evaluation-azure-devops?tabs=foundry-project).
 
 ### Incident Response
 
@@ -88,11 +109,21 @@ See **Microsoft Facilitation:**
 
 **All agent interactions must be logged in a tamper-evident format.** Logs must include timestamps, user IDs, and actions, and support forensic analysis in case of incidents.
 
+**Microsoft tools:**
+
+- **Azure AI Foundry:** Track model health and drift with [Monitor model deployments](/azure/ai-foundry/foundry-models/how-to/monitor-models) and application-level behaviors using [Monitor generative AI applications](/azure/ai-foundry/how-to/monitor-applications) while consolidating evaluation outputs through [Continuous evaluation for agents](/azure/ai-foundry/how-to/continuous-evaluation-agents).
+- **Microsoft Copilot Studio:** Audit configuration modifications, publishing events, and component updates through [Monitor logging and auditing](/azure/microsoft-copilot-studio/admin-logging-copilot-studio) to maintain traceability and detect unauthorized changes to agent configurations.
+
 ### Development
 
 **All agents deployments must use repeatable templates.** Templates standardize development and embed safeguards such as human handoff logic and permission checks. Make templates accessible through a shared repository or importable solution to simplify adoption. Review agents against the template and require teams to justify deviations. This approach accelerates development, improves consistency, and reduces governance overhead.
 
 **All agents must use approved frameworks.** Require teams to build agents using a common framework such as Microsoft Agent Framework. Approved frameworks ensure compatibility with enterprise security, compliance, and monitoring standards. They also reduce integration complexity and improve maintainability across the lifecycle.
+
+**Microsoft tools:**
+
+- **Azure AI Foundry:** Automate quality and safety gates by integrating evaluation workflows via [GitHub Actions evaluations](/azure/ai-foundry/how-to/evaluation-github-action?tabs=foundry-project) or [Azure DevOps evaluations](/azure/ai-foundry/how-to/evaluation-azure-devops?tabs=foundry-project) and use the [Azure AI Foundry VS Code Agent development extension](/azure/ai-foundry/how-to/develop/vs-code-agents) to standardize local configuration and enforce policy compliance.
+- **Microsoft Copilot Studio:** Standardize lifecycle workflows using [Create and manage solution pipelines](/azure/microsoft-copilot-studio/authoring-solutions-overview#create-and-manage-solution-pipelines) to embed approval, testing, and security validation checkpoints while organizing validated building blocks in [Reusable component collections](/azure/microsoft-copilot-studio/authoring-export-import-copilot-components).
 
 ### Operations
 
