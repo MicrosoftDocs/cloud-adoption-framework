@@ -1,5 +1,5 @@
 ---
-title: Networking for Azure Virtual Desktop
+title: Azure Virtual Desktop network topology and connectivity design guidance
 description: Use the Cloud Adoption Framework for Azure to identify networking capabilities that are required for your landing zone to support Azure Virtual Desktop workloads.
 author: jcoyne-msft
 ms.author: pnp
@@ -7,9 +7,9 @@ ms.date: 10/09/2025
 ms.topic: conceptual
 ---
 
-# Azure Virtual Desktop Network Topology and Connectivity Design Guidance
+# Azure Virtual Desktop network topology and connectivity design guidance
 
-This article outlines how to design network topology and connectivity for Azure Virtual Desktop (AVD) within an Azure landing zone. It helps technical decision-makers understand the networking requirements their teams must follow to ensure secure and scalable connectivity across Azure, private networks, and the public internet. Before deploying AVD, an Azure landing zone must be in place. Then you deploy AVD resources into an application landing zone.
+This article outlines how to design network topology and connectivity for Azure Virtual Desktop (AVD) within an Azure landing zone. It helps technical decision-makers understand the networking requirements their teams must follow to ensure secure and scalable connectivity across Azure, private networks, and the public internet. Before your organization deploys AVD, you should have an Azure landing zone in place. Then you deploy AVD resources into an application landing zone.
 
 ## AVD networking components
 
@@ -22,17 +22,17 @@ This article outlines how to design network topology and connectivity for Azure 
 ### Secure access and traffic control
 
 - [**Network security groups**](/azure/virtual-network/network-security-groups-overview) are used to filter network traffic to and from Azure resources in an Azure virtual network. A network security group contains security rules that allow or deny inbound network traffic to, or outbound network traffic from, several types of Azure resources.
-- [**Application security groups**](/azure/virtual-network/application-security-groups) provide a way for you to configure network security as a natural extension of an application's structure. You can use application security groups to group VMs and define network security policies that are based on those groups. You can reuse your security policy at scale without needing to manually maintain explicit IP addresses.
-- A [**NAT Gateway**](https://learn.microsoft.com/en-us/azure/nat-gateway/nat-overview) provide NAT service for private subnets egress traffic to the internet. It does not allow inbound traffic unless they are response packets. This provides Azure Virtual Desktop environments the ability to explicitly egress to the internet and also mitigate performance impact of sending AVD service traffic through a Firewall or NVA.
+- [**Application security groups**](/azure/virtual-network/application-security-groups) provide a way for you to configure network security as a natural extension of an application's structure. You can use application security groups to group virtual machines and define network security policies that are based on those groups. You can reuse your security policy at scale without needing to manually maintain explicit IP addresses.
+- A [**NAT Gateway**](/azure/nat-gateway/nat-overview) provide NAT service for private subnets egress traffic to the internet. It doesn't allow inbound traffic except for response packets. This setup provides Azure Virtual Desktop environments the ability to explicitly egress to the internet and also mitigate performance effects of sending AVD service traffic through a Firewall or NVA.
 
-### Routing and Optimization
+### Routing and optimization
 
-- An [**Azure Firewall or Network Virtual Appliance (NVA)**](https://azure.microsoft.com/blog/azure-firewall-and-network-virtual-appliances/) is a network device that supports functions like connectivity, application control, wide-area network (WAN) optimization, and security. NVAs include Azure Firewall and vendor network appliances found in the marketplace.
-- **[User-defined routes (UDRs)](/azure/virtual-network/virtual-networks-udr-overview)** can be used to override Azure default system routes. You can also use UDRs to add extra routes to a subnet route table which allows routing specific traffic and Azure services to desitnations across your networks and Azure.
+- An [**Azure Firewall or network virtual appliance (NVA)**](/azure/firewall/protect-azure-virtual-desktop) is a network device that supports functions like connectivity, application control, wide-area network (WAN) optimization, and security. NVAs include Azure Firewall and vendor network appliances found in the marketplace.
+- **[User-defined routes (UDRs)](/azure/virtual-network/virtual-networks-udr-overview)** can be used to override Azure default system routes. You can also use UDRs to add extra routes to a subnet route table that allows routing specific traffic and Azure services to destinations across your networks and Azure.
 
-### Azure Virtual Desktop Enhancements
+### Azure Virtual Desktop enhancements
 
-- **[Remote Desktop Protocol Shortpath (RDP Shortpath)](/azure/virtual-desktop/rdp-shortpath?tabs=managed-networks)** is a feature of Azure Virtual Desktop that's based on [Universal Rate Control Protocol (URCP)](https://www.microsoft.com/research/publication/urcp-universal-rate-control-protocol-for-real-time-communication-applications/). RDP Shortpath establishes a direct transport that's based on User Datagram Protocol (UDP) between a supported Windows Remote Desktop client and Azure Virtual Desktop session hosts. URCP enhances UDP connections by providing active monitoring of network conditions and quality-of-service (QoS) capabilities.
+- **[Remote Desktop Protocol Shortpath (RDP Shortpath)](/azure/virtual-desktop/rdp-shortpath?tabs=managed-networks)** is a feature of Azure Virtual Desktop based on [Universal Rate Control Protocol (URCP)](https://www.microsoft.com/research/publication/urcp-universal-rate-control-protocol-for-real-time-communication-applications/). RDP Shortpath establishes a direct transport that uses the User Datagram Protocol (UDP) between a supported Windows Remote Desktop client and Azure Virtual Desktop session hosts. URCP enhances UDP connections by providing active monitoring of network conditions and quality-of-service (QoS) capabilities.
 - **[Azure Private Link with Azure Virtual Desktop](/azure/virtual-desktop/private-link-overview)** (optional) provides a way for you to use a [private endpoint](/azure/private-link/private-endpoint-overview) in Azure to connect session hosts to the Azure Virtual Desktop service. With Private Link, traffic between your virtual network and the Azure Virtual Desktop service travels on the Microsoft *backbone* network. As a result, you don't need to connect to the public internet to access Azure Virtual Desktop services.
 
 ## AVD networking recommendations
@@ -127,8 +127,8 @@ This scenario is ideal if:
 - You don't need traffic inspection of internet-outbound traffic from Azure Virtual Desktop networks.
 - You don't need to control the public IP addresses that are used during source network address translation (SNAT) for Azure Virtual Desktop outbound internet connections.
 - You don't enforce Azure Virtual Desktop network-internal traffic.
-- You have pre-existing hybrid connectivity to on-premises environments, either through Azure ExpressRoute or a site-to-site (S2S) virtual private network (VPN).
-- You have pre-existing Active Directory Domain Services (AD DS) and Domain Name System (DNS) custom servers.
+- You have preexisting hybrid connectivity to on-premises environments, either through Azure ExpressRoute or a site-to-site (S2S) virtual private network (VPN).
+- You have preexisting Active Directory Domain Services (AD DS) and Domain Name System (DNS) custom servers.
 - You consume Azure Virtual Desktop by using a standard connection model, not RDP Shortpath.
 
 #### Architectural components for hub and spoke with hybrid connectivity
@@ -171,7 +171,7 @@ For detailed deployment guidance, see [RDP Shortpath connectivity for managed ne
 This scenario is ideal if:
 
 - You want to limit the number of over-the-internet connections to Azure Virtual Desktop session hosts.
-- You have pre-existing hybrid connectivity from an on-premises environment to Azure, either through ExpressRoute or an S2S or point-to-site (P2S) VPN.
+- You have preexisting hybrid connectivity from an on-premises environment to Azure, either through ExpressRoute or an S2S or point-to-site (P2S) VPN.
 - You have direct line-of-sight network connectivity between RDP clients and Azure Virtual Desktop hosts. Typically, one of the following setups is used in this scenario:
   - On-premises networks that are routed to Azure Virtual Desktop Azure networks
   - Client VPN connections that are routed to Azure Virtual Desktop Azure virtual networks
@@ -179,7 +179,7 @@ This scenario is ideal if:
 - You want to prioritize Azure Virtual Desktop traffic on your network.
 - You don't need traffic inspection between Azure Virtual Desktop networks and other Azure virtual networks.
 - You don't need traffic inspection between Azure Virtual Desktop networks and on-premises datacenters.
-- You have pre-existing AD DS or DNS custom servers.
+- You have preexisting AD DS or DNS custom servers.
 
 #### Architectural components for hub and spoke with hybrid connectivity over managed networks using RDP Shortpath
 
@@ -229,7 +229,7 @@ This scenario is ideal if:
 - You have direct outbound connectivity from Azure Virtual Desktop session hosts. You don't use a forced-tunnel routing through on-premises networks.
 - You don't need traffic inspection between Azure Virtual Desktop networks and other Azure virtual networks.
 - You don't need traffic inspection between Azure Virtual Desktop networks and on-premises datacenters.
-- You have pre-existing AD DS or DNS custom servers.
+- You have preexisting AD DS or DNS custom servers.
 
 #### Architectural components for hub and spoke with public networks using RDP Shortpath
 
