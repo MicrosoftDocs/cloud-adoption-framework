@@ -14,7 +14,7 @@ items:
         href: data-strategy.md
   - name: Governance and security
     href: governance-security.md
-  - name: Process to build agents
+  - name: Implementation roadmap
     expanded: true
     items:
       - name: 1. Single or multi-agent systems
