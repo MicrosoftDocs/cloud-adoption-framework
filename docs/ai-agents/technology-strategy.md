@@ -13,11 +13,11 @@ ms.collection: ce-skilling-ai-copilot
 
 Choose the optimal “buy vs build” approach for each AI agent to balance speed, cost, and customization. As a technical decision maker, you should guide a multi-track technology strategy. Some solutions can be *bought* (using prebuilt AI capabilities) to deliver value quickly, while others warrant *building* from scratch for a tailored fit. Balance quick ROI against long-term differentiation:
 
-| **Approach** | **Best For (When to Choose)** | **Typical Time-to-ROI** | **Microsoft Solution** |
-|--------------|-------------------------------|-------------------------|------------------------|
-| **Prebuilt "Buy" (SaaS)** | Out-of-the-box capabilities meet your needs with minimal tweaks. | **Shorter:** Value realized almost immediately | **Microsoft 365 Copilot**<br>**Role-based Copilots**<br>**In-product Copilots** |
-| **Low/no-Code Platform "Build"** | Customized solutions where you want quick development with minimal coding. | **Moderate:** Faster than full coding. | **Microsoft Copilot Studio** |
-| **Pro-code "Build"** | **Strategic use cases** needing custom logic, multiple AI models, or deep integration with systems | **Longer:** Development and testing effort. | **Azure AI Foundry** |
+| **Approach** | **Best for** | **Microsoft solution** |
+|--------------|-------------------------------|-------------------------|
+| **SaaS agents (buy) | Personal productivity for anyone who works with information daily. Out-of-the-box capabilities meet your needs with minimal tweaks. Value realized almost immediately | **Microsoft 365 Copilot**<br><br>**Role-based Copilots**<br><br>**In-product Copilots** |
+| **Low/no-code agents (build) | Process transformation for power users who are technical and understand business processes. Customized solutions where you want quick development with minimal coding. Faster than full coding. | **Microsoft Copilot Studio** |
+| **Pro-code agents (build) | Process transformation for app developers who build application and use IDEs. Strategic use cases needing custom logic, multiple AI models, or deep integration with systems. Longer development and testing effort. | **Azure AI Foundry** |
 
 ## Understand the agent options
 
@@ -25,11 +25,11 @@ Here's an overview of the different agent adoption approaches:
 
 ### Azure AI Foundry
 
-For strategic scenarios where AI becomes a core business capability, [Azure AI Foundry Agent Service](/azure/ai-foundry/agents/overview) provides the tools to build fully custom agents. Using the Agent Service and Microsoft’s open-source Agent Framework, engineering teams can develop sophisticated, multi-model agents with deep integrations and custom logic. This path requires more time and technical investment, but it enables differentiated solutions that drive long-term value. Use the Foundry playground to explore and prototype before scaling.
+For strategic scenarios where AI becomes a core business capability, [Azure AI Foundry Agent Service](/azure/ai-foundry/agents/overview) provides the tools to build fully custom agents. Using the Agent Service and Microsoft’s open-source Agent Framework, engineering teams can develop sophisticated, multi-model agents with deep integrations and custom logic. It has enterprise-to-enterprise data and app connectors. This path requires more time and technical investment, but it enables differentiated solutions that drive long-term value. Use the Foundry playground to explore and prototype before scaling.
 
 ### Low-code agents (Microsoft Copilot Studio)
 
-When your use case requires more customization, [Microsoft Copilot Studio](/azure/microsoft-copilot-studio/) offers a low-code/no-code platform that empowers IT pros and business users to build tailored AI agents. With a visual interface, built-in AI models, and over 1200 connectors, teams can create conversational agents that integrate with business system, often in weeks, not months. This approach balances speed and flexibility, making it ideal for departmental solutions or cross-functional workflows.
+When your use case requires more customization, [Microsoft Copilot Studio](/azure/microsoft-copilot-studio/) offers a low-code/no-code platform that empowers IT pros and business users to build tailored AI agents. With a visual interface, built-in AI models, and over 1200 connectors, teams can create conversational agents that integrate with business system, often in weeks, not months. It's also managed with a single price. This approach balances speed and flexibility, making it ideal for departmental solutions or cross-functional workflows.
 
 ### Prebuilt agents (Copilots)
 
