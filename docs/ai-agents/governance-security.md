@@ -21,6 +21,8 @@ Technical decision makers must treat Responsible AI as a strategic capability, n
 
 1. **Monitor and improve AI systems continuously.** Track unknown queries, model drift, and fairness metrics. Use these insights to refine training data, update moderation rules, and improve agent behavior over time.
 
+To translate these Responsible AI principles into enforceable practices, organizations must implement robust governance and security frameworks. These frameworks ensure that ethical standards are not only aspirational but operational, embedded into every phase of AI agent development and deployment.
+
 **Microsoft Tools:**
 
 - **Azure AI Foundry:**
@@ -30,15 +32,13 @@ Technical decision makers must treat Responsible AI as a strategic capability, n
     - Schedule fairness and safety evaluations using [continuous evaluation for agents](/azure/ai-foundry/how-to/continuous-evaluation-agents).
 
 - **Microsoft Copilot Studio:**
-- Configure content moderation policies at ingestion and retrieval using [Knowledge sources content moderation](/azure/microsoft-copilot-studio/knowledge-copilot-studio#content-moderation) and document escalation behavior for unknown intents.
-- Apply structured guardrails following the [Governance and security best practices overview](/azure/microsoft-copilot-studio/guidance/sec-gov-intro) and map each agent to documented ownership and scope in your governance catalog.
-minimize over-privileged operations.
-
-To translate these Responsible AI principles into enforceable practices, organizations must implement robust governance and security frameworks. These frameworks ensure that ethical standards are not only aspirational but operational, embedded into every phase of AI agent development and deployment.
+    - Configure content moderation policies at ingestion and retrieval using [Knowledge sources content moderation](/azure/microsoft-copilot-studio/knowledge-copilot-studio#content-moderation) and document escalation behavior for unknown intents.
+    - Apply structured guardrails following the [Governance and security best practices overview](/azure/microsoft-copilot-studio/guidance/sec-gov-intro) and map each agent to documented ownership and scope in your governance catalog.
+    minimize over-privileged operations.
 
 ## Agent governance
 
-AI agents now operate as integral components of enterprise systems, interacting with sensitive data, executing autonomous decisions, and influencing business outcomes. Their deployment introduces governance challenges that extend beyond regulatory compliance. To ensure safe, scalable, and responsible use of AI agents, organizations must adopt a comprehensive governance strategy that spans design, deployment, and ongoing operations. This guidance outlines how technical leadership should organize their teams and processes to enforce consistent governance across the Microsoft ecosystem.
+AI agents now operate as integral components of organization systems. They interact with sensitive data, execute tasks, and influence business outcomes. To ensure safe, scalable, and responsible use of AI agents, organizations must adopt a comprehensive governance strategy that spans design, deployment, and ongoing operations. This guidance outlines how technical leadership should organize their teams and processes to enforce consistent governance across the Microsoft ecosystem.
 
 1. **Define a centralized compliance framework for AI agents.** AI agents introduce operational complexity that requires consistent oversight across departments and jurisdictions. Without a centralized governance framework, organizations risk fragmented controls, inconsistent behavior, and increased exposure to legal and reputational risks. Technical leaders must direct their teams to define a unified governance model that applies across all agent initiatives.
 
@@ -66,12 +66,16 @@ Manual enforcement of governance policies introduces inconsistency and delays. P
     - Ensure policies are versioned, testable, and auditable, enabling governance teams to track changes and validate enforcement.
     - Apply policies consistently across custom-built agents and third-party platforms to reduce fragmentation.
 
-1. **Monitor and update compliance posture continuously.**
-Governance must adapt to evolving risks, regulations, and business priorities. Continuous monitoring enables organizations to reassess controls, identify gaps, and respond proactively. Technical leaders must establish feedback loops and use automated tools to maintain alignment with emerging standards.
+1. **Standardize agent development.** Standardization reduces risk, accelerates development, and simplifies governance. By requiring teams to use vetted templates and reference architectures, organizations ensure consistent safeguards such as content filters, logging, and escalation logic. Technical leadership must select platforms that support enterprise-grade features and direct teams to adopt standardized development practices.
 
-    - Establish feedback loops between governance and engineering teams to reassess controls and update policies.
-    - Use automated tools to track changes in regulatory and operational requirements.
-    - Review governance posture regularly using metrics and dashboards to assess effectiveness and identify areas for improvement.
+    - Require use of platforms like Semantic Kernel, Azure AI Foundry SDK, or Copilot Studio based on agent type.
+    - Mandate use of pre-configured templates and reference architectures that include built-in governance controls.
+
+1. **Establish reusable components.** Reusable components reduce duplication, accelerate development, and ensure consistent application of enterprise policies. Governance and platform teams must create libraries of pre-approved components and encourage their use across agent initiatives. Technical leadership must prioritize reuse over customization to improve ROI and reduce operational overhead.
+
+    - Create libraries of pre-approved components such as fallback messages, clarification prompts, and secure data connectors.
+    - Encourage developers to use approved components instead of building from scratch.
+    - Maintain versioned collections to support governance and lifecycle management.
 
 1. **Align data governance with AI agent behavior.**
 AI agents rely on data to operate effectively. Misaligned data governance introduces risks related to privacy, security, and compliance. Technical leaders must ensure that all data used by agents adheres to enterprise governance standards.
@@ -80,6 +84,13 @@ AI agents rely on data to operate effectively. Misaligned data governance introd
     - Extend data governance controls across all agent platforms, including custom-built solutions and third-party tools.
     - Integrate data governance into agent design so teams consider data constraints from the outset.
 
+1. **Monitor compliance continuously.**
+Governance must adapt to evolving risks, regulations, and business priorities. Continuous monitoring enables organizations to reassess controls, identify gaps, and respond proactively. Technical leaders must establish feedback loops and use automated tools to maintain alignment with emerging standards.
+
+    - Establish feedback loops between governance and engineering teams to reassess controls and update policies.
+    - Use automated tools to track changes in regulatory and operational requirements.
+    - Review governance posture regularly using metrics and dashboards to assess effectiveness and identify areas for improvement.
+
 **Microsoft tools:**
 
 - **Azure AI Foundry**
@@ -87,11 +98,45 @@ AI agents rely on data to operate effectively. Misaligned data governance introd
     - [Microsoft Purview APIs](/purview/developer/secure-ai-with-purview) enable Azure AI Foundry and other AI platforms to integrate enterprise-grade data security and governance controls into custom AI applications and agents.
     - [Azure Policy](/azure/ai-foundry/how-to/azure-policy) enforces deployment constraints and aligns with internal governance standards and [enforce model deployment controls](/azure/ai-foundry/how-to/built-in-policy-model-deployment)
     - Centrally administer quotas and access through the [Management center](/azure/ai-foundry/concepts/management-center).
+    - - Automate quality and safety gates by integrating evaluation workflows via [GitHub Actions evaluations](/azure/ai-foundry/how-to/evaluation-github-action?tabs=foundry-project) or [Azure DevOps evaluations](/azure/ai-foundry/how-to/evaluation-azure-devops?tabs=foundry-project) and enforce standardized agent behaviors using reusable templates in source control.
 
 - **Microsoft Copilot Studio**
     - Apply structured guardrails following the [Governance and security best practices overview](/azure/microsoft-copilot-studio/guidance/sec-gov-intro) and map each agent to documented ownership and scope in your governance catalog.
     - [Data locations in Copilot Studio](/azure/microsoft-copilot-studio/data-location) helps align AI agent deployments with jurisdictional requirements.
     - [Compliance (ISO, SOC, HIPAA) documentation](/azure/microsoft-copilot-studio/admin-certification) validates adherence to enterprise-grade security and privacy standards.
+    -  Standardize lifecycle workflows using [Create and manage solution pipelines](/azure/microsoft-copilot-studio/authoring-solutions-overview#create-and-manage-solution-pipelines) to embed approval, testing, and security validation checkpoints.
+    - Accelerate compliant scaling and reduce drift by organizing validated building blocks in [Reusable component collections](/azure/microsoft-copilot-studio/authoring-export-import-copilot-components) and enforcing version governance.
+    - Coordinate feature evolution and deprecation decisions under the governance processes outlined in the [Governance and security best practices overview](/azure/microsoft-copilot-studio/guidance/sec-gov-intro) and ensure each material change passes security scan reassessment.
+    - Validate solution packaging and environment promotion paths using [Solution pipelines](/azure/microsoft-copilot-studio/authoring-solutions-overview#create-and-manage-solution-pipelines) while enforcing required compliance documentation updates at each release gate.
+
+## Observability
+
+Effective governance of AI agents requires full visibility into their identity, behavior, and operational footprint. Without observability, organizations risk deploying agents that operate outside policy boundaries, introduce security vulnerabilities, or degrade user trust. Monitoring ensures that agents perform as expected and that deviations trigger timely intervention. For technical decision makers, observability provides the foundation for accountability, risk mitigation, and operational resilience.
+
+To implement observability at scale, organizations must treat AI agents as first-class operational entities, similar to microservices or APIs with clear ownership, lifecycle tracking, and performance telemetry. This enables governance teams to detect anomalies, enforce policy, and maintain audit readiness across environments.
+
+1.  **Assign unique identities to agents across platforms.** Require every AI agent to have a persistent identity, such as an **Agent ID** in Microsoft Entra ID. This identity supports traceability, access control, and lifecycle management. Use this identity to link logs, ownership metadata, and compliance status.
+
+2.  **Define ownership and scope for each agent.** Mandate that every agent has a designated owner and documented scope. This metadata must include the responsible team, approved data sources, intended use cases, and compliance review status. Require quarterly reviews to detect scope creep and enforce approval workflows for changes. This prevents agents from evolving beyond their original intent without oversight and ensures that every agent has accountable stewardship.
+
+3.  **Maintain a centralized agent catalog.** Direct teams to build and maintain a central inventory of all AI agents, experimental and production. This catalog should include identity, ownership, purpose, compliance status, and operational metrics. Use this portfolio to detect duplication, align governance reviews, and support discoverability of approved agents. A centralized view reduces shadow IT and improves coordination across departments.
+
+4.  **Implement tamper-evident logging of agent activity.** Require comprehensive logging of all agent interactions, including queries received, actions taken, and responses generated. Store logs in secure, write-once systems to prevent alteration. Include timestamps, user IDs, and agent IDs to support forensic analysis and accountability. Ensure that logs also capture refusals, escalations, and policy violations to inform governance reviews and model improvements.
+
+5.  **Deploy real-time monitoring and alerting.** Instruct platform teams to monitor agent behavior continuously and define thresholds for anomalous activity. Examples include spikes in usage, repeated errors, or unexpected data access patterns. Use telemetry to track performance metrics such as latency, success rates, and hallucination scores. Integrate monitoring with security operations to trigger alerts when agents deviate from expected behavior or policy constraints.
+
+6.  **Use continuous evaluation to validate agent performance.** Establish automated evaluation pipelines that test agents against predefined queries and expected outcomes. Track quality scores over time and investigate performance drift. Use these evaluations to inform retraining, grounding updates, or deprecation decisions. Continuous evaluation ensures that agents remain aligned with business goals and governance standards.
+
+By implementing these practices, technical leaders ensure that no agent operates in a blind spot. Observability transforms AI agents from opaque systems into transparent, accountable components of enterprise infrastructure.
+
+**Microsoft tools:**
+
+*   **Microsoft Copilot Studio:**
+    -  Audit configuration modifications, publishing events, and component updates through [Monitor logging and auditing](/azure/microsoft-copilot-studio/admin-logging-copilot-studio) and reconcile anomalies during scheduled reviews.
+    - Reassess security posture and behavioral alignment periodically by correlating runtime protection insights from the [Agent runtime protection status](/azure/microsoft-copilot-studio/security-agent-runtime-view) with audit event streams from [logging and auditing](/azure/microsoft-copilot-studio/admin-logging-copilot-studio).
+
+- **Azure AI Foundry:**
+    - Track model health and drift with [Monitor model deployments](/azure/ai-foundry/foundry-models/how-to/monitor-models) and application-level behaviors using [Monitor generative AI applications](/azure/ai-foundry/how-to/monitor-applications) while consolidating evaluation outputs through [continuous evaluation for agents](/azure/ai-foundry/how-to/continuous-evaluation-agents).
 
 ## Agent security
 
@@ -122,77 +167,3 @@ By embedding these five pillars into the AI agent lifecycle, technical leaders r
 - **Microsoft Copilot Studio:**
     - Review access, connectors, and environment boundaries against the consolidated [Security and governance guidance](/azure/microsoft-copilot-studio/security-and-governance).
     - Run pre-deployment assurance using the [Automatic security scan](/azure/microsoft-copilot-studio/security-scan) and continuously verify protections in production through the [Agent runtime protection status](/azure/microsoft-copilot-studio/security-agent-runtime-view) view.
-
-## Observability and monitoring
-
-Effective governance of AI agents requires full visibility into their identity, behavior, and operational footprint. Without observability, organizations risk deploying agents that operate outside policy boundaries, introduce security vulnerabilities, or degrade user trust. Monitoring ensures that agents perform as expected and that deviations trigger timely intervention. For technical decision makers, observability provides the foundation for accountability, risk mitigation, and operational resilience.
-
-To implement observability at scale, organizations must treat AI agents as first-class operational entities, similar to microservices or APIs with clear ownership, lifecycle tracking, and performance telemetry. This enables governance teams to detect anomalies, enforce policy, and maintain audit readiness across environments.
-
-1.  **Assign unique identities to agents across platforms.** Require every AI agent to have a persistent identity in the enterprise directory, such as an **Agent ID** in Microsoft Entra ID. This identity supports traceability, access control, and lifecycle management. Agents created through Microsoft Copilot Studio automatically receive such identities, enabling consistent oversight across environments. Use this identity to link logs, ownership metadata, and compliance status.
-
-2.  **Define ownership and scope for each agent.** Mandate that every agent has a designated owner and documented scope. This metadata must include the responsible team, approved data sources, intended use cases, and compliance review status. Require quarterly reviews to detect scope creep and enforce approval workflows for changes. This prevents agents from evolving beyond their original intent without oversight and ensures that every agent has accountable stewardship.
-
-3.  **Maintain a centralized agent catalog.** Direct governance teams to build and maintain a central inventory of all AI agents—experimental and production. This catalog should include identity, ownership, purpose, compliance status, and operational metrics. Use this portfolio to detect duplication, align governance reviews, and support discoverability of approved agents. A centralized view reduces shadow IT and improves coordination across departments.
-
-4.  **Implement tamper-evident logging of agent activity.** Require comprehensive logging of all agent interactions, including queries received, actions taken, and responses generated. Store logs in secure, write-once systems to prevent alteration. Include timestamps, user IDs, and agent IDs to support forensic analysis and accountability. Ensure that logs also capture refusals, escalations, and policy violations to inform governance reviews and model improvements.
-
-5.  **Deploy real-time monitoring and alerting.** Instruct platform teams to monitor agent behavior continuously and define thresholds for anomalous activity. Examples include spikes in usage, repeated errors, or unexpected data access patterns. Use telemetry to track performance metrics such as latency, success rates, and hallucination scores. Integrate monitoring with security operations to trigger alerts when agents deviate from expected behavior or policy constraints.
-
-6.  **Use continuous evaluation to validate agent performance.** Establish automated evaluation pipelines that test agents against predefined queries and expected outcomes. Track quality scores over time and investigate performance drift. Use these evaluations to inform retraining, grounding updates, or deprecation decisions. Continuous evaluation ensures that agents remain aligned with business goals and governance standards.
-
-By implementing these practices, technical leaders ensure that no agent operates in a blind spot. Observability transforms AI agents from opaque systems into transparent, accountable components of enterprise infrastructure.
-
-**Microsoft tools:**
-
-*   **Microsoft Copilot Studio:**
-    *   <https://learn.microsoft.com/en-us/power-platform/admin/power-virtual-agents-analytics> using built-in analytics and logging features in the Power Platform Admin Center.
-    *   <https://learn.microsoft.com/en-us/power-platform/admin/power-platform-admin-center> through solution pipelines, component libraries, and auditing capabilities.
-    *   <https://learn.microsoft.com/en-us/azure/microsoft-copilot-studio/guidance/sec-gov-intro> to ensure agents operate within approved boundaries.
-
-*   **Azure AI Foundry:**
-    *   <https://learn.microsoft.com/en-us/azure/ai-foundry/concepts/monitoring-dashboard> using the Foundry Monitoring Dashboard and Azure Monitor integration.
-    *   <https://learn.microsoft.com/en-us/azure/ai-foundry/concepts/evaluation> to track agent quality and detect drift.
-    *   <https://learn.microsoft.com/en-us/azure/ai-foundry/concepts/logging> using Azure Data Explorer, Log Analytics, and Microsoft Sentinel for security alerts and governance reporting.
-
-
-
-## Development Best Practices
-
-Establish and enforce best practices in the **development phase** to ensure that governance and security are baked into your AI agents from day one.
-
-*   **Template-based development:** All agent deployments should use **repeatable templates** or reference architectures. By providing developers (or citizen makers) with a vetted template that includes pre-configured safeguards (like default content filters, logging, error handling, and human handoff logic), you ensure consistency. Teams adopting the template benefit from embedded security and compliance checks, and any deviation from the template should be reviewed. Templates accelerate development by reducing guesswork and provide a common baseline that governance teams can easily evaluate. For example, a template might enforce that every agent has a standard “I’m sorry, I cannot help with that request” fallback for unanswerable questions, or that it uses a particular method for calling external APIs safely. Require justification if a team wants to build an agent without the approved template – this helps prevent rogue approaches and ensures alignment with enterprise standards.
-
-*   **Approved frameworks and tools:** Mandate that teams build agents using **approved frameworks** only. For instance, within your organization you might stipulate that all pro-code AI agents use Microsoft’s **Semantic Kernel** or the **Azure AI Foundry** SDK, and that citizen-developed bots use **Copilot Studio** or **Power Virtual Agents**. By standardizing on a set of tools, you ensure that those tools can be configured to meet your governance needs (and you avoid the scenario of having to govern a dozen different AI platforms). Approved frameworks usually come with enterprise features – e.g., the Microsoft Bot Framework or Semantic Kernel can integrate with your logging, authentication, and DevOps systems, whereas an unsupported open-source script might not. This also improves maintainability: if every team uses the same agent framework, updates (like applying a new security patch or upgrading to a safer AI model) can be rolled out uniformly. In short, **avoid custom one-off implementations** when an enterprise-grade option exists.
-
-**Microsoft Tools:**
-
-*   **Microsoft Copilot Studio:** Copilot Studio operates within Power Platform’s solution framework, which is ideal for implementing DevOps and ALM practices. Use **Solution Pipelines** in Copilot Studio to manage the lifecycle of agents from development to test to production. These pipelines let you define checkpoints – for instance, an agent must pass a **security test stage** and get approval from a risk officer before moving to production. Incorporate automated checks into the pipeline (such as running the Copilot Studio Test Kit or an Azure DevOps **Power Platform Checker**) and approvals (Power Platform can require a human approver to promote a solution). Also leverage **Reusable Component Libraries**: if you have common sub-flows or prompts that are known to be compliant, put them in a library that makers can import rather than reinventing. For example, a pre-built “Ask user for clarification” component that already handles privacy by not logging certain info. Microsoft Copilot Studio itself provides governance guidance in docs – ensure your development teams are trained on these guidelines. Finally, treat your Copilot Studio solutions like code: check them into source control (Power Platform allows solution export as files) and do code reviews on the JSON definitions especially for anything related to security (like connector references or allowed hosts). By using the pipeline and component features of Copilot Studio, you enforce a repeatable, controlled development process for all your low-code AI agents.
-
-*   **Azure AI Foundry:** Azure AI Foundry is geared towards professional developers and integrates tightly with standard dev tools. Take advantage of the **Azure AI Foundry VS Code extension**, which gives developers a consistent project structure and local linting for compliance (for instance, it can warn if your prompt is missing required disclaimers or if your config disallows certain operations). Set up **CI/CD workflows** with the provided **GitHub Actions for Foundry Evaluations**. These actions can automatically run your agent through a battery of tests (safety, quality, bias evaluations) on each pull request. Failing tests will prevent merge, thus embedding quality gates into development. Additionally, define **Azure Policies** for Foundry projects – e.g., a policy that no Foundry project can go to Production stage unless it has an associated compliance report and sign-off. Foundry’s Management Center allows governance of quotas and environments to ensure no one spins up unapproved projects. By using Foundry’s dev tooling and governance hooks, you essentially automate the governance: a developer pushing new agent code will automatically trigger all the checks and balances your policy demands. This not only ensures consistency and security, but also frees developers from guessing what the governance requirements are – they’re built into the tools they use. The net effect is faster development with fewer mistakes, all within the guardrails set by your organization.
-
-## Operations and lifecycle
-
-AI agents, once deployed, become persistent components of enterprise infrastructure. Their behavior, integrations, and underlying models evolve over time, which introduces operational risks if not governed properly. Technical decision makers must treat agent governance as a continuous discipline, not a one-time setup. This requires defining a clear lifecycle for each agent and enforcing structured change management to ensure that every modification aligns with business goals, security policies, and compliance standards.
-
-Without lifecycle planning, agents risk becoming outdated, misaligned, or vulnerable. Without change control, agents may expand their capabilities without oversight, introducing unintended access to sensitive systems or data. To mitigate these risks and maintain operational trust, organizations must implement the following practices:
-
-1.  **Define and document the full lifecycle of each agent.** Require teams to produce lifecycle documentation that includes the agent’s expected duration of use, criteria for retirement or replacement, and procedures for updating models or data sources. Monitor for changes in foundational technologies—such as new versions of Azure OpenAI models or deprecated connectors—and establish review checkpoints to evaluate their impact. Regularly assess agents in production to determine whether they require re-certification, upgrades, or decommissioning.
-
-2.  **Establish formal change management processes.** Treat any significant change to an agent’s functionality, scope, or integrations as a governance event. Require teams to log all major modifications—such as model updates, new skills, or expanded data access—and route them through a review board or designated approvers. Tie each change to a documented rationale and approval record. This prevents unauthorized feature additions and ensures that every evolution of the agent remains intentional and accountable.
-
-3.  **Integrate change control into deployment workflows.** Instruct platform teams to use structured pipelines that enforce governance gates before agents move between environments. Require compliance and security checks before promoting agents to production. Maintain version histories and rollback capabilities to recover from failed or risky changes. Schedule periodic reviews of all agents in production to validate their current configuration, ownership, and alignment with enterprise policies.
-
-By embedding lifecycle and change management into agent operations, organizations reduce the risk of unmanaged growth, ensure consistent oversight, and maintain trust in AI-driven systems. This approach aligns agent evolution with enterprise priorities and enables technical leadership to scale responsibly.
-
-**Microsoft tools:**
-
-*   **Microsoft Copilot Studio:**
-    *   Use <https://learn.microsoft.com/en-us/power-platform/alm/devops-build-tools> to manage agent promotion from development to production, with built-in checkpoints for compliance and security reviews.
-    *   Follow <https://learn.microsoft.com/en-us/azure/microsoft-copilot-studio/guidance/sec-gov-intro> to maintain version control, enforce change logs, and schedule regular reviews of agent configurations.
-
-*   **Azure AI Foundry:**
-    *   Use <https://learn.microsoft.com/en-us/azure/ai-foundry/concepts/evaluation> to assess agent performance and trigger governance actions based on drift or anomalies.
-    *   Integrate <https://learn.microsoft.com/en-us/azure/devops/release-notes/2020/sprint-166-update#release-gates-enhancements> or GitHub protections to enforce governance sign-offs before production deployment.
-    *   Use <https://learn.microsoft.com/en-us/azure/ai-foundry/concepts/model-catalog> to manage model updates and enable rapid rollback when necessary.
-
