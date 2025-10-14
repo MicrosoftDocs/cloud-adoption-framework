@@ -127,7 +127,7 @@ By embedding these five pillars into the AI agent lifecycle, technical leaders r
 
 Effective governance of AI agents requires full visibility into their identity, behavior, and operational footprint. Without observability, organizations risk deploying agents that operate outside policy boundaries, introduce security vulnerabilities, or degrade user trust. Monitoring ensures that agents perform as expected and that deviations trigger timely intervention. For technical decision makers, observability provides the foundation for accountability, risk mitigation, and operational resilience.
 
-To implement observability at scale, organizations must treat AI agents as first-class operational entities—similar to microservices or APIs—with clear ownership, lifecycle tracking, and performance telemetry. This enables governance teams to detect anomalies, enforce policy, and maintain audit readiness across environments.
+To implement observability at scale, organizations must treat AI agents as first-class operational entities, similar to microservices or APIs—with clear ownership, lifecycle tracking, and performance telemetry. This enables governance teams to detect anomalies, enforce policy, and maintain audit readiness across environments.
 
 1.  **Assign unique identities to agents across platforms.** Require every AI agent to have a persistent identity in the enterprise directory, such as an **Agent ID** in Microsoft Entra ID. This identity supports traceability, access control, and lifecycle management. Agents created through Microsoft Copilot Studio automatically receive such identities, enabling consistent oversight across environments. Use this identity to link logs, ownership metadata, and compliance status.
 
