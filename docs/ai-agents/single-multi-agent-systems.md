@@ -17,9 +17,11 @@ Designing an AI-powered solution begins with a key architectural decision: shoul
 
 Start by understanding the structure and complexity of the task. If the workflow is linear, well-bounded, and doesn’t require specialized roles, a single agent may be sufficient. However, if the task involves distinct subtasks (planning vs. execution, text vs. image processing), a multi-agent system may offer better modularity and long-term maintainability. Prototype a single-agent version and test end-to-end task completion. Run a dry simulation or prompt walkthrough to identify natural role separations. If responsibilities feel overloaded or entangled, consider splitting them.
 
+A major part of agentic workflows is including quality control. If an agent generates an article another agent needs to fact check it. If an agent generates structured text, a script should check for schema compliance and another agent checks the free-form values. There should be more quality control prompt text than generative text. validation agents and checks should be a core part of the process, not an afterthought.
+
 ## 2. Consider execution demands
 
-Even simple logic can become brittle under long-running workflows, large context windows, or multi-step coherence. A single agent may struggle to maintain memory or state across these boundaries. Measure token usage and memory retention during execution. If the agent frequently loses context or repeats clarifications, consider distributing responsibilities across agents with scoped memory.
+Even simple logic can become brittle under long-running workflows, large context windows, or multi-step coherence. A single agent may struggle to maintain memory or state across these boundaries. Measure token usage and memory retention during execution. If the agent frequently loses context or repeats clarifications, consider distributing responsibilities across agents with scoped memory. Don't create multiple agents for simple tasks. This creates more cost and latency without benefit.
 
 ## 3. Evaluate feature scope and growth
 

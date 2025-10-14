@@ -17,7 +17,7 @@ The guidance assumes governance and security controls are established. It focuse
 
 **Prerequisite:**
 
-1. **Set up your environment:** For **Azure AI Foundry** Start with an Azure landing zone, then use the application landing zone accelerator. For **Microsoft Copilot Studio setup,** [get access to Copilot Studio.](/azure/microsoft-copilot-studio/requirements-licensing-subscriptions) and [work with Power Platform environments](/azure/microsoft-copilot-studio/environments-first-run-experience).
+1. **Set up your environment:** For **Azure AI Foundry** Start with an Azure landing zone, then use the application landing zone accelerator. For **Microsoft Copilot Studio setup,** [get access to Copilot Studio.](/microsoft-copilot-studio/requirements-licensing-subscriptions) and [work with Power Platform environments](/microsoft-copilot-studio/environments-first-run-experience).
 1. Workload teams must use and apply the principles of the Well-Architected Framework for [AI workloads](/azure/well-architected/ai/).
 
 ## 1. Scope the agent
@@ -80,7 +80,7 @@ Direct workload teams to connect only approved and validated knowledge sources t
 
 Enable agents to perform approved actions such as creating support tickets or scheduling meetings. These actions must align with governance policies and use least-privilege principles to minimize risk. Validate each action in isolation before production deployment and enforce detailed logging for compliance.
 
-**Microsoft Copilot Studio:** Integrate content using [knowledge sources](/microsoft-copilot-studio/knowledge-copilot-studio) and [connectors](/microsoft-copilot-studio/advanced-connectors) to ground agent responses. Secure data by [protecting sensitive information](/microsoft-copilot-studio/security-and-governance) with data loss prevention policies and sensitivity labels. Ensure compliance by [viewing sensitivity labels](/microsoft-copilot-studio/sensitivity-label-copilot-studio) for SharePoint data sources. Expand functionality by [extending agent capabilities](/microsoft-copilot-studio/copilot-connectors-in-copilot-studio) with prebuilt or custom connectors. Enable autonomous actions by [orchestrating agent behavior](/microsoft-copilot-studio/advanced-generative-actions) to perform tasks without explicit user commands. Rely on [automatically updates indexed content](/azure/microsoft-copilot-studio/knowledge-unstructured-data) for indexed knowledge sources to maintain accuracy.
+**Microsoft Copilot Studio:** Integrate content using [knowledge sources](/microsoft-copilot-studio/knowledge-copilot-studio) and [connectors](/microsoft-copilot-studio/advanced-connectors) to ground agent responses. Secure data by [protecting sensitive information](/microsoft-copilot-studio/security-and-governance) with data loss prevention policies and sensitivity labels. Ensure compliance by [viewing sensitivity labels](/microsoft-copilot-studio/sensitivity-label-copilot-studio) for SharePoint data sources. Expand functionality by [extending agent capabilities](/microsoft-copilot-studio/copilot-connectors-in-copilot-studio) with prebuilt or custom connectors. Enable autonomous actions by [orchestrating agent behavior](/microsoft-copilot-studio/advanced-generative-actions) to perform tasks without explicit user commands. Rely on [automatically updates indexed content](/microsoft-copilot-studio/knowledge-unstructured-data) for indexed knowledge sources to maintain accuracy.
 
 **Azure AI Foundry:**
 1. Use [knowledge tools](/azure/ai-foundry/agents/how-to/tools/overview) to connect data to your agents.
