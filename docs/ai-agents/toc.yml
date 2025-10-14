@@ -13,15 +13,20 @@ items:
       - name: 4. Data strategy
         href: data-strategy.md
   - name: Governance and security
-    href: governance-security.md
+    expanded: true
+    items:
+      - name: Agent governance and security
+        href: governance-security.md
+      - name: Data governance and security
+        href: data-governance-security.md
   - name: Implementation roadmap
     expanded: true
     items:
       - name: 1. Single or multi-agent?
         href: single-multi-agent-systems.md
-      - name: 2. Build agents
+      - name: 2. Plan & build agents
         href: build-process.md
-      - name: 3. Deploy agents
+      - name: 3. Deploy and mange agents
         href: deploy.md
       - name: 4. Manage agents
         href: manage.md
