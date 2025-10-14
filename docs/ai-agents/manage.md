@@ -52,6 +52,26 @@ For retirement, define criteria for obsolescence such as declining usage or avai
 
 Lifecycle planning ensures efficient resource reallocation and prevents unmanaged technical debt.
 
+## Operations and lifecycle
+
+AI agents, once deployed, become persistent components of enterprise infrastructure. Their behavior, integrations, and underlying models evolve over time, which introduces operational risks if not governed properly. Technical decision makers must treat agent governance as a continuous discipline, not a one-time setup. This requires defining a clear lifecycle for each agent and enforcing structured change management to ensure that every modification aligns with business goals, security policies, and compliance standards.
+
+Without lifecycle planning, agents risk becoming outdated, misaligned, or vulnerable. Without change control, agents may expand their capabilities without oversight, introducing unintended access to sensitive systems or data. To mitigate these risks and maintain operational trust, organizations must implement the following practices:
+
+1.  **Define and document the full lifecycle of each agent.** Require teams to produce lifecycle documentation that includes the agent’s expected duration of use, criteria for retirement or replacement, and procedures for updating models or data sources. Monitor for changes in foundational technologies—such as new versions of Azure OpenAI models or deprecated connectors—and establish review checkpoints to evaluate their impact. Regularly assess agents in production to determine whether they require re-certification, upgrades, or decommissioning.
+
+2.  **Establish formal change management processes.** Treat any significant change to an agent’s functionality, scope, or integrations as a governance event. Require teams to log all major modifications—such as model updates, new skills, or expanded data access—and route them through a review board or designated approvers. Tie each change to a documented rationale and approval record. This prevents unauthorized feature additions and ensures that every evolution of the agent remains intentional and accountable.
+
+3.  **Integrate change control into deployment workflows.** Instruct platform teams to use structured pipelines that enforce governance gates before agents move between environments. Require compliance and security checks before promoting agents to production. Maintain version histories and rollback capabilities to recover from failed or risky changes. Schedule periodic reviews of all agents in production to validate their current configuration, ownership, and alignment with enterprise policies.
+
+By embedding lifecycle and change management into agent operations, organizations reduce the risk of unmanaged growth, ensure consistent oversight, and maintain trust in AI-driven systems. This approach aligns agent evolution with enterprise priorities and enables technical leadership to scale responsibly.
+
+**Microsoft tools:**
+
+- **Azure AI Foundry:**
+
+- **Microsoft Copilot Studio:**
+
 ## Feed operational insights into AI strategy
 
 Use lessons learned from managing AI agents to refine future initiatives. Successful scaling and high ROI justify increased investment in similar solutions. Conversely, retiring an agent due to limitations informs better selection criteria for upcoming projects. Treat the operate-and-improve phase as a strategic feedback loop that strengthens organizational AI maturity.
