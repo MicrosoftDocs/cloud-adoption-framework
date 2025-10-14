@@ -15,6 +15,8 @@ items:
   - name: Governance and security
     expanded: true
     items:
+      - name: Responsible AI
+        href: responsible-ai.md
       - name: Agent governance and security
         href: governance-security.md
       - name: Data governance and security
@@ -26,7 +28,7 @@ items:
         href: single-multi-agent-systems.md
       - name: 2. Plan & build agents
         href: build-process.md
-      - name: 3. Deploy and mange agents
-        href: deploy.md
+      - name: 3. Integrate and iterate
+        href: integrate-iterate.md
       - name: 4. Manage agents
         href: manage.md
