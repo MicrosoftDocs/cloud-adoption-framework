@@ -74,13 +74,27 @@ Evaluating technical feasibility ensures that AI agent use cases align with the 
 
 ## Establish success metrics
 
-AI agent initiatives must begin with a clear definition of success. Without measurable outcomes tied to business value, organizations risk deploying solutions that fail to justify their cost or effort. Technical leaders must guide their teams to define success in terms, such as operational efficiency, cost reduction, or customer satisfaction, and use these metrics to govern the entire lifecycle of the agent.
+AI agent initiatives must begin with a clear definition of success. Without measurable outcomes tied to business value, organizations risk deploying solutions that fail to justify their cost or effort. Technical leaders must guide their teams to define success in terms such as operational efficiency, cost reduction, or customer satisfaction, and use these metrics to govern the entire lifecycle of the agent.
 
-1. **Set target values and timelines.** Define success in measurable terms, such as “reduce handling time by 20% within 3 months of launch.” These targets provide clarity and serve as checkpoints for evaluating post-deployment performance. Align timelines with business expectations for ROI to maintain stakeholder confidence.
+Success metrics serve as the foundation for evaluating agent performance, guiding investment decisions, and informing lifecycle governance. By establishing these metrics early, organizations create a consistent framework for assessing value, managing change, and determining when to scale or retire agents.
 
-2. **Establish a baseline.** Measure current performance before deploying the agent. For example, document the average handle time and error rate for a process. Use these baselines to quantify the agent’s impact and validate its effectiveness.
+1.  **Set target values and timelines.** Define success in measurable terms, such as “reduce handling time by 20% within 3 months of launch.” These targets provide clarity and serve as checkpoints for evaluating post-deployment performance. Align timelines with business expectations for ROI to maintain stakeholder confidence.
 
-3. **Use success criteria as go/no-go gates.** Apply success criteria throughout the project lifecycle. If early prototypes or pilot results fall short of targets, reassess the initiative’s viability. Cancel or pivot underperforming projects early to avoid sunk costs and maintain strategic focus.
+2.  **Establish a baseline.** Measure current performance before deploying the agent. For example, document the average handle time and error rate for a process. Use these baselines to quantify the agent’s impact and validate its effectiveness.
+
+3.  **Use success criteria as go/no-go gates.** Apply success criteria throughout the project lifecycle. If early prototypes or pilot results fall short of targets, reassess the initiative’s viability. Cancel or pivot underperforming projects early to avoid sunk costs and maintain strategic focus.
+
+4.  **Link success metrics to lifecycle governance.** Use the same metrics to inform decisions about scaling, modifying, or retiring agents. For example, if an agent consistently meets or exceeds its success targets, prepare to extend its capabilities or apply its model to adjacent processes. If performance declines or fails to meet expectations, initiate structured change management or decommissioning procedures.
+
+5.  **Feed metrics into operational reviews.** Incorporate success metrics into quarterly performance evaluations and business reviews. Use these insights to justify continued investment, prioritize enhancements, or redirect resources to higher-impact initiatives.
+
+This approach ensures that every phase of the agent lifecycle—from deployment to retirement—remains grounded in measurable business value. It also enables technical leadership to maintain strategic alignment and operational discipline across AI initiatives.
+
+**Microsoft tools::**
+
+*   **Azure AI Foundry:** <https://learn.microsoft.com/en-us/azure/ai-foundry/how-to/costs-plan-manage> supports tracking agent ROI through quota and budget alerts. <https://learn.microsoft.com/en-us/azure/ai-foundry/how-to/monitor-applications> enables teams to assess performance against predefined metrics and thresholds.
+
+*   **Microsoft Copilot Studio:** <https://learn.microsoft.com/en-us/azure/microsoft-copilot-studio/analytics-overview> provides visibility into agent performance and user satisfaction. <https://learn.microsoft.com/en-us/azure/microsoft-copilot-studio/analytics-transcripts-studio> supports qualitative analysis of agent effectiveness.
 
 ## Next step
 

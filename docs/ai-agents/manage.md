@@ -1,5 +1,5 @@
 ---
-title: Manage AI agents
+title: Monitor impact and scale AI agents
 description: Learn Manage AI agents
 author: stephen-sumner
 ms.author: pnp
@@ -9,9 +9,9 @@ ms.topic: conceptual
 ms.collection: ce-skilling-ai-copilot
 ---
 
-# Manage AI agents
+# Monitor impact and scale AI agents
 
-This article explains how to govern and optimize AI agents after deployment to ensure cost efficiency, operational reliability, and continuous improvement. AI agents are software components that interact with users or systems to perform tasks autonomously. Managing these agents effectively is critical for controlling costs, maintaining performance, and aligning with business objectives. The guidance below outlines sequential steps for decision makers to establish governance and operational practices that keep AI agents secure, efficient, and valuable.
+AI agents operate as autonomous software components that interact with users or systems to perform tasks. Once deployed, these agents become persistent elements of enterprise infrastructure. Their behavior, integrations, and underlying models evolve, which introduces operational risks and cost variability. To maintain trust, maximize ROI, and align with business priorities, technical leaders must establish governance and operational practices that ensure agents remain secure, efficient, and strategically valuable.
 
 ## Control cost and maximize value
 
@@ -30,7 +30,7 @@ AI agents consume cloud resources continuously, which can lead to unpredictable 
 
 ## Monitor agents
 
-AI agents must deliver consistent value to users and stakeholders. Treat agents as dynamic business assets that require regular evaluation. Technical leaders must embed performance monitoring into operational workflows and ensure that feedback loops inform continuous improvement.
+AI agents must deliver consistent value to users and stakeholders. Performance monitoring must align with the success metrics defined during the planning phase. Technical leaders must embed these metrics into operational workflows and ensure that feedback loops inform continuous improvement.
 
 1. Conduct quarterly reviews of agent metrics such as success rate, deflection rate, and user satisfaction.
 1. Monitor feedback channels daily or weekly to identify prompt updates, content corrections, or feature requests.
@@ -65,4 +65,9 @@ This integrated approach to lifecycle governance reduces the risk of unmanaged g
 
 ## Feed operational insights into AI strategy
 
-Use lessons learned from managing AI agents to refine future initiatives. Successful scaling and high ROI justify increased investment in similar solutions. Conversely, retiring an agent due to limitations informs better selection criteria for upcoming projects. Treat the operate-and-improve phase as a strategic feedback loop that strengthens organizational AI maturity.
+Operational data from deployed agents provides valuable feedback for future initiatives. Technical leaders must use the original success metrics to evaluate outcomes and inform strategic decisions. This feedback loop strengthens organizational AI maturity and guides investment in future solutions.
+
+1. Track outcomes such as cost savings and revenue growth against the original success targets to validate ROI.
+2. Extend AI agents to additional processes once value is proven and success metrics are consistently met.
+3. Use retirement decisions and performance gaps to refine selection criteria for future agents.
+4. Integrate lessons learned into strategic planning and roadmap development to improve future deployments.
