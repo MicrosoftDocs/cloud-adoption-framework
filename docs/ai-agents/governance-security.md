@@ -32,8 +32,8 @@ To translate these Responsible AI principles into enforceable practices, organiz
     - Schedule fairness and safety evaluations using [continuous evaluation for agents](/azure/ai-foundry/how-to/continuous-evaluation-agents).
 
 - **Microsoft Copilot Studio:**
-    - Configure content moderation policies at ingestion and retrieval using [Knowledge sources content moderation](/azure/microsoft-copilot-studio/knowledge-copilot-studio#content-moderation) and document escalation behavior for unknown intents.
-    - Apply structured guardrails following the [Governance and security best practices overview](/azure/microsoft-copilot-studio/guidance/sec-gov-intro) and map each agent to documented ownership and scope in your governance catalog.
+    - Configure content moderation policies at ingestion and retrieval using [Knowledge sources content moderation](/microsoft-copilot-studio/knowledge-copilot-studio#content-moderation) and document escalation behavior for unknown intents.
+    - Apply structured guardrails following the [Governance and security best practices overview](/microsoft-copilot-studio/guidance/sec-gov-intro) and map each agent to documented ownership and scope in your governance catalog.
     minimize over-privileged operations.
 
 ## Agent governance
@@ -101,13 +101,13 @@ Governance must adapt to evolving risks, regulations, and business priorities. C
     - - Automate quality and safety gates by integrating evaluation workflows via [GitHub Actions evaluations](/azure/ai-foundry/how-to/evaluation-github-action?tabs=foundry-project) or [Azure DevOps evaluations](/azure/ai-foundry/how-to/evaluation-azure-devops?tabs=foundry-project) and enforce standardized agent behaviors using reusable templates in source control.
 
 - **Microsoft Copilot Studio**
-    - Apply structured guardrails following the [Governance and security best practices overview](/azure/microsoft-copilot-studio/guidance/sec-gov-intro) and map each agent to documented ownership and scope in your governance catalog.
-    - [Data locations in Copilot Studio](/azure/microsoft-copilot-studio/data-location) helps align AI agent deployments with jurisdictional requirements.
-    - [Compliance (ISO, SOC, HIPAA) documentation](/azure/microsoft-copilot-studio/admin-certification) validates adherence to enterprise-grade security and privacy standards.
-    -  Standardize lifecycle workflows using [Create and manage solution pipelines](/azure/microsoft-copilot-studio/authoring-solutions-overview#create-and-manage-solution-pipelines) to embed approval, testing, and security validation checkpoints.
-    - Accelerate compliant scaling and reduce drift by organizing validated building blocks in [Reusable component collections](/azure/microsoft-copilot-studio/authoring-export-import-copilot-components) and enforcing version governance.
-    - Coordinate feature evolution and deprecation decisions under the governance processes outlined in the [Governance and security best practices overview](/azure/microsoft-copilot-studio/guidance/sec-gov-intro) and ensure each material change passes security scan reassessment.
-    - Validate solution packaging and environment promotion paths using [Solution pipelines](/azure/microsoft-copilot-studio/authoring-solutions-overview#create-and-manage-solution-pipelines) while enforcing required compliance documentation updates at each release gate.
+    - Apply structured guardrails following the [Governance and security best practices overview](/microsoft-copilot-studio/guidance/sec-gov-intro) and map each agent to documented ownership and scope in your governance catalog.
+    - [Data locations in Copilot Studio](/microsoft-copilot-studio/data-location) helps align AI agent deployments with jurisdictional requirements.
+    - [Compliance (ISO, SOC, HIPAA) documentation](/microsoft-copilot-studio/admin-certification) validates adherence to enterprise-grade security and privacy standards.
+    -  Standardize lifecycle workflows using [Create and manage solution pipelines](/microsoft-copilot-studio/authoring-solutions-overview#create-and-manage-solution-pipelines) to embed approval, testing, and security validation checkpoints.
+    - Accelerate compliant scaling and reduce drift by organizing validated building blocks in [Reusable component collections](/microsoft-copilot-studio/authoring-export-import-copilot-components) and enforcing version governance.
+    - Coordinate feature evolution and deprecation decisions under the governance processes outlined in the [Governance and security best practices overview](/microsoft-copilot-studio/guidance/sec-gov-intro) and ensure each material change passes security scan reassessment.
+    - Validate solution packaging and environment promotion paths using [Solution pipelines](/microsoft-copilot-studio/authoring-solutions-overview#create-and-manage-solution-pipelines) while enforcing required compliance documentation updates at each release gate.
 
 ## Observability
 
@@ -132,8 +132,8 @@ By implementing these practices, technical leaders ensure that no agent operates
 **Microsoft tools:**
 
 *   **Microsoft Copilot Studio:**
-    -  Audit configuration modifications, publishing events, and component updates through [Monitor logging and auditing](/azure/microsoft-copilot-studio/admin-logging-copilot-studio) and reconcile anomalies during scheduled reviews.
-    - Reassess security posture and behavioral alignment periodically by correlating runtime protection insights from the [Agent runtime protection status](/azure/microsoft-copilot-studio/security-agent-runtime-view) with audit event streams from [logging and auditing](/azure/microsoft-copilot-studio/admin-logging-copilot-studio).
+    -  Audit configuration modifications, publishing events, and component updates through [Monitor logging and auditing](/microsoft-copilot-studio/admin-logging-copilot-studio) and reconcile anomalies during scheduled reviews.
+    - Reassess security posture and behavioral alignment periodically by correlating runtime protection insights from the [Agent runtime protection status](/microsoft-copilot-studio/security-agent-runtime-view) with audit event streams from [logging and auditing](/microsoft-copilot-studio/admin-logging-copilot-studio).
 
 - **Azure AI Foundry:**
     - Track model health and drift with [Monitor model deployments](/azure/ai-foundry/foundry-models/how-to/monitor-models) and application-level behaviors using [Monitor generative AI applications](/azure/ai-foundry/how-to/monitor-applications) while consolidating evaluation outputs through [continuous evaluation for agents](/azure/ai-foundry/how-to/continuous-evaluation-agents).
@@ -165,5 +165,5 @@ By embedding these five pillars into the AI agent lifecycle, technical leaders r
     - Prepare rollback and continuity procedures using [Customer enabled disaster recovery](/azure/ai-foundry/how-to/disaster-recovery) and integrate proactive risk detection from [Risks and safety monitoring](/azure/ai-foundry/openai/how-to/risks-safety-monitor) to trigger containment workflows.
 
 - **Microsoft Copilot Studio:**
-    - Review access, connectors, and environment boundaries against the consolidated [Security and governance guidance](/azure/microsoft-copilot-studio/security-and-governance).
-    - Run pre-deployment assurance using the [Automatic security scan](/azure/microsoft-copilot-studio/security-scan) and continuously verify protections in production through the [Agent runtime protection status](/azure/microsoft-copilot-studio/security-agent-runtime-view) view.
+    - Review access, connectors, and environment boundaries against the consolidated [Security and governance guidance](/microsoft-copilot-studio/security-and-governance).
+    - Run pre-deployment assurance using the [Automatic security scan](/microsoft-copilot-studio/security-scan) and continuously verify protections in production through the [Agent runtime protection status](/microsoft-copilot-studio/security-agent-runtime-view) view.
