@@ -1,5 +1,5 @@
 ---
-title: Process to deploy AI agents
+title: Integrate and iterate
 description: Learn the process to deploy AI agents
 author: stephen-sumner
 ms.author: pnp
@@ -9,55 +9,63 @@ ms.topic: conceptual
 ms.collection: ce-skilling-ai-copilot
 ---
 
-# Process to deploy AI agents
+# Integrate and iterate AI agents
 
-After building an AI agent, it is critical to introduce it to real users carefully. This milestone is about deployment strategy, rolling out the agent in phases, validating it in production conditions, and scaling up usage in a controlled way. The focus for technical decision makers is on risk mitigation and feedback loop. You want to catch any issues early with minimal business impact and ensure the agent truly adds value before broad release.
+Organizations that deploy AI agents across business processes must establish a consistent method to validate, embed, and refine these agents. These processes may be newly automated or may already rely on manual or legacy systems. In either case, technical decision makers must ensure that AI agents operate within real business environments to deliver measurable outcomes. This article outlines a scalable approach to reduce deployment risk, accelerate value realization, and maintain operational alignment across internal and external use cases.
 
-## Define readiness criteria
+## Integrate AI agents into business processes
 
-Before you enable any users to use the AI agent, be explicit about what conditions must be met to consider the agent ready for launch. These criteria should cover functional performance such as the agent answers at least 90 percent of test questions correctly, non-functional metrics such as Response time is under 3 seconds on average or System can handle 100 concurrent users without degradation, and compliance checks such as No privacy violations found in testing, all outputs comply with policy.
+AI agents must operate within the context of real business processes to deliver measurable value. These processes may be newly automated for the first time or may already rely on existing tools and manual methods. In either case, integration must reflect actual operational conditions and user behavior. This approach enables early detection of performance gaps, avoids misalignment with business goals, and ensures that agents contribute to meaningful outcomes.
 
-### Rollback strategies
+Technical decision makers must guide their teams to treat integration as a strategic deployment, not a technical experiment. This means embedding agents into processes that already generate business value or have clear potential to do so. It also means replacing legacy methods only when the agent demonstrates readiness and operational fit.
 
-At the same time, prepare a rollback plan in case something goes wrong after release. This plan should outline how to quickly disable or remove the agent from user access if a severe bug or incident occurs, who has the authority to trigger a rollback such as on-call platform engineer or a duty manager, and how to communicate the rollback to users. Having a rollback strategy is a safety net that gives the team confidence to proceed, knowing they can undo the deployment if needed.
+1. Identify business processes that either lack automation or rely on outdated methods. Prioritize those with high volume, repetitive tasks, or measurable inefficiencies.
+1. Select pilot groups that reflect actual user behavior and include stakeholders from departments that own the process. Avoid isolated testing environments that fail to capture real usage patterns.
+1. Integrate agents with existing platforms and tools to minimize disruption. Use orchestration platforms or connectors to streamline this integration and ensure compatibility.
+1. Define clear entry and exit criteria for each pilot. Include performance benchmarks, user engagement thresholds, and rollback protocols to manage risk and validate readiness.
 
-### Incremental rollout
+## Capture feedback across agents
 
-Additionally, plan for incremental rollout. Perhaps your readiness criteria are first proven in a pilot group. Define criteria for expanding from pilot to 50 percent audience, then to 100 percent. That way each stage has a checkpoint. Finally, make sure your support teams are briefed on the deployment timeline and expected issues so they are ready as well. A well-defined entry and exit criteria for launch ensures you do not rush an unprepared agent out, and if you do encounter surprises, you can respond without panic.
+Feedback loops provide essential insight into agent effectiveness and guide iterative improvements. Without structured feedback, teams risk deploying agents that fail to meet business goals or user expectations.
 
-## Begin with a pilot release
+Technical decision makers must ensure that feedback mechanisms are embedded into every agent deployment. These mechanisms must capture both quantitative and qualitative data to inform refinement and validate business impact.
 
-Start with a limited pilot release to validate the agent in real-world conditions. Instead of flipping the switch for all users on day one, do a pilot launch with a small, controlled audience. This could be a specific department, a group of friendly end users who volunteered, or a percentage of customers if it is a public-facing agent. The pilot allows you to observe how the agent performs with actual user behavior, which often uncovers issues not found in testing.
+1. Monitor agent interactions in real time using dashboards and session logs to capture operational metrics.
+1. Provide intuitive feedback channels such as embedded surveys or comment boxes to collect user insights.
+1. Conduct onboarding sessions to educate users on agent capabilities and gather early impressions.
+1. Compare pilot outcomes to pre-launch baselines, such as resolution time, user satisfaction, or cost reduction, to assess impact.
 
-Enable real-time monitoring and feedback collection. Require teams to review transcripts manually when feasible and provide users with simple feedback channels such as buttons or internal reporting tools. Halt rollout immediately if critical issues arise and resolve root causes before expansion.
+## Refine agents in agile cycles
 
-### Monitor closely after launch
+Static release plans often fail to accommodate evolving user needs. Agile refinement cycles allow teams to respond quickly to feedback and improve agent performance, usability, and alignment with business goals.
 
-If possible, have members of the workload team or platform team practically on call to watch sessions or metrics live when pilot users first start. This way, if something is obviously wrong such as the agent crashes or gives many incorrect answers, you can pause and fix before more people see it.
+Technical decision makers must establish agile processes that prioritize continuous improvement. These processes must enable rapid updates, revalidation, and reuse of successful patterns across the agent portfolio.
 
-### Check assumptions
+1. Prioritize issues uncovered during pilots, such as incorrect responses, latency, or low adoption.
+1. Update agent logic, training data, or configuration based on observed behavior and user feedback.
+1. Revalidate changes with pilot groups before broader rollout to ensure improvements address root causes.
+1. Document learnings and update reusable templates to improve future deployments and reduce rework.
 
-Use the pilot to check assumptions. Are users using the agent as much as you thought they would? Do they trust its answers? Are there certain requests it could not handle that we need to add before wider release? Treat this as a learning sprint. Also pay attention to the pilot’s effect on existing processes. For example, did the IT support tickets drop by X percent as expected because the agent is deflecting them? Or are users still going to the old process, indicating the agent is not yet intuitive or known enough?
+## Expand rollout across the portfolio
 
-### Expand rollout
+Once agents meet readiness criteria, organizations must scale deployment in controlled phases to avoid business disruption. A phased rollout strategy ensures stability and allows for rapid response to emerging issues. Technical decision makers must define clear thresholds for expansion and establish governance checkpoints to manage risk. This approach ensures that agents continue to meet performance expectations as deployment scales.
 
-Gradually expand the rollout while continuing to monitor and address issues. Once the pilot phase is successful, plan a phased rollout to the larger audience. For internal agents, this could mean adding more departments or regions in waves. For customer-facing, it could mean increasing the percentage of traffic that gets the AI agent. Some services allow flighting a feature to a percentage of users, which you can ramp up. By doing it gradually, if any strain or new issue emerges at higher volume, you catch it early.
+1. Define thresholds for scaling, such as performance stability, user satisfaction, and operational readiness.
+1. Use flighting strategies to gradually increase exposure, such as rolling out to additional departments or customer segments.
+1. Prepare support teams with escalation paths and expected issue documentation to ensure rapid resolution.
+1. Conduct go/no-go reviews with stakeholders before each expansion phase to confirm readiness.
 
-## Capture feedback and measure success
+## Build reusable templates for agent development
 
-Collect structured and anecdotal feedback from early users. Use surveys, ratings, and direct comments to assess effectiveness. Conduct onboarding sessions to explain design decisions and engage users in ambassador programs. Compare outcomes to pre-launch baselines. Evaluate metrics such as ticket deflection, resolution time, and user satisfaction. Share early wins and improvement areas with stakeholders to maintain alignment and funding.
+Reusable templates reduce errors, accelerate development, and improve consistency across the AI agent portfolio. Templates also enable teams to scale innovation without reinventing foundational components. Technical decision makers must direct their teams to codify successful patterns into reusable templates. These templates must support both single-agent and multi-agent systems and align with enterprise governance standards.
 
-Use the success metrics from your planning phase as part of this. For instance, if in pilot the agent only achieved 10 percent cost reduction versus the 30 percent goal, you might deem it not ready for full launch yet and iterate more. Also ensure you have monitored a sufficient variety of scenarios. Sometimes expanding testing to a beta group internally can reveal new issues. Once you have readiness criteria, do a go or no-go review with stakeholders to sign off that criteria are met.
+1. Create architecture templates that include input handling, context management, and security protocols.
+1. Extend templates to support multi-agent systems with orchestration and conflict resolution strategies.
+1. Require teams to contribute improvements and maintain version control to ensure template quality.
+1. Use platform governance capabilities to enforce template usage and align with enterprise standards.
 
-## Develop reusable assets and templates
+**Microsoft tools::**
 
-As your AI agent portfolio grows, reusable templates improve consistency and speed. A template defines inputs, logic, outputs, tools, and policies. Teams can use these to build agents more efficiently and with fewer errors, especially when supported by platforms that enable low-code customization, secure deployment, and scalable orchestration.
+- **Azure AI Foundry:** Use [Azure AI Foundry resource templates](https://learn.microsoft.com/azure/ai-foundry/how-to/create-resource-template) to deploy infrastructure that supports secure and scalable agent embedding.
 
-1. **Create a template for single-agent architecture.** After successful deployments, capture design patterns including input handling, context management, error handling, and security. Combine code snippets, configuration, and documentation for reuse.
-2. **Extend templates to multi-agent systems.** Build reference designs for orchestrated patterns such as planner-executor models using platforms like Semantic Kernel or Foundry. Define communication protocols and conflict resolution strategies.
-3. **Share and refine templates.** Require teams to contribute improvements and update templates as technologies evolve. Use Copilot Studio and Azure AI Foundry for versioning, governance, and collaborative workflows.
-
-**Microsoft facilitation**
-
-- **Copilot Studio:** Use built-in agent templates to create and customize agents quickly. Learn more at [Microsoft Copilot Studio template fundamentals](/azure/microsoft-copilot-studio/template-fundamentals) and [Agent builder templates overview](/azure/microsoft-365-copilot/extensibility/agent-builder-templates).
-- **Azure AI Foundry:** Deploy reusable agent infrastructure using IaC templates. See [Create an AI Foundry resource using Bicep](/azure/ai-foundry/how-to/create-resource-template) and [Secure Bicep deployment samples](https://github.com/Azure-Samples/azure-ai-studio-secure-bicep).
+- **Microsoft Copilot Studio:** Use [agent builder templates in Microsoft Copilot Studio](https://learn.microsoft.com/azure/microsoft-365-copilot/extensibility/agent-builder-templates) to accelerate integration and ensure consistency across deployments.

@@ -13,13 +13,21 @@ ms.collection: ce-skilling-ai-copilot
 
 This article outlines a strategic approach for technical decision makers to evaluate, prioritize, and implement AI agents in alignment with business goals. AI agents offer transformative potential when applied to high-impact scenarios. However, without a clear strategy, organizations risk misaligned investments and limited adoption. This guidance helps leaders define where and why to invest in AI agents, how to measure success, and how to organize teams for effective implementation.
 
+## Understand the process and business case
+
+1. **Map the process.** Examine user workflows and customer processes to pinpoint where AI agents can provide the biggest efficiency gains.
+1. **Feasibility and ROI.** Examine user workflows and customer processes to pinpoint where AI agents can provide the biggest efficiency gains.
+1. **Build a pilot.** Develop a minimal viable agent based that address your highest priority processes
+1. **Integrate and iterate.** Embed the pilot into existing  workflows, gather feedback, and refine the agent’s capabilities in agile cycles.
+1. **Measure impact and scale.** Track outcomes (cost savings, revenue growth) and extend AI agents to further processes once value is proven
+
 ## When not to use AI agents
 
 AI agents are not universally applicable. Misuse leads to wasted effort and unnecessary risk. **Avoid agents for easily scripted tasks.** If a problem can be solved with a simple script, automation tool, or existing software, use those solutions instead. AI agents are best reserved for challenges that involve reasoning over complex data or dynamic interaction, especially when inputs and outputs vary widely and natural language is the most effective interface. This helps reduce wasted effort and unnecessary risk.
 
 ## Prioritize agent use cases
 
-Not all potential projects are equal. Focus on the “low-hanging fruit” that can demonstrate value quickly, as well as those aligned to major strategic goals. Early wins build momentum, and strategic projects secure executive buy-in.
+Not all potential projects are equal. Focus on the use cases that can demonstrate value quickly, as well as those aligned to major strategic goals. Early wins build momentum, and strategic projects secure executive buy-in.
 
 ### Business impact
 
