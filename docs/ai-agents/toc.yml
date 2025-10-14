@@ -1,16 +1,19 @@
 items:
   - name: Agents - Microsoft's Cloud Adoption Framework
     href: index.md
-  - name: Organizational readiness
+  - name: Strategy
     expanded: true
     items:
       - name: 1. Business strategy
         href: business-strategy.md
       - name: 2. Technology strategy
         href: technology-strategy.md
-      - name: 3. People strategy
+  - name: Organizational readiness
+    expanded: true
+    items:
+      - name: 1. People strategy
         href: people-strategy.md
-      - name: 4. Data strategy
+      - name: 2. Data strategy
         href: data-strategy.md
   - name: Governance and security
     expanded: true
@@ -26,9 +29,9 @@ items:
     items:
       - name: 1. Single or multi-agent?
         href: single-multi-agent-systems.md
-      - name: 2. Plan & build agents
+      - name: 2. Build agents
         href: build-process.md
       - name: 3. Integrate and iterate
         href: integrate-iterate.md
-      - name: 4. Manage agents
+      - name: 4. Measure impact and scale
         href: manage.md
