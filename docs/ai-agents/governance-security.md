@@ -1,40 +1,16 @@
-# Governance and Security for AI Agents
+---
+title: Governance and security for AI Agents
+description: Learn Governance and security for AI Agents
+author: stephen-sumner
+ms.author: pnp
+ms.date: 11/01/2025
+ms.update-cycle: 180-days
+ms.topic: conceptual
+---
+
+# Governance and security for AI Agents
 
 ***How to protect, regulate, and ensure responsible use of AI agents and the data they handle.*** Before your team writes a single line of code or launches an AI agent, put governance and security frameworks in place. Setting clear guardrails early will minimize the risk of incidents, ensure compliance with regulations, and maintain stakeholder trust. Rather than treating governance as a separate phase, weave these considerations throughout the design, build, deploy, and manage phases. However, it is useful to plan and implement core governance mechanisms at the outset so they are ingrained in the project's DNA.
-
-## Responsible AI
-
-How to embed ethical principles into every stage of AI agent development
-Responsible AI refers to the organizational commitment to design, deploy, and manage artificial intelligence systems in ways that uphold ethical principles, legal compliance, and societal trust. It encompasses fairness, reliability, safety, privacy, inclusiveness, transparency, and accountability. These principles must guide every stage of AI development, from data collection and model training to deployment and ongoing monitoring.
-
-This concept matters because AI systems increasingly influence decisions that affect customers, employees, and operations. Without a clear and enforceable standard, organizations risk reputational damage, regulatory penalties, and unintended harm to individuals or communities. Responsible AI shifts the focus from reactive compliance to proactive governance, enabling organizations to innovate confidently while minimizing risk.
-
-Technical decision makers must treat Responsible AI as a strategic capability, not a technical feature. This means embedding it into governance structures, development workflows, and operational oversight. The goal is to create a repeatable framework that applies to every AI agent and system, ensuring consistent ethical behavior across all use cases.
-
-1. **Establish a Responsible AI standard** that defines the principles and expectations for ethical AI use. Align this standard with global regulations and internal values. Ensure it applies to all AI systems, regardless of scale or visibility.
-
-1. **Integrate Responsible AI into governance processes** such as architecture reviews, security assessments, and compliance workflows. Avoid creating parallel structures by embedding ethical checks into existing decision-making forums.
-
-1. **Assign ownership to a centralized function** such as an Office of Responsible AI or a cross-functional ethics board. This group must oversee policy enforcement, conduct ethics reviews, and manage escalation procedures.
-
-1. **Ensure every AI agent adheres to Responsible AI principles.** Require bias assessments, content moderation, and fallback behavior for all agents. Treat prompt exploits and inappropriate outputs as bugs and remediate them through structured processes.
-
-1. **Monitor and improve AI systems continuously.** Track unknown queries, model drift, and fairness metrics. Use these insights to refine training data, update moderation rules, and improve agent behavior over time.
-
-To translate these Responsible AI principles into enforceable practices, organizations must implement robust governance and security frameworks. These frameworks ensure that ethical standards are not only aspirational but operational, embedded into every phase of AI agent development and deployment.
-
-**Microsoft Tools:**
-
-- **Azure AI Foundry:**
-
-    - Use the [Responsible AI dashboard](/azure/ai-foundry/responsible-use-of-ai-overview) to assess fairness, interpretability, and error analysis across models.
-    - Apply [Content Safety in Azure AI Foundry](/azure/ai-foundry/ai-services/content-safety-overview) and tune policies via [content filtering guidance](/azure/ai-foundry/concepts/content-filtering)
-    - Schedule fairness and safety evaluations using [continuous evaluation for agents](/azure/ai-foundry/how-to/continuous-evaluation-agents).
-
-- **Microsoft Copilot Studio:**
-    - Configure content moderation policies at ingestion and retrieval using [Knowledge sources content moderation](/microsoft-copilot-studio/knowledge-copilot-studio#content-moderation) and document escalation behavior for unknown intents.
-    - Apply structured guardrails following the [Governance and security best practices overview](/microsoft-copilot-studio/guidance/sec-gov-intro) and map each agent to documented ownership and scope in your governance catalog.
-    minimize over-privileged operations.
 
 ## Agent governance
 
@@ -45,12 +21,6 @@ AI agents now operate as integral components of organization systems. They inter
     - Define a governance framework that includes agent classification, risk thresholds, behavior monitoring, and data sensitivity mapping.
     - Align governance with internal enterprise policies and external standards such as the EU AI Act, treating regulatory compliance as one component of a broader governance strategy.
     - Translate governance requirements into enforceable controls using policy-as-code and centralized management tools.
-
-1. **Require traceability and audit readiness.** Traceability enables organizations to validate agent behavior, investigate anomalies, and demonstrate policy adherence. Audit readiness ensures that governance remains defensible and consistent across jurisdictions. Technical leaders must instruct teams to document governance decisions and maintain visibility across the agent lifecycle.
-
-    - Mandate documentation of governance decisions, including risk assessments, mitigation strategies, and test results.
-    - Store documentation in centralized systems that support audit trails and cross-team visibility.
-    - Use Microsoft Entra-agent ID capability to assign persistent identifiers to agents across environments. This enables traceability of agent behavior, ownership, and lifecycle events, even as agents evolve or move between platforms.
 
 1. **Integrate governance into development and deployment workflows.**
 Governance must operate as part of the engineering lifecycle—not as a post-deployment review. Embedding governance into CI/CD pipelines ensures that agents meet policy requirements before they reach production. This reduces the risk of policy violations and reactive remediation.
@@ -109,7 +79,7 @@ Governance must adapt to evolving risks, regulations, and business priorities. C
     - Coordinate feature evolution and deprecation decisions under the governance processes outlined in the [Governance and security best practices overview](/microsoft-copilot-studio/guidance/sec-gov-intro) and ensure each material change passes security scan reassessment.
     - Validate solution packaging and environment promotion paths using [Solution pipelines](/microsoft-copilot-studio/authoring-solutions-overview#create-and-manage-solution-pipelines) while enforcing required compliance documentation updates at each release gate.
 
-## Observability
+## Agent observability
 
 Effective governance of AI agents requires full visibility into their identity, behavior, and operational footprint. Without observability, organizations risk deploying agents that operate outside policy boundaries, introduce security vulnerabilities, or degrade user trust. Monitoring ensures that agents perform as expected and that deviations trigger timely intervention. For technical decision makers, observability provides the foundation for accountability, risk mitigation, and operational resilience.
 
