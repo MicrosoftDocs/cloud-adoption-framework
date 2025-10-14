@@ -196,4 +196,3 @@ By embedding lifecycle and change management into agent operations, organization
     *   Integrate <https://learn.microsoft.com/en-us/azure/devops/release-notes/2020/sprint-166-update#release-gates-enhancements> or GitHub protections to enforce governance sign-offs before production deployment.
     *   Use <https://learn.microsoft.com/en-us/azure/ai-foundry/concepts/model-catalog> to manage model updates and enable rapid rollback when necessary.
 
-Let me know if you'd like this section formatted into a governance playbook or presentation for internal review.
