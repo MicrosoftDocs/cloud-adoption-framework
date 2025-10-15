@@ -56,7 +56,7 @@ Consider the following factors when deciding which systems, users, or devices ca
 
 - **Session monitoring for outbound internet connection security:** Use rule control or session auditing of outbound internet connectivity from Azure VMware Solution to identify unexpected or suspicious outbound internet activity. Decide when and where to position outbound network inspection to ensure maximum security. For more information, see [Enterprise-scale network topology and connectivity for Azure VMware Solution](./eslz-network-topology-connectivity.md).
 
-  Use specialized firewall, NVA, and virtual wide-area network (Virtual WAN) services for outbound internet connectivity instead of relying on Azure VMware Solution's default internet connectivity. For more information and design recommendations, see [Inspecting Azure VMware Solution traffic with a network virtual appliance in Azure Virtual Network](https://avs.ms/nva/).
+  Use specialized firewall, NVA, and virtual wide-area network (Virtual WAN) services for outbound internet connectivity instead of relying on Azure VMware Solution's default internet connectivity. For more information and design recommendations, see [Inspecting Azure VMware Solution traffic with a network virtual appliance in Azure Virtual Network](/azure/cloud-adoption-framework/scenarios/azure-vmware/example-architectures).
 
   Use service tags like `Virtual Network` and fully qualified domain name (FQDN) tags for identification when filtering egress traffic with Azure Firewall. Use a similar capability for other NVAs.
 
