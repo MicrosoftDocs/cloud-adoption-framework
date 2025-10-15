@@ -42,19 +42,17 @@ Prebuilt agents handle integration internally and often require only configurati
 
 ## Hybrid approach
 
-Many businesses use multiple approaches in parallel based on the nature of each use case. As a technology leader, orchestrate a portfolio where individual use Copilots to get immediate improvements. Other build custom agents in Copilot Studio for specific needs. For strategic initiatives, use Azure AI Foundry for full custom development.
+Many organizations use multiple approaches in parallel based on the nature of each use case. Technical leaders must orchestrate a portfolio where individuals use Copilots for immediate improvements, teams build custom agents in Copilot Studio for departmental needs, and engineering groups use Azure AI Foundry for strategic initiatives.
 
-Diversify how you implement AI agents, matching each project’s approach to its urgency and complexity. Over time, you can consolidate or standardize where it makes sense, but initially a flexible strategy will maximize your overall ROI.
+Diversify how your organization implements AI agents, matching each project’s approach to its urgency, complexity, and integration requirements. Over time, consolidate or standardize where it makes sense, but initially a flexible strategy maximizes ROI and reduces time to value.
 
 ## Build prototypes
 
-Before fully committing budget and time to a chosen approach (whether buy, low-code, or pro-code), run a quick proof-of-concept to de-risk your decision. This is a leadership best practice to ensure you’re on the right track.
+Before fully committing budget and time to a chosen approach (whether buy, low-code, or pro-code), run a quick proof-of-concept to de-risk your decision. This leadership best practice helps ensure the selected path aligns with business needs and team capabilities.
 
-1. **Time-box experiments for each option.** Allocate a short period (one to two weeks) for your team to prototype the solution using different methods. For example, if debating between a low-code Power Virtual Agents bot and a custom Azure AI build, have a small team try creating a basic version in each. Compare the development speed, the functionality achieved, and any blockers encountered. These experiments will reveal which approach delivers the needed result with the least effort or uncover unforeseen limitations.
+1. **Time-box experiments for each option.** Allocate one to two weeks for your team to prototype the solution using different methods. For example, if deciding between a low-code Copilot Studio agent and a custom Azure AI Foundry build, have a small team create a basic version in each. Compare development speed, functionality, and blockers.
 
-2. **Pilot prebuilt solutions with real users.** If you’re evaluating a prebuilt Copilot, conduct a limited pilot in your environment. Enable the Copilot for a small user group and monitor usage and feedback for a couple of weeks. This will show you how well it actually addresses the use case and what adoption challenges might arise. For instance, you might discover that a sales Copilot isn’t used by reps because it doesn’t handle certain product data, indicating a gap to fill either via configuration or by choosing a different approach.
-
-3. **Adapt based on pilot learnings.** Use the findings from prototypes and pilots to inform your go-forward plan. If a low-code prototype met requirements, you can proceed confidently with that path and allocate resources accordingly. If it fell short, you may pivot to pro-code or refine the scope. The goal is to avoid costly surprises later by doing a lightweight trial run now. Make sure to capture and discuss pilot results with stakeholders before moving to the next phase.
+2. **Adapt based on pilot learnings.** Use findings from prototypes and pilots to inform your go-forward plan. If a low-code prototype meets requirements, proceed confidently with that path. If it falls short, pivot to pro-code or refine the scope. Capture and discuss pilot results with stakeholders before scaling.
 
 ## Next step
 
