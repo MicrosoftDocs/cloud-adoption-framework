@@ -12,13 +12,16 @@ items:
         href: people-strategy.md
       - name: 2. Data strategy
         href: data-strategy.md
-  - name: Govern and secure agents
+  - name: Governance and security
     expanded: true
     items:
       - name: 1. Responsible AI
         href: responsible-ai.md
       - name: 2. Agent governance and security
         href: governance-security.md
+      - href: ./governance-security.md
+      - name: 3. Agent observability
+        href: ./governance-security.md#agent-observability
       - name: 3. Data governance and security
         href: data-governance-security.md
   - name: Implementation roadmap
