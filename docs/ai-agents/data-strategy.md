@@ -1,6 +1,6 @@
 ---
-title: Data strategy
-description: Learn the Data strategy, governance, and security for AI agents
+title: Data strategy for AI agents
+description: Learn the Data strategy for AI agents
 author: stephen-sumner
 ms.author: pnp
 ms.date: 11/01/2025
@@ -8,7 +8,7 @@ ms.update-cycle: 180-days
 ms.topic: conceptual
 ---
 
-# Data strategy
+# Data strategy for AI agents
 
 **The data you need and how to structure it for agents.** Data is the foundation of any AI agent. Having a solid data strategy upfront accelerates implementation, improves outcomes, and controls risks. In this phase, you ensure your data is prepared and accessible for AI, and that all usage will comply with security and privacy requirements. As technical leaders begin shaping their organization’s AI agent strategy, whether through SaaS copilots, low-code platforms, or custom pro-code solutions, the priority is about establishing a scalable, repeatable process that ensures the right data is identified, evaluated, and made ready for each agent use case across the business.
 
