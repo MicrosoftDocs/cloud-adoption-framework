@@ -56,7 +56,7 @@ Application landing zone accelerators help you deploy common workloads in your a
 
 ### AI in Azure landing zones
 
-A common questions is whether you need a dedicated AI landing zone alongside your Azure landing zone. The answer is that you don't need a separate AI landing zone. Instead, you can use the existing Azure landing zone architecture to deploy AI workloads into. The Azure landing zone design areas and principles are sufficient to support AI workloads, as they provide the necessary foundation for governance, security, and management for applications and workloads that both include AI and non-AI components and services. 
+A common question is whether you need a dedicated AI landing zone alongside your Azure landing zone. The answer is that you don't need a separate AI landing zone. Instead, you use the existing Azure landing zone architecture to deploy AI workloads into application landing zones. The Azure landing zone design areas and principles are sufficient to support AI workloads, as they provide the necessary foundation for governance, security, and management for applications and workloads that both include AI and non-AI components and services.
 
 You can integrate AI services into your application landing zones without needing a separate AI landing zone. The Azure landing zone architecture, design principles, and design areas, such as identity and access management, network topology and connectivity, security, and governance, are already designed to accommodate all workloads, including those that involve AI.
 
