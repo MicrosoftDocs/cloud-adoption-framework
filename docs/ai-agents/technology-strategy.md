@@ -15,7 +15,7 @@ To support business outcomes, AI agents must be integrated into your broader tec
 
 | **Approach** | **Best for** | **Microsoft solution** |
 |--------------|-------------------------------|-------------------------|
-| SaaS agents (buy) | Personal productivity for information workers. Minimal customization required. Immediate value. | **Microsoft 365 Copilot**<br>**Role-based Copilots**<br>**In-product Copilots** |
+| SaaS agents (buy) | Personal productivity for information workers. Minimal customization required. Immediate value. | **Copilots** |
 | Low/no-code agents (build) | Process transformation for technical business users. Fast development with minimal coding. | **Microsoft Copilot Studio** |
 | Pro-code agents (build) | Strategic transformation for engineering teams. Deep integration and custom logic. | **Azure AI Foundry** |
 
@@ -23,11 +23,11 @@ To support business outcomes, AI agents must be integrated into your broader tec
 
 Here's an overview of the different agent adoption approaches. Each option presents distinct integration and data requirements that influence how teams implement and scale AI agents. These considerations affect not only technical feasibility but also the skills required across the organization.
 
-### Azure AI Foundry (build pro code)
+### Azure AI Foundry
 
 For strategic scenarios where AI becomes a core business capability, [Azure AI Foundry Agent Service](/azure/ai-foundry/agents/overview) provides the tools to build fully custom agents. Using the Agent Service and Microsoft’s open-source Agent Framework, engineering teams can develop sophisticated, multi-model agents with deep integrations and custom logic. These agents often require grounding in proprietary data sources, which means teams must prepare infrastructure and integration patterns that support scalable and secure access to internal systems. This path demands more time and technical investment but enables differentiated solutions that drive long-term value. Use the [Azure AI Foundry playground](/azure/ai-foundry/concepts/concept-playgrounds) to explore and prototype before scaling. Follow the [quickstart to create a new agent](/azure/ai-foundry/agents/quickstart)
 
-### Microsoft Copilot Studio (build low code)
+### Microsoft Copilot Studio
 
 When use cases require more customization but less engineering effort, [Microsoft Copilot Studio](/azure/microsoft-copilot-studio/) empowers IT pros and business users to build tailored AI agents. With a visual interface, built-in AI models, and over 1200 connectors, teams create conversational agents that integrate with business systems in weeks, not months.
 
@@ -35,7 +35,7 @@ Copilot Studio agents handle much of the integration complexity internally. The 
 
 Start with a [60-day free trial](/microsoft-copilot-studio/requirements-licensing-subscriptions#copilot-studio-for-microsoft-teams-plans) to validate use cases before committing to production licenses, ensuring you have time to build prototypes and gather stakeholder feedback. Review [access options](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio#access-copilot-studio).
 
-### Prebuilt agents (Copilots)
+### Copilots
 
 Microsoft 365 Copilot includes prebuilt agents like Researcher and Analyst to support individual productivity. In addition, Microsoft offers in-product Copilots across services such as Azure, GitHub, Microsoft Fabric, and Power Platform. Role-based Copilots support functions like security, finance, and sales. These agents deliver immediate value with minimal setup and no custom development.
 
