@@ -46,3 +46,8 @@ A well-informed decision balances simplicity, performance, scalability, maintain
 - **Start with a single agent** for simple, stable, and bounded tasks. This minimizes complexity and cost while supporting fast iteration.
 - **Use multiple agents** when specialization, modularity, security, or growth is expected. This supports scalability, team autonomy, and long-running workflows.
 - **Avoid premature complexity** by prototyping before scaling. Build a working single-agent version first, then expand if needed.
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Build AI agents](./build-process.md)

@@ -99,4 +99,4 @@ Direct workload teams to integrate observability tools early. Define key perform
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Deploy agents](./deploy.md)
+> [Integrate agents](./deploy.md)

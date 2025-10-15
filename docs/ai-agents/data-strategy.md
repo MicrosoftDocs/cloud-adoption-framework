@@ -23,3 +23,8 @@ Whether it lives in a domain-specific database, a data lake, or a business appli
 4. **Maintain data quality and freshness.** Data freshness and quality are ongoing responsibilities. The process should include guidance for setting refresh schedules based on the nature of the data. Real-time sources may require streaming updates, while static content may only need periodic reviews. Platform teams should automate refresh pipelines and monitor for failures. Workload teams should validate that the data continues to support the agent’s logic and business outcomes over time.
 
 5. **Reuse and scale data.** Finally, the process must support reuse and scale. As more agents are developed, the organization should avoid duplicating effort. Encourage teams to contribute prepared datasets, integration patterns, and enrichment tools to a shared repository. This enables future agents to build on existing work and accelerates development across domains.
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Responsible AI](./responsible-ai.md)
