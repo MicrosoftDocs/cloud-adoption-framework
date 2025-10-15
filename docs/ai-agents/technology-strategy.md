@@ -30,6 +30,7 @@ For strategic scenarios where AI becomes a core business capability, [Azure AI F
 ### Microsoft Copilot Studio (build low code)
 
 When use cases require more customization but less engineering effort, [Microsoft Copilot Studio](/azure/microsoft-copilot-studio/) empowers IT pros and business users to build tailored AI agents. With a visual interface, built-in AI models, and over 1200 connectors, teams create conversational agents that integrate with business systems in weeks, not months.
+
 Copilot Studio agents handle much of the integration complexity internally. The platform indexes connected data sources and uses built-in AI to interpret and respond to user inputs. This reduces the need for external orchestration or custom data pipelines. However, technical leaders must ensure that the systems Copilot Studio connects to are accessible, documented, and governed appropriately.
 
 Start with a [60-day free trial](/microsoft-copilot-studio/requirements-licensing-subscriptions#copilot-studio-for-microsoft-teams-plans) to validate use cases before committing to production licenses, ensuring you have time to build prototypes and gather stakeholder feedback. Review [access options](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio#access-copilot-studio).
