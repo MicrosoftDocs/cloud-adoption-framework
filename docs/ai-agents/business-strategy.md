@@ -6,7 +6,6 @@ ms.author: pnp
 ms.date: 11/01/2025
 ms.update-cycle: 180-days
 ms.topic: conceptual
-ms.collection: ce-skilling-ai-copilot
 ---
 
 # Business strategy for AI agents
