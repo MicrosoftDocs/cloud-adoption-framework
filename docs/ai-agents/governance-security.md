@@ -137,3 +137,8 @@ By embedding these five pillars into the AI agent lifecycle, technical leaders r
 - **Microsoft Copilot Studio:**
     - Review access, connectors, and environment boundaries against the consolidated [Security and governance guidance](/microsoft-copilot-studio/security-and-governance).
     - Run pre-deployment assurance using the [Automatic security scan](/microsoft-copilot-studio/security-scan) and continuously verify protections in production through the [Agent runtime protection status](/microsoft-copilot-studio/security-agent-runtime-view) view.
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Agent governance and security](./governance-security.md)

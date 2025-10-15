@@ -1,6 +1,14 @@
+---
+title: Responsible AI for AI agents
+description: Learn Responsible AI for AI agents
+author: stephen-sumner
+ms.author: pnp
+ms.date: 11/01/2025
+ms.update-cycle: 180-days
+ms.topic: conceptual
+---
 
-
-# Responsible AI
+# Responsible AI for AI agents
 
 ***How to embed ethical principles into every stage of AI agent development.*** Responsible AI refers to the organizational commitment to design, deploy, and manage artificial intelligence systems in ways that uphold ethical principles, legal compliance, and societal trust. It encompasses fairness, reliability, safety, privacy, inclusiveness, transparency, and accountability. These principles must guide every stage of AI development, from data collection and model training to deployment and ongoing monitoring.
 
@@ -8,37 +16,16 @@ This concept matters because AI systems increasingly influence decisions that af
 
 Technical decision makers must treat Responsible AI as a strategic capability, not a technical feature. This means embedding it into governance structures, development workflows, and operational oversight. The goal is to create a repeatable framework that applies to every AI agent and system, ensuring consistent ethical behavior across all use cases.
 
-1. **Establish a Responsible AI standard** that defines the principles and expectations for ethical AI use. Align this standard with global regulations and internal values. Ensure it applies to all AI systems, regardless of scale or visibility.
+1. **Establish a Responsible AI standard.** Define an organization-wide Responsible AI standard that all AI agents must follow. This should align with ethical principles (fairness, privacy, transparency) and relevant regulations. Make it an official policy that applies to every AI system, regardless of size or visibility. Integrate Responsible AI into governance processes, such as architecture reviews, security assessments, and compliance workflows. Avoid creating parallel structures by embedding ethical checks into existing decision-making forums.
 
-1. **Integrate Responsible AI into governance processes** such as architecture reviews, security assessments, and compliance workflows. Avoid creating parallel structures by embedding ethical checks into existing decision-making forums.
+1. **Assign ownership to a centralized function.** Establish a central Responsible AI oversight function to own this policy. Your governance team and AI center of excellence team should partner to create AI agent specific policies around Responsible AI. The platform should then automate the enforcement of these policies as much as possible. In practice, develop policy to require things like bias assessments, content moderation filters, and defined fallback behaviors (when the agent is unsure, it says “I don’t know” or hands off to a human) for every agent. Treat any harmful or biased output as a bug to be fixed via a formal process. This mindset drives continuous improvement on ethical dimensions.
 
-1. **Assign ownership to a centralized function** such as an Office of Responsible AI or a cross-functional ethics board. This group must oversee policy enforcement, conduct ethics reviews, and manage escalation procedures.
-
-1. **Ensure every AI agent adheres to Responsible AI principles.** Require bias assessments, content moderation, and fallback behavior for all agents. Treat prompt exploits and inappropriate outputs as bugs and remediate them through structured processes.
-
-1. **Monitor and improve AI systems continuously.** Track unknown queries, model drift, and fairness metrics. Use these insights to refine training data, update moderation rules, and improve agent behavior over time.
-
-1. **Implement tiered response systems and validation layers.** To operationalize Responsible AI across varying levels of agent complexity, organizations must design systems that route queries based on risk and complexity:
-
-    - Automate responses for simple queries using pre-approved logic and templates.
-    - Route moderate complexity cases through AI agents with human review checkpoints.
-    - Assign complex cases to human handlers supported by AI tools for summarization, retrieval, and recommendation.
-    - Validate data formats between tools by checking outputs against expected input schemas before passing them to the next step.
-    - Introduce self-correction mechanisms that allow agents to reformat unexpected inputs or request clarification before proceeding.
-
-These practices reduce error propagation, improve reliability, and ensure that ethical safeguards scale with operational complexity.
-
-To translate these Responsible AI principles into enforceable practices, organizations must implement robust governance and security frameworks. These frameworks ensure that ethical standards are not only aspirational but operational, embedded into every phase of AI agent development and deployment.
+1. **Monitor and improve AI systems continuously.** Also plan for continuous Responsible AI monitoring: track metrics like occurrences of disallowed content, model drift, or user complaints about fairness, and use them to improve the agent over time.
 
 **Microsoft Tools:**
+Use the [Responsible AI dashboard](/azure/ai-foundry/responsible-use-of-ai-overview) to assess fairness, interpretability, and error analysis across models.
 
-- **Azure AI Foundry:**
+## Next step
 
-    - Use the [Responsible AI dashboard](/azure/ai-foundry/responsible-use-of-ai-overview) to assess fairness, interpretability, and error analysis across models.
-    - Apply [Content Safety in Azure AI Foundry](/azure/ai-foundry/ai-services/content-safety-overview) and tune policies via [content filtering guidance](/azure/ai-foundry/concepts/content-filtering)
-    - Schedule fairness and safety evaluations using [continuous evaluation for agents](/azure/ai-foundry/how-to/continuous-evaluation-agents).
-
-- **Microsoft Copilot Studio:**
-    - Configure content moderation policies at ingestion and retrieval using [Knowledge sources content moderation](/microsoft-copilot-studio/knowledge-copilot-studio#content-moderation) and document escalation behavior for unknown intents.
-    - Apply structured guardrails following the [Governance and security best practices overview](/microsoft-copilot-studio/guidance/sec-gov-intro) and map each agent to documented ownership and scope in your governance catalog.
-    minimize over-privileged operations.
+> [!div class="nextstepaction"]
+> [Data governance and security](./data-governance-security.md)

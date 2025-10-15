@@ -81,4 +81,4 @@ Ensure agents operate within authenticated environments. Configure agents to run
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Governance and security](./governance-security.md)
+> [Single or multi-agent systems?](./single-multi-agent-systems.md)

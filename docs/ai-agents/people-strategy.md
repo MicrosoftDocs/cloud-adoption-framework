@@ -62,3 +62,8 @@ In parallel, adopt a **phased skill-building strategy**. Start with platforms yo
 #### Continuous training
 
 Importantly, extend training beyond developers. Ensure that **domain experts** within workload teams understand how to work with AI agents, how to feed them new information, interpret outputs, and recognize limitations. Train support and operations teams to maintain and troubleshoot AI solutions. You should mandate cross-functional training and allocate budget for ongoing learning, recognizing that AI technologies evolve rapidly.
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Data strategy](./data-strategy.md)

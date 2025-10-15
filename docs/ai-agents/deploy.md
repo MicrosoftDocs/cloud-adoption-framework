@@ -69,3 +69,8 @@ Reusable templates reduce errors, accelerate development, and improve consistenc
 - **Azure AI Foundry:** Use [Azure AI Foundry resource templates](https://learn.microsoft.com/azure/ai-foundry/how-to/create-resource-template) to deploy infrastructure that supports secure and scalable agent embedding.
 
 - **Microsoft Copilot Studio:** Use [agent builder templates in Microsoft Copilot Studio](https://learn.microsoft.com/azure/microsoft-365-copilot/extensibility/agent-builder-templates) to accelerate integration and ensure consistency across deployments.
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Monitor agents success](./manage.md)
