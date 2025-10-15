@@ -25,6 +25,8 @@ The Azure landing zone conceptual architecture (*see figure 1*) represents an op
 
 **Resource organization:** The conceptual architecture shows a sample management group hierarchy. It organizes subscriptions (yellow boxes) by management group. The subscriptions under the "Platform" management group host shared services that comprise the platform landing zone. The subscriptions under the "Landing zone" management group represent the application landing zones. The conceptual architecture shows five subscriptions in detail. You can see the resources in each subscription and the policies applied.
 
+<a name='platform-landing-zones-vs-application-landing-zones'></a>
+
 ## Platform landing zone vs. application landing zones
 
 An Azure landing zone consists of one platform landing zone and one or more application landing zones. It's worth explaining the function of both in more detail.
