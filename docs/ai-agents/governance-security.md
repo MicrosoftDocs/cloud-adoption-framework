@@ -16,30 +16,17 @@ ms.topic: conceptual
 
 AI agents now operate as integral components of organization systems. They interact with sensitive data, execute tasks, and influence business outcomes. To ensure safe, scalable, and responsible use of AI agents, organizations must adopt a comprehensive governance strategy that spans design, deployment, and ongoing operations. This guidance outlines how technical leadership should organize their teams and processes to enforce consistent governance across the Microsoft ecosystem.
 
-1. **Define a centralized compliance framework for AI agents.** AI agents introduce operational complexity that requires consistent oversight across departments and jurisdictions. Without a centralized governance framework, organizations risk fragmented controls, inconsistent behavior, and increased exposure to legal and reputational risks. Technical leaders must direct their teams to define a unified governance model that applies across all agent initiatives.
+1. **Define a centralized compliance framework for AI agents.** Develop a unified AI agent governance framework that spans the entire organization. This means having consistent policies for how all agents are classified (by risk or criticality), what review/approval they need, how their behavior is monitored, and how data sensitivity is managed. Without a central framework, different teams might implement AI with inconsistent controls, leading to gaps or conflicts. Integrate this framework with existing corporate policies and any upcoming regulations (like the EU AI Act) so that using AI agents is just another facet of complying with enterprise rules. In short, treat AI governance as part of corporate governance.
 
-    - Define a governance framework that includes agent classification, risk thresholds, behavior monitoring, and data sensitivity mapping.
-    - Align governance with internal enterprise policies and external standards such as the EU AI Act, treating regulatory compliance as one component of a broader governance strategy.
-    - Translate governance requirements into enforceable controls using policy-as-code and centralized management tools.
+1. **Integrate governance into development and deployment workflows.** Make governance checks a built-in part of the AI agent development lifecycle. For example, incorporate policy compliance validation into CI/CD pipelines so an agent cannot be deployed unless it passes certain checks. These checks could verify that the agent’s data access is restricted, that content filters are active, that scenario-specific risk mitigations like prompt injection tests have passed, and that pre-deployment approval gates are established. Require a security and compliance review sign-off before promotion to production. By automating and enforcing these in the pipeline, you prevent policy violations upfront rather than remediating after something goes wrong. Use policy as code where possible. Encode rules such as agents must not access data labeled Confidential into scripts or cloud policies that automatically enforce them in runtime environments. This ensures uniform enforcement across teams and speeds up deployment by removing manual governance steps.
 
-1. **Integrate governance into development and deployment workflows.**
-Governance must operate as part of the engineering lifecycle—not as a post-deployment review. Embedding governance into CI/CD pipelines ensures that agents meet policy requirements before they reach production. This reduces the risk of policy violations and reactive remediation.
-
-    - Direct engineering teams to integrate governance checks into CI/CD workflows, including validation of data access, model safety, and privacy controls.
-    - Establish pre-deployment gates that enforce governance policies automatically.
-    - Ensure governance becomes a default part of development, not an afterthought.
-
-1. **Use policy enforcement to control deployment behavior**
-Manual enforcement of governance policies introduces inconsistency and delays. Policy-as-code enables technical teams to define and enforce constraints programmatically, ensuring uniform behavior across environments and reducing operational overhead.
+1. **Use policy enforcement to control deployment behavior** Manual enforcement of governance policies introduces inconsistency and delays. Policy-as-code enables technical teams to define and enforce constraints programmatically, ensuring uniform behavior across environments and reducing operational overhead.
 
     - Adopt policy-as-code to govern agent deployment, data residency, and access control.
     - Ensure policies are versioned, testable, and auditable, enabling governance teams to track changes and validate enforcement.
     - Apply policies consistently across custom-built agents and third-party platforms to reduce fragmentation.
 
-1. **Standardize agent development.** Standardization reduces risk, accelerates development, and simplifies governance. By requiring teams to use vetted templates and reference architectures, organizations ensure consistent safeguards such as content filters, logging, and escalation logic. Technical leadership must select platforms that support enterprise-grade features and direct teams to adopt standardized development practices.
-
-    - Require use of platforms like Semantic Kernel, Azure AI Foundry SDK, or Copilot Studio based on agent type.
-    - Mandate use of pre-configured templates and reference architectures that include built-in governance controls.
+1. **Standardize agent development.** Standardization reduces risk, accelerates development, and simplifies governance. Mandate use of pre-configured templates and reference architectures that include built-in governance controls. By requiring teams to use vetted templates and reference architectures, organizations ensure consistent safeguards such as content filters, logging, and escalation logic. Technical leadership must select platforms that support enterprise-grade features and direct teams to adopt standardized development practices. Narrow use of frameworks, like MIcrosoft Agent Framework, to support interoperability.
 
 1. **Establish reusable components.** Reusable components reduce duplication, accelerate development, and ensure consistent application of enterprise policies. Governance and platform teams must create libraries of pre-approved components and encourage their use across agent initiatives. Technical leadership must prioritize reuse over customization to improve ROI and reduce operational overhead.
 
@@ -101,12 +88,9 @@ By implementing these practices, technical leaders ensure that no agent operates
 
 **Microsoft tools:**
 
-*   **Microsoft Copilot Studio:**
-    -  Audit configuration modifications, publishing events, and component updates through [Monitor logging and auditing](/microsoft-copilot-studio/admin-logging-copilot-studio) and reconcile anomalies during scheduled reviews.
-    - Reassess security posture and behavioral alignment periodically by correlating runtime protection insights from the [Agent runtime protection status](/microsoft-copilot-studio/security-agent-runtime-view) with audit event streams from [logging and auditing](/microsoft-copilot-studio/admin-logging-copilot-studio).
+- **Azure AI Foundry:** Track model health and drift with [Monitor model deployments](/azure/ai-foundry/foundry-models/how-to/monitor-models) and application-level behaviors using [Monitor generative AI applications](/azure/ai-foundry/how-to/monitor-applications) while consolidating evaluation outputs through [continuous evaluation for agents](/azure/ai-foundry/how-to/continuous-evaluation-agents).
 
-- **Azure AI Foundry:**
-    - Track model health and drift with [Monitor model deployments](/azure/ai-foundry/foundry-models/how-to/monitor-models) and application-level behaviors using [Monitor generative AI applications](/azure/ai-foundry/how-to/monitor-applications) while consolidating evaluation outputs through [continuous evaluation for agents](/azure/ai-foundry/how-to/continuous-evaluation-agents).
+- **Microsoft Copilot Studio:** Audit configuration modifications, publishing events, and component updates through [Monitor logging and auditing](/microsoft-copilot-studio/admin-logging-copilot-studio) and reconcile anomalies during scheduled reviews. Reassess security posture and behavioral alignment periodically by correlating runtime protection insights from the [Agent runtime protection status](/microsoft-copilot-studio/security-agent-runtime-view) with audit event streams from [logging and auditing](/microsoft-copilot-studio/admin-logging-copilot-studio).
 
 ## Agent security
 
@@ -137,6 +121,37 @@ By embedding these five pillars into the AI agent lifecycle, technical leaders r
 - **Microsoft Copilot Studio:**
     - Review access, connectors, and environment boundaries against the consolidated [Security and governance guidance](/microsoft-copilot-studio/security-and-governance).
     - Run pre-deployment assurance using the [Automatic security scan](/microsoft-copilot-studio/security-scan) and continuously verify protections in production through the [Agent runtime protection status](/microsoft-copilot-studio/security-agent-runtime-view) view.
+
+## Agent protocols
+
+As organizations integrate autonomous agents into core operations, the need for structured governance becomes critical. These agents increasingly interact with internal systems, external APIs, and other agents to automate workflows, make decisions, and support business processes. Without a standardized approach, organizations risk fragmentation, security vulnerabilities, and operational inefficiencies.
+
+To ensure consistent, secure, and scalable agent behavior across development teams, leadership must establish a protocol governance framework. This framework defines how agents communicate, transact, and collaborate—internally and externally, while aligning with enterprise compliance and security standards.
+
+1. **Use standardized protocols for agent interactions** Standardization enables interoperability, simplifies integration, and reduces the cost of maintaining agent ecosystems. By mandating open and interoperable protocols, organizations can ensure that agents operate predictably across diverse environments.
+
+    - Require all agents to use the **Model Context Protocol (MCP)** for interactions with tools, APIs, and data sources. MCP provides a structured and secure method for service discovery and invocation.
+    - Mandate the use of **Agent-to-Agent Protocol (A2A)** or compatible alternatives for inter-agent communication. This ensures consistent collaboration, task delegation, and context sharing across agents.
+    - Direct development teams to explicitly implement these protocols using frameworks such as the **Microsoft Agent Framework**, which natively supports MCP and A2A.
+
+2. **Differentiate internal and external ecosystem interactions.** Agents operate across boundaries—some within the enterprise, others with external partners. Governance must reflect this distinction to maintain control and trust.
+
+    - Allow internal agents to freely use MCP and A2A, provided they register with approved MCP servers and remain discoverable within the enterprise ecosystem.
+    - Restrict external interactions to **trusted MCP servers** that meet organizational security and compliance standards. Validate all external agent communications and limit them to explicitly approved entities.
+    - Define clear boundaries for data access and logic execution to prevent leakage of sensitive information during external interactions.
+
+3. **Enforce security, observability, and lifecycle management** Protocol governance must extend beyond communication standards to include operational controls. These controls ensure agents behave securely, transparently, and remain manageable throughout their lifecycle.
+
+    - Require authentication and encryption for all MCP server interactions and agent communications. Integrate with identity providers such as **Microsoft Entra ID** to enforce access control.
+    - Implement observability using **OpenTelemetry** or equivalent frameworks to trace agent actions, tool calls, and inter-agent communications. This enables real-time monitoring and post-incident analysis.
+    - Establish centralized lifecycle management for agents. Define onboarding, versioning, and retirement processes. Assign ownership and maintain documentation for every agent to ensure accountability.
+
+4. **Define leadership responsibilities for operationalizing governance** Leadership must actively support and enforce protocol governance to ensure adoption and compliance across teams.
+
+    - Maintain a registry of approved protocols, MCP servers, and agents. This registry serves as the authoritative source for development and audit purposes.
+    - Provide training and documentation to development teams on protocol usage, security expectations, and governance workflows.
+    - Conduct regular audits to identify compliance gaps and emerging risks. Use findings to refine governance policies and tooling.
+    - Equip teams with governance dashboards and observability tools to monitor agent behavior and protocol adherence in real time.
 
 ## Next step
 
