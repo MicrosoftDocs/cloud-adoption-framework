@@ -19,15 +19,15 @@ AI agents are best suited for challenges involving complex reasoning, dynamic in
 
 However, AI agents are not universally applicable. If a problem can be solved with a simple script, automation tool, or existing software, those options should be prioritized. Misuse leads to wasted effort and unnecessary risk. A pilot is often the best way to validate feasibility and value.
 
-## When and when not to use AI agents?
+## Build a value-driven adoption path
 
-AI agents are best reserved for challenges that involve reasoning over complex data or dynamic interaction, especially when inputs and outputs vary widely and natural language is the most effective interface. This helps reduce wasted effort and unnecessary risk. Sometimes the only way to know for sure is to create a pilot. AI agents are not universally applicable. Misuse leads to wasted effort and unnecessary risk. Avoid agents for easily scripted tasks. If a problem can be solved with a simple script, automation tool, or existing software, use those solutions instead. Understand the process of taking a business case to pilot, and if successful, to production.
+To ensure AI agents deliver measurable business value and competitive advantage, organizations should follow a structured approach:
 
-1. **Map the process.** Examine processes to pinpoint where AI agents can provide the biggest efficiency gains.
-1. **Evaluate feasibility and ROI.** Assess technical readiness, data availability, integration complexity, and expected return. Prioritize use cases that are easy to implement and deliver immediate value.
-1. **Build agent pilots.** Develop a minimal viable agent based that address your highest priority processes
-1. **Integrate and iterate.** Embed the pilot into existing processes, gather feedback, and refine the agent’s capabilities in agile cycles.
-1. **Measure impact and scale.** Track outcomes such as cost savings, revenue growth, or customer satisfaction. Extend AI agents to further processes once value is proven.
+1. Map the process. Examine user workflows and customer processes to pinpoint where AI agents can provide the biggest efficiency gains.
+1. Evaluate feasibility and ROI. Assess technical readiness, data availability, integration complexity, and expected return. Prioritize use cases that are easy to implement and deliver immediate value.
+1. Build a pilot. Develop a minimal viable agent that addresses your highest priority processes.
+1. Integrate and iterate. Embed the pilot into existing processes, gather feedback, and refine the agent’s capabilities in agile cycles.
+1. Measure impact and scale. Track outcomes such as cost savings, revenue growth, or customer satisfaction. Extend AI agents to further processes once value is proven.
 
 ## Prioritize agent use cases (feasibility and ROI)
 
