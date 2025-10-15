@@ -10,7 +10,7 @@ ms.custom: internal
 
 # What is an Azure landing zone?
 
-An Azure landing zone is an environment that follows key design principles across eight design areas. These design principles accommodate all application portfolios and enable application migration, modernization, and innovation at scale. An Azure landing zone uses subscriptions to isolate and scale application resources and platform resources. Subscriptions for application resources are called application landing zones, and subscriptions for platform resources are called platform landing zones.
+An Azure landing zone is an environment that follows key design principles across eight design areas. These design principles accommodate all application portfolios and enable application migration, modernization, and innovation at scale.
 
 ## Azure landing zone architecture
 
@@ -23,7 +23,7 @@ The Azure landing zone conceptual architecture (*see figure 1*) represents an op
 
 **Design areas:** The conceptual architecture illustrates the relationships between its eight design areas. These design areas are Azure billing and Microsoft Entra tenant, identity and access management, management group and subscription organization, network topology and connectivity, security, management, governance, and platform automation and DevOps. For more information on the design areas, see [the Azure Landing Zone environment design areas](./design-areas.md#environment-design-areas).
 
-**Resource organization:** The conceptual architecture shows a sample management group hierarchy. It organizes subscriptions (yellow boxes) by management group. The subscriptions under the "Platform" management group represent the platform landing zones. The subscriptions under the "Landing zone" management group represent the application landing zones. The conceptual architecture shows five subscriptions in detail. You can see the resources in each subscription and the policies applied.
+**Resource organization:** The conceptual architecture shows a sample management group hierarchy. It organizes subscriptions (yellow boxes) by management group. The subscriptions under the "Platform" management group host shared services that comprise the platform landing zone. The subscriptions under the "Landing zone" management group represent the application landing zones. The conceptual architecture shows five subscriptions in detail. You can see the resources in each subscription and the policies applied.
 
 ## Platform landing zone vs. application landing zones
 
@@ -33,8 +33,8 @@ An Azure landing zone consists of one platform landing zone and one or more appl
 
 **Application landing zone:** An application landing zone is a subscription for hosting workload/application resources. A workload should have an application landing zone for each environment (development, testing, or production). Each application landing zone consists of one or more subscriptions, as needed to accommodate scaling and service limits. You pre-provision application landing zones through code, and they are nested under appropriate management groups, such as "Online" or "Corp," to inherit Azure Policy definitions from the parent management group(s). This structure ensures that workloads are deployed in a controlled and consistent manner, while still allowing flexibility for individual workload needs. In the conceptual architecture (*see figure 1*), the "Landing zone A2 subscription", for example, is an application landing zone. The architecture depicts representative resources and policies applied to the "Landing zone A2 subscription".
 
-:::image type="content" source="./media/alz-application-platform.svg" alt-text="A conceptual architecture diagram of an Azure landing zone with Application & Platform Landing Zones overlaid." lightbox="./media/alz-application-platform.svg":::
-*Figure 2: Azure landing zone conceptual architecture with Application & Platform Landing Zones overlaid. Download a [Visio file](https://github.com/MicrosoftDocs/cloud-adoption-framework/raw/main/docs/ready/enterprise-scale/media/enterprise-scale-architecture.vsdx) or [PDF file](https://github.com/MicrosoftDocs/cloud-adoption-framework/raw/main/docs/ready/enterprise-scale/media/enterprise-scale-architecture.pdf) of this architecture.*
+:::image type="content" source="./media/alz-application-platform.svg" alt-text="A conceptual architecture diagram of an Azure landing zone with Application Landing Zones & Platform Landing Zone overlaid." lightbox="./media/alz-application-platform.svg":::
+*Figure 2: Azure landing zone conceptual architecture with Application Landing Zones & Platform Landing Zone overlaid. Download a [Visio file](https://github.com/MicrosoftDocs/cloud-adoption-framework/raw/main/docs/ready/enterprise-scale/media/enterprise-scale-architecture.vsdx) or [PDF file](https://github.com/MicrosoftDocs/cloud-adoption-framework/raw/main/docs/ready/enterprise-scale/media/enterprise-scale-architecture.pdf) of this architecture.*
 
 There are three main approaches to managing application landing zones. You should use one of the following management approaches depending on your needs:
 
@@ -62,17 +62,17 @@ From the perspective of Azure landing zones, AI is just another workload or serv
 
 For more information on AI adoption in Azure, see the [AI adoption scenario](/azure/cloud-adoption-framework/scenarios/ai/). For specific focus on AI workloads and landing zones, see [Establish an AI foundation](/azure/cloud-adoption-framework/scenarios/ai/ready#establish-an-ai-foundation).
 
-## Azure Verified Modules for Platform Landing Zones
+## Azure Verified Modules for your Platform Landing Zone
 
-For infrastructure as code (IaC) deployments, you can use Azure Verified Modules for Platform Landing Zones. Available for both Bicep and Terraform, these modules provide a set of reusable, customizable, and extensible modules that help you deploy a platform landing zone. The modules are designed to help you accelerate the delivery of the recommended resource hierarchy and governance model. You can integrate shared services, network connectivity, and application workloads into your deployment or manage them independently.
+For infrastructure as code (IaC) deployments, you can use Azure Verified Modules your Platform Landing Zone. Available for both Bicep and Terraform, these modules provide a set of reusable, customizable, and extensible modules that help you deploy a platform landing zone. The modules are designed to help you accelerate the delivery of the recommended resource hierarchy and governance model. You can integrate shared services, network connectivity, and application workloads into your deployment or manage them independently.
 
 If you want to use Bicep or Terraform, see [Bicep and Terraform deployment options](/azure/architecture/landing-zones/landing-zone-deploy#platform).
 
-## Azure Platform Landing Zones Portal Accelerator
+## Azure Platform Landing Zone Portal Accelerator
 
 This accelerator is a ready-made deployment experience. The Azure landing zone portal accelerator deploys the conceptual architecture (*see figure 1*) and applies predetermined configurations to key components such as management groups and policies. It suits organizations whose conceptual architecture aligns with the planned operating model and resource structure.
 
-If you plan to manage your environment with the Azure portal, use the Azure Platform Landing Zones Portal Accelerator. Deploying the Azure Landing Zone Portal Accelerator requires permissions to create resources at the tenant (`/`) scope. To grant these permissions, follow the guidance in [Tenant deployments with ARM templates: Required access](/azure/azure-resource-manager/templates/deploy-to-tenant?tabs=azure-powershell#required-access).
+If you plan to manage your environment with the Azure portal, use the Azure Platform Landing Zone Portal Accelerator. Deploying the Azure Landing Zone Portal Accelerator requires permissions to create resources at the tenant (`/`) scope. To grant these permissions, follow the guidance in [Tenant deployments with ARM templates: Required access](/azure/azure-resource-manager/templates/deploy-to-tenant?tabs=azure-powershell#required-access).
 
 <!-- markdownlint-disable MD034 -->
 
