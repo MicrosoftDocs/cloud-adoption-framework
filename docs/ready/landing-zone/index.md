@@ -68,7 +68,7 @@ For infrastructure as code (IaC) deployments, you can use Azure Verified Modules
 
 If you want to use Bicep or Terraform, see [Bicep and Terraform deployment options](/azure/architecture/landing-zones/landing-zone-deploy#platform).
 
-## Azure Platform Landing Zone Portal Accelerator
+## Azure platform landing zone portal accelerator
 
 This accelerator is a ready-made deployment experience. The Azure landing zone portal accelerator deploys the conceptual architecture (*see figure 1*) and applies predetermined configurations to key components such as management groups and policies. It suits organizations whose conceptual architecture aligns with the planned operating model and resource structure.
 
