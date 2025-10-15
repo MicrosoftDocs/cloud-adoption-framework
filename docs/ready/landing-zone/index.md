@@ -72,7 +72,7 @@ If you want to use Bicep or Terraform, see [Bicep and Terraform deployment optio
 
 This accelerator is a ready-made deployment experience. The Azure landing zone portal accelerator deploys the conceptual architecture (*see figure 1*) and applies predetermined configurations to key components such as management groups and policies. It suits organizations whose conceptual architecture aligns with the planned operating model and resource structure.
 
-If you plan to manage your environment with the Azure portal, use the Azure Platform Landing Zone Portal Accelerator. Deploying the Azure Landing Zone Portal Accelerator requires permissions to create resources at the tenant (`/`) scope. To grant these permissions, follow the guidance in [Tenant deployments with ARM templates: Required access](/azure/azure-resource-manager/templates/deploy-to-tenant?tabs=azure-powershell#required-access).
+If you plan to manage your environment with the Azure portal, use the Azure platform landing zone portal accelerator. Deploying the Azure landing zone portal accelerator requires permissions to create resources at the tenant (`/`) scope. To grant these permissions, follow the guidance in [Tenant deployments with ARM templates: Required access](/azure/azure-resource-manager/templates/deploy-to-tenant?tabs=azure-powershell#required-access).
 
 <!-- markdownlint-disable MD034 -->
 
