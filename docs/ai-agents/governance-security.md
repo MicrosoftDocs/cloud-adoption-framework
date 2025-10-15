@@ -138,7 +138,7 @@ To ensure consistent, secure, and scalable agent behavior across development tea
     - Restrict external interactions to **trusted MCP servers** that meet organizational security and compliance standards. Validate all external agent communications and limit them to explicitly approved entities.
     - Define clear boundaries for data access and logic execution to prevent leakage of sensitive information during external interactions.
 
-3. **Enforce security, observability, and lifecycle management** Protocol governance must extend beyond communication standards to include operational controls. These controls ensure agents behave securely, transparently, and remain manageable throughout their lifecycle.
+3. **Enforce security, observability, and lifecycle management.** Protocol governance must extend beyond communication standards to include operational controls. These controls ensure agents behave securely, transparently, and remain manageable throughout their lifecycle.
 
     - Require authentication and encryption for all MCP server interactions and agent communications. Integrate with identity providers such as **Microsoft Entra ID** to enforce access control.
     - Implement observability using **OpenTelemetry** or equivalent frameworks to trace agent actions, tool calls, and inter-agent communications. This enables real-time monitoring and post-incident analysis.
@@ -154,4 +154,4 @@ To ensure consistent, secure, and scalable agent behavior across development tea
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Agent governance and security](./governance-security.md)
+> [Single or multi-agent systems>](./single-multi-agent-systems.md)
