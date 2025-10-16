@@ -82,8 +82,6 @@ Deploy domain controllers and associated components, such as Microsoft Entra Con
 
 - If you have Active Directory Federation Services (AD FS) federation with Microsoft Entra ID, you can use password hash synchronization as a backup. AD FS doesn't support Microsoft Entra seamless single sign-on (SSO).
 
-> [!IMPORTANT]
->
 > We highly recommend that you migrate to Microsoft Entra ID unless you specifically require AD FS. For more information, see [Resources for decommissioning AD FS](/windows-server/identity/ad-fs/ad-fs-decommission) and [Migrate from AD FS to Microsoft Entra ID](/entra/identity/enterprise-apps/migrate-adfs-apps-stages).
 >
 
