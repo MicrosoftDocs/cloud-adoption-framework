@@ -53,6 +53,8 @@ If you have applications and services that need access to traditional authentica
 
 For a comparison of identity options in the cloud, see [Compare self-managed Active Directory Domain Services, Microsoft Entra ID, and managed Microsoft Entra Domain Services](/entra/identity/domain-services/compare-identity-solutions).
 
+### Protect domain controllers
+
 If you use AD DS or Microsoft Entra Domain Services, you must protect the domain controllers from unauthorized access. Domain controllers are highly vulnerable to attacks and should have strict security controls and segregation from application workloads.
 
 Deploy domain controllers and associated components, such as Microsoft Entra Connect servers, in the Identity subscription located in the platform management group. Domain controllers aren't delegated to application teams. This isolation allows application owners to use identity services without having to maintain them, which reduces the risk of compromise to identity and access management services. The resources in the Identity platform subscription are a critical point of security for your cloud and on-premises environments.
