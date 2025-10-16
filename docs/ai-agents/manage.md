@@ -1,6 +1,6 @@
 ---
-title: Monitor impact and scale AI agents
-description: Learn Manage AI agents
+title: Manage impact of AI agents
+description: Learn to Manage impact of AI agents
 author: stephen-sumner
 ms.author: pnp
 ms.date: 11/01/2025
@@ -9,7 +9,7 @@ ms.topic: conceptual
 ms.collection: ce-skilling-ai-copilot
 ---
 
-# Monitor impact and scale AI agents
+# Manage impact of AI agents
 
 The journey doesn’t end with deployment. In fact, once an AI agent is running in production, it enters the operate and improve phase, which is ongoing. This is where you measure actual business impact against your goals, optimize costs, manage the agent’s lifecycle, and decide on scaling out or winding down as needed. For technical leaders, this phase is about ensuring the solution continues to deliver value and remains aligned with strategic objectives over time.
 
