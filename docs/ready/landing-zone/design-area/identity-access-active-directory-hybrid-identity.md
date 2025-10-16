@@ -47,9 +47,9 @@ You can extend on-premises domains into Azure landing zones for one of the follo
 
 If you have applications and services that need access to traditional authentication mechanisms such as Kerberos or NTLM, there are two ways to provide Domain Services in the cloud:
 
-1. A managed domain that you create using Microsoft Entra Domain Services. Microsoft creates and manages the required resources.
+- A managed domain that you create using Microsoft Entra Domain Services. Microsoft creates and manages the required resources.
 
-2. A self-managed domain that you create and configure using traditional resources such as virtual machines (VMs), Windows Server guest OS, and Active Directory Domain Services (AD DS). You then continue to administer these resources.
+- A self-managed domain that you create and configure using traditional resources such as virtual machines (VMs), Windows Server guest OS, and Active Directory Domain Services (AD DS). You then continue to administer these resources.
 
 For a comparison of identity options in the cloud, see [Compare self-managed Active Directory Domain Services, Microsoft Entra ID, and managed Microsoft Entra Domain Services](/entra/identity/domain-services/compare-identity-solutions).
 
