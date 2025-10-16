@@ -35,7 +35,9 @@ User objects that you create entirely in Microsoft Entra ID are known as *cloud-
 
 Your organization might already have longstanding AD DS directories that you integrate with other systems, such as line of business or enterprise resource planning (ERP) through the Lightweight Directory Access Protocol (LDAP). These domains can have many domain-joined computers and applications that use Kerberos or older NTLMv2 protocols for authentication. In these environments, you can synchronize user objects to Microsoft Entra ID so that users can sign in to both on-premises systems and cloud resources with a single identity. Unifying on-premises and cloud directory services is known as *hybrid identity*. Review the methods that you can use to [integrate on-premises Active Directory with Azure](/azure/architecture/reference-architectures/identity) to meet your organizational requirements.
 
-You can extend on-premises domains into Azure landing zones:
+### Extend on-premises domains
+
+You can extend on-premises domains into Azure landing zones for one of the following reasons:
 
 - To maintain a single user object in both cloud and on-premises environments, you can sync AD DS domain users with Microsoft Entra ID through Microsoft Entra Connect or Microsoft Entra Cloud Sync. For a comparison of the two approaches, see [What is Microsoft Entra Cloud Sync?](/entra/identity/hybrid/cloud-sync/what-is-cloud-sync) To determine the recommended configuration for your environment, see [Topologies for Microsoft Entra Connect](/entra/identity/hybrid/connect/plan-connect-topologies) and [Topologies for Microsoft Entra Cloud Sync](/entra/identity/hybrid/cloud-sync/plan-cloud-sync-topologies).
 
