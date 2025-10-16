@@ -13,28 +13,6 @@ ms.collection: ce-skilling-ai-copilot
 
 The journey doesn’t end with deployment. In fact, once an AI agent is running in production, it enters the operate and improve phase, which is ongoing. This is where you measure actual business impact against your goals, optimize costs, manage the agent’s lifecycle, and decide on scaling out or winding down as needed. For technical leaders, this phase is about ensuring the solution continues to deliver value and remains aligned with strategic objectives over time.
 
-## Track performance against success metrics
-
-Revisit the success metrics defined back in the Strategy phase and continuously monitor them now. This could include manage and test, manage and test
-
-- **Operational metrics** such as average handle time, resolution rate, deflection rate which refers to how many inquiries the agent handled without human help, number of tasks automated per week and similar indicators
-- **Business metrics** such as customer satisfaction measured through surveys after interaction, employee productivity measures, cost savings which might be calculated from hours saved, or even revenue influenced in a sales scenario
-
-Integrate these metrics into your operational dashboards and review them frequently. Include agent KPIs in your weekly or monthly operations review meetings. Conduct formal reviews such as quarterly business reviews of agent performance data including resolution rates, user satisfaction scores, cost savings, and similar indicators just as you would for any important initiative. Maintaining executive visibility through these reviews helps justify continued investment or prompt adjustments.
-
-Additionally, monitor **usage trends**. A drop in usage or engagement might indicate the agent is not as useful anymore or needs improvement. If you notice certain targets are not met such as only 5 percent reduction in time versus the 20 percent goal, decide if it is due to unrealistic goals or if the agent needs enhancements. Use the data to drive decisions. Either invest in improving the model or skills of the agent or consider decommissioning if the value is not materializing.
-
-## Gather user feedback continuously
-
-Beyond the numbers, keep listening to users. As the agent’s audience grows, set up permanent feedback channels.
-
-- **Qualitative rating system.** Keep the thumbs up or thumbs down or rating system live in the agent interface and review the feedback daily or weekly. Look for comments that point to new needs or persistent annoyances.
-- **Monitor support tickets** about the agent itself such as "the bot gave me a wrong answer on policy X" and include those in your backlog.
-- **Engage stakeholders** such as department heads for internal agents periodically to ask how the agent is fitting into their workflows. Maybe the business process changed and the agent needs an update.
-- **Track unknown or unhandled queries.** Most platforms can log when the agent could not find an answer or had to fall back. These are opportunities to expand the agent’s knowledge or capabilities. Maybe users are asking for something new that you did not anticipate but is within reason to support.
-
-The key is to treat the agent as a product with a user experience that you refine continuously. User sentiment can change over time so stay attuned to it. Quick responses to feedback such as fixing a frequently missed question or adjusting tone will improve adoption and satisfaction.
-
 ## Control cost and maximize value
 
 AI agents consume cloud resources continuously, which can lead to unpredictable expenses if left unmanaged. Cost governance requires a structured approach that ties operational spending to business outcomes such as labor savings or revenue growth. Technical leaders must direct their teams to implement cost attribution, usage controls, and optimization strategies that reduce waste and improve efficiency.
@@ -47,19 +25,30 @@ AI agents consume cloud resources continuously, which can lead to unpredictable 
 
 1. **Allocate costs per agent.** Tag or separate resources per agent so you can see cost per agent or per use case. Microsoft Cost Management can break down expenses by resource group or tag, so use that to attribute costs.
 
-For **Azure AI Foundry:** [Plan and manage costs for Azure AI Foundry](/azure/ai-foundry/how-to/costs-plan-manage) provides quota and budget alerts per agent, supports cost-efficient model deployment, and enables teams to monitor and control spending across environments. Use a [GenAI gateway](/azure/api-management/genai-gateway-capabilities) to rate limit APIs and [import Azure AI Foundry APIs](/azure/api-management/azure-ai-foundry-api) to use them. [Control AI model deployment with built-in policies](/azure/ai-foundry/how-to/built-in-policy-model-deployment) to use cost-efficient models for your environments.
+**Azure AI Foundry:** [Plan and manage costs for Azure AI Foundry](/azure/ai-foundry/how-to/costs-plan-manage) provides quota and budget alerts per agent, supports cost-efficient model deployment, and enables teams to monitor and control spending across environments. Use a [GenAI gateway](/azure/api-management/genai-gateway-capabilities) to rate limit APIs and [import Azure AI Foundry APIs](/azure/api-management/azure-ai-foundry-api) to use them. [Control AI model deployment with built-in policies](/azure/ai-foundry/how-to/built-in-policy-model-deployment) to use cost-efficient models for your environments.
 
-- Cost governance in **Microsoft Copilot Studio:** Add alerts for message packs and Pay-As-You-Go usage. Pick the right [Copilot Studio licensing](/microsoft-copilot-studio/billing-licensing) to optimize cost. View your message consumption here: [Billing rates and management](/microsoft-copilot-studio/requirements-messages-management#view-message-consumption). Understand how to [allocate, monitor, and optimize message usage](/azure/power-platform/admin/manage-copilot-studio-messages-capacity?tabs=new) across environments. [Block unauthorized self-service sign-ups](/microsoft-copilot-studio/admin-block-viral-signups).
+**Microsoft Copilot Studio:** Add alerts for message packs and Pay-As-You-Go usage. Pick the right [Copilot Studio licensing](/microsoft-copilot-studio/billing-licensing) to optimize cost. View your message consumption here: [Billing rates and management](/microsoft-copilot-studio/requirements-messages-management#view-message-consumption). Understand how to [allocate, monitor, and optimize message usage](/azure/power-platform/admin/manage-copilot-studio-messages-capacity?tabs=new) across environments. [Block unauthorized self-service sign-ups](/microsoft-copilot-studio/admin-block-viral-signups).
 
-## Monitor agents
+## Monitor and manage the agent’s lifecycle
 
-AI agents must deliver consistent value to users and stakeholders. Performance monitoring must align with the success metrics defined during the planning phase. Technical leaders must embed these metrics into operational workflows and ensure that feedback loops inform continuous improvement.
+Just as any product or system has a lifecycle, plan for the agent’s evolution and eventual retirement if necessary. Key activities:
 
-1. Conduct quarterly reviews of agent metrics such as success rate, deflection rate, and user satisfaction.
-1. Monitor feedback channels daily or weekly to identify prompt updates, content corrections, or feature requests.
-1. Assign business owners to notify technical teams about changes in processes or policies that affect agent behavior.
-1. Track usage trends to detect declines in engagement or accuracy and resolve issues early.
-1. Include AI agent performance in quarterly business reviews to maintain leadership visibility and secure resources for enhancement cycles.
+1. **Periodic review.** Every so often, such as quarterly or bi-annually, conduct a holistic review of each deployed agent. **Revisit the success metrics** defined back in the Strategy phase and continuously monitor them now. This could include:
+
+    - **Operational metrics** such as average handle time, resolution rate, deflection rate which refers to how many inquiries the agent handled without human help, number of tasks automated per week and similar indicators
+    - **Business metrics** such as customer satisfaction measured through surveys after interaction, employee productivity measures, cost savings which might be calculated from hours saved, or even revenue influenced in a sales scenario
+
+    Determine whether it is still meeting a need and whether it is up to date with business information. Check its usage and performance trends and identify any major drift or drop-off. Also review compliance. Ensure no new data source was integrated outside of process and confirm that all logs are still routed correctly.
+
+2. **Governance re-certification.** If there have been significant changes such as new features or new integrations, put the agent through parts of the governance process again. This acts like a mini security or compliance review to ensure those changes did not introduce issues.
+
+3. **Scalability planning.** If the agent’s usage is growing, ensure the architecture can handle it. Load test if you plan to scale to many more users. Coordinate with IT for any capacity increases needed. Consider multilingual support or other expansions. If they are likely, begin adding those capabilities proactively.
+
+4. **Model maintenance.** Over time, models can age. New better models may be released or your fine-tuned model might need retraining with fresh data. Monitor whether the agent’s accuracy drifts downward. This could be due to outdated training data or vocabulary. Plan updates such as retraining with the last six months of data or swapping in a newer version of the base model and testing improvements.
+
+5. **Change management for updates.** When making major changes, follow proper change management. Notify users of new features or changes in behavior. Consider running an A or B test if the change is significant, such as a new model, to ensure it is actually better. Maintain version history so you know what changed and when. This allows rollback if needed.
+
+6. **Retirement or end-of-life.** If an agent no longer provides sufficient value, for example if a process changed or a better solution emerged, retire it gracefully. Inform users in advance and provide alternatives. Its functionality may be merged into another agent or returned to a manual process. Revoke its access and resources. Archive necessary data such as logs and knowledge bases if they might be useful for future projects or audits. Shut down the services and remove credentials to eliminate security risks. Update documentation so people do not try to use a retired agent. Conduct a post-mortem to identify lessons learned and feed that experience into future AI strategy.
 
 **Microsoft tools**
 
@@ -67,11 +56,20 @@ AI agents must deliver consistent value to users and stakeholders. Performance m
 
 **Microsoft Copilot Studio:** Capture and monitor [Analytics](/microsoft-copilot-studio/analytics-overview) on your agents. [Download conversation transcripts in Copilot Studio](/microsoft-copilot-studio/analytics-transcripts-studio) and review them to ensure effective interactions. [Capture telemetry with Application Insights](/microsoft-copilot-studio/advanced-bot-framework-composer-capture-telemetry). Integrate Azure Monitor and Log Analytics to capture telemetry across all agent interactions. In Copilot Studio, teams capture conversation telemetry by enabling Application Insights; this provides detailed logs and metrics such as volume, resolution, and anomalies.
 
+## Gather user feedback continuously
+
+Beyond the numbers, keep listening to users. As the agent’s audience grows, set up permanent feedback channels.
+
+- **Qualitative rating system.** Keep the thumbs up or thumbs down or rating system live in the agent interface and review the feedback daily or weekly. Look for comments that point to new needs or persistent annoyances.
+- **Monitor support tickets** about the agent itself such as "the bot gave me a wrong answer on policy X" and include those in your backlog.
+- **Engage stakeholders** such as department heads for internal agents periodically to ask how the agent is fitting into their workflows. Maybe the business process changed and the agent needs an update.
+- **Track unknown or unhandled queries.** Most platforms can log when the agent could not find an answer or had to fall back. These are opportunities to expand the agent’s knowledge or capabilities. Maybe users are asking for something new that you did not anticipate but is within reason to support.
+
+The key is to treat the agent as a product with a user experience that you refine continuously. User sentiment can change over time so stay attuned to it. Quick responses to feedback such as fixing a frequently missed question or adjusting tone will improve adoption and satisfaction.
+
 ## Manage agents lifecycle
 
-AI agents, once deployed, become persistent components of enterprise infrastructure. Their lifecycle includes phases of scaling, evolving, and retiring. Without structured governance, agents risk becoming outdated, misaligned with business goals, or introducing operational and security risks. Technical decision makers must treat lifecycle management as a continuous discipline that includes scalability planning, change control, and structured decommissioning.
-
-Lifecycle governance ensures that every agent remains aligned with enterprise priorities, avoids unmanaged technical debt, and supports responsible scaling. It also enables organizations to maintain trust in AI systems by enforcing oversight and accountability throughout the agent’s operational lifespan. To implement lifecycle governance effectively, technical leaders must direct their teams to:
+Just as any product or system has a lifecycle, plan for the agent’s evolution and eventual retirement if necessary. Key activities include manage:
 
 1. **Document the full lifecycle of each agent.** Require teams to produce lifecycle documentation that includes expected duration of use, criteria for retirement or replacement, and procedures for updating models or data sources. Monitor foundational technology changes—such as new versions of Azure OpenAI models or deprecated connectors—and establish review checkpoints to evaluate their impact.
 
