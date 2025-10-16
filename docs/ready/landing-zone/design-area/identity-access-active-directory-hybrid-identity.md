@@ -16,7 +16,6 @@ Organizations that operate in the cloud require a directory service to manage us
 Microsoft Entra ID provides modern secure identity and access management for Azure and Microsoft 365 services. You can use Microsoft Entra ID for various organizations and workloads. For example, organizations with an on-premises AD DS infrastructure and cloud-based workloads can use directory synchronization with Microsoft Entra ID. Directory synchronization ensures that on-premises and cloud environments share a consistent set of identities, groups, and roles. Applications that require legacy authentication mechanisms such as Kerberos might need Domain Services for managed domain services in the cloud and to extend the on-premises AD DS infrastructure into Azure.
 
 > [!IMPORTANT]
->
 > Legacy authentication mechanisms pose a significant security risk to your IT estate. Wherever possible, use modern authentication and disable legacy methods completely. Passwords are one of the least secure authentication methods available. Consider [removing passwords from Microsoft Entra ID and using password scrambling for AD DS](/entra/identity/authentication/how-to-plan-password-scramble-phishing-resistant-passwordless-authentication).
 >
 
