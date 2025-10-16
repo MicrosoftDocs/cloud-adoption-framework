@@ -22,7 +22,7 @@ Microsoft Entra ID provides modern secure identity and access management for Azu
 
 Cloud-based identity management is an iterative process. You might start with a cloud-native solution that has a small set of users and corresponding roles for an initial deployment. As your migration matures, you might need to integrate your identity solution by using directory synchronization or add cloud-hosted domain services as part of your cloud deployments.
 
-Adjust your identity solution over time depending on your workload authentication requirements and other needs, such as changes to your organizational identity strategy and security requirements or integration with other directory services. When you evaluate Windows Server Active Directory solutions, understand the differences between Microsoft Entra ID, Domain Services, and AD DS on Windows Server. Wherever possible, use modern authentication services, and work with application owners to transition away from legacy approaches.
+Adjust your identity solution over time depending on your workload authentication requirements and other needs, such as changes to your organizational identity strategy and security requirements or integration with other directory services. When you evaluate Windows Server Active Directory solutions, understand the differences between Microsoft Entra ID, Domain Services, and AD DS on Windows Server. Wherever possible, use modern authentication services and work with application owners to transition away from legacy approaches.
 
 ## Identity and access management services in Azure landing zones
 
