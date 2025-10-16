@@ -11,7 +11,9 @@ ms.collection: ce-skilling-ai-copilot
 
 # People strategy for AI agents
 
-Adopting AI agents is as much about organizational change as it is about tech. Define roles, team structures, and skill development plans so that the right people are in place to design, build, and maintain your AI solutions. A common pitfall is to treat AI projects as isolated technical experiments. Successful AI agent adoption requires cross-functional collaboration and new expertise across the company
+Adopting AI agents is as much about organizational change as it is about tech. Define roles, team structures, and skill development plans so that the right people are in place to design, build, and maintain your AI solutions. A common pitfall is to treat AI projects as isolated technical experiments. Successful AI agent adoption requires cross-functional collaboration and new expertise across the company.
+
+By addressing these people factors, you ensure you have the right team structure and skills from day one. This alignment is critical. A well-trained, well-organized team will build better agents and adapt faster to challenges. It turns AI adoption into a company-wide capability, not just a one-off project, setting you up for sustainable success.
 
 ## Define team structure
 
