@@ -17,13 +17,15 @@ items:
     items:
       - name: 1. Responsible AI
         href: responsible-ai.md
-      - name: 2. Agent governance and security
+      - name: 2. Agent governance
         href: governance-security.md
       - href: ./governance-security.md
       - name: 3. Agent observability
         href: ./governance-security.md#agent-observability
-      - name: 3. Data governance and security
+      - name: 3. Data governance
         href: data-governance-security.md
+      - name: 4. Agent security
+        href: ./governance-security.md#agent-security
   - name: Implementation roadmap
     expanded: true
     items:
