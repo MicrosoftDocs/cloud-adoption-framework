@@ -43,6 +43,8 @@ You can extend on-premises domains into Azure landing zones for one of the follo
 
 - To domain join Windows virtual machines (VMs) and other services, you can deploy AD DS domain controllers or Domain Services in Azure. Use this approach so that AD DS users can sign in to Windows servers, Azure file shares, and other resources that use Active Directory as an authentication source. You can also use other Active Directory technologies, like group policy, as an authentication source. For more information, see [Common deployment scenarios for Microsoft Entra Domain Services](/entra/identity/domain-services/scenarios).
 
+### Traditional authentication mechanisms
+
 If you have applications and services that need access to traditional authentication mechanisms such as Kerberos or NTLM, there are two ways to provide Domain Services in the cloud:
 
 - A managed domain that you create using Microsoft Entra Domain Services. Microsoft creates and manages the required resources.
