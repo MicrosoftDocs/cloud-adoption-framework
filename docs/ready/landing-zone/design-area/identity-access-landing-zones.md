@@ -35,8 +35,7 @@ Managing application resources that don't cross security boundaries can be deleg
 ### RBAC
 
 > [!IMPORTANT]
->
-> Classic resources and classic administrators are [retiring on August 31, 2024](https://azure.microsoft.com/updates/cloud-services-retirement-announcement/). Remove unnecessary co-administrators, and use Azure RBAC for fine-grained access control.
+> Classic resources and classic administrators [retired on August 31, 2024](https://azure.microsoft.com/updates/cloud-services-retirement-announcement/). Remove unnecessary co-administrators, and use Azure RBAC for fine-grained access control.
 
 Understand the difference between Microsoft Entra ID roles and Azure RBAC roles.
 
