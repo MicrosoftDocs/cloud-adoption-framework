@@ -32,6 +32,8 @@ At this stage, it’s crucial to secure executive buy-in. Early wins with measur
 
 Ensure there is genuine demand from users or customers. An AI solution will only succeed if people actually use it. Gather evidence via surveys or interviews that target users have pain points an agent could address, and that they are open to an AI-driven solution. Favor projects with enthusiastic user champions and low resistance to change.
 
+:::image type="content" source="./images/high-value-low-complexity-use-cases.png" alt-text="Diagram that shows how to prioritize use cases by high value and low complexity." lightbox="./images/high-value-low-complexity-use-cases.png" border="false":::
+
 ## Define success metrics
 
 For each initiative, set clear, measurable success criteria tied to business outcomes, such as percentage reduction in processing time or increase in customer satisfaction scores. This establishes a target ROI and timeline. Also measure the baseline of current performance so you can compare post-deployment impact. Use these metrics as go/no-go gates during development – if a pilot isn’t meeting benchmarks, be ready to reassess or even cancel to avoid wasted investment.
