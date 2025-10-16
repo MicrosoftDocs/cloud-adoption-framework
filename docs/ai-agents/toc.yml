@@ -1,7 +1,7 @@
 items:
   - name: Agents - Microsoft's Cloud Adoption Framework
     href: index.md
-  - name: Prepare for agents
+  - name: Strategy & preparation
     expanded: true
     items:
       - name: 1. Business strategy

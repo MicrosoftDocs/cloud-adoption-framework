@@ -10,7 +10,7 @@ ms.topic: conceptual
 
 # Business strategy for AI agents
 
-AI agents can transform operations, but without a clear strategy, organizations risk misaligned investments and limited adoption. In this phase, decision makers identify where AI agents drive real value and set the stage for success by focusing on business impact, user needs, and technical feasibility.
+Successful agent adoption starts with a solid strategy that ties AI agents to business objectives, plus upfront planning around technology, people, and data. This preparation phase helps decision makers clarify why and where to use AI agents and how to organize for success.
 
 ## Identify when to use AI agents
 
@@ -18,31 +18,13 @@ AI agents are best suited for challenges involving complex reasoning, dynamic in
 
 However, AI agents are not universally applicable. If a problem can be solved with a simple script, automation tool, or existing software, those options should be prioritized. Misuse leads to wasted effort and unnecessary risk. A pilot is often the best way to validate feasibility and value.
 
-## Build a value-driven adoption path
+## Prioritize agent use cases
 
-To ensure AI agents deliver measurable business value and competitive advantage, organizations should follow a structured approach:
-
-1. Map the process. Examine user workflows and customer processes to pinpoint where AI agents can provide the biggest efficiency gains.
-1. Evaluate feasibility and ROI. Assess technical readiness, data availability, integration complexity, and expected return. Prioritize use cases that are easy to implement and deliver immediate value.
-1. Build a pilot. Develop a minimal viable agent that addresses your highest priority processes.
-1. Integrate and iterate. Embed the pilot into existing processes, gather feedback, and refine the agent’s capabilities in agile cycles.
-1. Measure impact and scale. Track outcomes such as cost savings, revenue growth, or customer satisfaction. Extend AI agents to further processes once value is proven.
-
-## Prioritize agent use cases (feasibility and ROI)
-
-Not all potential projects are equal. Focus on use cases that demonstrate value quickly and align with major strategic goals. This dual focus builds momentum and secures executive buy-in.
+At this stage, it’s crucial to secure executive buy-in. Early wins with measurable value will help build momentum and obtain support for broader AI investments. Not all potential potential agent projects are equal. Focus on use cases that demonstrate value quickly and align with major strategic goals.
 
 ### Measure business impact
 
-Ensure each proposed AI agent directly supports a top business goal. Whether the objective is reducing operational costs, improving customer satisfaction, or increasing revenue, the agent must contribute to measurable outcomes. Require teams to submit a business case that defines expected impact on key performance indicators (KPIs). This ensures AI investments remain focused on outcomes that matter.
-
-Use cases with the highest ROI typically include internal support automation (IT helpdesk bots), customer service triage, document summarization, and sales enablement tools. These scenarios often leverage existing data, require minimal integration, and deliver measurable efficiency gains quickly.
-
-### Measure user desirability
-
-Even technically sound agents fail without user adoption. Confirm that users experience a real pain point and are open to AI-based solutions. Use surveys, interviews, or pilot tests to assess demand and usability. Define the primary personas and clarify their roles, workflows, and expectations. Favor use cases with strong user interest and low resistance to change.
-
-Early adoption of AI agents can differentiate organizations by improving responsiveness, reducing operational costs, and enabling new service models. Competitive advantage arises from faster innovation cycles, better customer experiences, and the ability to scale expertise across the organization.
+Evaluate potential projects based on expected ROI and feasibility. Look for high-value, low-complexity projects that can demonstrate quick wins. These use cases should be technically attainable and align with top business goals, such as cutting costs, improving customer satisfaction. Require a brief business case for each AI agent candidate, outlining how it will impact key KPIs, like "reduce support ticket handling time by 20% within 3 months”.
 
 ### Measure technical feasibility
 
@@ -50,17 +32,23 @@ Evaluate whether the project is technically viable given current capabilities. I
 
 Use a change management matrix to evaluate rollout timeframe and user impact. Prioritize use cases with short rollout times and low disruption. Focus on scenarios where AI agents can integrate seamlessly with existing systems through well-documented APIs or connectors.
 
-## Establish success metrics
+### Measure user desirability
 
-Without measurable outcomes tied to business value, organizations risk deploying solutions that fail to justify their cost or effort. Define success in terms such as operational efficiency, cost reduction, or customer satisfaction, and use these metrics to govern the entire lifecycle of the agent.
+Ensure there is genuine demand from users or customers. An AI solution will only succeed if people actually use it. Gather evidence via surveys or interviews that target users have pain points an agent could address, and that they are open to an AI-driven solution. Favor projects with enthusiastic user champions and low resistance to change.
 
-1. **Tie metrics to business value.** Define success in measurable terms, such as “reduce handling time by 20% within 3 months of launch.” This gives teams a concrete target and timeline for ROI.
+## Define success metrics
 
-2. **Establish a baseline.** Also measure the baseline of current performance, like current handling time, error rates, so you can compare after deployment.
+For each initiative, set clear, measurable success criteria tied to business outcomes, such as percentage reduction in processing time or increase in customer satisfaction scores. This establishes a target ROI and timeline. Also measure the baseline of current performance so you can compare post-deployment impact. Use these metrics as go/no-go gates during development – if a pilot isn’t meeting benchmarks, be ready to reassess or even cancel to avoid wasted investment.
 
-3. **Use success criteria as go/no-go gates.** Use these metrics as go/no-go gates during the project. If an early pilot is far off the target, be ready to pivot or cancel to avoid sunk cost.
+## Roadmap the adoption path
 
-4. **Link success metrics to lifecycle governance.** After deployment, continue tracking the same KPIs and use them to decide whether to scale up the agent, improve it, or possibly retire it if it’s underperforming. Essentially, success metrics should feed into a continuous governance loop to keep the project outcome-focused throughout its life.
+Lay out a phased plan that starts with a pilot agent, integrates it into the business, and then iterates and scales based on results. For example, you might plan to deploy a minimum viable agent for one department, prove its value, then expand to more processes or teams once it’s performing well. Organizations should follow a structured approach:
+
+1. Map the process. Examine user workflows and customer processes to pinpoint where AI agents can provide the biggest efficiency gains.
+1. Evaluate feasibility and ROI. Assess technical readiness, data availability, integration complexity, and expected return. Prioritize use cases that are easy to implement and deliver immediate value.
+1. Build a pilot. Develop a minimal viable agent that addresses your highest priority processes.
+1. Integrate and iterate. Embed the pilot into existing processes, gather feedback, and refine the agent’s capabilities in agile cycles.
+1. Measure impact and scale. Track outcomes such as cost savings, revenue growth, or customer satisfaction. Extend AI agents to further processes once value is proven.
 
 ## Microsoft tools
 

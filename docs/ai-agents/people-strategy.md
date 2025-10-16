@@ -11,41 +11,49 @@ ms.collection: ce-skilling-ai-copilot
 
 # People strategy for AI agents
 
-Adopting AI agents is not merely a technical initiative. It’s a strategic transformation that touches every part of the organization. Success depends not only on the right tools and platforms, but also on the right people, structures, and skills. As a technical leader, your role is to architect a team model that balances centralized governance with decentralized innovation, ensuring that every team from engineering to business operations can contribute effectively to AI adoption.
+Adopting AI agents is as much about organizational change as it is about tech. Define roles, team structures, and skill development plans so that the right people are in place to design, build, and maintain your AI solutions. A common pitfall is to treat AI projects as isolated technical experiments. Successful AI agent adoption requires cross-functional collaboration and new expertise across the company
 
-## Roles and responsibilities for agents
+## Define team structure
 
-Building AI agents is a cross-functional effort. Establish a clear team structure so everyone knows their role. A recommended model is Platform Team vs. Workload (Business) Teams
+Establish a clear model dividing responsibilities. A recommended approach is to have a central platform team and distributed workload teams. This structure allows innovation to scale. Those closest to the business problem develop the solution, ensuring relevance and faster iteration while the platform team ensures they don’t “reinvent the wheel” or violate governance.
 
-1. **Platform team responsibilities:** The platform should be centrally managed typically within IT or engineering and responsible for delivering repeatable AI agent capabilities that workload teams need. The platform should also enforce governance policies across workload environments and have visibility into all agents performance and logs.
+1. **Platform team responsibilities:** provides the common infrastructure, tools, and governance frameworks for AI agents. They create reusable components, templates, and enforce standards/policies on things like security and compliance. They also operate any shared services, like the Microsoft Copilot Studio subscription and permissions, and monitor overall agent performance across the organization.
 
-2. **Workload team responsibilities:** Workload teams, embedded within business units, that actually conceive, build, and own the AI agents for their domain. Empower these teams to innovate within guardrails: they define requirements, design conversational flows, prepare domain-specific data, and integrate the agent into their local systems and processes. The platform team’s guardrails (policies, templates, approved tools) ensure they don’t go off track. This decentralized development speeds up delivery because the people closest to the business problem are building the solution, while the centralized platform team ensures consistency and support.
+2. **Workload team responsibilities:** Workload teams are embedded in business units (HR, Finance, Customer Service) and build and own the AI agents for their domain. These teams include subject matter experts and developers or power users. They define the agent’s requirements, supply domain-specific data, craft the conversation flows or skills, and integrate the agent into their local processes. The platform team’s guardrails (policies, approved tools, templates) ensure they innovate in a safe and consistent way.
 
-3. **Enabling, support teams:** Also consider an AI Center of Excellence (CoE) or support team. This is not a bureaucratic layer but an enablement group. Staff it with AI specialists who can create templates, conduct training, and jump in to help various workload teams on short-term projects. The CoE can host internal hackathons, evaluate new AI technologies, and spread best practices throughout the organization. As a leader, ensure the AI CoE has the mandate and resources to accelerate AI adoption. It should have executive support. The AI CoE effectively multiplies your skilled talent by mentoring and guiding others.
+3. **AI Center of Excellence (AI CoE):** It can be valuable to establish a small expert group or AI CoE as an enablement layer. The CoE is not a bottleneck for approval, but rather a support squad of AI specialists (data scientists, experienced AI developers, ethics or compliance experts) who provide consulting to all workload teams. They might conduct training sessions, help review agent designs for quality, run internal hackathons to spur ideas, and stay on top of emerging AI technologies to advise the organization. Ensure the AI CoE has executive support and a clear mission to accelerate AI adoption through best practices and mentorship.
 
-## Agent skill assessment and training
+Clarify this division of labor early, so everyone knows who is responsible for what. For example, the platform team might own ML model selection and cost management, while the business team focuses on the agent’s use case and continuous improvement in that context.
 
-Evaluate what new skills your organization needs to build and maintain AI agents. Common skill areas include prompt engineering, data science for model tuning and evaluation, software integration using APIs and cloud platforms, conversational UX design, and AI ethics and governance. Assess your current team against these and identify gaps where, say, your developers might need training on prompt crafting or your data engineers on model monitoring. Decide which gaps you will train existing staff versus hire new talent. For example, you might retrain a web developer to become proficient in using Copilot Studio since it is user-friendly, but for a highly specialized ML engineering need, you might hire an expert or engage a consultant to avoid costly trial and error.
+## Gain agent skills and training
+
+Assess what new skills your organization needs for AI agents and plan to upskill or hire accordingly. Common skill areas include:
 
 | Skill area | Description |
 | --- | --- |
-| Prompt engineering | Crafting effective prompts and dialogues for LLMs. |
-| Data science | Understanding how to fine-tune models, evaluate model outputs, and handle model-related issues. |
-| Software integration | Skills to integrate AI with enterprise systems (APIs, cloud architecture). |
-| User experience design |Conversational UX is a specialized skill – making interactions with the AI agent intuitive and friendly. |
-| AI governance and ethics | Ability to interpret AI principles and ensure the agent’s design aligns with them (this might be within the CoE or compliance teams). |
+| Prompt engineering | Crafting effective prompts and conversation flows for large language models. |
+| Data science | Fine-tuning models, evaluating model outputs, understanding AI performance metrics. |
+| Software integration | Connecting AI agents to enterprise systems via APIs, managing cloud resources for AI. |
+| User experience design | Designing intuitive conversational interfaces and dialogues. |
+| AI governance and ethics | Interpreting responsible AI principles and ensuring agents adhere to them. |
+
+Ensure each project team has access to these skills. You may train existing staff for some (for example, retrain a web developer to use Copilot Studio’s low-code tools) and hire specialists for others (e.g. an experienced ML engineer for a complex Foundry project). Decide which gaps can be filled with internal training and which require new talent or external partners
 
 **Launch a focused training program to build AI competency across teams.** Approach AI skills development with the same seriousness as adopting a new technology stack. Create a learning plan and use both internal and external resources:
 
-- **Use Microsoft’s free training resources.** Microsoft Learn offers modules and learning paths on AI services. There are also certifications like Azure AI Engineer. Encourage team members to complete relevant modules and perhaps achieve certifications. This builds foundational knowledge in a structured way.
+- **Use Microsoft’s free training resources.** Use Microsoft Learn’s free online modules and certifications such as Azure AI Engineer Associate to give your team a grounding in AI services
 
-- **Hands-on workshops and hackathons.** Organize internal training sessions where teams practice on real scenarios. For example, a workshop on prompt engineering could involve taking a sample prompt and iteratively improving it with an instructor. Hackathons are a great way for multidisciplinary teams to collaborate and build a small prototype AI agent in 1-2 days, which teaches practical skills and sparks ideas.
+- **Run hands-on workshops.** Run hands-on workshops or hackathons internally. For example, hold a prompt engineering lab where participants practice improving AI responses or a hackathon where cross-functional teams prototype a simple agent in a day or two. This not only builds skills but also enthusiasm and idea-sharing.
 
-- **Vendor or partner-led training.** Consider bringing in Microsoft or a certified partner to run training sessions tailored to your context. This could be an onsite (or virtual) training where your actual use cases are used as examples. For instance, a partner could walk your team through building a prototype agent using your data, teaching them methods along the way. Such guided training often accelerates learning.
+- **Consider partner-led training.** Bring in Microsoft or certified partners for tailored sessions or bootcamps on your specific tools like an Azure AI Foundry deep dive or a Copilot Studio workshop using your actual data. This accelerates learning through expert guidance.
 
-- **Mentorship and peer learning.** If you have one or two people who’ve already built an AI agent, set up a mentorship or “office hours” scheme. Those people can coach others through their projects. Create a community channel (Teams chat) for AI practitioners in your company to ask questions and share tips spontaneously.
+- **Encourage mentorship and peer learning.** If some employees have already built AI agents, recognize them as champions who can coach others. Create internal communities of practice such as a Teams channel for AI agent developers to ask questions and share tips.
 
-This capacity building should be ongoing. Start with easier platforms such as training many people on Copilot Studio to get quick wins while a subset of developers learn advanced Foundry skills in parallel for the harder projects. Also include non-developers. Domain experts should learn how to work with and supervise AI agents and support and operations teams need to know how to maintain them. Continuous training is key so budget for it and update curricula as AI tech evolves quickly.
+The objective is to cultivate a broad base of AI proficiency, not just in IT but also among business domain experts who will be working with agents. Plan for continuous learning because AI tech evolves rapidly. Budget time for periodic training updates or refresher courses
+
+## Address change management
+
+Prepare the organization for AI-driven change. Communicate early about what AI agents will and won’t do to manage expectations. Involve end users in pilot testing to gather feedback and build buy-in. From the leadership perspective, reinforce that adopting AI agents is a strategic priority so that managers encourage their teams to embrace the new tools. Celebrate successes and recognize teams that deliver value with AI to foster a culture of innovation.
 
 ## Next step
 
