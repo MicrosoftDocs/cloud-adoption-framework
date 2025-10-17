@@ -13,6 +13,8 @@ ms.collection: ce-skilling-ai-copilot
 
 With business needs defined, decide how you will deliver the AI agent solutions from a technology standpoint. the technology strategy phase is about choosing the right tool for the job and setting up a technical game plan. It ensures you allocate development effort wisely (buy vs build), pick an architecture that fits the problem, and equip your teams with the right platforms. At this stage, also outline technical success criteria: for instance, target model performance levels, response time requirements, integration points needed, etc., so that the build phase has clear goals.
 
+:::image type="content" source="./images/technology options.png" alt-text="Diagram that shows how buy vs. build technology options comparing Microsoft Copilots (buy) vs. Low-code (Microsoft Copilot Studio) and pro-code (Azure AI Foundry) build options." lightbox="./images/technology options.png" border="false":::
+
 Technical decision makers should evaluate whether to buy or build and outline the architecture approach. Microsoft offers multiple avenues to implement AI agents, from ready-made SaaS solutions to fully custom development. The right choice balances speed, cost, and customization:
 
 | Solution | Approach | Best for |

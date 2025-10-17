@@ -9,28 +9,40 @@ ms.topic: conceptual
 ms.collection: ce-skilling-ai-copilot
 ---
 
-# Process to build AI agents
+# Build AI agents
 
 This article provides a framework for technical decision makers to guide workload teams in building AI agents using **Azure AI Foundry** and **Microsoft Copilot Studio**. AI agents are autonomous or semi-autonomous systems that answer questions, perform actions, or collaborate with other agents. Building them requires structured steps to prevent uncontrolled expansion, minimize risk, and optimize performance.
 
 The guidance assumes governance and security controls are established. It focuses on how workload teams use platform capabilities at each phase while defining responsibilities between the enterprise platform and workload teams. This approach ensures predictable outcomes, cost efficiency, and compliance.
 
-**Prerequisite:**
+## Prerequisites
 
-1. **Set up your environment:** For **Azure AI Foundry** Start with an Azure landing zone, then use the application landing zone accelerator. For **Microsoft Copilot Studio setup,** [get access to Copilot Studio.](/microsoft-copilot-studio/requirements-licensing-subscriptions) and [work with Power Platform environments](/microsoft-copilot-studio/environments-first-run-experience).
+1. **Set up your environment:**
+    - **Azure AI Foundry** Start with an Azure landing zone, then use the application landing zone accelerator. **Azure AI Foundry:** To establish secure agent boundaries, [set up your agent environment](/azure/ai-foundry/agents/environment-setup) to create projects with basic or standard setup configurations. For enhanced data governance, [use the standard agent setup](/azure/ai-foundry/agents/concepts/standard-agent-setup) to store customer data in your own Azure resources with project-level data isolation. Configure roles and responsibilities for multi-agent systems in Foundry orchestration settings.
+
+    - **Microsoft Copilot Studio setup,** [get access to Copilot Studio.](/microsoft-copilot-studio/requirements-licensing-subscriptions) and [work with Power Platform environments](/microsoft-copilot-studio/environments-first-run-experience).
+
 1. **Follow WAF principles:** Workload teams must use and apply the principles of the Well-Architected Framework (AF) for [AI workloads](/azure/well-architected/ai/).
 
-## Map the process and scope the agent
+## 1 Models
+
+Instruct workload teams to choose models aligned with task complexity rather than defaulting to the largest option. Pick a model appropriate to the complexity and importance of the task. For many internal tasks, a smaller model, which is cheaper and faster, may suffice, especially if you provide good grounding data.
+
+For **multi-agent systems**, tailor model selection to each role. You might use a a large model for understanding queries but a smaller one or a rule-based system for executing structured tasks. Test a few models with sample queries in a small bake-off before settling.
+
+**Azure AI Foundry:** Select appropriate models by [exploring the AI Foundry model catalog](https://ai.azure.com/explore/models) to find models aligned with task complexity and cost requirements. Evaluate options using [model leaderboards](/azure/ai-foundry/concepts/model-benchmarks) to compare performance and cost trade-offs. For chat-based agents, [configure Model Router](/azure/ai-foundry/openai/concepts/model-router) to dynamically optimize costs while maintaining quality.
+
+- **Microsoft Copilot Studio:** Select optimal models by [choosing a primary AI model](/microsoft-copilot-studio/authoring-select-agent-model) from available options. Expand capabilities by [bringing your own model](/ai-builder/byom-for-your-prompts) to connect Azure AI Foundry models for specialized tasks.
+
+## 2. Customization
+
+### Scope the agent
 
 Ensure the workload team documents exactly what the agent will do and not do. This is often called an agent charter. This keeps development on target and prevents feature creep. For example, write down that our HR Answer Bot will answer employees’ HR policy questions and help schedule leave. It will not provide legal advice or access personal payroll records. Communicate this scope to all stakeholders. This clarity guides the next steps in design and can be referenced whenever new requests come in. No, we will not add IT support answers to the HR bot, that is outside its scope. Perhaps that is a separate agent.
 
 In this step, also map out the business process the agent fits into. Describe when users will invoke it, what decisions it might make, and when it should defer to a human. This ensures the agent’s role is rooted in a real workflow.
 
-**Azure AI Foundry:** To establish secure agent boundaries, [set up your agent environment](/azure/ai-foundry/agents/environment-setup) to create projects with basic or standard setup configurations. For enhanced data governance, [use the standard agent setup](/azure/ai-foundry/agents/concepts/standard-agent-setup) to store customer data in your own Azure resources with project-level data isolation. Configure roles and responsibilities for multi-agent systems in Foundry orchestration settings.
-
-**Microsoft Copilot Studio:** Define agent purpose and boundaries by [configuring agent settings](/microsoft-copilot-studio/authoring-first-bot) to establish operational scope. For multi-agent systems, [set up agent flows](/microsoft-copilot-studio/flows-overview) with distinct roles and approval checkpoints to ensure controlled collaboration.
-
-## 2. Define agent instructions
+### Define agent instructions
 
 Direct workload teams to write the initial system prompts or instructions that set the behavior of the agent. This is effectively the policy the agent will follow in conversation. Include the following:
 
@@ -45,23 +57,14 @@ For **multi-agent systems**, define distinct roles such as Planner, Executor, an
 
 **Azure AI Foundry:** Define clear operational rules by [configuring system messages and instruction sets](/azure/ai-foundry/agents/concepts/threads-runs-messages) to enforce agent boundaries and fallback behaviors. To implement deterministic logic, [use function calling tools](/azure/ai-foundry/agents/how-to/tools/function-calling) to enforce predictable behaviors and handle edge cases reliably.
 
-**Microsoft Copilot Studio:** Apply custom instructions in the agent editor to reinforce compliance and fallback behaviors. Configure agent behavior by [orchestrating with generative AI](/microsoft-copilot-studio/advanced-generative-actions) to enable natural conversation flows and pause-and-review workflows. For critical operations, [use multistage and AI approvals](/microsoft-copilot-studio/flows-advanced-approvals) to enforce deterministic decision gates.
+**Microsoft Copilot Studio:** Define agent purpose and boundaries by [configuring agent settings](/microsoft-copilot-studio/authoring-first-bot) to establish operational scope. For multi-agent systems, [set up agent flows](/microsoft-copilot-studio/flows-overview) with distinct roles and approval checkpoints to ensure controlled collaboration.Apply custom instructions in the agent editor to reinforce compliance and fallback behaviors. Configure agent behavior by [orchestrating with generative AI](/microsoft-copilot-studio/advanced-generative-actions) to enable natural conversation flows and pause-and-review workflows. For critical operations, [use multistage and AI approvals](/microsoft-copilot-studio/flows-advanced-approvals) to enforce deterministic decision gates.
 
-## 3. Choose models
+### Fine-tune and distill models
 
-Instruct workload teams to choose models aligned with task complexity rather than defaulting to the largest option. Pick a model appropriate to the complexity and importance of the task. For many internal tasks, a smaller model, which is cheaper and faster, may suffice, especially if you provide good grounding data.
-
-For **multi-agent systems**, tailor model selection to each role. You might use a a large model for understanding queries but a smaller one or a rule-based system for executing structured tasks. Test a few models with sample queries in a small bake-off before settling.
-
-**Azure AI Foundry:** Select appropriate models by [exploring the AI Foundry model catalog](https://ai.azure.com/explore/models) to find models aligned with task complexity and cost requirements. Evaluate options using [model leaderboards](/azure/ai-foundry/concepts/model-benchmarks) to compare performance and cost trade-offs. For chat-based agents, [configure Model Router](/azure/ai-foundry/openai/concepts/model-router) to dynamically optimize costs while maintaining quality.
-
-- **Microsoft Copilot Studio:** Select optimal models by [choosing a primary AI model](/microsoft-copilot-studio/authoring-select-agent-model) from available options. Expand capabilities by [bringing your own model](/ai-builder/byom-for-your-prompts) to connect Azure AI Foundry models for specialized tasks.
-
-## 4. Customize agents
-
+In Azure AI Foundry, review [threads, runs, and messages](/azure/ai-foundry/agents/concepts/threads-runs-messages) to understand conversation state management. Use the data in your threads to fine-tune and distill models
 Memory is a foundational capability for multi-turn and personalized interactions. Both Azure AI Foundry and Microsoft Copilot Studio offer built-in memory features that allow agents to retain context across sessions or within threads. Require structured testing cycles to refine prompts, instructions, memory behavior, and tool integrations. Mandate fairness and bias testing, validate content moderation, and include security tests for vulnerabilities such as prompt injection.
 
-**Azure AI Foundry:** Build context-aware agents by [reviewing threads, runs, and messages](/azure/ai-foundry/agents/concepts/threads-runs-messages) to understand conversation state management. Test and refine behavior using [agent evaluators](/azure/ai-foundry/concepts/evaluation-evaluators/agent-evaluators) in the agent playground. Validate security by [running AI red teaming scans](/azure/ai-foundry/how-to/develop/run-scans-ai-red-teaming-agent) locally during development or [in the cloud](/azure/ai-foundry/how-to/develop/run-ai-red-teaming-cloud) for pre-deployment testing. For persistent memory, [configure external stores like Azure Cosmos DB](/azure/ai-foundry/agents/concepts/standard-agent-setup) to maintain context across threads.
+**Azure AI Foundry:** Test and refine behavior using [agent evaluators](/azure/ai-foundry/concepts/evaluation-evaluators/agent-evaluators) in the agent playground. For persistent memory, [configure external stores like Azure Cosmos DB](/azure/ai-foundry/agents/concepts/standard-agent-setup) to maintain context across threads.
 
 **Microsoft Copilot Studio:** Validate agent behavior by [testing in the test panel](/microsoft-copilot-studio/authoring-test-bot) to observe conversation flows. Improve performance by [analyzing agent effectiveness](/microsoft-copilot-studio/analytics-improve-agent-effectiveness) to identify optimization opportunities. Understand user needs by [analyzing questions by theme](/microsoft-copilot-studio/analytics-themes) to discover patterns. Refine responses by [using prompt modification](/microsoft-copilot-studio/nlu-generative-answers-prompt-modification) to provide custom instructions.
 
@@ -85,17 +88,17 @@ Multi-agent systems introduce operational complexity that requires structured co
 
 **Microsoft Copilot Studio:** Build collaborative systems by [adding other agents](/microsoft-copilot-studio/authoring-add-other-agents) to delegate specialized tasks. Enable dynamic coordination by [orchestrating agent behavior with generative AI](/microsoft-copilot-studio/advanced-generative-actions) to select the best actions based on context.
 
-## 7. Bring your own services (trust)
+## 5. Bring your own services (trust)
 
 Workload teams will integrate using a **Bring Your Own (BYO)** approach as needed. Integrating AI workloads into existing infrastructure ensures compliance, security, and operational continuity. A Bring Your Own (BYO) approach allows organizations to connect agents to their own storage, identity systems, and routing logic. This approach allows you to implement structured memory systems. For example, you can combine short-term conversational buffers with long-term structured stores. Schedule summaries to maintain context without retaining raw personally identifiable information (PII). Have teams use vector stores for flexible and scalable memory, paired with databases for session logging. It allows you to design intelligent routing for cost and performance optimization. For example you can place a gateway in front of large language models (LLMs) to manage traffic. Route requests to low-cost models first and escalate based on confidence thresholds. Add failover mechanisms and semantic caching to improve reliability and reduce latency.
 
 **Azure AI Foundry:** Maintain control by [using your own resources](/azure/ai-foundry/agents/how-to/use-your-own-resources) like Azure Storage, Azure AI Search, and Cosmos DB for thread storage in standard setup configurations, ensuring compliance with organizational policies.
 
-## 8. Configure observability
+## 6. Observability
 
 Direct workload teams to integrate observability tools early. Define key performance metrics such as responsiveness, throughput, and error rates. Instrument agents with telemetry for logs, metrics, and traces. Monitor dashboards for system-wide and individual performance. Configure anomaly alerts and tie them into DevOps workflows.
 
-**Azure AI Foundry:** Monitor agent behavior with [Foundry evaluators](/azure/ai-foundry/concepts/evaluation-evaluators/general-purpose-evaluators) to understand performance and quality. Track operational metrics by [monitoring the Agent Service](/azure/ai-foundry/agents/how-to/metrics). Debug execution by [viewing trace results](/azure/ai-foundry/how-to/develop/trace-agents-sdk) for detailed analysis. Implement production monitoring by [continuously evaluating agents](/azure/ai-foundry/how-to/continuous-evaluation-agents). Integrate quality checks in your deployment pipeline by [evaluating in GitHub Actions](/azure/ai-foundry/how-to/evaluation-github-action) or [Azure DevOps](/azure/ai-foundry/how-to/evaluation-azure-devops).
+**Azure AI Foundry:** Monitor agent behavior with [Foundry evaluators](/azure/ai-foundry/concepts/evaluation-evaluators/general-purpose-evaluators) to understand performance and quality. Track operational metrics by [monitoring the Agent Service](/azure/ai-foundry/agents/how-to/metrics). Debug execution by [viewing trace results](/azure/ai-foundry/how-to/develop/trace-agents-sdk) for detailed analysis. Implement production monitoring by [continuously evaluating agents](/azure/ai-foundry/how-to/continuous-evaluation-agents). Integrate quality checks in your deployment pipeline by [evaluating in GitHub Actions](/azure/ai-foundry/how-to/evaluation-github-action) or [Azure DevOps](/azure/ai-foundry/how-to/evaluation-azure-devops). Validate security by [running AI red teaming scans](/azure/ai-foundry/how-to/develop/run-scans-ai-red-teaming-agent) locally during development or [in the cloud](/azure/ai-foundry/how-to/develop/run-ai-red-teaming-cloud) for pre-deployment testing.
 
 **Microsoft Copilot Studio:** Track performance using [analytics](/microsoft-copilot-studio/analytics-overview) to understand agent effectiveness and identify improvement areas. Enable advanced monitoring by [connecting to Azure Application Insights](/microsoft-copilot-studio/advanced-bot-framework-composer-capture-telemetry) for custom telemetry and real-time diagnostics.
 
