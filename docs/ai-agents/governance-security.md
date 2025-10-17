@@ -16,6 +16,8 @@ ms.topic: conceptual
 
 ***How to create governance policies.*** Start with a strong foundation of Responsible AI principles. Responsible AI refers to designing and operating AI systems in an ethical, transparent, and accountable manner. For business decision makers, this means putting policies in place so that all your AI agents adhere to core values and regulations, such as fairness, privacy, reliability, and safety. Key steps for Responsible AI:
 
+
+
 1. **Establish a Responsible AI standard.** Define an organization-wide Responsible AI standard that all AI agents must follow. Microsoft has it's own Responsible AI standard. You can start with this and adapt it to your needs. At a minimum, your policy should align with ethical principles (fairness, privacy, transparency) and relevant regulations. Make it an official policy that applies to every AI system, regardless of size or visibility. Integrate Responsible AI into governance processes, such as architecture reviews, security assessments, and compliance workflows. Avoid creating parallel structures by embedding ethical checks into existing decision-making forums. Responsible AI categories is also a great way to identity AI risks across your business.
 
     Use the [Responsible AI dashboard](/azure/ai-foundry/responsible-use-of-ai-overview) to assess fairness, interpretability, and error analysis across models. [Trustworthy AI for Azure AI Foundry](/azure/ai-foundry/responsible-use-of-ai-overview) outlines foundational governance principles including transparency, fairness, and accountability.
@@ -50,6 +52,11 @@ ms.topic: conceptual
 
 1. **Monitor compliance continuously.** Establish a process for ongoing compliance checks even after deployment. Regularly review agents for policy adherence, perhaps via automated tests or periodic audits. Set up dashboards with compliance metrics such as percentage of agents with missing owner info or number of times agents accessed a disallowed site. Governance is not set and forget. As new threats or regulations emerge, you need feedback loops to update policies and ensure teams implement those updates.
 
+## Agent-level governance and security
+
+
+
+
 ## Agent security
 
 AI agents now operate as core infrastructure components. Their integration introduces risks across identity, data handling, infrastructure, and behavior. These risks require a security strategy that treats agents as production systems and aligns with zero-trust principles and regulatory expectations. Organizations must direct their teams to implement controls that reduce exposure and ensure operational resilience. Key elements of security for AI agents:
@@ -80,7 +87,7 @@ AI agents now operate as core infrastructure components. Their integration intro
     - Review access, connectors, and environment boundaries against the consolidated [Security and governance guidance](/microsoft-copilot-studio/security-and-governance).
     - Run pre-deployment assurance using the [Automatic security scan](/microsoft-copilot-studio/security-scan) and continuously verify protections in production through the [Agent runtime protection status](/microsoft-copilot-studio/security-agent-runtime-view) view.
 
-## Agent observability
+### Agent observability
 
 Hand in hand with governance is observability. This is the ability to monitor and understand what your AI agents are doing in real time and over time. Given that AI agents have probabilistic behavior, it is critical to have visibility into their operations to detect anomalies, ensure compliance, and optimize performance. Think of AI agents as you would microservices. You need logging, monitoring, and analytics to manage them effectively at scale. Key observability practices for AI agents:
 

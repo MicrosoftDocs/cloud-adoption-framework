@@ -10,12 +10,23 @@ ms.topic: conceptual
 
 # AI agent adoption
 
-**What is an AI agent?** An **AI agent** is a microservice that can *reason*, *act*, and *learn* by combining a large language model with instructions and connecting to data sources or external tools. Examples include retrieval-based chatbots that answer questions using knowledge bases, task-focused agents that perform user-requested actions via APIs, or autonomous agents that execute proactive tasks based on events. 
+Many organizations explore AI agents to automate processes, improve productivity, and enable new services. However, implementing AI agents is not a plug-and-play endeavor. It requires careful planning and governance to deliver real business value. The potential payoff is substantial when done right. This guide provides sequential milestones and prescriptive recommendations to plan, govern, build, integrate, and manage AI agents in a way that **maximizes return on investment (ROI)**, **minimizes risks**, **optimizes costs**, and **aligns teams effectively**.
+
+:::image type="content" source="./images/ai-agent-adoption.png" alt-text="Diagram that shows the process outlined in this guidance." lightbox="./images/ai-agent-adoption.png" border="false":::
+
+It is tailored for technical decision makers (CIOs, CTOs, VPs of Technology, Directors, startup founders) who want to drive business outcomes with AI. The guide clarifies the distinct responsibilities between your **platform team**, which provides governance and tools, and your **workload teams**, which develop and operate specific AI agent solutions within those guardrails, so you can structure your organization accordingly. By following this guidance aligned with Microsoft’s Cloud Adoption Framework (CAF), your organization can implement AI agents successfully at scale in Azure.
+
+## What is an AI agent?
+
+An **AI agent** is a microservice that can *reason*, *act*, and *learn* by combining a large language model with instructions and connecting to data sources or external tools.
+
+:::image type="content" source="./images/agent-overview.png" alt-text="Diagram that shows the basic architecture of an agent." lightbox="./images/agent-overview.png" border="false":::
+
+Examples include retrieval-based chatbots that answer questions using knowledge bases, task-focused agents that perform user-requested actions via APIs, or autonomous agents that execute proactive tasks based on events.
 
 :::image type="content" source="./images/spectrum-agents.png" alt-text="Diagram that shows how to prioritize use cases by high value and low complexity." lightbox="./images/spectrum-agents.png" border="false":::
 
-Many organizations explore AI agents to automate processes, improve productivity, and enable new services. However, implementing AI agents is not a plug-and-play endeavor. It requires careful planning and governance to deliver real business value. The potential payoff is substantial when done right.
+## Next step
 
-:::image type="content" source="./images/ai-agent-adoption.png" alt-text="Diagram that shows how to prioritize use cases by high value and low complexity." lightbox="./images/ai-agent-adoption.png" border="false":::
-
-This guide provides sequential milestones and prescriptive recommendations to plan, govern, build, integrate, and manage AI agents in a way that **maximizes return on investment (ROI)**, **minimizes risks**, **optimizes costs**, and **aligns teams effectively**. It is tailored for technical decision makers (CIOs, CTOs, VPs of Technology, Directors, startup founders) who want to drive business outcomes with AI. The guide clarifies the distinct responsibilities between your **platform team**, which provides governance and tools, and your **workload teams**, which develop and operate specific AI agent solutions within those guardrails, so you can structure your organization accordingly. By following this guidance aligned with Microsoft’s Cloud Adoption Framework (CAF), your organization can implement AI agents successfully at scale in Azure.
+> [!div class="nextstepaction"]
+> [Business strategy for agents](./business-strategy.md)
