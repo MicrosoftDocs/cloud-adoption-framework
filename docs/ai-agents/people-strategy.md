@@ -13,7 +13,7 @@ ms.collection: ce-skilling-ai-copilot
 
 Adopting AI agents is as much about organizational change as it is about tech. Define roles, team structures, and skill development plans so that the right people are in place to design, build, and maintain your AI solutions. A common pitfall is to treat AI projects as isolated technical experiments. Successful AI agent adoption requires cross-functional collaboration and new expertise across the company.
 
-:::image type="content" source="./images/business-impact.png" alt-text="Diagram that shows how to workload teams, platform teams, and AI CoE work together." lightbox="./images/business-impact.png" border="false":::
+:::image type="content" source="./images/agent-teams.png" alt-text="Diagram that shows how to workload teams, platform teams, and AI CoE work together." lightbox="./images/agent-teams.png" border="false":::
 
 By addressing these people factors, you ensure you have the right team structure and skills from day one. This alignment is critical. A well-trained, well-organized team will build better agents and adapt faster to challenges. It turns AI adoption into a company-wide capability, not just a one-off project, setting you up for sustainable success.
 
