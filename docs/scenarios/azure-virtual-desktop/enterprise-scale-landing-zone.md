@@ -1,28 +1,43 @@
 ---
 title: Enterprise-scale support for Azure Virtual Desktop
 description: Guidance to deploy Azure Virtual Desktop (AVD) using an enterprise-scale Azure landing zone, prepare identity, network, storage, and automation to scale AVD securely.
-author: stephen-sumner
+author: jcoyne-msft
 ms.author: pnp
-ms.date: 09/02/2025
+ms.date: 10/17/2025
 ms.topic: conceptual
 ---
 
 # Deploy an enterprise-scale Azure landing zone for Azure Virtual Desktop
 
-This guide explains how to deploy Azure Virtual Desktop at enterprise scale. It describes how to use the application landing zone accelerator for Azure Virtual Desktop to shorten deployment time and apply enterprise governance, security, networking, and automation patterns. Follow this guidance to standardize deployments, enforce compliance controls, and scale AVD across regions with predictable operations.
+This document provides technical stakeholders responsible for platform and workload landing zones with guidance on Azure Virtual Desktop using enterprise-scale methodologies. It describes how both prepare and use the application landing zone accelerator for Azure Virtual Desktop which will shorten deployment time and apply enterprise governance, security, networking, and automation patterns. Follow this guidance to standardize deployments, enforce compliance controls, and scale AVD across regions with predictable operations. 
 
-**What you'll accomplish:**
+**This documentation enables your teams to:**
 
-- Set up enterprise-scale governance and security controls
+- Set up enterprise-scale identity, governance, and security controls for AVD workloads
 - Deploy the Azure Virtual Desktop accelerator with best practices built-in
-- Configure multi-region expansion for global users (optional)
-- Implement automated deployment pipelines
-
-**New to enterprise-scale Azure landing zone?** Start with the [enterprise-scale Azure landing zone overview](/azure/cloud-adoption-framework/ready/enterprise-scale/) to understand the foundational concepts before proceeding with Azure Virtual Desktop deployment.
+- Implement automated deployment pipelines (IaC provided)
 
 :::image type="content" source="./media/accelerator-baseline-architecture.svg" alt-text="Enterprise-scale Azure Virtual Desktop landing zone architecture showing networking, storage, compute, management services, and on-premises connectivity via ExpressRoute and VPN." lightbox="./media/accelerator-baseline-architecture.svg" border="false":::
 
 *Download a [Visio file](https://arch-center.azureedge.net/accelerator-baseline-architecture.vsdx) of this multi-region architecture of an Azure Virtual Desktop deployment in an enterprise-scale Azure landing zone.*
+
+**New to enterprise-scale Azure landing zone?** Start with the [enterprise-scale Azure landing zone overview](/azure/cloud-adoption-framework/ready/enterprise-scale/) to understand the foundational concepts before proceeding with Azure Virtual Desktop deployment. 
+
+> [!TIP]
+> It's highly recommended to ensure your application landing zones are aligned with your organizations platform landing zone practices before proceeding with deployment.
+
+## Cloud Adoption Framework fundamentals
+
+Before deploying any landing zone, ensure your teams understand the foundational principles of the Cloud Adoption Framework:
+- **Governance**: Define policies, compliance requirements, and guardrails.
+- **Management**: Establish monitoring, backup, and disaster recovery strategies.
+- **Platform**: Configure core infrastructure including networking, identity, and resource organization.
+- **Landing zones**: Create scalable environments for workloads with built-in governance and security.
+
+Recommended resources
+- https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/
+- https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/
+- https://learn.microsoft.com/en-us/training/modules/cloud-adoption-framework/
 
 ## Establish a scalable and compliant enterprise-scale Azure landing zone
 
@@ -67,9 +82,9 @@ A secondary region helps organizations scale Azure Virtual Desktop when the prim
 
 3. **Provision regional storage for user profiles.** Deploy a storage solution in the new region to store [FSLogix profile containers](/azure/virtual-desktop/fslogix-profile-containers). Ensure that users are assigned to desktops in only one region to avoid profile fragmentation across storage systems.
 
-4. **(Optional) Deploy a Domain Controller in the new region.** This deployment improves authentication performance and supports local identity resolution. Consider replicating Active Directory services if latency or availability is a concern.
+4. **(Recommended) Deploy a Domain Controller in the new region.** This deployment improves authentication performance and supports local identity resolution. Consider replicating Active Directory services if latency or availability is a concern.
 
-5. **Configure outbound internet connectivity in the new region.** Use [Network Security Groups (NSGs)](/azure/virtual-network/network-security-groups-overview), Network Virtual Appliances (NVAs), or [Azure Firewall](/azure/firewall/overview) to enforce security policies and control traffic flow.
+5. **Configure outbound internet connectivity in the new region.** Use [Network Security Groups (NSGs)](/azure/virtual-network/network-security-groups-overview), Network Virtual Appliances (NVAs), or [Azure Firewall](/azure/firewall/overview) to enforce security policies and control traffic flow. Use a private subnet with a NAT Gateway to explicitly define outbound internet connectivity.
 
 6. **Deploy Azure Virtual Desktop virtual machines in the new region.** Use the application landing zone accelerator for Azure Virtual Desktop to deploy session hosts and supporting infrastructure. Validate that all dependencies are available in the new region.
 
@@ -85,9 +100,9 @@ Deploying Azure Virtual Desktop closer to users and on-premises systems improves
 
 3. **Provision regional storage for user profiles.** Store [FSLogix profile containers](/azure/virtual-desktop/fslogix-profile-containers) in the same region as the session hosts to reduce latency and improve sign-in performance. Avoid cross-region profile access.
 
-4. **(Optional) Deploy a Domain Controller in the new region.** This setup supports local authentication and reduces dependency on cross-region identity services.
+4. **(Recommended) Deploy a Domain Controller in the new region.** This setup supports local authentication and reduces dependency on cross-region identity services.
 
-5. **Configure outbound internet connectivity in the new region.** Use [NSGs](/azure/virtual-network/network-security-groups-overview), NVAs, or [Azure Firewall](/azure/firewall/overview) to enforce consistent security policies and manage internet-bound traffic.
+5. **Configure outbound internet connectivity in the new region.** Use [NSGs](/azure/virtual-network/network-security-groups-overview), NVAs, or [Azure Firewall](/azure/firewall/overview) to enforce consistent security policies and manage internet-bound traffic. Use a private subnet with a NAT Gateway to explicitly define outbound internet connectivity.
 
 6. **Deploy Azure Virtual Desktop virtual machines in the new region.** Use the application landing zone accelerator for Azure Virtual Desktop to deploy session hosts and supporting infrastructure. Validate that regional dependencies are available.
 
