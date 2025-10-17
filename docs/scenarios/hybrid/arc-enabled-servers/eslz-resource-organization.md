@@ -1,6 +1,6 @@
 ---
 title: Resource organization for Azure Arc-enabled servers
-description: Learn how to organize resources when working with Azure Arc-enabled servers
+description: Evaluate how resources will be organized when working with Azure Arc-enabled servers
 author: lanicolas
 ms.author: matgri
 ms.date: 11/15/2021
@@ -10,41 +10,31 @@ ms.custom: e2e-hybrid, think-tank
 
 # Resource organization for Azure Arc-enabled servers
 
-Align with the [Ready methodology](../../../ready/index.md) of the Cloud Adoption Framework by implementing a resource consistency and tagging strategy. This strategy should include your hybrid and multicloud resources and incorporate business and operational details through inventory management and metadata tags.
+To align with the [Ready methodology](../../../ready/index.md) of the Cloud Adoption Framework, implement a resource consistency and tagging strategy. This strategy should include your hybrid and multicloud resources and add business and operational details as components of inventory management and metadata tags.
 
 ## Resource consistency and organization
 
-Before onboarding any machine to Azure Arc, define a structure for projecting these resources to Azure management scopes, such as management groups, subscriptions, and resource groups. This mapping is critical because it determines how you interact with resources when applying [role-based access control (RBAC)](/entra/identity/role-based-access-control/best-practices) and assigning Azure policies in your governance model. For detailed guidance, see the Cloud Adoption Framework recommendations on how to [organize resources](../../../ready/azure-setup-guide/organize-resources.md?tabs=AzureManagementGroupsAndHierarchy).
+Before onboarding any machine onto Azure Arc, it's important to define a structure on how these resources will be projected to Azure management scopes. These scopes include management groups, subscriptions, and resource groups. This mapping is key. It will determine how you can interact with these resources when applying [role-based access control (RBAC)](/entra/identity/role-based-access-control/best-practices) roles and while assigning Azure policies as part of your governance model. Review the Cloud Adoption Framework recommendations on how to [organize resources](../../../ready/azure-setup-guide/organize-resources.md?tabs=AzureManagementGroupsAndHierarchy).
 
-When designing this structure, consider the [Azure Resource Manager service limits](/azure/azure-arc/servers/agent-overview#azure-subscription-and-service-limits) that may affect components of your overall deployment. Although there are no specific limits on the number of Arc-enabled servers per resource group or subscription, ensure compliance with the current Azure Resource Manager limits for other resource types.
+When designing this structure, be aware of [Azure Resource Manager service limits](/azure/azure-arc/servers/agent-overview#azure-subscription-and-service-limits) which may apply to some components of your end-to-end solution. There are no limits to the number of Arc-enabled servers you can add to a resource group or subscription.
 
-After creating a taxonomy and agreeing on naming standards, apply tags to Azure Arc-enabled server resources. Registering a server in Azure assigns it a resource ID and includes it in a resource group and subscription, enabling the use of standard Azure features such as resource tags.
+After you've created a taxonomy structure and agreed on naming standards, it's recommended to apply tags to the Azure Arc-enabled server resources. Once a server is registered in Azure, it can benefit from standard Azure constructs such as resource tags. A server registered in Azure means it has a resource ID and becomes part of the resource group within a subscription.
 
-Resource tags add metadata to help you quickly locate resources and automate operational tasks. These capabilities support daily management activities, as detailed in the [Cloud Adoption Framework tagging strategy](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-tagging). For Azure Arc-enabled servers, include tags indicating the hosting platform and physical location.
+Resource tags allow you to add metadata to a resource to quickly locate it and automate operational tasks. These actions are important to your day-to-day tasks as described in the [Cloud Adoption Framework tagging strategy](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-tagging). Specifically for Azure Arc-enabled servers, it's a good practice to include a tag that reflects the "hosting platform" for Azure Arc-enabled resources and the physical "location".
 
-The following diagram shows resource tagging for Azure Arc-enabled servers:
+The following image shows a conceptual reference for resource tagging for Azure Arc-enabled servers:
 
 :::image type="content" source="./media/arc-enabled-servers-resource-tag.svg" alt-text="A diagram that shows resource tagging for Azure Arc-enabled servers." border="false" lightbox="./media/arc-enabled-servers-resource-tag.svg":::
 
-*Download the [Visio file](/azure/azure-arc/servers/media/arc-enabled-servers-resource-tag-update.vsdx) of this architecture.*
-
-## Azure Service Groups
-
-Azure Service Groups, currently in preview, allow dynamic grouping of resources across subscriptions and resource groups. This feature enables flexible inventory views and aggregated monitoring without changing the underlying resource organization. For more information, see the [Azure Service Groups overview](/azure/governance/service-groups/overview).
-
-## Note on Azure Arc-enabled PostgreSQL server
-
-The Azure Arc-enabled PostgreSQL server was retired in July 2025. For PostgreSQL workloads, use [Azure Database for PostgreSQL - Flexible Server](/azure/postgresql/flexible-server/overview).
+*Download a [Visio file](https://arch-center.azureedge.net/arc-enabled-servers-resource-tag-update.vsdx) of this architecture.*
 
 ## Next steps
 
-For more guidance on your hybrid cloud adoption journey, see the following resources:
+For more guidance for your hybrid cloud adoption journey, review the following resources:
 
-- Learn how to manage [hybrid and multicloud](../manage.md) environments.
-- Explore [Azure Arc Jumpstart](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/day2/) scenarios.
-- See the [prerequisites](/azure/azure-arc/servers/agent-overview#prerequisites) for Azure Arc-enabled servers.
-- Plan an [at-scale deployment](/azure/azure-arc/servers/plan-at-scale-deployment) of Azure Arc-enabled servers.
-- Learn how to apply resource tags to Azure Arc-enabled servers.
-- Explore [Azure Service Groups](/azure/governance/service-groups/overview) for dynamic resource grouping.
-- Learn about [Azure Change Tracking and Inventory](/azure/automation/change-tracking/overview-monitoring-agent) for continuous monitoring of changes in Arc-enabled servers.
-- Explore the [Azure Arc learning path](/training/paths/manage-hybrid-infrastructure-with-azure-arc/).
+- Understand how to manage [hybrid and multicloud](../manage.md) environments.
+- Review [Azure Arc Jumpstart](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/day2/) scenarios.
+- Review the [prerequisites](/azure/azure-arc/servers/agent-overview#prerequisites) for Azure Arc-enabled servers.
+- Plan an [at-scale deployment](/azure/azure-arc/servers/plan-at-scale-deployment) of Azure Arc-enable servers.
+- Learn how to apply resource tags for Azure Arc-enabled servers.
+- Learn more about Azure Arc via the [Azure Arc learning path](/training/paths/manage-hybrid-infrastructure-with-azure-arc/).
