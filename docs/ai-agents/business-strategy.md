@@ -44,7 +44,7 @@ Evaluate whether the project is technically viable given current capabilities. I
 
 Ensure there is genuine demand from users or customers. An AI solution will only succeed if people actually use it. Gather evidence via surveys or interviews that target users have pain points an agent could address, and that they are open to an AI-driven solution. Favor projects with enthusiastic user champions and low resistance to change.
 
-    :::image type="content" source="./images/user-desirability.png" alt-text="Diagram that shows how to prioritize use cases by high value and low complexity." lightbox="./images/user-desirability.png" border="false":::
+:::image type="content" source="./images/user-desirability.png" alt-text="Diagram that shows how to prioritize use cases by use desirability." lightbox="./images/user-desirability.png" border="false":::
 
 ## Define success metrics
 
