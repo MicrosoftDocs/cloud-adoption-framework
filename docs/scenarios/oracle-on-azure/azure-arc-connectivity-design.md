@@ -82,7 +82,7 @@ Organizations using TLS inspection can integrate Azure Arc agents with their sec
 
 Microsoft Defender for Cloud integration with Azure Arc enhances security monitoring for Oracle Database@Azure infrastructure. For comprehensive security configuration guidance, see [Security guidelines for Oracle Database@Azure](oracle-security-overview-odaa.md).
 
-Azure Arc-specific Defender integration requirements include:
+Azure Arc-specific Defender inte    gration requirements include:
 
 1. **Plan Defender deployment strategy for Azure Arc connectivity.** Review [Defender for servers deployment requirements](/azure/defender-for-cloud/plan-defender-for-servers) and ensure that all security endpoints are accessible through your Azure Arc network configuration.
 
@@ -90,11 +90,27 @@ Azure Arc-specific Defender integration requirements include:
 
 1. **Coordinate with existing Oracle security monitoring.** Integrate Defender alerts with existing Oracle security tools to avoid duplication while enhancing overall security posture. For integration patterns, see [Microsoft Defender for Cloud integration](/azure/defender-for-cloud/integration-overview).
 
+### Use Entra ID for SSH Authentication and Privileged Access Monitoring on Arc-Enabled Cluster Nodes
+
+Enable secure and scalable SSH access to Azure Arc-enabled Oracle Exadata cluster nodes using Entra ID.
+
+1. **Enable SSH access to Arc-enabled Oracle Database@Azure Exadata cluster servers.** Use Entra ID to manage SSH access to Oracle Database@Azure Exadata cluster servers. This approach centralizes identity verification and simplifies access management across hybrid environments. Refer to [SSH access to Azure Arc-enabled servers](/azure/azure-arc/servers/ssh-arc-overview?tabs=azure-cli) for implementation details.
+
+1. **Assign appropriate Entra ID roles and RBAC policies for SSH access.** [Assign Entra ID roles](/azure/azure-arc/servers/ssh-arc-overview?tabs=azure-cli#microsoft-entra-authentication) such as "Virtual Machine User Login" or "Virtual Machine Administrator Login" to control SSH access. Scope these roles to specific resource groups or Arc-enabled servers hosting Oracle workloads. Apply least privilege principles to minimize risk and ensure only authorized personnel access sensitive infrastructure.
+
+1. **Deploy Azure Monitor agent using Arc extensions.** Use Azure Policy to deploy the Azure Monitor agent via Arc extensions. This ensures consistent telemetry collection across all cluster nodes and supports scalable monitoring operations. Review [Azure Monitor Agent overview](/azure/azure-monitor/agents/azure-monitor-agent-overview0) for deployment guidance.
+
+1. **Configure data collection rules to capture Syslog telemetry.**  Create a [Data Collection Rule (DCR) to route Syslog data to a Log Analytics workspace](/azure/sentinel/forward-syslog-monitor-agent). This enables centralized log aggregation and supports advanced analytics and alerting.
+
+1. **Audit SSH access and privileged actions.**  Monitor login attempts and track privileged commands such as sudo usage. [Configure alert rules](/azure/azure-monitor/alerts/alerts-overview) to detect anomalies and notify security teams of suspicious activity. This step supports proactive threat detection and incident response.
+
+1. **Integrate with Microsoft Sentinel for advanced monitoring.** [Forward logs to Microsoft Sentinel](/azure/sentinel/connect-data-sources?tabs=defender-portal#syslog-and-common-event-format-cef) for advanced threat detection, incident response, and compliance reporting. This integration enhances visibility into access patterns and supports governance across hybrid environments.
+
 ## Implement endpoint allowlisting and security controls
 
 Configure network access controls that provide minimum required connectivity for Azure Arc operations while maintaining your organization's security posture. Use a least-privilege approach to Azure Arc endpoint access.
 
-1. **Configure firewall rules for Azure Arc-specific endpoints.** Allow only the required Azure Arc service endpoints through your firewall configuration. Reference the [Azure Arc endpoint requirements](#azure-arc-endpoint-requirements) table for specific endpoint categories and network requirements.
+1. **Configure firewall rules for Azure Arc-specific endpoints.** Allow only the required Azure Arc service endpoints through your firewall configuration. Reference the [Azure Arc endpoint requirements](#azure-arc-endpoint-requirements) table for specific endpoint categories and network requirements.  Reference [Azure Monitor Agent required endpoints](https://learn.microsoft.com/azure/azure-monitor/agents/azure-monitor-agent-network-configuration?tabs=PowerShellWindows#firewall-endpoints) for the Azure Monitor extension.
 
 1. **Restrict Azure Arc endpoint access to specific VM cluster nodes.** Limit network access to Azure Arc endpoints from only the Oracle Database@Azure VM cluster nodes that require Azure Arc management. This approach reduces the attack surface and maintains security boundaries. For access control patterns, see [Azure NSGs](/azure/virtual-network/network-security-groups-overview).
 
