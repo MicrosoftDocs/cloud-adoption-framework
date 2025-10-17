@@ -26,7 +26,6 @@ ms.topic: conceptual
 
 1. **Monitor and improve AI systems continuously.** Responsible AI is not a one-time effort. Set up metrics to continuously track ethical performance. For example, how often does the agent refuse to answer because of policy, how many user complaints about incorrect or biased responses are logged. Review these regularly and improve the agent to reduce issues. If regulations evolve such as new AI laws, update your agents and policies accordingly. Consider using tools like the Responsible AI dashboard to audit your models for fairness or errors in a systematic way.
 
-
 ## Agent governance
 
 1. **Ensure data compliance.** Validate each agent’s data access and processing against GDPR, HIPAA, CCPA, and internal policies. Engage legal and compliance teams for review. Update privacy notices to reflect AI usage. Conduct Data Protection Impact Assessments when required. Repeat compliance checks when agents integrate new datasets or features. Use [Microsoft Purview Compliance Manager](/purview/compliance-manager) translates regulations like the EU AI Act into actionable controls and enables teams to assess and manage compliance posture across AI applications.
