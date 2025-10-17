@@ -13,7 +13,7 @@ ms.collection: ce-skilling-ai-copilot
 
 This article provides a framework for technical decision makers to guide workload teams in building AI agents using **Azure AI Foundry** and **Microsoft Copilot Studio**. AI agents are autonomous or semi-autonomous systems that answer questions, perform actions, or collaborate with other agents. Building them requires structured steps to prevent uncontrolled expansion, minimize risk, and optimize performance.
 
-The guidance assumes governance and security controls are established. It focuses on how workload teams use platform capabilities at each phase while defining responsibilities between the enterprise platform and workload teams. This approach ensures predictable outcomes, cost efficiency, and compliance.
+:::image type="content" source="./images/agent-overview.png" alt-text="Diagram that shows how to agents work." lightbox="./images/agent-overview.png" border="false":::
 
 ## Prerequisites
 
@@ -24,7 +24,7 @@ The guidance assumes governance and security controls are established. It focuse
 
 1. **Follow WAF principles:** Workload teams must use and apply the principles of the Well-Architected Framework (AF) for [AI workloads](/azure/well-architected/ai/).
 
-## 1 Models
+## 1. Models
 
 Instruct workload teams to choose models aligned with task complexity rather than defaulting to the largest option. Pick a model appropriate to the complexity and importance of the task. For many internal tasks, a smaller model, which is cheaper and faster, may suffice, especially if you provide good grounding data.
 
