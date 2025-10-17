@@ -12,6 +12,8 @@ ms.topic: conceptual
 
 Successful agent adoption starts with a solid strategy that ties AI agents to business objectives, plus upfront planning around technology, people, and data. This preparation phase helps decision makers clarify why and where to use AI agents and how to organize for success.
 
+:::image type="content" source="./images/ai-agent-opportunities.png" alt-text="Diagram that shows AI agent opportunities." lightbox="./images/ai-agent-opportunities.png" border="false":::
+
 ## When to use AI agents?
 
 AI agents are best suited for challenges involving complex reasoning, dynamic interaction, or unstructured data, especially when natural language is the most effective interface. These scenarios often align with digital transformation goals such as improving agility, reducing manual effort, and scaling personalization. Common examples include customer support automation, knowledge retrieval, workflow orchestration, and real-time insights generation.
@@ -30,13 +32,13 @@ At this stage, it’s crucial to secure executive buy-in. Early wins with measur
 
 Evaluate potential projects based on expected ROI and feasibility. Look for high-value, low-complexity projects that can demonstrate quick wins. These use cases should be technically attainable and align with top business goals, such as cutting costs, improving customer satisfaction. Require a brief business case for each AI agent candidate, outlining how it will impact key KPIs, like "reduce support ticket handling time by 20% within 3 months".
 
-:::image type="content" source="./images/business-impact.png" alt-text="Diagram that shows how to prioritize use cases by high value and low complexity." lightbox="./images/business-impact.png" border="false":::
+:::image type="content" source="./images/business-impact.png" alt-text="Diagram that shows how to prioritize use cases by business impact." lightbox="./images/business-impact.png" border="false":::
 
 ### Measure technical feasibility
 
 Evaluate whether the project is technically viable given current capabilities. Identify potential risks such as data quality issues, system dependencies, and operational complexity. Ensure each use case includes a clear definition of scope, autonomy level, and decision-making boundaries. Use a change management matrix to evaluate rollout timeframe and user impact. Prioritize use cases with short rollout times and low disruption. Focus on scenarios where AI agents can integrate seamlessly with existing systems through well-documented APIs or connectors.
 
-:::image type="content" source="./images/technical-feasibility.png" alt-text="Diagram that shows how to prioritize use cases by high value and low complexity." lightbox="./images/technical-feasibility.png" border="false":::
+:::image type="content" source="./images/technical-feasibility.png" alt-text="Diagram that shows how to measure technical feasibility." lightbox="./images/technical-feasibility.png" border="false":::
 
 ### Measure user desirability
 
