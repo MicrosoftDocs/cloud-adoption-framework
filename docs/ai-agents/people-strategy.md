@@ -34,9 +34,9 @@ Common skill areas include:
 
 | Skill area | Description |
 | --- | --- |
-| Prompt engineering | Crafting effective instructions and orchestration for agents. |
-| Agent optimization | Fine-tuning models, evaluating model outputs, understanding AI performance metrics. |
-| AI governance and ethics | Interpreting responsible AI principles and ensuring agents adhere to them. |
+| [Prompt engineering](/azure/ai-foundry/openai/concepts/prompt-engineering) | Crafting effective instructions and orchestration for agents. |
+| Agent optimization | [Fine-tuning models](/azure/ai-foundry/concepts/fine-tuning-overview), evaluating model outputs, understanding AI performance metrics. |
+| AI ethics and governance | Interpreting [responsible AI principles](./responsible-ai.md) and ensuring agents adhere to them. |
 
 Develop a structured training program to build AI competency across teams. Treat skills development as a core part of technology adoption. Use a combination of internal and external resources:
 
@@ -44,7 +44,7 @@ Develop a structured training program to build AI competency across teams. Treat
 
 - **Run hands-on workshops.** Run hands-on workshops or hackathons internally. For example, hold a prompt engineering lab where participants practice improving AI responses or a hackathon where cross-functional teams prototype a simple agent in a day or two. This not only builds skills but also enthusiasm and idea-sharing.
 
-- **Consider partner-led training.** Bring in Microsoft or certified partners for tailored sessions or bootcamps on your specific tools like an Azure AI Foundry deep dive or a Copilot Studio workshop using your actual data. This accelerates learning through expert guidance.
+- **Consider partner-led training.** Bring in Microsoft or [certified training partners](/training/educator-center/programs/global-training-partner/find-global-training-partner) for tailored sessions or bootcamps on your specific tools like an Azure AI Foundry deep dive or a Copilot Studio workshop using your actual data. This accelerates learning through expert guidance.
 
 - **Encourage mentorship and peer learning.** If some employees have already built AI agents, recognize them as champions who can coach others. Create internal communities of practice such as a Teams channel for AI agent developers to ask questions and share tips.
 
