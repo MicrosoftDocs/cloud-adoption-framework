@@ -35,5 +35,5 @@ items:
         href: build-process.md
   - name: 3. Integrate agents
     href: integrate-iterate.md
-  - name: 4. Manage agents
+  - name: 4. Measure agent impact
     href: manage.md
