@@ -57,11 +57,8 @@ AI agents often weave through various data sources, some of which are sensitive 
 
 **Azure AI Foundry:**
 
-
-- [Data, privacy, and security for Azure AI Agent Service](/azure/ai-foundry/responsible-ai/agents/data-privacy-security) explains how agents handle personal data, enforce privacy, and comply with regulations.
-- [Secure and compliant AI apps with Microsoft Purview](/purview/developer/secure-ai-with-purview) shows how to apply sensitivity labels, audit logs, and data loss prevention to AI agents.
 - [Apply least privilege access principles using Azure role-based access control](/azure/ai-foundry/concepts/rbac-ai-studio) to assign necessary permissions for specific roles.
-- [Use managed identities for authentication](/entra/identity/managed-identities-azure-resources/overview) to eliminate credential management risks and [follow managed identity best practices](/entra/identity/managed-identities-azure-resources/managed-identity-best-practice-recommendations#follow-the-principle-of-least-privilege-when-granting-access).
+
 - [Define data boundaries based on user access levels and implement dataset isolation](/azure/cloud-adoption-framework/scenarios/ai/platform/security#secure-ai-data) for different agent environments.
 - [Use Prompt Shields to detect user prompt attacks and document-embedded attacks](/azure/ai-services/content-safety/concepts/jailbreak-detection) that attempt to manipulate agent behavior.
 - [Configure Azure Content Safety content filtering](/azure/ai-services/content-safety/overview) to block sensitive data leakage and enforce content policies.

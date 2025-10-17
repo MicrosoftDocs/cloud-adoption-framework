@@ -15,16 +15,12 @@ items:
   - name: Govern agents
     expanded: true
     items:
-      - name: 1. Responsible AI
-        href: responsible-ai.md
+      - name: 1. Responsible AI policy
+        href: ./governance-security.md#responsible-ai
       - name: 2. Governance
-      - href: ./governance-security.md
+        href: ./governance-security.md#governance
       - name: 3. Observability
         href: ./governance-security.md#agent-observability
-      - name: 4. Data governance
-        href: data-governance-security.md
-      - name: 5. Security
-        href: ./governance-security.md#agent-security
   - name: Build agents
     expanded: true
     items:
