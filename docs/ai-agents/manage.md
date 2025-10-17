@@ -17,6 +17,8 @@ The journey doesn’t end with deployment. In fact, once an AI agent is running 
 
 AI agents consume cloud resources continuously, which can lead to unpredictable expenses if left unmanaged. Cost governance requires a structured approach that ties operational spending to business outcomes such as labor savings or revenue growth. Technical leaders must direct their teams to implement cost attribution, usage controls, and optimization strategies that reduce waste and improve efficiency.
 
+1. **Dashboard and analytics.** Provide management a dashboard view of agent performance and usage. Summarize things like how many queries were handled, success rates, top topics asked, user satisfaction ratings, and more. Additionally, track business key performance indicators from phase one here such as the handle time reduction goal and see if they are being met in real usage. Including these metrics in regular business reviews keeps AI agents on leadership’s radar and ensures accountability.
+
 1. **Regularly calculate the return on investment.** For example you might say this quarter the agent cost a certain amount and saved an estimated amount in support labor yielding a return on investment of a specific value. This helps justify continuing or scaling the project and highlights if cost is creeping too high relative to benefits.
 
 1. **Analyze cost drivers.** Are most costs coming from calling a very large model? If so consider if you can switch to a smaller model in some cases or shorten prompts and responses to reduce token counts. You might implement a tiered approach where a cheaper model is tried first and only escalated to the expensive model if needed. This is sometimes called an AI gateway or router approach.
