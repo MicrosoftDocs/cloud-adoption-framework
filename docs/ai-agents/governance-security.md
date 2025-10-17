@@ -10,13 +10,27 @@ ms.topic: conceptual
 
 # Agent governance and security
 
-***How to protect, regulate, and ensure responsible use of AI agents and the data they handle.*** Beyond high-level principles, you need concrete governance mechanisms and security controls for your AI agents across their lifecycle. This is about putting guardrails in place so agents access only what they should, behave as expected, and can be managed centrally. Governance processes should be ingrained in how teams design, deploy, and update agents.
+***How to ensure responsible use of AI agents and the data they handle.*** Beyond high-level principles, you need concrete governance mechanisms and security controls for your AI agents across their lifecycle. This is about putting guardrails in place so agents access only what they should, behave as expected, and can be managed centrally. Governance processes should be ingrained in how teams design, deploy, and update agents.
+
+## Responsible AI policy
+
+***How to create governance policies.*** Start with a strong foundation of Responsible AI principles. Responsible AI refers to designing and operating AI systems in an ethical, transparent, and accountable manner. For business decision makers, this means putting policies in place so that all your AI agents adhere to core values and regulations, such as fairness, privacy, reliability, and safety. Key steps for Responsible AI:
+
+1. **Establish a Responsible AI standard.** Define an organization-wide Responsible AI standard that all AI agents must follow. Microsoft has it's own Responsible AI standard. You can start with this and adapt it to your needs. At a minimum, your policy should align with ethical principles (fairness, privacy, transparency) and relevant regulations. Make it an official policy that applies to every AI system, regardless of size or visibility. Integrate Responsible AI into governance processes, such as architecture reviews, security assessments, and compliance workflows. Avoid creating parallel structures by embedding ethical checks into existing decision-making forums. Responsible AI categories is also a great way to identity AI risks across your business.
+
+1. **Assign ownership and oversight.** Identify who in your organization is responsible for enforcing Responsible AI. It could be a centralized AI ethics committee, your existing compliance office, or the AI Center of Excellence in partnership with legal. Give them authority to develop and update the Responsible AI policy and to audit AI agents for compliance. At the same time, automate enforcement where possible. For example, require that every agent must implement certain safety features such as not revealing sensitive information and have this checked in code reviews or continuous integration and deployment pipelines. The platform team can build templates that include these features by default.
+
+1. **Use Responsible AI for risk assessment.**  Responsible AI principles provide a structured framework for comprehensive risk assessment. You must evaluate each AI workload against these principles to identify potential vulnerabilities and ethical concerns.
+
+1. **Monitor and improve AI systems continuously.** Responsible AI is not a one-time effort. Set up metrics to continuously track ethical performance. For example, how often does the agent refuse to answer because of policy, how many user complaints about incorrect or biased responses are logged. Review these regularly and improve the agent to reduce issues. If regulations evolve such as new AI laws, update your agents and policies accordingly. Consider using tools like the Responsible AI dashboard to audit your models for fairness or errors in a systematic way.
+
+## Microsoft Tools
+
+Use the [Responsible AI dashboard](/azure/ai-foundry/responsible-use-of-ai-overview) to assess fairness, interpretability, and error analysis across models. [Trustworthy AI for Azure AI Foundry](/azure/ai-foundry/responsible-use-of-ai-overview) outlines foundational governance principles including transparency, fairness, and accountability.
 
 ## Agent governance
 
 Key elements of AI agent governance:
-
-1. **Centralize policy and oversight.** Create a unified AI agent governance framework that applies to all teams. For example, define classification of agents by risk or business impact. Required approval steps for each class, such as a low-risk internal FAQ bot might need light review while a customer-facing finance advice agent needs heavy scrutiny. Define what ongoing monitoring you require. Integrate these with existing corporate governance and treat AI agents like any other critical technology asset that must comply with laws and company policies. If upcoming regulations such as the EU AI Act are relevant, proactively incorporate their requirements so you are not caught off guard.
 
 1. **Integrate governance into development and deployment.** Make governance shift left into the development process. This can be done by automating checks in CI/CD pipelines and deployment processes. For instance, before an agent goes live, have a pipeline step that verifies it is only connecting to approved data sources, content safety filters are enabled, no sensitive info is hard-coded, and that a security review sign-off exists. Use policy as code where possible and encode rules such as if an agent attempts to call an external API not on the allow list, block the deployment or if an agent’s configuration lacks an owner metadata, fail the build. Tools like Azure Policy can enforce cloud resource configurations and ensure the agent runs only in approved regions. This proactive gating prevents policy violations from reaching production.
 
