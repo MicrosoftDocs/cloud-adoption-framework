@@ -12,8 +12,6 @@ ms.topic: conceptual
 
 ***How to ensure responsible use of AI agents and the data they handle.*** Beyond high-level principles, you need concrete governance mechanisms and security controls for your AI agents across their lifecycle. This is about putting guardrails in place so agents access only what they should, behave as expected, and can be managed centrally. Governance processes should be ingrained in how teams design, deploy, and update agents.
 
-:::image type="content" source="./images/responsible-ai.png" alt-text="Diagram that shows Microsoft's responsible AI pillars." lightbox="./images/responsible-ai.png" border="false":::
-
 ## Responsible AI policy
 
 ***How to create governance policies.*** Start with a strong foundation of Responsible AI principles. Responsible AI refers to designing and operating AI systems in an ethical, transparent, and accountable manner.  Microsoft has it's own Responsible AI standard. You can start with this and adapt it to your needs.
@@ -35,8 +33,6 @@ ms.topic: conceptual
 ***How to ensure responsible use of AI agents and the data they handle.*** Beyond high-level principles, you need concrete governance mechanisms and security controls for your AI agents across their lifecycle. This is about putting guardrails in place so agents access only what they should, behave as expected, and can be managed centrally. Governance processes should be ingrained in how teams design, deploy, and update agents.
 
 :::image type="content" source="./images/governance-security.png" alt-text="Diagram that shows Microsoft's responsible AI pillars." lightbox="./images/governance-security.png" border="false":::
-
-## Govern identity
 
 ## Govern agent compliance
 
