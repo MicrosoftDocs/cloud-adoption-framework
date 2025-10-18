@@ -46,9 +46,23 @@ Validate each agent’s data access and processing against GDPR, HIPAA, CCPA, an
 
 **Monitor compliance continuously.** Establish a process for ongoing compliance checks even after deployment. Regularly review agents for policy adherence, perhaps via automated tests or periodic audits. Set up dashboards with compliance metrics such as percentage of agents with missing owner info or number of times agents accessed a disallowed site. Governance is not set and forget. As new threats or regulations emerge, you need feedback loops to update policies and ensure teams implement those updates.
 
-## Govern agent risks and alerts
+## Govern agent security risks and alerts
 
-Enable layered defenses using [AI threat protection](/azure/defender-for-cloud/ai-threat-protection) in Microsoft Defender for Cloud.  Defender for Cloud's AI threat protection works with Azure AI Content Safety Prompt Shields and Microsoft's threat intelligence to provide security alerts for threats like data leakage, data poisoning, jailbreak, and credential theft. Consider providing both end-user and application context. when adding end-user IP or identity, you can block that user or correlate incidents and alerts by that user. When adding application context, you can prioritize or determine whether suspicious behavior could be considered standard for that application in the organization. See [Gain application and end-user context for AI alerts](/azure/defender-for-cloud/gain-end-user-context-ai).
+To govern agent security effectively across your organization, direct your teams to implement a comprehensive strategy that addresses the unique risks introduced by generative AI. Focus on four critical threat vectors: data leakage, data poisoning, jailbreak attempts, and credential theft. These risks require proactive monitoring and response mechanisms that align with enterprise-grade security standards.
+
+Use Microsoft Defender for Cloud’s [AI threat protection](/azure/defender-for-cloud/ai-threat-protection) capabilities to establish a robust defense posture. This solution integrates with Azure AI Content Safety Prompt Shields and Microsoft's global threat intelligence to detect and alert on suspicious AI-related activities. By doing so, it enables your teams to respond to threats in real time and reduce exposure to emerging attack patterns. To operationalize this guidance:
+
+1. **Establish governance policies.** Define clear usage boundaries for generative AI agents. Include acceptable use policies, data handling protocols, and escalation paths for security incidents. Ensure these policies align with your broader cloud security and compliance frameworks.
+
+1. **Deploy AI threat protection.** Instruct your platform teams to activate AI threat protection within Microsoft Defender for Cloud. This step enables automated detection of prompt injection, model manipulation, and unauthorized data access attempts.
+
+1. **Integrate with existing SOC workflows.** Ensure that AI threat alerts flow into your Security Operations Center (SOC) tooling, like Microsoft Sentinel. This integration allows your security analysts to triage and respond to AI-specific threats alongside traditional security incidents.
+
+1. **Monitor and audit agent behavior.** Require regular audits of generative AI agent interactions. Use logging and telemetry to identify anomalous behavior, such as unexpected data access or unusual prompt patterns.
+
+1. **Train teams on AI-specific risks.** Provide targeted training for security and development teams on generative AI vulnerabilities. Focus on real-world scenarios such as jailbreak techniques and poisoning attacks to build awareness and readiness.
+
+1. **Review third-party integrations.** Evaluate any external plugins or APIs connected to your AI agents. Ensure they meet your enterprise’s security standards and do not introduce unvetted data sources or exposure points.
 
 ## Govern agent deployment
 
@@ -74,9 +88,16 @@ For Azure AI Foundry, centrally administer quotas and access through the [manage
 
 ## Agent governance and security
 
-1. **Protect and govern.** For **Azure AI Foundry**, have teams use evaluations. They should automate quality and safety gates by integrating evaluation workflows via [GitHub Actions evaluations](/azure/ai-foundry/how-to/evaluation-github-action?tabs=foundry-project) or [Azure DevOps evaluations](/azure/ai-foundry/how-to/evaluation-azure-devops?tabs=foundry-project) and enforce standardized agent behaviors using reusable templates in source control.
+### Protect and govern
 
-1. **Guardrails and controls.** Use [**content filtering**](/azure/ai-foundry/concepts/content-filtering) system works by running both the prompt input and completion output through an ensemble of classification models aimed at detecting and preventing the output of harmful content. Create a [**blocklist**](/azure/ai-foundry/openai/how-to/use-blocklists?tabs=api) to filter specific terms from input and output
+For **Azure AI Foundry**, have teams use evaluations. They should automate quality and safety gates by integrating evaluation workflows via [GitHub Actions evaluations](/azure/ai-foundry/how-to/evaluation-github-action?tabs=foundry-project) or [Azure DevOps evaluations](/azure/ai-foundry/how-to/evaluation-azure-devops?tabs=foundry-project) and enforce standardized agent behaviors using reusable templates in source control. 
+
+Consider providing both end-user and application context. when adding end-user IP or identity, you can block that user or correlate incidents and alerts by that user. When adding application context, you can prioritize or determine whether suspicious behavior could be considered standard for that application in the organization. See [Gain application and end-user context for AI alerts](/azure/defender-for-cloud/gain-end-user-context-ai).
+
+
+## Guardrails and controls
+
+Use [**content filtering**](/azure/ai-foundry/concepts/content-filtering) system works by running both the prompt input and completion output through an ensemble of classification models aimed at detecting and preventing the output of harmful content. Create a [**blocklist**](/azure/ai-foundry/openai/how-to/use-blocklists?tabs=api) to filter specific terms from input and output
 You can apply one or more blocklists, use the built-in profanity blocklist or combine multiple blocklists into the same filter. Follow agent-level **security recommendations** from Microsoft Defender for Cloud's [AI protection](/azure/defender-for-cloud/ai-threat-protection).
 
 ## Agent security
