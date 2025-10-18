@@ -39,10 +39,6 @@ By having data owners prepare their data for AI use and setting standards for da
 
 AI agents often weave through various data sources, some of which are sensitive or regulated. Ensuring data is handled properly is a fundamental responsibility that must be baked into every stage of agent development.
 
-1. **Implement risk management framework.** Identify and mitigate risks beyond security, including bias, drift, and misuse. Define controls to monitor agent behavior and data interactions. Use audit trails, validation checks, and independent guardrails to prevent unintended outcomes.
-
-2. **Compliance with data laws.** Validate each agent’s data access and processing against GDPR, HIPAA, CCPA, and internal policies. Engage legal and compliance teams for review. Update privacy notices to reflect AI usage. Conduct Data Protection Impact Assessments when required. Repeat compliance checks when agents integrate new datasets or features.
-
 3. **Data sensitivity labeling.** Classify and label all data used or produced by agents. Extend existing schemes (Public, Confidential, Highly Confidential) to agent workflows. Use Microsoft Purview to automate label enforcement. Configure agents to respect labels at runtime and restrict memory or logs from storing sensitive content without protection.
 
 4. **Data privacy.** Apply data minimization principles. Use only the information necessary for agent functions. Review training datasets, memory stores, and logs for privacy risks. Anonymize or pseudonymize data where possible. Support user rights, including data deletion requests. Ensure agents comply with the organization’s privacy policy. Use [Microsoft Purview](/purview/ai-agents) to manage data security & compliance for AI agents.
@@ -57,7 +53,7 @@ AI agents often weave through various data sources, some of which are sensitive 
 
 **Azure AI Foundry:**
 
-- [Apply least privilege access principles using Azure role-based access control](/azure/ai-foundry/concepts/rbac-ai-studio) to assign necessary permissions for specific roles.
+- 
 
 - [Define data boundaries based on user access levels and implement dataset isolation](/azure/cloud-adoption-framework/scenarios/ai/platform/security#secure-ai-data) for different agent environments.
 - [Use Prompt Shields to detect user prompt attacks and document-embedded attacks](/azure/ai-services/content-safety/concepts/jailbreak-detection) that attempt to manipulate agent behavior.
