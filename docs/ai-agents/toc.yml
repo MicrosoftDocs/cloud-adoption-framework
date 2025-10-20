@@ -12,19 +12,15 @@ items:
         href: people-strategy.md
       - name: 4. Data strategy
         href: data-strategy.md
+      
   - name: Agent governance
     expanded: true
     items:
       - name: 1. Responsible AI policy
-        href: ./governance-security.md#responsible-ai-policy
-      - name: 2. Data governance and compliance
-        href: ./governance-security.md#data-governance
-      - name: Agent governance
-        href: ./governance-security.md#agent-governance
-      - name: 3. Security
-        href: ./governance-security.md#agent-security
-      - name: 4. Observability
-        href: ./governance-security.md#agent-observability
+        href: ./responsible-ai.md
+      - name: 2. Governance and security
+        href: governance-security.md
+
   - name: Agent implementation roadmap
     expanded: true
     items:

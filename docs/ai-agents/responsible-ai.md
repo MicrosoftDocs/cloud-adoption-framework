@@ -1,6 +1,6 @@
 ---
 title: Responsible AI policy for AI Agents
-description: Learn  Responsible AI policy for AI Agents
+description: Learn Responsible AI policy for AI Agents
 author: stephen-sumner
 ms.author: pnp
 ms.date: 11/01/2025
@@ -10,28 +10,42 @@ ms.topic: conceptual
 
 # Responsible AI policy for AI Agents
 
-Responsible AI defines how the organization designs and operates AI systems in an ethical, transparent, and accountable manner. This policy applies to every AI agent, regardless of its visibility or complexity. Microsoft provides a Responsible AI standard that organizations can use as a starting point and adapt to their own needs. For Azure AI Foundry, [Trustworthy AI resources](/azure/ai-foundry/responsible-use-of-ai-overview).
+Responsible AI defines how your organization designs and operates AI systems in ways that uphold ethical standards, ensure transparency, and maintain accountability. This policy applies to every AI agent, regardless of its complexity or visibility. Microsoft offers a Responsible AI standard that serves as a starting point and can be adapted to meet your organization’s specific needs. For Azure AI Foundry, refer to /azure/ai-foundry/responsible-use-of-ai-overview. See [Trustworthy AI resources](/azure/ai-foundry/responsible-use-of-ai-overview).
 
 :::image type="content" source="./images/responsible-ai.png" alt-text="Diagram that shows Microsoft's responsible AI pillars." lightbox="./images/responsible-ai.png" border="false":::
 
-## Establish a Responsible AI standard
+## Define a responsible AI standard
 
-Create a clear and consistent standard that applies to all AI agents across the organization. Align this standard with ethical principles such as fairness, privacy, and transparency, and ensure it complies with applicable laws and regulations. Integrate this standard into existing governance processes, including architecture reviews, security assessments, and compliance workflows. This integration helps teams apply consistent expectations and reduces the risk of ethical oversights as AI agents scale across the cloud environment.
-
-Business leaders should treat this standard as a foundational policy that guides how teams design, deploy, and monitor AI systems. A well-defined standard simplifies oversight and accelerates deployment timelines by reducing rework and compliance delays.
+Establish a consistent standard that applies to all AI agents across the organization. This standard must reflect core principles such as fairness, privacy, transparency, and accountability. It must also comply with applicable laws and regulations.
+Integrate the standard into existing review processes such as architecture evaluations, security assessments, and compliance checks. This integration ensures that teams apply consistent expectations and reduces the likelihood of ethical oversights. A well-defined standard also simplifies oversight and shortens deployment timelines.
 
 ## Assign ownership and oversight
 
-Designate a responsible authority to manage and enforce the Responsible AI policy. This authority could be an AI ethics committee, the compliance office, or an AI Center of Excellence working with legal teams. Give this group the mandate to update policies, audit AI agents, and ensure compliance. Use automation to enforce standards where possible. For example, require safety features such as sensitive data protection in agent templates and verify them during code reviews or deployment pipelines.
-Clear ownership reduces ambiguity, speeds up decision-making, and ensures accountability across teams. Business leaders should ensure this authority has the resources and influence to act across departments.
+Designate a responsible authority to manage and enforce the Responsible AI policy. This authority could be an AI ethics committee, a compliance office, or an AI Center of Excellence that collaborates with legal teams. This group must have the mandate to update policies, audit AI agents, and ensure compliance across departments.
 
-## Use Responsible AI for risk assessment
+Use automation to enforce standards where feasible. For example, require safety features such as sensitive data protection in agent templates and verify them during code reviews or deployment pipelines. Clear ownership reduces ambiguity and enables faster decision-making.
 
-Apply Responsible AI principles to evaluate each AI workload. Use this structured approach to identify vulnerabilities and ethical concerns early. Tools like the Responsible AI dashboard help assess fairness, interpretability, and error rates. Refer to[Assess AI risks](../scenarios/ai/govern.md#assess-ai-organizational-risks).
+## Apply structured risk assessments
 
-Business leaders should direct teams to use these principles not only during development but also when reviewing existing systems. Early risk detection prevents reputational damage and reduces the cost of remediation.
+Direct teams to evaluate each AI workload using a structured risk assessment. This process identifies vulnerabilities and ethical concerns early in development. Require teams to complete an Impact Assessment before defining product requirements. This assessment must document:
 
-## Monitor and improve AI systems
+- Intended uses and stakeholders
+- Risks to individuals, groups, and society
+- Validation methods to ensure the system works as intended
+- Data governance practices
+- Human oversight and control mechanisms
 
-Define metrics that track ethical performance. Examples include refusal rates due to policy violations or user complaints about biased responses. Review these metrics regularly and direct teams to improve AI agents based on findings. Update policies and systems when regulations change. Use the Responsible AI dashboard to audit models for fairness, interpretability, and error analysis.
-Continuous oversight ensures long-term compliance and keeps AI systems aligned with business values and legal requirements. Business leaders should treat these metrics as part of their operational dashboards and use them to guide investment and improvement decisions.
+Review and update assessments annually or when new uses emerge. Require approvals before advancing to new release stages. Apply this structured approach to every AI workload to ensure consistent evaluation and documentation.
+Use tools such as the Responsible AI dashboard to assess fairness, interpretability, and error rates. Require fallback options and remediation plans for predictable failures. Define monitoring procedures for unknown failures and reassess systems when new operational factors or use cases arise. Early risk detection reduces remediation costs and protects the organization from reputational harm. Refer to [Assess AI risks](../scenarios/ai/govern.md#assess-ai-organizational-risks).
+
+## Track ethical performance
+
+Define metrics that measure ethical performance across AI systems. Examples include refusal rates due to policy violations or user complaints about biased responses. Review these metrics regularly and direct teams to improve AI agents based on findings.
+Update policies and systems when regulations change. Use audit tools to evaluate fairness, interpretability, and error analysis. Treat these metrics as part of operational dashboards and use them to guide investment and improvement decisions. Ongoing oversight ensures long-term compliance and keeps AI systems aligned with business values and legal requirements.
+
+## Next step
+
+Use these policies as the foundation for all AI agent implementations. Convert them into a governance framework that supports secure, ethical, and scalable AI adoption.
+
+> [!div class="nextstepaction"]
+> [Governance and security](./governance-security.md)
