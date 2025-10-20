@@ -98,7 +98,7 @@ Enable secure and scalable SSH access to Azure Arc-enabled Oracle Exadata cluste
 
 1. **Assign appropriate Entra ID roles and RBAC policies for SSH access.** [Assign Entra ID roles](/azure/azure-arc/servers/ssh-arc-overview?tabs=azure-cli#microsoft-entra-authentication) such as "Virtual Machine User Login" or "Virtual Machine Administrator Login" to control SSH access. Scope these roles to specific resource groups or Arc-enabled servers hosting Oracle workloads. Apply least privilege principles to minimize risk and ensure only authorized personnel access sensitive infrastructure.
 
-1. **Deploy Azure Monitor agent using Arc extensions.** Use Azure Policy to deploy the Azure Monitor agent via Arc extensions. This ensures consistent telemetry collection across all cluster nodes and supports scalable monitoring operations. Review [Azure Monitor Agent overview](/azure/azure-monitor/agents/azure-monitor-agent-overview0) for deployment guidance.
+1. **Deploy Azure Monitor agent using Arc extensions.** Use Azure Policy to deploy the Azure Monitor agent via Arc extensions. This ensures consistent telemetry collection across all cluster nodes and supports scalable monitoring operations. Review [Azure Monitor Agent overview](/azure/azure-monitor/agents/azure-monitor-agent-overview) for deployment guidance.
 
 1. **Configure data collection rules to capture Syslog telemetry.** Create a [Data Collection Rule (DCR) to route Syslog data to a Log Analytics workspace](/azure/sentinel/forward-syslog-monitor-agent). This enables centralized log aggregation and supports advanced analytics and alerting.
 
