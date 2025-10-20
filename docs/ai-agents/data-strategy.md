@@ -8,69 +8,38 @@ ms.update-cycle: 180-days
 ms.topic: conceptual
 ---
 
-# Data governance and security for AI agents
+# Data strategy for AI agents
 
-AI agents depend on reliable, accessible, and compliant data to deliver meaningful outcomes. Many organizations respond reactively to data needs, tailoring efforts to individual agent use cases. This reactive approach fragments data practices, duplicates effort, and weakens governance. A proactive data strategy enables scalable AI adoption, reduces risk, and improves return on investment.
+A comprehensive data strategy defines how an organization uses data to achieve business objectives. For AI agents to deliver meaningful outcomes, decision makers must treat data as a strategic asset and direct their teams to build a foundation that supports accessibility, governance, and scalability.
 
-This guidance outlines foundational data principles that support all AI agent initiatives. These principles apply across departments and projects to ensure consistent data quality, accessibility, and compliance.
+## Data quality and ownership Define data quality.
 
-1. **Define organizational data policies.** Assess whether data supports retrieval, reasoning, and summarization. Evaluate structure, tagging, and cleanliness. Validate compliance with access controls, retention rules, and sensitivity classifications. For external or unstructured data, direct platform teams to enrich or transform it. Add a checklist to assess data quality:
+Assess whether data supports retrieval, reasoning, and summarization. Evaluate structure, tagging, and cleanliness. Validate compliance with access controls, retention rules, and sensitivity classifications. For external or unstructured data, direct platform teams to enrich or transform it. Add a checklist to assess data quality:
 
-    - Accuracy: Does the data reflect real-world conditions?
-    - Completeness: Are all required fields populated?
-    - Consistency: Are formats and values standardized?
-    - Timeliness: Is the data current and updated regularly?
+- Accuracy: Does the data reflect real-world conditions?
+- Completeness: Are all required fields populated?
+- Consistency: Are formats and values standardized?
+- Timeliness: Is the data current and updated regularly?
 
-2. **Implement metadata strategy.** Define metadata standards to support discoverability, lineage, and auditability. Require teams to tag datasets with source, owner, sensitivity, and usage context. Use tools like Microsoft Purview to enforce metadata policies and enable cataloging.
+1. **Data ownership and stewardship.** Begin by assigning data ownership and stewardship roles. These roles clarify who holds responsibility for data accuracy, access control, and lifecycle management. Establish data quality standards that apply uniformly across departments and systems. These standards must include validation rules, completeness checks, and consistency requirements to support reliable decision-making.
 
-3. **Ensure data accessibility.** Standardize secure integration paths across local and cloud environments. Use APIs, connectors, or semantic indexes to connect agents to data. Document these patterns to reduce complexity and risk.
+## Collect and connect data across systems
 
-4. **Reuse and scale data.** Finally, the process must support reuse and scale. As more agents are developed, the organization should avoid duplicating effort. Encourage teams to contribute prepared datasets, integration patterns, and enrichment tools to a shared repository. This enables future agents to build on existing work and accelerates development across domains.
+Organizations must use secure and consistent methods to connect data from disparate systems, whether hosted on-premises or in the cloud. Direct your teams to use APIs and connectors to integrate data sources with AI agents. Require documentation for each connection method so future initiatives can reuse existing work without duplicating effort.
 
-5. **Manage the data lifecycle.** Expand retention policies into full lifecycle management. Define rules for data creation, archival, deletion, and purging. Use automated workflows to enforce lifecycle stages and reduce manual effort.
+1. Establish scalable data reuse practices. Create a shared space where teams store useful data, connection methods, and tools that clean or enrich data. This helps avoid duplication and speeds up development. When one team solves a problem, others can build on it.
 
-6. **Monitor and refine.** Establish feedback loops to improve data quality and integration based on agent performance. Track agent outcomes, identify data gaps, and adjust datasets or access patterns accordingly. Use telemetry and audit logs to inform continuous improvement.
+1. Prepare multimodal data for advanced scenarios. To support advanced use cases, prepare multimodal data, including images, audio, and video, in addition to structured text and numerical data. Define clear standards for labeling, storing, and accessing this data. These standards allow agents to operate across diverse business functions and unlock more complex capabilities.
 
-7. **Prepare multimodal data.** Extend readiness assessments to image, audio, and video data. Define standards for labeling, storage, and access. For Copilot Studio scenarios, ensure agents can process and retrieve multimodal content securely and efficiently.
+1. Monitor agent performance to refine data quality. To maintain accuracy and compliance, monitor agent performance and use those insights to refine data quality. Assign accountability for keeping data current and reliable. When agents produce poor results, investigate the underlying data and correct gaps or errors. This feedback loop improves agent reliability and supports regulatory requirements.
 
-By having data owners prepare their data for AI use and setting standards for data integration, you create a strong foundation for all AI agents. This prevents the common scenario of agents producing weak results or breaking rules due to lack of data readiness. Remember, garbage in, garbage out. A well-planned data strategy ensures your AI agents have rich, reliable fuel to drive their intelligence.
+## Organize data systems for governance and reuse
 
-## Data governance
+To support scalable and secure AI adoption across the cloud estate, decision makers must direct their teams to organize data systems in ways that protect sensitive information, simplify oversight, and accelerate solution development.
 
-AI agents often weave through various data sources, some of which are sensitive or regulated. Ensuring data is handled properly is a fundamental responsibility that must be baked into every stage of agent development.
+1. **Isolate sensitive data.** Start by isolating sensitive data. In environments like Azure AI Foundry, use separate management groups for internet-facing and internal agents. This separation enforces governance boundaries and reduces the risk of exposing business-critical data. Align this structure with Azure landing zone principles to enable policy inheritance and streamline compliance management.
 
-3. **Data sensitivity labeling.** Classify and label all data used or produced by agents. Extend existing schemes (Public, Confidential, Highly Confidential) to agent workflows. Use Microsoft Purview to automate label enforcement. Configure agents to respect labels at runtime and restrict memory or logs from storing sensitive content without protection.
-
-4. **Data privacy.** Apply data minimization principles. Use only the information necessary for agent functions. Review training datasets, memory stores, and logs for privacy risks. Anonymize or pseudonymize data where possible. Support user rights, including data deletion requests. Ensure agents comply with the organization’s privacy policy. Use [Microsoft Purview](/purview/ai-agents) to manage data security & compliance for AI agents.
-
-5. **Data residency and sovereignty.** Identify where each data source resides, where the agent runs, and where logs or outputs are stored. Select Azure regions or on-premises environments based on residency requirements. Disable logging of sensitive content unless retention is required. Apply encryption to all stored data. Review vendor guarantees for alignment with internal policies.
-
-6. **Data retention.** Define retention periods for logs, memory, and training data. Implement automated purging or anonymization. Retain only context necessary for agent functionality. Inform users about retention durations and provide deletion mechanisms.
-
-7. **Data transparency.** Disclose AI usage clearly in agent interfaces. Notify internal stakeholders when their data supports training or inference. Review new data sources before integration to validate content, permissions, and security risks.
-
-## Microsoft tools for data governance and security
-
-**Azure AI Foundry:**
-
-- 
-
-- [Define data boundaries based on user access levels and implement dataset isolation](/azure/cloud-adoption-framework/scenarios/ai/platform/security#secure-ai-data) for different agent environments.
-- [Use Prompt Shields to detect user prompt attacks and document-embedded attacks](/azure/ai-services/content-safety/concepts/jailbreak-detection) that attempt to manipulate agent behavior.
-- [Configure Azure Content Safety content filtering](/azure/ai-services/content-safety/overview) to block sensitive data leakage and enforce content policies.
-- [Implement agentic AI safeguards including audit trails, data validation, and independent guardrails](/azure/well-architected/ai/responsible-ai#implement-agentic-ai-safeguards) for production deployments.
-
-**Microsoft Copilot Studio:**
-
-- [Security and governance in Copilot Studio](/microsoft-copilot-studio/security-and-governance) provides an overview of governance controls including sensitivity labels and audit logs.
-- [Governance and security best practices overview](/microsoft-copilot-studio/guidance/sec-gov-intro) offers a phased approach to governance from planning to monitoring.
-- [Use Microsoft Purview to manage data security & compliance for Copilot Studio](/purview/ai-copilot-studio) lists supported Purview capabilities like DSPM, auditing, and insider risk management.
-- [AI threat protection overview in Defender for Cloud](/azure/defender-for-cloud/ai-threat-protection) to detect prompt injection, data leakage, and anomalous agent behavior.
-- [Configure user authentication with Microsoft Entra ID](/microsoft-copilot-studio/configuration-authentication-azure-ad) to ensure only authorized users can interact with agents.
-- [Run tools with user credentials by default](/microsoft-copilot-studio/advanced-plugin-actions#authentication-considerations-for-tools) to restrict data access based on individual user permissions.
-- [Use data policies to require user authentication](/microsoft-copilot-studio/dlp-example-3) and block improperly configured agents.
-- [Enable audit logging in Microsoft Purview](/microsoft-copilot-studio/admin-logging-copilot-studio) to capture user interactions and administrative actions.
-- [Configure data loss prevention policies](/microsoft-copilot-studio/admin-data-loss-prevention) to govern agent capabilities and restrict knowledge sources.
+1. **Unify data preparation.** Equally important is the centralization of data preparation and reuse. When teams prepare data in silos, they often duplicate effort and introduce inconsistencies that slow down development and increase governance complexity. To avoid these pitfalls, direct teams to unify data preparation in a shared platform such as Microsoft Fabric. This centralized approach ensures agents access consistent, well-prepared data and simplifies onboarding for new use cases. It also improves visibility into data usage, supports cross-agent reuse, and strengthens governance across the organization.
 
 ## Next step
 

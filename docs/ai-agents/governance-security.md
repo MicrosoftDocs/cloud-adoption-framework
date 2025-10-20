@@ -10,33 +10,82 @@ ms.topic: conceptual
 
 # Agent governance and security
 
-***How to ensure responsible use of AI agents and the data they handle.*** Beyond high-level principles, you need concrete governance mechanisms and security controls for your AI agents across their lifecycle. This is about putting guardrails in place so agents access only what they should, behave as expected, and can be managed centrally. Governance processes should be ingrained in how teams design, deploy, and update agents.
+AI agents introduce new capabilities across the cloud estate, but they also raise complex questions about ethics, compliance, and operational control. To ensure responsible use, decision makers must establish a governance framework that begins with Responsible AI principles, followed by data governance, and then agent governance. This order reflects the dependencies: agents rely on governed data, and Responsible AI principles guide how agents behave and interact with that data.
 
 ## Responsible AI policy
 
-***How to create governance policies.*** Start with a strong foundation of Responsible AI principles. Responsible AI refers to designing and operating AI systems in an ethical, transparent, and accountable manner.  Microsoft has it's own Responsible AI standard. You can start with this and adapt it to your needs.
+Responsible AI defines how the organization designs and operates AI systems in an ethical, transparent, and accountable manner. This policy applies to every AI agent, regardless of its visibility or complexity. Microsoft provides a Responsible AI standard that organizations can use as a starting point and adapt to their own needs. For Azure AI Foundry, [Trustworthy AI resources](/azure/ai-foundry/responsible-use-of-ai-overview).
 
 :::image type="content" source="./images/responsible-ai.png" alt-text="Diagram that shows Microsoft's responsible AI pillars." lightbox="./images/responsible-ai.png" border="false":::
 
-1. **Establish a Responsible AI standard.** Define an organization-wide Responsible AI standard that all AI agents must follow. The specific policies you create for each pillar will differ based on your industry and end users. At a minimum, your policy should align with ethical principles (fairness, privacy, transparency) and relevant regulations. Make it an official policy that applies to every AI system, regardless of size or visibility. Integrate Responsible AI into governance processes, such as architecture reviews, security assessments, and compliance workflows. Avoid creating parallel structures by embedding ethical checks into existing decision-making forums. Responsible AI categories is also a great way to identity AI risks across your business.
+1. **Establish a Responsible AI standard.** Define an organization-wide Responsible AI standard that applies to all AI agents. Align this standard with ethical principles such as fairness, privacy, and transparency, as well as relevant regulations. Integrate Responsible AI into existing governance processes, such as architecture reviews, security assessments, and compliance workflows.
 
-- For **Azure AI Foundry,** see [Trustworthy AI resources](/azure/ai-foundry/responsible-use-of-ai-overview).
-
-1. **Assign ownership and oversight.** Identify who in your organization is responsible for enforcing Responsible AI. It could be a centralized AI ethics committee, your existing compliance office, or the AI Center of Excellence in partnership with legal. Give them authority to develop and update the Responsible AI policy and to audit AI agents for compliance. At the same time, automate enforcement where possible. For example, require that every agent must implement certain safety features such as not revealing sensitive information and have this checked in code reviews or continuous integration and deployment pipelines. The platform team can build templates that include these features by default.
+1. **Assign ownership and oversight.** Designate a responsible authority to enforce the Responsible AI policy. This could be a centralized AI ethics committee, the compliance office, or an AI Center of Excellence in partnership with legal. Grant this authority the mandate to update policies and audit agents for compliance. Automate enforcement where possible. For example, require safety features such as sensitive data protection to be included in agent templates and verified during code reviews or deployment pipelines.
 
 1. **Use Responsible AI for risk assessment.**  Responsible AI principles provide a structured framework for comprehensive risk assessment. You must evaluate each AI workload against these principles to identify potential vulnerabilities and ethical concerns. Refer to [Assess AI risks](../scenarios/ai/govern.md#assess-ai-organizational-risks).
 
-1. **Monitor and improve AI systems continuously.** Responsible AI is not a one-time effort. Set up metrics to continuously track ethical performance. For example, how often does the agent refuse to answer because of policy, how many user complaints about incorrect or biased responses are logged. Review these regularly and improve the agent to reduce issues. If regulations evolve such as new AI laws, update your agents and policies accordingly. Consider using tools like the Responsible AI dashboard to audit your models for fairness or errors in a systematic way. Use the [Responsible AI dashboard](/azure/ai-foundry/responsible-use-of-ai-overview) to assess fairness, interpretability, and error analysis across models.
+1. **Monitor and improve AI systems.** Responsible AI requires continuous oversight. Establish metrics to track ethical performance, such as refusal rates due to policy violations or user complaints about biased responses. Review these metrics regularly and direct teams to improve agents accordingly. Update policies and systems when regulations change. Use tools like the Responsible AI dashboard to audit models for fairness, interpretability, and error analysis.Use the [Responsible AI dashboard](/azure/ai-foundry/responsible-use-of-ai-overview) to assess fairness, interpretability, and error analysis across models.
 
 ## Org-wide agent governance
 
-***How to ensure responsible use of AI agents and the data they handle.*** Beyond high-level principles, you need concrete governance mechanisms and security controls for your AI agents across their lifecycle. This is about putting guardrails in place so agents access only what they should, behave as expected, and can be managed centrally. Governance processes should be ingrained in how teams design, deploy, and update agents.
+***How to ensure responsible use of AI agents and the data they handle.*** Beyond high-level principles, you need concrete governance mechanisms for your AI agents across their lifecycle. This is about putting guardrails in place so agents access only what they should, behave as expected, and can be managed centrally. Governance processes should be ingrained in how teams design, deploy, and update agents.
 
 :::image type="content" source="./images/governance-security.png" alt-text="Diagram that shows Microsoft's responsible AI pillars." lightbox="./images/governance-security.png" border="false":::
 
-## Govern agent compliance
+### Org-wide Data governance and compliance
 
-**Regulatory compliance.** Validate each agent’s data access and processing against GDPR, HIPAA, CCPA, and internal policies. Engage legal and compliance teams for review. Update privacy notices to reflect AI usage. Conduct Data Protection Impact Assessments when required. Repeat compliance checks when agents integrate new datasets or features. Use [Microsoft Purview Compliance Manager](/purview/compliance-manager) translates regulations like the EU AI Act into actionable controls and enables teams to assess and manage compliance posture across AI applications.
+Data governance and compliance define how the organization manages, protects, and uses data across all AI agents and platforms. These practices ensure that AI systems operate within legal boundaries, align with internal policies, and maintain trust with users and stakeholders. Business leaders must treat governance as a strategic capability that supports innovation while minimizing risk.
+
+Effective governance spans two domains: regulatory compliance, which addresses external legal obligations, and corporate compliance, which enforces internal standards and operational consistency.
+
+#### Regulatory compliance
+
+Regulatory compliance ensures that AI agents meet legal requirements such as GDPR, HIPAA, and CCPA. This includes validating how agents access and process data, updating privacy notices to reflect AI usage, and conducting Data Protection Impact Assessments when agents introduce new datasets or features. To operationalize these requirements across the cloud estate, organizations must implement foundational data practices:
+
+- Metadata standards: Require teams to tag datasets with source, owner, sensitivity, and usage context. Use Microsoft Purview to enforce metadata policies and maintain a centralized data catalog. This supports auditability and improves discoverability.
+- Sensitivity labeling: Extend existing classification schemes, such as Public, General, and Confidential, into agent workflows. Configure agents to respect these labels at runtime and restrict memory or logs from storing sensitive content unless protected.
+- Privacy controls: Apply data minimization principles. Direct teams to use only the data necessary for agent functionality. Review training datasets, memory stores, and logs for privacy risks. Anonymize or pseudonymize data where possible. Support user rights, including deletion requests, and ensure agents comply with the organization’s privacy policy.
+- Residency and sovereignty: Identify where each data source resides, where the agent runs, and where logs or outputs are stored. Select Azure regions or on-premises environments that meet residency requirements. Disable logging of sensitive content unless retention is required. Apply encryption to all stored data and validate vendor guarantees against internal policies.
+- Retention and lifecycle management: Define retention periods for logs, memory, and training data. Implement automated purging or anonymization processes. Retain only the context necessary for agent functionality. Inform users about retention durations and provide deletion mechanisms. Expand retention policies into full lifecycle management with rules for data creation, archival, deletion, and purging.
+- Transparency: Disclose AI involvement clearly in agent interfaces. Notify internal stakeholders when their data supports training or inference. Review new data sources before integration to validate content, permissions, and security risks.
+
+Use [Microsoft Purview Compliance Manager](/purview/compliance-manager) to translate regulations like the EU AI Act into actionable controls and assess compliance posture across AI applications. Use [Azure AI Content Safety](/azure/ai-services/content-safety/overview) to detects harmful user-generated and AI-generated content and to help comply with regulations or maintain the intended environment for your users.
+
+- In **Azure AI Foundry**, you can use [Microsoft Purview APIs](/purview/developer/secure-ai-with-purview) enable Azure AI Foundry and other AI platforms to integrate data governance controls into custom AI applications and agents.
+
+- For **Microsoft Copilot Studio**, follow [Governance and security best practices](/microsoft-copilot-studio/guidance/sec-gov-intro). Use [data locations](/microsoft-copilot-studio/data-location) to respect data sovereignty. See the platform's [compliance (ISO, SOC, HIPAA) certifications](/microsoft-copilot-studio/admin-certification).
+
+#### Corporate compliance
+
+Corporate compliance ensures that AI agents align with internal governance policies and operational standards. This includes enforcing consistent deployment practices, reducing duplication of effort, and maintaining guardrails across all environments.
+
+Organizations must use policy-as-code and infrastructure-as-code to embed governance into agent development and deployment. Provide pre-approved templates and components with built-in controls. Mandate or encourage use of these standard components to ensure consistent application of policies such as content filtering, version control, and access restrictions.
+
+- For **Azure AI Foundry**, use [Azure Policy](/azure/ai-foundry/how-to/azure-policy) to control infrastructure configurations and [model deployment](/azure/ai-foundry/how-to/built-in-policy-model-deployment).
+
+- For **Microsoft Copilot Studio**, [create and manage solution pipelines](/microsoft-copilot-studio/authoring-solutions-overview#create-and-manage-solution-pipelines) and use [reusable component collections](/microsoft-copilot-studio/authoring-export-import-copilot-components) and enforcing version governance.
+
+### Agent observability
+
+Hand in hand with governance is observability. This is the ability to monitor and understand what your AI agents are doing in real time and over time. Given that AI agents have probabilistic behavior, it is critical to have visibility into their operations to detect anomalies, ensure compliance, and optimize performance. Think of AI agents as you would microservices. You need logging, monitoring, and analytics to manage them effectively at scale. Key observability practices for AI agents:
+
+1. **Unique agent ID and ownership.** To establish effective observability, begin by directing teams to assign a unique identity to every AI agent. This identity must include ownership metadata, versioning, and lifecycle status. [Microsoft Entra Agent ID](https://techcommunity.microsoft.com/blog/microsoft-entra-blog/announcing-microsoft-entra-agent-id-secure-and-manage-your-ai-agents/3827392) supports this requirement by linking each agent to its owner and purpose, enabling traceability and access control. This structure allows your organization to distinguish between production, development, and test instances, which is essential for managing risk and ensuring accountability.
+
+1. **Discover all agent workloads.** Next, ensure full discovery of agent workloads across your cloud estate. Use Microsoft Defender for Cloud to [discover](/azure/defender-for-cloud/identify-ai-workload-model) and classify these workloads.  This step prevents shadow deployments and maintains a complete inventory of AI assets, which is essential for governance and cost control.
+
+1. **Monitor all agents.** Once discovery is complete, shift focus to centralized monitoring. Use Azure Monitor Metrics and Application Insights to collect performance indicators such as latency, token usage, cost per request, and throughput. These metrics form the foundation for cost optimization and performance tuning. Instruct teams to configure custom telemetry that captures model behavior and user interaction patterns. This data enables leaders to quantify business impact and make informed decisions about scaling or refining models.
+
+    Operational logging must follow a standardized schema. Have teams export logs to a centralized Azure Log Analytics workspace. Standardized logging of agent actions, decisions, and errors improves transparency and supports compliance and audit readiness. Centralized logs also simplify cross-team collaboration and accelerate troubleshooting.
+
+    To support strategic planning, direct teams to build centralized dashboards using Azure Monitor Workbooks. This visibility helps align technical performance with business goals and ensures that AI investments deliver measurable value.
+
+    - For **Azure AI Foundry**, [monitor model deployments](/azure/ai-foundry/foundry-models/how-to/monitor-models) and application-level behaviors using [Monitor generative AI applications](/azure/ai-foundry/how-to/monitor-applications).
+
+    - For **Microsoft Copilot Studio**, see [Monitor logging and auditing](/microsoft-copilot-studio/admin-logging-copilot-studio). Centralize with [Azure Application Insights in Azure Monitor](/microsoft-copilot-studio/advanced-bot-framework-composer-capture-telemetry).
+
+### Agent compliance
+
+**Regulatory compliance.** Validate each agent’s data access and processing against GDPR, HIPAA, CCPA, and internal policies. Engage legal and compliance teams for review. Update privacy notices to reflect AI usage. Conduct Data Protection Impact Assessments when required. Repeat compliance checks when agents integrate new datasets or features. Use [Microsoft Purview Compliance Manager](/purview/compliance-manager) translates regulations like the EU AI Act into actionable controls and enables teams to assess and manage compliance posture across AI applications. Use [Azure AI Content Safety](/azure/ai-services/content-safety/overview) to detects harmful user-generated and AI-generated content and to help comply with regulations or maintain the intended environment for your users.
 
 - For **Azure AI Foundry**, use [Microsoft Purview APIs](/purview/developer/secure-ai-with-purview) enable Azure AI Foundry and other AI platforms to integrate data governance controls into custom AI applications and agents.
 
@@ -50,39 +99,23 @@ ms.topic: conceptual
 
 **Monitor compliance continuously.** Establish a process for ongoing compliance checks even after deployment. Regularly review agents for policy adherence, perhaps via automated tests or periodic audits. Set up dashboards with compliance metrics such as percentage of agents with missing owner info or number of times agents accessed a disallowed site. Governance is not set and forget. As new threats or regulations emerge, you need feedback loops to update policies and ensure teams implement those updates.
 
-## Govern agent security risks and alerts
+### Agent security
 
-To govern agent security effectively across your organization, direct your teams to implement a comprehensive strategy that addresses the unique risks introduced by generative AI. Focus on four critical threat vectors: data leakage, data poisoning, jailbreak attempts, and credential theft. These risks require proactive monitoring and response mechanisms that align with enterprise-grade security standards.
+To govern agent security effectively across your organization, focus on four critical threat vectors: data leakage, data poisoning, jailbreak attempts, and credential theft. These risks require proactive monitoring and response mechanisms that align with enterprise-grade security standards.
 
 Use Microsoft Defender for Cloud’s [AI threat protection](/azure/defender-for-cloud/ai-threat-protection) capabilities to establish a robust defense posture. This solution integrates with Azure AI Content Safety Prompt Shields and Microsoft's global threat intelligence to detect and alert on suspicious AI-related activities. By doing so, it enables your teams to respond to threats in real time and reduce exposure to emerging attack patterns. To operationalize this guidance:
 
-1. **Establish governance policies.** Define clear usage boundaries for generative AI agents. Include acceptable use policies, data handling protocols, and escalation paths for security incidents. Ensure these policies align with your broader cloud security and compliance frameworks.
+1. **Establish security policies.** Define clear usage boundaries for generative AI agents. Include acceptable use policies, data handling protocols, and escalation paths for security incidents. Ensure these policies align with your broader cloud security and compliance frameworks.
 
 1. **Deploy AI threat protection.** Instruct your platform teams to activate AI threat protection within Microsoft Defender for Cloud. This step enables automated detection of prompt injection, model manipulation, and unauthorized data access attempts.
 
-1. **Integrate with existing SOC workflows.** Ensure that AI threat alerts flow into your Security Operations Center (SOC) tooling, like Microsoft Sentinel. This integration allows your security analysts to triage and respond to AI-specific threats alongside traditional security incidents.
+1. **Integrate with existing SOC workflows.** Define thresholds for anomalies such as latency spikes or unauthorized access attempts. Instruct teams to create Azure Monitor Alerts and route them to Microsoft Sentinel through Log Analytics. This integration strengthens the organization’s security posture and enables faster incident response. By embedding alerting into the broader security operations workflow, decision makers ensure that AI services remain resilient and trustworthy.
 
 1. **Monitor and audit agent behavior.** Require regular audits of generative AI agent interactions. Use logging and telemetry to identify anomalous behavior, such as unexpected data access or unusual prompt patterns.
 
 1. **Train teams on AI-specific risks.** Provide targeted training for security and development teams on generative AI vulnerabilities. Focus on real-world scenarios such as jailbreak techniques and poisoning attacks to build awareness and readiness.
 
 1. **Review third-party integrations.** Evaluate any external plugins or APIs connected to your AI agents. Ensure they meet your enterprise’s security standards and do not introduce unvetted data sources or exposure points.
-
-## Govern agent observability
-
-Hand in hand with governance is observability. This is the ability to monitor and understand what your AI agents are doing in real time and over time. Given that AI agents have probabilistic behavior, it is critical to have visibility into their operations to detect anomalies, ensure compliance, and optimize performance. Think of AI agents as you would microservices. You need logging, monitoring, and analytics to manage them effectively at scale. Key observability practices for AI agents:
-
-1. **Unique agent ID and ownership.** Each agent must have a unique identity and assigned owners. With a unique identity, you can track usage statistics and tie them to the agent’s owner and purpose. You can do both in [Microsoft Entra Agent ID](https://techcommunity.microsoft.com/blog/microsoft-entra-blog/announcing-microsoft-entra-agent-id-secure-and-manage-your-ai-agents/3827392) supports traceability, access control, and lifecycle management. Use this identity to link logs, ownership metadata, and compliance status. It also helps if you have multiple versions of agents or development and test instances. Each should be distinguishable.
-
-1. **Observe all AI models.** To maintain visibility of all generative AI models running in your environment. See [Discover generative AI workloads](/azure/defender-for-cloud/identify-ai-workload-model)
-
-1. **Monitor agents.** Instruct teams to monitor agent behavior continuously and define thresholds for anomalous activity. Set up monitoring on key metrics and events for agents. Define what constitutes abnormal behavior. Examples include spikes in usage, repeated errors, or unexpected data access patterns. Tie these alerts into your Security Operations Center workflows if you have one so they are investigated promptly. For example, Microsoft Defender for Cloud’s AI protection can detect certain anomalies in agent behavior such as attempts to extract secrets. Those should raise immediate flags. Make sure to also log the reason behind actions when possible. If your platform allows capturing the chain of thought or confidence scores, store them. For example, Azure AI Foundry can output trace logs of how the agent decided to call a certain function. Such detail is invaluable for troubleshooting and for training improvements.
-
-- For **Azure AI Foundry**, [monitor model deployments](/azure/ai-foundry/foundry-models/how-to/monitor-models) and application-level behaviors using [Monitor generative AI applications](/azure/ai-foundry/how-to/monitor-applications).
-
-4. **Comprehensive logging.** Log everything the agent does in a secure and tamper-proof way. Logging is critical for debugging issues, analyzing failures or odd behaviors, and is often required for compliance such as audit trails. This includes user queries, the agent’s responses, actions it takes such as calls to functions or APIs, and any significant decisions internally such as if it used a tool because confidence was low. Logs should have timestamps, the user or external system that interacted, and the agent’s ID. Use write-once storage or append-only logs to ensure an agent or malicious actor cannot alter history.
-
-- For **Microsoft Copilot Studio**, see [Monitor logging and auditing](/microsoft-copilot-studio/admin-logging-copilot-studio) and [Agent runtime protection status]
 
 ## Govern agent development
 
@@ -115,6 +148,8 @@ AI agents now operate as core infrastructure components. Their integration intro
 
 1. **Secure agent infrastructure.** Align infrastructure and service controls with the [Azure security baseline for Azure AI Foundry](/azure/security/benchmark/azure/baselines/azure-ai-foundry-security-baseline). Include network isolation, patching, and runtime monitoring. Treat agent runtimes with the same governance and oversight as customer-facing systems.
 
+1. **Standardize content safety.** You need to block adversarial input to bypass integrated safety protocols. Use [Configure Azure Content Safety content filtering](/azure/ai-services/content-safety/overview) to block  sensitive data leakage and enforce content policies.
+
 1. **Enforce security best practices.** Use [managed identities for authentication](/entra/identity/managed-identities-azure-resources/overview) to eliminate credential management risks. use Microsoft Entra ID for authentication. Enforce least-privilege access.
 
     For **Azure AI Foundry.** Enforce least-privilege roles using [Azure role-based access control](/azure/ai-foundry/concepts/rbac-ai-studio) to assign necessary permissions for specific roles. Audit permissions regularly and apply Conditional Access policies to restrict access based on risk. This approach eliminates credential sprawl and enforces scoped trust boundaries.
@@ -130,7 +165,6 @@ AI agents now operate as core infrastructure components. Their integration intro
 ### Microsoft tools
 
 **Azure AI Foundry:** 
-    - 
     - Restrict data exfiltration and enforce private access to models by configuring [Secure networking with Private Link](/azure/ai-foundry/how-to/configure-private-link) and validating egress rules during peer reviews.
     - Assign least-privilege roles via [Role-based access control for Azure AI Foundry](/azure/ai-foundry/concepts/rbac-azure-ai-foundry?pivots=fdp-project) and rotate access boundaries during quarterly governance audits.
     - Prepare rollback and continuity procedures using [Customer enabled disaster recovery](/azure/ai-foundry/how-to/disaster-recovery) and integrate proactive risk detection from [Risks and safety monitoring](/azure/ai-foundry/openai/how-to/risks-safety-monitor) to trigger containment workflows.
@@ -138,7 +172,6 @@ AI agents now operate as core infrastructure components. Their integration intro
 **Microsoft Copilot Studio:**
     - Review access, connectors, and environment boundaries against the consolidated [Security and governance guidance](/microsoft-copilot-studio/security-and-governance).
     - Run pre-deployment assurance using the [Automatic security scan](/microsoft-copilot-studio/security-scan) and continuously verify protections in production through the [Agent runtime protection status](/microsoft-copilot-studio/security-agent-runtime-view) view.
-
 
 ## Next step
 
