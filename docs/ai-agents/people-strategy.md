@@ -50,9 +50,9 @@ Develop a structured training program to build AI competency across teams. Treat
 
 Build AI proficiency across both technical and business teams. Plan for continuous learning to keep pace with evolving AI technologies. Allocate time for regular training updates and refreshers.
 
-## Address change management
+## Address AI change
 
-Prepare the organization for AI-driven change. Communicate early about what AI agents will and won’t do to manage expectations. Involve end users in pilot testing to gather feedback and build buy-in. From the leadership perspective, reinforce that adopting AI agents is a strategic priority so that managers encourage their teams to embrace the new tools. Celebrate successes and recognize teams that deliver value with AI to foster a culture of innovation.
+**Prepare the organization for AI-driven change.** Communicate early about what AI agents will and won’t do to manage expectations. Involve end users in pilot testing to gather feedback and build buy-in. From the leadership perspective, reinforce that adopting AI agents is a strategic priority so that managers encourage their teams to embrace the new tools. Celebrate successes and recognize teams that deliver value with AI to foster a culture of innovation.
 
 ## Next step
 
