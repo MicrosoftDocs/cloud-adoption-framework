@@ -82,7 +82,7 @@ Organizations using TLS inspection can integrate Azure Arc agents with their sec
 
 Microsoft Defender for Cloud integration with Azure Arc enhances security monitoring for Oracle Database@Azure infrastructure. For comprehensive security configuration guidance, see [Security guidelines for Oracle Database@Azure](oracle-security-overview-odaa.md).
 
-Azure Arc-specific Defender inte    gration requirements include:
+Azure Arc-specific Defender integration requirements include:
 
 1. **Plan Defender deployment strategy for Azure Arc connectivity.** Review [Defender for servers deployment requirements](/azure/defender-for-cloud/plan-defender-for-servers) and ensure that all security endpoints are accessible through your Azure Arc network configuration.
 
