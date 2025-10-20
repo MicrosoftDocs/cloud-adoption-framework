@@ -30,7 +30,7 @@ Your organization might be required to use multiple Microsoft Entra tenants for 
 >[!NOTE]
 > This article focuses on Azure, not Microsoft 365 or other Microsoft Cloud offerings, such as Dynamics 365 or Power Platform.
 >
-> It focuses on [the platform rather than applications](../../index.md#platform-landing-zones-vs-application-landing-zones) that are built on top of the platform in tenants. For information about multiple Microsoft Entra tenants and application architecture, see:
+> It focuses on [the platform rather than applications](../../index.md#platform-landing-zone-vs-application-landing-zones) that are built on top of the platform in tenants. For information about multiple Microsoft Entra tenants and application architecture, see:
 >
 > - [Architect multitenant solutions on Azure](/azure/architecture/guide/multitenant/overview)
 

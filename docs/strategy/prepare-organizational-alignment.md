@@ -69,7 +69,7 @@ It's important that leadership identify and acknowledge their current limitation
 
 - _Identify gaps_: Based on the benchmark, hold a workshop with leadership to identify the readiness gaps for cloud and the strategic objectives and determine how the cloud adoption strategy needs to be aligned.
 
-- _Ensure all key stakeholders are informed_: Ensure all key stakeholders are informed and aligned on the gaps and the risks regarding cloud adoption and ensure these are suitably addressed during the planning stage (link to CAF plan).
+- _Ensure all key stakeholders are informed_: Ensure all key stakeholders are informed and aligned on the gaps and the risks regarding cloud adoption and ensure these are suitably addressed during the planning stage.
 
 - _Continuously review_: Continue to conduct benchmarks and workshops with leadership to continually review readiness along the journey so that progress can be measured, and the strategy can be adapted iteratively.  
 
