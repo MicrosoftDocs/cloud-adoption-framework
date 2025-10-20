@@ -20,32 +20,40 @@ AI agents introduce new capabilities across the cloud estate, but they also rais
 
 ### Org-wide Data governance and compliance
 
-Data governance and compliance define how the organization manages, protects, and uses data across all AI agents and platforms. These practices ensure that AI systems operate within legal boundaries, align with internal policies, and maintain trust with users and stakeholders. Business leaders must treat governance as a strategic capability that supports innovation while minimizing risk.
-
-Effective governance spans two domains: regulatory compliance, which addresses external legal obligations, and corporate compliance, which enforces internal standards and operational consistency.
+AI agents now play a central role in how organizations operate, interact with customers, and make decisions. As these agents become more capable and embedded across departments, business leaders must treat their governance as a core business function, not just a technical concern. This means establishing clear rules, oversight mechanisms, and accountability structures that apply across the entire organization.
 
 #### Regulatory compliance
 
 Regulatory compliance ensures that AI agents meet legal requirements such as GDPR, HIPAA, and CCPA. This includes validating how agents access and process data, updating privacy notices to reflect AI usage, and conducting Data Protection Impact Assessments when agents introduce new datasets or features. To operationalize these requirements across the cloud estate, organizations must implement foundational data practices:
 
-- Metadata standards: Require teams to tag datasets with source, owner, sensitivity, and usage context. Use Microsoft Purview to enforce metadata policies and maintain a centralized data catalog. This supports auditability and improves discoverability.
-- Sensitivity labeling: Extend existing classification schemes, such as Public, General, and Confidential, into agent workflows. Configure agents to respect these labels at runtime and restrict memory or logs from storing sensitive content unless protected.
-- Privacy controls: Apply data minimization principles. Direct teams to use only the data necessary for agent functionality. Review training datasets, memory stores, and logs for privacy risks. Anonymize or pseudonymize data where possible. Support user rights, including deletion requests, and ensure agents comply with the organization’s privacy policy.
-- Residency and sovereignty: Identify where each data source resides, where the agent runs, and where logs or outputs are stored. Select Azure regions or on-premises environments that meet residency requirements. Disable logging of sensitive content unless retention is required. Apply encryption to all stored data and validate vendor guarantees against internal policies.
-- Retention and lifecycle management: Define retention periods for logs, memory, and training data. Implement automated purging or anonymization processes. Retain only the context necessary for agent functionality. Inform users about retention durations and provide deletion mechanisms. Expand retention policies into full lifecycle management with rules for data creation, archival, deletion, and purging.
-- Transparency: Disclose AI involvement clearly in agent interfaces. Notify internal stakeholders when their data supports training or inference. Review new data sources before integration to validate content, permissions, and security risks.
+- **Metadata standards**: Require teams to tag datasets with source, owner, sensitivity, and usage context. Use Microsoft Purview to enforce metadata policies and maintain a centralized data catalog. This supports auditability and improves discoverability.
+- **Sensitivity labeling**: Extend existing classification schemes, such as Public, General, and Confidential, into agent workflows. Configure agents to respect these labels at runtime and restrict memory or logs from storing sensitive content unless protected.
+- **Privacy controls**: Apply data minimization principles. Direct teams to use only the data necessary for agent functionality. Review training datasets, memory stores, and logs for privacy risks. Anonymize or pseudonymize data where possible. Support user rights, including deletion requests, and ensure agents comply with the organization’s privacy policy.
+- **Residency and sovereignty**: Identify where each data source resides, where the agent runs, and where logs or outputs are stored. Select Azure regions or on-premises environments that meet residency requirements. Disable logging of sensitive content unless retention is required. Apply encryption to all stored data and validate vendor guarantees against internal policies.
+- **Retention and lifecycle management**: Define retention periods for logs, memory, and training data. Implement automated purging or anonymization processes. Retain only the context necessary for agent functionality. Inform users about retention durations and provide deletion mechanisms. Expand retention policies into full lifecycle management with rules for data creation, archival, deletion, and purging.
+- **Transparency**: Disclose AI involvement clearly in agent interfaces. Notify internal stakeholders when their data supports training or inference. Review new data sources before integration to validate content, permissions, and security risks.
 
-Use [Microsoft Purview Compliance Manager](/purview/compliance-manager) to translate regulations like the EU AI Act into actionable controls and assess compliance posture across AI applications. Use [Azure AI Content Safety](/azure/ai-services/content-safety/overview) to detects harmful user-generated and AI-generated content and to help comply with regulations or maintain the intended environment for your users.
+To support these efforts, use:
 
-- In **Azure AI Foundry**, you can use [Microsoft Purview APIs](/purview/developer/secure-ai-with-purview) enable Azure AI Foundry and other AI platforms to integrate data governance controls into custom AI applications and agents.
+- Use [Microsoft Purview Compliance Manager](/purview/compliance-manager) to translate regulations like the EU AI Act into actionable controls and assess compliance posture across AI applications. 
+- Use [Azure AI Content Safety](/azure/ai-services/content-safety/overview) to detects harmful user-generated and AI-generated content and to help comply with regulations or maintain the intended environment for your users.
 
-- For **Microsoft Copilot Studio**, follow [Governance and security best practices](/microsoft-copilot-studio/guidance/sec-gov-intro). Use [data locations](/microsoft-copilot-studio/data-location) to respect data sovereignty. See the platform's [compliance (ISO, SOC, HIPAA) certifications](/microsoft-copilot-studio/admin-certification).
+For platform-specific implementation:
+
+- In **Azure AI Foundry**, you can use [Microsoft Purview APIs](/purview/developer/secure-ai-with-purview) enable Azure AI Foundry and other AI platforms to integrate data governance controls into custom AI applications and agents. [Identity Microsoft Purview's support](purview/ai-azure-services) for Azure AI Foundry.
+
+- In **Microsoft Copilot Studio**, follow [Governance and security best practices](/microsoft-copilot-studio/guidance/sec-gov-intro). Use [data locations](/microsoft-copilot-studio/data-location) to respect data sovereignty. See the platform's [compliance (ISO, SOC, HIPAA) certifications](/microsoft-copilot-studio/admin-certification).
 
 #### Corporate compliance
 
 Corporate compliance ensures that AI agents align with internal governance policies and operational standards. This includes enforcing consistent deployment practices, reducing duplication of effort, and maintaining guardrails across all environments.
+Business leaders must direct their teams to embed governance into agent development and deployment using policy-as-code and infrastructure-as-code. These approaches allow organizations to define rules in reusable templates and components that teams must use when building agents.
+Key actions include:
 
-Organizations must use policy-as-code and infrastructure-as-code to embed governance into agent development and deployment. Provide pre-approved templates and components with built-in controls. Mandate or encourage use of these standard components to ensure consistent application of policies such as content filtering, version control, and access restrictions.
+- Provide pre-approved templates and components with built-in controls for content filtering, version control, and access restrictions.
+- Mandate or encourage use of these standard components to ensure consistent application of internal policies.
+
+Platform-specific tools support these practices:
 
 - For **Azure AI Foundry**, use [Azure Policy](/azure/ai-foundry/how-to/azure-policy) to control infrastructure configurations and [model deployment](/azure/ai-foundry/how-to/built-in-policy-model-deployment).
 
@@ -53,66 +61,118 @@ Organizations must use policy-as-code and infrastructure-as-code to embed govern
 
 ### Org-wide agent observability
 
-Hand in hand with governance is observability. This is the ability to monitor and understand what your AI agents are doing in real time and over time. Given that AI agents have probabilistic behavior, it is critical to have visibility into their operations to detect anomalies, ensure compliance, and optimize performance. Think of AI agents as you would microservices. You need logging, monitoring, and analytics to manage them effectively at scale. Key observability practices for AI agents:
+To manage AI agents effectively across your organization, treat observability as a core business capability and not just a technical function. Observability refers to the ability to monitor and understand what AI agents do both in real time and over time. Because these agents operate probabilistically and do not always behave the same way, visibility into their actions becomes essential for managing risk, ensuring compliance, and optimizing performance.
 
-1. **Unique agent ID and ownership.** To establish effective observability, begin by directing teams to assign a unique identity to every AI agent. This identity must include ownership metadata, versioning, and lifecycle status. [Microsoft Entra Agent ID](https://techcommunity.microsoft.com/blog/microsoft-entra-blog/announcing-microsoft-entra-agent-id-secure-and-manage-your-ai-agents/3827392) supports this requirement by linking each agent to its owner and purpose, enabling traceability and access control. This structure allows your organization to distinguish between production, development, and test instances, which is essential for managing risk and ensuring accountability.
+1. **Unique agent ID and ownership.** Start by requiring every AI agent to have a unique identity. This identity must include ownership details, version history, and lifecycle status.  [Microsoft Entra Agent ID](https://techcommunity.microsoft.com/blog/microsoft-entra-blog/announcing-microsoft-entra-agent-id-secure-and-manage-your-ai-agents/3827392)  supports this structure by linking each agent to its owner and purpose. This clarity helps your organization distinguish between production, development, and test agents which is critical for accountability and risk management.
 
-1. **Discover all agent workloads.** Next, ensure full discovery of agent workloads across your cloud estate. Use Microsoft Defender for Cloud to [discover](/azure/defender-for-cloud/identify-ai-workload-model) and classify these workloads.  This step prevents shadow deployments and maintains a complete inventory of AI assets, which is essential for governance and cost control.
+1. **Discover all agent workloads.** Untracked or "shadow" deployments pose security and cost risks. Leaders must direct their teams to discover and classify all AI workloads across the cloud environment. This step ensures the organization maintains a complete inventory of AI assets. Use tools like Microsoft Defender for Cloud to [discover](/azure/defender-for-cloud/identify-ai-workload-model) and categorize agent workloads. A full inventory supports better governance, financial oversight, and strategic planning.
 
-1. **Monitor all agents.** Once discovery is complete, shift focus to centralized monitoring. Use Azure Monitor Metrics and Application Insights to collect performance indicators such as latency, token usage, cost per request, and throughput. These metrics form the foundation for cost optimization and performance tuning. Instruct teams to configure custom telemetry that captures model behavior and user interaction patterns. This data enables leaders to quantify business impact and make informed decisions about scaling or refining models.
+1. **Centralize monitoring and logging.** Once the organization identifies all agents, the next step is to monitor their behavior and performance centrally. Leaders must require consistent tracking of key metrics such as:
 
-    Operational logging must follow a standardized schema. Have teams export logs to a centralized Azure Log Analytics workspace. Standardized logging of agent actions, decisions, and errors improves transparency and supports compliance and audit readiness. Centralized logs also simplify cross-team collaboration and accelerate troubleshooting.
+    - Latency (how fast agents respond)
+    - Token usage (how much data agents process)
+    - Cost per request
+    - Throughput (how many requests agents handle)
 
-    To support strategic planning, direct teams to build centralized dashboards using Azure Monitor Workbooks. This visibility helps align technical performance with business goals and ensures that AI investments deliver measurable value.
+    Use Azure Monitor Metrics and Application Insights to collect and analyze this data. Instruct teams to configure custom telemetry that captures how agents behave and how users interact with them. This information helps leaders decide whether to scale, refine, or retire agents based on business impact.
+
+    **Standardize operational logging across all agents.** Require teams to export logs to a centralized Azure Log Analytics workspace. This consistency improves transparency, supports audit readiness, and simplifies troubleshooting. Centralized logs also enable cross-team collaboration.
+    To align technical performance with business goals, ask teams to build dashboards using Azure Monitor Workbooks. These dashboards provide leadership with a clear view of how AI investments contribute to outcomes.
+
+    Platform-specific tools support these efforts:
 
     - For **Azure AI Foundry**, [monitor model deployments](/azure/ai-foundry/foundry-models/how-to/monitor-models) and application-level behaviors using [Monitor generative AI applications](/azure/ai-foundry/how-to/monitor-applications).
 
     - For **Microsoft Copilot Studio**, see [Monitor logging and auditing](/microsoft-copilot-studio/admin-logging-copilot-studio). Centralize with [Azure Application Insights in Azure Monitor](/microsoft-copilot-studio/advanced-bot-framework-composer-capture-telemetry).
 
+1. **Observe cost.** AI agents consume resources such as compute power, tokens, and API calls. Without visibility, costs can escalate quickly. Leaders must create a unified view of agent usage and cost across departments and projects to track metrics like:
+
+    - Token consumption
+    - API calls
+    - Compute usage
+
+    Organize this data by department or project to identify where costs concentrate. Apply cost center tags using [Microsoft Cost Management](/azure/cost-management-billing/costs/cost-allocation-introduction) to allocate expenses accurately. Require teams to tag resources per agent or use case so you can see cost breakdowns clearly. Set up real-time alerts to notify teams when spending approaches budget thresholds. These alerts help prevent overruns and support proactive financial management. Restrict who can create, deploy, and scale agents by using role-based access control (RBAC). This structure reduces risk and ensures only authorized personnel manage AI deployments.
+
+    For platform-specific cost management:
+
+    - For **Azure AI Foundry**, [plan and manage costs](/azure/ai-foundry/how-to/costs-plan-manage). Centrally administer quotas and access through the [management center](/azure/ai-foundry/concepts/management-center).
+    - For **Microsoft Copilot Studio**, [view and manage cost](/microsoft-copilot-studio/requirements-messages-management).
+
 ### Org-wide agent security
 
-To govern agent security effectively across your organization, focus on four critical threat vectors: data leakage, data poisoning, jailbreak attempts, and credential theft. These risks require proactive monitoring and response mechanisms that align with enterprise-grade security standards.
+AI agents operate differently from traditional IT systems. They process natural language, interact with external sources, and often make autonomous decisions. These capabilities introduce risks such as:
 
-Use Microsoft Defender for Cloud’s [AI threat protection](/azure/defender-for-cloud/ai-threat-protection) capabilities to establish a robust defense posture. This solution integrates with Azure AI Content Safety Prompt Shields and Microsoft's global threat intelligence to detect and alert on suspicious AI-related activities. By doing so, it enables your teams to respond to threats in real time and reduce exposure to emerging attack patterns. To operationalize this guidance:
+- **Data leakage**: Agents might unintentionally expose sensitive information.
+- **Data poisoning**: Malicious actors can manipulate training data to alter agent behavior.
+- **Jailbreak attempts**: Attackers can bypass safeguards to make agents behave unpredictably.
+- **Credential theft**: Agents can become a vector for stealing authentication credentials.
 
-1. **Establish security policies.** Define clear usage boundaries for generative AI agents. Include acceptable use policies, data handling protocols, and escalation paths for security incidents. Ensure these policies align with your broader cloud security and compliance frameworks.
+To manage these risks, leaders must direct their teams to integrate agent security into existing enterprise security frameworks. This integration ensures consistency, reduces exposure, and supports regulatory compliance.
 
-1. **Deploy AI threat protection.** Instruct your platform teams to activate AI threat protection within Microsoft Defender for Cloud. This step enables automated detection of prompt injection, model manipulation, and unauthorized data access attempts.
+1. **Establish security policies.** Start by setting clear boundaries for how AI agents operate. These policies must include:
 
-1. **Integrate with existing SOC workflows.** Define thresholds for anomalies such as latency spikes or unauthorized access attempts. Instruct teams to create Azure Monitor Alerts and route them to Microsoft Sentinel through Log Analytics. This integration strengthens the organization’s security posture and enables faster incident response. By embedding alerting into the broader security operations workflow, decision makers ensure that AI services remain resilient and trustworthy.
+    - Acceptable use guidelines for generative AI
+    - Data handling protocols that specify what agents can access and store
+    - Escalation paths for responding to security incidents
 
-1. **Monitor and audit agent behavior.** Require regular audits of generative AI agent interactions. Use logging and telemetry to identify anomalous behavior, such as unexpected data access or unusual prompt patterns.
+    Ensure these policies align with broader cloud security and compliance frameworks already in place. This alignment helps integrate AI governance into existing enterprise risk management practices.
 
-1. **Train teams on AI-specific risks.** Provide targeted training for security and development teams on generative AI vulnerabilities. Focus on real-world scenarios such as jailbreak techniques and poisoning attacks to build awareness and readiness.
+1. **Deploy AI threat protection.** Direct platform teams to use Microsoft Defender for Cloud’s [AI threat protection](/azure/defender-for-cloud/ai-threat-protection) capabilities. This solution detects prompt injection, model manipulation, and unauthorized data access attempts. It integrates with Azure AI Content Safety Prompt Shields and Microsoft’s global threat intelligence to identify suspicious activity in real time. Activating these protections enables faster response to emerging threats and reduces exposure to high-risk behaviors.
 
-1. **Review third-party integrations.** Evaluate any external plugins or APIs connected to your AI agents. Ensure they meet your enterprise’s security standards and do not introduce unvetted data sources or exposure points.
+1. **Integrate with security operations.** Ensure AI-related alerts flow into the Security Operations Center (SOC). Define thresholds for anomalies such as latency spikes or unauthorized access attempts. Use Azure Monitor Alerts and route them to Microsoft Sentinel through Log Analytics. This integration strengthens the organization’s overall security posture and ensures agents remain resilient and trustworthy.
+
+1. **Monitor and audit agent behavior.** Require periodic audits of agent interactions. Use logging and telemetry to identify unusual behavior, such as unexpected data access or abnormal prompt patterns. These audits help detect early signs of compromise and support compliance with internal and external standards.
+
+1. **Train teams on AI-specific risks.** Provide targeted training for security and development teams. Focus on real-world scenarios such as:
+
+    - Jailbreak techniques that bypass agent safeguards
+    - Data poisoning attacks that manipulate training data
+    - Credential theft through agent interfaces
+
+    This training builds awareness and readiness, enabling teams to respond effectively to AI-specific threats.
+
+1. **Govern external integrations.** AI agents often interact with external systems and data sources. These connections introduce additional risks. Leaders must ensure governance reflects this complexity. Require teams to:
+
+    - Use standard protocols such as Model Context Protocol (MCP) and Agent-to-Agent Protocol (A2A) for secure communication
+    - Restrict external interactions to trusted MCP servers that meet organizational security and compliance standards
+    - Validate all external agent communications and limit them to explicitly approved entities
+    - Define clear boundaries for data access and logic execution during external interactions
+
+    These measures help prevent leakage of sensitive information and maintain control over agent behavior across organizational boundaries.
 
 ## Org-wide agent development
 
-You need to define preferred and unacceptable **protocols and frameworks**. Use Require all agents to use the **Model Context Protocol (MCP)** for interactions with tools, APIs, and data sources. MCP provides a structured and secure method for service discovery and invocation. Mandate the use of **Agent-to-Agent Protocol (A2A)** or compatible alternatives for inter-agent communication. This ensures consistent collaboration, task delegation, and context sharing across agents.
+To ensure consistency, safety, and interoperability, organizations must standardize how agents interact with tools, data, and each other. Business leaders must define which protocols and frameworks are acceptable and direct teams to use them across all agent development efforts.
 
-**Govern external connections.** Agents operate across boundaries, some within the enterprise, others with external sources. Governance must reflect this distinction to maintain control and trust. Encourage teams to use standard agent protocols, like MCP and A2A. Restrict external interactions to trusted MCP servers that meet organizational security and compliance standards. Validate all external agent communications and limit them to explicitly approved entities. Define clear boundaries for data access and logic execution to prevent leakage of sensitive information during external interactions.
+1. **Standardize agent frameworks.** Direct development teams to use frameworks that support enterprise governance and security requirements. For example, in Azure AI Foundry, use the [Microsoft Agent Framework](/agent-framework/overview/agent-framework-overview), which includes native support for secure communication protocols such as Model Context Protocol (MCP) and Agent-to-Agent Protocol (A2A). This framework also includes orchestration capabilities that simplify agent coordination and ensure consistent behavior across environments.
 
-- For **Azure AI Foundry**, direct development teams to explicitly implement these protocols using frameworks such as the **Microsoft Agent Framework**, which natively supports MCP and A2A, or the built-in orchestration.
+    Standardizing frameworks reduces development complexity, improves cross-team collaboration, and streamlines compliance with internal policies. It also enables faster onboarding of new agents and simplifies long-term maintenance.
 
-## Govern agent cost For Azure AI Foundry, centrally administer quotas and access through the [management center](/azure/ai-foundry/concepts/management-center).
+1. **Standardize agent protocols.** Require all agent development efforts to use standard agent protocols, such as:
+
+    - **Model Context Protocol (MCP)**: This protocol provides structured and secure access to tools, APIs, and data sources. It ensures agents operate within defined boundaries and only access approved resources.
+    - **Agent-to-Agent Protocol (A2A)**: This protocol enables consistent communication between agents, including task delegation and context sharing. It supports predictable agent behavior and reduces the risk of miscommunication or unintended actions.
+
+    These protocols create a common language for agents across the organization, which improves interoperability and reduces integration overhead. They also support governance by enforcing clear rules for how agents interact with internal and external systems.
+
+- For **Azure AI Foundry**, direct development teams to explicitly implement these protocols using frameworks such as the **Microsoft Agent Framework**, which natively supports MCP and A2A, or it's built-in orchestration.
 
 ## Agent platform governance and security
 
 Organizations need an understanding of policies that affect workload governance requirements and governance that's applied to the platform itself.
 
-### Agent protect and govern
+### Protect and govern in the agent platform
 
 For **Azure AI Foundry**, have teams use [continuous evaluation](/azure/ai-foundry/how-to/continuous-evaluation-agents). They should automate quality and safety gates by integrating evaluation workflows via [GitHub Actions evaluations](/azure/ai-foundry/how-to/evaluation-github-action?tabs=foundry-project) or [Azure DevOps evaluations](/azure/ai-foundry/how-to/evaluation-azure-devops?tabs=foundry-project) and enforce standardized agent behaviors using reusable templates in source control.
 
 Consider providing both end-user and application context. when adding end-user IP or identity, you can block that user or correlate incidents and alerts by that user. When adding application context, you can prioritize or determine whether suspicious behavior could be considered standard for that application in the organization. See [Gain application and end-user context for AI alerts](/azure/defender-for-cloud/gain-end-user-context-ai).
 
-### Agent guardrails and controls
+### Agent guardrails and controls in the agent platform
 
 Use [**content filtering**](/azure/ai-foundry/concepts/content-filtering) system works by running both the prompt input and completion output through an ensemble of classification models aimed at detecting and preventing the output of harmful content. Create a [**blocklist**](/azure/ai-foundry/openai/how-to/use-blocklists?tabs=api) to filter specific terms from input and output
 You can apply one or more blocklists, use the built-in profanity blocklist or combine multiple blocklists into the same filter. Follow agent-level **security recommendations** from Microsoft Defender for Cloud's [AI protection](/azure/defender-for-cloud/ai-threat-protection).
 
-### Agent security
+### Agent security agent platform
 
 AI agents now operate as core infrastructure components. Their integration introduces risks across identity, data handling, infrastructure, and behavior. These risks require a security strategy that treats agents as production systems and aligns with zero-trust principles and regulatory expectations. Organizations must direct their teams to implement controls that reduce exposure and ensure operational resilience. Key elements of security for AI agents:
 
@@ -126,7 +186,7 @@ AI agents now operate as core infrastructure components. Their integration intro
 
 3. **Least privilege for tools.** If agents can execute actions, govern those capabilities tightly. Each tool the agent uses should enforce the user’s permissions or have scoped service accounts. Use Data Loss Prevention (DLP) policies to restrict what data the agent can access or output. For instance, prevent it from returning credit card numbers in answers.
 
-4. **Input and output filtering.** Have teams treat all incoming data—text, files, images—as potentially hostile. Instruct teams to validate and filter inputs before they reach models or backend systems. Strip scripting and injection content from text, enforce type and size restrictions for files, and scan media using moderation services. Update sanitization rules based on observed attack patterns.
+4. **Input and output filtering.** Have teams treat all incoming data, text, files, images, as potentially hostile. Instruct teams to validate and filter inputs before they reach models or backend systems. Strip scripting and injection content from text, enforce type and size restrictions for files, and scan media using moderation services. Update sanitization rules based on observed attack patterns.
 
 5. **Security and adversarial testing.** Require penetration testing across the agent’s full stack. Include prompt injection tests to validate instruction isolation and rejection of unauthorized queries. Simulate adversarial inputs and monitor agent responses. Integrate automated test cases into CI/CD pipelines and run red team exercises. Include prompt hardening and response filtration in every release cycle.
 
