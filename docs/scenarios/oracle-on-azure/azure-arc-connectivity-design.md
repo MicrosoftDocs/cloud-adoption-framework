@@ -110,7 +110,7 @@ Enable secure and scalable SSH access to Azure Arc-enabled Oracle Exadata cluste
 
 Configure network access controls that provide minimum required connectivity for Azure Arc operations while maintaining your organization's security posture. Use a least-privilege approach to Azure Arc endpoint access.
 
-1. **Configure firewall rules for Azure Arc-specific endpoints.** Allow only the required Azure Arc service endpoints through your firewall configuration. Reference the [Azure Arc endpoint requirements](#azure-arc-endpoint-requirements) table for specific endpoint categories and network requirements.  Reference [Azure Monitor Agent required endpoints](https://learn.microsoft.com/azure/azure-monitor/agents/azure-monitor-agent-network-configuration?tabs=PowerShellWindows#firewall-endpoints) for the Azure Monitor extension.
+1. **Configure firewall rules for Azure Arc-specific endpoints.** Allow only the required Azure Arc service endpoints through your firewall configuration. Reference the [Azure Arc endpoint requirements](#azure-arc-endpoint-requirements) table for specific endpoint categories and network requirements.  Reference [Azure Monitor Agent required endpoints](/azure/azure-monitor/agents/azure-monitor-agent-network-configuration?tabs=PowerShellWindows#firewall-endpoints) for the Azure Monitor extension.
 
 1. **Restrict Azure Arc endpoint access to specific VM cluster nodes.** Limit network access to Azure Arc endpoints from only the Oracle Database@Azure VM cluster nodes that require Azure Arc management. This approach reduces the attack surface and maintains security boundaries. For access control patterns, see [Azure NSGs](/azure/virtual-network/network-security-groups-overview).
 
