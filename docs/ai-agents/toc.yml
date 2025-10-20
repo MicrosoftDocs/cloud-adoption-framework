@@ -1,7 +1,7 @@
 items:
   - name: Agents - Microsoft's Cloud Adoption Framework
     href: index.md
-  - name: Plan for agents
+  - name: Agent strategy
     expanded: true
     items:
       - name: 1. Business strategy
@@ -12,16 +12,20 @@ items:
         href: people-strategy.md
       - name: 4. Data strategy
         href: data-strategy.md
-  - name: Prepare agent governance & security
+  - name: Agent governance
     expanded: true
     items:
       - name: 1. Responsible AI policy
         href: ./governance-security.md#responsible-ai-policy
-      - name: 2. Governance
-        href: ./governance-security.md#governance
-      - name: 3. Observability
+      - name: 2. Data governance and compliance
+        href: ./governance-security.md#data-governance
+      - name: Agent governance
+        href: ./governance-security.md#agent-governance
+      - name: 3. Security
+        href: ./governance-security.md#agent-security
+      - name: 4. Observability
         href: ./governance-security.md#agent-observability
-  - name: Build and optimize agents
+  - name: Agent implementation roadmap
     expanded: true
     items:
       - name: 1. Single or multi-agent?
