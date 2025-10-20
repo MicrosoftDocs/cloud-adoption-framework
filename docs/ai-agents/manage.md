@@ -17,6 +17,11 @@ The journey doesn’t end with deployment. In fact, once an AI agent is running 
 
 AI agents consume cloud resources continuously, which can lead to unpredictable expenses if left unmanaged. Cost governance requires a structured approach that ties operational spending to business outcomes such as labor savings or revenue growth. Technical leaders must direct their teams to implement cost attribution, usage controls, and optimization strategies that reduce waste and improve efficiency.
 
+Assign budgets to teams on a monthly or quarterly basis and require approvals for any spending beyond those limits. This process enforces discipline and aligns AI development with strategic priorities.
+Include lifecycle management in your governance plan. Require versioning, regular reviews, and decommissioning of unused agents. These checkpoints ensure that agents remain relevant, secure, and cost-effective.
+Performance and ROI monitoring
+Track the performance of AI agents by measuring cost per task, accuracy, and response time. Use built-in evaluation tools to collect this data consistently. Schedule quarterly reviews to assess return on investment (ROI) and adjust resource allocation based on performance insights.
+
 1. **Dashboard and analytics.** Provide management a dashboard view of agent performance and usage. Summarize things like how many queries were handled, success rates, top topics asked, user satisfaction ratings, and more. Additionally, track business key performance indicators from phase one here such as the handle time reduction goal and see if they are being met in real usage. Including these metrics in regular business reviews keeps AI agents on leadership’s radar and ensures accountability.
 
 1. **Regularly calculate the return on investment.** For example you might say this quarter the agent cost a certain amount and saved an estimated amount in support labor yielding a return on investment of a specific value. This helps justify continuing or scaling the project and highlights if cost is creeping too high relative to benefits.
@@ -24,8 +29,6 @@ AI agents consume cloud resources continuously, which can lead to unpredictable 
 1. **Analyze cost drivers.** Are most costs coming from calling a very large model? If so consider if you can switch to a smaller model in some cases or shorten prompts and responses to reduce token counts. You might implement a tiered approach where a cheaper model is tried first and only escalated to the expensive model if needed. This is sometimes called an AI gateway or router approach.
 
 1. **Evaluate long term pricing options.** If the agent’s usage is stable and high buying reserved capacity could cut costs. Or if using a third party model API you might move to a self hosted model once it is proven. There is a trade off in quality versus cost to consider
-
-1. **Allocate costs per agent.** Tag or separate resources per agent so you can see cost per agent or per use case. Microsoft Cost Management can break down expenses by resource group or tag, so use that to attribute costs.
 
 **Azure AI Foundry:** [Plan and manage costs for Azure AI Foundry](/azure/ai-foundry/how-to/costs-plan-manage) provides quota and budget alerts per agent, supports cost-efficient model deployment, and enables teams to monitor and control spending across environments. Use a [GenAI gateway](/azure/api-management/genai-gateway-capabilities) to rate limit APIs and [import Azure AI Foundry APIs](/azure/api-management/azure-ai-foundry-api) to use them. [Control AI model deployment with built-in policies](/azure/ai-foundry/how-to/built-in-policy-model-deployment) to use cost-efficient models for your environments.
 
