@@ -255,6 +255,13 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | Service endpoint policy | `Microsoft.Network/serviceEndPointPolicies` | `se` |
 | Traffic Manager profile | `Microsoft.Network/trafficManagerProfiles` | `traf` |
 | User defined route (UDR) | `Microsoft.Network/routeTables/routes` | `udr` |
+| Virtual enclaves community | `Microsoft.Mission/communities` | `cmt` |
+| Virtual enclaves community Endpoint | `Microsoft.Mission/communities/communityEndpoints` | `ce` |
+| Virtual enclaves transit hubs | `Microsoft.Mission/communities/transitHubs` | `th` |
+| Virtual enclaves | `Microsoft.Mission/virtualenclaves` | `ve` |
+| Virtual enclaves enclave endpoints | `Microsoft.Mission/virtualEnclaves/enclaveEndpoints` | `ee` |
+| Virtual enclaves enclave connections | `Microsoft.Mission/enclaveconnections` | `ec` |
+| Virtual enclaves workloads | `Microsoft.Mission/virtualEnclaves/workloads` | `wl` |
 | Virtual network | `Microsoft.Network/virtualNetworks` | `vnet`|
 | Virtual network gateway | `Microsoft.Network/virtualNetworkGateways` | `vgw` |
 | Virtual network manager | `Microsoft.Network/networkManagers` | `vnm`|
