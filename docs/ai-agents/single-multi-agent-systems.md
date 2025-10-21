@@ -24,7 +24,7 @@ Organizations that anticipate growth, complexity, or cross-team collaboration be
 
 3. **Include quality control as a core capability.** A major part of agent systems involves quality control. If one agent generates an article, another agent must fact-check it. If an agent produces structured text, a script should check for schema compliance and another agent should validate free-form values. Quality control must not remain an afterthought. Include more prompt logic for validation than for generation. Treat validation agents and automated checks as essential components of the system architecture.
 
-Before fully committing to a multi-agent architecture, run a quick experiment with a single-agent prototype. This test helps validate whether the task truly requires multiple agents. If the single agent performs well, avoid unnecessary complexity. If it fails—by mixing contexts or struggling with dual responsibilities—use the results to guide how to split tasks.
+Before fully committing to a multi-agent architecture, run a quick experiment with a single-agent prototype. This test helps validate whether the task truly requires multiple agents. If the single agent performs well, avoid unnecessary complexity. If it fails by mixing contexts or struggling with dual responsibilities use the results to guide how to split tasks.
 
 ## When to start with single-agent architecture
 

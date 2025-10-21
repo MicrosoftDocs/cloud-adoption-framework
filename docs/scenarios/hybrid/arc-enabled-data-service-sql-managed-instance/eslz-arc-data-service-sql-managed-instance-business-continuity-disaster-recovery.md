@@ -71,7 +71,7 @@ To assess the effect of Azure Arc-enabled SQL Managed Instance on your overall B
 
 - Consider the potential business effects of downtime in the General Purpose service tier that could result due to the existence of only one replica.
 
-- Consider how many replicas—one to three—to deploy in the Business Critical service tier.
+- Consider how many replicas, one to three, to deploy in the Business Critical service tier.
 
 - When deploying an instance in a Business Critical service tier with two or more replicas, you can configure the secondary replicas as readable. Decide on the number of secondary replicas to deploy in the Business Critical service tier. For information on changing the number, see [Configure readable secondaries](/azure/azure-arc/data/configure-managed-instance#configure-readable-secondaries).
 

@@ -16,7 +16,7 @@ Successful adoption of AI agents begins with a clear strategy that connects agen
 
 ## When to use AI agents?
 
-Use AI agents for challenges that require complex reasoning, dynamic interaction, or unstructured data—especially when natural language provides the most effective interface. These scenarios often support digital transformation goals such as increasing agility, reducing manual effort, and scaling personalization. Common examples include customer support automation, knowledge retrieval, process automation, and real-time insights generation
+Use AI agents for challenges that require complex reasoning, dynamic interaction, or unstructured data especially when natural language provides the most effective interface. These scenarios often support digital transformation goals such as increasing agility, reducing manual effort, and scaling personalization. Common examples include customer support automation, knowledge retrieval, process automation, and real-time insights generation
 
 1. **When not to use AI agents.** Do not use AI agents for problems that simpler tools or scripts already solve. Prioritize low-risk, low-effort solutions first. Misuse increases cost and complexity without added value. Run a pilot to validate feasibility and impact before scaling.
 
