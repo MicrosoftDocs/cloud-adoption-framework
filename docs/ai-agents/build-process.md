@@ -11,15 +11,15 @@ ms.collection: ce-skilling-ai-copilot
 
 # How to build AI agents
 
-This article provides a framework for technical decision makers to guide workload teams in building AI agents using **Azure AI Foundry** and **Microsoft Copilot Studio**.
+This article outlines a strategic framework for technical decision makers to guide workload teams in building AI agents using Azure AI Foundry and Microsoft Copilot Studio. It focuses on establishing a secure, scalable, and well-governed foundation that supports consistent agent development across the cloud estate.
 
 ## Prerequisites
 
-To guide your teams in building AI agents with Azure AI Foundry and Microsoft Copilot Studio, you need to establish a clear foundation that supports secure, scalable, and well-governed development across your cloud estate. The prerequisites you outlined form the basis of that foundation. Here's how to interpret and act on them from a technical decision maker’s perspective:
+Before directing teams to build AI agents, ensure the organization has the right environment and governance in place. These prerequisites help reduce risk, control cost, and accelerate time to value.
 
 :::image type="content" source="./images/agent-overview.png" alt-text="Diagram that shows how to agents work." lightbox="./images/agent-overview.png" border="false":::
 
-1. **Understand how agents work.** AI agents are autonomous or semi-autonomous systems that answer questions, perform actions, or collaborate with other agents. They take an input in the form of system events (triggers), user messages (chats), or messages from other agents (multi-agent or agent-to-agents communication). Building them requires structured steps to prevent uncontrolled expansion, minimize risk, and optimize performance. An agent uses a generative AI model typically a large language model to interpret instructions and process incoming data from various tools. These instructions define the agent’s operational boundaries, specifying what actions it must take or avoid. To fulfill its role, the agent uses tools to gather knowledge, perform tasks, or retrieve memory. This tool interaction enables the agent to maintain context across conversations and support persistent engagement. After collecting the necessary information, the agent sends all relevant inputs to the language model, which generates an output. This output can take the form of a message to the user, a response to another agent, or a summary of the tool’s results and actions. This structure allows the agent to act autonomously while remaining aligned with enterprise goals, ensuring consistent and context-aware decision-making across systems.
+1. **Understand how agents work.** AI agents operate as autonomous or semi-autonomous systems that respond to user messages, system events, or other agents. They use generative AI models, typically large language models, to interpret instructions and process inputs. These instructions define the agent’s scope, specifying which actions to take or avoid. Agents use tools to retrieve knowledge, perform tasks, and maintain memory, enabling persistent and context-aware engagement. After gathering relevant inputs, the agent sends them to the language model, which generates an output. This output may be a user message, a response to another agent, or a summary of tool results. This structure allows agents to act independently while remaining aligned with enterprise goals.
 
 1. **Set up your environment:** of you're building agents in **Azure AI Foundry** use the [application landing zone accelerator for Azure AI Foundry](https://github.com/Azure/AI-Landing-Zones). It's recommended that you start with an Azure landing zone to establish your platform landing zone. However, if you choose to build a custom platform, the application landing zone accelerator works without a platform landing zone. If you're building in **Microsoft Copilot Studio,** ensure you have [access to Copilot Studio](/microsoft-copilot-studio/requirements-licensing-subscriptions) and configure the Copilot Studio [environments](/microsoft-copilot-studio/environments-first-run-experience)  that align with your organization’s data boundaries and lifecycle management practices.
 
@@ -27,7 +27,7 @@ To guide your teams in building AI agents with Azure AI Foundry and Microsoft Co
 
 ## Agent build process
 
-Organizations that adopt AI agents across their cloud environments must guide their teams through a structured build process. This process ensures agents operate reliably, comply with enterprise policies, and deliver measurable business outcomes. The following roadmap outlines key decisions and actions for technical leaders to direct their teams effectively.
+Navigate a structured build process to ensure agents operate reliably, comply with enterprise policies, and deliver measurable business outcomes.
 
 :::image type="content" source="./images/build-ai-agents.png" alt-text="Diagram that shows how to agents work." lightbox="./images/build-ai-agents.png" border="false":::
 
@@ -43,7 +43,7 @@ In **Microsoft Copilot Studio** [choose a primary AI model](/microsoft-copilot-s
 
 ### 2. Customization
 
-To ensure the agent delivers consistent, compliant, and business-aligned outcomes, define its customization parameters with precision. This section outlines how to scope the agent’s responsibilities, configure its behavior, and validate its performance across real-world scenarios. These steps help technical decision makers establish a reliable foundation for agent deployment, reduce operational risk, and support long-term scalability.
+Define agent behavior with precision to ensure consistent, compliant, and business-aligned outcomes.
 
 #### Scope the agent
 
