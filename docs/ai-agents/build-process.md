@@ -94,9 +94,9 @@ Follow governance policies when integrating knowledge and tools. This includes:
 
 These practices reduce the risk of data leakage, unauthorized actions, or unpredictable behavior.
 
-**Azure AI Foundry:** Connect approved data sources using [**knowledge** tools](/azure/ai-foundry/agents/how-to/tools/overview) to enable agents to answer questions accurately. Secure access by [configuring project-level data isolation](/azure/ai-foundry/agents/concepts/standard-agent-setup#project-level-data-isolation). Enable **actions** using [action tools](/azure/ai-foundry/agents/how-to/tools/overview#action-tools) to perform tasks and streamline workflows.
+**Azure AI Foundry:** Use [**knowledge** tools](/azure/ai-foundry/agents/how-to/tools/overview) and enable **actions** using [action tools](/azure/ai-foundry/agents/how-to/tools/overview#action-tools) to perform tasks and streamline workflows.
 
-**Microsoft Copilot Studio:** Integrate content using [**knowledge** sources](/microsoft-copilot-studio/knowledge-copilot-studio) and [connectors](/microsoft-copilot-studio/advanced-connectors). Enable actions by [orchestrating agent behavior](/microsoft-copilot-studio/advanced-generative-actions).
+**Microsoft Copilot Studio:** Integrate [**knowledge** sources](/microsoft-copilot-studio/knowledge-copilot-studio) and consider [connectors](/microsoft-copilot-studio/advanced-connectors). Enable actions by [orchestrating agent behavior](/microsoft-copilot-studio/advanced-generative-actions).
 
 ## 4. Orchestration
 
