@@ -53,7 +53,7 @@ Quantitative metrics provide valuable insight, but they do not capture the full 
 
 Establish multiple feedback channels to capture diverse perspectives:
 
-- **Maintain in-product rating tools** such as thumbs up/down or star ratings. Review this feedback regularly—daily or weekly—to identify recurring issues or emerging user needs. Prioritize comments that highlight confusion, unmet expectations, or suggestions for new capabilities.
+- **Maintain in-product rating tools** such as thumbs up/down or star ratings. Review this feedback regularly daily or weekly to identify recurring issues or emerging user needs. Prioritize comments that highlight confusion, unmet expectations, or suggestions for new capabilities.
 
 - **Monitor support tickets** related to the agent’s behavior. Include tickets such as “the bot gave me a wrong answer on policy X” in the product backlog. These reports often reveal gaps in the agent’s knowledge or logic and should trigger targeted updates.
 
@@ -61,11 +61,11 @@ Establish multiple feedback channels to capture diverse perspectives:
 
 - **Track unhandled or fallback queries.** Most platforms log instances where the agent fails to respond or defaults to a generic answer. These logs highlight opportunities to expand the agent’s capabilities or knowledge base. Often, users ask for features or information that teams did not anticipate but can reasonably support.
 
-Treat the agent as a product with a user experience that requires continuous refinement. User sentiment shifts over time, so teams must stay attuned to it. Quick responses to feedback—such as fixing a frequently misunderstood question or adjusting tone—improve adoption and satisfaction across the organization.
+Treat the agent as a product with a user experience that requires continuous refinement. User sentiment shifts over time, so teams must stay attuned to it. Quick responses to feedback such as fixing a frequently misunderstood question or adjusting tone improve adoption and satisfaction across the organization.
 
 ## Iterate the framework itself
 
-Managing AI agents over time reveals strengths and limitations in the organization’s operating model. Technical decision makers must periodically assess how well the broader framework—strategy, governance, build, and manage—supports long-term success. This reflection ensures that the organization adapts its approach based on real-world experience.
+Managing AI agents over time reveals strengths and limitations in the organization’s operating model. Technical decision makers must periodically assess how well the broader framework strategy, governance, build, and manage supports long-term success. This reflection ensures that the organization adapts its approach based on real-world experience.
 
 For example, the initial governance process might feel too heavy for small updates but insufficient for major changes. Teams may need to streamline certain steps or introduce new checkpoints. Similarly, the build phase might benefit from clearer handoffs between design and deployment, or the manage phase might require stronger cost controls.
 
