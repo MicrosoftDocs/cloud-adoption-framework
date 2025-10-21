@@ -1,15 +1,14 @@
 ---
-title: Integrate and iterate
-description: Learn the process to deploy AI agents
+title: Deploy AI agents
+description: Learn to deploy AI agents
 author: stephen-sumner
 ms.author: pnp
 ms.date: 11/01/2025
 ms.update-cycle: 180-days
 ms.topic: conceptual
-ms.collection: ce-skilling-ai-copilot
 ---
 
-# Integrate and iterate AI agents
+# Deploy AI agents
 
 Organizations that deploy AI agents across business processes must establish a consistent method to validate, embed, and refine these agents. These processes may be newly automated or may already rely on manual or legacy systems. In either case, technical decision makers must ensure that AI agents operate within real business environments to deliver measurable outcomes. By tightly integrating agents into the business and iterating based on real feedback, you ensure the AI actually delivers on its promise. This approach avoids the scenario of an AI agent being built and then sitting idle or underused. Instead, it becomes an evolving asset.
 

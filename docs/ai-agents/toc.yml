@@ -28,7 +28,7 @@ items:
         href: single-multi-agent-systems.md
       - name: 2. Build agents
         href: build-process.md
-      - name: 3. Integrate agents
-        href: integrate.md
-      - name: 4. Measure agent impact
-        href: measure.md
+      - name: 3. Deploy agents
+        href: deploy.md
+      - name: 4. Manage agents
+        href: manage.md
