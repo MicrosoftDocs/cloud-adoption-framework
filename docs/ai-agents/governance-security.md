@@ -12,7 +12,7 @@ ms.topic: conceptual
 
 AI agents introduce new capabilities across the cloud estate, but they also raise complex questions about ethics, compliance, and operational control. To ensure responsible use, decision makers must establish a governance framework that begins with Responsible AI principles, followed by data governance, and then agent governance. This order reflects the dependencies: agents rely on governed data, and Responsible AI principles guide how agents behave and interact with that data.
 
-## Org-wide agent governance
+## Org-wide agent governance and security
 
 ***How to ensure responsible use of AI agents and the data they handle.*** Beyond high-level principles, you need concrete governance mechanisms for your AI agents across their lifecycle. This is about putting guardrails in place so agents access only what they should, behave as expected, and can be managed centrally. Governance processes should be ingrained in how teams design, deploy, and update agents.
 
@@ -126,16 +126,28 @@ To manage these risks, leaders must direct their teams to integrate agent securi
 
 To ensure consistency, safety, and interoperability, organizations must standardize how agents interact with tools, data, and each other. Business leaders must define which protocols and frameworks are acceptable and direct teams to use them across all agent development efforts.
 
-1. **Standardize agent frameworks.**  Standardizing frameworks reduces development complexity, improves cross-team collaboration, and streamlines compliance with internal policies. It also enables faster onboarding of new agents and simplifies long-term maintenance. For example, in Azure AI Foundry, teams could use their own agent framework, like [Microsoft Agent Framework](/agent-framework/overview/agent-framework-overview) or LangChain, or use the built-in orchestration. Help teams understand which to pick and when.
+### Standardize agent frameworks
 
-1. **Standardize agent protocols.** Require all agent development efforts to use standard agent protocols, such as:
+Direct your teams to use a consistent set of frameworks and SDKs for agent development. This reduces complexity, improves collaboration across departments, and simplifies long-term maintenance. For example, within Azure AI Foundry, you can standardize on options like the [Microsoft Agent Framework](/agent-framework/overview/agent-framework-overview) and the [Azure AI Foundry SDK](/azure/ai-foundry/how-to/develop/sdk-overview?pivots=programming-language-python). These tools provide structured approaches to agent orchestration and integration, and they support rapid onboarding of new agents.
 
-    - **Model Context Protocol (MCP)**: This protocol provides structured and secure access to tools, APIs, and data sources. It ensures agents operate within defined boundaries and only access approved resources.
-    - **Agent-to-Agent Protocol (A2A)**: This protocol enables consistent communication between agents, including task delegation and context sharing. It supports predictable agent behavior and reduces the risk of miscommunication or unintended actions.
+When selecting frameworks, consider the following:
 
-    These protocols create a common language for agents across the organization, which improves interoperability and reduces integration overhead. They also support governance by enforcing clear rules for how agents interact with internal and external systems.
+- Compatibility with existing infrastructure: Ensure the framework integrates well with your current cloud architecture and data sources.
+- Support and documentation: Choose frameworks with robust documentation and active support to reduce ramp-up time.
+- Governance alignment: Favor frameworks that include built-in compliance and security features to meet internal policy requirements.
 
-    - For **Azure AI Foundry**, direct development teams to explicitly implement these protocols using frameworks such as the **Microsoft Agent Framework**, which natively supports MCP and A2A, or it's built-in orchestration.
+    By standardizing these choices, you create a predictable development environment that accelerates delivery and reduces risk.
+
+### Standardize agent protocols
+
+Protocols define how agents interact with tools, data, and each other. Require all agent development efforts to use standard protocols to ensure secure and predictable behavior. Two key protocols to adopt:
+
+- **Model Context Protocol (MCP)**: MCP provides structured and secure access to tools, APIs, and data sources. It enforces boundaries around what agents can access, which helps prevent unauthorized actions and supports compliance.
+- **Agent-to-Agent Protocol (A2A)**: A2A enables consistent communication between agents. It supports task delegation and context sharing, which improves coordination and reduces errors in multi-agent systems.
+
+These protocols create a common language for agents across your organization. They reduce integration overhead, improve interoperability, and support governance by enforcing clear interaction rules.
+
+For **Azure AI Foundry**, ensure you understand the available orchestration options. In addition to the Microsoft Agent Framework and SDK, Azure AI Foundry supports other frameworks like LangChain and its own built-in orchestration tools. Provide guidance on when to use each option based on the complexity of the agent, the required integrations, and the business outcomes.
 
 ## Agent platform governance and security
 
@@ -147,17 +159,19 @@ To ensure agents operate safely and consistently, organizations must establish g
 
 #### Evaluations
 
-**Use continuous evaluations.** Evaluations provide a structured way to assess how well AI agents perform and how safely they behave. These assessments use standardized metrics to compare different versions of an agent and determine which one best meets business needs. Leadership must ensure that evaluation practices become part of the organization's broader quality assurance strategy. By requiring automated safety and performance checks before deployment, organizations reduce the risk of releasing agents that behave unpredictably or expose sensitive data.
+AI agents must meet business expectations for performance and safety. To achieve this, organizations need structured evaluation processes:
 
-**Conduct adversarial testing and red teaming.** Security testing must extend beyond traditional penetration tests. AI agents require specialized adversarial testing to simulate attacks that exploit their unique vulnerabilities. These tests include attempts to manipulate agent behavior through deceptive prompts or malicious inputs. Organizations must direct their teams to run these tests regularly and integrate them into release cycles.
+- **Use continuous evaluations.** Evaluations provide a structured way to assess how well AI agents perform and how safely they behave. These assessments use standardized metrics to compare different versions of an agent and determine which one best meets business needs. Leadership must ensure that evaluation practices become part of the organization's broader quality assurance strategy. By requiring automated safety and performance checks before deployment, organizations reduce the risk of releasing agents that behave unpredictably or expose sensitive data.
 
-- For **Azure AI Foundry**, have teams use [continuous evaluation](/azure/ai-foundry/how-to/continuous-evaluation-agents). They should automate quality and safety gates by integrating evaluation workflows via [GitHub Actions evaluations](/azure/ai-foundry/how-to/evaluation-github-action?tabs=foundry-project) or [Azure DevOps evaluations](/azure/ai-foundry/how-to/evaluation-azure-devops?tabs=foundry-project) and enforce standardized agent behaviors using reusable templates in source control. Teams can use dedicated [AI Red Teaming Agent](/azure/ai-foundry/how-to/develop/run-scans-ai-red-teaming-agent) to scan applications for safety and security issues. 
+- **Conduct adversarial testing and red teaming.** Security testing must extend beyond traditional penetration tests. AI agents require specialized adversarial testing to simulate attacks that exploit their unique vulnerabilities. These tests include attempts to manipulate agent behavior through deceptive prompts or malicious inputs. Organizations must direct their teams to run these tests regularly and integrate them into release cycles.
 
-- For  **Microsoft Copilot Studio**, use the  [Security and governance guidance](/microsoft-copilot-studio/security-and-governance), [automatic security scans](/microsoft-copilot-studio/security-scan), and verify [agent runtime protection status](/microsoft-copilot-studio/security-agent-runtime-view).
+For **Azure AI Foundry**, have teams use [continuous evaluation](/azure/ai-foundry/how-to/continuous-evaluation-agents). They should automate quality and safety gates by integrating evaluation workflows via [GitHub Actions evaluations](/azure/ai-foundry/how-to/evaluation-github-action?tabs=foundry-project) or [Azure DevOps evaluations](/azure/ai-foundry/how-to/evaluation-azure-devops?tabs=foundry-project) and enforce standardized agent behaviors using reusable templates in source control. Teams can use dedicated [AI Red Teaming Agent](/azure/ai-foundry/how-to/develop/run-scans-ai-red-teaming-agent) to scan applications for safety and security issues.
+
+For  **Microsoft Copilot Studio**, use the  [Security and governance guidance](/microsoft-copilot-studio/security-and-governance), [automatic security scans](/microsoft-copilot-studio/security-scan), and verify [agent runtime protection status](/microsoft-copilot-studio/security-agent-runtime-view).
 
 #### Guardrails and controls
 
-To prevent harmful or inappropriate outputs, organizations must implement guardrails that filter agent inputs and outputs. These controls include:
+To prevent harmful or inappropriate outputs at the agent level, the agent must use input and output filters:
 
 1. [**Content filtering**](/azure/ai-foundry/concepts/content-filtering) that scans both user prompts and agent responses for harmful content.
 1. [**Blocklist**](/azure/ai-foundry/openai/how-to/use-blocklists?tabs=api) that restrict specific terms or phrases from appearing in agent interactions.
@@ -170,7 +184,17 @@ Leadership must ensure these controls align with existing data protection and co
 
 Security alerts become more actionable when they include context about the user and the application involved. For example, adding user identity or IP address helps security teams block malicious actors or trace incidents. Including application context allows teams to distinguish between suspicious behavior and normal operations.
 
-Organizations must direct their teams to enrich AI-related alerts with both user and application context. This practice improves incident response and supports more accurate threat prioritization. See [Gain application and end-user context for AI alerts](/azure/defender-for-cloud/gain-end-user-context-ai).
+Direct teams to enrich AI-related alerts with both user and application context. This practice improves incident response and supports more accurate threat prioritization. See [Gain application and end-user context for AI alerts](/azure/defender-for-cloud/gain-end-user-context-ai).
+
+### Observe and optimize
+
+To improve agent performance and reliability, organizations must monitor how agents behave in real-world scenarios:
+
+- **Use traces**: Capture the journey of a request through the application. This includes function calls, values, and system events.
+- **Review threads**: Threads show how agents process instructions and help teams refine agent logic.
+- **Monitor models and resource usage**: Track how much computing power agents consume and whether they operate efficiently.
+
+In Azure AI Foundry, [trace and observe AI agents](/azure/ai-foundry/how-to/develop/trace-agents-sdk), [monitor your agents](/azure/ai-foundry/agents/how-to/metrics), review [threads](/azure/ai-foundry/agents/concepts/threads-runs-messages#threads), and view your model [resource usage](/azure/ai-foundry/foundry-models/how-to/monitor-models).
 
 ## Next step
 
