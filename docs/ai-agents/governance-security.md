@@ -109,7 +109,7 @@ To manage these risks, leaders must direct their teams to integrate agent securi
 
     This training builds awareness and readiness, enabling teams to respond effectively to AI-specific threats.
 
-1. **Govern external integrations.** AI agents often interact with external systems and data sources. These connections introduce additional risks. Leaders must ensure governance reflects this complexity. Require teams to:
+1. **Govern MCP and agent-to-agent integrations.** AI agents often interact with external systems and data sources. These connections introduce additional risks. Leaders must ensure governance reflects this complexity. Require teams to:
 
     - Use standard protocols such as Model Context Protocol (MCP) and Agent-to-Agent Protocol (A2A) for secure communication
     - Restrict external interactions to trusted MCP servers that meet organizational security and compliance standards
