@@ -134,7 +134,7 @@ Protocols define how agents interact with tools, data, and each other. Require a
 
 These protocols create a common language for agents across your organization. They reduce integration overhead, improve interoperability, and support governance by enforcing clear interaction rules.
 
-For **Azure AI Foundry**, ensure you understand the available orchestration options. In addition to the Microsoft Agent Framework and SDK, Azure AI Foundry supports other frameworks like LangChain and its own built-in orchestration tools. Provide guidance on when to use each option based on the complexity of the agent, the required integrations, and the business outcomes.
+For **Azure AI Foundry**, ensure you understand the available orchestration options. In addition to the Microsoft Agent Framework and SDK, Azure AI Foundry supports other frameworks, like LangGraph, and its own built-in orchestration tools. Provide guidance on when to use each option based on the complexity of the agent, the required integrations, and the business outcomes.
 
 ## Agent platform governance and security
 
