@@ -22,7 +22,7 @@ An AI agent is a microservice that uses a generative AI model alongside instruct
 
 :::image type="content" source="./images/agent-overview.png" alt-text="Diagram that shows the basic architecture of an agent." lightbox="./images/agent-overview.png" border="false":::
 
-Each agent interprets instructions to determine its scope and actions. It uses tools to retrieve knowledge, perform tasks, and maintain memory, which enables persistent and context-aware engagement. After gathering inputs, the agent sends them to the language model, which generates an output, such as a user message, a response to another agent, or a summary of tool results. This structure allows agents to operate independently while remaining aligned with enterprise goals.
+Each agent interprets instructions to determine its scope and actions. It uses tools to retrieve knowledge, perform tasks, and maintain memory, which enables persistent and context-aware engagement. After gathering inputs, the data gets sent to the language model, which generates an output, such as a user message, a response to another agent, or an action with tool results. This structure allows agents to operate independently while remaining aligned with enterprise goals.
 
 :::image type="content" source="./images/spectrum-agents.png" alt-text="Diagram that shows the three main types of agents: retrieval, task, and autonomous." lightbox="./images/spectrum-agents.png" border="false":::
 

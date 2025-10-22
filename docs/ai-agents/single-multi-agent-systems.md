@@ -1,6 +1,6 @@
 ---
 title: Single agent or multi-agent system
-description: Learn factors for ingle agent or multi-agent systems
+description: Learn factors for single agent or multi-agent systems
 author: stephen-sumner
 ms.author: pnp
 ms.date: 11/01/2025
@@ -28,13 +28,13 @@ Before fully committing to a multi-agent architecture, run a quick experiment wi
 
 ## When to start with single-agent architecture
 
-Start with a single agent when the task appears simple, stable, and bounded. This approach reduces complexity and cost while supporting fast iteration. However, validate this assumption through prototyping. Do not rely on process structure alone even if the process is sequential. Multi-agent orchestration can be sequential. Instead, test whether a single agent can complete the task end-to-end without confusion, context loss, or role overload. If it cannot, build with a multi-agent architecture.
+Start with a single agent when the task appears simple, stable, and bounded. This approach reduces complexity and cost while supporting fast iteration. However, validate this assumption through prototyping. Don't rely on process structure alone even if the process is sequential. Multi-agent orchestration can be sequential. Instead, test whether a single agent can complete the task end-to-end without confusion, context loss, or role overload. If it can't, build with a multi-agent architecture.
 
 1. **Identify role separation.** Examine the task for distinct responsibilities. If the agent must switch between planning and execution, or handle different data types (such as text and images), split the roles. Run a dry simulation or walkthrough to identify where responsibilities feel entangled. For simple tasks, the agent can validate its own outputs. For complex systems, assign validation to a separate agent to improve reliability and security. This requirement often remains unclear without testing. Some developers interpret roles too granularly and build a multi-agent architecture when a single agent suffices. Err on the side of simplicity. Adding agents later proves easier than streamlining a multi-agent system into a single-agent design.
 
 2. **Include quality control even in simple systems.** Validation must remain part of the architecture regardless of complexity. For simple tasks, a single agent can check its own outputs. For more demanding workflows, assign validation to a separate agent or automated process. This separation improves reliability and reduces risk. Treat quality control as a required capability, not a secondary feature.
 
-3. **Consider execution demands.** Even simple logic breaks down under long-running workflows, large context windows, or multi-step coherence. If the agent frequently loses context or repeats clarifications, distribute responsibilities across agents with scoped memory. Avoid creating multiple agents for tasks that do not benefit from separation. This adds cost and latency without improving performance.
+3. **Consider execution demands.** Even simple logic breaks down under long-running workflows, large context windows, or multi-step coherence. If the agent frequently loses context or repeats clarifications, distribute responsibilities across agents with scoped memory. Avoid creating multiple agents for tasks that don't benefit from separation. These interactions add cost and latency without improving performance.
 
 4. **Use cost estimates to inform architecture selection.** A single agent typically consumes fewer tokens and API calls, but may degrade under load. Multi-agent systems offer better performance and modularity at higher cost. Estimate token and API usage for each architecture. Simulate high-load scenarios to identify bottlenecks. For low-margin or high-frequency use cases, optimize for minimal token usage and agent count.
 

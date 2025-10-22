@@ -44,9 +44,7 @@ The [60-day free trial](/microsoft-copilot-studio/requirements-licensing-subscri
 
 Because these agents run on Microsoft-managed SaaS platforms, they inherit Microsoft’s responsible AI engineering by default. This includes privacy protections, ethical safeguards, and compliance with global standards. These built-in controls reduce risk and simplify governance, especially for organizations that prioritize speed and consistency over deep customization.
 
-Microsoft 365 Copilot includes agents such as Researcher and Analyst. Microsoft also embeds Copilots across Azure, GitHub, Microsoft Fabric, and Power Platform. Role-based Copilots support functions like security, finance, and sales. These agents manage integration internally and typically require only configuration and access permissions.
-
-See [Overview of Microsoft Copilots](/azure/cloud-adoption-framework/scenarios/ai/strategy#adopt-microsoft-software-ai-services-saas-for-initial-outcomes). Use the [Agent Success Kit](https://adoption.microsoft.com/ai-agents/success-kit/) to understand how to deploy and manage Copilots.
+Microsoft 365 Copilot includes agents such as Researcher and Analyst. Microsoft also embeds Copilots across Azure, GitHub, Microsoft Fabric, and Power Platform. Role-based Copilots support functions like security, finance, and sales. These agents manage integration internally and typically require only configuration and access permissions. See [Overview of available Microsoft Copilots](/azure/cloud-adoption-framework/scenarios/ai/strategy#adopt-microsoft-software-ai-services-saas-for-initial-outcomes). Use the [Agent Success Kit](https://adoption.microsoft.com/ai-agents/success-kit/) to understand how to deploy and manage Copilots.
 
 ## Validate platform fit with prototypes
 
