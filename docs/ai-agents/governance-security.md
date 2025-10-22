@@ -10,9 +10,7 @@ ms.topic: conceptual
 
 # Agent governance and security across your organization
 
-AI agents introduce powerful new capabilities across the cloud estate. At the same time, they raise critical questions about ethics, compliance, and operational control. To use these agents responsibly, technical decision makers must establish a governance framework that begins with Responsible AI principles, followed by data governance, and then agent governance. This sequence reflects key dependencies: agents operate on governed data, and Responsible AI principles define how agents should behave and interact with that data.
-
-***Establishing control over AI agents and the data they access*** Beyond high-level principles, you need concrete governance mechanisms for your AI agents across their lifecycle. This is about putting guardrails in place so agents access only what they should, behave as expected, and can be managed centrally. Governance processes should be ingrained in how teams design, deploy, and update agents.
+**Establishing control over AI agents and the data they access** Beyond high-level principles, you need concrete governance mechanisms for your AI agents across their lifecycle. This is about putting guardrails in place so agents access only what they should, behave as expected, and can be managed centrally. Governance processes should be ingrained in how teams design, deploy, and update agents.
 
 :::image type="content" source="./images/governance-security.png" alt-text="Diagram that shows Microsoft's responsible AI pillars." lightbox="./images/governance-security.png" border="false":::
 
