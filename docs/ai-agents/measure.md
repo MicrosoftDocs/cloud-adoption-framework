@@ -12,6 +12,8 @@ ms.topic: conceptual
 
 The journey doesn’t end with deployment. In fact, once an AI agent is running in production, it enters the operate and improve phase, which is ongoing. This is where you measure actual business impact against your goals, optimize costs, manage the agent’s lifecycle, and decide on scaling out or winding down as needed. For technical leaders, this phase is about ensuring the solution continues to deliver value and remains aligned with strategic objectives over time.
 
+:::image type="content" source="./images/ai-agent-adoption.png" alt-text="Diagram that shows the process outlined in this guidance: plan, govern, build and secure, integrate, and measure agents across your organization." lightbox="./images/ai-agent-adoption.png" border="false":::
+
 ## Control agent cost and maximize value
 
 To help technical decision makers control agent costs and maximize value across the organization, it's essential to establish a clear framework that connects AI agent usage with business outcomes. Here's how to guide your teams effectively:
@@ -26,9 +28,9 @@ To help technical decision makers control agent costs and maximize value across 
 
 1. **Evaluate long term pricing options.** If agent usage remains stable and high, consider reserved capacity to reduce costs. For third-party model APIs, evaluate whether self-hosting becomes viable once the solution proves effective. These decisions involve trade-offs between quality, control, and cost, so technical leaders must guide teams through the analysis.
 
-**Azure AI Foundry** provides tools to [Plan and manage costs](/azure/ai-foundry/how-to/costs-plan-manage). Use quota and budget alerts per agent, supports cost-efficient model deployment, and enables teams to monitor and control spending across environments. Consider a [GenAI gateway](/azure/api-management/genai-gateway-capabilities) to rate limit APIs and [import Azure AI Foundry APIs](/azure/api-management/azure-ai-foundry-api) to use them. [Control AI model deployment with built-in policies](/azure/ai-foundry/how-to/built-in-policy-model-deployment) to use cost-efficient models for your environments.
+In **Azure AI Foundry**, [plan and manage costs](/azure/ai-foundry/how-to/costs-plan-manage). Consider a [GenAI gateway](/azure/api-management/genai-gateway-capabilities) to rate limit APIs and [import Azure AI Foundry APIs](/azure/api-management/azure-ai-foundry-api) to use them. [Control AI model deployment](/azure/ai-foundry/how-to/built-in-policy-model-deployment) to use cost-efficient models for your environments.
 
-**Microsoft Copilot Studio** offers message packs, Pay-As-You-Go usage, [licensing options](/microsoft-copilot-studio/billing-licensing) to optimize cost. See [Billing rates and management](/microsoft-copilot-studio/requirements-messages-management#view-message-consumption). Understand how to [allocate, monitor, and optimize message usage](/power-platform/admin/manage-copilot-studio-messages-capacity?tabs=new) across environments. [Block unauthorized self-service sign-ups](/microsoft-copilot-studio/admin-block-viral-signups).
+In **Microsoft Copilot Studio** [licensing options](/microsoft-copilot-studio/billing-licensing) to optimize cost. See [Billing rates and management](/microsoft-copilot-studio/requirements-messages-management#view-message-consumption). Understand how to [allocate, monitor, and optimize message usage](/power-platform/admin/manage-copilot-studio-messages-capacity?tabs=new) across environments. [Block unauthorized self-service sign-ups](/microsoft-copilot-studio/admin-block-viral-signups).
 
 ## Manage the agent’s lifecycle
 

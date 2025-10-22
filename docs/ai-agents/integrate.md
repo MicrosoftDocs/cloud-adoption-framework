@@ -12,6 +12,8 @@ ms.topic: conceptual
 
 Once your organization identifies viable use cases and builds production-ready agents, the next step involves integrating them into the environment where work occurs. This integration must avoid disruption, align with existing systems, and include mechanisms for learning and refinement.
 
+:::image type="content" source="./images/ai-agent-adoption.png" alt-text="Diagram that shows the process outlined in this guidance: plan, govern, build and secure, integrate, and measure agents across your organization." lightbox="./images/ai-agent-adoption.png" border="false":::
+
 Technical decision makers must guide their teams through this phase with a clear operational strategy. Without this direction, agents risk becoming disconnected from business goals or underused by frontline teams. A well-integrated agent becomes a dynamic part of the organization’s operating model, not a standalone tool.
 
 ## Rollout agents into business processes
