@@ -17,7 +17,7 @@ items:
     expanded: true
     items:
       - name: 1. Responsible AI policy
-        href: ./responsible-ai.md
+        href: responsible-ai.md
       - name: 2. Governance and security
         href: governance-security.md
 
@@ -28,8 +28,6 @@ items:
         href: single-multi-agent-systems.md
       - name: 2. Build agents
         href: build-secure.md
-      - name: 3. Secure agents
-        href: secure-agents.md
   - name: 4. Integrate agents
     href: integrate.md
   - name: 5. Measure agents

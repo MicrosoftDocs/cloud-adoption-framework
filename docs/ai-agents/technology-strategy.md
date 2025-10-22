@@ -31,7 +31,7 @@ The [Azure AI Foundry playground](/azure/ai-foundry/concepts/concept-playgrounds
 
 ## Microsoft Copilot Studio
 
-**Low-code AI Agents (build SaaS):** [Microsoft Copilot Studio](/azure/microsoft-copilot-studio/) enables technical business users to build conversational agents using a low-code interface. This path suits departments that need tailored workflows but lack dedicated engineering resources. With access to over a thousand prebuilt connectors, teams can integrate agents with enterprise systems quickly. Use this track for process transformation initiatives that require moderate customization and fast delivery.
+**Low-code AI Agents (build SaaS):** [Microsoft Copilot Studio](/microsoft-copilot-studio/) enables technical business users to build conversational agents using a low-code interface. This path suits departments that need tailored workflows but lack dedicated engineering resources. With access to over a thousand prebuilt connectors, teams can integrate agents with enterprise systems quickly. Use this track for process transformation initiatives that require moderate customization and fast delivery.
 
 The [60-day free trial](/microsoft-copilot-studio/requirements-licensing-subscriptions#copilot-studio-for-microsoft-teams-plans) provides a low-risk opportunity to validate use cases before committing to production. Review [access options](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio#access-copilot-studio).
 

@@ -45,4 +45,4 @@ Only prototyping and testing reveal the architecture your organization needs. As
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Build AI agents](./build-process.md)
+> [Build AI agents](./build-secure.md)
