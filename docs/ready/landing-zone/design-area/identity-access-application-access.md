@@ -4,12 +4,12 @@ description: Learn about recommendations that application owners and developers 
 author: soderholmd
 ms.author: dsoderholm
 ms.topic: conceptual
-ms.date: 10/02/2025
+ms.date: 10/16/2025
 ---
 
 # Application identity and access management
 
-This article describes considerations and recommendations that application owners and developers can use to design the identity and access management for cloud-native applications.
+This article describes considerations and recommendations that application owners and developers can use to design the identity and access management for cloud-native applications, including how application components authenticate to each other, and how end user identities are managed within the application.
 
 If your team migrates or creates cloud-native applications, you must consider the authentication and access requirements for the applications. These requirements determine how users authenticate to applications and how application resources authenticate to each other, for example when a web application accesses a SQL database. 
 
@@ -23,17 +23,17 @@ To help reduce the risk of unauthorized access to your applications, incorporate
 
 - When you request an application landing zone from the platform team, you can help ensure that they create the appropriate subscriptions by asking them the following questions:
 
+  - Who are the end users? Are they internal users with an existing directory service; external partner organizations; or public users who sign up for your application?
   - How will end users authenticate to and access the application?
-  
   - Who needs role-based access control (RBAC) permissions for resources and services that the application uses?
   - Do existing built-in roles cover the RBAC access requirements for both control plane and data plane access, or do you need to create new custom roles?
-  - Did the platform team implement any compliance policies that might cause problems with the application?
+  - Is the application compatible with the authentication services provided by the platform team, or does it need modification to comply?
   - Which application components need to communicate with each other?
-  - Are there any requirements for accessing the shared resources, such as Microsoft Entra Domain Services, that are deployed in the platform landing zone?
+  - Are there any requirements for or administering the application, such as Microsoft Entra Domain Services, that are deployed in the platform landing zone?
 
 #### Azure Key Vault and managed identities
 
-- Security breaches of public cloud resources often originate from leaked credentials that are embedded in code or other text. You can use managed identities and [Key Vault](/azure/key-vault/general/overview) to implement programmatic access and help reduce the risk of credential theft.
+Security breaches of public cloud resources often originate from leaked credentials that are embedded in code or other text. You can use managed identities and [Key Vault](/azure/key-vault/general/overview) to implement programmatic access and help reduce the risk of credential theft.
 
 - If your application or workload requires a service to securely store credentials, you can use Key Vault to manage secrets, keys, and certificates.
 
@@ -41,7 +41,7 @@ To help reduce the risk of unauthorized access to your applications, incorporate
 
 - [Managed identities](/entra/identity/managed-identities-azure-resources/overview) provide an automatically managed identity principal that applications and resources use when they connect to resources that support Microsoft Entra ID authentication. Applications can use managed identities to [obtain Microsoft Entra ID tokens without having to manage any credentials](/entra/identity/managed-identities-azure-resources/overview-for-developers).
 
-  - You can use [system-assigned or user-assigned managed identities](/entra/identity/managed-identities-azure-resources/managed-identity-best-practice-recommendations#choosing-system-or-user-assigned-managed-identities).
+  - You can use [system-assigned or user-assigned managed identities](/entra/identity/managed-identities-azure-resources/managed-identity-best-practice-recommendations#choosing-system-or-user-assigned-managed-identities). System-assigned managed identities have their lifecycle tied to the resource that created them. This identity is restricted to only one resource, and you can grant permissions to the managed identity by using Azure role-based access control (RBAC). User-assigned managed identities can be used on multiple resources.
   
   - It's easy to confuse how service principals and managed identities access Azure resources. To understand the difference between the two, see [Demystifying service principals—Managed identities](https://devblogs.microsoft.com/devops/demystifying-service-principals-managed-identities).
   - Where possible, use managed identities to support authentication rather than using service principals and Microsoft Entra ID app registrations. You must have the Application Administrator or Application Developer RBAC roles to create service principals and app registrations. These privileged roles are typically assigned to the platform team or identity team. Use managed identities to eliminate the need for the platform team to create service principals and app registrations for your application team.
@@ -64,7 +64,7 @@ Consider the following recommendations when designing the identity and access ma
 
 #### OpenID Connect
 
-If your application team uses continuous integration and continuous delivery (CI/CD) pipelines to deploy applications programmatically, configure OpenID Connect authentication to your Azure services. OpenID Connect uses a temporary, credential-free token to authenticate to Azure services. For more information, see [Workload identity federation](/entra/workload-id/workload-identity-federation).
+If your application team uses continuous integration and continuous delivery (CI/CD) pipelines to deploy applications programmatically, configure OpenID Connect authentication from your development platform (such as GitHub or Azure DevOps) to your Azure services. OpenID Connect uses a temporary, credential-free token to authenticate to Azure services. For more information, see [Workload identity federation](/entra/workload-id/workload-identity-federation).
 
 If OpenID Connect isn't supported, create a service principal and assign the necessary permissions to allow infrastructure or application code to be deployed. For more information, see the training module, [Authenticate your Azure deployment pipeline by using service principals](/training/modules/authenticate-azure-deployment-pipeline-service-principals).
 
@@ -76,17 +76,6 @@ To further restrict access and prevent unauthorized access to data, [use attribu
 
 Where possible, use Microsoft Entra ID identities to control access to Azure virtual machines. Use Microsoft Entra ID instead of local authentication to provide access to virtual machines, taking advantage of Microsoft Entra Conditional Access, audit logging, and Microsoft Entra multifactor authentication (MFA). This configuration reduces the risk of attackers exploiting insecure local authentication services. For more information, see [Log into a Linux virtual machine in Azure by using Microsoft Entra ID and OpenSSH](/entra/identity/devices/howto-vm-sign-in-azure-ad-linux) and [Log into a Windows virtual machine in Azure using Microsoft Entra ID including passwordless](/entra/identity/devices/howto-vm-sign-in-azure-ad-windows).
 
-
-#### Microsoft identity platform
-
-- When developers build a cloud-native application, they should use the [Microsoft identity platform for developers](/entra/identity-platform/v2-overview) as the identity provider for their applications. The Microsoft identity platform provides an OpenID Connect standard-compliant authentication service that developers can use to authenticate several identity types including:
-
-  - Work or school accounts, provisioned through Microsoft Entra ID
-  
-  - Personal Microsoft accounts (Skype, Xbox, Outlook.com)
-  - Social or local accounts, by using Microsoft Entra ID
-
-- The [Microsoft identity platform best practices and recommendations](/entra/identity-platform/identity-platform-integration-checklist) checklist provides guidance on effectively integrating the application with the Microsoft identity platform.
 
 #### Managed identities
 
@@ -113,6 +102,16 @@ Where possible, use Microsoft Entra ID identities to control access to Azure vir
   - If you use CI/CD deployment pipelines with sufficient permissions, application owners can [configure Microsoft Entra application proxy by using the Microsoft Graph API](/graph/application-proxy-configure-api).
 
 - If the application uses legacy protocols, such as Kerberos, ensure that the application landing zone has network connectivity to domain controllers in the Microsoft identity platform subscription.
+
+#### Microsoft identity platform
+
+- When developers build a cloud-native application, they should use the [Microsoft identity platform for developers](/entra/identity-platform/v2-overview) as the identity provider for their applications. The Microsoft identity platform provides an OpenID Connect standard-compliant authentication service that developers can use to authenticate several identity types including:
+
+  - Work or school accounts, provisioned through Microsoft Entra ID
+  - Personal Microsoft accounts (Skype, Xbox, Outlook.com)
+  - Social or local accounts, by using Microsoft Entra ID
+
+- The [Microsoft identity platform best practices and recommendations](/entra/identity-platform/identity-platform-integration-checklist) checklist provides guidance on effectively integrating the application with the Microsoft identity platform.
 
 ### Next steps
 

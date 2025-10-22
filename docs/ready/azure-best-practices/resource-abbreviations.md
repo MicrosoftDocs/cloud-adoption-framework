@@ -252,7 +252,7 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | Route filter | `Microsoft.Network/routeFilters` | `rf` |
 | Route server | `Microsoft.Network/virtualHubs` | `rtserv` |
 | Route table | `Microsoft.Network/routeTables` | `rt` |
-| Service endpoint policy | `Microsoft.serviceEndPointPolicies` | `se` |
+| Service endpoint policy | `Microsoft.Network/serviceEndPointPolicies` | `se` |
 | Traffic Manager profile | `Microsoft.Network/trafficManagerProfiles` | `traf` |
 | User defined route (UDR) | `Microsoft.Network/routeTables/routes` | `udr` |
 | Virtual network | `Microsoft.Network/virtualNetworks` | `vnet`|
