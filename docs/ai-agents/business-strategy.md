@@ -20,7 +20,7 @@ Organizations use AI agents to increase operational efficiency, reduce manual ef
 
 :::image type="content" source="./images/ai-agent-opportunities.png" alt-text="Diagram that shows AI agent opportunities." lightbox="./images/ai-agent-opportunities.png" border="false":::
 
-### Internal impact
+### Internal impact from agents
 
 AI agents improve internal operations by automating routine tasks and enhancing workflows tied to specific roles. Common examples include:
 
@@ -28,7 +28,7 @@ AI agents improve internal operations by automating routine tasks and enhancing 
 
 - **Enrich employee experiences**: AI agents make data easier to find, simplify email composition, and transcribe calls accurately. These capabilities increase productivity by allowing employees to focus on higher-value work. They also streamline communication and task handoffs across teams, which improve collaboration and overall throughput. These outcomes reduce cycle times and increase employee satisfaction.
 
-### Customer impact
+### Customer impact from agents
 
 AI agents transform customer engagement by enabling faster responses and more personalized interactions. They support:
 
