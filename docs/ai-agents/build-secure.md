@@ -31,6 +31,8 @@ Before directing teams to build AI agents, ensure the organization has the right
 
 Navigate a structured build process to ensure agents operate reliably, comply with enterprise policies, and deliver measurable business outcomes.
 
+:::image type="content" source="./images/governance-security.png" alt-text="Diagram that shows how to govern ." lightbox="./images/governance-security.png" border="false":::
+
 ### 1. Choose models
 
 Avoid defaulting to the largest available model. Instead, instruct teams to select models that match the complexity and importance of each task. Smaller models often provide sufficient performance for internal workflows and reduce cost and latency.
