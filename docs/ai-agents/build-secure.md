@@ -1,6 +1,6 @@
 ---
-title: How to build AI agent
-description: Learn How to build AI agent
+title: How to build and secure AI agents
+description: Learn How to build and secure AI agents
 author: stephen-sumner
 ms.author: pnp
 ms.date: 11/01/2025
@@ -9,29 +9,27 @@ ms.topic: conceptual
 ms.collection: ce-skilling-ai-copilot
 ---
 
-# How to build AI agents
+# How to build and secure AI agents
 
-This article outlines a strategic framework for technical decision makers to guide workload teams in building AI agents using Azure AI Foundry and Microsoft Copilot Studio. It focuses on establishing a secure, scalable, and well-governed foundation that supports consistent agent development across the cloud estate.
+This article outlines a strategic framework for technical decision makers to guide workload teams in building AI agents using Azure AI Foundry and Microsoft Copilot Studio. It focuses on establishing a secure, scalable, and well-governed foundation that supports consistent agent development across the cloud estate. :::image type="content" source="./images/agent-overview.png" alt-text="Diagram that shows how to agents work." lightbox="./images/agent-overview.png" border="false":::
+
+**How agents work:** AI agents operate as autonomous or semi-autonomous systems that respond to user messages, system events, or other agents. They use generative AI models, typically large language models, to interpret instructions and process inputs. These instructions define the agent’s scope, specifying which actions to take or avoid. Agents use tools to retrieve knowledge, perform tasks, and maintain memory, enabling persistent and context-aware engagement. After gathering relevant inputs, the agent sends them to the language model, which generates an output. This output may be a user message, a response to another agent, or a summary of tool results. This structure allows agents to act independently while remaining aligned with enterprise goals.
 
 ## Prerequisites
 
 Before directing teams to build AI agents, ensure the organization has the right environment and governance in place. These prerequisites help reduce risk, control cost, and accelerate time to value.
 
-:::image type="content" source="./images/agent-overview.png" alt-text="Diagram that shows how to agents work." lightbox="./images/agent-overview.png" border="false":::
-
-1. **Understand how agents work.** AI agents operate as autonomous or semi-autonomous systems that respond to user messages, system events, or other agents. They use generative AI models, typically large language models, to interpret instructions and process inputs. These instructions define the agent’s scope, specifying which actions to take or avoid. Agents use tools to retrieve knowledge, perform tasks, and maintain memory, enabling persistent and context-aware engagement. After gathering relevant inputs, the agent sends them to the language model, which generates an output. This output may be a user message, a response to another agent, or a summary of tool results. This structure allows agents to act independently while remaining aligned with enterprise goals.
-
 1. **Set up your environment:** of you're building agents in **Azure AI Foundry** use the [application landing zone accelerator for Azure AI Foundry](https://github.com/Azure/AI-Landing-Zones). It's recommended that you start with an Azure landing zone to establish your platform landing zone. However, if you choose to build a custom platform, the application landing zone accelerator works without a platform landing zone. If you're building in **Microsoft Copilot Studio,** ensure you have [access to Copilot Studio](/microsoft-copilot-studio/requirements-licensing-subscriptions) and configure the Copilot Studio [environments](/microsoft-copilot-studio/environments-first-run-experience)  that align with your organization’s data boundaries and lifecycle management practices.
 
 1. **Apply well-architected principles to AI workloads** The agent itself should be built upon the principles of the Well-Architected Framework (AF) for [AI workloads](/azure/well-architected/ai/). This framework helps your teams balance performance, reliability, security, and cost. As a decision maker, you must ensure that every agent initiative aligns with these principles.
 
-## Agent build process
+## Build and secure AI agents
 
 Navigate a structured build process to ensure agents operate reliably, comply with enterprise policies, and deliver measurable business outcomes.
 
 :::image type="content" source="./images/build-ai-agents.png" alt-text="Diagram that shows how to agents work." lightbox="./images/build-ai-agents.png" border="false":::
 
-### 1. Models
+### 1. Choose models
 
 Avoid defaulting to the largest available model. Instead, instruct teams to select models that match the complexity and importance of each task. Smaller models often provide sufficient performance for internal workflows and reduce cost and latency.
 
@@ -45,11 +43,11 @@ In **Microsoft Copilot Studio** [choose a primary AI model](/microsoft-copilot-s
 
 Define agent behavior with precision to ensure consistent, compliant, and business-aligned outcomes.
 
-#### Scope the agent
+#### 2.1 Scope the agent
 
 Start by documenting what the agent does and what it does not do. This "agent charter" prevents scope creep and ensures alignment across teams. For example, an HR agent might answer policy questions and help schedule leave, but must not access payroll records or offer legal advice. Clarify when and how users interact with the agent, what decisions it supports, and when it escalates to a human. This helps the agent fit into real workflows and ensures it supports your operations.
 
-#### Define agent instructions
+#### 2.2 Define agent instructions
 
 Treat the agent’s instructions like a policy document. These instructions guide how the agent responds in conversation. Include:
 
@@ -66,7 +64,7 @@ For **multi-agent systems**, define distinct roles such as Planner, Executor, an
 
 **Microsoft Copilot Studio:** Define agent purpose and boundaries by [configuring agent settings](/microsoft-copilot-studio/authoring-first-bot) to establish operational scope. For multi-agent systems, [set up agent flows](/microsoft-copilot-studio/flows-overview) with distinct roles and approval checkpoints to ensure controlled collaboration.Apply custom instructions in the agent editor to reinforce compliance and fallback behaviors. Configure agent behavior by [orchestrating with generative AI](/microsoft-copilot-studio/advanced-generative-actions) to enable natural conversation flows and pause-and-review workflows. For critical operations, [use multistage and AI approvals](/microsoft-copilot-studio/flows-advanced-approvals) to enforce deterministic decision gates.
 
-#### Fine-tune and distill models
+#### 2.3 Fine-tune and distill models
 
 Use built-in memory features to help agents retain context across sessions. This supports more personalized and efficient interactions. Review conversation data to fine-tune prompts, instructions, and tool integrations.
 Run structured testing cycles to validate fairness, bias, and security. For example, test for vulnerabilities like prompt injection. Use analytics tools to understand user needs and improve agent effectiveness.
@@ -75,7 +73,7 @@ Run structured testing cycles to validate fairness, bias, and security. For exam
 
 **Microsoft Copilot Studio:** Validate agent behavior by [testing in the test panel](/microsoft-copilot-studio/authoring-test-bot) to observe conversation flows. Improve performance by [analyzing agent effectiveness](/microsoft-copilot-studio/analytics-improve-agent-effectiveness) to identify optimization opportunities. Understand user needs by [analyzing questions by theme](/microsoft-copilot-studio/analytics-themes) to discover patterns. Refine responses by [using prompt modification](/microsoft-copilot-studio/nlu-generative-answers-prompt-modification) to provide custom instructions.
 
-### 3. Knowledge and tools
+### 3. Add knowledge and tools
 
 To ensure AI agents operate securely, accurately, and in alignment with business goals, technical decision makers must direct their teams to integrate knowledge and tools in a controlled and governed manner. This step defines how agents access data and perform actions, which impacts their usefulness, compliance posture, and operational risk.
 
@@ -98,7 +96,7 @@ These practices reduce the risk of data leakage, unauthorized actions, or unpred
 
 **Microsoft Copilot Studio:** Integrate [**knowledge** sources](/microsoft-copilot-studio/knowledge-copilot-studio) and consider [connectors](/microsoft-copilot-studio/advanced-connectors). Enable actions by [orchestrating agent behavior](/microsoft-copilot-studio/advanced-generative-actions).
 
-## 4. Orchestration
+## 4. Determine orchestration
 
 Agent orchestration is the structured coordination of agents to achieve goals by managing how they interact with tools, knowledge sources, and memory. In a single-agent context, orchestration means internally deciding which tools to call, in what sequence, and how to merge results while maintaining context essentially acting as a hub that queries data, takes actions, and integrates short- and long-term memory.
 
@@ -108,7 +106,40 @@ Agent orchestration is the structured coordination of agents to achieve goals by
 
 **Microsoft Copilot Studio:** Build collaborative systems by [adding other agents](/microsoft-copilot-studio/authoring-add-other-agents) to delegate specialized tasks. Enable dynamic coordination by [orchestrating agent behavior with generative AI](/microsoft-copilot-studio/advanced-generative-actions) to select the best actions based on context.
 
-## 5. Bring your own services (trust)
+## 5. Protect and govern
+
+To ensure agents operate safely and consistently, organizations must establish governance practices that span both the applications agents support and the platforms they run on.
+
+### 5.1 Use evaluations
+
+AI agents must meet business expectations for performance and safety. To achieve this, organizations need structured evaluation processes:
+
+- **Use continuous evaluations.** Evaluations provide a structured way to assess how well AI agents perform and how safely they behave. These assessments use standardized metrics to compare different versions of an agent and determine which one best meets business needs. Leadership must ensure that evaluation practices become part of the organization's broader quality assurance strategy. By requiring automated safety and performance checks before deployment, organizations reduce the risk of releasing agents that behave unpredictably or expose sensitive data.
+
+- **Conduct adversarial testing and red teaming.** Security testing must extend beyond traditional penetration tests. AI agents require specialized adversarial testing to simulate attacks that exploit their unique vulnerabilities. These tests include attempts to manipulate agent behavior through deceptive prompts or malicious inputs. Organizations must direct their teams to run these tests regularly and integrate them into release cycles.
+
+For **Azure AI Foundry**, have teams use [continuous evaluation](/azure/ai-foundry/how-to/continuous-evaluation-agents). They should automate quality and safety gates by integrating evaluation workflows via [GitHub Actions evaluations](/azure/ai-foundry/how-to/evaluation-github-action?tabs=foundry-project) or [Azure DevOps evaluations](/azure/ai-foundry/how-to/evaluation-azure-devops?tabs=foundry-project) and enforce standardized agent behaviors using reusable templates in source control. Teams can use dedicated [AI Red Teaming Agent](/azure/ai-foundry/how-to/develop/run-scans-ai-red-teaming-agent) to scan applications for safety and security issues.
+
+For  **Microsoft Copilot Studio**, use the  [Security and governance guidance](/microsoft-copilot-studio/security-and-governance), [automatic security scans](/microsoft-copilot-studio/security-scan), and verify [agent runtime protection status](/microsoft-copilot-studio/security-agent-runtime-view).
+
+### 5.2 Implement guardrails and controls
+
+To prevent harmful or inappropriate outputs at the agent level, the agent must use input and output filters:
+
+1. [**Content filtering**](/azure/ai-foundry/concepts/content-filtering) that scans both user prompts and agent responses for harmful content.
+1. [**Blocklist**](/azure/ai-foundry/openai/how-to/use-blocklists?tabs=api) that restrict specific terms or phrases from appearing in agent interactions.
+1. **Security recommendations** from Microsoft Defender for Cloud's [AI protection](/azure/defender-for-cloud/ai-threat-protection).
+1. **Data controls** from Microsoft Purview that apply sensitivity labels and enforce data governance policies.
+
+Leadership must ensure these controls align with existing data protection and compliance frameworks. By embedding these safeguards into the agent platform, organizations reduce the risk of reputational damage and regulatory violations.
+
+### 5.3 Detect risks and set alerts
+
+Security alerts become more actionable when they include context about the user and the application involved. For example, adding user identity or IP address helps security teams block malicious actors or trace incidents. Including application context allows teams to distinguish between suspicious behavior and normal operations.
+
+Direct teams to enrich AI-related alerts with both user and application context. This practice improves incident response and supports more accurate threat prioritization. See [Gain application and end-user context for AI alerts](/azure/defender-for-cloud/gain-end-user-context-ai).
+
+### 5.4 Bring your own resources
 
 To maintain trust, security, and operational continuity across your cloud estate, you can Bring Your Own (BYO) approach when integrating AI agents with enterprise infrastructure. This strategy ensures agents operate within your organization’s governance boundaries while optimizing performance and cost.
 
@@ -118,9 +149,15 @@ Ensure the BYO approach integrates seamlessly with your broader architecture. Th
 
 **Azure AI Foundry:** Maintain control by [using your own resources](/azure/ai-foundry/agents/how-to/use-your-own-resources) like Azure Storage, Azure AI Search, and Cosmos DB for thread storage in standard setup configurations, ensuring compliance with organizational policies.
 
-## 6. Observability
+## 6. Observe and optimize
 
 The agent needs observability tools early. Capture key performance metrics such as responsiveness, throughput, and error rates. Instrument agents with telemetry for logs, metrics, and traces and send to a central analytics workspace as needed. Monitor dashboards for system-wide and individual performance. Set up dashboards that visualize system-wide and agent-specific metrics. These dashboards help decision makers and operations teams identify trends, spot bottlenecks, and prioritize improvements. Configure anomaly alerts to detect unusual behavior such as spikes in error rates or latency and tie these alerts into DevOps workflows for rapid response.
+
+To improve agent performance and reliability, organizations must monitor how agents behave in real-world scenarios:
+
+- **Use traces**: Capture the journey of a request through the application. This includes function calls, values, and system events.
+- **Review threads**: Threads show how agents process instructions and help teams refine agent logic.
+- **Monitor models and resource usage**: Track how much computing power agents consume and whether they operate efficiently.
 
 **Azure AI Foundry:** [Monitor the Agent Service](/azure/ai-foundry/agents/how-to/metrics). Debug execution by [viewing trace results](/azure/ai-foundry/how-to/develop/trace-agents-sdk) for detailed analysis. [Continuously evaluating agents](/azure/ai-foundry/how-to/continuous-evaluation-agents) and [evaluating in GitHub Actions](/azure/ai-foundry/how-to/evaluation-github-action) or [Azure DevOps](/azure/ai-foundry/how-to/evaluation-azure-devops). Use the [AI red teaming scans](/azure/ai-foundry/how-to/develop/run-scans-ai-red-teaming-agent) locally during development or [in the cloud](/azure/ai-foundry/how-to/develop/run-ai-red-teaming-cloud) for pre-deployment testing.
 
