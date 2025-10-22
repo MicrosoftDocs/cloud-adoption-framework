@@ -155,13 +155,14 @@ The agent needs observability tools early. Capture key performance metrics such 
 
 To improve agent performance and reliability, organizations must monitor how agents behave in real-world scenarios:
 
-- **Use traces**: Capture the journey of a request through the application. This includes function calls, values, and system events.
-- **Review threads**: Threads show how agents process instructions and help teams refine agent logic.
-- **Monitor models and resource usage**: Track how much computing power agents consume and whether they operate efficiently.
+- **[Use traces](/azure/ai-foundry/how-to/develop/trace-agents-sdk)**: Capture the journey of a request through the application. This includes function calls, values, and system events.
+- **[Review threads](/azure/ai-foundry/agents/concepts/threads-runs-messages#threads)**: Threads show how agents process instructions and help teams refine agent logic.
+- **[Monitor applications](/azure/ai-foundry/how-to/monitor-applications)**: Track analyze, and optimize your application’s performance and operational health in real time.
+- **[Monitor models](/azure/ai-foundry/foundry-models/how-to/monitor-models)**: Get metrics on your model deployments such as a total requests, total token count (prompt tokens + completion tokens).
 
-**Azure AI Foundry:** [Monitor the Agent Service](/azure/ai-foundry/agents/how-to/metrics). Debug execution by [viewing trace results](/azure/ai-foundry/how-to/develop/trace-agents-sdk) for detailed analysis. [Continuously evaluating agents](/azure/ai-foundry/how-to/continuous-evaluation-agents) and [evaluating in GitHub Actions](/azure/ai-foundry/how-to/evaluation-github-action) or [Azure DevOps](/azure/ai-foundry/how-to/evaluation-azure-devops). Use the [AI red teaming scans](/azure/ai-foundry/how-to/develop/run-scans-ai-red-teaming-agent) locally during development or [in the cloud](/azure/ai-foundry/how-to/develop/run-ai-red-teaming-cloud) for pre-deployment testing.
+**Azure AI Foundry:** [Monitor the Agent Service](/azure/ai-foundry/agents/how-to/metrics).
 
-**Microsoft Copilot Studio:** Use [analytics](/microsoft-copilot-studio/analytics-overview) to understand agent and [connect to Azure Application Insights](/microsoft-copilot-studio/advanced-bot-framework-composer-capture-telemetry) for custom telemetry and real-time diagnostics.
+**Microsoft Copilot Studio:** Use [analytics](/microsoft-copilot-studio/analytics-overview) and [connect to Azure Application Insights](/microsoft-copilot-studio/advanced-bot-framework-composer-capture-telemetry) for custom telemetry.
 
 ## Next step
 
