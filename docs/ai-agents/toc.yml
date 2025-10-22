@@ -27,7 +27,7 @@ items:
       - name: 1. Single or multi-agent?
         href: single-multi-agent-systems.md
       - name: 2. Build agents
-        href: build-process.md
+        href: build-secure.md
       - name: 3. Secure agents
         href: secure-agents.md
   - name: 4. Integrate agents
