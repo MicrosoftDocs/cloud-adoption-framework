@@ -13,7 +13,7 @@ items:
       - name: 4. Data strategy
         href: data-strategy.md
       
-  - name: 2. Govern and secure agents
+  - name: 2. Govern agents
     expanded: true
     items:
       - name: 1. Responsible AI policy
@@ -21,12 +21,12 @@ items:
       - name: 2. Governance and security
         href: governance-security.md
 
-  - name: 3. Build agents
+  - name: 3. Build and secure agents
     expanded: true
     items:
       - name: 1. Single or multi-agent?
         href: single-multi-agent-systems.md
-      - name: 2. Build agents
+      - name: 2. Build and secure agents
         href: build-secure.md
   - name: 4. Integrate agents
     href: integrate.md
