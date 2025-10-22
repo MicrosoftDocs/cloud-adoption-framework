@@ -102,7 +102,7 @@ These practices reduce the risk of data leakage, unauthorized actions, or unpred
 
 Agent orchestration is the structured coordination of agents to achieve goals by managing how they interact with tools, knowledge sources, and memory. In a single-agent context, orchestration means internally deciding which tools to call, in what sequence, and how to merge results. It needs to maintain context and act as a hub that queries data, takes actions, and integrates short- and long-term memory.
 
-**Multi-agent systems** have distributed orchestration: agents specialize in different tasks, call their own tools, and communicate to share context, resolve conflicts, and synchronize actions. When agents also interact with each other while making tool calls, orchestration involves negotiation, delegation, and collaboration protocols to ensure consistency and efficiency. Memory integration underpins all of this, enabling continuity, personalization, and shared state across agents and tools. In short, orchestration is the "conductor" that harmonizes tool usage, knowledge retrieval, and inter-agent collaboration into a coherent workflow. Without orchestration, agents risk entering uncontrolled peer-to-peer communication, leading to loops, conflicts, or degraded performance. Orchestration defines how agents collaborate securely and efficiently, ensuring predictable outcomes and scalable behavior. To reduce risk and improve reliability, select orchestration methods that match the complexity of the workload and the skill levels of the team. This approach minimizes rework and accelerates time-to-value.
+**Multi-agent systems** use distributed orchestration. Agents specialize in different tasks, call their own tools, and communicate to share context, resolve conflicts, and synchronize actions. When agents also interact with each other while making tool calls, orchestration involves negotiation, delegation, and collaboration protocols to ensure consistency and efficiency. Memory integration underpins all of this, enabling continuity, personalization, and shared state across agents and tools. In short, orchestration is the "conductor" that harmonizes tool usage, knowledge retrieval, and inter-agent collaboration into a coherent workflow. Without orchestration, agents risk entering uncontrolled peer-to-peer communication, leading to loops, conflicts, or degraded performance. Orchestration defines how agents collaborate securely and efficiently, ensuring predictable outcomes and scalable behavior. To reduce risk and improve reliability, select orchestration methods that match the complexity of the workload and the skill levels of the team. This approach minimizes rework and accelerates time-to-value.
 
 **Azure AI Foundry:** For multi-agent systems, [use AI agent orchestration patterns](/azure/architecture/ai-ml/guide/ai-agent-design-patterns). Use [connected agents](/azure/ai-foundry/agents/how-to/connected-agents) for built-in orchestration in standard enterprise scenarios. For advanced customization, use the [Microsoft Agent Framework](https://devblogs.microsoft.com/foundry/introducing-microsoft-agent-framework-the-open-source-engine-for-agentic-ai-apps/) for custom orchestration logic.
 
@@ -116,7 +116,7 @@ To ensure agents operate safely and consistently, organizations must establish g
 
 AI agents must meet business expectations for performance and safety. To achieve this, organizations need structured evaluation processes:
 
-- **Use continuous evaluations.** Evaluations provide a structured way to assess how well AI agents perform and how safely they behave. These assessments use standardized metrics to compare different versions of an agent and determine which one best meets business needs. Leadership must ensure that evaluation practices become part of the organization's broader quality assurance strategy. By requiring automated safety and performance checks before deployment, organizations reduce the risk of releasing agents that behave unpredictably or expose sensitive data.
+- **Use continuous evaluations.** Evaluations provide a structured way to assess how well AI agents perform and how safely they behave. These assessments use standardized metrics to compare different versions of an agent and determine which one best meets business needs. Leadership must ensure that evaluation practices become part of the organization's broader quality assurance strategy. When you require automated safety and performance checks before deployment, you reduce the risk of releasing agents that behave unpredictably or expose sensitive data.
 
 - **Conduct adversarial testing and red teaming.** Security testing must extend beyond traditional penetration tests. AI agents require specialized adversarial testing to simulate attacks that exploit their unique vulnerabilities. These tests include attempts to manipulate agent behavior through deceptive prompts or malicious inputs. Organizations must direct their teams to run these tests regularly and integrate them into release cycles.
 
@@ -133,7 +133,7 @@ To prevent harmful or inappropriate outputs at the agent level, the agent must u
 1. **Security recommendations** from Microsoft Defender for Cloud's [AI protection](/azure/defender-for-cloud/ai-threat-protection).
 1. **Data controls** from Microsoft Purview that apply sensitivity labels and enforce data governance policies.
 
-Leadership must ensure these controls align with existing data protection and compliance frameworks. By embedding these safeguards into the agent platform, organizations reduce the risk of reputational damage and regulatory violations.
+Leadership must ensure these controls align with existing data protection and compliance frameworks. When you embed these safeguards into the agent platform, organizations reduce the risk of reputational damage and regulatory violations.
 
 ### 5.3 Detect risks and set alerts
 
@@ -145,11 +145,11 @@ Direct teams to enrich AI-related alerts with both user and application context.
 
 To maintain trust, security, and operational continuity across your cloud estate, you can Bring Your Own (BYO) approach when integrating AI agents with enterprise infrastructure. This strategy ensures agents operate within your organization’s governance boundaries while optimizing performance and cost.
 
-Connecting agents to your existing systems such as storage, identity, and routing, ensures they follow your organization’s security and compliance policies. This includes using your own Azure Storage, Cosmos DB, or Azure AI Search to manage agent memory and data access. By doing so, you retain control over where data resides, how it is accessed, and who can audit it. This approach also supports structured memory design. For example, your teams can combine short-term conversational buffers with long-term structured stores to maintain context without retaining raw personally identifiable information (PII). This supports privacy compliance while enabling agents to deliver personalized and coherent responses.
+When you connect agents to your existing systems such as storage, identity, and routing, ensures they follow your organization’s security and compliance policies. This includes using your own Azure Storage, Cosmos DB, or Azure AI Search to manage agent memory and data access. By doing so, you retain control over where data resides, how it's accessed, and who can audit it. This approach also supports structured memory design. For example, your teams can combine short-term conversational buffers with long-term structured stores to maintain context without retaining raw personal data. This supports privacy compliance while enabling agents to deliver personalized and coherent responses.
 
 Ensure the BYO approach integrates seamlessly with your broader architecture. This includes aligning with identity systems for authentication, using approved APIs for tool access, and enforcing data isolation policies across projects. These measures reduce risk and simplify compliance audits.
 
-**Azure AI Foundry:** Maintain control by [using your own resources](/azure/ai-foundry/agents/how-to/use-your-own-resources) like Azure Storage, Azure AI Search, and Cosmos DB for thread storage in standard setup configurations, ensuring compliance with organizational policies.
+**Azure AI Foundry:** Maintain control by [using your own resources](/azure/ai-foundry/agents/how-to/use-your-own-resources) like Azure Storage, Azure AI Search, and Cosmos DB for thread storage in standard setup configurations.
 
 ## 6. Observe and optimize
 
@@ -157,10 +157,10 @@ The agent needs observability tools early. Capture key performance metrics such 
 
 To improve agent performance and reliability, organizations must monitor how agents behave in real-world scenarios:
 
-- **[Use traces](/azure/ai-foundry/how-to/develop/trace-agents-sdk)**: Capture the journey of a request through the application. This includes function calls, values, and system events.
+- **[Use traces](/azure/ai-foundry/how-to/develop/trace-agents-sdk)**: Capture the journey of a request through the application, such as function calls, values, and system events.
 - **[Review threads](/azure/ai-foundry/agents/concepts/threads-runs-messages#threads)**: Threads show how agents process instructions and help teams refine agent logic.
-- **[Monitor applications](/azure/ai-foundry/how-to/monitor-applications)**: Track analyze, and optimize your application’s performance and operational health in real time.
-- **[Monitor models](/azure/ai-foundry/foundry-models/how-to/monitor-models)**: Get metrics on your model deployments such as a total requests, total token count (prompt tokens + completion tokens).
+- **[Monitor applications](/azure/ai-foundry/how-to/monitor-applications)**: Track, analyze, and optimize your application’s performance and operational health in real time.
+- **[Monitor models](/azure/ai-foundry/foundry-models/how-to/monitor-models)**: Get metrics on your model deployments such as total requests, total token count (prompt tokens + completion tokens).
 
 **Azure AI Foundry:** [Monitor the Agent Service](/azure/ai-foundry/agents/how-to/metrics).
 
