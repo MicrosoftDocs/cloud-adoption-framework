@@ -14,17 +14,17 @@ Many organizations explore AI agents to automate processes, improve productivity
 
 :::image type="content" source="./images/ai-agent-adoption.png" alt-text="Diagram that shows the process outlined in this guidance." lightbox="./images/ai-agent-adoption.png" border="false":::
 
-It is tailored for technical decision makers (CIOs, CTOs, VPs of Technology, Directors, startup founders) who want to drive business outcomes with AI. The guide clarifies the distinct responsibilities between your **platform team**, which provides governance and tools, and your **workload teams**, which develop and operate specific AI agent solutions within those guardrails, so you can structure your organization accordingly. By following this guidance aligned with Microsoft’s Cloud Adoption Framework (CAF), your organization can implement AI agents successfully at scale in Azure.
-
 ## What is an AI agent?
 
-An **AI agent** is a microservice that can *reason*, *act*, and *learn* by combining a large language model with instructions and connecting to data sources or external tools.
+An AI agent is a microservice that can *reason*, *act*, and *learn* by combining a generative AI model with instructions, knowledge, and tools. 
 
 :::image type="content" source="./images/agent-overview.png" alt-text="Diagram that shows the basic architecture of an agent." lightbox="./images/agent-overview.png" border="false":::
 
-Examples include retrieval-based chatbots that answer questions using knowledge bases, task-focused agents that perform user-requested actions via APIs, or autonomous agents that execute proactive tasks based on events.
+They operate as autonomous or semi-autonomous systems that respond to user messages, system events, or other agents. They use generative AI models to interpret instructions and process inputs. These instructions define the agent’s scope, specifying which actions to take or avoid. Agents use tools to retrieve knowledge, perform tasks, and maintain memory, enabling persistent and context-aware engagement. After gathering relevant inputs, the agent sends them to the language model, which generates an output. This output may be a user message, a response to another agent, or a summary of tool results. This structure allows agents to act independently while remaining aligned with enterprise goals. Examples include retrieval-based chatbots that answer questions using knowledge bases, task-focused agents that perform user-requested actions via APIs, or autonomous agents that execute proactive tasks based on events.
 
-:::image type="content" source="./images/spectrum-agents.png" alt-text="Diagram that shows how to prioritize use cases by high value and low complexity." lightbox="./images/spectrum-agents.png" border="false":::
+:::image type="content" source="./images/spectrum-agents.png" alt-text="Diagram that shows the three main types of agents: retrieval, task, and autonomous." lightbox="./images/spectrum-agents.png" border="false":::
+
+## Why AI agents
 
 ## Next step
 
