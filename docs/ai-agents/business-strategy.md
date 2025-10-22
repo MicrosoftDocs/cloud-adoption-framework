@@ -10,22 +10,37 @@ ms.topic: conceptual
 
 # Business strategy for AI agents
 
-Successful adoption of AI agents begins with a clear strategy that connects agent capabilities to business objectives. Organizations must plan early across technology, workforce, and data readiness. This preparation enables leaders to define where AI agents create the most value and how to structure teams for success.
+Adopting AI agents across the organization requires a clear strategy that aligns agent capabilities with business outcomes. Leaders must assess readiness across technology, workforce, and data to identify where agents deliver the greatest value. This strategic alignment helps define how to organize teams, prioritize investments, and measure impact. **Prerequisite**: [Understand AI agents](./index.md#what-is-an-ai-agent)
 
-## Why AI agents
+## Why AI agents matter for business
 
-AI agents help enrich employee experiences, transform customer interactions, streamline operations, and accelerate innovation cycles.
+AI agents operate as autonomous or semi-autonomous systems that complete tasks requiring reasoning, interaction, or adaptation. These systems use natural language interfaces to communicate with users and other systems. This capability makes them effective in environments that contain unstructured data, dynamic workflows, or complex decision logic.
+
+Organizations use AI agents to increase operational efficiency, reduce manual effort, and accelerate innovation. The value of these agents depends on how well they integrate with existing systems and processes and how directly they support business objectives.
 
 :::image type="content" source="./images/ai-agent-opportunities.png" alt-text="Diagram that shows AI agent opportunities." lightbox="./images/ai-agent-opportunities.png" border="false":::
 
-1. Create Internal impact: reshapre business processes, enrich employee experiences.
-2. Create Customer impact: reivent customer engagement, and accelerate innovation
+### Internal impact
+
+AI agents improve internal operations by automating routine tasks and enhancing workflows tied to specific roles. Common examples include:
+
+- **Reshape business processes**: AI agents accelerate software development cycles, improve candidate screening and lead qualification, and resolve customer issues more efficiently. These changes allow organizations to scale operations without increasing headcount or cost. They also reduce manual labor and error rates, which lowers operational costs.
+
+- **Enrich employee experiences**: AI agents make data easier to find, simplify email composition, and transcribe calls accurately. These capabilities increase productivity by allowing employees to focus on higher-value work. They also streamline communication and task handoffs across teams, which improves collaboration and overall throughput. These outcomes reduce cycle times and increase employee satisfaction.
+
+### Customer impact
+
+AI agents transform customer engagement by enabling faster responses and more personalized interactions. They support:
+
+- **Reinvent customer engagement**: AI agents reduce support resolution times and improve responsiveness, which leads to higher customer satisfaction. They also ensure consistent execution and maintain data quality across customer-facing processes.
+
+- **Accelerate innovation**: AI agents shorten product development cycles and enable proactive service recommendations. These capabilities support faster experimentation and iteration across product and service lines, helping organizations respond more effectively to changing market demands.
 
 ## Where to use AI agents?
 
 Use AI agents for challenges that require complex reasoning, dynamic interaction, or unstructured data especially when natural language provides the most effective interface. These scenarios often support digital transformation goals such as increasing agility, reducing manual effort, and scaling personalization. Common examples include customer support automation, knowledge retrieval, process automation, and real-time insights generation
 
-1. **When not to use AI agents.** Do not use AI agents for problems that simpler tools or scripts already solve. Prioritize low-risk, low-effort solutions first. Misuse increases cost and complexity without added value. Run a pilot to validate feasibility and impact before scaling. Agents should not be used for the shake of using agents. If you can do it with simpler non agentic workflows you should not select agents. Agents introduce complexity and non deterministic components.
+1. **When not to use AI agents.** Avoid using AI agents for problems that simpler tools or scripts already solve. Prioritize low-risk, low-effort solutions first. Introducing agents where they are not needed increases cost and complexity without added value. Always validate feasibility and impact through a pilot before scaling. Agents introduce non-deterministic behavior and require careful governance.
 
 2. **Identify viable use cases.** Direct teams to explore proven patterns and validated examples from other organizations. Use resources like the [Microsoft Scenario Library](https://adoption.microsoft.com/scenario-library/) and [AI Use Cases catalog](https://www.microsoft.com/ai/use-case) pto guide planning. These references help avoid common design flaws and accelerate solution development. Include them in workshops and use them to benchmark internal ideas. See also [AI-powered success](https://www.microsoft.com/microsoft-cloud/blog/2025/07/24/ai-powered-success-with-1000-stories-of-customer-transformation-and-innovation/#:~:text=In%20this%20blog%2C%20we%E2%80%99ve%20collected%20more%20than%201%2C000,impact%20and%20shape%20today%E2%80%99s%20platform%20shift%20to%20AI.?msockid=3d64a84f1d7463b738e3bbc21c03625f), [Azure Marketplace](https://azure.microsoft.com/partners/marketplace?msockid=3d64a84f1d7463b738e3bbc21c03625f), [Sample Solution Gallery](https://adoption.microsoft.com/sample-solution-gallery/).
 
