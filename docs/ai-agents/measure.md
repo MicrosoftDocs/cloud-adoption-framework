@@ -12,7 +12,9 @@ ms.topic: conceptual
 
 The journey doesn’t end with deployment. In fact, once an AI agent is running in production, it enters the operate and improve phase, which is ongoing. This is where you measure actual business impact against your goals, optimize costs, manage the agent’s lifecycle, and decide on scaling out or winding down as needed. For technical leaders, this phase is about ensuring the solution continues to deliver value and remains aligned with strategic objectives over time.
 
-## Control agent cost and maximize value org-wide
+## Control agent cost and maximize value
+
+To help technical decision makers control agent costs and maximize value across the organization, it's essential to establish a clear framework that connects AI agent usage with business outcomes. Here's how to guide your teams effectively:
 
 1. **Align cost control with business outcomes.** AI agents consume cloud resources persistently, which introduces cost variability. To control this, assign budgets to teams and require approvals for spending beyond those limits. This enforces discipline and ensures that AI development aligns with strategic priorities. Tie operational spending directly to measurable business outcomes such as labor savings or revenue growth. Without this linkage, cost discussions remain abstract and disconnected from value.
 
