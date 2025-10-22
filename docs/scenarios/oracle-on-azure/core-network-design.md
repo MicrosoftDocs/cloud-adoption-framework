@@ -52,6 +52,10 @@ When you design your network topology for Oracle Exadata Database@Azure, conside
 
 - **Use unique DNS names:** When you use the default DNS settings, ensure that the first 10 characters of the virtual network and subnet names for any Exadata environments are unique. If not, a DNS resolver can't distinguish between the environments.
 
+### Azure Key Vault private endpoint considerations for Exadata deployments
+
+Oracle Exadata Database@Azure integration with Azure Key Vault for TDE key management requires Private Endpoint configuration and additional DNS setup. Plan delegated subnet sizing to accommodate the Key Vault Private Endpoint network interface in addition to database infrastructure requirements. The integration also requires creating two Private DNS zones (`privatelink.vaultcore.azure.net` and `vault.azure.net`) in the OCI Private View that matches your database VCN. For complete Azure Key Vault integration guidance including network prerequisites, see [Azure Key Vault integration for Oracle Exadata Database@Azure](oracle-akv-integration-exadata.md).
+
 ### Other guidance
 
 Beyond the core network design concepts for Oracle Exadata Database@Azure, also consider the connectivity requirements for your applications, other Azure services (like Azure Blob Storage or Azure NetApp Files), on-premises environments, and your BCDR configuration.

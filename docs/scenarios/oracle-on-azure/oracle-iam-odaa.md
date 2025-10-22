@@ -51,6 +51,8 @@ Implement granular access control by using Azure role-based access control (Azur
 
 4. **Implement cluster-specific RBAC for multi-cluster architectures.** Create separate customized groups and policies for each cluster when you manage multiple Oracle Database@Azure clusters. Default RBAC group permissions apply to all clusters within a subscription. Administrators must configure custom settings to enforce cluster-specific access control.
 
+5. **Configure service principals for Azure Key Vault TDE integration when using customer-managed encryption keys.** Azure Key Vault integration requires different identity configurations depending on database technology. Oracle Exadata Database@Azure uses database-level service principals with Key Vault RBAC assignments, while Oracle Autonomous Database@Azure creates service principals automatically through DBMS_CLOUD_ADMIN procedures with Vault Access Policy permissions. Ensure service principals have minimum required permissions (Get, Wrap Key, Unwrap Key) following least-privilege principles. For detailed service principal configuration procedures, see [Azure Key Vault integration for Oracle Exadata Database@Azure](oracle-akv-integration-exadata.md) or [Azure Key Vault integration for Oracle Autonomous Database@Azure](oracle-akv-integration-autonomous.md) depending on your deployment type.
+
 ## Integrate Azure Arc identity management
 
 Azure Arc integration with Oracle Database@Azure requires dedicated service principals and hybrid identity planning. Configure Arc identity components to support governance and monitoring capabilities without disrupting existing OCI federation.
