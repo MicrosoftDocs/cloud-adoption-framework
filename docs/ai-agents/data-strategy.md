@@ -12,6 +12,8 @@ ms.topic: conceptual
 
 A comprehensive data strategy defines how an organization uses data to achieve business objectives. For AI agents to deliver meaningful outcomes, decision makers must treat data as a strategic asset and direct their teams to build a foundation that supports accessibility, governance, and scalability.
 
+:::image type="content" source="./images/ai-agent-adoption.png" alt-text="Diagram that shows the process outlined in this guidance: plan, govern, build and secure, integrate, and measure agents across your organization." lightbox="./images/ai-agent-adoption.png" border="false":::
+
 ## Data quality and ownership
 
 Assess whether data supports retrieval, reasoning, and summarization. Evaluate structure, tagging, and cleanliness. Validate compliance with access controls, retention rules, and sensitivity classifications. For external or unstructured data, direct platform teams to enrich or transform it. Add a checklist to assess data quality:

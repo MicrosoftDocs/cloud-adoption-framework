@@ -14,7 +14,7 @@ Many organizations explore AI agents to automate processes, improve productivity
 
 This guidance outlines sequential milestones and prescriptive recommendations to help organizations plan, govern, build, integrate, and manage AI agents. These steps aim to maximize return on investment (ROI), minimize risks, optimize costs, and align teams around shared objectives.
 
-:::image type="content" source="./images/ai-agent-adoption.png" alt-text="Diagram that shows the process outlined in this guidance." lightbox="./images/ai-agent-adoption.png" border="false":::
+:::image type="content" source="./images/ai-agent-adoption.png" alt-text="Diagram that shows the process outlined in this guidance: plan, govern, build and secure, integrate, and measure agents across your organization." lightbox="./images/ai-agent-adoption.png" border="false":::
 
 ## What is an AI agent?
 
