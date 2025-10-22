@@ -26,7 +26,7 @@ AI agents improve internal operations by automating routine tasks and enhancing 
 
 - **Reshape business processes**: AI agents accelerate software development cycles, improve candidate screening and lead qualification, and resolve customer issues more efficiently. These changes allow organizations to scale operations without increasing headcount or cost. They also reduce manual labor and error rates, which lowers operational costs.
 
-- **Enrich employee experiences**: AI agents make data easier to find, simplify email composition, and transcribe calls accurately. These capabilities increase productivity by allowing employees to focus on higher-value work. They also streamline communication and task handoffs across teams, which improves collaboration and overall throughput. These outcomes reduce cycle times and increase employee satisfaction.
+- **Enrich employee experiences**: AI agents make data easier to find, simplify email composition, and transcribe calls accurately. These capabilities increase productivity by allowing employees to focus on higher-value work. They also streamline communication and task handoffs across teams, which improve collaboration and overall throughput. These outcomes reduce cycle times and increase employee satisfaction.
 
 ### Customer impact
 
@@ -40,11 +40,11 @@ AI agents transform customer engagement by enabling faster responses and more pe
 
 Today, most successful agents are supporting and integrated into a larger business process. Use AI agents for challenges that require complex reasoning, dynamic interaction, or unstructured data especially when natural language provides the most effective interface. These scenarios often support digital transformation goals such as increasing agility, reducing manual effort, and scaling personalization. Common examples include customer support automation, knowledge retrieval, process automation, and real-time insights generation
 
-1. **When not to use AI agents.** Do not use AI agents for problems that simpler tools or scripts already solve effectively. For example, static forms, rule-based automation, or straightforward data queries often require less overhead and governance. Introducing AI agents in these cases increases cost and complexity without delivering additional value.
+1. **When not to use AI agents.** Don't use AI agents for problems that simpler tools or scripts already solve effectively. For example, static forms, rule-based automation, or straightforward data queries often require less overhead and governance. Introducing AI agents in these cases increases cost and complexity without delivering more value.
 
-    Before scaling any agent-based solution, validate its feasibility and impact through a pilot. AI agents introduce non-deterministic behavior, which requires careful governance, monitoring, and fallback mechanisms. Always assess risk, effort, and expected return before deployment.
+    Before scaling any agent-based solution, validate its feasibility and impact through a pilot. AI agents introduce nondeterministic behavior, which requires careful governance, monitoring, and fallback mechanisms. Always assess risk, effort, and expected return before deployment.
 
-2. **Identify viable use cases.** Direct teams to explore proven patterns and validated examples from other organizations. Use resources like the [Microsoft Scenario Library](https://adoption.microsoft.com/scenario-library/) and [AI Use Cases catalog](https://www.microsoft.com/ai/use-case) pto guide planning. These references help avoid common design flaws and accelerate solution development. Include them in workshops and use them to benchmark internal ideas. See also [AI-powered success](https://www.microsoft.com/microsoft-cloud/blog/2025/07/24/ai-powered-success-with-1000-stories-of-customer-transformation-and-innovation/#:~:text=In%20this%20blog%2C%20we%E2%80%99ve%20collected%20more%20than%201%2C000,impact%20and%20shape%20today%E2%80%99s%20platform%20shift%20to%20AI.?msockid=3d64a84f1d7463b738e3bbc21c03625f), [Azure Marketplace](https://azure.microsoft.com/partners/marketplace?msockid=3d64a84f1d7463b738e3bbc21c03625f), [Sample Solution Gallery](https://adoption.microsoft.com/sample-solution-gallery/).
+2. **Identify viable use cases.** Direct teams to explore proven patterns and validated examples from other organizations. Use resources like the [Microsoft Scenario Library](https://adoption.microsoft.com/scenario-library/) and [AI Use Cases catalog](https://www.microsoft.com/ai/use-case) to guide planning. These references help avoid common design flaws and accelerate solution development. Include them in workshops and use them to benchmark internal ideas. See also [AI-powered success](https://www.microsoft.com/microsoft-cloud/blog/2025/07/24/ai-powered-success-with-1000-stories-of-customer-transformation-and-innovation/#:~:text=In%20this%20blog%2C%20we%E2%80%99ve%20collected%20more%20than%201%2C000,impact%20and%20shape%20today%E2%80%99s%20platform%20shift%20to%20AI.?msockid=3d64a84f1d7463b738e3bbc21c03625f), [Azure Marketplace](https://azure.microsoft.com/partners/marketplace?msockid=3d64a84f1d7463b738e3bbc21c03625f), [Sample Solution Gallery](https://adoption.microsoft.com/sample-solution-gallery/).
 
 ## How to prioritize AI agent use cases
 
@@ -54,7 +54,7 @@ Early wins with measurable outcomes build momentum and secure executive support 
 
 ### Evaluate business impact
 
-Assess each use case based on its potential to improve key performance indicators (KPIs) and deliver return on investment. Select projects that reduce operational costs, increase customer satisfaction, or improve service delivery. Require a concise business case for each candidate, including specific metrics such as "reduce support ticket handling time by 20% within 3 months."
+Assess each use case based on its potential to improve key performance indicators (KPIs) and deliver return on investment. Select projects that reduce operational costs, increase customer satisfaction, or improve service delivery. Require a concise business case for each candidate, including specific metrics such as "reduce support ticket handling time by 20% within three months."
 
 :::image type="content" source="./images/business-impact.png" alt-text="Diagram that shows how to prioritize use cases by business impact." lightbox="./images/business-impact.png" border="false":::
 
