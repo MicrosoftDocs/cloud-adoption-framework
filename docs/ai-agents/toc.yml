@@ -11,8 +11,7 @@ items:
       - name: 3. People strategy
         href: people-strategy.md
       - name: 4. Data strategy
-        href: data-strategy.md
-      
+        href: data-strategy.md 
   - name: 2. Govern agents
     expanded: true
     items:
@@ -20,7 +19,6 @@ items:
         href: responsible-ai.md
       - name: 2. Governance and security
         href: governance-security.md
-
   - name: 3. Build and secure agents
     expanded: true
     items:

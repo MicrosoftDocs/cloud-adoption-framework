@@ -10,37 +10,23 @@ ms.topic: conceptual
 
 # Integrate AI agents across your organization
 
-To realize value from AI investments, organizations must embed AI agents directly into business processes. These agents must operate in real environments not in isolated test settings to deliver measurable outcomes. Whether automating new workflows or enhancing legacy systems, technical decision makers must establish a consistent approach to validate, integrate, and refine AI agents. Without this discipline, agents risk becoming underused or misaligned with business needs. A well-integrated agent becomes a dynamic asset that evolves with the organization.
+Once your organization identifies viable use cases and builds production-ready agents, the next step involves integrating them into the environment where work occurs. This integration must avoid disruption, align with existing systems, and include mechanisms for learning and refinement.
 
-## Integrate AI agents into business processes
+Technical decision makers must guide their teams through this phase with a clear operational strategy. Without this direction, agents risk becoming disconnected from business goals or underused by frontline teams. A well-integrated agent becomes a dynamic part of the organization’s operating model, not a standalone tool.
 
-AI agents must operate where work happens. Embedding them in actual workflows rather than in parallel or disconnected systems ensures they contribute to productivity and decision-making. For example, a customer support agent must connect to the live chat or support portal, ideally starting with low-risk scenarios like after-hours or tier-1 inquiries. Internal agents must appear in familiar tools, such as Microsoft Teams, to encourage adoption and surface real usage patterns. To guide successful integration, follow these principles:
+## Rollout agents into business processes
 
-1. **Select a clear pilot scenario.** Choose a low-risk, representative use case. Start with one department or a specific inquiry type. Inform the pilot group about the scope and feedback process to ensure engagement and transparency.
+AI agents deliver value only when they operate inside real workflows. These workflows may include existing processes that benefit from automation or new ones that emerge because of the agent’s capabilities.
 
-2. **Minimize disruption to existing systems.** Connect the agent through standard APIs or interfaces. For example, use the official ticketing system API rather than building custom connectors. When working with legacy systems, use orchestration tools or robotic process automation (RPA) to bridge gaps without overhauling infrastructure.
+1. **Start with a controlled rollout.**  Select a low-risk test group for initial deployment. For example, focus on a single department or a small set of users that reflects broader business needs. If the agent supports internal users, inform the pilot group about its scope and how to provide feedback. If the agent interacts with customers, monitor these early interactions closely and direct teams to respond quickly to issues or confusion. This early phase sets the tone for adoption and helps surface integration challenges before scaling.
 
-3. **Define entry and exit criteria.** Establish clear rules for when the agent responds and when to escalate to a human. For instance, allow the agent to respond only when confidence exceeds 90 percent. If performance degrades or error rates increase, pause the pilot and route queries to human agents until resolved. Treat the deployment as a controlled rollout with safety mechanisms.
+2. **Monitor during initial deployment.** Direct teams to track usage patterns, user behavior, and early outcomes against the agent’s evaluation goals. This includes metrics such as query volume, resolution rate, and user satisfaction. Use this data to validate whether the agent contributes to productivity and aligns with business expectations. If quality falls short, pause the rollout and investigate root causes before expanding further.
 
-4. **Prepare and educate users.** Provide a short orientation to help users understand the agent’s capabilities and limitations. Set expectations clearly. Early users often hesitate or misuse new tools without guidance. A brief introduction improves adoption and reduces friction.
+3. **Prepare users.** Technical decision makers must ensure that users understand what the agent does, how to use it effectively, and where to go when it falls short. This preparation improves adoption, reduces confusion, and helps the organization learn from early usage. For **internal deployments**, direct teams to provide a concise orientation before launch. This can include a short video, a help article, or a live demo that explains the agent’s capabilities and limitations. Set expectations clearly. Early users often misinterpret what the agent can do or hesitate to use it without guidance. A brief introduction helps users engage confidently and provide meaningful feedback.
 
-## Capture feedback across AI agent deployments
+    For **customer-facing agents**, ensure that messaging aligns with the organization's brand and service standards. Customers must understand when they are interacting with an AI agent, what types of questions it can answer, and how to escalate to human support if needed. Include clear fallback options and visible help channels. This transparency builds trust and reduces frustration.
 
-AI agents only deliver sustained value when organizations treat them as evolving components of business operations. To guide that evolution, technical decision makers must direct their teams to embed structured feedback mechanisms into every deployment. These mechanisms must collect both performance metrics and user insights to validate business impact and inform continuous improvement.
-
-Unstructured or informal feedback often leads to misaligned iterations or missed opportunities. Instead, organizations must establish clear channels and responsibilities for monitoring agent performance and gathering actionable input. This approach ensures that agents remain relevant, effective, and aligned with business goals. Establish feedback mechanisms that drive improvement
-
-1. **Monitor agent performance in real time.** Set up dashboards that track usage patterns and success metrics such as query volume, resolution rate, and escalation frequency. Assign monitoring responsibilities to a designated team such as the AI center of excellence or the owning business unit to ensure timely intervention when issues arise. Early-stage deployments require close observation to catch and correct problems before they scale.
-
-2. **Enable direct user feedback.** Provide simple and accessible ways for users to share their experience. Embed feedback prompts within the agent interface, such as thumbs-up/down ratings or quick surveys. Supplement these with scheduled interviews or feedback sessions to gather deeper insights. Make it clear that user input directly influences future improvements.
-
-3. **Collect and analyze qualitative insights.** Quantitative metrics reveal performance trends, but qualitative feedback uncovers usability issues and contextual gaps. Comments like “the agent’s tone feels too formal” or “it doesn’t recognize policy X” often point to overlooked design flaws. Categorize and analyze this feedback to guide targeted refinements.
-
-4. **Provide support and escalation channels.**  Create a dedicated support channel such as a Teams chat or email alias where users can ask questions or report issues outside the agent interface. Assign a team, such as the development group or CoE, to respond and use this input to prioritize fixes and enhancements. This channel also builds trust and encourages adoption.
-
-5. **Compare pilot results against baseline metrics.**  Revisit the success criteria defined during the strategy phase. Measure actual performance against these benchmarks. For example, if the goal was a 20 percent reduction in resolution time, compare pilot results to historical data. If the agent fails to meet expectations, investigate root causes. Low usage or high error rates may indicate gaps in training, poor integration, or unrealistic targets.
-
-## Refine AI agents
+## Establish early feedback and refinement cycles
 
 AI agents must evolve continuously to remain effective. Static release plans often fail to meet changing business needs or user expectations. Instead of treating agents as one-time deployments, technical decision makers must guide their teams to adopt agile refinement cycles. These cycles enable rapid updates, revalidation, and reuse of successful design patterns across the agent portfolio.
 
@@ -56,7 +42,7 @@ This approach reduces operational risk, improves return on investment, and ensur
 
 By embedding refinement into the operating model, organizations ensure that AI agents remain responsive, useful, and aligned with evolving business needs. This approach also enables reuse of proven patterns across the cloud estate, reducing time-to-value and improving consistency.
 
-## Expand rollout across the agent portfolio
+## Scale agent deployments with control
 
 After an AI agent consistently meets its success criteria and receives positive user feedback, organizations must plan its broader rollout. Scaling agent deployments across the enterprise requires a deliberate and phased approach to avoid disruption and ensure sustained value. A successful pilot provides a blueprint, but expansion introduces new variables such as increased user volume, broader use cases, and more complex support needs that require careful planning.
 

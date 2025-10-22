@@ -63,7 +63,7 @@ Establish multiple feedback channels to capture diverse perspectives:
 
 Treat the agent as a product with a user experience that requires continuous refinement. User sentiment shifts over time, so teams must stay attuned to it. Quick responses to feedback such as fixing a frequently misunderstood question or adjusting tone improve adoption and satisfaction across the organization.
 
-## Iterate the framework itself
+## Refine the operating framework
 
 Managing AI agents over time reveals strengths and limitations in the organization’s operating model. Technical decision makers must periodically assess how well the broader framework strategy, governance, build, and manage supports long-term success. This reflection ensures that the organization adapts its approach based on real-world experience.
 
@@ -72,4 +72,3 @@ For example, the initial governance process might feel too heavy for small updat
 Direct teams to treat the framework as a living guide. Encourage them to document lessons learned, propose adjustments, and share feedback across departments. This practice builds organizational maturity and ensures that AI initiatives remain aligned with business goals, risk tolerance, and resource constraints.
 
 By continuously refining both the agents and the framework that supports them, organizations create a sustainable model for AI adoption that delivers measurable value over time.
-
