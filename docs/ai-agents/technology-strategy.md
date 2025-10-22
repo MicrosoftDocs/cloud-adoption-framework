@@ -36,7 +36,7 @@ The [60-day free trial](/microsoft-copilot-studio/requirements-licensing-subscri
 
 ## Copilots
 
-**Pre-built agents (buy SaaS):** Prebuilt Copilots offer the fastest route to productivity gains. These agents require minimal setup and support common tasks such as summarization, drafting, and data analysis. They integrate directly into Microsoft 365, GitHub, and Power Platform, and serve information workers who benefit from embedded intelligence. Use this track for low-complexity use cases that don't require customization or deep integration. This approach reduces time-to-value and minimizes technical overhead.
+**Prebuilt agents (buy SaaS):** Prebuilt Copilots offer the fastest route to productivity gains. These agents require minimal setup and support common tasks such as summarization, drafting, and data analysis. They integrate directly into Microsoft 365, GitHub, and Power Platform, and serve information workers who benefit from embedded intelligence. Use this track for low-complexity use cases that don't require customization or deep integration. This approach reduces time-to-value and minimizes technical overhead.
 
 Microsoft 365 Copilot includes agents such as Researcher and Analyst. Microsoft also embeds Copilots across Azure, GitHub, Microsoft Fabric, and Power Platform. Role-based Copilots support functions like security, finance, and sales. These agents manage integration internally and typically require only configuration and access permissions.
 
