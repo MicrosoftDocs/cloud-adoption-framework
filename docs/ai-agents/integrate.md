@@ -1,6 +1,6 @@
 ---
-title: Deploy AI agents
-description: Learn to deploy AI agents
+title: Integrate AI agents across your organization
+description: Integrate AI agents across your organization
 author: stephen-sumner
 ms.author: pnp
 ms.date: 11/01/2025
@@ -8,7 +8,7 @@ ms.update-cycle: 180-days
 ms.topic: conceptual
 ---
 
-# Deploy AI agents
+# Integrate AI agents across your organization
 
 To realize value from AI investments, organizations must embed AI agents directly into business processes. These agents must operate in real environments not in isolated test settings to deliver measurable outcomes. Whether automating new workflows or enhancing legacy systems, technical decision makers must establish a consistent approach to validate, integrate, and refine AI agents. Without this discipline, agents risk becoming underused or misaligned with business needs. A well-integrated agent becomes a dynamic asset that evolves with the organization.
 

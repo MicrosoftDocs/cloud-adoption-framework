@@ -1,6 +1,6 @@
 ---
-title: Manage AI agents
-description: Learn to Manage AI agents
+title: Measure AI agents across your organization
+description: Learn to Measure AI agents across your organization
 author: stephen-sumner
 ms.author: pnp
 ms.date: 11/01/2025
@@ -8,7 +8,7 @@ ms.update-cycle: 180-days
 ms.topic: conceptual
 ---
 
-# Manage AI agents org-wide
+# Measure AI agents across your organization
 
 The journey doesn’t end with deployment. In fact, once an AI agent is running in production, it enters the operate and improve phase, which is ongoing. This is where you measure actual business impact against your goals, optimize costs, manage the agent’s lifecycle, and decide on scaling out or winding down as needed. For technical leaders, this phase is about ensuring the solution continues to deliver value and remains aligned with strategic objectives over time.
 
