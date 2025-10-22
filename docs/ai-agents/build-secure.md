@@ -11,23 +11,25 @@ ms.collection: ce-skilling-ai-copilot
 
 # How to build and secure AI agents
 
-This article outlines a strategic framework for technical decision makers to guide workload teams in building AI agents using Azure AI Foundry and Microsoft Copilot Studio. It focuses on establishing a secure, scalable, and well-governed foundation that supports consistent agent development across the cloud estate. :::image type="content" source="./images/agent-overview.png" alt-text="Diagram that shows how to agents work." lightbox="./images/agent-overview.png" border="false":::
+This article outlines a strategic framework for technical decision makers to guide workload teams in building AI agents using Azure AI Foundry and Microsoft Copilot Studio. It focuses on establishing a secure, scalable, and well-governed foundation that supports consistent agent development across the cloud estate.
 
-**How agents work:** AI agents operate as autonomous or semi-autonomous systems that respond to user messages, system events, or other agents. They use generative AI models, typically large language models, to interpret instructions and process inputs. These instructions define the agent’s scope, specifying which actions to take or avoid. Agents use tools to retrieve knowledge, perform tasks, and maintain memory, enabling persistent and context-aware engagement. After gathering relevant inputs, the agent sends them to the language model, which generates an output. This output may be a user message, a response to another agent, or a summary of tool results. This structure allows agents to act independently while remaining aligned with enterprise goals.
+:::image type="content" source="./images/build-ai-agents.png" alt-text="Diagram that shows how to build AI agents in Azure AI Foundry and Microsoft Copilot Studio." lightbox="./images/build-ai-agents.png" border="false":::
 
 ## Prerequisites
 
 Before directing teams to build AI agents, ensure the organization has the right environment and governance in place. These prerequisites help reduce risk, control cost, and accelerate time to value.
 
-1. **Set up your environment:** of you're building agents in **Azure AI Foundry** use the [application landing zone accelerator for Azure AI Foundry](https://github.com/Azure/AI-Landing-Zones). It's recommended that you start with an Azure landing zone to establish your platform landing zone. However, if you choose to build a custom platform, the application landing zone accelerator works without a platform landing zone. If you're building in **Microsoft Copilot Studio,** ensure you have [access to Copilot Studio](/microsoft-copilot-studio/requirements-licensing-subscriptions) and configure the Copilot Studio [environments](/microsoft-copilot-studio/environments-first-run-experience)  that align with your organization’s data boundaries and lifecycle management practices.
+1. **Understand how agents work.** For more information, see [How agents work](./index.md#what-is-an-ai-agent).
+
+1. **Set up your environment:** of you're building agents in **Azure AI Foundry**, you can reference the [application landing zone accelerator for Azure AI Foundry](https://github.com/Azure/AI-Landing-Zones). It's a proven starting point that you can refine to meet your needs. Application landing zone accelerator works with and without a an Azure landing zone. 
+
+    If you're building in **Microsoft Copilot Studio,** ensure you have [access to Copilot Studio](/microsoft-copilot-studio/requirements-licensing-subscriptions) and configure the Copilot Studio [environments](/microsoft-copilot-studio/environments-first-run-experience)  that align with your organization’s data boundaries and lifecycle management practices.
 
 1. **Apply well-architected principles to AI workloads** The agent itself should be built upon the principles of the Well-Architected Framework (AF) for [AI workloads](/azure/well-architected/ai/). This framework helps your teams balance performance, reliability, security, and cost. As a decision maker, you must ensure that every agent initiative aligns with these principles.
 
 ## Build and secure AI agents
 
 Navigate a structured build process to ensure agents operate reliably, comply with enterprise policies, and deliver measurable business outcomes.
-
-:::image type="content" source="./images/build-ai-agents.png" alt-text="Diagram that shows how to agents work." lightbox="./images/build-ai-agents.png" border="false":::
 
 ### 1. Choose models
 
