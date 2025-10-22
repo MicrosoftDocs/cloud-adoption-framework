@@ -32,7 +32,7 @@ Organizations use different types of agents depending on their needs:
 - **Task agents** perform user-requested actions via APIs.
 - **Autonomous agents** execute proactive tasks based on events.
 
-## Why AI agents
+## Why AI agents?
 
 AI agents offer a scalable way to automate decision-making, streamline operations, and improve responsiveness across business functions. Their ability to interact through natural language and adapt to changing inputs makes them well-suited for environments with unstructured data, dynamic workflows, or complex logic.
 

@@ -1,5 +1,5 @@
 items:
-  - name: Agents - Microsoft's Cloud Adoption Framework
+  - name: Agent adoption overview
     href: index.md
   - name: 1. Plan for agents
     expanded: true
