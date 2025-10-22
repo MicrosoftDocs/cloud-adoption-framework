@@ -102,9 +102,7 @@ Enable secure and scalable SSH access to Azure Arc-enabled Oracle Exadata cluste
 
 1. **Configure data collection rules to capture Syslog telemetry.** Create a [Data Collection Rule (DCR) to route Syslog data to a Log Analytics workspace](/azure/sentinel/forward-syslog-monitor-agent). This enables centralized log aggregation and supports advanced analytics and alerting.
 
-1. **Audit SSH access and privileged actions.** Monitor login attempts and track privileged commands such as sudo usage. [Configure alert rules](/azure/azure-monitor/alerts/alerts-overview) to detect anomalies and notify security teams of suspicious activity. This step supports proactive threat detection and incident response.
-
-1. **Integrate with Microsoft Sentinel for advanced monitoring.** [Forward logs to Microsoft Sentinel](/azure/sentinel/connect-data-sources?tabs=defender-portal#syslog-and-common-event-format-cef) for advanced threat detection, incident response, and compliance reporting. This integration enhances visibility into access patterns and supports governance across hybrid environments.
+1. **Audit SSH access and privileged actions.** Monitor login attempts and track privileged commands such as sudo usage. [Configure alert rules](/azure/azure-monitor/alerts/alerts-overview) to detect anomalies and notify security teams of suspicious activity.  Base rules on ```auth``` facility type. This step supports proactive threat detection and incident response.  
 
 ## Implement endpoint allowlisting and security controls
 
