@@ -76,3 +76,8 @@ For example, the initial governance process might feel too heavy for small updat
 Direct teams to treat the framework as a living guide. Encourage them to document lessons learned, propose adjustments, and share feedback across departments. This practice builds organizational maturity and ensures that AI initiatives remain aligned with business goals, risk tolerance, and resource constraints.
 
 By continuously refining both the agents and the framework that supports them, organizations create a sustainable model for AI adoption that delivers measurable value over time.
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Explore other adoption scenarios](/azure/cloud-adoption-framework/overview#what-specific-scenarios-does-the-cloud-adoption-framework-address)
