@@ -69,69 +69,7 @@ Oracle Database@Azure resolves DNS queries through OCI Private Views. Create mat
 
 4. **Add A records in both DNS zones pointing to Private Endpoint IP.** In each DNS zone, create an A record using your Key Vault name (without domain suffix) as the record name. Set the record value to the Private Endpoint private IP address documented during Azure configuration. For example, if your Key Vault is named `my-keyvault` with Private Endpoint IP `10.0.0.4`, create A record `my-keyvault` → `10.0.0.4` in both zones.
 
-5. **Publish DNS changes to activate configuration.** After adding A records, review changes and select "Publish changes" in OCI Console to activate the DNS configuration. Allow 2-5 minutes for DNS record propagation across OCI infrastructure before proceeding to database configuration.
-
-### Configure database for private endpoint routing
-
-Direct Oracle Database@Azure to route all outbound connections through private endpoints instead of public endpoints.
-
-1. **Connect to Oracle database with administrative privileges.** Establish a SQL*Plus or SQL Developer connection to your Oracle database using the ADMIN credential with full administrative access.
-
-2. **Configure database property for private endpoint routing.** Execute the following SQL command to direct the database to use private endpoints for all outbound connections:
-   ```sql
-   ALTER DATABASE PROPERTY SET route_outbound_connections = 'enforce_private_endpoint';
-   ```
-   This setting directs the database to resolve all outbound FQDNs using the OCI Private DNS zones configured in the previous steps.
-
-3. **Restart the Oracle database to apply configuration changes.** Navigate to OCI Console, locate your Oracle Database@Azure VM cluster, and select the database instance. Initiate a database restart from the lifecycle management options. Database restart typically completes within 5-10 minutes.
-
-4. **Verify private endpoint enforcement after database restart.** After restart completes, reconnect as ADMIN and execute the following query to confirm configuration:
-   ```sql
-   SELECT PROPERTY_NAME, PROPERTY_VALUE 
-   FROM DATABASE_PROPERTIES 
-   WHERE PROPERTY_NAME = 'ROUTE_OUTBOUND_CONNECTIONS';
-   ```
-   The query should return `enforce_private_endpoint` as the property value, confirming successful private endpoint configuration.
-
-### Validate Private Endpoint connectivity
-
-Validate DNS resolution and connectivity before proceeding with Oracle Identity Connector configuration.
-
-1. **Configure network ACL for connectivity validation.** Connect to your database as ADMIN and execute the following PL/SQL block to allow HTTPS connectivity for testing:
-   ```sql
-   BEGIN
-     DBMS_NETWORK_ACL_ADMIN.APPEND_HOST_ACE(
-       host => '<keyvault-name>.vault.azure.net',
-       lower_port => 443,
-       upper_port => 443,
-       ace => xs$ace_type(
-         privilege_list => xs$name_list('connect'),
-         principal_name => 'ADMIN',
-         principal_type => xs_acl.ptype_db
-       )
-     );
-   END;
-   /
-   ```
-
-2. **Execute connectivity health check.** Run the following PL/SQL block to validate database can reach Key Vault through the private endpoint:
-   ```sql
-   SET SERVEROUTPUT ON;
-   BEGIN
-     DECLARE
-       req UTL_HTTP.REQ;
-       resp UTL_HTTP.RESP;
-     BEGIN
-       req := UTL_HTTP.BEGIN_REQUEST('https://<keyvault-name>.vault.azure.net/healthstatus');
-       UTL_HTTP.SET_HEADER(req, 'User-Agent', 'Mozilla/4.0');
-       resp := UTL_HTTP.GET_RESPONSE(req);
-       DBMS_OUTPUT.PUT_LINE('Status: ' || resp.status_code);
-       UTL_HTTP.END_RESPONSE(resp);
-     END;
-   END;
-   /
-   ```
-   Successful response (HTTP 200) confirms the database resolves the Key Vault FQDN to the Private Endpoint IP and establishes HTTPS connectivity through the private path.
+5. **Publish DNS changes to activate configuration.** After adding A records, review changes and select "Publish changes" in OCI Console to activate the DNS configuration. Allow 2-5 minutes for DNS record propagation across OCI infrastructure before proceeding to Oracle Identity Connector configuration.
 
 ## Establish Oracle Identity Connector for Azure Arc integration
 
@@ -173,23 +111,15 @@ Confirm Azure Key Vault integration functions correctly and database encryption 
 
 4. **Test database restart to validate key retrieval on startup.** Simulate a database restart to ensure the database can retrieve encryption keys from Azure Key Vault during startup without manual intervention. Shut down and restart the Oracle database from OCI Console. Successful database startup without errors confirms the integration provides reliable key access for operational scenarios including maintenance windows and failover events.
 
-## Operational procedures
+## Establish operational procedures for ongoing management
 
-Establish procedures for ongoing key management operations and monitoring.
+Implement standardized procedures for key lifecycle management and monitoring to maintain secure and reliable Azure Key Vault integration.
 
-### Key lifecycle management
+1. **Implement key lifecycle management procedures.** Establish standardized processes for key rotation, backup encryption key management, and disaster recovery scenarios. For complete key lifecycle procedures including rotation schedules, backup considerations, and disaster recovery planning, see [Manage Oracle TDE with Azure Key Vault - Ongoing management](/azure/oracle/oracle-db/manage-oracle-transparent-data-encryption-azure-key-vault#ongoing-management).
 
-For general key lifecycle operations including key rotation, backup encryption, and disaster recovery procedures, see [Manage Oracle TDE with Azure Key Vault](/azure/oracle/oracle-db/manage-oracle-transparent-data-encryption-azure-key-vault).
+2. **Monitor Private Endpoint connectivity health (private endpoint configurations only).** Configure Azure Monitor alerts for Private Endpoint connection state changes and network interface health when using private endpoint connectivity. Private Endpoint connectivity issues can prevent database access to encryption keys and require immediate attention. For monitoring configuration procedures, see [Monitor Private Link](/azure/private-link/private-link-overview#logging-and-monitoring).
 
-### Private endpoint specific operations
-
-When using private endpoint connectivity, implement these additional operational procedures:
-
-1. **Monitor Private Endpoint connectivity health.** Configure Azure Monitor alerts for Private Endpoint connection state changes and network interface health. Private Endpoint connectivity issues can prevent database access to encryption keys. For monitoring configuration, see [Monitor Private Link](/azure/private-link/private-link-overview#logging-and-monitoring).
-
-2. **Maintain DNS zone consistency during infrastructure changes.** When making changes to Private Endpoint IP addresses or Key Vault configurations, immediately update corresponding A records in both OCI DNS zones (`privatelink.vaultcore.azure.net` and `vault.azure.net`). DNS inconsistencies can cause key operation failures and database startup issues.
-
-3. **Document Private Endpoint disaster recovery procedures.** Include Private Endpoint and OCI DNS zone configuration in your disaster recovery documentation. Ensure procedures cover recreating Private Endpoints and DNS zones during regional failover scenarios.
+3. **Maintain DNS zone consistency during infrastructure changes (private endpoint configurations only).** Update corresponding A records in both OCI DNS zones (`privatelink.vaultcore.azure.net` and `vault.azure.net`) immediately when making changes to Private Endpoint IP addresses or Key Vault configurations. DNS inconsistencies can cause key operation failures and database startup issues. Include Private Endpoint and OCI DNS zone configuration procedures in your disaster recovery documentation.
 
 ## Troubleshoot common integration issues
 
@@ -210,7 +140,7 @@ Address frequent configuration problems that occur during Azure Key Vault integr
 |-------|------------|------------|
 | Database fails to open with ORA-28374 error (private endpoint) | Private Endpoint DNS resolution failure or incorrect DNS zone configuration in OCI | Verify both DNS zones (`privatelink.vaultcore.azure.net` and `vault.azure.net`) exist in OCI Private View with correct A records. Execute nslookup test from delegated subnet to confirm resolution to private IP address. |
 | Cannot create Private Endpoint to Key Vault | Advanced networking features not enabled or insufficient IP space in delegated subnet | Confirm advanced networking enabled in region following [Network planning for Oracle Database@Azure](/azure/oracle/oracle-db/oracle-database-network-plan#advanced-networking-features). Verify delegated subnet has available IP addresses for Private Endpoint NIC. |
-| Outbound connectivity to Key Vault times out (private endpoint) | Database not configured with correct outbound routing property or database not restarted after property change | Execute `ALTER DATABASE PROPERTY SET route_outbound_connections = 'enforce_private_endpoint'` and restart database from OCI Console. Verify property persists after restart using `SELECT PROPERTY_NAME, PROPERTY_VALUE FROM DATABASE_PROPERTIES WHERE PROPERTY_NAME = 'ROUTE_OUTBOUND_CONNECTIONS'`. |
+| Outbound connectivity to Key Vault times out (private endpoint) | Private Endpoint DNS resolution failure or network connectivity issues | Verify both DNS zones exist in OCI Private View with correct A records. Test network connectivity from delegated subnet to Private Endpoint IP address. Confirm Private Endpoint connection is approved in Azure Portal. |
 | Oracle Identity Connector creation fails | Invalid Azure access token or insufficient permissions | Generate fresh Azure access token using `az account get-access-token` and verify account has Owner or Contributor role on subscription or resource group. Ensure Microsoft.HybridCompute resource provider is registered in Azure subscription. |
 
 ## Azure tools and resources
