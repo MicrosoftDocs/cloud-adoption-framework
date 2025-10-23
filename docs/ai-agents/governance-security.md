@@ -43,7 +43,7 @@ In **Microsoft Copilot Studio**, [create and manage solution pipelines](/microso
 
 ## Agent observability
 
-**Policy: The actions and behaviors of every agent must be logged and auditable.** To manage AI agents effectively across your organization, treat observability as a core business capability and not just a technical function. Observability refers to the ability to monitor and understand what AI agents do both in real time and over time. Because these agents operate probabilistically and don't always behave the same way, visibility into their actions becomes essential for managing risk, ensuring compliance, and optimizing performance.
+**Policy: The actions and behaviors of every agent must be auditable.** To manage AI agents effectively across your organization, treat observability as a core business capability and not just a technical function. Observability refers to the ability to monitor and understand what AI agents do both in real time and over time. Because these agents operate probabilistically and don't always behave the same way, visibility into their actions becomes essential for managing risk, ensuring compliance, and optimizing performance.
 
 1. **All agents must have a unique identity.** Start by requiring every AI agent to have a unique identity. This identity must include ownership details, version history, and lifecycle status. [Microsoft Entra Agent ID](https://techcommunity.microsoft.com/blog/microsoft-entra-blog/announcing-microsoft-entra-agent-id-secure-and-manage-your-ai-agents/3827392)  supports this structure by linking each agent to its owner and purpose. This clarity helps your organization distinguish between production, development, and test agents, which is critical for accountability and risk management.
 
