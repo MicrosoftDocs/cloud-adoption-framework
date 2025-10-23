@@ -52,7 +52,7 @@ To maintain control, organizations must:
 
 1. **Respect sensitivity labels.** Agents must interpret and enforce organizational sensitivity labels such as General, Public, and Confidential. Prevent agents from storing sensitive content in memory or logs unless protected by encryption and access controls. Extend existing classification schemes into agent workflows to maintain data protection standards.
 
-1. **Standardize integration and governance.** Standardize how agents connect to enterprise knowledge and tools to reduce duplication and simplify maintenance. Use official APIs and connectors instead of custom integrations. This allows multiple agents across departments (IT, HR, facilities) to reuse infrastructure, reduce operational costs, and accelerate deployment timelines.
+1. **Standardize integration.** Standardize how agents connect to knowledge and tools to reduce duplication and simplify maintenance. Use official APIs and connectors instead of custom integrations. Don’t give the agent broad direct access to systems. Instead, expose specific allowed actions via an API or function it can call. For instance, if required, create a secure API endpoint for “createSupportTicket(details)” that the agent can invoke, rather than letting it run free-form database queries. This allows multiple agents across departments (IT, HR, facilities) to reuse infrastructure, reduce operational costs, and accelerate deployment timelines.
 
     Support agents with a shared knowledge base for company policies. When integrating knowledge and tools, follow governance policies:
 
