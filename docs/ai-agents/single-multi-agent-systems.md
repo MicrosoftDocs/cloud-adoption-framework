@@ -36,7 +36,7 @@ Start with a single agent when the task appears simple, stable, and bounded. Thi
 
 3. **Consider execution demands.** Even simple logic breaks down under long-running workflows, large context windows, or multi-step coherence. If the agent frequently loses context or repeats clarifications, distribute responsibilities across agents with scoped memory. Avoid creating multiple agents for tasks that don't benefit from separation. These interactions add cost and latency without improving performance.
 
-4. **Use cost estimates to inform architecture selection.** A single agent typically consumes fewer tokens and API calls, but may degrade under load. Multi-agent systems offer better performance and modularity at higher cost. Estimate token and API usage for each architecture. Simulate high-load scenarios to identify bottlenecks. For low-margin or high-frequency use cases, optimize for minimal token usage and agent count.
+4. **Use cost estimates to inform architecture selection.** A single agent typically consumes fewer tokens and API calls, but may degrade under load. Multi-agent systems offer better performance and modularity at higher cost. Multi-agent systems typically consume more tokens due to inter-agent communication and context sharing, which can significantly increase operational costs. Estimate token and API usage for each architecture. Simulate high-load scenarios to identify bottlenecks. For low-margin or high-frequency use cases, optimize for minimal token usage and agent count.
 
 ## Make an architecture decision
 

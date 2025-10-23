@@ -77,22 +77,13 @@ Run structured testing cycles to validate fairness, bias, and security. For exam
 
 ### 3. Add knowledge and tools
 
-To ensure AI agents operate securely, accurately, and in alignment with business goals, technical decision makers must direct their teams to integrate knowledge and tools in a controlled and governed manner. This step defines how agents access data and perform actions, which impacts their usefulness, compliance posture, and operational risk. 
+To ensure AI agents operate securely, accurately, and in alignment with business goals, technical decision makers must direct their teams to integrate knowledge and tools in a controlled and governed manner. This step defines how agents access data and perform actions, which impacts their usefulness, compliance posture, and operational risk.
 
 1. **Add agent knowledge.** Agents must only use validated and approved data sources. This prevents unauthorized access, reduces compliance exposure, and ensures consistent, predictable responses. For example, when an agent answers HR or policy questions, it should only pull from sanctioned documents such as those indexed in Azure AI Search or stored in a vector database with embeddings. To maintain control, enforce least-privilege access. This means agents should only access the minimum data required to perform their role. Also, require fallback logic for unknown or ambiguous queries. If the agent can't find a reliable answer, it should escalate or defer rather than guess. This approach supports both accuracy and auditability, which are essential for regulated environments or customer-facing use cases.
 
 1. **Agent tools for actions.** Agents often need to do more than answer questions they must also take action. These extra responsibilities include tasks like creating support tickets, scheduling meetings, or triggering workflows. To support this, define a clear list of approved actions and ensure each one maps to a secure, authenticated tool or API. These tools must follow enterprise security policies, including identity management and data protection standards. This structure allows agents to automate routine tasks while maintaining control and traceability.
 
-By standardizing how agents access knowledge and tools, you reduce duplication and simplify maintenance. Connect the agent through standard APIs or interfaces. For example, use the official ticketing system API rather than building custom connectors. When working with legacy systems, use orchestration tools or robotic process automation (RPA) to bridge gaps without overhauling infrastructure. This also allows the workloads to reuse integrations across multiple agents, which lowers operational costs and accelerates deployment timelines. For example, a single connector to a ticketing system can support multiple agents across IT, HR, and facilities. Similarly, a shared knowledge base for company policies can serve agents in different departments.
-
-Follow governance policies when integrating knowledge and tools. This includes:
-
-- Using project-level data isolation to prevent cross-contamination of sensitive data
-- Applying data loss prevention (DLP) policies and sensitivity labels to protect information
-- Requiring structured outputs (such as JSON) to support downstream processing and compliance audits
-- Validating all integrations through security reviews and testing cycles
-
-These practices reduce the risk of data leakage, unauthorized actions, or unpredictable behavior.
+**Follow all [data governance and compliance policies](./governance-security.md#data-governance-and-compliance).**
 
 **Azure AI Foundry:** Use [**knowledge** tools](/azure/ai-foundry/agents/how-to/tools/overview) and enable **actions** using [action tools](/azure/ai-foundry/agents/how-to/tools/overview#action-tools) to perform tasks and streamline workflows.
 

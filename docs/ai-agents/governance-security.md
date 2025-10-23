@@ -36,7 +36,33 @@ In **Microsoft Copilot Studio**, follow [Governance and security best practices]
 
 **Policy: All agents must comply with the Responsible AI policies.** Corporate compliance ensures agents align with internal governance policies. Corporate policies include consistent deployment practices, version control, and guardrails across environments. Define reusable infrastructure templates and mandate their use. Use policy-as-code and infrastructure-as-code to enforce standards. Review agent updates and deployments through automated pipelines.
 
-- **Respect sensitivity labeles**: All AI agents must interpret and enforce organizational sensitivity labels such as General, Public, and Confidential. Agents must restrict memory and logging functions from storing sensitive content unless protected by encryption and access controls. Teams must extend existing classification schemes into agent workflows to maintain data protection standards.
+1. **Limit data access.** Give access to necessary data only. Avoid exposing confidential or sensitive data to the agent during training or runtime unless necessary. If certain documents are highly confidential, store them in a separate datastore and restrict the agent’s access. Likewise, integrate only the essential data sources needed for the agent’s function. For example, if the agent answers HR policy questions, connect it only to the HR policy documents or database, rather than your entire document library. Unneeded data connections can introduce noise or security risks.
+
+1. **Enforce internal-user access controls.** Internal-facing agents must follow the same data governance rules as other systems. Agents must only retrieve data that the requesting user is authorized to access. This typically involves passing the user’s identity or token securely when querying data, ensuring session integrity and least privilege. For example, an internal helpdesk agent must show an employee only their own HR record, not someone else’s. Align agent behavior with existing role-based access controls to maintain compliance and user trust.
+
+1. **Enforce external-user access controls.** Agents that interact with external users introduce additional complexity. These users often fall outside the enterprise identity system, increasing the risk of unauthorized data exposure. Limit agent access to public or explicitly shared data. Never expose internal systems, sensitive records, or proprietary content unless the organization verifies the user’s identity and grants appropriate permissions.
+To maintain control, organizations must:
+
+    - Define clear boundaries for what external agents can access and perform
+    - Use authentication mechanisms such as OAuth or federated identity systems when external users require access to personalized or sensitive data
+    - Apply strict rate limits and monitoring to detect misuse
+    - Implement fallback logic for queries outside the agent’s scope. For example, if an external user asks about internal HR policies, the agent should respond with a generic message or redirect to a public-facing resource
+
+1. **Handle unknowns gracefully**. Agents must respond appropriately when they lack sufficient data. Instead of generating inaccurate or misleading responses, agents should acknowledge the gap and offer escalation to human support. Program fallback messages and escalation paths to manage out-of-scope queries or errors. Log these incidents to identify knowledge gaps and improve agent performance.
+
+1. **Respect sensitivity labels.** Agents must interpret and enforce organizational sensitivity labels such as General, Public, and Confidential. Prevent agents from storing sensitive content in memory or logs unless protected by encryption and access controls. Extend existing classification schemes into agent workflows to maintain data protection standards.
+
+1. **Standardize integration and governance.** Standardize how agents connect to enterprise knowledge and tools to reduce duplication and simplify maintenance. Use official APIs and connectors instead of custom integrations. This allows multiple agents across departments (IT, HR, facilities) to reuse infrastructure, reduce operational costs, and accelerate deployment timelines.
+
+    Support agents with a shared knowledge base for company policies. When integrating knowledge and tools, follow governance policies:
+
+    - Use project-level data isolation to prevent cross-contamination of sensitive information
+    - Apply data loss prevention (DLP) policies and sensitivity labels to protect data
+    - Require structured outputs (such as JSON) to support downstream processing and compliance audits
+    - Validate all integrations through security reviews and testing cycles
+
+    These practices reduce the risk of data leakage, unauthorized actions, and unpredictable behavior.
+
 - **Uphold transparency**: Disclose AI involvement clearly in agent interfaces. Notify internal stakeholders when their data supports training or inference. Review new data sources before integration to validate content, permissions, and security risks.
 
 In **Azure AI Foundry**, use [Azure Policy](/azure/ai-foundry/how-to/azure-policy) to control infrastructure configurations and [model deployment](/azure/ai-foundry/how-to/built-in-policy-model-deployment).
