@@ -23,9 +23,9 @@ Microsoft provides three distinct agent platforms: prebuilt SaaS Copilots, low-c
 | **GPUs & containers** | Build - IaaS pro-code agents | Full control of the entire technology stack.
 | **Copilots** | Ready-to-use - SaaS agents| Personal productivity for information workers. Minimal customization required. Immediate value. |
 
-## Build AI agents
+## Technologies to build AI agents
 
-Organizations that treat AI agents as strategic assets must choose build paths that align with their business priorities, technical capabilities, and governance requirements. The following options reflect three distinct approaches. Each is suited to different levels of customization, control, and investment.
+Organizations must choose build paths for AI agents that align with their business priorities, technical capabilities, and governance requirements. The following options reflect three distinct approaches. Each is suited to different levels of customization, control, and investment.
 
 :::image type="content" source="./images/build-overview.png" alt-text="Diagram that shows an overview of the build agent options." lightbox="./images/build-overview.png" border="false":::
 
@@ -42,7 +42,8 @@ Use the [Azure AI Foundry playground](/azure/ai-foundry/concepts/concept-playgro
 
 **Build with SaaS for low-code or no-code agents.** Use [Microsoft Copilot Studio](/microsoft-copilot-studio/) to build conversational agents through a low-code interface. This software-as-a-service (SaaS) model provides fully managed orchestration and conversation storage. Pricing is typically per message, and development occurs within the Copilot Studio environment.
 
-This option suits departments that need tailored workflows but lack dedicated engineering resources. With access to over a thousand prebuilt connectors, teams can integrate agents with business systems quickly and with minimal overhead.
+Many organizations combine low-code development with Azure AI capabilities to address complex scenarios while maintaining the security and reliability of a SaaS platform. Copilot Studio supports integration with Azure AI Search, fine-tuned models, and even Azure AI Foundry components. With access to over a thousand prebuilt connectors, teams can integrate agents with business systems quickly and with minimal overhead.
+
 Copilot Studio includes built-in responsible AI features such as content moderation, data protection, and access controls. These features reflect Microsoft’s responsible AI engineering and reduce the burden on teams to implement safeguards independently. Use this path for process transformation initiatives that require moderate customization and fast delivery.
 
 The [60-day free trial](/microsoft-copilot-studio/requirements-licensing-subscriptions#copilot-studio-for-microsoft-teams-plans) provides a low-risk opportunity to validate use cases before committing to production. Review [access options](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio#access-copilot-studio).
@@ -50,6 +51,7 @@ The [60-day free trial](/microsoft-copilot-studio/requirements-licensing-subscri
 ### GPUs and containers
 
 **Build with IaaS for pro-code agents:** Use infrastructure-as-a-service (IaaS) to build agents when full control over the technology stack is essential. This path supports custom storage, model selection, and orchestration. Pricing depends on token usage and compute resources. Development typically occurs in Visual Studio Code and GitHub.
+
 This option suits organizations with advanced engineering capabilities and strict infrastructure requirements. It enables full-stack customization but requires significant effort to manage scalability, reliability, and compliance independently.. For more information, see [AI on IaaS](/azure/cloud-adoption-framework/scenarios/ai/infrastructure/cycle-cloud).
 
 ## Ready-to-use agents (Copilots)
@@ -60,7 +62,7 @@ Because these agents run on Microsoft-managed SaaS platforms, they inherit Micro
 
 Microsoft 365 Copilot includes agents such as Researcher and Analyst. Microsoft also embeds Copilots across Azure, GitHub, Microsoft Fabric, and Power Platform. Role-based Copilots support functions like security, finance, and sales. These agents manage integration internally and typically require only configuration and access permissions. See [Overview of available Microsoft Copilots](/azure/cloud-adoption-framework/scenarios/ai/strategy#adopt-microsoft-software-ai-services-saas-for-initial-outcomes). Use the [Agent Success Kit](https://adoption.microsoft.com/ai-agents/success-kit/) to understand how to deploy and manage Copilots.
 
-## Validate platform fit with prototypes
+## Validate technology choices
 
 To confirm the right technology path for AI agent delivery, decision makers must validate platform fit through structured experimentation. This step ensures that each approach aligns with business objectives, technical feasibility, and team readiness before scaling across the cloud estate. It also reduces the risk of misalignment between business needs and technical capabilities.
 

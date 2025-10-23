@@ -63,7 +63,7 @@ In **Microsoft Copilot Studio**, [create and manage solution pipelines](/microso
 
 ## Agent security
 
-**Policy: All agents must pass a security review and undergo continuous security testing.** AI agents operate differently from traditional IT systems. They process natural language, interact with external sources, and often make autonomous decisions. These capabilities introduce risks such as:
+**Policy: All agents must meet all baseline security requirements.** AI agents operate differently from traditional IT systems. They process natural language, interact with external sources, and often make autonomous decisions. These capabilities introduce risks such as:
 
 - **Data leakage**: Agents might unintentionally expose sensitive information.
 - **Data poisoning**: Malicious actors can manipulate training data to alter agent behavior.
@@ -115,11 +115,11 @@ To manage these risks, leaders must direct their teams to integrate agent securi
 
 ## Agent development
 
-To ensure consistency, safety, and interoperability, organizations must standardize how agents interact with tools, data, and each other. Business leaders must define which protocols and frameworks are acceptable and direct teams to use them across all agent development efforts.
+**Policy: Every agent must only use approved frameworks and protocols.** To ensure consistency, safety, and interoperability, organizations must standardize how agents interact with tools, data, and each other. Business leaders must define which protocols and frameworks are acceptable and direct teams to use them across all agent development efforts.
 
 ### Standardize agent frameworks
 
-Direct your teams to use a consistent set of frameworks and SDKs for agent development. This reduces complexity, improves collaboration across departments, and simplifies long-term maintenance. For example, within Azure AI Foundry, you can standardize on options like the [Microsoft Agent Framework](/agent-framework/overview/agent-framework-overview) and the [Azure AI Foundry SDK](/azure/ai-foundry/how-to/develop/sdk-overview?pivots=programming-language-python). These tools provide structured approaches to agent orchestration and integration, and they support rapid onboarding of new agents. When selecting frameworks, consider the following points:
+Establish a consistent set of frameworks and SDKs for agent development. This reduces complexity, improves collaboration across departments, and simplifies long-term maintenance. For example, within Azure AI Foundry, you can standardize on options like the [Microsoft Agent Framework](/agent-framework/overview/agent-framework-overview) and the [Azure AI Foundry SDK](/azure/ai-foundry/how-to/develop/sdk-overview?pivots=programming-language-python). These tools provide structured approaches to agent orchestration and integration, and they support rapid onboarding of new agents. When selecting frameworks, consider the following points:
 
 - **Compatibility with existing infrastructure**: Ensure the framework integrates well with your current cloud architecture and data sources.
 - **Support and documentation**: Choose frameworks with robust documentation and active support to reduce ramp-up time.
