@@ -25,25 +25,32 @@ Microsoft provides three distinct agent platforms: prebuilt SaaS Copilots, low-c
 
 ## Build AI agents
 
+Organizations that treat AI agents as strategic assets must choose build paths that align with their business priorities, technical capabilities, and governance requirements. The following options reflect three distinct approaches. Each is suited to different levels of customization, control, and investment.
+
+:::image type="content" source="./images/build-overview.png" alt-text="Diagram that shows an overview of the build agent options." lightbox="./images/build-overview.png" border="false":::
+
 ### Azure AI Foundry
 
-**Build - PaaS pro-code agents:** Use [Azure AI Foundry Agent Service](/azure/ai-foundry/agents/overview) development for strategic use cases where AI becomes a core business capability. This path enables engineering teams to build multi-agent systems with custom orchestration, proprietary data grounding, and deep integration. Although this approach requires more time and technical investment, it unlocks differentiated capabilities that drive long-term value.
+**Build with PaaS for pro-code agents.** Use [Azure AI Foundry Agent Service](/azure/ai-foundry/agents/overview) o develop agents for high-value scenarios where AI becomes a core business capability. This platform-as-a-service (PaaS) model supports full customization. Teams select their own AI models and infrastructure, including conversation storage in Cosmos DB. Pricing is based on token usage, and development occurs in environments such as Visual Studio Code, GitHub, and the Foundry portal.
+This option suits engineering-led organizations that require multi-agent systems, proprietary data grounding, and deep integration with internal systems. Although this path demands greater technical investment and longer timelines, it enables differentiated capabilities that drive long-term business value.
 
-Azure AI Foundry also embeds Microsoft’s responsible AI engineering practices into the platform. These include tools for model interpretability, fairness evaluation, and content safety. By using this PaaS foundation, organizations inherit many of the safeguards and governance controls that align with Microsoft’s Responsible AI Standard. This inheritance reduces the need to build compliance mechanisms from scratch and accelerates responsible deployment at scale.
+Azure AI Foundry embeds Microsoft’s responsible AI engineering practices into the platform. These include tools for model interpretability, fairness evaluation, and content safety. By using this PaaS foundation, organizations inherit governance controls aligned with Microsoft’s Responsible AI Standard. This reduces the need to build compliance mechanisms from scratch and accelerates responsible deployment at scale.
 
 Use the [Azure AI Foundry playground](/azure/ai-foundry/concepts/concept-playgrounds) to build prototypes before scaling. Follow the quickstart guide to [create a new agent](/azure/ai-foundry/agents/quickstart).
 
 ### Microsoft Copilot Studio
 
-**Build - SaaS low/no-code agents:** [Microsoft Copilot Studio](/microsoft-copilot-studio/) enables technical business users to build conversational agents using a low-code interface. This path suits departments that need tailored workflows but lack dedicated engineering resources. With over a thousand prebuilt connectors, teams can integrate agents with systems quickly.
+**Build with SaaS for low-code or no-code agents.** Use [Microsoft Copilot Studio](/microsoft-copilot-studio/) to build conversational agents through a low-code interface. This software-as-a-service (SaaS) model provides fully managed orchestration and conversation storage. Pricing is typically per message, and development occurs within the Copilot Studio environment.
 
-Copilot Studio also includes built-in responsible AI features such as content moderation, data protection, and access controls. These features reflect Microsoft’s responsible AI engineering and reduce the burden on teams to implement these safeguards independently. Use this track for process transformation initiatives that require moderate customization and fast delivery.
+This option suits departments that need tailored workflows but lack dedicated engineering resources. With access to over a thousand prebuilt connectors, teams can integrate agents with business systems quickly and with minimal overhead.
+Copilot Studio includes built-in responsible AI features such as content moderation, data protection, and access controls. These features reflect Microsoft’s responsible AI engineering and reduce the burden on teams to implement safeguards independently. Use this path for process transformation initiatives that require moderate customization and fast delivery.
 
 The [60-day free trial](/microsoft-copilot-studio/requirements-licensing-subscriptions#copilot-studio-for-microsoft-teams-plans) provides a low-risk opportunity to validate use cases before committing to production. Review [access options](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio#access-copilot-studio).
 
 ### GPUs and containers
 
-**Build - IaaS pro-code agents:** This is for use cases where you need maximum control over the entire technology stack
+**Build with IaaS for pro-code agents:** Use infrastructure-as-a-service (IaaS) to build agents when full control over the technology stack is essential. This path supports custom storage, model selection, and orchestration. Pricing depends on token usage and compute resources. Development typically occurs in Visual Studio Code and GitHub.
+This option suits organizations with advanced engineering capabilities and strict infrastructure requirements. It enables full-stack customization but requires significant effort to manage scalability, reliability, and compliance independently.. For more information, see [AI on IaaS](/azure/cloud-adoption-framework/scenarios/ai/infrastructure/cycle-cloud).
 
 ## Ready-to-use agents (Copilots)
 
