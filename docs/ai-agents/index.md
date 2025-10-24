@@ -10,27 +10,31 @@ ms.topic: conceptual
 
 # AI agent adoption
 
-Many organizations explore AI agents to automate processes, improve productivity, and enable new services. However, implementing AI agents requires more than deploying a model or integrating a chatbot. It demands structured planning and governance to deliver measurable business value. When executed correctly, AI agents can transform operations and drive innovation across the cloud estate.
-
-This guidance outlines sequential milestones and prescriptive recommendations to help organizations plan, govern, build, integrate, and manage AI agents. These steps aim to maximize return on investment (ROI), minimize risks, optimize costs, and align teams around shared objectives.
+Organizations are increasingly exploring AI agents to automate processes, boost productivity, and deliver new services. However, successful adoption involves more than deploying a model or adding a chatbot. It requires structured planning, governance, and integration to achieve measurable business outcomes. When implemented effectively, AI agents can transform operations and accelerate innovation across the cloud estate.
 
 :::image type="content" source="./images/ai-agent-adoption.png" alt-text="Diagram that shows the process outlined in this guidance: plan, govern, build and secure, integrate, and measure agents across your organization." lightbox="./images/ai-agent-adoption.png" border="false":::
 
+This guidance provides a step-by-step framework with prescriptive recommendations to help organizations plan, govern, build, integrate, and manage AI agents. These milestones aim to maximize return on investment (ROI), reduce risks, optimize costs, and align teams around shared objectives.
+
 ## What is an AI agent?
 
-An AI agent is a microservice that uses a generative AI model alongside instructions, knowledge, and tools to reason, act, and learn. These agents operate autonomously or semi-autonomously in response to user messages, system events, or other agents.
+An AI agent is a microservice that uses a generative AI model alongside instructions, knowledge, and tools to reason, act, and learn. These agents operate in response to user messages, system events, or other agents.
 
 :::image type="content" source="./images/agent-overview.png" alt-text="Diagram that shows the basic architecture of an agent." lightbox="./images/agent-overview.png" border="false":::
 
 Each agent interprets instructions to determine its scope and actions. It uses tools to retrieve knowledge, perform tasks, and maintain memory, which enables persistent and context-aware engagement. After gathering inputs, the data gets sent to the language model, which generates an output, such as a user message, a response to another agent, or an action with tool results. This structure allows agents to operate independently while remaining aligned with enterprise goals.
 
+## Types of agents
+
+Organizations use three types of agents depending on the complexity and criticality of the task:
+
 :::image type="content" source="./images/spectrum-agents.png" alt-text="Diagram that shows the three main types of agents: retrieval, task, and autonomous." lightbox="./images/spectrum-agents.png" border="false":::
 
-Organizations use different types of agents depending on their needs:
+- **Retrieval agents** return information from grounding data. These agents suit scenarios where speed and accuracy matter most, such as customer support or compliance queries. They operate within well-defined boundaries and introduce minimal risk.
+- **Task agents** take action when prompted. These agents automate structured workflows like updating records or creating service tickets. They require more oversight than retrieval agents but remain predictable when scoped and tested.
+- **Autonomous agents** act independently. These agents adapt to changing conditions and make decisions without constant human input. They orchestrate multi-step processes and optimize operations. However, their non-deterministic behavior requires rigorous testing and governance before use in mission-critical workloads.
 
-- **Retrieval agents** answer questions using knowledge bases.
-- **Task agents** perform user-requested actions via APIs.
-- **Autonomous agents** execute proactive tasks based on events.
+The choice of agent type depends on the use case and the criticality of the process. While autonomous agents offer significant innovation potential, their non-deterministic behavior means they require rigorous testing and governance before being applied to mission-critical workloads. Retrieval and task agents typically provide faster, lower-risk adoption paths.
 
 ## Why AI agents?
 
@@ -40,7 +44,7 @@ Organizations use AI agents to reduce manual effort, accelerate innovation, and 
 
 ## Next step
 
-To realize the full potential of AI agents, organizations must align their adoption strategy with business outcomes. The next section explores how AI agents create internal and customer-facing impact—and how decision makers can guide their teams to use agents effectively across the enterprise.
+To realize the full potential of AI agents, organizations must align their adoption strategy with business outcomes. The next section explores how AI agents create internal and customer-facing impact—and how decision makers can guide their teams to use agents effectively across the business.
 
 > [!div class="nextstepaction"]
 > [Business strategy for AI agents](./business-strategy.md)
