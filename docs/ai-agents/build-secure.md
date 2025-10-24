@@ -11,7 +11,7 @@ ms.collection: ce-skilling-ai-copilot
 
 # Build and secure AI agents
 
-This article outlines a strategic framework for technical decision makers to guide agent building in **Azure AI Foundry Agent Service** and **Microsoft Copilot Studio**. It focuses on establishing a secure, scalable, and well-governed foundation that supports consistent agent development across the cloud estate.
+This article outlines a strategic framework for technical decision makers to guide agent building in **Azure AI Foundry Agent Service** and **Microsoft Copilot Studio**. It focuses on establishing a well-governed foundation that supports consistent agent development across the cloud estate.
 
 :::image type="content" source="./images/build-ai-agents.png" alt-text="Diagram that shows how to build AI agents in Azure AI Foundry and Microsoft Copilot Studio." lightbox="./images/build-ai-agents.png" border="false":::
 
@@ -27,7 +27,7 @@ Before directing teams to build AI agents, ensure the organization has the right
 
 1. **Apply well-architected principles to AI workloads** The agent itself should be built upon the principles of the Well-Architected Framework (AF) for [AI workloads](/azure/well-architected/ai/). This framework helps your teams balance performance, reliability, security, and cost. As a decision maker, you must ensure that every agent initiative aligns with these principles.
 
-## Build and secure AI agents
+## Building AI agents
 
 Navigate a structured build process to ensure agents operate reliably, comply with enterprise policies, and deliver measurable business outcomes.
 
