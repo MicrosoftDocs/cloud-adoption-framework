@@ -77,17 +77,32 @@ Run structured testing cycles to validate fairness, bias, and security. For exam
 
 ### 3. Add knowledge and tools
 
-To ensure AI agents operate securely, accurately, and in alignment with business goals, technical decision makers must direct their teams to integrate knowledge and tools in a controlled and governed manner. This step defines how agents access data and perform actions, which impacts their usefulness, compliance posture, and operational risk.
+To ensure AI agents operate securely, accurately, and in alignment with business goals, technical decision makers must direct their teams to integrate knowledge and tools in a controlled and governed manner. This step defines how agents access data and perform actions, which impacts their usefulness, compliance posture, and operational risk. **Follow all [data governance and compliance policies](./governance-security.md#data-governance-and-compliance).**
 
-1. **Add agent knowledge.** Agents must only use validated and approved data sources. This prevents unauthorized access, reduces compliance exposure, and ensures consistent, predictable responses. For example, when an agent answers HR or policy questions, it should only pull from sanctioned documents such as those indexed in Azure AI Search or stored in a vector database with embeddings. To maintain control, enforce least-privilege access. This means agents should only access the minimum data required to perform their role. Also, require fallback logic for unknown or ambiguous queries. If the agent can't find a reliable answer, it should escalate or defer rather than guess. This approach supports both accuracy and auditability, which are essential for regulated environments or customer-facing use cases.
+### Add agent knowledge
 
-1. **Agent tools for actions.** Agents often need to do more than answer questions they must also take action. These extra responsibilities include tasks like creating support tickets, scheduling meetings, or triggering workflows. To support this, define a clear list of approved actions and ensure each one maps to a secure, authenticated tool or API. These tools must follow enterprise security policies, including identity management and data protection standards. This structure allows agents to automate routine tasks while maintaining control and traceability.
+AI agents must use only validated and approved data sources. This ensures consistent responses and prevents unauthorized access. For example, when an agent answers HR or policy questions, it should reference only sanctioned documents—such as those indexed in Azure AI Search or stored in a vector database with embeddings. This approach reduces compliance exposure and avoids misinformation. 
 
-**Follow all [data governance and compliance policies](./governance-security.md#data-governance-and-compliance).**
+- To maintain control, assign **least-privilege access** to the agent’s managed identity using Azure Role-Based Access Control (RBAC). Avoid broad roles like "Reader" or "Contributor" unless the agent’s function justifies it. Instead, tailor permissions to the agent’s specific tasks. This limits exposure and aligns with security best practices.
 
-**Azure AI Foundry:** Use [**knowledge** tools](/azure/ai-foundry/agents/how-to/tools/overview) and enable **actions** using [action tools](/azure/ai-foundry/agents/how-to/tools/overview#action-tools) to perform tasks and streamline workflows.
+- Agents must also **handle unknown or ambiguous queries responsibly**. Instead of guessing, they should acknowledge gaps and escalate to human support. Define fallback messages and escalation paths to manage out-of-scope queries or errors. Log these incidents to identify knowledge gaps and improve the agent’s performance over time.
 
-**Microsoft Copilot Studio:** Integrate [**knowledge** sources](/microsoft-copilot-studio/knowledge-copilot-studio) and consider [connectors](/microsoft-copilot-studio/advanced-connectors). Enable actions by [orchestrating agent behavior](/microsoft-copilot-studio/advanced-generative-actions).
+- **Keep the agent’s data sources current.** Use scheduled or event-driven updates—preferably incremental—to refresh indexed content. Monitor refresh jobs to prevent stale data. For dynamic information like inventory or weather, connect the agent to live APIs rather than relying on cached values. An outdated agent quickly loses credibility, so plan for ongoing maintenance.
+
+### Agent tools for actions
+
+Agents often need to perform tasks beyond answering questions. These include creating support tickets, scheduling meetings, or triggering workflows. To support this, define a clear list of approved actions and map each one to a secure, authenticated tool or API.
+Avoid giving agents broad access to systems. Instead, expose specific actions through well-defined APIs. For example, create a secure endpoint for *createSupportTicket(details)* rather than allowing direct database queries. This structure maintains control and traceability.
+
+**Apply least-privilege principles to the agent’s credentials.** If the agent creates tickets, its token should not delete them. If it sends emails, restrict it to a no-reply account to prevent misuse.
+
+**Define usage logic in the agent’s prompt or code.** Specify when and how the agent should use each tool. For instance: “If the user asks to reset their password, call the ResetPassword API with their username.” This prevents unintended actions.
+
+**Test each action in isolation before deployment.** Simulate triggers and verify outcomes. If the agent fails to perform correctly, adjust the logic or prompt. Log all actions for auditing and debugging. Track what the agent does, when, and why. This helps identify anomalies—like multiple password resets—and supports root cause analysis.
+
+In **Azure AI Foundry**, use [**knowledge** tools](/azure/ai-foundry/agents/how-to/tools/overview) and [**action** tools](/azure/ai-foundry/agents/how-to/tools/overview#action-tools).
+
+In **Microsoft Copilot Studio**, use [**knowledge** sources](/microsoft-copilot-studio/knowledge-copilot-studio), [connectors](/microsoft-copilot-studio/advanced-connectors), and [orchestrate agent behavior](/microsoft-copilot-studio/advanced-generative-actions).
 
 ## 4. Determine orchestration
 
