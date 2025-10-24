@@ -1,6 +1,6 @@
 ---
 title: How to build and secure AI agents
-description: Learn How to build and secure AI agents
+description: Learn to build and secure AI agents
 author: stephen-sumner
 ms.author: pnp
 ms.date: 11/01/2025
@@ -9,7 +9,7 @@ ms.topic: conceptual
 ms.collection: ce-skilling-ai-copilot
 ---
 
-# How to build and secure AI agents
+# Build and secure AI agents
 
 This article outlines a strategic framework for technical decision makers to guide workload teams in building AI agents using Azure AI Foundry and Microsoft Copilot Studio. It focuses on establishing a secure, scalable, and well-governed foundation that supports consistent agent development across the cloud estate.
 
@@ -19,7 +19,7 @@ This article outlines a strategic framework for technical decision makers to gui
 
 Before directing teams to build AI agents, ensure the organization has the right environment and governance in place. These prerequisites help reduce risk, control cost, and accelerate time to value.
 
-1. **Understand how agents work.** For more information, see [How agents work](./index.md#what-is-an-ai-agent).
+1. **Understand how agents work.** For more information, see [What is an AI agent?](./index.md#what-is-an-ai-agent).
 
 1. **Set up your environment:** If you're building agents in **Azure AI Foundry**, you can reference the [application landing zone accelerator for Azure AI Foundry](https://github.com/Azure/AI-Landing-Zones). It's a proven starting point that you can refine to meet your needs. Application landing zone accelerator works with and without an Azure landing zone.
 
