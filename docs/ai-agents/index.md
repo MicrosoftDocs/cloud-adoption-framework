@@ -10,11 +10,13 @@ ms.topic: conceptual
 
 # AI agent adoption
 
-Organizations are increasingly exploring AI agents to automate processes, boost productivity, and deliver new services. However, successful adoption involves more than deploying a model or adding a chatbot. It requires structured planning, governance, and integration to achieve measurable business outcomes. When implemented effectively, AI agents can transform operations and accelerate innovation across the cloud estate.
+Organizations adopt AI agents to automate tasks, increase productivity, and deliver new digital services across the cloud environment. However, deploying a chatbot or machine learning model does not guarantee business impact. Without structured planning, governance, integration, and measurement, AI agents remain disconnected tools rather than strategic assets.
 
 :::image type="content" source="./images/ai-agent-adoption.png" alt-text="Diagram that shows the process outlined in this guidance: plan, govern, build and secure, integrate, and measure agents across your organization." lightbox="./images/ai-agent-adoption.png" border="false":::
 
-This guidance provides a step-by-step framework with prescriptive recommendations to help organizations plan, govern, build, integrate, and manage AI agents. These milestones aim to maximize return on investment (ROI), reduce risks, optimize costs, and align teams around shared objectives.
+This guidance defines a step-by-step framework that helps decision makers plan, govern, build, integrate, and measure AI agents across the organization. Each milestone supports return on investment, cost optimization, risk reduction, and team alignment to ensure agents deliver measurable value across the cloud estate.
+
+The series focuses on **Azure AI Foundry Agent Service** and **Microsoft Copilot Studio**, which provide flexible tools for designing, deploying, and managing agents. It also includes use cases for **Microsoft Copilots** and building with GPU-based infrastructure and containers architectures.
 
 ## What is an AI agent?
 
