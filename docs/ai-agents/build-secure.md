@@ -77,44 +77,63 @@ Run structured testing cycles to validate fairness, bias, and security. For exam
 
 ### 3. Add knowledge and tools
 
-To ensure AI agents operate securely, accurately, and in alignment with business goals, technical decision makers must direct their teams to integrate knowledge and tools in a controlled and governed manner. This step defines how agents access data and perform actions, which impacts their usefulness, compliance posture, and operational risk. **Follow all [data governance and compliance policies](./governance-security.md#data-governance-and-compliance).**
+To ensure AI agents operate securely, deliver accurate results, and align with business goals, technical decision makers must define how agents access data and perform actions. This step directly affects the agent’s usefulness, compliance posture, and operational risk across the cloud estate. **Follow all [data governance and compliance policies](./governance-security.md#data-governance-and-compliance).**
 
 ### Add agent knowledge
 
-AI agents must use only validated and approved data sources. This ensures consistent responses and prevents unauthorized access. For example, when an agent answers HR or policy questions, it should reference only sanctioned documents—such as those indexed in Azure AI Search or stored in a vector database with embeddings. This approach reduces compliance exposure and avoids misinformation. 
+AI agents must use only validated and approved data sources. This ensures consistent responses and prevents unauthorized access. For example, when an agent answers HR or policy questions, it should reference only sanctioned documents—such as those indexed in Azure AI Search or stored in a vector database with embeddings. This approach reduces compliance exposure and avoids misinformation.
 
-- To maintain control, assign **least-privilege access** to the agent’s managed identity using Azure Role-Based Access Control (RBAC). Avoid broad roles like "Reader" or "Contributor" unless the agent’s function justifies it. Instead, tailor permissions to the agent’s specific tasks. This limits exposure and aligns with security best practices.
+1. **Enforce least-privilege access.** Agents must use managed identity be managed through Azure Role-Based Access Control (RBAC). Avoid broad roles like "Reader" or "Contributor" unless the agent’s function justifies it. Instead, tailor permissions to the agent’s specific tasks. This limits exposure and aligns with security best practices.
 
-- Agents must also **handle unknown or ambiguous queries responsibly**. Instead of guessing, they should acknowledge gaps and escalate to human support. Define fallback messages and escalation paths to manage out-of-scope queries or errors. Log these incidents to identify knowledge gaps and improve the agent’s performance over time.
+2. **Handle unknowns consistently.** Agents should to respond politely when it cannot answer a question or access a resource. Use default responses such as "I am sorry, I do not have that information right now" and suggest escalation to a human when needed. Log unknown queries across agents to identify gaps and improve coverage.
 
-- **Keep the agent’s data sources current.** Use scheduled or event-driven updates—preferably incremental—to refresh indexed content. Monitor refresh jobs to prevent stale data. For dynamic information like inventory or weather, connect the agent to live APIs rather than relying on cached values. An outdated agent quickly loses credibility, so plan for ongoing maintenance.
+3. **Keep the agent’s data sources current.** Use scheduled or event-driven updates,preferably incremental, to refresh indexed content. Monitor refresh jobs to prevent stale data. For dynamic information like inventory or weather, connect the agent to live APIs rather than relying on cached values. An outdated agent quickly loses credibility, so plan for ongoing maintenance.
+
+In **Azure AI Foundry**, use [**knowledge** tools](/azure/ai-foundry/agents/how-to/tools/overview).
+
+In **Microsoft Copilot Studio**, use [**knowledge** sources](/microsoft-copilot-studio/knowledge-copilot-studio) and [connectors](/microsoft-copilot-studio/advanced-connectors).
 
 ### Agent tools for actions
 
-Agents often need to perform tasks beyond answering questions. These include creating support tickets, scheduling meetings, or triggering workflows. To support this, define a clear list of approved actions and map each one to a secure, authenticated tool or API.
-Avoid giving agents broad access to systems. Instead, expose specific actions through well-defined APIs. For example, create a secure endpoint for *createSupportTicket(details)* rather than allowing direct database queries. This structure maintains control and traceability.
+Agents often need to perform tasks beyond answering questions—such as creating support tickets, scheduling meetings, or triggering workflows. To support this, define a clear list of approved actions and map each one to a secure, authenticated tool or API.
+Avoid giving agents broad access to systems. Instead:
 
-**Apply least-privilege principles to the agent’s credentials.** If the agent creates tickets, its token should not delete them. If it sends emails, restrict it to a no-reply account to prevent misuse.
+1. **Keep a human in the loop.** Establish clear boundaries for when agents act independently and when they defer to human support. Avoid relying solely on confidence scores. Instead, use business context to guide escalation. For example, allow agents to handle routine inquiries but escalate complex or sensitive issues. This approach improves reliability and user satisfaction while reducing risk.
 
-**Define usage logic in the agent’s prompt or code.** Specify when and how the agent should use each tool. For instance: “If the user asks to reset their password, call the ResetPassword API with their username.” This prevents unintended actions.
+2. **Use well-defined APIs or connectors.** Do not give agents broad access to systems. Instead, expose specific actions through secure APIs or functions. For example, rather than allowing direct database access, provide an endpoint like createSupportTicket with structured input. This keeps operations scoped and controlled.
 
-**Test each action in isolation before deployment.** Simulate triggers and verify outcomes. If the agent fails to perform correctly, adjust the logic or prompt. Log all actions for auditing and debugging. Track what the agent does, when, and why. This helps identify anomalies—like multiple password resets—and supports root cause analysis.
+3. **Apply least privilege to each agent.** Ensure the credentials or tokens the agent uses for actions have the minimal rights. If it needs to create tickets, the token should not be able to delete tickets. If it sends emails, perhaps restrict it to a dummy or no-reply account to prevent misuse. If only one agent, such as Agent C, is responsible for executing changes, then its credentials should reflect that. Other agents might only read data or provide responses. Tokens and credentials should be scoped to prevent misuse.
 
-In **Azure AI Foundry**, use [**knowledge** tools](/azure/ai-foundry/agents/how-to/tools/overview) and [**action** tools](/azure/ai-foundry/agents/how-to/tools/overview#action-tools).
+4. **Define tool usage in the instructions.** First confirm the details of the action to be taken, second ask for permission to execute on the user behalf. Specify when and how each agent should use its tools. Most frameworks allow defining tools with usage instructions. For example, you might say, if the user asks to reset their password, the agent should call the ResetPassword API with their username. This prevents unintended actions and ensures agents act only when appropriate.
 
-In **Microsoft Copilot Studio**, use [**knowledge** sources](/microsoft-copilot-studio/knowledge-copilot-studio), [connectors](/microsoft-copilot-studio/advanced-connectors), and [orchestrate agent behavior](/microsoft-copilot-studio/advanced-generative-actions).
+5. **Test each agent’s actions in isolation.** Before deploying, simulate each agent’s action triggers in a test environment. Validate that the correct agent initiates the action, the action performs as expected, all required fields are filled, and no unintended side effects occur. Adjust prompts or logic if behavior deviates from expectations.
+
+6. **Log all actions with agent attribution.** Maintain detailed logs for every action, including which agent initiated it, what the action was, and who the action affected. For example, you might log that Agent C triggered password reset for user X on behalf of user Y. This supports auditing, debugging, and accountability. Logging failed actions will also help you improve agent functionality over time.
+
+**Multi-agent systems** should partition action capabilities across agents (multi-agent systems). Just as you partition knowledge, partition action capabilities to keep the system modular and secure. Agent A might answer frequently asked questions, Agent B might retrieve internal data, and Agent C executes changes.
+
+In **Azure AI Foundry**, use [**action** tools](/azure/ai-foundry/agents/how-to/tools/overview#action-tools).
+
+In **Microsoft Copilot Studio**, use [orchestrate agent behavior](/microsoft-copilot-studio/advanced-generative-actions).
 
 ## 4. Determine orchestration
 
-Agent orchestration is the structured coordination of agents to achieve goals by managing how they interact with tools, knowledge sources, and memory. In a single-agent context, orchestration means internally deciding which tools to call, in what sequence, and how to merge results. It needs to maintain context and act as a hub that queries data, takes actions, and integrates short- and long-term memory.
+To coordinate AI agents effectively across your cloud environment, your organization must define orchestration strategies that align with business goals, security requirements, and operational complexity. Orchestration refers to how agents interact with tools, data sources, and each other to complete tasks and maintain context. This coordination ensures agents behave predictably, avoid conflicts, and deliver consistent outcomes.
 
-**Multi-agent systems** use distributed orchestration. Agents specialize in different tasks, call their own tools, and communicate to share context, resolve conflicts, and synchronize actions. When agents also interact with each other while making tool calls, orchestration involves negotiation, delegation, and collaboration protocols to ensure consistency and efficiency. Memory integration underpins all of this, enabling continuity, personalization, and shared state across agents and tools. In short, orchestration is the "conductor" that harmonizes tool usage, knowledge retrieval, and inter-agent collaboration into a coherent workflow. Without orchestration, agents risk entering uncontrolled peer-to-peer communication, leading to loops, conflicts, or degraded performance. Orchestration defines how agents collaborate securely and efficiently, ensuring predictable outcomes and scalable behavior. To reduce risk and improve reliability, select orchestration methods that match the complexity of the workload and the skill levels of the team. This approach minimizes rework and accelerates time-to-value.
+In a single-agent setup, orchestration involves internal decision-making, selecting tools, sequencing actions, and integrating memory. The agent acts as a hub that queries data, performs tasks, and maintains continuity. This structure supports reliable performance and simplifies governance.
 
-**Keep a human in the loop** Define clear engagement rules. Agents must know when to respond and when to defer to human support. Rather than relying solely on confidence scores, direct teams to design escalation logic based on business context. For example, allow the agent to handle routine inquiries but escalate complex or sensitive issues to a human. This approach ensures that agents contribute to productivity without introducing risk or frustration.
+In **multi-agent systems**, orchestration becomes distributed. Each agent specializes in a task, uses its own tools, and communicates with others to share context and synchronize actions. Without orchestration, agents risk entering uncontrolled peer-to-peer communication, which can lead to loops, conflicts, or degraded performance. Structured orchestration prevents these issues and supports scalable, modular design.
+To implement orchestration effectively across your cloud estate:
 
-**Azure AI Foundry:** For multi-agent systems, [use AI agent orchestration patterns](/azure/architecture/ai-ml/guide/ai-agent-design-patterns). Use [connected agents](/azure/ai-foundry/agents/how-to/connected-agents) for built-in orchestration in standard enterprise scenarios. For advanced customization, use the [Microsoft Agent Framework](https://devblogs.microsoft.com/foundry/introducing-microsoft-agent-framework-the-open-source-engine-for-agentic-ai-apps/) for custom orchestration logic.
+1. **Use approved communication protocols.** Refer to [agent protocol governance](./governance-security.md#standardize-agent-protocols) and use standard protocols, like A2A ,when agents need to collaborate, negotiate, or delegate tasks dynamically. However, interacting with unknown or internet-exposed agents introduces significant security risks and should be prohibited.
 
-**Microsoft Copilot Studio:** Build collaborative systems by [adding other agents](/microsoft-copilot-studio/authoring-add-other-agents) to delegate specialized tasks. Enable dynamic coordination by [orchestrating agent behavior with generative AI](/microsoft-copilot-studio/advanced-generative-actions) to select the best actions based on context.
+2. **Decide on a message format.** Define how agents communicate. Use structured data formats or consistent keywords to ensure clarity. For example, in multi-agent systems, when Agent A sends a query to Agent B, include relevant context rather than just the raw question. This consistency prevents miscommunication and improves task execution.
+
+3. **Set boundaries on conversations.** Set boundaries on how many times agents can interact per task. For example, restrict agents to two exchanges before escalating to a human or returning a default response. This prevents infinite loops and ensures timely resolution.
+
+In **Azure AI Foundry**, for multi-agent systems, reference [AI agent orchestration patterns](/azure/architecture/ai-ml/guide/ai-agent-design-patterns). For built-in orchestration, use [connected agents](/azure/ai-foundry/agents/how-to/connected-agents). For advanced customization, use the [Microsoft Agent Framework](https://devblogs.microsoft.com/foundry/introducing-microsoft-agent-framework-the-open-source-engine-for-agentic-ai-apps/), which supports modular and secure AI agents.
+
+In **Microsoft Copilot Studio**, [add other agents](/microsoft-copilot-studio/authoring-add-other-agents) and [orchestrate agent behavior](/microsoft-copilot-studio/advanced-generative-actions).
 
 ## 5. Protect and govern
 
