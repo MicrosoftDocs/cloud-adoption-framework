@@ -11,11 +11,11 @@ ms.collection: ce-skilling-ai-copilot
 
 # Build and secure AI agents
 
-This article outlines a strategic framework for technical decision makers to guide workload teams in building AI agents using Azure AI Foundry and Microsoft Copilot Studio. It focuses on establishing a secure, scalable, and well-governed foundation that supports consistent agent development across the cloud estate.
+This article outlines a strategic framework for technical decision makers to guide agent building in **Azure AI Foundry Agent Service** and **Microsoft Copilot Studio**. It focuses on establishing a secure, scalable, and well-governed foundation that supports consistent agent development across the cloud estate.
 
 :::image type="content" source="./images/build-ai-agents.png" alt-text="Diagram that shows how to build AI agents in Azure AI Foundry and Microsoft Copilot Studio." lightbox="./images/build-ai-agents.png" border="false":::
 
-## Prerequisites
+## AI agent prerequisites
 
 Before directing teams to build AI agents, ensure the organization has the right environment and governance in place. These prerequisites help reduce risk, control cost, and accelerate time to value.
 
