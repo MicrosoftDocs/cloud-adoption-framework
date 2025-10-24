@@ -41,7 +41,7 @@ In **Azure AI Foundry** use [the AI Foundry model catalog](https://ai.azure.com/
 
 In **Microsoft Copilot Studio** [choose a primary AI model](/microsoft-copilot-studio/authoring-select-agent-model) from available options. You can [bring your own model](/ai-builder/byom-for-your-prompts) to connect Azure AI Foundry models for specialized tasks.
 
-### 2. Customization
+### 2. Customize agents
 
 Define agent behavior with precision to ensure consistent, compliant, and business-aligned outcomes.
 
@@ -79,7 +79,7 @@ Run structured testing cycles to validate fairness, bias, and security. For exam
 
 To ensure AI agents operate securely, deliver accurate results, and align with business goals, technical decision makers must define how agents access data and perform actions. This step directly affects the agent’s usefulness, compliance posture, and operational risk across the cloud estate. **Follow all [data governance and compliance policies](./governance-security.md#data-governance-and-compliance).**
 
-### Add agent knowledge
+### 3.1 Add agent knowledge
 
 AI agents must use only validated and approved data sources. This ensures consistent responses and prevents unauthorized access. For example, when an agent answers HR or policy questions, it should reference only sanctioned documents—such as those indexed in Azure AI Search or stored in a vector database with embeddings. This approach reduces compliance exposure and avoids misinformation.
 
@@ -93,7 +93,7 @@ In **Azure AI Foundry**, use [**knowledge** tools](/azure/ai-foundry/agents/how-
 
 In **Microsoft Copilot Studio**, use [**knowledge** sources](/microsoft-copilot-studio/knowledge-copilot-studio) and [connectors](/microsoft-copilot-studio/advanced-connectors).
 
-### Agent tools for actions
+### 3.2 Agent tools for actions
 
 Agents often need to perform tasks beyond answering questions—such as creating support tickets, scheduling meetings, or triggering workflows. To support this, define a clear list of approved actions and map each one to a secure, authenticated tool or API.
 Avoid giving agents broad access to systems. Instead:
