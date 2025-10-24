@@ -1,6 +1,6 @@
 ---
-title: Governance and security for AI Agents
-description: Learn Governance and security for AI Agents
+title: Governance and security for AI agents
+description: Learn Governance and security for AI agents
 author: stephen-sumner
 ms.author: pnp
 ms.date: 11/01/2025
@@ -8,9 +8,9 @@ ms.update-cycle: 180-days
 ms.topic: conceptual
 ---
 
-# Agent governance and security across your organization
+# Governance and security for AI agents
 
-**Establishing control over AI agents and the data they access.** Beyond high-level principles, you need concrete governance mechanisms for your AI agents across their lifecycle. This is about putting guardrails in place so agents access only what they should, behave as expected, and can be managed centrally. Governance processes should be ingrained in how teams design, deploy, and update agents.
+**Governance is about establishing control over AI agents and the data they access.** Beyond high-level principles, you need concrete governance mechanisms for your AI agents across their lifecycle. This is about putting guardrails in place so agents access only what they should, behave as expected, and can be managed centrally. Governance processes should be ingrained in how teams design, deploy, and update agents.
 
 :::image type="content" source="./images/governance-security.png" alt-text="Diagram that shows how to govern ." lightbox="./images/governance-security.png" border="false":::
 

@@ -1,5 +1,5 @@
 ---
-title: Single agent or multi-agent system
+title: Single agent or multi-agent system?
 description: Learn factors for single agent or multi-agent systems
 author: stephen-sumner
 ms.author: pnp
@@ -8,7 +8,7 @@ ms.update-cycle: 180-days
 ms.topic: conceptual
 ---
 
-# Single-agent or multi-agent system
+# Single agent or multi-agent systems?
 
 Every organization that builds AI-powered solutions must make a foundational architectural decision: use a single intelligent agent or a coordinated set of specialized agents. This decision affects how teams structure their work, manage costs, and scale capabilities across the cloud environment. The right approach depends on the complexity of the task, anticipated growth, team boundaries, and operational constraints.
 

@@ -8,7 +8,7 @@ ms.update-cycle: 180-days
 ms.topic: conceptual
 ---
 
-# Responsible AI policy for AI Agents
+# Responsible AI policy for AI agents
 
 Responsible AI defines how your organization designs and operates AI systems in ways that uphold ethical standards, ensure transparency, and maintain accountability. This policy applies to every AI agent, regardless of its complexity or visibility. Microsoft offers a Responsible AI standard that serves as a starting point and can be adapted to meet your organization’s specific needs. See [Responsible AI resources](/azure/ai-foundry/responsible-use-of-ai-overview).
 
