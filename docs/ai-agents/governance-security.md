@@ -20,7 +20,7 @@ AI agents now play a central role in how organizations operate, interact with cu
 
 ### Regulatory compliance
 
-**Policy: All agents must comply with regulations and standards.** this includes data protection laws (such as GDPR and HIPAA), industry certifications, and internal governance requirements. Technical decision makers must direct their teams to implement foundational controls that ensure agents process data responsibly, securely, and transparently.
+**Policy: All agents must comply with regulations and standards.** This policy includes data protection laws (such as GDPR and HIPAA), industry certifications, and internal governance requirements. Technical decision makers must direct their teams to implement foundational controls that ensure agents process data responsibly, securely, and transparently.
 
 1. **Ensure data privacy.** All AI agents must follow data minimization principles and use only the data necessary for their intended functionality. Teams must review training datasets, memory stores, and logs to identify and mitigate privacy risks. Agents must anonymize or pseudonymize personal data where feasible and support user rights, including deletion requests, in alignment with the organization’s privacy policy.
 
