@@ -10,7 +10,7 @@ ms.topic: conceptual
 
 # AI agent adoption
 
-Organizations adopt AI agents to automate tasks, increase productivity, and deliver new digital services across the cloud environment. However, deploying a chatbot or machine learning model does not guarantee business impact. Without structured planning, governance, integration, and measurement, AI agents remain disconnected tools rather than strategic assets.
+Organizations adopt AI agents to automate tasks, increase productivity, and deliver new digital services across the cloud environment. However, deploying agents does not guarantee business impact. Without structured planning, governance, integration, and measurement, AI agents remain disconnected tools rather than strategic assets.
 
 :::image type="content" source="./images/ai-agent-adoption.png" alt-text="Diagram that shows the process outlined in this guidance: plan, govern, build and secure, integrate, and measure agents across your organization." lightbox="./images/ai-agent-adoption.png" border="false":::
 
