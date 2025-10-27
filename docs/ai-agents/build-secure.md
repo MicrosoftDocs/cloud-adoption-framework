@@ -100,7 +100,7 @@ AI agents must use only validated and approved data sources. For example, when a
 
 3. **Keep the agent’s data sources current.** Use scheduled or event-driven updates, preferably incremental, to refresh indexed content. Monitor refresh jobs to prevent stale data. For dynamic information like inventory or weather, connect the agent using MCP (Model Context Protocol) servers. MCP servers provide a standardized way to expose real-time data and actions to agents, making them ideal for scenarios where freshness and reliability are critical. An outdated agent quickly loses credibility, so plan for ongoing maintenance.
 
-In **Azure AI Foundry**, use [**knowledge** tools](/azure/ai-foundry/agents/how-to/tools/overview).
+In **Azure AI Foundry**, use [**knowledge** tools](/azure/ai-foundry/agents/how-to/tools/overview). With the Microsoft Agent Framework, extend the capabilities of your agents by connecting it to tools hosted on remote [Model Context Protocol](/agent-framework/user-guide/model-context-protocol/).
 
 In **Microsoft Copilot Studio**, use [**knowledge** sources](/microsoft-copilot-studio/knowledge-copilot-studio) and [connectors](/microsoft-copilot-studio/advanced-connectors).
 
@@ -144,7 +144,7 @@ To implement orchestration effectively across your cloud estate:
 
 3. **Set boundaries on conversations.** Set boundaries on how many times agents can interact per task. For example, restrict agents to two exchanges before escalating to a human or returning a default response. This prevents infinite loops and ensures timely resolution.
 
-In **Azure AI Foundry**, for multi-agent systems, reference [AI agent orchestration patterns](/azure/architecture/ai-ml/guide/ai-agent-design-patterns). For built-in orchestration, use [connected agents](/azure/ai-foundry/agents/how-to/connected-agents). For advanced customization, use the [Microsoft Agent Framework](https://devblogs.microsoft.com/foundry/introducing-microsoft-agent-framework-the-open-source-engine-for-agentic-ai-apps/), which supports modular and secure AI agents.
+In **Azure AI Foundry**, for multi-agent systems, reference [AI agent orchestration patterns](/azure/architecture/ai-ml/guide/ai-agent-design-patterns) and [A2A agents](/agent-framework/user-guide/agents/agent-types/a2a-agent) with the Microsoft Agent Framework. For built-in orchestration, use [connected agents](/azure/ai-foundry/agents/how-to/connected-agents). For advanced customization, use the [Microsoft Agent Framework](https://devblogs.microsoft.com/foundry/introducing-microsoft-agent-framework-the-open-source-engine-for-agentic-ai-apps/), which is a unified SDK and runtime for agent development and orchestration.
 
 In **Microsoft Copilot Studio**, [add other agents](/microsoft-copilot-studio/authoring-add-other-agents) and [orchestrate agent behavior](/microsoft-copilot-studio/advanced-generative-actions).
 

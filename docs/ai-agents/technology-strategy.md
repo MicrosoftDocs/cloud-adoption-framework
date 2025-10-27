@@ -51,6 +51,19 @@ Copilot Studio includes over a thousand prebuilt connectors for business systems
 
 Retrieval and task agents remain predictable and easier to govern. Autonomous agents require extensive testing and monitoring to ensure reliability. Development typically occurs in Visual Studio Code and GitHub, with pricing based on token usage and compute resources. For more information, see [AI on IaaS](/azure/cloud-adoption-framework/scenarios/ai/infrastructure/cycle-cloud).
 
+### Microsoft Agent Framework
+
+The [Microsoft Agent Framework](/agent-framework/overview/agent-framework-overview) provides an open-source development kit for building individual AI agents and orchestrating multi-agent workflows. This framework applies specifically to pro-code development paths: Azure AI Foundry and GPU/container environments. It does not apply to Microsoft Copilot Studio or ready-to-use Copilots, which provide their own orchestration mechanisms.
+
+Organizations use the Microsoft Agent Framework when they need more control over agent orchestration than Azure AI Foundry's built-in capabilities provide. The framework combines enterprise-grade features with abstractions for single-agent and multi-agent patterns. It supports .NET and Python and integrates with Azure OpenAI and OpenAI.
+
+The framework suits teams that require custom multi-agent workflows, specific programming language support, or graph-based orchestration patterns. Two protocols facilitate agent communication:
+
+- [Model Context Protocol (MCP)](/agent-framework/user-guide/model-context-protocol/) standardizes how agents connect with external tools and data sources.
+- [Agent-to-Agent (A2A) protocol](/agent-framework/user-guide/agents/agent-types/a2a-agent) enables agents to discover each other and coordinate tasks programmatically.
+
+These protocols reduce custom integration work and ensure consistent communication across multi-agent systems.
+
 ## Ready-to-use agents (Copilots)
 
 **Read-to-use agents (SaaS):** Use ready-to-use Copilots to deploy retrieval and task agents quickly. These agents support common tasks such as summarization, drafting, and data analysis. They integrate directly into Microsoft 365, GitHub, and Power Platform.
