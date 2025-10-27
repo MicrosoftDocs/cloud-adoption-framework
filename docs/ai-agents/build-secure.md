@@ -46,11 +46,11 @@ In **Microsoft Copilot Studio** [choose a primary AI model](/microsoft-copilot-s
 
 ### 2. Customize agents
 
-A well-governed agent ecosystem begins with clarity. Each agent must operate within a defined scope, follow precise instructions, and undergo continuous refinement. These practices ensure agents deliver consistent, compliant, and business-aligned outcomes across the cloud estate.
+A well-governed agent ecosystem begins with clarity. Each agent must operate within a defined scope, follow precise instructions, and undergo continuous evaluation to ensure consistent behavior overtime. These practices ensure agents deliver consistent, compliant, and business-aligned outcomes across the cloud estate.
 
 #### 2.1 Scope the agent
 
-Start by documenting the agent’s responsibilities and limitations in an “agent charter.” This document defines what the agent does, what it avoids, and how it fits into business workflows. For example, an HR agent might answer policy questions and help schedule leave, but must not access payroll records or offer legal advice. Clarify when users interact with the agent, what decisions it supports, and when it escalates to a human. This clarity prevents scope creep and aligns expectations across agents.
+Start by documenting the agent’s responsibilities and limitations in an "agent charter." This document defines what the agent does, what it avoids, and how it fits into business workflows. For example, an HR agent might answer policy questions and help schedule leave, but must not access payroll records or offer legal advice. Clarify when users interact with the agent, what decisions it supports, and when it escalates to a human. This clarity prevents scope creep and aligns expectations across agents.
 
 #### 2.2 Define agent instructions
 
@@ -93,13 +93,13 @@ To ensure AI agents operate securely, deliver accurate results, and align with b
 
 ### 3.1 Add agent knowledge
 
-AI agents must use only validated and approved data sources. This ensures consistent responses and prevents unauthorized access. For example, when an agent answers HR or policy questions, it should reference only sanctioned documents—such as those indexed in Azure AI Search or stored in a vector database with embeddings. This approach reduces compliance exposure and avoids misinformation.
+AI agents must use only validated and approved data sources. For example, when an agent answers HR or policy questions, it should reference only sanctioned documents—such as those indexed in Azure AI Search or stored in a vector database with embeddings. This approach reduces compliance exposure and avoids misinformation.
 
-1. **Enforce least-privilege access.** Each agent must use managed identity and operate under tightly scoped permissions through Azure Role-Based Access Control (RBAC). Avoid broad roles like “Reader” or “Contributor” unless the agent’s function justifies it. Tailor permissions to the agent’s specific tasks to limit exposure and align with security best practices.
+1. **Enforce least-privilege access.** Each agent must use managed identity and operate under tightly scoped permissions through Azure Role-Based Access Control (RBAC). Avoid broad roles like "Reader" or "Contributor" unless the agent’s function justifies it. Tailor permissions to the agent’s specific tasks to limit exposure and align with security best practices.
 
 2. **Handle unknowns consistently.** When an agent cannot answer a question or access a resource, it must respond politely and suggest escalation to a human. Logging unknown queries across agents helps identify gaps and improve coverage over time.
 
-3. **Keep the agent’s data sources current.** Use scheduled or event-driven updates,preferably incremental, to refresh indexed content. Monitor refresh jobs to prevent stale data. For dynamic information like inventory or weather, connect the agent to live APIs rather than relying on cached values. An outdated agent quickly loses credibility, so plan for ongoing maintenance.
+3. **Keep the agent’s data sources current.** Use scheduled or event-driven updates, preferably incremental, to refresh indexed content. Monitor refresh jobs to prevent stale data. For dynamic information like inventory or weather, connect the agent using MCP (Model Context Protocol) servers. MCP servers provide a standardized way to expose real-time data and actions to agents, making them ideal for scenarios where freshness and reliability are critical. An outdated agent quickly loses credibility, so plan for ongoing maintenance.
 
 In **Azure AI Foundry**, use [**knowledge** tools](/azure/ai-foundry/agents/how-to/tools/overview).
 
@@ -135,13 +135,13 @@ To coordinate AI agents effectively across your cloud environment, your organiza
 
 In a single-agent setup, orchestration involves internal decision-making, selecting tools, sequencing actions, and integrating memory. The agent acts as a hub that queries data, performs tasks, and maintains continuity. This structure supports reliable performance and simplifies governance.
 
-In **multi-agent systems**, orchestration becomes distributed. Each agent specializes in a task, uses its own tools, and communicates with others to share context and synchronize actions. Without orchestration, agents risk entering uncontrolled peer-to-peer communication, which can lead to loops, conflicts, or degraded performance. Structured orchestration prevents these issues and supports scalable, modular design.
+In **multi-agent systems**, orchestration becomes distributed. Each agent specializes in a task, can make calls to tools, and communicates with others to share context and synchronize actions. Without orchestration, agents risk entering uncontrolled peer-to-peer communication, which can lead to loops, conflicts, or degraded performance. Structured orchestration prevents these issues and supports scalable, modular design.
 
 To implement orchestration effectively across your cloud estate:
 
-1. **Use approved communication protocols.** Refer to [agent protocol governance](./governance-security.md#standardize-agent-protocols) and use standard protocols, like A2A ,when agents need to collaborate, negotiate, or delegate tasks dynamically. However, interacting with unknown or internet-exposed agents introduces significant security risks and should be prohibited.
+1. **Use approved communication protocols.** Refer to [agent protocol governance](./governance-security.md#standardize-agent-protocols) and use standard protocols, like A2A, when agents need to collaborate, negotiate, or delegate tasks dynamically. However, interacting with unknown or internet-exposed agents introduces significant security risks and should be prohibited.
 
-2. **Decide on a message format.** Define how agents communicate. Use structured data formats or consistent keywords to ensure clarity. For example, in multi-agent systems, when Agent A sends a query to Agent B, include relevant context rather than just the raw question. This consistency prevents miscommunication and improves task execution.
+2. **Decide on a message format.** Define how agents communicate. Use structured data formats, such as JSON, or consistent keywords to ensure clarity. For example, in multi-agent systems, when Agent A sends a query to Agent B, include relevant context rather than just the raw question. This consistency prevents miscommunication and improves task execution.
 
 3. **Set boundaries on conversations.** Set boundaries on how many times agents can interact per task. For example, restrict agents to two exchanges before escalating to a human or returning a default response. This prevents infinite loops and ensures timely resolution.
 
