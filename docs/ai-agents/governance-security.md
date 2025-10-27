@@ -24,7 +24,7 @@ AI agents now play a central role in how organizations operate, interact with cu
 
 1. **Ensure data privacy.** All AI agents must follow data minimization principles and use only the data necessary for their intended functionality. Teams must review training datasets, memory stores, and logs to identify and mitigate privacy risks. Agents must anonymize or pseudonymize personal data where feasible and support user rights, including deletion requests, in alignment with the organization’s privacy policy.
 
-1. **Abide by data residency and sovereignty laws.** All AI agents must operate in environments that meet data residency and sovereignty requirements. Teams must identify the location of each data source, agent runtime, and output storage. Agents must use Azure regions or on-premises environments that comply with residency policies. Logging of sensitive content must remain disabled unless retention is required, and all stored data must be encrypted.
+1. **Abide by data residency and sovereignty laws.** All AI agents must operate in environments that meet data residency and sovereignty requirements. Teams must identify the location of each data source, agent runtime, and output storage. Agents must use Azure regions or on-premises environments that comply with residency policies. Configure logging to avoid unnecessary storage of sensitive content. Retain only what compliance or operational policies require, ensuring encryption at rest.
 
 1. **Comply with data retention laws.** All AI agents must follow defined retention periods for logs, memory, and training data. Implement automated purging or anonymization processes and retain only the context necessary for agent functionality. Agents must inform users about retention durations and provide deletion mechanisms. Retention policies must extend into full lifecycle management, including rules for data creation, archival, deletion, and purging.
 
@@ -36,9 +36,9 @@ In **Microsoft Copilot Studio**, follow [Governance and security best practices]
 
 **Policy: All agents must comply with the Responsible AI policies.** Corporate compliance ensures agents align with internal governance policies. Corporate policies include consistent deployment practices, version control, and guardrails across environments. Define reusable infrastructure templates and mandate their use. Use policy-as-code and infrastructure-as-code to enforce standards. Review agent updates and deployments through automated pipelines.
 
-1. **Isolate confidential data.** Confidential data must be physically or logically isolated confidential data. Only link public-facing agents to non-confidential sources.
+1. **Isolate confidential data.** Confidential data must be physically or logically isolated. Only link public-facing agents to non-confidential sources.
 
-1. **Limit data access.** Give access to necessary data only. Avoid exposing confidential or sensitive data to the agent during training or runtime unless necessary. Respect sensitivity labels.** Agents must interpret and enforce organizational sensitivity labels such as General, Public, and Confidential. Prevent agents from storing sensitive content in memory or logs unless protected by encryption and access controls. Extend existing classification schemes into agent workflows to maintain data protection standards. If certain documents are highly confidential, store them in a separate datastore and restrict the agent’s access. Likewise, integrate only the essential data sources needed for the agent’s function. For example, if the agent answers HR policy questions, connect it only to the HR policy documents or database, rather than your entire document library. Unneeded data connections can introduce noise or security risks.
+1. **Limit data access.** Give access to necessary data only. Avoid exposing confidential or sensitive data to the agent during training or runtime unless necessary. Ensure integrations (Purview, [DLP](/purview/dlp-learn-about-dlp)) enable enforcement of sensitivity labels. Agents should route or restrict usage based on labeled content. Prevent agents from storing sensitive content in memory or logs unless protected by encryption and access controls. Extend existing classification schemes into agent workflows to maintain data protection standards. If certain documents are highly confidential, store them in a separate datastore and restrict the agent’s access. Likewise, integrate only the essential data sources needed for the agent’s function. For example, if the agent answers HR policy questions, connect it only to the HR policy documents or database, rather than your entire document library. Unneeded data connections can introduce noise or security risks.
 
 1. **Enforce internal-user access controls.** Internal-facing agents must follow the same data governance rules as other systems. Agents must only retrieve data that the requesting user is authorized to access. This typically involves passing the user’s identity or token securely when querying data, ensuring session integrity and least privilege. For example, an internal helpdesk agent must show an employee only their own HR record, not someone else’s. Align agent behavior with existing role-based access controls to maintain compliance and user trust.
 
@@ -83,7 +83,7 @@ In **Microsoft Copilot Studio**, [create and manage solution pipelines](/microso
 1. **Track agent costs.** AI agents consume resources such as compute power, tokens, and API calls. Without visibility, costs can escalate quickly. You need a unified view of agent usage and cost across departments and projects to track metrics like token consumption and compute usage. Organize this data by department or project to identify where costs concentrate. Apply cost center tags using [Microsoft Cost Management](/azure/cost-management-billing/costs/cost-allocation-introduction) to allocate agent expenses accurately. Require teams to tag resources per agent or use case so you can see cost breakdowns clearly. Set up real-time **alerts** to notify teams when spending approaches budget thresholds. These alerts help prevent overruns and support proactive financial management. Restrict who can create, deploy, and scale agents by using Azure **role-based access control** (RBAC). This structure reduces risk and ensures only authorized personnel manage AI deployments.
 
     - In **Azure AI Foundry**, [plan and manage costs](/azure/ai-foundry/how-to/costs-plan-manage). Centrally administer quotas and access through the [management center](/azure/ai-foundry/concepts/management-center).
-    - In **Microsoft Copilot Studio**, [view and manage cost](/microsoft-copilot-studio/requirements-messages-management).
+    - In **Microsoft Copilot Studio**, [Review usage and message allocation](/microsoft-copilot-studio/requirements-messages-management) to manage consumption.
 
 ## Agent security
 
@@ -110,7 +110,7 @@ To manage these risks, leaders must direct their teams to integrate agent securi
 
 1. **Filter all agent inputs and outputs.** You need to block adversarial input to bypass integrated safety protocols. Have teams treat all incoming data, text, files, images, as potentially hostile. Instruct teams to validate and filter inputs before they reach models or backend systems. Strip scripting and injection content from text, enforce type and size restrictions for files, and scan media using moderation services. Update sanitization rules based on observed attack patterns.
 
-    For **Azure AI Foundry**, [configure Azure Content Safety content filtering](/azure/ai-services/content-safety/overview) to block  sensitive data leakage and enforce content policies.
+    For **Azure AI Foundry**, [configure Azure Content Safety content filtering](/azure/ai-services/content-safety/overview) to mitigate harmful content. Combine with [Purview DLP](/purview/dlp-learn-about-dlp) or custom detectors to reduce sensitive data leakage.
 
 1. **Use secure authentication mechanisms.** Use [managed identities for authentication](/entra/identity/managed-identities-azure-resources/overview) to eliminate credential management risks.
 
@@ -130,9 +130,9 @@ To manage these risks, leaders must direct their teams to integrate agent securi
 
     This training builds awareness and readiness, enabling teams to respond effectively to AI-specific threats.
 
-1. **Integrate with approved MCP and agent-to-agent .** AI agents often interact with external systems and data sources. These connections introduce more risks. Leaders must ensure governance reflects this complexity. Require teams to:
+1. **Integrate with approved external agents and data.** AI agents often interact with external systems and data sources. These connections introduce more risks. Leaders must ensure governance reflects this complexity. Require teams to:
 
-    - Use standard protocols such as Model Context Protocol (MCP) and Agent-to-Agent Protocol (A2A) for secure communication
+    - Adopt emerging interoperability standards like Model Context Protocol (MCP) and Agent-to-Agent Protocol (A2A)
     - Restrict external interactions to trusted MCP servers that meet organizational security and compliance standards
     - Validate all external agent communications and limit them to explicitly approved entities
     - Define clear boundaries for data access and logic execution during external interactions
@@ -166,7 +166,7 @@ Protocols define how agents interact with tools, data, and each other. Require a
 
 These protocols create a common language for agents across your organization. They reduce integration overhead, improve interoperability, and support governance by enforcing clear interaction rules.
 
-For **Azure AI Foundry**, ensure you understand the available orchestration options. In addition to the [Microsoft Agent Framework](/agent-framework/overview/agent-framework-overview) and the [Azure AI Foundry SDK](/azure/ai-foundry/how-to/develop/sdk-overview?pivots=programming-language-python), Azure AI Foundry supports other frameworks, like LangGraph, and its own built-in orchestration tools. Provide guidance on when to use each option based on the complexity of the agent, the required integrations, and the business outcomes.
+For **Azure AI Foundry**, ensure you understand the available orchestration options. In addition to the [Microsoft Agent Framework](/agent-framework/overview/agent-framework-overview) and the [Azure AI Foundry SDK](/azure/ai-foundry/how-to/develop/sdk-overview?pivots=programming-language-python), Azure AI Foundry integrates with multiple orchestration approaches. Evaluate built-in orchestration, Microsoft Agent Framework, SDK, and community frameworks such as LangGraph where appropriate. Provide guidance on when to use each option based on the complexity of the agent, the required integrations, and the business outcomes.
 
 ## Next step
 
