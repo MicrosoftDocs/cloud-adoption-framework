@@ -110,7 +110,7 @@ To manage these risks, leaders must direct their teams to integrate agent securi
 
 1. **Filter all agent inputs and outputs.** You need to block adversarial input to bypass integrated safety protocols. Have teams treat all incoming data, text, files, images, as potentially hostile. Instruct teams to validate and filter inputs before they reach models or backend systems. Strip scripting and injection content from text, enforce type and size restrictions for files, and scan media using moderation services. Update sanitization rules based on observed attack patterns.
 
-    For **Azure AI Foundry**, [configure Azure Content Safety content filtering](/azure/ai-services/content-safety/overview) to mitigate harmful content. Combine with [Purview DLP](/purview/dlp-learn-about-dlp) or custom detectors to reduce sensitive data leakage.
+    For **Azure AI Foundry**, [configure Azure Content Safety content filtering](/azure/ai-services/content-safety/overview) to mitigate harmful content. Combine with [Purview DLP](/purview/dlp-learn-about-dlp) policies or adding custom detectors, either within Purview or as standalone solutions, to reduce sensitive data leakage.
 
 1. **Use secure authentication mechanisms.** Use [managed identities for authentication](/entra/identity/managed-identities-azure-resources/overview) to eliminate credential management risks.
 
@@ -132,7 +132,7 @@ To manage these risks, leaders must direct their teams to integrate agent securi
 
 1. **Integrate with approved external agents and data.** AI agents often interact with external systems and data sources. These connections introduce more risks. Leaders must ensure governance reflects this complexity. Require teams to:
 
-    - Adopt emerging interoperability standards like Model Context Protocol (MCP) and Agent-to-Agent Protocol (A2A)
+    - Supported interoperability standards such as MCP (widely adopted across platforms) and emerging standards like A2A
     - Restrict external interactions to trusted MCP servers that meet organizational security and compliance standards
     - Validate all external agent communications and limit them to explicitly approved entities
     - Define clear boundaries for data access and logic execution during external interactions
