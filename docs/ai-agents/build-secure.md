@@ -53,16 +53,29 @@ Start by documenting the agent’s responsibilities and limitations in an "agent
 
 #### 2.2 Define agent instructions
 
-Treat agent instructions as operational policy. These instructions guide how the agent responds and ensure consistent behavior across environments. Include:
+Agent instructions act as operational guidelines that direct how agents respond and behave. Well-defined instructions create predictable, compliant agent behavior across your cloud environment. Organizations that invest in clear instructions reduce operational risk and improve user trust.
 
-- **Identity and persona.** Define whether the agent is a helpful assistant, uses a formal tone, or has another style.
-- **Capabilities and limitations.** Specify what the agent can do, like search policy databases, and what it must avoid, like accessing personal files.
-- **Handle uncertainties or refusals.** Explain how the agent should respond when unsure. For instance, it can respond later or escalate to HR. Define fallback behaviors, such as escalating to a human or deferring a response.
-- **Compliance requirements.** Include rules such as not providing medical or legal advice and following privacy rules for personal data.
+1. **Write clear, structured instructions.** Each agent needs a complete set of guidelines that covers four key areas:
 
-Test these instructions using platforms like Foundry’s test interface or Copilot Studio’s test panel. Iterate wording to improve reliability. Reinforce critical constraints in both prompts and code, such as adding disclaimers or enforcing final answer checks.
+    - **Identity and tone.** Describe how the agent presents itself. For example, specify whether the agent uses conversational language or formal business terminology. Consistent tone helps users form accurate expectations and builds confidence in agent interactions.
 
-For **multi-agent systems**, define distinct roles such as Planner, Executor, and Reviewer. Document the output each agent produces and how it transitions to the next agent. This clarity prevents duplication, reduces conflict, and simplifies maintenance. Always require structured outputs, such as JSON, to support downstream processing and compliance audits.
+    - **Scope and boundaries.** State explicitly what the agent does and what it avoids. For instance, an HR agent might answer benefits questions but must not access salary data or provide tax advice. Clear boundaries prevent the agent from attempting tasks outside its approved function.
+
+    - **Unknown situations.** Specify how the agent handles questions it cannot answer. Options include transferring to a human specialist, logging the request for review, or providing a standard response such as "I don't have that information." Predictable fallback behavior maintains user confidence even when the agent reaches its limits.
+
+    - **Compliance rules.** Embed organizational and regulatory requirements directly into instructions. For example, prohibit financial advice if the agent lacks appropriate licensing, or require data privacy acknowledgments before collecting personal information. These embedded rules align agent behavior with corporate policy and legal obligations.
+
+    Test instructions thoroughly before deployment. Use evaluation tools in Azure AI Foundry or Microsoft Copilot Studio to validate behavior against sample queries. Refine language based on test results to close gaps and improve reliability. For critical constraints, reinforce rules in multiple places such as system prompts, validation checks, and fallback logic.
+
+2. **Build validation into every agent.** Quality control must be automatic and systematic. When one agent produces output, another component must verify it. This dual-layer approach catches errors before they reach users or downstream systems. For example, if an agent drafts a response, run it through a second agent that checks facts and tone. If an agent generates structured data, apply automated schema validation and use a review agent to confirm any unstructured content aligns with business rules. Organizations should allocate equal or greater effort to validation as they do to generation. Treat validation as a core architectural requirement, not an optional add-on. Using multiple validation perspectives reduces the chance of undetected hallucinations or policy violations.
+
+3. **Manage instructions with version control.** Store all agent instructions in a version-controlled system such as GitHub. Version control creates an auditable history of changes, supports collaborative editing, and ensures teams reference approved instructions. When updates occur, teams can review differences, test changes in isolation, and roll back if needed. This practice supports governance and simplifies compliance reporting.
+
+For **multi-agent systems**, assign each agent a specific role such as Planner, Researcher, Executor, or Reviewer. Document what each agent produces and how information flows between agents. Role separation prevents overlapping responsibilities, reduces conflicts, and makes troubleshooting faster. Require agents to output structured data formats such as JSON to support automated processing and compliance audits. Smaller, focused instructions are easier to maintain and debug than large, multi-purpose prompts. When complexity requires it, combine these focused agents into coordinated workflows using orchestration patterns.
+
+**Azure AI Foundry:** Test instructions using the [AI Foundry playground](/azure/ai-foundry/how-to/develop/playground-chat) and refine based on evaluation results. Store prompts in version control and integrate them into agent configurations.
+
+**Microsoft Copilot Studio:** Validate instructions in the [test panel](/microsoft-copilot-studio/authoring-test-bot) and refine based on observed behavior. Use the agent editor to apply custom instructions that enforce compliance and operational boundaries.
 
 **Azure AI Foundry:** Define clear operational rules by [configuring system messages and instruction sets](/azure/ai-foundry/agents/concepts/threads-runs-messages) to enforce agent boundaries and fallback behaviors. To implement deterministic logic, [use function calling tools](/azure/ai-foundry/agents/how-to/tools/function-calling) to enforce predictable behaviors and handle edge cases reliably.
 
