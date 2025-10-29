@@ -4,7 +4,7 @@ description: Understand security, governance, and compliance considerations for 
 author: Mahesh-MSFT
 ms.author: maksh
 ms.date: 04/21/2022
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: think-tank, e2e-azure-vmware
 ---
 

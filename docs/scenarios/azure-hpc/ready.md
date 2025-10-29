@@ -4,7 +4,7 @@ description: Explore how HPC impacts Azure landing zone design and compare Azure
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
 ms.date: 06/10/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: think-tank
 ---
 

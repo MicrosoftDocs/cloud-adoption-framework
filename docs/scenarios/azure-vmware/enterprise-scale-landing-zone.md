@@ -5,7 +5,7 @@ author: pgandham
 ms.author: pnp
 ms.reviewer: tozimmergren
 ms.date: 01/20/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: e2e-azure-vmware, think-tank, engagement-fy23
 ---
 

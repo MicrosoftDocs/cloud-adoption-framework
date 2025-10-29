@@ -4,7 +4,7 @@ description: Learn about key design considerations and recommendations for secur
 author: BenMartinBaur
 ms.author: bebaur
 ms.date: 09/17/2024
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: think-tank, e2e-avd
 ---
 

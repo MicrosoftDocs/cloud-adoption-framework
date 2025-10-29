@@ -4,7 +4,7 @@ description: Learn about authentication techniques for cloud-scale analytics in 
 author: stephen-sumner
 ms.author: pnp
 ms.date: 02/04/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: e2e-data-management, think-tank
 ---
 

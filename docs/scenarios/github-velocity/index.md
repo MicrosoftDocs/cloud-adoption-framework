@@ -4,7 +4,7 @@ description: Companies can take advantage of GitHub's connectedness to the open-
 author: nkpatterson
 ms.author: nipatter
 ms.date: 05/07/2024
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: think-tank
 ---
 

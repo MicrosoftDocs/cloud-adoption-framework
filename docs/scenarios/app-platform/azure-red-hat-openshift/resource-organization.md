@@ -4,7 +4,7 @@ description: Review guidelines for resource organization in Azure Red Hat OpenSh
 author: rotorr
 ms.author: rolandotorio
 ms.date: 08/19/2022
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: think-tank, e2e-ARO, linux-related-content
 ---
 

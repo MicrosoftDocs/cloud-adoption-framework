@@ -4,7 +4,7 @@ description: Learn about the tools, features, and services to automate various t
 author: heisthesisko
 ms.author: joelsisk
 ms.date: 07/24/2024
-ms.topic: conceptual
+ms.topic: concept-article
 ---
 
 # Platform automation considerations for Red Hat Enterprise Linux on Azure

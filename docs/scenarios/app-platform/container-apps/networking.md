@@ -4,7 +4,7 @@ description: Learn about network considerations Azure Container Apps.
 author: craigshoemaker
 ms.author: cshoe
 ms.date: 10/06/2023
-ms.topic: conceptual
+ms.topic: concept-article
 ---
 
 # Networking for the Azure Container Apps - Landing Zone Accelerator

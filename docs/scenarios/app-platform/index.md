@@ -4,7 +4,7 @@ description: Learn about Azure application landing zone accelerators
 author: stephen-sumner
 ms.author: pnp
 ms.date: 09/26/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ---
 
 # Azure application landing zone accelerators

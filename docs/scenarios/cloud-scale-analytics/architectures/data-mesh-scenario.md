@@ -4,7 +4,7 @@ description: Learn about a data mesh scenario for cloud-scale analytics in Azure
 author: stephen-sumner
 ms.author: pnp
 ms.date: 11/27/2024
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: think-tank, e2e-data-management
 adobe-target: true
 ---

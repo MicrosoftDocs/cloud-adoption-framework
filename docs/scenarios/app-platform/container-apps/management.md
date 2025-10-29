@@ -4,7 +4,7 @@ description: Learn how to use the features of Container Apps to keep your apps s
 author: craigshoemaker
 ms.author: cshoe
 ms.date: 10/06/2023
-ms.topic: conceptual
+ms.topic: concept-article
 ---
 
 # Management and operations for the Azure Container Apps - Landing Zone Accelerator
