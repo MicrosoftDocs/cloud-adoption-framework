@@ -4,7 +4,7 @@ description: Deploy cloud-native Azure solutions with CI/CD pipelines, blue-gree
 author: stephen-sumner
 ms.author: pnp
 ms.date: 08/01/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ---
 
 # Deploy cloud-native solutions

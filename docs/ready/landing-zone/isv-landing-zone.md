@@ -4,7 +4,7 @@ description: Discuss Independent Software Vendor (ISV) specific considerations f
 author: arsenvlad
 ms.author: arsenv
 ms.date: 07/30/2024
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: internal
 ---
 

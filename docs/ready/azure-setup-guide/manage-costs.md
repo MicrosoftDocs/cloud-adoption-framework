@@ -4,7 +4,7 @@ description: Use the Cloud Adoption Framework for Azure to understand invoices a
 author: stephen-sumner
 ms.author: pnp
 ms.date: 05/19/2020
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: think-tank, fasttrack-edit, AQC, setup
 ---
 

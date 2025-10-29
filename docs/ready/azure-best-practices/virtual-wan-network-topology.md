@@ -4,7 +4,7 @@ description: Learn how to set up Virtual WAN network topology in an Azure landin
 author: stephen-sumner
 ms.author: pnp
 ms.date: 10/08/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ---
 
 # Virtual WAN network topology in an Azure landing zone

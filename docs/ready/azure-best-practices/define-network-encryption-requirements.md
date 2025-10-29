@@ -4,7 +4,7 @@ description: Examine key design considerations and recommendations surrounding n
 author: JefferyMitchell
 ms.author: jemitche
 ms.date: 07/31/2024
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: think-tank
 ---
 

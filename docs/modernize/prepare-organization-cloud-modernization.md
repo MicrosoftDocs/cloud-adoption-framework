@@ -4,7 +4,7 @@ description: Guide for preparing your organization for cloud modernization succe
 author: stephen-sumner
 ms.author: ssumner
 ms.date: 08/01/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ---
 
 # Prepare for cloud modernization

@@ -4,7 +4,7 @@ description: Learn how to configure networking for AI workloads on Azure infrast
 author: stephen-sumner
 ms.author: rajanaki
 ms.date: 03/18/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ---
 
 # Networking recommendations for AI workloads on Azure infrastructure (IaaS)

@@ -4,7 +4,7 @@ description: Learn how to create an effective AI adoption strategy using Microso
 author: stephen-sumner
 ms.author: ssumner
 ms.date: 09/05/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ---
 
 # Create your AI strategy

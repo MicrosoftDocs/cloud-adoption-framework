@@ -5,7 +5,7 @@ author: sitarant
 ms.author: sitarant
 ms.reviewer: tozimmergren
 ms.date: 05/21/2024
-ms.topic: conceptual
+ms.topic: concept-article
 ---
 
 # Azure Virtual Network Manager in Azure landing zones

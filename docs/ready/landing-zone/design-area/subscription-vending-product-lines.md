@@ -4,7 +4,7 @@ description: Learn about the benefits of offering different subscription vending
 author: jtracey93
 ms.author: jatracey
 ms.date: 12/16/2024
-ms.topic: conceptual
+ms.topic: concept-article
 ---
 
 # Establish common subscription vending product lines

@@ -4,7 +4,7 @@ description: Learn the process to plan for AI adoption with best practices and r
 author: stephen-sumner
 ms.author: ssumner
 ms.date: 07/01/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ---
 
 # Plan for AI adoption

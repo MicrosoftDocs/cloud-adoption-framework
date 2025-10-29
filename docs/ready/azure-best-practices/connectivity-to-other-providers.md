@@ -4,7 +4,7 @@ description: Integrate an Azure enterprise-scale landing zone architecture to ot
 author: stephen-sumner
 ms.author: sitarant
 ms.date: 09/05/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom:
   - sfi-image-nochange
 ---

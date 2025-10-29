@@ -4,7 +4,7 @@ description: Discover how startups and enterprises can effectively adopt generat
 author: stephen-sumner
 ms.author: ssumner
 ms.date: 07/01/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ---
 
 # AI adoption

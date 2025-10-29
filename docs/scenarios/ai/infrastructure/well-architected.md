@@ -4,7 +4,7 @@ description: Learn how to design AI workloads on Azure infrastructure (IaaS).
 author: stephen-sumner
 ms.author: rajanaki
 ms.date: 03/11/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ---
 # Well-architected considerations for AI workloads on Azure infrastructure (IaaS)
 

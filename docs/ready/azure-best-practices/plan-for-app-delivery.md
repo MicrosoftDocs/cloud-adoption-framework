@@ -4,7 +4,7 @@ description: Examine key design considerations and recommendations surrounding t
 author: stephen-sumner
 ms.author: pnp
 ms.date: 11/08/2022
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: internal
 ---
 

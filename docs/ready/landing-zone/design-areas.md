@@ -5,7 +5,7 @@ author: jtracey93
 ms.author: jatracey
 ms.date: 09/03/2025
 ms.update-cycle: 180-days
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: internal, UpdateFrequency.5
 ---
 

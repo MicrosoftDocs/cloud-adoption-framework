@@ -5,7 +5,7 @@ author: jtracey93
 ms.author: jatracey
 ms.date: 11/28/2024
 ms.update-cycle: 180-days
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: think-tank, UpdateFrequency.5
 ---
 

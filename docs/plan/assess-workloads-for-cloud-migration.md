@@ -4,7 +4,7 @@ description: Learn how to conduct thorough workload assessments to gather archit
 author: stephen-sumner
 ms.author: pnp
 ms.date: 07/15/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ---
 
 # Assess your workloads for cloud migration

@@ -4,7 +4,7 @@ description: Discover how to build AI workloads on Azure IaaS with detailed reco
 author: stephen-sumner
 ms.author: rajanaki
 ms.date: 04/09/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ---
 
 # Implementation option for AI on Azure infrastructure

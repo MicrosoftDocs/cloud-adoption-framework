@@ -4,7 +4,7 @@ description: Testing approach for Azure landing zones
 author: jtracey93
 ms.author: jatracey
 ms.date: 03/31/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: think-tank
 ---
 

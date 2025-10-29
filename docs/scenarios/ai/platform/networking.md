@@ -4,7 +4,7 @@ description: Learn how to implement secure networking for AI workloads using Azu
 author: stephen-sumner
 ms.author: ssumner
 ms.date: 07/01/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ---
 
 # Configure secure networking for Azure AI platform services

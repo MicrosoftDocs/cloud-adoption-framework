@@ -4,7 +4,7 @@ description: Choose and implement a cloud operations approach that distributes A
 author: stephen-sumner
 ms.author: pnp
 ms.date: 07/15/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ---
 
 # Prepare your organization for the cloud

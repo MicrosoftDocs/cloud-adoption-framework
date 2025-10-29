@@ -5,7 +5,7 @@ author: balunywa
 ms.author: mubaluny
 ms.reviewer: tozimmergren
 ms.date: 05/23/2023
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: think-tank, e2e-aks
 ---
 

@@ -4,7 +4,7 @@ description: Learn about cost governance for Azure Kubernetes Service.
 author: stephen-sumner
 ms.author: pnp
 ms.date: 01/20/2023
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: think-tank, e2e-aks
 ---
 
