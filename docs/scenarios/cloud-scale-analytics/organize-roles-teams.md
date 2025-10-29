@@ -4,7 +4,7 @@ description: Learn about the roles and teams for Cloud-scale analytics in Azure.
 author: abdale
 ms.author: hamoodaleem
 ms.date: 11/27/2024
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: e2e-data-management, think-tank
 ---
 

@@ -4,7 +4,7 @@ description: Learn design considerations and recommendations for CI/CD workflows
 author: stephen-sumner
 ms.author: pnp
 ms.date: 01/20/2022
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: e2e-hybrid, think-tank
 ---
 

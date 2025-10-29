@@ -4,7 +4,7 @@ description: Understand key Azure Data Lake Storage considerations for cloud-sca
 author: stephen-sumner
 ms.author: pnp
 ms.date: 1/7/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: e2e-data-management, think-tank
 ---
 

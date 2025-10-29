@@ -4,7 +4,7 @@ description: Learn how this cloud-scale analytics scenario can improve platform 
 author: stephen-sumner
 ms.author: pnp
 ms.date: 02/22/2022
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: e2e-data-management, think-tank
 ---
 

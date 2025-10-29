@@ -4,7 +4,7 @@ description: Use the Cloud Adoption Framework for Azure to assess your Azure Vir
 author: stephen-sumner
 ms.author: pnp
 ms.date: 05/18/2021
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: think-tank, e2e-avd
 ---
 

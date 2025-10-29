@@ -4,7 +4,7 @@ description: Guidance to deploy Azure Virtual Desktop (AVD) using an enterprise-
 author: stephen-sumner
 ms.author: pnp
 ms.date: 09/02/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ---
 
 # Deploy an enterprise-scale Azure landing zone for Azure Virtual Desktop

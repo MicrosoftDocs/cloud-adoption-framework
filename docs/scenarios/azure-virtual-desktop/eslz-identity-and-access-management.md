@@ -4,7 +4,7 @@ description: Learn how to use Azure role-based access control for identity and a
 author: wahidsaleemi
 ms.author: wasaleem
 ms.date: 06/12/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: think-tank, e2e-avd
 ---
 

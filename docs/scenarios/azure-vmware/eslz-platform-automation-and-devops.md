@@ -4,7 +4,7 @@ description: Learn about considerations for the initial deployment of Azure VMwa
 author: ScottHolden
 ms.author: scholden
 ms.date: 04/21/2022
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: think-tank, e2e-azure-vmware
 ---
 

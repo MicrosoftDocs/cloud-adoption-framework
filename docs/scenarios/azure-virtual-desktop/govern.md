@@ -4,7 +4,7 @@ description: Explore governance best practice for Azure Virtual Desktop
 author: stephen-sumner
 ms.author: pnp
 ms.date: 05/07/2024
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: think-tank, e2e-avd
 ---
 

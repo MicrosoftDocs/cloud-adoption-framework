@@ -4,7 +4,7 @@ description: Learn how to design inbound internet connectivity for Azure VMware 
 author: fguerri
 ms.author: fguerri
 ms.date: 09/20/2023
-ms.topic: conceptual
+ms.topic: concept-article
 ms.service: caf
 ms.subservice: caf-scenario-vmware
 ms.custom: think-tank, e2e-azure-vmware

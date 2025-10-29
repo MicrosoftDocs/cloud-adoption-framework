@@ -4,7 +4,7 @@ description: Learn about data mesh observability in Azure.
 author: sudivate
 ms.author: sudivate
 ms.date: 03/18/2022
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: e2e-data-management, think-tank
 ---
 

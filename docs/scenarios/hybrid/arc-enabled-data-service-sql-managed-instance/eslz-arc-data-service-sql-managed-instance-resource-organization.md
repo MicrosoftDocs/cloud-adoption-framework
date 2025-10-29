@@ -4,7 +4,7 @@ description: Learn how to organize resources when working with Azure Arc-enabled
 author: tiagobalabuch
 ms.author: tibalabu
 ms.date: 09/07/2022
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: e2e-hybrid, think-tank
 ---
 

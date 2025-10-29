@@ -4,7 +4,7 @@ description: Understand the ingest process with cloud-scale analytics in Azure.
 author: stephen-sumner
 ms.author: pnp
 ms.date: 12/03/2024
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: e2e-data-management, think-tank
 ---
 

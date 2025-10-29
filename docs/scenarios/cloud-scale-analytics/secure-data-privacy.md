@@ -4,7 +4,7 @@ description: Learn about how to use cloud-scale analytics to determine the optim
 author: stephen-sumner
 ms.author: pnp
 ms.date: 1/6/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: e2e-data-management, think-tank
 ---
 # Data privacy for cloud-scale analytics in Azure

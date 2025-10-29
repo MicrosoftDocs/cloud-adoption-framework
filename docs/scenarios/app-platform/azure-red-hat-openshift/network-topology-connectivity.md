@@ -4,7 +4,7 @@ description: Learn how to improve network topology and connectivity for the Azur
 author: Welasco
 ms.author: vsantana
 ms.date: 08/18/2022
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: think-tank, e2e-aro, linux-related-content
 ---
 

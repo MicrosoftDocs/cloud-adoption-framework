@@ -4,7 +4,7 @@ description: Direct egress and ingress traffic from Azure VMware Solution
 author: sblair01
 ms.author: sablair
 ms.date: 11/25/2024
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: e2e-azure-vmware, think-tank
 ---
 

@@ -4,7 +4,7 @@ description: Learn about the resource organization design area and how to apply 
 author: stephen-sumner
 ms.author: pnp
 ms.date: 02/07/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: think-tank, e2e-avd
 ---
 

@@ -4,7 +4,7 @@ description: Learn about design considerations and recommendations for Azure Red
 author: SriniPadala
 ms.author: srpadala
 ms.date: 08/19/2022
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: think-tank, e2e-aro, linux-related-content
 ---
 

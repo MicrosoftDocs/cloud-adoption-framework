@@ -4,7 +4,7 @@ description: Learn about design considerations and recommendations for network t
 author: motasem13
 ms.author: mohamad
 ms.date: 01/05/2023
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: internal
 ---
 

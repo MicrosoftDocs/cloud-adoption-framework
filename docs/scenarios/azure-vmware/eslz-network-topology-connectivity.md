@@ -4,7 +4,7 @@ description: Examine key design considerations and best practices around network
 author: rodrigosantosms
 ms.author: rosanto
 ms.date: 10/17/2022
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: think-tank, e2e-azure-vmware
 ---
 

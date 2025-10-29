@@ -4,7 +4,7 @@ description: Implement Azure App Service with an application landing zone accele
 author: stephen-sumner
 ms.author: pnp
 ms.date: 06/24/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ---
 
 # Azure App Service application landing zone accelerator

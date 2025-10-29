@@ -4,7 +4,7 @@ description: Learn about key design considerations and recommendations for secur
 author: jhajduk-microsoft
 ms.author: temandin
 ms.date: 7/24/2024
-ms.topic: conceptual
+ms.topic: concept-article
 ---
 
 # Security considerations for Red Hat Enterprise Linux on Azure
