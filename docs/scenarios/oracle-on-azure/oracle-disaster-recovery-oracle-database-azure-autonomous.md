@@ -5,7 +5,7 @@ keywords: Oracle Autonomous Database Azure, business continuity, disaster recove
 author: onursenturk
 ms.author: onursenturk
 ms.date: 07/08/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: e2e-oracle
 ---
 

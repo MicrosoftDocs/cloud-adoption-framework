@@ -4,7 +4,7 @@ description: Azure hybrid and multicloud strategy. Learn to use Azure as a unifi
 author: stephen-sumner
 ms.author: pnp
 ms.date: 09/16/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ---
 
 # Unified hybrid and multicloud operations

@@ -4,7 +4,7 @@ description: Learn how to implement the integration of SAP with Microsoft Power 
 author: shekhag
 ms.author: shegupt
 ms.date: 10/30/2024
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: e2e-sap
 ---
 

@@ -4,7 +4,7 @@ description: Understand the design considerations and recommendations for cost m
 author: sebassem
 ms.author: sebassem
 ms.date: 10/18/2021
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: e2e-hybrid, think-tank
 ---
 

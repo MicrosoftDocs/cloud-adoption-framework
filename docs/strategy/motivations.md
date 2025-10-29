@@ -4,7 +4,7 @@ description: Learn how to use the Cloud Adoption Framework for Azure to understa
 ms.author: pnp
 author: stephen-sumner
 ms.date: 02/03/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ms.update-cycle: 1095-days
 ---
 

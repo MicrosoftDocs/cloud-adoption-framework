@@ -4,7 +4,7 @@ description: Learn how to establish, maintain, and automate cloud security in Az
 author: stephen-sumner
 ms.author: pnp
 ms.date: 09/12/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: internal, UpdateFrequency2
 ms.update-cycle: 365-days
 ---

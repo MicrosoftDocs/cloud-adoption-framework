@@ -4,7 +4,7 @@ description: Understand the design considerations and recommendations for manage
 author: sebassem
 ms.author: sebassem
 ms.date: 09/23/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ---
 
 # Management and monitoring for Azure Arc-enabled servers
