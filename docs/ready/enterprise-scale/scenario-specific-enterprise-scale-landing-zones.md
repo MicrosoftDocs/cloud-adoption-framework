@@ -4,7 +4,7 @@ description: Find technology-specific Azure enterprise-scale landing zone scenar
 author: mosabami
 ms.author: aayodeji
 ms.date: 02/27/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: think-tank
 ---
 

@@ -4,7 +4,7 @@ description: Comprehensive modernization guidance for cloud workloads using thre
 author: stephen-sumner
 ms.author: ssumner
 ms.date: 08/01/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ---
 
 # Modernization guides

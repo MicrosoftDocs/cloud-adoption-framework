@@ -4,7 +4,7 @@ description: Learn how to manage Azure Policy at scale by using the Enterprise P
 author: anwather
 ms.author: anwather
 ms.date: 01/04/2023
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: internal
 ---
 

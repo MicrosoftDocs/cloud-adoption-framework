@@ -4,7 +4,7 @@ description: Learn about the automation considerations and recommendations when 
 author: jtracey93
 ms.author: jatracey
 ms.date: 01/07/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: think-tank
 ---
 

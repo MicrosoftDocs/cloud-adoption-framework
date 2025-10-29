@@ -4,7 +4,7 @@ description: Improve landing zone governance. To improve landing zone governance
 author: asudbring
 ms.author: allensu
 ms.date: 06/19/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: internal
 ---
 

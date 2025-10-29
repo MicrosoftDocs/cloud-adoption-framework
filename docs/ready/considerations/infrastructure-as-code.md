@@ -4,7 +4,7 @@ description: Learn to use infrastructure as code to deploy and manage your Azure
 author: stephen-sumner
 ms.author: pnp
 ms.date: 09/29/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ---
 
 # Use infrastructure as code to deploy and manage your Azure environment

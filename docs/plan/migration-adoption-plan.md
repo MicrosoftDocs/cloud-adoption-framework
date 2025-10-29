@@ -4,7 +4,7 @@ description: Use this template to document your migration strategy, operating mo
 author: stephen-sumner
 ms.author: pnp
 ms.date: 07/15/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ---
 
 # Cloud adoption plan template for migration

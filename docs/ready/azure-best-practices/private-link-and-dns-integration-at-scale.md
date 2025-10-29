@@ -4,7 +4,7 @@ description: Learn how to integrate Azure Private Link for PaaS services with Az
 author: JefferyMitchell
 ms.author: jemitche
 ms.date: 01/10/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: think-tank, UpdateFrequency2
 ---
 

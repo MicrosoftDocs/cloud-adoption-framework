@@ -4,7 +4,7 @@ description: Improve Azure landing zone operations using the Manage methodology 
 author: stephen-sumner
 ms.author: pnp
 ms.date: 07/05/2022
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: internal
 ---
 

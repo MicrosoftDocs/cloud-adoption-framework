@@ -4,7 +4,7 @@ description: Determine which landing zone implementation option best fits your r
 author: stephen-sumner
 ms.author: pnp
 ms.date: 01/17/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: internal
 ---
 

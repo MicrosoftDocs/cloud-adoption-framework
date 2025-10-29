@@ -4,7 +4,7 @@ description: Understand Azure landing zone and the process to use one.
 author: stephen-sumner
 ms.author: pnp
 ms.date: 10/02/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: internal
 ms.update-cycle: 1095-days
 ---

@@ -4,7 +4,7 @@ description: Storage considerations for Azure Kubernetes Service (AKS)
 author: nillsf
 ms.author: nilfran
 ms.date: 11/15/2022
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: think-tank, e2e-aks
 ---
 

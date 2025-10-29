@@ -4,7 +4,7 @@ description: Select cloud migration strategies for your workloads. Choose betwee
 author: stephen-sumner
 ms.author: pnp
 ms.date: 07/15/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ---
 
 # Select your cloud migration strategies

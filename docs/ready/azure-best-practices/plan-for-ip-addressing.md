@@ -4,7 +4,7 @@ description: Examine important design considerations and recommendations to ensu
 author: JefferyMitchell
 ms.author: jemitche
 ms.date: 12/07/2021
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: think-tank
 ---
 

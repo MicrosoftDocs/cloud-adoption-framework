@@ -4,7 +4,7 @@ description: Learn about security control mapping with Azure landing zones for r
 author: Tshah2808
 ms.author: tanshah
 ms.date: 02/27/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ---
 
 # Security control mapping with Azure landing zones

@@ -4,7 +4,7 @@ description: Discover how to create a comprehensive workload inventory and prior
 author: stephen-sumner
 ms.author: pnp
 ms.date: 07/15/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ---
 
 # Discover your existing workload inventory

@@ -4,7 +4,7 @@ description: Learn about design considerations and recommendations for operation
 author: stephen-sumner
 ms.author: pnp
 ms.date: 04/12/2022
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: internal
 ---
 

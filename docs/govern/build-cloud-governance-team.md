@@ -4,7 +4,7 @@ description: Learn to build an effective cloud governance team. Discover respons
 author: larzstridh
 ms.author: pnp
 ms.date: 05/22/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: internal, UpdateFrequency2
 ---
 

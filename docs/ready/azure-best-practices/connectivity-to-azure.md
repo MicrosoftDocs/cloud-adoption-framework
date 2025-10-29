@@ -4,7 +4,7 @@ description: Examine key design considerations and recommendations surrounding n
 author: JefferyMitchell
 ms.author: jemitche
 ms.date: 10/28/2021
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom:
   - think-tank
   - sfi-image-nochange

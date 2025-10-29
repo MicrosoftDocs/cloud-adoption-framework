@@ -4,7 +4,7 @@ description: Design area guidance for DevOps principles and practices in Azure L
 author: elanzel
 ms.author: elanzelm
 ms.date: 10/14/2024
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: internal
 ---
 

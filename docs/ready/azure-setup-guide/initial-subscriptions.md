@@ -4,7 +4,7 @@ description: Learn to create your initial Azure subscriptions and scale your sub
 author: stephen-sumner
 ms.author: pnp
 ms.date: 06/26/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ---
 
 # Create and scale Azure subscriptions

@@ -4,7 +4,7 @@ description: Learn how to manage your organization's application environments in
 author: brsteph
 ms.author: pnp
 ms.date: 02/27/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: internal
 ---
 

@@ -4,7 +4,7 @@ description: Comprehensive guide to planning cloud modernization projects with s
 author: stephen-sumner
 ms.author: ssumner
 ms.date: 08/01/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ---
 
 # Plan your cloud modernization

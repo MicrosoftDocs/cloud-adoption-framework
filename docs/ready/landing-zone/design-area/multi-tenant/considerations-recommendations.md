@@ -4,7 +4,7 @@ description: Learn about the considerations and recommendations when handling mu
 author: jtracey93
 ms.author: jatracey
 ms.date: 11/28/2024
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom:
   - think-tank
   - sfi-ga-nochange

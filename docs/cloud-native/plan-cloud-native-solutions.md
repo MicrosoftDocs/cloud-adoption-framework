@@ -4,7 +4,7 @@ description: Plan cloud-native Azure apps with proven strategies for business go
 author: stephen-sumner
 ms.author: pnp
 ms.date: 08/01/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ---
 
 # Plan the cloud-native solutions

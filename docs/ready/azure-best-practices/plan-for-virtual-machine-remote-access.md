@@ -4,7 +4,7 @@ description: Learn about design and planning considerations for using Azure Bast
 author: sitarant
 ms.author: sitarant
 ms.date: 01/10/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: think-tank
 ---
 

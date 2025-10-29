@@ -4,7 +4,7 @@ description: Use the Cloud Adoption Framework for Azure to learn how to stay cur
 author: stephen-sumner
 ms.author: pnp
 ms.date: 11/04/2022
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: think-tank, fasttrack-new, AQC, setup
 ---
 
