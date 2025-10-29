@@ -4,7 +4,7 @@ description: Learn about design considerations and recommendations for managing 
 author: stephen-sumner
 ms.author: pnp
 ms.date: 01/04/2023
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: think-tank, e2e-sap, engagement-fy23
 products: azure-monitor
 ---

@@ -4,7 +4,7 @@ description: Learn how to set up and manage Oracle workloads within your Azure l
 author: jfaurskov
 ms.author: janfaurs
 ms.date: 11/04/2024
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: e2e-oracle
 ---
 # Introduction to Oracle on Azure adoption scenarios

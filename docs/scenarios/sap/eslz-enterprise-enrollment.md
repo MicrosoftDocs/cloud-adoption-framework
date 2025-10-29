@@ -4,7 +4,7 @@ description: SAP guidelines for enterprise enrollment
 author: PmeshramPM
 ms.author: pameshra
 ms.date: 05/01/2021
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: think-tank, e2e-sap
 ---
 

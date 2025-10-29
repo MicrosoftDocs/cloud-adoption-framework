@@ -4,7 +4,7 @@ description: Learn how to incorporate principles that address business continuit
 author: PmeshramPM
 ms.author: pameshra
 ms.date: 08/13/2024
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: think-tank, e2e-sap
 ---
 

@@ -4,7 +4,7 @@ description: Learn how to secure Azure Arc-enabled servers with managed identiti
 author: chintalavr
 ms.author: vchintala
 ms.date: 09/02/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom:
   - e2e-hybrid
   - think-tank

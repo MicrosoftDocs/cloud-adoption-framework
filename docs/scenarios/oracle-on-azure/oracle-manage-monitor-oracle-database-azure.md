@@ -5,7 +5,7 @@ author: sihbher
 ms.author: rajanaki
 ms.reviewer: bhbandam
 ms.date: 09/03/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: e2e-oracle
 ---
 

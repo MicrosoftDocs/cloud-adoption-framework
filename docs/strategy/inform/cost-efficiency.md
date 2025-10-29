@@ -3,7 +3,7 @@ title: Cost efficiency considerations for your cloud adoption strategy
 description: Learn how to optimize costs that are associated with cloud services and ensure that your organization gets the best value for its investment.
 ms.author: pnp
 author: stephen-sumner
-ms.topic: conceptual
+ms.topic: concept-article
 ms.date: 02/03/2025
 ---
 

@@ -4,7 +4,7 @@ description: Understand the design considerations and recommendations for networ
 author: chintalavr
 ms.author: vchintala
 ms.date: 04/27/2022
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: think-tank, e2e-hybrid
 ---
 

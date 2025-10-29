@@ -4,7 +4,7 @@ description: Learn how to adopt security best practices during your cloud estate
 author: claytonsiemens77
 ms.author: pnp
 ms.date: 11/01/2024
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: internal, UpdateFrequency2
 ---
 

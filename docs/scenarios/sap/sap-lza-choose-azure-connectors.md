@@ -4,7 +4,7 @@ description: Learn how to choose the best SAP connector for your source applicat
 author: shah-manish
 ms.author: manshah
 ms.date: 01/24/2023
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: think-tank, e2e-sap
 ---
 

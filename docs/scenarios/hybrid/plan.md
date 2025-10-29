@@ -4,7 +4,7 @@ description: Learn how to plan for hybrid and multicloud scenarios.
 author: stephen-sumner
 ms.author: pnp
 ms.date: 02/01/2020
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: e2e-hybrid, think-tank
 ---
 
