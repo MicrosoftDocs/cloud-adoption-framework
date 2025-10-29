@@ -4,7 +4,7 @@ description: Learn the process to build AI workloads in Azure with best practice
 author: stephen-sumner
 ms.author: ssumner
 ms.date: 07/01/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ---
 
 # AI Ready

@@ -4,7 +4,7 @@ description: Learn how to configure network connectivity when Azure VMware Solut
 author: fguerri
 ms.author: fguerri
 ms.date: 02/09/2023
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom:
   - think-tank
   - e2e-azure-vmware

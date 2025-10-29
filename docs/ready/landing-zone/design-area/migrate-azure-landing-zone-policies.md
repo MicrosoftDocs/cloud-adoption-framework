@@ -4,7 +4,7 @@ description: Learn how to use governance guidance to migrate previously deployed
 author: Jfaurskov
 ms.author: janfaurs
 ms.date: 01/17/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: internal, devx-track-bicep, devx-track-terraform, UpdateFrequency2
 ---
 

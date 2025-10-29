@@ -5,7 +5,7 @@ author: jjaygbay1
 ms.author: jacobjaygbay
 ms.reviewer: ramakoni
 ms.date: 07/05/2024
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: e2e-oracle
 --- 
 

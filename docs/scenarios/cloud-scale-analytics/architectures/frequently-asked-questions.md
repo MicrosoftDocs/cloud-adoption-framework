@@ -4,7 +4,7 @@ description: Explore frequently asked questions about cloud-scale analytics.
 author: abdale
 ms.author: hamoodaleem
 ms.date: 02/28/2022
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: e2e-data-management, think-tank
 ---
 

@@ -4,7 +4,7 @@ description: Learn how to limit cross-tenant private endpoint connections to pre
 author: MarvinBuss
 ms.author: mabuss
 ms.date: 01/11/2023
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom:
   - think-tank
   - sfi-image-nochange

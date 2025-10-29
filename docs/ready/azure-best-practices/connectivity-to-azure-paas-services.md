@@ -4,7 +4,7 @@ description: Examine key design considerations and recommendations surrounding c
 author: JefferyMitchell
 ms.author: jemitche
 ms.date: 06/22/2022
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom:
   - think-tank
   - sfi-image-nochange

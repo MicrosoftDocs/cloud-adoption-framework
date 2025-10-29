@@ -4,7 +4,7 @@ description: Learn about single-region data landing zone connectivity for cloud-
 author: marvinbuss
 ms.author: mabuss
 ms.date: 02/21/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom:
   - e2e-data-management
   - think-tank

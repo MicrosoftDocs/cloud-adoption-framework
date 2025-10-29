@@ -4,7 +4,7 @@ description: Learn how to administer your Azure cloud estate and manage your clo
 author: stephen-sumner
 ms.author: pnp
 ms.date: 04/01/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: UpdateFrequency2
 ---
 

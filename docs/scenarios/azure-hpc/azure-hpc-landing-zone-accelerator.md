@@ -4,7 +4,7 @@ description: The HPC landing zone accelerator is a set of open-source scripts an
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
 ms.date: 06/10/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: think-tank
 ---
 

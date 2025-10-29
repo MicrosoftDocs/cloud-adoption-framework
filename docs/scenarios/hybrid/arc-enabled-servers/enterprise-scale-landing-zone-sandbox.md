@@ -5,7 +5,7 @@ author: likamrat
 ms.author: likamrat
 ms.reviewer: tozimmergren
 ms.date: 02/17/2023
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: think-tank, e2e-hybrid, engagement-fy23
 ---
 

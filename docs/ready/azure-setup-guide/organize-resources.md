@@ -4,7 +4,7 @@ description: Learn how to structure Azure resources using management hierarchies
 author: stephen-sumner
 ms.author: pnp
 ms.date: 06/18/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: AQC
 ---
 

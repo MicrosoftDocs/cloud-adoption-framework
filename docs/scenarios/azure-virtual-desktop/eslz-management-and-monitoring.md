@@ -5,7 +5,7 @@ author: stephen-sumner
 ms.author: pnp
 ms.reviewer: tozimmergren
 ms.date: 01/04/2023
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: think-tank, e2e-avd, engagement-fy23
 products: azure-monitor
 ---

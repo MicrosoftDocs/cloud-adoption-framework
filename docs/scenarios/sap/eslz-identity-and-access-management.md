@@ -4,7 +4,7 @@ description: Learn more about design considerations and recommendations that rel
 author: PmeshramPM
 ms.author: pameshra
 ms.date: 06/30/2023
-ms.topic: conceptual
+ms.topic: concept-article
 ms.subservice: caf-scenario-sap
 ms.custom: think-tank, e2e-sap, UpdateFrequency2
 ---

@@ -4,7 +4,7 @@ description: Learn how to assess cloud risks effectively for cloud governance. I
 author: larzstridh
 ms.author: pnp
 ms.date: 05/22/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: internal, UpdateFrequency2
 ---
 

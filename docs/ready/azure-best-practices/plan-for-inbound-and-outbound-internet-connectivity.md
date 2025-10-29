@@ -5,7 +5,7 @@ author: sebassem
 ms.author: sebassem
 ms.date: 08/25/2025
 ms.reviewer: ssumner
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: think-tank, csu
 ---
 

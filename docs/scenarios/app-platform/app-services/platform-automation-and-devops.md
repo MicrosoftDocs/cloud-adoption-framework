@@ -4,7 +4,7 @@ description: Learn about design considerations and recommendations for platform 
 author: motasem13
 ms.author: mohamad
 ms.date: 01/09/2023
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: internal
 ---
 

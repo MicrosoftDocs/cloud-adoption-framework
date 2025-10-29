@@ -4,7 +4,7 @@ description: Learn how to use the Oracle on Azure landing zone accelerator to au
 author: jfaurskov
 ms.author: janfaurs
 ms.date: 08/02/2024
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: e2e-oracle
 ---
 

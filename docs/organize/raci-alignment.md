@@ -4,7 +4,7 @@ description: Learn to align responsibilities across teams by developing a cross-
 author: stephen-sumner
 ms.author: pnp
 ms.date: 12/29/2021
-ms.topic: conceptual
+ms.topic: concept-article
 ---
 
 # Align responsibilities across teams

@@ -4,7 +4,7 @@ description: Capturing and analyzing network traffic in Azure.
 author: stephen-sumner
 ms.author: ssumner
 ms.date: 07/31/2024
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: think-tank
 ---
 

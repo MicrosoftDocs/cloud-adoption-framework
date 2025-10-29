@@ -5,7 +5,7 @@ author: stephen-sumner
 ms.author: ssumner
 ms.date: 05/23/2025
 ms.reviewer: ssumner
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: internal, readiness, fasttrack-edit
 ---
 

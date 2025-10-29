@@ -4,7 +4,7 @@ description: Create a comprehensive cloud adoption plan for Azure-native startup
 author: stephen-sumner
 ms.author: pnp
 ms.date: 07/15/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ---
 
 

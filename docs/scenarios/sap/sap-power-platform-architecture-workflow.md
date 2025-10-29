@@ -4,7 +4,7 @@ description: View an architecture workflow for integrations of SAP and Microsoft
 author: mimergel
 ms.author: mimergel
 ms.date: 10/30/2024
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: e2e-sap
 ---
 

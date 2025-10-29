@@ -5,7 +5,7 @@ author: stephen-sumner
 ms.author: pnp
 ms.date: 02/19/2021
 ms.update-cycle: 1825-days
-ms.topic: conceptual
+ms.topic: concept-article
 ms.subservice: caf-methodology-ready
 ms.custom: think-tank,UpdateFrequency5
 ---

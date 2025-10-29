@@ -4,7 +4,7 @@ description: Learn to enforce cloud governance policies in Azure environments. U
 author: larzstridh
 ms.author: pnp
 ms.date: 05/22/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: internal, UpdateFrequency2
 ---
 

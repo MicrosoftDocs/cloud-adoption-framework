@@ -4,7 +4,7 @@ description: Learn about design considerations and recommendations for security 
 author: stephen-sumner
 ms.author: jordanbean
 ms.date: 09/12/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ---
 
 # Security considerations for the Azure Integration Services landing zone accelerator

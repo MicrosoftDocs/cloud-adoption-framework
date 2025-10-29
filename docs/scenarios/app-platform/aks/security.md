@@ -4,7 +4,7 @@ description: Learn more about the cloud security control lifecycle and how to se
 author: stephen-sumner
 ms.author: pnp
 ms.date: 03/24/2022
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: think-tank, e2e-aks
 ---
 

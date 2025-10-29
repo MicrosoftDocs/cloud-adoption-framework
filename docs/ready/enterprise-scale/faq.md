@@ -4,7 +4,7 @@ description: The Azure landing zone frequently asked questions (FAQ) provide ans
 author: jtracey93
 ms.author: jatracey
 ms.date: 07/01/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: think-tank, UpdateFrequency2, devx-track-terraform
 ---
 

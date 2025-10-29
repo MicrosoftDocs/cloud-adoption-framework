@@ -4,7 +4,7 @@ description: Expand Azure governance, security, and compliance baseline for depl
 author: lanicolas
 ms.author: lanicola
 ms.date: 04/29/2022
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: e2e-hybrid
 ---
 

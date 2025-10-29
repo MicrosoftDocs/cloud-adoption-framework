@@ -4,7 +4,7 @@ description: Expand governance capabilities to hybrid, multicloud, and edge depl
 author: stephen-sumner
 ms.author: pnp
 ms.date: 05/07/2024
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: e2e-hybrid, think-tank
 ---
 

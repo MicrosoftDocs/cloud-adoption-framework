@@ -4,7 +4,7 @@ description: Overview of Azure Landing Zone and platform services automation con
 author: stephen-sumner
 ms.author: pnp
 ms.date: 01/17/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: internal
 ---
 

@@ -4,7 +4,7 @@ description: Learn design considerations and recommendations on cost governance 
 author: mrhoads
 ms.author: mirhoads
 ms.date: 09/22/2022
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: e2e-hybrid, think-tank
 ---
 

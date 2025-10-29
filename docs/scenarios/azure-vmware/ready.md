@@ -4,7 +4,7 @@ description: Learn about how Microsoft Azure VMware Solution affects your Azure 
 author: stephen-sumner
 ms.author: pnp
 ms.date: 05/07/2024
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: e2e-azure-vmware, think-tank
 ---
 

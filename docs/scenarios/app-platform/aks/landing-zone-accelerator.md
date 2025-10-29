@@ -4,7 +4,7 @@ description: Learn how to deploy Azure Kubernetes Service (AKS) clusters using t
 author: stephen-sumner
 ms.author: pnp
 ms.date: 09/30/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ---
 
 # Azure Kubernetes Services (AKS) landing zone accelerator

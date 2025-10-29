@@ -4,7 +4,7 @@ description: Learn about the design principles that influence the design areas f
 author: jtracey93
 ms.author: jatracey
 ms.date: 09/03/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: think-tank
 ---
 

@@ -4,7 +4,7 @@ description: Learn about security guidelines for Oracle workloads on Azure Virtu
 author: jessiehaessler
 ms.author: jhaessler
 ms.date: 06/24/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: e2e-oracle
 ---
 

@@ -4,7 +4,7 @@ description: Learn how to improve management and monitoring of Azure VMware Solu
 author: Prasad3017
 ms.author: pgandham
 ms.date: 08/04/2022
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: e2e-azure-vmware, think-tank
 ---
 

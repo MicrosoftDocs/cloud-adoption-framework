@@ -4,7 +4,7 @@ description: Learn about recommendations for tagging your Azure resources and as
 author: stephen-sumner
 ms.author: pnp
 ms.date: 07/01/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ---
 
 # Define your tagging strategy

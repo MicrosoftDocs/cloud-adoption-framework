@@ -4,7 +4,7 @@ description: AKS guidelines for Azure billing offers and Active Directory tenant
 author: stephen-sumner
 ms.author: pnp
 ms.date: 05/01/2021
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: think-tank, e2e-aks
 ---
 
