@@ -88,7 +88,7 @@ Setting reliability SLAs usually includes three steps: defining, measuring, and 
 
 Begin setting your SLA by defining what reliability means. All key stakeholders must agree on this definition. Ensure every key stakeholder is involved and buys in, especially if your downstream consumers come from different teams or different geographical regions and time zones.
 
-Your SLA needs to be carefully crafted. Involve your legal team if data consumers are external paid customers. For internal customers, your SLA definition should includ key areas like data promise, data quality, and a process to handle data incidents if the promise isn't met.
+Your SLA needs to be carefully crafted. Involve your legal team if data consumers are external paid customers. For internal customers, your SLA definition should include key areas like data promise, data quality, and a process to handle data incidents if the promise isn't met.
 
 ### Example SLA
 
@@ -113,7 +113,7 @@ Suppose Contoso's data team identifies key metrics from different areas to meet 
 
 |Metric|Purpose|
 |------|-----|
-|Spark cluster CPU and memory usage|To measure any performance bottle neck in the underlying infrastructure used to run data pipelines|
+|Spark cluster CPU and memory usage|To measure any performance bottleneck in the underlying infrastructure used to run data pipelines|
 |Pipeline total run time in minutes| To measure if a pipeline takes more time than expected to run|
 |Pipeline failure and success rates| To measure how many pipelines fail or succeed|
 |Data quality metrics (downstream)| To ensure the data delivered by the data pipeline meets expectations|
@@ -135,7 +135,7 @@ SLOs can depend on:
 
 #### SLO example
 
-Suppose Contoso's data team delivers sales data across seven different United States regions. 210 data sets are delivered every calendar year across all regions, and only 200 data sets are complete and meet the SLA. These successful deliveries translate to a 95.99% success rate for that year. The 10 failed (incomplete) data sets occured at an acceptable error rate of 4%.
+Suppose Contoso's data team delivers sales data across seven different United States regions. 210 data sets are delivered every calendar year across all regions, and only 200 data sets are complete and meet the SLA. These successful deliveries translate to a 95.99% success rate for that year. The 10 failed (incomplete) data sets occurred at an acceptable error rate of 4%.
 
 The data team creates a monitoring dashboard that tracks aggregated SLIs to monitor this SLO over a period of 30 days. Both the data team and sales team get notified when target success rate isn't achieved.
 
@@ -149,4 +149,4 @@ Data observability is an essential part of the DataOps framework and should be c
 | **Stage 4 (Advanced)** | Dashboards track SLO, SLI, and SLA across the most critical data observability components. Platform monitoring data and pipeline performance monitoring data are correlated using automation. | Data incident tools monitor and measure TTD and TTR metrics for any incidents. | Data quality is maintained through a framework that's usable across multiple data products and tracked using dashboards.| Data lineage includes data quality tags and is connected to data discoverability. | Data lineage is now connected to data discoverability and includes data quality tags as well. |
 | **Stage 3 (Evolving)** | Well defined SLO, SLI, and SLA cover most critical almost all components for Data Observability. Data incidents are managed with specialized tools. | Platform monitoring data is correlated with data pipeline performance monitoring using some amount of automation. | Data quality checks are well defined and mapped to custom metrics. | Data lineage has matured to contain enough metadata needed for decision making. | Data discoverability is achieved using specialized data catalog tools. |
 | **Stage 2 (Planning)** | An initial draft of SLO, SLI, and SLA covers the most critical components needed for data observability. Platform monitoring data is centralized and there is a unified view of the entire data environment. All data incident management is manual. | Data pipeline performance metrics are defined and measured. | Data quality checks exist, but no standard metric is defined, measured, and visualized. | Data lineage is limited to single data product or isn't tracked. | Data discoverability is achieved but no sophisticated tools are used. |
-| **Stage 1 Learning** | Every critical platform service (provider-managed and self-managed) is monitoried in the data landscape. | Pipeline monitoring is minimal. Failures trigger alerts, but have no insights into any possible cause. | Data quality tests can be run from the pipeline, but no metric is measured or tracked. | Data lineage doesn't exist. | Data discoverability doesn't exist. |
+| **Stage 1 (Learning)** | Every critical platform service (provider-managed and self-managed) is monitored in the data landscape. | Pipeline monitoring is minimal. Failures trigger alerts, but have no insights into any possible cause. | Data quality tests can be run from the pipeline, but no metric is measured or tracked. | Data lineage doesn't exist. | Data discoverability doesn't exist. |
