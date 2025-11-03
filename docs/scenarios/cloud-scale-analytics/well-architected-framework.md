@@ -14,7 +14,7 @@ The [Plan methodology of this scenario](./plan.md) outlines a process for you to
 
 ## Cost optimization
 
-It's critical to architect with the right tool for the right solution in mind. This principal can help you analyze spend over time. It can also help you analyze your ability to scale out versus scale in when needed. For your data workloads, consider reusability, on-demand scaling, reduced data duplication, and take advantage of the Azure Advisor service.
+It's critical to architect with the right tool for the right solution in mind. This principle can help you analyze spend over time. It can also help you analyze your ability to scale out versus scale in when needed. For your data workloads, consider reusability, on-demand scaling, reduced data duplication, and take advantage of the Azure Advisor service.
 
 For more information, see [Design review checklist for Cost Optimization](/azure/well-architected/cost-optimization/checklist).
 
