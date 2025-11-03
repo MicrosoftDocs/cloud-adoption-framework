@@ -4,7 +4,7 @@ description: Learn about the sovereign landing zone variant of the Azure landing
 author: pikestel
 ms.author: pikestel
 ms.date: 02/27/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: internal
 ---
 # Sovereignty considerations for Azure landing zones

@@ -4,7 +4,7 @@ description: Learn how this design area can improve business continuity and disa
 author: moisesjgomez
 ms.author: mgomezcortez
 ms.date: 08/24/2022
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: think-tank, e2e-avd
 ---
 

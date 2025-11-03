@@ -4,7 +4,7 @@ description: Use this enterprise-scale scenario to improve business continuity a
 author: sonmitt
 ms.author: soniyamittal
 ms.date: 10/18/2022
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom:
   - think-tank
   - e2e-azure-vmware

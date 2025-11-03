@@ -4,7 +4,7 @@ description: Choose the right Azure regions for your workloads to ensure complia
 author: stephen-sumner
 ms.author: pnp
 ms.date: 06/18/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ---
 
 # Select Azure regions

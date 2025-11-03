@@ -4,7 +4,7 @@ description: As an IT Professional, I want to find guidance in the Cloud Adoptio
 author: Rajani-Janaki-Ram
 ms.author: padmalathas
 ms.date: 09/15/2022
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: think-tank
 ---
 

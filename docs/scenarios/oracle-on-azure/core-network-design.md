@@ -4,7 +4,7 @@ description: Learn about Oracle Database@Azure core network concepts, key design
 author: moisesjgomez
 ms.author: mgomezcortez
 ms.date: 02/08/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: e2e-oracle
 ---
 

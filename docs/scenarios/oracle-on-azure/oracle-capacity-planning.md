@@ -4,7 +4,7 @@ description: Learn how capacity planning can help you select the appropriate inf
 author: jessiehaessler
 ms.author: jhaessler
 ms.date: 06/24/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: UpdateFrequency2, e2e-oracle
 ---
 

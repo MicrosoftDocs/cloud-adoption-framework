@@ -4,7 +4,7 @@ description: Learn about key design considerations and recommendations for gover
 author: jhajduk-microsoft
 ms.author: temandin
 ms.date: 7/24/2024
-ms.topic: conceptual
+ms.topic: concept-article
 ---
 
 # Governance and compliance considerations for Red Hat Enterprise Linux on Azure

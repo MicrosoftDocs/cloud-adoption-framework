@@ -4,7 +4,7 @@ description: Learn how a landing zone provides the basic building block of any c
 author: jtracey93
 ms.author: jatracey
 ms.date: 07/01/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: internal
 ---
 

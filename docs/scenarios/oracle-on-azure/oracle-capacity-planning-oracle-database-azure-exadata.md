@@ -4,7 +4,7 @@ description: Plan and configure the appropriate infrastructure capacity for Orac
 author: gkayali
 ms.author: guherk
 ms.date: 08/13/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: e2e-oracle
 ---
 

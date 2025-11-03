@@ -4,7 +4,7 @@ description: Learn how to improve identity and access management for Azure Arc-e
 author: chintalavr
 ms.author: vchintala
 ms.date: 09/22/2022
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: e2e-hybrid, think-tank
 ---
 

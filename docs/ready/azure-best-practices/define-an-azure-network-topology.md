@@ -4,7 +4,7 @@ description: Learn about key considerations for designing network topologies in 
 author: jtracey93
 ms.author: jatracey
 ms.date: 08/25/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ---
 
 # Define an Azure network topology

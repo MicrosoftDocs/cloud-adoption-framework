@@ -4,7 +4,7 @@ description: Learn about design considerations and recommendations for identity 
 author: motasem13
 ms.author: mohamad
 ms.date: 01/06/2023
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: internal
 ---
 

@@ -1,5 +1,5 @@
 # Engagement Optimization Guidelines
-Enusre the content is useful and actionable from the introduction to the end. If the content is not adding value to help customer make the right decision or undestand how to align with best practices, then remove it.
+Ensure the content is useful and actionable from the introduction to the end. If the content is not adding value to help customer make the right decision or understand how to align with best practices, then remove it.
 
 - Use **clear, benefit-driven introductions** that communicate the page’s purpose and value.
 - Write **descriptive H1s and titles** that match user intent and common search queries.

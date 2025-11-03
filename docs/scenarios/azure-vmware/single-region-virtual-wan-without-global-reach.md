@@ -4,7 +4,7 @@ description: Learn how to configure network connectivity for a single-region Azu
 author: stephen-sumner
 ms.author: pnp
 ms.date: 10/16/2024
-ms.topic: conceptual
+ms.topic: concept-article
 ms.service: caf
 ms.subservice: caf-scenario-vmware
 ms.custom: think-tank, e2e-azure-VMware

@@ -4,7 +4,7 @@ description: Explore the enterprise enrollment design area and how to apply it t
 author: stephen-sumner
 ms.author: pnp
 ms.date: 09/17/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: think-tank, e2e-avd
 ---
 

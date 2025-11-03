@@ -4,7 +4,7 @@ description: Comprehensive guide for post-migration workload optimization in Azu
 author: stephen-sumner
 ms.author: pnp
 ms.date: 08/01/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ---
 
 # Optimize workloads after migration

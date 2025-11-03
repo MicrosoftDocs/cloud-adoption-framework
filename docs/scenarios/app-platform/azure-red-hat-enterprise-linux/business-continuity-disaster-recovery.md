@@ -4,7 +4,7 @@ description: Learn how this design area can improve business continuity and disa
 author: terrymandin
 ms.date: 07/24/2024
 ms.author: temandin
-ms.topic: conceptual
+ms.topic: concept-article
 ---
 
 # Business continuity and disaster recovery considerations for Red Hat Enterprise Linux on Azure

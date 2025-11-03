@@ -4,7 +4,7 @@ description: Learn how to secure AI workloads using Azure AI platform services (
 author: stephen-sumner
 ms.author: ssumner
 ms.date: 04/30/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ---
 
 # Secure Azure platform services (PaaS) for AI

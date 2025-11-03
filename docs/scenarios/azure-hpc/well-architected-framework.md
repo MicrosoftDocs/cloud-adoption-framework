@@ -4,7 +4,7 @@ description: Learn how to use the Azure Well-Architected Framework architecture 
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
 ms.date: 04/02/2024
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: think-tank
 ---
 

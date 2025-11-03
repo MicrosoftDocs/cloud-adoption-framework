@@ -4,7 +4,7 @@ description: Learn about business continuity and disaster recovery (BCDR) for Or
 author: gkayali
 ms.author: guherk
 ms.date: 01/25/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: e2e-oracle
 ai-usage: ai-assisted
 --- 

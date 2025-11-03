@@ -4,7 +4,7 @@ description: Learn about the best practices, including data management and role-
 author: stephen-sumner
 ms.author: pnp
 ms.date: 01/31/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: e2e-data-management, think-tank
 ---
 

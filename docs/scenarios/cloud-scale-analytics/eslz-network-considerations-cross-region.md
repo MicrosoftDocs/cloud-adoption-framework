@@ -4,7 +4,7 @@ description: Learn cross-region connectivity for cloud-scale analytics landing z
 author: marvinbuss
 ms.author: mabuss
 ms.date: 11/27/2024
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: e2e-data-management, think-tank
 ---
 

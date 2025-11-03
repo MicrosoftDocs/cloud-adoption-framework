@@ -4,7 +4,7 @@ description: Learn about technical considerations that might affect your cloud s
 author: jfaurskov
 ms.author: janfaurs
 ms.date: 04/26/2024
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: e2e-oracle
 --- 
 

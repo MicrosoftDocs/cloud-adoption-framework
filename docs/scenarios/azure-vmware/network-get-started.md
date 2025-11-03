@@ -4,7 +4,7 @@ description: Learn about architectures, solutions, and guides that can help you 
 author: sblair01
 ms.author: sablair
 ms.date: 05/31/2023
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: e2e-azure-vmware, think-tank
 ---
 # Prepare for connectivity for Azure VMware Solution

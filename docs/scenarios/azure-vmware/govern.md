@@ -4,7 +4,7 @@ description: Learn about how to extend your governance approach across the Azure
 author: stephen-sumner
 ms.author: pnp
 ms.date: 01/28/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: think-tank, e2e-azure-vmware
 ---
 

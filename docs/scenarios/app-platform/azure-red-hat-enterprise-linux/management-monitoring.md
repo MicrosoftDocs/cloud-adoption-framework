@@ -3,7 +3,7 @@ title: Management and monitoring considerations for Red Hat Enterprise Linux on 
 description: Learn about key design considerations and recommendations for management and monitoring in RHEL on Azure infrastructure.
 author: heisthesisko
 ms.author: joelsisk
-ms.topic: conceptual
+ms.topic: concept-article
 ms.date: 07/24/2024
 ms.custom: sfi-image-nochange
 ---

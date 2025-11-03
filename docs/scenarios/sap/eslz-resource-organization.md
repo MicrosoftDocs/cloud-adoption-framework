@@ -4,7 +4,7 @@ description: Evaluate how resources will be organized when deploying SAP to Azur
 author: PmeshramPM
 ms.author: pameshra
 ms.date: 3/12/2021
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: think-tank, e2e-sap
 ---
 

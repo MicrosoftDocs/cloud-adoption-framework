@@ -4,7 +4,7 @@ description: Learn about best practices for data science projects with cloud-sca
 author: abdale
 ms.author: hamoodaleem
 ms.date: 05/07/2024
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: e2e-data-management, think-tank
 ---
 

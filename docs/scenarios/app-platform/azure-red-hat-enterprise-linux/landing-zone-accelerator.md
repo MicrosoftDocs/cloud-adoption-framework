@@ -4,7 +4,7 @@ description: Learn how to use the Red Hat Enterprise Linux (RHEL) landing zone a
 author: hannah-leland
 ms.author: temandin
 ms.date: 7/24/2024
-ms.topic: conceptual
+ms.topic: concept-article
 ---
 
 # Azure Red Hat Enterprise Linux landing zone accelerator

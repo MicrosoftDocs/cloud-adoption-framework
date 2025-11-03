@@ -4,7 +4,7 @@ description: Set up identity in Azure
 author: stephen-sumner
 ms.author: pnp
 ms.date: 08/27/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ---
 
 

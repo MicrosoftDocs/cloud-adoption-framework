@@ -4,7 +4,7 @@ description: Learn how to create a cloud adoption workload migration plan for Or
 author: jfaurskov
 ms.author: janfaurs
 ms.date: 04/26/2024
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: e2e-oracle
 --- 
 

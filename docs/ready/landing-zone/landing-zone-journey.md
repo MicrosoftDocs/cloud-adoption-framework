@@ -4,7 +4,7 @@ description: Learn how to deploy and scale out a cloud environment to ultimately
 author: stephen-sumner
 ms.author: pnp
 ms.date: 11/28/2024
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: internal
 ---
 

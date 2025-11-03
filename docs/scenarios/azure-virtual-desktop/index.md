@@ -4,7 +4,7 @@ description: Use the Cloud Adoption Framework best practices to migrate end-user
 author: stephen-sumner
 ms.author: pnp
 ms.date: 07/19/2023
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: think-tank, e2e-avd
 ---
 

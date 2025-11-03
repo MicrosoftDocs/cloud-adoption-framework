@@ -4,7 +4,7 @@ description: Create accurate Azure cost estimates by planning architectures and 
 author: stephen-sumner
 ms.author: pnp
 ms.date: 07/15/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ---
 
 # Plan your Azure environment for cost estimation

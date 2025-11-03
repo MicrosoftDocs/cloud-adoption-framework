@@ -4,7 +4,7 @@ description: Use this guidance to update already-deployed Azure landing zone cus
 author: DaFitRobsta
 ms.author: Rolightn
 ms.date: 01/17/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: internal, devx-track-bicep, devx-track-terraform, UpdateFrequency2
 ---
 

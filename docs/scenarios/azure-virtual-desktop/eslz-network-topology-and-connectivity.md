@@ -4,7 +4,7 @@ description: Use the Cloud Adoption Framework for Azure to identify networking c
 author: jcoyne-msft
 ms.author: pnp
 ms.date: 10/09/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ---
 
 # Azure Virtual Desktop network topology and connectivity design guidance

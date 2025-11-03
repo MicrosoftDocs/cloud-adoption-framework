@@ -4,7 +4,7 @@ description: Learn key design considerations and recommendations for security an
 author: nataliakon
 ms.author: pnp
 ms.date: 05/02/2022
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: think-tank, e2e-avd
 ---
 

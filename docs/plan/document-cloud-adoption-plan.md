@@ -4,7 +4,7 @@ description: Learn how to document your cloud adoption plan to ensure alignment,
 author: stephen-sumner
 ms.author: pnp
 ms.date: 07/15/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ---
 
 # Document your cloud adoption plan

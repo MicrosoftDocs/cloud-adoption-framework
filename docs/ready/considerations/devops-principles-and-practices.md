@@ -4,7 +4,7 @@ description: Design area guidance for DevOps considerations in Azure Landing Zon
 author: alguadam
 ms.author: alguadam
 ms.date: 06/24/2022
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: internal
 ---
 

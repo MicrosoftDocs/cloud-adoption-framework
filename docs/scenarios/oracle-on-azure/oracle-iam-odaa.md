@@ -5,7 +5,7 @@ author: sihbher
 ms.author: gereyeso
 ms.reviewer: janfaurs
 ms.date: 09/01/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: e2e-oracle
 ---
 

@@ -4,7 +4,7 @@ description: Learn how to establish operations management for containerized work
 author: stephen-sumner
 ms.author: pnp
 ms.date: 01/15/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: think-tank, e2e-aks
 ---
 

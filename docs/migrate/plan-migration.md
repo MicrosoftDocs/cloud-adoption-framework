@@ -4,7 +4,7 @@ description: Learn how to create migration plans that define workload sequencing
 author: stephen-sumner
 ms.author: pnp
 ms.date: 08/01/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ---
 
 # Plan your migration

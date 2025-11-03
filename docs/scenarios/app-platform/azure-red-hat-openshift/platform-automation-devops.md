@@ -4,7 +4,7 @@ description: Design recommendations and considerations for Azure Red Hat OpenShi
 author: stephen-sumner
 ms.author: pnp
 ms.date: 08/16/2022
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: think-tank, e2e-aks, linux-related-content
 ---
 

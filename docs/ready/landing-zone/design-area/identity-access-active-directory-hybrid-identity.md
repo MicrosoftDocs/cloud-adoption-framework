@@ -3,7 +3,7 @@ title: Hybrid identity with Active Directory and Microsoft Entra ID in Azure lan
 description: Learn about considerations and recommendations to design and implement Microsoft Entra ID and hybrid identity for Azure landing zones.
 author: soderholmd
 ms.author: dsoderholm
-ms.topic: conceptual
+ms.topic: concept-article
 ms.date: 10/15/2025
 ---
 

@@ -4,7 +4,7 @@ description: Learn more about the shared responsibility model, and learn about s
 author: PmeshramPM
 ms.author: pameshra
 ms.date: 03/01/2021
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: think-tank, e2e-sap
 ---
 

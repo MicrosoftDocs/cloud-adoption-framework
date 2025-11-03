@@ -4,7 +4,7 @@ description: Learn about design considerations and recommendations for Azure Red
 author: SriniPadala
 ms.author: srpadala
 ms.date: 08/19/2022
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: think-tank, e2e-aro, linux-related-content
 ---
 
@@ -42,7 +42,7 @@ Consider the following factors:
   - Container Insights can be enabled by onboarding the cluster to Azure Arc-enabled Kubernetes.
   - [OpenShift logging](https://docs.openshift.com/container-platform/4.10/logging/cluster-logging.html) deploys log aggregators, storage, and visualization components.
 - Automate the application delivery process through DevOps practices and CI/CD solutions, such as Pipelines/GitOps provided by OpenShift Container Platform.
-- Define ClusterAutoScaler and MachineAutoScaler to scale machines when your cluster runs out of resources to support more deployments.
+- Define `ClusterAutoscaler` and `MachineAutoscaler` resource definitions to describe how to adjust your cluster when it runs low on resources so that you can support continued operations. [`ClusterAutoscaler`](https://docs.redhat.com/en/documentation/openshift_container_platform/latest/html/machine_management/applying-autoscaling#cluster-autoscaler-about_applying-autoscaling) considers resources of all nodes on the cluster, including control plane nodes. As you scale up the cluster's control plane nodes, you reduce the remaining capacity for auto scaling worker nodes.
 - Deploy machine health checks to automatically repair damaged machines in a machine pool.
 - Scale pods to meet demand using [horizontal pod autoscaler](https://docs.openshift.com/container-platform/4.10/nodes/pods/nodes-pods-autoscaling.html).
 - Use an alerting system to provide notifications when things need direct action: Container Insights [metric alerts](/azure/azure-monitor/containers/container-insights-metric-alerts) or in-built [Alerting UI](https://docs.openshift.com/container-platform/4.10/monitoring/managing-alerts.html).

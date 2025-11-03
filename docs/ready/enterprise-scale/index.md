@@ -4,7 +4,7 @@ description: Start with enterprise-scale landing zones using the Microsoft Cloud
 author: JefferyMitchell
 ms.author: jemitche
 ms.date: 02/27/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: think-tank
 ---
 

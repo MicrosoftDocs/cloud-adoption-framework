@@ -4,7 +4,7 @@ description: Learn how this design area can improve platform automation and DevO
 author: stephen-sumner
 ms.author: pnp
 ms.date: 02/22/2023
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: think-tank, e2e-avd
 ---
 

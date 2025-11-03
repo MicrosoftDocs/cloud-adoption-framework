@@ -4,7 +4,7 @@ description: Learn which of the two Terraform approaches is more suited to your 
 author: matt-FFFFFF
 ms.author: mawhi
 ms.date: 01/17/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: devx-track-terraform
 ---
 
