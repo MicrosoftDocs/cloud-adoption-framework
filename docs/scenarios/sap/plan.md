@@ -36,7 +36,7 @@ Several considerations should be included in those processes when planning for S
 
   - Separate and group any foundational assets on which the SAP deployment depends. These can later be replaced with more efficient Azure landing zone options.
 
-  - Group each dependant workload individually. Those workloads can each be considered independently during rationalization and migration efforts.
+  - Group each dependent workload individually. Those workloads can each be considered independently during rationalization and migration efforts.
 
 - **Asset rationalization:** Rationalization is one of the most important considerations for the financial plan. Think about the following with each group of assets:
 
