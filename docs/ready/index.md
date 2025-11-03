@@ -42,7 +42,7 @@ As you work through the Ready guide, think of your progress as a journey toward 
 Whether you’re starting fresh (Greenfield) or modernizing an existing setup (Brownfield), the first step is to create the subscriptions that will host your resources. Implementing a new Azure landing zone environment based on best practices usually requires multiple subscriptions. You can create these subscriptions manually, programmatically, or by using automated vending modules:
 
 - [Create subscriptions manually](/azure/cost-management-billing/manage/create-subscription#create-a-subscription)
-- [Create subscriptions programatically](/azure/cost-management-billing/manage/programmatically-create-subscription)
+- [Create subscriptions programmatically](/azure/cost-management-billing/manage/programmatically-create-subscription)
 - [Subscription vending modules](/azure/cloud-adoption-framework/ready/landing-zone/design-area/subscription-vending)
 
 ### 2. Deploy platform landing zone components
