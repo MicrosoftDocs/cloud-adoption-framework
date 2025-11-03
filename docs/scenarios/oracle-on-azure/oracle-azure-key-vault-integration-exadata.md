@@ -30,92 +30,64 @@ Define your Azure Key Vault integration architecture based on security requireme
 
 4. **Deploy Azure Key Vault in same region as Oracle Exadata Database@Azure.** Colocation minimizes network latency for TDE operations and ensures optimal database startup and transaction processing performance. Cross-region key access introduces latency that can impact database availability during startup sequences and failover operations. Regional deployment also supports data residency requirements and compliance with geographic data sovereignty mandates.
 
-## Prepare environment and validate prerequisites
+## Implementation considerations
 
-Complete foundational requirements before implementing Azure Key Vault integration. Prerequisites validation prevents implementation delays and configuration failures.
+Review critical implementation factors before deploying Azure Key Vault integration. These considerations ensure successful integration and prevent common deployment challenges.
 
-1. **Confirm Oracle Exadata Database@Azure deployment completion and operational status.** Verify virtual machine cluster operates correctly in delegated subnet within Azure virtual network with administrative access to both Azure Portal and OCI Console. Working database deployment is required because Azure Key Vault integration builds upon existing Oracle infrastructure. For deployment verification procedures, see [Onboard Oracle Database@Azure](/azure/oracle/oracle-db/onboard-oracle-database).
+### Prerequisites and permissions
 
-2. **Provision Azure Key Vault and generate encryption keys following security best practices.** Create Azure Key Vault in same Azure region as Oracle Exadata Database@Azure deployment. Generate RSA encryption key (minimum 2048-bit) for TDE master key storage. Configure appropriate access policies and enable diagnostic logging for security monitoring. For complete provisioning procedures, see [Integrate Oracle Exadata Database@Azure with Azure Key Vault - Step 1](/azure/oracle/oracle-db/manage-oracle-transparent-data-encryption-azure-key-vault#step-1-create-and-prepare-a-key-vault).
+Successful Azure Key Vault integration requires operational Oracle Exadata Database@Azure deployment, appropriate Azure and Microsoft Entra ID permissions, and network connectivity planning. Plan for Azure Owner or Contributor role access, Microsoft Entra ID User Administrator permissions, and outbound connectivity for Azure Arc registration through NAT Gateway, Azure Firewall, or network virtual appliance. For complete prerequisites checklist and detailed requirements, see [Integrate Oracle Exadata Database@Azure with Azure Key Vault - Prerequisites](/azure/oracle/oracle-db/manage-oracle-transparent-data-encryption-azure-key-vault#prerequisites).
 
-3. **Establish outbound connectivity for Azure Arc registration.** Configure outbound connectivity to Azure public endpoints through Azure NAT Gateway, Azure Firewall, or network virtual appliance. Oracle Identity Connector requires Microsoft Entra ID public endpoint access during initial setup for Azure Arc agent authentication and registration. Without connectivity, Oracle Identity Connector creation fails and prevents Azure Key Vault integration. For connectivity requirements, see [Azure Arc network requirements](/azure/azure-arc/servers/network-requirements).
+### Private endpoint connectivity considerations
 
-4. **Verify Azure permissions for identity and resource management.** Ensure Azure Owner or Contributor role on subscription or resource group where Key Vault resides. Confirm Microsoft Entra ID User Administrator role permissions for creating security groups and managing service principals. Insufficient permissions cause Oracle Identity Connector setup failures requiring administrative intervention. For detailed permission requirements, see [Integrate Oracle Exadata Database@Azure with Azure Key Vault - Prerequisites](/azure/oracle/oracle-db/manage-oracle-transparent-data-encryption-azure-key-vault#prerequisites).
-
-## Implement private endpoint connectivity (optional)
-
-Configure private endpoint connectivity when security requirements mandate network traffic isolation through Azure Private Link. This configuration eliminates internet exposure for TDE key operations.
+Private endpoint connectivity through Azure Private Link eliminates internet exposure for TDE key operations and meets zero-trust network requirements. This configuration requires advanced networking features enabled in your Azure region, split DNS configuration on both Azure and OCI sides, and Private Link scope setup for Azure Arc when requiring private Arc connectivity. Private Link is mandatory for Managed HSM deployments and recommended for all production environments with stringent security requirements.
 
 > [!IMPORTANT]
-> Private endpoint connectivity requires advanced networking features and additional DNS configuration. Follow official Microsoft procedures for complete implementation:
+> Private endpoint implementation requires advanced networking features and complex DNS configuration. Verify regional support before implementation and follow official procedures:
 > - [Integrate Key Vault with Azure Private Link](/azure/key-vault/general/private-link-service)
 > - [Use Azure Private Link to securely connect servers to Azure Arc](/azure/azure-arc/servers/private-link-security)  
 > - [Oracle Database@Azure DNS setup](https://techcommunity.microsoft.com/blog/fasttrackforazureblog/oracle-databaseazure-dns-setup/4304513)
+> - [Network planning for Oracle Database@Azure](/azure/oracle/oracle-db/oracle-database-network-plan#advanced-networking-features)
 
-1. **Verify advanced networking feature availability in your Azure region.** Confirm your region supports advanced networking for Oracle Database@Azure before implementing private endpoint connectivity. Attempting implementation without advanced networking features results in deployment failures. For feature availability verification, see [Network planning for Oracle Database@Azure](/azure/oracle/oracle-db/oracle-database-network-plan#advanced-networking-features).
+### Identity and access management integration
 
-2. **Configure Azure Key Vault private endpoint with DNS integration.** Establish private endpoint for Azure Key Vault ensuring DNS resolution works correctly from Oracle Exadata Database@Azure delegated subnet. Private endpoint setup requires DNS configuration on both Azure and OCI sides following split DNS model. For implementation procedures, see [Integrate Key Vault with Azure Private Link](/azure/key-vault/general/private-link-service).
+Oracle Identity Connector enables secure communication between Oracle Exadata Database@Azure and Azure Key Vault through Azure Arc-enabled servers with managed identity authentication. The connector automatically registers database virtual machines as Azure Arc resources and creates system-assigned managed identities for each database node. Implement group-based RBAC approach using Microsoft Entra ID security groups with Key Vault Crypto Officer and Key Vault Reader roles to simplify permission management across multiple database nodes and support future scalability.
 
-3. **Configure Azure Arc Private Link scope (when requiring private Arc connectivity).** Set up Private Link scope and private endpoint for Azure Arc if Oracle Identity Connector requires private connectivity. Ensure DNS resolution properly configured and endpoints reachable from Oracle Exadata Database@Azure. For configuration procedures, see [Use Azure Private Link to securely connect servers to Azure Arc](/azure/azure-arc/servers/private-link-security).
+For complete technical procedures including token generation, connector creation, RBAC configuration, and permission validation, see [Integrate Oracle Exadata Database@Azure with Azure Key Vault - Steps 2-3](/azure/oracle/oracle-db/manage-oracle-transparent-data-encryption-azure-key-vault#step-2-configure-microsoft-entra-id-permissions-for-key-vault-access).
 
-4. **Validate DNS configuration follows Oracle Database@Azure split DNS requirements.** Oracle Database@Azure requires DNS configuration on both Azure and OCI sides. Verify private endpoint DNS resolution works correctly from delegated subnet where Oracle Exadata Database@Azure resides. For DNS setup guidance, see [Oracle Database@Azure DNS setup](https://techcommunity.microsoft.com/blog/fasttrackforazureblog/oracle-databaseazure-dns-setup/4304513).
+### Database configuration approach
 
-## Configure Oracle Identity Connector and Azure Arc integration
+Azure Key Vault integration follows cluster-first configuration pattern where VM cluster enablement precedes individual database configuration. Cluster-level enablement installs required Oracle libraries without automatically switching existing databases, allowing gradual migration from Oracle Wallet to Azure Key Vault. This approach prevents configuration failures, ensures consistent functionality across database instances, and supports coexistence of both key management methods during transition periods.
 
-Establish Oracle Identity Connector to enable secure communication between Oracle Exadata Database@Azure and Azure Key Vault through Azure Arc-enabled servers. This connector automatically registers database virtual machines as Azure Arc resources with managed identity authentication.
+Configure new databases with Azure Key Vault from creation by selecting appropriate vault and key during provisioning. Migrate existing databases from Oracle Wallet through online re-encryption process that doesn't require database shutdown. Note that migration from Azure Key Vault back to Oracle Wallet isn't supported through OCI Console or API, making this architectural decision effectively permanent.
 
-> [!TIP]
-> For complete technical procedures including token generation, connector creation, and permission configuration, see [Integrate Oracle Exadata Database@Azure with Azure Key Vault - Step 3](/azure/oracle/oracle-db/manage-oracle-transparent-data-encryption-azure-key-vault#step-3-set-up-the-oracle-identity-connector).
+For detailed implementation procedures including cluster enablement, vault registration, database configuration, and validation steps, see [Integrate Oracle Exadata Database@Azure with Azure Key Vault - Steps 4-7](/azure/oracle/oracle-db/manage-oracle-transparent-data-encryption-azure-key-vault#step-4-enable-azure-key-vault-integration-on-vm-cluster).
 
-1. **Generate Azure access token and configure Oracle Identity Connector.** Obtain Azure access token using account with Owner or Contributor permissions. Create Oracle Identity Connector in OCI Console providing Azure tenant ID and access token. For private endpoint configurations, specify Private Link scope name to enable private Arc connectivity. The connector automatically installs Azure Arc agents on database virtual machines and registers them as Azure Arc-enabled servers.
+## Operational management strategy
 
-2. **Verify Azure Arc server registration and managed identity creation.** Confirm Oracle Exadata Database@Azure virtual machines appear as Azure Arc-enabled servers in Azure Portal under Azure Arc → Servers. Each database node receives system-assigned managed identity for Azure service authentication. Verify all expected virtual machines successfully registered before proceeding with permission configuration.
+Establish operational procedures for key lifecycle management, monitoring, and disaster recovery aligned with organizational security policies and compliance requirements.
 
-3. **Configure Azure RBAC permissions for Key Vault access.** Create Microsoft Entra ID security group and assign Key Vault Crypto Officer and Key Vault Reader roles at Key Vault scope. Add Azure Arc server managed identity principal IDs to security group to grant Key Vault access permissions. This group-based approach simplifies permission management across multiple database nodes. For RBAC configuration procedures, see [Integrate Oracle Exadata Database@Azure with Azure Key Vault - Step 2](/azure/oracle/oracle-db/manage-oracle-transparent-data-encryption-azure-key-vault#step-2-configure-microsoft-entra-id-permissions-for-key-vault-access).
+### Key lifecycle management
 
-## Enable Azure Key Vault integration and configure databases
+Implement key rotation schedules aligned with security policies (typically annual or event-driven) and always initiate rotations through OCI Console or API rather than directly in Azure Key Vault. This Oracle-side initiation ensures database awareness of new key versions and prevents TDE operation failures. Retain old encryption key versions for duration of backup retention periods to enable point-in-time recovery from long-term backups. Azure Key Vault supports key versioning enabling disabled rather than deleted old versions until no longer needed.
 
-Complete Azure Key Vault integration enabling at cluster level and configure individual databases for TDE key management. These configuration steps apply to both public and private endpoint connectivity models.
+### Monitoring and observability
 
-> [!TIP]
-> For detailed step-by-step procedures, see [Integrate Oracle Exadata Database@Azure with Azure Key Vault](/azure/oracle/oracle-db/manage-oracle-transparent-data-encryption-azure-key-vault#step-4-enable-azure-key-vault-integration-on-vm-cluster).
+Enable Azure Key Vault diagnostic logging with Log Analytics workspace integration to monitor wrap/unwrap key operations from Azure Arc server managed identities. Configure alerts for key access anomalies, permission changes, and Private Endpoint connection state changes for private endpoint configurations. Monitoring confirms successful database key access patterns and enables rapid detection of integration health issues.
 
-1. **Enable Azure Key Vault at VM cluster level before configuring databases.** Cluster-level enablement installs required Oracle library on all cluster virtual machines making Azure Key Vault available as key management option without automatically switching existing databases. This prevents individual database configuration failures and ensures consistent functionality across database instances. For enablement procedures, see [Integrate Oracle Exadata Database@Azure with Azure Key Vault - Step 4](/azure/oracle/oracle-db/manage-oracle-transparent-data-encryption-azure-key-vault#step-4-enable-azure-key-vault-integration-on-vm-cluster).
+### Disaster recovery planning
 
-2. **Register Azure Key Vault in OCI Console to establish service connection.** Registration creates association between Key Vault and Oracle Identity Connector enabling databases to discover and access encryption keys. Without registration, databases cannot authenticate with Azure Key Vault causing TDE operation failures. For registration procedures, see [Integrate Oracle Exadata Database@Azure with Azure Key Vault - Step 5](/azure/oracle/oracle-db/manage-oracle-transparent-data-encryption-azure-key-vault#step-5-register-the-key-vault-in-oci-optional-as-needed).
+Ensure disaster recovery sites can access encryption keys during failover scenarios by registering Key Vault with standby cluster's Oracle Identity Connector before Data Guard configuration. Test switchover and failover operations to validate standby database can independently open with Azure Key Vault keys. Store encryption keys and database backups in separate environments to minimize data compromise risk during disaster recovery scenarios.
 
-3. **Configure database TDE to use Azure Key Vault for new or existing databases.** For new databases, select Azure Key Vault as key management option during creation and choose registered vault and key. For existing databases, migrate from Oracle Wallet to Azure Key Vault through database encryption settings. Migration re-encrypts TDE wallet without database shutdown. For configuration procedures, see [Integrate Oracle Exadata Database@Azure with Azure Key Vault - Step 6](/azure/oracle/oracle-db/manage-oracle-transparent-data-encryption-azure-key-vault#step-6-configure-an-oracle-database-to-use-azure-key-vault).
+For detailed operational procedures, best practices, and troubleshooting guidance, see [Integrate Oracle Exadata Database@Azure with Azure Key Vault - Ongoing management and DR](/azure/oracle/oracle-db/manage-oracle-transparent-data-encryption-azure-key-vault#ongoing-management).
 
-4. **Validate database encryption configuration and Key Vault integration.** Verify database details page shows Azure Key Vault as key management method with correct key name. Perform standard database operations on encrypted tablespaces ensuring TDE operations execute transparently without errors. For validation procedures, see [Integrate Oracle Exadata Database@Azure with Azure Key Vault - Step 7](/azure/oracle/oracle-db/manage-oracle-transparent-data-encryption-azure-key-vault#step-7-verify-the-integration-and-security).
+## Common challenges and mitigation strategies
 
-## Establish operational management procedures
+Azure Key Vault integration challenges typically involve private endpoint connectivity, DNS resolution, Azure Arc registration, and permission configuration. Private endpoint implementations require careful attention to split DNS configuration across Azure and OCI environments, advanced networking feature enablement, and proper Private Link scope setup for Azure Arc connectivity.
 
-Implement standardized operational procedures for key lifecycle management, monitoring, and disaster recovery to maintain secure and reliable Azure Key Vault integration.
+Authorization errors typically result from incomplete RBAC role assignments or missing managed identity permissions. DNS resolution failures manifest as connection timeouts and require verification of private DNS zones with correct A records. Azure Arc registration issues often relate to token expiration, insufficient permissions, or Private Link connectivity problems.
 
-1. **Implement key rotation procedures aligned with security policies.** Establish key rotation schedules (typically annual or event-driven) and execute rotations through OCI Console or API rather than directly in Azure. Always initiate rotation from Oracle side coordinating with Azure to ensure database awareness of new key versions. For rotation procedures and best practices, see [Integrate Oracle Exadata Database@Azure with Azure Key Vault - Ongoing management](/azure/oracle/oracle-db/manage-oracle-transparent-data-encryption-azure-key-vault#ongoing-management).
-
-2. **Configure monitoring and alerting for key access and integration health.** Enable Azure Key Vault diagnostic logging and configure Log Analytics workspace integration. Monitor wrap/unwrap key operations from Azure Arc server managed identities to confirm successful database key access. For private endpoint configurations, configure alerts for Private Endpoint connection state changes and network interface health. For monitoring configuration, see [Monitor Azure Key Vault](/azure/key-vault/general/monitor-key-vault).
-
-3. **Plan disaster recovery considering key management dependencies.** Ensure disaster recovery sites can access encryption keys during failover scenarios by registering Key Vault with standby cluster's Oracle Identity Connector. Test switchover and failover operations to validate standby database can open with Azure Key Vault keys independently. For DR planning guidance, see [Integrate Oracle Exadata Database@Azure with Azure Key Vault - Disaster recovery](/azure/oracle/oracle-db/manage-oracle-transparent-data-encryption-azure-key-vault#disaster-recovery).
-
-4. **Maintain backup encryption key retention aligned with backup retention policies.** Retain old encryption key versions for duration of backup retention periods to enable point-in-time recovery from long-term backups. Store encryption keys and database backups in separate environments to minimize data compromise risk during disaster recovery scenarios. Don't immediately delete old key versions as they may be needed to restore historical backups.
-
-## Troubleshoot integration issues
-
-Address common Azure Key Vault integration issues focusing on private endpoint connectivity challenges unique to Oracle Exadata Database@Azure implementations.
-
-> [!TIP]
-> For comprehensive troubleshooting guidance including authorization errors, Azure Arc connectivity issues, and token expiration problems, see [Integrate Oracle Exadata Database@Azure with Azure Key Vault - Troubleshooting](/azure/oracle/oracle-db/manage-oracle-transparent-data-encryption-azure-key-vault#troubleshooting-common-problems).
-
-### Common integration challenges
-
-**Private endpoint DNS resolution failures**: Verify DNS zones (`privatelink.vaultcore.azure.net` and `vault.azure.net`) exist in OCI Private View with correct A records pointing to private endpoint IP address. Execute nslookup test from delegated subnet to confirm resolution. See [Private endpoint DNS configuration](/azure/private-link/private-endpoint-dns) and [Oracle Database@Azure DNS setup](https://techcommunity.microsoft.com/blog/fasttrackforazureblog/oracle-databaseazure-dns-setup/4304513).
-
-**Private endpoint connectivity timeouts**: Test network connectivity from delegated subnet to private endpoint IP address. Confirm private endpoint connection approved in Azure Portal. Validate OCI Private Views DNS zone configuration. See [Troubleshoot private endpoint connectivity](/azure/private-link/troubleshoot-private-endpoint-connectivity).
-
-**Azure Arc registration failures through private endpoint**: Configure Private Link scope for Azure Arc following Microsoft requirements. Verify DNS resolution for Azure Arc endpoints through private connectivity. Ensure Azure Arc private endpoint properly configured. See [Azure Arc Private Link configuration](/azure/azure-arc/servers/private-link-security).
-
-**Advanced networking prerequisite failures**: Confirm advanced networking enabled for Oracle Database@Azure following [Network planning for Oracle Database@Azure](/azure/oracle/oracle-db/oracle-database-network-plan#advanced-networking-features). Verify delegated subnet has available IP addresses for private endpoint network interface.
+For comprehensive troubleshooting procedures including diagnostic steps, resolution guidance, and preventive measures, see [Integrate Oracle Exadata Database@Azure with Azure Key Vault - Troubleshooting](/azure/oracle/oracle-db/manage-oracle-transparent-data-encryption-azure-key-vault#troubleshooting-common-problems).
 
 ## Next steps
 
