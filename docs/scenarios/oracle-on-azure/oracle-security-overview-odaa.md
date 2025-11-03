@@ -47,7 +47,7 @@ Data protection requires encryption at rest and comprehensive key management str
 
 1. **Integrate Azure Key Vault for Azure-native key management with private connectivity.** Azure Key Vault provides centralized TDE master encryption key storage within Azure security boundaries while maintaining compliance with Azure governance policies. Implementation requirements differ by database technology:
    - **Oracle Exadata Database@Azure** requires Private Endpoint connectivity, advanced networking features, and OCI Private DNS zone configuration. For complete implementation guidance including network setup, identity configuration, and validation procedures, see [Azure Key Vault integration for Oracle Exadata Database@Azure](oracle-akv-integration-exadata.md).
-   - **Oracle Autonomous Database@Azure** uses service principal authentication with public endpoint connectivity and automated Azure Active Directory integration. For step-by-step configuration procedures, see [Azure Key Vault integration for Oracle Autonomous Database@Azure](oracle-akv-integration-autonomous.md).
+
 
 1. **Implement Oracle Key Vault for on-premises style deployment when required.** Deploy [Oracle Key Vault on Azure](https://docs.oracle.com/en/solutions/deploy-key-vault-database-at-azure/index.html) when organizational requirements mandate traditional key management approaches with full control over the key management infrastructure. Oracle Key Vault requires separate licensing, manual installation, database integration configuration, and high availability setup. This option suits organizations with existing Oracle Key Vault investments or specific compliance requirements for self-managed key storage.
 
