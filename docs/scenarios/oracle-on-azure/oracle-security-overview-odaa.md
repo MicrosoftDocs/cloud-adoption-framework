@@ -83,18 +83,6 @@ Operational security requires rigorous key management, secure agent deployment, 
 
 1. **Implement workload isolation for security boundaries.** Deploy VM clusters in separate virtual networks to achieve security isolation at the workload level, especially when different teams access multiple databases on the same infrastructure. This isolation prevents lateral movement between environments and maintains clear security boundaries. For more information, see [Resource organization for Oracle Database@Azure](oracle-resource-organization-oracle-database-azure.md).
 
-### Defender for Cloud integration
-
-Consider the following recommendations for integrating Defender for Cloud with Oracle Exadata Database@Azure:
-
-- **Enable comprehensive threat protection.** Deploy [Microsoft Defender for servers](/azure/defender-for-cloud/defender-for-servers-introduction) on Azure Arc-enabled Oracle Database@Azure infrastructure. For more information, see [Defender for servers features and benefits](/azure/defender-for-cloud/defender-for-servers-overview). Optionally, integrate with [Microsoft Sentinel](/azure/sentinel/overview) for SIEM capabilities.
-
-- **Configure security baselines and compliance.** Use [Microsoft cloud security benchmark](/security/benchmark/azure/introduction) to complement Oracle security configurations. For more information, see [Establish a security baseline](/azure/well-architected/security/establish-baseline).
-
-- **Implement threat detection workflows.** Establish alert correlation processes by using [Defender workflow automation](/azure/defender-for-cloud/workflow-automation) and [managing security alerts](/azure/defender-for-cloud/managing-and-responding-alerts). Configure automated response playbooks for threat scenarios.
-
-- **Deploy vulnerability management.** Implement [Defender vulnerability assessment](/azure/defender-for-cloud/deploy-vulnerability-assessment-defender-vulnerability-management) with scheduling considerations for Oracle maintenance windows. For remediation guidance, see [Remediate machine vulnerability findings](/azure/defender-for-cloud/remediate-vulnerability-findings-vm).
-
 ## Next steps
 
 Implement the Oracle Database@Azure security framework through the following complementary guidance areas:

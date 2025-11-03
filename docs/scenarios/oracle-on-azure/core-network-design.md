@@ -54,7 +54,7 @@ When you design your network topology for Oracle Exadata Database@Azure, conside
 
 ### Azure Key Vault private endpoint considerations for Exadata deployments
 
-Oracle Exadata Database@Azure integration with Azure Key Vault for TDE key management requires Private Endpoint configuration and additional DNS setup. Plan delegated subnet sizing to accommodate the Key Vault Private Endpoint network interface in addition to database infrastructure requirements. The integration also requires creating two Private DNS zones (`privatelink.vaultcore.azure.net` and `vault.azure.net`) in the OCI Private View that matches your database VCN. For complete Azure Key Vault integration guidance including network prerequisites, see [Azure Key Vault integration for Oracle Exadata Database@Azure](oracle-akv-integration-exadata.md).
+Oracle Exadata Database@Azure integration with Azure Key Vault for TDE key management requires Private Endpoint configuration and additional DNS setup. Plan delegated subnet sizing to accommodate the Key Vault Private Endpoint network interface in addition to database infrastructure requirements. The integration requires creating the `privatelink.vaultcore.azure.net` Private DNS zone in the OCI Private View that matches your database VCN. For complete Azure Key Vault integration guidance including network prerequisites, see [Azure Key Vault integration for Oracle Exadata Database@Azure](oracle-akv-integration-exadata.md).
 
 ### Other guidance
 
