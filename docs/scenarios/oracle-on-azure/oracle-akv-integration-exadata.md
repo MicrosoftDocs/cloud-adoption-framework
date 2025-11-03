@@ -2,9 +2,8 @@
 title: Azure Key Vault Integration for Oracle Exadata Database@Azure
 description: Configure Azure Key Vault to manage TDE encryption keys for Oracle Exadata Database@Azure
 author: sihbher
-ms.author: sihbher
+ms.author: gereyeso
 ms.reviewer: sihbher
-ms.date: 2025-10-22
 ms.topic: conceptual
 ms.custom: e2e-oracle
 ---
@@ -125,4 +124,3 @@ Address configuration problems specific to private endpoint connectivity with Or
 - [Manage and monitor Oracle Database@Azure](oracle-manage-monitor-oracle-database-azure.md)
 - [Azure Key Vault best practices](/azure/key-vault/general/best-practices)
 - [Manage Oracle TDE with Azure Key Vault](/azure/oracle/oracle-db/manage-oracle-transparent-data-encryption-azure-key-vault)
-- [Azure Key Vault integration with Autonomous Database@Azure](oracle-akv-integration-autonomous.md)
