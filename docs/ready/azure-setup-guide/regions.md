@@ -57,7 +57,7 @@ Single-region deployments can limit scalability and resiliency. Multi-region str
     | Data residency & compliance | Meet legal and regulatory requirements. | Choose compliant regions; enforce with Azure Policy and Purview. |
     | Regional capacity limits | Avoid hitting quotas in one region. | Spread workloads across regions; monitor with Azure Resource Graph. |
     | Cost & resource efficiency | Optimize spend and resource use. | Run noncritical workloads in lower-cost regions; use Pricing Calculator and Cost Management. |
-    | Availability & disaster recovery | Improve resilience to outages. | Use active-active or active-passive setups; enable Site Recovery and GRS. |
+    | Availability & disaster recovery | Improve recoverability from outages and also design for resiliency. | Use active-active or active-passive setups; enable Site Recovery and GRS. |
 
     For more workload design information, see [Regions and availability zones](/azure/well-architected/reliability/regions-availability-zones).
 
