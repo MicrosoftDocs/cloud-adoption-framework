@@ -26,11 +26,11 @@ Companies can take advantage of GitHub's connectedness to the open-source commun
 
 GitHub makes it easy for organizations to share within their teams, which makes it faster to modernize and deploy the next application or workload. Companies can look to *InnerSource*, a key tenet of innovation, to borrow best practices like sharing and reuse, collaboration and communication, and more from the open-source community and apply them within their organization.
 
-From securing the open-source packages to the intellectual property that's written daily, securing the entire software supply chain should be a main priority for to every company. This goal requires advanced security technology that can be incorporated and automated throughout the entire lifecycle, and native GitHub capabilities like GitHub advanced security and GitHub Actions offer this type flexibility.
+From securing the open-source packages to the intellectual property that's written daily, securing the entire software supply chain should be a main priority for to every company. This goal requires advanced security technology that can be incorporated and automated throughout the entire lifecycle, and native GitHub capabilities like GitHub advanced security and GitHub Actions offer this type of flexibility.
 
 ## Take advantage of open-source assets
 
-Highly effective organizations recognize open-source software (OSS) as essential versus optional for modern software development. They engage with the developer communities on which they depend and use a secure platform to strategically invest in OSS. As a result, these organizations experience innovate quickly, outpace competitors, and cut costs while minimizing risk.
+Highly effective organizations recognize open-source software (OSS) as essential versus optional for modern software development. They engage with the developer communities on which they depend and use a secure platform to strategically invest in OSS. As a result, these organizations experience innovation quickly, outpace competitors, and cut costs while minimizing risk.
 
 OSS consists of packages, libraries, scripts, and dependencies that are incorporated into applications. OSS also includes thousands of open-source assets in the form of infrastructure as code (IaC), documentation, and guidance for well-defined Azure architectures. Microsoft, partners, vendors, customers, and individuals contribute these packages to the OSS community. You can find them in GitHub, and modify, reuse, and deploy them to a specific Azure environment.
 
