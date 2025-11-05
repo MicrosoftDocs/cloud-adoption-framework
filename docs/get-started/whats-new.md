@@ -4,6 +4,7 @@ description: Learn about recent updates to the Microsoft Cloud Adoption Framewor
 author: stephen-sumner
 ms.author: pnp
 ms.date: 11/05/2025
+ai-usage: ai-assisted
 ms.update-cycle: 180-days
 ms.topic: concept-article
 ms.custom: UpdateFrequency.5, historical
