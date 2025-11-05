@@ -124,7 +124,7 @@ When you set up your availability zones, use zone-redundant services for your in
 
 For more information about the availability zone architecture for SAP on Azure, see [SAP HA availability zones](/azure/virtual-machines/workloads/sap/sap-ha-availability-zones).
 
-It is important to ensure all Azure resources used in your workload are set up with Zone-redundant or across availability zones for zonal components. In order to assist in the process assign [Azure Policy Initiative for Zone Resilience](/azure/governance/policy/samples/built-in-initiatives#resilience) to intermediate Management Group. This ensures “start resilient & stay resilient” approach. The Zone Resilient built-in policies aim to:
+Ensure Azure resources in the workload use zone-redundant configurations or span availability zones for zonal components. Assign the [Azure Policy Initiative for Zone Resilience](/azure/governance/policy/samples/built-in-initiatives#resilience) to the intermediate management group to enforce a "start resilient & stay resilient" approach. The Zone Resilient built-in policies aim to:
 
 - Deliver clear and actionable information that assists in the design, planning, and automation of AZ-resilient deployments.
 - Detect: Audit subscriptions for non-compliance of these policies.
@@ -247,24 +247,24 @@ You can use the Azure Center for SAP solutions to take the following steps:
 
 Azure Center for SAP solutions provides these capabilities:
 
-**Guided SAP deployment**
+#### Guided SAP deployment
 
 Azure Center for SAP solutions automates the deployment of SAP S/4HANA systems on Azure. It provides a guided solution for deploying the infrastructure and automatically installs S/4HANA software.
 
-You provide minimal input and can choose the right type of deployment. The deployments are based on the latest best practices and reference architectures. You can get sizing recommendations to deploy the SAP system based on SAPS and database memory requirements. 
+You provide minimal input and can choose the right type of deployment. The deployments are based on the latest best practices and reference architectures. You can get sizing recommendations to deploy the SAP system based on SAPS and database memory requirements.
 
-**Registration of existing SAP systems**
+#### Registration of existing SAP systems
 
 If you're already running SAP systems on Azure or are in the process of a migration, you can use Azure Center for SAP solutions to integrate your existing systems by using a simple registration process. This registration process is supported for SAP S/4HANA and NetWeaver ABAP systems that run on Linux and Windows.
 
-**Intelligent SAP management**
+#### Intelligent SAP management
 
 Whether you're creating a new SAP system or registering an existing system, Azure Center for SAP solutions provides these benefits:
 
 - Quality checks, integrated with Azure Advisor, so you know when infrastructure and operating system configurations deviate from documented best practices and standards. These checks can save time during troubleshooting and increase system quality by prompting you to act before the deviations cause problems.
 - Ability to view SAP status and health across multiple SAP systems from a centralized tool. This capability enables you to quickly identify problems that affect SAP systems and their components.
 - Ability to stop and start an SAP system directly from Azure.
-- Ability to view post-deployment costs at the SAP SID level. 
+- Ability to view post-deployment costs at the SAP SID level.
 - Integration with [Azure Monitor for SAP solutions](/azure/virtual-machines/workloads/sap/monitor-sap-on-azure). This integration provides technical monitoring and enables you to correlate the telemetry of the SAP system with the telemetry of the OS, DBMS, and underlying Azure infrastructure.
 - Ability to search across your SAP systems based on an SID by using [Azure Resource Graph](/azure/governance/resource-graph/overview). This capability makes it easier to discover which Azure resources are part of the SAP landscape. Resource Graph is an Azure service that provides efficient resource exploration by enabling you to query at scale across subscriptions.
 

@@ -26,29 +26,29 @@ During the Manage phase of your cloud adoption journey, you should have a robust
 
 ### Azure facilitation
 
-- [Microsoft Defender XDR](/defender-xdr/advanced-hunting-overview) provides advanced threat hunting across multiple domains, like endpoints, cloud apps, and identity. 
+- [Microsoft Defender XDR](/defender-xdr/advanced-hunting-overview) provides advanced threat hunting across multiple domains, like endpoints, cloud apps, and identity.
 
 ## Managing incident preparedness and response
 
-- **Incident preparedness:** 
+- **Incident preparedness:**
 
-    - Implement a security information and event management (SIEM) and security orchestration, automation, and response (SOAR) solution to augment your infrastructure monitoring and alerting systems to detect and respond to security incidents.
+  - Implement a security information and event management (SIEM) and security orchestration, automation, and response (SOAR) solution to augment your infrastructure monitoring and alerting systems to detect and respond to security incidents.
 
-    - Proactively scan your cloud systems for vulnerabilities. Using a vulnerability scanner that can be integrated with a SIEM system consolidates security data from across your environment, which helps you efficiently detect and respond to multiple types of security risks and incidents.
+  - Proactively scan your cloud systems for vulnerabilities. Using a vulnerability scanner that can be integrated with a SIEM system consolidates security data from across your environment, which helps you efficiently detect and respond to multiple types of security risks and incidents.
 
-    - Increase the depth of your visibility into security risks in your environment by implementing an extended detection and response (XDR) solution. Feeding this data into your SIEM system unifies security monitoring into a single pane of glass and optimizes your [security operations](./teams-roles.md) team's efficiency.
+  - Increase the depth of your visibility into security risks in your environment by implementing an extended detection and response (XDR) solution. Feeding this data into your SIEM system unifies security monitoring into a single pane of glass and optimizes your [security operations](./teams-roles.md) team's efficiency.
 
-- **Incident response planning:** Modernizing your observability platform is essential for incident detection. It's also the foundation for maintaining your incident response plan. Your incident response plan must be a living document that's updated regularly. It needs to stay up to date with your threat hunting and detection engineering efforts and with publicly available risk information like the [MITRE ATT&CK](https://attack.mitre.org/) knowledge base. 
+- **Incident response planning:** Modernizing your observability platform is essential for incident detection. It's also the foundation for maintaining your incident response plan. Your incident response plan must be a living document that's updated regularly. It needs to stay up to date with your threat hunting and detection engineering efforts and with publicly available risk information like the [MITRE ATT&CK](https://attack.mitre.org/) knowledge base.
 
   In addition to maintaining your incident response plans, you also need to have fully developed incident response and disaster recovery plans.
 
-- **Business continuity and disaster recovery:** Develop and test disaster recovery plans to ensure that your cloud environment is resilient and can quickly recover from incidents. Include backup and recovery strategies that support business continuity. In many cases, individual workloads in your environment have unique recovery targets and processes, so having workload-based plans, rather than a single plan that covers all facets of the business, is a good strategy. Refer to the Well-Architected Framework [disaster recovery guide](/azure/well-architected/reliability/disaster-recovery) for workload-focused guidance on this topic.
+- **Business continuity and disaster recovery:** Develop and test disaster recovery plans to improve recoverability and verify rapid restoration of normal operations after incidents. Pair those plans with resilient architecture that withstands faults and continues operating during localized infrastructure issues. Include backup and recovery strategies that support business continuity. Many individual workloads have unique recovery targets and processes, so adopt workload-specific plans rather than a single all-encompassing plan. Refer to the Well-Architected Framework [disaster recovery guide](/azure/well-architected/reliability/disaster-recovery) for workload-focused guidance on recovery while you separately design for resiliency.
 
 ### Azure facilitation
 
 - [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) offers plans that monitor and protect many workload resources, like [servers](/azure/defender-for-cloud/plan-defender-for-servers-select-plan), [storage](/azure/defender-for-cloud/defender-for-storage-introduction), [containers](/azure/defender-for-cloud/defender-for-containers-introduction), [SQL databases](/azure/defender-for-cloud/quickstart-enable-database-protections), and [DNS](/azure/defender-for-cloud/defender-for-dns-introduction). These plans enable you to discover deep insights that you might otherwise be unable to find with your existing monitoring solution.
 
-    - Defender for Servers includes [Microsoft Defender Vulnerability Management](/azure/defender-for-cloud/deploy-vulnerability-assessment-defender-vulnerability-management) for vulnerability scanning against your Azure-based or Azure Arc-enabled VMs.
+  Defender for Servers includes [Microsoft Defender Vulnerability Management](/azure/defender-for-cloud/deploy-vulnerability-assessment-defender-vulnerability-management) for vulnerability scanning against your Azure-based or Azure Arc-enabled VMs.
 
 - [Microsoft Sentinel](/azure/sentinel/overview) is the Microsoft cloud-native SIEM and SOAR solution. You can use it as a standalone solution. It also integrates with Microsoft Defender to provide a [unified security operations platform](/azure/sentinel/microsoft-sentinel-defender-portal).
 

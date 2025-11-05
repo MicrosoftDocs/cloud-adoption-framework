@@ -32,7 +32,6 @@ You measure the RPO from the most recent recovery point to the time that an outa
 
 For mission-critical systems, measure the RPO in minutes or seconds to help avoid loss in revenue or profits. A short RPO generally results in increased management costs. To help reduce these costs, you should create a management baseline that focuses on the longest acceptable RPO. You can then decrease the RPO of the specific platforms or workloads that warrant more investment.
 
-
 ### Workload BCDR considerations
 
 High availability and disaster recovery design considerations for RHEL-based workloads depend on the technologies that support those workloads. Many modern workloads can take advantage of native Azure services to provide redundancy across availability zones and across regions. Use Azure services to manage data replication, automatically scale availability sets, and control update and fault domains. These practices make it easier to ensure the availability of RHEL deployments.
@@ -50,11 +49,12 @@ Database solutions and other stateful applications might need operating system-c
 | [Azure Backup](/azure/backup/backup-overview) | A service that provides cost-effective solutions to back up your data and recover it from the Azure cloud. | Backup is a reliable and cost-effective solution that protects your RHEL infrastructure from VM failure or corruption. Use Backup to easily restore your entire VM or specific files and folders from the cloud, without having to recreate the VM or lose any data. You can also use other supported partner solutions. |
 | [Azure Arc](/azure/azure-arc/overview) | A platform that extends Azure services so that they run across diverse environments, including datacenters, edge devices, and multicloud architectures. Use Azure Arc to provide consistent development, operations, and security management for applications and services. | Use Azure Arc to implement centralized automated backups and monitoring, which increases resiliency from a BCDR perspective. |
 | [Azure Site Recovery](/azure/site-recovery/site-recovery-overview) | A service that provides disaster recovery capabilities to ensure business continuity. You can replicate and manage workloads, including Azure VMs and on-premises VMs, across different regions. With Site Recovery, you can set up replication, failover, and recovery processes to safeguard your applications during planned outages and unplanned outages. | Use Site Recovery to minimize recovery problems, reduce infrastructure costs, and ensure secure and dependable recovery between Azure regions or from on-premises locations to Azure.  |
-| [Resource locks](/azure/azure-resource-manager/management/lock-resources) | An Azure feature that you can use to restrict users and roles in your organization. Protect your critical resources from accidental or malicious changes. You can lock a resource at various levels of scope, such as subscription, resource group, or individual resource levels. Depending on the type of lock, you can prevent users from deleting or modifying a resource, but they can still read its configuration. | To protect all RHEL infrastructure and golden image VMs, use resource locks. To prevent accidentally losing important machines, apply the **Delete** lock at a minimum. Apply the **ReadOnly** lock to RHEL infrastructure machines because they don't change often. Only make changes during appropriate change control windows. |	
+| [Resource locks](/azure/azure-resource-manager/management/lock-resources) | An Azure feature that you can use to restrict users and roles in your organization. Protect your critical resources from accidental or malicious changes. You can lock a resource at various levels of scope, such as subscription, resource group, or individual resource levels. Depending on the type of lock, you can prevent users from deleting or modifying a resource, but they can still read its configuration. | To protect all RHEL infrastructure and golden image VMs, use resource locks. To prevent accidentally losing important machines, apply the **Delete** lock at a minimum. Apply the **ReadOnly** lock to RHEL infrastructure machines because they don't change often. Only make changes during appropriate change control windows. |
 
 ### RHEL platform BCDR considerations
 
-For more information about BCDR capabilities for an RHEL platform infrastructure, see: 
+For more information about BCDR capabilities for an RHEL platform infrastructure, see:
+
 - [Satellite high availability architecture](./management-monitoring.md).
 - [Ansible Automation platform high availability architecture](https://docs.redhat.com/documentation/red_hat_ansible_automation_platform/2.1/html-single/deploying_ansible_automation_platform_2.1/index).
 - [Identity management high availability architecture](./identity-access-management.md#design-recommendations-for-red-hat-identity-management).
@@ -108,9 +108,8 @@ You can use Compute Gallery to store golden images for deployments. Use these im
 
 ### Recovery cluster nodes
 
-To reduce RTOs and increase resilience, you can use active or standby remote [recovery cluster](https://docs.redhat.com/documentation/red_hat_enterprise_linux/8/html/configuring_and_managing_high_availability_clusters/assembly_configuring-disaster-recovery-configuring-and-managing-high-availability-clusters) nodes. You must configure disaster recovery cluster items manually. For example, you must apply configurations to set up resources and copy data.
+Use active or standby remote [recovery cluster](https://docs.redhat.com/documentation/red_hat_enterprise_linux/8/html/configuring_and_managing_high_availability_clusters/assembly_configuring-disaster-recovery-configuring-and-managing-high-availability-clusters) nodes to reduce RTO while your primary architecture patterns provide resilience. You must configure disaster recovery cluster items manually. For example, you must apply configurations to set up resources and copy data.
 
 ## Next steps
 
 - [Network topology and connectivity considerations for Red Hat Enterprise Linux](./network-topology-connectivity.md)
-
