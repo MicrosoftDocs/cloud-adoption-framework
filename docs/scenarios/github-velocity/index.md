@@ -52,7 +52,7 @@ The following architecture diagram highlights the security checks that run in th
 
 ![An architecture diagram that highlights the security checks that run in the GitHub and Azure components of a GitHub DevSecOps environment.](./media/github-security-checks.png)
 
-- [GitHub](https://docs.github.com/en) provides a code-hosting platform that developers can use for collaborating on open-source and InnerSource projects.
+- [GitHub](https://docs.github.com) provides a code-hosting platform that developers can use for collaborating on open-source and InnerSource projects.
 
 - [Codespaces](https://docs.github.com/codespaces/about-codespaces) is an online development environment. Hosted by GitHub and powered by Microsoft Visual Studio Code, this tool provides a complete development solution in the cloud.
 
@@ -102,7 +102,7 @@ For more information, see the white paper [An introduction to InnerSource](https
 
 ## Automation
 
-GitHub Actions allows users to create custom workflows directly in their GitHub repositories. Users can discover, create, and share actions to perform any job, including CI/CD, and combine actions in a completely customized workflow. They can also create CI workflows that build and test projects written in different programming languages. Examples are available in the [guides for GitHub Actions](https://docs.github.com/en/actions/guides).
+GitHub Actions allows users to create custom workflows directly in their GitHub repositories. Users can discover, create, and share actions to perform any job, including CI/CD, and combine actions in a completely customized workflow. They can also create CI workflows that build and test projects written in different programming languages. Examples are available in the [guides for GitHub Actions](https://docs.github.com/actions/tutorials).
 
 GitHub Actions can be used to combine IaC concepts and CI/CD practices to automate the entire end-to-end deployment lifecycle, including provisioning or updating the target environment in a repeatable manner and packaging and deploying the application itself.
 
@@ -149,4 +149,4 @@ The following links provide more information about GitHub.
 
 - [Learn modules for GitHub](/training/browse/?products=github)
 - [GitHub Learning Lab](https://github.com/apps/github-learning-lab)
-- [GitHub Docs](https://docs.github.com/en)
+- [GitHub Docs](https://docs.github.com)
