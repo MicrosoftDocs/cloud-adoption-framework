@@ -18,9 +18,6 @@ Partner with us in our ongoing effort to develop the Cloud Adoption Framework.
 
 ## October 2025
 
-### New articles
-
-- [Silos and fiefdoms](../organize/fiefdoms-silos.md): Learn how to identify and address organizational antipatterns that block cloud transformation. Distinguish between healthy IT team resistance and problematic silos (passion-driven) versus fiefdoms (fear-driven). Learn about practical strategies, including virtual teams, experimentation, education, and inclusive leadership approaches to overcome cultural barriers and drive successful cloud adoption.
 
 ### Updated articles
 
