@@ -5,7 +5,6 @@ author: stephen-sumner
 ms.author: pnp
 ms.date: 08/19/2022
 ms.topic: concept-article
-ms.custom: think-tank, e2e-ARO, linux-related-content
 ---
 
 # Resource organization considerations for Azure Red Hat OpenShift (optional)
