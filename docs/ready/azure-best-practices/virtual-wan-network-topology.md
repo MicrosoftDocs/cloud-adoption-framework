@@ -53,7 +53,7 @@ Azure Virtual WAN any-to-any transitive connectivity supports the following path
 
 1. **Deploy required shared services.** Deploy required shared services, like DNS servers, in a dedicated spoke virtual network. Customer-deployed shared resources can't be deployed inside the Virtual WAN hub itself.
 
-1. **Plan for subscription limits and scalability.** Don't create more than 500 virtual network connections per Virtual WAN virtual hub. If you need more than 500 virtual network connections per Virtual WAN virtual hub, you can deploy another Virtual WAN virtual hub. Deploy it in the same region as part of the same Virtual WAN and resource group. Plan your deployment carefully, and ensure that your network architecture is within the [Azure Virtual WAN limits](/azure/azure-resource-manager/management/azure-subscription-service-limits#azure-virtual-wan-limits).
+1. **Plan for subscription limits and scalability.** Don't create more than 600 virtual network connections per Virtual WAN virtual hub. If you need more than 600 virtual network connections per Virtual WAN virtual hub, you can deploy another Virtual WAN virtual hub. Deploy it in the same region as part of the same Virtual WAN and resource group. Plan your deployment carefully, and ensure that your network architecture is within the [Azure Virtual WAN limits](/azure/azure-resource-manager/management/azure-subscription-service-limits#azure-virtual-wan-limits).
 
 ## Connect on-premises locations and branches
 
