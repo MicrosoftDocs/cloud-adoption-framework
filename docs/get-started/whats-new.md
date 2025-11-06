@@ -18,7 +18,6 @@ Partner with us in our ongoing effort to develop the Cloud Adoption Framework.
 
 ## October 2025
 
-
 ### Updated articles
 
 - [Microsoft Cloud Adoption Framework for Azure](../overview.md): We improved readability and logical flow. We moved the methodology explanation to appear earlier in the article, reorganized the foundational and operational methodology sections for better clarity, and simplified the organization type table. We also removed promotional language throughout to focus on practical guidance for Azure adoption.
