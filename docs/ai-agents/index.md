@@ -32,8 +32,10 @@ Organizations use three types of agents depending on the complexity and critical
 
 :::image type="content" source="./images/spectrum-agents.png" alt-text="Diagram that shows the three main types of agents: retrieval, task, and autonomous." lightbox="./images/spectrum-agents.png" border="false":::
 
-- **Retrieval agents** return information from grounding data. These agents suit scenarios where speed and accuracy matter most, such as customer support or compliance queries. They operate within well-defined boundaries and introduce minimal risk.
+- **Retrieval agents** use a generative AI model as part of the retrieval process. A traditional RAG application performs a static keyword, vector, or hybrid search and then passes results to a model for synthesis. A retrieval agent orchestrates retrieval dynamically. It can reformulate queries, choose the best retrieval strategy, and apply reasoning steps before and after fetching grounding data. These agents suit scenarios where speed and accuracy matter most, such as customer support or compliance queries. They operate within well-defined boundaries and introduce minimal risk.
+
 - **Task agents** take action when prompted. These agents automate structured workflows like updating records or creating service tickets. They require more oversight than retrieval agents but remain predictable when scoped and tested.
+
 - **Autonomous agents** act independently. These agents adapt to changing conditions and make decisions without constant human input. They orchestrate multi-step processes and optimize operations. However, their non-deterministic behavior requires rigorous testing and governance before use in mission-critical workloads.
 
 The choice of agent type depends on the use case and the criticality of the process. While autonomous agents offer significant innovation potential, their non-deterministic behavior means they require rigorous testing and governance before being applied to mission-critical workloads. Retrieval and task agents typically provide faster, lower-risk adoption paths.
