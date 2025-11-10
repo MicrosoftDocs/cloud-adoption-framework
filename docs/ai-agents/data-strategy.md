@@ -25,7 +25,7 @@ Assess whether data supports retrieval, reasoning, and summarization. Evaluate s
 
 ## Define data ownership and stewardship
 
-Begin by assigning data ownership and stewardship roles. These roles clarify who holds responsibility for data accuracy, access control, and lifecycle management. Establish data quality standards that apply uniformly across departments and systems. These standards must include validation rules, completeness checks, and consistency requirements to support reliable decision-making.
+Begin by assigning data ownership and stewardship roles. These roles clarify who holds responsibility for data accuracy, access control, compliance, and lifecycle management. Establish data quality standards that apply uniformly across departments and systems. These standards must include validation rules, completeness checks, and consistency requirements to support reliable decision-making.
 
 ## Collect and connect data across systems
 
@@ -35,7 +35,7 @@ Organizations must use secure and consistent methods to connect data from dispar
 
 1. **Prepare multimodal data for advanced scenarios.** To support advanced use cases, prepare multimodal data, including images, audio, and video, in addition to structured text and numerical data. Define clear standards for labeling, storing, and accessing this data. These standards allow agents to operate across diverse business functions and unlock more complex capabilities.
 
-1. **Monitor agent performance to refine data quality.** To maintain accuracy and compliance, monitor agent performance and use those insights to refine data quality. Assign accountability for keeping data current and reliable. When agents produce poor results, investigate the underlying data and correct gaps or errors. This feedback loop improves agent reliability and supports regulatory requirements.
+1. **Monitor agent performance to refine data quality.** To maintain accuracy and compliance, monitor agent performance and use those insights to refine data quality. Assign accountability for keeping data current and reliable. When agents produce poor results, investigate the underlying data, prompts, and model to correct gaps or errors. This feedback loop improves agent reliability and supports regulatory requirements.
 
 ## Organize data systems for governance and reuse
 
@@ -43,7 +43,7 @@ To support scalable and secure AI adoption across the cloud estate, decision mak
 
 1. **Isolate sensitive data.** Start by isolating sensitive data. In environments like Azure AI Foundry, use separate management groups for internet-facing and internal agents. This separation enforces governance boundaries and reduces the risk of exposing business-critical data. Align this structure with Azure landing zone principles to enable policy inheritance and streamline compliance management.
 
-1. **Unify data preparation.** Equally important is the centralization of data preparation and reuse. When teams prepare data in silos, they often duplicate effort and introduce inconsistencies that slow down development and increase governance complexity. To avoid these pitfalls, direct teams to unify data preparation in a shared platform such as Microsoft Fabric. This centralized approach ensures agents access consistent, well-prepared data and simplifies onboarding for new use cases. It also improves visibility into data usage, supports cross-agent reuse, and strengthens governance across the organization.
+1. **Unify data.** Data preparation often happens in isolated teams, which creates duplicate effort and inconsistent data quality that slows development and complicates governance. Instead, direct teams to use a shared platform such as Microsoft Fabric where domain experts prepare and refine their data before it enters a central repository. This hub-and-spoke approach combines the strengths of decentralized ownership with centralized visibility. Domain teams retain responsibility for their data quality and validation, while the central platform ensures consistency, enables cross-agent reuse, and strengthens governance across the organization.
 
 ## Next step
 
