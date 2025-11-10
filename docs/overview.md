@@ -11,7 +11,7 @@ ms.subservice: caf-general
 
 # What is the Microsoft Cloud Adoption Framework?
 
-The Microsoft Cloud Adoption Framework for Azure delivers comprehensive, step-by-step guidance for cloud adoption success. This framework enables organizations to strategically plan, securely deploy, and efficiently operate Azure cloud solutions that drive measurable business outcomes while minimizing risks and maximizing return on investment.
+The Microsoft Cloud Adoption Framework for Azure delivers comprehensive, step-by-step guidance for cloud adoption success. This framework enables organizations to plan, deploy, and operate Azure cloud solutions that drive measurable business outcomes while minimizing risks and maximizing return on investment.
 
 :::image type="content" source="caf-overview.png" alt-text="Diagram overview of the Cloud Adoption Framework for Azure showing seven core methodologies: Strategy, Plan, Ready, Adopt, Govern, Secure, and Manage. Foundational methodologies flow sequentially. Operational methodologies run in parallel during operations." lightbox="caf-overview.png" border="false":::
 
