@@ -35,8 +35,8 @@ When evaluating new services that are in preview, only use these services in pro
 
 Cloud computing often offers advantages over on-premises computing. Examples include:
 
-- **Increased resiliency:** Recovering after failure.
-- **Availability:** Running in a healthy state without significant downtime.
+- **Increased resiliency:** Withstand faults, errors, or localized infrastructure incidents and continue operating without user-visible disruption.
+- **Availability:** Operate in a healthy state without significant downtime.
 
 Because most cloud services offer these advantages, many organizations assume that all cloud services offer resiliency and high availability by default. In reality, these features are often only available at extra cost and with additional technical effort.
 
@@ -56,7 +56,7 @@ See trusted, mature resources for information on architectural best practices th
 - [Reference architectures](/azure/architecture/browse/)
 - [Microsoft Azure Well-Architected Framework](/azure/architecture/framework/)
 
-Identify the right balance between costs and features such as [high resiliency and availability](/azure/architecture/framework/resiliency/design-resiliency). Increased resiliency and availability typically lead to increased costs. For instance:
+Identify the right balance between costs and features such as [high resiliency and availability](/azure/architecture/framework/resiliency/design-resiliency). Higher resiliency typically increases cost. For instance:
 
 - A single VM might have an SLA with a guaranteed uptime of 99.9%.
 - Two VMs running the same workload would provide an SLA with an uptime between 99.95 and 99.99 percent.
