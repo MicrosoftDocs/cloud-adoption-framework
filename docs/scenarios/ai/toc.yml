@@ -50,7 +50,10 @@ items:
   - name: Manage AI 
     href: manage.md  
   - name: Additional resources
+    expanded: true
     items:
       - name: AI Center of Excellence
         href: center-of-excellence.md
+      - name: AI agent adoption
+        href: ../../ai-agents/index.md
 
