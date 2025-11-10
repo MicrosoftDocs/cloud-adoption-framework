@@ -14,11 +14,9 @@ Successful adoption of AI agents begins with a clear strategy that connects agen
 
 ## When to use AI agents?
 
-Use AI agents for challenges that require complex reasoning, dynamic interaction, or unstructured data, especially when natural language provides the most effective interface. These scenarios often support digital transformation goals such as increasing agility, reducing manual effort, and scaling personalization. Common examples include customer support automation, knowledge retrieval, process automation, and real-time insights generation
+Today, most successful agents are supporting and integrated into a larger business process. Use AI agents for challenges that require complex reasoning, dynamic interaction, or processing unstructured data, especially when natural language provides the most effective interface. These scenarios often support digital transformation goals such as increasing agility, reducing manual effort, and scaling personalization. Common examples include customer support automation, knowledge retrieval, process automation, and real-time insights generation
 
 1. **When not to use AI agents.** Do not use AI agents for problems that simpler tools or scripts already solve. Prioritize low-risk, low-effort solutions first. Misuse increases cost and complexity without added value. Run a pilot to validate feasibility and impact before scaling.
-
-    Before you scale any agent-based solution, validate its feasibility and impact through a pilot program. AI agents introduce nondeterministic behavior, which requires careful governance, monitoring, and fallback mechanisms. Assess risk, effort, and expected return before each deployment.
 
 2. **Identify agent use cases.** Direct teams to explore proven patterns and validated examples from other organizations. Use resources such as the [Microsoft Scenario Library](https://adoption.microsoft.com/scenario-library/) and [AI Use Cases catalog](https://www.microsoft.com/ai/use-case) to guide planning. These reference resources help avoid common design flaws and accelerate solution development. Include these resources in workshops and use them to benchmark internal ideas. See also [AI-powered success](https://www.microsoft.com/microsoft-cloud/blog/2025/07/24/ai-powered-success-with-1000-stories-of-customer-transformation-and-innovation/#:~:text=In%20this%20blog%2C%20we%E2%80%99ve%20collected%20more%20than%201%2C000,impact%20and%20shape%20today%E2%80%99s%20platform%20shift%20to%20AI.?msockid=3d64a84f1d7463b738e3bbc21c03625f), [Azure Marketplace](https://azure.microsoft.com/partners/marketplace?msockid=3d64a84f1d7463b738e3bbc21c03625f), [Sample Solution Gallery](https://adoption.microsoft.com/sample-solution-gallery/).
 
@@ -26,13 +24,13 @@ Use AI agents for challenges that require complex reasoning, dynamic interaction
 
 The following four areas highlight where AI agents can have the greatest impact across an organization and explain why adopting agents should be considered as part of a broader business strategy.
 
-- **Reshape business processes (internal impact)**: AI agents accelerate software development, improve candidate screening and lead qualification, and resolve customer issues more effectively.
+- **Reshape business processes (internal impact)**: AI agents can accelerate software development, improve candidate screening and lead qualification, and resolve customer issues more effectively. These changes allow organizations to scale operations without increasing headcount.
 
-- **Enrich employee experiences (internal impact)**: AI agents make data easier to find, simplify email composition, and transcribe calls accurately. These capabilities increase productivity by allowing employees to focus on higher-value work while reducing cycle times.
+- **Enrich employee experiences (internal impact)**: AI agents can retrieve data, simplify email composition, and transcribe calls. These capabilities increase productivity by allowing employees to focus on higher-value work while reducing cycle times.
 
-- **Reinvent customer engagement (external impact)**: AI agents reduce support resolution times and improve responsiveness, which leads to higher customer satisfaction through consistent execution and improved data quality.
+- **Reinvent customer engagement (external impact)**: AI agents can reduce support resolution times and improve responsiveness, which leads to higher customer satisfaction.
 
-- **Accelerate innovation (external impact)**: AI agents shorten product development cycles and enable proactive service recommendations, supporting faster experimentation and helping organizations respond to changing market demands.
+- **Accelerate innovation (external impact)**: AI agents can shorten product development cycles and enable proactive service recommendations, supporting faster experimentation and helping organizations respond to changing market demands quicker.
 
 ## How to prioritize AI agent use cases
 
