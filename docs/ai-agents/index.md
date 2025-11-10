@@ -24,7 +24,7 @@ An AI agent is a system that uses a generative AI model alongside instructions, 
 
 :::image type="content" source="./images/agent-overview.png" alt-text="Diagram that shows the basic architecture of an agent." lightbox="./images/agent-overview.png" border="false":::
 
-Each agent interprets instructions to determine its scope and actions. It uses tools to retrieve knowledge, perform tasks, and maintain memory, which enables persistent and context-aware engagement. After gathering inputs, the data gets sent to the language model, which generates an output, such as a user message, a response to another agent, or an action with tool results. This structure allows agents to operate independently while remaining aligned with enterprise goals.
+Each agent interprets instructions to determine its scope and actions. It uses tools to retrieve knowledge, perform tasks. It has short and long-term memory which enables persistent and context-aware engagement. After gathering inputs, the data gets sent to the language model, which generates an output, such as a user message, a response to another agent, or an action with tool results. This structure allows agents to operate independently while remaining aligned with enterprise goals.
 
 :::image type="content" source="./images/agent-overview.png" alt-text="Diagram showing agent architecture with four components feeding into a language model: instructions (defining agent scope and actions), knowledge (grounding data and context), tools (functions and APIs the agent can call), and memory (conversation history and state). The model produces output responses." lightbox="./images/agent-overview.png" border="false":::
 
@@ -41,8 +41,6 @@ Organizations use three types of agents depending on the complexity and critical
 - **Task agents** take action when prompted. These agents automate structured workflows like updating records or creating service tickets. They require more oversight than retrieval agents but remain predictable when scoped and tested.
 
 - **Autonomous agents** act independently. These agents adapt to changing conditions and make decisions without constant human input. They orchestrate multi-step processes and optimize operations. However, their non-deterministic behavior requires rigorous testing and governance before use in mission-critical workloads.
-
-The choice of agent type depends on the use case and the criticality of the process. While autonomous agents offer significant innovation potential, their non-deterministic behavior means they require rigorous testing and governance before being applied to mission-critical workloads. Retrieval and task agents typically provide faster, lower-risk adoption paths.
 
 ## Why AI agents?
 
