@@ -61,3 +61,6 @@
     - name: Organize
       tocHref: /azure/cloud-adoption-framework/organize/
       topicHref: /azure/cloud-adoption-framework/organize
+    - name: AI Agents
+      tocHref: /azure/cloud-adoption-framework/ai-agents/
+      topicHref: /azure/cloud-adoption-framework/ai-agents
