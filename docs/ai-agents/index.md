@@ -10,13 +10,13 @@ ms.topic: conceptual
 
 # AI agent adoption
 
-Organizations adopt AI agents to automate tasks, increase productivity, and deliver new digital services across the cloud environment. However, deploying agents does not guarantee business impact. Without structured planning, governance, integration, and measurement, AI agents remain disconnected tools rather than strategic assets.
+Organizations adopt AI agents to automate tasks, increase productivity, and deliver new digital services across the cloud environment. However, deploying agents does not guarantee business impact. Without structured planning, governance, integration, and measurement, AI agents remain disconnected tools rather than strategic assets. This guidance defines a step-by-step framework that helps decision makers plan, govern, build, integrate, and measure AI agents across the organization.
 
-:::image type="content" source="./images/ai-agent-adoption.png" alt-text="Diagram that shows the process outlined in this guidance: plan, govern, build and secure, integrate, and measure agents across your organization." lightbox="./images/ai-agent-adoption.png" border="false":::
+:::image type="content" source="./images/ai-agent-adoption.png" alt-text="Diagram showing a horizontal workflow with five connected phases: plan (business strategy, technology strategy, people strategy, data strategy), govern (governance and security, responsible AI), build and secure (single and multi-agent systems, build secure agents), integrate (integrate agents), and measure (measure agents)." lightbox="./images/ai-agent-adoption.png" border="false":::
 
-This guidance defines a step-by-step framework that helps decision makers plan, govern, build, integrate, and measure AI agents across the organization. Each milestone supports return on investment, cost optimization, risk reduction, and team alignment to ensure agents deliver measurable value across the cloud estate.
+Each milestone supports return on investment, cost optimization, risk reduction, and team alignment to ensure agents deliver measurable value across the cloud estate. The guidance focuses on **Foundry Agent Service** and **Microsoft Copilot Studio**, which provide flexible tools for designing, deploying, and managing agents. It also includes use cases for **Microsoft Copilots** and building with GPU-based infrastructure and containers architectures.
 
-The series focuses on **Azure AI Foundry Agent Service** and **Microsoft Copilot Studio**, which provide flexible tools for designing, deploying, and managing agents. It also includes use cases for **Microsoft Copilots** and building with GPU-based infrastructure and containers architectures.
+:::image type="content" source="./images/ai-agent-decision-tree.png" alt-text="Decision tree diagram showing three paths based on use case type: for retrieval use cases, use Azure AI Foundry or Copilot Studio; for task automation, use Copilot Studio or Azure AI Foundry; for autonomous agents, use Azure AI Foundry with GPU infrastructure and containers." lightbox="./images/ai-agent-decision-tree.png" border="false":::
 
 ## What is an AI agent?
 
@@ -26,11 +26,15 @@ An AI agent is a microservice that uses a generative AI model alongside instruct
 
 Each agent interprets instructions to determine its scope and actions. It uses tools to retrieve knowledge, perform tasks, and maintain memory, which enables persistent and context-aware engagement. After gathering inputs, the data gets sent to the language model, which generates an output, such as a user message, a response to another agent, or an action with tool results. This structure allows agents to operate independently while remaining aligned with enterprise goals.
 
+:::image type="content" source="./images/agent-overview.png" alt-text="Diagram showing agent architecture with four components feeding into a language model: instructions (defining agent scope and actions), knowledge (grounding data and context), tools (functions and APIs the agent can call), and memory (conversation history and state). The model produces output responses." lightbox="./images/agent-overview.png" border="false":::
+
+Each agent interprets instructions to determine its scope and actions. It uses tools to retrieve knowledge, perform tasks, and maintain memory, which enables persistent and context-aware engagement. After gathering inputs, the data gets sent to the language model, which generates an output, such as a user message, a response to another agent, or an action with tool results. This structure allows agents to operate independently while remaining aligned with enterprise goals.
+
 ## Types of agents
 
 Organizations use three types of agents depending on the complexity and criticality of the task:
 
-:::image type="content" source="./images/spectrum-agents.png" alt-text="Diagram that shows the three main types of agents: retrieval, task, and autonomous." lightbox="./images/spectrum-agents.png" border="false":::
+:::image type="content" source="./images/spectrum-agents.png" alt-text="Diagram showing a spectrum of three agent types from left to right: retrieval agents (lowest complexity, access and synthesize information), task agents (moderate complexity, take specific actions), and autonomous agents (highest complexity, multi-step planning and decision-making). An arrow indicates increasing complexity and capability from left to right." lightbox="./images/spectrum-agents.png" border="false":::
 
 - **Retrieval agents** use a generative AI model as part of the retrieval process. A traditional RAG application performs a static keyword, vector, or hybrid search and then passes results to a model for synthesis. A retrieval agent orchestrates retrieval dynamically. It can reformulate queries, choose the best retrieval strategy, and apply reasoning steps before and after fetching grounding data. These agents suit scenarios where speed and accuracy matter most, such as customer support or compliance queries. They operate within well-defined boundaries and introduce minimal risk.
 
