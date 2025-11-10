@@ -40,13 +40,14 @@ You need to evaluate each AI agent using a structured risk assessment. This proc
 - Data governance practices
 - Human oversight and control mechanisms
 
-Review and update assessments annually or when new uses emerge. Require approvals before advancing to new release stages. Apply this structured approach to every AI workload to ensure consistent evaluation and documentation.
+Conduct impact assessments before each development stage and whenever you introduce new use cases. Document assessments in a central repository for audit trails and compliance verification. Require explicit approval before teams advance AI agents to production, new user groups, or expanded capabilities. This structured approach ensures consistent evaluation and documentation across all AI workloads.
 
 Use tools such as the [Responsible AI toolbox](https://github.com/microsoft/responsible-ai-toolbox?tab=readme-ov-file#responsible-ai-toolbox) to assess fairness, interpretability, and error rates. Require fallback options and remediation plans for predictable failures. Define monitoring procedures for unknown failures and reassess systems when new operational factors or use cases arise. Early risk detection reduces remediation costs and protects the organization from reputational harm. Refer to [Assess AI risks](../scenarios/ai/govern.md#assess-ai-organizational-risks).
 
 ## Track ethical performance
 
 Define metrics that measure ethical performance across AI systems. Examples include refusal rates due to policy violations or user complaints about biased responses. Review these metrics regularly and direct teams to improve AI agents based on findings.
+
 Update policies and systems when regulations change. Use audit tools to evaluate fairness, interpretability, and error analysis. Treat these metrics as part of operational dashboards and use them to guide investment and improvement decisions. Ongoing oversight ensures long-term compliance and keeps AI systems aligned with business values and legal requirements.
 
 ## Next step
