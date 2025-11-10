@@ -20,7 +20,7 @@ Each milestone supports return on investment, cost optimization, risk reduction,
 
 ## What is an AI agent?
 
-An AI agent is a microservice that uses a generative AI model alongside instructions, knowledge, and tools to reason, act, and learn. These agents operate in response to user messages, system events, or other agents.
+An AI agent is a system that uses a generative AI model alongside instructions, knowledge, and tools to reason, act, and learn. These agents operate in response to user messages, system events, or other agents.
 
 :::image type="content" source="./images/agent-overview.png" alt-text="Diagram that shows the basic architecture of an agent." lightbox="./images/agent-overview.png" border="false":::
 
