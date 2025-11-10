@@ -25,7 +25,7 @@ Establish a clear division of responsibilities. A proven model includes a centra
 
 2. **Workload responsibilities:** Agent workloads operate within business units and own the agents for their domains. Agent developers define agent requirements, provide domain-specific data, design conversation flows, and integrate agents into business processes. Platform guardrails ensure safe and consistent innovation. Workload developers are responsible for upholding the responsible AI principles throughout development. The platform products they consume only provide guardrails for AI agents. Workload developers must ultimately enforce and evaluate the agent's compliance with the organization's responsible AI principles.
 
-3. **AI Center of Excellence (AI CoE):** Establishing a small expert group or AI CoE as an enablement layer can be valuable. The CoE isn't a bottleneck for approval but rather a support squad of AI specialists (data scientists, experienced AI developers, ethics, or compliance experts) who provide consulting to all workload and platform developers. They conduct training sessions, help review agent designs for quality, run internal hackathons to spur ideas, and stay on top of emerging AI technologies to advise the organization. Ensure the AI CoE has executive support and a clear mission to accelerate AI adoption through best practices and mentorship.
+3. **AI Center of Excellence (AI CoE):** An AI CoE consists of an internal team of experts who drive successful and valuable AI outcomes. The AI CoE prevents fragmented or ungoverned AI adoption. It establishes a strong foundation for AI initiatives and provides business and technical consultation that supports successful AI integration. For more information, see [Establish an AI CoE](/azure/cloud-adoption-framework/scenarios/ai/center-of-excellence)
 
 ## Gain agent skills and training
 
@@ -52,7 +52,7 @@ Build AI proficiency across both technical and business teams. Plan for continuo
 
 ## Address AI change
 
-Prepare the organization for AI-driven change. Communicate early about what AI agents should and shouldn't do to manage expectations. Involve end users in pilot testing to gather feedback and build buy-in. From the leadership perspective, reinforce that adopting AI agents is a strategic priority so that managers encourage their teams to embrace the new tools. Celebrate successes and recognize teams that deliver value with AI to foster a culture of innovation.
+Prepare the organization for AI-driven change. Manage expectations by communicating early about what AI agents should and shouldn't do. From the leadership perspective, reinforce that adopting AI agents is a strategic priority so that managers encourage their teams to embrace the new tools. Celebrate successes and recognize teams that deliver value with AI to foster a culture of innovation.
 
 ## Next step
 
