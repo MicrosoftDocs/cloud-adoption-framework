@@ -34,7 +34,7 @@ AI agents must evolve continuously to remain effective. Static release plans oft
 
 This approach reduces operational risk, improves return on investment, and ensures agents stay aligned with business goals. Treat each agent as a product that matures through iteration not as a fixed solution.
 
-1. **Create and maintain a backlog of improvements.** Direct teams to capture unresolved queries, confusing interactions, and feature requests in a structured backlog. For example, unanswered questions can feed updates to the knowledge base. Misunderstood phrasing can prompt prompt tuning or retraining. New capabilities requested by users can inform future versions. This backlog becomes the foundation for each refinement cycle.
+1. **Create and maintain a backlog of improvements.** Direct teams to capture unresolved queries, confusing interactions, and feature requests in a structured backlog. For example, unanswered questions can feed updates to the knowledge base. Misunderstood phrasing can prompt tuning or retraining. New capabilities requested by users can inform future versions. This backlog becomes the foundation for each refinement cycle.
 
 2. **Prioritize blockers to business outcomes.** Focus first on issues that prevent the agent from delivering value. If a specific query type consistently fails, address it immediately. This might involve updating training data, adjusting prompts, or enabling new tools. Prioritization must reflect business impact, not just technical complexity.
 
