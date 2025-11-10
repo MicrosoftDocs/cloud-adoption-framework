@@ -75,14 +75,13 @@ The Cloud Adoption Framework provides industry-specific, technology-focused guid
 | CAF Scenario | Business challenge solved | Ideal for organizations requiring |
 |--------------|-----------------|----------------------------------|
 | [AI adoption](./scenarios/ai/index.md) | Implement responsible AI solutions with governance, ethics compliance, and MLOps automation. | Responsible AI deployment, machine learning model governance, AI ethics compliance, MLOps automation |
+| [Azure Virtual Desktop](./scenarios/azure-virtual-desktop/index.md) | Deliver and manage virtual desktops at enterprise scale with security and compliance controls. | Remote work enablement, desktop virtualization, end-user computing, security compliance |
 | [Azure VMware Solution](./scenarios/azure-vmware/index.md) | Migrate VMware workloads to Azure with zero downtime and maintained operational consistency. | VMware infrastructure migration, hybrid cloud strategy, disaster recovery modernization |
 | [Cloud-Scale Analytics](./scenarios/data-management/index.md) | Build secure, scalable data platforms with advanced analytics and real-time insights. | Data modernization, analytics platforms, data governance, real-time processing |
 | [Hybrid and Multicloud](./scenarios/hybrid/index.md) | Integrate on-premises, Azure, and multi-cloud environments with unified management and security. | Multi-cloud strategy, hybrid connectivity, workload portability, edge computing |
 | [Modern Application Platform](./scenarios/app-platform/index.md) | Modernize applications using containers, microservices architecture, and Azure PaaS services. | Application modernization, container adoption, microservices architecture, DevOps transformation |
 | [Oracle on Azure](./scenarios/oracle-on-azure/index.md) | Run enterprise Oracle workloads in Azure with optimized performance and cost efficiency. | Oracle database migration, enterprise application continuity, performance optimization |
 | [SAP on Azure](./scenarios/sap/index.md) | Deploy and operate SAP solutions using Azure-native tools with enterprise-grade reliability. | SAP migration, ERP modernization, mission-critical workloads, high availability |
-| [Virtual Desktop](./scenarios/azure-virtual-desktop/index.md) | Deliver and manage virtual desktops at enterprise scale with security and compliance controls. | Remote work enablement, desktop virtualization, end-user computing, security compliance |
-| [High-performance computing](./scenarios/azure-hpc/index.md) | Run compute-intensive workloads with optimized performance and cost-effective scaling. | Scientific computing, financial modeling, engineering simulations, research computing |
 
 Cloud Adoption Framework scenarios eliminate the complexity gap between general cloud adoption guidance and specific technology implementation, providing detailed implementation roadmaps for complex, enterprise-scale deployments that significantly accelerate time-to-production.
 
