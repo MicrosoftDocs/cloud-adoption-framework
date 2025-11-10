@@ -14,7 +14,7 @@ Once your organization identifies viable use cases and builds production-ready a
 
 :::image type="content" source="./images/ai-agent-adoption.png" alt-text="Diagram that shows the process outlined in this guidance: plan, govern, build and secure, integrate, and measure agents across your organization." lightbox="./images/ai-agent-adoption.png" border="false":::
 
-Technical decision makers must guide their teams through this phase with a clear operational strategy. Without this direction, agents risk becoming disconnected from business goals or underused by frontline teams. A well-integrated agent becomes a dynamic part of the organization’s operating model, not a standalone tool.
+Organizations must guide their teams through this phase with a clear operational strategy. Without this direction, agents risk becoming disconnected from business goals or underused by frontline teams. A well-integrated agent becomes a dynamic part of the organization’s operating model, not a standalone tool.
 
 ## Rollout agents into business processes
 
@@ -24,13 +24,13 @@ AI agents deliver value only when they operate inside real workflows. These work
 
 2. **Monitor during initial deployment.** Direct teams to track usage patterns, user behavior, and early outcomes against the agent’s evaluation goals. This includes metrics such as query volume, resolution rate, and user satisfaction. Use this data to validate whether the agent contributes to productivity and aligns with business expectations. If quality falls short, pause the rollout and investigate root causes before expanding further.
 
-3. **Prepare users.** Technical decision makers must ensure that users understand what the agent does, how to use it effectively, and where to go when it falls short. This preparation improves adoption, reduces confusion, and helps the organization learn from early usage. For **internal deployments**, direct teams to provide a concise orientation before launch. This can include a short video, a help article, or a live demo that explains the agent’s capabilities and limitations. Set expectations clearly. Early users often misinterpret what the agent can do or hesitate to use it without guidance. A brief introduction helps users engage confidently and provide meaningful feedback.
+3. **Prepare users.** Organizations must ensure that users understand what the agent does, how to use it effectively, and where to go when it falls short. This preparation improves adoption, reduces confusion, and helps the organization learn from early usage. For **internal deployments**, direct teams to provide a concise orientation before launch. This can include a short video, a help article, or a live demo that explains the agent’s capabilities and limitations. Set expectations clearly. Early users often misinterpret what the agent can do or hesitate to use it without guidance. A brief introduction helps users engage confidently and provide meaningful feedback.
 
     For **customer-facing agents**, ensure that messaging aligns with the organization's brand and service standards. Customers must understand when they are interacting with an AI agent, what types of questions it can answer, and how to escalate to human support if needed. Include clear fallback options and visible help channels. This transparency builds trust and reduces frustration.
 
 ## Establish early feedback and refinement cycles
 
-AI agents must evolve continuously to remain effective. Static release plans often fail to meet changing business needs or user expectations. Instead of treating agents as one-time deployments, technical decision makers must guide their teams to adopt agile refinement cycles. These cycles enable rapid updates, revalidation, and reuse of successful design patterns across the agent portfolio.
+AI agents must evolve continuously to remain effective. Static release plans often fail to meet changing business needs or user expectations. Instead of treating agents as one-time deployments, guide your teams to adopt agile refinement cycles. These cycles enable rapid updates, revalidation, and reuse of successful design patterns across the agent portfolio.
 
 This approach reduces operational risk, improves return on investment, and ensures agents stay aligned with business goals. Treat each agent as a product that matures through iteration not as a fixed solution.
 
@@ -48,8 +48,6 @@ By embedding refinement into the operating model, organizations ensure that AI a
 
 After an AI agent consistently meets its success criteria and receives positive user feedback, organizations must plan its broader rollout. Scaling agent deployments across the enterprise requires a deliberate and phased approach to avoid disruption and ensure sustained value. A successful pilot provides a blueprint, but expansion introduces new variables such as increased user volume, broader use cases, and more complex support needs that require careful planning.
 
-Technical decision makers must guide their teams to scale in stages, validate performance at each step, and reuse proven patterns to accelerate future deployments.
-
 ### Scale existing agents with control and oversight
 
 Start by expanding the agent’s reach gradually. Increase the user base incrementally for example, from one department to multiple business units while monitoring performance and user experience at each stage. Avoid sudden jumps in scale, such as moving from 50 users to 50,000 in a single release. Instead, double or triple the user count in phases and validate stability before proceeding.
@@ -64,11 +62,11 @@ Use the insights from the pilot to accelerate future agent projects. Document wh
 
 Identify shared capabilities across agents. If multiple agents require access to the same resource such as a company wiki or HR system direct platform teams to build reusable connectors or shared knowledge stores. This approach reduces duplication, improves consistency, and speeds up development across the portfolio.
 
-By scaling thoughtfully and reusing successful patterns, organizations reduce risk, optimize cost, and increase the return on AI investments. Technical decision makers must ensure that each agent rollout contributes to a broader strategy for intelligent automation across the cloud estate.
+By scaling thoughtfully and reusing successful patterns, organizations reduce risk, optimize cost, and increase the return on AI investments. Ensure that each agent rollout contributes to a broader strategy for intelligent automation across the cloud estate.
 
 ## Build reusable templates for agent development
 
-After completing several pilot deployments and refinement cycles, formalize successful patterns into reusable templates and accelerators. These templates reduce duplication of effort, improve consistency across agents, and accelerate future development. Technical decision makers must direct their teams to maintain a shared repository of these resources and update them as new best practices emerge.
+After completing several pilot deployments and refinement cycles, formalize successful patterns into reusable templates and accelerators. These templates reduce duplication of effort, improve consistency across agents, and accelerate future development. Direct your teams to maintain a shared repository of these resources and update them as new best practices emerge.
 
 Encourage teams to contribute improvements back into the templates when they discover effective approaches. This practice builds a scalable foundation for agent development across the organization.
 
