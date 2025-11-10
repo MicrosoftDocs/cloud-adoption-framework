@@ -12,11 +12,15 @@ ms.topic: conceptual
 
 To build on the business strategy for AI agents, decision makers must now define a technology strategy that supports the delivery of those agents across the organization. The business strategy already identifies where AI agents create value whether through customer engagement, operational efficiency, or innovation. The technology strategy must now determine how to deliver those agents effectively, balancing speed, cost, and customization.
 
-:::image type="content" source="./images/technology-options.png" alt-text="Diagram that shows how to ready-to-use vs. build technology options comparing Microsoft Copilots (ready-to-use) vs. Low-code (Microsoft Copilot Studio) and pro-code (Azure AI Foundry) build options." lightbox="./images/technology-options.png" border="false":::
+:::image type="content" source="./images/ai-agent-decision-tree.png" alt-text="Decision tree diagram showing three paths based on use case type: for retrieval use cases, use Azure AI Foundry or Copilot Studio; for task automation, use Copilot Studio or Azure AI Foundry; for autonomous agents, use Azure AI Foundry with GPU infrastructure and containers." lightbox="./images/ai-agent-decision-tree.png" border="false":::
 
 ## Technology options for agent delivery
 
-Microsoft provides three distinct agent platforms: prebuilt SaaS Copilots, low-code agents in Microsoft Copilot Studio, and pro-code agents built with Azure AI Foundry. Each path supports different business needs and [agent types](./index.md#types-of-agents). Organizations rarely choose just one. Instead, they often use all three approaches in parallel to meet distinct needs across departments, timelines, and levels of complexity.
+Microsoft provides three distinct agent platforms: prebuilt SaaS Copilots, low-code agents in Microsoft Copilot Studio, and pro-code agents built with Azure AI Foundry. Each path supports different business needs and [agent types](./index.md#types-of-agents).
+
+:::image type="content" source="./images/technology-options.png" alt-text="Diagram that shows how to ready-to-use vs. build technology options comparing Microsoft Copilots (ready-to-use) vs. Low-code (Microsoft Copilot Studio) and pro-code (Azure AI Foundry) build options." lightbox="./images/technology-options.png" border="false":::
+
+Organizations rarely choose just one. Instead, they often use all three approaches in parallel to meet distinct needs across departments, timelines, and levels of complexity.
 
 | Solution | Approach | Agent types | Best for |
 |----------|----------|-------------| -------- |
