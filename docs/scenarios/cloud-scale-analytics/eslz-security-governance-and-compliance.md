@@ -24,7 +24,7 @@ Both Microsoft and customers share responsibility for security. For accepted sec
 
 ### Data-at-rest encryption
 
-Data-at-rest encryption refers to the encryption of data as it persists in storage, and addresses the security risks related to direct physical access of storage media. Data-at-rest is a critical security control since the underlying data is unrecoverable and can't be changed without its decryption key. DData-at-rest is an important layer in the defense-in-depth strategy of Microsoft datacenters. Often, there are compliance and governance reasons to deploy data-at-rest encryption.
+Data-at-rest encryption refers to the encryption of data as it persists in storage, and addresses the security risks related to direct physical access of storage media. Data-at-rest is a critical security control since the underlying data is unrecoverable and can't be changed without its decryption key. Data-at-rest is an important layer in the defense-in-depth strategy of Microsoft datacenters. Often, there are compliance and governance reasons to deploy data-at-rest encryption.
 
 Several Azure services support data-at-rest encryption, including Azure Storage and Azure SQL databases. Although common concepts and models influence the design of Azure services, each service can apply data-at-rest encryption at different stack layers or have different encryption requirements.
 
@@ -93,7 +93,7 @@ Azure Policy helps bring your resources into compliance through bulk remediation
 
 ### Automate deployments
 
-You can save time and reduce errors by automating deployments. Reduce the deployment complexity of end-to-end data landing zones and data applications (which create data products) by creating reuseable code templates. This automation minimizes the time to deploy or redeploy solutions. For more information, see [Understand DevOps automation for the cloud-scale analytics in Azure](../cloud-scale-analytics/manage.md)
+You can save time and reduce errors by automating deployments. Reduce the deployment complexity of end-to-end data landing zones and data applications (which create data products) by creating reusable code templates. This automation minimizes the time to deploy or redeploy solutions. For more information, see [Understand DevOps automation for the cloud-scale analytics in Azure](../cloud-scale-analytics/manage.md)
 
 ### Lock resources for production workloads
 

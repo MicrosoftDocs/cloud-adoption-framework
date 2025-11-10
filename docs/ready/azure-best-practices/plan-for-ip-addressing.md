@@ -91,7 +91,7 @@ Here's a closer look at what a typical architecture might look like:
 - Deploy the NVA in [Virtual Machine Scale Sets with Flexible orchestration](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-orchestration-modes#scale-sets-with-flexible-orchestration) (VMSS Flex) for resiliency and expose them to the internet through [Azure Load-Balancer](/azure/load-balancer/load-balancer-ipv6-overview), which has a public IP address front end.
 
    The NVAs accept IPv4 and IPv6 traffic and translate it into IPv4-only traffic to access the application in the application subnet. The approach reduces complexity for the application team and reduces the attack surface.
-- Deploy [Azure Front Door](https://azure.microsoft.com/services/frontdoor/) to provide global routing for web traffic.
+- Deploy [Azure Front Door](/azure/frontdoor/front-door-overview) to provide global routing for web traffic.
 
   Azure Front Door capabilities include proxying IPv6 client requests and traffic to an IPv4-only back end, as shown here:
 
