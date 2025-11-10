@@ -60,7 +60,7 @@ At each major expansion milestone, conduct a go/no-go review with stakeholders. 
 
 Use the insights from the pilot to accelerate future agent projects. Document what worked well and what required adjustment. Create reusable templates or playbooks that include architecture diagrams, code samples, prompt design guidelines, and integration patterns. These resources help new teams start faster and avoid common pitfalls.
 
-Identify shared capabilities across agents. If multiple agents require access to the same resource such as a company wiki or HR system direct platform teams to build reusable connectors or shared knowledge stores. This approach reduces duplication, improves consistency, and speeds up development across the portfolio.
+Identify shared capabilities across agents. If multiple agents require access to the same resource such as a company wiki or HR system, direct platform teams to build reusable connectors or shared knowledge stores. This approach reduces duplication, improves consistency, and speeds up development across the portfolio.
 
 By scaling thoughtfully and reusing successful patterns, organizations reduce risk, optimize cost, and increase the return on AI investments. Ensure that each agent rollout contributes to a broader strategy for intelligent automation across the cloud estate.
 
