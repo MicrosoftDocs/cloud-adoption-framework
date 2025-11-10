@@ -37,16 +37,15 @@ Each build path offers different levels of control, required investment, and gov
 
 ### Foundry
 
-Use [Azure AI Foundry Agent Service](/azure/ai-foundry/agents/overview) when you need pro-code agents for high-value scenarios. This platform-as-a-service (PaaS) approach provides full customization capabilities, including model selection, infrastructure control, and proprietary data integration. Azure AI Foundry works best for engineering-led organizations that require multi-agent systems with deep integration into internal systems.
+Use [Azure AI Foundry Agent Service](/azure/ai-foundry/agents/overview) when you need pro-code agents for high-value scenarios. This platform-as-a-service (PaaS) approach provides full customization capabilities, including model selection, infrastructure control, and proprietary data integration. Foundry works best for engineering-led organizations that require multi-agent systems with deep integration into internal systems.
 
 Azure AI Foundry supports three agent types:
+
 1. **Retrieval agents** provide fast, accurate responses from your data sources
 2. **Task agents** automate structured workflows and business processes
 3. **Autonomous agents** orchestrate complex processes and adapt to changing conditions
 
-The platform includes Microsoft's responsible AI engineering practices with built-in tools for fairness evaluation and content safety. These features simplify compliance requirements and accelerate your deployment timeline.
-
-Start development using the [Azure AI Foundry playground](/azure/ai-foundry/concepts/concept-playgrounds) to build and test prototypes. Follow the quickstart guide to [create a new agent](/azure/ai-foundry/agents/quickstart) and validate your use case.
+The platform includes Microsoft's responsible AI engineering practices with built-in tools for fairness evaluation and content safety. These features simplify compliance requirements and accelerate your deployment timeline. Start development using the [Azure AI Foundry playground](/azure/ai-foundry/concepts/concept-playgrounds) to build and test prototypes. Follow the quickstart guide to [create a new agent](/azure/ai-foundry/agents/quickstart) and validate your use case.
 
 ### Microsoft Copilot Studio
 
@@ -65,7 +64,7 @@ This path enables you to:
 2. Optimize performance for specific workloads
 3. Meet stringent compliance or data residency requirements
 
-Retrieval and task agents on this platform remain predictable and straightforward to govern. Autonomous agents require comprehensive testing and monitoring frameworks to ensure reliability. Develop your agents using Visual Studio Code and GitHub, with costs based on token consumption and compute resource usage. For detailed guidance, see [AI on IaaS](/azure/cloud-adoption-framework/scenarios/ai/infrastructure/cycle-cloud).
+Develop your agents using Visual Studio Code and GitHub, with costs based on token consumption and compute resource usage. For detailed guidance, see [AI on IaaS](/azure/cloud-adoption-framework/scenarios/ai/infrastructure/cycle-cloud).
 
 ### Microsoft Agent Framework and protocols
 
