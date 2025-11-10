@@ -44,21 +44,43 @@ Organizations build momentum and secure executive support for broader AI investm
 
 ### Evaluate business impact
 
-Assess each use case based on its potential to improve key performance indicators (KPIs) and deliver return on investment. Select projects that reduce operational costs, increase customer satisfaction, or improve service delivery. Require a concise business case for each candidate use case, including specific metrics such as "reduce support ticket handling time by 20% within three months."
+Assess each use case against three key dimensions:
 
-:::image type="content" source="./images/business-impact.png" alt-text="Diagram showing business impact evaluation criteria including cost reduction, revenue generation, customer satisfaction improvements, and operational efficiency gains for AI agent use cases." lightbox="./images/business-impact.png" border="false":::
+1. **Executive strategy alignment**: Confirm whether the use case directly supports organizational priorities. If it does not align with business strategy, it should not proceed. The strongest candidates are those that clearly advance strategic objectives and have visible board-level sponsorship.
+
+1. **Business value**: Quantify the impact. Use cases with vague or unproven benefits should be deprioritized. Select initiatives that deliver measurable outcomes, such as reducing operational costs, increasing revenue, or improving customer satisfaction, with clear evidence of significant value.
+
+1. **Change management timeframe**: Consider the expected time and effort required to implement the use case and manage associated changes. A lengthy rollout with significant user disruption signals a challenging implementation. A short deployment cycle with minimal impact on users indicates strong feasibility and readiness.
+
+:::image type="content" source="./images/business-impact.png" alt-text="Diagram showing business impact evaluation criteria: executive strategy alignment, business value, and change management timeframe, each rated from low to high impact." lightbox="./images/business-impact.png" border="false":::
 
 ### Measure technical feasibility
 
-Determine whether the organization can implement the use case with current systems, data, and skills. Identify risks such as poor data quality, system dependencies, or integration challenges. Define the scope, autonomy level, and decision boundaries for each AI agent. Use a change management matrix to assess rollout timelines and user impact. Prioritize use cases with short deployment cycles and minimal disruption. Favor agent scenarios that integrate with existing systems through documented APIs or connectors.
+Assess each use case across three critical dimensions:
+
+1. **Implementation and operation risks.** Identify and address risks upfront. If risks are unknown or mitigation plans are absent, the use case should not advance. Prioritize scenarios where risks are well understood and mitigation strategies are documented and actionable.
+
+1. **Sufficient safeguards**: Validate compliance and security measures. Lack of safeguards or unclear governance creates unacceptable exposure. Select use cases backed by mature security controls, responsible AI practices, and regulatory compliance frameworks.
+
+1. **Technology fit**: Confirm compatibility with existing systems. If the technology requirements are unclear or poorly aligned, integration is more likely to fail. Favor solutions where the technology choice is justified, the benefits are compelling, and integration with current infrastructure is straightforward.
+
+Require a technical feasibility summary for each candidate use case, including considerations such as data quality, system dependencies, integration challenges, and implementation timelines. Favor projects with short deployment cycles, minimal disruption, and strong compatibility with documented APIs or connectors.
 
 :::image type="complex" source="./images/technical-feasibility.png" alt-text="Technical feasibility assessment framework":::
-   Diagram showing technical feasibility evaluation factors including data availability and quality, system integration requirements, skill and resource availability, security and compliance considerations, and implementation timeline for AI agent use cases.
+   Diagram showing technical feasibility evaluation criteria: implementation and operation risks, sufficient safeguards, and technology fit, each rated from low to high feasibility.
 :::image-end:::
 
 ### Measure user desirability
 
-Confirm that users or customers recognize the problem and accept an AI-driven solution. Collect evidence through interviews or surveys that show clear pain points and openness to change. Prioritize projects with strong user advocates and minimal resistance. AI agents only succeed when people use them consistently and trust their output.
+Evaluate each use case across three dimensions using a 1–5 scale, where lower scores indicate unclear or weak desirability and higher scores indicate strong desirability:
+
+1. **Key personas**: Assess whether the key stakeholders and users impacted by the use case are clearly identified. A low score means these personas are not well understood or defined. A high score means they are clearly defined and their roles are well understood.
+
+1. **Value proposition**: Consider the appeal and adoption potential of the use case for users. A low score reflects minimal perceived value or low interest. A high score indicates the solution is highly desired and offers clear benefits to users.
+
+1. **Change resistance**: Evaluate the expected level of resistance to adopting the solution. A low score suggests significant resistance and challenges in managing change. A high score indicates very low resistance and strong readiness for adoption.
+
+Gather evidence through interviews or surveys to validate pain points and openness to change. Prioritize projects with strong user advocates and minimal resistance, as AI agents succeed only when people use them consistently and trust their output.
 
 :::image type="content" source="./images/user-desirability.png" alt-text="Diagram showing user desirability assessment factors including user pain points, solution acceptance, change readiness, and stakeholder support for AI agent implementations." lightbox="./images/user-desirability.png" border="false":::
 
