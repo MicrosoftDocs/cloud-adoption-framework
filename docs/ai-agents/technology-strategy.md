@@ -1,5 +1,5 @@
 ---
-title: Technology strategy for AI ag### Azure AI Foundry
+title: Technology strategy for AI agents
 description: Learn the technology strategy for AI agents
 author: stephen-sumner
 ms.author: pnp
@@ -27,7 +27,7 @@ Organizations rarely choose just one. Instead, they often use all three approach
 | **Azure AI Foundry Agent Service** | Build with PaaS for pro-code agents | Retrieval, Task, Autonomous | Strategic transformation for engineering teams. Deep integration and custom logic. |
 | **Microsoft Copilot Studio** | Build with SaaS for low-code or no-code agents | Retrieval, Task, Autonomous | Process transformation for technical business users. Fast development with minimal coding. |
 | **GPUs & containers** | Build with IaaS for pro-code agents | Retrieval, Task, Autonomous |Full control of the entire technology stack.|
-| **Copilots** | Read-to-use agents (SaaS) | Retrieval, Task | Personal productivity for information workers. Minimal customization required. Immediate value. |
+| **Copilots** | Ready-to-use agents (SaaS) | Retrieval, Task | Personal productivity for information workers. Minimal customization required. Immediate value. |
 
 ## Build paths for AI agents
 
@@ -71,7 +71,7 @@ These protocols help reduce the time and effort required to build custom integra
 
 ## Ready-to-use agents (Copilots)
 
-**Read-to-use agents (SaaS):** Use ready-to-use Copilots to deploy retrieval and task agents quickly. These agents support common tasks such as summarization, drafting, and data analysis. They integrate directly into Microsoft 365, GitHub, and Power Platform.
+**Ready-to-use agents (SaaS):** Use ready-to-use Copilots to deploy retrieval and task agents quickly. These agents support common tasks such as summarization, drafting, and data analysis. They integrate directly into Microsoft 365, GitHub, and Power Platform.
 
 Copilots operate within Microsoft-managed SaaS platforms and inherit responsible AI engineering by default. This includes privacy protections, ethical safeguards, and compliance with global standards. These built-in controls reduce risk and simplify governance.
 
