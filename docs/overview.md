@@ -67,8 +67,6 @@ The Cloud Adoption Framework provides industry-specific, technology-focused guid
 | [Oracle on Azure](./scenarios/oracle-on-azure/index.md) | Run enterprise Oracle workloads in Azure with optimized performance and cost efficiency. | Oracle database migration, enterprise application continuity, performance optimization |
 | [SAP on Azure](./scenarios/sap/index.md) | Deploy and operate SAP solutions using Azure-native tools with enterprise-grade reliability. | SAP migration, ERP modernization, mission-critical workloads, high availability |
 
-Cloud Adoption Framework scenarios eliminate the complexity gap between general cloud adoption guidance and specific technology implementation, providing detailed implementation roadmaps for complex, enterprise-scale deployments that significantly accelerate time-to-production.
-
 ## Quick start options
 
 Choose your optimal starting point based on your cloud maturity and business objectives:
