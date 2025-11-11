@@ -21,7 +21,7 @@ You should continually reassess your infrastructure requirements to improve perf
 Review the [migration resources](../../migrate/azure-migration-guide/index.md#azure-migration-guide-overview) to define your HPC migration process and in addition:
 - **Review the current VM size**: Review your CPU, memory, disk, and networking specifications for existing VMs to determine appropriate VM sizes.
 - **Verify Azure subscription quota limits**: Ensure that the quota limits in your Azure subscription accommodate the target VM sizes you choose.
-- **Identify the deployment model**: Automate deployment as much as possible by choosing between Azure Resource Manager or Azure Service Manager, previously known as classic deployment.
+- **Identify the deployment model**: Automate deployment as much as possible by using Azure Resource Manager for all new and migrated workloads.
 
 Consider also [getting assistance](../../migrate/azure-migration-guide/assistance.md) to accelerate your HPC migration efforts.
 
