@@ -63,7 +63,7 @@ Once your platform is in place, you’ll need to create individual application l
 
 ### 4. Deploy application landing zone components
 
-Finally, deploy the components that support your workloads. Multiple application landing zone accelerators are available to provide reference architectures and implementation guidance for scenarios such as Azure Virtual Desktop, SAP, and Azure Kubernetes. These accelerators help prepare application landing zones in an Azure landing. See the [CAF cloud adoption scenarios](../overview.md#what-specific-scenarios-does-the-cloud-adoption-framework-address).
+Finally, deploy the components that support your workloads. Multiple application landing zone accelerators are available to provide reference architectures and implementation guidance for scenarios such as Azure Virtual Desktop, SAP, and Azure Kubernetes. These accelerators help prepare application landing zones in an Azure landing. See the [CAF cloud adoption scenarios](../overview.md#cloud-adoption-framework-scenarios).
 
 ## Next step
 

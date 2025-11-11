@@ -535,12 +535,10 @@ items:
     items:
     - name: AI
       href: scenarios/ai/index.md
-    - name: Azure VMware Solution
-      href: scenarios/azure-vmware/index.md
+    - name: Azure Virtual Desktop
+      href: scenarios/azure-virtual-desktop/index.md
     - name: Cloud-scale analytics
       href: scenarios/data-management/index.md
-    - name: High-performance computing
-      href: scenarios/azure-hpc/index.md
     - name: Hybrid and multicloud
       href: scenarios/hybrid/index.md
     - name: Modern application platform
@@ -549,8 +547,9 @@ items:
       href: scenarios/oracle-on-azure/index.md
     - name: SAP
       href: scenarios/sap/index.md
-    - name: Virtual desktops
-      href: scenarios/azure-virtual-desktop/index.md
+    - name: Azure VMware Solution
+      href: scenarios/azure-vmware/index.md
+
 
   - name: Resources
     items:
