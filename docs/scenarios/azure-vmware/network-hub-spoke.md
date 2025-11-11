@@ -100,7 +100,7 @@ Dynamic route propagation:
 To use Azure Route Server, you must:
 
 -	Enable Branch to Branch
--	Use route summarization for > 1000 routes or use `NO_ADVERTISE BGP communities` flag refenced in the [Azure Route Server frequently asked questions (FAQs)](/azure/route-server/route-server-faq#can-azure-route-server-filter-out-routes-from-nvas)
+-	Use route summarization for > 1000 routes or use `NO_ADVERTISE BGP communities` flag referenced in the [Azure Route Server frequently asked questions (FAQs)](/azure/route-server/route-server-faq#can-azure-route-server-filter-out-routes-from-nvas)
 
 -	Peer  NVA with specific, non-Azure ASNs. For example, since ARS uses 65515, no other appliance in the VNET can use that ASN (Autonomous System Number).
 -	No support for IPV6
@@ -116,7 +116,7 @@ By using NFS datastores backed by Azure NetApp Files, you can expand your storag
 -  Ultra & ErGw3AZ SKU is required for bypassing the gateway port speed limits
 -  Read traffic ingresses and write traffic is egresses over the Expressroute. Egress traffic over Expressroute circuits bypasses the gateway and go directly to the edge router
 -  Ingress/Egress charges are suppressed from AVS, however there's an egress charge if data is going across peered VNETs.
--  Use a dedicated ExpressRoute Gateway for Azure Netapp Files, do not use a shared/centralized ExpressRoute Gateway.
+-  Use a dedicated ExpressRoute Gateway for Azure NetApp Files, do not use a shared/centralized ExpressRoute Gateway.
 -  Don't place a firewall or NVA in the data path between Azure NetApp Files and Azure VMware Solution.
 - Only NFS v3 is supported today.
 
@@ -124,11 +124,11 @@ If you’re seeing unexpected latency, make sure your AVS Private cloud, and ANF
 
 > [!IMPORTANT]
 > Microsoft does not support Fastpath for Secured Azure VWAN hub where the maximum port speed possible is 20Gbps. Consider using hub & spoke VNET's if larger throughput is required.
-See how to attach Azure Netapp Files datastores to Azure VMware Solution hosts [here](/azure/azure-vmware/attach-azure-netapp-files-to-azure-vmware-solution-hosts?tabs=azure-portal)
+See how to attach Azure NetApp Files datastores to Azure VMware Solution hosts [here](/azure/azure-vmware/attach-azure-netapp-files-to-azure-vmware-solution-hosts?tabs=azure-portal)
 
 ### VPN connectivity from On-premises
 
-While an Expressroute circuit is recommended, connecting to AVS from on-premises with IPSEC using a transit hub VNET in Azure is also possible. This scenario requires a VPN gateway and Azure Route Server. As referenced earlier, Azure Route Server enables transitivity between the VPN gateway and the AVS Expressroute gateway.
+While an Expressroute circuit is recommended, connecting to AVS from on-premises with IPsec using a transit hub VNET in Azure is also possible. This scenario requires a VPN gateway and Azure Route Server. As referenced earlier, Azure Route Server enables transitivity between the VPN gateway and the AVS Expressroute gateway.
 
 [![Azure VMware Solution with transit between Expressroute and on-premises VPN Gateway](./media/vpn-to-er.png)](./media/vpn-to-er.png)
 
