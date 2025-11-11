@@ -1,11 +1,13 @@
 ---
-title: AI agent adoption
-description: Learn AI agent adoption
+title: AI Agent Adoption Framework for Organizations
+ms.reviewer: ssumner
+description: Discover how to adopt AI agents effectively with a step-by-step framework for planning, governance, integration, and measurement to maximize business impact.
 author: stephen-sumner
 ms.author: pnp
-ms.date: 11/01/2025
+ms.date: 11/11/2025
 ms.update-cycle: 180-days
 ms.topic: conceptual
+ms.collection: ce-skilling-ai-copilot
 ---
 
 # AI agent adoption
@@ -14,7 +16,7 @@ Organizations adopt AI agents to automate tasks, increase productivity, and deli
 
 :::image type="content" source="./images/ai-agent-adoption.png" alt-text="Diagram showing a horizontal workflow with five connected phases: plan (business strategy, technology strategy, people strategy, data strategy), govern (governance and security, responsible AI), build and secure (single and multi-agent systems, build secure agents), integrate (integrate agents), and measure (measure agents)." lightbox="./images/ai-agent-adoption.png" border="false":::
 
-Each milestone supports return on investment, cost optimization, risk reduction, and team alignment to ensure agents deliver measurable value across the cloud estate. The guidance focuses on **Foundry Agent Service** and **Microsoft Copilot Studio**, which provide flexible tools for designing, deploying, and managing agents. It also includes use cases for **Microsoft Copilots** and building with GPU-based infrastructure and containers architectures.
+Each milestone supports return on investment, cost optimization, risk reduction, and team alignment to ensure agents deliver measurable value across the cloud estate. The guidance focuses on **Foundry** and **Microsoft Copilot Studio**, which provide flexible tools for designing, deploying, and managing agents. It also includes use cases for **Microsoft Copilots** and building with GPU-based infrastructure and containers architectures.
 
 :::image type="content" source="./images/ai-agent-decision-tree.png" alt-text="Decision tree diagram showing three paths based on use case type: for retrieval use cases, use Azure AI Foundry or Copilot Studio; for task automation, use Copilot Studio or Azure AI Foundry; for autonomous agents, use Azure AI Foundry with GPU infrastructure and containers." lightbox="./images/ai-agent-decision-tree.png" border="false":::
 

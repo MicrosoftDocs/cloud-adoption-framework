@@ -1,11 +1,13 @@
 ---
 title: Technology strategy for AI agents
+ms.reviewer: ssumner
 description: Learn how to define a technology strategy for AI agents
 author: stephen-sumner
 ms.author: pnp
-ms.date: 11/01/2025
+ms.date: 11/11/2025
 ms.update-cycle: 180-days
 ms.topic: conceptual
+ms.collection: ce-skilling-ai-copilot
 ---
 
 # Technology strategy for AI agents
