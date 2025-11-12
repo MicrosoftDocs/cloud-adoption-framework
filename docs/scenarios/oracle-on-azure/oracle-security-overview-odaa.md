@@ -2,7 +2,7 @@
 title: Security for Oracle Database@Azure
 description: Implement defense-in-depth security architecture and threat protection for Oracle Database@Azure by using Azure Arc integration and Microsoft Defender for Cloud.
 author: basimolimajeed
-ms.author: bamajeed
+ms.author: terrymandin
 ms.reviewer: terrymandin
 ms.date: 09/01/2025
 ms.topic: concept-article
@@ -45,7 +45,7 @@ Data protection requires encryption at rest and comprehensive key management str
 
 1. **Integrate Azure Key Vault for centralized key management with private connectivity.** Azure Key Vault provides centralized TDE master encryption key storage within Azure security boundaries while maintaining compliance with Azure governance policies. This integration enables unified key management across your Azure environment, reduces operational complexity, and supports Azure-native security controls including role-based access control (RBAC) and audit logging. For complete implementation guidance including network setup, Private Endpoint connectivity configuration, identity configuration, and validation procedures, see [Azure Key Vault integration for Oracle Exadata Database@Azure](oracle-azure-key-vault-integration-exadata.md).
 
-1. **Ensure high availability for key management infrastructure.** Azure Key Vault provides built-in service resilience with automatic replication within regions and asynchronous replication to paired regions where supported. Key Vault automatically replicates key vault contents both within the region and to the paired region without requiring configuration. This replication ensures encryption key availability during regional outages by maintaining copies in both primary and secondary regions. For regions that support Microsoft-managed failover (most paired regions), the Azure Key Vault service handles failover automatically during prolonged region failures. Deploy Private Link endpoints to maintain secure, private connectivity to Key Vault instances without public internet exposure. For critical workloads requiring cross-region private connectivity, consider creating Key Vault resources and Private Link endpoints in multiple regions as part of your disaster recovery strategy. For more information about Azure Key Vault availability and disaster recovery, see [Azure Key Vault availability and redundancy](/azure/key-vault/general/disaster-recovery-guidance).
+1. **Ensure high availability for key management infrastructure.** Azure Key Vault provides built-in service resilience with automatic replication within regions and asynchronous replication to paired regions where supported. Consider multi-region Azure Key Vault failover strategies here: [Reliability in Azure Key Vault](/azure/reliability/reliability-key-vault).
 
 1. **Establish secure backup encryption practices.** Database backups encrypt with the same primary encryption keys by default. Store encryption keys and database backups in separate environments to enhance security and minimize data compromise risk during disaster recovery scenarios. Retain old encryption keys for the duration of backup retention periods to enable restoration operations when performing point-in-time recovery from long-term backups.
 
