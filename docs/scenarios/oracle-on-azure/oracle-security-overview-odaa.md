@@ -3,7 +3,7 @@ title: Security for Oracle Database@Azure
 description: Implement defense-in-depth security architecture and threat protection for Oracle Database@Azure by using Azure Arc integration and Microsoft Defender for Cloud.
 author: basimolimajeed
 ms.author: bamajeed
-ms.reviewer: janfaurs
+ms.reviewer: terrymandin
 ms.date: 09/01/2025
 ms.topic: concept-article
 ms.custom: e2e-oracle
