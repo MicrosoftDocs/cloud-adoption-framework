@@ -33,7 +33,7 @@ For an Azure Virtual Desktop host pool, you can use either an *active-active* or
 
 - Two (2) Host pools (one per Region) containing session hosts
 
-- Users of a region are assigned to the host pool for their region, in case of a desaster, they are getting entitled to access the host pool in the other region.
+- Users of a region are assigned to the host pool for their region. In case of a disaster, they are getting entitled to access the host pool in the other region.
 
 - For FSLogix Cloud Cache, this [guidance for BCDR](/fslogix/concepts-container-recovery-business-continuity) can be used.
 
