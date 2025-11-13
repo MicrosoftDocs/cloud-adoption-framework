@@ -25,26 +25,29 @@ For more information about BCDR considerations for your Azure resources, see [Az
 
 As you design your Azure Virtual Desktop infrastructure, consider these design factors.
 
-### Host pool active-active vs. active-passive
+### Host pools active-active vs. active-passive
 
 For an Azure Virtual Desktop host pool, you can use either an *active-active* or an *active-passive* BCDR approach.
 
-#### Active-active host pool
+#### Active-active host pools
 
-- Storage outages are mitigated without requiring the user to reauthenticate.
-- Continuous testing of the disaster recovery location is enabled.
-- A single host pool can contain VMs from multiple regions. In this scenario, you must use [Cloud Cache](/fslogix/cloud-cache-resiliency-availability-cncpt) to actively replicate the user's FSLogix profile and Office containers between regions.
-- For virtual machines (VMs) in each region, invert the Cloud Cache registry entry that specifies locations to give precedence to the local cache registry.
-- Load balancing incoming user connections can't take proximity into account. All hosts are equal, and users might be directed to a remote (and not optimal) Azure Virtual Desktop host pool VM.
+- Two (2) Host pools (one per Region) containing session hosts
+
+- Users of a region are assigned to the host pool for their region. In case of a disaster, they are getting entitled to access the host pool in the other region.
+
+- For FSLogix Cloud Cache, this [guidance for BCDR](/fslogix/concepts-container-recovery-business-continuity) can be used.
+
 - This configuration is limited to a *pooled* (shared) host pool type. For a *personal* (dedicated) type, when a desktop is assigned to a user on a certain session host VM, the desktop doesn't change, even if the VM isn't available.
 - Cloud Cache doesn't improve the users' sign-on and sign out experience when using poor performing storage. It's common for environments using Cloud Cache to have slightly slower sign-on and sign out times, relative to using traditional VHDLocations, using the same storage. [Review the FSLogix Cloud Cache documentation for recommendations regarding local cache storage](/fslogix/cloud-cache-resiliency-availability-cncpt).
-- The active-active host pool configuration often is complex. It isn't considered a performance optimization or a cost optimization.
+- The active-active host pools configuration often is complex and comes with additional cost both for infrastructure and management.
 
 #### Active-passive host pool
 
 - You can use [Azure Site Recovery](/azure/site-recovery/site-recovery-overview) or a secondary host pool (hot standby) to maintain a backup environment.
 - You can use Site Recovery for both personal (dedicated) and pooled (shared) host pool types, and you can maintain a single host pool entity.
 - You can create a new host pool in the failover region and keep all the resources turned off. For this method, set up new application groups in the failover region and assign users to the groups. Then, you can use a recovery plan in Site Recovery to turn on host pools and create an orchestrated process.
+
+- FSLogix profile storage is local to a specific region only. In case of a disaster, new FSLogix profiles are created in the alternate region or restored from Backup.
 
 ### Host pool resiliency
 
@@ -187,7 +190,7 @@ For most scenarios, we recommend that you use Azure Files or Azure NetApp Files 
   - Network infrastructure, as part of a hub-and-spoke or virtual wide area network (WAN) architecture, must be available in the secondary region.
   - Hybrid connectivity must be highly available in the primary and secondary regions.
   - Active Directory authentication must be available in the disaster recovery region, or connectivity to the on-premises domain must be guaranteed.
-
+    
 - Learn about security, governance, and compliance for an Azure Virtual Desktop enterprise-scale scenario.
 
   > [!div class="nextstepaction"]
