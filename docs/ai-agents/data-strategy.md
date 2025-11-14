@@ -19,53 +19,55 @@ This guidance focuses on two priorities:
 1. Preparing enterprise data for SaaS-based productivity agents like Microsoft 365 Copilot.
 2. Preparing enterprise data for custom AI agent retrieval.
 
-## Prepare enterprise data for Microsoft 365 Copilot and SaaS agents
+## Prepare data for Microsoft 365 Copilot and SaaS agents
 
-Productivity agents such as Microsoft 365 Copilot depend on access to organizational content stored in OneDrive, SharePoint, Exchange, and other Microsoft 365 sources. These agents use Microsoft Graph to retrieve documents, emails, and collaboration artifacts. To ensure secure and effective access, organizations must balance availability with least-privileged access principles.
+Productivity agents such as Microsoft 365 Copilot depend on access to organizational content stored in OneDrive, SharePoint, Exchange, and other Microsoft 365 sources. These agents use Microsoft Graph to retrieve documents, emails, and collaboration artifacts while respecting existing permissions. See [Microsoft 365 Copilot privacy, data, and security](/microsoft-365-copilot/microsoft-365-copilot-privacy) and [Microsoft Graph overview](/graph/overview). To ensure secure and effective access, organizations must balance availability with least-privileged access principles. See [Least privilege guidance](/entra/identity/role-based-access-control/best-practices#1-apply-principle-of-least-privilege).
 
-### Key actions for decision makers
+1. **Unify content under governed access.** Use Microsoft Graph APIs to integrate OneDrive, SharePoint, and other Microsoft 365 sources. See [OneDrive and SharePoint in Microsoft Graph](/onedrive/developer/rest-api/?view=odsp-graph-online). Consolidated access surfaces relevant content while enforcing existing access boundaries. Avoid fragmented permission models that create blind spots or expose sensitive data.
 
-1. **Unify content under governed access.** Use Microsoft Graph APIs to integrate OneDrive, SharePoint, and other Microsoft 365 sources. This integration ensures that agents can retrieve relevant content while respecting organizational security boundaries. Avoid fragmented permissions that create blind spots or expose sensitive data.
+1. **Enforce least-privileged access.** Review and update access controls across Microsoft 365 repositories. Confirm users and agents only access data they are authorized to view. Use Microsoft Purview [sensitivity labels](/purview/sensitivity-labels) and [Purview DLP](/purview/dlp-learn-about-dlp) to reduce oversharing and apply consistent protection.
 
-2. **Enforce least-privileged access.** Review and update access controls across Microsoft 365 repositories. Ensure that users and agents only access data they are authorized to view. Use Microsoft Purview sensitivity labels and data loss prevention policies to enforce compliance and prevent oversharing.
+1. **Maintain metadata and traceable governance.** Apply metadata enrichment to productivity content (owners, timestamps, sensitivity classification). Use Microsoft Purview to capture lineage for supported data systems and audit access events where logging applies. See [Purview lineage overview](/purview/data-gov-classic-lineage) and [Purview audit solutions](/purview/audit-solutions-overview). Avoid implying universal coverage—traceability depends on service integration and enabled logging.
 
-3. **Maintain metadata and lineage.**Apply metadata enrichment to productivity content, including document owners, timestamps, and sensitivity classifications. Use Microsoft Purview for governance and lineage tracking so that every retrieval is auditable and traceable.
+1. **Optimize search and indexing.** Confirm semantic capabilities and Microsoft 365 Copilot Search or semantic index are enabled. See [Semantic indexing for Microsoft 365 Copilot](/microsoftsearch/semantic-index-for-copilot) and configure Microsoft 365 Copilot connectors (formerly Graph connectors) for external sources (see [Copilot connectors overview](/microsoft-365-copilot/extensibility/overview-copilot-connector)). This improves natural language retrieval relevance without custom indexing infrastructure.
 
-4. **Optimize search and indexing.** Confirm that Microsoft Search and Graph connectors are active and configured for natural language queries. This step improves retrieval accuracy for Copilot and other SaaS agents without requiring custom development.
+Without these measures, productivity agents risk exposing sensitive information or returning incomplete results. A governed approach improves predictable performance, reduces exposure, and supports compliance across collaboration tools.
 
-Without these measures, productivity agents risk exposing sensitive information or delivering incomplete results. A governed approach ensures predictable performance, simplified security, and compliance across collaboration tools.
-
-## Prepare enterprise data for custom AI agent retrieval
+## Prepare data for custom AI agent retrieval
 
 Custom AI agents require structured, high-quality data to reason effectively. Fragmented or poorly indexed data increases latency, reduces accuracy, and complicates governance. Preparing data for agentic retrieval minimizes these risks and accelerates development.
 
 ### Establish a unified data foundation
 
-Create a centralized platform that serves as the authoritative source for structured business data. Use Microsoft Fabric to consolidate disparate sources into golden datasets—standardized, trusted datasets derived from mirrored OLTP systems. This architecture provides consistent, high-quality data for analytical and reasoning tasks while simplifying governance.
+Create a centralized analytics platform as the authoritative source for structured business data. Use Microsoft Fabric mirroring and curated semantic models (rather than “golden datasets”) to consolidate operational sources into governed analytical representations. See [Fabric mirroring overview](/fabric/mirroring/overview). Mirroring replicates supported OLTP sources into OneLake in an analytics-ready open Delta format, enabling consistent downstream use (BI, data science, and AI) while simplifying governance.
 
 ### Prepare data for agentic retrieval
 
-Agentic retrieval enables AI agents to locate and interpret relevant data efficiently using natural language. Preparing data involves several steps:
+Agentic retrieval enables AI agents to locate and interpret relevant data efficiently using natural language and hybrid search (semantic, vector, lexical). See [Agentic retrieval index design](/azure/search/agentic-retrieval-how-to-create-index). Preparing data involves several steps:
 
-1. **Assess readiness of existing data assets.** Evaluate whether current datasets meet foundational requirements for agent workloads. Confirm that indexes exist for core sources and support natural language search. If missing, plan for index creation and schema adjustments.
+1. **Assess readiness of existing data assets.** Evaluate whether current datasets meet retrieval workloads. Confirm required indexes exist and semantic or hybrid configurations are active where natural language relevance is needed. See [Semantic index](/microsoftsearch/semantic-index-for-copilot). Identify gaps (missing indexes, inconsistent schemas) and prioritize remediation.
 
-2. **Plan for metadata enrichment and traceability.** Add identifiers such as document names, section markers, and source references. Include ownership, timestamps, and sensitivity labels to support transparency and compliance.
+1. **Plan metadata enrichment and traceability.** Add identifiers (document names, section markers, source references), ownership, timestamps, and sensitivity labels (see [Sensitivity labels](/purview/sensitivity-labels)). This supports transparent relevance scoring, compliance, and selective access.
 
-3. **Include enhancements for performance and relevance.** Consider synonym maps for industry-specific terminology and scoring profiles to prioritize critical content. These improvements increase retrieval quality but require additional effort.
+1. **Include enhancements for performance and relevance.** Consider [synonym maps](/azure/search/search-synonyms) and [scoring profiles](/azure/search/index-add-scoring-profiles) to boost critical fields. These improvements add maintenance overhead—balance benefit versus lifecycle cost.
 
-4. **Structure data for efficient retrieval and reasoning.** Segment large documents into smaller, context-preserving chunks. Chunking improves retrieval speed and reasoning accuracy while reducing cost.
+1. **Structure data for efficient retrieval and reasoning.** Segment large documents into smaller, context-preserving chunks. See [chunking guidance](/azure/search/vector-search-how-to-chunk-documents). Chunking helps stay within embedding model token limits and improves retrieval precision when properly tuned; benefits depend on content structure and query patterns.
 
-5. **Plan for chunk configuration.** Define chunk sizes and overlap strategies. Test and tune configurations based on real data to optimize latency and accuracy.
+1. **Define chunk size and overlap strategies.** Start with evidence-based defaults (for example ~512 tokens with moderate overlap per Azure guidance) and iterate using real usage metrics. See [chunking examples](/azure/search/vector-search-how-to-chunk-documents#chunking-examples). Optimize for relevance first, then evaluate latency and cost impacts.
 
-6. **Preserve relationships within data.** Maintain hierarchical links between chunks and parent documents. This design enables agents to navigate from summaries to detailed content without losing context.
+1. **Preserve relationships within data.** Maintain hierarchical links between chunks and parent documents (section → paragraph → chunk) to enable reconstruction of broader context. See [Advanced RAG ingestion considerations](/azure/developer/ai/advanced-retrieval-augmented-generation#ingestion).
 
-A unified foundation and structured preparation reduce complexity, improve performance, and ensure compliance. These steps allow teams to build agents that deliver accurate, auditable, and cost-efficient outcomes.
+1. **Integrate embeddings consistently.** Use the same embedding model for indexing and querying. See [Generate embeddings](/azure/search/vector-search-how-to-generate-embeddings) and [Integrated vectorization](/azure/search/vector-search-integrated-vectorization). Normalize or compress vectors when appropriate to control storage and improve similarity performance.
+
+A unified foundation and structured preparation reduce complexity, improve relevance, and support governance. These steps allow teams to build agents that deliver accurate, auditable, and cost-efficient outcomes.
 
 ### Trade-offs and considerations
 
-- **Effort vs. accuracy:** Metadata enrichment and chunking improve retrieval quality but add complexity. Decision makers should weigh benefits against cost and timeline.
-- **Security vs. accessibility:** Enforcing least privilege reduces risk but requires ongoing governance. Automating sensitivity labeling and access reviews can minimize effort.
-- **Performance vs. flexibility:** Enhancements like synonym maps improve relevance but require maintenance as terminology evolves.
+- **Effort vs. accuracy:** Metadata enrichment, synonym maps, and chunk strategy tuning improve retrieval quality and grounding reliability but increase maintenance.
+
+- **Security vs. accessibility:** Least privilege and regular access reviews (see [Access reviews](/entra/id-governance/deploy-access-reviews)) reduce risk but require ongoing process maturity. Automating labeling and policy enforcement (see [Auto-labeling](/purview/apply-sensitivity-label-automatically)) lowers manual overhead.
+
+- **Performance vs. flexibility:** Advanced relevance features (semantic ranking, scoring profiles, hybrid vector + lexical queries) raise computational cost. Apply selectively to critical content domains; monitor usage and adjust.
 
 ## Next step
 
