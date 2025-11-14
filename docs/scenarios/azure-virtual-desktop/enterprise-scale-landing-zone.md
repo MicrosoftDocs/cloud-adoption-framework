@@ -11,7 +11,7 @@ ms.topic: conceptual
 
 This document provides technical stakeholders responsible for platform and workload landing zones with guidance on Azure Virtual Desktop using enterprise-scale methodologies. It describes how both prepare and use the application landing zone accelerator for Azure Virtual Desktop which will shorten deployment time and apply enterprise governance, security, networking, and automation patterns. Follow this guidance to standardize deployments, enforce compliance controls, and scale AVD across regions with predictable operations. 
 
-**This documentation enables your teams to:**
+**This documentation enables your team(s) to:**
 
 - Set up enterprise-scale identity, governance, and security controls for AVD workloads
 - Deploy the Azure Virtual Desktop accelerator with best practices built-in
@@ -28,16 +28,17 @@ This document provides technical stakeholders responsible for platform and workl
 
 ## Cloud Adoption Framework fundamentals
 
-Before deploying any landing zone, ensure your teams understand the foundational principles of the Cloud Adoption Framework:
-- **Governance**: Define policies, compliance requirements, and guardrails.
-- **Management**: Establish monitoring, backup, and disaster recovery strategies.
+Before deploying any landing zone, ensure your workload team understands the foundational principles of the Cloud Adoption Framework:
+- **Governance**: Define policies, implement compliance requirements, and enforce guardrails.
+- **Management**: Establish monitoring, life-cyle, backup, and disaster recovery strategies.
 - **Platform**: Configure core infrastructure including networking, identity, and resource organization.
-- **Landing zones**: Create scalable environments for workloads with built-in governance and security.
+- **Landing zones**: Create scalable environments for workloads with both Platform and Service limits in mind.
 
-Recommended resources
-- https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/
-- https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/
-- https://learn.microsoft.com/en-us/training/modules/cloud-adoption-framework/
+Recommended resources to learn more about the Azure Cloud Adoption Framework and Landing Zone concepts:
+- [Microsoft Cloud Adoption Framework](/azure/cloud-adoption-framework/)
+- [What is an Azure landing zone?](/azure/cloud-adoption-framework/ready/landing-zone/)
+- [Get started with an enterprise-scale Azure landing zone](/azure/cloud-adoption-framework/ready/enterprise-scale/)
+- [Introduction to the Microsoft Cloud Adoption Framework - Learning Path](/training/modules/cloud-adoption-framework/)
 
 ## Establish a scalable and compliant enterprise-scale Azure landing zone
 
@@ -52,7 +53,7 @@ An enterprise-scale Azure landing zone ensures consistent governance, security, 
 
 ## Deploy the application landing zone accelerator for Azure Virtual Desktop
 
-The application landing zone accelerator for Azure Virtual Desktop provides Infrastructure as Code templates that implement enterprise-scale best practices, reducing deployment time and ensuring consistency across environments.
+The application landing zone accelerator for Azure Virtual Desktop provides Infrastructure as Code templates that implement enterprise-scale best practices, reducing deployment time, and ensuring consistency across environments.
 
 > [!div class="nextstepaction"]
 > [Deploy Azure Virtual Desktop to an application landing zone](https://github.com/Azure/avdaccelerator)
@@ -67,16 +68,16 @@ The application landing zone accelerator for Azure Virtual Desktop provides Infr
 
 ## Expand Azure Virtual Desktop across regions
 
-Growing globally or need more capacity? Regional expansion provides scalability, improves performance for distributed users, and supports business continuity. Choose the expansion scenario that fits your needs:
+Growing globally or need more capacity? Regional expansion provides scalability, improves performance for distributed users, and enables business continuity. Choose the expansion scenario that fits your needs:
 
-**Scenario 1: Scale beyond capacity limits** - Add regions when your primary region reaches resource limits
-**Scenario 2: Improve user proximity** - Deploy closer to users for better performance and local connectivity
+**Scenario 1: Scale beyond regional capacity limits** - Add regions when your primary region reaches resource limits
+**Scenario 2: Improve user proximity** - Deploy closer to end-users and applications for better performance and local connectivity
 
 ### Expand due to capacity limitations
 
 A secondary region helps organizations scale Azure Virtual Desktop when the primary region reaches capacity limits.
 
-1. **Deploy a new virtual network with non-overlapping IP address space.** This configuration prevents routing conflicts and ensures clean peering between regions. Use CIDR blocks that don't overlap with existing virtual networks in the primary region.
+1. **Deploy a new virtual network with non-overlapping IP address space.** This configuration prevents routing conflicts and ensures clean peering between regions. Use CIDR blocks that don't overlap with existing virtual networks.
 
 2. **Connect the new region to the primary region using [global VNet peering](/azure/virtual-network/virtual-network-peering-overview) with [gateway transit](/azure/vpn-gateway/vpn-gateway-peering-gateway-transit) enabled.** Gateway transit allows the new region to access shared on-premises resources through VPN or ExpressRoute. This setup supports centralized connectivity and avoids duplicating network infrastructure.
 
