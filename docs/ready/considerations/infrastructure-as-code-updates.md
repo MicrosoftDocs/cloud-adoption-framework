@@ -3,7 +3,7 @@ title: Use infrastructure as code to update Azure landing zones
 description: Learn about the benefits of using infrastructure as code to update your Azure landing zone to ensure configurations are correct.
 author: jtracey93
 ms.author: jatracey
-ms.topic: conceptual
+ms.topic: concept-article
 ms.date: 03/03/2023
 ---
 

@@ -4,7 +4,7 @@ description: Learn how Azure Arc accelerates hybrid and multicloud adoption with
 author: stephen-sumner
 ms.author: pnp
 ms.date: 09/29/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ---
 
 # Implement hybrid and multicloud adoption with Azure Arc and Azure landing zones

@@ -4,7 +4,7 @@ description: Learn about business and technical considerations for architectural
 author: mhenry
 ms.author: jaalmond
 ms.date: 04/21/2022
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: e2e-azure-vmware, think-tank
 ---
 

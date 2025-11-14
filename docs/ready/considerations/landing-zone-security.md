@@ -4,7 +4,7 @@ description: Improve landing zone security.
 author: stephen-sumner
 ms.author: pnp
 ms.date: 06/21/2022
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: internal
 ---
 

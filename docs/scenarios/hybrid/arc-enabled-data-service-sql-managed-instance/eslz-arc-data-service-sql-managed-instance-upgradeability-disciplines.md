@@ -4,7 +4,7 @@ description: Learn how to implement upgradeability disciplines for Azure Arc-ena
 author: sebassem
 ms.author: sebassem
 ms.date: 09/26/2022
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: e2e-hybrid, think-tank
 ---
 

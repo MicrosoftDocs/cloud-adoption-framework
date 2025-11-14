@@ -4,7 +4,7 @@ description: Learn how to incorporate Zero Trust-specific deployment objectives 
 author: brsteph
 ms.author: pnp
 ms.date: 02/27/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ---
 
 # Incorporate Zero Trust practices in your landing zone

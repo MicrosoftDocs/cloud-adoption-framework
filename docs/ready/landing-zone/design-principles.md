@@ -4,7 +4,7 @@ description: Learn about the design principles that influence the design areas f
 author: jtracey93
 ms.author: jatracey
 ms.date: 09/03/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: think-tank
 ---
 
@@ -22,7 +22,7 @@ Familiarize yourself with these principles to better understand their impact and
 
 There might be valid reasons to deviate from the design principles. For example, organizational requirements might dictate specific outcomes or approaches for designing an Azure environment. In such cases, it's important to understand the impact the deviation has on the design and future operations. Carefully consider the tradeoffs each principle outlines.
 
-As a general rule, be prepared to balance requirements and functionality. Your journey to a conceptual architecture evolves over time as requirements change and you learn from your implementation. For example, using preview services and depending on service roadmaps can remove technical blockers during adoption.
+As a general rule, be prepared to balance requirements and functionality. Your journey to a conceptual architecture evolves over time as requirements change, and you learn from your implementation. For example, using preview services and depending on service roadmaps can remove technical blockers during adoption.
 
 ## Subscription democratization
 
@@ -47,11 +47,11 @@ Subscription democratization provides a scalable way to accelerate application m
 
 - **Operating model misalignment.** Azure landing zone conceptual architecture design assumes a specific management group and subscription hierarchy for all operations management subscriptions. This hierarchy might not align with your [operations approach](../../plan/prepare-organization-for-cloud.md#choose-a-cloud-operating-model). As your organization grows and evolves, your operating model might change. Moving resources into separate subscriptions can lead to complicated technical migrations. Review the [Align](../../ready/enterprise-scale/transition.md) guidance before you commit to an approach.
 
-- **Lack of subscription vending process and automation.** If you do not provide a subscription vending process and associated automation, whether self-service or not, application and service teams will be delayed from delviering value for your organization whilst subscriptions are created for them and placed the appropriate Management Group in the hierarchy. If the process for getting new subscriptions is complicated and takes a long time, application and service teams may chose to create subscriptions by themselves via alternative billing accounts and maybe also in non-managed or goverened Microsoft Entra tenants; which means shadow IT is now in existence.
+- **Lack of subscription vending process and automation.** If you do not provide a subscription vending process and associated automation, whether self-service or not, application and service teams will be delayed from delivering value for your organization whilst subscriptions are created for them and placed the appropriate Management Group in the hierarchy. If the process for getting new subscriptions is complicated and takes a long time, application and service teams may choose to create subscriptions by themselves via alternative billing accounts and maybe also in non-managed or governed Microsoft Entra tenants, which means shadow IT is now in existence.
 
 ## Policy-driven governance
 
-Use Azure Policy to provide guardrails and ensure that the applications you deploy comply with your organization's security, governance, and regulatory controls that is implementation and configuration tooling agnostic. Azure Policy provides platform teams with the required tooling to implement, enforce, audit, and control Azure control and data plane operations and configurations. This then allows the [subscriptions to be democratized](#subscription-democratization), ideally via a self-service process, to application and service teams so they can deliver business value rapidly for the organization.
+Use Azure Policy to provide guardrails and ensure that the applications you deploy comply with your organization's security, governance, and regulatory controls that are implementation and configuration tooling agnostic. Azure Policy provides platform teams with the required tooling to implement, enforce, audit, and control Azure control and data plane operations and configurations. This then allows the [subscriptions to be democratized](#subscription-democratization), ideally via a self-service process, to application and service teams so they can deliver business value rapidly for the organization.
 
 For more information on utilizing Azure Policy, review [Adopt policy-driven guardrails](../../ready/enterprise-scale/dine-guidance.md).
 
@@ -61,7 +61,7 @@ For more information on utilizing Azure Policy, review [Adopt policy-driven guar
 
 ## Single control and management plane
 
-Avoid dependency on abstraction layers such as customer-developed portals or tooling. It's best to have a consistent experience for both central operations and workload operations. Azure provides a unified and consistent control plane that applies across all Azure resources and provisioning channels, known as [Azure Resoruce Manager](/azure/azure-resource-manager/management/overview). The control plane is subject to role-based access controls and policy-driven controls. You can use this Azure control plane to establish a standardized set of policies and controls that govern your entire enterprise estate.
+Avoid dependency on abstraction layers such as customer-developed portals or tooling. It's best to have a consistent experience for both central operations and workload operations. Azure provides a unified and consistent control plane that applies across all Azure resources and provisioning channels, known as [Azure Resource Manager](/azure/azure-resource-manager/management/overview). The control plane is subject to role-based access controls and policy-driven controls. You can use this Azure control plane to establish a standardized set of policies and controls that govern your entire enterprise estate.
 
 ### Impact of deviation
 

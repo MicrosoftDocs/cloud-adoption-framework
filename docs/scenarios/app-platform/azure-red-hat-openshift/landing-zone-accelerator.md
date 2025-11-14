@@ -4,7 +4,7 @@ description: Learn how to deploy Azure Red Hat OpenShift landing zone accelerato
 author: UmarMohamedUsman
 ms.author: umarm
 ms.date: 08/17/2022
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom:
   - think-tank
   - e2e-ARO

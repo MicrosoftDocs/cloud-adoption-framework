@@ -3,7 +3,7 @@ title: Sustainability Considerations in Your Cloud Strategy
 description: Learn how to incorporate sustainability into your cloud strategy. Use Azure to drive your sustainability efforts.
 ms.author: pnp
 author: stephen-sumner
-ms.topic: conceptual
+ms.topic: concept-article
 ms.date: 02/03/2025
 ---
 

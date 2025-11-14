@@ -4,7 +4,7 @@ description: Learn how to optimize Azure workloads after cloud modernization by 
 author: stephen-sumner
 ms.author: pnp
 ms.date: 08/15/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ---
 
 # Optimize workloads after cloud modernization

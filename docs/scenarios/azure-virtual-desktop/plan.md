@@ -4,7 +4,7 @@ description: Use the Cloud Adoption Framework for Azure to plan your virtual des
 author: stephen-sumner
 ms.author: pnp
 ms.date: 02/03/2023
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: think-tank, e2e-avd
 ---
 

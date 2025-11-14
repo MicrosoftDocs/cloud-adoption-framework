@@ -4,7 +4,7 @@ description: Learn about design considerations and recommendations for operation
 author: claytonsiemens77
 ms.author: csiemens
 ms.date: 03/16/2023
-ms.topic: conceptual
+ms.topic: concept-article
 ---
 
 # Operations management considerations for the AIS Services landing zone accelerator

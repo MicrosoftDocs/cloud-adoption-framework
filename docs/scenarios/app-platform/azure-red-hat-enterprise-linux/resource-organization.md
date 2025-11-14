@@ -4,7 +4,7 @@ description: Learn about key design considerations and recommendations for resou
 author: moisesjgomez
 ms.author: mgomezcortez
 ms.date: 07/24/2024
-ms.topic: conceptual
+ms.topic: concept-article
 ---
 
 # Resource organization considerations for Red Hat Enterprise Linux on Azure

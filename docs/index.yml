@@ -34,7 +34,7 @@ highlightedContent:
       url: ./ready/landing-zone/index.md    
     - title: Adoption scenarios
       itemType: get-started
-      url: ./overview.md#what-specific-scenarios-does-the-cloud-adoption-framework-address
+      url: ./overview.md#cloud-adoption-framework-scenarios
     - title: Create an Azure account
       itemType: get-started
       url: https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn

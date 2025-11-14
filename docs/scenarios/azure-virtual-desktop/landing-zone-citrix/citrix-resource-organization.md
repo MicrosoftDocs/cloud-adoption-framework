@@ -4,7 +4,7 @@ description: Learn about the resource organization design area and how to apply 
 author: BenMartinBaur
 ms.author: bebaur
 ms.date: 02/06/2023
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: think-tank, e2e-avd
 ---
 

@@ -4,7 +4,7 @@ description: Learn how to use Azure Virtual WAN and NVAs to establish network co
 author: Mahesh-MSFT
 ms.author: maksh
 ms.date: 10/16/2024
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: think-tank, e2e-azure-vmware
 ---
 

@@ -4,7 +4,7 @@ description: Learn the process to secure AI with best practices and recommendati
 ms.author: ssumner
 author: stephen-sumner
 ms.date: 07/01/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ---
 
 # Secure AI

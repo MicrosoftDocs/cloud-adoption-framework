@@ -5,7 +5,7 @@ author: stephen-sumner
 ms.author: pnp
 ms.date: 11/28/2024
 ms.update-cycle: 180-days
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom:
   - internal
   - UpdateFrequency.5

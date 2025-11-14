@@ -4,7 +4,7 @@ description: Learn about design considerations and recommendations for security 
 author: stephen-sumner
 ms.author: jordanbean
 ms.date: 09/12/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ---
 
 # Security considerations for the Azure Integration Services landing zone accelerator
@@ -119,11 +119,11 @@ General security considerations include:
 
 - Consider the use of penetration testing to identify any weaknesses in your security design.
 
-- Use automated deployment processes to configure security. Where possible, use a CI/CD pipeline like [GitHub Actions](/azure/developer/github/github-actions) or [Azure DevOps Pipelines](/azure/devops/pipelines/overview-azure?view=azure-devops) and Infrastructure as Code tools such as [Bicep](/azure/azure-resource-manager/bicep/overview?tabs=bicep) or [Terraform](/azure/developer/terraform/overview) to not only deploy your resources, but also to configure security. This ensures your resources will be automatically protected whenever they are deployed.
+- Use automated deployment processes to configure security. Where possible, use a CI/CD pipeline like [GitHub Actions](/azure/developer/github/github-actions) or [Azure DevOps Pipelines](/azure/devops/pipelines/overview-azure) and Infrastructure as Code tools such as [Bicep](/azure/azure-resource-manager/bicep/overview) or [Terraform](/azure/developer/terraform/overview) to not only deploy your resources, but also to configure security. This ensures your resources will be automatically protected whenever they are deployed.
 
 ## Next step
 
-Review the critical design areas to make complete considerations and recommendations for your architecture. 
+Review the critical design areas to make complete considerations and recommendations for your architecture.
 
 > [!div class="nextstepaction"]
 > [Management](./management.md)
@@ -134,7 +134,7 @@ Review the critical design areas to make complete considerations and recommendat
 
 - [What are managed identities for Azure resources?](/entra/identity/managed-identities-azure-resources/overview)
 
-- [Authenticate access to Azure resources with managed identities in Azure Logic Apps](/azure/logic-apps/create-managed-service-identity?tabs=standard)
+- [Authenticate access to Azure resources with managed identities in Azure Logic Apps](/azure/logic-apps/create-managed-service-identity)
 
 - [Security considerations for data movement in Azure Data Factory](/azure/data-factory/data-movement-security-considerations)
 

@@ -4,7 +4,7 @@ description: This article examines the design considerations and recommendations
 author: E-G-C
 ms.author: egonzalez
 ms.date: 04/21/2022
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: e2e-azure-vmware, think-tank
 ---
 

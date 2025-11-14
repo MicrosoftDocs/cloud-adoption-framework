@@ -4,7 +4,7 @@ description: Learn about the strategic impact of modern application platform ado
 author: stephen-sumner
 ms.author: pnp
 ms.date: 03/01/2021
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: think-tank, e2e-aks
 ---
 

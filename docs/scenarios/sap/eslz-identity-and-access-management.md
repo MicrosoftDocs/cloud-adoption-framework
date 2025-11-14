@@ -4,7 +4,7 @@ description: Learn more about design considerations and recommendations that rel
 author: PmeshramPM
 ms.author: pameshra
 ms.date: 06/30/2023
-ms.topic: conceptual
+ms.topic: concept-article
 ms.subservice: caf-scenario-sap
 ms.custom: think-tank, e2e-sap, UpdateFrequency2
 ---
@@ -63,7 +63,7 @@ Here are common administration and management activities of SAP on Azure:
 - [Migrate](/entra/id-governance/scenarios/migrate-from-sap-idm) your SAP Identity Management (IDM) solution to Microsoft Entra ID Governance.
 
 - Implement SSO by using Windows AD, Microsoft Entra ID, or AD FS, depending on the access type, so that the end users can connect to SAP applications without a user ID and password once the central identity provider successfully authenticates them.
-  - Implement SSO to SAP SaaS applications like [SAP Analytics Cloud](/en-us/entra/identity/saas-apps/sapboc-tutorial), [SAP Business Technology Platform (BTP)](/entra/identity/saas-apps/sap-hana-cloud-platform-tutorial), [Business by design](/entra/identity/saas-apps/sapbusinessbydesign-tutorial), [SAP Qualtrics](/entra/identity/saas-apps/qualtrics-tutorial) and [SAP C4C](/entra/identity/saas-apps/sap-customer-cloud-tutorial) with Microsoft Entra ID using SAML.
+  - Implement SSO to SAP SaaS applications like [SAP Analytics Cloud](/entra/identity/saas-apps/sapboc-tutorial), [SAP Business Technology Platform (BTP)](/entra/identity/saas-apps/sap-hana-cloud-platform-tutorial), [Business by design](/entra/identity/saas-apps/sapbusinessbydesign-tutorial), [SAP Qualtrics](/entra/identity/saas-apps/qualtrics-tutorial) and [SAP C4C](/entra/identity/saas-apps/sap-customer-cloud-tutorial) with Microsoft Entra ID using SAML.
   - Implement SSO to [SAP NetWeaver](/entra/identity/saas-apps/sap-netweaver-tutorial)-based web applications like [SAP Fiori](/entra/identity/saas-apps/sap-fiori-tutorial) and SAP Web GUI by using SAML.
   - You can implement SSO to SAP GUI by using SAP NetWeaver SSO or a partner solution.
   - For SSO for SAP GUI and web browser access, implement SNC – Kerberos/SPNEGO (simple and protected GSSAPI negotiation mechanism) due to its ease of configuration and maintenance. For SSO with X.509 client certificates, consider the SAP Secure Login Server, which is a component of the SAP SSO solution.

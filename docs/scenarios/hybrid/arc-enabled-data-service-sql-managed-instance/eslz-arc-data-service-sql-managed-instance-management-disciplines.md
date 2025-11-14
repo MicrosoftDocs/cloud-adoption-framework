@@ -4,7 +4,7 @@ description: Learn about design considerations and recommendations for the manag
 author: mrhoads
 ms.author: mirhoads
 ms.date: 09/07/2022
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: e2e-hybrid, think-tank
 ---
 

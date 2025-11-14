@@ -4,7 +4,7 @@ description: Learn to deploy the Azure Integration Services application landing 
 author: stephen-sumner
 ms.author: pnp
 ms.date: 10/13/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ---
 
 # Azure Integration Services application landing zone accelerator in an Azure landing zone

@@ -4,7 +4,7 @@ description: Learn how to identify SAP applications and connectors to integrate 
 author: PmeshramPM
 ms.author: pameshra
 ms.date: 01/16/2023
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: think-tank, e2e-sap
 ---
 

@@ -4,7 +4,7 @@ description: Learn about considerations for your operations management for Azure
 author: stephen-sumner
 ms.author: pnp
 ms.date: 02/13/2023
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: think-tank, e2e-aks, engagement-fy23
 products: azure-monitor
 ---

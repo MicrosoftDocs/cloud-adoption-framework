@@ -4,7 +4,7 @@ description: Understand data standardization in cloud-scale analytics.
 author: stephen-sumner
 ms.author: pnp
 ms.date: 04/08/2022
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: e2e-data-management, think-tank
 ---
 

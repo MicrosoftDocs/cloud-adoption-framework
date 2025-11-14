@@ -4,7 +4,7 @@ description: Learn how to implement business continuity and disaster recovery fo
 author: sebassem
 ms.author: sebassem
 ms.date: 09/07/2022
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: e2e-hybrid, think-tank
 ---
 

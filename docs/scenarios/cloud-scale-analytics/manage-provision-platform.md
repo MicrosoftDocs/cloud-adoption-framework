@@ -4,7 +4,7 @@ description: Learn how to provision cloud-scale analytics by deploying landing z
 author: abdale
 ms.author: hamoodaleem
 ms.date: 07/15/2021
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: e2e-data-management, think-tank
 ---
 

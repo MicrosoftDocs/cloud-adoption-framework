@@ -4,7 +4,7 @@ description: Learn how to use a data management landing zone to govern your anal
 author: stephen-sumner
 ms.author: pnp
 ms.date: 02/20/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: e2e-data-management, think-tank
 ---
 

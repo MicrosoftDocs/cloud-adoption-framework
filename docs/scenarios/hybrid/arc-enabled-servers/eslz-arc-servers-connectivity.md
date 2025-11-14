@@ -4,7 +4,7 @@ description: Learn about design considerations and recommendations for network c
 author: stephen-sumner
 ms.author: pnp
 ms.date: 10/14/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ---
 
 # Network topology and connectivity for Azure Arc-enabled servers

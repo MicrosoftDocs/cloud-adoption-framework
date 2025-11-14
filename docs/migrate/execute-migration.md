@@ -4,7 +4,7 @@ description: Execute migration to cloud with structured guidance for both offlin
 author: stephen-sumner
 ms.author: pnp
 ms.date: 08/01/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ---
 
 # Execute migration to cloud

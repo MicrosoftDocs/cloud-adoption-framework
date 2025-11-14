@@ -4,7 +4,7 @@ description: Learn how to select the right Azure AI services, compute, and tools
 author: stephen-sumner
 ms.author: ssumner
 ms.date: 03/27/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ---
 
 # Select Azure PaaS solutions for AI

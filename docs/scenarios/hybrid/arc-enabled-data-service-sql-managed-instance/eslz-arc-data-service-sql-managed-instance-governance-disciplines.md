@@ -4,7 +4,7 @@ description: Adopt best practices for governance, security, and compliance on Az
 author: sebassem
 ms.author: sebassem
 ms.date: 09/21/2022
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: e2e-hybrid, think-tank
 ---
 

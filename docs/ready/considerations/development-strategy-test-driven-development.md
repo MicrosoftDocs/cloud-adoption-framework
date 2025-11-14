@@ -4,7 +4,7 @@ description: Test-driven development for Azure Landing Zones.
 author: elbatane
 ms.author: elbatane
 ms.date: 06/28/2022
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: internal
 ---
 

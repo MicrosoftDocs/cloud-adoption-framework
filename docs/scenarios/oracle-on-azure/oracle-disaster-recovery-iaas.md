@@ -5,7 +5,7 @@ author: jjaygbay1
 ms.author: jacobjaygbay
 ms.reviewer: ramakoni
 ms.date: 07/05/2024
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: e2e-oracle
 --- 
 
@@ -14,11 +14,11 @@ ms.custom: e2e-oracle
 
 This article builds on the considerations and recommendations that are defined in the [Azure landing zone design area for business continuity and disaster recovery (BCDR)](../../ready/landing-zone/design-area/management-business-continuity-disaster-recovery.md). This article follows that guidance and describes design considerations and best practices about BCDR options for Oracle workload deployments on Azure infrastructure virtual machines (VMs).
 
-Azure provides services that you can use to design highly available and resilient architectures. This guide outlines various options and best practices to help you design high availability and disaster recovery for Oracle databases on Azure Virtual Machines landing zone accelerator. It also describes how to configure accompanying Azure services to help you achieve high end-to-end availability for your solution.
+Azure provides services that you can use to design architectures that continue operating during localized faults and that can be restored quickly after broader incidents. This guide outlines options and best practices for resiliency and disaster recovery for Oracle databases on the Azure Virtual Machines landing zone accelerator. It also describes how to configure accompanying Azure services to achieve end-to-end workload reliability.
 
 ## Get started
 
-To build a resilient architecture for your workload environment, determine availability requirements for your solution based on the recovery time objective (RTO) and recovery point objective (RPO) for various levels of failure. RTO is the maximum time that an application remains unavailable after an incident occurs. RPO is the maximum amount of data loss during a disaster. After you determine the requirements for your solution, design your architecture to provide the established levels of resiliency and availability.
+To design for reliability, first determine availability and recovery requirements based on recovery time objective (RTO) and recovery point objective (RPO) targets for various failures. RTO is the maximum time that an application remains unavailable after an incident occurs. RPO is the maximum amount of data loss during a disaster. Use RTO/RPO to drive recovery architecture decisions. Separately implement resiliency patterns to meet continuous operation goals.
 
 Oracle on Azure workloads primarily use Oracle Data Guard, which is a built-in Oracle Database Enterprise Edition feature that uses replication technology. You can use Data Guard to fulfill high availability and disaster recovery needs. Data Guard offers three protection modes: maximum performance, maximum availability, and maximum protection. Choose your protection mode based on your architectural design and your specific RPO and RTO requirements.
 
@@ -71,7 +71,7 @@ To provide the lowest possible latency, place VMs as close as possible. You can 
 
 ## Configure your workload for disaster recovery
 
-A disaster recovery architecture provides resiliency against failures that affect Azure datacenters or regions or against failures that hinder application functionality across an entire region. In such a scenario, you should move your entire workload to a different datacenter or region.
+A disaster recovery architecture provides recoverability after failures that affect Azure datacenters, regions, or larger portions of application functionality. In such a scenario, you move your workload to a different datacenter or region. Resiliency patterns (fault isolation, zone redundancy) complement this by reducing the likelihood or impact of localized faults before full failover is required.
 
 Choose your disaster recovery architecture based on your solution requirements. You determine your requirements based on your RTO and RPO. Disaster recovery architectures are for exceptional failure cases, so failover processes are manual. In the high availability design, failover processes are automatic. In a disaster recovery architecture, you should have more relaxed requirements for RTO and RPO, which saves money.
 

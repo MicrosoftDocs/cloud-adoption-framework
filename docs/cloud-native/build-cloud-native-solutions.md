@@ -4,7 +4,7 @@ description: Learn to build resilient cloud-native Azure solutions using best pr
 author: stephen-sumner
 ms.author: pnp
 ms.date: 08/01/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ---
 
 # Build cloud-native solutions

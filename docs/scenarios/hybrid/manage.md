@@ -4,7 +4,7 @@ description: Implement effective controls to provide operations management acros
 author: stephen-sumner
 ms.author: pnp
 ms.date: 02/01/2020
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: e2e-hybrid, think-tank
 ---
 

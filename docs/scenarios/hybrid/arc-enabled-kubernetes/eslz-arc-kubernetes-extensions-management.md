@@ -4,7 +4,7 @@ description: Learn design considerations and recommendations for extensions mana
 author: mrhoads
 ms.author: mirhoads
 ms.date: 04/29/2022
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: e2e-hybrid, think-tank, e2e-arc-enabled-kubernetes
 ---
 

@@ -3,7 +3,7 @@ title: Storage for Azure HPC Workloads
 description: Learn how to use Azure Storage for high-performance computing (HPC) workloads in energy environments, the finance sector, and for manufacturing.
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: think-tank
 ms.date: 12/06/2024
 ---
@@ -28,7 +28,7 @@ The following diagram shows a decision tree that's for a specific HPC storage sy
 
 :::image type="content" source="media/storage-selection-flow.svg" alt-text="Diagram that shows a decision tree of considerations when you choose a storage solution." lightbox="media/storage-selection-flow.svg" border="false":::
 
-*Download a [Visio file](https://archcenter.blob.core.windows.net/cdn/storage-selection-flow.vsdx) of this architecture.*
+*Download a [Visio file](https://arch-center.azureedge.net/storage-selection-flow.vsdx) of this architecture.*
 
 ## HPC considerations
 

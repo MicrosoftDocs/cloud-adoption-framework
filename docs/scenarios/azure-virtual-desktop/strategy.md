@@ -4,7 +4,7 @@ description: Explore the strategic benefits of an Azure Virtual Desktop environm
 author: stephen-sumner
 ms.author: pnp
 ms.date: 10/27/2022
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: think-tank, e2e-avd
 ---
 

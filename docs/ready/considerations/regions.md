@@ -4,7 +4,7 @@ description: Overview of how Azure landing zones use regions and how to add or m
 author: johndowns
 ms.author: jodowns
 ms.date: 05/21/2024
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: internal
 ---
  

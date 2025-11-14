@@ -4,7 +4,7 @@ description: Review how you can migrate VMware workloads from your data center t
 author: stephen-sumner
 ms.author: pnp
 ms.date: 04/22/2022
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: e2e-azure-vmware, think-tank
 ---
 

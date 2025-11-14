@@ -4,7 +4,7 @@ description: Use the Cloud Adoption Framework for Azure to learn how to govern y
 author: stephen-sumner
 ms.author: pnp
 ms.date: 09/17/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ---
 
 # Set up governance in Azure

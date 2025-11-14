@@ -4,7 +4,7 @@ description: Learn how this design area can improve platform automation and DevO
 author: stephen-sumner
 ms.author: pnp
 ms.date: 02/22/2023
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: think-tank, e2e-avd
 ---
 
@@ -117,6 +117,7 @@ Gate your deployment pipelines so they can be automatically triggered to deploy 
 ### Variables and Azure Key Vault
 
 Use variable groups when working in Azure Pipelines.
+
 - Variable groups let you have repeatable parameters in your pipelines like secrets and file locations.
 - Variables within variable groups can be stored as key/value pairs, but the recommended method is [Linking a variable group to an Azure Key Vault](/azure/devops/pipelines/release/azure-key-vault?view=azure-devops&preserve-view=true) to pull in secrets for use in your deployment pipeline.
 
@@ -164,7 +165,7 @@ The Azure Compute Gallery service is the simplest way to build structure and org
 - Global replication of images to different Azure regions.
   - Make sure you've deployed images in the regions that Azure Virtual Desktop session hosts (VMs) deploy to.
 - Image versioning and grouping for easier management. Versioning and grouping are helpful for rolling back Azure Virtual Desktop host pools to previous image versions.
-- Highly available images with zone-redundant storage (ZRS) accounts in regions that support Availability Zones. ZRS offers better resilience against zonal failures.
+- Highly available images with zone-redundant storage (ZRS) accounts in regions that support Availability Zones. ZRS improves resiliency by distributing replicas across zones.
 - Azure Virtual Desktop image sharing across subscriptions, and even between Microsoft Entra tenants, through role-based access control (RBAC).
 - Deployment scaling with image replicas in each region.
   - Plan on deploying [one replica for every 20 VMs](/azure/virtual-machines/shared-image-galleries) you plan to deploy concurrently.

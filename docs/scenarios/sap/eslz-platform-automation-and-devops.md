@@ -4,7 +4,7 @@ description: Learn more about the dependencies between SAP systems, environments
 author: PmeshramPM
 ms.author: pameshra
 ms.date: 03/16/2021
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: think-tank, e2e-sap
 ---
 

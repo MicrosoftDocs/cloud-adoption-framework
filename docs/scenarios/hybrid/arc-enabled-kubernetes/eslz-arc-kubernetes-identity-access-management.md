@@ -4,7 +4,7 @@ description: Learn how to implement identity and access management for Azure Arc
 author: chintalavr
 ms.author: vchintala
 ms.date: 04/27/2021
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: e2e-hybrid, think-tank
 ---
 
@@ -38,7 +38,7 @@ The following diagram shows various Azure Arc-enabled Kubernetes components and 
 
 The following diagram displays [Azure Arc-enabled Kubernetes cluster access from anywhere](/azure/azure-arc/kubernetes/conceptual-cluster-connect) and shows how components interact with each other to manage a cluster using Azure RBAC.
 
-[![Diagram that shows how to access Arc-enabled Kubernetes anywhere.](./media/arc-enabled-kubernetes-cluster-connect-network.png)](./media/arc-enabled-kubernetes-cluster-connect-network.png#lighbox)
+[![Diagram that shows how to access Arc-enabled Kubernetes anywhere.](./media/arc-enabled-kubernetes-cluster-connect-network.png)](./media/arc-enabled-kubernetes-cluster-connect-network.png#lightbox)
 
 ## Design considerations
 

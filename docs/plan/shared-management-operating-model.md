@@ -4,7 +4,7 @@ description: Implement a shared management cloud operating model that scales clo
 author: stephen-sumner
 ms.author: pnp
 ms.date: 07/15/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ---
 
 # Shared management cloud operations

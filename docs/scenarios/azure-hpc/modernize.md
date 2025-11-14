@@ -4,7 +4,7 @@ description: This is HPC scenario's impact on cloud adoption strategy.
 author: Rajani-Janaki-Ram
 ms.author: rajanaki
 ms.date: 10/03/2022
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: think-tank
 ---
 

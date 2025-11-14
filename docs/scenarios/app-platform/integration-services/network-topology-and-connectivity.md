@@ -4,7 +4,7 @@ description: Learn about design considerations and recommendations for network t
 author: stephen-sumner
 ms.author: jordanbean
 ms.date: 09/12/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ---
 
 # Network topology and connectivity considerations for the Integration Services landing zone accelerator

@@ -4,7 +4,7 @@ description: Learn about the tasks that you need to complete after an Azure land
 author: jtracey93
 ms.author: jatracey
 ms.date: 08/25/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ms.collection: 
  - migration
 ---

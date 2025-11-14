@@ -4,7 +4,7 @@ description: Learn about how Microsoft manages and maintains the private cloud i
 author: stephen-sumner
 ms.author: pnp
 ms.date: 08/28/2021
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: think-tank, e2e-azure-vmware
 ---
 

@@ -4,7 +4,7 @@ description: Understand Azure landing zone and the process to use one.
 author: stephen-sumner
 ms.author: pnp
 ms.date: 10/02/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: internal
 ms.update-cycle: 1095-days
 ---
@@ -42,7 +42,7 @@ As you work through the Ready guide, think of your progress as a journey toward 
 Whether you’re starting fresh (Greenfield) or modernizing an existing setup (Brownfield), the first step is to create the subscriptions that will host your resources. Implementing a new Azure landing zone environment based on best practices usually requires multiple subscriptions. You can create these subscriptions manually, programmatically, or by using automated vending modules:
 
 - [Create subscriptions manually](/azure/cost-management-billing/manage/create-subscription#create-a-subscription)
-- [Create subscriptions programatically](/azure/cost-management-billing/manage/programmatically-create-subscription)
+- [Create subscriptions programmatically](/azure/cost-management-billing/manage/programmatically-create-subscription)
 - [Subscription vending modules](/azure/cloud-adoption-framework/ready/landing-zone/design-area/subscription-vending)
 
 ### 2. Deploy platform landing zone components
@@ -63,7 +63,7 @@ Once your platform is in place, you’ll need to create individual application l
 
 ### 4. Deploy application landing zone components
 
-Finally, deploy the components that support your workloads. Multiple application landing zone accelerators are available to provide reference architectures and implementation guidance for scenarios such as Azure Virtual Desktop, SAP, and Azure Kubernetes. These accelerators help prepare application landing zones in an Azure landing. See the [CAF cloud adoption scenarios](../overview.md#what-specific-scenarios-does-the-cloud-adoption-framework-address).
+Finally, deploy the components that support your workloads. Multiple application landing zone accelerators are available to provide reference architectures and implementation guidance for scenarios such as Azure Virtual Desktop, SAP, and Azure Kubernetes. These accelerators help prepare application landing zones in an Azure landing. See the [CAF cloud adoption scenarios](../overview.md#cloud-adoption-framework-scenarios).
 
 ## Next step
 

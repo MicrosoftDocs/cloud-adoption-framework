@@ -4,7 +4,7 @@ description: Learn about design and planning considerations for using Azure Bast
 author: sitarant
 ms.author: sitarant
 ms.date: 01/10/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: think-tank
 ---
 
@@ -31,7 +31,7 @@ Azure offers technologies that work together to facilitate highly secure remote 
   -  VMs protected by Azure firewalls controlled by Azure Firewall Manager.
 - [Azure Bastion](/azure/bastion/bastion-overview) provides an extra layer of control. It enables highly secure and seamless RDP and SSH connectivity to your VMs directly from the Azure portal or [native client](/azure/bastion/connect-native-client-windows) over a secure TLS channel. Azure Bastion also negates the need for hybrid connectivity.
 - Use the appropriate Azure Bastion SKU based on your requirements. For more information, see [Azure Bastion configuration settings](/azure/bastion/configuration-settings).
-- Review the [Azure Bastion FAQ](/answers/products/) for answers to common questions about the service.
+- Review the [Azure Bastion FAQ](/azure/bastion/bastion-faq) for answers to common questions about the service.
 - Azure Bastion with Kerberos authentication requires that both the domain controllers and Azure Bastion be located in the same virtual network. For more information, see [Azure Bastion Kerberos authentication](/azure/bastion/kerberos-authentication-portal).
 - Azure Bastion can be used in an [Azure Virtual WAN topology](./virtual-wan-network-topology.md). However, there are some limitations:
   - Azure Bastion can't be deployed inside of a Virtual WAN virtual hub.
@@ -70,5 +70,3 @@ Azure offers technologies that work together to facilitate highly secure remote 
 - If you connect to Linux VMs via SSH, establish the connection via a [private key in Azure Key Vault](/azure/bastion/bastion-connect-vm-ssh-linux#akv).
 - Deploy Azure Bastion and ExpressRoute or VPN access to address specific needs like emergency break-glass access.
 - Don't enable remote access to Windows and Linux VMs via public IPs directly attached to the VMs. Don't deploy remote access without strict NSG rules and firewalling.
-
-

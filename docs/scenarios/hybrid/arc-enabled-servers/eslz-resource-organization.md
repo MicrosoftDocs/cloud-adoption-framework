@@ -4,7 +4,7 @@ description: Evaluate how resources will be organized when working with Azure Ar
 author: lanicolas
 ms.author: matgri
 ms.date: 11/15/2021
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: e2e-hybrid, think-tank
 ---
 

@@ -4,7 +4,7 @@ description: Develop a plan for cloud adoption with a focus on modern applicatio
 author: stephen-sumner
 ms.author: pnp
 ms.date: 03/01/2021
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: think-tank, e2e-aks
 ---
 

@@ -4,7 +4,7 @@ description: Learn how to establish secure, high-performance connectivity betwee
 author: stephen-sumner
 ms.author: sitarant
 ms.date: 09/05/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: think-tank
 ---
 

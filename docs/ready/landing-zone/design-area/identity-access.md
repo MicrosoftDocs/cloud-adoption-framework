@@ -3,7 +3,7 @@ title: Azure identity and access management design area
 description: Learn about the identity and access management design area, which provides best practices to establish the foundation of your public cloud architecture.
 author: soderholmd
 ms.author: dsoderholm
-ms.topic: conceptual
+ms.topic: concept-article
 ms.date: 10/15/2025
 ---
 

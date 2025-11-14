@@ -67,7 +67,7 @@ The following table contains the tokens that reappear throughout the templates u
 ## ThinkTank team steps to use this template
 
 1. Review the table to understand the purpose of each document in the template.
-1. Use the tokens to update the documents with the values for your sceneario.
+1. Use the tokens to update the documents with the values for your scenario.
 1. All scenario articles (not prefixed with `alz-`) must accurately reflect the Cloud Adoption Framework (CAF) methodologies **and** the marketing motion to drive this scenario. Each starts with a series of sections that must be evaluated and updated based on CAF links in each section.
 1. Add as many (##) H2 sections after the core CAF sections as required to tell the story and guide adoption.
 1. Draft all remaining ALZ articles (prefixed with `alz-`) to reflect any considerations or recommendations required to prepare for the ALZ deployment. Any additional guidance may be added after the H2s for recommendations and considerations.

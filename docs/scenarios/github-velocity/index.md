@@ -4,7 +4,7 @@ description: Companies can take advantage of GitHub's connectedness to the open-
 author: nkpatterson
 ms.author: nipatter
 ms.date: 05/07/2024
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: think-tank
 ---
 
@@ -26,11 +26,11 @@ Companies can take advantage of GitHub's connectedness to the open-source commun
 
 GitHub makes it easy for organizations to share within their teams, which makes it faster to modernize and deploy the next application or workload. Companies can look to *InnerSource*, a key tenet of innovation, to borrow best practices like sharing and reuse, collaboration and communication, and more from the open-source community and apply them within their organization.
 
-From securing the open-source packages to the intellectual property that's written daily, securing the entire software supply chain should be a main priority for to every company. This goal requires advanced security technology that can be incorporated and automated throughout the entire lifecycle, and native GitHub capabilities like GitHub advanced security and GitHub Actions offer this type flexibility.
+From securing the open-source packages to the intellectual property that's written daily, securing the entire software supply chain should be a main priority for to every company. This goal requires advanced security technology that can be incorporated and automated throughout the entire lifecycle, and native GitHub capabilities like GitHub advanced security and GitHub Actions offer this type of flexibility.
 
 ## Take advantage of open-source assets
 
-Highly effective organizations recognize open-source software (OSS) as essential versus optional for modern software development. They engage with the developer communities on which they depend and use a secure platform to strategically invest in OSS. As a result, these organizations experience innovate quickly, outpace competitors, and cut costs while minimizing risk.
+Highly effective organizations recognize open-source software (OSS) as essential versus optional for modern software development. They engage with the developer communities on which they depend and use a secure platform to strategically invest in OSS. As a result, these organizations experience innovation quickly, outpace competitors, and cut costs while minimizing risk.
 
 OSS consists of packages, libraries, scripts, and dependencies that are incorporated into applications. OSS also includes thousands of open-source assets in the form of infrastructure as code (IaC), documentation, and guidance for well-defined Azure architectures. Microsoft, partners, vendors, customers, and individuals contribute these packages to the OSS community. You can find them in GitHub, and modify, reuse, and deploy them to a specific Azure environment.
 
@@ -52,7 +52,7 @@ The following architecture diagram highlights the security checks that run in th
 
 ![An architecture diagram that highlights the security checks that run in the GitHub and Azure components of a GitHub DevSecOps environment.](./media/github-security-checks.png)
 
-- [GitHub](https://docs.github.com/en) provides a code-hosting platform that developers can use for collaborating on open-source and InnerSource projects.
+- [GitHub](https://docs.github.com) provides a code-hosting platform that developers can use for collaborating on open-source and InnerSource projects.
 
 - [Codespaces](https://docs.github.com/codespaces/about-codespaces) is an online development environment. Hosted by GitHub and powered by Microsoft Visual Studio Code, this tool provides a complete development solution in the cloud.
 
@@ -102,7 +102,7 @@ For more information, see the white paper [An introduction to InnerSource](https
 
 ## Automation
 
-GitHub Actions allows users to create custom workflows directly in their GitHub repositories. Users can discover, create, and share actions to perform any job, including CI/CD, and combine actions in a completely customized workflow. They can also create CI workflows that build and test projects written in different programming languages. Examples are available in the [guides for GitHub Actions](https://docs.github.com/en/actions/guides).
+GitHub Actions allows users to create custom workflows directly in their GitHub repositories. Users can discover, create, and share actions to perform any job, including CI/CD, and combine actions in a completely customized workflow. They can also create CI workflows that build and test projects written in different programming languages. Examples are available in the [guides for GitHub Actions](https://docs.github.com/actions/tutorials).
 
 GitHub Actions can be used to combine IaC concepts and CI/CD practices to automate the entire end-to-end deployment lifecycle, including provisioning or updating the target environment in a repeatable manner and packaging and deploying the application itself.
 
@@ -149,4 +149,4 @@ The following links provide more information about GitHub.
 
 - [Learn modules for GitHub](/training/browse/?products=github)
 - [GitHub Learning Lab](https://github.com/apps/github-learning-lab)
-- [GitHub Docs](https://docs.github.com/en)
+- [GitHub Docs](https://docs.github.com)

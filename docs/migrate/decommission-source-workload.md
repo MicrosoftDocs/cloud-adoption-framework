@@ -4,7 +4,7 @@ description: Learn how to properly decommission source workloads after Azure mig
 author: stephen-sumner
 ms.author: pnp
 ms.date: 01/13/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ---
 
 # Decommission source workloads after migration to cloud
