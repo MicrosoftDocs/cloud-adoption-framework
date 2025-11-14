@@ -21,33 +21,14 @@ This document provides technical stakeholders responsible for platform and workl
 
 *Download a [Visio file](https://arch-center.azureedge.net/accelerator-baseline-architecture.vsdx) of this multi-region architecture of an Azure Virtual Desktop deployment in an enterprise-scale Azure landing zone.*
 
-**New to enterprise-scale Azure landing zone?** Start with the [enterprise-scale Azure landing zone overview](/azure/cloud-adoption-framework/ready/enterprise-scale/) to understand the foundational concepts before proceeding with Azure Virtual Desktop deployment. 
-
-> [!TIP]
-> It's highly recommended to ensure your application landing zones are aligned with your organizations platform landing zone practices before proceeding with deployment.
-
-## Cloud Adoption Framework fundamentals
-
-Before deploying any landing zone, ensure your workload team understands the foundational principles of the Cloud Adoption Framework:
-- **Governance**: Define policies, implement compliance requirements, and enforce guardrails.
-- **Management**: Establish monitoring, life-cyle, backup, and disaster recovery strategies.
-- **Platform**: Configure core infrastructure including networking, identity, and resource organization.
-- **Landing zones**: Create scalable environments for workloads with both Platform and Service limits in mind.
-
-Recommended resources to learn more about the Azure Cloud Adoption Framework and Landing Zone concepts:
-- [Microsoft Cloud Adoption Framework](/azure/cloud-adoption-framework/)
-- [What is an Azure landing zone?](/azure/cloud-adoption-framework/ready/landing-zone/)
-- [Get started with an enterprise-scale Azure landing zone](/azure/cloud-adoption-framework/ready/enterprise-scale/)
-- [Introduction to the Microsoft Cloud Adoption Framework - Learning Path](/training/modules/cloud-adoption-framework/)
-
-## Establish a scalable and compliant enterprise-scale Azure landing zone
+## Establish an Azure landing zone
 
 An enterprise-scale Azure landing zone ensures consistent governance, security, and operational readiness across Azure environments. Complete this foundation before deploying Azure Virtual Desktop to ensure security and compliance requirements are met.
 
 > [!div class="nextstepaction"]
 > [Get started with an enterprise-scale Azure landing zone](/azure/cloud-adoption-framework/ready/enterprise-scale/)
 
-1. **Deploy the enterprise-scale Azure landing zone.** This deployment includes identity, network, management, and security configurations that support scalable workloads. Use the [step-by-step deployment guide](/azure/cloud-adoption-framework/ready/enterprise-scale/) to configure your environment.
+1. **Deploy an Azure landing zone.** This deployment includes identity, network, management, and security configurations that support scalable workloads. Use the [step-by-step deployment guide](/azure/cloud-adoption-framework/ready/enterprise-scale/) to configure your environment.
 
 2. **Review implementation guidance to align with enterprise-scale Azure landing zone architecture.** This step ensures that your deployment follows best practices for modularity, scalability, and compliance. See the [enterprise-scale implementation best practices](/azure/cloud-adoption-framework/ready/enterprise-scale/implementation).
 
@@ -124,8 +105,7 @@ Maximize your Azure Virtual Desktop deployment with these essential design guide
 - [Security governance and compliance](./eslz-security-governance-and-compliance.md) - Enforce security controls and meet compliance requirements
 - [Platform automation and DevOps](./eslz-platform-automation-and-devops.md) - Streamline automation and deployment pipelines
 
-> [!TIP]
-> **Start with identity and networking** if you're new to enterprise-scale patterns. These foundational areas affect all other design decisions.
+**Start with identity and networking** if you're new to enterprise-scale patterns. These foundational areas affect all other design decisions.
 
 ## Azure tools and resources
 
