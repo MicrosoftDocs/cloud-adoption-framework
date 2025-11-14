@@ -1,66 +1,60 @@
 ---
 title: Data strategy for AI agents
+ms.reviewer: ssumner
 description: Learn how to develop a comprehensive data strategy that enables AI agents to deliver business value through effective data management, preparation, and security.
 author: stephen-sumner
 ms.author: pnp
-ms.date: 11/01/2025
+ms.date: 11/14/2025
 ms.update-cycle: 180-days
 ms.topic: conceptual
+ms.collection: ce-skilling-ai-copilot
 ---
 
 # Data strategy for AI agents
 
-A data strategy for AI agents establishes how your organization manages, prepares, and secures data to enable autonomous reasoning and decision-making. Since agents actively reason over retrieved information to generate insights and take actions, your data strategy must address unique requirements beyond traditional data management. This article helps you build a foundation that supports agent reasoning, maintains security boundaries, and scales across your organization.
+A data strategy for AI agents establishes how your organization manages, prepares, and secures data to enable autonomous reasoning and decision-making. AI agents use language models to reason over data, extracting insights and making decisions that directly impact business operations. This article helps you build a foundation that balances agent autonomy with data security while optimizing data preparation for efficient retrieval.
 
 :::image type="content" source="./images/ai-agent-adoption.png" alt-text="Diagram that shows the process outlined in this guidance: plan, govern, build and secure, integrate, and measure agents across your organization." lightbox="./images/ai-agent-adoption.png" border="false":::
 
-## Prepare data for agent reasoning
+## Establish unified data foundation
 
-AI agents differ from traditional applications because they reason over data to make autonomous decisions. Without properly structured data, agents produce inconsistent results, miss critical connections, and fail to provide accurate insights. Your data preparation must support three core agent capabilities: retrieval accuracy, reasoning quality, and contextual understanding.
+Before implementing agent-specific data strategies, establish a unified data platform that serves as your authoritative data source. Microsoft Fabric provides comprehensive capabilities to consolidate disparate data sources into golden datasets through mirrored data from your OLTP databases. This data lake architecture creates consistent, high-quality data that agents can reliably access while Microsoft Purview maintains governance, metadata management, and lineage tracking.
 
-### Structure data for retrieval and reasoning
+## Optimize data for agent retrieval
 
-Transform your data to optimize how agents find and interpret information. Unstructured or poorly organized data causes agents to retrieve irrelevant information, leading to incorrect conclusions and reduced trust in agent outputs.
+Agent effectiveness depends on quickly finding relevant information from vast data repositories. Poor data organization leads to increased latency, higher costs, and reduced accuracy. Azure AI Search provides specialized index creation and vector search capabilities that organizations must prepare for, while Azure AI Foundry Agent Service orchestrates the retrieval process.
 
-1. **Create semantic relationships.** Add metadata that explains connections between documents, entities, and concepts. When an agent retrieves customer purchase history, it needs links to product specifications, support tickets, and warranty information to provide complete recommendations.Tools like Microsoft Purview can help you discover and classify data relationships across your estate using [metadata attributes](https://learn.microsoft.com/purview/unified-catalog-custom-metadata).
+### Structure data for efficient chunking
 
-2. **Build knowledge graphs.** Implement graph databases or knowledge structures that map relationships explicitly. These structures help agents traverse connected information and understand complex dependencies across your data estate. Start by modeling your core business entities and their relationships, then expand the graph as agents require more context. Use [Graph in Microsoft Fabric](https://learn.microsoft.com/fabric/graph/overview)
+Transform documents and datasets into formats that optimize both retrieval speed and reasoning accuracy. Azure AI Search uses integrated chunking strategies when creating indexes that preserve context while enabling precise retrieval.
 
-3. **Optimize chunking strategies.** Break large documents into semantically meaningful segments that preserve context. Poor chunking causes agents to miss critical information or misinterpret partial data. Use overlapping chunks of 512-1024 tokens with 10-20% overlap to maintain context across boundaries. Azure AI Search (Foundry IQ) provides built-in chunking capabilities that preserve document structure. Test different chunking sizes and overlap strategies to balance retrieval precision with reasoning completeness. See the different [chunking approaches](https://learn.microsoft.com/azure/search/vector-search-how-to-chunk-documents) in Foundry IQ (formerly Azure AI Search).
+1. **Configure appropriate chunk sizes.** Set chunk sizes between 1024-2048 tokens to balance context preservation with retrieval precision. Smaller chunks improve precision but require more retrieval operations. Larger chunks provide more context but reduce retrieval accuracy. Use Azure AI Search's built-in chunking capabilities when creating indexes with page-based or fixed-size strategies. Test different configurations using your actual data to determine optimal settings. See [chunking configuration](https://learn.microsoft.com/azure/search/vector-search-how-to-chunk-documents) for implementation details.
 
-### Enhance data with context and grounding
+2. **Implement overlapping chunks.** Configure 10-20% overlap between consecutive chunks to maintain context across boundaries. This overlap ensures agents don't lose critical information split between chunks. Use Azure AI Search's overlap settings when building indexes to preserve continuity. Store overlap metadata to help agents understand chunk relationships. Track chunk boundaries in your indexing pipeline.
 
-Raw data often lacks the context agents need for accurate reasoning. Without proper grounding, agents hallucinate information or make incorrect assumptions about your business domain. Augment your data to reduce hallucinations and improve decision quality.
+3. **Preserve document structure.** Maintain hierarchical relationships between chunks, sections, and parent documents. Azure AI Foundry Agent Service uses this structure to navigate from summary to detail efficiently. Include parent document ID, section hierarchy, and sequential position in chunk metadata. Use [complex types](https://learn.microsoft.com/azure/search/search-howto-complex-data-types) to represent nested structures in your Azure AI Search indexes. Configure parent-child relationships in your index schema.
 
-1. **Add temporal context.** Include timestamps, version histories, and validity periods with your data. Agents need this information to distinguish current policies from outdated ones or to understand seasonal patterns in business metrics. Implement slowly changing dimensions in your data warehouse. Use Data Factory to automate temporal data enrichment during ingestion.
+### Prepare data for vector and hybrid search
 
-2. **Provide domain grounding.** Create reference datasets that establish authoritative sources for key concepts, definitions, and business rules. These grounding documents prevent agents from making incorrect inferences about specialized terminology or processes. Store grounding documents in OneLake in Microsoft Fabric with proper versioning and access controls. For scenarios requiring broader storage options, use Azure Data Lake Storage Gen2. Use Azure OpenAI's system messages to inject this context into agent prompts.
+Azure AI Search combines vector similarity with keyword search to provide comprehensive retrieval capabilities that Azure AI Foundry Agent Service leverages. Prepare your data from Microsoft Fabric to support both search methods effectively.
 
-3. **Include negative examples.** Document what agents should not do or conclude. Explicit negative examples help agents avoid common mistakes and understand boundaries in their reasoning. Create a library of edge cases and failure scenarios from production incidents. Store these examples in your vector database alongside positive examples to provide balanced training data.
+1. **Generate high-quality embeddings.** Create vector representations of your content using appropriate embedding models. Choose models that understand your domain-specific terminology and context. Use Azure OpenAI's text-embedding-3-large model for general content when creating vectors in Azure AI Search. Deploy [custom embedding models](https://learn.microsoft.com/azure/ai-services/openai/how-to/embeddings) for specialized domains. Normalize embeddings to improve similarity calculations.
 
-## Secure data for autonomous operations
+2. **Optimize for hybrid search.** Prepare content that performs well in both vector and keyword search scenarios within Azure AI Search indexes. Maintain original text alongside vector embeddings. Configure appropriate analyzers for keyword search based on content language and domain. Use Azure AI Search's [hybrid search capabilities](https://learn.microsoft.com/azure/search/hybrid-search-how-to-query) to combine vector and keyword results. Set RRF (Reciprocal Rank Fusion) parameters to balance search methods.
 
-When agents operate autonomously, security becomes more complex. A single compromised agent can access vast amounts of data before detection. Traditional security models assume human oversight that doesn't exist with autonomous agents. Your strategy must protect data while enabling legitimate agent operations.
+3. **Add semantic ranking metadata.** Include fields that support Azure AI Search's semantic ranking capabilities. These fields help Azure AI Foundry Agent Service identify the most relevant content within retrieved results. Configure title, content, and keyword fields for semantic ranking in your indexes. Use [semantic configuration](https://learn.microsoft.com/azure/search/semantic-how-to-query-request) to specify priority fields. Test different field combinations to optimize ranking quality.
 
-### Implement dynamic access controls
+### Enable agentic reasoning capabilities
 
-Static permissions fail when agents need different data access based on context and user authority. Without dynamic controls, you either over-provision access (creating security risks) or under-provision (limiting agent effectiveness).
+Prepare your data to support the specific needs of Azure AI Foundry Agent Service, where agents reason over retrieved content from Azure AI Search to answer complex queries.
 
-1. **Use attribute-based access control (ABAC).** Define policies that evaluate multiple attributes including user role, data sensitivity, request context, and agent purpose. An agent helping HR might access salary data when processing payroll but not when answering general policy questions. Azure Active Directory provides ABAC capabilities that integrate with Azure services. Create policies using combinations of user attributes, resource tags, and environment conditions. [Implement ABAC in Azure](https://learn.microsoft.com/azure/role-based-access-control/conditions-overview).
+1. **Create reasoning-friendly summaries.** Generate concise summaries that capture key facts, decisions, and relationships within documents stored in Microsoft Fabric. Azure AI Foundry Agent Service uses these summaries to quickly assess relevance before detailed analysis. Use Azure OpenAI to create extractive and abstractive summaries. Store summaries as separate searchable fields in Azure AI Search indexes. Include summary confidence scores to help agents evaluate reliability.
 
-2. **Create data access proxies.** Build intermediary services that evaluate and filter data before agents receive it. These proxies apply business rules, mask sensitive fields, and audit all access attempts. Use Azure API Management to create a gateway that enforces data policies. Implement field-level encryption for sensitive data and only decrypt when specific conditions are met. [Build secure API gateways](https://learn.microsoft.com/azure/api-management/api-management-howto-protect-backend-with-aad).
+2. **Extract structured information.** Convert unstructured content from your OLTP databases and Microsoft Fabric into structured formats that Azure AI Foundry Agent Service can process efficiently. Tables, lists, and key-value pairs enable faster reasoning than narrative text. Use [Azure Document Intelligence](https://learn.microsoft.com/azure/ai-services/document-intelligence/overview) to extract tables and forms. Store structured data in dedicated index fields within Azure AI Search. Maintain links between structured extracts and source documents.
 
-3. **Establish data use agreements.** Define explicit contracts that specify how agents can use different data types. Include restrictions on data combination, retention limits, and prohibited operations. Implement these agreements as code using Azure Policy to enforce compliance automatically. Create custom policies that prevent agents from combining certain data types or exceeding retention periods. [Create custom Azure policies](https://learn.microsoft.com/azure/governance/policy/tutorials/create-custom-policy-definition).
+3. **Add task-specific annotations.** Annotate content with information relevant to common agent tasks in your domain. These annotations guide Azure AI Foundry Agent Service reasoning and reduce processing time. Identify frequently asked questions and pre-compute answers. Add decision criteria and business rules as searchable metadata in Azure AI Search. Create task templates that agents can use as reasoning frameworks.
 
-### Create specialized data stores
-
-Different agent types need different data organizations. Generic storage solutions force compromises that reduce agent effectiveness. Build purpose-specific stores that optimize for particular reasoning patterns.
-
-1. **Vector databases for semantic search.** Store embeddings that enable agents to find conceptually similar information across diverse sources. Optimize index structures for the query patterns your agents use most frequently. Azure AI Search (Foundry IQ) provides vector search capabilities with multiple index types. Choose HNSW indexes for high recall requirements or IVF for faster queries with acceptable recall trade-offs. [Configure vector search indexes](https://learn.microsoft.com/azure/search/vector-search-how-to-create-index).
-
-2. **Time-series stores for trend analysis.** Organize temporal data to support pattern recognition and forecasting. Include aggregations at multiple time scales to enable both detailed and high-level reasoning. Azure Data Explorer excels at time-series analysis with built-in functions for anomaly detection and forecasting. Pre-compute common aggregations to reduce query latency. [Optimize time-series queries](https://learn.microsoft.com/azure/data-explorer/time-series-analysis).
-
-3. **Graph databases for relationship reasoning.** Structure interconnected data to support traversal queries and network analysis. Define clear relationship types that agents can interpret consistently. Use Azure Cosmos DB for Apache Gremlin to store and query graph data. Design your graph schema to minimize traversal depth for common agent queries. [Design efficient graph queries](https://learn.microsoft.com/azure/cosmos-db/gremlin/query-optimization).
+4. **Track data lineage and versioning.** Maintain records of data sources, transformations, and versions using Microsoft Purview. Azure AI Foundry Agent Service uses this information to assess data reliability and currency. Use [Microsoft Purview](https://learn.microsoft.com/azure/purview/overview) for comprehensive data lineage tracking and metadata management. Implement version control for critical datasets in Microsoft Fabric. Store lineage metadata in searchable fields within Azure AI Search indexes.
 
 ## Next step
 
