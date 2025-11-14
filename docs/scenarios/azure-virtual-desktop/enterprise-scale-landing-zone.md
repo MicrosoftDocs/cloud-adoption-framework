@@ -3,7 +3,7 @@ title: Enterprise-scale support for Azure Virtual Desktop
 description: Guidance to deploy Azure Virtual Desktop (AVD) using an enterprise-scale Azure landing zone, prepare identity, network, storage, and automation to scale AVD securely.
 author: jcoyne-msft
 ms.author: pnp
-ms.date: 10/17/2025
+ms.date: 11/14/2025
 ms.topic: conceptual
 ---
 
@@ -115,14 +115,14 @@ Maximize your Azure Virtual Desktop deployment with these essential design guide
 
 **Core design areas:**
 
-- [🏢 Enterprise enrollment](./eslz-enterprise-enrollment.md) - Optimize subscription and billing management
-- [🔐 Identity and access management](./eslz-identity-and-access-management.md) - Secure user authentication and authorization  
-- [🌐 Network topology and connectivity](./eslz-network-topology-and-connectivity.md) - Design resilient network patterns
-- [📋 Resource organization](./eslz-resource-organization.md) - Implement effective resource grouping and tagging
-- [📊 Management and monitoring](./eslz-management-and-monitoring.md) - Set up comprehensive operational management
-- [🔄 Business continuity and disaster recovery](./eslz-business-continuity-and-disaster-recovery.md) - Protect with backup and recovery strategies
-- [🛡️ Security governance and compliance](./eslz-security-governance-and-compliance.md) - Enforce security controls and meet compliance requirements
-- [⚙️ Platform automation and DevOps](./eslz-platform-automation-and-devops.md) - Streamline automation and deployment pipelines
+- [Enterprise enrollment](./eslz-enterprise-enrollment.md) - Optimize subscription and billing management
+- [Identity and access management](./eslz-identity-and-access-management.md) - Secure user authentication and authorization  
+- [Network topology and connectivity](./eslz-network-topology-and-connectivity.md) - Design resilient network patterns
+- [Resource organization](./eslz-resource-organization.md) - Implement effective resource grouping and tagging
+- [Management and monitoring](./eslz-management-and-monitoring.md) - Set up comprehensive operational management
+- [Business continuity and disaster recovery](./eslz-business-continuity-and-disaster-recovery.md) - Protect with backup and recovery strategies
+- [Security governance and compliance](./eslz-security-governance-and-compliance.md) - Enforce security controls and meet compliance requirements
+- [Platform automation and DevOps](./eslz-platform-automation-and-devops.md) - Streamline automation and deployment pipelines
 
 > [!TIP]
 > **Start with identity and networking** if you're new to enterprise-scale patterns. These foundational areas affect all other design decisions.
@@ -133,9 +133,9 @@ Maximize your Azure Virtual Desktop deployment with these essential design guide
 
 | Category | Tool | Why you need it |
 |----------|------|-------------|
-| 🚀 **Quick start** | [Azure Virtual Desktop accelerator](https://github.com/Azure/avdaccelerator) | Deploy production-ready AVD in hours, not weeks - includes Infrastructure as Code templates with enterprise-scale best practices built-in |
-| 🏗️ **Foundation** | [Enterprise-scale Azure landing zone guide](../../ready/enterprise-scale/index.md) | Establish governance, security, and management capabilities that support scalable Azure Virtual Desktop deployments |
-| ⚙️ **Automation** | [Bicep and PowerShell deployment scripts](https://github.com/Azure/avdaccelerator/tree/main/workload/bicep) | Automate your Azure Virtual Desktop deployments with proven Infrastructure as Code templates and CI/CD integration examples |
+| **Quick start** | [Azure Virtual Desktop accelerator](https://github.com/Azure/avdaccelerator) | Deploy production-ready AVD in hours, not weeks - includes Infrastructure as Code templates with enterprise-scale best practices built-in |
+| **Foundation** | [Enterprise-scale Azure landing zone guide](../../ready/enterprise-scale/index.md) | Establish governance, security, and management capabilities that support scalable Azure Virtual Desktop deployments |
+| **Automation** | [Bicep and PowerShell deployment scripts](https://github.com/Azure/avdaccelerator/tree/main/workload/bicep) | Automate your Azure Virtual Desktop deployments with proven Infrastructure as Code templates and CI/CD integration examples |
 
 > [!div class="nextstepaction"]
 > [Explore all Azure Virtual Desktop resources](/azure/virtual-desktop/)
