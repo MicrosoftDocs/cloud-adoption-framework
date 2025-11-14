@@ -12,49 +12,60 @@ ms.collection: ce-skilling-ai-copilot
 
 # Data strategy for AI agents
 
-A data strategy for AI agents establishes how your organization manages, prepares, and secures data to enable autonomous reasoning and decision-making. AI agents use language models to reason over data, extracting insights and making decisions that directly impact business operations. This article helps you build a foundation that balances agent autonomy with data security while optimizing data preparation for efficient retrieval.
+Organizations need a clear data strategy to enable AI agents to deliver accurate, secure, and compliant outcomes. This strategy ensures that enterprise SaaS agents such as Microsoft 365 Copilot have governed access to productivity content, and that teams building custom AI agents can work with high-quality, well-prepared data. Without this foundation, AI adoption introduces unnecessary risk, inefficiency, and cost.
 
-:::image type="content" source="./images/ai-agent-adoption.png" alt-text="Diagram that shows the process outlined in this guidance: plan, govern, build and secure, integrate, and measure agents across your organization." lightbox="./images/ai-agent-adoption.png" border="false":::
+This guidance focuses on two priorities:
 
-## Establish unified data foundation
+1. Preparing enterprise data for SaaS-based productivity agents like Microsoft 365 Copilot.
+2. Preparing enterprise data for custom AI agent retrieval.
 
-Before implementing agent-specific data strategies, establish a unified data platform that serves as your authoritative data source. Microsoft Fabric provides comprehensive capabilities to consolidate disparate data sources into golden datasets through mirrored data from your OLTP databases. This data lake architecture creates consistent, high-quality data that agents can reliably access while Microsoft Purview maintains governance, metadata management, and lineage tracking.
+## Prepare enterprise data for Microsoft 365 Copilot and SaaS agents
 
-## Optimize data for agent retrieval
+Productivity agents such as Microsoft 365 Copilot depend on access to organizational content stored in OneDrive, SharePoint, Exchange, and other Microsoft 365 sources. These agents use Microsoft Graph to retrieve documents, emails, and collaboration artifacts. To ensure secure and effective access, organizations must balance availability with least-privileged access principles.
 
-Agent effectiveness depends on quickly finding relevant information from vast data repositories. Poor data organization leads to increased latency, higher costs, and reduced accuracy. Azure AI Search provides specialized index creation and vector search capabilities that organizations must prepare for, while Azure AI Foundry Agent Service orchestrates the retrieval process.
+### Key actions for decision makers
 
-### Structure data for efficient chunking
+1. **Unify content under governed access.** Use Microsoft Graph APIs to integrate OneDrive, SharePoint, and other Microsoft 365 sources. This integration ensures that agents can retrieve relevant content while respecting organizational security boundaries. Avoid fragmented permissions that create blind spots or expose sensitive data.
 
-Transform documents and datasets into formats that optimize both retrieval speed and reasoning accuracy. Azure AI Search uses integrated chunking strategies when creating indexes that preserve context while enabling precise retrieval.
+2. **Enforce least-privileged access.** Review and update access controls across Microsoft 365 repositories. Ensure that users and agents only access data they are authorized to view. Use Microsoft Purview sensitivity labels and data loss prevention policies to enforce compliance and prevent oversharing.
 
-1. **Configure appropriate chunk sizes.** Set chunk sizes between 1024-2048 tokens to balance context preservation with retrieval precision. Smaller chunks improve precision but require more retrieval operations. Larger chunks provide more context but reduce retrieval accuracy. Use Azure AI Search's built-in chunking capabilities when creating indexes with page-based or fixed-size strategies. Test different configurations using your actual data to determine optimal settings. See [chunking configuration](https://learn.microsoft.com/azure/search/vector-search-how-to-chunk-documents) for implementation details.
+3. **Maintain metadata and lineage.**Apply metadata enrichment to productivity content, including document owners, timestamps, and sensitivity classifications. Use Microsoft Purview for governance and lineage tracking so that every retrieval is auditable and traceable.
 
-2. **Implement overlapping chunks.** Configure 10-20% overlap between consecutive chunks to maintain context across boundaries. This overlap ensures agents don't lose critical information split between chunks. Use Azure AI Search's overlap settings when building indexes to preserve continuity. Store overlap metadata to help agents understand chunk relationships. Track chunk boundaries in your indexing pipeline.
+4. **Optimize search and indexing.** Confirm that Microsoft Search and Graph connectors are active and configured for natural language queries. This step improves retrieval accuracy for Copilot and other SaaS agents without requiring custom development.
 
-3. **Preserve document structure.** Maintain hierarchical relationships between chunks, sections, and parent documents. Azure AI Foundry Agent Service uses this structure to navigate from summary to detail efficiently. Include parent document ID, section hierarchy, and sequential position in chunk metadata. Use [complex types](https://learn.microsoft.com/azure/search/search-howto-complex-data-types) to represent nested structures in your Azure AI Search indexes. Configure parent-child relationships in your index schema.
+Without these measures, productivity agents risk exposing sensitive information or delivering incomplete results. A governed approach ensures predictable performance, simplified security, and compliance across collaboration tools.
 
-### Prepare data for vector and hybrid search
+## Prepare enterprise data for custom AI agent retrieval
 
-Azure AI Search combines vector similarity with keyword search to provide comprehensive retrieval capabilities that Azure AI Foundry Agent Service leverages. Prepare your data from Microsoft Fabric to support both search methods effectively.
+Custom AI agents require structured, high-quality data to reason effectively. Fragmented or poorly indexed data increases latency, reduces accuracy, and complicates governance. Preparing data for agentic retrieval minimizes these risks and accelerates development.
 
-1. **Generate high-quality embeddings.** Create vector representations of your content using appropriate embedding models. Choose models that understand your domain-specific terminology and context. Use Azure OpenAI's text-embedding-3-large model for general content when creating vectors in Azure AI Search. Deploy [custom embedding models](https://learn.microsoft.com/azure/ai-services/openai/how-to/embeddings) for specialized domains. Normalize embeddings to improve similarity calculations.
+### Establish a unified data foundation
 
-2. **Optimize for hybrid search.** Prepare content that performs well in both vector and keyword search scenarios within Azure AI Search indexes. Maintain original text alongside vector embeddings. Configure appropriate analyzers for keyword search based on content language and domain. Use Azure AI Search's [hybrid search capabilities](https://learn.microsoft.com/azure/search/hybrid-search-how-to-query) to combine vector and keyword results. Set RRF (Reciprocal Rank Fusion) parameters to balance search methods.
+Create a centralized platform that serves as the authoritative source for structured business data. Use Microsoft Fabric to consolidate disparate sources into golden datasets—standardized, trusted datasets derived from mirrored OLTP systems. This architecture provides consistent, high-quality data for analytical and reasoning tasks while simplifying governance.
 
-3. **Add semantic ranking metadata.** Include fields that support Azure AI Search's semantic ranking capabilities. These fields help Azure AI Foundry Agent Service identify the most relevant content within retrieved results. Configure title, content, and keyword fields for semantic ranking in your indexes. Use [semantic configuration](https://learn.microsoft.com/azure/search/semantic-how-to-query-request) to specify priority fields. Test different field combinations to optimize ranking quality.
+### Prepare data for agentic retrieval
 
-### Enable agentic reasoning capabilities
+Agentic retrieval enables AI agents to locate and interpret relevant data efficiently using natural language. Preparing data involves several steps:
 
-Prepare your data to support the specific needs of Azure AI Foundry Agent Service, where agents reason over retrieved content from Azure AI Search to answer complex queries.
+1. **Assess readiness of existing data assets.** Evaluate whether current datasets meet foundational requirements for agent workloads. Confirm that indexes exist for core sources and support natural language search. If missing, plan for index creation and schema adjustments.
 
-1. **Create reasoning-friendly summaries.** Generate concise summaries that capture key facts, decisions, and relationships within documents stored in Microsoft Fabric. Azure AI Foundry Agent Service uses these summaries to quickly assess relevance before detailed analysis. Use Azure OpenAI to create extractive and abstractive summaries. Store summaries as separate searchable fields in Azure AI Search indexes. Include summary confidence scores to help agents evaluate reliability.
+2. **Plan for metadata enrichment and traceability.** Add identifiers such as document names, section markers, and source references. Include ownership, timestamps, and sensitivity labels to support transparency and compliance.
 
-2. **Extract structured information.** Convert unstructured content from your OLTP databases and Microsoft Fabric into structured formats that Azure AI Foundry Agent Service can process efficiently. Tables, lists, and key-value pairs enable faster reasoning than narrative text. Use [Azure Document Intelligence](https://learn.microsoft.com/azure/ai-services/document-intelligence/overview) to extract tables and forms. Store structured data in dedicated index fields within Azure AI Search. Maintain links between structured extracts and source documents.
+3. **Include enhancements for performance and relevance.** Consider synonym maps for industry-specific terminology and scoring profiles to prioritize critical content. These improvements increase retrieval quality but require additional effort.
 
-3. **Add task-specific annotations.** Annotate content with information relevant to common agent tasks in your domain. These annotations guide Azure AI Foundry Agent Service reasoning and reduce processing time. Identify frequently asked questions and pre-compute answers. Add decision criteria and business rules as searchable metadata in Azure AI Search. Create task templates that agents can use as reasoning frameworks.
+4. **Structure data for efficient retrieval and reasoning.** Segment large documents into smaller, context-preserving chunks. Chunking improves retrieval speed and reasoning accuracy while reducing cost.
 
-4. **Track data lineage and versioning.** Maintain records of data sources, transformations, and versions using Microsoft Purview. Azure AI Foundry Agent Service uses this information to assess data reliability and currency. Use [Microsoft Purview](https://learn.microsoft.com/azure/purview/overview) for comprehensive data lineage tracking and metadata management. Implement version control for critical datasets in Microsoft Fabric. Store lineage metadata in searchable fields within Azure AI Search indexes.
+5. **Plan for chunk configuration.** Define chunk sizes and overlap strategies. Test and tune configurations based on real data to optimize latency and accuracy.
+
+6. **Preserve relationships within data.** Maintain hierarchical links between chunks and parent documents. This design enables agents to navigate from summaries to detailed content without losing context.
+
+A unified foundation and structured preparation reduce complexity, improve performance, and ensure compliance. These steps allow teams to build agents that deliver accurate, auditable, and cost-efficient outcomes.
+
+### Trade-offs and considerations
+
+- **Effort vs. accuracy:** Metadata enrichment and chunking improve retrieval quality but add complexity. Decision makers should weigh benefits against cost and timeline.
+- **Security vs. accessibility:** Enforcing least privilege reduces risk but requires ongoing governance. Automating sensitivity labeling and access reviews can minimize effort.
+- **Performance vs. flexibility:** Enhancements like synonym maps improve relevance but require maintenance as terminology evolves.
 
 ## Next step
 
