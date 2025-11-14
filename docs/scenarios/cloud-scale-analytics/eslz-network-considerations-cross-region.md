@@ -44,7 +44,7 @@ In this network design, your central Azure platform team can no longer inspect a
 
 You can capture all of these logs at scale by using [Azure Policy definitions for diagnostic settings](https://github.com/Azure/data-management-zone/tree/main/infra/Policies/PolicyDefinitions/DiagnosticSettings).
 
-In some scenarios, you need to limit due to regulatory or legal implications. For instance, you might have a local regulation that requires certain datasets to stay within a particulate datacenter, so you're not allowed to transfer them across regions. You can rely on network security groups to help you comply with this kind of rule, only allowing traffic to move in one direction from East US to West Europe and not vice versa. Within your network security groups, you can ensure that traffic originating from East US is denied while traffic originating from West Europe is allowed.
+In some scenarios, you need to limit due to regulatory or legal implications. For instance, you might have a local regulation that requires certain datasets to stay within a particular datacenter, so you're not allowed to transfer them across regions. You can rely on network security groups to help you comply with this kind of rule, only allowing traffic to move in one direction from East US to West Europe and not vice versa. Within your network security groups, you can ensure that traffic originating from East US is denied while traffic originating from West Europe is allowed.
 
 This solution approach doesn't impact bandwidth and latency, and allows customers to remain compliant while still combining datasets from multiple regions. This option also has no impact on your DNS architecture and allows you to use an Azure-native solution based on Azure Private DNS Zones.
 
