@@ -171,14 +171,14 @@ Partner with us in our ongoing effort to develop the Cloud Adoption Framework.
 - [Storage considerations for AKS](../scenarios/app-platform/aks/storage.md): We made updates to streamline the content and improve technical accuracy. We also added sections for Azure Container Storage.
 - [Enterprise-scale support for Citrix on Azure](../scenarios/azure-virtual-desktop/landing-zone-citrix/citrix-enterprise-scale-landing-zone.md): We reorganized the content in this article and made minor edits.
 - [Establish an AI Center of Excellence](../scenarios/ai/center-of-excellence.md): We added specific steps, detailed role definitions, organizational integration recommendations, and maturity-based operational evolution to provide a more strategic approach to establishing and operating an AI Center of Excellence.
-- [Select Azure platform as a service (PaaS) solutions for AI](../scenarios/ai/platform/resource-selection.md): We updated resource recommendations to include Azure AI Foundry Agent Service and streamlined the guidance to present Azure AI Foundry as the comprehensive solution and Azure OpenAI for specific model access needs.
+- [Select Azure platform as a service (PaaS) solutions for AI](../scenarios/ai/platform/resource-selection.md): We updated resource recommendations to include Foundry Agent Service and streamlined the guidance to present Foundry as the comprehensive solution and Azure OpenAI for specific model access needs.
 
 ## May 2025
 
 ### Updated articles
 
 - [Prepare for cloud adoption](../ready/index.md): We refined the Azure Landing Zones concepts section to provide a more detailed summary of designing and deploying landing zones.
-- [Abbreviation recommendations for Azure resources](../ready/azure-best-practices/resource-abbreviations.md): We updated abbreviations for Azure AI Foundry and Azure AI Foundry project with the updates to the resource provider.
+- [Abbreviation recommendations for Azure resources](../ready/azure-best-practices/resource-abbreviations.md): We updated abbreviations for Foundry and Foundry project with the updates to the resource provider.
 
 #### Defense scenario retirement
 
@@ -277,7 +277,7 @@ This month, we made significant updates to the Strategy methodology. The Strateg
 
 #### AI Adoption updates
 
-- [AI Governance for PaaS workloads](../scenarios/ai/platform/governance.md): Learn how to control the models you allow across Azure and deployed in Azure AI Foundry.
+- [AI Governance for PaaS workloads](../scenarios/ai/platform/governance.md): Learn how to control the models you allow across Azure and deployed in Foundry.
 - [Secure AI](../scenarios/ai/secure.md): Learn how to conduct red team testing on generative AI and nongenerative AI models.
 
 #### Oracle updates

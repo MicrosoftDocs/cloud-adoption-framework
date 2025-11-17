@@ -44,7 +44,7 @@ Develop a structured training program to build AI competency across teams. Treat
 
 - **Run hands-on workshops.** Run hands-on workshops or hackathons internally. For example, hold a prompt engineering lab where participants practice improving AI responses or a hackathon, where cross-functional teams prototype a simple agent in a day or two. This not only builds skills but also enthusiasm and idea-sharing.
 
-- **Consider partner-led training.** Bring in Microsoft or [certified training partners](/training/educator-center/programs/global-training-partner/find-global-training-partner) for tailored sessions or bootcamps on your specific tools like an Azure AI Foundry or Copilot Studio. You can train on your actual data. This accelerates learning through expert guidance.
+- **Consider partner-led training.** Bring in Microsoft or [certified training partners](/training/educator-center/programs/global-training-partner/find-global-training-partner) for tailored sessions or bootcamps on your specific tools like an Foundry or Copilot Studio. You can train on your actual data. This accelerates learning through expert guidance.
 
 - **Encourage mentorship and peer learning.** If some employees already built AI agents, recognize them as champions who can coach others. Create internal communities of practice such as a Teams channel for AI agent developers to ask questions and share tips.
 

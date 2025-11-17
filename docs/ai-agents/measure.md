@@ -28,7 +28,7 @@ To help technical decision makers control agent costs and maximize value across 
 
 1. **Evaluate long term pricing options.** If agent usage remains stable and high, consider reserved capacity to reduce costs. For third-party model APIs, evaluate whether self-hosting becomes viable once the solution proves effective. These decisions involve trade-offs between quality, control, and cost, so technical leaders must guide teams through the analysis.
 
-In **Azure AI Foundry**, [plan and manage costs](/azure/ai-foundry/how-to/costs-plan-manage). Consider a [GenAI gateway](/azure/api-management/genai-gateway-capabilities) to rate limit APIs and [import Azure AI Foundry APIs](/azure/api-management/azure-ai-foundry-api) to use them. [Control AI model deployment](/azure/ai-foundry/how-to/built-in-policy-model-deployment) to use cost-efficient models for your environments.
+In **Foundry**, [plan and manage costs](/azure/ai-foundry/how-to/costs-plan-manage). Consider a [GenAI gateway](/azure/api-management/genai-gateway-capabilities) to rate limit APIs and [import Foundry APIs](/azure/api-management/azure-ai-foundry-api) to use them. [Control AI model deployment](/azure/ai-foundry/how-to/built-in-policy-model-deployment) to use cost-efficient models for your environments.
 
 In **Microsoft Copilot Studio** [licensing options](/microsoft-copilot-studio/billing-licensing) to optimize cost. See [Billing rates and management](/microsoft-copilot-studio/requirements-messages-management#view-message-consumption). Understand how to [allocate, monitor, and optimize message usage](/power-platform/admin/manage-copilot-studio-messages-capacity?tabs=new) across environments. [Block unauthorized self-service sign-ups](/microsoft-copilot-studio/admin-block-viral-signups).
 

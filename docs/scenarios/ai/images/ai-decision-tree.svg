@@ -270,7 +270,7 @@
 			<v:textRect cx="180.77" cy="1143.52" width="361.55" height="31.5"/>
 			<rect x="0" y="1127.77" width="361.54" height="31.5" class="st3"/>
 			<text x="4" y="1128.52" class="st4" v:langID="1033"><v:paragraph v:bulletSize="0.166667"/><v:tabList/>Need an AI development platform to build AI applications and agents? An instance of <tspan
-						x="4" dy="1.2em" class="st5">Azure AI Foundry provides access to the model catalog, Azure OpenAI models, and </tspan><tspan
+						x="4" dy="1.2em" class="st5">Foundry provides access to the model catalog, Azure OpenAI models, and </tspan><tspan
 						x="4" dy="1.2em" class="st5">nongenerative Azure AI services models, so you don</tspan>’t need to deploy those services <tspan
 						x="4" dy="1.2em" class="st5">separately.</tspan></text>		</g>
 		<g id="shape1014-58" v:mID="1014" v:groupContext="shape" transform="translate(77.7571,-1113.54)">
@@ -4899,14 +4899,14 @@
 			</g>
 			<g id="shape1038-141" v:mID="1038" v:groupContext="shape" transform="translate(-10.125,13.5)">
 				<title>Sheet.1038</title>
-				<desc>Azure AI Foundry PaaS | Generative AI &#38; nongenerative AI</desc>
+				<desc>Foundry PaaS | Generative AI &#38; nongenerative AI</desc>
 				<v:userDefs>
 					<v:ud v:nameU="visNavOrder" v:prompt="" v:val="VT0(30000):26"/>
 				</v:userDefs>
 				<v:textBlock v:margins="rect(4,4,4,4)"/>
 				<v:textRect cx="69.1203" cy="1143.52" width="138.25" height="31.5"/>
 				<rect x="0" y="1127.77" width="138.241" height="31.5" class="st3"/>
-				<text x="26.16" y="1126.72" class="st13" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Azure AI Foundry<v:newlineChar/><tspan
+				<text x="26.16" y="1126.72" class="st13" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Foundry<v:newlineChar/><tspan
 							x="13.2" dy="1.2em" class="st15">PaaS | Generative AI &#38; </tspan><tspan x="27.56" dy="1.2em"
 							class="st15">nongenerative AI</tspan><v:newlineChar/></text>			</g>
 		</g>

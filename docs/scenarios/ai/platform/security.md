@@ -35,9 +35,9 @@ AI model security protects against threats like prompt injection attacks and mod
 
 AI access controls restrict resource usage to authorized users through authentication and authorization mechanisms. Access management prevents unauthorized interactions with AI models and protects sensitive data. You must implement comprehensive access controls to maintain security compliance and reduce breach risks. Here's how:
 
-1. **Use Microsoft Entra ID for authentication instead of API keys.** Microsoft Entra ID provides centralized identity management with advanced security features that static API keys cannot offer. This approach eliminates credential management overhead and reduces security vulnerabilities from compromised keys. Replace API keys with Microsoft Entra ID authentication for [Azure AI Foundry](/azure/ai-services/authentication#authenticate-with-microsoft-entra-id), [Azure OpenAI](/azure/ai-services/openai/how-to/managed-identity), and [Azure AI Services](/azure/ai-services/authentication#authenticate-with-microsoft-entra-id). If you must use keys, [rotate keys](/azure/ai-services/rotate-keys) regularly and audit access.
+1. **Use Microsoft Entra ID for authentication instead of API keys.** Microsoft Entra ID provides centralized identity management with advanced security features that static API keys cannot offer. This approach eliminates credential management overhead and reduces security vulnerabilities from compromised keys. Replace API keys with Microsoft Entra ID authentication for [Foundry](/azure/ai-services/authentication#authenticate-with-microsoft-entra-id), [Azure OpenAI](/azure/ai-services/openai/how-to/managed-identity), and [Azure AI Services](/azure/ai-services/authentication#authenticate-with-microsoft-entra-id). If you must use keys, [rotate keys](/azure/ai-services/rotate-keys) regularly and audit access.
 
-2. **Maintain an inventory of AI agents.** An accurate inventory of AI agent identities provides the foundation for access management and policy enforcement. This inventory prevents shadow AI deployments and ensures all agents follow security standards. Use [Microsoft Entra Agent ID](/entra/identity/monitoring-health/concept-sign-ins#microsoft-entra-agent-id) to view all AI agents created through Azure AI Foundry and Copilot Studio.
+2. **Maintain an inventory of AI agents.** An accurate inventory of AI agent identities provides the foundation for access management and policy enforcement. This inventory prevents shadow AI deployments and ensures all agents follow security standards. Use [Microsoft Entra Agent ID](/entra/identity/monitoring-health/concept-sign-ins#microsoft-entra-agent-id) to view all AI agents created through Foundry and Copilot Studio.
 
 3. **Configure multifactor authentication and privileged access.** Multifactor authentication adds an essential security layer that protects against credential compromise. Privileged access controls limit administrative exposure and reduce attack surfaces. Enable [multifactor authentication](/entra/identity/authentication/tutorial-enable-azure-mfa) for all users and implement [Privileged Identity Management](/entra/id-governance/privileged-identity-management/pim-configure) for administrative accounts to provide just-in-time access.
 
@@ -49,7 +49,7 @@ AI access controls restrict resource usage to authorized users through authentic
 
 7. **Control external access to AI endpoints.** External access controls ensure only authorized clients interact with AI models and provide comprehensive monitoring capabilities. This protection prevents unauthorized model usage and maintains service availability. Require Microsoft Entra ID authentication for AI model endpoints and consider Azure API Management as an AI gateway to enforce access policies and monitor usage patterns.
 
-8. **Use Azure AI Foundry Management Center for governance.** Centralized management provides consistent access controls and resource governance across your AI infrastructure. This centralization ensures compliance with organizational standards and simplifies administrative overhead. Use the management center to control access to AI resources, manage quotas, and enforce governance policies.
+8. **Use Foundry Management Center for governance.** Centralized management provides consistent access controls and resource governance across your AI infrastructure. This centralization ensures compliance with organizational standards and simplifies administrative overhead. Use the management center to control access to AI resources, manage quotas, and enforce governance policies.
 
 ## Secure AI data
 
@@ -75,14 +75,14 @@ AI execution security protects against malicious code execution when AI agents r
 
 4. **Monitor execution activity.** Execution monitoring provides visibility into AI agent behavior and helps detect malicious or unusual activity patterns. This monitoring enables rapid response to security incidents and maintains operational awareness. Log all execution activities, monitor resource usage patterns, and configure alerts for suspicious behavior or resource consumption anomalies.
 
-For more information, see [Azure AI Foundry Agent Service](/azure/ai-foundry/agents/overview), [How to create Assistants with Azure OpenAI Service](/azure/ai-services/openai/how-to/assistant), [How to use Azure OpenAI Assistants function calling](/azure/ai-services/openai/how-to/assistant-functions), and [Agent implementation](/azure/cosmos-db/ai-agents#implementation-of-ai-agents).
+For more information, see [Foundry Agent Service](/azure/ai-foundry/agents/overview), [How to create Assistants with Azure OpenAI Service](/azure/ai-services/openai/how-to/assistant), [How to use Azure OpenAI Assistants function calling](/azure/ai-services/openai/how-to/assistant-functions), and [Agent implementation](/azure/cosmos-db/ai-agents#implementation-of-ai-agents).
 
 ## Azure resources
 
 | Category | Tool | Description |
 |----------|------|-------------|
 | Security baselines | [Azure Machine Learning security baseline](/security/benchmark/azure/baselines/machine-learning-service-security-baseline) | Provides standardized security controls for Azure Machine Learning deployments |
-| Security baselines | [Azure AI Foundry security baseline](/security/benchmark/azure/baselines/azure-ai-studio-security-baseline) | Offers security controls specific to Azure AI Foundry environments |
+| Security baselines | [Foundry security baseline](/security/benchmark/azure/baselines/azure-ai-studio-security-baseline) | Offers security controls specific to Foundry environments |
 | Security baselines | [Azure OpenAI security baseline](/security/benchmark/azure/baselines/azure-openai-security-baseline) | Delivers security controls tailored for Azure OpenAI services |
 | Architecture guidance | [Azure Machine Learning service guide](/azure/well-architected/service-guides/azure-machine-learning) | Provides comprehensive security recommendations for Azure Machine Learning |
 | Architecture guidance | [Azure OpenAI service guide](/azure/well-architected/service-guides/azure-openai) | Offers security best practices specific to Azure OpenAI implementations |

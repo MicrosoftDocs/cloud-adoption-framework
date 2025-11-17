@@ -14,22 +14,22 @@ ms.collection: ce-skilling-ai-copilot
 
 After defining your business strategy for AI agents, you must now establish a technology strategy that enables effective agent delivery across your organization. Your business strategy identifies where AI agents create value through customer engagement, operational efficiency, and innovation. Your technology strategy determines how to deliver these agents by selecting the right platforms, balancing implementation speed with customization needs, and managing costs effectively.
 
-:::image type="content" source="./images/ai-agent-decision-tree.png" alt-text="Decision tree diagram showing three paths based on use case type: for retrieval use cases, use Azure AI Foundry or Copilot Studio; for task automation, use Copilot Studio or Azure AI Foundry; for autonomous agents, use Azure AI Foundry with GPU infrastructure and containers." lightbox="./images/ai-agent-decision-tree.png" border="false":::
+## Select technology options
 
-## Select technology options for agent delivery
-
-Microsoft provides three agent platforms that support different business requirements and technical capabilities. Each platform enables specific [agent types](./index.md#types-of-agents) and development approaches.
+Microsoft provides multiple options to adopt agents. For each AI agent use case, you choose the option that best meets your business requirements and technical capabilities. Each platform enables specific [agent types](./index.md#types-of-agents) and development approaches.
 
 :::image type="content" source="./images/technology-options.png" alt-text="Diagram that shows how to ready-to-use vs. build technology options comparing Microsoft Copilots (ready-to-use) vs. Low-code (Microsoft Copilot Studio) and pro-code (Foundry) build options." lightbox="./images/technology-options.png" border="false":::
 
-Organizations typically adopt multiple approaches simultaneously to address varying requirements across departments, project timelines, and technical complexity levels.
+Organizations adopt multiple approaches to address varying requirements across departments, project timelines, and technical complexity levels.
 
 | Solution | Approach | Agent types | Best for |
 |----------|----------|-------------| -------- |
+| **SaaS agents** | Ready-to-use agents (SaaS) | Retrieval, Task | Personal productivity for information workers. Minimal customization required. Immediate value. |
 | **Foundry Agent Service** | Build with PaaS for pro-code agents | Retrieval, Task, Autonomous | Strategic transformation for engineering teams. Deep integration and custom logic. |
 | **Microsoft Copilot Studio** | Build with SaaS for low-code or no-code agents | Retrieval, Task, Autonomous | Process transformation for technical business users. Fast development with minimal coding. |
 | **GPUs & containers** | Build with IaaS for pro-code agents | Retrieval, Task, Autonomous |Full control of the entire technology stack.|
-| **Copilots** | Ready-to-use agents (SaaS) | Retrieval, Task | Personal productivity for information workers. Minimal customization required. Immediate value. |
+
+:::image type="content" source="./images/ai-agent-decision-tree.png" alt-text="Decision tree diagram showing when to use traditional AI apps, generative AI apps, SaaS agents, and AI agents you build." lightbox="./images/ai-agent-decision-tree.png" border="false":::
 
 ## Choose build paths for AI agents
 
@@ -37,17 +37,11 @@ Each build path offers different levels of control, required investment, and gov
 
 :::image type="content" source="./images/build-overview.png" alt-text="Diagram that shows an overview of the build agent options." lightbox="./images/build-overview.png" border="false":::
 
-### Foundry
+### Foundry Agent Service
 
-Use [Azure AI Foundry Agent Service](/azure/ai-foundry/agents/overview) when you need pro-code agents for high-value scenarios. This platform-as-a-service (PaaS) approach provides full customization capabilities, including model selection, infrastructure control, and proprietary data integration. Foundry works best for engineering-led organizations that require multi-agent systems with deep integration into internal systems.
+Use [Foundry Agent Service](/azure/ai-foundry/agents/overview) when you need pro-code agents for high-value scenarios. This platform-as-a-service (PaaS) approach provides full customization capabilities, including model selection, infrastructure control, and proprietary data integration. Foundry works best for engineering-led organizations that require multi-agent systems with deep integration into internal systems. You can build retrieval agents, task agents, and autonomous agents.
 
-Azure AI Foundry supports three agent types:
-
-1. **Retrieval agents** provide fast, accurate responses from your data sources
-2. **Task agents** automate structured workflows and business processes
-3. **Autonomous agents** orchestrate complex processes and adapt to changing conditions
-
-The platform includes Microsoft's responsible AI engineering practices with built-in tools for fairness evaluation and content safety. These features simplify compliance requirements and accelerate your deployment timeline. Start development using the [Azure AI Foundry playground](/azure/ai-foundry/concepts/concept-playgrounds) to build and test prototypes. Follow the quickstart guide to [create a new agent](/azure/ai-foundry/agents/quickstart) and validate your use case.
+The platform includes Microsoft's responsible AI engineering practices with built-in tools for fairness evaluation and content safety. These features simplify compliance requirements and accelerate your deployment timeline. Start development using the [Foundry playground](/azure/ai-foundry/concepts/concept-playgrounds) to build and test prototypes. Follow the quickstart guide to [create a new agent](/azure/ai-foundry/agents/quickstart) and validate your use case.
 
 ### Microsoft Copilot Studio
 
@@ -70,9 +64,9 @@ Develop your agents using Visual Studio Code and GitHub, with costs based on tok
 
 ### Microsoft Agent Framework and protocols
 
-The [Microsoft Agent Framework](/agent-framework/overview/agent-framework-overview) provides an open-source development kit for building individual agents and orchestrating multi-agent workflows. Use this framework with pro-code development paths on Azure AI Foundry and GPU/container environments. The framework does not apply to Microsoft Copilot Studio or ready-to-use Copilots, which include their own orchestration mechanisms.
+The [Microsoft Agent Framework](/agent-framework/overview/agent-framework-overview) provides an open-source development kit for building individual agents and orchestrating multi-agent workflows. Use this framework with pro-code development paths on Foundry and GPU/container environments. The framework does not apply to Microsoft Copilot Studio or ready-to-use Copilots, which include their own orchestration mechanisms.
 
-Deploy the Microsoft Agent Framework when you need greater control over agent orchestration than Azure AI Foundry's built-in capabilities provide. The framework delivers enterprise-grade features with abstractions for both single-agent and multi-agent patterns.
+Deploy the Microsoft Agent Framework when you need greater control over agent orchestration than Foundry's built-in capabilities provide. The framework delivers enterprise-grade features with abstractions for both single-agent and multi-agent patterns.
 
 Standardize agent communication across your cloud estate using two key protocols:
 
@@ -94,9 +88,9 @@ Microsoft 365 Copilot includes specialized agents such as Researcher and Analyst
 
 To confirm the right technology path for AI agent delivery, decision makers must validate platform fit through structured experimentation. This step ensures that each approach aligns with business objectives, technical feasibility, and team readiness before scaling across the cloud estate. It also reduces the risk of misalignment between business needs and technical capabilities.
 
-Organizations often use all three implementation paths, Copilots, Microsoft Copilot Studio, and Azure AI Foundry, in parallel. Each path serves distinct needs, and experimentation helps clarify which one fits best for each use case.
+Organizations often use all three implementation paths, Copilots, Microsoft Copilot Studio, and Foundry, in parallel. Each path serves distinct needs, and experimentation helps clarify which one fits best for each use case.
 
-1. **Run time-boxed experiments.** Direct teams to build short prototypes for each candidate solution. Allocate one to two weeks per option. Compare a low-code agent built in Copilot Studio with a custom solution using Azure AI Foundry. Evaluate each prototype based on:
+1. **Run time-boxed experiments.** Direct teams to build short prototypes for each candidate solution. Allocate one to two weeks per option. Compare a low-code agent built in Copilot Studio with a custom solution using Foundry. Evaluate each prototype based on:
 
     - Development speed and usability
     - Functional coverage and extensibility

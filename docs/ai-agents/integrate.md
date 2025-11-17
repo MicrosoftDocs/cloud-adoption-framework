@@ -79,7 +79,7 @@ Examples of reusable templates include:
 
 Microsoft provides tools that support scalable and secure agent development:
 
-**Azure AI Foundry:** Use [Azure AI Foundry resource templates](/azure/ai-foundry/how-to/create-resource-template) to deploy infrastructure that supports secure and scalable agent embedding.
+**Foundry:** Use [Foundry resource templates](/azure/ai-foundry/how-to/create-resource-template) to deploy infrastructure that supports secure and scalable agent embedding.
 
 **Microsoft Copilot Studio:** Use [agent builder templates in Microsoft Copilot Studio](/microsoft-365-copilot/extensibility/agent-builder-templates) to accelerate integration and ensure consistency across deployments.
 

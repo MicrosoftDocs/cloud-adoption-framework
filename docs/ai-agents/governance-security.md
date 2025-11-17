@@ -28,7 +28,7 @@ AI agents now play a central role in how organizations operate, interact with cu
 
 1. **Comply with data retention laws.** All AI agents must follow defined retention periods for logs, memory, and training data. Implement automated purging or anonymization processes and retain only the context necessary for agent functionality. Agents must inform users about retention durations and provide deletion mechanisms. Retention policies must extend into full lifecycle management, including rules for data creation, archival, deletion, and purging.
 
-In **Azure AI Foundry**, use [Microsoft Purview Compliance Manager](/purview/compliance-manager) to translate regulations, such as the EU AI Act, into controls and assess compliance posture across AI applications. Apply [Azure AI Content Safety](/azure/ai-services/content-safety/overview) to filter harmful content and enforce responsible AI practices. Use [Microsoft Purview APIs](/purview/developer/secure-ai-with-purview) to integrate compliance automation into agent workflows. Review [Microsoft Purview capabilities for Azure AI Foundry](/purview/ai-azure-services) to understand data governance and protection options. For Azure OpenAI models, review [data privacy and security](/azure/ai-foundry/responsible-ai/openai/data-privacy?tabs=azure-portal) details, especially around global and data zone deployments, to confirm alignment with data residency requirements.
+In **Foundry**, use [Microsoft Purview Compliance Manager](/purview/compliance-manager) to translate regulations, such as the EU AI Act, into controls and assess compliance posture across AI applications. Apply [Azure AI Content Safety](/azure/ai-services/content-safety/overview) to filter harmful content and enforce responsible AI practices. Use [Microsoft Purview APIs](/purview/developer/secure-ai-with-purview) to integrate compliance automation into agent workflows. Review [Microsoft Purview capabilities for Foundry](/purview/ai-azure-services) to understand data governance and protection options. For Azure OpenAI models, review [data privacy and security](/azure/ai-foundry/responsible-ai/openai/data-privacy?tabs=azure-portal) details, especially around global and data zone deployments, to confirm alignment with data residency requirements.
 
 In **Microsoft Copilot Studio**, follow [Governance and security best practices](/microsoft-copilot-studio/guidance/sec-gov-intro). Use [data locations](/microsoft-copilot-studio/data-location) to respect data sovereignty. See the platform's [compliance (ISO, SOC, HIPAA) certifications](/microsoft-copilot-studio/admin-certification).
 
@@ -63,7 +63,7 @@ To maintain control, organizations must:
 
 - **Uphold transparency**: Disclose AI involvement clearly in agent interfaces. Notify internal stakeholders when their data supports training or inference. Review new data sources before integration to validate content, permissions, and security risks.
 
-In **Azure AI Foundry**, use [Azure Policy](/azure/ai-foundry/how-to/azure-policy) to control infrastructure configurations and [model deployment](/azure/ai-foundry/how-to/built-in-policy-model-deployment).
+In **Foundry**, use [Azure Policy](/azure/ai-foundry/how-to/azure-policy) to control infrastructure configurations and [model deployment](/azure/ai-foundry/how-to/built-in-policy-model-deployment).
 
 In **Microsoft Copilot Studio**, [create and manage solution pipelines](/microsoft-copilot-studio/authoring-solutions-overview#create-and-manage-solution-pipelines) and use [reusable component collections](/microsoft-copilot-studio/authoring-export-import-copilot-components) and enforcing version governance.
 
@@ -77,12 +77,12 @@ In **Microsoft Copilot Studio**, [create and manage solution pipelines](/microso
 
 1. **Collect agent metrics and logs.** Once the organization identifies all agents, the next step is to monitor their behavior and performance. Have teams track key **metrics** and **logs** consistently, ideally to a centralized location, such as an Azure Log Analytics workspace. This consistency improves transparency, supports audit readiness, and simplifies troubleshooting. Centralized logs also enable cross-team collaboration. As needed, instruct teams to gather custom telemetry in Application Insights that captures how agents behave and how users interact with them. This information helps you decide whether to scale, refine, or retire agents based on business impact. To align technical performance with business goals, teams should use or build **dashboards**. These dashboards provide leadership with a clear view of how AI investments contribute to outcomes.
 
-    - For **Azure AI Foundry**, [monitor agents](/azure/ai-foundry/agents/how-to/metrics), [monitor model deployments](/azure/ai-foundry/foundry-models/how-to/monitor-models), and [monitor applications](/azure/ai-foundry/how-to/monitor-applications) and [dashboards](/azure/ai-foundry/agents/how-to/metrics#dashboards).
+    - For **Foundry**, [monitor agents](/azure/ai-foundry/agents/how-to/metrics), [monitor model deployments](/azure/ai-foundry/foundry-models/how-to/monitor-models), and [monitor applications](/azure/ai-foundry/how-to/monitor-applications) and [dashboards](/azure/ai-foundry/agents/how-to/metrics#dashboards).
     - For **Microsoft Copilot Studio**, see [monitor logging and auditing](/microsoft-copilot-studio/admin-logging-copilot-studio). Centralize with [Azure Application Insights in Azure Monitor](/microsoft-copilot-studio/advanced-bot-framework-composer-capture-telemetry).
 
 1. **Track agent costs.** AI agents consume resources such as compute power, tokens, and API calls. Without visibility, costs can escalate quickly. You need a unified view of agent usage and cost across departments and projects to track metrics like token consumption and compute usage. Organize this data by department or project to identify where costs concentrate. Apply cost center tags using [Microsoft Cost Management](/azure/cost-management-billing/costs/cost-allocation-introduction) to allocate agent expenses accurately. Require teams to tag resources per agent or use case so you can see cost breakdowns clearly. Set up real-time **alerts** to notify teams when spending approaches budget thresholds. These alerts help prevent overruns and support proactive financial management. Restrict who can create, deploy, and scale agents by using Azure **role-based access control** (RBAC). This structure reduces risk and ensures only authorized personnel manage AI deployments.
 
-    - In **Azure AI Foundry**, [plan and manage costs](/azure/ai-foundry/how-to/costs-plan-manage). Centrally administer quotas and access through the [management center](/azure/ai-foundry/concepts/management-center).
+    - In **Foundry**, [plan and manage costs](/azure/ai-foundry/how-to/costs-plan-manage). Centrally administer quotas and access through the [management center](/azure/ai-foundry/concepts/management-center).
     - In **Microsoft Copilot Studio**, [Review usage and message allocation](/microsoft-copilot-studio/requirements-messages-management) to manage consumption.
 
 ## Agent security
@@ -100,21 +100,21 @@ To manage these risks, leaders must direct their teams to integrate agent securi
 
 1. **Every agent must follow baseline security recommendations.** Treat agent infrastructure with the same level of oversight as customer-facing systems. Treat agent runtimes with the same governance and oversight as customer-facing systems.
 
-    For **Azure AI Foundry**, use the [Azure security baseline for Azure AI Foundry](/security/benchmark/azure/baselines/azure-ai-foundry-security-baseline).
+    For **Foundry**, use the [Azure security baseline for Foundry](/security/benchmark/azure/baselines/azure-ai-foundry-security-baseline).
 
 1. **Conduct adversarial testing and red teaming exercises.** Organizations must validate agent resilience before deployment. Red teaming simulates real-world attacks to identify vulnerabilities that standard testing might miss. These exercises help detect weaknesses such as prompt injection, data leakage, and jailbreak attempts. Direct teams to run adversarial tests on all agents before production release and after significant updates. This step reduces the likelihood of exploitation and improves the agent's ability to handle hostile input.
 
-    For **Azure AI Foundry**, use the [AI Red Teaming Agent](/azure/ai-foundry/how-to/develop/run-scans-ai-red-teaming-agent) to scan applications for safety and security issues before deployment. Also see [AI Red Teaming Playground Labs](https://github.com/microsoft/AI-Red-Teaming-Playground-Labs?tab=readme-ov-file#ai-red-teaming-playground-labs)
+    For **Foundry**, use the [AI Red Teaming Agent](/azure/ai-foundry/how-to/develop/run-scans-ai-red-teaming-agent) to scan applications for safety and security issues before deployment. Also see [AI Red Teaming Playground Labs](https://github.com/microsoft/AI-Red-Teaming-Playground-Labs?tab=readme-ov-file#ai-red-teaming-playground-labs)
 
     For **Microsoft Copilot Studio**, follow [security and governance guidance](/microsoft-copilot-studio/security-and-governance), enable [automatic security scans](/microsoft-copilot-studio/security-scan), and verify [agent runtime protection status](/microsoft-copilot-studio/security-agent-runtime-view) to ensure continuous validation.
 
 1. **Filter all agent inputs and outputs.** You need to block adversarial input to bypass integrated safety protocols. Have teams treat all incoming data, text, files, images, as potentially hostile. Instruct teams to validate and filter inputs before they reach models or backend systems. Strip scripting and injection content from text, enforce type and size restrictions for files, and scan media using moderation services. Update sanitization rules based on observed attack patterns.
 
-    For **Azure AI Foundry**, [configure Azure Content Safety content filtering](/azure/ai-services/content-safety/overview) to mitigate harmful content. Combine with [Purview DLP](/purview/dlp-learn-about-dlp) policies or adding custom detectors, either within Purview or as standalone solutions, to reduce sensitive data leakage.
+    For **Foundry**, [configure Azure Content Safety content filtering](/azure/ai-services/content-safety/overview) to mitigate harmful content. Combine with [Purview DLP](/purview/dlp-learn-about-dlp) policies or adding custom detectors, either within Purview or as standalone solutions, to reduce sensitive data leakage.
 
 1. **Use secure authentication mechanisms.** Use [managed identities for authentication](/entra/identity/managed-identities-azure-resources/overview) to eliminate credential management risks.
 
-    For **Azure AI Foundry**, enforce least-privilege roles using [Azure role-based access control](/azure/ai-foundry/concepts/rbac-azure-ai-foundry).
+    For **Foundry**, enforce least-privilege roles using [Azure role-based access control](/azure/ai-foundry/concepts/rbac-azure-ai-foundry).
 
 1. **Enforce least-privilege access.** If agents can execute actions, govern those capabilities tightly. Each tool the agent uses should enforce the user’s permissions or have scoped service accounts. Use Data Loss Prevention (DLP) policies to restrict what data the agent can access or output. For instance, prevent it from returning credit card numbers in answers.
 
@@ -141,7 +141,7 @@ To manage these risks, leaders must direct their teams to integrate agent securi
 
 1. **Create agent incident response plan.**  Decide in advance how you would quickly disable an agent if it's doing harm or malfunctioning. Plan how to communicate incidents. Include steps for preserving logs for forensic analysis and updating stakeholders. Just as you have disaster recovery plans for systems, have one for AI agents. Run drills if the agent is critical to ensure the team knows how to respond under pressure.
 
-    For **Azure AI Foundry**, prepare rollback and continuity procedures using [Customer enabled disaster recovery](/azure/ai-foundry/how-to/disaster-recovery) and integrate proactive risk detection from [Risks and safety monitoring](/azure/ai-foundry/openai/how-to/risks-safety-monitor) to trigger containment workflows.
+    For **Foundry**, prepare rollback and continuity procedures using [Customer enabled disaster recovery](/azure/ai-foundry/how-to/disaster-recovery) and integrate proactive risk detection from [Risks and safety monitoring](/azure/ai-foundry/openai/how-to/risks-safety-monitor) to trigger containment workflows.
 
 ## Agent development
 
@@ -149,7 +149,7 @@ To manage these risks, leaders must direct their teams to integrate agent securi
 
 ### Standardize agent frameworks
 
-Establish a consistent set of frameworks and SDKs for agent development. This reduces complexity, improves collaboration across departments, and simplifies long-term maintenance. For example, within Azure AI Foundry, you can standardize on options like the [Microsoft Agent Framework](/agent-framework/overview/agent-framework-overview) and the [Azure AI Foundry SDK](/azure/ai-foundry/how-to/develop/sdk-overview?pivots=programming-language-python). These tools provide structured approaches to agent orchestration and integration, and they support rapid onboarding of new agents. When selecting frameworks, consider the following points:
+Establish a consistent set of frameworks and SDKs for agent development. This reduces complexity, improves collaboration across departments, and simplifies long-term maintenance. For example, within Foundry, you can standardize on options like the [Microsoft Agent Framework](/agent-framework/overview/agent-framework-overview) and the [Foundry SDK](/azure/ai-foundry/how-to/develop/sdk-overview?pivots=programming-language-python). These tools provide structured approaches to agent orchestration and integration, and they support rapid onboarding of new agents. When selecting frameworks, consider the following points:
 
 - **Compatibility with existing infrastructure**: Ensure the framework integrates well with your current cloud architecture and data sources.
 - **Support and documentation**: Choose frameworks with robust documentation and active support to reduce ramp-up time.
@@ -166,7 +166,7 @@ Protocols define how agents interact with tools, data, and each other. Require a
 
 These protocols create a common language for agents across your organization. They reduce integration overhead, improve interoperability, and support governance by enforcing clear interaction rules.
 
-For **Azure AI Foundry**, ensure you understand the available orchestration options. In addition to the [Microsoft Agent Framework](/agent-framework/overview/agent-framework-overview) and the [Azure AI Foundry SDK](/azure/ai-foundry/how-to/develop/sdk-overview?pivots=programming-language-python), Azure AI Foundry integrates with multiple orchestration approaches. Evaluate built-in orchestration, Microsoft Agent Framework, SDK, and community frameworks such as LangGraph where appropriate. Provide guidance on when to use each option based on the complexity of the agent, the required integrations, and the business outcomes.
+For **Foundry**, ensure you understand the available orchestration options. In addition to the [Microsoft Agent Framework](/agent-framework/overview/agent-framework-overview) and the [Foundry SDK](/azure/ai-foundry/how-to/develop/sdk-overview?pivots=programming-language-python), Foundry integrates with multiple orchestration approaches. Evaluate built-in orchestration, Microsoft Agent Framework, SDK, and community frameworks such as LangGraph where appropriate. Provide guidance on when to use each option based on the complexity of the agent, the required integrations, and the business outcomes.
 
 ## Next step
 
