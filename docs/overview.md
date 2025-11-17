@@ -62,16 +62,6 @@ The Cloud Adoption Framework provides industry-specific, technology-focused guid
 | [Azure Virtual Desktop](./scenarios/azure-virtual-desktop/index.md) | Deliver and manage virtual desktops at enterprise scale with security and compliance controls. | Remote work enablement, desktop virtualization, end-user computing, security compliance |
 | [Azure VMware Solution](./scenarios/azure-vmware/index.md) | Migrate VMware workloads to Azure with zero downtime and maintained operational consistency. | VMware infrastructure migration, hybrid cloud strategy, disaster recovery modernization |
 | [Cloud-Scale Analytics](./scenarios/data-management/index.md) | Build secure, scalable data platforms with advanced analytics and real-time insights. | Data modernization, analytics platforms, data governance, real-time processing |
-| [Hybrid and Multicloud](./scenarios/hybrid/index.md) | Integrate on-premises, Azure, and multi-cloud environments with unified management and security. | Multi-cloud strategy, hybrid connectivity, workload portability, edge computing |
 | [Modern Application Platform](./scenarios/app-platform/index.md) | Modernize applications using containers, microservices architecture, and Azure PaaS services. | Application modernization, container adoption, microservices architecture, DevOps transformation |
 | [Oracle on Azure](./scenarios/oracle-on-azure/index.md) | Run enterprise Oracle workloads in Azure with optimized performance and cost efficiency. | Oracle database migration, enterprise application continuity, performance optimization |
 | [SAP on Azure](./scenarios/sap/index.md) | Deploy and operate SAP solutions using Azure-native tools with enterprise-grade reliability. | SAP migration, ERP modernization, mission-critical workloads, high availability |
-
-## Quick start options
-
-Choose your optimal starting point based on your cloud maturity and business objectives:
-
-- **Looking to build rapidly?** Use the [Quick setup guide](./ready/azure-setup-guide/identity.md) to start building your first cloud-native workload.
-- **New to Azure cloud migration?** [Define your cloud strategy and business goals](/azure/cloud-adoption-framework/strategy/) to align stakeholders around measurable success metrics and ROI targets
-- **Ready to build secure cloud infrastructure?** [Set up Azure landing zones](./ready/landing-zone/index.md) for enterprise-grade, scalable cloud foundation with built-in governance
-- **Have legacy workloads to migrate?** [Plan your migration approach](/azure/cloud-adoption-framework/migrate/plan-migration) using proven migration strategies that minimize business disruption
