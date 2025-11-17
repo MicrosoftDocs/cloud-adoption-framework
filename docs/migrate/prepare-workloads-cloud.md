@@ -4,7 +4,7 @@ description: Comprehensive guidance for validating, securing, and automating wor
 author: stephen-sumner
 ms.author: pnp
 ms.date: 09/15/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ---
 
 # Prepare workloads for the cloud

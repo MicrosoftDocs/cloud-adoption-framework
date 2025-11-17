@@ -4,7 +4,7 @@ description: Learn about design considerations and recommendations for the manag
 author: mrhoads
 ms.author: mirhoads
 ms.date: 09/07/2022
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: e2e-hybrid, think-tank
 ---
 
@@ -55,7 +55,7 @@ Consider your organization's preferred monitoring tools when evaluating how to m
 
 When you deploy Arc-enabled SQL Managed Instance indirectly connected mode, there's no direct connection to Azure. 
 
-- When you when plan to deploy an instance in indirectly connected mode, consider how to upload logs and metadata about the instance from the cluster to Azure. Consider how to automate this process. For more information, see [Upload logs to Azure Monitor](/azure/azure-arc/data/upload-logs?tabs=windows).
+- When you plan to deploy an instance in indirectly connected mode, consider how to upload logs and metadata about the instance from the cluster to Azure. Consider how to automate this process. For more information, see [Upload logs to Azure Monitor](/azure/azure-arc/data/upload-logs?tabs=windows).
 
 - At least once per month, you must upload metadata about the instance to Azure for inventory and billing purposes. For more information about this, see [Azure Arc data services data collection and reporting](/azure/azure-arc/data/privacy-data-collection-and-reporting).
 

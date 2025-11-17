@@ -4,7 +4,7 @@ description: Learn how to adopt security best practices in your cloud adoption p
 author: claytonsiemens77
 ms.author: pnp
 ms.date: 10/23/2024
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: internal, UpdateFrequency2
 ---
 

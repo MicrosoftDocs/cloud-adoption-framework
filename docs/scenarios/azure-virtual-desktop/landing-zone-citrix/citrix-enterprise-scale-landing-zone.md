@@ -4,7 +4,7 @@ description: Learn about a reference implementation of a Citrix Cloud and Azure 
 author: BenMartinBaur
 ms.author: wasaleem
 ms.date: 02/08/2023
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: think-tank, e2e-avd
 ---
 

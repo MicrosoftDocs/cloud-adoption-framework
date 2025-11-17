@@ -12,19 +12,19 @@ items:
     items:
     - name: Strategy
       items:
-      - name: Overview
+      - name: 1. Overview
         href: strategy/index.md
-      - name: Assess your cloud adoption strategy
+      - name: 2. Assess your cloud adoption strategy
         href: strategy/assessment.md
-      - name: Determine your motivations
+      - name: 3. Determine your motivations
         href: strategy/motivations.md
-      - name: Define your mission and objectives
+      - name: 4. Define your mission and objectives
         href: strategy/mission-objectives.md
-      - name: Define your strategy team
+      - name: 5. Define your strategy team
         href: strategy/define-your-team.md
-      - name: Prepare your organization
+      - name: 6. Prepare your organization
         href: strategy/prepare-organizational-alignment.md
-      - name: Inform your strategy
+      - name: 7. Inform your strategy
         items:
           - name: Cost efficiency
             href: strategy/inform/cost-efficiency.md
@@ -483,21 +483,21 @@ items:
 
     - name: Secure
       items:
-      - name: Overview 
+      - name: 1. Overview 
         href: secure/overview.md
-      - name: Teams and roles
+      - name: 2. Teams and roles
         href: secure/teams-roles.md
-      - name: Strategy
+      - name: 3. Strategy
         href: secure/strategy.md
-      - name: Plan
+      - name: 4. Plan
         href: secure/plan.md
-      - name: Ready
-        href: secure/ready.md    
-      - name: Adopt 
+      - name: 5. Ready
+        href: secure/ready.md
+      - name: 6. Adopt
         href: secure/adopt.md
-      - name: Govern  
+      - name: 7. Govern
         href: secure/govern.md
-      - name: Manage  
+      - name: 8. Manage
         href: secure/manage.md
 
     - name: Manage
@@ -537,12 +537,10 @@ items:
       href: ai-agents/index.md
     - name: AI
       href: scenarios/ai/index.md
-    - name: Azure VMware Solution
-      href: scenarios/azure-vmware/index.md
+    - name: Azure Virtual Desktop
+      href: scenarios/azure-virtual-desktop/index.md
     - name: Cloud-scale analytics
       href: scenarios/data-management/index.md
-    - name: High-performance computing
-      href: scenarios/azure-hpc/index.md
     - name: Hybrid and multicloud
       href: scenarios/hybrid/index.md
     - name: Modern application platform
@@ -551,8 +549,9 @@ items:
       href: scenarios/oracle-on-azure/index.md
     - name: SAP
       href: scenarios/sap/index.md
-    - name: Virtual desktops
-      href: scenarios/azure-virtual-desktop/index.md
+    - name: Azure VMware Solution
+      href: scenarios/azure-vmware/index.md
+
 
   - name: Resources
     items:

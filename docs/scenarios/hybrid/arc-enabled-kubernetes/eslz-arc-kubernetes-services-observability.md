@@ -4,7 +4,7 @@ description: Learn design considerations and recommendations for services observ
 author: stephen-sumner
 ms.author: pnp
 ms.date: 04/29/2022
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom:
   - e2e-hybrid
   - think-tank
@@ -66,7 +66,7 @@ The following table shows collection impact for the three pillars.
 | Immune to cardinality issues      | No      |   Yes |   Yes |
 | Cost  | Low      |    High |    Low |
 
-There are different ways you can achieve service observability. You can use a service mesh to do it at the platform layer, where your application is unaware and unchanged. You can also instrument an application with a library, which is commonly done using an Application Performance Monitoring (APM) tool like [Application Insights](/azure/azure-monitor/app/app-insights-overview). API gateways provide observability into north-south traffic, but lacks observability into pod to pod communication and ease of configuration at scale.
+There are different ways you can achieve service observability. You can use a service mesh to do it at the platform layer, where your application is unaware and unchanged. You can also instrument an application with a library, which is commonly done using an Application Performance Monitoring (APM) tool like [Application Insights](/azure/azure-monitor/app/app-insights-overview). API gateways provide observability into north-south traffic, but lack observability into pod to pod communication and ease of configuration at scale.
 
 The following sections explain how you can use a service mesh and the self-hosted API Gateway available for Azure Arc to achieve services observability.
 
@@ -154,7 +154,7 @@ Use visualizations from the Jaeger UI to:
 - Observe a topology graph visualization that shows which microservices communicate with each other, where requests go, and how long they take.
 - Inspect for specific requests and responses to see how and when they happen for monitoring and troubleshooting distributed systems.
   
-Services observability just one discipline of your cloud monitoring strategy. For more information on management disciplines, review the [Management disciplines critical design area](./eslz-arc-kubernetes-management-disciplines.md).
+Services observability is just one discipline of your cloud monitoring strategy. For more information on management disciplines, review the [Management disciplines critical design area](./eslz-arc-kubernetes-management-disciplines.md).
 
 ## Next steps
 

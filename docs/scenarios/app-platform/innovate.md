@@ -4,7 +4,7 @@ description: Understand how to establish a modern application platform environme
 author: stephen-sumner
 ms.author: pnp
 ms.date: 05/14/2021
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: e2e-aks, think-tank
 ---
 

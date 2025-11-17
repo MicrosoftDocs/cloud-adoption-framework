@@ -4,7 +4,7 @@ description: Learn how to configure network connectivity when Azure VMware Solut
 author: fguerri
 ms.author: fguerri
 ms.date: 02/09/2023
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom:
   - think-tank
   - e2e-azure-vmware
@@ -20,7 +20,7 @@ This article describes how to configure network connectivity when Azure VMware S
 This article focuses on a typical dual-region scenario, shown in the following Figure 1:
 
 - An Azure hub and spoke network exists in each region.
-- A disaster-resilient configuration for Azure ExpressRoute (two circuits in two different peering locations, with each circuit connected to hub virtual networks in both regions) has been deployed. The guidance provided in the following sections stays the same in case [fall-back VPN connectivity](/azure/expressroute/expressroute-howto-coexist-resource-manager#configure-a-site-to-site-vpn-as-a-failover-path-for-expressroute) is configured.
+- A configuration for Azure ExpressRoute designed for disaster recoverability (two circuits in different peering locations, each circuit connected to hub virtual networks in both regions) has been deployed. Resiliency is achieved through dual paths; recoverability is supported by multi-region connectivity. The guidance provided in the following sections stays the same if [fall-back VPN connectivity](/azure/expressroute/expressroute-howto-coexist-resource-manager#configure-a-site-to-site-vpn-as-a-failover-path-for-expressroute) is configured.
 - An Azure VMware Solution private cloud has been deployed in each region.
 
 :::image type="content" source="media/dual-region-figure-1.png" alt-text="Diagram of Figure 1, which shows the dual-region scenario covered in this article." lightbox="media/dual-region-figure-1.png":::
@@ -61,7 +61,7 @@ The recommended option for connecting Azure VMware Solution private clouds to on
    Diagram of Figure 3, which shows Global Reach connections can be established between customer managed ExpressRoute circuits and Azure VMware Solution managed ExpressRoute circuits.
 :::image-end:::
 
-*Figure 3: This reference scenario shows Global Reach connections between customer-managed ExpressRoute circuits and Azure VMware Solution ExpressRoute circuits.* 
+*Figure 3: This reference scenario shows Global Reach connections between customer-managed ExpressRoute circuits and Azure VMware Solution ExpressRoute circuits.*
 
 ### Azure Virtual Network connectivity
 

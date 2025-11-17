@@ -5,7 +5,7 @@ keywords: Oracle Autonomous Database Azure, business continuity, disaster recove
 author: onursenturk
 ms.author: onursenturk
 ms.date: 07/08/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: e2e-oracle
 ---
 
@@ -23,7 +23,7 @@ In this article, you learn how to do the following tasks:
 
 Organizations must establish clear recovery objectives before they implement BCDR solutions for Oracle Autonomous Database@Azure. RTO represents the maximum acceptable downtime after a failure. RPO defines the maximum acceptable data loss. These critical metrics determine the appropriate BCDR architecture and Oracle technologies for your cloud database environment.
 
-- **Define your recovery objectives based on business requirements.** Oracle Autonomous Database@Azure supports different availability levels that align with [Oracle Maximum Availability Architecture (MAA) principles](https://docs.oracle.com/en/database/oracle/oracle-database/21/haovw/oracle-maximum-availability-architecture-and-oracle-autonomous-database.html#GUID-80E31978-A2B5-4106-9CB8-C8DFD8AA9637). The default configuration provides MAA Silver-level protection against instance and hardware failures. Choose an architecture that meets specific RTO and RPO requirements for different failure scenarios.
+- **Define your recovery objectives based on business requirements.** Oracle Autonomous Database@Azure supports different availability levels that align with [Oracle Maximum Availability Architecture (MAA) principles](https://docs.oracle.com/en/database/oracle/oracle-database/26/haiad/maara_overview.html). The default configuration provides MAA Silver-level protection against instance and hardware failures. Choose an architecture that meets specific RTO and RPO requirements for different failure scenarios.
 
 - **Address regional limitations and cross-region requirements.** Oracle Autonomous Database@Azure operates within a single availability region where you create the instance. Multiregional resiliency requires more cross-region disaster recovery instances. Identify geographic distribution requirements for your compliance and data residency needs when you design your deployment topology.
 

@@ -4,7 +4,7 @@ description: Learn how to improve identity and access management for Azure Arc-e
 author: chintalavr
 ms.author: vchintala
 ms.date: 09/22/2022
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: e2e-hybrid, think-tank
 ---
 
@@ -52,7 +52,7 @@ Active Directory connector in [customer-managed keytab mode](/azure/azure-arc/da
 
 When the Arc-enabled data services extension is installed in Directly connected mode, a [managed identity](/azure/azure-arc/data/create-data-controller-direct-cli?tabs=windows#retrieve-the-managed-identity-and-grant-roles) is created for Arc-enabled data services to interact with Azure Resource Manager (ARM) APIs control plane and data plane. Azure Arc Data Controller uses this managed identity to perform these actions when managing Arc-enabled SQL Managed Instance.
 
-In an Indirect connectivity mode, a [service principal](/azure/azure-arc/data/upload-metrics-and-logs-to-azure-monitor#create-service-principal) with [required permissions](/azure/azure-arc/data/upload-metrics-and-logs-to-azure-monitor?tabs=windows#assign-roles-to-the-service-principal) is needed by Azure Arc Data Controller to periodically [export usage information](/en-us/azure/azure-arc/data/upload-usage-data#upload-usage-data) such as inventory and resource usage to Azure.
+In an Indirect connectivity mode, a [service principal](/azure/azure-arc/data/upload-metrics-and-logs-to-azure-monitor#create-service-principal) with [required permissions](/azure/azure-arc/data/upload-metrics-and-logs-to-azure-monitor?tabs=windows#assign-roles-to-the-service-principal) is needed by Azure Arc Data Controller to periodically [export usage information](/azure/azure-arc/data/upload-usage-data#upload-usage-data) such as inventory and resource usage to Azure.
 
 ### Azure RBAC on Azure Arc-enabled data services
 

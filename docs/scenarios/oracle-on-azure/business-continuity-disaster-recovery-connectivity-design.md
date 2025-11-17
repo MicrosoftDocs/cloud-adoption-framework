@@ -4,13 +4,13 @@ description: Learn about considerations and recommendations for Oracle Database@
 author: moisesjgomez
 ms.author: mgomezcortez
 ms.date: 02/08/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: e2e-oracle
 ---
 
 # Network topology and connectivity for Oracle Exadata Database@Azure - BCDR connectivity design
 
-This article focuses on high availability (HA) and disaster recovery (DR) connectivity considerations for Oracle Exadata Database@Azure deployments. It begins by addressing single-region redundancy, then expands to cross-region architectures to help ensure that your environments remain resilient and meet low recovery point objective (RPO) and recovery time objective (RTO) requirements.
+This article focuses on high availability (HA) and disaster recovery (DR) connectivity considerations for Oracle Exadata Database@Azure deployments. It begins with single-region redundancy and then expands to cross-region architectures. The goal is to sustain operation during localized faults while separately meeting low recovery point objective (RPO) and recovery time objective (RTO) targets through properly engineered failover and replication paths.
 
 You must address the following key requirements:
 
@@ -49,7 +49,7 @@ The following diagram shows the recommended cross-region configuration that uses
 
 - **Network virtual appliances (NVAs):** Minimize the use of NVAs and other appliances in the network path because each extra hop adds latency that can degrade Data Guard replication performance.
 
-- **Asynchronous replication for cross-region DR:** Because of higher latency between geographically distant regions, consider using asynchronous Data Guard replication. This mode can handle increased latency without affecting production performance. 
+- **Asynchronous replication for cross-region DR:** Because of higher latency between geographically distant regions, consider using asynchronous Data Guard replication. This mode can handle increased latency without affecting production performance.
 
 ## Next step
 

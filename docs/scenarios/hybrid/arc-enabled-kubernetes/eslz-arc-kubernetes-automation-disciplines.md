@@ -4,7 +4,7 @@ description: Understand the design considerations and recommendations for automa
 author: mrhoads
 ms.author: mirhoads
 ms.date: 04/29/2022
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: e2e-hybrid
 ---
 

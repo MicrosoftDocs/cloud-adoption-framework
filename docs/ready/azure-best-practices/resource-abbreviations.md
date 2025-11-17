@@ -5,7 +5,7 @@ author: stephen-sumner
 ms.author: ssumner
 ms.date: 05/23/2025
 ms.reviewer: ssumner
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: internal, readiness, fasttrack-edit
 ---
 
@@ -62,7 +62,6 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | Azure Synapse Analytics Spark Pool | `Microsoft.Synapse/workspaces/bigDataPools` | `synsp` |
 | Azure Synapse Analytics workspaces | `Microsoft.Synapse/workspaces` | `synw` |
 | Data Lake Store account | `Microsoft.DataLakeStore/accounts` | `dls` |
-| Data Lake Analytics account | `Microsoft.DataLakeAnalytics/accounts` | `dla` |
 | Event Hubs namespace | `Microsoft.EventHub/namespaces` | `evhns` |
 | Event hub | `Microsoft.EventHub/namespaces/eventHubs` | `evh` |
 | Event Grid domain | `Microsoft.EventGrid/domains` | `evgd` |
@@ -151,7 +150,6 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | Azure SQL Elastic Pool | `Microsoft.Sql/servers/elasticpool` | `sqlep` |
 | MySQL database | `Microsoft.DBforMySQL/servers` | `mysql` |
 | PostgreSQL database | `Microsoft.DBforPostgreSQL/servers` | `psql` |
-| SQL Server Stretch Database | `Microsoft.Sql/servers/databases` | `sqlstrdb` |
 | SQL Managed Instance | `Microsoft.Sql/managedInstances` | `sqlmi` |
 
 ## Developer tools
@@ -191,8 +189,6 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | Azure Monitor action group | `Microsoft.Insights/actionGroups` | `ag` |
 | Azure Monitor data collection rule | `Microsoft.Insights/dataCollectionRules` | `dcr` |
 | Azure Monitor alert processing rule | `Microsoft.AlertsManagement/actionRules` | `apr` |
-| Blueprint (planned for deprecation) | `Microsoft.Blueprint/blueprints` | `bp` |
-| Blueprint assignment (planned for deprecation) | `Microsoft.Blueprint/blueprints/artifacts` | `bpa` |
 | Data collection endpoint | `Microsoft.Insights/dataCollectionEndpoints` | `dce` |
 | Deployment scripts | `Microsoft.Resources/deploymentScripts` | `script` |
 | Log Analytics workspace | `Microsoft.OperationalInsights/workspaces` | `log` |
@@ -282,7 +278,6 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 
 | Resource | Resource provider namespace | Abbreviation |
 |--|--|--|
-| Azure StorSimple | `Microsoft.StorSimple/managers` | `ssimp` |
 | Backup Vault name | `Microsoft.DataProtection/backupVaults` | `bvault` |
 | Backup Vault policy | `Microsoft.DataProtection/backupVaults/backupPolicies` | `bkpol` |
 | File share | `Microsoft.Storage/storageAccounts/fileServices/shares` | `share` |

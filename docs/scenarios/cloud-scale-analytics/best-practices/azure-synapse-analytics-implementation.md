@@ -4,7 +4,7 @@ description: Learn how to use Azure Synapse Analytics with cloud-scale analytics
 author: stephen-sumner
 ms.author: pnp
 ms.date: 12/03/2024
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: e2e-data-management, think-tank
 ---
 
@@ -19,7 +19,7 @@ Azure Synapse Analytics is the provisioned, integrated analytics service that ac
 Azure Synapse studio is a tool in Azure Synapse that provides a unified experience for management, monitoring, coding, and security. Synapse studio has deep integration with other Azure services like Power BI, Azure Cosmos DB, and Azure Machine Learning.
 
 > [!NOTE]
-> This section aims to describe prescribed configurations which are specific to cloud-scale analytics. It's a compliment to the official [Azure Synapse Analytics documentation](/azure/synapse-analytics/).
+> This section aims to describe prescribed configurations which are specific to cloud-scale analytics. It's a complement to the official [Azure Synapse Analytics documentation](/azure/synapse-analytics/).
 
 ## Overview
 
@@ -48,7 +48,7 @@ For example, row-level security ensures that users in a specific data applicatio
 You can combine row-level security with column-level security to restrict access to columns with sensitive data. This way, both row-level security and column-level security apply the access restriction logic at the database tier rather than the application tier. The permission is evaluated every time data access is attempted from any tier.
 
 > [!NOTE]
-> Azure Synapse serverless SQL pool supports [Column-level security](/azure/synapse-analytics/sql-data-warehouse/column-level-security) for views and not for external tables. In case of external tables one can create a logical view on top of the external table and than apply Column-level security. In case of Row-level security, custom views can be used as a workaround. 
+> Azure Synapse serverless SQL pool supports [Column-level security](/azure/synapse-analytics/sql-data-warehouse/column-level-security) for views and not for external tables. In case of external tables one can create a logical view on top of the external table and then apply Column-level security. In case of Row-level security, custom views can be used as a workaround. 
 
 For more information, see [Azure Synapse Analytics data access control](data-lake-access.md#azure-synapse-analytics-data-access-control).
 

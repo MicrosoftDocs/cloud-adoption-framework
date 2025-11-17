@@ -4,7 +4,7 @@ description: Use the Cloud Adoption Framework for Azure to learn how to build th
 author: stephen-sumner
 ms.author: pnp
 ms.date: 05/19/2019
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: internal
 ---
 

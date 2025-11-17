@@ -1,11 +1,10 @@
 ---
 title: Security Teams, Roles, and Functions
 description: Learn how to create a security team and its roles. These roles help you ensure that security is part of every stage of the cloud lifecycle.
-author: claytonsiemens77
+author: stephen-sumner
 ms.author: pnp
-ms.date: 11/01/2024
-ms.topic: conceptual
-ms.custom: internal, UpdateFrequency2
+ms.date: 11/05/2025
+ms.topic: concept-article
 ---
 # Security teams, roles, and functions
 

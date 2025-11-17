@@ -4,7 +4,7 @@ description: Learn key design considerations and recommendations for security an
 author: nataliakon
 ms.author: pnp
 ms.date: 05/02/2022
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: think-tank, e2e-avd
 ---
 
@@ -61,7 +61,7 @@ Review the following sections to find recommended security controls and governan
 ## Session hosts
 
 - Create a dedicated Organization Unit(s) (OU) in the Active Directory for the Azure Virtual Desktop session hosts. Apply dedicated Group Policy to your session hosts to manage controls such as:
-  - [Enable screen capture protection](/azure/virtual-desktop/screen-capture-protection) to you prevent sensitive screen information from being captured on the client endpoints.
+  - [Enable screen capture protection](/azure/virtual-desktop/screen-capture-protection) to prevent sensitive screen information from being captured on the client endpoints.
   - Set [maximum inactive/disconnection time policies](/windows/security/threat-protection/security-policy-settings/microsoft-network-server-amount-of-idle-time-required-before-suspending-session) and [screen locks](/windows/security/threat-protection/security-policy-settings/interactive-logon-machine-inactivity-limit).
   - [Hide local and remote drive mappings](/troubleshoot/windows-client/group-policy/using-group-policy-objects-hide-specified-drives) in Windows Explorer.
   - Optionally, configuration parameters for [FSLogix Profile Containers](/fslogix/profile-container-configuration-reference) and [FSLogix Cloud Cache](/fslogix/cloud-cache-configuration-reference).
@@ -133,7 +133,7 @@ Review the [security best practices for Azure Virtual Desktop](/azure/virtual-de
 
 Nearly all organizations must comply with various government or industry regulatory policies. Review any such policies with your compliance team and implement the correct controls for your particular Azure Virtual Desktop landing zone. For example, you should consider controls for specific policies like the Payment Card Industry Data Security Standard (PCI DSS) or the Health Insurance Portability and Accountability Act of 1996 (HIPAA) if your organization follows their frameworks.
 
-- [Use Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) to apply extra compliance standards to Azure Virtual Desktop Landing zones if necessary. Microsoft Defender for Cloud helps streamline your process for meeting regulatory compliance requirements through its [regulatory compliance dashboard](/azure/defender-for-cloud/regulatory-compliance-dashboard). You can add built-in or customized compliancy standards to the dashboard. Already-built-in regulatory standards that you can add include:
+- [Use Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) to apply extra compliance standards to Azure Virtual Desktop Landing zones if necessary. Microsoft Defender for Cloud helps streamline your process for meeting regulatory compliance requirements through its [regulatory compliance dashboard](/azure/defender-for-cloud/regulatory-compliance-dashboard). You can add built-in or customized compliance standards to the dashboard. Already-built-in regulatory standards that you can add include:
 
   - PCI-DSS v3.2.1:2018
   - SOC TSP

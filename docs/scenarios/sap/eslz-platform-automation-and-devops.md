@@ -4,7 +4,7 @@ description: Learn more about the dependencies between SAP systems, environments
 author: PmeshramPM
 ms.author: pameshra
 ms.date: 03/16/2021
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: think-tank, e2e-sap
 ---
 
@@ -12,9 +12,9 @@ ms.custom: think-tank, e2e-sap
 
 # Deployment options for SAP in Azure
 
-The principles in the Cloud Adoption Framework for Azure can help with automating SAP in Azure. When forming your automation strategy and determining your approach, it's important to identify an SAP application's key components and use those observations to guide the strategy. Specifically in enterprise environments, deployment option should consider manual configuration, platform automation, and DevOps approaches used to support the SAP platform.
+The principles in the Cloud Adoption Framework for Azure can help with automating SAP in Azure. When forming your automation strategy and determining your approach, it's important to identify an SAP application's key components and use those observations to guide the strategy. Specifically in enterprise environments, deployment options should consider manual configuration, platform automation, and DevOps approaches used to support the SAP platform.
 
-SAP applications are a critical technology backbone for many global enterprises, and Azure provides [guidance](./enterprise-scale-landing-zone.md) to ensure that solutions are certified, supported, and successfully implemented. Organizations can optimize Azure's agility to deploy SAP, automate deployment activities, configure systems, and perform other complex tasks for to ensure operational efficiency and controlled, code-malleable infrastructure deployments.
+SAP applications are a critical technology backbone for many global enterprises, and Azure provides [guidance](./enterprise-scale-landing-zone.md) to ensure that solutions are certified, supported, and successfully implemented. Organizations can optimize Azure's agility to deploy SAP, automate deployment activities, configure systems, and perform other complex tasks to ensure operational efficiency and controlled, code-malleable infrastructure deployments.
 
 The [Microsoft SAP Automation repo](https://github.com/Azure/sap-automation) supports Azure-SAP customers to integrate scripts with current DevOps practices or use the code in its current state and directly from a cloned repository.
 
@@ -43,7 +43,7 @@ The following diagram illustrates the dependencies between SAP systems, workload
 In addition to the SAP components the automation solution will need:
 
 - An execution environment from where deployment activities can be performed
-- Persistent storage for installation media and if Terraform is used to store Terraform state files
+- Persistent storage for installation media and, if Terraform is used to store Terraform state files
 
 **Design recommendations:**
 
@@ -62,7 +62,7 @@ An SAP deployment automation should be implemented as a workflow that starts wit
 
   - Infrastructure
   - Configuring the operating system
-  - Installing the application installation
+  - Installing the application
   - Ongoing operations (run-state operations)
 
 - Define the strategy for storing parameter files

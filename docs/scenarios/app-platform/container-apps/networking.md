@@ -1,15 +1,15 @@
 ---
 title: Networking for the Azure Container Apps - Landing Zone Accelerator
-description: Learn about network considerations Azure Container Apps.
+description: Learn about network considerations for Azure Container Apps.
 author: craigshoemaker
 ms.author: cshoe
 ms.date: 10/06/2023
-ms.topic: conceptual
+ms.topic: concept-article
 ---
 
 # Networking for the Azure Container Apps - Landing Zone Accelerator
 
-Container Apps is responsible for taking care of OS updates, scaling, failover processes, and resource allocation in an what's known as a Container Apps environment. Environments encapsulate one or more container apps or jobs, by creating a secure boundary through a virtual network (VNet).
+Container Apps is responsible for taking care of OS updates, scaling, failover processes, and resource allocation in what's known as a Container Apps environment. Environments encapsulate one or more container apps or jobs, by creating a secure boundary through a virtual network (VNet).
 
 By default, a VNet is automatically created for your Container App environment. However, if you want more detailed control over your network, you can use a pre-existing VNet as you create your container app environment.
 
@@ -37,7 +37,7 @@ External environments expose container apps by using a virtual IP address that i
 
 * **Proxy and Encryption**:
 
-  * Container Apps use an Envoy proxy as an edge HTTP proxy. All HTTP requests are automatically redirected to HTTPs. Envoy terminates transport layer security (TLS) after crossing its boundary. Mutual transport layer security (mTLS) is available only when using Dapr. However, because Envoy terminates mTLS, inbound calls from Envoy to Dapr-enabled container apps aren't encrypted.
+  * Container Apps use an Envoy proxy as an edge HTTP proxy. All HTTP requests are automatically redirected to HTTPS. Envoy terminates transport layer security (TLS) after crossing its boundary. Mutual transport layer security (mTLS) is available only when using Dapr. However, because Envoy terminates mTLS, inbound calls from Envoy to Dapr-enabled container apps aren't encrypted.
 
 * **DNS Considerations**:
 
@@ -75,7 +75,7 @@ External environments expose container apps by using a virtual IP address that i
 
 * **Internal traffic management**: Use an internal network configuration for services like Azure Application Gateway or Azure Front Door, ensuring traffic from the load-balancer to the Azure Container Apps Environment uses an internal connection.
 
-* **Exposing applications**: Enable ingress to expose your application over HTTPs or TCP port.
+* **Exposing applications**: Enable ingress to expose your application over HTTPS or TCP port.
 
 ## References
 

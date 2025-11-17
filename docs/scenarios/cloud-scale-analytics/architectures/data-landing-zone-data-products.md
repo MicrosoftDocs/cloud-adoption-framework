@@ -4,7 +4,7 @@ description: Learn about cloud-scale analytics data products in Azure.
 author: sasever
 ms.author: sasever
 ms.date: 11/27/2024
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: think-tank, e2e-data-management
 ---
 

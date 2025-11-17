@@ -5,7 +5,7 @@ author: sebassem
 ms.author: sebassem
 ms.reviewer: tozimmergren
 ms.date: 02/27/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ms.service: caf
 ---
 

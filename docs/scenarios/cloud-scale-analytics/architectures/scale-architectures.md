@@ -4,7 +4,7 @@ description: Learn how to scale cloud-scale analytics in Azure by using data lan
 author: marvinbuss
 ms.author: mabuss
 ms.date: 11/12/2024
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: e2e-data-management, think-tank
 ---
 

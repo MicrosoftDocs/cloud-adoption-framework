@@ -4,7 +4,7 @@ description: Storage considerations for Azure Kubernetes Service (AKS)
 author: nillsf
 ms.author: nilfran
 ms.date: 11/15/2022
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: think-tank, e2e-aks
 ---
 
@@ -127,7 +127,7 @@ For Azure NetApp Files, consider the following options:
 
 Consider the amount of unstructured data that your application needs to store. Azure Blob storage is accessible via an HTTP API or through the SDKs. Mounting blob storage as a file system into a container or pod is ideal for application workloads that have massive amounts of unstructured data, such as log files, images, documents, streaming media, and disaster-recovery data.
 
-- **Data redundancy**. Consider which data redundancy suits your application. For more information, see [Azure Storage redundancy](/azure/storage/common/storage-redundancy). Data redundancy is selected at the level of the storage account. 
+- **Data redundancy**. Consider which data redundancy suits your application. For more information, see [Azure Storage redundancy](/azure/storage/common/storage-redundancy). Data redundancy is selected at the level of the storage account.
 
 - **Performance tier**. Consider which performance tier of blob storage your application requires. For more information, see [Hot, cool, and archive access tiers for blob data](/azure/storage/blobs/access-tiers-overview).
 
@@ -175,7 +175,7 @@ The following sections contain recommendations for using Azure Container Storage
 
 - **Azure Disks**: Use for tier 1 and general purpose databases like MySQL, MongoDB, and PostgreSQL. When using UltraSSD_LRS or PremiumV2_LRS disks, specify performance parameters (IOPS and throughput) directly in your storage pool definition with the [IOPSReadWrite and MBpsReadWrite parameters](/azure/storage/container-storage/use-container-storage-with-managed-disks#create-a-dynamic-storage-pool). This approach ensures Azure Container Storage provisions optimal disk resources for your performance needs.
 
-- **Azure Ephemeral Disks**: Best for applications requiring ultra-low latency (submillisecond) with either no data durability requirements or with built-in application-level data replication (such as Cassandra). Data on ephemeral disks doesn't persist through VM reboots. While Azure Container Storage with NVMe supports volume replication for resilience against single-node failures, you lose data if all replicas reboot simultaneously. Assess this risk carefully for your specific workload. NVMe is available on [storage optimized L-Family VM SKUs](/azure/virtual-machines/sizes/overview?tabs=breakdownseries%2Cgeneralsizelist%2Ccomputesizelist%2Cmemorysizelist%2Cstoragesizelist%2Cgpusizelist%2Cfpgasizelist%2Chpcsizelist#storage-optimized).
+- **Azure ephemeral disks**: Best for applications requiring ultra-low latency (submillisecond) with either no data durability requirements or with built-in application-level data replication (such as Cassandra). Data on ephemeral disks doesn't persist through VM reboots. While Azure Container Storage with NVMe supports volume replication for resiliency against single-node failures, you lose data if all replicas reboot simultaneously. Assess this risk carefully for your workload. NVMe is available on [storage optimized L-Family VM SKUs](/azure/virtual-machines/sizes/overview#storage-optimized).
 
 #### Configure Azure Container Storage resiliency
 
@@ -193,51 +193,52 @@ When designing for resiliency with Azure Container Storage, choose one of these 
 
 For Azure disks, we recommend the following design options:
 
-  - **Use Premium or Ultra disks**. In most cases, we recommend Premium or Ultra disks to ensure adequate performance. For more information, see [Azure Disk Storage](https://azure.microsoft.com/products/storage/disks/).
+- **Use Premium or Ultra disks**. In most cases, we recommend Premium or Ultra disks to ensure adequate performance. For more information, see [Azure Disk Storage](https://azure.microsoft.com/products/storage/disks/).
 
-  - **Size the node for disks and throughput**. We recommend ensuring that the size of your Kubernetes node is large enough to support the number of disks and the amount of aggregate throughput. For information about sizes and characteristics, see [Sizes for virtual machines in Azure](/azure/virtual-machines/sizes).
+- **Size the node for disks and throughput**. We recommend ensuring that the size of your Kubernetes node is large enough to support the number of disks and the amount of aggregate throughput. For information about sizes and characteristics, see [Sizes for virtual machines in Azure](/azure/virtual-machines/sizes).
 
-  - **Create snapshots of persistent volumes**. Take snapshots of persistent volumes to back up data or restore volumes to a previous state by using the Azure Disks CSI driver. For more information, see [Volume snapshots](/azure/aks/azure-disk-csi#volume-snapshots).
+- **Create snapshots of persistent volumes**. Take snapshots of persistent volumes to back up data or restore volumes to a previous state by using the Azure Disks CSI driver. For more information, see [Volume snapshots](/azure/aks/azure-disk-csi#volume-snapshots).
 
-  - **Avoid disk striping across disks**. We recommend that you avoid striping across multiple disks in Kubernetes.
+- **Avoid disk striping across disks**. We recommend that you avoid striping across multiple disks in Kubernetes.
 
-  - **Use PV/PVC**. We recommend using PV and PVC in Kubernetes to dynamically create disks where required. For more information about persistent storage, see [Storage options for applications in Azure Kubernetes Service (AKS)](/azure/aks/concepts-storage).
+- **Use PV/PVC**. We recommend using PV and PVC in Kubernetes to dynamically create disks where required. For more information about persistent storage, see [Storage options for applications in Azure Kubernetes Service (AKS)](/azure/aks/concepts-storage).
 
 ### Azure Files
 
 For Azure Files, we recommend the following design options:
 
-  - **Choose Premium**. If performance is critical, we recommend using the Premium tier.
+- **Choose Premium**. If performance is critical, we recommend using the Premium tier.
 
-  - **Create dedicated storage accounts**. We recommend providing dedicated storage accounts for your file shares.
+- **Create dedicated storage accounts**. We recommend providing dedicated storage accounts for your file shares.
 
-  - **Choose static or dynamically created file shares**. We recommend careful consideration of whether you want AKS to create the file shares or if you want to create them statically outside of Kubernetes. Storage that is created dynamically can also be deleted dynamically. For more information about letting AKS dynamically create file shares, see [Dynamically create and use a persistent volume with Azure Files](/azure/aks/azure-files-dynamic-pv).
+- **Choose static or dynamically created file shares**. We recommend careful consideration of whether you want AKS to create the file shares or if you want to create them statically outside of Kubernetes. Storage that is created dynamically can also be deleted dynamically. For more information about letting AKS dynamically create file shares, see [Dynamically create and use a persistent volume with Azure Files](/azure/aks/azure-files-dynamic-pv).
 
 ### Azure NetApp Files
 
 For Azure NetApp Files, we recommend the following design options:
 
-  - **Choose a performance tier based on the application requirements.** Azure NetApp Files offers three performance tiers that offer varying classes of performance. For more information, see [Performance considerations for Azure NetApp Files](/azure/azure-netapp-files/azure-netapp-files-performance-considerations).
+- **Choose a performance tier based on the application requirements.** Azure NetApp Files offers three performance tiers that offer varying classes of performance. For more information, see [Performance considerations for Azure NetApp Files](/azure/azure-netapp-files/azure-netapp-files-performance-considerations).
   
-  - **Create capacity pools in the same Azure region as the AKS cluster.** For more information, see [Create a capacity pool for Azure NetApp Files](/azure/azure-netapp-files/azure-netapp-files-set-up-capacity-pool).
+- **Create capacity pools in the same Azure region as the AKS cluster.** For more information, see [Create a capacity pool for Azure NetApp Files](/azure/azure-netapp-files/azure-netapp-files-set-up-capacity-pool).
 
-  - **Use the Auto QoS type for capacity pools.** 
+- **Use the Auto QoS type for capacity pools.**
 
-  - **Plan your network.** Two options exist for network design: 
-    1. If you use the same virtual network for AKS and Azure NetApp Files, create a dedicated subnet for Azure NetApp Files and [delegate the subnet](/azure/azure-netapp-files/azure-netapp-files-delegate-subnet) to Microsoft.NetApp/Volumes.
-    2. If you use different VNets, establish virtual network peering between them.
+- **Plan your network.** Two options exist for network design:
+
+  1. If you use the same virtual network for AKS and Azure NetApp Files, create a dedicated subnet for Azure NetApp Files and [delegate the subnet](/azure/azure-netapp-files/azure-netapp-files-delegate-subnet) to Microsoft.NetApp/Volumes.
+  2. If you use different VNets, establish virtual network peering between them.
 
 ### Blob storage
 
 For blob storage, we recommend the following design options:
 
-  - **Use an SDK to interface with storage**. We recommend using an application-level SDK to interface with blob storage.
+- **Use an SDK to interface with storage**. We recommend using an application-level SDK to interface with blob storage.
 
-  - **Use CSI with NFS to interface with storage**. If you can't use an application-level SDK to interface with blob storage, we recommend using the NFS v3 option in the blob CSI driver. For more information, see [Use Azure Blob storage Container Storage Interface (CSI) driver](/azure/aks/azure-blob-csi).
+- **Use CSI with NFS to interface with storage**. If you can't use an application-level SDK to interface with blob storage, we recommend using the NFS v3 option in the blob CSI driver. For more information, see [Use Azure Blob storage Container Storage Interface (CSI) driver](/azure/aks/azure-blob-csi).
 
-  - **Use Microsoft Entra ID for access**. We recommend using Microsoft Entra ID for authorizing access to blob storage. Avoid using a shared storage account key. For more information, see [Authorize access to blobs using Microsoft Entra ID](/azure/storage/blobs/authorize-access-azure-active-directory).
+- **Use Microsoft Entra ID for access**. We recommend using Microsoft Entra ID for authorizing access to blob storage. Avoid using a shared storage account key. For more information, see [Authorize access to blobs using Microsoft Entra ID](/azure/storage/blobs/authorize-access-azure-active-directory).
 
-  - **Adjust tier levels**. We recommend using lifecycle management policies to move infrequently accessed data to a cooler access tier. For more information, see [Hot, cool, and archive access tiers for blob data](/azure/storage/blobs/access-tiers-overview).
+- **Adjust tier levels**. We recommend using lifecycle management policies to move infrequently accessed data to a cooler access tier. For more information, see [Hot, cool, and archive access tiers for blob data](/azure/storage/blobs/access-tiers-overview).
 
 ## Next steps
 

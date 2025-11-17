@@ -4,7 +4,7 @@ description: Learn about design considerations and recommendations for identity 
 author: jordanbean-msft
 ms.author: pnp
 ms.date: 09/12/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ---
 
 # Identity and access management considerations for the Azure Integration Services landing zone accelerator

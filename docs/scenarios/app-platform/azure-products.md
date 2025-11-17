@@ -4,7 +4,7 @@ description: A number of Azure products can support the modern application platf
 author: stephen-sumner
 ms.author: pnp
 ms.date: 05/01/2021
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: think-tank, e2e-aks
 ---
 

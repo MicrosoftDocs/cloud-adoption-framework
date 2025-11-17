@@ -4,7 +4,7 @@ description: Learn how to expand a landing zone using shared architecture pillar
 author: stephen-sumner
 ms.author: pnp
 ms.date: 05/07/2024
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: internal
 ---
 

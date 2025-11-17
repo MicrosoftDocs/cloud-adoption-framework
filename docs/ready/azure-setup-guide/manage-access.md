@@ -4,7 +4,7 @@ description: Manage access to resources in Azure
 author: stephen-sumner
 ms.author: pnp
 ms.date: 08/15/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ---
 
 # Manage access to resources in Azure

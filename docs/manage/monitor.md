@@ -4,7 +4,7 @@ description: Learn how to monitor your Azure cloud estate, workloads, other clou
 author: stephen-sumner
 ms.author: pnp
 ms.date: 04/01/2025
-ms.topic: conceptual
+ms.topic: concept-article
 products: azure-monitor
 ms.custom: UpdateFrequency2
 ---

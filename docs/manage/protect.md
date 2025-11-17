@@ -4,7 +4,7 @@ description: Learn how to ensure the reliability and security your Azure cloud e
 author: stephen-sumner
 ms.author: pnp
 ms.date: 04/01/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: UpdateFrequency2
 ---
 

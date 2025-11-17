@@ -4,7 +4,7 @@ description: Learn about cloud-scale analytics architectures in Azure.
 author: stephen-sumner
 ms.author: pnp
 ms.date: 03/24/2022
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: e2e-data-management, think-tank
 ---
 

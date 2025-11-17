@@ -4,7 +4,7 @@ description: Learn how to govern AI workloads using Azure AI platform services (
 author: stephen-sumner
 ms.author: ssumner
 ms.date: 04/29/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ---
 
 # Govern Azure platform services (PaaS) for AI

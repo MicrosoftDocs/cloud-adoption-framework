@@ -4,7 +4,7 @@ description: Learn how to use the Cloud Adoption Framework to design networking 
 author: BenMartinBaur
 ms.author: bebaur
 ms.date: 07/09/2024
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: think-tank, e2e-avd
 ---
 

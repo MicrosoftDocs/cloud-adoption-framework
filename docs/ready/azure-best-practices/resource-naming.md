@@ -4,7 +4,7 @@ description: Learn how to create a standardized naming convention for Azure reso
 author: stephen-sumner
 ms.author: pnp
 ms.date: 09/12/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ---
 
 # Define your naming convention

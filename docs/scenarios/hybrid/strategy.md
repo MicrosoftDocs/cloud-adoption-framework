@@ -4,7 +4,7 @@ description: Azure hybrid and multicloud strategy. Learn to use Azure as a unifi
 author: stephen-sumner
 ms.author: pnp
 ms.date: 09/16/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ---
 
 # Unified hybrid and multicloud operations
@@ -26,7 +26,7 @@ Start by identifying why your organization is adopting hybrid and multicloud. Bu
 - **Vendor flexibility**: Reduce dependence on any single provider to mitigate lock-in and allow cost optimization and best-of-breed service use. For example, avoid relying solely on one cloud’s features if an alternative could save cost or offer unique capabilities.
 - **Business unit diversity**: Accommodate different teams, acquisitions, or subsidiaries that use various platforms. A unified strategy prevents operational silos and establishes central governance across all environments while respecting existing investments.
 - **Compliance and data residency**: Meet regulatory mandates for data sovereignty or specific security controls. Use Azure Local, which Azure Stack HCI is now a part of, for workloads that must remain on-premises. Connect to Azure cloud services for other data and applications.
-- **Resilience and disaster recovery**: Improve availability by distributing workloads and establishing multi-environment failover. Design seamless recovery between Azure and secondary environments (other clouds or on-premises) with unified processes to ensure minimal downtime.
+- **Resilience and disaster recovery**: Improve availability by distributing workloads and establishing multi-environment failover. Resilience sustains operation during localized faults; disaster recovery restores normal operations after broader incidents. Design recovery between Azure and secondary environments (other clouds or on-premises) with unified processes to ensure minimal downtime.
 - **Performance optimization**: Place workloads closer to users or data sources to reduce latency. For example, deploy Azure Local instances in factory locations for real-time processing, while maintaining centralized coordination through Azure cloud services.
 - **Modernization and innovation**: Use specialized cloud services to drive transformation. For example, use Azure’s AI services and Microsoft Fabric analytics while integrating data and apps across other clouds as needed.
 - **Unifying silos**: Eliminate internal silos between infrastructure, cloud, and application teams. Establish common tools and processes, like Azure Arc for resource management, Azure Monitor for observability, to create shared visibility and collaboration across formerly isolated groups.

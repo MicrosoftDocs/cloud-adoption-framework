@@ -5,7 +5,7 @@ author: PmeshramPM
 ms.author: pameshra
 ms.reviewer: tozimmergren
 ms.date: 07/18/2023
-ms.topic: conceptual
+ms.topic: concept-article
 ms.subservice: caf-scenario-sap
 ms.custom: think-tank, e2e-sap
 ---

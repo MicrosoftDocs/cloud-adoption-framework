@@ -4,7 +4,7 @@ description: Understand how to adopt policy-driven guardrails in the Azure landi
 author: jtracey93
 ms.author: jatracey
 ms.date: 12/16/2024
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: think-tank
 ---
 # Adopt policy-driven guardrails

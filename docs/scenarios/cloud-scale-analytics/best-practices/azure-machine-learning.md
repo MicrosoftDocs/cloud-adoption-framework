@@ -4,7 +4,7 @@ description: Learn about Azure Machine Learning as a data product for cloud-scal
 author: abdale
 ms.author: deeikele
 ms.date: 12/15/2021
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: e2e-data-management, think-tank
 ---
 
@@ -57,7 +57,7 @@ You can deploy the number of machine learning workspaces that your workloads req
 
 - When multiple environments are needed for dev, staging, and production workspaces in a data landing zone, we recommend avoiding data duplication by having each environment land in the same production data landing zone.
 
-For each default resource configuration in an data landing zone, an Azure Machine Learning service is deployed in a dedicated resource group with the following configurations and dependent resources:
+For each default resource configuration in a data landing zone, an Azure Machine Learning service is deployed in a dedicated resource group with the following configurations and dependent resources:
 
 - Azure Key Vault
 - Application Insights
@@ -132,7 +132,7 @@ Cloud-scale analytics data landing zones outline reference implementation for re
 > Use Azure Machine Learning clusters for production-grade model training, and Azure Kubernetes Service (AKS) for production-grade deployments.
 
 > [!TIP]
-> Use Azure Machine Learning for data science projects. It covers the end-to-end workflow with subservices and features, and allows to the process to be fully automated.
+> Use Azure Machine Learning for data science projects. It covers the end-to-end workflow with subservices and features, and allows the process to be fully automated.
 
 ## Next steps
 

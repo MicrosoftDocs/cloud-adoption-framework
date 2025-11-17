@@ -6,7 +6,7 @@ ms.author: aamurugan
 ms.reviewer: tozimmergren
 ms.date: 03/13/2025
 ms.update-cycle: 180-days
-ms.topic: conceptual
+ms.topic: concept-article
 ms.collection: ce-skilling-ai-copilot
 ms.custom:
   - devx-track-bicep

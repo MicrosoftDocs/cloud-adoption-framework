@@ -4,7 +4,7 @@ description: Equip your team with essential Azure skills through targeted traini
 author: stephen-sumner
 ms.author: pnp
 ms.date: 07/15/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ---
 
 # Prepare your people for the cloud

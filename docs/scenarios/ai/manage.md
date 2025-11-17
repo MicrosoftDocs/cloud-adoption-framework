@@ -4,7 +4,7 @@ description: Learn the process to manage AI with best practices and recommendati
 author: stephen-sumner
 ms.author: ssumner
 ms.date: 07/01/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ---
 
 # Manage AI

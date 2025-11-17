@@ -4,7 +4,7 @@ description: See a summary of security considerations including access, agents, 
 author: steved0x
 ms.author: sdanie
 ms.date: 06/23/2022
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: internal
 ---
 

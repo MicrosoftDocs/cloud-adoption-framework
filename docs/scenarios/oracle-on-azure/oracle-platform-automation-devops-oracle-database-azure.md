@@ -5,7 +5,7 @@ author: terrymandin
 ms.author: temandin
 ms.reviewer: guherk
 ms.date: 07/15/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: e2e-oracle
 ---
 
@@ -100,7 +100,7 @@ OCI Terraform is required to configure Exadata after the infrastructure is deplo
 | Configuration management | [OCI Terraform provider](https://registry.terraform.io/providers/oracle/oci/latest) | Configuration and management of Oracle components within Azure deployments |
 | Diagnostic Logs for Oracle Exadata Database Service @ Azure| [Oracle Exadata Database Service@ Azure logs with Azure Monitor](/azure/oracle/oracle-db/oracle-exadata-database-dedicated-infrastructure-logs) | Oracle Exadata Database on dedicated infrastructure logs on Azure for Enhanced Observability |
 | Hybrid management | [Azure Arc-enabled servers](/azure/azure-arc/servers/overview) | Extends Azure management capabilities to Oracle Database@Azure infrastructure |
-| Security monitoring | [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) | Comprehensive security monitoring, vulnerability assessment, and threat protection for Arc-enabled Oracle Database@Azure infrastructure with optional integration to Microsoft Sentinel security information and even management (SIEM) |
+| Security monitoring | [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) | Comprehensive security monitoring, vulnerability assessment, and threat protection for Arc-enabled Oracle Database@Azure infrastructure with optional integration to Microsoft Sentinel security information and event management (SIEM) |
 | Security automation | [Defender workflow automation](/azure/defender-for-cloud/workflow-automation) | Automated security response and remediation workflows for threat detection and incident response on Oracle infrastructure |
 | Vulnerability management | [Defender vulnerability assessment](/azure/defender-for-cloud/deploy-vulnerability-assessment-defender-vulnerability-management) | Automated vulnerability scanning and security recommendations for Arc-enabled Oracle Database@Azure VM cluster nodes |
 

@@ -5,7 +5,7 @@ author: stephen-sumner
 ms.author: pnp
 ms.reviewer: tozimmergren
 ms.date: 12/13/2022
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: think-tank, fasttrack-edit, AQC, setup, engagement-fy23
 products: azure-monitor
 ---

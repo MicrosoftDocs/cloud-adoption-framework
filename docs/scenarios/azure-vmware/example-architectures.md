@@ -4,7 +4,7 @@ description: Learn about four scenarios that you can use to implement networking
 author: sblair01
 ms.author: lrivallain
 ms.date: 12/12/2024
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom:
   - think-tank
   - e2e-azure-vmware

@@ -4,7 +4,7 @@ description: Learn to optimize Azure cloud-native solutions post-deployment with
 author: stephen-sumner
 ms.author: pnp
 ms.date: 08/01/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ---
 
 # Optimize the cloud-native solutions after deployment

@@ -5,7 +5,7 @@ author: jtracey93
 ms.author: jatracey
 ms.reviewer: tozimmergren
 ms.date: 01/17/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ---
 
 <!-- docutune:casing resourceType resourceTypes resourceId resourceIds -->

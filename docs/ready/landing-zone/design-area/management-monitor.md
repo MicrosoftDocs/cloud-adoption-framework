@@ -5,7 +5,7 @@ author: Jfaurskov
 ms.author: janfaurs
 ms.date: 02/27/2025
 ms.update-cycle: 180-days
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: internal, UpdateFrequency.5
 ---
 

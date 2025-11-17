@@ -4,7 +4,7 @@ description: Learn about design considerations for self-serve data platforms
 author: stephen-sumner
 ms.author: pnp
 ms.date: 05/07/2024
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: e2e-data-management, think-tank
 ---
 
@@ -35,7 +35,7 @@ The simplest deployment pattern for building a data mesh architecture involves o
 
 :::image type="content" source="../media/domain-agnostic-infra-01.png" alt-text="A diagram that shows the simplest possible data mesh architecture, which is a single data management landing zone and a single data landing zone." lightbox="../media/domain-agnostic-infra-01.png":::
 
-In this model, all your functional data domains reside same data landing zone. A single subscription contains a standard set of services. Resource groups segregate different data domains and data products. Standard data services, like Azure Data Lake Store and Azure Logic Apps, apply to all domains.
+In this model, all your functional data domains reside in the same data landing zone. A single subscription contains a standard set of services. Resource groups segregate different data domains and data products. Standard data services, like Azure Data Lake Store and Azure Logic Apps, apply to all domains.
 
 All data domains follow data mesh principles: data follows domain ownership, and data is treated like products. The platform is fully self-service, though there are limited variations of services. All domains should strongly adhere and conform to the same data management principles.
 
@@ -79,7 +79,7 @@ Different landing zones don't stand alone. They can connect to data lakes hosted
 
 When deploying multiple data landing zones, know that there's management overhead attached to each data landing zone. You must apply VNet peering between all data landing zones, you must manage extra private endpoints, and so on.
 
-Deploying multiple data landing zones is good option if your data architecture is large. You can add more landing zones to your architecture to address common needs of various domains. These extra landing zones use virtual network peering to connect to both the data management landing zone and all other landing zones. Peering allows you to share datasets and resources across your landing zones. Splitting data across separate zones lets you spread workloads across your Azure subscriptions and resources. This approach helps organically implement the data mesh.
+Deploying multiple data landing zones is a good option if your data architecture is large. You can add more landing zones to your architecture to address common needs of various domains. These extra landing zones use virtual network peering to connect to both the data management landing zone and all other landing zones. Peering allows you to share datasets and resources across your landing zones. Splitting data across separate zones lets you spread workloads across your Azure subscriptions and resources. This approach helps organically implement the data mesh.
 
 ## Large scale enterprise requiring different data management zones
 
@@ -91,7 +91,7 @@ Multiple data management landing zones should justify your overhead and integrat
 
 ## Conclusion
 
-The transition towards data mesh is a cultural shift involving nuances, trade offs and considerations. You can use cloud-scale analytics to obtain best practices and executable resources. This article's reference architectures offer starting points for you to kick-start your implementation.
+The transition towards data mesh is a cultural shift involving nuances, trade-offs and considerations. You can use cloud-scale analytics to obtain best practices and executable resources. This article's reference architectures offer starting points for you to kick-start your implementation.
 
 ## Next step
 

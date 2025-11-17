@@ -4,7 +4,7 @@ description: Learn about cloud-scale analytics architecture data landing zones i
 author: stephen-sumner
 ms.author: pnp
 ms.date: 02/14/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: e2e-data-management, think-tank
 ---
 

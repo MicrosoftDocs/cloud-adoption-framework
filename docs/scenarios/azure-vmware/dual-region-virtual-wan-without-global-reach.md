@@ -4,7 +4,7 @@ description: Learn how to configure network connectivity when you deploy Azure V
 author: stephen-sumner
 ms.author: pnp
 ms.date: 10/16/2024
-ms.topic: conceptual
+ms.topic: concept-article
 ms.service: caf
 ms.subservice: caf-scenario-vmware
 ms.custom:

@@ -4,14 +4,14 @@ description: Learn about business continuity and disaster recovery (BCDR) for Or
 author: gkayali
 ms.author: guherk
 ms.date: 01/25/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: e2e-oracle
 ai-usage: ai-assisted
 --- 
 
 # Business continuity and disaster recovery considerations for Oracle Exadata Database@Azure
 
-Oracle Database@Azure provides robust business continuity and disaster recovery (BCDR) options to ensure the resilience and high availability of your critical workloads. This article provides an overview of key BCDR considerations, design strategies, and best practices for deploying Oracle Exadata Database@Azure. Learn how to build a secure and reliable architecture that meets your organization's requirements.
+Oracle Database@Azure provides business continuity and disaster recovery (BCDR) options that support recoverability. Resiliency is addressed through redundancy and high availability features. This article provides an overview of key BCDR considerations, design strategies, and best practices for deploying Oracle Exadata Database@Azure so you can build a secure, reliable architecture that meets your organization's requirements.
 
 ## Design considerations
 
@@ -53,7 +53,7 @@ You should configure at least two Oracle Exadata Database@Azure instances with D
 
 The multiple-zone BCDR architecture is recommended for customers who require a zero or near-zero RPO with multiple-zone redundancy while meeting single-region data residency requirements.
 
-This solution includes a secondary Oracle Exadata Database@Azure deployment in a different availability zone within the same region. To ensure resilience against database, cluster, or availability zone failures, implement a standby database located in the secondary instance. This setup provides protection against site-level failures.  
+This solution includes a secondary Oracle Exadata Database@Azure deployment in a different availability zone within the same region. Implement a standby database in the secondary instance to achieve recoverability for site-level failures. Zone separation also adds resiliency by limiting the impact of a single zone fault.
 
 :::image type="content" source="./media/cross-availability-zones.svg" alt-text="Diagram that shows a multiple-zone BCDR architecture for Oracle Exadata Database@Azure Azure landing zone accelerator." lightbox="./media/cross-availability-zones.svg" border="false":::
 
@@ -87,13 +87,13 @@ This solution includes a secondary Oracle Exadata Database@Azure deployment in a
 
 :::image type="content" source="./media/gold-cross-region.svg" alt-text="A diagram of multiregional BCDR architecture for Oracle Exadata Database@Azure Azure landing zone accelerator." lightbox="./media/gold-cross-region.svg" border="false":::
 
-- Multiple-zone and multiregional BCDR recommendations focus on database service resiliency. To help ensure overall workload resiliency, consider using Azure services and features such as Azure Virtual Machine Scale Sets, Azure Site Recovery, and Azure Front Door to design robust architecture across availability zones or regions.
+- Multiple-zone and multiregional BCDR recommendations primarily address recoverability (meeting RTO/RPO) while also improving resiliency through geographic and zonal isolation. To enhance overall workload reliability, combine these recovery architectures with Azure services such as Azure Virtual Machine Scale Sets, Azure Site Recovery, and Azure Front Door across availability zones or regions.
 
 ### Extended BCDR scenarios
 
 #### Local and remote standby databases
 
-To address requirements for robust service availability and resilience against regional outages, we recommend that you implement multiple standby databases for mission-critical workloads.
+To address robust service availability requirements and recoverability from regional outages, implement multiple standby databases for mission-critical workloads. Regional redundancy also adds resiliency by limiting the impact of regional faults.
 
 A local standby database on an Oracle Exadata Database@Azure deployment resides in a different availability zone within the same region. This setup provides a viable solution for latency-sensitive applications by addressing zero data loss failover requirements through SYNC Data Guard replication. This strategy helps ensure service availability without affecting application throughput or overall response time.
 

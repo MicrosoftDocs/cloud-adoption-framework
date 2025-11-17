@@ -4,7 +4,7 @@ description: Reduce cloud platform dependency and potentially reduce infrastruct
 author: stephen-sumner
 ms.author: pnp
 ms.date: 10/23/2023
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: e2e-aks, UpdateFrequency2
 ---
 

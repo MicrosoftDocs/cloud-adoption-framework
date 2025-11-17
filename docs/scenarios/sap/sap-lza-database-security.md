@@ -5,7 +5,7 @@ author: msclash
 ms.author: pameshra
 ms.reviewer: tozimmergren
 ms.date: 10/14/2024
-ms.topic: conceptual
+ms.topic: concept-article
 ms.subservice: caf-scenario-sap
 ms.custom: think-tank, e2e-sap, UpdateFrequency2
 ---

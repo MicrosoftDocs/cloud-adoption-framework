@@ -4,7 +4,7 @@ description: Learn how to organize workloads into migration waves for successful
 author: stephen-sumner
 ms.author: pnp
 ms.date: 08/01/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ---
 
 # Migration wave planning

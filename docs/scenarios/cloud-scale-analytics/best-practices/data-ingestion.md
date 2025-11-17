@@ -4,7 +4,7 @@ description: Understand the ingest process with cloud-scale analytics in Azure.
 author: stephen-sumner
 ms.author: pnp
 ms.date: 12/03/2024
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: e2e-data-management, think-tank
 ---
 
@@ -31,7 +31,7 @@ Proprietary native and third-party tooling provides niche capabilities to integr
 
 If you have an data agnostic ingestion engine, you should deploy a single Data Factory for each data landing zone in the data ingestion resource group. The Data Factory workspace should be locked off to users, and only managed identity and service principals will have access to deploy. Data landing zone operations should have read access to allow pipeline debugging.
 
-Data application can have there own Data Factory for data movement. Having a Data Factory in each data application resource group supports a complete continuous integration (CI) and continuous deployment (CD) experience by only allowing pipelines to be deployed from Azure DevOps or GitHub.
+Data applications can have their own Data Factory for data movement. Having a Data Factory in each data application resource group supports a complete continuous integration (CI) and continuous deployment (CD) experience by only allowing pipelines to be deployed from Azure DevOps or GitHub.
 
 All Data Factory workspaces will mostly use the managed virtual network (VNet) feature in Data Factory or [self-hosted integration runtime](/azure/data-factory/concepts-integration-runtime) for their data landing zone within the data management landing zone. Engineers are encouraged to use the managed VNet feature to securely connect to the Azure PaaS resource.
 

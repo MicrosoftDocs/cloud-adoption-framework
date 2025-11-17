@@ -4,7 +4,7 @@ description: Learn how to manage AI workloads using Azure AI platform services (
 author: stephen-sumner
 ms.author: ssumner
 ms.date: 07/01/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ---
 
 # Manage Azure platform services (PaaS) for AI
