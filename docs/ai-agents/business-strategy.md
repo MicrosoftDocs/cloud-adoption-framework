@@ -1,20 +1,23 @@
 ---
-title: Business strategy for AI agents
-description: Learn the business strategy for AI agents
+title: Business Plan for AI Agents
+ms.reviewer: ssumner
+description: Discover how to create a business strategy for AI agents that aligns with organizational goals, enhances operations, and drives innovation.
+#customer intent: As a decision-maker, I want to identify high-value AI agent use cases so that I can prioritize initiatives with the greatest impact.
 author: stephen-sumner
 ms.author: pnp
-ms.date: 11/01/2025
+ms.date: 12/01/2025
 ms.update-cycle: 180-days
-ms.topic: conceptual
+ms.topic: concept-article
+ms.collection: ce-skilling-ai-copilot
 ---
 
-# Business strategy for AI agents
+# Business plan for AI agents
 
-Successful adoption of AI agents begins with a clear strategy that connects agent capabilities to business objectives. Organizations must plan early across technology, workforce, and data readiness. This preparation enables leaders to define where AI agents create the most value and how to structure teams for success. AI agents help enrich employee experiences, transform customer interactions, streamline operations, and accelerate innovation cycles.
+The successful adoption of AI agents begins with a plan that connects agent capabilities to business priorities. This preparation enables leaders to define where AI agents create the most value and how to structure teams for success.
 
 ## When to use AI agents?
 
-Today, most successful agents are supporting and integrated into a larger business process. Use AI agents for challenges that require complex reasoning, dynamic interaction, or processing unstructured data, especially when natural language provides the most effective interface. These scenarios often support digital transformation goals such as increasing agility, reducing manual effort, and scaling personalization. Common examples include customer support automation, knowledge retrieval, process automation, and real-time insights generation
+Today, most successful agents support existing business process. Use AI agents for tasks and workflows that require complex reasoning, dynamic interaction, or processing unstructured data, especially when natural language is required. These scenarios often support digital transformation goals such as increasing agility, reducing manual effort, and scaling personalization. Common examples include customer support automation, knowledge retrieval, process automation, and real-time insights generation
 
 1. **When not to use AI agents.** Do not use AI agents for problems that simpler tools or scripts already solve. Prioritize low-risk, low-effort solutions first. Misuse increases cost and complexity without added value. Run a pilot to validate feasibility and impact before scaling.
 
