@@ -10,15 +10,27 @@ ms.topic: conceptual
 ms.collection: ce-skilling-ai-copilot
 ---
 
-# Technology strategy for AI agents
+# Technology plan for AI agents
 
 After defining your business strategy for AI agents, you must now establish a technology strategy that enables effective agent delivery across your organization. Your business strategy identifies where AI agents create value through customer engagement, operational efficiency, and innovation. Your technology strategy determines how to deliver these agents by selecting the right platforms, balancing implementation speed with customization needs, and managing costs effectively.
 
-## Select technology options
+## Select AI technology options
 
-Microsoft provides multiple options to adopt agents. For each AI agent use case, you choose the option that best meets your business requirements and technical capabilities. Each platform enables specific [agent types](./index.md#types-of-agents) and development approaches.
+When we step back and look at AI technology decisions more holistically, it’s important to remember when to use agents—and when not to.
 
-:::image type="content" source="./images/technology-options.png" alt-text="Diagram that shows how to ready-to-use vs. build technology options comparing Microsoft Copilots (ready-to-use) vs. Low-code (Microsoft Copilot Studio) and pro-code (Foundry) build options." lightbox="./images/technology-options.png" border="false":::
+:::image type="content" source="./images/ai-agent-decision-tree.png" alt-text="Decision tree diagram showing when to use traditional AI apps, generative AI apps, SaaS agents, and AI agents you build." lightbox="./images/ai-agent-decision-tree.png" border="false":::
+
+1. **Build a tradition AI app.** If your processes follow clear rules, have structured workflows, and rely on consistent inputs and outputs, you shouldn’t build agents for those scenarios. Instead, build a traditional, non-generative AI app using Foundry tools, Microsoft Fabric for Data Science, and Azure Machine Learning.
+
+2. **Build a generative AI app.** If you don’t need prebuilt models and simply want to create a chatbot that answers questions using a defined set of your own data—without complex retrieval or model orchestration—then a generative AI chatbot built with Foundry or Azure OpenAI is the right choice. If direct access to Azure OpenAI models meets your needs, start there.
+
+3. **Use SaaS agents.** However, if those options don’t satisfy your use case, you move into the realm of AI agents. Depending on your goals, whether productivity or business process automation, first evaluate SaaS agents available in Microsoft 365 Copilot, GitHub, Microsoft Fabric, Azure Copilot, Dynamics, Security Copilot. If any meet your requirements within your budget and data constraints, consider adopting them before building from scratch.
+
+4. **Build AI agents.** If your use case isn’t met by prebuilt SaaS agents, then explore building agents using on of the following solutions:
+
+- Foundry Agent Service for pro-code development
+- Microsoft Copilot Studio for low-code/no-code scenarios
+- Virtual machines for highly regulated environments requiring full control
 
 Organizations adopt multiple approaches to address varying requirements across departments, project timelines, and technical complexity levels.
 
@@ -29,9 +41,9 @@ Organizations adopt multiple approaches to address varying requirements across d
 | **Microsoft Copilot Studio** | Build with SaaS for low-code or no-code agents | Retrieval, Task, Autonomous | Process transformation for technical business users. Fast development with minimal coding. |
 | **Virtual machines** | Build with IaaS for pro-code agents | Retrieval, Task, Autonomous |Full control of the entire technology stack.|
 
-:::image type="content" source="./images/ai-agent-decision-tree.png" alt-text="Decision tree diagram showing when to use traditional AI apps, generative AI apps, SaaS agents, and AI agents you build." lightbox="./images/ai-agent-decision-tree.png" border="false":::
+:::image type="content" source="./images/technology-options.png" alt-text="Diagram that shows how to ready-to-use vs. build technology options comparing Microsoft Copilots (ready-to-use) vs. Low-code (Microsoft Copilot Studio) and pro-code (Foundry) build options." lightbox="./images/technology-options.png" border="false":::
 
-## Choose build paths for AI agents
+## Solutions to build AI agents
 
 Each build path offers different levels of control, required investment, and governance complexity. Select your path based on your business priorities and technical capabilities.
 
@@ -51,11 +63,10 @@ The platform provides over one thousand prebuilt connectors for common business 
 
 Test your use cases with the [60-day free trial](/microsoft-copilot-studio/requirements-licensing-subscriptions#copilot-studio-for-microsoft-teams-plans) before committing to production deployment. Review available [access options](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio#access-copilot-studio) to determine the best entry point for your organization.
 
-### GPUs and containers
+### Virtual machines and agents
 
-Deploy agents on GPU infrastructure and containers when you need complete control over your technology stack. This infrastructure-as-a-service (IaaS) approach supports all agent types and works best for organizations with advanced engineering capabilities and strict infrastructure requirements.
+Deploy agents on GPU infrastructure and containers when you need complete control over your technology stack. This infrastructure-as-a-service (IaaS) approach supports all agent types and works best for organizations with advanced engineering capabilities and strict infrastructure requirements. This path enables you to:
 
-This path enables you to:
 1. Control every aspect of your agent architecture
 2. Optimize performance for specific workloads
 3. Meet stringent compliance or data residency requirements
