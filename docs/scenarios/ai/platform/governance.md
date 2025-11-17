@@ -11,7 +11,7 @@ ms.topic: concept-article
 
 This article describes governance practices for organizations that use Azure AI platform-as-a-service (PaaS) solutions. These practices help you build responsible AI systems and reduce security, cost, and compliance risks. Effective governance ensures that your AI investments align with your business goals.
 
-## Govern Azure AI platforms
+## Govern AI platforms
 
 AI platform governance uses policy controls to keep Azure AI services operating consistently. Platform-level governance enforces security, compliance, and operational standards across your AI environment. Implement comprehensive policies to maintain oversight and improve AI management. To govern Azure AI platforms, follow these steps:
 
