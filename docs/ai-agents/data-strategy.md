@@ -1,7 +1,7 @@
 ---
-title: Data strategy for AI agents
+title: Data plan for AI agents
 ms.reviewer: ssumner
-description: Learn how to develop a comprehensive data strategy that enables AI agents to deliver business value through effective data management, preparation, and security.
+description: Learn how to develop a comprehensive data plan that enables AI agents to deliver business value through effective data management, preparation, and security.
 author: stephen-sumner
 ms.author: pnp
 ms.date: 11/14/2025
@@ -10,64 +10,94 @@ ms.topic: conceptual
 ms.collection: ce-skilling-ai-copilot
 ---
 
-# Data strategy for AI agents
+# Data plan for AI agents
 
-Organizations need a clear data strategy to enable AI agents to deliver accurate, secure, and compliant outcomes. This strategy ensures that enterprise SaaS agents such as Microsoft 365 Copilot have governed access to productivity content, and that teams building custom AI agents can work with high-quality, well-prepared data. Without this foundation, AI adoption introduces unnecessary risk, inefficiency, and cost.
+Organizations need a data plan to enable AI agents to deliver accurate, secure, and compliant outcomes. A good data plan ensures that enterprise SaaS agents such as Microsoft 365 Copilot have governed access to productivity content, and that teams building custom AI agents work with high-quality, well-prepared data. Without this foundation, AI adoption introduces unnecessary risk, inefficiency, and cost.
 
-This guidance focuses on two priorities:
+## Prepare data for Microsoft SaaS agents
 
-1. Preparing enterprise data for SaaS-based productivity agents like Microsoft 365 Copilot.
-2. Preparing enterprise data for custom AI agent retrieval.
+Productivity agents such as Microsoft 365 Copilot agents, depend on access to organizational content stored in OneDrive, SharePoint, Exchange, and other Microsoft 365 sources. These agents use Microsoft Graph to retrieve documents, emails, and collaboration artifacts while respecting existing permissions. See [Microsoft 365 Copilot architecture](/copilot/microsoft-365/microsoft-365-copilot-architecture#user-access-and-data-privacy). To prepare your data for Microsoft 365 Copilot agents:
 
-## Prepare data for Microsoft 365 Copilot and SaaS agents
+1. **Use the adoption guide.** Follow the [Microsoft 365 adoption guide](/copilot/microsoft-365/microsoft-365-copilot-enablement-resources#step-1---get-your-organization-ready-and-use-the-microsoft-adoption-site) to get your data ready.  
 
-Productivity agents such as Microsoft 365 Copilot depend on access to organizational content stored in OneDrive, SharePoint, Exchange, and other Microsoft 365 sources. These agents use Microsoft Graph to retrieve documents, emails, and collaboration artifacts while respecting existing permissions. See [Microsoft 365 Copilot privacy, data, and security](/microsoft-365-copilot/microsoft-365-copilot-privacy) and [Microsoft Graph overview](/graph/overview). To ensure secure and effective access, organizations must balance availability with least-privileged access principles. See [Least privilege guidance](/entra/identity/role-based-access-control/best-practices#1-apply-principle-of-least-privilege).
+1. **Apply zero trust principles.** To ensure secure and effective access, organizations must balance availability with least-privileged access principles. See [Microsoft 365 Copilot zero trust](/security/zero-trust/copilots/zero-trust-microsoft-365-copilot?toc=%2Fcopilot%2Fmicrosoft-365%2Ftoc.json&bc=%2Fcopilot%2Fmicrosoft-365%2Fagent-framework%2Fbread%2Ftoc.json)
 
-1. **Unify content under governed access.** Use Microsoft Graph APIs to integrate OneDrive, SharePoint, and other Microsoft 365 sources. See [OneDrive and SharePoint in Microsoft Graph](/onedrive/developer/rest-api/?view=odsp-graph-online). Consolidated access surfaces relevant content while enforcing existing access boundaries. Avoid fragmented permission models that create blind spots or expose sensitive data.
+## Prepare data for custom agents
 
-1. **Enforce least-privileged access.** Review and update access controls across Microsoft 365 repositories. Confirm users and agents only access data they are authorized to view. Use Microsoft Purview [sensitivity labels](/purview/sensitivity-labels) and [Purview DLP](/purview/dlp-learn-about-dlp) to reduce oversharing and apply consistent protection.
+Custom agents built in platforms such as Copilot Studio or Foundry require indexed data sources. High-quality data improves performance by enabling agents to reason over content and retrieve relevant information.
 
-1. **Maintain metadata and traceable governance.** Apply metadata enrichment to productivity content (owners, timestamps, sensitivity classification). Use Microsoft Purview to capture lineage for supported data systems and audit access events where logging applies. See [Purview lineage overview](/purview/data-gov-classic-lineage) and [Purview audit solutions](/purview/audit-solutions-overview). Avoid implying universal coverage—traceability depends on service integration and enabled logging.
+### Establish a unified data platform
 
-1. **Optimize search and indexing.** Confirm semantic capabilities and Microsoft 365 Copilot Search or semantic index are enabled. See [Semantic indexing for Microsoft 365 Copilot](/microsoftsearch/semantic-index-for-copilot) and configure Microsoft 365 Copilot connectors (formerly Graph connectors) for external sources (see [Copilot connectors overview](/microsoft-365-copilot/extensibility/overview-copilot-connector)). This improves natural language retrieval relevance without custom indexing infrastructure.
+Create a centralized data platform as the authoritative source for structured business data. Start with Microsoft Fabric, which represents all data in Fabric without creating multiple copies.See [Fabric mirroring overview](/fabric/mirroring/overview).
 
-Without these measures, productivity agents risk exposing sensitive information or returning incomplete results. A governed approach improves predictable performance, reduces exposure, and supports compliance across collaboration tools.
+### Data preparation for Copilot Studio agents
 
-## Prepare data for custom AI agent retrieval
+When you build an agent in Copilot Studio, its ability to deliver accurate, helpful answers depends on the quality and accessibility of the data you provide. Think of this as creating a strong foundation for your agent. A well-prepared data plan ensures your agent delivers accurate, secure, and timely answers. By organizing and connecting your data thoughtfully, you create a reliable experience for your users. Here’s how to prepare:
 
-Custom AI agents require structured, high-quality data to reason effectively. Fragmented or poorly indexed data increases latency, reduces accuracy, and complicates governance. Preparing data for agentic retrieval minimizes these risks and accelerates development.
+1. Decide What Knowledge Your Agent Needs
+Start by identifying the types of questions your agent should answer. Will it handle FAQs, product details, or internal policies? This clarity helps you choose the right sources, files, folders, or external systems.
 
-### Establish a unified data foundation
+Step 2: Gather and Organize Your Data
+Collect the documents, spreadsheets, and knowledge bases your agent will use. Store them in accessible locations like OneDrive, SharePoint, or supported systems such as Salesforce or ServiceNow. Organize them into folders with clear names and remove duplicates or outdated content.
 
-Create a centralized analytics platform as the authoritative source for structured business data. Use Microsoft Fabric mirroring and curated semantic models (rather than “golden datasets”) to consolidate operational sources into governed analytical representations. See [Fabric mirroring overview](/fabric/mirroring/overview). Mirroring replicates supported OLTP sources into OneLake in an analytics-ready open Delta format, enabling consistent downstream use (BI, data science, and AI) while simplifying governance.
+Step 3: Check File Readiness
+Before uploading:
 
-### Prepare data for agentic retrieval
+Ensure files are in supported formats and not password-protected.
+Avoid confidential or highly restricted content unless permissions are properly managed.
+If files come from shared locations, confirm the agent maker has access.
 
-Agentic retrieval enables AI agents to locate and interpret relevant data efficiently using natural language and hybrid search (semantic, vector, lexical). See [Agentic retrieval index design](/azure/search/agentic-retrieval-how-to-create-index). Preparing data involves several steps:
 
-1. **Assess readiness of existing data assets.** Evaluate whether current datasets meet retrieval workloads. Confirm required indexes exist and semantic or hybrid configurations are active where natural language relevance is needed. See [Semantic index](/microsoftsearch/semantic-index-for-copilot). Identify gaps (missing indexes, inconsistent schemas) and prioritize remediation.
+Step 4: Connect Your Sources
+In Copilot Studio, add your files or connect to external systems using built-in connectors. When you connect a folder or knowledge base, the entire structure is indexed—not just individual files—so keep your folders clean and relevant.
 
-1. **Plan metadata enrichment and traceability.** Add identifiers (document names, section markers, source references), ownership, timestamps, and sensitivity labels (see [Sensitivity labels](/purview/sensitivity-labels)). This supports transparent relevance scoring, compliance, and selective access.
+Step 5: Understand How Your Data Is Processed
+Copilot Studio breaks your content into smaller chunks and creates semantic indexes and vector embeddings. This allows the agent to retrieve the most relevant pieces of information when answering questions.
 
-1. **Include enhancements for performance and relevance.** Consider [synonym maps](/azure/search/search-synonyms) and [scoring profiles](/azure/search/index-add-scoring-profiles) to boost critical fields. These improvements add maintenance overhead—balance benefit versus lifecycle cost.
+Step 6: Keep Data Fresh
+Connected sources sync automatically on a schedule. Deleted files are removed during refresh, so your agent stays up to date. Manual refresh isn’t available yet, so plan for periodic updates in your source systems.
 
-1. **Structure data for efficient retrieval and reasoning.** Segment large documents into smaller, context-preserving chunks. See [chunking guidance](/azure/search/vector-search-how-to-chunk-documents). Chunking helps stay within embedding model token limits and improves retrieval precision when properly tuned; benefits depend on content structure and query patterns.
+Step 7: Respect Limits and Permissions
+Each agent can include:
 
-1. **Define chunk size and overlap strategies.** Start with evidence-based defaults (for example ~512 tokens with moderate overlap per Azure guidance) and iterate using real usage metrics. See [chunking examples](/azure/search/vector-search-how-to-chunk-documents#chunking-examples). Optimize for relevance first, then evaluate latency and cost impacts.
+Up to 500 knowledge objects (files, folders, articles).
+A maximum of 5 different sources.
+Permissions are enforced at query time—users only see what they’re allowed to access.
 
-1. **Preserve relationships within data.** Maintain hierarchical links between chunks and parent documents (section → paragraph → chunk) to enable reconstruction of broader context. See [Advanced RAG ingestion considerations](/azure/developer/ai/advanced-retrieval-augmented-generation#ingestion).
 
-1. **Integrate embeddings consistently.** Use the same embedding model for indexing and querying. See [Generate embeddings](/azure/search/vector-search-how-to-generate-embeddings) and [Integrated vectorization](/azure/search/vector-search-integrated-vectorization). Normalize or compress vectors when appropriate to control storage and improve similarity performance.
+Step 8: Enable Dataverse Search
+If you can’t add files, check with your admin to ensure Dataverse search is enabled. This is required for knowledge sources to work.
 
-A unified foundation and structured preparation reduce complexity, improve relevance, and support governance. These steps allow teams to build agents that deliver accurate, auditable, and cost-efficient outcomes.
+### Data preparation for Foundry agents
 
-### Trade-offs and considerations
+ how to create a strategic data plan that supports agents built on Azure AI Foundry and Azure AI Search. The steps follow the logical sequence leaders should consider when planning and implementing this strategy.
 
-- **Effort vs. accuracy:** Metadata enrichment, synonym maps, and chunk strategy tuning improve retrieval quality and grounding reliability but increase maintenance.
+## 1. Organize knowledge around data domains and data products
 
-- **Security vs. accessibility:** Least privilege and regular access reviews (see [Access reviews](/entra/id-governance/deploy-access-reviews)) reduce risk but require ongoing process maturity. Automating labeling and policy enforcement (see [Auto-labeling](/purview/apply-sensitivity-label-automatically)) lowers manual overhead.
+Start by defining **data domains** that align with business units or major functional areas such as HR, finance, or customer support. Treat each domain as a **data product** that exposes the right indexes and knowledge for all agents that need it. This approach reduces duplication and simplifies governance because agents within the same domain share common knowledge needs.
 
-- **Performance vs. flexibility:** Advanced relevance features (semantic ranking, scoring profiles, hybrid vector + lexical queries) raise computational cost. Apply selectively to critical content domains; monitor usage and adjust.
+Instead of creating separate indexes for every agent, maintain one authoritative index per domain. In Azure AI Foundry, a knowledge source points to an Azure AI Search index. Multiple agents reference the same knowledge source, which connects to the domain index. This design allows organizations to monitor API calls, enforce security boundaries where needed, and maintain consistent governance.
+
+**Why this structure matters:** Organizing data as products within domains prevents drift in how information is chunked, embedded, and retrieved. It also lowers operational overhead by reducing redundant ingestion pipelines and ensures predictable cost as adoption grows.
+
+### 2. Define a clear data contract
+
+A data contract is an agreement that sets expectations for how information supports intelligent agents across the organization. Establishing this contract early prevents misalignment and ensures that every agent operates on consistent, reliable data. Business leaders should focus on five key decisions when planning this contract:
+
+**1. Clarify the knowledge scope**  
+Determine what information each agent family needs to answer questions effectively. Decide which data sources are shared across multiple agents and which are unique to specific use cases. Document these choices so teams understand where authoritative knowledge resides.
+
+**2. Confirm index readiness**  
+Indexes are structured collections of searchable content. Ensure that each index includes clear text fields, ranking rules for relevance, and metadata such as document titles and sections. These elements make it possible for agents to provide accurate, traceable answers.
+
+**3. Set a standard for content structure**  
+Break large documents into smaller, logical sections that preserve headings and context. Consistent structure improves retrieval accuracy and reduces confusion when agents cite information. Aim for a predictable format that works across all domains.
+
+**4. Align on embedding approach**  
+Embedding refers to converting text into numeric representations for similarity matching. Use the same approach for both storing and querying data to maintain consistency. This alignment avoids mismatched results and ensures predictable performance.
+
+**5. Define relevance controls**  
+Decide how to handle internal terminology, acronyms, and business priorities such as freshness or regional relevance. Create synonym lists and scoring rules that reflect organizational needs. Apply these rules consistently so agents prioritize the right information.
 
 ## Next step
 
