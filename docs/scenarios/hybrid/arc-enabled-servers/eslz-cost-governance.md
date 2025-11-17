@@ -98,7 +98,7 @@ Review the [recommendations for security and compliance](./eslz-security-governa
 - Review [Microsoft Sentinel pricing](https://azure.microsoft.com/pricing/details/azure-sentinel/).
 - Use the Azure pricing calculator to estimate [Microsoft Sentinel costs](/azure/sentinel/azure-sentinel-billing).
 
-:::image type="content" source="./media/azure-sentinel-costs.png" alt-text="Screenshot that shows and example Microsoft Sentinel costs." lightbox="./media/azure-sentinel-costs.png":::
+:::image type="content" source="./media/azure-sentinel-costs.png" alt-text="Screenshot that shows an example Microsoft Sentinel costs." lightbox="./media/azure-sentinel-costs.png":::
 
 - Use [Cost Management](/azure/sentinel/azure-sentinel-billing#manage-and-monitor-azure-sentinel-costs) to have visibility on Microsoft Sentinel analysis costs.
 
@@ -148,5 +148,5 @@ For more guidance for your hybrid cloud adoption journey, review the following r
 
 - Review [Azure Arc Jumpstart](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/day2/) scenarios.
 - Review the [prerequisites](/azure/azure-arc/servers/agent-overview#prerequisites) for Azure Arc-enabled servers.
-- Plan an [at-scale deployment](/azure/azure-arc/servers/plan-at-scale-deployment) of Azure Arc-enable servers.
+- Plan an [at-scale deployment](/azure/azure-arc/servers/plan-at-scale-deployment) of Azure Arc-enabled servers.
 - Learn more about Azure Arc via the [Azure Arc learning path](/training/paths/manage-hybrid-infrastructure-with-azure-arc/).
