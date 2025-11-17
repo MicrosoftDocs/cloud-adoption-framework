@@ -93,7 +93,7 @@ General security considerations include:
 
 - Implement a [key rotation policy](/azure/key-vault/keys/how-to-configure-key-rotation) to ensure that all keys in use in your environment are regularly rotated to prevent attacks using jeopardized keys
 
-- For Logic App, [use obfuscation](/azure/logic-apps/logic-apps-securing-a-logic-app?tabs=azure-portal#secure-data-in-run-history-by-using-obfuscation) to secure data in run history.
+- For Logic Apps, [use obfuscation](/azure/logic-apps/logic-apps-securing-a-logic-app?tabs=azure-portal#secure-data-in-run-history-by-using-obfuscation) to secure data in run history.
 
 ### Authentication and access design recommendations
 
