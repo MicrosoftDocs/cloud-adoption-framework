@@ -92,7 +92,7 @@ These artifacts should include:
 Artifacts can speed up data science projects' exploration and operationalization phases. A DevOps forking strategy can help to scale these artifacts across all projects. Since this setup promotes the use of Git, users and the overall automation process can benefit from the provided artifacts.
 
 > [!TIP]
-> Azure Machine Learning sample pipelines should built with the Python software developer kit (SDK) or based on the YAML language. The new YAML experience will be more future-proof, as the Azure Machine Learning product team is currently working on a new SDK and command line interface (CLI). The Azure Machine Learning product team is confident that YAML will serve as the definition language for all artifacts within Azure Machine Learning.
+> Azure Machine Learning sample pipelines should be built with the Python software developer kit (SDK) or based on the YAML language. The new YAML experience will be more future-proof, as the Azure Machine Learning product team is currently working on a new SDK and command line interface (CLI). The Azure Machine Learning product team is confident that YAML will serve as the definition language for all artifacts within Azure Machine Learning.
 
 Sample pipelines don't work out of the box for each project, but they can be used as a baseline. You can adjust sample pipelines for projects. A pipeline should include the most relevant aspects of each project. For example, a pipeline can reference a compute target, reference data products, define parameters, define inputs, and define the execution steps. The same process should be done for Azure Pipelines. Azure Pipelines should also use the Azure Machine Learning SDK or CLI.
 

@@ -26,7 +26,7 @@ Companies can take advantage of GitHub's connectedness to the open-source commun
 
 GitHub makes it easy for organizations to share within their teams, which makes it faster to modernize and deploy the next application or workload. Companies can look to *InnerSource*, a key tenet of innovation, to borrow best practices like sharing and reuse, collaboration and communication, and more from the open-source community and apply them within their organization.
 
-From securing the open-source packages to the intellectual property that's written daily, securing the entire software supply chain should be a main priority for to every company. This goal requires advanced security technology that can be incorporated and automated throughout the entire lifecycle, and native GitHub capabilities like GitHub advanced security and GitHub Actions offer this type of flexibility.
+From securing the open-source packages to the intellectual property that's written daily, securing the entire software supply chain should be a main priority for every company. This goal requires advanced security technology that can be incorporated and automated throughout the entire lifecycle, and native GitHub capabilities like GitHub advanced security and GitHub Actions offer this type of flexibility.
 
 ## Take advantage of open-source assets
 

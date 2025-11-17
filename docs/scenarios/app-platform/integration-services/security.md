@@ -37,11 +37,11 @@ Decide early on if you need:
 
 - **Private Cloud** - all of your resources reside in a Virtual Network (VNet) and only use private networking, with no access to or from the public Internet, potentially available to your on-premises resources via VPN or ExpressRoute.
 
-- **Public Cloud** - all of your public-facing resources have access to public internet, although locked to down to restrict access from the public Internet and only allow specific IP addresses/ranges.
+- **Public Cloud** - all of your public-facing resources have access to public internet, although locked down to restrict access from the public Internet and only allow specific IP addresses/ranges.
 
 - **Hybrid** - some resources are private, and some are public.
 
-The choice that you make affect both the cost of your resources, along with how much security you can implement for your applications.
+The choice that you make affects both the cost of your resources, along with how much security you can implement for your applications.
 
 General security considerations include:
 
@@ -83,7 +83,7 @@ General security considerations include:
 
 ### Encryption design recommendations
 
-- When storing data (in Azure Storage or Azure SQL Server, for example) in Azure PaaS services, it always **Encrypted at Rest** using Microsoft-managed keys. Lock down access to the data, ideally only to services and a limited number of administrators. Remember that this also applies to log data as well. For more information, see [Azure data encryption at rest](/azure/security/fundamentals/encryption-atrest) and [Azure encryption overview](/azure/security/fundamentals/encryption-overview). Consider if using [Customer Managed Keys](/azure/security/fundamentals/key-management) (CMK) is necessary or if Microsoft-managed keys are sufficient.
+- When storing data (in Azure Storage or Azure SQL Server, for example) in Azure PaaS services, it is always **encrypted at rest** using Microsoft-managed keys. Lock down access to the data, ideally only to services and a limited number of administrators. Remember that this also applies to log data as well. For more information, see [Azure data encryption at rest](/azure/security/fundamentals/encryption-atrest) and [Azure encryption overview](/azure/security/fundamentals/encryption-overview). Consider if using [Customer Managed Keys](/azure/security/fundamentals/key-management) (CMK) is necessary or if Microsoft-managed keys are sufficient.
 
 - Always use **Encryption in Transit** (TLS traffic, for example) when transferring data between resources; never send data over an unencrypted channel.
 
@@ -91,9 +91,9 @@ General security considerations include:
 
 - Keep secrets in **[Azure Key Vault](/azure/key-vault/general/basic-concepts)**, and then link these to **[App Settings](/azure/app-service/app-service-key-vault-references?tabs=azure-cli)** (Functions, Logic Apps), **[Named Values](/azure/api-management/api-management-howto-properties?tabs=azure-portal)** (API Management), or **Configuration Entries** (App Configuration).
 
-- Implement a [key rotation policy](/azure/key-vault/keys/how-to-configure-key-rotation) to ensure that all keys in use in your environment are regularly rotated to prevent against attacks using jeopardized keys
+- Implement a [key rotation policy](/azure/key-vault/keys/how-to-configure-key-rotation) to ensure that all keys in use in your environment are regularly rotated to prevent attacks using jeopardized keys
 
-- For Logic App, [use obfuscation](/azure/logic-apps/logic-apps-securing-a-logic-app?tabs=azure-portal#secure-data-in-run-history-by-using-obfuscation) to secure data in run history.
+- For Logic Apps, [use obfuscation](/azure/logic-apps/logic-apps-securing-a-logic-app?tabs=azure-portal#secure-data-in-run-history-by-using-obfuscation) to secure data in run history.
 
 ### Authentication and access design recommendations
 
