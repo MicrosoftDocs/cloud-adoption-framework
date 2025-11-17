@@ -83,7 +83,7 @@ General security considerations include:
 
 ### Encryption design recommendations
 
-- When storing data (in Azure Storage or Azure SQL Server, for example) in Azure PaaS services, it is always **encrypted at rest** using Microsoft-managed keys. Lock down access to the data, ideally only to services and a limited number of administrators. Remember that this also applies to log data as well. For more information, see [Azure data encryption at rest](/azure/security/fundamentals/encryption-at-rest) and [Azure encryption overview](/azure/security/fundamentals/encryption-overview). Consider if using [Customer Managed Keys](/azure/security/fundamentals/key-management) (CMK) is necessary or if Microsoft-managed keys are sufficient.
+- When storing data (in Azure Storage or Azure SQL Server, for example) in Azure PaaS services, it is always **encrypted at rest** using Microsoft-managed keys. Lock down access to the data, ideally only to services and a limited number of administrators. Remember that this also applies to log data as well. For more information, see [Azure data encryption at rest](/azure/security/fundamentals/encryption-atrest) and [Azure encryption overview](/azure/security/fundamentals/encryption-overview). Consider if using [Customer Managed Keys](/azure/security/fundamentals/key-management) (CMK) is necessary or if Microsoft-managed keys are sufficient.
 
 - Always use **Encryption in Transit** (TLS traffic, for example) when transferring data between resources; never send data over an unencrypted channel.
 
