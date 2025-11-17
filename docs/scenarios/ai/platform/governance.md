@@ -28,7 +28,7 @@ AI platform governance uses policy controls to keep Azure AI services operating 
 
 ## Govern AI models
 
-Model governance establishes controls to ensure AI models deliver safe, reliable, and ethical outcomes. This includes using Azure Policy to restrict which models can be deployed, applying content safety filters to block harmful outputs, and defining clear rules for acceptable inputs and outputs. These measures help prevent misuse, maintain compliance, and uphold responsible AI principles. In addition, ongoing oversight-such as monitoring, audits, and policy reviews-supports user protection and reinforces trust in AI deployment. To govern AI models, follow these steps:
+Model governance sets controls to keep AI models safe, reliable, and ethical. It uses Azure Policy to restrict which models can be deployed. Content safety filters block harmful or inappropriate outputs. Clear rules for inputs and outputs prevent misuse and protect against harmful content. These measures maintain compliance and support responsible AI principles. Continuous oversight through monitoring, audits, and policy reviews protects users and builds trust. To govern AI models, follow these steps:
 
 1. **Create and maintain an AI agent inventory.** Microsoft Entra Agent ID gives you a centralized view and management of AI agents created in Azure AI Foundry and Copilot Studio. Maintaining a complete inventory lets you enforce access controls and monitor policy compliance across your organization. Use [Microsoft Entra Agent ID](/entra/identity/monitoring-health/concept-sign-ins#microsoft-entra-agent-id) to track and manage your AI agents.
 
