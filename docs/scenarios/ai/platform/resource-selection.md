@@ -3,7 +3,7 @@ title: Select Azure Platform as a Service (PaaS) Solutions for AI
 description: Learn how to select the right Azure AI services, compute, and tools to build effective generative and nongenerative AI workloads.
 author: stephen-sumner
 ms.author: ssumner
-ms.date: 03/27/2025
+ms.date: 11/17/2025
 ms.topic: concept-article
 ---
 
