@@ -133,7 +133,7 @@ Review the following security considerations when planning to implement GitOps f
 ### Secret management
 
 - Avoid storing plain text or base64 encoded secrets in your Git repository. Instead, consider using an external secrets provider such as Azure Key Vault. The [Azure Key Vault Provider for Secrets Store CSI Driver](/azure/azure-arc/kubernetes/tutorial-akv-secrets-provider) allows you to integrate an Azure key vault as a secrets store with an Azure Kubernetes Service (AKS) cluster using a CSI volume. This service is available through the Azure Arc-enabled Kubernetes extension. [HashiCorp Vault](https://www.vaultproject.io/) is a third party managed secret provider alternative.
-- Another alternative way to manage secrets is to use [Bitnami's Sealed Secrets](https://github.com/bitnami-labs/sealed-secrets/releases), which operated from the concept of public and private keys. This allows operators to store a one-way encrypted secret using a public key in Git, which can only be decrypted through the private key, which is used by a SealedSecrets controller running in your cluster.
+- Another alternative way to manage secrets is to use [Bitnami's Sealed Secrets](https://github.com/bitnami-labs/sealed-secrets/releases), which operates from the concept of public and private keys. This allows operators to store a one-way encrypted secret using a public key in Git, which can only be decrypted through the private key, which is used by a SealedSecrets controller running in your cluster.
 
 ## Design recommendations
 

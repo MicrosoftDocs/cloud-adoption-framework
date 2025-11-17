@@ -53,7 +53,7 @@ Use Virtual WAN when you require [transit connectivity between VPN and ExpressRo
 
 Azure Virtual Desktop session hosts have the same name resolution requirements as any other infrastructure as a service (IaaS) workload. As a result, connectivity to custom DNS servers or access via a virtual network link to Azure private DNS zones is required. Extra Azure private DNS zones are required to host the private endpoint namespaces of certain platform as a service (PaaS) services, such as storage accounts and key management services. For more information, see [Azure private endpoint DNS configuration](/azure/private-link/private-endpoint-dns).
 
-You can optionally configure email-based feed discovery to simplify user onboarding. Modern Azure Virtual Desktop clients can also subscribe directly using workspace discovery via the service without DNS-based email discovery. SeeFor more information, see [Set up email discovery to subscribe to your RDS feed](/windows-server/remote/remote-desktop-services/rds-email-discovery).
+You can optionally configure email-based feed discovery to simplify user onboarding. Modern Azure Virtual Desktop clients can also subscribe directly using workspace discovery via the service without DNS-based email discovery. For more information, see [Set up email discovery to subscribe to your RDS feed](/windows-server/remote/remote-desktop-services/rds-email-discovery).
 
 ### Optimize AVD bandwidth and latency
 

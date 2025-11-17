@@ -133,7 +133,7 @@ When choosing a production StorageClass in on-premises or multicloud scenarios, 
 
 ### Data controller design
 
-Choose a remote, shared StorageClass to ensure data durability. In the event a pod or node is removed, you can bring the pod back up and connect again to the Persistent Volume. The underline StorageClass must provide redundancy and high availability.
+Choose a remote, shared StorageClass to ensure data durability. In the event a pod or node is removed, you can bring the pod back up and connect again to the Persistent Volume. The underlying StorageClass must provide redundancy and high availability.
 
 We recommend using a custom deployment template when you create your Arc-enabled data services data controller. A custom template lets you fine-tune storage classes, storage size for data and logs, security, and Kubernetes Service Types. You can customize them for your environment and enterprise needs. The Azure Arc Data Controller requires a total of eight Persistent Volumes. The default minimum configuration allows for 15Gi for data and 10Gi for logs on the PVs. Configure capacity that not only meets minimum recommendations but supports higher growth from having many Arc-enabled SQL Managed Instance implementations running in a cluster. This configuration will prevent the need for resizing PVCs in the future.
 

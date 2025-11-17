@@ -12,7 +12,7 @@ ms.custom: e2e-hybrid
 
 This article provides key design considerations and best practices for security, governance, and compliance that you should use when building your Azure Arc-enabled Kubernetes deployment. While the enterprise-scale landing zone documentation covers [Governance](../../../ready/landing-zone/design-area/governance.md) and [Security](../../../ready/landing-zone/design-area/security.md) as separate topics, these critical design areas are consolidated into a single topic for Azure Arc-enabled Kubernetes.
 
-[Azure Policy](/azure/governance/policy/overview) and [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) are cloud-native tools that allow you to implement implementation of guardrails, controls, reports, alerts and remediation tasks in an automated fashion at scale. By combining them with Azure Arc-enabled Kubernetes, you can extend governance policies and security checks to any Kubernetes cluster in your on-premises and/or multicloud environment.
+[Azure Policy](/azure/governance/policy/overview) and [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) are cloud-native tools that allow you to implement guardrails, controls, reports, alerts and remediation tasks in an automated fashion at scale. By combining them with Azure Arc-enabled Kubernetes, you can extend governance policies and security checks to any Kubernetes cluster in your on-premises and/or multicloud environment.
 
 ## Architecture
 
@@ -44,7 +44,7 @@ For more information, see [Identity and access management for Azure Arc-enabled 
 
 ### Secret and certificate management
 
-Secure secrets and certificates by [using Azure Key Vault and deploying its extension](/azure/azure-arc/kubernetes/tutorial-akv-secrets-provider) in your Azure Arc-enabled kubernetes clusters through the Container Storage Interface (CSI).
+Secure secrets and certificates by [using Azure Key Vault and deploying its extension](/azure/azure-arc/kubernetes/tutorial-akv-secrets-provider) in your Azure Arc-enabled Kubernetes clusters through the Container Storage Interface (CSI).
 
 ### Data residency
 
@@ -82,7 +82,7 @@ This section contains design recommendations you should follow while planning th
 
 - Define a strategy for onboarding your clusters into Azure Arc, including a method of automation for bulk enrollment. Establish a formal plan that takes into account the scope of your deployment and includes objectives, selection criteria, success criteria, training plans, rollback, and risks.
 
-- You can [using a service principal](/azure/azure-arc/servers/onboard-service-principal#create-a-service-principal-for-onboarding-at-scale) to integrate agent provisioning as part of your continuous integration and continuous deployment (CI/CD) pipelines. You should limit the privileges of this service principal and only assign the roles required to onboard Kubernetes to Azure (the "Kubernetes Cluster - Azure Arc Onboarding" role), since it can only be used to onboard Kubernetes, not undoing the process or deleting the resource.
+- You can [use a service principal](/azure/azure-arc/servers/onboard-service-principal#create-a-service-principal-for-onboarding-at-scale) to integrate agent provisioning as part of your continuous integration and continuous deployment (CI/CD) pipelines. You should limit the privileges of this service principal and only assign the roles required to onboard Kubernetes to Azure (the "Kubernetes Cluster - Azure Arc Onboarding" role), since it can only be used to onboard Kubernetes, not undoing the process or deleting the resource.
 
 ### Agent management
 
@@ -92,7 +92,7 @@ If an agent stops sending heartbeats to Azure, goes offline, or loses connectivi
 
 You can use Azure Activity Log to set up [resource health alerts](/azure/service-health/resource-health-alert-monitor-guide) and remain informed on the current and historical health status of your [agent's pods](/azure/azure-arc/kubernetes/quickstart-connect-cluster?tabs=azure-cli#6-view-azure-arc-agents-for-kubernetes). To understand how to properly manage your agent, review the [management critical design area](./eslz-arc-kubernetes-management-disciplines.md).
 
-If the service hasn't received an agent heartbeat for 15 minutes, [Azure Arc-enabled Kubernetes cluster show as offline](/azure/azure-arc/kubernetes/conceptual-agent-architecture). To ensure your agent can securely connect to Azure Arc endpoints, review the [Azure Arc-enabled Kubernetes connectivity critical design area](./eslz-arc-kubernetes-network-connectivity.md).
+If the service hasn't received an agent heartbeat for 15 minutes, [Azure Arc-enabled Kubernetes cluster shows as offline](/azure/azure-arc/kubernetes/conceptual-agent-architecture). To ensure your agent can securely connect to Azure Arc endpoints, review the [Azure Arc-enabled Kubernetes connectivity critical design area](./eslz-arc-kubernetes-network-connectivity.md).
 
 ### Role-based access controls (RBAC)
 
@@ -184,7 +184,7 @@ Implementing a service mesh lets you introduce authentication and authorization 
 
 Service mesh implementations can protect against:
 
-- Unauthorized accesses
+- Unauthorized access
 - Sniffing attacks
 - Data exfiltration
 - Impersonations
