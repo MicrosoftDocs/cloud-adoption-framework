@@ -37,6 +37,8 @@ AI agents are most effective for tasks that require reasoning and adaptability. 
 
 1. **Know when to not use AI agents.** Avoid using AI agents for problems that simpler tools or scripts can solve. If a predictable function addresses the problem, an agent adds unnecessary cost and complexity without improving results. When uncertain, validate feasibility through a pilot in Foundry (a no-code testing environment) or Copilot Studio (a low/no-code platform).
 
+:::image type="content" source="./images/ai-agent-decision-tree.png" alt-text="Decision tree diagram showing when to use traditional AI apps, generative AI apps, SaaS agents, and AI agents you build." lightbox="./images/ai-agent-decision-tree.png" border="false":::
+
 2. **Identify agent use cases.** Explore examples from resources such as the [Microsoft Scenario Library](https://adoption.microsoft.com/scenario-library/) and [AI Use Cases catalog](https://www.microsoft.com/ai/use-case) to guide planning. These reference resources help avoid common design flaws and accelerate solution development. Include these resources in workshops and use them to benchmark internal ideas. See also [AI-powered success](https://www.microsoft.com/microsoft-cloud/blog/2025/07/24/ai-powered-success-with-1000-stories-of-customer-transformation-and-innovation/#:~:text=In%20this%20blog%2C%20we%E2%80%99ve%20collected%20more%20than%201%2C000,impact%20and%20shape%20today%E2%80%99s%20platform%20shift%20to%20AI.?msockid=3d64a84f1d7463b738e3bbc21c03625f), [Azure Marketplace](https://azure.microsoft.com/partners/marketplace?msockid=3d64a84f1d7463b738e3bbc21c03625f), [Sample Solution Gallery](https://adoption.microsoft.com/sample-solution-gallery/).
 
 ## How to prioritize AI agent use cases

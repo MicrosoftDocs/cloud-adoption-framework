@@ -27,7 +27,7 @@ Organizations adopt multiple approaches to address varying requirements across d
 | **SaaS agents** | Ready-to-use agents (SaaS) | Retrieval, Task | Personal productivity for information workers. Minimal customization required. Immediate value. |
 | **Foundry Agent Service** | Build with PaaS for pro-code agents | Retrieval, Task, Autonomous | Strategic transformation for engineering teams. Deep integration and custom logic. |
 | **Microsoft Copilot Studio** | Build with SaaS for low-code or no-code agents | Retrieval, Task, Autonomous | Process transformation for technical business users. Fast development with minimal coding. |
-| **GPUs & containers** | Build with IaaS for pro-code agents | Retrieval, Task, Autonomous |Full control of the entire technology stack.|
+| **Virtual machines** | Build with IaaS for pro-code agents | Retrieval, Task, Autonomous |Full control of the entire technology stack.|
 
 :::image type="content" source="./images/ai-agent-decision-tree.png" alt-text="Decision tree diagram showing when to use traditional AI apps, generative AI apps, SaaS agents, and AI agents you build." lightbox="./images/ai-agent-decision-tree.png" border="false":::
 
@@ -39,7 +39,7 @@ Each build path offers different levels of control, required investment, and gov
 
 ### Foundry Agent Service
 
-Use [Foundry Agent Service](/azure/ai-foundry/agents/overview) when you need pro-code agents for high-value scenarios. This platform-as-a-service (PaaS) approach provides full customization capabilities, including model selection, infrastructure control, and proprietary data integration. Foundry works best for engineering-led organizations that require multi-agent systems with deep integration into internal systems. You can build retrieval agents, task agents, and autonomous agents.
+Use [Foundry Agent Service](/azure/ai-foundry/agents/overview) when you need pro-code agents for high-value scenarios. This platform-as-a-service (PaaS) approach provides full customization capabilities, including model selection, infrastructure control, and data integration. Foundry works best for organizations with strong engineering capabilities. You can build retrieval agents, task agents, and autonomous agents.
 
 The platform includes Microsoft's responsible AI engineering practices with built-in tools for fairness evaluation and content safety. These features simplify compliance requirements and accelerate your deployment timeline. Start development using the [Foundry playground](/azure/ai-foundry/concepts/concept-playgrounds) to build and test prototypes. Follow the quickstart guide to [create a new agent](/azure/ai-foundry/agents/quickstart) and validate your use case.
 
