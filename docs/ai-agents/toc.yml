@@ -4,13 +4,13 @@ items:
   - name: 1. Plan for agents
     expanded: true
     items:
-      - name: Business strategy
+      - name: Business plan
         href: business-strategy.md
-      - name: Technology strategy
+      - name: Technology plan
         href: technology-strategy.md
-      - name: People strategy
+      - name: People plan
         href: people-strategy.md
-      - name: Data strategy
+      - name: Data plan
         href: data-strategy.md 
   - name: 2. Govern agents
     expanded: true

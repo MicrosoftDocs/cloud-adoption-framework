@@ -15,7 +15,7 @@ ms.collection: ce-skilling-ai-copilot
 
 Adopting AI agents successfully requires more than technology. It begins with a clear business plan that connects agent capabilities to organizational priorities. This guidance explains where AI agents create the most impact, how to identify appropriate use cases, and how to measure success. The goal is to help leaders make informed decisions that deliver measurable business value.
 
-## AI agents impact
+## Where do agents provide value?
 
 Before deciding where to integrate AI agents, understand the areas where they provide the greatest value. These areas represent opportunities to improve internal operations and external engagement:
 
