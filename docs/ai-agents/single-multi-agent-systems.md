@@ -12,7 +12,7 @@ ms.topic: conceptual
 
 Every organization that builds AI-powered solutions must make a foundational architectural decision: use a single intelligent agent or a coordinated set of specialized agents. This decision affects how teams structure their work, manage costs, and scale capabilities across the cloud environment. The right approach depends on the complexity of the task, anticipated growth, team boundaries, and operational constraints.
 
-:::image type="content" source="./images/agent-decision-tree.png" alt-text="Diagram that shows a decision tree for single-agent or multi-agent systems." lightbox="./images/agent-decision-tree.png" border="false":::
+:::image type="content" source="./images/ai-agent-decision-tree.png" alt-text="Diagram that shows a decision tree for single-agent or multi-agent systems." lightbox="./images/ai-agent-decision-tree.png" border="false":::
 
 ## When to start with multi-agent architecture
 
