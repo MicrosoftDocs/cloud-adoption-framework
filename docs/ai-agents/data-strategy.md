@@ -4,9 +4,9 @@ ms.reviewer: ssumner
 description: Learn how to develop a comprehensive data plan that enables AI agents to deliver business value through effective data management, preparation, and security.
 author: stephen-sumner
 ms.author: pnp
-ms.date: 11/14/2025
+ms.date: 12/01/2025
 ms.update-cycle: 180-days
-ms.topic: conceptual
+ms.topic: concept-article
 ms.collection: ce-skilling-ai-copilot
 ---
 
