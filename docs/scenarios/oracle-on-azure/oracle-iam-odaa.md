@@ -9,11 +9,11 @@ ms.topic: concept-article
 ms.custom: e2e-oracle
 ---
 
-# Identity and access management for Oracle Autonomous Database@Azure and Oracle Exadata Database@Azure
+# Identity and access management for Oracle Exadata Database@Azure
 
-This article provides identity and access management guidance for Oracle Autonomous Database@Azure and Oracle Exadata Database@Azure deployments. These recommendations enable secure, compliant access across both Azure and Oracle Cloud Infrastructure (OCI) while maintaining operational efficiency.
+This article provides identity and access management guidance for Oracle Exadata Database@Azure deployments. These recommendations enable secure, compliant access across both Azure and Oracle Cloud Infrastructure (OCI) while maintaining operational efficiency.
 
-Oracle Database@Azure requires coordinated identity management across Azure and OCI platforms. Implement these recommendations to establish consistent security posture, enable seamless user access, and maintain compliance with organizational policies while supporting both Oracle Autonomous Database@Azure and Oracle Exadata Database@Azure services.
+Oracle Database@Azure requires coordinated identity management across Azure and OCI platforms. Implement these recommendations to establish consistent security posture, enable seamless user access, and maintain compliance with organizational policies while supporting Oracle Exadata Database@Azure services.
 
 ## Establish federated identity foundation
 
@@ -51,7 +51,7 @@ Implement granular access control by using Azure role-based access control (Azur
 
 4. **Implement cluster-specific RBAC for multi-cluster architectures.** Create separate customized groups and policies for each cluster when you manage multiple Oracle Database@Azure clusters. Default RBAC group permissions apply to all clusters within a subscription. Administrators must configure custom settings to enforce cluster-specific access control.
 
-5. **Configure service principals for Azure Key Vault TDE integration when using customer-managed encryption keys.** Azure Key Vault integration requires different identity configurations depending on database technology. Oracle Exadata Database@Azure uses database-level service principals with Key Vault RBAC assignments. Ensure service principals have minimum required permissions (Get, Wrap Key, Unwrap Key) following least-privilege principles. For detailed service principal configuration procedures, see [Azure Key Vault integration for Oracle Exadata Database@Azure](oracle-azure-key-vault-integration-exadata.md).
+5. **Configure Azure Arc-enabled servers with managed identities for Azure Key Vault TDE integration in Oracle Exadata Database@Azure.** Oracle Exadata Database@Azure integrates with Azure Key Vault through Azure Arc-enabled servers with system-assigned managed identities for each database node. Use Azure RBAC with Microsoft Entra ID security groups assigned Key Vault Crypto Officer and Key Vault Reader roles to manage encryption key access. This group-based approach simplifies permission management across multiple database nodes while maintaining least-privilege principles. For complete identity configuration procedures including Oracle Identity Connector setup, managed identity authentication, and RBAC assignments, see [Azure Key Vault integration for Oracle Exadata Database@Azure](oracle-azure-key-vault-integration-exadata.md).
 
 ## Integrate Azure Arc identity management
 
