@@ -82,6 +82,6 @@ If you're an advanced user, you can compose your own architecture from the Azure
 [accelerator_bootstrap]: https://azure.github.io/Azure-Landing-Zones/accelerator/userguide/2_start/ "Accelerator Phase 2 - Bootstrap"
 [alz_pwsh_module]: https://www.powershellgallery.com/packages/ALZ "Azure Landing Zones PowerShell Module."
 [alz_tf_docs]: https://aka.ms/alz/tf "Azure Verified Modules for Platform Landing Zones Terraform docs."
-[alz_tf_getting_started]: https://azure.github.io/Azure-Landing-Zones/terraform/gettingStarted/ "(Advanced) Getting started with Azure Verified Modules for Platform Landing Zones."
+[alz_tf_getting_started]: https://azure.github.io/Azure-Landing-Zones/terraform/gettingstarted/ "(Advanced) Getting started with Azure Verified Modules for Platform Landing Zones."
 [msdocs_alz_architecture]: index.md#azure-landing-zone-architecture "Conceptual architecture for Azure landing zones."
 [tf_reg_azure]: https://registry.terraform.io/modules/Azure "Search Azure modules on the Terraform Registry."
