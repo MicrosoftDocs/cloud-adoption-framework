@@ -20,9 +20,11 @@ The guidance focuses on **Microsoft Foundry** and **Microsoft Copilot Studio**, 
 
 ## What is an AI agent?
 
-AI agents are specialized AI apps that can automate specific tasks and workflows. Agents can reason about which data and tools to use for a specific task, and can reference prior interactions when configured with conversation history or memory mechanisms. These capabilities make them versatile tools for various business uses.
+An AI agent is a simple program where you allow an generative AI model to help you decide the control flow of the program. It is like a micro-service that can execute tasks and achieve specific business outcomes. Just like microservices, you can update or fine-tune an agent without having to rebuild the whole system. It’s all about having a unit of logic that's easy to optimize and improve over time.
 
-At the technical level, an AI agent uses generative AI model to reason about the knowledge and tools it needs to accomplish each task. Unlike a traditional RAG application that performs a defined retrieval step before generation, agents can dynamically orchestrate multi-step retrieval, tool invocation, and adaptive reasoning during an interaction. RAG applications perform static (keyword, vector, or hybrid) searches before passing results to a model for synthesis. Agents orchestrate retrieval dynamically.
+What makes an agent different from traditional apps is its ability to handle unstructured, multi-modal input, and it uses generative AI model to decide which tool to use.
+
+At the technical level, an AI agent uses generative AI model to reason about the knowledge and tools it needs to accomplish each task. Unlike a traditional RAG application that performs a defined retrieval step before generation, agents can dynamically orchestrate multi-step retrieval, tool invocation, and adaptive reasoning during an interaction using the generative AI model. RAG applications perform static (keyword, vector, or hybrid) searches before passing results to a model for synthesis. Agents orchestrate retrieval dynamically.
 
 :::image type="content" source="./images/agent-overview.png" alt-text="Diagram showing agent architecture with four components feeding into a language model: instructions (defining agent scope and actions), knowledge (grounding data and context), tools (functions and APIs the agent can call), and memory (conversation history and state). The model produces output responses." lightbox="./images/agent-overview.png" border="false":::
 
