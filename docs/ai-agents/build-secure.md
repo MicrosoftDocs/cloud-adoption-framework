@@ -212,7 +212,7 @@ The agent needs observability tools early. Capture key performance metrics such 
 
 To improve agent performance and reliability, organizations must monitor how agents behave in real-world scenarios:
 
-- **[Use traces](/azure/ai-foundry/how-to/develop/trace-agents-sdk)**: Capture the journey of a request through the application, such as function calls, values, and system events.
+- **[Use traces](/azure/ai-foundry/how-to/develop/trace-agents-sdk)**: Capture the journey of a request through individual agents, such as inputs and outputs and metadata.
 - **[Review threads](/azure/ai-foundry/agents/concepts/threads-runs-messages#threads)**: Threads show how agents process instructions and help teams refine agent logic.
 - **[Monitor applications](/azure/ai-foundry/how-to/monitor-applications)**: Track, analyze, and optimize your application’s performance and operational health in real time.
 - **[Monitor models](/azure/ai-foundry/foundry-models/how-to/monitor-models)**: Get metrics on your model deployments such as total requests, total token count (prompt tokens + completion tokens).
