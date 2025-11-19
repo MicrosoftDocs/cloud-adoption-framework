@@ -26,15 +26,15 @@ Organizations that succeed with AI agents start with a strong and adaptive data 
 
 Unifying and cleansing data within each domain creates a reliable foundation that reduces friction for teams building agents. Clean and consistent data enables faster design and deployment of agents and ensures that analytics and automation produce accurate results.
 
-**Do you need a single platform?** AI agents can work without a unified platform by connecting directly to domain-specific systems or using federated queries. However, this approach introduces trade-offs:
+1. **Do you need a single platform?** AI agents can work without a unified platform by connecting directly to domain-specific systems or using federated queries. However, this approach introduces trade-offs:
 
-- Higher integration cost: Each agent must manage multiple data sources, schemas, and security models.
-- Inconsistent governance: Policies and compliance controls differ across systems, which increases risk.
-- Slower development: Adding new agents or expanding capabilities requires repeating integration work.
+    - Higher integration cost: Each agent must manage multiple data sources, schemas, and security models.
+    - Inconsistent governance: Policies and compliance controls differ across systems, which increases risk.
+    - Slower development: Adding new agents or expanding capabilities requires repeating integration work.
+    
+    A unified platform such as Microsoft Fabric addresses these challenges by providing a single logical data lake (OneLake) where teams organize data by domain and publish certified data products. This approach does not replace domain ownership but makes data easier to consume and govern.
 
-A unified platform such as Microsoft Fabric addresses these challenges by providing a single logical data lake (OneLake) where teams organize data by domain and publish certified data products. This approach does not replace domain ownership but makes data easier to consume and govern.
-
-**What data should you unify?** Ask: “Does this data help measure, visualize, or automate a business process?” If yes, prepare it for analytics and AI. If no, keep it in collaboration tools. Exclude purely collaborative content such as drafts, meeting notes, or brainstorming documents unless they contain structured data for analysis. Keep personal or ad-hoc files that do not contribute to measurable outcomes in OneDrive or SharePoint for collaboration only.
+2. **What data should you unify?** Ask: “Does this data help measure, visualize, or automate a business process?” If yes, prepare it for analytics and AI. If no, keep it in collaboration tools. Exclude purely collaborative content such as drafts, meeting notes, or brainstorming documents unless they contain structured data for analysis. Keep personal or ad-hoc files that do not contribute to measurable outcomes in OneDrive or SharePoint for collaboration only.
 
 ## Data retrieval strategies
 
@@ -44,13 +44,13 @@ Organizations that adopt AI agents must decide how those agents access enterpris
 - **MCP (read)**: The agent checks the current VPN service status from an IT monitoring system.
 - **MCP (write)**: The agent creates a helpdesk ticket if the user requests it.
 
-These approaches work together to provide complete and accurate responses. See [agentic RAG](/azure/ai-foundry/concepts/retrieval-augmented-generation?view=foundry#agentic-rag-modern-approach-to-retrieval) and [MCP servers](/azure/ai-foundry/agents/how-to/tools/model-context-protocol?view=foundry)
+These approaches work together to provide complete and accurate responses. See [agentic RAG](/azure/ai-foundry/concepts/retrieval-augmented-generation?view=foundry#agentic-rag-modern-approach-to-retrieval) and [MCP servers](/azure/ai-foundry/agents/how-to/tools/model-context-protocol?view=foundry).
 
 1. **Start with built-in retrieval options.** Start with the RAG and MCP retrieval capabilities included in platforms such as Microsoft Foundry and Copilot Studio. Built-in options reduce integration complexity, accelerate deployment, and maintain consistency. Before investing in custom solutions, confirm whether these features meet your requirements for accuracy and governance. 
 
-    :::image type="content" source="images/foundry.png" alt-text="Icon for Microsoft Foundry."::: See [Foundry IQ](/azure/ai-foundry/agents/how-to/tools/knowledge-retrieval?view=foundry&tabs=foundry%2Cpython), [Connect to MCP servers](/azure/ai-foundry/agents/how-to/tools/model-context-protocol?view=foundry), [Build your own MCP server](/azure/ai-foundry/mcp/build-your-own-mcp-server?view=foundry), [Sharepoint connection](/azure/ai-foundry/agents/how-to/tools/sharepoint?view=foundry), [Azure AI Search](/azure/ai-foundry/agents/how-to/tools/ai-search?view=foundry&tabs=keys%2Cazurecli).
+    :::image type="icon" source="images/foundry.png" alt-text="Icon for Microsoft Foundry."::: See [Foundry IQ](/azure/ai-foundry/agents/how-to/tools/knowledge-retrieval?view=foundry&tabs=foundry%2Cpython), [Connect to MCP servers](/azure/ai-foundry/agents/how-to/tools/model-context-protocol?view=foundry), [Build your own MCP server](/azure/ai-foundry/mcp/build-your-own-mcp-server?view=foundry), [Sharepoint connection](/azure/ai-foundry/agents/how-to/tools/sharepoint?view=foundry), [Azure AI Search](/azure/ai-foundry/agents/how-to/tools/ai-search?view=foundry&tabs=keys%2Cazurecli).
 
-1. **Plan to use RAG for knowledge lookup**: RAG retrieves relevant content from approved sources and uses that content to build answers. This approach works best for unstructured or semi-structured information such as policies, manuals, FAQs, and wikis. RAG improves accuracy and transparency because the agent cites actual documents rather than relying on assumptions.
+1. **Plan to use RAG for knowledge lookup**: RAG retrieves approved content from knowledge sources and uses it to build answers. This method works best for unstructured or semi-structured information such as policies, manuals, FAQs, and wikis. RAG improves transparency because the agent cites actual documents.
 
     - **Decision point**: Determine whether to create one centralized index or multiple domain-specific indexes. A single index simplifies management but can mix unrelated content and reduce relevance. Multiple indexes improve precision and governance but add complexity in query routing and maintenance.
     - **Action**: Document the chosen indexing approach in the data plan to avoid ad hoc decisions later.
