@@ -219,7 +219,7 @@ To improve agent performance and reliability, organizations must monitor how age
 
 **Foundry:** [Monitor the Agent Service](/azure/ai-foundry/agents/how-to/metrics).
 
-**Microsoft Copilot Studio:** Use [analytics](/microsoft-copilot-studio/analytics-overview) and [connect to Azure Application Insights](/microsoft-copilot-studio/advanced-bot-framework-composer-capture-telemetry) for custom telemetry.
+:::image type="icon" source="images/copilot-studio-icon.svg" **Microsoft Copilot Studio:** Use [analytics](/microsoft-copilot-studio/analytics-overview) and [connect to Azure Application Insights](/microsoft-copilot-studio/advanced-bot-framework-composer-capture-telemetry) for custom telemetry.
 
 ## Next step
 
