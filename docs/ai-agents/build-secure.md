@@ -63,7 +63,7 @@ A clear scope prevents uncontrolled expansion of responsibilities, reduces secur
 
 ### 1.2 Define agent instructions
 
-Agent instructions act as operational guidelines that determine how agents respond and behave. Well-structured instructions ensure agents operate within approved boundaries, comply with regulations, and maintain consistent tone and identity. Without these controls, agents risk producing inaccurate outputs, violating compliance rules, or exposing sensitive data. Business leaders should prioritize instruction design as part of governance and risk management.
+Agent instructions, also known as system messages, act as operational guidelines that determine how agents respond and behave. Well-structured instructions ensure agents operate within approved boundaries, comply with regulations, and maintain consistent tone and identity. Without these controls, agents risk producing inaccurate outputs, violating compliance rules, or exposing sensitive data. Business leaders should prioritize instruction design as part of governance and risk management.
 
 **Key practices for instructions:**
 
@@ -77,9 +77,9 @@ Agent instructions act as operational guidelines that determine how agents respo
 
     - **Compliance rules.** Embed organizational and regulatory requirements directly into instructions. For example, prohibit financial advice if the agent lacks appropriate licensing, or require data privacy acknowledgments before collecting personal information. These embedded rules align agent behavior with corporate policy and legal obligations.
 
-    Test instructions thoroughly before deployment in Foundry or Copilot Studio to validate behavior against sample queries. See [Prompt engineering techniques](/azure/ai-foundry/openai/concepts/prompt-engineering?view=foundry).
+    Test instructions thoroughly before deployment in Foundry or Copilot Studio to validate behavior against sample queries.
 
-    :::image type="icon" source="./images/foundry-icon.png"::: **Foundry:** Use the [Foundry playground](/azure/ai-foundry/concepts/concept-playgrounds?view=foundry). 
+    :::image type="icon" source="./images/foundry-icon.png"::: **Foundry:** See also [system message design](/azure/ai-foundry/openai/concepts/advanced-prompt-engineering?view=foundry) and [Prompt engineering techniques](/azure/ai-foundry/openai/concepts/prompt-engineering?view=foundry). Use the [Foundry playground](/azure/ai-foundry/concepts/concept-playgrounds?view=foundry) for testing. 
 
 2. **Build validation into every agent.** Quality control must be automatic and systematic in any agent system. When an agent produces output, the same agent or another component must verify it. This dual-layer approach catches errors before they reach users or downstream systems. For example, if an agent drafts a response, run it through a second agent that checks facts and tone. If an agent generates structured data, apply automated schema validation and use a review agent to confirm any unstructured content aligns with business rules. Organizations should allocate equal or greater effort to validation as they do to generation. Treat validation as a core architectural requirement, not an optional add-on. Using multiple validation perspectives reduces the chance of undetected hallucinations or policy violations.
 
