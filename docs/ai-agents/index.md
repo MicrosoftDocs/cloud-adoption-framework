@@ -37,7 +37,7 @@ At the technical level, an AI agent uses generative AI model to reason about the
 
 An input, such as a user message or system event, triggers the agent. The agent uses its instructions, generative AI model, and available tools, knowledge, and memory to produce an output. The output can be a message to a user or another agent, or a tool result. This structure enables agents to operate independently while aligning with business goals.
 
-For more information, see [What is an agent?](/agent-framework/overview/agent-framework-overview#what-is-an-ai-agent) and [What is a workflow?](/agent-framework/overview/agent-framework-overview#what-is-a-workflow) in the Microsoft Agent Framework.
+See [What is an agent?](/agent-framework/overview/agent-framework-overview#what-is-an-ai-agent) and [What is a workflow?](/azure/ai-foundry/agents/concepts/workflow?view=foundry). For more technical depth, see [What is a workflow?](/agent-framework/overview/agent-framework-overview#what-is-a-workflow) in the Microsoft Agent Framework.
 
 ## Types of agents
 
