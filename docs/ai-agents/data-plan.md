@@ -16,6 +16,8 @@ A strong data plan is essential for organizations that want AI agents to deliver
 
 Organizations often underestimate the role of data readiness in AI success. AI agents do not create knowledge; they retrieve and synthesize information from existing sources. If those sources are incomplete, fragmented, or inaccessible, the agent produces inaccurate or misleading results. A well-designed data plan ensures that agents operate on authoritative content, respect security boundaries, and deliver consistent value across business processes.
 
+:::image type="content" source="images/alz-fabric-agents-data.png" alt-text="Diagram of a data estate from Microsoft 365 apps to data in Azure. It shows unification of business data in Microsoft Fabric's OneLake data lake, and how that data supports Foundry and Copilot Agents." lightbox="images/alz-fabric-agents-data.png":::
+
 ## Prepare Microsoft 365 data
 
 Microsoft 365 Copilot productivity agents, such as Researcher agent, App Builder agent, and Workflows agent, rely on organizational data stored in Microsoft Graph, which includes SharePoint, OneDrive, Exchange, and other Microsoft 365 sources. These agents retrieve documents, emails, and collaboration artifacts while honoring existing permissions. See [Microsoft 365 Copilot architecture](/copilot/microsoft-365/microsoft-365-copilot-architecture#user-access-and-data-privacy). Agents in Foundry ([SharePoint](/azure/ai-foundry/agents/how-to/tools/sharepoint?view=foundry)) and [Copilot Studio](/microsoft-copilot-studio/knowledge-copilot-studio#supported-knowledge-sources) can also connect to data in Microsoft 365 apps.
@@ -26,40 +28,43 @@ Microsoft 365 Copilot productivity agents, such as Researcher agent, App Builder
 
 Microsoft 365 enables agents to reason over collaboration and knowledge content. However, agents that automate processes or analyze business performance need more than documents and emails. They require a unified, governed data foundation that spans operational systems and structured business data, and can include curated signals from Microsoft 365 content. Microsoft Fabric provides this foundation. Unifying and cleansing data within each domain creates a reliable foundation that reduces friction for teams building agents. Clean and consistent data enables faster design and deployment of agents and ensures that analytics and automation produce accurate results.
 
-Why do you need a single data platform? AI agents can work without a unified platform by connecting directly to domain-specific systems or using federated queries. However, this approach introduces trade-offs:
+### Why a single data platform matters
 
-Higher integration cost: Each agent must manage multiple data sources, schemas, and security models.
-Inconsistent governance: Policies and compliance controls differ across systems, which increases risk.
-Slower development: Adding new agents or expanding capabilities requires repeating integration work.
-A unified platform such as Microsoft Fabric addresses these challenges by providing a single logical data lake (OneLake) where teams organize data by domain and publish certified data products. This approach does not replace domain ownership but makes data easier to consume and govern.
+AI agents can operate without a unified platform by connecting directly to domain-specific systems or using federated queries. However, this approach introduces trade-offs:
 
-What data should you unify? Ask: “Does this data help understand a business process?” If yes, prepare it for analytics and AI. If no, keep it in collaboration tools. Exclude purely collaborative content such as drafts, meeting notes, or brainstorming documents unless they contain structured data for analysis. Keep personal or ad-hoc files that do not contribute to measurable outcomes in OneDrive or SharePoint for collaboration only.
+- Higher integration cost: Each agent must manage multiple data sources, schemas, and security models.
+- Inconsistent governance: Policies and compliance controls differ across systems, increasing risk.
+- Slower development: Adding new agents or expanding capabilities requires repeating integration work.
+
+A unified platform such as Microsoft Fabric addresses these challenges by providing OneLake—a single logical data lake where teams organize data by domain and publish certified data products. This approach does not replace domain ownership but makes data easier to consume and govern. This architecture is not just for analytics. It directly enables AI agents. Fabric’s unified data layer ensures that retrieval strategies like RAG and MCP can operate on trusted, governed data rather than fragmented sources.
+
+### What data should you unify?
+
+Ask: “Does this data help understand a business process?” If yes, prepare it for analytics and AI. If no, keep it in collaboration tools. Exclude purely collaborative content such as drafts, meeting notes, or brainstorming documents unless they contain structured data for analysis. Keep personal or ad-hoc files that do not contribute to measurable outcomes in OneDrive or SharePoint for collaboration only.
 
 Fabric organizes structured tables alongside semi-structured and unstructured datasets, including content ingested from SharePoint and OneDrive, through the medallion architecture. PDFs, Word documents, and similar files are generally unstructured because they lack a fixed schema like rows and columns. They become semi-structured if they include metadata or tags (for example, XML or JSON wrappers), or structured if cognitive services extract fields and map them to Fabric tables.
 
-## Fabric data agents
+### Use Fabric data agents
 
-Fabric Data Agents enable natural language queries against structured data. They work best on mirrored or shortcut tables, typically those designated as Gold sources, to deliver decimal-precise NLP-to-SQL queries.
+Fabric Data Agents use natural language to query structured data and translate questions into precise SQL statements. They work best on mirrored or shortcut tables, especially those designated as Gold sources, because these tables provide certified, high-quality data for accurate results.
 
 ### Medallion architecture layers
 
-For semi-structured and unstructured data, the Medallion approach organizes data into three layers:
+The medallion architecture creates a structured approach for managing semi-structured and unstructured data. It organizes data into three layers:
 
 - **Bronze (raw ingestion)**: All data (tabular, JSON/XML, PDFs, and Office files) lands in OneLake in its original form. This layer remains immutable for audit and lineage. External sources should be accessed via shortcuts or mirroring rather than copying.
-- **Silver (validated)**: Here, data is cleaned and standardized. Duplicates are removed, formats normalized (e.g., converting PDFs to text or extracting entities), and schemas applied (such as converting JSON into Delta tables).
-Search indexers are created at this stage to enable discovery and retrieval. This is a core part of the Medallion work, ensuring agents can reason over trusted, normalized data.
-- **Gold (business context)**:  Aggregate data with business meaning, add a semantic layer, optimize performance, and govern and certify. Gold can be dynamic, allowing agent-driven consumption patterns to define and evolve “dynamic gold” datasets. Register these data products in Microsoft Purview.
 
-To do this, create OneLake search indexers on Silver-layer data to enable discovery. Agents can use Silver datasets to identify relationships and patterns. When an agent creates a new curated set, store it as a registered data product in Purview or retain the instructions as a specification file in Git for version control. This approach ensures reproducibility and governance.
+- **Silver (validated)**: Clean and standardize data. Remove duplicates, normalize formats (such as converting PDFs to text or extracting entities), and apply schemas (for example, converting JSON into Delta tables).
+
+- **Gold (business context)**:  Aggregate data with business meaning, add a semantic layer, optimize performance, and certify datasets. Gold can include dynamic datasets that evolve based on agent-driven consumption patterns. Register these data products in Microsoft Purview for governance and compliance.
+
+To enable retrieval, create OneLake search indexers on Silver-layer data. Agents use Silver datasets to identify relationships and patterns. When an agent creates a curated set, store it as a registered data product in Purview or keep the instructions as a specification file in Git for version control. This process ensures reproducibility and governance.
 
 ### Adaptive Gold (dynamic)
 
-Adaptive Gold goes beyond indexing. It introduces agent-driven curation based on real-world usage patterns:
+Adaptive Gold introduces a dynamic approach to data curation that responds to real-world usage patterns. Instead of relying on static indexing, organizations use agent-driven processes to create curated datasets that evolve with business needs.
 
-Agents monitor frequent queries and aggregations.
-They materialize curated datasets as Delta tables or generate specification files for reproducibility.
-Approved metrics—such as RevenuePerRegion or CustomerSatisfactionScore—are enforced through governance guardrails.
-These dynamic datasets are registered in Purview for compliance and visibility.
+Agents track frequent queries and aggregations to identify high-value patterns. They then materialize curated datasets as Delta tables or generate specification files to ensure reproducibility. Governance guardrails enforce approved metrics such as RevenuePerRegion or CustomerSatisfactionScore, and all dynamic datasets are registered in Microsoft Purview for compliance and visibility.
 
 | Aspect | Silver layer | Gold layer (static) | Adaptive gold (agent-driven) |
 |--------|--------------|-------------------|------------------------------|
@@ -70,8 +75,6 @@ These dynamic datasets are registered in Purview for compliance and visibility.
 | Governance | Registered in Purview | Certified and auditable in Purview | Registered dynamically; enforced via Foundry + DSPM guardrails |
 | Agent role | Consumes validated data | Queries curated sets for consistent metrics | Creates new curated sets or instructions for reuse |
 | Flexibility | High (raw + normalized) | Low (static definitions) | Very high (adaptive to real-world usage) |
-
-This architecture is not just for analytics. It directly enables AI agents. Fabric’s unified data layer ensures that retrieval strategies like RAG and MCP can operate on trusted, governed data rather than fragmented sources.
 
 ## Data retrieval strategies for custom agents
 
