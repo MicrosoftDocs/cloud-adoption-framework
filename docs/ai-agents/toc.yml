@@ -4,20 +4,20 @@ items:
   - name: 1. Plan for agents
     expanded: true
     items:
-      - name: Business plan
-        href: business-strategy.md
-      - name: Technology plan
-        href: technology-strategy.md
-      - name: People plan
-        href: people-strategy.md
-      - name: Data plan
-        href: data-strategy.md 
+      - name: Business
+        href: business-plan.md
+      - name: Technology
+        href: technology-plan.md
+      - name: People
+        href: organization-people-readiness-plan.md
+      - name: Data
+        href: data-plan.md 
   - name: 2. Govern agents
     expanded: true
     items:
-      - name: Responsible AI policy
+      - name: Responsible AI
         href: responsible-ai.md
-      - name: Governance and security
+      - name: Governance
         href: governance-security.md
   - name: 3. Build and secure agents
     expanded: true
@@ -27,6 +27,6 @@ items:
       - name: Build and secure agents
         href: build-secure.md
   - name: 4. Integrate agents
-    href: integrate.md
+    href: integrate-organization.md
   - name: 5. Measure agents
-    href: measure.md
+    href: measure-impact.md
