@@ -1,9 +1,11 @@
 ---
-title: How to build and secure AI agents
-description: Learn to build and secure AI agents
+title: Build and Secure AI Agents with Foundry and Copilot
+ms.reviewer: ssumner
+description: Learn how to build and secure AI agents using Foundry Agent Service and Microsoft Copilot Studio. Follow a strategic framework for consistent, governed development.
+#customer intent: As a technical decision maker, I want to understand the prerequisites for building AI agents so that I can establish a secure and well-governed foundation.
 author: stephen-sumner
 ms.author: pnp
-ms.date: 11/01/2025
+ms.date: 12/01/2025
 ms.update-cycle: 180-days
 ms.topic: conceptual
 ms.collection: ce-skilling-ai-copilot
@@ -19,41 +21,29 @@ This article outlines a strategic framework for technical decision makers to gui
 
 Before directing teams to build AI agents, ensure the organization has the right environment and governance in place. These prerequisites help reduce risk, control cost, and accelerate time to value.
 
-1. **Understand how agents work.** Review [What is an AI agent?](./index.md#what-is-an-ai-agent) to clarify how agents operate and where they fit into business workflows.
+1. **Determine how to create this agent.** There are three main categories of agents based on their behavior and how they interact with data, systems, and users: retrieval, task, and autonomous. See [What is an AI agent?](./index.md#what-is-an-ai-agent). 
 
-1. **Set up your environment:** If you're building agents in **Foundry**, you can reference the [application landing zone accelerator for Foundry](https://github.com/Azure/AI-Landing-Zones). It's a proven starting point that you can refine to meet your needs. Application landing zone accelerator works with and without an Azure landing zone.
+    - In Foundry, there are two main ways to create and run agents. You can use a low/no-code approach called a prompt-based agent. Or you can use a pro-code approach using a hosted agent A prompt-based agent is a declaratively defined single agent that combines model configuration, instruction, tools, and natural language prompts to drive behavior. You can also make your agent even more powerful by attaching knowledge and memory capabilities. Prompt-based agents can be edited, versioned, tested, evaluated, monitored and published from the agent playground in the Microsoft Foundry portal. If you want to develop a more advanced agentic workflow that consists of a sequence of actions, or orchestrate multiple agents together, you can do so with Workflows. Workflows have their own development interface in the portal, but the same lifecycle applies. See the workflow article for details. Hosted agents are containerized agents that are developed in code using supported agent frameworks or custom code. These agents are deployed and managed by the Foundry Agent Service. They are created primarily using the code-first experience and can't be edited in the agent building interface on Foundry, but they can be viewed, invoked, evaluated, monitored and published just like prompt-based agents and workflows. See [Types of agents](/azure/ai-foundry/agents/concepts/development-lifecycle?view=foundry#types-of-agents) in Foundry.
 
-    If you're building in **Microsoft Copilot Studio,** ensure you have [access to Copilot Studio](/microsoft-copilot-studio/requirements-licensing-subscriptions) and configure the Copilot Studio [environments](/microsoft-copilot-studio/environments-first-run-experience)  that align with your organization’s data boundaries and lifecycle management practices.
+1. **Set up your environment:** If you're building agents in **Foundry**, references the [AI landing zone](https://github.com/Azure/AI-Landing-Zones). It's a proven starting point that you can refine to meet your needs. If you're building in **Microsoft Copilot Studio,** ensure you have [access to Copilot Studio](/microsoft-copilot-studio/requirements-licensing-subscriptions) and configure the Copilot Studio [environments](/microsoft-copilot-studio/environments-first-run-experience)  that align with your organization’s data boundaries and lifecycle management practices.
 
-1. **Apply well-architected principles to AI workloads** The agent itself should be built upon the principles of the Well-Architected Framework (AF) for [AI workloads](/azure/well-architected/ai/). This framework helps your teams balance performance, reliability, security, and cost. As a decision maker, you must ensure that every agent initiative aligns with these principles.
+1. **Use the Well-Architected Framework (WAF)** The agent itself should be built upon the principles of the Well-Architected Framework (AF) for [AI workloads](/azure/well-architected/ai/). This framework helps your teams balance performance, reliability, security, and cost. As a decision maker, you must ensure that every agent initiative aligns with these principles.
 
 ## Building AI agents
 
 Follow this structured build process to ensure agents operate reliably, comply with governance policies, and deliver measurable business outcomes.
 
-### 1. Choose models
-
-Start by selecting models that align with the complexity and importance of each task. Avoid defaulting to the largest or most expensive model. Instead, instruct teams to select models that match the complexity and importance of each task. Smaller models often provide sufficient performance for internal workflows and reduce cost and latency. Evaluate the task's requirements and choose models that balance performance, cost, and quota constraints.
-
-Consider quotas and cost implications. Higher-end models often have stricter rate limits and higher costs, which can lead to quota exhaustion and budget overruns if used for all tasks. To optimize availability and cost, diversify your model selection. Use smaller models for routine or internal workflows and reserve premium models for complex, high-value scenarios.
-
-In **multi-agent systems**, assign models based on role. For example, use a more capable model to interpret user intent, and a simpler model or rule-based logic to execute commands. This approach improves efficiency and ensures each agent contributes effectively to the overall system. Before finalizing model choices, run a small-scale test using sample queries. This testing phase helps validate performance and cost trade-offs in real scenarios. It also supports governance by documenting model behavior and ensuring compliance with internal standards.
-
-In **Foundry** use [the AI Foundry model catalog](https://ai.azure.com/explore/models) to find models aligned with task complexity and cost requirements. Each model in Foundry has specific [usage quotas and pricing](/azure/ai-foundry/foundry-models/quotas-limits).  Always review quota limits in the Azure portal and [request increases to default limits](/azure/ai-foundry/foundry-models/quotas-limits#request-increases-to-the-default-limits), as needed. Evaluate options using [model leaderboards](/azure/ai-foundry/concepts/model-benchmarks) to compare performance and cost trade-offs. For chat-based agents, [configure Model Router](/azure/ai-foundry/openai/concepts/model-router) to dynamically optimize costs while maintaining quality.
-
-In **Microsoft Copilot Studio** [choose a primary AI model](/microsoft-copilot-studio/authoring-select-agent-model) from available options. You can [bring your own model](/ai-builder/byom-for-your-prompts) to connect Foundry models for specialized tasks.
-
-### 2. Customize agents
+## 1. Agent orchestration
 
 A well-governed agent ecosystem begins with clarity. Each agent must operate within a defined scope, follow precise instructions, and undergo continuous evaluation to ensure consistent behavior overtime. These practices ensure agents deliver consistent, compliant, and business-aligned outcomes across the cloud estate.
 
-#### 2.1 Scope the agent
+### 1.1 Scope the agent
 
 Start by documenting the agent’s responsibilities and limitations in an "agent charter." This document defines what the agent does, what it avoids, and how it fits into business workflows. For example, an HR agent might answer policy questions and help schedule leave, but must not access payroll records or offer legal advice. Clarify when users interact with the agent, what decisions it supports, and when it escalates to a human. This clarity prevents scope creep and aligns expectations across agents.
 
-#### 2.2 Define agent instructions
+### 1.2 Define agent instructions
 
-Agent instructions act as operational guidelines that direct how agents respond and behave. Well-defined instructions create predictable, compliant agent behavior across your cloud environment. Organizations that invest in clear instructions reduce operational risk and improve user trust.
+Agent instructions act as operational guidelines that directs and orchestrates how agents respond and behave. Well-defined instructions create predictable, compliant agent behavior across your cloud environment. Organizations that invest in clear instructions reduce operational risk and improve user trust.
 
 1. **Write clear, structured instructions.** Each agent needs a complete set of guidelines that covers four key areas:
 
@@ -73,31 +63,53 @@ Agent instructions act as operational guidelines that direct how agents respond 
 
 For **multi-agent systems**, assign each agent a specific role such as Planner, Researcher, Executor, or Reviewer. Document what each agent produces and how information flows between agents. Role separation prevents overlapping responsibilities, reduces conflicts, and makes troubleshooting faster. Require agents to output structured data formats such as JSON to support automated processing and compliance audits. Smaller, focused instructions are easier to maintain and debug than large, multi-purpose prompts. When complexity requires it, combine these focused agents into coordinated workflows using orchestration patterns.
 
-**Foundry:** Test instructions using the [AI Foundry playground](/azure/ai-foundry/how-to/develop/playground-chat) and refine based on evaluation results. Store prompts in version control and integrate them into agent configurations.
+:::image type="icon" source="foundry-icon.png"::: **Foundry:** Test instructions using the [AI Foundry playground](/azure/ai-foundry/how-to/develop/playground-chat) and refine based on evaluation results. Store prompts in version control and integrate them into agent configurations. Define clear operational rules by [configuring system messages and instruction sets](/azure/ai-foundry/agents/concepts/threads-runs-messages) to enforce agent boundaries and fallback behaviors. To implement deterministic logic, [use function calling tools](/azure/ai-foundry/agents/how-to/tools/function-calling) to enforce predictable behaviors and handle edge cases reliably.
 
-**Microsoft Copilot Studio:** Validate instructions in the [test panel](/microsoft-copilot-studio/authoring-test-bot) and refine based on observed behavior. Use the agent editor to apply custom instructions that enforce compliance and operational boundaries.
+:::image type="icon" source="copilot-studio-icon.png"::: **Microsoft Copilot Studio:** Validate instructions in the [test panel](/microsoft-copilot-studio/authoring-test-bot) and refine based on observed behavior. Use the agent editor to apply custom instructions that enforce compliance and operational boundaries. Define agent purpose and boundaries by [configuring agent settings](/microsoft-copilot-studio/authoring-first-bot) to establish operational scope. For multi-agent systems, [set up agent flows](/microsoft-copilot-studio/flows-overview) with distinct roles and approval checkpoints to ensure controlled collaboration. Apply custom instructions in the agent editor to reinforce compliance and fallback behaviors. Configure agent behavior by [orchestrating with generative AI](/microsoft-copilot-studio/advanced-generative-actions) to enable natural conversation flows and pause-and-review workflows. For critical operations, [use multistage and AI approvals](/microsoft-copilot-studio/flows-advanced-approvals) to enforce deterministic decision gates.
 
-**Foundry:** Define clear operational rules by [configuring system messages and instruction sets](/azure/ai-foundry/agents/concepts/threads-runs-messages) to enforce agent boundaries and fallback behaviors. To implement deterministic logic, [use function calling tools](/azure/ai-foundry/agents/how-to/tools/function-calling) to enforce predictable behaviors and handle edge cases reliably.
+### 1.3 Agent orchestration framework
 
-**Microsoft Copilot Studio:** Define agent purpose and boundaries by [configuring agent settings](/microsoft-copilot-studio/authoring-first-bot) to establish operational scope. For multi-agent systems, [set up agent flows](/microsoft-copilot-studio/flows-overview) with distinct roles and approval checkpoints to ensure controlled collaboration. Apply custom instructions in the agent editor to reinforce compliance and fallback behaviors. Configure agent behavior by [orchestrating with generative AI](/microsoft-copilot-studio/advanced-generative-actions) to enable natural conversation flows and pause-and-review workflows. For critical operations, [use multistage and AI approvals](/microsoft-copilot-studio/flows-advanced-approvals) to enforce deterministic decision gates.
+In a single-agent setup, orchestration involves internal decision-making, selecting tools, sequencing actions, and integrating memory. The agent acts as a hub that queries data, performs tasks, and maintains continuity. This structure supports reliable performance and simplifies governance.
 
-#### 2.3 Fine-tune with agent memory
+In **multi-agent systems**, orchestration becomes distributed. Each agent specializes in a task, can make calls to tools, and communicates with others to share context and synchronize actions. Without orchestration, agents risk entering uncontrolled peer-to-peer communication, which can lead to loops, conflicts, or degraded performance. Structured orchestration prevents these issues and supports scalable, modular design.
 
-Improving agent behavior across a cloud estate requires a balance between user experience, security, and regulatory compliance. Organizations must define clear governance boundaries while enabling agents to operate efficiently across sessions and workflows. The following best practices support scalable and secure agent interactions.
+#### What orchestrator to use?
 
-1. **Use memory to improve continuity.** Agents that retain context across sessions reduce repetitive user input and improve responsiveness. This continuity lowers latency and reduces unnecessary API calls. However, storing context introduces data retention responsibilities. Organizations subject to regulations such as GDPR or HIPAA must define clear policies for data minimization, retention, and deletion.
+Built-in orchestration overview: Foundry Agent Service provides a fully managed, low-code platform that handles AI agent orchestration within Azure, managing conversation threads, tool invocations, and outputs automatically with minimal developer coding. It emphasizes rapid deployment and enterprise-grade governance.  
+Foundry advantages: It offers fast time-to-value with minimal coding, integrated enterprise connectors, built-in security and compliance features like Azure AD integration and content filtering, and automatic scaling and reliability as a cloud service. Foundry limitations: The orchestration logic is nondeterministic and less customizable, with some performance overhead due to cloud routing and limited debugging transparency. It runs exclusively in Azure, limiting deployment options.  
 
-2. **Persist only the information necessary to support continuity** Avoid storing full transcripts unless the business case justifies the privacy trade-off. Full transcripts improve user experience but increase exposure risk. Minimal context reduces risk but may limit the agent’s ability to respond effectively. When restoring context into a new session, ensure agents only deserialize safe and relevant data. Prevent leakage of unrelated user information by applying strict filtering and validation rules.
+Agent frameworks overview: MAF and LangGraph are pro-code SDKs allowing developers to explicitly define AI agent orchestration logic, workflows, and multi-agent interactions with full control over execution, state management, and integration. They run within the developer’s own infrastructure or applications. You need to host the agent. In Foundry, you need to use a [hosted agent](/azure/ai-foundry/agents/concepts/hosted-agents?view=foundry&branch=main). Framework advantages: They provide maximum flexibility for complex, conditional, or multi-step workflows, deterministic and transparent logic that supports detailed debugging, broader integration beyond Azure, performance tuning with local execution, and fine-grained state management.  
+Framework challenges: Development and maintenance require skilled engineers and significant effort, including infrastructure management, implementing security and compliance features, and handling complexity in multi-agent coordination.  
 
-3. **Protect sensitive data.** Encrypt all memory at rest and in transit. Apply role-based access control (RBAC) and identity management to restrict access. Enable audit logging to track all read and write operations. These controls form the foundation for secure agent behavior and align AI adoption with enterprise risk management strategies.
+Integration considerations: Foundry is ideal for Azure-centric organizations needing quick, secure deployments with built-in governance. Agent frameworks are suited multi-cloud or on-premises needs and scenarios requiring deep customization or integration within existing products. Hybrid approaches are possible.  
 
-4. **Validate behavior through testing.** Agents that use memory or share context across threads must undergo rigorous testing. Include compliance checks in evaluation cycles and validate defenses against prompt injection and other vulnerabilities. Test agent behavior under multi-thread scenarios to confirm fairness, security, and performance. This validation ensures agents operate reliably and safely across diverse workflows and user groups.
+Choose between approaches: Foundry offers a turnkey, ready service focusing on convenience and rapid results. Agent frameworks provide a DIY model for full control and advanced capabilities, with the choice depending on project complexity, speed to market, and team expertise.
 
-**Foundry** stores [threads, runs, and messages](/azure/ai-foundry/agents/concepts/threads-runs-messages) in a Microsoft-managed storage account. This configuration requires no setup but limits control over data retention and compliance. Organizations that require full control should configure Bring Your Own Thread Storage (BYOS) using a data store, like Azure Cosmos DB. BYOS enables custom retention policies, encryption, and audit logging. For example, Cosmos DB organizes agent data into three containers: user messages, system messages, model inputs and outputs. See [configure external stores like Azure Cosmos DB](/azure/ai-foundry/agents/concepts/standard-agent-setup) and [Azure Cosmos DB integration with Azure AI Agents Service](/azure/cosmos-db/gen-ai/azure-agent-service).
+#### Configuring agent behavior
 
-Agent frameworks, like the Microsoft Agent Framework, supports [serialization and deserialization](/agent-framework/user-guide/agents/multi-turn-conversation#agentthread-storage) of thread state. Thread ID reuse and context serialization support these strategies but require code changes and introduce operational complexity. Decision makers must weigh these efforts against the benefits of improved control, compliance, and user experience. See also [Agent Memory](/agent-framework/user-guide/agents/agent-memory) in the Microsoft Agent Framework. Test and refine behavior using [agent evaluators](/azure/ai-foundry/concepts/evaluation-evaluators/agent-evaluators) in the agent playground.
+To implement orchestration effectively across your cloud estate:
 
-In **Microsoft Copilot Studio:** [control transcript access and retention](/microsoft-copilot-studio/admin-transcript-controls). Validate agent behavior by [testing in the test panel](/microsoft-copilot-studio/authoring-test-bot) to observe conversation flows. Improve performance by [analyzing agent effectiveness](/microsoft-copilot-studio/analytics-improve-agent-effectiveness) to identify optimization opportunities. Understand user needs by [analyzing questions by theme](/microsoft-copilot-studio/analytics-themes) to discover patterns. Refine responses by [using prompt modification](/microsoft-copilot-studio/nlu-generative-answers-prompt-modification) to provide custom instructions.
+1. **Use approved communication protocols.** Refer to [agent protocol governance](./governance-security.md#standardize-agent-protocols) and use standard protocols, like A2A, when agents need to collaborate, negotiate, or delegate tasks dynamically. However, interacting with unknown or internet-exposed agents introduces significant security risks and should be prohibited.
+
+2. **Decide on a message format.** Define how agents communicate. Use structured data formats, such as JSON, or consistent keywords to ensure clarity. For example, in multi-agent systems, when Agent A sends a query to Agent B, include relevant context rather than just the raw question. This consistency prevents miscommunication and improves task execution.
+
+3. **Set boundaries on conversations.** Set boundaries on how many times agents can interact per task. For example, restrict agents to two exchanges before escalating to a human or returning a default response. This prevents infinite loops and ensures timely resolution.
+
+- :::image type="icon" source="foundry-icon.png"::: **Foundry**: Reference the [AI agent orchestration patterns](/azure/architecture/ai-ml/guide/ai-agent-design-patterns). For built-in orchestration, use [connected agents](/azure/ai-foundry/agents/how-to/connected-agents). For agent frameworks, start with the [Microsoft Agent Framework](https://devblogs.microsoft.com/foundry/introducing-microsoft-agent-framework-the-open-source-engine-for-agentic-ai-apps/) and see [A2A agents](/agent-framework/user-guide/agents/agent-types/a2a-agent).
+
+- :::image type="icon" source="copilot-studio-icon.png"::: **Microsoft Copilot Studio**: [Add other agents](/microsoft-copilot-studio/authoring-add-other-agents) and [orchestrate agent behavior](/microsoft-copilot-studio/advanced-generative-actions).
+
+### 2. Agent model selection
+
+Start by selecting models that align with the complexity and importance of each task. Avoid defaulting to the largest or most expensive model. Instead, instruct teams to select models that match the complexity and importance of each task. Smaller models often provide sufficient performance for internal workflows and reduce cost and latency. Evaluate the task's requirements and choose models that balance performance, cost, and quota constraints.
+
+Consider quotas and cost implications. Higher-end models often have stricter rate limits and higher costs, which can lead to quota exhaustion and budget overruns if used for all tasks. To optimize availability and cost, diversify your model selection. Use smaller models for routine or internal workflows and reserve premium models for complex, high-value scenarios.
+
+In **multi-agent systems**, assign models based on role. For example, use a more capable model to interpret user intent, and a simpler model or rule-based logic to execute commands. This approach improves efficiency and ensures each agent contributes effectively to the overall system. Before finalizing model choices, run a small-scale test using sample queries. This testing phase helps validate performance and cost trade-offs in real scenarios. It also supports governance by documenting model behavior and ensuring compliance with internal standards.
+
+In **Foundry** use [the AI Foundry model catalog](https://ai.azure.com/explore/models) to find models aligned with task complexity and cost requirements. Each model in Foundry has specific [usage quotas and pricing](/azure/ai-foundry/foundry-models/quotas-limits).  Always review quota limits in the Azure portal and [request increases to default limits](/azure/ai-foundry/foundry-models/quotas-limits#request-increases-to-the-default-limits), as needed. Evaluate options using [model leaderboards](/azure/ai-foundry/concepts/model-benchmarks) to compare performance and cost trade-offs. For chat-based agents, [configure Model Router](/azure/ai-foundry/openai/concepts/model-router) to dynamically optimize costs while maintaining quality.
+
+In **Microsoft Copilot Studio** [choose a primary AI model](/microsoft-copilot-studio/authoring-select-agent-model) from available options. You can [bring your own model](/ai-builder/byom-for-your-prompts) to connect Foundry models for specialized tasks.
 
 ### 3. Add knowledge and tools
 
@@ -115,7 +127,7 @@ AI agents must use only validated and approved data sources. For example, when a
 
 In **Foundry**, use [**knowledge** tools](/azure/ai-foundry/agents/how-to/tools/overview). With the Microsoft Agent Framework, extend the capabilities of your agents by connecting it to tools hosted on remote [Model Context Protocol](/agent-framework/user-guide/model-context-protocol/).
 
-In **Microsoft Copilot Studio**, use [**knowledge** sources](/microsoft-copilot-studio/knowledge-copilot-studio) and [connectors](/microsoft-copilot-studio/advanced-connectors).
+In **Microsoft Copilot Studio**, use [knowledge sources](/microsoft-copilot-studio/knowledge-copilot-studio) and [connectors](/microsoft-copilot-studio/advanced-connectors).
 
 ### 3.2 Agent tools for actions
 
@@ -139,27 +151,25 @@ In **Foundry**, use [**action** tools](/azure/ai-foundry/agents/how-to/tools/ove
 
 In **Microsoft Copilot Studio**, use [orchestrate agent behavior](/microsoft-copilot-studio/advanced-generative-actions).
 
-This approach helps organizations define a secure and scalable roadmap for agent development. It clarifies responsibilities, minimizes risk, and ensures agents contribute meaningfully to business operations across the cloud estate.
+This approach helps organizations define a secure and scalable roadmap for agent development. It clarifies responsibilities, minimizes risk, and ensures agents contribute meaningfully to business operations across the cloud estate
 
-## 4. Determine orchestration
+### 3.3 Agent memory
 
-To coordinate AI agents effectively across your cloud environment, your organization must define orchestration strategies that align with business goals, security requirements, and operational complexity. Orchestration refers to how agents interact with tools, data sources, and each other to complete tasks and maintain context. This coordination ensures agents behave predictably, avoid conflicts, and deliver consistent outcomes.
+Improving agent behavior across a cloud estate requires a balance between user experience, security, and regulatory compliance. Organizations must define clear governance boundaries while enabling agents to operate efficiently across sessions and workflows. The following best practices support scalable and secure agent interactions.
 
-In a single-agent setup, orchestration involves internal decision-making, selecting tools, sequencing actions, and integrating memory. The agent acts as a hub that queries data, performs tasks, and maintains continuity. This structure supports reliable performance and simplifies governance.
+1. **Use memory to improve continuity.** Agents that retain context across sessions reduce repetitive user input and improve responsiveness. This continuity lowers latency and reduces unnecessary API calls. However, storing context introduces data retention responsibilities. Organizations subject to regulations such as GDPR or HIPAA must define clear policies for data minimization, retention, and deletion.
 
-In **multi-agent systems**, orchestration becomes distributed. Each agent specializes in a task, can make calls to tools, and communicates with others to share context and synchronize actions. Without orchestration, agents risk entering uncontrolled peer-to-peer communication, which can lead to loops, conflicts, or degraded performance. Structured orchestration prevents these issues and supports scalable, modular design.
+2. **Persist only the information necessary to support continuity** Avoid storing full transcripts unless the business case justifies the privacy trade-off. Full transcripts improve user experience but increase exposure risk. Minimal context reduces risk but may limit the agent’s ability to respond effectively. When restoring context into a new session, ensure agents only deserialize safe and relevant data. Prevent leakage of unrelated user information by applying strict filtering and validation rules.
 
-To implement orchestration effectively across your cloud estate:
+3. **Protect sensitive data.** Encrypt all memory at rest and in transit. Apply role-based access control (RBAC) and identity management to restrict access. Enable audit logging to track all read and write operations. These controls form the foundation for secure agent behavior and align AI adoption with enterprise risk management strategies.
 
-1. **Use approved communication protocols.** Refer to [agent protocol governance](./governance-security.md#standardize-agent-protocols) and use standard protocols, like A2A, when agents need to collaborate, negotiate, or delegate tasks dynamically. However, interacting with unknown or internet-exposed agents introduces significant security risks and should be prohibited.
+4. **Validate behavior through testing.** Agents that use memory or share context across threads must undergo rigorous testing. Include compliance checks in evaluation cycles and validate defenses against prompt injection and other vulnerabilities. Test agent behavior under multi-thread scenarios to confirm fairness, security, and performance. This validation ensures agents operate reliably and safely across diverse workflows and user groups.
 
-2. **Decide on a message format.** Define how agents communicate. Use structured data formats, such as JSON, or consistent keywords to ensure clarity. For example, in multi-agent systems, when Agent A sends a query to Agent B, include relevant context rather than just the raw question. This consistency prevents miscommunication and improves task execution.
+**Foundry** stores [threads, runs, and messages](/azure/ai-foundry/agents/concepts/threads-runs-messages) in a Microsoft-managed storage account. This configuration requires no setup but limits control over data retention and compliance. Organizations that require full control should configure Bring Your Own Thread Storage (BYOS) using a data store, like Azure Cosmos DB. BYOS enables custom retention policies, encryption, and audit logging. For example, Cosmos DB organizes agent data into three containers: user messages, system messages, model inputs and outputs. See [configure external stores like Azure Cosmos DB](/azure/ai-foundry/agents/concepts/standard-agent-setup) and [Azure Cosmos DB integration with Azure AI Agents Service](/azure/cosmos-db/gen-ai/azure-agent-service).
 
-3. **Set boundaries on conversations.** Set boundaries on how many times agents can interact per task. For example, restrict agents to two exchanges before escalating to a human or returning a default response. This prevents infinite loops and ensures timely resolution.
+Agent frameworks, like the Microsoft Agent Framework, supports [serialization and deserialization](/agent-framework/user-guide/agents/multi-turn-conversation#agentthread-storage) of thread state. Thread ID reuse and context serialization support these strategies but require code changes and introduce operational complexity. Decision makers must weigh these efforts against the benefits of improved control, compliance, and user experience. See also [Agent Memory](/agent-framework/user-guide/agents/agent-memory) in the Microsoft Agent Framework. Test and refine behavior using [agent evaluators](/azure/ai-foundry/concepts/evaluation-evaluators/agent-evaluators) in the agent playground.
 
-In **Foundry**, for multi-agent systems, reference [AI agent orchestration patterns](/azure/architecture/ai-ml/guide/ai-agent-design-patterns) and [A2A agents](/agent-framework/user-guide/agents/agent-types/a2a-agent) with the Microsoft Agent Framework. For built-in orchestration, use [connected agents](/azure/ai-foundry/agents/how-to/connected-agents). For advanced customization, use the [Microsoft Agent Framework](https://devblogs.microsoft.com/foundry/introducing-microsoft-agent-framework-the-open-source-engine-for-agentic-ai-apps/), which is a unified SDK and runtime for agent development and orchestration.
-
-In **Microsoft Copilot Studio**, [add other agents](/microsoft-copilot-studio/authoring-add-other-agents) and [orchestrate agent behavior](/microsoft-copilot-studio/advanced-generative-actions).
+In **Microsoft Copilot Studio**, [control transcript access and retention](/microsoft-copilot-studio/admin-transcript-controls). Validate agent behavior by [testing in the test panel](/microsoft-copilot-studio/authoring-test-bot) to observe conversation flows. Improve performance by [analyzing agent effectiveness](/microsoft-copilot-studio/analytics-improve-agent-effectiveness) to identify optimization opportunities. Understand user needs by [analyzing questions by theme](/microsoft-copilot-studio/analytics-themes) to discover patterns. Refine responses by [using prompt modification](/microsoft-copilot-studio/nlu-generative-answers-prompt-modification) to provide custom instructions.
 
 ## 5. Protect and govern
 
@@ -177,7 +187,7 @@ AI agents must meet business expectations for performance and safety. To achieve
 
 For **Foundry**, have teams use [continuous evaluation](/azure/ai-foundry/how-to/continuous-evaluation-agents). They should automate quality and safety gates by integrating evaluation workflows via [GitHub Actions evaluations](/azure/ai-foundry/how-to/evaluation-github-action?tabs=foundry-project) or [Azure DevOps evaluations](/azure/ai-foundry/how-to/evaluation-azure-devops?tabs=foundry-project) and enforce standardized agent behaviors using reusable templates in source control. Teams can use dedicated [AI Red Teaming Agent](/azure/ai-foundry/how-to/develop/run-scans-ai-red-teaming-agent) to scan applications for safety and security issues.
 
-For  **Microsoft Copilot Studio**, use the  [Security and governance guidance](/microsoft-copilot-studio/security-and-governance), [automatic security scans](/microsoft-copilot-studio/security-scan), and verify [agent runtime protection status](/microsoft-copilot-studio/security-agent-runtime-view).
+For  **Microsoft Copilot Studio**, [Create test sets for evaluations](/microsoft-copilot-studio/analytics-agent-evaluation-create), [Security and governance guidance](/microsoft-copilot-studio/security-and-governance), [automatic security scans](/microsoft-copilot-studio/security-scan), and verify [agent runtime protection status](/microsoft-copilot-studio/security-agent-runtime-view).
 
 ### 5.2 Implement guardrails and controls
 
