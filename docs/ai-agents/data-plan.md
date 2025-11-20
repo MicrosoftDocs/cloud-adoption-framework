@@ -58,7 +58,7 @@ The medallion architecture creates a structured approach for managing semi-struc
 
 - **Gold (business context)**:  Aggregate data with business meaning, add a semantic layer, optimize performance, and certify datasets. Gold can include dynamic datasets that evolve based on agent-driven consumption patterns. Register these data products in Microsoft Purview for governance and compliance.
 
-To enable retrieval, create OneLake search indexers on Silver-layer data. Agents use Silver datasets to identify relationships and patterns. When an agent creates a curated set, store it as a registered data product in Purview or keep the instructions as a specification file in Git for version control. This process ensures reproducibility and governance.
+To enable retrieval, create OneLake [search indexers](/azure/search/search-how-to-index-onelake-files) with Azure AI Search on Silver-layer data. Agents use Silver datasets to identify relationships and patterns. When an agent creates a curated set, store it as a registered data product in Purview or keep the instructions as a specification file in Git for version control. This process ensures reproducibility and governance.
 
 ### Adaptive Gold (dynamic)
 
