@@ -21,7 +21,7 @@ This article outlines a strategic framework for technical decision makers to gui
 
 Before directing teams to build AI agents, ensure the organization has the right environment and governance in place. These prerequisites help reduce risk, control cost, and accelerate time to value.
 
-1. **Determine how to create this agent.** There are three main categories of agents based on their behavior and how they interact with data, systems, and users: retrieval, task, and autonomous. See [What is an AI agent?](./index.md#what-is-an-ai-agent). 
+1. **Determine how to create this agent.** There are three main categories of agents based on their behavior and how they interact with data, systems, and users: retrieval, task, and autonomous. See [What is an AI agent?](./index.md#what-is-an-ai-agent).
 
     - In Foundry, there are two main ways to create and run agents. You can use a low/no-code approach called a prompt-based agent. Or you can use a pro-code approach using a hosted agent A prompt-based agent is a declaratively defined single agent that combines model configuration, instruction, tools, and natural language prompts to drive behavior. You can also make your agent even more powerful by attaching knowledge and memory capabilities. Prompt-based agents can be edited, versioned, tested, evaluated, monitored and published from the agent playground in the Microsoft Foundry portal. If you want to develop a more advanced agentic workflow that consists of a sequence of actions, or orchestrate multiple agents together, you can do so with Workflows. Workflows have their own development interface in the portal, but the same lifecycle applies. See the workflow article for details. Hosted agents are containerized agents that are developed in code using supported agent frameworks or custom code. These agents are deployed and managed by the Foundry Agent Service. They are created primarily using the code-first experience and can't be edited in the agent building interface on Foundry, but they can be viewed, invoked, evaluated, monitored and published just like prompt-based agents and workflows. See [Types of agents](/azure/ai-foundry/agents/concepts/development-lifecycle?view=foundry#types-of-agents) in Foundry.
 
@@ -35,13 +35,35 @@ Follow this structured build process to ensure agents operate reliably, comply w
 
 ## 1. Agent orchestration
 
-### 1.1 Scope the system
+### 1.1 Define the system scope
 
-Document the system's responsibilities and limitations in an agent charter. This charter specifies what the system does and what each agent, if more than one, does, what it avoids, and how it integrates into business workflows. For example, an HR agent can answer policy questions and help schedule leave but must not access payroll records or provide legal advice. Include details on when users interact with the agent, what decisions it supports, and when it escalates to a human. Clear scope prevents uncontrolled expansion and aligns expectations across teams.
+Start by creating an **agent charter** that documents responsibilities, limitations, and integration points. This charter is the foundation for governance and risk management. It specifies:
+
+- **System responsibilities**: What the overall solution does and how it supports business objectives.
+- **Agent roles**: What each agent handles when multiple agents exist.
+- **Prohibited actions**: What the system must not do to avoid compliance or security violations.
+- **Workflow integration**: How the system fits into existing business processes.
+
+For example, an HR agent can answer policy questions and assist with scheduling leave requests. It must not access payroll records or provide legal advice. These boundaries protect sensitive data and prevent regulatory breaches.
+
+Include these details in the charter:
+
+- **Interaction points**: When and where users engage with the agent (e.g., Teams, web portal).
+- **Decision support**: Which decisions the agent informs and which remain under human control.
+- **Escalation rules**: When the agent transfers issues to a human and the escalation process.
+
+A clear scope prevents uncontrolled expansion of responsibilities, reduces security risks, and aligns expectations across teams. It also ensures compliance with organizational and regulatory requirements.
+
+**Best practices for scoping**:
+
+- **Align with business objectives**: Confirm that the scope supports strategic priorities and compliance obligations.
+- **Validate with stakeholders**: Review the charter with legal, security, and operational teams before deployment.
+- **Update under change control**: Revise the charter as business needs evolve, but enforce strict governance to prevent scope creep.
+- **Implement technical safeguards**: Use middleware for input validation, logging, and security enforcement to ensure agents operate within defined boundaries.
 
 ### 1.2 Define agent instructions
 
-Agent instructions serve as operational guidelines that direct how agents respond and behave. Well-defined instructions create predictable and compliant behavior across your cloud environment. Organizations that invest in clear instructions reduce operational risk and improve user trust.
+Agent instructions act as operational guidelines that determine how agents respond and behave. Well-structured instructions ensure agents operate within approved boundaries, comply with regulations, and maintain consistent tone and identity. Without these controls, agents risk producing inaccurate outputs, violating compliance rules, or exposing sensitive data. Business leaders should prioritize instruction design as part of governance and risk management.
 
 **Key practices for instructions:**
 
@@ -55,17 +77,19 @@ Agent instructions serve as operational guidelines that direct how agents respon
 
     - **Compliance rules.** Embed organizational and regulatory requirements directly into instructions. For example, prohibit financial advice if the agent lacks appropriate licensing, or require data privacy acknowledgments before collecting personal information. These embedded rules align agent behavior with corporate policy and legal obligations.
 
-    Test instructions thoroughly before deployment. Use evaluation tools in Foundry or Microsoft Copilot Studio to validate behavior against sample queries. Refine language based on test results to close gaps and improve reliability. For critical constraints, reinforce rules in multiple places such as system prompts, validation checks, and fallback logic.
+    Test instructions thoroughly before deployment in Foundry or Copilot Studio to validate behavior against sample queries. See [Prompt engineering techniques](/azure/ai-foundry/openai/concepts/prompt-engineering?view=foundry).
 
-2. **Build validation into every agent.** Quality control must be automatic and systematic. When one agent produces output, another component must verify it. This dual-layer approach catches errors before they reach users or downstream systems. For example, if an agent drafts a response, run it through a second agent that checks facts and tone. If an agent generates structured data, apply automated schema validation and use a review agent to confirm any unstructured content aligns with business rules. Organizations should allocate equal or greater effort to validation as they do to generation. Treat validation as a core architectural requirement, not an optional add-on. Using multiple validation perspectives reduces the chance of undetected hallucinations or policy violations.
+    :::image type="icon" source="./images/foundry-icon.png"::: **Foundry:** Use the [Foundry playground](/azure/ai-foundry/concepts/concept-playgrounds?view=foundry). 
+
+2. **Build validation into every agent.** Quality control must be automatic and systematic in any agent system. When an agent produces output, the same agent or another component must verify it. This dual-layer approach catches errors before they reach users or downstream systems. For example, if an agent drafts a response, run it through a second agent that checks facts and tone. If an agent generates structured data, apply automated schema validation and use a review agent to confirm any unstructured content aligns with business rules. Organizations should allocate equal or greater effort to validation as they do to generation. Treat validation as a core architectural requirement, not an optional add-on. Using multiple validation perspectives reduces the chance of undetected hallucinations or policy violations.
 
 3. **Manage instructions with version control.** Store all agent instructions in a version-controlled system such as GitHub. Version control creates an auditable history of changes, supports collaborative editing, and ensures teams reference approved instructions. When updates occur, teams can review differences, test changes in isolation, and roll back if needed. This practice supports governance and simplifies compliance reporting.
 
 For **multi-agent systems**, assign each agent a specific role such as Planner, Researcher, Executor, or Reviewer. Document what each agent produces and how information flows between agents. Role separation prevents overlapping responsibilities, reduces conflicts, and makes troubleshooting faster. Require agents to output structured data formats such as JSON to support automated processing and compliance audits. Smaller, focused instructions are easier to maintain and debug than large, multi-purpose prompts. When complexity requires it, combine these focused agents into coordinated workflows using orchestration patterns.
 
-    :::image type="icon" source="./images/foundry-icon.png"::: **Foundry:** Use the [Foundry playground](/azure/ai-foundry/concepts/concept-playgrounds?view=foundry). Define clear operational rules by [configuring system messages and instruction sets](/azure/ai-foundry/agents/concepts/threads-runs-messages) to enforce agent boundaries and fallback behaviors. To implement deterministic logic, [use function calling tools](/azure/ai-foundry/agents/how-to/tools/function-calling) to enforce predictable behaviors and handle edge cases reliably.
-    
-    :::image type="icon" source="./images/copilot-studio-icon.png"::: **Microsoft Copilot Studio:** Validate instructions in the [test panel](/microsoft-copilot-studio/authoring-test-bot) and refine based on observed behavior. Use the agent editor to apply custom instructions that enforce compliance and operational boundaries. Define agent purpose and boundaries by [configuring agent settings](/microsoft-copilot-studio/authoring-first-bot) to establish operational scope. For multi-agent systems, [set up agent flows](/microsoft-copilot-studio/flows-overview) with distinct roles and approval checkpoints to ensure controlled collaboration. Apply custom instructions in the agent editor to reinforce compliance and fallback behaviors. Configure agent behavior by [orchestrating with generative AI](/microsoft-copilot-studio/advanced-generative-actions) to enable natural conversation flows and pause-and-review workflows. For critical operations, [use multistage and AI approvals](/microsoft-copilot-studio/flows-advanced-approvals) to enforce deterministic decision gates.
+Define clear operational rules by [configuring system messages and instruction sets](/azure/ai-foundry/agents/concepts/threads-runs-messages) to enforce agent boundaries and fallback behaviors. To implement deterministic logic, [use function calling tools](/azure/ai-foundry/agents/how-to/tools/function-calling) to enforce predictable behaviors and handle edge cases reliably.
+
+:::image type="icon" source="./images/copilot-studio-icon.png"::: **Copilot Studio:** Validate instructions in the [test panel](/microsoft-copilot-studio/authoring-test-bot) and refine based on observed behavior. Use the agent editor to apply custom instructions that enforce compliance and operational boundaries. Define agent purpose and boundaries by [configuring agent settings](/microsoft-copilot-studio/authoring-first-bot) to establish operational scope. For multi-agent systems, [set up agent flows](/microsoft-copilot-studio/flows-overview) with distinct roles and approval checkpoints to ensure controlled collaboration. Apply custom instructions in the agent editor to reinforce compliance and fallback behaviors. Configure agent behavior by [orchestrating with generative AI](/microsoft-copilot-studio/advanced-generative-actions) to enable natural conversation flows and pause-and-review workflows. For critical operations, [use multistage and AI approvals](/microsoft-copilot-studio/flows-advanced-approvals) to enforce deterministic decision gates.
     
 ### 1.3 Agent orchestration framework
 
