@@ -20,36 +20,44 @@ The guidance focuses on **Microsoft Foundry** and **Microsoft Copilot Studio**, 
 
 ## What is an AI agent?
 
-An AI agent is a simple program where you allow an generative AI model to help you decide the control flow of the program. It is like a micro-service that can execute tasks and achieve specific business outcomes. Just like microservices, you can update or fine-tune an agent without having to rebuild the whole system. It’s all about having a unit of logic that's easy to optimize and improve over time.
-
-What makes an agent different from traditional apps is its ability to handle unstructured, multi-modal input, and it uses generative AI model to decide which tool to use.
-
-At the technical level, an AI agent uses generative AI model to reason about the knowledge and tools it needs to accomplish each task. Unlike a traditional RAG application that performs a defined retrieval step before generation, agents can dynamically orchestrate multi-step retrieval, tool invocation, and adaptive reasoning during an interaction using the generative AI model. RAG applications perform static (keyword, vector, or hybrid) searches before passing results to a model for synthesis. Agents orchestrate retrieval dynamically.
+An AI agent is a small, adaptable program that uses artificial intelligence to perform tasks and make decisions. Think of it as a digital assistant that can understand instructions, access information, and take actions on your behalf. Unlike traditional applications, which follow fixed rules, AI agents can interpret unstructured input such as text or voice and decide the best way to respond. Agents operate through four core components:
 
 :::image type="content" source="./images/agent-overview.png" alt-text="Diagram showing agent architecture with four components feeding into a language model: instructions (defining agent scope and actions), knowledge (grounding data and context), tools (functions and APIs the agent can call), and memory (conversation history and state). The model produces output responses." lightbox="./images/agent-overview.png" border="false":::
 
-**Components of an agent.** An agent operates through four core components:
+- Instructions: Define what the agent should do and its scope.
+- Knowledge: Provide the data and context the agent needs.
+- Tools: Include the functions or systems the agent can use to complete tasks.
+- Memory: Store conversation history and state for continuity.
 
-- Instructions: Define the scope and actions of the agent.
-- Knowledge: Provide grounding data and context.
-- Tools: Include functions and APIs the agent can call.
-- Memory: Maintain conversation history and state.
+When triggered by a user request or system event, the agent uses these components to produce an output, such as answering a question, updating a record, or completing a workflow. 
 
-An input, such as a user message or system event, triggers the agent. The agent uses its instructions, generative AI model, and available tools, knowledge, and memory to produce an output. The output can be a message to a user or another agent, or a tool result. This structure enables agents to operate independently while aligning with business goals.
+**How is this different from traditional RAG applications?** Unlike RAG (retrieval-augmented generation) apps that follow a deterministic retrieval process before generating a response, AI agents use a generative AI model to dynamically decide which knowledge and tools to use at each step. This adaptive approach allows agents to orchestrate multi-step reasoning and actions rather than relying on a fixed search pattern.
 
-See [What is an agent?](/agent-framework/overview/agent-framework-overview#what-is-an-ai-agent) and [What is a workflow?](/azure/ai-foundry/agents/concepts/workflow?view=foundry). For more technical depth, see [What is a workflow?](/agent-framework/overview/agent-framework-overview#what-is-a-workflow) in the Microsoft Agent Framework.
+For a more technical description of agents, see [What is an agent?](/agent-framework/overview/agent-framework-overview#what-is-an-ai-agent) and [What is a workflow?](/azure/ai-foundry/agents/concepts/workflow?view=foundry) in the context of Microsoft Foundry. See also [What is a workflow?](/agent-framework/overview/agent-framework-overview#what-is-a-workflow) in the Microsoft Agent Framework.
 
-## Types of agents
+## Why do AI agents matter?
 
-Organizations deploy three types of agents based on task complexity and criticality:
+AI agents deliver three critical benefits that translate directly into business outcomes:
+
+- Efficiency: They reduce manual effort by automating repetitive tasks.
+- Speed: They accelerate decision-making and service delivery.
+- Scalability: They allow businesses to handle more work without adding headcount.
+
+These benefits lead to measurable results such as lower operating costs, improved customer satisfaction, and faster innovation. For leaders, this means AI agents are not just a technology investment—they are a strategic lever for growth and competitiveness.
+
+## Types of AI agents
+
+Organizations use three categories of AI agents, each delivering value at different levels of business impact:
 
 :::image type="content" source="./images/spectrum-agents.png" alt-text="Diagram showing a spectrum of three agent types from left to right: retrieval agents (lowest complexity, access and synthesize information), task agents (moderate complexity, take specific actions), and autonomous agents (highest complexity, multi-step planning and decision-making). An arrow indicates increasing complexity and capability from left to right." lightbox="./images/spectrum-agents.png" border="false":::
 
-**Retrieval agents** access and synthesize information based on user prompts. These agents process user input with a generative AI model to generate responses and facilitate back-and-forth exchanges. Organizations deploy retrieval agents for customer service, compliance queries, and other scenarios that require immediate, accurate responses. These agents operate within well-defined boundaries and introduce minimal risk while streamlining routine interactions.
+- **Productivity agents** (retrieval agents): These agents accelerate decision-making by instantly finding and summarizing information. They empower employees to work smarter by reducing time spent searching for answers. Productivity agents are ideal for roles that require quick responses, such as customer service, compliance, or internal knowledge lookups.
+**Business value**: Improve accuracy, boost employee productivity, and reduce operational delays. **Examples**: Fabric data agents, Researcher agent, and custom agents built in Microsoft Foundry or Copilot Studio.
 
-**Task agents** use tools to perform specific actions when prompted by users, agents, or systems. Task agents integrate with systems through APIs and tools to perform actions across platforms. They reduce manual effort in repetitive processes while maintaining predictable outcomes. They automate tasks and workflows, such as updating records, creating service tickets, or processing transactions.
+- **Action agents** (task agents). These agents go beyond answering questions and can take action. They automate repetitive tasks such as creating service tickets, updating records, or triggering workflows.
+**Business value**: Streamline operations, reduce manual errors, and free staff for higher-value work. **Examples**: Security Copilot, App Builder agent, and custom agents in Microsoft Foundry or Copilot Studio.
 
-**Autonomous agents** operate independently to achieve complex goals without constant human supervision. They make decisions, adapt to changing conditions, and orchestrate multi-step processes across systems. They are suitable for complex workflows such as supply chain optimization or predictive maintenance but require rigorous testing and governance due to non-deterministic behavior.
+- **Automation agents** These agents manage complex, multi-step processes with minimal oversight. They make decisions, adapt to changing conditions, and orchestrate entire workflows such as supply chain optimization or dynamic resource allocation. **Business value**: Enable scalable automation, improve agility, and unlock innovation in advanced business scenarios. Strong governance is essential to ensure trust and compliance. **Examples**: Custom agents in Microsoft Foundry and Copilot Studio.
 
 ## Next step
 
