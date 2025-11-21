@@ -16,6 +16,7 @@ ms.collection: ce-skilling-ai-copilot
 This article outlines a strategic framework for technical decision makers to understand the process, decisions, and best practices required to build agents in **Foundry Agent Service** and **Microsoft Copilot Studio**, so you can lead your teams and organization and set standards that help your business be successful with AI agents.
 
 :::image type="content" source="./images/build-ai-agents.png" alt-text="Diagram that shows how to build AI agents in Foundry and Microsoft Copilot Studio." lightbox="./images/build-ai-agents.png" border="false":::
+
 ## 1. Agent orchestration
 
 Business leaders must establish a strategic foundation for AI agents before development begins. This section guides you through defining system requirements, selecting technology platforms, and structuring agent behavior to ensure agents deliver value while remaining secure and compliant.
@@ -51,32 +52,28 @@ Include these interaction details in your charter:
 
 ### 1.2 Set up your environment
 
-Establish a secure and well-architected foundation before building AI agents. This foundation includes infrastructure, governance frameworks, and compliance controls that support reliable and scalable agent operations.
+Establish a secure and well-architected foundation before building AI agents. Proper environment setup reduces deployment delays and compliance violations. This investment also simplifies scaling as agent adoption grows across your organization. This foundation includes infrastructure, governance frameworks, and compliance controls that support reliable and scalable agent operations.
 
 :::image type="icon" source="./images/foundry-icon.png"::: **Foundry:** Start with the [AI landing zone](https://github.com/Azure/AI-Landing-Zones). This reference architecture provides a proven foundation you can customize to meet your requirements. You have two primary approaches:
 
 - **Low-code approach with prompt-based agents**: Use [prompt-based agents](/azure/ai-foundry/agents/concepts/development-lifecycle?view=foundry#types-of-agents) to build agents without extensive coding. This approach accelerates development and allows business stakeholders to participate in agent design.
 
-- **Pro-code approach with hosted agents**: Use [hosted agents](/azure/ai-foundry/agents/concepts/hosted-agents?view=foundry) for advanced scenarios that require custom orchestration logic and detailed control over agent behavior.
-
-Apply [Well-Architected Framework principles](/azure/well-architected/ai/) to balance performance, reliability, security, and cost.
+- **Pro-code approach with hosted agents**: Use [hosted agents](/azure/ai-foundry/agents/concepts/hosted-agents?view=foundry) for advanced scenarios that require custom orchestration logic and detailed control over agent behavior. Apply the Well-Architected Framework principles for [AI workloads](/azure/well-architected/ai/).
 
 :::image type="icon" source="./images/copilot-studio-icon.png"::: **Copilot Studio:** First [verify licensing and access requirements](/microsoft-copilot-studio/requirements-licensing-subscriptions). Then [configure environments](/microsoft-copilot-studio/environments-first-run-experience) to separate development, testing, and production workloads.
-
-Proper environment setup reduces deployment delays and compliance violations. This investment also simplifies scaling as agent adoption grows across your organization.
 
 ### 1.3 Choose agent orchestration
 
 Orchestration determines how agents coordinate, make decisions, and execute tasks. In a single-agent setup, the agent manages its own decision-making process, selects appropriate tools, sequences actions, and remembers context from previous interactions. This structure delivers reliable performance and simplifies oversight.
 
-In multi-agent systems, orchestration becomes distributed across multiple specialized agents. Each agent focuses on specific tasks, uses relevant tools, and communicates with other agents to share information and coordinate actions. Structured orchestration prevents communication breakdowns, circular dependencies, and conflicting instructions. This approach enables scalable, modular design that grows with your business needs.
+In **multi-agent systems**, orchestration becomes distributed across multiple specialized agents. Each agent focuses on specific tasks, uses relevant tools, and communicates with other agents to share information and coordinate actions. Structured orchestration prevents communication breakdowns, circular dependencies, and conflicting instructions. This approach enables scalable, modular design that grows with your business needs.
 
 **Choose between these orchestration approaches**:
 
 | Approach | Description | Advantages | Tradeoffs | Best for |
 |----------|-------------|------------|-----------|----------|
-| **Managed orchestration with Foundry Agent Service** | Foundry provides a fully managed, low-code orchestration platform within Azure. It handles conversation threads, tool calls, and output sequencing with minimal coding effort. | Fast deployment delivers rapid time-to-value. Built-in security and compliance features include Azure AD integration. Enterprise connectors and automatic scaling reduce operational burden. | Limited customization restricts complex workflow adaptation. Orchestration logic operates as a managed service with less transparency. Azure hosting exclusively means no multi-cloud flexibility. | Organizations that prioritize speed, governance, and simplicity over deep customization. Ideal when rapid deployment and built-in compliance matter more than workflow control. |
-| **Custom orchestration with agent frameworks** | Frameworks such as Microsoft Agent Framework or LangGraph provide full control over orchestration logic, multi-agent workflows, and state management. These frameworks run in your infrastructure or applications. | Transparent workflows give you complete visibility into decision logic. Detailed debugging and performance tuning capabilities support optimization. Broader integration options extend beyond Azure to support diverse technology stacks. | Higher development and maintenance effort requires dedicated engineering resources. Skilled engineering teams become essential for success. You assume full responsibility for security, compliance, and infrastructure management. | Organizations that require advanced customization, multi-cloud support, or integration with existing systems. Best when workflow control and flexibility outweigh speed-to-market considerations. |
+| **Managed orchestration with Foundry Agent Service** | Foundry handles conversation flow, tool execution, and task sequencing with minimal coding on a fully managed Azure platform. | Deploy agents quickly with built-in security, compliance, and enterprise connectors. | Limited customization for complex workflows and reduced transparency into orchestration logic. | Organizations prioritizing rapid deployment and built-in governance. |
+| **Custom orchestration with agent frameworks** | Frameworks like Microsoft Agent Framework or LangGraph let you build orchestration logic within your infrastructure with complete control over coordination and task execution. | You gain full visibility into decision logic, can debug performance at any layer, and integrate with diverse technology stacks. | Your team must invest significant engineering effort to build and maintain orchestration logic and become responsible for security and compliance. | Organizations requiring advanced customization, multi-cloud flexibility, or deep integration with existing systems. |
 
 :::image type="icon" source="./images/foundry-icon.png"::: **Foundry:** See [Build a workflow](/azure/ai-foundry/agents/concepts/workflow?view=foundry). For hosted agents, see [Workflow orchestrations](/agent-framework/user-guide/workflows/orchestrations/overview) and [AI agent orchestration patterns](/azure/architecture/ai-ml/guide/ai-agent-design-patterns).
 
@@ -86,9 +83,7 @@ In multi-agent systems, orchestration becomes distributed across multiple specia
 
 Agent instructions, also known as system messages, serve as operational guidelines that determine how agents respond and behave. Well-structured instructions ensure agents operate within approved boundaries, comply with regulations, and maintain consistent tone and identity.
 
-For multi-agent systems, assign each agent a specific role such as Planner, Researcher, Executor, or Reviewer. Document what each agent produces and how information flows between agents. Role separation prevents overlapping responsibilities, reduces conflicts, and enables faster troubleshooting.
-
-**Follow these practices for effective agent instructions**:
+For **multi-agent systems**, assign each agent a specific role such as Planner, Researcher, Executor, or Reviewer. Document what each agent produces and how information flows between agents. Role separation prevents overlapping responsibilities, reduces conflicts, and enables faster troubleshooting.
 
 1. **Write clear, structured instructions**. Each agent requires complete guidelines covering these key areas:
 
@@ -124,9 +119,9 @@ Consider quotas and cost implications. Higher-end models often have stricter rat
 
 In **multi-agent systems**, assign models based on role. For example, use a more capable model to interpret user intent, and a simpler model or rule-based logic to execute commands. This approach improves efficiency and ensures each agent contributes effectively to the overall system. Before finalizing model choices, run a small-scale test using sample queries. This testing phase helps validate performance and cost trade-offs in real scenarios. It also supports governance by documenting model behavior and ensuring compliance with internal standards.
 
-:::image type="icon" source="./images/foundry-icon.png"::: **Foundry**: Use [model catalog](https://ai.azure.com/explore/models) to find models aligned with task complexity and cost requirements. Each model in Foundry has specific [usage quotas and pricing](/azure/ai-foundry/foundry-models/quotas-limits).  Always review quota limits in the Azure portal and [request increases to default limits](/azure/ai-foundry/foundry-models/quotas-limits#request-increases-to-the-default-limits), as needed. Evaluate options using [model leaderboards](/azure/ai-foundry/concepts/model-benchmarks) to compare performance and cost trade-offs. For chat-based agents, [configure Model Router](/azure/ai-foundry/openai/concepts/model-router) to dynamically optimize costs while maintaining quality.
+:::image type="icon" source="./images/foundry-icon.png"::: **Foundry**: Use [model catalog](https://ai.azure.com/explore/models) and evaluate model options using [model leaderboards](/azure/ai-foundry/concepts/model-benchmarks?view=foundry-classics) to compare performance and cost trade-offs. For productivity and action agents, use the [Model Router](/azure/ai-foundry/openai/concepts/model-router?view=foundry) to dynamically optimize costs while maintaining quality. Review models' [quotas and limits](/azure/ai-foundry/foundry-models/quotas-limits?view=foundry-classic).  
 
-In **Microsoft Copilot Studio** [choose a primary AI model](/microsoft-copilot-studio/authoring-select-agent-model) from available options. You can [bring your own model](/ai-builder/byom-for-your-prompts) to connect Foundry models for specialized tasks.
+:::image type="icon" source="./images/copilot-studio-icon.png"::: **Copilot Studio**: [Choose a primary AI model](/microsoft-copilot-studio/authoring-select-agent-model) or [bring your own model](/ai-builder/byom-for-your-prompts) from Foundry.
 
 ### 3. Add knowledge and tools
 
