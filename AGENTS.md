@@ -1,29 +1,118 @@
-Help business leaders learn what they need to know to make the right decisions for their organization on this topic. Explain what their options are at each decision point and why business leaders should do or not do something, including tradeoffs of the options and providing best practices. Review the technical accuracy of the article. Seamlessly integrate all information and guidance in prose narrative and ensure a nice flow for clarity and connectedness across all the sections.
+**Purpose:**  
+Reframe existing guidance so it is clear, actionable, technically accurate, and implicitly aligned with the needs of enterprise-level decision makers responsible for architecture, infrastructure, and adoption initiatives. The output should help readers make informed decisions without being overwhelmed.
 
-## Template
-Review all the content to ensure it aligns with the following template. Don't make the content more concise. 
-{
-    # Article title must be descriptive noun phrase
-        The introduction should The introduction should Help business leaders learn what they need to know to make the right decisions for their organization on this topic. Explain what their options are at each decision point and why business leaders should do or not do something, including tradeoffs of the options and providing best practices. Review the technical accuracy of the article. Seamlessly integrate all information and guidance in prose narrative and ensure a nice flow for clarity and connectedness across all the sections.
+***
 
-    ## Use headings to divide the guidance into meaningful sections. When there's multiple steps involved, use numbered bullet points. 
-        These sections should Help business leaders learn what they need to know to make the right decisions for their organization on this topic. Explain what their options are at each decision point and why business leaders should do or not do something, including tradeoffs of the options and providing best practices. Review the technical accuracy of the article. Seamlessly integrate all information and guidance in prose narrative and ensure a nice flow for clarity and connectedness across all the sections.
-}
- 
-## Apply these style and formatting instructions:    
-Replace all gerunds (verbs starting sentences ending in -ing) with more direct and active structures to enhance clarity and engagement.
-Replace all content in the future tense with the present tense.
-Replace all em dashes with alternative punctuation or phrasing to improve readability.
-Add a logical noun referent after all demonstrative pronouns (this, that, these, those) to clarify the subject.
-Convert all passive voice constructions into active voice.
-Replace all instances of 'may' with direct and actionable instructions.
-Replace any emotional or marketing language with precise and descriptive terminology.
-Replace all adverbs with more precise verbs to enhance clarity and directness in the writing.
-Replace 'leverage' or 'leverages' with 'use' or 'uses'.
-Review all images to ensure their content aligns with the written guidance and supports the recommendations.
-Use sentence case for all headers
-Use prose narrative and ensure a nice flow for clarity.
-Replace all —. 
-Don't use any em dashes
-Ensure the guidance is clear and easy to understand.
-Prefer simple sentence structure over complex. 
+#### **Core Objectives**
+
+1.  **Improve clarity and actionability**
+    *   Ensure recommendations are easy to understand and implement.
+    *   Maintain a logical flow across sections.
+
+2.  **Provide decision context**
+    *   Explain *why* each recommendation matters.
+    *   Include trade-offs and implications for organizational outcomes.
+    *   Highlight best practices and rationale behind choices.
+
+3.  **Focus on key concerns**
+    *   Address the most critical considerations for strategic planning, technical reliability, and successful adoption.
+    *   Avoid unnecessary detail; consolidate information into high-value insights.
+
+***
+
+#### **Persona Awareness (Implicit)**
+
+The agent should **consider these priorities without naming roles explicitly**:
+
+*   **Enterprise Architecture Concerns**
+    *   Align technology decisions with business strategy.
+    *   Manage complexity and interoperability.
+    *   Ensure scalability, compliance, and governance.
+    *   Drive modernization and cloud adoption.
+
+*   **Infrastructure Management Concerns**
+    *   Maintain reliability, security, and performance.
+    *   Optimize costs and resource allocation.
+    *   Integrate new technologies without disrupting legacy systems.
+    *   Ensure disaster recovery and business continuity.
+
+*   **Adoption Team Concerns**
+    *   Drive user adoption and engagement.
+    *   Overcome resistance to change.
+    *   Provide effective onboarding and training.
+    *   Measure adoption success and ROI.
+
+**Instruction:**  
+Do **not** create separate sections for these personas or mention them by name. Instead, produce one cohesive set of guidance that implicitly addresses these concerns at the right altitude.
+
+***
+
+#### **Grounding and Accuracy Rules**
+
+*   Use only **information from the provided source content, grounding files, and MCP servers**.
+*   Verify technical accuracy against the grounding data.
+*   If existing recommendations are incorrect or incomplete, **update them based on the grounded information**.
+*   Do **not invent new recommendations** beyond what is supported by the grounding data.
+
+***
+
+#### **Content Rules**
+
+*   **Do not include meta-commentary or implementation notes** (e.g., “I can help you…” or “Here’s the revised content”).
+*   Do **not introduce new recommendations unless correcting inaccuracies or improving clarity based on grounded data**.
+*   **Avoid strings of imperatives**. Each recommendation must:
+    *   Begin with a **clear, concise heading** (imperative or noun phrase).
+    *   Follow with **context and reasoning** that explains:
+        *   Why this matters.
+        *   What trade-offs exist.
+        *   How it supports organizational goals.
+*   Use **headings** for major topics; use **numbered steps** for multi-step processes.
+*   When using numbered lists:
+    *   Format each item as:
+            1. **[Short imperative or noun phrase].**
+               [Explanatory text starts on the next line, indented one level.]
+    *   Ensure the period is inside the bold text.
+    *   Do not keep the explanation on the same line as the heading.
+*   Keep tone **authoritative but advisory**, guiding decision-making rather than commanding.
+*   Avoid:
+    *   Explicit role names.
+    *   Em dashes.
+    *   Emotional or marketing language.
+*   Replace:
+    *   Gerunds with active verbs.
+    *   Future tense with present tense.
+    *   Passive voice with active voice.
+    *   “May” with direct, actionable phrasing.
+    *   “Leverage” with “use.”
+*   Add:
+    *   Clear noun referents after demonstrative pronouns.
+*   Ensure:
+    *   Sentence case for all headers.
+    *   Simple sentence structures.
+    *   Images support and align with guidance.
+    *   Narrative flow is smooth and connected.
+
+***
+
+#### **Template**
+
+    # [Descriptive Noun Phrase Title]
+
+    ## Introduction
+    State the purpose of the guidance and summarize the key decisions and trade-offs.
+
+    ## [Section Heading]
+    Explain the decision point, available options, trade-offs, and best practices. Provide concise, actionable recommendations with supporting rationale.
+
+    ## [Additional Sections as Needed]
+    Follow the same structure for each major topic.
+
+***
+
+### ✅ **Key Principles for Output**
+
+*   Recommendations should **always include reasoning and trade-offs**, not just imperatives.
+*   Keep explanations **focused on top concerns** for the topic.
+*   Provide enough context for informed decisions without overwhelming detail.
+*   Output should look like **final published guidance**, not instructions or commentary.
+
