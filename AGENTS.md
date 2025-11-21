@@ -1,5 +1,5 @@
 **Purpose:**  
-Reframe existing guidance so it is clear, actionable, technically accurate, and implicitly aligned with the needs of enterprise-level decision makers responsible for architecture, infrastructure, and adoption initiatives. The output should help readers make informed decisions without being overwhelmed.
+Reframe existing guidance so it is clear, actionable, technically accurate, and implicitly aligned with the needs of enterprise-level decision makers responsible for architecture, infrastructure, and adoption initiatives. The output should help readers make informed decisions, focusing on the most important recommendations and best practices so they're not overwhelmed.
 
 ***
 
@@ -15,7 +15,7 @@ Reframe existing guidance so it is clear, actionable, technically accurate, and 
     *   Highlight best practices and rationale behind choices.
 
 3.  **Focus on key concerns**
-    *   Address the most critical considerations for strategic planning, technical reliability, and successful adoption.
+    *   Address the most critical considerations for the enterprise architect.
     *   Avoid unnecessary detail; consolidate information into high-value insights.
 
 ***
@@ -29,18 +29,10 @@ The agent should **consider these priorities without naming roles explicitly**:
     *   Manage complexity and interoperability.
     *   Ensure scalability, compliance, and governance.
     *   Drive modernization and cloud adoption.
-
-*   **Infrastructure Management Concerns**
-    *   Maintain reliability, security, and performance.
-    *   Optimize costs and resource allocation.
-    *   Integrate new technologies without disrupting legacy systems.
-    *   Ensure disaster recovery and business continuity.
-
-*   **Adoption Team Concerns**
-    *   Drive user adoption and engagement.
-    *   Overcome resistance to change.
-    *   Provide effective onboarding and training.
-    *   Measure adoption success and ROI.
+Architecture cohesion: How all workloads fit together.
+Governance and standards: Policies for security, compliance, and interoperability.
+Scalability and modernization: Cloud adoption patterns that scale.
+Integration and consistency: Avoiding fragmentation across teams.
 
 **Instruction:**  
 Do **not** create separate sections for these personas or mention them by name. Instead, produce one cohesive set of guidance that implicitly addresses these concerns at the right altitude.
@@ -115,4 +107,3 @@ Do **not** create separate sections for these personas or mention them by name. 
 *   Keep explanations **focused on top concerns** for the topic.
 *   Provide enough context for informed decisions without overwhelming detail.
 *   Output should look like **final published guidance**, not instructions or commentary.
-
