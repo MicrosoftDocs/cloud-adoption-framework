@@ -1,7 +1,7 @@
 ---
-title: Build and Secure AI Agents with Foundry and Copilot
+title: Build AI Agents with Foundry and Copilot
 ms.reviewer: ssumner
-description: Learn how to build and secure AI agents using Foundry Agent Service and Microsoft Copilot Studio. Follow a strategic framework for consistent, governed development.
+description: Learn how to build and secure AI agents using Foundry and Microsoft Copilot Studio. Follow a strategic framework for consistent, governed development.
 #customer intent: As a technical decision maker, I want to understand the prerequisites for building AI agents so that I can establish a secure and well-governed foundation.
 author: stephen-sumner
 ms.author: pnp
@@ -11,7 +11,7 @@ ms.topic: conceptual
 ms.collection: ce-skilling-ai-copilot
 ---
 
-# Build and secure AI agents
+# Build AI agents
 
 This article provides a strategic framework for technical decision makers to build agents in Foundry Agent Service and Microsoft Copilot Studio. Use this guidance to establish standards and help your organization succeed with AI agents.
 
