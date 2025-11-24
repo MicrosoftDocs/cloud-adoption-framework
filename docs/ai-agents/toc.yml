@@ -26,7 +26,5 @@ items:
         href: single-multi-agent-systems.md
       - name: Build and secure agents
         href: build-secure.md
-  - name: 4. Integrate agents
-    href: integrate-organization.md
-  - name: 5. Measure agents
-    href: measure-impact.md
+  - name: 4. Operate agents
+    href: operate-manage.md
