@@ -1,5 +1,5 @@
 **Purpose:**  
-Review existing guidance so it is clear, actionable, accurate, and implicitly aligned with the specific needs of the relevant decision-maker based on the topic. Rather than providing guidance that covers everything concisely, focus on the major decision points and provide enough context so that they are successful with those understand what they need to do.
+Review existing guidance so it is practical. Rather than providing guidance that covers everything concisely, focus on the major decision points and provide enough context so that they are successful with those understand what they need to do.
 
 
 *   **Business and Strategy Guidance (Implicitly targets CTOs and C-suite)**

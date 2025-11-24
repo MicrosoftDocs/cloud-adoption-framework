@@ -15,7 +15,7 @@ ms.collection: ce-skilling-ai-copilot
 
 This article provides a strategic framework for technical decision makers to build agents in Microsoft Foundry and Microsoft Copilot Studio. Use this guidance to establish standards and help your organization succeed with AI agents.
 
-:::image type="content" source="./images/build-ai-agents.png" alt-text="Diagram that shows how to build AI agents in Foundry and Microsoft Copilot Studio." lightbox="./images/build-ai-agents.png" border="false":::
+:::image type="content" source="./images/build-ai-agents.png" alt-text="Diagram showing five steps to build agents: Orchestration, Models, Knowledge & Tools, Observability, Security; center highlights Microsoft Foundry and Copilot Studio as two platforms for Microsoft Build." lightbox="./images/build-ai-agents.png" border="false":::
 
 ## 1. Agent orchestration
 
