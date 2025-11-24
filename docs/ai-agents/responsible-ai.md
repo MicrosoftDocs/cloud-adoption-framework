@@ -10,7 +10,7 @@ ms.topic: conceptual
 
 # Responsible AI policy for AI agents
 
-Responsible AI defines how an organization designs and operates AI systems to uphold ethical standards, ensure transparency, and maintain accountability. This policy applies to every AI agent, regardless of complexity or visibility. Establishing a clear policy ensures that AI adoption aligns with organizational values and regulatory requirements while mitigating reputational and operational risks. The primary decision involves balancing the speed of innovation with the rigor of governance; a well-structured policy enables faster, safer innovation by providing clear guardrails rather than bureaucratic hurdles.
+Responsible AI defines how an organization designs and operates AI systems to uphold ethical standards, ensure transparency, and maintain accountability. This policy applies to every AI agent, regardless of complexity or visibility. Establishing a clear policy ensures that AI adoption aligns with organizational values and regulatory requirements while mitigating reputational and operational risks. The primary decision involves balancing the speed of innovation with the rigor of governance. A well-structured policy enables faster, safer innovation by providing clear guardrails rather than bureaucratic hurdles.
 
 :::image type="content" source="./images/responsible-ai.png" alt-text="Diagram that shows Microsoft's responsible AI pillars." lightbox="./images/responsible-ai.png" border="false":::
 
