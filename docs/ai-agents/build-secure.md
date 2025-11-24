@@ -19,146 +19,101 @@ This article provides a strategic framework for technical decision makers to bui
 
 ## 1. Agent orchestration
 
-Establish a strategic foundation before development begins. Define system requirements, select technology platforms, and structure agent behavior to ensure agents deliver value while remaining secure and compliant.
+Establish a strategic foundation before development begins. Enterprise architects must define system requirements, select technology platforms, and structure agent behavior to ensure agents deliver value while remaining secure and compliant.
 
-### 1.1 Define system requirements
+### 1.1 Platform and environment strategy
 
-Create an agent charter that documents what the agent system does, how it supports business objectives, and what it must not do. Your charter must specify:
+Standardize the environment and governance artifacts before building AI agents. Proper setup reduces deployment delays, ensures compliance, and simplifies scaling as agent adoption grows.
 
-- **System responsibilities**: Identify what the solution accomplishes and how it advances business objectives.
-- **Single or multi-agent approach**: Single-agent systems offer simplicity. Multi-agent systems enable specialization but require complex orchestration.
-- **Technology platform**: Choose between Foundry, Copilot Studio, or custom frameworks based on control, ease of use, and integration needs.
-- **Agent roles**: Define what each agent does to prevent overlap and ensure accountability.
-- **Prohibited actions**: Specify what the system must not do to avoid compliance or security violations.
+1.  **Define the Agent Charter.** Create a governance artifact that documents what the agent system does, how it supports business objectives, and what it must not do. The charter must specify:
+    *   **System responsibilities:** Identify what the solution accomplishes and how it advances business objectives.
+    *   **Agent roles:** Define what each agent does to prevent overlap and ensure accountability.
+    *   **Prohibited actions:** Specify what the system must not do to avoid compliance or security violations.
 
-Align the scope with business objectives and validate the charter with your Responsible AI, security, and operational teams before deployment.
+2.  **Select the technology platform.** Choose between Foundry, Copilot Studio, or custom frameworks based on control, ease of use, and integration needs. See [Technology plan](./technology-plan.md) for more information on platform selection.
 
-### 1.2 Set up your environment
+    :::image type="icon" source="./images/foundry-icon.png"::: **Foundry**: Use for scenarios requiring deep customization or pro-code control. Use [prompt-based agents](/azure/ai-foundry/agents/concepts/development-lifecycle?view=foundry#types-of-agents) for rapid development or [hosted agents](/azure/ai-foundry/agents/concepts/hosted-agents?view=foundry) for advanced orchestration. Apply the Well-Architected Framework principles for [AI workloads](/azure/well-architected/ai/) and start with the [AI landing zone](https://github.com/Azure/AI-Landing-Zones).
 
-Establish a secure foundation before building AI agents. Proper environment setup reduces deployment delays and compliance violations. This investment also simplifies scaling as agent adoption grows across your organization. This foundation includes infrastructure, governance frameworks, and compliance controls that support reliable and scalable agent operations.
+    :::image type="icon" source="./images/copilot-studio-icon.png"::: **Copilot Studio**:  Use for SaaS integration and low-code extensibility. [Verify licensing](/microsoft-copilot-studio/requirements-licensing-subscriptions) and [configure environments](/microsoft-copilot-studio/environments-first-run-experience) to separate development, testing, and production workloads.
 
-:::image type="icon" source="./images/foundry-icon.png"::: **Foundry**: Start with the [AI landing zone](https://github.com/Azure/AI-Landing-Zones)reference architecture. It provides a tested baseline for infrastructure, governance, and compliance controls. Adopting this model reduces design complexity and ensures alignment with enterprise standards. Customize the landing zone to meet organizational requirements while maintaining consistency across environments. See also [Set up your Foundry environment](/azure/ai-foundry/agents/environment-setup?view=foundry). Use a [Bring Your Own (BYO)](/azure/ai-foundry/agents/how-to/use-your-own-resources?view=foundry) approach when connecting AI agents to existing infrastructure. This strategy keeps agents within established governance boundaries, ensuring compliance and cost optimization. BYO integration also supports continuity by leveraging existing security and monitoring frameworks. Isolated deployments create governance gaps and increase operational overhead. BYO integration aligns AI workloads with enterprise policies from day one.
+### 1.2 Orchestrator selection
 
-- **Low-code approach with prompt-based agents**: Use [prompt-based agents](/azure/ai-foundry/agents/concepts/development-lifecycle?view=foundry#types-of-agents) to build agents without extensive coding. This approach accelerates development and allows business stakeholders to participate in agent design.
-
-- **Pro-code approach with hosted agents**: Use [hosted agents](/azure/ai-foundry/agents/concepts/hosted-agents?view=foundry) for advanced scenarios that require custom orchestration logic and detailed control over agent behavior. Apply the Well-Architected Framework principles for [AI workloads](/azure/well-architected/ai/).
-
-:::image type="icon" source="./images/copilot-studio-icon.png"::: **Copilot Studio**: First [verify licensing and access requirements](/microsoft-copilot-studio/requirements-licensing-subscriptions). Then [configure environments](/microsoft-copilot-studio/environments-first-run-experience) to separate development, testing, and production workloads.
-
-### 1.3 Choose agent orchestration
-
-Orchestration determines how agents coordinate, make decisions, and execute tasks. Single-agent setups simplify oversight and deliver reliable performance. The agent manages its own decision-making, selects appropriate tools, sequences actions, and remembers context.
-
-Multi-agent systems distribute orchestration across specialized agents. Each agent focuses on specific tasks, uses relevant tools, and communicates with other agents to share information and coordinate actions. Structured orchestration prevents communication breakdowns, circular dependencies, and conflicting instructions.
-
-Choose between two primary orchestration approaches:
+Orchestration determines how agents coordinate, make decisions, and execute tasks. Select an orchestration pattern that balances complexity with control. Choose between managed and custom orchestration frameworks based on organizational capability and requirements:
 
 | Approach | Benefits | Tradeoffs |
-|----------|----------|-----------|
+| :--- | :--- | :--- |
 | **Managed orchestration** (Foundry Agent Service) | Quick deployment, built-in security, enterprise connectors | Limited customization, reduced transparency |
 | **Agent orchestration frameworks** (Microsoft Agent Framework, LangGraph) | Complete control, full visibility, multi-cloud flexibility | Significant engineering effort, compliance responsibility |
 
-Organizations that prioritize rapid deployment and built-in governance benefit from managed orchestration. Organizations that require advanced customization, multi-cloud flexibility, or deep integration with existing systems benefit from custom orchestration.
+:::image type="icon" source="./images/foundry-icon.png"::: **Foundry**: For managed orchestration, see [Build a workflow](/azure/ai-foundry/agents/concepts/workflow?view=foundry).
 
-:::image type="icon" source="./images/foundry-icon.png"::: **Foundry**: See [Build a workflow](/azure/ai-foundry/agents/concepts/workflow?view=foundry). For hosted agents, see [Workflow orchestrations](/agent-framework/user-guide/workflows/orchestrations/overview) and [AI agent orchestration patterns](/azure/architecture/ai-ml/guide/ai-agent-design-patterns).
+:::image type="icon" source="./images/microsoft-agent-framework-icon.png"::: **Microsoft Agent Framework**: For hosted agents, see [workflow orchestrations](/agent-framework/user-guide/workflows/orchestrations/overview) and [AI agent orchestration patterns](/azure/architecture/ai-ml/guide/ai-agent-design-patterns).
 
-:::image type="icon" source="./images/copilot-studio-icon.png"::: **Copilot Studio**: For multi-agent systems, [set up agent flows](/microsoft-copilot-studio/flows-overview) with distinct roles and approval checkpoints. [Configure agent behavior](/microsoft-copilot-studio/advanced-generative-actions) by orchestrating with generative AI. For critical operations, use [multistage and AI approvals](/microsoft-copilot-studio/flows-advanced-approvals) to enforce deterministic decision gates.
+:::image type="icon" source="./images/copilot-studio-icon.png"::: **Copilot Studio**: For multi-agent systems, [set up agent flows](/microsoft-copilot-studio/flows-overview) with distinct roles and approval checkpoints. [Configure agent behavior](/microsoft-copilot-studio/advanced-generative-actions) by orchestrating with generative AI.
 
-### 1.4 Define agent behavior
+### 1.3 Agent instructions
 
-Agent instructions act as operational guardrails that shape how agents respond, interact, and comply with organizational policies. Well-defined behavior ensures consistency, regulatory alignment, and predictable outcomes across single-agent and multi-agent systems. Poorly structured instructions lead to compliance gaps, unclear responsibilities, and operational risk.
+Agent instructions act as operational guardrails that shape how agents respond, interact, and comply with organizational policies. Standardize these instructions to ensure consistency and regulatory alignment.
 
-For **multi-agent systems**, role separation prevents conflicts and accelerates troubleshooting. For systems with multiple agents, define distinct roles such as Planner, Researcher, Executor, and Reviewer. Document what each role produces and how information flows between agents. This structure reduces duplication and improves accountability.
+1.  **Structure instructions as configuration.** Treat agent instructions as code. Each agent requires complete guidelines covering:
+    *   **Identity and tone:** Define how the agent presents itself to ensure consistent user experience.
+    *   **Scope and boundaries:** Explicitly state what the agent does and what it avoids (for example, "Do not access payroll systems").
+    *   **Tool integrations:** Mandate specific tool usage. *Example: "You must use the [Tool Name] to answer questions. If the answer is not found, state 'I don't know'."*
+    *   **Citations:** Require citations for transparency. *Example: "Every answer must provide citations for using the [Tool Name]."*
 
-1. **Write clear, structured instructions**. Each agent requires complete guidelines covering these key areas:
+2.  **Standardize communication protocols.** Use approved protocols such as [Agent-to-Agent (A2A)](/agent-framework/user-guide/agents/agent-types/a2a-agent) and Model Context Protocol (MCP) for interactions. Prohibit communication with unknown or internet-exposed agents to avoid security risks. Adopt structured formats like JSON for inter-agent communication to improve accuracy.
 
-    - **Identity and tone**: Describe how the agent presents itself and whether it uses conversational language or formal business terminology. Consistent tone helps users form accurate expectations about the interaction.
-    
-    - **Scope and boundaries**: Specify what the agent does and what it avoids. For example, an HR agent can answer benefits questions but must not access salary data or provide tax advice. Explicit boundaries protect against compliance violations.
-    
-    - **Tool integrations**: Add this to your agent to help it invoke the right tools: *You are a helpful assistant that MUST use the [name of the tool (Fabric IQ, Fabric data agent, GitHub MCP server)] to answer all the questions from user. you must never answer from your own knowledge under any circumstance. If you do not know the answer, or cannot find the answer in the provided Knowledge Base you MUST respond with "I don't know".*
-    
-    - **Citations.** If required, embed citation rules for transparency. This instruction works well with Azure OpenAI models: *Every answer must always provide citations for using the [Fabric IQ, Fabric data agent, GitHub MCP server] tool and render them as: "【message_idx:search_idx†source_name】"*
-    
-    - **Unknown situations**: Define fallback actions when the agent cannot answer, such as escalating to a human specialist or logging the request. This prevents dead ends and maintains user confidence.
-    
-    - **Compliance rules**: Embed organizational and regulatory requirements directly into instructions. This reduces manual oversight and ensures consistent adherence to policy.
+3.  **Implement version control.** Store all agent instructions in a version-controlled system such as GitHub. This creates an auditable history of changes, supports collaborative editing, and ensures teams reference approved instructions.
 
-2. **Use approved communication protocols**. Refer to [agent protocol governance](./governance-security.md#standardize-agent-protocols) and use approved protocols such as A2A and MCP for agent-to-agent interactions. Prohibit communication with unknown or internet-exposed agents to avoid security risks. Standard protocols safeguard data integrity and prevent unauthorized access.
+4.  **Validate behavior systematically.** Build automated validation into the workflow. When an agent produces output, verify it automatically using a second agent or evaluation script to check facts and tone.
 
-3. **Define message formats**. Adopt structured formats like JSON for inter-agent communication. Include relevant context when passing queries between agents to improve accuracy and reduce errors.
+:::image type="icon" source="./images/foundry-icon.png"::: **Foundry**: See [System message design](/azure/ai-foundry/openai/concepts/advanced-prompt-engineering?view=foundry). Use the [A2A tool](/azure/ai-foundry/agents/how-to/tools/agent-to-agent?view=foundry&pivots=python) and [Foundry playground](/azure/ai-foundry/concepts/concept-playgrounds?view=foundry). Test and refine behavior using [agent evaluators](/azure/ai-foundry/concepts/evaluation-evaluators/agent-evaluators?view=foundry).
 
-4. **Set boundaries on conversations**. Restrict how many times agents can interact per task to prevent infinite loops and ensure timely resolution. These boundaries protect system resources and maintain user satisfaction.
+## 2. Agent model selection strategy
 
-5. **Build validation into every agent**. Quality control must be automatic and systematic. When an agent produces output, verify it automatically. For example, if an agent drafts a response, run it through a second agent that checks facts and tone. Allocate equal or greater effort to validation as you do to generation. This practice maintains quality standards and protects your brand reputation.
+Define a strategy for model selection that balances performance, cost, and compliance. Do not default to the largest models. Instead, evaluate task complexity and establish standards that align model capabilities with specific requirements.
 
-6. **Manage instructions with version control**. Store all agent instructions in a version-controlled system such as GitHub. Version control creates an auditable history of changes, supports collaborative editing, and ensures teams reference approved instructions. This practice supports compliance audits and reduces configuration errors.
+In multi-agent architectures, define policies for assigning distinct models to specific agents based on their roles. Use capable models for orchestration and reasoning while utilizing cost-effective models for routine execution. This tiered approach optimizes efficiency and ensures architectural cohesion.
 
-Test instructions thoroughly before deployment to validate behavior against sample queries. Testing reveals gaps in instructions and prevents costly mistakes in production environments.
+1. **Match model capabilities to task complexity.** Establish guidelines that map workload types to appropriate model classes. Use smaller, optimized models for routine tasks like summarization to control costs and latency. Reserve premium models for high-value scenarios requiring complex reasoning or multi-step analysis.
 
-:::image type="icon" source="./images/foundry-icon.png"::: **Foundry**: See [System message design](/azure/ai-foundry/openai/concepts/advanced-prompt-engineering?view=foundry) and [prompt engineering techniques](/azure/ai-foundry/openai/concepts/prompt-engineering?view=foundry). Use the [A2A tool](/azure/ai-foundry/agents/how-to/tools/agent-to-agent?view=foundry&pivots=python) and [Foundry playground](/azure/ai-foundry/concepts/concept-playgrounds?view=foundry). Test and refine behavior using [agent evaluators](/azure/ai-foundry/concepts/evaluation-evaluators/agent-evaluators?view=foundry). See [Foundry tool best practices](/azure/ai-foundry/agents/concepts/tool-best-practice?view=foundry).
+2. **Enforce quota and cost governance.** High-end models impose stricter rate limits and higher costs. To prevent budget overruns and service interruptions, diversify model usage across workloads and restrict premium model allocation to tasks that justify the investment.
 
-In the Microsoft Agent Framework, see [A2A agents](/agent-framework/user-guide/agents/agent-types/a2a-agent).
+3. **Mandate validation prior to deployment.** Require small-scale testing with representative queries before standardizing on a model. This validation documents performance trade-offs and ensures the selected model complies with internal governance standards.
 
-:::image type="icon" source="./images/copilot-studio-icon.png"::: **Copilot Studio**: For multi-agent systems, [set up agent flows](/microsoft-copilot-studio/flows-overview) with distinct roles and approval checkpoints.
-
-### 2. Agent model selection
-
-Selecting the right model for each task is critical for balancing performance, cost, and compliance. Do not default to the largest or most expensive model. Instead, evaluate the complexity and importance of the task and choose a model that meets those requirements.
-
-In **multi-agent systems**, each agent can use a different model. Assign models based on the agent’s role. Use a more capable model for interpreting user intent or orchestrating complex decisions. Use simpler models or rule-based logic for executing commands or performing predictable steps. This approach improves efficiency and ensures each agent contributes effectively to the overall system.
-
-1. **Match model to task complexity.** Smaller models often deliver sufficient performance for internal workflows while reducing cost and latency. For routine tasks such as summarization, drafting, or FAQ-style responses, use models optimized for speed and cost. Reserve premium models for complex, high-value scenarios that require deep reasoning, multi-step analysis, or tool-rich workflows.
-
-2. **Consider quotas and cost implications.** High-end models typically have stricter rate limits and higher costs. Using them for all tasks can lead to quota exhaustion and budget overruns. To optimize availability and cost:
-
-    - Diversify model selection across workloads.
-    - Use smaller models for routine or internal workflows.
-    - Assign premium models only to tasks that justify their cost and latency.
-
-3. **Validate choices through testing.** Before finalizing model selection, run small-scale tests with representative queries. Testing validates performance and cost trade-offs in real scenarios and supports governance by documenting model behavior and compliance with internal standards.
-
-:::image type="icon" source="./images/foundry-icon.png"::: **Foundry**: Use [model catalog](https://ai.azure.com/explore/models) and evaluate model options using [model leaderboards](/azure/ai-foundry/concepts/model-benchmarks?view=foundry-classics) to compare performance and cost trade-offs. For productivity and action agents, use the [Model Router](/azure/ai-foundry/openai/concepts/model-router?view=foundry) to dynamically optimize costs while maintaining quality. Review models' [quotas and limits](/azure/ai-foundry/foundry-models/quotas-limits?view=foundry-classic).  
+:::image type="icon" source="./images/foundry-icon.png"::: **Foundry**: Use [model catalog](https://ai.azure.com/explore/models) and evaluate model options using [model leaderboards](/azure/ai-foundry/concepts/model-benchmarks?view=foundry-classics) to compare performance and cost trade-offs. For productivity and action agents, use the [Model Router](/azure/ai-foundry/openai/concepts/model-router?view=foundry) to dynamically optimize costs while maintaining quality. Review models' [quotas and limits](/azure/ai-foundry/foundry-models/quotas-limits?view=foundry-classic).
 
 :::image type="icon" source="./images/copilot-studio-icon.png"::: **Copilot Studio**: [Choose a primary AI model](/microsoft-copilot-studio/authoring-select-agent-model) or [bring your own model](/ai-builder/byom-for-your-prompts) from Foundry.
 
-### 3. Add knowledge and tools
+## 3. Agent knowledge and tools
 
-To ensure AI agents operate securely, deliver accurate results, and align with business goals, organizations must define how agents access data and perform actions. This step shapes the agent’s reliability, compliance posture, and operational risk. It also determines how effectively agents contribute to business outcomes. **Follow all [data governance and compliance policies](./governance-security.md#data-governance-and-compliance).**
+Organizations must define standards for how agents access data and perform actions. These policies determine the agent’s reliability, compliance posture, and operational risk. **Follow all [data governance and compliance policies](./governance-security.md#data-governance-and-compliance).**
 
-### 3.1 Add agent knowledge
+### 3.1 Agent knowledge
 
-Agents require access to validated information sources to answer questions and support decisions. Your organization must define which data sources agents access, how agents authenticate to those sources, and what happens when agents encounter information they cannot retrieve. These decisions directly affect agent reliability, security posture, and compliance with data governance policies.
+Ensure the [data governance](./governance-security.md#data-governance-and-compliance) policies you defined are enforced. Review the [Data plan for AI agents](./data-plan.md) to align integration strategies with organizational security requirements.
 
-Start by reviewing the [Data plan for AI agents](./data-plan.md) to understand the tradeoffs between different data integration approaches and to align agent knowledge with your organization's security and compliance requirements.
-
-**Restrict agents to approved data sources.** Agents retrieve information only from validated and authorized repositories. For example, an HR agent references official policy documents and benefits guides but does not access payroll systems or confidential employee records. Public-facing agents use only publicly available information to prevent exposure of internal data. Verify all knowledge bases before deployment to confirm they contain no confidential or sensitive information.
-
-**Apply least-privilege access to each agent.** Configure each agent to authenticate using managed identities with permissions scoped to specific tasks. Use Azure Role-Based Access Control (RBAC) to grant the minimum access necessary for the agent to perform its function. For example, an agent that retrieves product documentation has read-only access to a specific container or folder rather than broad permissions across storage accounts. Avoid assigning roles like "Reader" or "Contributor" unless the agent's responsibilities require that scope. Least-privilege access reduces the attack surface and limits potential damage if credentials become compromised.
-
-**Define how agents respond to information gaps.** Agents encounter situations where they cannot find an answer or access a required resource. Establish a standard response for these scenarios. The agent acknowledges the limitation, provides a clear explanation, and suggests escalation to a human specialist. Log all instances where agents fail to retrieve information. This logging identifies gaps in knowledge coverage, highlights data access issues, and supports continuous improvement.
-
-**Segment knowledge by agent role in multi-agent systems.** Assign each agent access to the knowledge sources relevant to its role. For example, a benefits agent accesses HR documentation while a technical support agent retrieves product manuals and troubleshooting guides. This segmentation reduces complexity, improves response accuracy, and limits the scope of access for each agent.
+Segment knowledge by role. In multi-agent systems, restrict data access based on the specific function of each agent. Segmentation reduces complexity and limits the potential exposure of sensitive information.
 
 :::image type="icon" source="./images/foundry-icon.png"::: **Foundry**: Connect agents to [Foundry IQ](/azure/ai-foundry/agents/how-to/tools/knowledge-retrieval?view=foundry&tabs=foundry%2Cpython) to combine multiple data sources behind an agentic retrieval engine while maintaining governance controls.
 
 :::image type="icon" source="./images/copilot-studio-icon.png"::: **Copilot Studio**: Use [knowledge sources](/microsoft-copilot-studio/knowledge-copilot-studio) to connect agents to approved information repositories and [connectors](/microsoft-copilot-studio/advanced-connectors) to integrate with enterprise systems securely.
 
-### 3.2 Agent tools for actions
+### 3.2 Agent tools
 
-Agents perform tasks such as creating support tickets, scheduling meetings, or triggering workflows. Organizations must define approved actions and secure the tools that execute them. This approach prevents unauthorized system access and ensures agents operate within business and compliance boundaries.
+Agents performing tasks, such as triggering workflows or modifying records, require strict governance to prevent unauthorized system access. Define approved actions and secure the tools that execute them to ensure operations remain within compliance boundaries.
 
-1. **Define tool usage in agent instructions.** Specify when and how each agent uses tools. Most frameworks support tool definitions with usage instructions. For example, when a user requests a password reset, the agent calls the `ResetPassword` API with the username. The agent confirms action details and requests user permission before execution. This confirmation step prevents unintended actions and ensures agents act only when authorized.
+1. **Codify tool usage policies.** Explicitly define in the instructions when and how agents are permitted to use tools. Instructions must mandate that agents confirm action details and request user permission before execution to prevent unintended consequences.
 
-2. **Require human approval for sensitive actions.** Define when agents act independently and when they escalate to human support. Use business context to guide escalation rather than confidence scores alone. Allow agents to handle routine inquiries but escalate complex or sensitive issues. This approach balances efficiency with risk management and improves user satisfaction.
+2. **Mandate human approval for sensitive actions.** Specify when and how each agent uses tools. Most frameworks support tool definitions with usage instructions. For example, when a user requests a password reset, the agent calls the `ResetPassword` API with the username. The agent confirms action details and requests user permission before execution. This confirmation step prevents unintended actions and ensures agents act only when authorized.
 
-3. **Expose specific actions through secure APIs or connectors.** Provide narrowly scoped endpoints instead of broad system access. For example, expose a function like `createSupportTicket` with structured input parameters rather than allowing direct database access. This design keeps operations controlled and auditable.
+3. **Secure integration endpoints.** Expose actions through narrowly scoped APIs rather than direct system access. Define structured input parameters to keep operations controlled and auditable.
 
-4. **Apply least privilege to agent credentials and tokens.** Grant credentials or tokens the minimum permissions required for each action. If an agent creates tickets, its token must not delete them. If it sends emails, restrict it to a no-reply account. Scoped tokens reduce misuse risk and limit damage if credentials become compromised.
+4. **Restrict credential scope.** Apply least-privilege principles to agent credentials and tokens. Ensure tokens are scoped strictly to the required action (for example, read-only versus write access) to reduce misuse risk.
 
-5. **Test agent actions in isolation before deployment.** Simulate each agent's action triggers in a test environment. Validate that the correct agent initiates the action, the action performs as expected, all required fields are populated, and no unintended side effects occur. Testing reveals gaps in logic and prevents costly errors in production.
+5. **Require isolated testing.** Mandate that all agent actions be validated in a test environment before deployment. Verify that actions perform as expected without side effects to prevent operational errors in production.
 
-6. **Log all actions with agent attribution.** Maintain detailed logs for every action, including which agent initiated it, what the action was, and who the action affected. For example, log that Agent C triggered a password reset for user X on behalf of user Y. This logging supports auditing, debugging, and accountability. Failed action logs identify improvement opportunities and inform agent refinement.
+6. **Standardize action attribution.** Enforce detailed logging for every action, capturing the initiating agent, the specific operation, and the affected user. This attribution is essential for auditing, debugging, and accountability.
 
 :::image type="icon" source="./images/foundry-icon.png"::: **Foundry**: Use [tools](/azure/ai-foundry/agents/concepts/tool-catalog?view=foundry) and [tool best practices](/azure/ai-foundry/agents/concepts/tool-best-practice?view=foundry). Use an [AI gateway](/azure/ai-foundry/agents/how-to/tools/governance?view=foundry) for tool governance.
 
@@ -184,29 +139,27 @@ Organizations must define what data agents retain, how long they store it, and w
 
 :::image type="icon" source="./images/copilot-studio-icon.png"::: **Copilot Studio**: [Analyze agent effectiveness](/microsoft-copilot-studio/analytics-improve-agent-effectiveness) to identify optimization opportunities. Review [user questions by theme](/microsoft-copilot-studio/analytics-themes) to discover patterns and refine responses.
 
-## 4. Observe and optimize
+## 4. Agent observability
 
 Observability ensures agents operate reliably, meet performance expectations, and align with organizational standards. Implement monitoring and telemetry early to detect issues, optimize workflows, and maintain system health across your agent fleet.
 
 :::image type="content" source="./images/governance-security.png" alt-text="Diagram that shows how to govern." lightbox="./images/governance-security.png" border="false":::
 
-:::image type="icon" source="./images/foundry-icon.png"::: **Foundry**: Use the [Microsoft Foundry Control Plane](/azure/ai-foundry/control-plane/overview?view=foundry) for unified visibility and governance across your agent fleet.
+:::image type="icon" source="./images/foundry-icon.png"::: **Foundry**: Use the [Microsoft Foundry Control Plane](/azure/ai-foundry/control-plane/overview?view=foundry) for unified visibility and governance across your agent fleet. 
+    
+1. **Agents and workflows.** Configure [traces](/azure/ai-foundry/observability/concepts/trace-agent-concept?view=foundry) for execution visibility to provide the context needed to diagnose issues and improve agent logic. Establish expected ranges for latency, cost, and success rates. Alert teams when agents operate outside these baselines to enable rapid investigation and remediation. Configure [monitoring](/azure/ai-foundry/agents/how-to/metrics?view=foundry) for Foundry instances and all projects Use [agent evaluators](/azure/ai-foundry/concepts/evaluation-evaluators/agent-evaluators?view=foundry) to measure quality. See [Agent Monitoring Dashboard](/azure/ai-foundry/agents/how-to/how-to-monitor-agents-dashboard?view=foundry).
 
-Define standards for collecting logs, metrics, and alerts from all agent instances. Send telemetry to centralized repositories such as Azure Log Analytics Workspace or storage accounts. This centralized approach enables enterprise visibility, supports compliance audits, and simplifies troubleshooting across teams. Configure [monitoring](/azure/ai-foundry/agents/how-to/metrics?view=foundry) for Foundry instances and all projects.
+2. **Models.** [Monitor models](/azure/ai-foundry/foundry-models/how-to/monitor-models?view=foundry) and use [evaluations](/azure/ai-foundry/concepts/observability?view=foundry#what-are-evaluators) to measure the quality, safety, and reliability of AI responses from deployed models.
 
-1. **User traces.** Track agent execution with complete visibility into inputs, outputs, tool usage, latencies, and costs. This telemetry reveals performance patterns, identifies optimization opportunities, and supports cost management. Configure [traces](/azure/ai-foundry/observability/concepts/trace-agent-concept?view=foundry) for execution visibility to provide the context needed to diagnose issues and improve agent logic. Establish expected ranges for latency, cost, and success rates. Alert teams when agents operate outside these baselines to enable rapid investigation and remediation. Use [agent evaluators](/azure/ai-foundry/concepts/evaluation-evaluators/agent-evaluators?view=foundry) to measure quality. See [Agent Monitoring Dashboard](/azure/ai-foundry/agents/how-to/how-to-monitor-agents-dashboard?view=foundry).
-
-2. **Use evaluations.** Create a shared set of evaluations that apply consistent quality standards across all model deployments and agent versions. Evaluations provide a structured way to assess how well AI agents perform and how safely they behave. These assessments use standardized metrics to compare different versions of an agent and determine which one best meets business needs. Leadership must ensure that evaluation practices become part of the organization's broader quality assurance strategy. Build and store evaluations in the [evaluator catalog](/azure/ai-foundry/concepts/evaluation-evaluators/agent-evaluators?view=foundry). Have teams use [continuous evaluation](https://learn.microsoft.com/en-us/azure/ai-foundry/how-to/continuous-evaluation-agents?view=foundry). Integrate evaluations into CI/CD pipelines using [GitHub Actions](/azure/ai-foundry/how-to/evaluation-github-action?tabs=foundry-project) or [Azure DevOps](/azure/ai-foundry/how-to/evaluation-azure-devops?tabs=foundry-project).
-
-3. **Conduct adversarial testing and red teaming.** Security testing must extend beyond traditional penetration tests. AI agents require specialized adversarial testing to simulate attacks that exploit their unique vulnerabilities. These tests include attempts to manipulate agent behavior through deceptive prompts or malicious inputs. Organizations must direct their teams to run these tests regularly and integrate them into release cycles. Teams can use dedicated [AI Red Teaming Agent](/azure/ai-foundry/how-to/develop/run-scans-ai-red-teaming-agent) to scan applications for safety and security issues.
+3. **Evaluations.** Create a shared set of [evaluations](/azure/ai-foundry/concepts/evaluation-evaluators/agent-evaluators?view=foundry) that apply consistent quality standards across all model deployments and agent versions. Build and store evaluations in the [evaluator catalog](/azure/ai-foundry/concepts/evaluation-evaluators/agent-evaluators?view=foundry). Have teams use [continuous evaluation](/azure/ai-foundry/how-to/continuous-evaluation-agents?view=foundry). Integrate evaluations into CI/CD pipelines using [GitHub Actions](/azure/ai-foundry/how-to/evaluation-github-action?tabs=foundry-project) or [Azure DevOps](/azure/ai-foundry/how-to/evaluation-azure-devops?tabs=foundry-project).Security testing must extend beyond traditional penetration tests. Teams can use dedicated [AI Red Teaming Agent](/azure/ai-foundry/how-to/develop/run-scans-ai-red-teaming-agent) to scan applications for safety and security issues.
 
 :::image type="icon" source="./images/copilot-studio-icon.png"::: **Copilot Studio**: Use [analytics](/microsoft-copilot-studio/analytics-overview) and [connect to Azure Application Insights](/microsoft-copilot-studio/advanced-bot-framework-composer-capture-telemetry) for centralized telemetry. [Create test sets for evaluations](/microsoft-copilot-studio/analytics-agent-evaluation-create), [Security and governance guidance](/microsoft-copilot-studio/security-and-governance), [automatic security scans](/microsoft-copilot-studio/security-scan), and verify [agent runtime protection status](/microsoft-copilot-studio/security-agent-runtime-view).
 
-## 5. Security
+## 5. Agent security
 
 Security and governance ensure AI agents operate safely, consistently, and in compliance with organizational standards. These practices reduce risks such as data leakage, harmful outputs, and regulatory violations. Effective governance spans both the applications agents support and the platforms they run on, embedding safeguards into every layer of the solution.
 
-1. **Apply guardrails at multiple intervention points.** Guardrails prevent harmful or inappropriate outputs and protect against input-based attacks. They should operate across the full interaction lifecycle. Recommended intervention points:
+1. **Guardrails.** Guardrails prevent harmful or inappropriate outputs and protect against input-based attacks. They should operate across the full interaction lifecycle. Recommended intervention points:
 
     - User input. Filter prompts to block malicious or sensitive requests before they reach the model.
     - Tool calls. Validate and sanitize data exchanged with external systems to prevent injection attacks.
@@ -215,7 +168,7 @@ Security and governance ensure AI agents operate safely, consistently, and in co
 
     This layered approach reduces single points of failure and strengthens overall resilience.
 
-2. **Use blocklists and category filters.** Blocklists help enforce organizational standards by preventing prohibited terms, sensitive data patterns, or unsafe categories from entering or leaving the system. Maintain centralized blocklists for consistency across agents and models. Update lists regularly based on emerging threats and compliance requirements. Combine blocklists with dynamic detection methods for greater coverage.
+2. **Blocklists.** Blocklists help enforce organizational standards by preventing prohibited terms, sensitive data patterns, or unsafe categories from entering or leaving the system. Maintain centralized blocklists for consistency across agents and models. Update lists regularly based on emerging threats and compliance requirements. Combine blocklists with dynamic detection methods for greater coverage.
 
 :::image type="icon" source="./images/foundry-icon.png"::: **Foundry**: See [Guardrails and control overview](/azure/ai-foundry/guardrails/guardrails-overview?view=foundry). Apply guardrails at different [intervention points](/azure/ai-foundry/guardrails/intervention-points?view=foundry&pivots=programming-language-foundry-portal). Use an [AI Gateway](/azure/ai-foundry/agents/how-to/ai-gateway?view=foundry) to control model endpoints and enforce secure access. Use Microsoft Defender for Cloud's [AI protection](/azure/defender-for-cloud/ai-threat-protection) and [Gain application and end-user context for AI alerts](/azure/defender-for-cloud/gain-end-user-context-ai).
 
