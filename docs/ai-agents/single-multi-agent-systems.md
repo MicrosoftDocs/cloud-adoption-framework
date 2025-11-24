@@ -1,94 +1,78 @@
 ---
-title: Single agent or multi-agent system
-description: Learn how to choose between single-agent and multi-agent architectures for AI solutions
+title: Choosing Between Single-Agent and Multi-Agent Systems
+ms.reviewer: ssumner
+description: Explore decision criteria for selecting single-agent or multi-agent architectures to optimize AI-powered solutions for your organization.
+#customer intent: As a technical decision-maker, I want to compare single-agent and multi-agent architectures so that I can optimize scalability and performance.
 author: stephen-sumner
 ms.author: pnp
-ms.date: 11/01/2025
+ms.date: 12/01/2025
 ms.update-cycle: 180-days
-ms.topic: conceptual
+ms.topic: concept-article
+ms.collection: ce-skilling-ai-copilot
 ---
 
-# Single agent or multi-agent system
+# Single-agent versus multi-agent architecture
 
-Organizations building AI-powered solutions face a foundational architecture decision: deploy a single intelligent agent or orchestrate multiple specialized agents. This choice determines how teams structure work, manage complexity, control costs, and scale across cloud environments. The decision affects architecture cohesion, governance standards, scalability patterns, and integration consistency across the enterprise.
+Organizations building AI-powered solutions must decide between deploying a single intelligent agent or orchestrating multiple specialized agents. This architectural choice fundamentally affects how teams structure work, manage complexity, control costs, and scale across cloud environments. The decision impacts architecture cohesion, governance standards, scalability patterns, and integration consistency across the enterprise.
+
+Multi-agent systems provide modularity and specialization but introduce orchestration overhead, latency, and cost multiplication. Single-agent architectures offer the most efficient starting point for most scenarios. Organizations should adopt multi-agent designs only when specific security, organizational, or functional requirements mandate separation.
 
 :::image type="content" source="./images/ai-agent-decision-tree.png" alt-text="Diagram that shows a decision tree for single-agent or multi-agent systems." lightbox="./images/ai-agent-decision-tree.png" border="false":::
 
-## Multi-agent architecture
-
-Adopt a multi-agent architecture when complexity, scale, or organizational factors demand a modular approach. Multi-agent systems assign distinct responsibilities to separate agents, improving modularity and clear ownership from the outset. Consider starting with multiple agents in the following situations:
-
-1. Multiple teams involved: Align your architecture with your organizational structure. If different teams or departments will contribute, a multi-agent approach lets each team build and own their agent aligned to their domain. This parallel team ownership reduces cross-team interference and clearly delineates responsibilities. It also improves integration consistency: each agent interfaces at defined boundaries, avoiding ad-hoc coupling. The result is an architecture where technology mirrors business domains, enhancing overall cohesion. For instance, a “Finance Agent” can handle financial queries while a separate “HR Agent” answers HR questions, each managed by the respective department – reducing fragmentation by keeping each context self-contained yet interoperable through orchestrated workflows.
-
-1. Long-Term Complexity & Growth: If your product roadmap includes adding many features, integrating diverse data sources, or supporting multiple business units, don’t begin with a monolithic agent that must absorb all future duties. Designing a multi-agent system early ensures you can separate concerns and avoid massive refactoring later. As a rule of thumb, if the envisioned solution spans more than roughly 3–5 distinct functions or domains, plan for a modular multi-agent design from the start. This architecture better supports scalability and cloud adoption patterns. You can modernize or replace individual agents without rewriting the entire system.
-
-
-3. Strict Security or Compliance Boundaries: If parts of the task require different permission levels or compliance regimes, multi-agent systems support granular governance and security controls. You can constrain each agent’s access to only the data and tools it needs, enforcing the principle of least privilege and simplifying audits. For example, in a customer service scenario, one agent could handle general FAQs with no access to customer data, while a second agent handles billing queries with access to sensitive account info – this separation ensures that a breach or error in one agent doesn’t expose everything. Multi-agent architectures inherently create check-points where data and decisions pass from one specialized context to another, allowing easier insertion of compliance checks and logging at those boundaries. In short, choose multiple agents when you need to compartmentalize sensitive functions for security, or to meet regulatory requirements with clear accountability per function. 
-
-
-4. Different models required: If the task requires different data modalities: if part of the process involves heavy text analysis and another part requires image processing, splitting these into dedicated agents can use the best model or tools for each job. This specialization reduces the cognitive load on any single agent, which can improve accuracy (each agent’s prompt and logic are simpler) and ease troubleshooting. It also improves modularity: each agent can be updated or replaced independently as better models or algorithms for that subtask become available, supporting technological evolution. Be cautious, however – ensure that breaking the task apart won’t introduce excessive back-and-forth overhead. But when roles are clearly distinct or benefit from different resources (e.g., a smaller, faster model for one part; a larger, more powerful model for another), multi-agent is the right choice.
-
-
-5. High Scalability and Future Proofing: Use multiple agents if you expect high load or need horizontal scaling beyond what a single agent instance can handle. Multi-agent systems can process parts of a user request in parallel, thereby improving throughput and latency for complex interactions. They also let you scale out certain capabilities selectively – for example, if the demand on one aspect of the system grows (like significantly more of a certain type of query), you can add more instances or a more powerful model for that agent alone rather than scaling the entire system. This targeted scalability optimizes resource use and cost: you’re not over-provisioning a single agent to cope with one hotspot. Additionally, a multi-agent design is more adaptable to change – new capabilities can be introduced as new agents without disturbing existing ones, which supports continuous modernization. In rapidly evolving business environments, having an architecture that can expand or modify components independently is a big advantage for agility. Essentially, multi-agent systems provide a future-ready foundation that can grow organically as your needs evolve, aligning with enterprise cloud adoption best practices for modular scaling. 
-
-
-6. Low-Code Orchestration is Available: If you have access to orchestration frameworks or low-code platforms (like Microsoft’s Azure AI Foundry Agent Service or similar) that simplify multi-agent workflows, the barrier to a multi-agent architecture is lowered. Modern AI orchestration tools can handle agent coordination, conversation state management, and hand-offs declaratively, meaning you don’t have to write complex code for agents to work together. When such platforms are in play, you can confidently assign distinct roles to different agents (such as separate “Validator” or “Retriever” agents in a workflow) because the platform manages their sequence and data passing. This mitigates a historical downside of multi-agent systems (integration complexity), allowing you to reap the benefits of specialization and modularity with less engineering effort. In short, if your environment supports it, leverage these tools to build a multi-agent system that’s orchestrated out-of-the-box, aligning with a multi-cloud or cloud-native strategy without adding undue complexity.
-
-
-Before fully committing to multi-agent, run a quick experiment with a single-agent prototype. This test validates whether one agent truly can’t handle the task. If a single agent struggles – for example, it mixes contexts or fails at dual responsibilities – use that evidence to intelligently split roles in your multi-agent design. If the single agent performs well enough, you might avoid unnecessary complexity altogether. Multi-agent should address concrete needs, not theoretical ones.
-
 ## Single-agent architecture
 
-Single-agent architecture suits straightforward, well-bounded tasks where speed and simplicity take priority. Starting with one capable agent often represents the most pragmatic approach, especially during project inception.
+Single-agent architectures consolidate all logic, context, and tool execution into one entity. This approach simplifies design, implementation, and governance, making it the most efficient starting point for many use cases. By minimizing moving parts, organizations can focus on business logic and value generation rather than orchestration complexity.
 
-### **Simplicity and speed to market.**
-Single-agent systems provide the simplest AI solution form with one model or codebase handling the entire workflow. This simplicity accelerates development and deployment. Without complex inter-agent protocols, fewer integration issues arise. Teams deliver single agents in weeks compared to months for multi-agent systems. Small engineering teams or limited resources benefit from concentrated effort on one agent. This approach minimizes initial complexity and technical risk, important when solution reception or requirement changes remain uncertain. Early deployment demonstrates value to stakeholders and aligns solutions with business strategy quickly. You can add complexity later but cannot recover lost time to market.
+1. **Well-bounded domain.** If the problem domain is defined and the workflow is linear, a single agent is sufficient. For example, an FAQ bot for a specific knowledge base or an assistant orchestrating a fixed sequence of API calls can be handled by one agent. This keeps the architecture lean, translating to faster development and easier maintenance. It aligns with a "start small" strategy, delivering value quickly with minimal complexity.
 
-### **Focused and manageable tasks.**
-Narrow problem domains or well-defined sequential workflows suit single agents well. Tasks appearing to involve different roles often resolve within one agent through proper prompt design or logic. An AI writing assistant handles planning, drafting, and editing within one agent's process without needing separate stage agents. Premature splitting over-complicates solutions. Starting with one agent and adding more only when needed proves easier than starting with many and consolidating later. Single agents maintain holistic task views advantageously. Without context swaps or state handoffs, everything exists in one cognitive space. This suits deep rather than broad domains where agents benefit from complete problem understanding. A legal research assistant reading cases and writing summaries performs better when one agent sees the full picture rather than splitting research from writing, which loses nuanced context.
+2. **Rapid time-to-market.** Single agents are preferable when speed to market drives decision-making. Teams can focus effort on prompt engineering and business logic rather than orchestration design. The simplified architecture eliminates inter-agent communication protocols and coordination complexity. This enables faster validation of business value through iterative refinement based on user feedback.
 
-### **End-to-end context and continuity.**
-Use cases demanding continuous context and coherent conversation benefit from single agents. Long customer interactions or counseling sessions require agents to remember and integrate details throughout. One agent avoids context loss during transitions. Sequential decision processes where each step builds on previous analysis benefit from single agents carrying forward subtle intermediate conclusions. When outcome quality depends on holistic understanding, single agents prove preferable. Test this assumption by simulating multi-step processes with one agent. If confusion doesn't occur, maintain the unified approach.
+3. **Cost efficiency.** Single-agent designs minimize token consumption and API costs. Consolidating operations into unified requests eliminates communication overhead between components. Research indicates multi-agent systems can consume significantly more tokens than single-agent approaches for equivalent tasks. Operational expenses also decrease through simplified monitoring, logging, and debugging requirements.
 
-### **Resource constraints and cost control.**
-Single-agent systems provide cost efficiency for low-to-moderate scale usage. Less duplicated overhead exists with only one agent loading knowledge bases or context. Fewer API calls and smaller hosted footprints mean lower operational costs, crucial for budget-constrained projects or high-volume services where token usage affects profitability. Maintenance remains simpler with one set of prompts or model weights to update, keeping ongoing costs down. Well-optimized single agents with good caching strategies handle surprising scale. Single larger models sometimes prove more cost-effective than multiple smaller ones when each additional agent introduces fixed prompt or context overheads. Monitor performance as usage grows. Long response times, context window limits, or frequent data handling errors signal that single-agent approaches might incur hidden costs through expensive model upgrades or infrastructure requirements.
+Single-agent system trade-offs: Single agents context length limits restrict the volume of information agents can process simultaneously.  Broad access requirements for comprehensive functionality complicate least-privilege security enforcement. 
 
-### **Uncertain or evolving requirements.**
-When AI function requirements remain unclear, single agents provide flexible learning environments. Early projects often discover new user needs or better problem approaches. Monolithic agents allow broad adjustments through prompt or training data changes affecting whole behavior. Multiple agent changes involve updating several agents or coordination methods, proving harder. Single-agent MVPs validate problem-solution fit with minimal variables, aligning with agile development. Quick end-to-end functionality gathers feedback for expansion decisions. Many successful multi-agent systems began as single agents proving concepts before component splitting for scale. Starting with one agent maintains architecture flexibility. Observe breakdown points to modularize intelligently later. Sometimes single agents handle more than expected, avoiding complexity additions entirely.
+## Multi-agent architecture
 
-### **Risk mitigation strategies.**
-Single agents create single points of failure requiring robust error handling and fallback mechanisms. Manual handoffs to human operators for difficult cases provide safety nets. Monitor performance closely as task complexity grows. Response times may slow with increased work per query. Prompt optimization, fine-tuning, or retrieval usage to reduce processing requirements extend single-agent viability. From governance perspectives, control what single agents can do. Broad responsibilities require guardrails for compliance through prompt limits and logging. Reviewing one agent's decisions proves easier than many, though single agents might intermingle domain logic in ways hard to disentangle during audits. Regular evaluation determines if new requirements stretch agents too thin, signaling architecture revisits.
+Multi-agent architectures employ specialized agents to handle distinct tasks or roles, often coordinated by a central orchestrator. This modular design enables parallel operation and optimization for specific domains. While this approach handles complex environments effectively, it introduces significant coordination latency and governance overhead. Organizations should start with a multi-agent system only when specific requirements outweigh the added complexity.
 
-## Architecture decision framework
+1. **Security and compliance isolation.** Separate agents are necessary when regulations or policies mandate strict data separation. Distinct security classifications require independent processing boundaries that single agents cannot provide. This least-privilege design limits the blast radius of security incidents. Regulated industries often require separation of duties, where one agent prepares transactions and another validates them.
 
-Answer these questions to guide your architecture choice:
+2. **Multiple teams involved.** Multi-agent designs are appropriate when distinct teams manage separate knowledge domains. Independent development cycles require decoupled architectures where teams maintain domain-specific agents using specialized expertise and data sources. This alignment mirrors organizational structure and enables parallel development without coordination bottlenecks. Teams deploy updates independently, and explicit interfaces between domains simplify governance.
 
-1. **Significant scope growth expected.**
-    System must integrate multiple data sources, features, or user groups over time. Choose multi-agent architecture to add agents without redesigning the entire system.
+3. **Future growth planned.** Modular multi-agent design is required if the solution roadmap includes diverse features, data sources, or business units. Monolithic agents become difficult to maintain as duties expand. Separating concerns early prevents the need for massive refactoring later. Solutions spanning more than three to five distinct functions or domains benefit from this architecture, which supports scalability and allows for the modernization of individual agents without disrupting the entire system.
 
-2. **Strict security or compliance requirements.**
-    Data or capabilities need isolation for regulatory or security reasons. Choose multi-agent architecture to enforce least-privilege access per agent.
+Multi-agent system trade-offs: Multi-agent systems introduce coordination complexity. Each interaction requires protocol design, error handling, and state management. Each component requires separate prompts, monitoring, logging, and debugging capabilities. Security surfaces increase through additional credentials and data transit points. Cost structures change in multi-agent systems, often increasing due to redundant context processing and communication overhead.
 
-5. **Multiple teams responsible.**
-    Different business units own solution aspects. Choose multi-agent architecture aligning agents with team domains for efficient development.
+## Comparative prototyping
 
-4. **Different performance requirements.**
-    Process parts have varying speed, accuracy, or resource needs. Choose multi-agent architecture for specialized handling and optimized resource use.
+Teams often default to multi-agent architectures based on untested assumptions about complexity, performance, or role separation. Before committing to the overhead of orchestration, conduct controlled experiments to compare single-agent and multi-agent approaches. Focus prototyping on these specific decision drivers to validate if the added complexity yields necessary value.
 
-6. **High adaptability requirements.**
-    Dynamic environments need parallel problem-solving or frequent changes. Choose multi-agent architecture for flexible role adaptation and parallel exploration.
+1. **Large amounts of data.** Developers frequently assume that large datasets or long conversations require multiple agents to partition context. However, single agents utilizing Retrieval-Augmented Generation (RAG) or extended context windows often maintain high accuracy. Test whether a single agent actually suffers from context degradation or hallucination. Adopt multi-agent patterns only when data volume demonstrably exceeds the reasoning capacity of a single model.
 
-7. **Continuous context critical.**
-    Long conversations or tightly interdependent sequences define success. Start with single-agent prototype to preserve context and coherence.
+2. **Clear roles identified.** A common hypothesis is that distinct functional roles (like a planner and a reviewer) necessitate separate agents. Modern models can often switch personas effectively within a single system prompt. Evaluate if a single agent can handle role transitions without confusion or information leakage. Use multi-agent architectures when strict security boundaries or distinct organizational ownership make logical separation insufficient.
 
-8. **Limited time or resources.**
-    Quick MVP delivery or constrained budget drives decisions. Start with single-agent prototype for faster iteration and deployment.
+3. **High-demand process.** While multi-agent systems allow parallel processing, they introduce significant latency through orchestration and network calls. Single agents typically execute linear tasks faster. Measure throughput and response time for both designs. Validate that the performance gains from parallelizing subtasks outweigh the coordination overhead inherent in multi-agent systems.
 
-9. **Narrow, self-contained domain.**
-    Task complexity exists within focused niche. Start with single-agent prototype for deep expertise without splitting overhead.
+4. **Different modalities.** Solutions requiring diverse capabilities (such as image generation, coding, and text analysis) often drive teams toward multi-agent designs. Many state-of-the-art models are multimodal and capable of handling varied tasks via tools. Verify whether a single generalist model with tools can meet quality standards. Reserve multi-agent designs for scenarios where specialized models provide a critical advantage in cost or specific domain performance.
 
-10. **Cost sensitivity.**
-     Tight budgets or high request volumes require minimal overhead. Start with single-agent prototype for fewer tokens and simpler management.
+## Workflow orchestration
+
+Workflow orchestration combines the generative capabilities of AI agents with deterministic business logic to automate complex processes. This approach integrates AI decision-making with structured operations, ensuring reliability where precision is required. Workflows function effectively with both **single-agent** and **multi-agent** architectures, providing the scaffolding to ground AI outputs in verifiable business rules. Workflow decision criteria:
+
+1. **Deterministic precision.** Workflows are essential when specific steps require absolute accuracy, such as financial calculations or inventory updates. Generative AI models are probabilistic and can struggle with precise arithmetic or rigid rule adherence. Wrapping agents in a workflow ensures that critical operations execute via code-based logic, while agents handle unstructured tasks like reasoning or content generation.
+
+2. **Hybrid process automation.** Workflows are ideal for orchestrating interactions between AI agents and traditional systems. A workflow can trigger an agent to analyze input, then execute a deterministic code block to update a database based on that analysis. This pattern allows organizations to automate end-to-end business processes that span both creative intelligence and rigid operational requirements.
+
+3. **Tooling alignment.** The choice of orchestration tool should align with development capabilities and platform strategy. [Azure AI Foundry](/azure/ai-foundry/agents/concepts/workflow?view=foundry) offers low-code options for visually designing workflows, suitable for rapid prototyping. For complex, code-heavy scenarios, the [Microsoft Agent Framework](/agent-framework/user-guide/workflows/overview) provides a pro-code environment. Both paths enable the integration of single or multiple agents into structured business processes.
+
+## Decision framework
+
+| Approach | Use when | Skip prototyping | First step |
+|---|---|---|---|
+| **Single agent** | Narrow domain, unified context required, MVP speed priority, cost constraints | Yes, proceed when scope remains simple and urgency dominates | Deploy single agent with tools and iterate on functionality |
+| **Comparative prototype** | Architecture unclear, need evidence on context handling, role separation, performance | No, prototyping drives decision | Execute controlled tests comparing architectures with defined metrics |
+| **Multi-agent** | Hard boundaries exist (security, compliance, organizational), guaranteed multi-domain scale | Yes, proceed to multi-agent when requirements mandate separation | Design isolated agents with scoped access and clear interfaces |
+| **Workflow orchestration** | Deterministic control required, audit requirements, hybrid AI/non-AI steps | Complements either architecture | Implement orchestration layer with explicit control flow |
 
 ## Next step
 
