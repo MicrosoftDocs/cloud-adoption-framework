@@ -13,7 +13,7 @@ ms.collection: ce-skilling-ai-copilot
 
 # Build AI agents
 
-This article provides a strategic framework for technical decision makers to build agents in Foundry Agent Service and Microsoft Copilot Studio. Use this guidance to establish standards and help your organization succeed with AI agents.
+This article provides a strategic framework for technical decision makers to build agents in Microsoft Foundry and Microsoft Copilot Studio. Use this guidance to establish standards and help your organization succeed with AI agents.
 
 :::image type="content" source="./images/build-ai-agents.png" alt-text="Diagram that shows how to build AI agents in Foundry and Microsoft Copilot Studio." lightbox="./images/build-ai-agents.png" border="false":::
 
@@ -143,7 +143,7 @@ Organizations must define what data agents retain, how long they store it, and w
 
 Observability ensures agents operate reliably, meet performance expectations, and align with organizational standards. Implement monitoring and telemetry early to detect issues, optimize workflows, and maintain system health across your agent fleet.
 
-:::image type="content" source="./images/governance-security.png" alt-text="Diagram that shows how to govern." lightbox="./images/governance-security.png" border="false":::
+:::image type="content" source="./images/governance-security.png" alt-text="Diagram illustrating governance layers for agents and workflows. At the top, a box labeled Organizational Governance includes categories for Data Governance, Security, Observability, and Development, with tools such as Microsoft Purview, Azure Policy, Microsoft Defender, Azure Monitor, Microsoft Entra, and development frameworks like Microsoft Agent Framework, Foundry SDK, and MCP. Below, a second box labeled Government for Building and Operating Agents and Workflows is divided into two sections: Build Phase: Four boxes for Agents and Workflows, Models, Evaluations, and Guardrails, each governed and secured by corresponding tools. Operate Phase: Four boxes for Assets, Compliance, Quotas, and Administration, with tools supporting governance during operations.." lightbox="./images/governance-security.png" border="false":::
 
 :::image type="icon" source="./images/foundry-icon.png"::: **Foundry**: Use the [Microsoft Foundry Control Plane](/azure/ai-foundry/control-plane/overview?view=foundry) for unified visibility and governance across your agent fleet. 
     
