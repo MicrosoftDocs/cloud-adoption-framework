@@ -63,7 +63,7 @@ Workflow orchestration combines the generative capabilities of AI agents with de
 
 2. **Hybrid process automation.** Workflows are ideal for orchestrating interactions between AI agents and traditional systems. A workflow can trigger an agent to analyze input, then execute a deterministic code block to update a database based on that analysis. This pattern allows organizations to automate end-to-end business processes that span both creative intelligence and rigid operational requirements.
 
-3. **Tooling alignment.** The choice of orchestration tool should align with development capabilities and platform strategy. [Azure AI Foundry](/azure/ai-foundry/agents/concepts/workflow?view=foundry) offers low-code options for visually designing workflows, suitable for rapid prototyping. For complex, code-heavy scenarios, the [Microsoft Agent Framework](/agent-framework/user-guide/workflows/overview) provides a pro-code environment. Both paths enable the integration of single or multiple agents into structured business processes.
+**Tooling alignment.** The choice of orchestration tool should align with development capabilities and platform strategy. [Azure AI Foundry](/azure/ai-foundry/agents/concepts/workflow?view=foundry) offers low-code options for visually designing workflows, suitable for rapid prototyping. For complex, code-heavy scenarios, the [Microsoft Agent Framework](/agent-framework/user-guide/workflows/overview) provides a pro-code environment. Both paths enable the integration of single or multiple agents into structured business processes.
 
 ## Decision framework
 
