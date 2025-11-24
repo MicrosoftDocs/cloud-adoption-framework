@@ -37,13 +37,13 @@ Align the scope with business objectives and validate the charter with your Resp
 
 Establish a secure foundation before building AI agents. Proper environment setup reduces deployment delays and compliance violations. This investment also simplifies scaling as agent adoption grows across your organization. This foundation includes infrastructure, governance frameworks, and compliance controls that support reliable and scalable agent operations.
 
-:::image type="icon" source="./images/foundry-icon.png"::: **Foundry:** Start with the [AI landing zone](https://github.com/Azure/AI-Landing-Zones)reference architecture. It provides a tested baseline for infrastructure, governance, and compliance controls. Adopting this model reduces design complexity and ensures alignment with enterprise standards. Customize the landing zone to meet organizational requirements while maintaining consistency across environments. See also [Set up your Foundry environment](/azure/ai-foundry/agents/environment-setup?view=foundry). Use a [Bring Your Own (BYO)](/azure/ai-foundry/agents/how-to/use-your-own-resources?view=foundry) approach when connecting AI agents to existing infrastructure. This strategy keeps agents within established governance boundaries, ensuring compliance and cost optimization. BYO integration also supports continuity by leveraging existing security and monitoring frameworks. Isolated deployments create governance gaps and increase operational overhead. BYO integration aligns AI workloads with enterprise policies from day one.
+:::image type="icon" source="./images/foundry-icon.png"::: **Foundry**: Start with the [AI landing zone](https://github.com/Azure/AI-Landing-Zones)reference architecture. It provides a tested baseline for infrastructure, governance, and compliance controls. Adopting this model reduces design complexity and ensures alignment with enterprise standards. Customize the landing zone to meet organizational requirements while maintaining consistency across environments. See also [Set up your Foundry environment](/azure/ai-foundry/agents/environment-setup?view=foundry). Use a [Bring Your Own (BYO)](/azure/ai-foundry/agents/how-to/use-your-own-resources?view=foundry) approach when connecting AI agents to existing infrastructure. This strategy keeps agents within established governance boundaries, ensuring compliance and cost optimization. BYO integration also supports continuity by leveraging existing security and monitoring frameworks. Isolated deployments create governance gaps and increase operational overhead. BYO integration aligns AI workloads with enterprise policies from day one.
 
 - **Low-code approach with prompt-based agents**: Use [prompt-based agents](/azure/ai-foundry/agents/concepts/development-lifecycle?view=foundry#types-of-agents) to build agents without extensive coding. This approach accelerates development and allows business stakeholders to participate in agent design.
 
 - **Pro-code approach with hosted agents**: Use [hosted agents](/azure/ai-foundry/agents/concepts/hosted-agents?view=foundry) for advanced scenarios that require custom orchestration logic and detailed control over agent behavior. Apply the Well-Architected Framework principles for [AI workloads](/azure/well-architected/ai/).
 
-:::image type="icon" source="./images/copilot-studio-icon.png"::: **Copilot Studio:** First [verify licensing and access requirements](/microsoft-copilot-studio/requirements-licensing-subscriptions). Then [configure environments](/microsoft-copilot-studio/environments-first-run-experience) to separate development, testing, and production workloads.
+:::image type="icon" source="./images/copilot-studio-icon.png"::: **Copilot Studio**: First [verify licensing and access requirements](/microsoft-copilot-studio/requirements-licensing-subscriptions). Then [configure environments](/microsoft-copilot-studio/environments-first-run-experience) to separate development, testing, and production workloads.
 
 ### 1.3 Choose agent orchestration
 
@@ -60,9 +60,9 @@ Choose between two primary orchestration approaches:
 
 Organizations that prioritize rapid deployment and built-in governance benefit from managed orchestration. Organizations that require advanced customization, multi-cloud flexibility, or deep integration with existing systems benefit from custom orchestration.
 
-:::image type="icon" source="./images/foundry-icon.png"::: **Foundry:** See [Build a workflow](/azure/ai-foundry/agents/concepts/workflow?view=foundry). For hosted agents, see [Workflow orchestrations](/agent-framework/user-guide/workflows/orchestrations/overview) and [AI agent orchestration patterns](/azure/architecture/ai-ml/guide/ai-agent-design-patterns).
+:::image type="icon" source="./images/foundry-icon.png"::: **Foundry**: See [Build a workflow](/azure/ai-foundry/agents/concepts/workflow?view=foundry). For hosted agents, see [Workflow orchestrations](/agent-framework/user-guide/workflows/orchestrations/overview) and [AI agent orchestration patterns](/azure/architecture/ai-ml/guide/ai-agent-design-patterns).
 
-:::image type="icon" source="./images/copilot-studio-icon.png"::: **Copilot Studio:** For multi-agent systems, [set up agent flows](/microsoft-copilot-studio/flows-overview) with distinct roles and approval checkpoints. [Configure agent behavior](/microsoft-copilot-studio/advanced-generative-actions) by orchestrating with generative AI. For critical operations, use [multistage and AI approvals](/microsoft-copilot-studio/flows-advanced-approvals) to enforce deterministic decision gates.
+:::image type="icon" source="./images/copilot-studio-icon.png"::: **Copilot Studio**: For multi-agent systems, [set up agent flows](/microsoft-copilot-studio/flows-overview) with distinct roles and approval checkpoints. [Configure agent behavior](/microsoft-copilot-studio/advanced-generative-actions) by orchestrating with generative AI. For critical operations, use [multistage and AI approvals](/microsoft-copilot-studio/flows-advanced-approvals) to enforce deterministic decision gates.
 
 ### 1.4 Define agent behavior
 
@@ -160,9 +160,9 @@ Agents perform tasks such as creating support tickets, scheduling meetings, or t
 
 6. **Log all actions with agent attribution.** Maintain detailed logs for every action, including which agent initiated it, what the action was, and who the action affected. For example, log that Agent C triggered a password reset for user X on behalf of user Y. This logging supports auditing, debugging, and accountability. Failed action logs identify improvement opportunities and inform agent refinement.
 
-:::image type="icon" source="./images/foundry-icon.png"::: **Foundry:** Use [tools](/azure/ai-foundry/agents/concepts/tool-catalog?view=foundry) and [tool best practices](/azure/ai-foundry/agents/concepts/tool-best-practice?view=foundry). Use an [AI gateway](/azure/ai-foundry/agents/how-to/tools/governance?view=foundry) for tool governance.
+:::image type="icon" source="./images/foundry-icon.png"::: **Foundry**: Use [tools](/azure/ai-foundry/agents/concepts/tool-catalog?view=foundry) and [tool best practices](/azure/ai-foundry/agents/concepts/tool-best-practice?view=foundry). Use an [AI gateway](/azure/ai-foundry/agents/how-to/tools/governance?view=foundry) for tool governance.
 
-:::image type="icon" source="./images/copilot-studio-icon.png"::: **Copilot Studio:** [Add tools](/microsoft-copilot-studio/advanced-plugin-actions) and [triggers](/microsoft-copilot-studio/authoring-triggers-about).
+:::image type="icon" source="./images/copilot-studio-icon.png"::: **Copilot Studio**: [Add tools](/microsoft-copilot-studio/advanced-plugin-actions) and [triggers](/microsoft-copilot-studio/authoring-triggers-about).
 
 ### 3.3 Agent memory
 
@@ -188,9 +188,10 @@ Organizations must define what data agents retain, how long they store it, and w
 
 Observability ensures agents operate reliably, meet performance expectations, and align with organizational standards. Implement monitoring and telemetry early to detect issues, optimize workflows, and maintain system health across your agent fleet.
 
-:::image type="content" source="./images/governance-security.png" alt-text="Diagram that shows how to govern ." lightbox="./images/governance-security.png" border="false":::
+:::image type="content" source="./images/governance-security.png" alt-text="Diagram that shows how to govern." lightbox="./images/governance-security.png" border="false":::
 
-:::image type="icon" source="./images/foundry-icon.png"::: **Foundry:** Use the [Microsoft Foundry Control Plane](/azure/ai-foundry/control-plane/overview?view=foundry) for unified visibility and governance across your agent fleet. 
+:::image type="icon" source="./images/foundry-icon.png"::: **Foundry**: Use the [Microsoft Foundry Control Plane](/azure/ai-foundry/control-plane/overview?view=foundry) for unified visibility and governance across your agent fleet.
+
 Define standards for collecting logs, metrics, and alerts from all agent instances. Send telemetry to centralized repositories such as Azure Log Analytics Workspace or storage accounts. This centralized approach enables enterprise visibility, supports compliance audits, and simplifies troubleshooting across teams. Configure [monitoring](/azure/ai-foundry/agents/how-to/metrics?view=foundry) for Foundry instances and all projects.
 
 1. **User traces.** Track agent execution with complete visibility into inputs, outputs, tool usage, latencies, and costs. This telemetry reveals performance patterns, identifies optimization opportunities, and supports cost management. Configure [traces](/azure/ai-foundry/observability/concepts/trace-agent-concept?view=foundry) for execution visibility to provide the context needed to diagnose issues and improve agent logic. Establish expected ranges for latency, cost, and success rates. Alert teams when agents operate outside these baselines to enable rapid investigation and remediation. Use [agent evaluators](/azure/ai-foundry/concepts/evaluation-evaluators/agent-evaluators?view=foundry) to measure quality. See [Agent Monitoring Dashboard](/azure/ai-foundry/agents/how-to/how-to-monitor-agents-dashboard?view=foundry).
@@ -199,7 +200,7 @@ Define standards for collecting logs, metrics, and alerts from all agent instanc
 
 3. **Conduct adversarial testing and red teaming.** Security testing must extend beyond traditional penetration tests. AI agents require specialized adversarial testing to simulate attacks that exploit their unique vulnerabilities. These tests include attempts to manipulate agent behavior through deceptive prompts or malicious inputs. Organizations must direct their teams to run these tests regularly and integrate them into release cycles. Teams can use dedicated [AI Red Teaming Agent](/azure/ai-foundry/how-to/develop/run-scans-ai-red-teaming-agent) to scan applications for safety and security issues.
 
-:::image type="icon" source="./images/copilot-studio-icon.png"::: **Copilot Studio:** Use [analytics](/microsoft-copilot-studio/analytics-overview) and [connect to Azure Application Insights](/microsoft-copilot-studio/advanced-bot-framework-composer-capture-telemetry) for centralized telemetry. [Create test sets for evaluations](/microsoft-copilot-studio/analytics-agent-evaluation-create), [Security and governance guidance](/microsoft-copilot-studio/security-and-governance), [automatic security scans](/microsoft-copilot-studio/security-scan), and verify [agent runtime protection status](/microsoft-copilot-studio/security-agent-runtime-view).
+:::image type="icon" source="./images/copilot-studio-icon.png"::: **Copilot Studio**: Use [analytics](/microsoft-copilot-studio/analytics-overview) and [connect to Azure Application Insights](/microsoft-copilot-studio/advanced-bot-framework-composer-capture-telemetry) for centralized telemetry. [Create test sets for evaluations](/microsoft-copilot-studio/analytics-agent-evaluation-create), [Security and governance guidance](/microsoft-copilot-studio/security-and-governance), [automatic security scans](/microsoft-copilot-studio/security-scan), and verify [agent runtime protection status](/microsoft-copilot-studio/security-agent-runtime-view).
 
 ## 5. Security
 
@@ -216,7 +217,7 @@ Security and governance ensure AI agents operate safely, consistently, and in co
 
 2. **Use blocklists and category filters.** Blocklists help enforce organizational standards by preventing prohibited terms, sensitive data patterns, or unsafe categories from entering or leaving the system. Maintain centralized blocklists for consistency across agents and models. Update lists regularly based on emerging threats and compliance requirements. Combine blocklists with dynamic detection methods for greater coverage.
 
-:::image type="icon" source="./images/foundry-icon.png"::: **Foundry:** See [Guardrails and control overview](/azure/ai-foundry/guardrails/guardrails-overview?view=foundry). Apply guardrails at different [intervention points](/azure/ai-foundry/guardrails/intervention-points?view=foundry&pivots=programming-language-foundry-portal). Microsoft Defender for Cloud's [AI protection](/azure/defender-for-cloud/ai-threat-protection) and [Gain application and end-user context for AI alerts](/azure/defender-for-cloud/gain-end-user-context-ai).
+:::image type="icon" source="./images/foundry-icon.png"::: **Foundry**: See [Guardrails and control overview](/azure/ai-foundry/guardrails/guardrails-overview?view=foundry). Apply guardrails at different [intervention points](/azure/ai-foundry/guardrails/intervention-points?view=foundry&pivots=programming-language-foundry-portal). Use an [AI Gateway](/azure/ai-foundry/agents/how-to/ai-gateway?view=foundry) to control model endpoints and enforce secure access. Use Microsoft Defender for Cloud's [AI protection](/azure/defender-for-cloud/ai-threat-protection) and [Gain application and end-user context for AI alerts](/azure/defender-for-cloud/gain-end-user-context-ai).
 
 ## Next step
 

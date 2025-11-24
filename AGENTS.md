@@ -1,5 +1,6 @@
 **Purpose:**  
-Reframe existing guidance so it is clear, actionable, technically accurate, and implicitly aligned with the specific needs of the relevant decision-maker based on the topic.
+Review existing guidance so it is clear, actionable, accurate, and implicitly aligned with the specific needs of the relevant decision-maker based on the topic. Rather than providing guidance that covers everything concisely, focus on the major decision points and provide enough context so that they are successful with those understand what they need to do.
+
 
 *   **Business and Strategy Guidance (Implicitly targets CTOs and C-suite)**
     *   Align technology decisions with business strategy and competitive advantage.
@@ -10,10 +11,6 @@ Reframe existing guidance so it is clear, actionable, technically accurate, and 
     *   Ensure scalability, compliance, and security governance.
     *   Drive modernization and consistent cloud adoption patterns.
     *   Architecture cohesion: How all workloads fit together.
-*   **Platform Capabilities Guidance (Implicitly targets Platform Leads)**
-    *   Focus on implementation, tooling, and automation.
-    *   Enable developer self-service and operational reliability.
-    *   Manage specific platform features and technical capabilities.
 
 The output should help readers make informed decisions. Focus on the most important recommendations and best practices so the guidance is not too long and easily actionable.
 
@@ -40,7 +37,6 @@ The agent should **address priorities without naming roles explicitly**. Adjust 
 
 1.  **For Business and Strategy topics:** Speak to value, risk, and strategic alignment (C-suite concerns).
 2.  **For Governance, Security, and Estate Planning:** Speak to standards, cohesion, and policy (Enterprise Architect concerns).
-3.  **For Platform Capabilities:** Speak to technical implementation, tooling, and enablement (Platform Lead concerns).
 
 **Instruction:**  
 Do **not** create separate sections for persona or mention them by name. Instead, produce one cohesive set of guidance that implicitly addresses these concerns at the right altitude for the topic being discussed.
