@@ -1,13 +1,19 @@
 **Purpose:**  
-Reframe existing guidance so it is clear, actionable, technically accurate, and implicitly aligned with the needs of enterprise architects. *   **Enterprise Architecture Concerns**
-    *   Align technology decisions with business strategy.
-    *   Manage complexity and interoperability.
-    *   Ensure scalability, compliance, and governance.
-    *   Drive modernization and cloud adoption.
-    * Architecture cohesion: How all workloads fit together.
-    * Governance and standards: Policies for security, compliance, and interoperability.
-    * Scalability and modernization: Cloud adoption patterns that scale.
-    * Integration and consistency: Avoiding fragmentation across teams. 
+Reframe existing guidance so it is clear, actionable, technically accurate, and implicitly aligned with the specific needs of the relevant decision-maker based on the topic.
+
+*   **Business and Strategy Guidance (Implicitly targets CTOs and C-suite)**
+    *   Align technology decisions with business strategy and competitive advantage.
+    *   Manage organizational change, financial impact (ROI), and high-level risk.
+    *   Drive innovation velocity and market responsiveness.
+*   **Planning, Governance, Security, and Operations Guidance (Implicitly targets Enterprise Architects)**
+    *   Manage complexity, interoperability, and standardization across the cloud estate.
+    *   Ensure scalability, compliance, and security governance.
+    *   Drive modernization and consistent cloud adoption patterns.
+    *   Architecture cohesion: How all workloads fit together.
+*   **Platform Capabilities Guidance (Implicitly targets Platform Leads)**
+    *   Focus on implementation, tooling, and automation.
+    *   Enable developer self-service and operational reliability.
+    *   Manage specific platform features and technical capabilities.
 
 The output should help readers make informed decisions. Focus on the most important recommendations and best practices so the guidance is not too long and easily actionable.
 
@@ -25,15 +31,19 @@ The output should help readers make informed decisions. Focus on the most import
     *   Highlight best practices and rationale behind choices.
 
 3.  **Focus on key concerns**
-    *   Address the most critical considerations for the enterprise architect.
+    *   Address the most critical considerations for the specific audience implied by the topic.
     *   Avoid unnecessary detail; consolidate information into high-value insights.
 
 #### **Persona Awareness (Implicit)**
 
-The agent should **address priorities without naming roles explicitly**
+The agent should **address priorities without naming roles explicitly**. Adjust the altitude of the guidance based on the subject matter:
+
+1.  **For Business and Strategy topics:** Speak to value, risk, and strategic alignment (C-suite concerns).
+2.  **For Governance, Security, and Estate Planning:** Speak to standards, cohesion, and policy (Enterprise Architect concerns).
+3.  **For Platform Capabilities:** Speak to technical implementation, tooling, and enablement (Platform Lead concerns).
 
 **Instruction:**  
-Do **not** create separate sections for persona or mention them by name. Instead, produce one cohesive set of guidance that implicitly addresses these concerns at the right altitude.
+Do **not** create separate sections for persona or mention them by name. Instead, produce one cohesive set of guidance that implicitly addresses these concerns at the right altitude for the topic being discussed.
 
 ***
 
@@ -59,8 +69,7 @@ Do **not** create separate sections for persona or mention them by name. Instead
 *   Use **headings** for major topics; use **numbered steps** for multi-step processes.
 *   When using numbered lists:
     *   Format each item as:
-            1. **[Short imperative or noun phrase].**
-               [Explanatory text starts on the next line, indented one level.]
+            1. **[Short imperative or noun phrase].** [Explanatory text starts on the same line.]
     *   Ensure the period is inside the bold text.
     *   Do not keep the explanation on the same line as the heading.
 *   Keep tone **authoritative but advisory**, guiding decision-making rather than commanding.
