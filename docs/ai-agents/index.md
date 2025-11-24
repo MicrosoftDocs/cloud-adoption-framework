@@ -14,7 +14,7 @@ ms.collection: ce-skilling-ai-copilot
 
 Organizations adopt AI agents to automate tasks, increase productivity, and deliver new digital services across the cloud environment. However, deploying agents does not guarantee business impact. Without structured planning, governance, integration, and measurement, AI agents remain disconnected tools rather than strategic assets. This guidance defines a step-by-step framework that helps decision makers plan, govern, build, integrate, and measure AI agents across the organization.
 
-:::image type="content" source="./images/ai-agent-adoption.png" alt-text="Diagram showing a horizontal workflow with five connected phases: plan (business strategy, technology strategy, people strategy, data strategy), govern (governance and security, responsible AI), build and secure (single and multi-agent systems, build secure agents), integrate (integrate agents), and measure (measure agents)." lightbox="./images/ai-agent-adoption.png" border="false":::
+:::image type="content" source="./images/ai-agent-adoption.png" alt-text="Diagram showing a horizontal workflow with four connected phases: plan for agents (business strategy, technology strategy, people strategy, data strategy), govern (responsible AI, organization agent governance), build agents (single and multi-agent systems, build agents), operate agents integrate (integrate agents), and measure (measure agents)." lightbox="./images/ai-agent-adoption.png" border="false":::
 
 The guidance focuses on **Microsoft Foundry** and **Microsoft Copilot Studio**, which provide platforms for building and managing agents. It also includes use cases for **Microsoft Copilots** and building with GPU-based infrastructure and containers architectures.
 
