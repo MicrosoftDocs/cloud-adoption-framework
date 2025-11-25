@@ -4,19 +4,20 @@ ms.reviewer: ssumner
 description: Discover how to adopt AI agents effectively with a step-by-step framework for planning, governance, integration, and measurement to maximize business impact.
 author: stephen-sumner
 ms.author: pnp
-ms.date: 11/11/2025
+ms.date: 12/01/2025
 ms.update-cycle: 180-days
 ms.topic: concept-article
 ms.collection: ce-skilling-ai-copilot
 ---
-
 # AI agent adoption
 
-Organizations adopt AI agents to automate tasks, increase productivity, and deliver new digital services across the cloud environment. However, deploying agents does not guarantee business impact. Without structured planning, governance, integration, and measurement, AI agents remain disconnected tools rather than strategic assets. This guidance defines a step-by-step framework that helps decision makers plan, govern, build, integrate, and measure AI agents across the organization.
+This guidance extends the broader AI adoption framework to focus specifically on AI agents. While the primary framework addresses the full spectrum of deterministic and non-deterministic AI, this content targets the unique lifecycle and considerations of agent-based systems. Use this guidance when AI agents become a consideration within the broader [AI technology strategy](../scenarios/ai/strategy.md#define-an-ai-technology-strategy).
+
+Organizations adopt AI agents to automate tasks, increase productivity, and deliver new digital services across the cloud environment. However, deploying agents does not guarantee business impact. Without structured planning, governance, integration, and measurement, AI agents remain disconnected tools rather than strategic assets. This guidance defines a step-by-step framework to plan, govern, build, integrate, and measure AI agents across the organization.
 
 :::image type="content" source="./images/ai-agent-adoption.png" alt-text="Diagram showing a horizontal workflow with four connected phases: plan for agents (business strategy, technology strategy, people strategy, data strategy), govern (responsible AI, organization agent governance), build agents (single and multi-agent systems, build agents), operate agents integrate (integrate agents), and measure (measure agents)." lightbox="./images/ai-agent-adoption.png" border="false":::
 
-The guidance focuses on **Microsoft Foundry** and **Microsoft Copilot Studio**, which provide platforms for building and managing agents. It also includes use cases for **Microsoft Copilots** and building with GPU-based infrastructure and containers architectures.
+The guidance focuses on **Microsoft Foundry** and **Microsoft Copilot Studio**, which provide platforms for building and managing agents. It also includes use cases for **Microsoft Copilot** and building with GPU-based infrastructure and container architectures.
 
 ## What is an AI agent?
 
