@@ -3,7 +3,7 @@ title: Plan for application delivery
 description: Examine key design considerations and recommendations surrounding the delivery of applications in a secure way.
 author: stephen-sumner
 ms.author: pnp
-ms.date: 25/11/2025
+ms.date: 11/25/2025
 ms.topic: concept-article
 ms.custom: internal
 ---
