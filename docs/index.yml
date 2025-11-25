@@ -23,27 +23,21 @@ highlightedContent:
   items:
 
     # Card
-    - title: Cloud Adoption Framework overview
+    - title: Overview
       itemType: overview
       url: ./overview.md
+    - title: Agents
+      itemType: concept
+      url: ./ai-agents/index.md
     - title: AI adoption
       itemType: how-to-guide
       url: ./scenarios/ai/index.md
     - title: Azure landing zone
       itemType: architecture
       url: ./ready/landing-zone/index.md    
-    - title: Adoption scenarios
+    - title: Scenarios
       itemType: get-started
       url: ./overview.md#cloud-adoption-framework-scenarios
-    - title: Create an Azure account
-      itemType: get-started
-      url: https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn
-    - title: Claim startup credits
-      itemType: get-started
-      url: https://www.microsoft.com/en-us/startups
-    - title: Quick setup guide
-      itemType: how-to-guide
-      url: ./ready/azure-setup-guide/identity.md
 
 
 # Card with summary style
