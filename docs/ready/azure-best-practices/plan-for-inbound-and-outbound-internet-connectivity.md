@@ -3,7 +3,7 @@ title: Plan for inbound and outbound internet connectivity
 description: Explore recommended connectivity models for inbound and outbound connectivity to and from the public internet.
 author: sebassem
 ms.author: sebassem
-ms.date: 08/25/2025
+ms.date: 11/25/2025
 ms.reviewer: ssumner
 ms.topic: concept-article
 ms.custom: think-tank, csu
@@ -73,6 +73,8 @@ This article lists considerations and recommendations for inbound and outbound c
 - Use WAF within a landing-zone virtual network for protecting inbound HTTP/S traffic from the internet.
 
 - Use Azure Front Door and WAF policies to provide global protection across Azure regions for inbound HTTP/S connections to a landing zone.
+
+  - Ensure you have reviewed the guidance in [Global routing redundancy for mission-critical web applications](/azure/architecture/guide/networking/global-web-applications/overview) when using Azure Front Door in your architectures.
 
 - To use Azure Front Door and Azure Application Gateway to help protect HTTP/S applications, use WAF policies in Azure Front Door. Lock down Azure Application Gateway to receive traffic only from Azure Front Door.
 

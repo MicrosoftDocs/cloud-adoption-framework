@@ -3,7 +3,7 @@ title: Plan for application delivery
 description: Examine key design considerations and recommendations surrounding the delivery of applications in a secure way.
 author: stephen-sumner
 ms.author: pnp
-ms.date: 11/08/2022
+ms.date: 25/11/2025
 ms.topic: concept-article
 ms.custom: internal
 ---
@@ -20,7 +20,7 @@ This section explores key recommendations to deliver internal-facing and externa
 
 - Azure Front Door allows the secure delivery of highly available HTTP/S applications across Azure regions.
 
-- Azure Traffic Manager allows the delivery of global applications.
+- Azure Traffic Manager allows the delivery of global applications and can be used alongside Azure Front Door for added resilience.
 
 **Design recommendations:**
 
@@ -40,6 +40,8 @@ This section explores key recommendations to deliver internal-facing and externa
 - Use a DDoS standard protection plan for all public IP addresses in a landing zone.
 
 - Use Azure Front Door with WAF policies to deliver and help protect global HTTP/S applications that span Azure regions.
+
+- Ensure you have reviewed the guidance in [Global routing redundancy for mission-critical web applications](/azure/architecture/guide/networking/global-web-applications/overview) when using Azure Front Door in your architectures.
 
 - When you're using Front Door and Application Gateway to help protect HTTP/S applications, use WAF policies in Front Door. Lock down Application Gateway to receive traffic only from Front Door.
 
