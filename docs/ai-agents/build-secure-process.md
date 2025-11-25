@@ -26,13 +26,14 @@ Establish a strategic foundation before development begins. Enterprise architect
 Standardize the environment and governance artifacts before building AI agents. Proper setup reduces deployment delays, ensures compliance, and simplifies scaling as agent adoption grows.
 
 1.  **Define the Agent Charter.** Create a governance artifact that documents what the agent system does, how it supports business objectives, and what it must not do. The charter must specify:
-    *   **System responsibilities:** Identify what the solution accomplishes and how it advances business objectives.
-    *   **Agent roles:** Define what each agent does to prevent overlap and ensure accountability.
-    *   **Prohibited actions:** Specify what the system must not do to avoid compliance or security violations.
+    - **System responsibilities:** Identify what the solution accomplishes and how it advances business objectives.
+    - **Agent roles:** Define what each agent does to prevent overlap and ensure accountability.
+    - **Prohibited actions:** Specify what the system must not do to avoid compliance or security violations.
 
 2.  **Select the technology platform.** Choose between Foundry, Copilot Studio, or custom frameworks based on control, ease of use, and integration needs. See [Technology plan](./technology-solutions-plan-strategy.md) for more information on platform selection.
 
 **Microsoft facilitation:**
+
 :::image type="icon" source="./images/foundry-icon.png"::: **Foundry**: Use for scenarios requiring deep customization or pro-code control. Use [prompt-based agents](/azure/ai-foundry/agents/concepts/development-lifecycle?view=foundry#types-of-agents) for rapid development or [hosted agents](/azure/ai-foundry/agents/concepts/hosted-agents?view=foundry) for advanced orchestration. Apply the Well-Architected Framework principles for [AI workloads](/azure/well-architected/ai/) and start with the [AI landing zone](https://github.com/Azure/AI-Landing-Zones). See also [AI Ready](/azure/cloud-adoption-framework/scenarios/ai/ready) for general best practices.
 
 :::image type="icon" source="./images/copilot-studio-icon.png"::: **Copilot Studio**:  Use for SaaS integration and low-code extensibility. [Verify licensing](/microsoft-copilot-studio/requirements-licensing-subscriptions) and [configure environments](/microsoft-copilot-studio/environments-first-run-experience) to separate development, testing, and production workloads.
@@ -42,8 +43,8 @@ Standardize the environment and governance artifacts before building AI agents. 
 Orchestration determines how agents coordinate, make decisions, and execute tasks. Select an orchestration pattern that balances complexity with control.
 
 1. **Select an orchestration pattern.** Choose between managed services and custom frameworks based on organizational capability and requirements.
-    *   **Managed orchestration** (Foundry Agent Service) offers quick deployment, built-in security, and enterprise connectors, but limits customization and transparency.
-    *   **Custom frameworks** (Microsoft Agent Framework, LangGraph) provide complete control, full visibility, and multi-cloud flexibility but increase engineering effort.
+    - **Managed orchestration** (Foundry Agent Service) offers quick deployment, built-in security, and enterprise connectors, but limits customization and transparency.
+    - **Custom frameworks** (Microsoft Agent Framework, LangGraph) provide complete control, full visibility, and multi-cloud flexibility but increase engineering effort.
 
 2. **Use workflows for deterministic sequences.** Workflows are not mandatory but provide structure when processes require a predefined order of operations. Use workflows to define sequences that include agents, grounding AI decision-making in verifiable rules. This approach ensures reliability for complex tasks where consistency is prioritized over flexibility.
 
@@ -58,10 +59,10 @@ Orchestration determines how agents coordinate, make decisions, and execute task
 Agent instructions act as operational guardrails that shape how agents respond, interact, and comply with organizational policies. Standardize these instructions to ensure consistency and regulatory alignment.
 
 1.  **Structure instructions as configuration.** Treat agent instructions as code. Each agent requires complete guidelines covering:
-    *   **Identity and tone:** Define how the agent presents itself to ensure consistent user experience.
-    *   **Scope and boundaries:** Explicitly state what the agent does and what it avoids (for example, "Do not access payroll systems").
-    *   **Tool integrations:** Mandate specific tool usage. *Example: "You must use the [Tool Name] to answer questions. If the answer is not found, state 'I don't know'."*
-    *   **Citations:** Require citations for transparency. *Example: "Every answer must provide citations for using the [Tool Name]."*
+    - **Identity and tone:** Define how the agent presents itself to ensure consistent user experience.
+    - **Scope and boundaries:** Explicitly state what the agent does and what it avoids (for example, "Do not access payroll systems").
+    - **Tool integrations:** Mandate specific tool usage. *Example: "You must use the [Tool Name] to answer questions. If the answer is not found, state 'I don't know'."*
+    - **Citations:** Require citations for transparency. *Example: "Every answer must provide citations for using the [Tool Name]."*
 
 2.  **Standardize communication protocols.** Use approved protocols such as [Agent-to-Agent (A2A)](/agent-framework/user-guide/agents/agent-types/a2a-agent) and Model Context Protocol (MCP) for interactions. Prohibit communication with unknown or internet-exposed agents to avoid security risks. Adopt structured formats like JSON for inter-agent communication to improve accuracy.
 
@@ -94,7 +95,7 @@ Organizations must define standards for how agents access data and perform actio
 
 ### Agent knowledge
 
-Review the [Data plan for AI agents](./data-plan.md) to align integration strategies with organizational security requirements.
+Review the [Data architecture for AI agents](./data-architecture-plan.md) to align integration strategies with organizational security requirements.
 
 1. **Segment knowledge by role.** In multi-agent systems, restrict data access based on the specific function of each agent. Segmentation reduces complexity and limits the potential exposure of sensitive information.
 
@@ -180,4 +181,4 @@ Security and governance ensure AI agents operate safely, consistently, and in co
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Integrate agents into business processes](./integrate.md)
+> [Operate AI agents](./integrate-manage-operate.md)

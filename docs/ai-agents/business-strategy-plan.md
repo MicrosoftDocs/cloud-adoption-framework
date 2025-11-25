@@ -7,7 +7,7 @@ author: stephen-sumner
 ms.author: pnp
 ms.date: 12/01/2025
 ms.update-cycle: 180-days
-ms.topic: concept-article
+ms.topic: article
 ms.collection: ce-skilling-ai-copilot
 ---
 
@@ -29,9 +29,9 @@ Before building an agent, assess whether a deterministic or structured approach 
 
 Use agents when a workflow requires reasoning, decision-making, and dynamic tool execution to handle ambiguity. Unlike deterministic software that follows a fixed logic path, agents autonomously formulate plans and adapt to variable inputs to achieve a specific goal. This capability bridges the gap between static automation and open-ended generative AI. See also [What is an AI agent?](./index.md#what-is-an-ai-agent).
 
-1.  **Identify scenarios requiring cognitive flexibility.** Evaluate processes where the inputs vary significantly or the steps to a solution depend on context. Agents provide value when a task involves interpreting intent, chaining multiple reasoning steps, or selecting specific tools from a library to complete a request. If the workflow is static, use standard automation. If it requires judgment, use an agent. Consult resources such as the [Microsoft Scenario Library](https://adoption.microsoft.com/scenario-library/), [AI Use Cases catalog](https://www.microsoft.com/ai/use-case), and [Sample Solution Gallery](https://adoption.microsoft.com/sample-solution-gallery/) to benchmark internal ideas against proven patterns.
+1. **Identify scenarios requiring cognitive flexibility.** Evaluate processes where the inputs vary significantly or the steps to a solution depend on context. Agents provide value when a task involves interpreting intent, chaining multiple reasoning steps, or selecting specific tools from a library to complete a request. If the workflow is static, use standard automation. If it requires judgment, use an agent. Consult resources such as the [Microsoft Scenario Library](https://adoption.microsoft.com/scenario-library/), [AI Use Cases catalog](https://www.microsoft.com/ai/use-case), and [Sample Solution Gallery](https://adoption.microsoft.com/sample-solution-gallery/) to benchmark internal ideas against proven patterns.
 
-2.  **Target high-impact strategic areas.** Direct agent development toward pillars that scale operations and drive competitive advantage. Aligning agent capabilities with these strategic goals ensures measurable business value.
+2. **Target high-impact strategic areas.** Direct agent development toward pillars that scale operations and drive competitive advantage. Aligning agent capabilities with these strategic goals ensures measurable business value.
 
    :::image type="content" source="./images/ai-agent-opportunities.png" alt-text="Diagram showing four quadrants of AI agent opportunities: Reshape business processes and Enrich employee experiences (internal impact), plus Reinvent customer engagement and Accelerate innovation (external impact). Each quadrant contains specific examples of how AI agents can create business value." lightbox="./images/ai-agent-opportunities.png" border="false":::
 

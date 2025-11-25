@@ -5,7 +5,7 @@ author: stephen-sumner
 ms.author: pnp
 ms.date: 11/01/2025
 ms.update-cycle: 180-days
-ms.topic: conceptual
+ms.topic: article
 ---
 
 # Responsible AI policy for AI agents
@@ -18,11 +18,11 @@ Responsible AI defines how an organization designs and operates AI systems to up
 
 Begin with core Responsible AI principles that all AI agents must follow. Common principles include fairness, privacy, transparency, and accountability. Grounding your policy in these values sets a consistent ethical baseline. Integrating these principles into existing processes prevents fragmented compliance and makes ethical requirements part of the DNA of every AI project.
 
-1.  **Adopt industry frameworks as baselines.** Use established standards like [Microsoft’s Responsible AI principles](/ai/responsible-ai?msockid=387b522e88e769ba0c90444a89ed68d0) or [NIST’s AI Risk Management Framework (RMF)](https://www.nist.gov/itl/ai-risk-management-framework) as a starting point. These frameworks offer comprehensive coverage of ethical and risk considerations, saving time and lending credibility to your policy. They ensure critical areas like data privacy, fairness, and security are not overlooked.
+1. **Adopt industry frameworks as baselines.** Use established standards like [Microsoft’s Responsible AI principles](/ai/responsible-ai?msockid=387b522e88e769ba0c90444a89ed68d0) or [NIST’s AI Risk Management Framework (RMF)](https://www.nist.gov/itl/ai-risk-management-framework) as a starting point. These frameworks offer comprehensive coverage of ethical and risk considerations, saving time and lending credibility to your policy. They ensure critical areas like data privacy, fairness, and security are not overlooked.
 
-2.  **Align AI policy with corporate governance.** Map the Responsible AI policy to existing corporate policies, such as data governance and incident management. This integration ensures consistency and prevents AI from becoming a loophole outside normal oversight. Regularly benchmark the policy against emerging laws and standards, such as the EU AI Act or ISO/IEC 42001, to stay ahead of compliance issues.
+2. **Align AI policy with corporate governance.** Map the Responsible AI policy to existing corporate policies, such as data governance and incident management. This integration ensures consistency and prevents AI from becoming a loophole outside normal oversight. Regularly benchmark the policy against emerging laws and standards, such as the EU AI Act or ISO/IEC 42001, to stay ahead of compliance issues.
 
-3.  **Enforce "Ethical by Design" through training.** Provide practical guidance, templates, and checklists to help teams build compliant AI systems from the start. Invest in training programs for product managers and developers to ensure they understand the rationale behind the rules. Establishing an "AI champion" network within business units can bridge the gap between high-level policy and on-the-ground implementation.
+3. **Enforce "Ethical by Design" through training.** Provide practical guidance, templates, and checklists to help teams build compliant AI systems from the start. Invest in training programs for product managers and developers to ensure they understand the rationale behind the rules. Establishing an "AI champion" network within business units can bridge the gap between high-level policy and on-the-ground implementation.
 
 ## Assign ownership and oversight
 
@@ -45,4 +45,4 @@ Even with robust planning, issues may arise. A strong governance framework inclu
 Use these policies as the foundation for all AI agent implementations. Convert them into a governance framework that supports secure, ethical, and scalable AI adoption.
 
 > [!div class="nextstepaction"]
-> [Governance and security](./governance-security.md)
+> [Govern agents across organization](./governance-security-across-organization.md)
