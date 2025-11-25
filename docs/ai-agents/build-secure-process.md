@@ -7,7 +7,7 @@ author: stephen-sumner
 ms.author: pnp
 ms.date: 12/01/2025
 ms.update-cycle: 180-days
-ms.topic: conceptual
+ms.topic: article
 ms.collection: ce-skilling-ai-copilot
 ---
 

@@ -16,7 +16,7 @@ A strong data plan is essential for organizations that want AI agents to deliver
 
 Organizations often underestimate the role of data readiness in AI success. AI agents do not create knowledge. They retrieve and synthesize information from existing sources. If those sources are incomplete, fragmented, or inaccessible, the agent produces inaccurate or misleading results. A well-designed data plan ensures that agents operate on authoritative content, respect security boundaries, and deliver consistent value across business processes.
 
-:::image type="content" source="images/alz-fabric-agents-data.png" alt-text="Diagram of a data estate from Microsoft 365 apps to data in Azure. It shows unification of business data in Microsoft Fabric's OneLake data lake, and how that data supports Foundry and Copilot Agents." lightbox="images/alz-fabric-agents-data.png":::
+:::image type="content" source="images/data-architecture-fabric-onelake-foundry-azure-microsoft.png" alt-text="Diagram of a data estate from Microsoft 365 apps to data in Azure. It shows unification of business data in Microsoft Fabric's OneLake data lake, and how that data supports Foundry and Copilot Agents." lightbox="images/data-architecture-fabric-onelake-foundry-azure-microsoft.png":::
 
 ## Prepare Microsoft 365 data
 
@@ -139,4 +139,4 @@ Include governance details in the same record. Specify which data sources are ce
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Responsible AI](./responsible-ai.md)
+> [Responsible AI](./responsible-ai-across-organization.md)

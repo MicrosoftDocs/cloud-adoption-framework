@@ -23,7 +23,7 @@ items:
     expanded: true
     items:
       - name: Single or multiple agents?
-        href: single-multi-agent-systems.md
+        href: docs/ai-agents/single-agent-multiple-agents.md
       - name: Build process
         href: build-secure-process.md
   - name: 4. Operate agents

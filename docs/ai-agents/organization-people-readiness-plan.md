@@ -5,7 +5,7 @@ author: stephen-sumner
 ms.author: pnp
 ms.date: 12/01/2025
 ms.update-cycle: 180-days
-ms.topic: conceptual
+ms.topic: article
 ms.collection: ce-skilling-ai-copilot
 ---
 
@@ -19,7 +19,7 @@ Adopting AI agents demands a deliberate organizational shift beyond technical im
 
 Establish a clear division of responsibilities to support scalable innovation. A proven model includes a central platform and distributed workloads. This structure allows workloads to provide business-aligned solutions quickly while the platform enforces consistency and governance.
 
-1. **Platform responsibilities.** The platform team provides shared infrastructure, tools, and governance enforcement. Platform builders align the "platform products" they create so that agent developers can consume these products in line with the organization's [responsible AI policies](./responsible-ai.md). This centralization reduces duplication and ensures that security, observability, and compliance are built-in rather than bolted on. Key functions include monitoring AI systems for performance and fairness, enforcing risk checks, and maintaining development standards. The platform team also incorporates insights from incident and compliance events into continuous platform improvements. To establish an enterprise platform, follow [Azure landing zone](/azure/cloud-adoption-framework/ready/landing-zone/).
+1. **Platform responsibilities.** The platform team provides shared infrastructure, tools, and governance enforcement. Platform builders align the "platform products" they create so that agent developers can consume these products in line with the organization's [responsible AI policies](./responsible-ai-across-organization.md). This centralization reduces duplication and ensures that security, observability, and compliance are built-in rather than bolted on. Key functions include monitoring AI systems for performance and fairness, enforcing risk checks, and maintaining development standards. The platform team also incorporates insights from incident and compliance events into continuous platform improvements. To establish an enterprise platform, follow [Azure landing zone](/azure/cloud-adoption-framework/ready/landing-zone/).
 
 1. **Workload responsibilities.** Agent workloads operate within business units and own the agents for their domains. Agent developers define requirements, provide domain-specific data, design conversation flows, and integrate agents into business processes. While platform guardrails ensure safe innovation, workload developers must ultimately enforce and evaluate the agent's compliance with the organization's responsible AI principles. This approach ensures agents remain relevant to specific business needs and adapt quickly to changing requirements.
 
@@ -35,7 +35,7 @@ Common skill areas include:
 | --- | --- |
 | [Prompt engineering](/azure/ai-foundry/openai/concepts/prompt-engineering) | Crafting effective instructions and orchestration for agents. |
 | Agent optimization | [Fine-tuning models](/azure/ai-foundry/concepts/fine-tuning-overview), evaluating model outputs, and understanding AI performance metrics. |
-| AI ethics and governance | Interpreting [responsible AI principles](./responsible-ai.md) and ensuring agents adhere to them. |
+| AI ethics and governance | Interpreting [responsible AI principles](./responsible-ai-across-organization.md) and ensuring agents adhere to them. |
 
 Develop a structured training program to build AI competency across teams. Treat skills development as a core part of technology adoption rather than an afterthought.
 
@@ -51,4 +51,4 @@ Prepare the organization for AI-driven change to ensure long-term adoption. Mana
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Data strategy](./data-strategy.md)
+> [Data architecture](./data-architecture-plan.md)

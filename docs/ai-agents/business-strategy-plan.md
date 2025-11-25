@@ -97,4 +97,4 @@ This structured evaluation approach ensures that every AI agent initiative remai
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Technology strategy](./technology-strategy.md)
+> [Technology plan](./technology-solutions-plan-strategy.md)

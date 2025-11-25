@@ -5,7 +5,7 @@ author: stephen-sumner
 ms.author: pnp
 ms.date: 12/01/2025
 ms.update-cycle: 180-days
-ms.topic: conceptual
+ms.topic: article
 ---
 
 # Operate AI agents across your organization
@@ -35,9 +35,9 @@ Ad-hoc development leads to duplication and inconsistent security standards. For
 
 :::image type="icon" source="./images/copilot-studio-icon.png"::: **Copilot Studio:** Use [agent builder templates](/microsoft-365-copilot/extensibility/agent-builder-templates) to accelerate integration and ensure consistency across deployments.
 
-## Operate AI agents across your organization
+## Manage AI agents across your organization
 
-Operational excellence ensures agents remain secure, cost-effective, and compliant as they scale. Without centralized oversight, shadow AI and uncontrolled costs can undermine the value of adoption. Operations teams must transition from deployment to active management, ensuring the [governance policies](./governance-security.md) and [security standards](./build-secure.md) remain effective over time.
+Operational excellence ensures agents remain secure, cost-effective, and compliant as they scale. Without centralized oversight, shadow AI and uncontrolled costs can undermine the value of adoption. Operations teams must transition from deployment to active management, ensuring the governance policies and security standards remain effective over time.
 
 :::image type="content" source="./images/governance-security.png" alt-text="Diagram illustrating governance layers for agents and workflows. At the top, a box labeled Organizational Governance includes categories for Data Governance, Security, Observability, and Development, with tools such as Microsoft Purview, Azure Policy, Microsoft Defender, Azure Monitor, Microsoft Entra, and development frameworks like Microsoft Agent Framework, Foundry SDK, and MCP. Below, a second box labeled Government for Building and Operating Agents and Workflows is divided into two sections: Build Phase: Four boxes for Agents and Workflows, Models, Evaluations, and Guardrails, each governed and secured by corresponding tools. Operate Phase: Four boxes for Assets, Compliance, Quotas, and Administration, with tools supporting governance during operations.." lightbox="./images/governance-security.png" border="false":::
 
@@ -45,15 +45,15 @@ Operational excellence ensures agents remain secure, cost-effective, and complia
 
 Agents are not "set and forget" assets. Active lifecycle management reduces the attack surface and reclaims resources for high-value initiatives.
 
-1. **Audit the agent estate.** Use the [inventory established during governance](./governance-security.md#agent-observability) to track active deployments. Regularly identify and retire "zombie" agents—those that are deployed but unused or outdated.
+1. **Audit the agent estate.** Use the [inventory established during governance](./governance-security-across-organization.md#agent-observability) to track active deployments. Regularly identify and retire "zombie" agents—those that are deployed but unused or outdated.
 2. **Centralize administration.** Fragmented management leads to security gaps. Use a unified control plane to manage the agent fleet rather than managing projects in isolation. This allows administrators to push policy updates, rotate credentials, and manage access controls consistently.
-3. **High availability and disaster recovery.** Align the availability configurations of each service deployment to the needs of the workloads environments. 
+3. **High availability and disaster recovery.** Align the availability configurations of each service deployment to the needs of the workloads environments.
 
 :::image type="icon" source="./images/foundry-icon.png"::: **Foundry**: Use the [Microsoft Foundry Control Plane](/azure/ai-foundry/control-plane/overview?view=foundry) for unified visibility and governance across your agent fleet. See [High availability and resiliency](/azure/ai-foundry/how-to/high-availability-resiliency?view=foundry) and [disaster recovery](/azure/ai-foundry/how-to/agent-service-disaster-recovery?view=foundry).
 
 ### 2. Continuous compliance and security
 
-Regulatory and internal requirements evolve. Ensure that the [compliance policies](./governance-security.md#data-governance-and-compliance) and [security guardrails](./build-secure.md#5-agent-security) defined during the build phase are enforced continuously.
+Regulatory and internal requirements evolve. Ensure that the [governance policies](./governance-security-across-organization.md) and [security standards](./build-secure-process.md#5-agent-security) defined during the build phase are enforced continuously.
 
 1. **Automate policy enforcement.** Schedule automated scans to detect configuration drift or policy violations. Ensure agents continue to adhere to data residency, retention, and privacy standards as they evolve.
 2. **Integrate with security operations.** Route agent alerts to the Security Operations Center (SOC) to ensure rapid response to incidents like jailbreak attempts or data leakage. Treat agent anomalies with the same urgency as traditional security threats.
@@ -61,7 +61,7 @@ Regulatory and internal requirements evolve. Ensure that the [compliance policie
 
 ### 3. Cost and quota optimization
 
-Variable costs for tokens and compute can scale disproportionately to business value. Actively manage the [cost tracking mechanisms](./governance-security.md#track-and-allocate-costs) set up during governance to ensure financial sustainability.
+Variable costs for tokens and compute can scale disproportionately to business value. Actively manage the [cost tracking mechanisms](./governance-security-across-organization.md#agent-observability) set up during governance to ensure financial sustainability.
 
 1. **Review consumption trends.** Analyze usage data to identify inefficiencies, such as agents using premium models for simple tasks. Regular reviews prevent budget overruns and highlight opportunities for optimization.
 2. **Adjust quotas dynamically.** Use usage data to adjust quotas and budgets. Prioritize critical workloads while preventing runaway spending on lower-value activities.

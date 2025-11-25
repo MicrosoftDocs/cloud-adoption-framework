@@ -176,4 +176,4 @@ These protocols create a common language for agents across the organization. The
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Single or multi-agent systems?](./single-multi-agent-systems.md)
+> [Single agent or multiple agents?](./single-agent-multiple-agents.md)

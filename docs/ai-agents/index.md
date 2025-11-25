@@ -64,4 +64,4 @@ Organizations use three categories of AI agents, each delivering value at differ
 
 To realize the full potential of AI agents, organizations must align their adoption strategy with business outcomes. The next section explores how AI agents create internal and customer-facing impact, and how decision makers guide their teams to use agents effectively across the business.
 
-[Business strategy for AI agents](./business-strategy.md)
+[Business plan](./business-strategy-plan.md)
