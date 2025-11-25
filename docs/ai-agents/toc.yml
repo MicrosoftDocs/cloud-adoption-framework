@@ -7,7 +7,7 @@ items:
       - name: Business plan
         href: business-strategy-plan.md
       - name: Technology plan
-        href: technology-solutions-plan.md
+        href: technology-solutions-plan-strategy.md
       - name: Organization readiness
         href: organization-people-readiness-plan.md
       - name: Data architecture
