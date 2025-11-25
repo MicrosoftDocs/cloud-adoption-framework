@@ -21,7 +21,7 @@ This article provides a strategic framework for technical decision makers to bui
 
 Establish a strategic foundation before development begins. Enterprise architects must define system requirements, select technology platforms, and structure agent behavior to ensure agents deliver value while remaining secure and compliant.
 
-### Environment setup
+### Set up environment
 
 Standardize the environment and governance artifacts before building AI agents. Proper setup reduces deployment delays, ensures compliance, and simplifies scaling as agent adoption grows.
 
@@ -30,13 +30,14 @@ Standardize the environment and governance artifacts before building AI agents. 
     *   **Agent roles:** Define what each agent does to prevent overlap and ensure accountability.
     *   **Prohibited actions:** Specify what the system must not do to avoid compliance or security violations.
 
-2.  **Select the technology platform.** Choose between Foundry, Copilot Studio, or custom frameworks based on control, ease of use, and integration needs. See [Technology plan](./technology-plan.md) for more information on platform selection.
+2.  **Select the technology platform.** Choose between Foundry, Copilot Studio, or custom frameworks based on control, ease of use, and integration needs. See [Technology plan](./technology-solutions-plan-strategy.md) for more information on platform selection.
 
-    :::image type="icon" source="./images/foundry-icon.png"::: **Foundry**: Use for scenarios requiring deep customization or pro-code control. Use [prompt-based agents](/azure/ai-foundry/agents/concepts/development-lifecycle?view=foundry#types-of-agents) for rapid development or [hosted agents](/azure/ai-foundry/agents/concepts/hosted-agents?view=foundry) for advanced orchestration. Apply the Well-Architected Framework principles for [AI workloads](/azure/well-architected/ai/) and start with the [AI landing zone](https://github.com/Azure/AI-Landing-Zones).
+**Microsoft facilitation:**
+:::image type="icon" source="./images/foundry-icon.png"::: **Foundry**: Use for scenarios requiring deep customization or pro-code control. Use [prompt-based agents](/azure/ai-foundry/agents/concepts/development-lifecycle?view=foundry#types-of-agents) for rapid development or [hosted agents](/azure/ai-foundry/agents/concepts/hosted-agents?view=foundry) for advanced orchestration. Apply the Well-Architected Framework principles for [AI workloads](/azure/well-architected/ai/) and start with the [AI landing zone](https://github.com/Azure/AI-Landing-Zones). See also [AI Ready](/azure/cloud-adoption-framework/scenarios/ai/ready) for general best practices.
 
-    :::image type="icon" source="./images/copilot-studio-icon.png"::: **Copilot Studio**:  Use for SaaS integration and low-code extensibility. [Verify licensing](/microsoft-copilot-studio/requirements-licensing-subscriptions) and [configure environments](/microsoft-copilot-studio/environments-first-run-experience) to separate development, testing, and production workloads.
+:::image type="icon" source="./images/copilot-studio-icon.png"::: **Copilot Studio**:  Use for SaaS integration and low-code extensibility. [Verify licensing](/microsoft-copilot-studio/requirements-licensing-subscriptions) and [configure environments](/microsoft-copilot-studio/environments-first-run-experience) to separate development, testing, and production workloads.
 
-### Orchestration strategy
+### Pick an orchestration strategy
 
 Orchestration determines how agents coordinate, make decisions, and execute tasks. Select an orchestration pattern that balances complexity with control.
 
@@ -68,6 +69,7 @@ Agent instructions act as operational guardrails that shape how agents respond, 
 
 4.  **Validate behavior systematically.** Build automated validation into the workflow. When an agent produces output, verify it automatically using a second agent or evaluation script to check facts and tone.
 
+**Microsoft facilitation:**
 :::image type="icon" source="./images/foundry-icon.png"::: **Foundry**: See [System message design](/azure/ai-foundry/openai/concepts/advanced-prompt-engineering?view=foundry). Use the [A2A tool](/azure/ai-foundry/agents/how-to/tools/agent-to-agent?view=foundry&pivots=python) and [Foundry playground](/azure/ai-foundry/concepts/concept-playgrounds?view=foundry). Test and refine behavior using [agent evaluators](/azure/ai-foundry/concepts/evaluation-evaluators/agent-evaluators?view=foundry).
 
 ## 2. Agent model selection strategy
@@ -88,13 +90,15 @@ In multi-agent architectures, define policies for assigning distinct models to s
 
 ## 3. Agent knowledge and tools
 
-Organizations must define standards for how agents access data and perform actions. These policies determine the agent’s reliability, compliance posture, and operational risk. **Follow all [data governance and compliance policies](./governance-security.md#data-governance-and-compliance).**
+Organizations must define standards for how agents access data and perform actions. These policies determine the agent’s reliability, compliance posture, and operational risk. Follow all [**data governance and compliance policies**](./governance-security-across-organization.md#data-governance-and-compliance).
 
 ### Agent knowledge
 
-Ensure the [data governance](./governance-security.md#data-governance-and-compliance) policies you defined are enforced. Review the [Data plan for AI agents](./data-plan.md) to align integration strategies with organizational security requirements.
+Review the [Data plan for AI agents](./data-plan.md) to align integration strategies with organizational security requirements.
 
-Segment knowledge by role. In multi-agent systems, restrict data access based on the specific function of each agent. Segmentation reduces complexity and limits the potential exposure of sensitive information.
+1. **Segment knowledge by role.** In multi-agent systems, restrict data access based on the specific function of each agent. Segmentation reduces complexity and limits the potential exposure of sensitive information.
+
+2. **Connect to governed data sources.** Ensure agents retrieve information only from approved, managed repositories. Avoid connecting agents to unstructured or unverified data lakes without proper filtering.
 
 :::image type="icon" source="./images/foundry-icon.png"::: **Foundry**: Connect agents to [Foundry IQ](/azure/ai-foundry/agents/how-to/tools/knowledge-retrieval?view=foundry&tabs=foundry%2Cpython) to combine multiple data sources behind an agentic retrieval engine while maintaining governance controls.
 
