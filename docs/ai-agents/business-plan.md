@@ -31,25 +31,38 @@ Identify the strategic areas where AI agents deliver the most significant impact
 
 ## When to use AI agents?
 
-After identifying a strategic area for improvement, determine if an AI agent is the correct technical solution. Agents provide value in tasks that require reasoning, adaptability, and the ability to handle variable inputs. They differ from traditional automation, which relies on fixed logic. Use the following criteria to narrow the scope and select appropriate use cases.
-
-1. **Distinguish reasoning from repetition.** Do not use AI agents for tasks that simpler, deterministic tools can solve. If a process follows a predictable path with fixed inputs and outputs, an agent introduces unnecessary cost and latency. Reserve agents for scenarios where ambiguity exists.
-
-2. **Combine agents with deterministic code.** Split processes into distinct components. Use AI agents for user interaction, intent recognition, or data gathering, and rely on deterministic functions for calculations or database commits. This hybrid approach ensures precision for mathematical or transactional tasks while using the agent's flexibility for engagement.
-
-3. **Validate feasibility with pilots.** Test use cases in low-code or no-code environments before committing to full development. Platforms like Azure AI Foundry or Microsoft Copilot Studio allow for rapid prototyping. This step confirms whether an agent adds value beyond standard automation without significant upfront investment.
+After identifying a strategic area for improvement, determine if an AI agent is the correct technical solution. Not every problem requires an agent. Simpler tools often provide faster, more reliable results for predictable tasks.
 
 :::image type="content" source="./images/ai-agent-decision-tree.png" alt-text="Decision tree diagram showing when to use traditional AI apps, generative AI apps, SaaS agents, and AI agents you build." lightbox="./images/ai-agent-decision-tree.png" border="false":::
 
-4. **Identify agent use cases.** Explore examples from resources such as the [Microsoft Scenario Library](https://adoption.microsoft.com/scenario-library/) and [AI Use Cases catalog](https://www.microsoft.com/ai/use-case) to guide planning. These reference resources help avoid common design flaws and accelerate solution development. Include these resources in workshops and use them to benchmark internal ideas. See also [AI-powered success](https://www.microsoft.com/microsoft-cloud/blog/2025/07/24/ai-powered-success-with-1000-stories-of-customer-transformation-and-innovation/#:~:text=In%20this%20blog%2C%20we%E2%80%99ve%20collected%20more%20than%201%2C000,impact%20and%20shape%20today%E2%80%99s%20platform%20shift%20to%20AI.?msockid=3d64a84f1d7463b738e3bbc21c03625f), [Azure Marketplace](https://azure.microsoft.com/partners/marketplace?msockid=3d64a84f1d7463b738e3bbc21c03625f), and the [Sample Solution Gallery](https://adoption.microsoft.com/sample-solution-gallery/).
+### When not to use AI agents?
 
-## How to prioritize AI agent use cases
+Before building an agent, assess whether a deterministic or structured approach is more suitable.
+
+1. **Use deterministic code for predictable tasks.** Do not use AI agents for tasks that simpler, deterministic tools can solve. If a process follows a predictable path with fixed inputs and outputs, involves numerical calculations, and requires precise outputs, use standard code or deterministic AI automation. An agent introduces unnecessary variability, cost, and latency.
+
+1. **Build generative AI apps for static retrieval.** Use a generative AI application, rather than an agent, for static Q&A or content generation that requires no reasoning over which data or tool to use. These applications use a consistent index to generate responses without the complex orchestration capabilities of an agent.
+
+1. **Implement workflows for defined processes.** Use workflows when the sequence of operations is explicitly defined and requires strict control over the execution path. A workflow is a predefined sequence that can include AI agents as components, handling complex business processes, human interactions, and system integrations. Unlike agents, workflows do not rely on an LLM to determine the path dynamically. They follow a set structure.
+
+### Identify AI agent use cases
+
+1. **Select AI agents for reasoning and adaptability.** Agents provide value in tasks that require reasoning, adaptability, and the ability to handle variable inputs. They differ from traditional automation, which relies on fixed logic. Consult resources such as the [Microsoft Scenario Library](https://adoption.microsoft.com/scenario-library/), [AI Use Cases catalog](https://www.microsoft.com/ai/use-case), and [Sample Solution Gallery](https://adoption.microsoft.com/sample-solution-gallery/) to guide planning. Reference these examples to benchmark internal ideas and avoid design flaws.
+
+3. **Validate feasibility with pilots.** Test use cases in low-code or no-code environments before committing to full development. Platforms like Azure AI Foundry or Microsoft Copilot Studio allow for rapid prototyping. This step confirms whether an agent adds value beyond standard automation without significant upfront investment.
+
+
+### Identify AI agent use cases
+
+Choose AI agents when the task requires dynamic reasoning and adaptability rather than a fixed sequence of steps.
+
+1. **Select AI agents for dynamic reasoning.** An AI agent is driven by a large language model (LLM) and determines its own steps based on context and available tools. Use agents for scenarios where the path to the solution is ambiguous or variable. Consult resources such as the [Microsoft Scenario Library](https://adoption.microsoft.com/scenario-library/) to guide planning.
+
+1. **Validate feasibility with pilots.** Test use cases in low-code or no-code environments before committing to full development. Platforms like Azure AI Foundry or Microsoft Copilot Studio allow for rapid prototyping. This step confirms whether an agent adds value beyond standard automation without significant upfront investment.
+
+## How to prioritize AI agent use cases?
 
 Not all agent initiatives deliver equal value. Prioritize use cases that align with strategic goals and demonstrate impact quickly. Focus on projects that offer high business value and low implementation complexity. Use three criteria to evaluate and rank candidate use cases: business impact (value), technical feasibility (complexity), and user desirability (value).
-
-:::image type="complex" source="./images/high-value-low-complexity-use-cases.png" alt-text="Prioritization matrix for AI agent use cases" lightbox="./images/business-impact.png" border="false":::
-   Diagram showing a matrix with Business Value on the vertical axis and Implementation Complexity on the horizontal axis. The diagram highlights the sweet spot in the upper-left quadrant representing high business value and low implementation complexity, which is the optimal target for AI agent use case prioritization.
-:::image-end:::
 
 ### Evaluate business impact
 

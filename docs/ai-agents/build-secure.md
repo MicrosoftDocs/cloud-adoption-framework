@@ -15,13 +15,13 @@ ms.collection: ce-skilling-ai-copilot
 
 This article provides a strategic framework for technical decision makers to build agents in Microsoft Foundry and Microsoft Copilot Studio. Use this guidance to establish standards and help your organization succeed with AI agents.
 
-:::image type="content" source="./images/build-ai-agents.png" alt-text="Diagram showing five steps to build agents: Orchestration, Models, Knowledge & Tools, Observability, Security; center highlights Microsoft Foundry and Copilot Studio as two platforms for Microsoft Build." lightbox="./images/build-ai-agents.png" border="false":::
+:::image type="content" source="./images/build-ai-agents.png" alt-text="Diagram showing five steps to build agents: Orchestration, Models, Knowledge & Tools, Observability, Security. The center highlights Microsoft Foundry and Copilot Studio as two platforms for Microsoft Build." lightbox="./images/build-ai-agents.png" border="false":::
 
 ## 1. Agent orchestration
 
 Establish a strategic foundation before development begins. Enterprise architects must define system requirements, select technology platforms, and structure agent behavior to ensure agents deliver value while remaining secure and compliant.
 
-### 1.1 Platform and environment strategy
+### Environment setup
 
 Standardize the environment and governance artifacts before building AI agents. Proper setup reduces deployment delays, ensures compliance, and simplifies scaling as agent adoption grows.
 
@@ -36,22 +36,23 @@ Standardize the environment and governance artifacts before building AI agents. 
 
     :::image type="icon" source="./images/copilot-studio-icon.png"::: **Copilot Studio**:  Use for SaaS integration and low-code extensibility. [Verify licensing](/microsoft-copilot-studio/requirements-licensing-subscriptions) and [configure environments](/microsoft-copilot-studio/environments-first-run-experience) to separate development, testing, and production workloads.
 
-### 1.2 Orchestrator selection
+### Orchestration strategy
 
-Orchestration determines how agents coordinate, make decisions, and execute tasks. Select an orchestration pattern that balances complexity with control. Choose between managed and custom orchestration frameworks based on organizational capability and requirements:
+Orchestration determines how agents coordinate, make decisions, and execute tasks. Select an orchestration pattern that balances complexity with control.
 
-| Approach | Benefits | Tradeoffs |
-| :--- | :--- | :--- |
-| **Managed orchestration** (Foundry Agent Service) | Quick deployment, built-in security, enterprise connectors | Limited customization, reduced transparency |
-| **Agent orchestration frameworks** (Microsoft Agent Framework, LangGraph) | Complete control, full visibility, multi-cloud flexibility | Significant engineering effort, compliance responsibility |
+1. **Select an orchestration pattern.** Choose between managed services and custom frameworks based on organizational capability and requirements.
+    *   **Managed orchestration** (Azure AI Agent Service) offers quick deployment, built-in security, and enterprise connectors, but limits customization and transparency.
+    *   **Custom frameworks** (Microsoft Agent Framework, LangGraph) provide complete control, full visibility, and multi-cloud flexibility, but impose significant engineering effort and compliance responsibility.
 
-:::image type="icon" source="./images/foundry-icon.png"::: **Foundry**: For managed orchestration, see [Build a workflow](/azure/ai-foundry/agents/concepts/workflow?view=foundry).
+2. **Use workflows for deterministic sequences.** Workflows are not mandatory but provide structure when processes require a predefined order of operations. Use workflows to define sequences that include agents, grounding AI decision-making in verifiable rules. This approach ensures reliability for complex tasks where consistency is prioritized over flexibility.
 
-:::image type="icon" source="./images/microsoft-agent-framework-icon.png"::: **Microsoft Agent Framework**: For hosted agents, see [workflow orchestrations](/agent-framework/user-guide/workflows/orchestrations/overview) and [AI agent orchestration patterns](/azure/architecture/ai-ml/guide/ai-agent-design-patterns).
+:::image type="icon" source="./images/foundry-icon.png"::: **Foundry**: Use [Workflows](/azure/ai-foundry/agents/concepts/workflow?view=foundry) for visual, low-code design suitable for rapid prototyping.
 
-:::image type="icon" source="./images/copilot-studio-icon.png"::: **Copilot Studio**: For multi-agent systems, [set up agent flows](/microsoft-copilot-studio/flows-overview) with distinct roles and approval checkpoints. [Configure agent behavior](/microsoft-copilot-studio/advanced-generative-actions) by orchestrating with generative AI.
+:::image type="icon" source="./images/microsoft-agent-framework-icon.png"::: **Microsoft Agent Framework**: Use the [Microsoft Agent Framework](/agent-framework/user-guide/workflows/overview) for complex, code-heavy scenarios requiring a pro-code environment.
 
-### 1.3 Agent instructions
+:::image type="icon" source="./images/copilot-studio-icon.png"::: **Copilot Studio**: [Set up agent flows](/microsoft-copilot-studio/flows-overview) for multi-agent systems with distinct roles and approval checkpoints. [Configure agent behavior](/microsoft-copilot-studio/advanced-generative-actions) by orchestrating with generative AI.
+
+### Agent instructions
 
 Agent instructions act as operational guardrails that shape how agents respond, interact, and comply with organizational policies. Standardize these instructions to ensure consistency and regulatory alignment.
 
@@ -89,7 +90,7 @@ In multi-agent architectures, define policies for assigning distinct models to s
 
 Organizations must define standards for how agents access data and perform actions. These policies determine the agent’s reliability, compliance posture, and operational risk. **Follow all [data governance and compliance policies](./governance-security.md#data-governance-and-compliance).**
 
-### 3.1 Agent knowledge
+### Agent knowledge
 
 Ensure the [data governance](./governance-security.md#data-governance-and-compliance) policies you defined are enforced. Review the [Data plan for AI agents](./data-plan.md) to align integration strategies with organizational security requirements.
 
@@ -99,7 +100,7 @@ Segment knowledge by role. In multi-agent systems, restrict data access based on
 
 :::image type="icon" source="./images/copilot-studio-icon.png"::: **Copilot Studio**: Use [knowledge sources](/microsoft-copilot-studio/knowledge-copilot-studio) to connect agents to approved information repositories and [connectors](/microsoft-copilot-studio/advanced-connectors) to integrate with enterprise systems securely.
 
-### 3.2 Agent tools
+### Agent tools
 
 Agents performing tasks, such as triggering workflows or modifying records, require strict governance to prevent unauthorized system access. Define approved actions and secure the tools that execute them to ensure operations remain within compliance boundaries.
 
@@ -119,7 +120,7 @@ Agents performing tasks, such as triggering workflows or modifying records, requ
 
 :::image type="icon" source="./images/copilot-studio-icon.png"::: **Copilot Studio**: [Add tools](/microsoft-copilot-studio/advanced-plugin-actions) and [triggers](/microsoft-copilot-studio/authoring-triggers-about).
 
-### 3.3 Agent memory
+### Agent memory
 
 Agent memory supports continuity across sessions by retaining context from previous interactions. This capability improves user experience by reducing repetitive input and enabling more natural conversations. However, memory introduces data protection obligations that require explicit policies and technical controls.
 
@@ -146,7 +147,7 @@ Observability ensures agents operate reliably, meet performance expectations, an
 :::image type="content" source="./images/governance-security.png" alt-text="Diagram illustrating governance layers for agents and workflows. At the top, a box labeled Organizational Governance includes categories for Data Governance, Security, Observability, and Development, with tools such as Microsoft Purview, Azure Policy, Microsoft Defender, Azure Monitor, Microsoft Entra, and development frameworks like Microsoft Agent Framework, Foundry SDK, and MCP. Below, a second box labeled Government for Building and Operating Agents and Workflows is divided into two sections: Build Phase: Four boxes for Agents and Workflows, Models, Evaluations, and Guardrails, each governed and secured by corresponding tools. Operate Phase: Four boxes for Assets, Compliance, Quotas, and Administration, with tools supporting governance during operations.." lightbox="./images/governance-security.png" border="false":::
 
 :::image type="icon" source="./images/foundry-icon.png"::: **Foundry**: Use the [Microsoft Foundry Control Plane](/azure/ai-foundry/control-plane/overview?view=foundry) for unified visibility and governance across your agent fleet. 
-    
+
 1. **Agents and workflows.** Configure [traces](/azure/ai-foundry/observability/concepts/trace-agent-concept?view=foundry) for execution visibility to provide the context needed to diagnose issues and improve agent logic. Establish expected ranges for latency, cost, and success rates. Alert teams when agents operate outside these baselines to enable rapid investigation and remediation. Configure [monitoring](/azure/ai-foundry/agents/how-to/metrics?view=foundry) for Foundry instances and all projects Use [agent evaluators](/azure/ai-foundry/concepts/evaluation-evaluators/agent-evaluators?view=foundry) to measure quality. See [Agent Monitoring Dashboard](/azure/ai-foundry/agents/how-to/how-to-monitor-agents-dashboard?view=foundry).
 
 2. **Models.** [Monitor models](/azure/ai-foundry/foundry-models/how-to/monitor-models?view=foundry) and use [evaluations](/azure/ai-foundry/concepts/observability?view=foundry#what-are-evaluators) to measure the quality, safety, and reliability of AI responses from deployed models.
