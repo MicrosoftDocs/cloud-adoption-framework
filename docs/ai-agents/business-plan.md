@@ -13,52 +13,34 @@ ms.collection: ce-skilling-ai-copilot
 
 # Business plan for AI agents
 
-Successful AI agent adoption aligns technical capabilities with organizational goals. This guidance identifies high-value opportunities for AI agents and defines the criteria for their application, ensuring that technology investments drive measurable business outcomes and manage architectural complexity.
+Successful AI agent adoption requires aligning technical capabilities with organizational strategy. This guidance helps identify high-value use cases and define criteria for application, ensuring investments drive measurable business outcomes while managing architectural complexity.
 
-## Where do agents provide value?
+## When not to use AI agents?
 
-Identify the strategic areas where AI agents deliver the most significant impact. Focusing on these pillars ensures that investments scale operations, enhance productivity, and drive innovation.
-
-:::image type="content" source="./images/ai-agent-opportunities.png" alt-text="Diagram showing four quadrants of AI agent opportunities: Reshape business processes and Enrich employee experiences (internal impact), plus Reinvent customer engagement and Accelerate innovation (external impact). Each quadrant contains specific examples of how AI agents can create business value." lightbox="./images/ai-agent-opportunities.png" border="false":::
-
-1. **Reshape business processes.** Agents accelerate software development, improve candidate screening, and resolve customer issues. This scales operations efficiently without increasing headcount.
-
-2. **Enrich employee experiences.** Agents retrieve data, simplify email composition, and transcribe calls. These capabilities increase productivity by reducing cycle times and allowing employees to focus on strategic work.
-
-3. **Reinvent customer engagement.** Agents reduce support resolution times and improve responsiveness. Faster, more accurate interactions lead to higher customer satisfaction.
-
-4. **Accelerate innovation.** Agents shorten product development cycles and enable proactive service recommendations. This supports faster experimentation and helps organizations respond quickly to changing market demands.
-
-## When to use AI agents?
-
-After identifying a strategic area for improvement, determine if an AI agent is the correct technical solution. Not every problem requires an agent. Simpler tools often provide faster, more reliable results for predictable tasks.
+Before building an agent, assess whether a deterministic or structured approach is more suitable. Agents introduce non-deterministic behavior, latency, and cost that are unnecessary for static workflows.
 
 :::image type="content" source="./images/ai-agent-decision-tree.png" alt-text="Decision tree diagram showing when to use traditional AI apps, generative AI apps, SaaS agents, and AI agents you build." lightbox="./images/ai-agent-decision-tree.png" border="false":::
 
-### When not to use AI agents?
+1. **Prioritize deterministic code for predictable tasks.** Do not use agents for problems solvable with simpler tools. If a process follows a fixed path with specific inputs and outputs, standard code or robotic process automation (RPA) is faster, cheaper, and more reliable. Agents introduce variability and latency that degrade performance in strictly defined scenarios.
 
-Before building an agent, assess whether a deterministic or structured approach is more suitable.
+2. **Use generative AI apps for information retrieval.** Distinguish between simple Q&A and complex orchestration. If the goal is generating content from a static index without decision-making or tool execution, a standard generative AI application (RAG pattern) is more efficient than an agent.
 
-1. **Use deterministic code for predictable tasks.** Do not use AI agents for tasks that simpler, deterministic tools can solve. If a process follows a predictable path with fixed inputs and outputs, involves numerical calculations, and requires precise outputs, use standard code or deterministic AI automation. An agent introduces unnecessary variability, cost, and latency.
+## When to use AI agents?
 
-1. **Build generative AI apps for static retrieval.** Use a generative AI application, rather than an agent, for static Q&A or content generation that requires no reasoning over which data or tool to use. These applications use a consistent index to generate responses without the complex orchestration capabilities of an agent.
+Use agents when a workflow requires reasoning, decision-making, and dynamic tool execution to handle ambiguity. Unlike deterministic software that follows a fixed logic path, agents autonomously formulate plans and adapt to variable inputs to achieve a specific goal. This capability bridges the gap between static automation and open-ended generative AI. See also [What is an AI agent?](./index.md#what-is-an-ai-agent).
 
-1. **Implement workflows for defined processes.** Use workflows when the sequence of operations is explicitly defined and requires strict control over the execution path. A workflow is a predefined sequence that can include AI agents as components, handling complex business processes, human interactions, and system integrations. Unlike agents, workflows do not rely on an LLM to determine the path dynamically. They follow a set structure.
+1.  **Identify scenarios requiring cognitive flexibility.** Evaluate processes where the inputs vary significantly or the steps to a solution depend on context. Agents provide value when a task involves interpreting intent, chaining multiple reasoning steps, or selecting specific tools from a library to complete a request. If the workflow is static, use standard automation. If it requires judgment, use an agent. Consult resources such as the [Microsoft Scenario Library](https://adoption.microsoft.com/scenario-library/), [AI Use Cases catalog](https://www.microsoft.com/ai/use-case), and [Sample Solution Gallery](https://adoption.microsoft.com/sample-solution-gallery/) to benchmark internal ideas against proven patterns.
 
-### Identify AI agent use cases
+2.  **Target high-impact strategic areas.** Direct agent development toward pillars that scale operations and drive competitive advantage. Aligning agent capabilities with these strategic goals ensures measurable business value.
 
-1. **Select AI agents for reasoning and adaptability.** Agents provide value in tasks that require reasoning, adaptability, and the ability to handle variable inputs. They differ from traditional automation, which relies on fixed logic. Consult resources such as the [Microsoft Scenario Library](https://adoption.microsoft.com/scenario-library/), [AI Use Cases catalog](https://www.microsoft.com/ai/use-case), and [Sample Solution Gallery](https://adoption.microsoft.com/sample-solution-gallery/) to guide planning. Reference these examples to benchmark internal ideas and avoid design flaws.
+   :::image type="content" source="./images/ai-agent-opportunities.png" alt-text="Diagram showing four quadrants of AI agent opportunities: Reshape business processes and Enrich employee experiences (internal impact), plus Reinvent customer engagement and Accelerate innovation (external impact). Each quadrant contains specific examples of how AI agents can create business value." lightbox="./images/ai-agent-opportunities.png" border="false":::
 
-3. **Validate feasibility with pilots.** Test use cases in low-code or no-code environments before committing to full development. Platforms like Azure AI Foundry or Microsoft Copilot Studio allow for rapid prototyping. This step confirms whether an agent adds value beyond standard automation without significant upfront investment.
+   *   **Reshape business processes.** Automate complex, multi-step workflows such as supply chain adjustments or incident triage. This scales operations without linear increases in headcount.
+   *   **Enrich employee experiences.** Augment staff by handling cognitive load, such as synthesizing research or drafting technical content. This reduces cycle times and allows employees to focus on strategic decision-making.
+   *   **Reinvent customer engagement.** Resolve dynamic customer queries autonomously with context-aware responses. This improves resolution speed and customer satisfaction compared to rigid chatbots.
+   *   **Accelerate innovation.** Use agents to analyze market trends or simulate scenarios. This shortens product development cycles and enables faster experimentation.
 
-
-### Identify AI agent use cases
-
-Choose AI agents when the task requires dynamic reasoning and adaptability rather than a fixed sequence of steps.
-
-1. **Select AI agents for dynamic reasoning.** An AI agent is driven by a large language model (LLM) and determines its own steps based on context and available tools. Use agents for scenarios where the path to the solution is ambiguous or variable. Consult resources such as the [Microsoft Scenario Library](https://adoption.microsoft.com/scenario-library/) to guide planning.
-
-1. **Validate feasibility with pilots.** Test use cases in low-code or no-code environments before committing to full development. Platforms like Azure AI Foundry or Microsoft Copilot Studio allow for rapid prototyping. This step confirms whether an agent adds value beyond standard automation without significant upfront investment.
+1.  **Validate value through rapid piloting.** Test the reasoning capabilities of an agent in a low-code environment before investing in custom code. Platforms like Microsoft Copilot Studio or Azure AI Foundry allow for rapid prototyping to verify that an agent can handle the required ambiguity. This step prevents over-engineering solutions that might be better served by simpler automation.
 
 ## How to prioritize AI agent use cases?
 
