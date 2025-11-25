@@ -3,7 +3,7 @@ title: Organizational readiness for AI agents
 description: Learn Organizational readiness for AI agents
 author: stephen-sumner
 ms.author: pnp
-ms.date: 11/01/2025
+ms.date: 12/01/2025
 ms.update-cycle: 180-days
 ms.topic: conceptual
 ms.collection: ce-skilling-ai-copilot
