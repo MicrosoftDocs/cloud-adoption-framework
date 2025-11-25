@@ -14,7 +14,7 @@ ms.collection: ce-skilling-ai-copilot
 
 A strong data plan is essential for organizations that want AI agents to deliver accurate, secure, and actionable results. This guidance explains how to prepare organizational data for Microsoft SaaS agents such as Microsoft 365 Copilot and for custom AI agents built on platforms like Copilot Studio or Microsoft Foundry. It outlines the decisions business leaders must make and the trade-offs involved in each step.
 
-Organizations often underestimate the role of data readiness in AI success. AI agents do not create knowledge; they retrieve and synthesize information from existing sources. If those sources are incomplete, fragmented, or inaccessible, the agent produces inaccurate or misleading results. A well-designed data plan ensures that agents operate on authoritative content, respect security boundaries, and deliver consistent value across business processes.
+Organizations often underestimate the role of data readiness in AI success. AI agents do not create knowledge. They retrieve and synthesize information from existing sources. If those sources are incomplete, fragmented, or inaccessible, the agent produces inaccurate or misleading results. A well-designed data plan ensures that agents operate on authoritative content, respect security boundaries, and deliver consistent value across business processes.
 
 :::image type="content" source="images/alz-fabric-agents-data.png" alt-text="Diagram of a data estate from Microsoft 365 apps to data in Azure. It shows unification of business data in Microsoft Fabric's OneLake data lake, and how that data supports Foundry and Copilot Agents." lightbox="images/alz-fabric-agents-data.png":::
 
@@ -82,7 +82,7 @@ This adaptive model improves flexibility and performance because it prioritizes 
 | Data quality | Deduplicated, standardized | Certified, governed, optimized for analytics | Optimized for frequent queries and evolving business needs |
 | Structure | Normalized tables, semi-structured indexed | Semantic layer with KPIs, hierarchies, curated joins | Agent-generated tables or spec files for reproducibility |
 | Performance | Good for ad-hoc queries | High performance (materialized views, pre-aggregations) | Improves over time as agents learn common queries |
-| Governance | Registered in Purview | Certified and auditable in Purview | Registered dynamically; enforced via Foundry + DSPM guardrails |
+| Governance | Registered in Purview | Certified and auditable in Purview | Registered dynamically, Enforced via Foundry + DSPM guardrails |
 | Agent role | Consumes validated data | Queries curated sets for consistent metrics | Creates new curated sets or instructions for reuse |
 | Flexibility | High (raw + normalized) | Low (static definitions) | Very high (adaptive to real-world usage) |
 

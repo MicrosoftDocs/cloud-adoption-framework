@@ -41,8 +41,8 @@ Standardize the environment and governance artifacts before building AI agents. 
 Orchestration determines how agents coordinate, make decisions, and execute tasks. Select an orchestration pattern that balances complexity with control.
 
 1. **Select an orchestration pattern.** Choose between managed services and custom frameworks based on organizational capability and requirements.
-    *   **Managed orchestration** (Azure AI Agent Service) offers quick deployment, built-in security, and enterprise connectors, but limits customization and transparency.
-    *   **Custom frameworks** (Microsoft Agent Framework, LangGraph) provide complete control, full visibility, and multi-cloud flexibility, but impose significant engineering effort and compliance responsibility.
+    *   **Managed orchestration** (Foundry Agent Service) offers quick deployment, built-in security, and enterprise connectors, but limits customization and transparency.
+    *   **Custom frameworks** (Microsoft Agent Framework, LangGraph) provide complete control, full visibility, and multi-cloud flexibility but increase engineering effort.
 
 2. **Use workflows for deterministic sequences.** Workflows are not mandatory but provide structure when processes require a predefined order of operations. Use workflows to define sequences that include agents, grounding AI decision-making in verifiable rules. This approach ensures reliability for complex tasks where consistency is prioritized over flexibility.
 

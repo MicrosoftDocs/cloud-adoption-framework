@@ -3,7 +3,7 @@ title: Operate AI agents across your organization
 description: Operate AI agents across your organization
 author: stephen-sumner
 ms.author: pnp
-ms.date: 11/01/2025
+ms.date: 12/01/2025
 ms.update-cycle: 180-days
 ms.topic: conceptual
 ---
@@ -71,7 +71,7 @@ Variable costs for tokens and compute can scale disproportionately to business v
 
 :::image type="icon" source="./images/copilot-studio-icon.png"::: **Copilot Studio**: [Review usage and message allocation](/microsoft-copilot-studio/requirements-messages-management) to manage consumption and optimize licensing.
 
-### 4. Administration and gateway management
+### 4. Administer
 
 Centralized visibility and traffic control are essential for managing a sprawling agent ecosystem. Without a unified gateway, enforcing consistent policies across disparate projects becomes unmanageable.
 

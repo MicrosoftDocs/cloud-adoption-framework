@@ -4,27 +4,27 @@ items:
   - name: 1. Plan for agents
     expanded: true
     items:
-      - name: Business
-        href: business-plan.md
-      - name: Technology
-        href: technology-plan.md
-      - name: People
+      - name: Business plan
+        href: business-strategy-plan.md
+      - name: Technology plan
+        href: technology-solutions-plan.md
+      - name: Organization readiness
         href: organization-people-readiness-plan.md
-      - name: Data
-        href: data-plan.md 
+      - name: Data architecture
+        href: data-architecture-plan.md 
   - name: 2. Govern agents
     expanded: true
     items:
-      - name: Responsible AI
-        href: responsible-ai.md
-      - name: Governance
-        href: governance-security.md
-  - name: 3. Build and secure agents
+      - name: Responsible AI across organization
+        href: responsible-ai-across-organization.md
+      - name: Governance across organization
+        href: governance-security-across-organization.md
+  - name: 3. Build agents
     expanded: true
     items:
-      - name: Single or multi-agent?
+      - name: Single or multiple agents?
         href: single-multi-agent-systems.md
-      - name: Build and secure agents
-        href: build-secure.md
+      - name: Build process
+        href: build-secure-process.md
   - name: 4. Operate agents
-    href: operate-manage.md
+    href: integrate-manage-operate.md
