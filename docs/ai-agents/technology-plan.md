@@ -12,29 +12,29 @@ ms.collection: ce-skilling-ai-copilot
 
 # Technology strategy for AI agents
 
-## Introduction
-Defining a technology strategy for AI agents is essential after establishing a business strategy. The business strategy identifies where AI agents create value through customer engagement, operational efficiency, and innovation. The technology strategy determines how to deliver these agents by selecting appropriate platforms, balancing implementation speed with customization needs, and managing costs effectively. This guidance helps technical decision makers evaluate options and make informed choices.
-
-## Select AI technology options
-After establishing that your use case requires AI agents, decide whether to adopt ready-to-use SaaS agents or build custom agents. Ready-to-use agents reduce time to value and operational complexity but offer limited customization. Custom-built agents provide full control and deeper integration but require more development resources and ongoing maintenance. Evaluate functional requirements, timeline, budget, and internal capabilities to guide this decision.
+After establishing that a use case requires AI agents, decide whether to adopt ready-to-use SaaS agents or build custom agents. Ready-to-use SaaS agents reduce time to value and operational complexity but offer limited customization. Custom-built agents provide full control and deeper integration but require more development resources and ongoing maintenance. Evaluate functional requirements, timeline, budget, and internal capabilities to guide this decision.
 
 :::image type="content" source="./images/ai-agent-decision-tree.png" alt-text="Decision tree diagram showing when to use traditional AI apps, generative AI apps, SaaS agents, and AI agents you build." lightbox="./images/ai-agent-decision-tree.png" border="false":::
 
-### Use SaaS agents
+## Adopt SaaS agents
 
-If prebuilt solutions meet functional and budget requirements, adopt SaaS agents before building custom ones. Agents available in Microsoft 365 Copilot ([App Builder agent](/copilot/microsoft-365/app-builder-privacy-data-subject-request-faq), [Workflows agent](/copilot/microsoft-365/flow-builder-privacy-data-subject-request-faq), [Researcher](/copilot/microsoft-365/researcher-agent)), GitHub, Dynamics, and Security Copilot provide ready-to-use options for productivity and business process automation. Review the [Overview of available Microsoft Copilots](/azure/cloud-adoption-framework/scenarios/ai/strategy#adopt-microsoft-software-ai-services-saas-for-initial-outcomes) to identify relevant options. Use the [Agent Success Kit](https://adoption.microsoft.com/ai-agents/success-kit/) to plan your deployment and management approach.
+Prioritize prebuilt solutions when they meet functional and budget requirements. SaaS agents reduce development overhead and accelerate deployment.
 
-When SaaS agents do not meet requirements, build custom agents.
+- **Agents in Microsoft 365 Copilot.** [App Builder agent](/copilot/microsoft-365/app-builder-privacy-data-subject-request-faq), [Workflows agent](/copilot/microsoft-365/flow-builder-privacy-data-subject-request-faq), and [Researcher](/copilot/microsoft-365/researcher-agent) enable task automation and information synthesis across Microsoft 365 applications. Use the [Agent Success Kit](https://adoption.microsoft.com/ai-agents/success-kit/) to structure your deployment approach and governance model.
+
+- **Other SaaS agents.** [GitHub Copilot agents](https://docs.github.com/en/copilot/concepts/agents/coding-agent/about-coding-agent) support coding tasks, [Microsoft Fabric data agents](/fabric/data-science/concept-data-agent) enable data analysis, [Azure Copilot agents](/azure/copilot/agents-preview) provide infrastructure insights, [Dynamics 365 agents](/dynamics365/customer-service/administer/overview-bots) automate customer service workflows, and [Security Copilot agents](/copilot/security/agents-overview) enhance threat detection and response. These agents deliver immediate capabilities for domain-specific productivity and process automation. For additional context, see [Overview of available Copilots](/azure/cloud-adoption-framework/scenarios/ai/strategy#adopt-microsoft-software-ai-services-saas-for-initial-outcomes).
+
+When no SaaS agents meet your functional requirements, build custom agents to achieve the necessary capabilities and integration depth.
 
 ## Build AI agents
 
-Each build path offers different levels of control, investment, and governance complexity. Select the path that aligns with business priorities and technical capabilities.
+Choose a build path based on your organization's technical capabilities, timeline, and control requirements. Microsoft provides two primary platforms: Foundry for pro-code development with maximum flexibility, and Copilot Studio for low-code development with faster deployment.
 
 :::image type="content" source="./images/build-overview.png" alt-text="Diagram that shows an overview of the build agent options." lightbox="./images/build-overview.png" border="false":::
 
-### Foundry Agent Service
+### Microsoft Foundry
 
-The [Foundry Agent Service](/azure/ai-foundry/agents/overview) provides a platform-as-a-service (PaaS) model for pro-code development. It supports full customization, including model selection, infrastructure control, and data integration. Foundry is best for organizations with strong engineering capabilities and high-value scenarios. It includes responsible AI tools for fairness evaluation and content safety, simplifying compliance. Start with the [Foundry playground](/azure/ai-foundry/concepts/concept-playgrounds) to build and test prototypes. Follow the quickstart guide to [create a new agent](/azure/ai-foundry/agents/quickstart) and validate your use case.
+[Microsoft Foundry](/azure/ai-foundry/agents/overview) provides a platform-as-a-service (PaaS) model for pro-code development. It supports full customization, including model selection, infrastructure control, and data integration. Foundry is best for organizations with strong engineering capabilities and high-value scenarios. It includes responsible AI tools for fairness evaluation and content safety, simplifying compliance. Start with the [Foundry playground](/azure/ai-foundry/concepts/concept-playgrounds) to build and test prototypes. Follow the quickstart guide to [create a new agent](/azure/ai-foundry/agents/quickstart) and validate your use case.
 
 ### Microsoft Copilot Studio
 
