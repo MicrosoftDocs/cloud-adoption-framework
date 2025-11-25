@@ -48,9 +48,11 @@ Orchestration determines how agents coordinate, make decisions, and execute task
 
 2. **Use workflows for deterministic sequences.** Workflows are not mandatory but provide structure when processes require a predefined order of operations. Use workflows to define sequences that include agents, grounding AI decision-making in verifiable rules. This approach ensures reliability for complex tasks where consistency is prioritized over flexibility.
 
+**Microsoft facilitation:**
+
 :::image type="icon" source="./images/foundry-icon.png"::: **Foundry**: Use [Workflows](/azure/ai-foundry/agents/concepts/workflow?view=foundry) for visual, low-code design suitable for rapid prototyping.
 
-:::image type="icon" source="./images/microsoft-agent-framework-icon.png"::: **Microsoft Agent Framework**: Use the [Microsoft Agent Framework](/agent-framework/user-guide/workflows/overview) for complex, code-heavy scenarios requiring a pro-code environment.
+:::image type="icon" source="./images/microsoft-agent-framework-icon.png"::: **Microsoft Agent Framework**: Use code-first [workflows](/agent-framework/user-guide/workflows/overview) for complex, code-heavy scenarios requiring a pro-code environment.
 
 :::image type="icon" source="./images/copilot-studio-icon.png"::: **Copilot Studio**: [Set up agent flows](/microsoft-copilot-studio/flows-overview) for multi-agent systems with distinct roles and approval checkpoints. [Configure agent behavior](/microsoft-copilot-studio/advanced-generative-actions) by orchestrating with generative AI.
 
