@@ -133,7 +133,7 @@ Data access and tool permissions determine agent reliability, compliance posture
 
 Observability provides the visibility needed to maintain reliable agent operations, optimize performance, and ensure compliance with organizational standards. Early implementation of monitoring and telemetry enables proactive issue detection and continuous improvement.
 
-:::image type="content" source="./images/observability-security-build-agents.png" alt-text="Diagram showing agent observability and security components: monitoring traces, metrics, and evaluations for agent health; guardrails and blocklists for input validation, tool calls, responses, and output filtering." lightbox="./images/observability-security-build-agents.png" border="false":::
+:::image type="content" source="./images/observability-security-build-agents.svg" alt-text="Diagram showing agent observability and security components: monitoring traces, metrics, and evaluations for agent health; guardrails and blocklists for input validation, tool calls, responses, and output filtering." lightbox="./images/observability-security-build-agents.svg" border="false":::
 
 **Implement comprehensive tracing across agent workflows.** Configure traces that capture execution paths, decision points, and interaction patterns. This visibility enables rapid diagnosis when agents produce unexpected results or experience performance degradation. Establish baselines for latency, cost per interaction, and success rates. Alert teams when metrics deviate from expected ranges to enable investigation before users notice issues.
 

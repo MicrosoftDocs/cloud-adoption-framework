@@ -51,7 +51,7 @@ Integration places agents where work happens, whether automating existing tasks 
 
 Management ensures operational excellence as agents scale across the organization. Without centralized oversight and active lifecycle management, organizations face shadow AI proliferation, budget overruns, and security vulnerabilities. Operations teams must transition from deployment focus to continuous management that maintains governance effectiveness and cost optimization.
 
-:::image type="complex" source="./images/operate-agents.png" alt-text="Diagram showing the four management phases for AI agents: asset lifecycle management, continuous compliance and security, quota optimization, and administration.":::
+:::image type="complex" source="./images/operate-agents.svg" alt-text="Diagram showing the four management phases for AI agents: asset lifecycle management, continuous compliance and security, quota optimization, and administration.":::
     This diagram illustrates the key operational management activities required to maintain AI agents at scale, including retiring unused agents, monitoring costs and compliance, adjusting resource allocation based on usage patterns, and centralizing governance through unified administration tools.
 :::image-end:::
 
