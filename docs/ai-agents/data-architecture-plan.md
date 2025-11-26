@@ -2,7 +2,7 @@
 title: Data architecture for AI agents across your organization
 ms.reviewer: ssumner
 description: Explore how Microsoft Fabric and OneLake enable AI agents to operate on unified, trusted data for better decision-making and automation.
-#customer intent: As a business leader, I want to understand the role of data readiness so that I can ensure AI agents deliver accurate and reliable results.
+#customer intent: As a CTO or enterprise architect, I want to understand how to prepare our data and data architecture so that AI agents can access and remain grounded in our organizational data. I need to know how to achieve this in the most cost-effective way, enabling us to unlock the power of agents securely and in a governed manner—ensuring no data leakage while maintaining up-to-date, accurate information that integrates seamlessly with platforms like Microsoft Foundry and Copilot Studio.
 author: stephen-sumner
 ms.author: pnp
 ms.date: 12/01/2025

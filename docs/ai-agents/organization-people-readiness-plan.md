@@ -1,6 +1,8 @@
 ---
 title: Organizational readiness for AI agents
-description: Learn Organizational readiness for AI agents
+ms.reviewer: ssumner
+description: Explore strategies for organizational readiness, including platform governance, workload alignment, and AI Center of Excellence integration.
+#customer intent: As a CTO or enterprise architect, I want to understand how to prepare my people and teams for success with AI agents. I need clarity on team structures, roles, and responsibilities—both at the platform and workload levels—and how an AI Center of Excellence fits into this model. Additionally, I want to know how my teams can gain the skills and training needed to thrive in this agent-driven era.
 author: stephen-sumner
 ms.author: pnp
 ms.date: 12/01/2025

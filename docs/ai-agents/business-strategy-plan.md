@@ -2,7 +2,7 @@
 title: Business Plan for AI Agents
 ms.reviewer: ssumner
 description: Discover how to create a business strategy for AI agents that aligns with organizational goals, enhances operations, and drives innovation.
-#customer intent: As a decision-maker, I want to identify high-value AI agent use cases so that I can prioritize initiatives with the greatest impact.
+#customer As a CTO or enterprise architect, I want to understand how AI agents create business value. I need clarity on when to use agents and when not to, so we avoid wasting time and resources on unsuitable use cases. Once we identify a set of use cases, I want guidance on how to prioritize them, define success criteria, and establish methods to measure success over time.
 author: stephen-sumner
 ms.author: pnp
 ms.date: 12/01/2025

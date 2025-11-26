@@ -2,7 +2,7 @@
 title: AI Agent Adoption Guidance for Organizations
 ms.reviewer: ssumner
 description: Discover how to adopt AI agents effectively with a step-by-step framework for planning, governance, integration, and measurement to maximize business impact.
-#customer intent: As a business leader, I want to understand how to adopt AI agents effectively so that I can align them with my organization's strategic goals.
+#customer intent: As a CTO or enterprise architect, I want to understand how to adopt AI agents the right way. I need a clear, end-to-end framework that outlines all the decisions required along the journey, including weighing their pros and cons. Additionally, I want to see how Microsoft facilitates this process.
 author: stephen-sumner
 ms.author: pnp
 ms.date: 12/01/2025

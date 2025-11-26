@@ -2,7 +2,7 @@
 title: Choosing Between building a ingle agent or multiple agents
 ms.reviewer: ssumner
 description: Explore decision criteria for selecting single-agent or multi-agent architectures to optimize AI-powered solutions for your organization.
-#customer intent: As a technical decision-maker, I want to compare single-agent and multi-agent architectures so that I can optimize scalability and performance.
+#customer intent: As an enterprise architect I want to help my teams across my organization understand the standards and criteria for building single agents for a particular system or a multi agent
 author: stephen-sumner
 ms.author: pnp
 ms.date: 12/01/2025

@@ -2,7 +2,7 @@
 title: Governance for AI agents across the organization
 ms.reviewer: ssumner
 description: Explore best practices for governing AI agents, from data residency laws to corporate compliance, to ensure secure and responsible AI deployment.
-#customer intent: As a compliance manager, I want to implement internal-user access controls for AI agents so that I can protect sensitive data.
+#customer intent: As a CTO or enterprise architect, I want to understand how to implement governance across the organization. I need to develop policies that apply universally and can be enforced by the compliance team. Additionally, I want to learn about the controls and solutions Microsoft provides to help facilitate this governance.
 author: stephen-sumner
 ms.author: pnp
 ms.date: 12/01/2025

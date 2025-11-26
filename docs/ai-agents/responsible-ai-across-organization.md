@@ -1,6 +1,8 @@
 ---
-title: Responsible AI policy for AI Agents
-description: Learn Responsible AI policy for AI Agents
+title: Establishing Responsible AI Policies for AI Agents across Organizations
+ms.reviewer: ssumner
+description: Explore the principles of responsible AI to design ethical, transparent, and accountable AI agents for your organization.
+#customer intent: As a CTO or enterprise architect, I want to understand how to develop a responsible AI policy that accounts for AI agents. I need a solid baseline to start from and guidance on how to integrate this policy into our processes so it becomes part of day-to-day workflows—not just an add-on. The goal is to ensure ethical and responsible use of AI across the organization.
 author: stephen-sumner
 ms.author: pnp
 ms.date: 11/01/2025
@@ -8,9 +10,13 @@ ms.update-cycle: 180-days
 ms.topic: article
 ---
 
-# Responsible AI policy for AI agents
+# Responsible AI Policies for for AI Agents
 
-Responsible AI defines how an organization designs and operates AI systems to uphold ethical standards, ensure transparency, and maintain accountability. This policy applies to every AI agent, regardless of complexity or visibility. Establishing a clear policy ensures that AI adoption aligns with organizational values and regulatory requirements while mitigating reputational and operational risks. The primary decision involves balancing the speed of innovation with the rigor of governance. A well-structured policy enables faster, safer innovation by providing clear guardrails rather than bureaucratic hurdles.
+This article describes how to establish a responsible AI policy for AI agents across your organization. A responsible AI policy defines how your organization designs and operates AI systems to uphold ethical standards, ensure transparency, and maintain accountability. This policy is the foundation of the "Govern agents" step in the AI agent adoption process.
+
+:::image type="content" source="./images/ai-agent-adoption.png" alt-text="Diagram that shows the process outlined in this guidance: plan, govern, build and secure, integrate, and measure agents across your organization." lightbox="./images/ai-agent-adoption.png" border="false":::
+
+Without this policy, your organization risks reputational damage, regulatory penalties, and operational failures that erode trust in your AI systems. The policy you establish applies to every AI agent, regardless of complexity or visibility. Your primary decision involves balancing innovation speed with governance rigor. A well-structured policy provides clear guardrails that accelerate innovation rather than create bureaucratic obstacles. When you define responsible AI standards early, you create a consistent ethical baseline that integrates into your existing governance processes. This integration ensures AI projects meet the same quality and compliance standards as other technology initiatives.
 
 :::image type="content" source="./images/responsible-ai.png" alt-text="Diagram that shows Microsoft's responsible AI pillars." lightbox="./images/responsible-ai.png" border="false":::
 

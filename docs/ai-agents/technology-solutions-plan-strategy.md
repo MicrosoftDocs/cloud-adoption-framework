@@ -1,7 +1,8 @@
 ---
-title: Technology plan for AI agents
+title: Technology Plan for AI Agents in Microsoft Ecosystem
 ms.reviewer: ssumner
-description: Learn how to define a technology plan for AI agents
+description: Learn how to define a technology plan for AI agents across your organization using MIcrosoft SaaS agents, Microsoft Foundry, and Copilot Studio
+#customer intent: As an enterprise architect I want to understand what AI agent options are available to me across the Microsoft ecosystem so that I can provide the right approach that balances speed cost and operations for each use case and make that available to my teams
 author: stephen-sumner
 ms.author: pnp
 ms.date: 12/01/2025
