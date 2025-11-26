@@ -7,11 +7,11 @@ brand: azure
 metadata:
 
   title: Microsoft Cloud Adoption Framework
-  description: Proven guidance to be successful in Azure.
+  description: Proven guidance to be successful in the cloud.
   services: cloud-adoption-framework
   author: stephen-sumner
   ms.author: pnp
-  ms.date: 06/01/2025
+  ms.date: 12/01/2025
   ms.topic: hub-page
   ms.subservice: caf-general
 # Maximum of 8 items
