@@ -69,10 +69,10 @@ Start with the [Foundry playground](/azure/ai-foundry/concepts/concept-playgroun
 
 Choose the architectural configuration that aligns with your security and operational needs.
 
-- **Basic agent setup.** Use the [basic setup](/azure/ai-foundry/agents/environment-setup?view=foundry#choose-your-setup) for rapid prototyping and individual development. This topology prioritizes speed and ease of access but lacks network isolation.
-- **Standard setup.** Use the [standard setup](/azure/ai-foundry/agents/concepts/standard-agent-setup?view=foundry) for production environments and enterprise teams. This topology supports fine-grained control over data, security, and networking. **Public networking.** Suitable for nonconfidential workloads that require enterprise data controls. **Private networking.** Required for confidential workloads. This configuration integrates with existing Azure OpenAI, search, and storage resources to meet strict compliance standards.
+- **Basic agent setup.** Use the [basic setup](/azure/ai-foundry/agents/environment-setup?view=foundry&preserve-view=true#choose-your-setup) for rapid prototyping and individual development. This topology prioritizes speed and ease of access but lacks network isolation.
+- **Standard setup.** Use the [standard setup](/azure/ai-foundry/agents/concepts/standard-agent-setup?view=foundry&preserve-view=true) for production environments and enterprise teams. This topology supports fine-grained control over data, security, and networking. **Public networking.** Suitable for nonconfidential workloads that require enterprise data controls. **Private networking.** Required for confidential workloads. This configuration integrates with existing Azure OpenAI, search, and storage resources to meet strict compliance standards.
 
-See comparison and deployment of both the [basic and standard setups](/azure/ai-foundry/agents/environment-setup?view=foundry#choose-your-setup)
+See comparison and deployment of both the [basic and standard setups](/azure/ai-foundry/agents/environment-setup?view=foundry&preserve-view=true#choose-your-setup)
 
 ### Microsoft Copilot Studio
 
