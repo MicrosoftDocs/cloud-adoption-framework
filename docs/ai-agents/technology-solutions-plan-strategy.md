@@ -41,6 +41,10 @@ Choose a build path based on your organization's technical capabilities, timelin
 
 [Microsoft Foundry](/azure/ai-foundry/what-is-azure-ai-foundry?view=foundry) is a platform-as-a-service for pro-code agent development that consolidates runtime, orchestration, and integration features into a managed environment. It exposes capabilities that span authoring, execution, and operational observability so teams can build sophisticated, production-grade agents without managing underlying VM or Kubernetes infrastructure.
 
+:::image type="complex" source="./images/foundry-overview.png" alt-text="Diagram showing." lightbox="./images/foundry-overview.png":::
+    Overview of AI agent build options comparing three deployment paths. Microsoft Foundry offers pro-code development with declarative agents for focused tasks, workflows for multi-step orchestration, and hosted agents with managed runtime. Microsoft Copilot Studio provides low-code development with prebuilt connectors and retrieval and task agent capabilities. GPUs & Containers support custom infrastructure using Visual Studio Code and GitHub for maximum flexibility in agent deployment.
+:::image-end:::
+
 **Development capabilities**
 
 - **Declarative agents.** Define agent behavior in [prompt-based](/azure/ai-foundry/agents/concepts/development-lifecycle?view=foundry#types-of-agents) declarative agents. Combine model selection, prompts, instructions, and tool bindings. Declarative agents support augmentation with knowledge bases and memory to extend context and retrieval.
