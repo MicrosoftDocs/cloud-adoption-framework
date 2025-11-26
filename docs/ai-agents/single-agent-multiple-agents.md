@@ -27,7 +27,9 @@ Multi-agent systems employ specialized agents to handle distinct tasks or roles 
 
 3. **Future growth planned.** Modular multi-agent design is required if the solution roadmap includes diverse features, data sources, or business units. Monolithic agents become difficult to maintain as duties expand. Separating concerns early prevents the need for massive refactoring later. Solutions spanning more than three to five distinct functions or domains benefit from this architecture, which supports scalability and allows for the modernization of individual agents without disrupting the entire system.
 
-**Mutli-agent orchestration and workflows**: Multi-agent systems use workflows to implement processes, manage state, and enforce orchestration patterns. See [AI agent orchestration patterns](/azure/architecture/ai-ml/guide/ai-agent-design-patterns) in the Azure Architecture Center. Without a workflow, manual chaining of agents becomes brittle and difficult to maintain. Workflows provide:
+### Mutli-agent orchestration and workflows
+
+Multi-agent systems use workflows to enforce orchestration patterns. See [AI agent orchestration patterns](/azure/architecture/ai-ml/guide/ai-agent-design-patterns) in the Azure Architecture Center. Without a workflow, manual chaining of agents becomes brittle and difficult to maintain. Workflows provide:
 
 - **Coordination:** Defines how agents interact (parallel, sequential, conditional).
 - **State management:** Preserves context across agents.
@@ -36,7 +38,9 @@ Multi-agent systems employ specialized agents to handle distinct tasks or roles 
 
 See [Orchestration strategy](./build-secure-process.md#pick-an-orchestration-strategy) for technology specific options.
 
-**Multi-agent system trade-offs**: In addition to coordination requirements, each interaction requires protocol design, error handling, and state management. Each component requires separate prompts, monitoring, logging, and debugging capabilities. Security surfaces increase through additional credentials and data transit points. Cost structures often increase due to redundant context processing and communication overhead.
+### Multi-agent system trade-offs
+
+In addition to coordination requirements, each interaction requires protocol design, error handling, and state management. Each component requires separate prompts, monitoring, logging, and debugging capabilities. Security surfaces increase through additional credentials and data transit points. Cost structures often increase due to redundant context processing and communication overhead.
 
 ## Comparative prototyping
 
@@ -62,13 +66,18 @@ Single-agent architectures consolidate all logic, context, and tool execution in
 
 2. **Operational simplicity.** Single agents eliminate the need for complex inter-agent communication protocols. This reduces latency and failure points, making debugging and maintenance significantly easier compared to distributed systems.
 
-**Orchestration and workflows**: Single-agent systems typically follow a direct invocation pattern where the user interacts directly with the agent to receive an output. However, workflows act as critical operational wrappers to ensure reliability and integration. Use workflows to wrap a single agent when the solution requires:
+### Single-agent workflows
 
-- **Repeatability:** To execute tasks consistently across inputs, such as nightly batch summarization.
-- **Integration:** To trigger downstream systems, such as sending outputs to SharePoint or notifying users via Teams.
-- **Governance:** To enforce logging, compliance checks, or human-in-the-loop approvals before the system executes an action.
+Single-agent systems typically invoke the agent directly in response to user requests. However, workflows provide essential operational structure to ensure reliability and integration across systems. Use workflows to orchestrate a single agent when the solution requires:
 
-**Single-agent system trade-offs**: Context length limits restrict the volume of information agents can process simultaneously. Furthermore, broad access requirements for comprehensive functionality complicate least-privilege security enforcement, as the single agent must hold permissions for all potential actions.
+- **Repeatability.** Execute the same task consistently across inputs without manual intervention. Typical examples include nightly batch summarization or scheduled report generation.
+- **System integration.** Route agent outputs to downstream systems. Workflows trigger actions like sending results to SharePoint, posting notifications to Teams, or writing data to enterprise databases.
+- **Governance and compliance.** Implement logging, approval gates, and audit trails around agent execution. These controls satisfy compliance requirements and provide operational visibility.
+- **Human review.** Insert checkpoints where humans validate or refine agent outputs before downstream actions occur. This human-in-the-loop pattern maintains quality control while preserving automation benefits.
+
+### Single-agent system trade-offs
+
+Context length limits restrict the volume of information agents can process simultaneously. Furthermore, broad access requirements for comprehensive functionality complicate least-privilege security enforcement, as the single agent must hold permissions for all potential actions.
 
 ## Decision framework
 
