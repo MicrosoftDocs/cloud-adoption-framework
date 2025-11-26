@@ -35,12 +35,12 @@ Use agents when a workflow requires reasoning, decision-making, and dynamic tool
 
    :::image type="content" source="./images/ai-agent-opportunities.png" alt-text="Diagram showing four quadrants of AI agent opportunities: Reshape business processes and Enrich employee experiences (internal impact), plus Reinvent customer engagement and Accelerate innovation (external impact). Each quadrant contains specific examples of how AI agents can create business value." lightbox="./images/ai-agent-opportunities.png" border="false":::
 
-   *   **Reshape business processes.** Automate complex, multi-step workflows such as supply chain adjustments or incident triage. This scales operations without linear increases in headcount.
-   *   **Enrich employee experiences.** Augment staff by handling cognitive load, such as synthesizing research or drafting technical content. This reduces cycle times and allows employees to focus on strategic decision-making.
-   *   **Reinvent customer engagement.** Resolve dynamic customer queries autonomously with context-aware responses. This improves resolution speed and customer satisfaction compared to rigid chatbots.
-   *   **Accelerate innovation.** Use agents to analyze market trends or simulate scenarios. This shortens product development cycles and enables faster experimentation.
+   - **Reshape business processes.** Automate complex, multi-step workflows such as supply chain adjustments or incident triage. This scales operations without linear increases in headcount.
+   - **Enrich employee experiences.** Augment staff by handling cognitive load, such as synthesizing research or drafting technical content. This reduces cycle times and allows employees to focus on strategic decision-making.
+   - **Reinvent customer engagement.** Resolve dynamic customer queries autonomously with context-aware responses. This improves resolution speed and customer satisfaction compared to rigid chatbots.
+   - **Accelerate innovation.** Use agents to analyze market trends or simulate scenarios. This shortens product development cycles and enables faster experimentation.
 
-1.  **Validate value through rapid piloting.** Test the reasoning capabilities of an agent in a low-code environment before investing in custom code. Platforms like Microsoft Copilot Studio or Azure AI Foundry allow for rapid prototyping to verify that an agent can handle the required ambiguity. This step prevents over-engineering solutions that might be better served by simpler automation.
+3. **Validate value through rapid piloting.** Test the reasoning capabilities of an agent in a low-code environment before investing in custom code. Platforms like Microsoft Copilot Studio or Azure AI Foundry allow for rapid prototyping to verify that an agent can handle the required ambiguity. This step prevents over-engineering solutions that might be better served by simpler automation.
 
 ## How to prioritize AI agent use cases?
 
