@@ -12,15 +12,13 @@ ms.collection: ce-skilling-ai-copilot
 
 # Technology plan for AI agents
 
-## Introduction
-
 This article helps you choose the right technology platform for AI agents. After establishing that a use case requires AI agents, decide whether to adopt ready-to-use SaaS agents or build custom agents. Ready-to-use SaaS agents reduce time to value and operational complexity but offer limited customization. Custom-built agents provide full control and deeper integration but require more development resources and ongoing maintenance. Evaluate functional requirements, timeline, budget, and internal capabilities to guide this decision.
 
 :::image type="complex" source="./images/ai-agent-decision-tree.png" alt-text="Decision tree diagram for selecting AI agent solutions based on business and technology requirements." lightbox="./images/ai-agent-decision-tree.png":::
     A flowchart guides organizations through decisions about when and how to use AI agents. The diagram starts with a blue diamond labeled "Potential agent use case" and branches into multiple decision paths. The business plan path determines if AI agents should be used. If the answer is "No," the path leads to "Use code or non-generative AI models" with icons for GitHub, Microsoft Fabric, AI models in Foundry, and Machine Learning. If "Yes," it asks if the task involves static Q&A or content generation without reasoning. The technology plan path checks if SaaS agents meet functional requirements. If "Yes," the path leads to "Use SaaS agents" with icons representing M365 Copilot agents (App Builder, Workflows, Researcher, Analyst, Surveys), GitHub Copilot agent, Microsoft Fabric data agents, Azure Copilot agents, Dynamics 365 agents, and Security Copilot agents. If SaaS agents do not meet needs, the path leads to "Build AI agents" with options for GPUs & Containers (open-source), Microsoft Foundry (PaaS pro-code), and Copilot Studio (SaaS no/low-code). The single or multiple agents decision path asks whether the use case involves security concerns, compliance requirements, multiple teams, or future growth. If "Yes," it leads to "Build multiple agents" using workflows for orchestration. If "No," it checks task complexity and requirements, leading to either "Test a single agent" or "Build a single agent" using workflows for integration and governance. The diagram uses color-coded shapes with diamonds representing decision points and rectangles representing actions, with arrows showing the flow between choices.
 :::image-end:::
 
-## Adopt SaaS agents
+## Use SaaS agents
 
 Prioritize prebuilt solutions when they meet functional and budget requirements. SaaS agents reduce development overhead and accelerate deployment.
 

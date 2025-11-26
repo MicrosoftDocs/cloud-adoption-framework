@@ -13,9 +13,13 @@ ms.collection: ce-skilling-ai-copilot
 
 # Governance for AI agents across the organization
 
-**Governance establishes control over AI agents and the data they access.** Beyond high-level principles, organizations require concrete governance mechanisms for AI agents across their lifecycle. Guardrails ensure agents access only authorized data, behave as expected, and allow for central management. Governance processes must be ingrained in how teams design, deploy, and update agents.
+This article helps you establish governance and security practices for AI agents across your organization. Without proper governance, AI agents can expose sensitive data, operate outside compliance boundaries, or create security vulnerabilities that threaten business operations. The guidance here explains how to implement controls that protect data, ensure regulatory compliance, maintain visibility into agent behavior, and secure agent infrastructure throughout its lifecycle.
 
-:::image type="content" source="./images/governance-security.png" alt-text="Diagram that shows how to govern ." lightbox="./images/governance-security.png" border="false":::
+Organizations must apply concrete governance mechanisms that span the entire agent lifecycle. These mechanisms ensure agents access only authorized data, behave predictably, and remain manageable at scale. Governance must be embedded into how teams design, deploy, monitor, and update agents, not treated as an afterthought.
+
+:::image type="complex" source="./images/governance-security.png" alt-text="Diagram of Microsoft's agent governance and lifecycle management framework." lightbox="./images/governance-security.png":::
+    The diagram illustrates Microsoft's agent governance and lifecycle management framework in three main sections. The top section shows org-wide agent governance with Microsoft Agent 365 at the center, connected to three areas: Data governance and compliance (Microsoft Purview, Azure Policy), Security (Microsoft Defender), and Observability (Azure Monitor, Microsoft Entra). Below this is a development layer featuring Microsoft Agent Framework, Foundry SDK, A2A, and MCP. The middle section shows the "Build" phase of lifecycle management with four categories: Agents and Workflows (Traces, Monitor, Evaluation), Models (Monitor, Evaluation), Evaluations (Evaluations, Evaluator catalog, Red team), and Guardrails (Guardrails, Blocklists). The bottom section shows the "Operate" phase with Foundry control plane containing Assets (Agents, Models, Tools), Compliance (Policies, Guardrails, Security posture), Quota (Tokens per minute, Provisioned throughput unit), and Admin (All projects, AI Gateway). At the base is the Microsoft Foundry logo with the label "Foundry Agent Service."
+:::image-end:::
 
 ## Data governance and compliance
 

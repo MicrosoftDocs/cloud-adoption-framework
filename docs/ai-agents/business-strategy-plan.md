@@ -13,7 +13,7 @@ ms.collection: ce-skilling-ai-copilot
 
 # Business plan for AI agents
 
-Successful AI agent adoption requires aligning technical capabilities with organizational strategy. This guidance helps identify high-value use cases and define criteria for application, ensuring investments drive measurable business outcomes while managing architectural complexity.
+This article helps decision-makers identify high-value AI agent use cases and establish prioritization criteria aligned with organizational strategy. You'll learn when agents deliver measurable business value, how to evaluate candidates across business impact, technical feasibility, and user desirability, and how to define success metrics that track outcomes. This guidance ensures AI agent investments drive competitive advantage while managing implementation complexity and risk.
 
 ## When not to use AI agents?
 

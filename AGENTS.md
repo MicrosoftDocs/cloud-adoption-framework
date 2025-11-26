@@ -85,13 +85,14 @@ Do **not** create separate sections for persona or mention them by name. Instead
 
     # [Descriptive Noun Phrase Title]
 
-    ## Introduction
-    "This article ..." then summarize what the reader will learn. State why this is important to the key persona(s).
+    "This article ..." then summarize what the article covers. Descriptively explain why this article is important to the enterprise architect. Explain what would happen if you don't follow this guidance.
 
     ## [Section Heading]
+
     Explain the decision point, available options, trade-offs, and best practices. Provide concise, actionable recommendations with supporting rationale.
 
     ## [Additional Sections as Needed]
+
     Follow the same structure for each major topic.
 
 ***

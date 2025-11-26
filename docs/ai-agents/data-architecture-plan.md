@@ -1,7 +1,8 @@
 ---
-title: Data plan for AI agents
+title: Data architecture for AI agents across your organization
 ms.reviewer: ssumner
-description: Learn how to develop a comprehensive data plan that enables AI agents to deliver business value through effective data management, preparation, and security.
+description: Explore how Microsoft Fabric and OneLake enable AI agents to operate on unified, trusted data for better decision-making and automation.
+#customer intent: As a business leader, I want to understand the role of data readiness so that I can ensure AI agents deliver accurate and reliable results.
 author: stephen-sumner
 ms.author: pnp
 ms.date: 12/01/2025
@@ -10,11 +11,13 @@ ms.topic: article
 ms.collection: ce-skilling-ai-copilot
 ---
 
-# Data plan for AI agents
+# Data architecture for AI agents
 
-A strong data plan is essential for organizations that want AI agents to deliver accurate, secure, and actionable results. This guidance explains how to prepare organizational data for Microsoft SaaS agents such as Microsoft 365 Copilot and for custom AI agents built on platforms like Copilot Studio or Microsoft Foundry. It outlines the decisions business leaders must make and the trade-offs involved in each step.
+This article explains how to develop a comprehensive data plan that enables AI agents to deliver business value through effective data management, preparation, and security. It guides leaders through key decisions about data unification, retrieval strategies, and governance that directly influence agent accuracy and organizational risk.
 
 Organizations often underestimate the role of data readiness in AI success. AI agents do not create knowledge. They retrieve and synthesize information from existing sources. If those sources are incomplete, fragmented, or inaccessible, the agent produces inaccurate or misleading results. A well-designed data plan ensures that agents operate on authoritative content, respect security boundaries, and deliver consistent value across business processes.
+
+This guidance applies to Microsoft SaaS agents such as Microsoft 365 Copilot and to custom AI agents built on platforms like Copilot Studio or Microsoft Foundry. The decisions outlined here directly affect agent reliability, compliance posture, and the speed at which new agents can be deployed.
 
 :::image type="content" source="images/data-architecture-fabric-onelake-foundry-azure-microsoft.png" alt-text="Diagram of a data estate from Microsoft 365 apps to data in Azure. It shows unification of business data in Microsoft Fabric's OneLake data lake, and how that data supports Foundry and Copilot Agents." lightbox="images/data-architecture-fabric-onelake-foundry-azure-microsoft.png":::
 
