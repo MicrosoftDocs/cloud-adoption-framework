@@ -89,6 +89,7 @@ In multi-agent architectures, define policies for assigning distinct models to s
 
 3. **Mandate validation prior to deployment.** Require small-scale testing with representative queries before standardizing on a model. This validation documents performance trade-offs and ensures the selected model complies with internal governance standards.
 
+**Microsoft facilitation:**<br>
 :::image type="icon" source="./images/foundry-icon.png"::: **Foundry**: Use [model catalog](https://ai.azure.com/explore/models) and evaluate model options using [model leaderboards](/azure/ai-foundry/concepts/model-benchmarks?view=foundry-classics) to compare performance and cost trade-offs. For productivity and action agents, use the [Model Router](/azure/ai-foundry/openai/concepts/model-router?view=foundry) to dynamically optimize costs while maintaining quality. Review models' [quotas and limits](/azure/ai-foundry/foundry-models/quotas-limits?view=foundry-classic).
 
 :::image type="icon" source="./images/copilot-studio-icon.png"::: **Copilot Studio**: [Choose a primary AI model](/microsoft-copilot-studio/authoring-select-agent-model) or [bring your own model](/ai-builder/byom-for-your-prompts) from Foundry.
@@ -105,6 +106,7 @@ Review the [Data architecture for AI agents](./data-architecture-plan.md) to ali
 
 2. **Connect to governed data sources.** Ensure agents retrieve information only from approved, managed repositories. Avoid connecting agents to unstructured or unverified data lakes without proper filtering.
 
+**Microsoft facilitation:**<br>
 :::image type="icon" source="./images/foundry-icon.png"::: **Foundry**: Connect agents to [Foundry IQ](/azure/ai-foundry/agents/how-to/tools/knowledge-retrieval?view=foundry&tabs=foundry%2Cpython) to combine multiple data sources behind an agentic retrieval engine while maintaining governance controls.
 
 :::image type="icon" source="./images/copilot-studio-icon.png"::: **Copilot Studio**: Use [knowledge sources](/microsoft-copilot-studio/knowledge-copilot-studio) to connect agents to approved information repositories and [connectors](/microsoft-copilot-studio/advanced-connectors) to integrate with enterprise systems securely.
@@ -125,6 +127,7 @@ Agents performing tasks, such as triggering workflows or modifying records, requ
 
 6. **Standardize action attribution.** Enforce detailed logging for every action, capturing the initiating agent, the specific operation, and the affected user. This attribution is essential for auditing, debugging, and accountability.
 
+**Microsoft facilitation:**<br>
 :::image type="icon" source="./images/foundry-icon.png"::: **Foundry**: Use [tools](/azure/ai-foundry/agents/concepts/tool-catalog?view=foundry) and [tool best practices](/azure/ai-foundry/agents/concepts/tool-best-practice?view=foundry). Use an [AI gateway](/azure/ai-foundry/agents/how-to/tools/governance?view=foundry) for tool governance.
 
 :::image type="icon" source="./images/copilot-studio-icon.png"::: **Copilot Studio**: [Add tools](/microsoft-copilot-studio/advanced-plugin-actions) and [triggers](/microsoft-copilot-studio/authoring-triggers-about).
@@ -143,6 +146,7 @@ Organizations must define what data agents retain, how long they store it, and w
 
 4. **Validate behavior through testing.** Agents that use memory or share context across threads require rigorous testing. Include compliance checks in evaluation cycles and validate defenses against prompt injection attacks that attempt to manipulate stored context. Test agent behavior in multi-thread scenarios to confirm fairness, security, and performance. Verify that agents do not expose one user's data to another when switching contexts or sessions.
 
+**Microsoft facilitation:**<br>
 :::image type="icon" source="./images/foundry-icon.png"::: **Foundry**: Use [memory](/azure/ai-foundry/agents/concepts/agent-memory?view=foundry&tabs=python) to store conversations. For your own storage, see [standard agent setup](/azure/ai-foundry/agents/concepts/standard-agent-setup?view=foundry#leveraging-your-own-resources-for-storing-customer-data), [Azure Cosmos DB](/azure/ai-foundry/agents/how-to/use-your-own-resources?view=foundry#azure-cosmos-db-for-nosql-to-store-conversations), and [Azure Cosmos DB integration](/azure/cosmos-db/gen-ai/azure-agent-service).
 
 :::image type="icon" source="./images/foundry-icon.png"::: **Microsoft Agent Framework**: Use [serialization and deserialization](/agent-framework/user-guide/agents/multi-turn-conversation#agentthread-storage) of thread state and [agent memory](/agent-framework/user-guide/agents/agent-memory).
@@ -155,7 +159,9 @@ Observability ensures agents operate reliably, meet performance expectations, an
 
 :::image type="content" source="./images/governance-security.png" alt-text="Diagram illustrating governance layers for agents and workflows. At the top, a box labeled Organizational Governance includes categories for Data Governance, Security, Observability, and Development, with tools such as Microsoft Purview, Azure Policy, Microsoft Defender, Azure Monitor, Microsoft Entra, and development frameworks like Microsoft Agent Framework, Foundry SDK, and MCP. Below, a second box labeled Government for Building and Operating Agents and Workflows is divided into two sections: Build Phase: Four boxes for Agents and Workflows, Models, Evaluations, and Guardrails, each governed and secured by corresponding tools. Operate Phase: Four boxes for Assets, Compliance, Quotas, and Administration, with tools supporting governance during operations.." lightbox="./images/governance-security.png" border="false":::
 
-:::image type="icon" source="./images/foundry-icon.png"::: **Foundry**: Use the [Microsoft Foundry Control Plane](/azure/ai-foundry/control-plane/overview?view=foundry) for unified visibility and governance across your agent fleet. 
+**Microsoft facilitation:**<br>
+
+:::image type="icon" source="./images/foundry-icon.png"::: **Foundry**: Use the [Microsoft Foundry Control Plane](/azure/ai-foundry/control-plane/overview?view=foundry) for unified visibility and governance across your agent fleet.
 
 1. **Agents and workflows.** Configure [traces](/azure/ai-foundry/observability/concepts/trace-agent-concept?view=foundry) for execution visibility to provide the context needed to diagnose issues and improve agent logic. Establish expected ranges for latency, cost, and success rates. Alert teams when agents operate outside these baselines to enable rapid investigation and remediation. Configure [monitoring](/azure/ai-foundry/agents/how-to/metrics?view=foundry) for Foundry instances and all projects Use [agent evaluators](/azure/ai-foundry/concepts/evaluation-evaluators/agent-evaluators?view=foundry) to measure quality. See [Agent Monitoring Dashboard](/azure/ai-foundry/agents/how-to/how-to-monitor-agents-dashboard?view=foundry).
 
@@ -180,6 +186,7 @@ Security and governance ensure AI agents operate safely, consistently, and in co
 
 2. **Blocklists.** Blocklists help enforce organizational standards by preventing prohibited terms, sensitive data patterns, or unsafe categories from entering or leaving the system. Maintain centralized blocklists for consistency across agents and models. Update lists regularly based on emerging threats and compliance requirements. Combine blocklists with dynamic detection methods for greater coverage.
 
+**Microsoft facilitation:**<br>
 :::image type="icon" source="./images/foundry-icon.png"::: **Foundry**: See [Guardrails and control overview](/azure/ai-foundry/guardrails/guardrails-overview?view=foundry). Apply guardrails at different [intervention points](/azure/ai-foundry/guardrails/intervention-points?view=foundry&pivots=programming-language-foundry-portal). Use an [AI Gateway](/azure/ai-foundry/agents/how-to/ai-gateway?view=foundry) to control model endpoints and enforce secure access. Use Microsoft Defender for Cloud's [AI protection](/azure/defender-for-cloud/ai-threat-protection) and [Gain application and end-user context for AI alerts](/azure/defender-for-cloud/gain-end-user-context-ai).
 
 ## Next step
