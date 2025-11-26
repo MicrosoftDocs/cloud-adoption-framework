@@ -2,7 +2,7 @@
 title: Process to Build AI agents with Microsoft Foundry and Copilot Studio
 ms.reviewer: ssumner
 description: Learn how to build and secure AI agents using Microsoft Foundry and Microsoft Copilot Studio. Follow a strategic framework for consistent, governed development.
-#customer intent: As a technical decision maker, I want to understand the prerequisites for building AI agents so that I can establish a secure and well-governed foundation.
+#customer intent: As an enterprise architect, I want to gain a clear understanding of the processes and decision-making involved in building AI agents across my organization—particularly within the Microsoft ecosystem—using Microsoft Foundry as the primary platform and Microsoft Copilot Studio as a complementary tool.
 author: stephen-sumner
 ms.author: pnp
 ms.date: 12/01/2025
