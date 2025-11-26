@@ -1,12 +1,12 @@
 ---
-title: Technology plN for AI agents
+title: Technology plan for AI agents
 ms.reviewer: ssumner
 description: Learn how to define a technology plan for AI agents
 author: stephen-sumner
 ms.author: pnp
-ms.date: 11/11/2025
+ms.date: 12/01/2025
 ms.update-cycle: 180-days
-ms.topic: conceptual
+ms.topic: article
 ms.collection: ce-skilling-ai-copilot
 ---
 
@@ -55,8 +55,10 @@ Organizations often use multiple approaches to meet diverse requirements. Valida
 :::image type="content" source="./images/technology-options.png" alt-text="Diagram that shows how to ready-to-use vs. build technology options comparing Microsoft Copilots (ready-to-use) vs. Low-code (Microsoft Copilot Studio) and pro-code (Foundry) build options." lightbox="./images/technology-options.png" border="false":::
 
 1. **Run time-boxed experiments.** Build short prototypes for each candidate solution. Allocate one to two weeks per option. Compare low-code agents in Copilot Studio with pro-code solutions in Foundry. Evaluate development speed, functional coverage, and integration complexity.
+
 2. **Require documentation and stakeholder review.** Document findings and present clear recommendations. If a low-code solution meets functional and security requirements, proceed with that option. If not, shift to pro-code or adjust scope. Stakeholder review reduces rework and increases confidence.
-3. **Assess single-agent versus multi-agent architecture.** Use prototypes to determine whether the task requires multiple specialized agents or a single agent. Avoid unnecessary complexity. If a single agent meets business needs efficiently, proceed with that approach. If not, define a roadmap for multi-agent orchestration. Refer to [Single agent or multiple agents?](./single-multi-agent-systems.md).
+
+3. **Assess single-agent versus multi-agent architecture.** Use prototypes to determine whether the task requires multiple specialized agents or a single agent. Avoid unnecessary complexity. If a single agent meets business needs efficiently, proceed with that approach. If not, define a roadmap for multi-agent orchestration. Refer to [Single agent or multiple agents?](./single-agent-multiple-agents.md).
 
 | Solution | Approach | Agent types | Best for |
 | :--- | :--- | :--- | :--- |
@@ -72,4 +74,4 @@ See the general [AI decision tree] for more guidance.
 After you define your business and technology strategies for AI agents, you must focus on the organizational structure and talent required to deliver and sustain these solutions.
 
 > [!div class="nextstepaction"]
-> [People strategy](./people-strategy.md)
+> [Organizational readiness](./organization-people-readiness-plan.md)

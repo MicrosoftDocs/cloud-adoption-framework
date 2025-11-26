@@ -25,12 +25,12 @@ Establish a strategic foundation before development begins. Enterprise architect
 
 Standardize the environment and governance artifacts before building AI agents. Proper setup reduces deployment delays, ensures compliance, and simplifies scaling as agent adoption grows.
 
-1.  **Define the Agent Charter.** Create a governance artifact that documents what the agent system does, how it supports business objectives, and what it must not do. The charter must specify:
+1. **Define the Agent Charter.** Create a governance artifact that documents what the agent system does, how it supports business objectives, and what it must not do. The charter must specify:
     - **System responsibilities:** Identify what the solution accomplishes and how it advances business objectives.
     - **Agent roles:** Define what each agent does to prevent overlap and ensure accountability.
     - **Prohibited actions:** Specify what the system must not do to avoid compliance or security violations.
 
-2.  **Select the technology platform.** Choose between Foundry, Copilot Studio, or custom frameworks based on control, ease of use, and integration needs. See [Technology plan](./technology-solutions-plan-strategy.md) for more information on platform selection.
+2. **Select the technology platform.** Choose between Foundry, Copilot Studio, or custom frameworks based on control, ease of use, and integration needs. See [Technology plan](./technology-solutions-plan-strategy.md) for more information on platform selection.
 
 **Microsoft facilitation:**<br>
 :::image type="icon" source="./images/foundry-icon.png"::: **Foundry**: Use for scenarios requiring deep customization or pro-code control. Use [prompt-based agents](/azure/ai-foundry/agents/concepts/development-lifecycle?view=foundry#types-of-agents) for rapid development or [hosted agents](/azure/ai-foundry/agents/concepts/hosted-agents?view=foundry) for advanced orchestration. Apply the Well-Architected Framework principles for [AI workloads](/azure/well-architected/ai/) and start with the [AI landing zone](https://github.com/Azure/AI-Landing-Zones). See also [AI Ready](/azure/cloud-adoption-framework/scenarios/ai/ready) for general best practices.
@@ -60,17 +60,17 @@ Orchestration determines how agents coordinate, make decisions, and execute task
 
 Agent instructions act as operational guardrails that shape how agents respond, interact, and comply with organizational policies. Standardize these instructions to ensure consistency and regulatory alignment.
 
-1.  **Structure instructions as configuration.** Treat agent instructions as code. Each agent requires complete guidelines covering:
+1. **Structure instructions as configuration.** Treat agent instructions as code. Each agent requires complete guidelines covering:
     - **Identity and tone:** Define how the agent presents itself to ensure consistent user experience.
     - **Scope and boundaries:** Explicitly state what the agent does and what it avoids (for example, "Do not access payroll systems").
     - **Tool integrations:** Mandate specific tool usage. *Example: "You must use the [Tool Name] to answer questions. If the answer is not found, state 'I don't know'."*
     - **Citations:** Require citations for transparency. *Example: "Every answer must provide citations for using the [Tool Name]."*
 
-2.  **Standardize communication protocols.** Use approved protocols such as [Agent-to-Agent (A2A)](/agent-framework/user-guide/agents/agent-types/a2a-agent) and Model Context Protocol (MCP) for interactions. Prohibit communication with unknown or internet-exposed agents to avoid security risks. Adopt structured formats like JSON for inter-agent communication to improve accuracy.
+2. **Standardize communication protocols.** Use approved protocols such as [Agent-to-Agent (A2A)](/agent-framework/user-guide/agents/agent-types/a2a-agent) and Model Context Protocol (MCP) for interactions. Prohibit communication with unknown or internet-exposed agents to avoid security risks. Adopt structured formats like JSON for inter-agent communication to improve accuracy.
 
-3.  **Implement version control.** Store all agent instructions in a version-controlled system such as GitHub. This creates an auditable history of changes, supports collaborative editing, and ensures teams reference approved instructions.
+3. **Implement version control.** Store all agent instructions in a version-controlled system such as GitHub. This creates an auditable history of changes, supports collaborative editing, and ensures teams reference approved instructions.
 
-4.  **Validate behavior systematically.** Build automated validation into the workflow. When an agent produces output, verify it automatically using a second agent or evaluation script to check facts and tone.
+4. **Validate behavior systematically.** Build automated validation into the workflow. When an agent produces output, verify it automatically using a second agent or evaluation script to check facts and tone.
 
 **Microsoft facilitation:**
 :::image type="icon" source="./images/foundry-icon.png"::: **Foundry**: See [System message design](/azure/ai-foundry/openai/concepts/advanced-prompt-engineering?view=foundry). Use the [A2A tool](/azure/ai-foundry/agents/how-to/tools/agent-to-agent?view=foundry&pivots=python) and [Foundry playground](/azure/ai-foundry/concepts/concept-playgrounds?view=foundry). Test and refine behavior using [agent evaluators](/azure/ai-foundry/concepts/evaluation-evaluators/agent-evaluators?view=foundry).

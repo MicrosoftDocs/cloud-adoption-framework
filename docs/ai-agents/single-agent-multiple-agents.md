@@ -90,4 +90,4 @@ Context length limits restrict the volume of information agents can process simu
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Build AI agents](./build-secure.md)
+> [Process to build AI agents](./build-secure-process.md)
