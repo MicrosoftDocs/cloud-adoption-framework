@@ -109,7 +109,7 @@ Organizations often use multiple approaches to meet diverse requirements. Valida
 | **SaaS agents** | Ready-to-use (SaaS) | Retrieval, Task | Personal productivity. Requires minimal customization to deliver immediate value. |
 | **Microsoft Foundry** | Pro-code (PaaS) | Retrieval, Task, Autonomous | Strategic transformation. Supports deep integration and custom logic. |
 | **Microsoft Copilot Studio** | Low-code (SaaS) | Retrieval, Task, Autonomous | Process transformation. Enables fast development with minimal coding and SaaS security. |
-| **Virtual machines** | Pro-code (IaaS) | Retrieval, Task, Autonomous | Custom infrastructure. Provides full control of the entire technology stack. |
+| **GPUs & Containers** | Pro-code (IaaS) | Retrieval, Task, Autonomous | Custom infrastructure. Provides full control of the entire technology stack. |
 
 See the general [AI decision tree] for more guidance.
 
