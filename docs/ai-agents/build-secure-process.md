@@ -34,7 +34,7 @@ Create a governance artifact that documents what the agent system does, how it s
 Proper setup reduces deployment delays, ensures compliance, and simplifies scaling as agent adoption grows. **Select the technology platform.** Choose between Foundry, Copilot Studio, or custom frameworks based on control, ease of use, and integration needs. See [Technology plan](./technology-solutions-plan-strategy.md) for more information on platform selection.
 
 **Microsoft facilitation:**<br>
-:::image type="icon" source="./images/foundry-icon.png"::: **Foundry**: Use [prompt-based agents](/azure/ai-foundry/agents/concepts/development-lifecycle?view=foundry#types-of-agents) for rapid development or [hosted agents](/azure/ai-foundry/agents/concepts/hosted-agents?view=foundry) for advanced orchestration. Apply the Well-Architected Framework principles for [AI workloads](/azure/well-architected/ai/) and start with the [AI landing zone](https://github.com/Azure/AI-Landing-Zones). See also [AI Ready](/azure/cloud-adoption-framework/scenarios/ai/ready) for Azure landing zone guidance.
+:::image type="icon" source="./images/foundry-icon.png"::: **Foundry**: Use [prompt-based agents](/azure/ai-foundry/agents/concepts/development-lifecycle?view=foundry#types-of-agents) for rapid development. For [hosted agents](/azure/ai-foundry/agents/concepts/hosted-agents?view=foundry), apply the Well-Architected Framework principles for [AI workloads](/azure/well-architected/ai/) and start with the [AI landing zone](https://github.com/Azure/AI-Landing-Zones). See also [AI Ready](/azure/cloud-adoption-framework/scenarios/ai/ready) for Azure landing zone guidance.
 
 :::image type="icon" source="./images/copilot-studio-icon.png"::: **Copilot Studio**:  Use for SaaS integration and low-code extensibility. [Verify licensing](/microsoft-copilot-studio/requirements-licensing-subscriptions) and [configure environments](/microsoft-copilot-studio/environments-first-run-experience) to separate development, testing, and production workloads.
 
@@ -52,7 +52,7 @@ Orchestration determines how agents coordinate, make decisions, and execute task
 3. **Orchestration and workflows.** See workflow guidance for [single agents](./single-agent-multiple-agents.md#single-agent-workflows) and [multi-agent systems](./single-agent-multiple-agents.md#mutli-agent-orchestration-and-workflows).
 
 **Microsoft facilitation:**<br>
-:::image type="icon" source="./images/foundry-icon.png"::: **Foundry**: Use [Workflows](/azure/ai-foundry/agents/concepts/workflow?view=foundry) for visual, low-code design suitable for rapid prototyping.
+:::image type="icon" source="./images/foundry-icon.png"::: **Foundry**: Use [workflows](/azure/ai-foundry/agents/concepts/workflow?view=foundry) for visual, low-code design suitable for rapid prototyping.
 
 :::image type="icon" source="./images/microsoft-agent-framework-icon.png"::: **Microsoft Agent Framework**: Use [workflows](/agent-framework/user-guide/workflows/overview) to implement orchestration patterns in code.
 

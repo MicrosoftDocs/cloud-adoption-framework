@@ -17,7 +17,7 @@ This article helps you understand when to use a single agent to automate a busin
 
 :::image type="content" source="./images/ai-agent-decision-tree.png" alt-text="Diagram that shows a decision tree for single-agent or multi-agent systems." lightbox="./images/ai-agent-decision-tree.png" border="false":::
 
-## Build systems with multiple agents
+## Build multiple agents
 
 Multi-agent systems employ specialized agents to handle distinct tasks or roles within a single system. This modular design enables parallel operation and optimization for specific domains. While this approach handles complex environments effectively, it introduces significant coordination latency and governance overhead. Organizations should use a multi-agent architecture when specific criteria necessitate separation.
 
@@ -31,10 +31,12 @@ Multi-agent systems employ specialized agents to handle distinct tasks or roles 
 
 Multi-agent systems use workflows to enforce orchestration patterns. See [AI agent orchestration patterns](/azure/architecture/ai-ml/guide/ai-agent-design-patterns) in the Azure Architecture Center. Without a workflow, manual chaining of agents becomes brittle and difficult to maintain. Workflows provide:
 
-- **Coordination:** Defines how agents interact (parallel, sequential, conditional).
-- **State management:** Preserves context across agents.
-- **Branching logic:** Invokes different agents based on conditions, such as escalating from a chatbot to a billing agent or human support.
-- **Transparency:** Visualizes and debugs the flow of information.
+| Workflow capability | Purpose |
+|---|---|
+| **Coordination** | Defines how agents interact (parallel, sequential, conditional) |
+| **State management** | Preserves context across agents |
+| **Branching logic** | Invokes different agents based on conditions, such as escalating from a chatbot to a billing agent or human support |
+| **Transparency** | Visualizes and debugs the flow of information |
 
 See [Orchestration strategy](./build-secure-process.md#pick-an-orchestration-strategy) for technology specific options.
 
@@ -42,7 +44,7 @@ See [Orchestration strategy](./build-secure-process.md#pick-an-orchestration-str
 
 In addition to coordination requirements, each interaction requires protocol design, error handling, and state management. Each component requires separate prompts, monitoring, logging, and debugging capabilities. Security surfaces increase through additional credentials and data transit points. Cost structures often increase due to redundant context processing and communication overhead.
 
-## Comparative prototyping
+## Prototype single and multiple agents
 
 Teams often default to multi-agent architectures based on untested assumptions about complexity, performance, or role separation. Before committing to orchestration overhead, always start with a single-agent prototype and validate whether it meets requirements. Move to multi-agent only if testing shows clear limitations. Focus prototyping on these decision drivers:
 
