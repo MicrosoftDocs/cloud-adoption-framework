@@ -1,6 +1,5 @@
 **Purpose:**  
-Review existing guidance so it is practical. Rather than providing guidance that covers everything concisely, focus on the major decision points and provide enough context so that they are successful with those understand what they need to do.
-
+Ensure the guidance is practical for enterprise architects. Rather than providing guidance that covers everything concisely, focus on the major decision points and provide enough context so that they are successful with those understand what they need to do. The output should help readers make informed decisions. Focus on the most important guidance so that the guidance there is well understood and explained but the overall length of the article is still actionable.
 
 *   **Business and Strategy Guidance (Implicitly targets CTOs and C-suite)**
     *   Align technology decisions with business strategy and competitive advantage.
@@ -11,10 +10,6 @@ Review existing guidance so it is practical. Rather than providing guidance that
     *   Ensure scalability, compliance, and security governance.
     *   Drive modernization and consistent cloud adoption patterns.
     *   Architecture cohesion: How all workloads fit together.
-
-The output should help readers make informed decisions. Focus on the most important recommendations and best practices so the guidance is not too long and easily actionable.
-
-***
 
 #### **Core Objectives**
 
@@ -35,7 +30,7 @@ The output should help readers make informed decisions. Focus on the most import
 
 The agent should **address priorities without naming roles explicitly**. Adjust the altitude of the guidance based on the subject matter:
 
-1.  **For Business and Strategy topics:** Speak to value, risk, and strategic alignment (C-suite concerns).
+1.  **For Business and Strategy topics:** Speak to ROI, value, risk, and strategic busiess alignment (C-suite concerns).
 2.  **For Governance, Security, and Estate Planning:** Speak to standards, cohesion, and policy (Enterprise Architect concerns).
 
 **Instruction:**  
@@ -45,12 +40,7 @@ Do **not** create separate sections for persona or mention them by name. Instead
 
 #### **Grounding and Accuracy Rules**
 
-*   Use only **information from the provided source content, grounding files, and MCP servers**.
 *   Verify technical accuracy against the grounding data.
-*   If existing recommendations are incorrect or incomplete, **update them based on the grounded information**.
-*   Do **not invent new recommendations** beyond what is supported by the grounding data.
-
-***
 
 #### **Content Rules**
 
@@ -62,7 +52,7 @@ Do **not** create separate sections for persona or mention them by name. Instead
         *   Why this matters.
         *   What trade-offs exist.
         *   How it supports organizational goals.
-*   Use **headings** for major topics; use **numbered steps** for multi-step processes.
+*   Use **headings** for major topics. Use **numbered steps** for multi-step processes.
 *   When using numbered lists:
     *   Format each item as:
             1. **[Short imperative or noun phrase].** [Explanatory text starts on the same line.]
@@ -73,6 +63,7 @@ Do **not** create separate sections for persona or mention them by name. Instead
     *   Explicit role names.
     *   Em dashes.
     *   Emotional or marketing language.
+    *   Using ;
 *   Replace:
     *   Gerunds with active verbs.
     *   Future tense with present tense.
@@ -94,7 +85,7 @@ Do **not** create separate sections for persona or mention them by name. Instead
     # [Descriptive Noun Phrase Title]
 
     ## Introduction
-    State the purpose of the guidance and summarize the key decisions and trade-offs.
+    "This article ..." then summarize what the reader will learn. State why this is important to the key persona(s).
 
     ## [Section Heading]
     Explain the decision point, available options, trade-offs, and best practices. Provide concise, actionable recommendations with supporting rationale.

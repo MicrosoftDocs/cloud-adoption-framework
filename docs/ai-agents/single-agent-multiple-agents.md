@@ -29,7 +29,7 @@ Multi-agent systems employ specialized agents to handle distinct tasks or roles 
 
 ### Mutli-agent orchestration and workflows
 
-Multi-agent systems use workflows to enforce orchestration patterns. See [AI agent orchestration patterns](/azure/architecture/ai-ml/guide/ai-agent-design-patterns) in the Azure Architecture Center. Without a workflow, manual chaining of agents becomes brittle and difficult to maintain. Workflows provide:
+Multi-agent systems use workflows to enforce [orchestration patterns](/azure/architecture/ai-ml/guide/ai-agent-design-patterns) in the Azure Architecture Center. Without a workflow, manual chaining of agents becomes brittle and difficult to maintain. Workflows provide:
 
 | Workflow capability | Purpose |
 |---|---|
@@ -48,17 +48,17 @@ In addition to coordination requirements, each interaction requires protocol des
 
 Teams often default to multi-agent architectures based on untested assumptions about complexity, performance, or role separation. Before committing to orchestration overhead, always start with a single-agent prototype and validate whether it meets requirements. Move to multi-agent only if testing shows clear limitations. Focus prototyping on these decision drivers:
 
-1. **Rapid time-to-market.** Single agents are simpler and faster to implement. Start with a single-agent prototype to validate speed and user feedback before considering multi-agent architectures. This approach minimizes initial development time and allows for quicker iteration based on real-world usage.
+1. **Clear roles identified.** Prototype with a single agent using persona-switching or distinct system prompts. Adopt multi-agent designs only if strict security boundaries or distinct organizational ownership make a unified agent insufficient. Many role-based requirements can be met by a single agent dynamically adjusting its behavior based on context.
 
-2. **Cost efficiency.** Single-agent designs minimize token usage and API call volume. Prototype with a single agent first to confirm cost benefits before adding orchestration complexity. Multi-agent systems often multiply costs through redundant context processing and inter-agent communication, so validating the necessity of this expense is crucial.
+2. **Rapid time-to-market.** Single agents are simpler and faster to implement. Start with a single-agent prototype to validate speed and user feedback before considering multi-agent architectures. This approach minimizes initial development time and allows for quicker iteration based on real-world usage.
 
-3. **Large amounts of data.** Test whether a single agent with Retrieval-Augmented Generation (RAG) or extended context windows can handle the required data volume. Move to multi-agent architectures only if context degradation or hallucination occurs during testing. Often, efficient data retrieval strategies can resolve capacity issues without the need for multiple agents.
+3. **Cost efficiency.** Single-agent designs minimize token usage and API call volume. Prototype with a single agent first to confirm cost benefits before adding orchestration complexity. Multi-agent systems often multiply costs through redundant context processing and inter-agent communication, so validating the necessity of this expense is crucial.
 
-4. **Clear roles identified.** Prototype with a single agent using persona-switching or distinct system prompts. Adopt multi-agent designs only if strict security boundaries or distinct organizational ownership make a unified agent insufficient. Many role-based requirements can be met by a single agent dynamically adjusting its behavior based on context.
+4. **Large amounts of data.** Test whether a single agent with Retrieval-Augmented Generation (RAG) or extended context windows can handle the required data volume. Move to multi-agent architectures only if context degradation or hallucination occurs during testing. Often, efficient data retrieval strategies can resolve capacity issues without the need for multiple agents.
 
 5. **High-demand process.** Measure throughput and latency with a single agent under load. Move to multi-agent architectures only if parallelization provides significant, measurable gains. While multi-agent systems can offer concurrency, the overhead of coordination can sometimes negate performance benefits in simpler high-demand scenarios.
 
-6. **Different modalities.** Start with a single multimodal model and appropriate tools. Use multi-agent architectures only if specialized models deliver critical performance or cost advantages that a generalist model cannot match. Specialized agents are justified when specific modalities (like complex image analysis or audio processing) require distinct optimization or resource allocation.
+6. **Different modalities involved.** Start with a single multimodal model and appropriate tools. Use multi-agent architectures only if specialized models deliver critical performance or cost advantages that a generalist model cannot match. Specialized agents are justified when specific modalities (like complex image analysis or audio processing) require distinct optimization or resource allocation.
 
 ## Build a single agent system
 

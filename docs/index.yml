@@ -1,7 +1,7 @@
 ### YamlMime:Hub
 
 title: Microsoft Cloud Adoption Framework
-summary: Proven guidance to be successful in Azure.
+summary: Proven guidance to be successful in the cloud.
 brand: azure
 
 metadata:
@@ -46,8 +46,8 @@ additionalContent:
 
   # Supports up to 3 sections
   sections:
-    - title: Cloud Adoption Framework methodologies  # < 60 chars (optional)
-      summary: Proven guidance for each phase of the cloud journey.  # < 160 chars (optional)
+    - title: Guidance  # < 60 chars (optional)
+     # < 160 chars (optional)
       items:
 
         # Card
@@ -94,8 +94,7 @@ additionalContent:
           summary: Manage your entire Azure environment.
           url: ./manage/index.md
 
-    - title: Workload design guidance
-      summary: Use the Well-Architected Framework and Azure Architecture Center to build Azure solutions.  # < 160 chars (optional)
+    - title: Workload design guidance # < 160 chars (optional)
       items: 
 
         # Card
@@ -110,7 +109,7 @@ additionalContent:
 
 
     - title: Find help  # < 60 chars (optional)
-      summary: Microsoft has dedicated resources to support your Azure adoption journey.  # < 160 chars (optional)
+ # < 160 chars (optional)
       items:
 
         # Card

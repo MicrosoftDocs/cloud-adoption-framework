@@ -1,5 +1,5 @@
 items:
-  - name: Agent adoption overview
+  - name: AI Agent adoption overview
     href: index.md
   - name: 1. Plan for agents
     expanded: true
