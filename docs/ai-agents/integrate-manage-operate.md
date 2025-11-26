@@ -31,7 +31,7 @@ Ad-hoc development leads to duplication and inconsistent security standards. For
 1. **Create reusable templates.** Convert proven architectures, prompts, and integration logic into templates. For example, a reference architecture for a retrieval-augmented generation (RAG) agent ensures security and logging standards are met automatically.
 2. **Establish feedback loops.** Agents require continuous evolution to remain relevant. Implement agile refinement cycles to adapt to changing business needs. Maintain an improvement backlog to capture unresolved queries and feature requests, prioritizing issues that block value delivery.
 
-:::image type="icon" source="./images/foundry-icon.png"::: **Foundry**: Use [Foundry resource templates](/azure/ai-foundry/how-to/create-resource-template) to deploy infrastructure that supports secure and scalable agent embedding.
+:::image type="icon" source="./images/foundry-icon.png"::: **Foundry**: See [deployment guidance](/azure/ai-foundry/agents/how-to/publish-agent?view=foundry), [rollout guidance](/azure/ai-foundry/concepts/planning?view=foundry) and [Bicep](/azure/ai-foundry/how-to/create-resource-template?view=foundry&tabs=cli) and [Terraform](/azure/ai-foundry/how-to/create-resource-terraform?view=foundry&tabs=azapi) resources.
 
 :::image type="icon" source="./images/copilot-studio-icon.png"::: **Copilot Studio:** Use [agent builder templates](/microsoft-365-copilot/extensibility/agent-builder-templates) to accelerate integration and ensure consistency across deployments.
 

@@ -29,7 +29,7 @@ Before building an agent, assess whether a deterministic or structured approach 
 
 Use agents when a workflow requires reasoning, decision-making, and dynamic tool execution to handle ambiguity. Unlike deterministic software that follows a fixed logic path, agents autonomously formulate plans and adapt to variable inputs to achieve a specific goal. This capability bridges the gap between static automation and open-ended generative AI. See also [What is an AI agent?](./index.md#what-is-an-ai-agent).
 
-1. **Identify scenarios requiring cognitive flexibility.** Evaluate processes where the inputs vary significantly or the steps to a solution depend on context. Agents provide value when a task involves interpreting intent, chaining multiple reasoning steps, or selecting specific tools from a library to complete a request. If the workflow is static, use standard automation. If it requires judgment, use an agent. Consult resources such as the [Microsoft Scenario Library](https://adoption.microsoft.com/scenario-library/), [AI Use Cases catalog](https://www.microsoft.com/ai/use-case), and [Sample Solution Gallery](https://adoption.microsoft.com/sample-solution-gallery/) to benchmark internal ideas against proven patterns.
+1. **Identify scenarios requiring cognitive flexibility.** Evaluate processes where the inputs vary significantly or the steps to a solution depend on context. Agents provide value when a task involves interpreting intent, chaining multiple reasoning steps, or selecting specific tools from a library to complete a request. If the workflow is static, use standard automation. If it requires judgment, use an agent.
 
 2. **Target high-impact strategic areas.** Direct agent development toward pillars that scale operations and drive competitive advantage. Aligning agent capabilities with these strategic goals ensures measurable business value.
 
@@ -41,6 +41,9 @@ Use agents when a workflow requires reasoning, decision-making, and dynamic tool
    - **Accelerate innovation.** Use agents to analyze market trends or simulate scenarios. This shortens product development cycles and enables faster experimentation.
 
 3. **Validate value through rapid piloting.** Test the reasoning capabilities of an agent in a low-code environment before investing in custom code. Platforms like Microsoft Copilot Studio or Azure AI Foundry allow for rapid prototyping to verify that an agent can handle the required ambiguity. This step prevents over-engineering solutions that might be better served by simpler automation.
+
+**Microsoft facilitation:**<br>
+See the [Microsoft Scenario Library](https://adoption.microsoft.com/scenario-library/), [AI Use Cases catalog](https://www.microsoft.com/ai/use-case), and [Sample Solution Gallery](https://adoption.microsoft.com/sample-solution-gallery/) to benchmark internal ideas against proven patterns.
 
 ## How to prioritize AI agent use cases?
 
@@ -56,7 +59,9 @@ Evaluate each use case across three dimensions using a 1–5 scale, where lower 
 
 1. **Change management timeframe**: Consider the expected time and effort required to implement the use case and manage associated changes. A lengthy rollout with significant user disruption signals a challenging implementation. A short deployment cycle with minimal impact on users indicates strong feasibility and readiness.
 
-:::image type="content" source="./images/business-impact.png" alt-text="Diagram showing business impact evaluation criteria: executive strategy alignment, business value, and change management timeframe, each rated from low to high impact." lightbox="./images/business-impact.png" border="false":::
+:::image type="complex" source="./images/business-impact.png" alt-text="Three-part evaluation framework showing business impact, technical feasibility, and user desirability criteria.":::
+   Diagram with three sections. First section shows business impact evaluation criteria: executive strategy alignment, business value, and change management timeframe, each rated from low to high impact. Second section shows technical feasibility evaluation criteria: implementation and operation risks, sufficient safeguards, and technology fit, each rated from low to high feasibility. Third section shows user desirability assessment factors including user pain points, solution acceptance, change readiness, and stakeholder support for AI agent implementations.
+:::image-end:::
 
 ### Measure technical feasibility
 
@@ -68,8 +73,6 @@ Require a technical feasibility summary for each candidate use case, including c
 
 1. **Technology fit**: Confirm compatibility with existing systems. If the technology requirements are unclear or poorly aligned, integration is more likely to fail. Favor solutions where the technology choice is justified, the benefits are compelling, and integration with current infrastructure is straightforward.
 
-:::image type="content" source="./images/technical-feasibility.png" alt-text="Diagram showing technical feasibility evaluation criteria: implementation and operation risks, sufficient safeguards, and technology fit, each rated from low to high feasibility." lightbox="./images/business-impact.png" border="false":::
-
 ### Measure user desirability
 
 Gather evidence through interviews or surveys to validate pain points and openness to change. Prioritize projects with strong user advocates and minimal resistance, as AI agents succeed only when people use them consistently and trust their output. Evaluate each use case across three dimensions using a 1–5 scale, where lower scores indicate unclear or weak desirability and higher scores indicate strong desirability:
@@ -79,8 +82,6 @@ Gather evidence through interviews or surveys to validate pain points and openne
 1. **Value proposition**: Consider the appeal and adoption potential of the use case for users. A low score reflects minimal perceived value or low interest. A high score indicates the solution is highly desired and offers clear benefits to users.
 
 1. **Change resistance**: Evaluate the expected level of resistance to adopting the solution. A low score suggests significant resistance and challenges in managing change. high score indicates very low resistance and strong readiness for adoption.
-
-:::image type="content" source="./images/user-desirability.png" alt-text="Diagram showing user desirability assessment factors including user pain points, solution acceptance, change readiness, and stakeholder support for AI agent implementations." lightbox="./images/user-desirability.png" border="false":::
 
 ## Define success metrics
 
