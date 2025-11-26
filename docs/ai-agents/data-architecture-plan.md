@@ -19,7 +19,7 @@ Organizations often underestimate the role of data readiness in AI success. AI a
 
 This guidance applies to Microsoft SaaS agents such as Microsoft 365 Copilot and to custom AI agents built on platforms like Copilot Studio or Microsoft Foundry. The decisions outlined here directly affect agent reliability, compliance posture, and the speed at which new agents can be deployed.
 
-:::image type="content" source="images/data-architecture-fabric-onelake-foundry-azure-microsoft.png" alt-text="Diagram of a data estate from Microsoft 365 apps to data in Azure. It shows unification of business data in Microsoft Fabric's OneLake data lake, and how that data supports Foundry and Copilot Agents." lightbox="images/data-architecture-fabric-onelake-foundry-azure-microsoft.png":::
+:::image type="content" source="images/data-architecture-fabric-onelake-foundry-azure-microsoft.svg" alt-text="Diagram of a data estate from Microsoft 365 apps to data in Azure. It shows unification of business data in Microsoft Fabric's OneLake data lake, and how that data supports Foundry and Copilot Agents." lightbox="images/data-architecture-fabric-onelake-foundry-azure-microsoft.svg":::
 
 ## Prepare Microsoft 365 data
 
