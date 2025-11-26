@@ -59,7 +59,7 @@ Evaluate each use case across three dimensions using a 1–5 scale, where lower 
 
 1. **Change management timeframe**: Consider the expected time and effort required to implement the use case and manage associated changes. A lengthy rollout with significant user disruption signals a challenging implementation. A short deployment cycle with minimal impact on users indicates strong feasibility and readiness.
 
-:::image type="complex" source="./images/business-impact.png" alt-text="Three-part evaluation framework showing business impact, technical feasibility, and user desirability criteria.":::
+:::image type="complex" source="./images/prioritize-agent-use-cases.png" alt-text="Three-part evaluation framework showing business impact, technical feasibility, and user desirability criteria." lightbox="./images/prioritize-agent-use-cases.png":::
    Diagram with three sections. First section shows business impact evaluation criteria: executive strategy alignment, business value, and change management timeframe, each rated from low to high impact. Second section shows technical feasibility evaluation criteria: implementation and operation risks, sufficient safeguards, and technology fit, each rated from low to high feasibility. Third section shows user desirability assessment factors including user pain points, solution acceptance, change readiness, and stakeholder support for AI agent implementations.
 :::image-end:::
 
