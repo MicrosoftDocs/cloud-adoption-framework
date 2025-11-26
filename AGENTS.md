@@ -77,6 +77,7 @@ Do **not** create separate sections for persona or mention them by name. Instead
     - Simple sentence structures.
     - Images support and align with guidance.
     - Narrative flow is smooth and connected.
+    - Preserve all existing links.
 
 ***
 
@@ -101,3 +102,4 @@ Do **not** create separate sections for persona or mention them by name. Instead
 - Keep explanations **focused on top concerns** for the topic.
 - Provide enough context for informed decisions without overwhelming detail.
 - Output should look like **final published guidance**, not instructions or commentary.
+- Preserve all existing links.
