@@ -31,6 +31,7 @@ Ad-hoc development leads to duplication and inconsistent security standards. For
 1. **Create reusable templates.** Convert proven architectures, prompts, and integration logic into templates. For example, a reference architecture for a retrieval-augmented generation (RAG) agent ensures security and logging standards are met automatically.
 2. **Establish feedback loops.** Agents require continuous evolution to remain relevant. Implement agile refinement cycles to adapt to changing business needs. Maintain an improvement backlog to capture unresolved queries and feature requests, prioritizing issues that block value delivery.
 
+**Microsoft facilitation:**<br>
 :::image type="icon" source="./images/foundry-icon.png"::: **Foundry**: See [deployment guidance](/azure/ai-foundry/agents/how-to/publish-agent?view=foundry), [rollout guidance](/azure/ai-foundry/concepts/planning?view=foundry) and [Bicep](/azure/ai-foundry/how-to/create-resource-template?view=foundry&tabs=cli) and [Terraform](/azure/ai-foundry/how-to/create-resource-terraform?view=foundry&tabs=azapi) resources.
 
 :::image type="icon" source="./images/copilot-studio-icon.png"::: **Copilot Studio:** Use [agent builder templates](/microsoft-365-copilot/extensibility/agent-builder-templates) to accelerate integration and ensure consistency across deployments.
@@ -49,6 +50,7 @@ Agents are not "set and forget" assets. Active lifecycle management reduces the 
 2. **Centralize administration.** Fragmented management leads to security gaps. Use a unified control plane to manage the agent fleet rather than managing projects in isolation. This allows administrators to push policy updates, rotate credentials, and manage access controls consistently.
 3. **High availability and disaster recovery.** Align the availability configurations of each service deployment to the needs of the workloads environments.
 
+**Microsoft facilitation:**<br>
 :::image type="icon" source="./images/foundry-icon.png"::: **Foundry**: Use the [Microsoft Foundry Control Plane](/azure/ai-foundry/control-plane/overview?view=foundry) for unified visibility and governance across your agent fleet. See [High availability and resiliency](/azure/ai-foundry/how-to/high-availability-resiliency?view=foundry) and [disaster recovery](/azure/ai-foundry/how-to/agent-service-disaster-recovery?view=foundry).
 
 ### 2. Continuous compliance and security
@@ -59,7 +61,7 @@ Regulatory and internal requirements evolve. Ensure that the [governance policie
 2. **Integrate with security operations.** Route agent alerts to the Security Operations Center (SOC) to ensure rapid response to incidents like jailbreak attempts or data leakage. Treat agent anomalies with the same urgency as traditional security threats.
 3. **Validate through red teaming.** Continue adversarial testing (red teaming) periodically, especially after major model updates or architectural changes. This ensures defenses remain effective against new attack vectors.
 
-### 3. Cost and quota optimization
+### 3. Quota optimization
 
 Variable costs for tokens and compute can scale disproportionately to business value. Actively manage the [cost tracking mechanisms](./governance-security-across-organization.md#agent-observability) set up during governance to ensure financial sustainability.
 
@@ -67,6 +69,7 @@ Variable costs for tokens and compute can scale disproportionately to business v
 2. **Adjust quotas dynamically.** Use usage data to adjust quotas and budgets. Prioritize critical workloads while preventing runaway spending on lower-value activities.
 3. **Optimize model selection.** Continuously evaluate if smaller, more cost-effective models can handle routine tasks without sacrificing quality. Reserve premium models for complex reasoning to maximize ROI.
 
+**Microsoft facilitation:**<br>
 :::image type="icon" source="./images/foundry-icon.png"::: **Foundry**: [Plan and manage costs](/azure/ai-foundry/concepts/manage-costs?view=foundry). Use the [management center](/azure/ai-foundry/how-to/quota?view=foundry) to administer quotas and monitor usage against budgets.
 
 :::image type="icon" source="./images/copilot-studio-icon.png"::: **Copilot Studio**: [Review usage and message allocation](/microsoft-copilot-studio/requirements-messages-management) to manage consumption and optimize licensing.
@@ -79,4 +82,5 @@ Centralized visibility and traffic control are essential for managing a sprawlin
 2. **Implement an AI gateway.** Route AI traffic through a managed gateway to unify endpoints and enforce policy. This abstraction layer allows for centralized monitoring, security enforcement, and traffic management without modifying individual agent code.
 3. **Enforce fine-grained controls.** Configure token limits and quotas at the project or agent level. Manage the lifecycle of external agents and tools with pause and resume actions to respond quickly to security or operational incidents.
 
+**Microsoft facilitation:**<br>
 :::image type="icon" source="./images/foundry-icon.png"::: **Foundry**: View all Foundry projects in the Admin dashboard. Enable [AI Gateway](/azure/ai-foundry/agents/how-to/tools/governance?view=foundry), powered by Azure API Management, to govern AI model deployments, tools, and agents in your Foundry resources.
