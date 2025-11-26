@@ -1,16 +1,23 @@
 ---
 title: Operate AI agents across your organization
-description: Operate AI agents across your organization
+ms.reviewer: ssumner
+description: Learn how to integrate and manage AI agents across your organization to enhance workflows, ensure security, and optimize costs with Microsoft tools.
+#customer intent: As a business decision maker, I want to plan a phased rollout of AI agents so that I can minimize operational risks and ensure user adoption.
 author: stephen-sumner
 ms.author: pnp
 ms.date: 12/01/2025
 ms.update-cycle: 180-days
 ms.topic: article
+ms.collection: ce-skilling-ai-copilot
 ---
 
 # Operate AI agents across your organization
 
+This article describes how to integrate AI agents into existing workflows and manage them as part of your operational infrastructure. Successful agent deployments require structured rollout strategies, continuous compliance monitoring, and centralized administration. Without deliberate integration and management practices, organizations risk shadow AI proliferation, uncontrolled costs, and security gaps that undermine the value of AI investments.
+
 :::image type="content" source="./images/ai-agent-adoption.png" alt-text="Diagram that shows the process outlined in this guidance: plan, govern, build and secure, integrate, and measure agents across your organization." lightbox="./images/ai-agent-adoption.png" border="false":::
+
+The guidance addresses two critical phases: integration, which focuses on deploying agents where work happens while maintaining operational stability, and management, which ensures agents remain secure, cost-effective, and compliant as they scale. Organizations that skip these operational disciplines often face support overload during deployment, configuration drift in production, and budget overruns from unoptimized model usage. This article provides the decision context and actionable recommendations to avoid these outcomes.
 
 ## Integrate AI agents across your organization
 
