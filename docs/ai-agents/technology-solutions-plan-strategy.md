@@ -65,25 +65,21 @@ Choose a build path based on your organization's technical capabilities, timelin
 
 Start with the [Foundry playground](/azure/ai-foundry/concepts/concept-playgrounds) to build and test prototypes. Follow the quickstart guide to [create a new agent](/azure/ai-foundry/agents/quickstart).
 
-### Choose a setup topology
+**Setup topology**
 
-Select the appropriate infrastructure setup for your Foundry agents based on your security, networking, and scalability needs.
+In Microsoft Foundry, setup topology refers to the architectural configuration you choose for deploying and running your AI agents. It’s essentially about how your infrastructure is organized to meet different operational needs—security, networking, scalability, and compliance. There are two options:
 
-#### Basic agent setup
+- **Basic agent setup.** Use the [basic setup](/azure/ai-foundry/how-to/create-project) for rapid experimentation and development where enterprise-grade isolation is not required. This topology suits startups or small teams that need flexibility and speed without complex network configurations.
 
-Use the [basic setup](/azure/ai-foundry/how-to/create-project) for rapid experimentation and development where enterprise-grade isolation is not required. This topology suits startups or small teams that need flexibility and speed without complex network configurations.
+    - **Target environment.** New environments or startups with existing Azure OpenAI resources.
+    - **Key features.** Quick deployment and ease of use.
+    - **Limitations.** Lacks network isolation and advanced enterprise guarantees.
 
-- **Target environment.** New environments or startups with existing Azure OpenAI resources.
-- **Key features.** Quick deployment and ease of use.
-- **Limitations.** Lacks network isolation and advanced enterprise guarantees.
+- **Standard setup.** Use the [standard setup](/azure/ai-foundry/how-to/create-hub) for production environments that require fine-grained control over data, security, and networking. This topology supports large enterprises with compliance requirements.
 
-#### Standard setup
-
-Use the [standard setup](/azure/ai-foundry/how-to/create-hub) for production environments that require fine-grained control over data, security, and networking. This topology supports large enterprises with compliance requirements.
-
-- **Standard with public networking.** Best for large organizations exploring AI that require enterprise data controls but do not yet need full network isolation. It supports non-confidential workloads.
-- **Standard with private networking.** Essential for production environments handling confidential workloads. This configuration supports private networking and integrates with existing Azure OpenAI, search, and storage resources to meet strict compliance and security standards.
-
+    - **Standard with public networking.** Best for large organizations exploring AI that require enterprise data controls but do not yet need full network isolation. It supports non-confidential workloads.
+    - **Standard with private networking.** Essential for production environments handling confidential workloads. This configuration supports private networking and integrates with existing Azure OpenAI, search, and storage resources to meet strict compliance and security standards.
+    
 ### Microsoft Copilot Studio
 
 [Microsoft Copilot Studio](/microsoft-copilot-studio/) offers a software-as-a-service (SaaS) platform for low-code development. It enables business teams to deploy agents quickly with moderate customization. The platform includes prebuilt connectors, supports retrieval and task agents, and integrates with Azure AI Search. Built-in responsible AI features reduce the need for custom safeguards.
