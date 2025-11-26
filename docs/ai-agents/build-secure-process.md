@@ -54,7 +54,7 @@ Orchestration determines how agents coordinate, make decisions, and execute task
 **Microsoft facilitation:**<br>
 :::image type="icon" source="./images/foundry-icon.png"::: **Foundry**: Use [Workflows](/azure/ai-foundry/agents/concepts/workflow?view=foundry) for visual, low-code design suitable for rapid prototyping.
 
-:::image type="icon" source="./images/microsoft-agent-framework-icon.png"::: **Microsoft Agent Framework**: Use code-first [workflows](/agent-framework/user-guide/workflows/overview) for complex, code-heavy scenarios requiring a pro-code environment.
+:::image type="icon" source="./images/microsoft-agent-framework-icon.png"::: **Microsoft Agent Framework**: Use [workflows](/agent-framework/user-guide/workflows/overview) to implement orchestration patterns in code.
 
 :::image type="icon" source="./images/copilot-studio-icon.png"::: **Copilot Studio**: [Set up agent flows](/microsoft-copilot-studio/flows-overview) for multi-agent systems with distinct roles and approval checkpoints. [Configure agent behavior](/microsoft-copilot-studio/advanced-generative-actions) by orchestrating with generative AI.
 
@@ -63,10 +63,13 @@ Orchestration determines how agents coordinate, make decisions, and execute task
 Agent instructions act as operational guardrails that shape how agents respond, interact, and comply with organizational policies. Standardize these instructions to ensure consistency and regulatory alignment.
 
 1. **Structure instructions as configuration.** Treat agent instructions as code. Each agent requires complete guidelines covering:
-    - **Identity and tone:** Define how the agent presents itself to ensure consistent user experience.
-    - **Scope and boundaries:** Explicitly state what the agent does and what it avoids (for example, "Do not access payroll systems").
-    - **Tool integrations:** Mandate specific tool usage. *Example: "You must use the [Tool Name] to answer questions. If the answer is not found, state 'I don't know'."*
-    - **Citations:** Require citations for transparency. *Example: "Every answer must provide citations for using the [Tool Name]."*
+
+    | Guideline | Description |
+    |-----------|-------------|
+    | **Identity and tone** | Define how the agent presents itself to ensure consistent user experience. |
+    | **Scope and boundaries** | Explicitly state what the agent does and what it avoids (for example, "Do not access payroll systems"). |
+    | **Tool integrations** | Mandate specific tool usage. *Example: "You must use the [Tool Name] to answer questions. If the answer is not found, state 'I don't know'."* |
+    | **Citations** | Require citations for transparency. *Example: "Every answer must provide citations for using the [Tool Name]."* |
 
 2. **Standardize communication protocols.** Use approved protocols such as [Agent-to-Agent (A2A)](/agent-framework/user-guide/agents/agent-types/a2a-agent) and Model Context Protocol (MCP) for interactions. Prohibit communication with unknown or internet-exposed agents to avoid security risks. Adopt structured formats like JSON for inter-agent communication to improve accuracy.
 
