@@ -2,7 +2,7 @@
 title: Operate AI agents across your organization
 ms.reviewer: ssumner
 description: Learn how to integrate and manage AI agents across your organization to enhance workflows, ensure security, and optimize costs with Microsoft tools.
-#customer intent: As a business decision maker, I want to plan a phased rollout of AI agents so that I can minimize operational risks and ensure user adoption.
+#customer intent: As an enterprise architect, I want to understand how to operate AI agents effectively. This includes how to roll them out, improve and manage them across their lifecycle, ensure appropriate quota allocation, and optimize costs. Additionally, I want guidance on administering agents across the entire organization.
 author: stephen-sumner
 ms.author: pnp
 ms.date: 12/01/2025
