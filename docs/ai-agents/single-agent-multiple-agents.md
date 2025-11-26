@@ -1,5 +1,5 @@
 ---
-title: Choosing Between building a ingle agent or multiple agents
+title: Choosing Between building a single agent or multiple agents
 ms.reviewer: ssumner
 description: Explore decision criteria for selecting single-agent or multi-agent architectures to optimize AI-powered solutions for your organization.
 #customer intent: As an enterprise architect I want to help my teams across my organization understand the standards and criteria for building single agents for a particular system or a multi agent
@@ -27,7 +27,7 @@ Single-agent systems consolidate all logic into one entity. This consolidation s
 
 Multi-agent systems deploy specialized agents for distinct tasks or roles within a single business process. This architecture enables parallel operation and domain optimization. The coordination between agents introduces latency at each handoff point and requires explicit state management between components. Organizations should choose multi-agent architecture only when specific criteria mandate separation.
 
-1. **Crossing security and compliance boundaries.** Build multiple agents when regulations or policies mandate strict data isolation. Different security classifications need independent processing environments that single agents cannot provide. This least-privilege design limits the blast radius of security incidents by containing breaches within individual agent boundaries. Financial services often require one agent to prepare transactions while another validates them, enforcing separation of duties through architecture.
+1. **Crossing security and compliance boundaries.** Build multiple agents when regulations or policies mandate strict data isolation. Different security classifications need independent processing environments that single agents can't provide. This least-privilege design limits the blast radius of security incidents by containing breaches within individual agent boundaries. Financial services often require one agent to prepare transactions while another validates them, enforcing separation of duties through architecture.
 
 2. **Multiple teams involved.** Adopt multi-agent designs when distinct teams manage separate knowledge areas. Independent development cycles benefit from decoupled architectures where teams maintain domain-specific agents. Each team uses its specialized expertise and data sources without waiting for other teams. This alignment mirrors organizational structure and enables parallel development. Teams deploy updates independently while explicit interfaces between domains simplify governance and reduce integration risk.
 
@@ -48,11 +48,11 @@ See [Orchestration strategy](./build-secure-process.md#pick-an-orchestration-str
 
 ### Multi-agent system trade-offs
 
-Each agent interaction requires protocol design, error handling, and state synchronization. Every component needs separate prompt engineering, monitoring infrastructure, and debugging capabilities. Security surfaces expand through additional credential management and data transit points between agents. Cost structures increase because each agent processes redundant context and communication overhead multiplies with agent count. Latency accumulates at each handoff point, potentially degrading user experience.
+Each agent interaction requires protocol design, error handling, and state synchronization. Every component needs separate prompt engineering, monitoring infrastructure, and debugging capabilities. Security surfaces expand through extra credential management and data transit points between agents. Cost structures increase because each agent processes redundant context and communication overhead multiplies with agent count. Latency accumulates at each handoff point, potentially degrading user experience.
 
 ## Prototype single and multiple agents
 
-Teams often assume multi-agent architectures are necessary based on untested beliefs about complexity or performance requirements. This assumption leads to unnecessary overhead and delayed delivery. Start with a single-agent prototype to establish baseline capabilities. Move to multi-agent architecture only when testing reveals specific limitations that cannot be addressed through single-agent optimization.
+Teams often assume multi-agent architectures are necessary based on untested beliefs about complexity or performance requirements. This assumption leads to unnecessary overhead and delayed delivery. Start with a single-agent prototype to establish baseline capabilities. Move to multi-agent architecture only when testing reveals specific limitations that can't be addressed through single-agent optimization.
 
 1. **Clear roles involved.** Test a single agent using persona-switching or distinct system prompts before building separate agents. Multi-agent designs become necessary only when strict security boundaries or distinct organizational ownership make unified agents impossible. Single agents can handle most role-based requirements by adjusting behavior based on user context or request type.
 
@@ -64,7 +64,7 @@ Teams often assume multi-agent architectures are necessary based on untested bel
 
 5. **High-demand process.** Measure throughput and latency with single agents under production loads. Multi-agent architectures provide value only when parallelization delivers measurable performance gains. Coordination overhead can negate concurrency benefits in many scenarios, making single agents more efficient.
 
-6. **Different modalities involved.** Start with multimodal models that handle text, images, and other formats within one agent. Use specialized agents only when specific modalities require distinct optimization that general models cannot provide. Complex image analysis or real-time audio processing sometimes justifies dedicated agents with specialized resources.
+6. **Different modalities involved.** Start with multimodal models that handle text, images, and other formats within one agent. Use specialized agents only when specific modalities require distinct optimization that general models can't provide. Complex image analysis or real-time audio processing sometimes justifies dedicated agents with specialized resources.
 
 ## Build a single agent system
 
@@ -76,7 +76,7 @@ Single-agent architectures consolidate logic, context, and tool execution into o
 
 ### Single-agent workflows
 
-Single agents often respond directly to user requests without additional orchestration. Workflows provide essential structure for reliability and enterprise integration even with single agents.
+Single agents often respond directly to user requests without orchestration. Workflows provide essential structure for reliability and enterprise integration even with single agents.
 
 - **Repeatability.** Workflows execute consistent tasks across inputs without manual intervention. Nightly batch summarization or scheduled report generation requires workflow automation around single agents.
 - **System integration.** Route agent outputs to downstream systems through workflow connectors. Workflows trigger actions including sending results to SharePoint, posting notifications to Teams, or writing data to enterprise databases.
