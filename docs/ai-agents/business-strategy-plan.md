@@ -13,23 +13,23 @@ ms.collection: ce-skilling-ai-copilot
 
 # Business plan for AI agents
 
-This article describes the first step in the planning phase of AI agent adoption: identifying and prioritizing high-value use cases. You'll learn when agents deliver measurable business value, how to evaluate candidates across business impact, technical feasibility, and user desirability, and how to define success metrics that track outcomes. This approach ensures AI agent investments drive competitive advantage while managing implementation complexity and risk.
+This article describes the first step in the planning phase of AI agent adoption: identifying and prioritizing high-value use cases. You learn when agents deliver measurable business value, how to evaluate candidates across business impact, technical feasibility, and user desirability, and how to define success metrics that track outcomes. This approach ensures AI agent investments drive competitive advantage while managing implementation complexity and risk.
 
 :::image type="content" source="./images/ai-agent-adoption.svg" alt-text="Diagram that shows the process outlined in this guidance: plan, govern, build and secure, integrate, and measure agents across your organization." lightbox="./images/ai-agent-adoption.svg" border="false":::
 
 ## When not to use AI agents?
 
-Assess whether a deterministic or structured approach is more suitable before building an agent. Agents introduce non-deterministic behavior, latency, and cost. These factors are unnecessary for static workflows.
+Assess whether a deterministic or structured approach is more suitable before building an agent. Agents introduce nondeterministic behavior, latency, and cost. These factors are unnecessary for static workflows.
 
-1. **Structured and predictable tasks.** Use deterministic code or non-generative AI models when the workflow is predictable, rule-based, and does not require reasoning. If a process follows a fixed path with well-defined inputs and outputs, deterministic code or nongenerative AI models is faster, cheaper, and more reliable.
+1. **Structured and predictable tasks.** Use deterministic code or nongenerative AI models when the workflow is predictable, rule-based, and doesn't require reasoning. If a process follows a fixed path with well-defined inputs and outputs, deterministic code or nongenerative AI models is faster, cheaper, and more reliable.
 
-2. **Static knowledge retrieval.** Use standard Retrieval-Augmented Generation (RAG) when the goal is answering questions or generating content from a fixed index. If the workflow does not require tool execution or multi-step reasoning, an agent adds unnecessary complexity. Standard generative AI applications are sufficient for single-turn interactions where the system summarizes data or answers questions without orchestration. Examples include FAQ bots, document search with generative summaries, and knowledge base assistants. See [RAG](/azure/ai-foundry/concepts/retrieval-augmented-generation?view=foundry).
+2. **Static knowledge retrieval.** Use standard Retrieval-Augmented Generation (RAG) when the goal is answering questions or generating content from a fixed index. If the workflow doesn't require tool execution or multi-step reasoning, an agent adds unnecessary complexity. Standard generative AI applications are sufficient for single-turn interactions where the system summarizes data or answers questions without orchestration. Examples include FAQ bots, document search with generative summaries, and knowledge base assistants. See [RAG](/azure/ai-foundry/concepts/retrieval-augmented-generation?view=foundry).
 
 **Microsoft facilitation:**<br>
 See [Microsoft Fabric data science](/fabric/data-science/data-science-overview), prebuilt speech, language, and translator models in [Foundry Tools](/azure/ai-foundry/agents/how-to/tools/azure-ai-speech?view=foundry), or [Azure Machine Learning](/azure/machine-learning/overview-what-is-azure-machine-learning).
 
 :::image type="complex" source="./images/ai-agent-decision-tree.svg" alt-text="Decision tree diagram for selecting AI agent solutions based on business and technology requirements." lightbox="./images/ai-agent-decision-tree.svg":::
-    A flowchart guides organizations through decisions about when and how to use AI agents. The diagram starts with a blue diamond labeled "Potential agent use case" and branches into multiple decision paths. The business plan path determines if AI agents should be used. If the answer is "No," the path leads to "Use code or non-generative AI models" with icons for GitHub, Microsoft Fabric, AI models in Foundry, and Machine Learning. If "Yes," it asks if the task involves static Q&A or content generation without reasoning. The technology plan path checks if SaaS agents meet functional requirements. If "Yes," the path leads to "Use SaaS agents" with icons representing M365 Copilot agents (App Builder, Workflows, Researcher, Analyst, Surveys), GitHub Copilot agent, Microsoft Fabric data agents, Azure Copilot agents, Dynamics 365 agents, and Security Copilot agents. If SaaS agents do not meet needs, the path leads to "Build AI agents" with options for GPUs & Containers (open-source), Microsoft Foundry (PaaS pro-code), and Copilot Studio (SaaS no/low-code). The single or multiple agents decision path asks whether the use case involves security concerns, compliance requirements, multiple teams, or future growth. If "Yes," it leads to "Build multiple agents" using workflows for orchestration. If "No," it checks task complexity and requirements, leading to either "Test a single agent" or "Build a single agent" using workflows for integration and governance. The diagram uses color-coded shapes with diamonds representing decision points and rectangles representing actions, with arrows showing the flow between choices.
+    A flowchart guides organizations through decisions about when and how to use AI agents. The diagram starts with a blue diamond labeled "Potential agent use case" and branches into multiple decision paths. The business plan path determines if AI agents should be used. If the answer is "No," the path leads to "Use code or nongenerative AI models" with icons for GitHub, Microsoft Fabric, AI models in Foundry, and Machine Learning. If Yes, it asks if the task involves static question or answer or content generation without reasoning. The technology plan path checks if SaaS agents meet functional requirements. If Yes, the path leads to Use SaaS agents. There are cons representing Microsoft 365 Copilot agents (App Builder, Workflows, Researcher, Analyst, Surveys). Then there are icons for GitHub Copilot agent, Microsoft Fabric data agents, Azure Copilot agents, Dynamics 365 agents, and Security Copilot agents. If SaaS agents don't meet needs, the path leads to "Build AI agents" with options for GPUs & Containers (open-source), Microsoft Foundry (PaaS pro-code), and Copilot Studio (SaaS no/low-code). The single or multiple agents decision path asks whether the use case involves security concerns, compliance requirements, multiple teams, or future growth. If Yes, it leads to "Build multiple agents" using workflows for orchestration. If No, it checks task complexity and requirements, leading to either "Test a single agent" or "Build a single agent" using workflows for integration and governance. The diagram uses color-coded shapes with diamonds representing decision points and rectangles representing actions, with arrows showing the flow between choices.
 :::image-end:::
 
 ## When to use AI agents?
@@ -48,12 +48,12 @@ Choose this option only when tasks require adaptive reasoning, dynamic decision-
 
    :::image type="content" source="./images/ai-agent-opportunities.png" alt-text="Diagram showing four quadrants of AI agent opportunities: Reshape business processes and Enrich employee experiences (internal impact), plus Reinvent customer engagement and Accelerate innovation (external impact). Each quadrant contains specific examples of how AI agents can create business value." lightbox="./images/ai-agent-opportunities.png" border="false":::
 
-   - **Reshape business processes.** Automate complex, multi-step workflows such as supply chain adjustments or incident triage. This scales operations without linear increases in headcount.
-   - **Enrich employee experiences.** Augment staff by handling cognitive load, such as synthesizing research or drafting technical content. This reduces cycle times and allows employees to focus on strategic decision-making.
-   - **Reinvent customer engagement.** Resolve dynamic customer queries autonomously with context-aware responses. This improves resolution speed and customer satisfaction compared to rigid chatbots.
-   - **Accelerate innovation.** Use agents to analyze market trends or simulate scenarios. This shortens product development cycles and enables faster experimentation.
+   - **Reshape business processes.** Automate complex, multi-step workflows such as supply chain adjustments or incident triage. It scales operations without linear increases in headcount.
+   - **Enrich employee experiences.** Augment staff by handling cognitive load, such as synthesizing research or drafting technical content. It reduces cycle times and allows employees to focus on strategic decision-making.
+   - **Reinvent customer engagement.** Resolve dynamic customer queries autonomously with context-aware responses. It improves resolution speed and customer satisfaction compared to rigid chatbots.
+   - **Accelerate innovation.** Use agents to analyze market trends or simulate scenarios. It shortens product development cycles and enables faster experimentation.
 
-3. **Validate value through rapid piloting.** Test the reasoning capabilities of an agent in a low-code environment before investing in custom code. Platforms like Microsoft Copilot Studio or Azure AI Foundry allow for rapid prototyping to verify that an agent can handle the required ambiguity. This step prevents over-engineering solutions that might be better served by simpler automation.
+3. **Validate value through rapid piloting.** Test the reasoning capabilities of an agent in a low-code environment before investing in custom code. Platforms like Microsoft Copilot Studio or Azure AI Foundry allow for rapid prototyping to verify that an agent can handle the required ambiguity. This step prevents over-engineering solutions that might use simpler automation.
 
 **Microsoft facilitation:**<br>
 See the [Microsoft Scenario Library](https://adoption.microsoft.com/scenario-library/), [AI Use Cases catalog](https://www.microsoft.com/ai/use-case), and [Sample Solution Gallery](https://adoption.microsoft.com/sample-solution-gallery/) to benchmark internal ideas against proven patterns.
@@ -70,17 +70,17 @@ Not all agent initiatives deliver equal value. Prioritize use cases that align w
 
 Evaluate each use case across three dimensions using a 1–5 scale, where lower scores indicate unclear or weak business impact and higher scores indicate strong business impact:
 
-1. **Executive strategy alignment**: Confirm whether the use case directly supports organizational priorities. If it does not align with business strategy, it should not proceed. The strongest candidates are those that clearly advance strategic objectives and have visible board-level sponsorship.
+1. **Executive strategy alignment**: Confirm whether the use case directly supports organizational priorities. If it doesn't align with business strategy, it shouldn't proceed. The strongest candidates advance strategic objectives and have visible board-level sponsorship.
 
-1. **Business value**: Quantify the impact. Use cases with vague or unproven benefits should be deprioritized. Select initiatives that deliver measurable outcomes, such as reducing operational costs, increasing revenue, or improving customer satisfaction, with clear evidence of significant value.
+1. **Business value**: Quantify the impact. Use cases with vague or unproven benefits should be deprioritized. Select initiatives that deliver measurable outcomes with clear evidence of significant value. Examples include reducing operational costs, increasing revenue, or improving customer satisfaction.
 
 1. **Change management timeframe**: Consider the expected time and effort required to implement the use case and manage associated changes. A lengthy rollout with significant user disruption signals a challenging implementation. A short deployment cycle with minimal impact on users indicates strong feasibility and readiness.
 
 ### Measure technical feasibility
 
-Require a technical feasibility summary for each candidate use case, including considerations such as data quality, system dependencies, integration challenges, and implementation timelines. Favor projects with short deployment cycles, minimal disruption, and strong compatibility with documented APIs or connectors. Evaluate each use case across three dimensions using a 1–5 scale, where lower scores indicate unclear or weak technical feasibility and higher scores indicate strong technical feasibility:
+Require a technical feasibility summary for each candidate use case. Include considerations such as data quality, system dependencies, integration challenges, and implementation timelines. Favor projects with short deployment cycles, minimal disruption, and strong compatibility with documented APIs or connectors. Evaluate each use case across three dimensions using a 1–5 scale, where lower scores indicate unclear or weak technical feasibility and higher scores indicate strong technical feasibility:
 
-1. **Implementation and operation risks.** Identify and address risks upfront. If risks are unknown or mitigation plans are absent, the use case should not advance. Prioritize scenarios where risks are well understood and mitigation strategies are documented and actionable.
+1. **Implementation and operation risks.** Identify and address risks upfront. If risks are unknown or mitigation plans are absent, the use case shouldn't advance. Prioritize scenarios where risks are well understood and mitigation strategies are documented and actionable.
 
 1. **Sufficient safeguards**: Validate compliance and security measures. Lack of safeguards or unclear governance creates unacceptable exposure. Select use cases backed by mature security controls, responsible AI practices, and regulatory compliance frameworks.
 
@@ -90,11 +90,11 @@ Require a technical feasibility summary for each candidate use case, including c
 
 Gather evidence through interviews or surveys to validate pain points and openness to change. Prioritize projects with strong user advocates and minimal resistance, as AI agents succeed only when people use them consistently and trust their output. Evaluate each use case across three dimensions using a 1–5 scale, where lower scores indicate unclear or weak desirability and higher scores indicate strong desirability:
 
-1. **Key personas**: Assess whether the key stakeholders and users impacted by the use case are clearly identified. A low score means these personas are not well understood or defined. A high score means they are clearly defined and their roles are well understood.
+1. **Key personas**: Assess whether the key stakeholders and users affected by the use case are clearly identified. A low score means these personas aren't well understood or defined. A high score means they're clearly defined and their roles are well understood.
 
 1. **Value proposition**: Consider the appeal and adoption potential of the use case for users. A low score reflects minimal perceived value or low interest. A high score indicates the solution is highly desired and offers clear benefits to users.
 
-1. **Change resistance**: Evaluate the expected level of resistance to adopting the solution. A low score suggests significant resistance and challenges in managing change. high score indicates very low resistance and strong readiness for adoption.
+1. **Change resistance**: Evaluate the expected level of resistance to adopting the solution. A low score suggests significant resistance and challenges in managing change. high score indicates low resistance and strong readiness for adoption.
 
 ## Define success metrics
 
