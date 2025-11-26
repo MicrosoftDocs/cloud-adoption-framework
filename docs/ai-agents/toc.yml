@@ -15,9 +15,9 @@ items:
   - name: 2. Govern agents
     expanded: true
     items:
-      - name: Responsible AI across organization
+      - name: Responsible AI
         href: responsible-ai-across-organization.md
-      - name: Governance across organization
+      - name: Governance
         href: governance-security-across-organization.md
   - name: 3. Build agents
     expanded: true

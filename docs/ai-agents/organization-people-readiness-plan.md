@@ -42,8 +42,11 @@ Common skill areas include:
 Develop a structured training program to build AI competency across teams. Treat skills development as a core part of technology adoption rather than an afterthought.
 
 1. **Use Microsoft’s free training resources.** Use Microsoft Learn’s free online modules and certifications, such as [Azure AI Engineer Associate](/credentials/certifications/azure-ai-engineer/?practice-assessment-type=certification), to give teams a grounding in AI services.
+
 2. **Run hands-on workshops.** Organize internal workshops or hackathons. For example, hold a prompt engineering lab where participants practice improving AI responses, or a hackathon where cross-functional teams prototype a simple agent. This builds skills, enthusiasm, and idea-sharing.
+
 3. **Consider partner-led training.** Bring in Microsoft or [certified training partners](/training/educator-center/programs/global-training-partner/find-global-training-partner) for tailored sessions or bootcamps on specific tools like Azure AI Foundry or Copilot Studio. Training on actual data accelerates learning through expert guidance.
+
 4. **Encourage mentorship and peer learning.** Recognize employees who have already built AI agents as champions who can coach others. Create internal communities of practice, such as a Teams channel, for AI agent developers to ask questions and share tips.
 
 ## Address AI change

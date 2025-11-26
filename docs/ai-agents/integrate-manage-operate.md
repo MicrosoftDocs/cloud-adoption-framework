@@ -28,14 +28,22 @@ Agents deliver value when they operate within real-world processes. Integration 
 Phased deployment mitigates operational risk by validating system stability and support capacity before full scale. A broad release risks overwhelming support teams and damaging trust if issues arise.
 
 1. **Deploy in defined phases.** Start with a pilot group that represents broader business needs but carries lower risk. Expand to departments and then business units only after validating performance metrics.
-2. **Monitor adoption metrics.** Track usage patterns and user satisfaction immediately. If metrics fall below the baseline, pause expansion to investigate root causes rather than pushing forward.
+
+2. **Monitor adoption metrics.** Use the success metrics defined during the [strategy phase](./business-strategy-plan.md#define-success-metrics) to evaluate performance. Track usage patterns and user satisfaction immediately. If metrics fall below the baseline, pause expansion to investigate root causes rather than pushing forward.
+
 3. **Equip support teams.** Train helpdesk and operations staff on specific agent capabilities and failure modes. As usage grows, support volume often spikes. Untrained teams may struggle to resolve agent-specific queries effectively.
+
+**Microsoft facilitation:**<br>
+:::image type="icon" source="./images/foundry-icon.png"::: **Foundry**: Use [cost analysis dashboards](/azure/ai-foundry/concepts/manage-costs?view=foundry) to monitor token consumption and identify usage patterns.
+
+:::image type="icon" source="./images/copilot-studio-icon.png"::: **Copilot Studio:** Use [analytics](/microsoft-copilot-studio/analytics-summary) to track engagement and [satisfaction metrics](/microsoft-copilot-studio/analytics-satisfaction).
 
 ### 2. Standardization and feedback
 
 Ad-hoc development leads to duplication and inconsistent security standards. Formalizing patterns accelerates time-to-market and ensures governance by default.
 
 1. **Create reusable templates.** Convert proven architectures, prompts, and integration logic into templates. For example, a reference architecture for a retrieval-augmented generation (RAG) agent ensures security and logging standards are met automatically.
+
 2. **Establish feedback loops.** Agents require continuous evolution to remain relevant. Implement agile refinement cycles to adapt to changing business needs. Maintain an improvement backlog to capture unresolved queries and feature requests, prioritizing issues that block value delivery.
 
 **Microsoft facilitation:**<br>
@@ -54,7 +62,16 @@ Operational excellence ensures agents remain secure, cost-effective, and complia
 Agents are not "set and forget" assets. Active lifecycle management reduces the attack surface and reclaims resources for high-value initiatives.
 
 1. **Audit the agent estate.** Use the [inventory established during governance](./governance-security-across-organization.md#agent-observability) to track active deployments. Regularly identify and retire "zombie" agents—those that are deployed but unused or outdated.
+
+2. **Optimize agent costs.** Continuous monitoring of usage and costs allows for the identification of inefficiencies without disrupting service. Implement governance controls such as token caps, rate limiting, and quotas. Use dashboards to track token usage per agent and set alerts for anomalies. Optimize prompts by shortening system messages and summarizing conversation history. Reduce compute load by caching frequent responses and routing deterministic tasks to rule-based logic rather than premium models.
+
+    **Microsoft facilitation:**<br>
+    :::image type="icon" source="./images/foundry-icon.png"::: **Foundry**: [Optimize model cost and performance](/azure/ai-foundry/control-plane/how-to-optimize-cost-performance?view=foundry). Use the [AI Gateway](/azure/ai-foundry/agents/how-to/tools/governance?view=foundry) to enforce global token caps and quotas. Monitor consumption with [cost analysis dashboards](/azure/ai-foundry/concepts/manage-costs?view=foundry) and configure [autoscaling](/azure/ai-foundry/how-to/high-availability-resiliency?view=foundry) to manage idle resources.
+
+    :::image type="icon" source="./images/copilot-studio-icon.png"::: **Copilot Studio**: Use [analytics](/microsoft-copilot-studio/analytics-summary) to monitor token usage per session and identify high-cost skills. Implement [Azure API Management](/azure/api-management/api-management-key-concepts) to enforce throttling and logging policies.
+
 2. **Centralize administration.** Fragmented management leads to security gaps. Use a unified control plane to manage the agent fleet rather than managing projects in isolation. This allows administrators to push policy updates, rotate credentials, and manage access controls consistently.
+
 3. **High availability and disaster recovery.** Align the availability configurations of each service deployment to the needs of the workloads environments.
 
 **Microsoft facilitation:**<br>
@@ -65,7 +82,9 @@ Agents are not "set and forget" assets. Active lifecycle management reduces the 
 Regulatory and internal requirements evolve. Ensure that the [governance policies](./governance-security-across-organization.md) and [security standards](./build-secure-process.md#5-agent-security) defined during the build phase are enforced continuously.
 
 1. **Automate policy enforcement.** Schedule automated scans to detect configuration drift or policy violations. Ensure agents continue to adhere to data residency, retention, and privacy standards as they evolve.
+
 2. **Integrate with security operations.** Route agent alerts to the Security Operations Center (SOC) to ensure rapid response to incidents like jailbreak attempts or data leakage. Treat agent anomalies with the same urgency as traditional security threats.
+
 3. **Validate through red teaming.** Continue adversarial testing (red teaming) periodically, especially after major model updates or architectural changes. This ensures defenses remain effective against new attack vectors.
 
 ### 3. Quota optimization
@@ -73,7 +92,9 @@ Regulatory and internal requirements evolve. Ensure that the [governance policie
 Variable costs for tokens and compute can scale disproportionately to business value. Actively manage the [cost tracking mechanisms](./governance-security-across-organization.md#agent-observability) set up during governance to ensure financial sustainability.
 
 1. **Review consumption trends.** Analyze usage data to identify inefficiencies, such as agents using premium models for simple tasks. Regular reviews prevent budget overruns and highlight opportunities for optimization.
+
 2. **Adjust quotas dynamically.** Use usage data to adjust quotas and budgets. Prioritize critical workloads while preventing runaway spending on lower-value activities.
+
 3. **Optimize model selection.** Continuously evaluate if smaller, more cost-effective models can handle routine tasks without sacrificing quality. Reserve premium models for complex reasoning to maximize ROI.
 
 **Microsoft facilitation:**<br>
@@ -86,7 +107,9 @@ Variable costs for tokens and compute can scale disproportionately to business v
 Centralized visibility and traffic control are essential for managing a sprawling agent ecosystem. Without a unified gateway, enforcing consistent policies across disparate projects becomes unmanageable.
 
 1. **Centralize project visibility.** Maintain a comprehensive inventory of all AI agent projects and deployments. Visibility is the prerequisite for governance. You cannot secure or manage what you cannot see.
+
 2. **Implement an AI gateway.** Route AI traffic through a managed gateway to unify endpoints and enforce policy. This abstraction layer allows for centralized monitoring, security enforcement, and traffic management without modifying individual agent code.
+
 3. **Enforce fine-grained controls.** Configure token limits and quotas at the project or agent level. Manage the lifecycle of external agents and tools with pause and resume actions to respond quickly to security or operational incidents.
 
 **Microsoft facilitation:**<br>

@@ -35,6 +35,7 @@ AI agents play a central role in operations, customer interactions, and decision
 
 1. **Define data retention policies.** Agents must follow defined retention periods for logs, memory, and training data. Implement automated purging or anonymization processes and retain only the context necessary for agent functionality. Agents must inform users about retention durations and provide deletion mechanisms. Retention policies must extend into full lifecycle management, including rules for data creation, archival, deletion, and purging.
 
+**Microsoft facilitation:**<br>
 :::image type="icon" source="./images/foundry-icon.png"::: **Foundry**: Use [Microsoft Purview Compliance Manager](/purview/compliance-manager) to translate regulations, such as the EU AI Act, into controls and assess compliance posture across AI applications. Use [Microsoft Purview APIs](/purview/developer/secure-ai-with-purview) to integrate compliance automation into agent workflows. Review [Microsoft Purview capabilities for Foundry](/purview/ai-azure-services) to understand data governance and protection options.
 
 :::image type="icon" source="./images/copilot-studio-icon.png"::: **Copilot Studio**: Follow [governance and security best practices](/microsoft-copilot-studio/guidance/sec-gov-intro). Use [data locations](/microsoft-copilot-studio/data-location) to respect data sovereignty. See the platform's [compliance (ISO, SOC, HIPAA) certifications](/microsoft-copilot-studio/admin-certification).

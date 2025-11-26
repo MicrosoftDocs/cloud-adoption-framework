@@ -52,18 +52,15 @@ Organizations typically deploy three categories of agents. Each category offers 
 
 :::image type="content" source="./images/spectrum-agents.png" alt-text="Diagram showing a spectrum of three agent types from left to right: retrieval agents (lowest complexity, access and synthesize information), task agents (moderate complexity, take specific actions), and autonomous agents (highest complexity, multi-step planning and decision-making). An arrow indicates increasing complexity and capability from left to right." lightbox="./images/spectrum-agents.png" border="false":::
 
-1. **Productivity agents.** These agents focus on information retrieval and synthesis. They accelerate decision-making by providing instant access to summarized knowledge.
-    - **Use case.** Customer service support, compliance checks, and internal knowledge management.
-    - **Business value.** Increases employee accuracy and reduces time spent searching for information.
-2. **Action agents.** These agents perform specific tasks within defined workflows. They automate routine actions such as updating records or triggering processes.
-    - **Use case.** Service ticket creation, CRM updates, and system monitoring.
-    - **Business value.** Streamlines operations and reduces manual data entry errors.
-3. **Automation agents.** These agents manage complex, multi-step processes with minimal oversight. They adapt to changing conditions and orchestrate entire workflows.
-    - **Use case.** Supply chain optimization, dynamic resource allocation, and fraud detection.
-    - **Business value.** Enables scalable automation and agility in complex scenarios. Note that this level of autonomy requires the most rigorous governance and testing.
+1. **Productivity agents.** These agents focus on information retrieval and synthesis to accelerate decision-making. They use knowledge tools to draw data from various sources and retrieve it for the user. This capability increases employee accuracy and reduces time spent searching for information in scenarios like customer service support and internal knowledge management.
+
+2. **Action agents.** These agents perform specific tasks within defined workflows, such as updating records or triggering processes. They use knowledge tools combined with action tools to accomplish tasks. This approach streamlines operations and reduces manual data entry errors in use cases like service ticket creation and system monitoring.
+
+3. **Automation agents.** These agents manage complex, multi-step processes with minimal oversight. They use knowledge tools and action tools, plus triggers that determine when to run, stop, or escalate an issue. This autonomy enables scalable automation for scenarios like supply chain optimization, though it requires rigorous governance to manage the increased complexity.
 
 ## Next steps
 
 To realize the potential of AI agents, align the adoption strategy with specific business outcomes. The following sections explore how to create internal and customer-facing impact and guide teams to use agents effectively.
 
-[Business plan](./business-strategy-plan.md)
+> [!div class="nextstepaction"]
+> [Business plan](./business-strategy-plan.md)
