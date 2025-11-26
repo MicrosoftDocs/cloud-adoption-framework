@@ -38,11 +38,11 @@ Strategic orchestration decisions determine how agents coordinate work, integrat
 
 ### Pick an orchestration strategy
 
-Orchestration determines how agents coordinate, make decisions, and execute tasks. Select an orchestration pattern that balances complexity with control. 
+Orchestration determines how agents coordinate, make decisions, and execute tasks. Select an orchestration pattern that balances complexity with control.
 
-**Select an orchestration approach.** This guidance applies to PaaS environments. There are two primary approaches managed orchestration and agent frameworks. Choose your orchestration approach based on organizational capability and control requirements. Managed orchestration through Foundry Agent Service accelerates deployment and provides built-in security but limits customization and reduces transparency into decision-making processes. Agent frameworks like Microsoft Agent Framework and LangGraph offer complete control and multi-cloud flexibility but require significant engineering investment and ongoing maintenance. Your choice determines how quickly teams can deploy agents versus how much control you maintain over agent behavior and decision logic.
+**Select an orchestration approach (Foundry only).** This guidance applies to PaaS environments. There are two primary approaches managed orchestration and agent frameworks. Choose your orchestration approach based on organizational capability and control requirements. Managed orchestration through Foundry Agent Service accelerates deployment and provides built-in security but limits customization and reduces transparency into decision-making processes. Agent frameworks like Microsoft Agent Framework and LangGraph offer complete control and multi-cloud flexibility but require significant engineering investment and ongoing maintenance. Your choice determines how quickly teams can deploy agents versus how much control you maintain over agent behavior and decision logic.
 
-**Orchestration patterns.** For multi-agent systems, decide whether to chain agents sequentially or implement parallel processing patterns. Sequential chaining simplifies debugging and provides clear accountability but increases latency. Parallel processing improves response times but requires sophisticated coordination mechanisms and error handling. See [AI agent orchestration patterns](/azure/architecture/ai-ml/guide/ai-agent-design-patterns) in the Azure Architecture Center.
+**Orchestration patterns (Foundry and Copilot Studio).** For multi-agent systems, decide whether to chain agents sequentially or implement parallel processing patterns. Sequential chaining simplifies debugging and provides clear accountability but increases latency. Parallel processing improves response times but requires sophisticated coordination mechanisms and error handling. See [AI agent orchestration patterns](/azure/architecture/ai-ml/guide/ai-agent-design-patterns) in the Azure Architecture Center.
 
 **Deterministic workflows.** Review workflow guidance for [single agents](./single-agent-multiple-agents.md#single-agent-workflows) and [multi-agent systems](./single-agent-multiple-agents.md#mutli-agent-orchestration-and-workflows).
 
@@ -60,6 +60,13 @@ Orchestration determines how agents coordinate, make decisions, and execute task
 Communication protocols between agents require explicit standards. Use approved protocols such as [Agent-to-Agent (A2A)](/agent-framework/user-guide/agents/agent-types/a2a-agent) and Model Context Protocol (MCP) while prohibiting communication with unknown or internet-exposed agents. Structured formats like JSON improve accuracy and enable better error handling in multi-agent interactions.
 
 Store all instructions in version-controlled systems to create auditable change histories and support collaborative editing. Build automated validation into workflows where secondary agents or evaluation scripts verify output accuracy and appropriate tone. This systematic approach prevents drift in agent behavior and maintains compliance as systems evolve.
+
+| Guideline | Description |
+|-----------|-------------|
+| **Identity and tone** | Define how the agent presents itself to ensure consistent user experience. |
+| **Scope and boundaries** | Explicitly state what the agent does and what it avoids (for example, "Do not access payroll systems"). |
+| **Tool integrations** | Mandate specific tool usage. *Example: "You must use the [Tool Name] to answer questions. If the answer is not found, state 'I don't know'."* |
+| **Citations** | Require citations for transparency. *Example: "Every answer must provide citations for using the [Tool Name]."* |
 
 **Microsoft facilitation:**<br>
 :::image type="icon" source="./images/foundry-icon.png"::: **Foundry**: See [System message design](/azure/ai-foundry/openai/concepts/advanced-prompt-engineering?view=foundry). Use the [A2A tool](/azure/ai-foundry/agents/how-to/tools/agent-to-agent?view=foundry&pivots=python) and [Foundry playground](/azure/ai-foundry/concepts/concept-playgrounds?view=foundry). Test and refine behavior using [agent evaluators](/azure/ai-foundry/concepts/evaluation-evaluators/agent-evaluators?view=foundry).
@@ -85,7 +92,7 @@ Data access and tool permissions determine agent reliability, compliance posture
 
 ### Agent knowledge
 
-**Segment knowledge by role to minimize data exposure.** Multi-agent systems require strict data boundaries where each agent accesses only information necessary for its function. This segmentation reduces attack surfaces and simplifies compliance audits by creating clear data access patterns. When agents connect to data sources, ensure retrieval occurs only from governed repositories with proper filtering and access controls. Review the [Data architecture for AI agents](./data-architecture-plan.md) to align integration strategies with security requirements.
+**Segment knowledge by role to minimize data exposure.** Multi-agent systems require strict data boundaries where each agent accesses only information necessary for its function. This segmentation reduces attack surfaces and simplifies compliance audits by creating clear data access patterns. When agents connect to data sources, ensure retrieval occurs only from governed repositories with proper filtering and access controls. Review the [Data architecture for AI agents](./data-architecture-plan.md#data-retrieval-strategies-for-custom-agents) to align integration strategies with security requirements.
 
 **Microsoft facilitation:**<br>
 :::image type="icon" source="./images/foundry-icon.png"::: **Foundry**: Connect agents to [Foundry IQ](/azure/ai-foundry/agents/how-to/tools/knowledge-retrieval?view=foundry&tabs=foundry%2Cpython) to combine multiple data sources behind an agentic retrieval engine while maintaining governance controls.
