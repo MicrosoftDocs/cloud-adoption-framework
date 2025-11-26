@@ -54,10 +54,11 @@ The Microsoft Cloud Adoption Framework serves organizations across all industrie
 
 ## Cloud Adoption Framework scenarios
 
-The Cloud Adoption Framework provides industry-specific, technology-focused guidance tailored to complex business requirements and technical architectures. These scenarios apply the framework's proven methodologies to real-world implementation challenges, delivering actionable roadmaps and technology-specific best practices for accelerated deployment success.
+The Cloud Adoption Framework provides technology-focused guidance tailored to complex business requirements and technical architectures. These scenarios apply the framework's proven methodologies to real-world implementation challenges, delivering actionable roadmaps and technology-specific best practices for accelerated deployment success.
 
 | CAF Scenario | Business challenge solved | Ideal for organizations requiring |
 |--------------|-----------------|----------------------------------|
+| [AI agents](./ai-agents/index.md) | Build, deploy, and govern AI agents to automate business processes and enhance workforce productivity. | Business process automation, agentic workflows, individual productivity, agent governance |
 | [AI adoption](./scenarios/ai/index.md) | Implement responsible AI solutions with governance, ethics compliance, and MLOps automation. | Responsible AI deployment, machine learning model governance, AI ethics compliance, MLOps automation |
 | [Azure Virtual Desktop](./scenarios/azure-virtual-desktop/index.md) | Deliver and manage virtual desktops at enterprise scale with security and compliance controls. | Remote work enablement, desktop virtualization, end-user computing, security compliance |
 | [Azure VMware Solution](./scenarios/azure-vmware/index.md) | Migrate VMware workloads to Azure with zero downtime and maintained operational consistency. | VMware infrastructure migration, hybrid cloud strategy, disaster recovery modernization |

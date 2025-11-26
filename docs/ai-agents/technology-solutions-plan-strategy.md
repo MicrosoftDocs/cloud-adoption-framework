@@ -65,6 +65,8 @@ Organizations often use multiple approaches to meet diverse requirements. Valida
 | **Microsoft Copilot Studio** | Low-code (SaaS) | Retrieval, Task, Autonomous | Process transformation. Enables fast development with minimal coding and SaaS security. |
 | **Virtual machines** | Pro-code (IaaS) | Retrieval, Task, Autonomous | Custom infrastructure. Provides full control of the entire technology stack. |
 
+See the general [AI decision tree] for more guidance.
+
 ## Next step
 
 After you define your business and technology strategies for AI agents, you must focus on the organizational structure and talent required to deliver and sustain these solutions.
