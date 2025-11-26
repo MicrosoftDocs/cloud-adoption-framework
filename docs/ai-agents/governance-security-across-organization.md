@@ -15,6 +15,10 @@ ms.collection: ce-skilling-ai-copilot
 
 This article explains how to establish governance and security practices for AI agents across your organization. Without proper governance, AI agents expose sensitive data, operate outside compliance boundaries, and create security vulnerabilities that threaten business operations. The guidance shows how to implement controls that protect data, ensure regulatory compliance, maintain visibility into agent behavior, and secure agent infrastructure throughout its lifecycle. Organizations that fail to establish these controls face regulatory penalties, data breaches, reputation damage, and operational disruptions from ungoverned agent behaviors.
 
+:::image type="complex" source="./images/governance-security.png" alt-text="Diagram showing governance and security framework for AI agents across the organization with four horizontal layers." lightbox="./images/governance-security.png":::
+    The diagram illustrates a comprehensive governance and security framework organized into four layers. The top layer, "Data governance and compliance," includes Microsoft Purview Compliance Manager, Microsoft Purview APIs, Copilot Studio governance features, and data location controls. The second layer, "Agent observability," contains Agent 365, Microsoft Defender for Cloud, Azure Log Analytics, Application Insights, and Microsoft Cost Management. The third layer, "Agent security," shows Microsoft Defender for Cloud AI threat protection, Azure AI Content Safety, AI Red Teaming Agent, Azure role-based access control (RBAC), and Microsoft Sentinel. The bottom layer, "Agent development," lists Microsoft Agent Framework, Foundry SDK, Model Context Protocol (MCP), and Agent-to-Agent Protocol (A2A). Each layer connects to specific Microsoft services that support governance objectives at that level.
+:::image-end:::
+
 ## Data governance and compliance
 
 Organizations require concrete mechanisms to control how agents access, process, and store data. These mechanisms translate regulatory requirements and corporate policies into technical controls that enforce boundaries around agent behavior. Data governance establishes the foundation for responsible AI deployment by defining what data agents can use, where they can operate, and how long they can retain information.
@@ -59,25 +63,18 @@ Organizations require concrete mechanisms to control how agents access, process,
 
 **The actions of every agent must be auditable.** Observability provides the ability to monitor and understand what AI agents do both in real time and over time. Because agents operate probabilistically and do not always behave the same way, visibility into their actions becomes essential for managing risk, ensuring compliance, and optimizing performance. Organizations require complete visibility into agent deployments, behaviors, and costs to maintain control at scale.
 
-1. **Assign unique identities.** Every AI agent requires a unique identity that includes ownership details, version history, and lifecycle status. [Microsoft Entra Agent identity](/azure/ai-foundry/agents/concepts/agent-identity?tabs=rest-api) supports this structure by linking each agent to its owner and purpose. This clarity helps the organization distinguish between production, development, and test agents, which provides accountability and risk management.
+1. **Assign unique identities.** Every AI agent requires a unique identity that includes ownership details, version history, and lifecycle status. Use [Microsoft Entra Agent Identity](/entra/identity/hybrid/connect/whatis-hybrid-identity) to establish these identities, which helps the organization distinguish between production, development, and test agents, providing accountability and risk management.
 
-1. **Maintain agent inventory.** Untracked or "shadow" deployments pose security and cost risks. Organizations discover and classify all AI workloads across the cloud environment to maintain a complete inventory of AI assets. Use [Agent 365](/microsoft-365/admin/manage/agent-365-overview) for a full inventory, metrics, governance, and financial oversight across all agents. If Agent 365 is unavailable, use Microsoft Defender for Cloud to [discover](/azure/defender-for-cloud/identify-ai-workload-model) and categorize agent workloads.
+1. **Maintain agent inventory.** Untracked or "shadow" deployments pose security and cost risks. Organizations discover and classify all AI workloads across the cloud environment to maintain a complete inventory of AI assets.
 
-    :::image type="icon" source="./images/foundry-icon.png"::: **Foundry**: See [Publish an agent to Agent 365](/azure/ai-foundry/agents/how-to/agent-365).
+1. **Centralize logging.** Track key logs consistently to a centralized location, such as an Azure Log Analytics workspace. This consistency improves transparency, supports audit readiness, and simplifies troubleshooting. Centralized logs enable cross-team collaboration. Gather custom telemetry that captures how agents behave and how users interact with them. This information decides whether to scale, refine, or retire agents based on business impact. Build dashboards that provide leadership with a clear view of how AI investments contribute to outcomes.
 
-1. **Centralize logging.** Track key logs consistently to a centralized location, such as an Azure Log Analytics workspace. This consistency improves transparency, supports audit readiness, and simplifies troubleshooting. Centralized logs enable cross-team collaboration. Gather custom telemetry in Application Insights that captures how agents behave and how users interact with them. This information decides whether to scale, refine, or retire agents based on business impact. Build dashboards that provide leadership with a clear view of how AI investments contribute to outcomes.
+1. **Track and allocate costs.** AI agents consume resources such as compute power, tokens, and API calls. Without visibility, costs escalate quickly. Establish a unified view of agent usage and cost across departments and projects to track metrics like token consumption and compute usage. Organize this data by department or project to identify where costs concentrate. Apply cost center tags to allocate agent expenses accurately. Require teams to tag resources per agent or use case to visualize cost breakdowns clearly. Set up real-time alerts to notify teams when spending approaches budget thresholds. These alerts prevent overruns and support proactive financial management. Restrict who can create, deploy, and scale agents to reduce risk and ensure only authorized personnel manage AI deployments.
 
-    **Microsoft facilitation:**<br>
-    :::image type="icon" source="./images/foundry-icon.png"::: **Foundry**: [Monitor agents](/azure/ai-foundry/agents/how-to/metrics), [monitor model deployments](/azure/ai-foundry/foundry-models/how-to/monitor-models), and [monitor applications](/azure/ai-foundry/how-to/monitor-applications) and [dashboards](/azure/ai-foundry/agents/how-to/metrics#dashboards).
+**Microsoft facilitation:**<br>
+:::image type="icon" source="./images/foundry-icon.png"::: **Foundry**: Manage agent identities with [Microsoft Entra Agent Identity](/entra/identity/hybrid/connect/whatis-hybrid-identity), [publish agents to Agent 365](/azure/ai-foundry/agents/how-to/agent-365), [monitor agents](/azure/ai-foundry/agents/how-to/metrics), [monitor model deployments](/azure/ai-foundry/foundry-models/how-to/monitor-models), [monitor applications](/azure/ai-foundry/how-to/monitor-applications) and [dashboards](/azure/ai-foundry/agents/how-to/metrics#dashboards), [plan and manage costs](/azure/ai-foundry/how-to/costs-plan-manage), and use the [management center](/azure/ai-foundry/concepts/management-center) to centrally administer quotas and access. If Agent 365 is unavailable, use [Microsoft Defender for Cloud](/azure/defender-for-cloud/identify-ai-workload-model) to discover and categorize agent workloads.
 
-    :::image type="icon" source="./images/copilot-studio-icon.png"::: **Copilot Studio**: See [monitor logging and auditing](/microsoft-copilot-studio/admin-logging-copilot-studio). Centralize with [Azure Application Insights in Azure Monitor](/microsoft-copilot-studio/advanced-bot-framework-composer-capture-telemetry).
-
-1. **Track and allocate costs.** AI agents consume resources such as compute power, tokens, and API calls. Without visibility, costs escalate quickly. Establish a unified view of agent usage and cost across departments and projects to track metrics like token consumption and compute usage. Organize this data by department or project to identify where costs concentrate. Apply cost center tags using [Microsoft Cost Management](/azure/cost-management-billing/costs/cost-allocation-introduction) to allocate agent expenses accurately. Require teams to tag resources per agent or use case to visualize cost breakdowns clearly. Set up real-time alerts to notify teams when spending approaches budget thresholds. These alerts prevent overruns and support proactive financial management. Restrict who can create, deploy, and scale agents by using Azure role-based access control (RBAC). This structure reduces risk and ensures only authorized personnel manage AI deployments.
-
-    **Microsoft facilitation:**<br>
-    :::image type="icon" source="./images/foundry-icon.png"::: **Foundry**: [Plan and manage costs](/azure/ai-foundry/how-to/costs-plan-manage). Centrally administer quotas and access through the [management center](/azure/ai-foundry/concepts/management-center).
-
-    :::image type="icon" source="./images/copilot-studio-icon.png"::: **Copilot Studio**: [Review usage and message allocation](/microsoft-copilot-studio/requirements-messages-management) to manage consumption.
+:::image type="icon" source="./images/copilot-studio-icon.png"::: **Copilot Studio**: [Monitor logging and auditing](/microsoft-copilot-studio/admin-logging-copilot-studio), centralize data with [Azure Application Insights in Azure Monitor](/microsoft-copilot-studio/advanced-bot-framework-composer-capture-telemetry), and [review usage and message allocation](/microsoft-copilot-studio/requirements-messages-management) to manage consumption.
 
 ## Agent security
 
@@ -86,26 +83,12 @@ Organizations require concrete mechanisms to control how agents access, process,
 1. **Require AI threat protection.** Activate AI-specific threat protection. Microsoft Defender for Cloud's [AI threat protection](/azure/defender-for-cloud/ai-threat-protection) detects prompt manipulation, unauthorized data access, and other agent-specific threats. These protections use global threat intelligence and integrate with Azure AI Content Safety to identify suspicious behavior in real time. Activating these tools reduces exposure and enables faster response to emerging risks.
 
 1. **Enforce infrastructure security baselines.** Treat agent infrastructure with the same level of oversight as customer-facing systems. Agent runtimes require the same governance and oversight as customer-facing systems.
-    
-    **Microsoft facilitation:**<br>
-    :::image type="icon" source="./images/foundry-icon.png"::: **Foundry**: Review the [Azure security baseline for Foundry](/security/benchmark/azure/baselines/azure-ai-foundry-security-baseline) as a standard policy.
 
 1. **Mandate adversarial testing.** Organizations validate agent resilience before deployment. Red teaming simulates real-world attacks to identify vulnerabilities that standard testing might miss. These exercises detect weaknesses such as prompt injection, data leakage, and jailbreak attempts. Run adversarial tests on all agents before production release and after significant updates. This step reduces the likelihood of exploitation and improves the agent's ability to handle hostile input.
 
-    **Microsoft facilitation:**<br>
-    :::image type="icon" source="./images/foundry-icon.png"::: **Foundry**: Enforce the use of the [AI Red Teaming Agent](/azure/ai-foundry/how-to/develop/run-scans-ai-red-teaming-agent) to scan applications for safety and security issues before deployment. Also see [AI Red Teaming Playground Labs](https://github.com/microsoft/AI-Red-Teaming-Playground-Labs?tab=readme-ov-file#ai-red-teaming-playground-labs).
-
-    :::image type="icon" source="./images/copilot-studio-icon.png"::: **Copilot Studio**: Review [security and governance guidance](/microsoft-copilot-studio/security-and-governance), enable [automatic security scans](/microsoft-copilot-studio/security-scan), and verify [agent runtime protection status](/microsoft-copilot-studio/security-agent-runtime-view) to ensure continuous validation.
-
 1. **Filter inputs and outputs.** Block adversarial input that attempts to bypass integrated safety protocols. Treat all incoming data, text, files, and images as potentially hostile. Validate and filter inputs before they reach models or backend systems. Strip scripting and injection content from text, enforce type and size restrictions for files, and scan media using moderation services. Update sanitization rules based on observed attack patterns.
 
-    **Microsoft facilitation:**<br>
-    :::image type="icon" source="./images/foundry-icon.png"::: **Foundry**: Enforce baseline [guardrails and controls](/azure/ai-services/content-safety/overview) to mitigate harmful content. Combine with [Purview DLP](/purview/dlp-learn-about-dlp) policies or add custom detectors, either within Purview or as standalone solutions, to reduce sensitive data leakage.
-
 1. **Standardize authentication.** Use [managed identities for authentication](/entra/identity/managed-identities-azure-resources/overview) to eliminate credential management risks.
-
-    **Microsoft facilitation:**<br>
-    :::image type="icon" source="./images/foundry-icon.png"::: **Foundry**: Enforce least-privilege roles using [Azure role-based access control](/azure/ai-foundry/concepts/rbac-azure-ai-foundry).
 
 1. **Enforce least privilege.** When agents execute actions, govern those capabilities tightly. Each tool the agent uses enforces the user's permissions or has scoped service accounts. Use Data Loss Prevention (DLP) policies to restrict what data the agent can access or output. For instance, prevent the agent from returning credit card numbers in answers.
 
@@ -119,8 +102,10 @@ Organizations require concrete mechanisms to control how agents access, process,
 
 1. **Establish incident response plans.** Decide in advance how to quickly disable an agent if it malfunctions or causes harm. Plan how to communicate incidents. Include steps for preserving logs for forensic analysis and updating stakeholders. Establish disaster recovery plans for AI agents as you do for systems. Run drills if the agent supports critical operations to ensure the team knows how to respond under pressure.
 
-    **Microsoft facilitation:**<br>
-    :::image type="icon" source="./images/foundry-icon.png"::: **Foundry**: Enforce the [high availability and resiliency](/azure/ai-foundry/how-to/high-availability-resiliency) guidance across your organization.
+**Microsoft facilitation:**<br>
+:::image type="icon" source="./images/foundry-icon.png"::: **Foundry**: Review the [Azure security baseline for Foundry](/security/benchmark/azure/baselines/azure-ai-foundry-security-baseline) as a standard policy. Enforce the use of the [AI Red Teaming Agent](/azure/ai-foundry/how-to/develop/run-scans-ai-red-teaming-agent) to scan applications for safety and security issues before deployment. Also see [AI Red Teaming Playground Labs](https://github.com/microsoft/AI-Red-Teaming-Playground-Labs?tab=readme-ov-file#ai-red-teaming-playground-labs). Enforce baseline [guardrails and controls](/azure/ai-services/content-safety/overview) to mitigate harmful content. Combine with [Purview DLP](/purview/dlp-learn-about-dlp) policies or add custom detectors, either within Purview or as standalone solutions, to reduce sensitive data leakage. Enforce least-privilege roles using [Azure role-based access control](/azure/ai-foundry/concepts/rbac-azure-ai-foundry). Enforce the [high availability and resiliency](/azure/ai-foundry/how-to/high-availability-resiliency) guidance across your organization.
+
+:::image type="icon" source="./images/copilot-studio-icon.png"::: **Copilot Studio**: Review [security and governance guidance](/microsoft-copilot-studio/security-and-governance), enable [automatic security scans](/microsoft-copilot-studio/security-scan), and verify [agent runtime protection status](/microsoft-copilot-studio/security-agent-runtime-view) to ensure continuous validation.
 
 ## Agent development
 
