@@ -23,7 +23,7 @@ highlightedContent:
   items:
 
     # Card
-    - title: Overview
+    - title: Introduction
       itemType: overview
       url: ./overview.md
     - title: Agents
