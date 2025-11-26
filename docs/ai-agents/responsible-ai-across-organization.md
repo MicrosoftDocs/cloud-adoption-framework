@@ -13,11 +13,11 @@ ms.collection: ce-skilling-ai-copilot
 
 # Establishing responsible AI policies for AI agents across organizations
 
-This article explains how to establish responsible AI policies that ensure ethical, transparent, and accountable AI agent deployment across your organization. You learn how to create practical governance standards that integrate into existing workflows rather than creating bureaucratic obstacles.Responsible AI policies form the foundation of the "Govern agents" step in the AI agent adoption process. 
+This article explains how to establish responsible AI policies that ensure ethical, transparent, and accountable AI agent deployment across your organization. You learn how to create practical governance standards that integrate into existing workflows rather than creating bureaucratic obstacles. Responsible AI policies form the foundation of the "Govern agents" step in the AI agent adoption process.
 
 :::image type="content" source="./images/ai-agent-adoption.svg" alt-text="Diagram that shows the process outlined in this guidance: plan, govern, build and secure, integrate, and measure agents across your organization." lightbox="./images/ai-agent-adoption.svg" border="false":::
 
-Without clear responsible AI policies, organizations face significant risks including reputational damage from biased or harmful AI outputs, regulatory penalties from non-compliance with emerging AI laws, and erosion of stakeholder trust that undermines AI adoption efforts.
+Without clear responsible AI policies, organizations face significant risks from AI agents. These risks include reputational damage from biased or harmful AI outputs, regulatory penalties from noncompliance with emerging AI laws, and erosion of stakeholder trust that undermines AI adoption efforts.
 
 ## Define responsible AI standards
 
@@ -29,7 +29,7 @@ Your responsible AI standards establish the ethical baseline for all AI agents i
 
 2. **Align AI policies with corporate governance.** Map your responsible AI requirements to existing corporate policies for data governance, security, and risk management. This alignment prevents AI from becoming an exception to normal oversight procedures. When AI policies integrate with established processes, teams already familiar with corporate governance naturally extend their practices to AI systems. Review your policies against emerging regulations like the EU AI Act and ISO/IEC 42001 standards quarterly to maintain compliance as the regulatory landscape evolves.
 
-3. **Implement "ethical by design" practices.** Provide development teams with practical tools including templates for ethical impact assessments, checklists for bias testing, and code libraries for transparency features. These resources transform abstract principles into concrete actions. Establish mandatory training programs that explain both the what and why of responsible AI requirements. Create an AI champion network across business units where experienced practitioners guide their peers through ethical considerations specific to their domains.
+3. **Implement "ethical by design" practices.** Provide development teams with practical tools including templates for ethical impact assessments, checklists for bias testing, and code libraries for transparency features. These resources transform abstract principles into concrete actions. Establish mandatory training programs that explain both the *what* and *why* of responsible AI requirements. Create an AI champion network across business units where experienced practitioners guide their peers through ethical considerations specific to their domains.
 
 ## Assign ownership and oversight
 
@@ -37,7 +37,7 @@ Clear ownership structures ensure consistent policy enforcement while empowering
 
 1. **Empower a cross-functional governance team.** Establish an [AI Center of Excellence](/azure/cloud-adoption-framework/scenarios/ai/center-of-excellence) or ethics committee that includes representatives from legal, security, product, and engineering teams. This group defines standards and provides consultative support rather than acting as gatekeepers. Give this team executive sponsorship and clear authority to enforce policies when necessary. The governance team should develop standard operating procedures, review high-risk projects, and evolve policies based on lessons learned. Resource this team adequately to prevent it from becoming a bottleneck that slows innovation.
 
-2. **Institutionalize governance in workflows.** Embed responsible AI checkpoints at key project milestones including design reviews, testing phases, and pre-launch approvals. Require formal sign-offs from the governance team for high-risk AI agents that interact directly with customers or make consequential decisions. Implement automated scanning tools that detect potentially biased training data, inappropriate content generation, or privacy violations. These automated checks provide continuous compliance monitoring without relying solely on manual reviews.
+2. **Institutionalize governance in workflows.** Embed responsible AI checkpoints at key project milestones including design reviews, testing phases, and prelaunch approvals. Require formal sign-offs from the governance team for high-risk AI agents that interact directly with customers or make consequential decisions. Implement automated scanning tools that detect potentially biased training data, inappropriate content generation, or privacy violations. These automated checks provide continuous compliance monitoring without relying solely on manual reviews.
 
 ## Establish auditing and transparency
 

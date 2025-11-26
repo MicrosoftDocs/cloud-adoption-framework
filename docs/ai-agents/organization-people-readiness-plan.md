@@ -49,7 +49,7 @@ A structured training program builds AI competency across teams. Treat skills de
 
 1. **Consider partner-led training.** Bring in Microsoft or [certified training partners](/training/educator-center/programs/global-training-partner/find-global-training-partner) for tailored sessions or bootcamps on specific tools like Azure AI Foundry or Copilot Studio. Training on actual data accelerates learning through expert guidance.
 
-1. **Encourage mentorship and peer learning.** Recognize employees who have already built AI agents as champions who can coach others. Create internal communities of practice, such as a Teams channel, for AI agent developers to ask questions and share tips.
+1. **Encourage mentorship and peer learning.** Recognize employees who built AI agents as champions who can coach others. Create internal communities of practice, such as a Teams channel, for AI agent developers to ask questions and share tips.
 
 **Microsoft facilitation:**<br>
 :::image type="icon" source="./images/foundry-icon.png"::: **Foundry**: [Training path](us/training/azure/ai-foundry). See the tutorial [Build and evaluate an enterprise agent](/azure/ai-foundry/tutorials/developer-journey-idea-to-prototype?view=foundry).
@@ -58,7 +58,7 @@ A structured training program builds AI competency across teams. Treat skills de
 
 ## Address AI change management
 
-Preparing the organization for AI-driven change ensures long-term adoption. Manage expectations by communicating early about what AI agents can and cannot do. Leadership must reinforce that adopting AI agents is a strategic priority. This encouragement helps managers and teams embrace new tools rather than resist them. Celebrate successes and recognize teams that deliver value with AI to foster a culture of innovation.
+Preparing the organization for AI-driven change ensures long-term adoption. Manage expectations by communicating early about what AI agents can and can't do. Leadership must reinforce that adopting AI agents is a strategic priority. This encouragement helps managers and teams embrace new tools rather than resist them. Celebrate successes and recognize teams that deliver value with AI to foster a culture of innovation.
 
 ## Next step
 
