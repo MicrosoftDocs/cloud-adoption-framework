@@ -32,8 +32,7 @@ Standardize the environment and governance artifacts before building AI agents. 
 
 2.  **Select the technology platform.** Choose between Foundry, Copilot Studio, or custom frameworks based on control, ease of use, and integration needs. See [Technology plan](./technology-solutions-plan-strategy.md) for more information on platform selection.
 
-**Microsoft facilitation:**
-
+**Microsoft facilitation:**<br>
 :::image type="icon" source="./images/foundry-icon.png"::: **Foundry**: Use for scenarios requiring deep customization or pro-code control. Use [prompt-based agents](/azure/ai-foundry/agents/concepts/development-lifecycle?view=foundry#types-of-agents) for rapid development or [hosted agents](/azure/ai-foundry/agents/concepts/hosted-agents?view=foundry) for advanced orchestration. Apply the Well-Architected Framework principles for [AI workloads](/azure/well-architected/ai/) and start with the [AI landing zone](https://github.com/Azure/AI-Landing-Zones). See also [AI Ready](/azure/cloud-adoption-framework/scenarios/ai/ready) for general best practices.
 
 :::image type="icon" source="./images/copilot-studio-icon.png"::: **Copilot Studio**:  Use for SaaS integration and low-code extensibility. [Verify licensing](/microsoft-copilot-studio/requirements-licensing-subscriptions) and [configure environments](/microsoft-copilot-studio/environments-first-run-experience) to separate development, testing, and production workloads.
@@ -53,11 +52,9 @@ Orchestration determines how agents coordinate, make decisions, and execute task
 
 **Microsoft facilitation:**
 
-:::image type="icon" source="./images/foundry-icon.png"::: **Foundry**: Use [Workflows](/azure/ai-foundry/agents/concepts/workflow?view=foundry) for visual, low-code design suitable for rapid prototyping.
-
-:::image type="icon" source="./images/microsoft-agent-framework-icon.png"::: **Microsoft Agent Framework**: Use code-first [workflows](/agent-framework/user-guide/workflows/overview) for complex, code-heavy scenarios requiring a pro-code environment.
-
-:::image type="icon" source="./images/copilot-studio-icon.png"::: **Copilot Studio**: [Set up agent flows](/microsoft-copilot-studio/flows-overview) for multi-agent systems with distinct roles and approval checkpoints. [Configure agent behavior](/microsoft-copilot-studio/advanced-generative-actions) by orchestrating with generative AI.
+- :::image type="icon" source="./images/foundry-icon.png"::: **Foundry**: Use [Workflows](/azure/ai-foundry/agents/concepts/workflow?view=foundry) for visual, low-code design suitable for rapid prototyping.
+- :::image type="icon" source="./images/microsoft-agent-framework-icon.png"::: **Microsoft Agent Framework**: Use code-first [workflows](/agent-framework/user-guide/workflows/overview) for complex, code-heavy scenarios requiring a pro-code environment.
+-:::image type="icon" source="./images/copilot-studio-icon.png"::: **Copilot Studio**: [Set up agent flows](/microsoft-copilot-studio/flows-overview) for multi-agent systems with distinct roles and approval checkpoints. [Configure agent behavior](/microsoft-copilot-studio/advanced-generative-actions) by orchestrating with generative AI.
 
 ### Agent instructions
 
