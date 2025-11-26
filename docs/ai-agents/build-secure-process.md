@@ -160,7 +160,7 @@ Organizations must define what data agents retain, how long they store it, and w
 
 Observability ensures agents operate reliably, meet performance expectations, and align with organizational standards. Implement monitoring and telemetry early to detect issues, optimize workflows, and maintain system health across your agent fleet.
 
-:::image type="content" source="./images/observability-security-build-agents.png" alt-text="Diagram ." lightbox="./images/observability-security-build-agents.png" border="false":::
+:::image type="content" source="./images/observability-security-build-agents.png" alt-text="Diagram showing agent observability and security components: monitoring traces, metrics, and evaluations for agent health; guardrails and blocklists for input validation, tool calls, responses, and output filtering." lightbox="./images/observability-security-build-agents.png" border="false":::
 
 **Microsoft facilitation:**<br>
 
