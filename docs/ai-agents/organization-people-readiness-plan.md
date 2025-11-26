@@ -52,7 +52,7 @@ A structured training program builds AI competency across teams. Treat skills de
 1. **Encourage mentorship and peer learning.** Recognize employees who built AI agents as champions who can coach others. Create internal communities of practice, such as a Teams channel, for AI agent developers to ask questions and share tips.
 
 **Microsoft facilitation:**<br>
-:::image type="icon" source="./images/foundry-icon.png"::: **Foundry**: [Training path](us/training/azure/ai-foundry). See the tutorial [Build and evaluate an enterprise agent](/azure/ai-foundry/tutorials/developer-journey-idea-to-prototype?view=foundry&preserve-view=true).
+:::image type="icon" source="./images/foundry-icon.png"::: **Foundry**: [Training path](/training/azure/ai-foundry). See the tutorial [Build and evaluate an enterprise agent](/azure/ai-foundry/tutorials/developer-journey-idea-to-prototype?view=foundry&preserve-view=true).
 
 :::image type="icon" source="./images/copilot-studio-icon.png"::: **Copilot Studio**: [Training path](/training/paths/power-virtual-agents-workshop/).
 

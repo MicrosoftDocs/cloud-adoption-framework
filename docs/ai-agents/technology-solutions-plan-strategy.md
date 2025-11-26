@@ -69,8 +69,10 @@ Start with the [Foundry playground](/azure/ai-foundry/concepts/concept-playgroun
 
 Choose the architectural configuration that aligns with your security and operational needs.
 
-- **Basic agent setup.** Use the [basic setup](/azure/ai-foundry/how-to/create-project) for rapid prototyping and individual development. This topology prioritizes speed and ease of access but lacks network isolation.
-- **Standard setup.** Use the [standard setup](/azure/ai-foundry/how-to/create-hub) for production environments and enterprise teams. This topology supports fine-grained control over data, security, and networking. **Public networking.** Suitable for nonconfidential workloads that require enterprise data controls. **Private networking.** Required for confidential workloads. This configuration integrates with existing Azure OpenAI, search, and storage resources to meet strict compliance standards.
+- **Basic agent setup.** Use the [basic setup](/azure/ai-foundry/agents/environment-setup?view=foundry#choose-your-setup) for rapid prototyping and individual development. This topology prioritizes speed and ease of access but lacks network isolation.
+- **Standard setup.** Use the [standard setup](/azure/ai-foundry/agents/concepts/standard-agent-setup?view=foundry) for production environments and enterprise teams. This topology supports fine-grained control over data, security, and networking. **Public networking.** Suitable for nonconfidential workloads that require enterprise data controls. **Private networking.** Required for confidential workloads. This configuration integrates with existing Azure OpenAI, search, and storage resources to meet strict compliance standards.
+
+See comparison and deployment of both the [basic and standard setups](/azure/ai-foundry/agents/environment-setup?view=foundry#choose-your-setup)
 
 ### Microsoft Copilot Studio
 
@@ -80,7 +82,7 @@ You can use Copilot Studio's low-code interface with Foundry's advanced models t
 
 Test use cases with the [60-day free trial](/microsoft-copilot-studio/requirements-licensing-subscriptions#copilot-studio-for-microsoft-teams-plans) before committing to production deployment. Review available [access options](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio#access-copilot-studio) to determine the best entry point for your organization.
 
-### GPUs & Containers 
+### GPUs & Containers
 
 You can also choose to deploy agents on GPU infrastructure using Azure Virtual Machines with containers as an alternative. While this guidance doesn't provide detailed steps for that approach, it can be useful when you need flexibility for custom configurations, integration with existing VM-based workloads, or scenarios requiring advanced security controls. Development uses Visual Studio Code and GitHub. Costs scale with token consumption and compute usage. For deployment guidance, see [AI on IaaS](/azure/cloud-adoption-framework/scenarios/ai/infrastructure/cycle-cloud).
 

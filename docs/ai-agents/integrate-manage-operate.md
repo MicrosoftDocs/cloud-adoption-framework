@@ -34,7 +34,7 @@ Integration places agents where work happens, whether automating existing tasks 
 **Microsoft facilitation:**<br>
 :::image type="icon" source="./images/foundry-icon.png"::: **Foundry**: Use [cost analysis dashboards](/azure/ai-foundry/concepts/manage-costs?view=foundry&preserve-view=true) to monitor token consumption and identify usage patterns.
 
-:::image type="icon" source="./images/copilot-studio-icon.png"::: **Copilot Studio:** Use [analytics](/microsoft-copilot-studio/analytics-summary) to track engagement and [satisfaction metrics](/microsoft-copilot-studio/analytics-satisfaction).
+:::image type="icon" source="./images/copilot-studio-icon.png"::: **Copilot Studio:** Use [analytics](/microsoft-copilot-studio/analytics-summary) to track engagement and [conversation metrics](/microsoft-copilot-studio/analytics-improve-agent-effectiveness).
 
 ### Standardization and feedback
 
@@ -72,7 +72,7 @@ Management ensures operational excellence as agents scale across the organizatio
 
 ### Continuous compliance and security
 
-**Automate policy enforcement.** Schedule automated scans that detect configuration drift and policy violations before they become incidents. Verify that agents continue meeting data residency, retention, and privacy requirements as regulations change. The [governance policies](./governance-security-across-organization.md) and [security standards](./build-secure-process.md#5-agent-security) established during development require ongoing enforcement and adaptation since static configurations become vulnerabilities over time. Automated enforcement reduces manual review burden while improving consistency across the agent estate.
+**Automate policy enforcement.** Schedule automated scans that detect configuration drift and policy violations before they become incidents. Verify that agents continue meeting data residency, retention, and privacy requirements as regulations change. The [governance policies](./governance-security-across-organization.md) and [security standards](./build-secure-process.md#agent-security) established during development require ongoing enforcement and adaptation since static configurations become vulnerabilities over time. Automated enforcement reduces manual review burden while improving consistency across the agent estate.
 
 **Integrate with security operations.** Route agent security alerts to your Security Operations Center (SOC) for rapid incident response. Treat jailbreak attempts, data leakage indicators, and anomalous behavior patterns with the same urgency as traditional security threats. This integration ensures agent-specific risks receive appropriate attention and response resources. Security teams must understand agent-specific threat patterns and response procedures to handle incidents effectively.
 
