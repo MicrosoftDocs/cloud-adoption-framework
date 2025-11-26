@@ -62,6 +62,10 @@ See the [Microsoft Scenario Library](https://adoption.microsoft.com/scenario-lib
 
 Not all agent initiatives deliver equal value. Prioritize use cases that align with strategic goals and demonstrate impact quickly. Focus on projects that offer high business value and low implementation complexity. Use three criteria to evaluate and rank candidate use cases: business impact (value), technical feasibility (complexity), and user desirability (value).
 
+:::image type="complex" source="./images/prioritize-agent-use-cases.png" alt-text="Three-part evaluation framework showing business impact, technical feasibility, and user desirability criteria." lightbox="./images/prioritize-agent-use-cases.png":::
+   Diagram with three sections. First section shows business impact evaluation criteria: executive strategy alignment, business value, and change management timeframe, each rated from low to high impact. Second section shows technical feasibility evaluation criteria: implementation and operation risks, sufficient safeguards, and technology fit, each rated from low to high feasibility. Third section shows user desirability assessment factors including user pain points, solution acceptance, change readiness, and stakeholder support for AI agent implementations.
+:::image-end:::
+
 ### Evaluate business impact
 
 Evaluate each use case across three dimensions using a 1–5 scale, where lower scores indicate unclear or weak business impact and higher scores indicate strong business impact:
@@ -71,10 +75,6 @@ Evaluate each use case across three dimensions using a 1–5 scale, where lower 
 1. **Business value**: Quantify the impact. Use cases with vague or unproven benefits should be deprioritized. Select initiatives that deliver measurable outcomes, such as reducing operational costs, increasing revenue, or improving customer satisfaction, with clear evidence of significant value.
 
 1. **Change management timeframe**: Consider the expected time and effort required to implement the use case and manage associated changes. A lengthy rollout with significant user disruption signals a challenging implementation. A short deployment cycle with minimal impact on users indicates strong feasibility and readiness.
-
-:::image type="complex" source="./images/prioritize-agent-use-cases.png" alt-text="Three-part evaluation framework showing business impact, technical feasibility, and user desirability criteria." lightbox="./images/prioritize-agent-use-cases.png":::
-   Diagram with three sections. First section shows business impact evaluation criteria: executive strategy alignment, business value, and change management timeframe, each rated from low to high impact. Second section shows technical feasibility evaluation criteria: implementation and operation risks, sufficient safeguards, and technology fit, each rated from low to high feasibility. Third section shows user desirability assessment factors including user pain points, solution acceptance, change readiness, and stakeholder support for AI agent implementations.
-:::image-end:::
 
 ### Measure technical feasibility
 
