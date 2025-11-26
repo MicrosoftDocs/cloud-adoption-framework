@@ -34,7 +34,7 @@ An AI agent is an adaptable program that uses artificial intelligence to interpr
 
 Standard RAG applications follow a deterministic retrieval process to answer queries. AI agents use a generative model to decide which knowledge and tools to use at each step. This adaptive approach enables multi-step reasoning and complex problem-solving, but it also introduces nondeterministic behavior that requires robust testing and governance.
 
-For technical definitions, see [What is an agent?](/agent-framework/overview/agent-framework-overview#what-is-an-ai-agent) and [what is a workflow?](/azure/ai-foundry/agents/concepts/workflow?view=foundry).
+For technical definitions, see [What is an agent?](/agent-framework/overview/agent-framework-overview#what-is-an-ai-agent) and [what is a workflow?](/azure/ai-foundry/agents/concepts/workflow?view=foundry&preserve-view=true).
 
 ## Why AI agents?
 

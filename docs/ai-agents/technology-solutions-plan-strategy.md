@@ -39,7 +39,7 @@ Choose a build path based on your organization's technical capabilities, timelin
 
 ### Microsoft Foundry
 
-[Microsoft Foundry](/azure/ai-foundry/what-is-azure-ai-foundry?view=foundry) provides a platform-as-a-service (PaaS) environment for pro-code agent development. Use this platform when requirements demand specific model selection, complex orchestration logic, or deep integration with custom code that low-code solutions can't support. It consolidates runtime, orchestration, and integration into a managed environment, removing the need to manage underlying virtual machine or Kubernetes infrastructure.
+[Microsoft Foundry](/azure/ai-foundry/what-is-azure-ai-foundry?view=foundry&preserve-view=true) provides a platform-as-a-service (PaaS) environment for pro-code agent development. Use this platform when requirements demand specific model selection, complex orchestration logic, or deep integration with custom code that low-code solutions can't support. It consolidates runtime, orchestration, and integration into a managed environment, removing the need to manage underlying virtual machine or Kubernetes infrastructure.
 
 :::image type="complex" source="./images/foundry-overview.png" alt-text="Diagram showing the Microsoft Foundry architecture including authoring, orchestration, and runtime layers." lightbox="./images/foundry-overview.png":::
     Overview of the Microsoft Foundry architecture. The diagram illustrates the flow from authoring tools to the managed runtime environment. It highlights key components including the model catalog, agent orchestration engine, and integration capabilities with external data and tools.
@@ -47,21 +47,21 @@ Choose a build path based on your organization's technical capabilities, timelin
 
 #### Integration and interoperability
 
-Ensure agents can communicate effectively across your ecosystem. Foundry supports the Activity Protocol and agent-to-agent (A2A) patterns for standardized messaging. You can also publish agents to [Microsoft 365](/azure/ai-foundry/agents/how-to/publish-copilot?view=foundry) and [Agent 365](/azure/ai-foundry/agents/how-to/agent-365?view=foundry) to surface capabilities directly in user workflows.
+Ensure agents can communicate effectively across your ecosystem. Foundry supports the Activity Protocol and agent-to-agent (A2A) patterns for standardized messaging. You can also publish agents to [Microsoft 365](/azure/ai-foundry/agents/how-to/publish-copilot?view=foundry&preserve-view=true) and [Agent 365](/azure/ai-foundry/agents/how-to/agent-365?view=foundry&preserve-view=true) to surface capabilities directly in user workflows.
 
 #### Development capabilities
 
 Choose the development model that matches your control requirements and coding expertise.
 
-- **Multi-agent workflows.** Implement [workflows](/azure/ai-foundry/agents/concepts/workflow?view=foundry) to orchestrate complex business processes. Workflows handle sequential logic, conditional branching, and state management across multiple agents.
-- **Declarative agents.** Use [prompt-based](/azure/ai-foundry/agents/concepts/development-lifecycle?view=foundry#types-of-agents) definitions for agents that rely primarily on model reasoning and instructions. This approach simplifies updates and versioning for behavior-driven agents.
-- **Hosted agents.** Deploy code-first agents using [hosted agents](/azure/ai-foundry/agents/concepts/hosted-agents?view=foundry) when you need custom libraries or frameworks. This option provides a managed runtime that handles provisioning and scaling while allowing full code control.
+- **Multi-agent workflows.** Implement [workflows](/azure/ai-foundry/agents/concepts/workflow?view=foundry&preserve-view=true) to orchestrate complex business processes. Workflows handle sequential logic, conditional branching, and state management across multiple agents.
+- **Declarative agents.** Use [prompt-based](/azure/ai-foundry/agents/concepts/development-lifecycle?view=foundry&preserve-view=true#types-of-agents) definitions for agents that rely primarily on model reasoning and instructions. This approach simplifies updates and versioning for behavior-driven agents.
+- **Hosted agents.** Deploy code-first agents using [hosted agents](/azure/ai-foundry/agents/concepts/hosted-agents?view=foundry&preserve-view=true) when you need custom libraries or frameworks. This option provides a managed runtime that handles provisioning and scaling while allowing full code control.
 
 #### Models, memory, and tools
 
 - **Model selection.** Choose from the [Model catalog](/azure/ai-studio/how-to/model-catalog), including OpenAI, Anthropic, Meta LLaMA, and Mistral. Select models based on specific performance, latency, and cost requirements.
-- **Memory and state.** Maintain conversation context with [managed memory](/azure/ai-foundry/agents/concepts/agent-memory?view=foundry&tabs=python). For strict data sovereignty requirements, use the bring-your-own (BYO) memory store option.
-- **Tool integration.** Connect to external systems via the [Tool catalog](/azure/ai-foundry/agents/concepts/tool-catalog?view=foundry), Microsoft Copilot Protocol (MCP), or OpenAPI specifications. Integrate with Azure Logic Apps and Azure Functions for serverless automation.
+- **Memory and state.** Maintain conversation context with [managed memory](/azure/ai-foundry/agents/concepts/agent-memory?view=foundry&preserve-view=true&tabs=python). For strict data sovereignty requirements, use the bring-your-own (BYO) memory store option.
+- **Tool integration.** Connect to external systems via the [Tool catalog](/azure/ai-foundry/agents/concepts/tool-catalog?view=foundry&preserve-view=true), Microsoft Copilot Protocol (MCP), or OpenAPI specifications. Integrate with Azure Logic Apps and Azure Functions for serverless automation.
 
 Start with the [Foundry playground](/azure/ai-foundry/concepts/concept-playgrounds) to build and test prototypes. Follow the quickstart guide to [create a new agent](/azure/ai-foundry/agents/quickstart).
 
