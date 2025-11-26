@@ -15,7 +15,7 @@ ms.collection: ce-skilling-ai-copilot
 
 This article describes the first step in the planning phase of AI agent adoption: identifying and prioritizing high-value use cases. You'll learn when agents deliver measurable business value, how to evaluate candidates across business impact, technical feasibility, and user desirability, and how to define success metrics that track outcomes. This approach ensures AI agent investments drive competitive advantage while managing implementation complexity and risk.
 
-:::image type="content" source="./images/ai-agent-adoption.png" alt-text="Diagram that shows the process outlined in this guidance: plan, govern, build and secure, integrate, and measure agents across your organization." lightbox="./images/ai-agent-adoption.png" border="false":::
+:::image type="content" source="./images/ai-agent-adoption.svg" alt-text="Diagram that shows the process outlined in this guidance: plan, govern, build and secure, integrate, and measure agents across your organization." lightbox="./images/ai-agent-adoption.svg" border="false":::
 
 ## When not to use AI agents?
 

@@ -15,7 +15,7 @@ ms.collection: ce-skilling-ai-copilot
 
 This article extends the broader [CAF AI adoption](/azure/cloud-adoption-framework/scenarios/ai/) scenario to address the uniqueness of AI agents within an organization. While the AI adoption scenario covers the full spectrum of AI, this guidance focuses on the planning, governance, integration, and measurement required for agent-based systems. It helps organizations move beyond isolated deployments to treat agents as strategic assets that automate tasks, increase productivity, and deliver digital services.
 
-:::image type="content" source="./images/ai-agent-adoption.png" alt-text="Diagram showing a horizontal workflow with four connected phases: plan for agents (business strategy, technology strategy, people strategy, data strategy), govern (responsible AI, organization agent governance), build agents (single and multi-agent systems, build agents), operate agents integrate (integrate agents), and measure (measure agents)." lightbox="./images/ai-agent-adoption.png" border="false":::
+:::image type="content" source="./images/ai-agent-adoption.svg" alt-text="Diagram showing a horizontal workflow with four connected phases: plan for agents (business strategy, technology strategy, people strategy, data strategy), govern (responsible AI, organization agent governance), build agents (single and multi-agent systems, build agents), operate agents integrate (integrate agents), and measure (measure agents)." lightbox="./images/ai-agent-adoption.svg" border="false":::
 
 The guidance focuses on Microsoft Foundry and Microsoft Copilot Studio for building and managing agents. It also addresses use cases for Microsoft Copilot and custom architectures using GPU-based infrastructure.
 

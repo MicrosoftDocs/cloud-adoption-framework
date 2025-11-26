@@ -15,7 +15,7 @@ ms.collection: ce-skilling-ai-copilot
 
 This article provides guidance on integrating AI agents into existing workflows and managing them as part of your operational infrastructure. You will learn how to deploy agents where work happens while maintaining operational stability and ensuring agents remain secure, cost-effective, and compliant as they scale. Without structured integration and management practices, organizations face shadow AI proliferation, uncontrolled costs, and security gaps that undermine the value of AI investments.
 
-:::image type="content" source="./images/ai-agent-adoption.png" alt-text="Diagram that shows the process outlined in this guidance: plan, govern, build and secure, integrate, and measure agents across your organization." lightbox="./images/ai-agent-adoption.png" border="false":::
+:::image type="content" source="./images/ai-agent-adoption.svg" alt-text="Diagram that shows the process outlined in this guidance: plan, govern, build and secure, integrate, and measure agents across your organization." lightbox="./images/ai-agent-adoption.svg" border="false":::
 
 Integration focuses on deploying agents within real-world processes while maintaining stability and user acceptance. Management ensures ongoing security, cost optimization, and compliance as agents scale across the organization. Organizations that skip these operational disciplines encounter support overload during deployment, configuration drift in production, and budget overruns from unoptimized model usage.
 

@@ -15,7 +15,7 @@ ms.collection: ce-skilling-ai-copilot
 
 This article explains how to establish responsible AI policies that ensure ethical, transparent, and accountable AI agent deployment across your organization. You learn how to create practical governance standards that integrate into existing workflows rather than creating bureaucratic obstacles.Responsible AI policies form the foundation of the "Govern agents" step in the AI agent adoption process. 
 
-:::image type="content" source="./images/ai-agent-adoption.png" alt-text="Diagram that shows the process outlined in this guidance: plan, govern, build and secure, integrate, and measure agents across your organization." lightbox="./images/ai-agent-adoption.png" border="false":::
+:::image type="content" source="./images/ai-agent-adoption.svg" alt-text="Diagram that shows the process outlined in this guidance: plan, govern, build and secure, integrate, and measure agents across your organization." lightbox="./images/ai-agent-adoption.svg" border="false":::
 
 Without clear responsible AI policies, organizations face significant risks including reputational damage from biased or harmful AI outputs, regulatory penalties from non-compliance with emerging AI laws, and erosion of stakeholder trust that undermines AI adoption efforts.
 
