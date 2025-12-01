@@ -13,11 +13,14 @@ ms.collection: ce-skilling-ai-copilot
 
 # Operate AI agents across your organization
 
-This article provides guidance on integrating AI agents into existing workflows and managing them as part of your operational infrastructure. You learn how to deploy agents where work happens while maintaining operational stability and ensuring agents remain secure, cost-effective, and compliant as they scale. Without structured integration and management practices, organizations face shadow AI proliferation, uncontrolled costs, and security gaps that undermine the value of AI investments.
+This article provides guidance on integrating AI agents into existing workflows and managing them as part of your operational infrastructure.
+
+This article provides guidance on integrating AI agents into business workflows and managing their lifecycle from deployment to retirement. Operational excellence ensures that agents deliver consistent value while maintaining security, compliance, and cost efficiency at scale. Learning to how to **Operate agents** is the final step in the AI agent adoption process (*see figure 1*).
 
 :::image type="content" source="./images/ai-agent-adoption.svg" alt-text="Diagram that shows the process outlined in this guidance: plan, govern, build and secure, integrate, and measure agents across your organization." lightbox="./images/ai-agent-adoption.svg" border="false":::
+*Figure 1. Microsoft's AI agent adoption process.*
 
-Integration focuses on deploying agents within real-world processes while maintaining stability and user acceptance. Management ensures ongoing security, cost optimization, and compliance as agents scale across the organization. Organizations that skip these operational disciplines encounter support overload during deployment, configuration drift in production, and budget overruns from unoptimized model usage.
+Integrating agents into daily operations requires a disciplined approach that balances rapid adoption with robust governance. You must establish standardized patterns for rollout, monitoring, and maintenance to prevent technical debt and operational fragmentation. Without these controls, organizations face shadow AI proliferation, unpredictable budget overruns, and the accumulation of unused agents that expand the attack surface. This guidance helps you transition agents from development pilots into reliable, managed enterprise assets.
 
 ## Integrate AI agents
 
@@ -61,7 +64,7 @@ Management ensures operational excellence as agents scale across the organizatio
 
 ### AI agents asset lifecycle management
 
-Lifecycle management ensures that the AI agent estate remains secure, cost-effective, and aligned with business goals as it evolves. The challenge lies in standardizing operations across disparate teams to prevent fragmentation. Without a unified approach to lifecycle management, organizations risk accumulating technical debt, sustaining unused "zombie" agents, and losing visibility into operational risks.
+Lifecycle management ensures that the AI agent estate remains secure, cost-effective, and aligned with business goals as it evolves. The challenge lies in standardizing operations across disparate teams to prevent fragmentation. Without a unified approach to lifecycle management, organizations risk accumulating technical debt, sustaining unused agents, and losing visibility into operational risks.
 
 1. **Conduct regular estate audits.** Use the [inventory established during governance](./governance-security-across-organization.md#agent-observability) to maintain visibility of all active deployments. Identify agents that remain deployed but unused, as these dormant assets create security risks and consume quota allocations. Establish quarterly reviews to retire agents that no longer deliver business value. Regular auditing prevents technical debt accumulation and ensures resources align with current business priorities.
 

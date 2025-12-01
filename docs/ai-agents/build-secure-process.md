@@ -13,11 +13,12 @@ ms.collection: ce-skilling-ai-copilot
 
 # Process to build AI agents
 
-This article establishes the framework to build AI agents consistently and securely across organizations. The five-step process addresses critical decision points in agent development: orchestration patterns, model selection trade-offs, data and tool integration standards, observability requirements, and security controls. By following this structured approach, organizations reduce deployment complexity, ensure regulatory compliance, and scale agent adoption while maintaining operational control.
+This article outlines the standardized process that teams must follow to build AI agents consistently across the organization. It defines the critical decision points for orchestration, model selection, data integration, and security that ensure agents align with enterprise standards. This guidance focuses on the governance and structural decisions required to support development teams, rather than the technical implementation of individual workloads. Understanding this process is the final component of the **Build agents** phase in the AI agent adoption process (*see figure 1*).
 
-:::image type="content" source="./images/build-ai-agents.png" alt-text="Diagram showing five steps to build agents: Orchestration, Models, Knowledge & Tools, Observability, Security. The center highlights Microsoft Foundry and Copilot Studio as two platforms for Microsoft Build." lightbox="./images/build-ai-agents.png" border="false":::
+:::image type="content" source="./images/ai-agent-adoption.svg" alt-text="Diagram that shows the process outlined in this guidance: plan, govern, build and secure, integrate, and measure agents across your organization." lightbox="./images/ai-agent-adoption.svg" border="false":::
+*Figure 1. Microsoft's AI agent adoption process.*
 
-Without proper governance frameworks for AI agent development, organizations face fragmented implementations, inconsistent security postures, and compliance violations. Agents built without standardized processes create technical debt through duplicated efforts, incompatible architectures, and unmanaged proliferation of models and tools. This lack of coordination increases operational risk, drives up costs through inefficient resource utilization, and slows innovation as teams struggle to integrate disparate agent systems.
+Without a unified development process, organizations face unmanaged agent proliferation, incompatible architectures, and significant security vulnerabilities. These issues create technical debt and increase operational risk, preventing the organization from scaling AI adoption effectively.
 
 ## Agent orchestration
 
