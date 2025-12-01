@@ -13,7 +13,7 @@ ms.collection: ce-skilling-ai-copilot
 
 # AI agent adoption
 
-This article extends the broader [CAF AI adoption](/azure/cloud-adoption-framework/scenarios/ai/) scenario to address the uniqueness of AI agents within an organization. While the AI adoption scenario covers the full spectrum of AI, this guidance focuses on the planning, governance, integration, and measurement required for agent-based systems. It helps organizations move beyond isolated deployments to treat agents as strategic assets that automate tasks, increase productivity, and deliver digital services.
+The AI agent adoption guidance extends the broader [AI adoption](/azure/cloud-adoption-framework/scenarios/ai/) in the Cloud Adoption Framework to address the uniqueness of AI agents within an organization. While the AI adoption scenario covers the full spectrum of AI, this guidance focuses on the planning, governance, integration, and measurement required for agent-based systems. It helps organizations move beyond isolated deployments to treat agents as strategic assets that automate tasks, increase productivity, and deliver digital services.
 
 :::image type="content" source="./images/ai-agent-adoption.svg" alt-text="Diagram showing a horizontal workflow with four connected phases: plan for agents (business strategy, technology strategy, people strategy, data strategy). Govern (responsible AI, organization agent governance). Build agents (single and multi-agent systems, build agents). Operate agents integrate (integrate agents). Measure (measure agents)." lightbox="./images/ai-agent-adoption.svg" border="false":::
 
