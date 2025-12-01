@@ -105,7 +105,7 @@ Gather evidence through interviews or surveys to validate pain points and openne
 
 - **Value proposition**: Consider the appeal and adoption potential of the use case for users. A low score reflects minimal perceived value or low interest. A high score indicates the solution is highly desired and offers clear benefits to users.
 
-- **Change resistance**: Evaluate the expected level of resistance to adopting the solution. A low score suggests significant resistance and challenges in managing change. high score indicates low resistance and strong readiness for adoption.
+- **Change resistance**: Evaluate the expected level of resistance to adopting the solution. A low score suggests significant resistance and challenges in managing change. A high score indicates low resistance and strong readiness for adoption.
 
 ## Define success metrics
 
