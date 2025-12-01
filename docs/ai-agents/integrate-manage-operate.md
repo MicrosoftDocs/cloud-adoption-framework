@@ -13,8 +13,6 @@ ms.collection: ce-skilling-ai-copilot
 
 # Operate AI agents across your organization
 
-This article provides guidance on integrating AI agents into existing workflows and managing them as part of your operational infrastructure.
-
 This article provides guidance on integrating AI agents into business workflows and managing their lifecycle from deployment to retirement. Operational excellence ensures that agents deliver consistent value while maintaining security, compliance, and cost efficiency at scale. Learning to how to **Operate agents** is the final step in the AI agent adoption process (*see figure 1*).
 
 :::image type="content" source="./images/ai-agent-adoption.svg" alt-text="Diagram that shows the process outlined in this guidance: plan, govern, build and secure, integrate, and measure agents across your organization." lightbox="./images/ai-agent-adoption.svg" border="false":::
