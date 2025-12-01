@@ -13,15 +13,24 @@ ms.collection: ce-skilling-ai-copilot
 
 # Single agent or multiple agents
 
-This article helps you determine whether to build a single-agent or multi-agent architecture when implementing AI solutions. Organizations face this critical decision during the Build agents phase of AI agent adoption. Your choice affects development complexity, operational overhead, security boundaries, and integration patterns across your cloud estate. Make this architectural decision early because switching between approaches after implementation requires significant refactoring and can disrupt established workflows.
+This article helps you determine whether to build a single-agent or multi-agent architecture when implementing AI solutions. Organizations face this critical decision during the **Build agents** phase of AI agent adoption (*see figure 1*).
 
 :::image type="content" source="./images/ai-agent-adoption.svg" alt-text="Diagram that shows the process outlined in this guidance: plan, govern, build and secure, integrate, and measure agents across your organization." lightbox="./images/ai-agent-adoption.svg" border="false":::
+*Figure 1. Microsoft's AI agent adoption process.*
 
-Single-agent systems consolidate all logic into one entity. This consolidation simplifies implementation and reduces operational overhead. Multi-agent systems distribute responsibilities across specialized agents. This distribution enables modularity but introduces coordination complexity. Without clear requirements for separation, the added complexity of multi-agent systems creates unnecessary technical debt and operational burden. Organizations that default to multi-agent architectures without validating the need often encounter higher costs, increased latency, and more failure points than necessary.
+Your choice affects development complexity, operational overhead, security boundaries, and integration patterns across your cloud estate.
+
+- **Single-agent systems** consolidate all logic into one entity. This consolidation simplifies implementation and reduces operational overhead.
+- **Multi-agent systems** distribute responsibilities across specialized agents. This distribution enables modularity but introduces coordination complexity. Without clear requirements for separation, the added complexity of multi-agent systems can create unnecessary complexity during development and higher maintenance effort.
+
+Organizations that default to multi-agent architectures without validating the need often encounter higher costs, increased latency, and more failure points than necessary.
+
+**AI Agent decision tree**: Determine the optimal architecture for your agent system by evaluating your use case against the criteria in the following decision tree (*see figure 2.*). The flowchart guides you through key decision points, including security boundaries and team structure. Follow the path that matches your specific constraints to select the appropriate approach. For more information on each criteria, use the guidance in this article.
 
 :::image type="complex" source="./images/ai-agent-decision-tree.svg" alt-text="Decision tree diagram for selecting AI agent solutions based on business and technology requirements." lightbox="./images/ai-agent-decision-tree.svg" border="false":::
     A flowchart guides organizations through decisions about when and how to use AI agents. The diagram starts with a blue diamond labeled "Potential agent use case" and branches into multiple decision paths. The business plan path determines if AI agents should be used. If the answer is "No," the path leads to "Use code or nongenerative AI models" with icons for GitHub, Microsoft Fabric, AI models in Foundry, and Machine Learning. If Yes, it asks if the task involves static question or answer or content generation without reasoning. The technology plan path checks if SaaS agents meet functional requirements. If Yes, the path leads to Use SaaS agents. There are cons representing Microsoft 365 Copilot agents (App Builder, Workflows, Researcher, Analyst, Surveys). Then there are icons for GitHub Copilot agent, Microsoft Fabric data agents, Azure Copilot agents, Dynamics 365 agents, and Security Copilot agents. If SaaS agents don't meet needs, the path leads to "Build AI agents" with options for GPUs & Containers (open-source), Microsoft Foundry (PaaS pro-code), and Copilot Studio (SaaS no/low-code). The single or multiple agents decision path asks whether the use case involves security concerns, compliance requirements, multiple teams, or future growth. If Yes, it leads to "Build multiple agents" using workflows for orchestration. If No, it checks task complexity and requirements, leading to either "Test a single agent" or "Build a single agent" using workflows for integration and governance. The diagram uses color-coded shapes with diamonds representing decision points and rectangles representing actions, with arrows showing the flow between choices.
 :::image-end:::
+*Figure 2. Microsoft's AI agent decision tree.*
 
 ## Build multiple agents
 
