@@ -13,9 +13,12 @@ ms.collection: ce-skilling-ai-copilot
 
 # Business plan for AI agents
 
-This article describes how to create a business plan for AI agents that aligns technology investments with organizational strategy. You learn how to determine when AI agents deliver measurable business value and when alternative solutions are more appropriate. The guidance covers methods to identify high-value use cases, prioritize them based on business impact and feasibility, and define success metrics that track return on investment. This approach helps you avoid wasting resources on unsuitable automation scenarios while focusing agent development on processes that drive competitive advantage across your organization.
+This article describes how to create a business plan for AI agents that aligns technology investments with organizational strategy. A business plan is the initial step in the **Plan for agents** phase of AI agent adoption (*see figure 1*).
 
-:::image type="content" source="./images/ai-agent-adoption.svg" alt-text="Diagram that shows the process outlined in this guidance: plan, govern, build and secure, integrate, and measure agents across your organization." lightbox="./images/ai-agent-adoption.svg" border="false":::
+:::image type="content" source="./images/ai-agent-adoption.svg" alt-text="Diagram showing a horizontal workflow with four connected phases: plan for agents (business strategy, technology strategy, people strategy, data strategy). Govern (responsible AI, organization agent governance). Build agents (single and multi-agent systems, build agents). Operate agents integrate (integrate agents). Measure (measure agents)." lightbox="./images/ai-agent-adoption.svg" border="false":::
+*Figure 1. Microsoft's AI agent adoption process.*
+
+This guidance helps you determine when AI agents deliver measurable business value and when alternative solutions are more appropriate. It covers methods to identify high-value use cases, prioritize them based on business impact and feasibility, and define success metrics that track return on investment. Without a clear business plan, organizations risk wasting resources on unsuitable automation scenarios or failing to realize the competitive advantage that agents provide.
 
 ## When not to use AI agents?
 
