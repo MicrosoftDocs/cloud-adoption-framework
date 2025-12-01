@@ -13,7 +13,12 @@ ms.collection: ce-skilling-ai-copilot
 
 # Organizational readiness for AI agents
 
-This article outlines strategies for organizational readiness, including platform governance, workload alignment, and AI Center of Excellence integration. Organizational readiness ensures that the people and teams building AI agents have the structure and skills necessary for success. Without this preparation, organizations face isolated experiments, inconsistent governance, and the inability to scale AI agents across the enterprise.
+This article outlines strategies for organizational readiness, including platform governance, workload alignment, and AI Center of Excellence integration. Organizational readiness is the third step in the **Plan for agents** phase of AI agent adoption (*see figure 1*).
+
+:::image type="content" source="./images/ai-agent-adoption.svg" alt-text="Diagram showing a horizontal workflow with four connected phases: plan for agents (business strategy, technology strategy, people strategy, data strategy). Govern (responsible AI, organization agent governance). Build agents (single and multi-agent systems, build agents). Operate agents integrate (integrate agents). Measure (measure agents)." lightbox="./images/ai-agent-adoption.svg" border="false":::
+*Figure 1. Microsoft's AI agent adoption process.*
+
+Organizational readiness ensures that the people and teams building AI agents have the structure and skills necessary for success. Without this preparation, organizations face isolated experiments, inconsistent governance, and the inability to scale AI agents across the enterprise.
 
 :::image type="content" source="./images/agent-teams.png" alt-text="Diagram that shows how workload teams, platform teams, and AI CoE work together." lightbox="./images/agent-teams.png" border="false":::
 
@@ -45,11 +50,11 @@ A structured training program builds AI competency across teams. Treat skills de
 
 1. **Use Microsoft's free training resources.** Use Microsoft Learn's free online modules and certifications, such as [Azure AI Engineer Associate](/credentials/certifications/azure-ai-engineer/?practice-assessment-type=certification), to give teams a grounding in AI services. See the [AI agents hub](https://enablement.microsoft.com/ai-agents/) for helpful resources.
 
-1. **Run hands-on workshops.** Organize internal workshops or hackathons. For example, hold a prompt engineering lab where participants practice improving AI responses, or a hackathon where cross-functional teams prototype a simple agent. These activities build skills, enthusiasm, and idea-sharing.
+2. **Run hands-on workshops.** Organize internal workshops or hackathons. For example, hold a prompt engineering lab where participants practice improving AI responses, or a hackathon where cross-functional teams prototype a simple agent. These activities build skills, enthusiasm, and idea-sharing.
 
-2. **Consider partner-led training.** Bring in Microsoft or [certified training partners](/training/educator-center/programs/global-training-partner/find-global-training-partner) for tailored sessions or bootcamps on specific tools like Azure AI Foundry or Copilot Studio. Training on actual data accelerates learning through expert guidance.
+3. **Consider partner-led training.** Bring in Microsoft or [certified training partners](/training/educator-center/programs/global-training-partner/find-global-training-partner) for tailored sessions or bootcamps on specific tools like Azure AI Foundry or Copilot Studio. Training on actual data accelerates learning through expert guidance.
 
-3. **Encourage mentorship and peer learning.** Recognize employees who built AI agents as champions who can coach others. Create internal communities of practice, such as a Teams channel, for AI agent developers to ask questions and share tips.
+4. **Encourage mentorship and peer learning.** Recognize employees who built AI agents as champions who can coach others. Create internal communities of practice, such as a Teams channel, for AI agent developers to ask questions and share tips.
 
 **Microsoft facilitation:**<br>
 :::image type="icon" source="./images/foundry-icon.png"::: **Foundry**: [Training path](/training/azure/ai-foundry). See the tutorial [Build and evaluate an enterprise agent](/azure/ai-foundry/tutorials/developer-journey-idea-to-prototype?view=foundry&preserve-view=true).
