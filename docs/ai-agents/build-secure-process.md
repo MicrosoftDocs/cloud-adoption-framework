@@ -117,7 +117,7 @@ Tools extend agent capabilities from passive information retrieval to active sys
 
 :::image type="icon" source="./images/copilot-studio-icon.png"::: **Copilot Studio**: [Add tools](/microsoft-copilot-studio/advanced-plugin-actions) and [triggers](/microsoft-copilot-studio/authoring-triggers-about).
 
-### Agent memory strategy
+### Agent memory
 
 Agent memory transforms stateless model inference into stateful business processes. Across the enterprise, memory requirements vary from transient session context to persistent historical recall. Without a unified strategy, ad-hoc memory implementations create vectors for data leakage, privacy violations, and unmanaged storage growth. Organizations must establish governance models that treat conversation history as sensitive enterprise data.
 
