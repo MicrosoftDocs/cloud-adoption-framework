@@ -1,5 +1,5 @@
 ---
-title: Technology Plan for AI Agents in Microsoft Ecosystem
+title: Technology Plan for AI Agents across your organization using the Microsoft Ecosystem
 ms.reviewer: ssumner
 description: Learn how to define a technology plan for AI agents across your organization using Microsoft SaaS agents, Microsoft Foundry, and Copilot Studio
 #customer intent: As an enterprise architect I want to understand what AI agent options are available to me across the Microsoft ecosystem so that I can provide the right approach that balances speed cost and operations for each use case and make that available to my teams
@@ -11,7 +11,7 @@ ms.topic: article
 ms.collection: ce-skilling-ai-copilot
 ---
 
-## Technology plan for AI agents
+# Technology plan for AI agents
 
 This article provides a framework for selecting technology platforms for AI agents within the Microsoft ecosystem. Developing a technology plan is the second step in the **Plan for agents** phase of AI agent adoption (*see figure 1*).
 

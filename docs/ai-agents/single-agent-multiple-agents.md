@@ -53,7 +53,7 @@ Multi-agent systems require workflows to implement [orchestration patterns](/azu
 | **Branching logic** | Routes requests to appropriate agents based on conditions, enabling escalation from chatbots to specialized agents or human support |
 | **Transparency** | Provides visibility into information flow for debugging and compliance auditing |
 
-See [Orchestration strategy](./build-secure-process.md#pick-an-orchestration-strategy) for technology-specific implementation options.
+See [Orchestration strategy](./build-secure-process.md#orchestration-strategy) for technology-specific implementation options.
 
 ### Multi-agent system trade-offs
 
@@ -92,7 +92,7 @@ Single agents often respond directly to user requests without orchestration. Wor
 - **Governance and compliance.** Implement logging, approval gates, and audit trails through workflow capabilities. These controls satisfy regulatory requirements and provide operational visibility into agent decisions.
 - **Human review.** Insert checkpoints where people validate agent outputs before downstream execution. This human-in-the-loop pattern maintains quality while preserving automation benefits.
 
-See [Orchestration strategy](./build-secure-process.md#pick-an-orchestration-strategy) for technology-specific workflows implementation options.
+See [Orchestration strategy](./build-secure-process.md#orchestration-strategy) for technology-specific workflows implementation options.
 
 ### Single-agent system trade-offs
 
