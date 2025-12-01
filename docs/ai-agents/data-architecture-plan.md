@@ -20,9 +20,10 @@ This article explains how to develop a comprehensive data plan that enables AI a
 
 Organizations often underestimate the role of data readiness in AI success. AI agents don't create knowledge. They retrieve and synthesize information from existing sources. If those sources are incomplete, fragmented, or inaccessible, the agent produces inaccurate or misleading results. A well-designed data plan ensures that agents operate on authoritative content, respect security boundaries, and deliver consistent value across business processes.
 
-This guidance applies to Microsoft SaaS agents such as Microsoft 365 Copilot and to custom AI agents built on platforms like Copilot Studio or Microsoft Foundry. The decisions outlined here directly affect agent reliability, compliance posture, and the speed at which new agents can be deployed.
+This guidance applies to Microsoft SaaS agents such as agents in Microsoft 365 Copilot and to custom AI agents built on platforms like Microsoft Foundry and Microsoft Copilot Studio. The decisions outlined here directly affect agent reliability, compliance posture, and the speed at which new agents can be deployed. See figure 2 for a conceptual data architecture.
 
 :::image type="content" source="images/data-architecture-fabric-onelake-foundry-azure-microsoft.svg" alt-text="diagram showing data flow from non-Azure sources into Microsoft services. At the base, external data enters and moves upward into multiple data domains representing business units. Each domain connects to Microsoft Fabric OneLake workspaces for unified business data. Above, processing occurs using Fabric IQ and Fabric data agents, which then feed into Microsoft Foundry agents in Azure or Copilot Studio agents within the Microsoft ecosystem. At the top, agents integrate with Azure landing zones: platform landing zones with management groups and subscriptions, application landing zones hosting Foundry, and data management landing zones hosting Fabric capacity. Azure Databricks appears in a data landing zone for advanced analytics, enabling insights across teams." lightbox="images/data-architecture-fabric-onelake-foundry-azure-microsoft.svg" border="false":::
+*Figure 2. Conceptual data architecture for AI agents.*
 
 ## Prepare Microsoft 365 data
 
