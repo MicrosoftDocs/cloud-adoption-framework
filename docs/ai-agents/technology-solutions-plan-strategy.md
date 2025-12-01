@@ -13,7 +13,7 @@ ms.collection: ce-skilling-ai-copilot
 
 ## Technology plan for AI agents
 
-This article provides a framework for selecting technology platforms for AI agents within the Microsoft ecosystem. It defines the second step in the **Plan for agents** phase of AI agent adoption (*see figure 1*).
+This article provides a framework for selecting technology platforms for AI agents within the Microsoft ecosystem. Developing a technology plan is the second step in the **Plan for agents** phase of AI agent adoption (*see figure 1*).
 
 :::image type="content" source="./images/ai-agent-adoption.svg" alt-text="Diagram showing a horizontal workflow with four connected phases: plan for agents (business strategy, technology strategy, people strategy, data strategy). Govern (responsible AI, organization agent governance). Build agents (single and multi-agent systems, build agents). Operate agents integrate (integrate agents). Measure (measure agents)." lightbox="./images/ai-agent-adoption.svg" border="false":::
 *Figure 1. Microsoft's AI agent adoption process.*
