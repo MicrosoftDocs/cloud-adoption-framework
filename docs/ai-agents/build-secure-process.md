@@ -20,7 +20,7 @@ This article outlines the standardized process that teams must follow to build A
 
 Without a unified development process, organizations face unmanaged agent proliferation, incompatible architectures, and significant security vulnerabilities. These issues create technical debt and increase operational risk, preventing the organization from scaling AI adoption effectively.
 
-## Agent orchestration
+## 1. Agent orchestration
 
 Strategic orchestration decisions determine how agents coordinate work, integrate with existing systems, and scale across the enterprise. These choices affect development velocity, operational complexity, and the organization's ability to maintain control as agent adoption grows.
 
@@ -74,7 +74,7 @@ Instructions function as the operational logic for AI agents interpret intent an
 **Microsoft facilitation:**<br>
 :::image type="icon" source="./images/foundry-icon.png"::: **Foundry**: See [System message design](/azure/ai-foundry/openai/concepts/advanced-prompt-engineering?view=foundry&preserve-view=true). Use the [A2A tool](/azure/ai-foundry/agents/how-to/tools/agent-to-agent?view=foundry&preserve-view=true&pivots=python) and [Foundry playground](/azure/ai-foundry/concepts/concept-playgrounds?view=foundry&preserve-view=true). Test and refine behavior using [agent evaluators](/azure/ai-foundry/concepts/evaluation-evaluators/agent-evaluators?view=foundry&preserve-view=true).
 
-## Agent model selection strategy
+## 2. Agent model selection strategy
 
 Model selection directly affects cost, performance, and compliance across your agent fleet. Organizations that default to the largest available models face unnecessary costs and quota limitations that constrain scaling.
 
@@ -89,7 +89,7 @@ Model selection directly affects cost, performance, and compliance across your a
 
 :::image type="icon" source="./images/copilot-studio-icon.png"::: **Copilot Studio**: [Choose a primary AI model](/microsoft-copilot-studio/authoring-select-agent-model) or [bring your own model](/ai-builder/byom-for-your-prompts) from Foundry.
 
-## Agent knowledge and tools
+## 3. Agent knowledge and tools
 
 Data access and tool permissions determine agent reliability, compliance posture, and operational risk. These policies establish boundaries that prevent unauthorized actions while enabling agents to deliver value. Follow all [data governance and compliance policies](./governance-security-across-organization.md#data-governance-and-compliance).
 
@@ -136,7 +136,7 @@ Agent memory transforms stateless model inference into stateful business process
 
 :::image type="icon" source="./images/copilot-studio-icon.png"::: **Copilot Studio**: [Analyze agent effectiveness](/microsoft-copilot-studio/analytics-improve-agent-effectiveness) to identify optimization opportunities. Review [user questions by theme](/microsoft-copilot-studio/analytics-themes) to discover patterns and refine responses.
 
-## Agent observability
+## 4. Agent observability
 
 Observability provides the visibility needed to maintain reliable agent operations, optimize performance, and ensure compliance with organizational standards. Early implementation of monitoring and telemetry enables proactive issue detection and continuous improvement.
 
@@ -159,7 +159,7 @@ Observability provides the visibility needed to maintain reliable agent operatio
 
 :::image type="icon" source="./images/copilot-studio-icon.png"::: **Copilot Studio**: Use [analytics](/microsoft-copilot-studio/analytics-overview) and [connect to Azure Application Insights](/microsoft-copilot-studio/advanced-bot-framework-composer-capture-telemetry) for centralized telemetry. [Create test sets for evaluations](/microsoft-copilot-studio/analytics-agent-evaluation-create), [Security and governance guidance](/microsoft-copilot-studio/security-and-governance), [automatic security scans](/microsoft-copilot-studio/security-scan), and verify [agent runtime protection status](/microsoft-copilot-studio/security-agent-runtime-view).
 
-## Agent security
+## 5. Agent security
 
 Security controls embedded throughout the agent lifecycle prevent harmful outputs, protect against attacks, and ensure compliance with organizational standards. These safeguards operate across multiple layers to create defense in depth.
 

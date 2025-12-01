@@ -17,14 +17,14 @@ items:
     items:
       - name: Responsible AI
         href: responsible-ai-across-organization.md
-      - name: Governance
+      - name: Org-wide governance
         href: governance-security-across-organization.md
   - name: 3. Build agents
     expanded: true
     items:
       - name: Single or multiple agents?
         href: single-agent-multiple-agents.md
-      - name: Build process
+      - name: Understand the build process
         href: build-secure-process.md
   - name: 4. Operate agents
     href: integrate-manage-operate.md
