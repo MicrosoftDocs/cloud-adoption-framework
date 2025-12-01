@@ -13,7 +13,10 @@ ms.collection: ce-skilling-ai-copilot
 
 # Data architecture for AI agents
 
-This article explains how to develop a comprehensive data plan that enables AI agents to deliver business value through effective data management, preparation, and security. It guides leaders through key decisions about data unification, retrieval strategies, and governance that directly influence agent accuracy and organizational risk.
+This article explains how to develop a comprehensive data plan that enables AI agents to deliver business value through effective data management, preparation, and security. It guides leaders through key decisions about data unification, retrieval strategies, and governance that directly influence agent accuracy and organizational risk. Planning your data architecture readiness is the final step in the **Plan for agents** phase of AI agent adoption (*see figure 1*).
+
+:::image type="content" source="./images/ai-agent-adoption.svg" alt-text="Diagram showing a horizontal workflow with four connected phases: plan for agents (business strategy, technology strategy, people strategy, data strategy). Govern (responsible AI, organization agent governance). Build agents (single and multi-agent systems, build agents). Operate agents integrate (integrate agents). Measure (measure agents)." lightbox="./images/ai-agent-adoption.svg" border="false":::
+*Figure 1. Microsoft's AI agent adoption process.*
 
 Organizations often underestimate the role of data readiness in AI success. AI agents don't create knowledge. They retrieve and synthesize information from existing sources. If those sources are incomplete, fragmented, or inaccessible, the agent produces inaccurate or misleading results. A well-designed data plan ensures that agents operate on authoritative content, respect security boundaries, and deliver consistent value across business processes.
 
