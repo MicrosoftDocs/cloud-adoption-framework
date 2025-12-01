@@ -80,6 +80,8 @@ Organizations require concrete mechanisms to control how agents access, process,
 
 **All agents must meet all baseline security requirements.** AI agents process natural language, interact with external sources, and often make autonomous decisions. These capabilities introduce security risks that organizations must address, including data leakage, data poisoning, jailbreak attempts, and credential theft. Organizations integrate agent security into existing enterprise security frameworks to ensure consistency, reduce exposure, and support regulatory compliance.
 
+1. **Mandate agent security training.** Provide targeted training for security and development teams. Focus on real-world scenarios of jailbreak techniques that bypass agent safeguards, data poisoning attacks that manipulate training data, and credential theft through agent interfaces. This training builds awareness and readiness, enabling teams to respond effectively to AI-specific threats.
+
 1. **Require AI threat protection.** Activate AI-specific threat protection. Microsoft Defender for Cloud's [AI threat protection](/azure/defender-for-cloud/ai-threat-protection) detects prompt manipulation, unauthorized data access, and other agent-specific threats. These protections use global threat intelligence and integrate with Azure AI Content Safety to identify suspicious behavior in real time. Activating these tools reduces exposure and enables faster response to emerging risks.
 
 1. **Enforce infrastructure security baselines.** Treat agent infrastructure with the same level of oversight as customer-facing systems. Agent runtimes require the same governance and oversight as customer-facing systems to prevent unauthorized access and ensure stability.
@@ -88,15 +90,11 @@ Organizations require concrete mechanisms to control how agents access, process,
 
 1. **Filter inputs and outputs.** Block adversarial input that attempts to bypass integrated safety protocols. Treat all incoming data, text, files, and images as potentially hostile. Validate and filter inputs before they reach models or backend systems. Strip scripting and injection content from text, enforce type and size restrictions for files, and scan media using moderation services. Update sanitization rules based on observed attack patterns.
 
-1. **Standardize authentication.** Use [managed identities for authentication](/entra/identity/managed-identities-azure-resources/overview) to eliminate credential management risks. This approach removes the need for developers to handle secrets and ensures that only authorized identities can access resources.
+1. **Standardize authentication.** Mandate the use of [managed identities for authentication](/entra/identity/managed-identities-azure-resources/overview) to eliminate credential management risks. This approach removes the need for developers to handle secrets and ensures that only authorized identities can access resources.
 
 1. **Enforce least privilege.** Govern agent capabilities tightly when they execute actions. Each tool the agent uses enforces the user's permissions, or it has scoped service accounts. Use Data Loss Prevention (DLP) policies to restrict what data the agent can access or output. For instance, prevent the agent from returning credit card numbers in answers.
 
 1. **Integrate with security operations.** Ensure AI-related alerts flow into the Security Operations Center (SOC). Define thresholds for anomalies such as latency spikes or unauthorized access attempts. Use Azure Monitor Alerts and route them to Microsoft Sentinel through Log Analytics. This integration strengthens the organization's overall security posture and ensures agents remain resilient and trustworthy.
-
-1. **Audit agent behavior.** Conduct periodic audits of agent interactions to identify unusual behavior, such as unexpected data access or different prompt patterns. These audits detect early signs of compromise and support compliance with internal and external standards.
-
-1. **Mandate security training.** Provide targeted training for security and development teams. Focus on real-world scenarios of jailbreak techniques that bypass agent safeguards, data poisoning attacks that manipulate training data, and credential theft through agent interfaces. This training builds awareness and readiness, enabling teams to respond effectively to AI-specific threats.
 
 1. **Govern external integrations.** Support interoperability standards such as MCP and emerging standards like A2A when agents interact with external systems. Restrict external interactions to trusted MCP servers that meet organizational security and compliance standards. Validate all external agent communications and limit them to explicitly approved entities. Define clear boundaries for data access and logic execution during external interactions. These measures prevent leakage of sensitive information and maintain control over agent behavior across organizational boundaries.
 

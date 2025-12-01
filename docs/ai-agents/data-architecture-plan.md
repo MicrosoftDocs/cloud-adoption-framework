@@ -37,11 +37,13 @@ Unifying and cleansing data within each domain creates a reliable base for agent
 
 AI agents can technically operate without a unified platform by connecting directly to domain-specific systems or using federated queries. However, a unified approach delivers significant advantages:
 
-- Lower integration effort: Agents connect to a single logical data lake rather than multiple systems, reducing complexity and accelerating development.
-- Consistent governance: Policies, compliance controls, and security models are applied uniformly across all data domains.
-- Faster innovation: New agents and capabilities can be deployed without repeating integration work for every source.
-- Improved discoverability: Certified data products are easier to find and consume, enabling agents to reason over trusted datasets.
-- Better performance for AI: Retrieval strategies like RAG and MCP operate on optimized, governed data rather than fragmented sources.
+| Benefit | Impact |
+|---------|--------|
+| Lower integration effort | Agents connect to a single logical data lake rather than multiple systems, reducing complexity and accelerating development. |
+| Consistent governance | Policies, compliance controls, and security models are applied uniformly across all data domains. |
+| Faster innovation | New agents and capabilities can be deployed without repeating integration work for every source. |
+| Improved discoverability | Certified data products are easier to find and consume, enabling agents to reason over trusted datasets. |
+| Better performance for AI | Retrieval strategies like RAG and MCP operate on optimized, governed data rather than fragmented sources. |
 
 Microsoft Fabric addresses these needs through OneLake, a single logical data lake where teams organize data by domain and publish certified data products. This approach preserves domain ownership while making data easier to consume and govern. It’s not just an analytics architecture. It’s a foundation for AI agents to operate effectively and securely.
 
@@ -63,13 +65,13 @@ Organizations should prioritize creating and certifying Gold tables for critical
 
 The medallion architecture organizes data into three layers that progressively improve quality and usability:
 
-- **Bronze (raw ingestion)**: Store all data in its original form in OneLake, including tabular files, JSON/XML, PDFs, and Office documents. Keep this layer immutable for audit and lineage. Use shortcuts or mirroring for external sources to avoid duplication and maintain consistency.
+1. **Bronze (raw ingestion)**: Store all data in its original form in OneLake, including tabular files, JSON/XML, PDFs, and Office documents. Keep this layer immutable for audit and lineage. Use shortcuts or mirroring for external sources to avoid duplication and maintain consistency.
 
-- **Silver (validated)**: Clean and standardize data. Remove duplicates, normalize formats, and apply schemas. For example, convert PDFs to text or transform JSON into Delta tables. This layer supports accurate joins and indexing for retrieval.
+2. **Silver (validated)**: Clean and standardize data. Remove duplicates, normalize formats, and apply schemas. For example, convert PDFs to text or transform JSON into Delta tables. This layer supports accurate joins and indexing for retrieval.
 
-- **Gold (business context)**: Aggregate data with business meaning, add semantic layers, optimize performance, and certify datasets. Register these curated data products in Microsoft Purview to enforce governance and compliance.
+3. **Gold (business context)**: Aggregate data with business meaning, add semantic layers, optimize performance, and certify datasets. Register these curated data products in Microsoft Purview to enforce governance and compliance.
 
-To enable retrieval, create OneLake [search indexers](/azure/search/search-how-to-index-onelake-files) with Azure AI Search on Silver-layer data. Agents use Silver datasets to identify relationships and patterns. When an agent creates a curated set, store it as a registered data product in Purview or keep the instructions as a specification file in Git for version control. This process ensures reproducibility and governance.
+To enable retrieval, create OneLake [search indexers](/azure/search/search-how-to-index-onelake-files) with Azure AI Search on Silver-layer data. Agents use Silver datasets to identify relationships and patterns. When an agent creates a curated set, store it as a registered data product in Purview or keep the instructions as a specification file in Git for version control. This process ensures reproducibility and governance. For an architecture, see [Fabric enterprise architecture](/azure/architecture/example-scenario/analytics/enterprise-bi-microsoft-fabric).
 
 ### Adaptive Gold (dynamic)
 
