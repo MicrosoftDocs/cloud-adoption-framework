@@ -41,7 +41,7 @@ See [Microsoft Fabric data science](/fabric/data-science/data-science-overview),
 
 ## When to use AI agents?
 
-After eliminating unsuitable scenarios, focus on opportunities where agents drive strategic value. Unlike deterministic software that follows a fixegic path, agents reason over data and tools to formulate plans. They adapt to variable inputs to achieve a specific goal. This capability bridges the gap between static automation and open-ended generative AI. See also [What is an AI agent?](./index.md#what-is-an-ai-agent).
+After eliminating unsuitable scenarios, focus on opportunities where agents drive strategic value. Unlike deterministic software that follows a fixed path, agents reason over data and tools to formulate plans. They adapt to variable inputs to achieve a specific goal. This capability bridges the gap between static automation and open-ended generative AI. See also [What is an AI agent?](./index.md#what-is-an-ai-agent).
 
 To maximize return on investment, start by identifying high-impact business areas, then validate that the specific processes within those areas require the unique reasoning capabilities of an agent.
 
