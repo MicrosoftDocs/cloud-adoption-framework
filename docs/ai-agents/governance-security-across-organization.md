@@ -123,6 +123,19 @@ Organizations require concrete mechanisms to control how agents access, process,
 
 :::image type="icon" source="./images/copilot-studio-icon.png"::: **Copilot Studio**: Use the [authoring canvas](/microsoft-copilot-studio/authoring-fundamentals) for low-code development and [knowledge sources](/microsoft-copilot-studio/knowledge-copilot-studio) to integrate with external data and services.
 
+## Prepare environment
+
+Secure, governed environments are the foundation of scalable AI agent development. This phase assumes the organization has already selected its platforms as outlined in the [Technology plan](./technology-solutions-plan-strategy.md). Platform leads and enterprise architects must now implement the infrastructure and policy guardrails that allow development teams to consume these platforms safely. Proper environment setup ensures that security controls, access management, and resource limits apply consistently across all agent workloads.
+
+1. **Standardize landing zones.** Deploy consistent infrastructure baselines for Microsoft Foundry and Copilot Studio that automatically enforce your standards. Pre-configure networking, identity, and monitoring resources so that teams inherit security controls rather than building them from scratch. This approach reduces the cognitive load on developers and prevents configuration drift across the estate.
+
+2. **Enforce environment isolation.** Configure distinct environments for development, testing, and production to maintain operational stability. Strict separation prevents experimental agents from accessing production data or impacting live business processes. Implement automated promotion pipelines that require validation before an agent moves to a higher environment.
+
+**Microsoft facilitation:**<br>
+:::image type="icon" source="./images/foundry-icon.png"::: **Foundry**: For enterprise environments, deploy the [AI landing zone](https://github.com/Azure/AI-Landing-Zones) reference architecture. Review [AI Ready](/azure/cloud-adoption-framework/scenarios/ai/ready) for Azure landing zone platform guidance. See the [AI workloads](/azure/well-architected/ai/) in the Well-Architected Framework.
+
+:::image type="icon" source="./images/copilot-studio-icon.png"::: **Copilot Studio**: [Configure environments](/microsoft-copilot-studio/environments-first-run-experience) to separate workloads. Apply [Data Loss Prevention (DLP) policies](/microsoft-copilot-studio/admin-data-loss-prevention) to control connector usage within each environment.
+
 ## Next step
 
 > [!div class="nextstepaction"]

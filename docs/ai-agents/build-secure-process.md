@@ -28,19 +28,6 @@ Strategic orchestration decisions determine how agents coordinate work, integrat
 
 **Create governance artifacts that document agent boundaries and business alignment.** The charter serves as the authoritative reference for what the agent system accomplishes and what it must avoid. This documentation prevents scope creep, ensures compliance teams understand system boundaries, and provides clear accountability when issues arise. Include system responsibilities that map to specific business objectives, agent roles that prevent functional overlap, and prohibited actions that establish compliance guardrails. Without clear charters, agents evolve beyond their intended scope, creating security vulnerabilities and regulatory exposure.
 
-### Environment setup strategy
-
-Secure, governed environments are the foundation of scalable AI agent development. This phase assumes the organization has already selected its platforms as outlined in the [Technology plan](./technology-solutions-plan-strategy.md). Platform leads and enterprise architects must now implement the infrastructure and policy guardrails that allow development teams to consume these platforms safely. Proper environment setup ensures that security controls, access management, and resource limits apply consistently across all agent workloads.
-
-1. **Standardize landing zones.** Deploy consistent infrastructure baselines for Microsoft Foundry and Copilot Studio that automatically enforce enterprise standards. Pre-configure networking, identity, and monitoring resources so that teams inherit security controls rather than building them from scratch. This approach reduces the cognitive load on developers and prevents configuration drift across the estate.
-
-2. **Enforce environment isolation.** Configure distinct environments for development, testing, and production to maintain operational stability. Strict separation prevents experimental agents from accessing production data or impacting live business processes. Implement automated promotion pipelines that require validation before an agent moves to a higher environment.
-
-**Microsoft facilitation:**<br>
-:::image type="icon" source="./images/foundry-icon.png"::: **Foundry**: For enterprise environments, deploy the [AI landing zone](https://github.com/Azure/AI-Landing-Zones) reference architecture. Review [AI Ready](/azure/cloud-adoption-framework/scenarios/ai/ready) for Azure landing zone platform guidance. See the [AI workloads](/azure/well-architected/ai/) in the Well-Architected Framework.
-
-:::image type="icon" source="./images/copilot-studio-icon.png"::: **Copilot Studio**: [Configure environments](/microsoft-copilot-studio/environments-first-run-experience) to separate workloads. Apply [Data Loss Prevention (DLP) policies](/microsoft-copilot-studio/admin-data-loss-prevention) to control connector usage within each environment.
-
 ### Orchestration strategy
 
 Orchestration determines how agents coordinate, make decisions, and execute tasks. Organizations must define approved orchestration patterns to balance development velocity with operational control. Without standardized strategies, teams could build incompatible systems that are difficult to monitor, debug, and scale.

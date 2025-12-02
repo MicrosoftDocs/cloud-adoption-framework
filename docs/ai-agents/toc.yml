@@ -19,6 +19,8 @@ items:
         href: responsible-ai-across-organization.md
       - name: Org-wide governance
         href: governance-security-across-organization.md
+      - name: Prepare environment
+        href: governance-security-across-organization.md#prepare-environment
   - name: 3. Build agents
     expanded: true
     items:
