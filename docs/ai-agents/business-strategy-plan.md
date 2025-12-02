@@ -20,7 +20,7 @@ This article describes how to create a business plan for AI agents that aligns t
 
 This guidance helps you determine when AI agents deliver measurable business value and when alternative solutions are more appropriate. It covers methods to identify high-value use cases, prioritize them based on business impact and feasibility, and define success metrics that track return on investment. Without a clear business plan, organizations risk wasting resources on unsuitable automation scenarios or failing to realize the competitive advantage that agents provide.
 
-## When not to use AI agents?
+## When not to use AI agents
 
 The first step in identifying high-value agent use cases is understanding when *not* to use an agent. Agents introduce nondeterministic behavior, latency, and cost that are unnecessary for many scenarios. By eliminating unsuitable use cases early, you narrow the focus to opportunities where agents deliver measurable business value. This approach prevents wasted effort on projects better served by deterministic code or simpler AI solutions.
 
@@ -39,7 +39,7 @@ Refer to the decision tree below to assess whether your use case is suitable for
 **Microsoft facilitation:**<br>
 See [Microsoft Fabric data science](/fabric/data-science/data-science-overview), prebuilt speech, language, and translator models in [Foundry Tools](/azure/ai-foundry/agents/how-to/tools/azure-ai-speech?view=foundry&preserve-view=true), or [Azure Machine Learning](/azure/machine-learning/overview-what-is-azure-machine-learning).
 
-## When to use AI agents?
+## When to use AI agents
 
 After eliminating unsuitable scenarios, focus on opportunities where agents drive strategic value. Unlike deterministic software that follows a fixed path, agents reason over data and tools to formulate plans. They adapt to variable inputs to achieve a specific goal. This capability bridges the gap between static automation and open-ended generative AI. See also [What is an AI agent?](./index.md#what-is-an-ai-agent).
 
@@ -69,7 +69,7 @@ To maximize return on investment, start by identifying high-impact business area
 **Microsoft facilitation:**<br>
 See the [Microsoft Scenario Library](https://adoption.microsoft.com/scenario-library/), [AI Use Cases catalog](https://www.microsoft.com/ai/use-case), and [Sample Solution Gallery](https://adoption.microsoft.com/sample-solution-gallery/) to benchmark internal ideas against proven patterns.
 
-## How to prioritize AI agent use cases?
+## How to prioritize AI agent use cases
 
 Not all agent initiatives deliver equal value. Prioritize use cases that align with strategic goals and demonstrate impact quickly. Focus on projects that offer high business value and low implementation complexity. Use three criteria to evaluate and rank candidate use cases: business impact (value), technical feasibility (complexity), and user desirability (value). See the following image for a framework on prioritizing AI agent use cases. The guidance that follows walks you through each of the criteria in more detail.
 
