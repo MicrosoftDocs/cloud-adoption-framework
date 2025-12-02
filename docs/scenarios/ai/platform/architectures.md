@@ -1,6 +1,6 @@
 ---
 title: Get AI architecture guidance for Azure platform services (PaaS) for AI
-description: Find AI architectures and guides to build AI workloads with Azure AI platform services like Azure AI Foundry, Azure OpenAI, Azure Machine Learning, and Azure AI Services.
+description: Find AI architectures and guides to build AI workloads with Azure AI platform services like Foundry, Azure OpenAI, Azure Machine Learning, and Azure AI Services.
 author: stephen-sumner
 ms.author: ssumner
 ms.date: 07/01/2025
@@ -19,9 +19,10 @@ Generative AI architectures create new content and enable conversational experie
 
    | Article | Article type | Target organization |
    |---------|--------------|---------------------|
-   | [Baseline Azure AI Foundry chat reference architecture in an Azure landing zone](/azure/architecture/ai-ml/architecture/baseline-azure-ai-foundry-landing-zone) | Architecture | Enterprise |
-   | [Baseline Azure AI Foundry chat reference architecture](/azure/architecture/ai-ml/architecture/baseline-azure-ai-foundry-chat) | Architecture | Any |
-   | [Basic Azure AI Foundry chat reference architecture](/azure/architecture/ai-ml/architecture/basic-azure-ai-foundry-chat) | Architecture | Startup |
+   | [Baseline Foundry chat reference architecture in an Azure landing zone](/azure/architecture/ai-ml/architecture/baseline-azure-ai-foundry-landing-zone) | Architecture | Enterprise |
+   | [AI application landing zone](https://github.com/Azure/AI-Landing-Zones) | Architecture | Any |
+   | [Baseline Foundry chat reference architecture](/azure/architecture/ai-ml/architecture/baseline-azure-ai-foundry-chat) | Architecture | Any |
+   | [Basic Foundry chat reference architecture](/azure/architecture/ai-ml/architecture/basic-azure-ai-foundry-chat) | Architecture | Startup |
 
 2. **Apply operational guidance that supports AI development lifecycle management.** These guides establish practices for model deployment, monitoring, and continuous improvement across development environments. They ensure consistent quality and reliability as AI applications evolve.
 
@@ -81,7 +82,7 @@ The following articles provide best practices for adopting AI workloads using Az
 
 | Category | Tool | Description |
 |----------|------|-------------|
-| Platform Services | [Azure AI Foundry](/azure/ai-foundry/what-is-azure-ai-foundry) | Unified platform for building and deploying generative and nongenerative AI applications |
+| Platform Services | [Foundry](/azure/ai-foundry/what-is-azure-ai-foundry) | Unified platform for building and deploying generative and nongenerative AI applications |
 | Platform Services | [Azure OpenAI](/azure/ai-services/openai/) | Access to OpenAI models with enterprise security and compliance |
 | Platform Services | [Azure Machine Learning](/azure/machine-learning/overview-what-is-azure-machine-learning) | End-to-end machine learning lifecycle management platform |
 | Platform Services | [Azure AI Services](/azure/ai-services/what-are-ai-services) | Prebuilt AI capabilities for vision, speech, language, and decision making |

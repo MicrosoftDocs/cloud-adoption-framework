@@ -1,35 +1,106 @@
-Create guidance for Microsoft's Cloud Adoption Framework.
-The Cloud Adoption Framework is a self-service guide to help all customers of all sizes succeed and mature in Azure.
-Target audience is technical decision makers, not implementers.
-Ensure technical accuracy against https://github.com/microsoftdocs/mcp. 
+**Purpose:**  
+Ensure the guidance is practical for enterprise architects. Rather than providing guidance that covers everything concisely, focus on the major decision points and provide enough context so that they are successful with those understand what they need to do. The output should help readers make informed decisions. Focus on the most important guidance so that the guidance there is well understood and explained but the overall length of the article is still actionable.
 
-## Template
-Review all the content to ensure it aligns with the following template. Don't make the content more concise. Just apply the template to what's there.
+- **Business and Strategy Guidance (Implicitly targets CTOs and C-suite)**
+    - Align technology decisions with business strategy and competitive advantage.
+    - Manage organizational change, financial impact (ROI), and high-level risk.
+    - Drive innovation velocity and market responsiveness.
+- **Planning, Governance, Security, and Operations Guidance (Implicitly targets Enterprise Architects)**
+    - Manage complexity, interoperability, and standardization across the cloud estate.
+    - Ensure scalability, compliance, and security governance.
+    - Drive modernization and consistent cloud adoption patterns.
+    - Architecture cohesion: How all workloads fit together.
 
-    Template:{
+#### **Core Objectives**
 
-    # Article title must be goal oriented
-     If reviewing the entire article, start the article by stating what the article is about. Define any technical terms. Explain why the guidance in this article is important. Then the rest of the article details the major sequential steps to achieve the goal.
+1. **Improve clarity and actionability**
+    - Ensure recommendations are easy to understand and implement.
+    - Maintain a logical flow across sections.
 
-    ## Each heading must be a prescriptive recommendation that represents a significant milestone in the context of article.
+2. **Provide decision context**
+    - Explain *why* each recommendation matters.
+    - Include trade-offs and implications for organizational outcomes.
+    - Highlight best practices and rationale behind choices.
 
-    Provide context about what, why, and how to implement this prescriptive recommendation. Don't state: what, why, or how. Address them implicitly. Define any terms to ensure clarity. Then tell customers how to act on this prescriptive recommendation in logical order. Start with what must come first and then next etc. Use numbered lists to enforce sequentially and review to ensure recommendations are logically sequential. Don't make this intro overly concise.
+3. **Focus on key concerns**
+    - Address the most critical considerations for the specific audience implied by the topic.
+    - Avoid unnecessary detail; consolidate information into high-value insights.
 
-    1. **Start with a concise bold, numbered, prescriptive, imperative recommendation that indicates how to reach the {goal} and ends in a period.** Then explain what, why, and how to implement this prescriptive recommendation without stating what, why, or how. Address them implicitly. Define any terms to ensure clarity. Then tell customers how to act on this prescriptive recommendation. Next explain how to follow this recommendation, making it actionable and noting any tradeoffs that are present to help users make the right decision fast. Provide enough context and explanation to make it easy to act on. Use prose narrative and ensure a nice flow for clarity.
+#### **Persona Awareness (Implicit)**
 
-        Use as many {numbered imperative recommendations} as needed and follow the same instructions above for each.
+The agent should **address priorities without naming roles explicitly**. Adjust the altitude of the guidance based on the subject matter:
 
-    ## Add as many headings and sub-headings as needed. Enforce the same style and format throughout.
-    }
+1. **For Business and Strategy topics:** Speak to ROI, value, risk, and strategic busiess alignment (C-suite concerns).
+2. **For Governance, Security, and Estate Planning:** Speak to standards, cohesion, and policy (Enterprise Architect concerns).
 
-## Style and formatting instructions:    
-Replace all gerunds (verbs ending in -ing) with more direct and active structures to enhance clarity and engagement.
-Replace all content in the future tense with the present tense.
-Replace all em dashes with alternative punctuation or phrasing to improve readability.
-Add a logical noun referent after all demonstrative pronouns (this, that, these, those) to clarify the subject.
-Convert all passive voice constructions into active voice.
-Replace all instances of 'may' with direct and actionable instructions.
-Replace any emotional or marketing language with precise and descriptive terminology.
-Replace all adverbs with more precise verbs to enhance clarity and directness in the writing.
-Replace 'leverage' or 'leverages' with 'use' or 'uses'.
-Review all images to ensure their content aligns with the written guidance and supports the recommendations.
+**Instruction:**  
+Do **not** create separate sections for persona or mention them by name. Instead, produce one cohesive set of guidance that implicitly addresses these concerns at the right altitude for the topic being discussed.
+
+***
+
+#### **Grounding and Accuracy Rules**
+
+- Verify technical accuracy against the grounding data.
+
+#### **Content Rules**
+
+- **Do not include meta-commentary or implementation notes** (e.g., “I can help you…” or “Here’s the revised content”).
+- Do **not introduce new recommendations unless correcting inaccuracies or improving clarity based on grounded data**.
+- **Avoid strings of imperatives**. Each recommendation must:
+    - Begin with a **clear, concise heading** (imperative or noun phrase).
+    - Follow with **context and reasoning** that explains:
+        - Why this matters.
+        - What trade-offs exist.
+        - How it supports organizational goals.
+- Use **headings** for major topics. Use **numbered steps** for multi-step processes.
+- When using numbered lists:
+    - Format each item as:
+            1. **[Short imperative or noun phrase].** [Explanatory text starts on the same line.]
+    - Ensure the period is inside the bold text.
+    - Do not keep the explanation on the same line as the heading.
+- Keep tone **authoritative but advisory**, guiding decision-making rather than commanding.
+- Avoid:
+    - Explicit role names.
+    - Em dashes.
+    - Emotional or marketing language.
+    - Using ;
+- Replace:
+    - Gerunds with active verbs.
+    - Future tense with present tense.
+    - Passive voice with active voice.
+    - “May” with direct, actionable phrasing.
+    - “Leverage” with “use.”
+- Add:
+    - Clear noun referents after demonstrative pronouns.
+- Ensure:
+    - Sentence case for all headers.
+    - Simple sentence structures.
+    - Images support and align with guidance.
+    - Narrative flow is smooth and connected.
+    - Preserve all existing links.
+
+***
+
+#### **Template**
+
+    # [Descriptive Noun Phrase Title]
+
+    "This article ..." then summarize what the article covers. Descriptively explain why this article is important to the enterprise architect. Explain what would happen if you don't follow this guidance.
+
+    ## [Section Heading]
+
+    Explain the decision point, available options, trade-offs, and best practices. Provide concise, actionable recommendations with supporting rationale.
+
+    ## [Additional Sections as Needed]
+
+    Follow the same structure for each major topic.
+
+***
+
+### ✅ **Key Principles for Output**
+
+- Recommendations should **always include reasoning and trade-offs**, not just imperatives.
+- Keep explanations **focused on top concerns** for the topic.
+- Provide enough context for informed decisions without overwhelming detail.
+- Output should look like **final published guidance**, not instructions or commentary.
+- Preserve all existing links.

@@ -52,7 +52,7 @@ An organization's strategic objectives are often the basis for adopting Azure Vi
 
 - **Potential cost savings**. An organization can consider Azure to be an operational cost rather than an upfront cost, because pricing is based on consumption. For example, the charge for using a virtual machine is based on the time that it's active, which can realize cost savings for the organization.
 
-Customers often have motivations in all of the preceding categories. To successfully implement Azure Virtual Desktop, it's imperative for your cloud strategy team—including your business and IT leaders—to review and prioritize the motivations that are identified in [Why are we moving to the cloud?](../../strategy/motivations.md) Having your priorities documented helps your cloud adoption team to make informed decisions throughout implementation.
+Customers often have motivations in all of the preceding categories. To successfully implement Azure Virtual Desktop, it's imperative for your cloud strategy team, including your business and IT leaders, to review and prioritize the motivations that are identified in [Why are we moving to the cloud?](../../strategy/motivations.md) Having your priorities documented helps your cloud adoption team to make informed decisions throughout implementation.
 
 When deciding whether to adopt Azure Virtual Desktop, your cloud strategy should consider the following factors:
 

@@ -461,8 +461,6 @@ items:
             href: /azure/architecture/virtual-machines/baseline-landing-zone
           - name: Citrix on Azure
             href: scenarios/azure-virtual-desktop/landing-zone-citrix/citrix-enterprise-scale-landing-zone.md
-          - name: High-performance computing
-            href: scenarios/azure-hpc/azure-hpc-landing-zone-accelerator.md
           - name: Oracle on Azure
             href: scenarios/oracle-on-azure/oracle-landing-zone-accelerator.md
           - name: SAP on Azure
@@ -511,28 +509,10 @@ items:
       - name: 4. Protect Azure
         href: manage/protect.md
   
-  - name: Quick setup guide
+  - name: Scenarios
     items:
-    - name: Set up identity
-      href: ready/azure-setup-guide/identity.md
-    - name: Organize resources
-      href: ready/azure-setup-guide/organize-resources.md
-    - name: Set up governance
-      href: ready/azure-setup-guide/governance-compliance.md
-    - name: Create subscriptions
-      href: ready/azure-setup-guide/initial-subscriptions.md
-    - name: Select regions
-      href: ready/azure-setup-guide/regions.md
-    - name: Manage access
-      href: ready/azure-setup-guide/manage-access.md
-    - name: Manage costs and billing
-      href: ready/azure-setup-guide/manage-costs.md
-    - name: Set up monitoring
-      href: ready/azure-setup-guide/monitoring-reporting.md
-    - name: Stay current with Azure
-      href: ready/azure-setup-guide/staying-current.md  
-  - name: Adoption scenarios
-    items:
+    - name: Agents
+      href: ai-agents/index.md
     - name: AI
       href: scenarios/ai/index.md
     - name: Azure Virtual Desktop
@@ -553,6 +533,26 @@ items:
 
   - name: Resources
     items:
+    - name: Quick setup guide
+      items:
+      - name: Set up identity
+        href: ready/azure-setup-guide/identity.md
+      - name: Organize resources
+        href: ready/azure-setup-guide/organize-resources.md
+      - name: Set up governance
+        href: ready/azure-setup-guide/governance-compliance.md
+      - name: Create subscriptions
+        href: ready/azure-setup-guide/initial-subscriptions.md
+      - name: Select regions
+        href: ready/azure-setup-guide/regions.md
+      - name: Manage access
+        href: ready/azure-setup-guide/manage-access.md
+      - name: Manage costs and billing
+        href: ready/azure-setup-guide/manage-costs.md
+      - name: Set up monitoring
+        href: ready/azure-setup-guide/monitoring-reporting.md
+      - name: Stay current with Azure
+        href: ready/azure-setup-guide/staying-current.md  
     - name: Azure Architecture Center
       href: /azure/architecture/
     - name:  Well-Architected Framework

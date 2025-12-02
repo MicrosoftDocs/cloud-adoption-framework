@@ -28,7 +28,7 @@ The principle of least privilege ensures users receive only the permissions requ
     | Management group | Role permissions apply to all subscriptions and resources within the management group. |
     | Subscription     | Role permissions apply to all resource groups and resources within the subscription. |
     | Resource group   | Role permissions apply to all resources within that resource group.        |
-    | Resource         | Role permissions apply only to the specific resource (for example, an Azure AI Foundry instance). |
+    | Resource         | Role permissions apply only to the specific resource (for example, an Foundry instance). |
 
 For detailed steps, see [Apply Azure RBAC roles](/azure/role-based-access-control/role-assignments-portal).
 
@@ -45,7 +45,7 @@ Instead of assigning roles to individual users, assign them to Microsoft Entra I
     | Business role          | Business need                                                      | Group name         | Azure RBAC role | Scope of permissions       |
     |-------------------|------------------------------------------------------------------|--------------------|-----------------|----------------------------|
     | Subscription owners | Manage access control, governance, and billing across the subscription | Subscription-Owners | Owner           | Subscription level         |
-    | AI developers         | Build and deploy models in Azure AI Foundry                          | AI-Foundry-Dev     | Contributor      | Resource group level       |
+    | AI developers         | Build and deploy models in Foundry                          | AI-Foundry-Dev     | Contributor      | Resource group level       |
     | Finance            | Review billing, usage, and cost reports                                 | Finance-Readers    | Reader           | Subscription level         |
 
 4. **Limit Owner role assignments.** The Owner role grants full access to manage all resources and assign roles in Azure RBAC. Limit this role to three or fewer users per subscription. Review and adjust the default Owner assignment for subscription creators as needed.

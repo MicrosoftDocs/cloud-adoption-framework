@@ -1,0 +1,32 @@
+items:
+  - name: AI Agent adoption overview
+    href: index.md
+  - name: 1. Plan for agents
+    expanded: true
+    items:
+      - name: Business plan
+        href: business-strategy-plan.md
+      - name: Technology plan
+        href: technology-solutions-plan-strategy.md
+      - name: Organizational readiness
+        href: organization-people-readiness-plan.md
+      - name: Data architecture
+        href: data-architecture-plan.md 
+  - name: 2. Govern agents
+    expanded: true
+    items:
+      - name: Responsible AI
+        href: responsible-ai-across-organization.md
+      - name: Org-wide governance
+        href: governance-security-across-organization.md
+      - name: Prepare environment
+        href: governance-security-across-organization.md#prepare-environment
+  - name: 3. Build agents
+    expanded: true
+    items:
+      - name: Single or multiple agents?
+        href: single-agent-multiple-agents.md
+      - name: Process to build agents
+        href: build-secure-process.md
+  - name: 4. Manage agents
+    href: integrate-manage-operate.md
