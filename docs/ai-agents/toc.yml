@@ -28,5 +28,5 @@ items:
         href: single-agent-multiple-agents.md
       - name: Process to build agents
         href: build-secure-process.md
-  - name: 4. Operate agents
+  - name: 4. Manage agents
     href: integrate-manage-operate.md

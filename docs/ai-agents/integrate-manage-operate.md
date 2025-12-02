@@ -1,7 +1,7 @@
 ---
-title: Operate AI agents across your organization
+title: Manage AI agents across your organization
 ms.reviewer: ssumner
-description: Learn how to integrate and manage AI agents across your organization to enhance workflows, ensure security, and optimize costs with Microsoft tools.
+description: Learn how to integrate and operate AI agents across your organization to enhance workflows, ensure security, and optimize costs with Microsoft tools.
 #customer intent: As an enterprise architect, I want to understand how to operate AI agents effectively. This includes how to roll them out, improve and manage them across their lifecycle, ensure appropriate quota allocation, and optimize costs. Additionally, I want guidance on administering agents across the entire organization.
 author: stephen-sumner
 ms.author: pnp
@@ -11,9 +11,9 @@ ms.topic: article
 ms.collection: ce-skilling-ai-copilot
 ---
 
-# Operate AI agents across your organization
+# Manage AI agents across your organization
 
-This article provides guidance on integrating AI agents into business workflows and managing their lifecycle from deployment to retirement. Operational excellence ensures that agents deliver consistent value while maintaining security, compliance, and cost efficiency at scale. Learning to how to **Operate agents** is the final step in the AI agent adoption process (*see figure 1*).
+This article provides guidance on integrating AI agents into business workflows and managing their lifecycle from deployment to retirement. Operational excellence ensures that agents deliver consistent value while maintaining security, compliance, and cost efficiency at scale. Learning to how to **Manage agents** is the final step in the AI agent adoption process (*see figure 1*).
 
 :::image type="content" source="./images/ai-agent-adoption.svg" alt-text="Diagram that shows the process outlined in this guidance: plan, govern, build and secure, integrate, and measure agents across your organization." lightbox="./images/ai-agent-adoption.svg" border="false":::
 *Figure 1. Microsoft's AI agent adoption process.*
@@ -24,7 +24,7 @@ Integrating agents into daily operations requires a disciplined approach that ba
 
 Integration places agents where work happens, whether automating existing tasks or enabling new capabilities. Successful integration requires phased deployment strategies and standardized development patterns that accelerate adoption while maintaining operational control.
 
-### AI agent rollout strategy
+### Business integration for AI agents
 
 Rolling out AI agents requires a disciplined approach that balances speed with control. Organizations that deploy too quickly overwhelm support teams and damage user trust when issues arise. Conversely, those that move too slowly miss competitive opportunities while pilot fatigue sets in. The following phased deployment approach validates technical stability and operational readiness at each stage while building organizational confidence in AI capabilities.
 
@@ -39,7 +39,7 @@ Rolling out AI agents requires a disciplined approach that balances speed with c
 
 :::image type="icon" source="./images/copilot-studio-icon.png"::: **Copilot Studio:** Use [analytics](/microsoft-copilot-studio/analytics-summary) to track engagement and [conversation metrics](/microsoft-copilot-studio/analytics-improve-agent-effectiveness).
 
-### AI agent standardization and feedback
+### Standardization of AI agents
 
 Standardization accelerates adoption and ensures consistent governance, while continuous feedback mechanisms prevent agent capabilities from drifting away from user needs. Without these patterns, organizations face fragmented development efforts and agents that fail to evolve with business requirements.
 
@@ -52,7 +52,7 @@ Standardization accelerates adoption and ensures consistent governance, while co
 
 :::image type="icon" source="./images/copilot-studio-icon.png"::: **Copilot Studio:** Use [agent builder templates](/microsoft-365-copilot/extensibility/agent-builder-templates) to accelerate integration and ensure consistency across deployments.
 
-## Manage AI agents
+## Operate AI agents
 
 Management ensures operational excellence as agents scale across the organization. Without centralized oversight and active lifecycle management, organizations face shadow AI proliferation, budget overruns, and security vulnerabilities. Operations teams must transition from deployment focus to continuous management that maintains governance effectiveness and cost optimization.
 
@@ -60,7 +60,7 @@ Management ensures operational excellence as agents scale across the organizatio
     This diagram illustrates the key operational management activities required to maintain AI agents at scale. It includes retiring unused agents, monitoring costs and compliance, adjusting resource allocation based on usage patterns, and centralizing governance through unified administration tools.
 :::image-end:::
 
-### AI agents asset lifecycle management
+### Asset lifecycle management for AI agents
 
 Lifecycle management ensures that the AI agent estate remains secure, cost-effective, and aligned with business goals as it evolves. The challenge lies in standardizing operations across disparate teams to prevent fragmentation. Without a unified approach to lifecycle management, organizations risk accumulating technical debt, sustaining unused agents, and losing visibility into operational risks.
 
@@ -77,7 +77,7 @@ Lifecycle management ensures that the AI agent estate remains secure, cost-effec
 
 :::image type="icon" source="./images/copilot-studio-icon.png"::: **Copilot Studio**: Use [analytics](/microsoft-copilot-studio/analytics-summary) to monitor token usage per session and identify high-cost skills. Implement [Azure API Management](/azure/api-management/api-management-key-concepts) to enforce throttling and logging policies.
 
-### AI agents compliance and security
+### Compliance and security of AI agents
 
 Continuous compliance ensures that AI agents remain secure and aligned with regulatory standards as they evolve. Without ongoing monitoring, static security configurations quickly become obsolete, exposing the organization to data leakage, regulatory fines, and reputational damage. Operations teams must automate policy enforcement and integrate agent security into broader organizational defense strategies.
 
@@ -92,7 +92,7 @@ Continuous compliance ensures that AI agents remain secure and aligned with regu
 
 :::image type="icon" source="./images/copilot-studio-icon.png"::: **Copilot Studio**: Use [Data Loss Prevention (DLP) policies](/microsoft-copilot-studio/admin-data-loss-prevention) to control data flow and connector usage.
 
-### AI agents quota optimization
+### Quota optimization of AI agents
 
 Quota optimization ensures that agent workloads receive necessary resources while preventing cost overruns from inefficient usage. Without active quota management, organizations risk service interruptions for high-value agents due to resource exhaustion by lower-priority tasks. Operations teams must balance availability requirements against budget constraints through dynamic allocation strategies.
 
@@ -107,7 +107,7 @@ Quota optimization ensures that agent workloads receive necessary resources whil
 
 :::image type="icon" source="./images/copilot-studio-icon.png"::: **Copilot Studio**: [Review usage and message allocation](/microsoft-copilot-studio/requirements-messages-management) to manage consumption and optimize licensing.
 
-### AI agents administration
+### Administration of AI agents
 
 Administration centralizes control over the AI agent ecosystem to ensure consistency, security, and operational efficiency. Without unified administration, organizations face fragmented governance, inconsistent policy enforcement, and difficulty responding to widespread incidents. Effective administration requires visibility into all deployments and the ability to enforce controls.
 
