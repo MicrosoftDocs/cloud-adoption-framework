@@ -20,6 +20,7 @@ Generative AI architectures create new content and enable conversational experie
    | Article | Article type | Target organization |
    |---------|--------------|---------------------|
    | [Baseline Foundry chat reference architecture in an Azure landing zone](/azure/architecture/ai-ml/architecture/baseline-azure-ai-foundry-landing-zone) | Architecture | Enterprise |
+   | [AI application landing zone](https://github.com/Azure/AI-Landing-Zones) | Architecture | Any |
    | [Baseline Foundry chat reference architecture](/azure/architecture/ai-ml/architecture/baseline-azure-ai-foundry-chat) | Architecture | Any |
    | [Basic Foundry chat reference architecture](/azure/architecture/ai-ml/architecture/basic-azure-ai-foundry-chat) | Architecture | Startup |
 
