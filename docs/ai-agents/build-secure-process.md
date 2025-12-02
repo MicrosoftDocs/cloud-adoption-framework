@@ -1,7 +1,7 @@
 ---
-title: Process to Build AI agents with Microsoft Foundry and Copilot Studio
+title: Process to build agents process across your organization with Microsoft Foundry and Copilot Studio
 ms.reviewer: ssumner
-description: Learn how to build and secure AI agents using Microsoft Foundry and Microsoft Copilot Studio. Follow a strategic framework for consistent, governed development.
+description: Learn how to build and secure AI agents across your organization using Microsoft Foundry and Microsoft Copilot Studio. Follow a strategic framework for consistent, governed development.
 #customer intent: As an enterprise architect, I want to gain a clear understanding of the processes and decision-making involved in building AI agents across my organization—particularly within the Microsoft ecosystem—using Microsoft Foundry as the primary platform and Microsoft Copilot Studio as a complementary tool.
 author: stephen-sumner
 ms.author: pnp
@@ -11,14 +11,16 @@ ms.topic: article
 ms.collection: ce-skilling-ai-copilot
 ---
 
-# Process to build AI agents
+# Process to build agents across your organization
 
-This article outlines the standardized process that teams must follow to build AI agents consistently across the organization. It defines the critical decision points for orchestration, model selection, data integration, and security that ensure agents align with enterprise standards. This guidance focuses on the governance and structural decisions required to support development teams, rather than the technical implementation of individual workloads. Understanding this process is the final component of the **Build agents** phase in the AI agent adoption process (*see figure 1*).
+This article outlines the standardized process that teams must follow to build AI agents consistently across the organization. This guidance focuses on the governance and structural decisions required to support development teams, rather than the technical implementation of individual workloads. Understanding this process is the final component of the **Build agents** phase in the AI agent adoption process (*see figure 1*).
 
 :::image type="content" source="./images/ai-agent-adoption.svg" alt-text="Diagram that shows the process outlined in this guidance: plan, govern, build and secure, integrate, and measure agents across your organization." lightbox="./images/ai-agent-adoption.svg" border="false":::
 *Figure 1. Microsoft's AI agent adoption process.*
 
-Without a unified development process, organizations face unmanaged agent proliferation, incompatible architectures, and significant security vulnerabilities. These issues create technical debt and increase operational risk, preventing the organization from scaling AI adoption effectively.
+Without a unified development process, organizations experience uncontrolled agent sprawl, inconsistent architectures, and critical security gaps. These problems accumulate as technical debt and operational risk, preventing the organization from scaling AI adoption effectively. This five-step process addresses the essential decisions teams must make during agent development: how agents coordinate work (orchestration), which models match specific tasks (model selection), how agents access data and systems (knowledge and tools), what visibility teams need for reliable operations (observability), and which controls prevent harmful outputs (security). Following this structured approach reduces deployment complexity, ensures regulatory compliance, and enables scalable agent adoption while maintaining organizational control.
+
+:::image type="content" source="./images/build-ai-agents.png" alt-text="Diagram showing five steps to build agents: Orchestration, Models, Knowledge & Tools, Observability, Security. The center highlights Microsoft Foundry and Copilot Studio as two platforms for Microsoft Build." lightbox="./images/build-ai-agents.png" border="false":::
 
 ## 1. Agent orchestration
 

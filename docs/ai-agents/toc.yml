@@ -26,7 +26,7 @@ items:
     items:
       - name: Single or multiple agents?
         href: single-agent-multiple-agents.md
-      - name: Understand the build process
+      - name: Process to build agents
         href: build-secure-process.md
   - name: 4. Operate agents
     href: integrate-manage-operate.md
