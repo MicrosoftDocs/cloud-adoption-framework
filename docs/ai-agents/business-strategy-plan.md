@@ -24,8 +24,6 @@ This guidance helps you determine when AI agents deliver measurable business val
 
 The first step in identifying high-value agent use cases is understanding when *not* to use an agent. Agents introduce nondeterministic behavior, latency, and cost that are unnecessary for many scenarios. By eliminating unsuitable use cases early, you narrow the focus to opportunities where agents deliver measurable business value. This approach prevents wasted effort on projects better served by deterministic code or simpler AI solutions.
 
-Assess whether a deterministic or structured approach is more suitable before building an agent. If a process follows predictable logic with well-defined inputs and outputs, standard automation or nongenerative AI models are faster, cheaper, and more reliable.
-
 - **Structured and predictable tasks.** Use deterministic code or nongenerative AI models when the workflow is predictable, rule-based, and doesn't require reasoning. If a process follows a fixed path with well-defined inputs and outputs, deterministic code or nongenerative AI models is faster, cheaper, and more reliable.
 
 - **Static knowledge retrieval.** Use standard Retrieval-Augmented Generation (RAG) when the goal is answering questions or generating content from a fixed index. If the workflow doesn't require tool execution or multi-step reasoning, an agent adds unnecessary complexity. Standard generative AI applications are sufficient for single-turn interactions where the system summarizes data or answers questions without orchestration. Examples include FAQ bots, document search with generative summaries, and knowledge base assistants. See [RAG](/azure/ai-foundry/concepts/retrieval-augmented-generation?view=foundry&preserve-view=true).
