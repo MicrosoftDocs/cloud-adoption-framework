@@ -1,5 +1,5 @@
 ---
-title: Choosing Between building a single agent or multiple agents
+title: Choosing Between Building a Single-Agent System or Multi-Agent System
 ms.reviewer: ssumner
 description: Explore decision criteria for selecting single-agent or multi-agent architectures to optimize AI-powered solutions for your organization.
 #customer intent: As an enterprise architect I want to help my teams across my organization understand the standards and criteria for building single agents for a particular system or a multi agent
@@ -13,7 +13,7 @@ ms.collection: ce-skilling-ai-copilot
 
 # Single agent or multiple agents
 
-This article helps you determine whether to build a single-agent or multi-agent architecture when implementing AI solutions. Organizations face this critical decision during the **Build agents** phase of AI agent adoption (*see figure 1*).
+This article helps you determine whether to build a single-agent or multi-agent systems when implementing AI agent solutions. Organizations face this decision during the **Build agents** phase of AI agent adoption (*see figure 1*).
 
 :::image type="content" source="./images/ai-agent-adoption.svg" alt-text="Diagram that shows the process outlined in this guidance: plan, govern, build and secure, integrate, and measure agents across your organization." lightbox="./images/ai-agent-adoption.svg" border="false":::
 *Figure 1. Microsoft's AI agent adoption process.*
