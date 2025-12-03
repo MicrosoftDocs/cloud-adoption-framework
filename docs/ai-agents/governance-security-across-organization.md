@@ -1,5 +1,5 @@
 ---
-title: Governance for AI agents across the organization
+title: Governance and security for AI agents across the organization
 ms.reviewer: ssumner
 description: Explore best practices for governing AI agents, from data residency laws to corporate compliance, to ensure secure and responsible AI deployment.
 #customer intent: As a CTO or enterprise architect, I want to understand how to implement governance across the organization. I need to develop policies that apply universally and can be enforced by the compliance team. Additionally, I want to learn about the controls and solutions Microsoft provides to help facilitate this governance.
@@ -11,7 +11,7 @@ ms.topic: article
 ms.collection: ce-skilling-ai-copilot
 ---
 
-# Governance for AI agents across the organization
+# Governance and security for AI agents across the organization
 
 This article explains how to establish governance and security practices for AI agents across your organization. The formation of AI agent governance policies is critical to the **Govern agents** step in the AI agent adoption process (*see figure 1*).
 

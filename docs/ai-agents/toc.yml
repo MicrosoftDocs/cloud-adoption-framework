@@ -12,12 +12,12 @@ items:
         href: organization-people-readiness-plan.md
       - name: Data architecture
         href: data-architecture-plan.md 
-  - name: 2. Govern agents
+  - name: 2. Govern & secure agents
     expanded: true
     items:
       - name: Responsible AI
         href: responsible-ai-across-organization.md
-      - name: Org-wide governance
+      - name: Governance and security
         href: governance-security-across-organization.md
       - name: Prepare environment
         href: governance-security-across-organization.md#prepare-environment
