@@ -4,7 +4,7 @@ description: #Describe how this scenario can improve security, for {{Insert-acce
 author: {{Token-ContributorGithubId}}
 ms.author: {{Token-Alias}}
 ms.date: {{Token-Date}}
-ms.topic: conceptual
+ms.topic: article
 ms.custom: think-tank
 ---
 
