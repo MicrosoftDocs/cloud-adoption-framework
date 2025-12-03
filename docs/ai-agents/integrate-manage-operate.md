@@ -15,10 +15,10 @@ ms.collection: ce-skilling-ai-copilot
 
 This article provides guidance on integrating AI agents into business workflows and managing their lifecycle from deployment to retirement. Operational excellence ensures that agents deliver consistent value while maintaining security, compliance, and cost efficiency at scale. Learning how to **Manage agents** is the final step in the AI agent adoption process (*see figure 1*).
 
+Integrating agents into daily operations requires a approach that balances adoption with standardization. You must establish standardized patterns for rollout, monitoring, and maintenance to prevent technical debt and operational fragmentation. Without these controls, organizations face shadow AI proliferation, unpredictable budget overruns, and the accumulation of unused agents that expand the attack surface. This guidance helps you transition agents from development pilots into reliable, managed enterprise assets.
+
 :::image type="content" source="./images/ai-agent-adoption.svg" alt-text="Diagram that shows the process outlined in this guidance: plan, govern, build and secure, integrate, and measure agents across your organization." lightbox="./images/ai-agent-adoption.svg" border="false":::
 *Figure 1. Microsoft's AI agent adoption process.*
-
-Integrating agents into daily operations requires a disciplined approach that balances rapid adoption with robust governance. You must establish standardized patterns for rollout, monitoring, and maintenance to prevent technical debt and operational fragmentation. Without these controls, organizations face shadow AI proliferation, unpredictable budget overruns, and the accumulation of unused agents that expand the attack surface. This guidance helps you transition agents from development pilots into reliable, managed enterprise assets.
 
 ## Integrate AI agents
 
