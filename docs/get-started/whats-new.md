@@ -3,7 +3,7 @@ title: What's New in the Microsoft Cloud Adoption Framework
 description: Learn about recent updates to the Microsoft Cloud Adoption Framework for Azure.
 author: stephen-sumner
 ms.author: pnp
-ms.date: 11/05/2025
+ms.date: 12/04/2025
 ai-usage: ai-assisted
 ms.update-cycle: 180-days
 ms.topic: concept-article
@@ -15,6 +15,34 @@ ms.custom: UpdateFrequency.5, historical
 We build the Microsoft Cloud Adoption Framework collaboratively with our customers, partners, and internal Microsoft Teams. We release new and updated content for the framework as it becomes available. These new releases pose an opportunity for you to test, validate, and refine the Cloud Adoption Framework guidance along with us.
 
 Partner with us in our ongoing effort to develop the Cloud Adoption Framework.
+
+## November 2025
+
+### Updated articles
+
+- [Govern Azure platform as a service (PaaS) solutions for AI](./scenarios/ai/platform/governance.md): We improved explanations of key concepts like provisioned throughput units (PTUs), retrieval-augmented generation (RAG), and role-based access control (RBAC) by adding definitions and practical examples. We also reorganized content into clearer steps and added concrete examples, like using a generative AI gateway to manage costs and implementing version control for training datasets.
+
+- [Select Azure PaaS solutions for AI](./scenarios/ai/platform/resource-selection.md): We simplified language throughout the article, converted workflow descriptions to use numbered lists for better scannability, and refined resource selection steps to be more concise and actionable. We also updated terminology, like changing *Azure Cache for Redis* to *Azure Managed Redis* to reflect current product naming.
+
+- [Secure Azure PaaS for AI](./scenarios/ai/platform/security.md): We simplified language throughout the article by removing passive voice and converting complex sentences to more direct phrasing, which makes security recommendations easier to understand and implement. We also reformatted reference links as a bulleted list and updated the resource table descriptions for better scannability.
+
+- [Security considerations for the Azure Integration Services landing zone accelerator](./scenarios/app-platform/integration-services/security.md): We updated the integration services security guidance to fix typos, correct grammatical errors, and improve consistency. We also cleaned up link formatting by removing unnecessary URL parameters.
+
+- [Governance, security, and compliance baseline for Azure Arc-enabled Kubernetes](./scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-governance-disciplines.md): We fixed typos, improved clarity, and corrected grammatical errors. We also standardized capitalization for *Kubernetes*.
+
+- [Enterprise-scale support for Azure Virtual Desktop](./scenarios/azure-virtual-desktop/enterprise-scale-landing-zone.md): We removed the introductory Cloud Adoption Framework fundamentals section and replaced verbose explanations with more concise, direct language throughout the article. We also fixed typos, removed emoji icons from design area lists, and standardized terminology.
+
+- [Business continuity and disaster recovery for Azure Virtual Desktop](./scenarios/azure-virtual-desktop/eslz-business-continuity-and-disaster-recovery.md): We clarified the active-active host pool section by explaining the two-region setup with user assignment and failover procedures, and we added guidance about FSLogix profile storage behavior in the active-passive scenario. We also standardized headings for consistency.
+
+- [Microsoft Cloud Adoption Framework](.//overview.md): We simplified the introduction by removing excessive detail, consolidated the foundational and operational methodology tables into a single table, and replaced section headings with more direct language. We also removed the *Quick Start* section and reduced the scenarios section to focus on the most relevant options with clearer descriptions.
+
+- [Storage considerations for AKS](./scenarios/app-platform/aks/storage.md): We improved formatting consistency and fixed minor typos. We standardized capitalization and reformatted all recommendation bullet points to use consistent indentation. We also cleaned up link formatting by removing unnecessary URL parameters and improved readability in the network planning section.
+
+- [SAP on Azure landing zone accelerator](./scenarios/sap/enterprise-scale-landing-zone.md): We improved clarity and formatting. We simplified the zone resilience policy explanation by removing verbose phrasing and making the recommendation more direct and actionable. We also reformatted the Azure Center for SAP solutions capabilities section by converting inline bold headings to proper headings for better document structure and scannability.
+
+- [Manage your cloud estate with enhanced security](./secure/manage.md): We improved formatting consistency and clarity. We standardized indentation for nested bullet points under incident preparedness and Azure facilitation sections, and we enhanced the business continuity and disaster recovery recommendation by clarifying the distinction between disaster recovery planning and resilient architecture design with more precise, actionable language.
+
+- [Prepare your secure cloud estate](./secure/ready.md): We improved terminology and formatting. We changed *resiliency* to *reliability* throughout the availability section to align with Well-Architected Framework terminology. We also clarified the distinction between resilience patterns and recoverability mechanisms in the design recommendation, and standardized spacing between bullet points for better readability.
 
 ## October 2025
 
@@ -393,35 +421,3 @@ We made security updates to the following Cloud Scale Analytics articles:
 - [Authentication for cloud-scale analytics in Azure](../scenarios/cloud-scale-analytics/secure-authentication.md)
 - [Data privacy for cloud-scale analytics in Azure](../scenarios/cloud-scale-analytics/secure-data-privacy.md)
 - [Integrate cloud-scale analytics into your cloud adoption strategy](../scenarios/cloud-scale-analytics/strategy.md)
-
-## November 2024
-
-### New articles
-
-- [Well-architected considerations for AI workloads on Azure infrastructure (IaaS)](../scenarios/ai/infrastructure/well-architected.md): Explore the importance of well-architected AI solutions and how to apply the Azure Well-Architected Framework to your AI workloads. Find guidance on reliability, security, cost optimization, operational excellence, and performance efficiency.
-
-#### Secure methodology refresh
-
-This month, we made significant updates to the Secure methodology. The Secure methodology provides guidance on how to secure your cloud environment and protect your data. The methodology includes the following articles:
-
-- [Secure overview](../secure/overview.md): Learn about the Secure methodology and how to apply it to secure your cloud environment. Explore the key components of the Secure methodology, including security principles, security controls, and security best practices.
-- [Security teams, roles, and functions](../secure/teams-roles.md): Learn about the key security teams, roles, and functions that are essential for securing your cloud environment.
-- [Integrate security into your cloud adoption strategy](../secure/strategy.md): Explore key considerations for integrating security into your cloud adoption strategy.
-- [Plan for a secure cloud adoption](../secure/plan.md): Learn about the key considerations for planning a secure cloud adoption and the tools and services you can use to plan for a secure cloud adoption.
-- [Prepare your secure cloud estate](../secure/ready.md): Find guidance on the key considerations for preparing your secure cloud estate and the tools and services you can use to prepare your cloud estate securely.
-- [Perform your cloud adoption securely](../secure/adopt.md): Explore the importance of security in cloud adoption and the key considerations for securely adopting cloud services.
-- [Securely govern your cloud estate](../secure/govern.md): Find guidance on the key considerations for securely governing your cloud estate and the tools and services you can use to securely govern your cloud environment.
-- [Manage your cloud estate with enhanced security](../secure/manage.md): Explore the importance of managing your cloud estate with enhanced security and the key considerations for managing your cloud estate securely.
-
-#### SAP and Power Platform
-
-We introduced new articles that provide guidance on integrating SAP and Power Platform. Learn how to extend an SAP landing zone to support Power Platform, understand the architecture workflow, and explore the fundamentals of SAP and Power Platform integration.
-
-- [SAP and Microsoft Power Platform architecture workflow](../scenarios/sap/sap-power-platform-architecture-workflow.md): Find guidance on how to design, deploy, and manage an integrated SAP and Power Platform solution. Explore the key components of the architecture, including SAP systems, Azure services, and Power Platform components.
-- [Extend an SAP landing zone to support Microsoft Power Platform](../scenarios/sap/sap-power-platform-extend-landing-zone.md): Learn how to extend an SAP landing zone to support Power Platform.
-- [SAP and Power Platform fundamentals](../scenarios/sap/sap-power-platform-fundamental.md): Explore the fundamentals of integrating SAP and Power Platform. Learn about the benefits of integrating SAP and Power Platform, the key components of the integration, and the architecture considerations for a successful integration.
-
-### Updated articles
-
-- [Azure API Management landing zone accelerator](../scenarios/app-platform/api-management/landing-zone-accelerator.md): Find new guidance on generative AI gateway scenarios and how to use them in your API Management landing zone as well as new architecture examples.
-- [Introduction to Oracle on Azure adoption scenarios](../scenarios/oracle-on-azure/index.md): Explore new guidance on multi-region design for Oracle workloads on Azure, enhancing availability, scalability, and disaster recovery.
