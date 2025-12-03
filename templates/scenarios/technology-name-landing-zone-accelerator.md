@@ -4,7 +4,7 @@ description: #Describe how enterprise-scale can accelerate adoption of {{Token-N
 author: {{Token-ContributorGithubId}}
 ms.author: {{Token-Alias}}
 ms.date: {{Token-Date}}
-ms.topic: conceptual
+ms.topic: article
 ms.custom: think-tank
 ---
 
