@@ -15,7 +15,7 @@ This article explains how to define and enforce governance rules in Azure using 
 
 ## Establish governance policies
 
-Setting clear rules helps you stay consistent and avoiding mistakes as you build in the cloud. These rules guide how you use Azure and help you manage risks like overspending, misconfigurations, or security gaps.
+Setting clear rules helps you stay consistent and avoid mistakes as you build in the cloud. These rules guide how you use Azure and help you manage risks like overspending, misconfigurations, or security gaps.
 
 1. **Start by identifying risks that could affect your cloud setup.** Think about what could go wrong, like deploying resources in the wrong region, using expensive services by accident, or missing security settings. Use the [Assess cloud risks](/azure/cloud-adoption-framework/govern/assess-cloud-risks) guide to explore common risks and decide which ones matter most to you.
 
