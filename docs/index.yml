@@ -1,17 +1,17 @@
 ### YamlMime:Hub
 
 title: Microsoft Cloud Adoption Framework
-summary: Proven guidance to be successful in Azure.
+summary: Proven guidance to be successful in the cloud.
 brand: azure
 
 metadata:
 
   title: Microsoft Cloud Adoption Framework
-  description: Proven guidance to be successful in Azure.
+  description: Proven guidance to be successful in the cloud.
   services: cloud-adoption-framework
   author: stephen-sumner
   ms.author: pnp
-  ms.date: 06/01/2025
+  ms.date: 12/01/2025
   ms.topic: hub-page
   ms.subservice: caf-general
 # Maximum of 8 items
@@ -23,27 +23,21 @@ highlightedContent:
   items:
 
     # Card
-    - title: Cloud Adoption Framework overview
+    - title: Introduction
       itemType: overview
       url: ./overview.md
+    - title: Agents
+      itemType: concept
+      url: ./ai-agents/index.md
     - title: AI adoption
       itemType: how-to-guide
       url: ./scenarios/ai/index.md
     - title: Azure landing zone
       itemType: architecture
       url: ./ready/landing-zone/index.md    
-    - title: Adoption scenarios
+    - title: Scenarios
       itemType: get-started
       url: ./overview.md#cloud-adoption-framework-scenarios
-    - title: Create an Azure account
-      itemType: get-started
-      url: https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn
-    - title: Claim startup credits
-      itemType: get-started
-      url: https://www.microsoft.com/en-us/startups
-    - title: Quick setup guide
-      itemType: how-to-guide
-      url: ./ready/azure-setup-guide/identity.md
 
 
 # Card with summary style
@@ -52,8 +46,8 @@ additionalContent:
 
   # Supports up to 3 sections
   sections:
-    - title: Cloud Adoption Framework methodologies  # < 60 chars (optional)
-      summary: Proven guidance for each phase of the cloud journey.  # < 160 chars (optional)
+    - title: Guidance  # < 60 chars (optional)
+     # < 160 chars (optional)
       items:
 
         # Card
@@ -100,8 +94,7 @@ additionalContent:
           summary: Manage your entire Azure environment.
           url: ./manage/index.md
 
-    - title: Workload design guidance
-      summary: Use the Well-Architected Framework and Azure Architecture Center to build Azure solutions.  # < 160 chars (optional)
+    - title: Workload design guidance # < 160 chars (optional)
       items: 
 
         # Card
@@ -116,7 +109,7 @@ additionalContent:
 
 
     - title: Find help  # < 60 chars (optional)
-      summary: Microsoft has dedicated resources to support your Azure adoption journey.  # < 160 chars (optional)
+ # < 160 chars (optional)
       items:
 
         # Card

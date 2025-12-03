@@ -1,9 +1,9 @@
 ---
 title: Security for Oracle Database@Azure
 description: Implement defense-in-depth security architecture and threat protection for Oracle Database@Azure by using Azure Arc integration and Microsoft Defender for Cloud.
-author: basimolimajeed
-ms.author: bamajeed
-ms.reviewer: janfaurs
+author: terrymandin
+ms.author: temandin
+ms.reviewer: terrymandin
 ms.date: 09/01/2025
 ms.topic: concept-article
 ms.custom: e2e-oracle
@@ -39,24 +39,15 @@ Network security provides the frontline of defense through Azure virtual network
 
 ## Deploy data encryption and key management
 
-Data protection requires encryption at rest and comprehensive key management strategies. Oracle Database@Azure provides built-in encryption capabilities with flexible key management options.
+Data protection requires encryption at rest and comprehensive key management strategies. Oracle Database@Azure provides built-in Transparent Data Encryption (TDE) capabilities with default encryption for immediate protection and Azure Key Vault integration for centralized key management within Azure security boundaries.
 
 1. **Use default transparent data encryption for immediate protection.** Oracle Database@Azure enables data-at-rest encryption by default through transparent data encryption at the database layer. This encryption secures the container database (CDB$ROOT) and pluggable databases by using Oracle-managed encryption keys with AES-128 encryption stored locally in a wallet within the VM cluster file system. For more information, see [Manage tablespace encryption](https://docs.oracle.com/iaas/exadatacloud/doc/exa-conf-db-features.html#GUID-A7949087-DF56-4EF0-A32B-9465BBC7EE0F).
 
-1. **Select appropriate key management platform based on data residency requirements.** Choose between [OCI Vault](https://docs.oracle.com/iaas/Content/KeyManagement/Concepts/keyoverview.htm) for Oracle Cloud Integration, [Oracle Key Vault](https://www.oracle.com/security/database-security/key-vault/) for on-premises style deployment, or [Azure Key Vault](/azure/key-vault/general/overview) for Azure-native integration. Consider data location requirements when you select the key management solution.
+1. **Integrate Azure Key Vault for centralized key management with private connectivity.** Azure Key Vault provides centralized TDE master encryption key storage within Azure security boundaries while maintaining compliance with Azure governance policies. This integration enables unified key management across your Azure environment, reduces operational complexity, and supports Azure-native security controls including role-based access control (RBAC) and audit logging. For complete implementation guidance including network setup, Private Endpoint connectivity configuration, identity configuration, and validation procedures, see [Azure Key Vault integration for Oracle Exadata Database@Azure](oracle-azure-key-vault-integration-exadata.md).
 
-    - **Use OCI Vault for standard deployments.** OCI Vault provides built-in integration with Oracle Database@Azure with keys stored in OCI outside of Azure. This option offers the simplest implementation path with native Oracle integration.
+1. **Ensure high availability for key management infrastructure.** Azure Key Vault provides built-in service resilience with automatic replication within regions and asynchronous replication to paired regions where supported. Consider multi-region Azure Key Vault failover strategies here: [Reliability in Azure Key Vault](/azure/reliability/reliability-key-vault).
 
-    - **Store Oracle Transparent Data Encryption (TDE) master encryption keys in [Key Vault](/azure/oracle/oracle-db/manage-oracle-transparent-data-encryption-azure-key-vault).** Follow [best practices](/azure/key-vault/general/best-practices) for using Key Vault when you implement Azure-native key management for Oracle Database@Azure. This option keeps all keys within Azure boundaries and integrates with Azure security controls.
-
-    - **Implement Oracle Key Vault for on-premises style deployment.** Deploy Oracle Key Vault on Azure when you require traditional key management approaches with full control over the key management infrastructure. [Oracle Key Vault on Azure](https://docs.oracle.com/en/solutions/deploy-key-vault-database-at-azure/index.html) requires manual installation, database integration, and high availability configuration. For deployment guidance, see [Create an Oracle Key Vault image in Microsoft Azure](https://docs.oracle.com/en/database/oracle/key-vault/21.9/okvag/using_okv_as_oci_vm_compute_instance.html#GUID-E8154AEB-2964-4698-AE6E-64A108C06D11).
-
-1. **Ensure high availability for key management infrastructure.** Create a multi-primary Oracle Key Vault deployment for encryption key availability. Deploy a multi-primary Oracle Key Vault cluster with four nodes spanning at least two availability zones or regions for robust high availability. For more information, see [Oracle Key Vault multi-primary cluster concepts](https://docs.oracle.com/en/database/oracle/key-vault/21.9/okvag/multimaster_concepts.html#GUID-E1A92D83-760F-470F-877F-D769169C6ABC).
-
-    > [!NOTE]
-    > Oracle Key Vault requires separate licensing and manual high availability configuration.
-
-1. **Establish secure backup encryption practices.** Database backups are encrypted with the same primary encryption keys by default. Store encryption keys and database backups in separate environments to enhance security and minimize data compromise risk. Retain old encryption keys for restoration operations when you perform long-term backups.
+1. **Establish secure backup encryption practices.** Database backups encrypt with the same primary encryption keys by default. Store encryption keys and database backups in separate environments to enhance security and minimize data compromise risk during disaster recovery scenarios. Retain old encryption keys for the duration of backup retention periods to enable restoration operations when performing point-in-time recovery from long-term backups.
 
 ## Enable Defender for Cloud integration
 
@@ -76,27 +67,13 @@ Defender for Cloud provides comprehensive threat protection and security monitor
 
 Operational security requires rigorous key management, secure agent deployment, and workload isolation strategies. These practices maintain security integrity while enabling necessary monitoring and management operations.
 
-1. **Establish key rotation and life cycle management processes.** Implement rigorous key rotation processes to maintain security and compliance standards when you use customer-managed encryption keys. Define rotation schedules, automate key management operations where possible, and maintain audit trails for all key life cycle events.
+1. **Establish key rotation and life cycle management processes.** Implement rigorous key rotation processes to maintain security and compliance standards when you use customer-managed encryption keys. Azure Key Vault supports key rotation policies that enable automated rotation for cryptographic keys at specified intervals. Define rotation schedules for encryption keys, configure rotation policies through Azure Key Vault, and maintain audit trails for all key life cycle events through Azure Monitor and Azure Policy. For more information about Azure Key Vault key rotation capabilities, see [Configure cryptographic key auto-rotation in Azure Key Vault](/azure/key-vault/keys/how-to-configure-key-rotation).
 
-    - **Start with local wallet for pilot deployments.** Use a wallet stored locally in the software keystore for proof of concept or pilot deployments when you finalize key management platform decisions. Plan transition strategy based on selected key management platform.
-
-    - **Plan transition strategies by platform.** If you select OCI Vault, transition represents a dynamic operation with minimal disruption. If you select Oracle Key Vault, manually migrate encryption keys to the Oracle Key Vault platform following Oracle migration procedures.
+1. **Plan transition from local wallet to Azure Key Vault.** Use a wallet stored locally in the software keystore for proof of concept or pilot deployments. Plan the transition to Azure Key Vault integration following the implementation guidance in [Azure Key Vault integration for Oracle Exadata Database@Azure](oracle-azure-key-vault-integration-exadata.md). This transition enables centralized key management, improved security controls, and simplified operational procedures.
 
 1. **Deploy security agents with infrastructure considerations.** Install non-Microsoft or Oracle agents on Oracle Database@Azure in locations where database or grid infrastructure patches don't interfere with agent operations. Ensure agents don't modify or compromise the database operating system kernel to maintain Oracle support and system stability.
 
 1. **Implement workload isolation for security boundaries.** Deploy VM clusters in separate virtual networks to achieve security isolation at the workload level, especially when different teams access multiple databases on the same infrastructure. This isolation prevents lateral movement between environments and maintains clear security boundaries. For more information, see [Resource organization for Oracle Database@Azure](oracle-resource-organization-oracle-database-azure.md).
-
-### Defender for Cloud integration
-
-Consider the following recommendations for integrating Defender for Cloud with Oracle Exadata Database@Azure:
-
-- **Enable comprehensive threat protection.** Deploy [Microsoft Defender for servers](/azure/defender-for-cloud/defender-for-servers-introduction) on Azure Arc-enabled Oracle Database@Azure infrastructure. For more information, see [Defender for servers features and benefits](/azure/defender-for-cloud/defender-for-servers-overview). Optionally, integrate with [Microsoft Sentinel](/azure/sentinel/overview) for SIEM capabilities.
-
-- **Configure security baselines and compliance.** Use [Microsoft cloud security benchmark](/security/benchmark/azure/introduction) to complement Oracle security configurations. For more information, see [Establish a security baseline](/azure/well-architected/security/establish-baseline).
-
-- **Implement threat detection workflows.** Establish alert correlation processes by using [Defender workflow automation](/azure/defender-for-cloud/workflow-automation) and [managing security alerts](/azure/defender-for-cloud/managing-and-responding-alerts). Configure automated response playbooks for threat scenarios.
-
-- **Deploy vulnerability management.** Implement [Defender vulnerability assessment](/azure/defender-for-cloud/deploy-vulnerability-assessment-defender-vulnerability-management) with scheduling considerations for Oracle maintenance windows. For remediation guidance, see [Remediate machine vulnerability findings](/azure/defender-for-cloud/remediate-vulnerability-findings-vm).
 
 ## Next steps
 

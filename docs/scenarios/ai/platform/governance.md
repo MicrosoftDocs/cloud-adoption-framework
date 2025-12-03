@@ -16,7 +16,7 @@ This article describes governance practices for organizations that use Azure AI 
 AI platform governance uses policy controls to keep Azure AI services operating consistently. Platform-level governance enforces security, compliance, and operational standards across your AI environment. Implement comprehensive policies to maintain oversight and improve AI management. To govern Azure AI platforms, follow these steps:
 
 1. **Apply built-in governance policies for each AI platform.** Azure Policy offers predefined policy definitions for common governance needs in AI services. These policies enforce security settings, cost controls, and compliance requirements without custom development. Use Azure Policy to apply built-in policy definitions for:
-- [Azure AI Foundry](/azure/ai-foundry/how-to/azure-policy)
+- [Foundry](/azure/ai-foundry/how-to/azure-policy)
 - [Azure AI services](/azure/ai-services/policy-reference)
 - [Azure AI Search](/azure/search/policy-reference)
 
@@ -57,7 +57,7 @@ Cost management controls help prevent unnecessary AI spending and maximize opera
 
 3. **Set quotas and limits to prevent cost overruns.** Provisioning quotas control resource allocation and help prevent unexpected charges. Allocate quotas for each model based on expected workloads. Monitor quotas regularly to ensure they match actual demand. Adjust quotas as needed to maintain optimal throughput without overspending.
 
-4. **Select cost-effective deployment options.** Azure AI Foundry models provide different [deployment options](/azure/ai-foundry/concepts/deployments-overview). Choose the most cost-effective and compliant option for your use case.
+4. **Select cost-effective deployment options.** Foundry models provide different [deployment options](/azure/ai-foundry/concepts/deployments-overview). Choose the most cost-effective and compliant option for your use case.
 
 5. **Control client usage patterns.** Client behavior directly affects consumption costs in pay-per-use services. Limit client access using security protocols, such as:
 - Network controls
@@ -74,7 +74,7 @@ Batch requests when possible to optimize efficiency. Keep prompts concise and pr
 
 7. **Implement gateway controls for cost management.** A [generative AI gateway](/azure/api-management/genai-gateway-capabilities) provides centralized cost controls for AI endpoints. The gateway tracks token usage, throttles consumption, applies circuit breakers, and routes traffic to different endpoints to optimize costs. For example, you can use a generative AI gateway to limit token usage during peak hours and route requests to less expensive endpoints.
 
-For additional cost management guidance, see [Manage AI costs](../manage.md#manage-ai-costs) and [cost optimization](/azure/architecture/ai-ml/architecture/baseline-azure-ai-foundry-chat#cost-optimization) in the baseline Azure AI Foundry chat reference architecture.
+For additional cost management guidance, see [Manage AI costs](../manage.md#manage-ai-costs) and [cost optimization](/azure/architecture/ai-ml/architecture/baseline-azure-ai-foundry-chat#cost-optimization) in the baseline Foundry chat reference architecture.
 
 ## Govern AI security
 
@@ -101,7 +101,7 @@ AI operations governance sets controls for AI service management and maintenance
 - [Azure OpenAI](/azure/ai-services/openai/how-to/business-continuity-disaster-recovery)
 - Azure AI services
 
-3. **Configure monitoring and alerting for AI workloads.** Baseline metrics provide early warning of performance degradation and operational issues before they affect users. Alert rules enable proactive responses to prevent service disruptions. Enable recommended alert rules for [Azure AI Search](/azure/search/monitor-azure-cognitive-search#azure-ai-search-alert-rules), [Azure AI Foundry Agent Service deployments](/azure/ai-foundry/agents/how-to/metrics), and individual Azure AI services.
+3. **Configure monitoring and alerting for AI workloads.** Baseline metrics provide early warning of performance degradation and operational issues before they affect users. Alert rules enable proactive responses to prevent service disruptions. Enable recommended alert rules for [Azure AI Search](/azure/search/monitor-azure-cognitive-search#azure-ai-search-alert-rules), [Foundry Agent Service deployments](/azure/ai-foundry/agents/how-to/metrics), and individual Azure AI services.
 
 ## Govern AI regulatory compliance
 

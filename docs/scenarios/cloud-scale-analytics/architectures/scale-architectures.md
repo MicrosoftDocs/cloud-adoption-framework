@@ -20,7 +20,7 @@ Many enterprises have large data platform monoliths. These monoliths are built a
 
 When you structure your data platform, consider the structure of your organization. Note the data ownership and functional responsibilities of your teams. If your organization gives teams large degrees of autonomy and distributed ownership, a data mesh architecture is your best option.
 
-Avoid situations where different teams are responsible for various tasks of a solution—tasks such as ingestion, cleansing, aggregation, and serving. Depending on multiple teams can cause a dramatic loss of velocity. For example, if your data consumers on the serving layer need to onboard new data assets or implement functional changes for a particular data asset, they must go through a multi-step process. For this example, the steps are:
+Avoid situations where different teams are responsible for various tasks of a solution, tasks such as ingestion, cleansing, aggregation, and serving. Depending on multiple teams can cause a dramatic loss of velocity. For example, if your data consumers on the serving layer need to onboard new data assets or implement functional changes for a particular data asset, they must go through a multi-step process. For this example, the steps are:
 
 1. The data consumer submits a ticket to every team responsible for a data pipeline stage.
 2. The teams must work together in sync because the layers are interconnected. The new services require changes to the data cleansing layer, which leads to changes in the data aggregation layer, which leads to changes in the serving layer. The changes can affect every pipeline stage.
