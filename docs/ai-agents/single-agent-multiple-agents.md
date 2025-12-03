@@ -44,7 +44,7 @@ Multi-agent systems deploy specialized agents for distinct tasks or roles within
 
 ### Multi-agent orchestration and workflows
 
-Multi-agent systems require workflows to implement [orchestration patterns](/azure/architecture/ai-ml/guide/ai-agent-design-patterns) documented in the Azure Architecture Center. Manual chaining of agents creates brittle connections that fail unpredictably. Workflows provide structured coordination that ensures reliable agent interaction.
+Multi-agent systems require workflows to implement [orchestration patterns](/azure/architecture/ai-ml/guide/ai-agent-design-patterns) documented in the Azure Architecture Center. Manual chaining of agents creates brittle connections that fail unpredictably. Workflows provide structured coordination that ensures reliable agent interaction. Here are some benefits of using workflows with multi-agent systems:
 
 | Workflow capability | Purpose |
 |---|---|
@@ -61,7 +61,7 @@ Each agent interaction requires protocol design, error handling, and state synch
 
 ## Prototype single and multiple agents
 
-Teams often assume multi-agent architectures are necessary based on untested beliefs about complexity or performance requirements. This assumption leads to unnecessary overhead and delayed delivery. Start with a single-agent prototype to establish baseline capabilities. Move to multi-agent architecture only when testing reveals specific limitations that can't be addressed through single-agent optimization.
+Teams often assume multi-agent architectures are necessary based on untested beliefs about complexity or performance requirements. This assumption leads to unnecessary overhead and delayed delivery. For scenarios with the following criteria, start with a single-agent prototype to establish baseline capabilities. Move to multi-agent architecture only when testing reveals specific limitations that can't be addressed through single-agent optimization.
 
 1. **Clear roles involved.** Test a single agent using persona-switching or distinct system prompts before building separate agents. Multi-agent designs become necessary only when strict security boundaries or distinct organizational ownership make unified agents impossible. Single agents can handle most role-based requirements by adjusting behavior based on user context or request type.
 
