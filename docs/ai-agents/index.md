@@ -42,8 +42,8 @@ For technical definitions, see [What is an agent?](/agent-framework/overview/age
 Adopting AI agents drives specific organizational outcomes. Understanding these benefits helps justify investment and prioritize use cases.
 
 - **Efficiency.** Agents automate repetitive, low-value tasks. It reduces manual effort and operational costs, allowing resources to focus on strategic initiatives.
-- **Speed.** Agents process information and execute decisions faster than human workflows. This acceleration improves service delivery times and responsiveness to market changes.
-- **Scalability.** Agents handle fluctuating workloads without the need for proportional headcount increases. This elasticity supports growth and seasonal demand spikes.
+- **Speed.** Agents can process information and execute decisions fast, which can improve service delivery times and responsiveness to market changes.
+- **Scalability.** Agents handle fluctuating workloads, and this elasticity supports growth and seasonal demand spikes.
 
 These benefits lead to measurable results such as lower operating costs, improved customer satisfaction, and faster innovation. For leaders, this means AI agents aren't just a technology investment. They're a strategic lever for growth and competitiveness. See [Business plan for AI agents](./business-strategy-plan.md) for more business rationale and use cases.
 
