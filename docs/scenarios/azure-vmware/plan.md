@@ -30,7 +30,7 @@ Project objectives support business goals and align with initial motivations for
 
 Defining success criteria for the Azure VMware Solution project aligns with the outcomes your organization is seeking:
 
-- **Realize cost efficiencies and reduction of TCO.** TOC is often measured by lowering the data center footprint and optimizing costs through cloud economics and Azure Reservations. Whether at a macro level or specific to the Azure VMware Solution project, you should create clear success measures for reducing TCO for VMware vSphere workloads.
+- **Realize cost efficiencies and reduction of TCO.** TCO is often measured by lowering the data center footprint and optimizing costs through cloud economics and Azure Reservations. Whether at a macro level or specific to the Azure VMware Solution project, you should create clear success measures for reducing TCO for VMware vSphere workloads.
 - **Realize ease of implementation and change management.** By using existing VMware solution skills and processes with Azure VMware Solution, define success measures related to resourcing in hours. Include requirements for in-house project support, any reskilling of IT professionals, or new skill acquisition required.
 - **Realize minimal downtime and business continuity impact.** Define success measures related to acceptable system downtime, if any, and other factors that might affect business continuity, such as latency for system communication and process re-engineering.
 

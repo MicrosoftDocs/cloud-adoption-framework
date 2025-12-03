@@ -75,7 +75,7 @@ Teams often assume multi-agent architectures are necessary based on untested bel
 
 6. **Different modalities involved.** Start with multimodal models that handle text, images, and other formats within one agent. Use specialized agents only when specific modalities require distinct optimization that general models can't provide. Complex image analysis or real-time audio processing sometimes justifies dedicated agents with specialized resources.
 
-## When to use a a single agent system
+## When to use a single agent system
 
 Single-agent architectures consolidate logic, context, and tool execution into one entity. This consolidation reduces design complexity, simplifies implementation, and streamlines governance. Organizations can focus on business value rather than orchestration mechanics. Single agents provide the most efficient starting point for **low complexity** use cases.
 
