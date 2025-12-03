@@ -14,7 +14,7 @@ This article has design considerations and guidelines for networking and connect
 
 Since data management and data landing zones are important, you should also include the guidance for the Azure landing zone design areas in your design.
 
-This section outlines gives a high level overview of the networking pattern with further links to deploying in both single and multiple Azure regions.
+This section gives a high level overview of the networking pattern with further links to deploying in both single and multiple Azure regions.
 
 Cloud-scale analytics promises the possibility to easily share and access datasets across multiple data domains and data landing Zones without critical bandwidth or latency limitations and without creating multiple copies of the same dataset. To deliver on that promise, different network designs have to be considered, evaluated, and tested to make sure that these are compatible with the existing hub and spoke and vWAN deployments of corporations.
 
