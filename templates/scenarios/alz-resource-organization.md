@@ -4,7 +4,7 @@ description: #Describe how this {{Insert-accelerator-name}} landing zone acceler
 author: {{Token-ContributorGithubId}}
 ms.author: {{Token-Alias}}
 ms.date: {{Token-Date}}
-ms.topic: conceptual
+ms.topic: article
 ms.custom: think-tank
 ---
 

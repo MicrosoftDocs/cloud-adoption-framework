@@ -4,7 +4,7 @@ description: #Describe the scenario's impact on Azure Landing Zone design.
 author: {{Token-ContributorGithubId}}
 ms.author: {{Token-Alias}}
 ms.date: {{Token-Date}}
-ms.topic: conceptual
+ms.topic: article
 ms.custom: think-tank
 ---
 
