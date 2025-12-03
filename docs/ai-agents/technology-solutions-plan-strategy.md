@@ -13,14 +13,16 @@ ms.collection: ce-skilling-ai-copilot
 
 # Technology plan for AI agents
 
-This article provides a framework for selecting technology platforms for AI agents within the Microsoft ecosystem. Developing a technology plan is the second step in the **Plan for agents** phase of AI agent adoption (*see figure 1*).
+This article provides guidance on how to select the right technology platform for each of your potential agent use cases, whether adopting a ready-to-use SaaS agent or building a custom agent with one of Microsoft's agent development platforms. Developing a technology plan is the second step in the **Plan for agents** phase of AI agent adoption (*see figure 1*).
 
 :::image type="content" source="./images/ai-agent-adoption.svg" alt-text="Diagram showing a horizontal workflow with four connected phases: plan for agents (business strategy, technology strategy, people strategy, data strategy). Govern (responsible AI, organization agent governance). Build agents (single and multi-agent systems, build agents). Operate agents integrate (integrate agents). Measure (measure agents)." lightbox="./images/ai-agent-adoption.svg" border="false":::
 *Figure 1. Microsoft's AI agent adoption process.*
 
-The right platform aligns agent adoption with organizational standards for security, scalability, and interoperability. Ready-to-use, SaaS agents reduce deployment time and maintenance overhead but offer fixed capabilities. Custom agents provide necessary control and integration flexibility but demand higher engineering effort. A misaligned strategy results in redundant development, security vulnerabilities, and rigid architectures.
+Effective technology adoption aligns goals with cost, level of effort, and customization needs. This alignment matches the technology to the use case and balances the effort required to achieve a return on investment. Understanding the available landscape ensures the right choice between adopting a ready-to-use SaaS agent or building a custom solution to provide business advantage. 
 
-Use the following decision tree to evaluate whether SaaS agents meet functional requirements or if a custom build on Microsoft platforms is required.
+## AI agent decision tree
+
+The AI agent decision tree guides the technology selection process by focusing on one primary question: **Does a SaaS agent meet your functional requirements?** If a SaaS agent satisfies your needs, adopt the prebuilt solution. If no SaaS agent fits the use case, you must build a custom agent. Determining which platform to use for a custom build—Microsoft Foundry, Microsoft Copilot Studio, or custom infrastructure—requires further investigation. The sections below provide guidance on selecting the right platform based on your specific requirements.
 
 :::image type="complex" source="./images/ai-agent-decision-tree.svg" alt-text="Decision tree diagram for selecting AI agent solutions based on business and technology requirements." lightbox="./images/ai-agent-decision-tree.svg" border="false":::
     A flowchart guides organizations through decisions about when and how to use AI agents. The diagram starts with a blue diamond labeled "Potential agent use case" and branches into multiple decision paths. The business plan path determines if AI agents should be used. If the answer is "No," the path leads to "Use code or nongenerative AI models" with icons for GitHub, Microsoft Fabric, AI models in Foundry, and Machine Learning. If Yes, it asks if the task involves static question or answer or content generation without reasoning. The technology plan path checks if SaaS agents meet functional requirements. If Yes, the path leads to Use SaaS agents. There are cons representing Microsoft 365 Copilot agents (App Builder, Workflows, Researcher, Analyst, Surveys). Then there are icons for GitHub Copilot agent, Microsoft Fabric data agents, Azure Copilot agents, Dynamics 365 agents, and Security Copilot agents. If SaaS agents don't meet needs, the path leads to "Build AI agents" with options for GPUs & Containers (open-source), Microsoft Foundry (PaaS pro-code), and Copilot Studio (SaaS no/low-code). The single or multiple agents decision path asks whether the use case involves security concerns, compliance requirements, multiple teams, or future growth. If Yes, it leads to "Build multiple agents" using workflows for orchestration. If No, it checks task complexity and requirements, leading to either "Test a single agent" or "Build a single agent" using workflows for integration and governance. The diagram uses color-coded shapes with diamonds representing decision points and rectangles representing actions, with arrows showing the flow between choices.
@@ -28,7 +30,7 @@ Use the following decision tree to evaluate whether SaaS agents meet functional 
 
 ## Use SaaS agents
 
-Prioritize prebuilt solutions when they meet functional and budget requirements. SaaS agents reduce development overhead and accelerate deployment.
+SaaS agents are ready-to-use solutions built by Microsoft that enable immediate deployment. These agents provide rapid value for standard business functions but offer limited customization compared to custom builds. Evaluate the agents available across the technology stack to determine if a prebuilt solution meets your requirements.
 
 - **Agents in Microsoft 365 Copilot.** [App Builder agent](/copilot/microsoft-365/app-builder-privacy-data-subject-request-faq), [Workflows agent](/copilot/microsoft-365/flow-builder-privacy-data-subject-request-faq), and [Researcher](/copilot/microsoft-365/researcher-agent) enable task automation and information synthesis across Microsoft 365 applications. Use the [Agent Success Kit](https://adoption.microsoft.com/ai-agents/success-kit/) to structure your deployment approach and governance model.
 
@@ -52,34 +54,17 @@ Choose a build path based on your organization's technical capabilities, timelin
     Overview of the Microsoft Foundry architecture. The diagram illustrates the flow from authoring tools to the managed runtime environment. It highlights key components including the model catalog, agent orchestration engine, and integration capabilities with external data and tools.
 :::image-end:::
 
-#### Integration and interoperability
+- **Integration and interoperability.** Foundry supports the [Activity Protocol](/microsoft-365/agents-sdk/activity-protocol) and agent-to-agent (A2A) patterns for standardized messaging. Agents can be published to [Microsoft 365](/azure/ai-foundry/agents/how-to/publish-copilot?view=foundry&preserve-view=true) and [Agent 365](/azure/ai-foundry/agents/how-to/agent-365?view=foundry&preserve-view=true) to surface capabilities directly in user workflows.
+- **Multi-agent workflows.** [Workflows](/azure/ai-foundry/agents/concepts/workflow?view=foundry&preserve-view=true) orchestrate complex business processes by handling sequential logic, conditional branching, and state management across multiple agents.
+- **Declarative agents.** [Prompt-based agents](/azure/ai-foundry/agents/concepts/development-lifecycle?view=foundry&preserve-view=true#types-of-agents) rely primarily on model reasoning and instructions, simplifying updates and versioning for behavior-driven agents.
+- **Hosted agents.** Code-first, [hosted agents](/azure/ai-foundry/agents/concepts/hosted-agents?view=foundry&preserve-view=true) support custom libraries or frameworks. This option provides a managed runtime that handles provisioning and scaling while allowing full code control.
+- **Models from.** The [Model catalog](/azure/ai-studio/how-to/model-catalog) includes models from OpenAI, Anthropic, Meta, and Mistral, allowing selection based on specific performance, latency, and cost requirements.
+- **Memory.** [Managed memory](/azure/ai-foundry/agents/concepts/agent-memory?view=foundry&preserve-view=true&tabs=python) maintains conversation context. For strict data sovereignty requirements, a bring-your-own (BYO) memory store option is available.
+- **Tools.** The [Tool catalog](/azure/ai-foundry/agents/concepts/tool-catalog?view=foundry&preserve-view=true), Microsoft Copilot Protocol (MCP), and OpenAPI specifications enable connections to external systems. Integration with Azure Logic Apps and Azure Functions supports serverless automation.
 
-Ensure agents can communicate effectively across your ecosystem. Foundry supports the Activity Protocol and agent-to-agent (A2A) patterns for standardized messaging. You can also publish agents to [Microsoft 365](/azure/ai-foundry/agents/how-to/publish-copilot?view=foundry&preserve-view=true) and [Agent 365](/azure/ai-foundry/agents/how-to/agent-365?view=foundry&preserve-view=true) to surface capabilities directly in user workflows.
+**Setup options**: Choose a setup configuration that aligns with your security and operational needs. Use the [basic setup](/azure/ai-foundry/agents/environment-setup?view=foundry&preserve-view=true#choose-your-setup) for rapid prototyping and individual development when speed and ease of access are priorities, noting that this option lacks network isolation. For production environments and enterprise teams, use the [standard setup](/azure/ai-foundry/agents/concepts/standard-agent-setup?view=foundry&preserve-view=true) to gain fine-grained control over data, security, and networking. Within the standard setup, select public networking for nonconfidential workloads that require enterprise data controls, or private networking for confidential workloads that must integrate with existing Azure resources to meet strict compliance standards. Review the [comparison and deployment guide](/azure/ai-foundry/agents/environment-setup?view=foundry&preserve-view=true#choose-your-setup) for details on both topologies.
 
-#### Development capabilities
-
-Choose the development model that matches your control requirements and coding expertise.
-
-- **Multi-agent workflows.** Implement [workflows](/azure/ai-foundry/agents/concepts/workflow?view=foundry&preserve-view=true) to orchestrate complex business processes. Workflows handle sequential logic, conditional branching, and state management across multiple agents.
-- **Declarative agents.** Use [prompt-based](/azure/ai-foundry/agents/concepts/development-lifecycle?view=foundry&preserve-view=true#types-of-agents) definitions for agents that rely primarily on model reasoning and instructions. This approach simplifies updates and versioning for behavior-driven agents.
-- **Hosted agents.** Deploy code-first agents using [hosted agents](/azure/ai-foundry/agents/concepts/hosted-agents?view=foundry&preserve-view=true) when you need custom libraries or frameworks. This option provides a managed runtime that handles provisioning and scaling while allowing full code control.
-
-#### Models, memory, and tools
-
-- **Model selection.** Choose from the [Model catalog](/azure/ai-studio/how-to/model-catalog), including OpenAI, Anthropic, Meta LLaMA, and Mistral. Select models based on specific performance, latency, and cost requirements.
-- **Memory and state.** Maintain conversation context with [managed memory](/azure/ai-foundry/agents/concepts/agent-memory?view=foundry&preserve-view=true&tabs=python). For strict data sovereignty requirements, use the bring-your-own (BYO) memory store option.
-- **Tool integration.** Connect to external systems via the [Tool catalog](/azure/ai-foundry/agents/concepts/tool-catalog?view=foundry&preserve-view=true), Microsoft Copilot Protocol (MCP), or OpenAPI specifications. Integrate with Azure Logic Apps and Azure Functions for serverless automation.
-
-Start with the [Foundry playground](/azure/ai-foundry/concepts/concept-playgrounds) to build and test prototypes. Follow the quickstart guide to [create a new agent](/azure/ai-foundry/agents/quickstart).
-
-#### Setup topology
-
-Choose the architectural configuration that aligns with your security and operational needs.
-
-- **Basic agent setup.** Use the [basic setup](/azure/ai-foundry/agents/environment-setup?view=foundry&preserve-view=true#choose-your-setup) for rapid prototyping and individual development. This topology prioritizes speed and ease of access but lacks network isolation.
-- **Standard setup.** Use the [standard setup](/azure/ai-foundry/agents/concepts/standard-agent-setup?view=foundry&preserve-view=true) for production environments and enterprise teams. This topology supports fine-grained control over data, security, and networking. **Public networking.** Suitable for nonconfidential workloads that require enterprise data controls. **Private networking.** Required for confidential workloads. This configuration integrates with existing Azure OpenAI, search, and storage resources to meet strict compliance standards.
-
-See comparison and deployment of both the [basic and standard setups](/azure/ai-foundry/agents/environment-setup?view=foundry&preserve-view=true#choose-your-setup)
+**Foundry playground**: Start with the [Foundry playground](/azure/ai-foundry/concepts/concept-playgrounds) to build and test prototypes. Follow the quickstart guide to [create a new agent](/azure/ai-foundry/agents/quickstart).
 
 ### Microsoft Copilot Studio
 

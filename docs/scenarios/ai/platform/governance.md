@@ -16,7 +16,7 @@ This article describes governance practices for organizations that use Azure AI 
 AI platform governance uses policy controls to keep Azure AI services operating consistently. Platform-level governance enforces security, compliance, and operational standards across your AI environment. Implement comprehensive policies to maintain oversight and improve AI management. To govern Azure AI platforms, follow these steps:
 
 1. **Apply built-in governance policies for each AI platform.** Azure Policy offers predefined policy definitions for common governance needs in AI services. These policies enforce security settings, cost controls, and compliance requirements without custom development. Use Azure Policy to apply built-in policy definitions for:
-- [Foundry](/azure/ai-foundry/how-to/azure-policy)
+- [Microsoft Foundry](/azure/ai-foundry/how-to/azure-policy)
 - [Azure AI services](/azure/ai-services/policy-reference)
 - [Azure AI Search](/azure/search/policy-reference)
 
@@ -30,9 +30,9 @@ AI platform governance uses policy controls to keep Azure AI services operating 
 
 Model governance sets controls to keep AI models safe, reliable, and ethical. It uses Azure Policy to restrict which models can be deployed. Content safety filters block harmful or inappropriate outputs. Clear rules for inputs and outputs prevent misuse and protect against harmful content. These measures maintain compliance and support responsible AI principles. Continuous oversight through monitoring, audits, and policy reviews protects users and builds trust. To govern AI models, follow these steps:
 
-1. **Create and maintain an AI agent inventory.** Microsoft Entra Agent ID gives you a centralized view and management of AI agents created in Azure AI Foundry and Copilot Studio. Maintaining a complete inventory lets you enforce access controls and monitor policy compliance across your organization. Use [Microsoft Entra Agent ID](/entra/identity/monitoring-health/concept-sign-ins#microsoft-entra-agent-id) to track and manage your AI agents.
+1. **Create and maintain an AI agent inventory.** Microsoft Entra Agent ID gives you a centralized view and management of AI agents created in Foundry and Copilot Studio. Maintaining a complete inventory lets you enforce access controls and monitor policy compliance across your organization. Use [Microsoft Entra Agent ID](/entra/identity/monitoring-health/concept-sign-ins#microsoft-entra-agent-id) to track and manage your AI agents.
 
-2. **Enforce model restrictions.** Azure Policy lets you control which AI models your organization uses. Apply [model-specific policies](/azure/ai-foundry/how-to/built-in-policy-model-deployment) in Azure AI Foundry to meet your organization's standards and requirements.
+2. **Enforce model restrictions.** Azure Policy lets you control which AI models your organization uses. Apply [model-specific policies](/azure/ai-foundry/how-to/built-in-policy-model-deployment) in Foundry to meet your organization's standards and requirements.
 
 3. **Implement AI risk detection processes.** Use Defender for Cloud to [identify AI workloads](/azure/defender-for-cloud/identify-ai-workload-model) and [assess risks](/azure/defender-for-cloud/explore-ai-risk) before deployment. Run regular [red team assessments](/azure/ai-services/openai/concepts/red-teaming) on generative AI models. Document your findings and update governance policies to address new risks.
 
@@ -53,7 +53,7 @@ Cost management controls help prevent unnecessary AI spending and maximize opera
 
 1. **Select the appropriate billing model for your workload patterns.** Commitment tiers and provisioned throughput offer predictable costs for stable workloads. [Provisioned throughput units (PTUs)](/azure/ai-services/openai/concepts/provisioned-throughput) are a billing option in Azure OpenAI that reserve a set amount of compute resources for predictable costs, and typically cost less than pay-as-you-go pricing for consistent usage. To handle traffic spikes efficiently, combine PTU endpoints with consumption-based endpoints. Use PTUs for primary endpoints and consumption-based endpoints for overflow traffic. For more guidance, see [Introduce a gateway for multiple Azure OpenAI instances](/azure/architecture/ai-ml/guide/azure-openai-gateway-multi-backend#multiple-azure-openai-instances-in-a-single-region-and-single-subscription).
 
-2. **Choose models that match requirements without overspending.** Model selection affects both costs and capability requirements. Less expensive models often deliver enough performance for many use cases without losing needed functionality. For Azure AI Foundry, see [Azure AI Foundry pricing](https://azure.microsoft.com/pricing/details/ai-foundry/?cdn=disable) and [model billing information](/azure/ai-studio/how-to/model-catalog-overview#billing). Use Azure Policy definitions to [allow specific models](/azure/ai-foundry/how-to/built-in-policy-model-deployment) that meet your cost requirements.
+2. **Choose models that match requirements without overspending.** Model selection affects both costs and capability requirements. Less expensive models often deliver enough performance for many use cases without losing needed functionality. For Foundry, see [Foundry pricing](https://azure.microsoft.com/pricing/details/ai-foundry/?cdn=disable) and [model billing information](/azure/ai-studio/how-to/model-catalog-overview#billing). Use Azure Policy definitions to [allow specific models](/azure/ai-foundry/how-to/built-in-policy-model-deployment) that meet your cost requirements.
 
 3. **Set quotas and limits to prevent cost overruns.** Provisioning quotas control resource allocation and help prevent unexpected charges. Allocate quotas for each model based on expected workloads. Monitor quotas regularly to ensure they match actual demand. Adjust quotas as needed to maintain optimal throughput without overspending.
 
@@ -70,7 +70,7 @@ Enforce API constraints, including:
 
 Batch requests when possible to optimize efficiency. Keep prompts concise and provide only the necessary context to reduce token consumption.
 
-6. **Automate resource shutdown for non-production workloads.** Automatic shutdown helps prevent unnecessary compute costs during idle periods. Define and enforce policies that require AI resources to use automatic shutdown features on virtual machines and compute instances in Azure AI Foundry and Azure Machine Learning. Apply automatic shutdown to non-production environments. Also, apply it to production workloads that can go offline during specific periods.
+6. **Automate resource shutdown for non-production workloads.** Automatic shutdown helps prevent unnecessary compute costs during idle periods. Define and enforce policies that require AI resources to use automatic shutdown features on virtual machines and compute instances in Foundry and Azure Machine Learning. Apply automatic shutdown to non-production environments. Also, apply it to production workloads that can go offline during specific periods.
 
 7. **Implement gateway controls for cost management.** A [generative AI gateway](/azure/api-management/genai-gateway-capabilities) provides centralized cost controls for AI endpoints. The gateway tracks token usage, throttles consumption, applies circuit breakers, and routes traffic to different endpoints to optimize costs. For example, you can use a generative AI gateway to limit token usage during peak hours and route requests to less expensive endpoints.
 
@@ -97,7 +97,7 @@ AI operations governance sets controls for AI service management and maintenance
 1. **Establish model lifecycle management policies.** Model versioning policies ensure compatibility and smooth transitions between updates. Version control helps prevent disruptions when models are upgraded or retired. It also maintains system stability across deployments. Create policies that define model versioning standards, compatibility testing requirements, and rollback procedures for all AI platforms in your organization. For example, use Azure Policy to restrict which models are available for deployment. Apply content safety filters to prevent harmful outputs. If you upgrade a model and encounter issues, use rollback procedures to restore the previous version.
 
 2. **Implement business continuity and disaster recovery plans.** Disaster recovery plans protect AI operations against service interruptions and data loss. For example, configure backup and failover for Azure AI model endpoints to maintain service availability during outages. These plans help ensure business operations continue during outages and maintain service availability for critical AI workloads. Configure baseline disaster recovery for resources that host AI model endpoints, including:
-- [Azure AI Foundry](/azure/ai-studio/how-to/disaster-recovery)
+- [Foundry](/azure/ai-studio/how-to/disaster-recovery)
 - [Azure OpenAI](/azure/ai-services/openai/how-to/business-continuity-disaster-recovery)
 - Azure AI services
 
