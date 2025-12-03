@@ -13,12 +13,12 @@ ms.collection: ce-skilling-ai-copilot
 
 # Data architecture for AI agents
 
-This article outlines how to prepare your data estate for AI agents, ensuring they operate on a unified, secure, and governed foundation. Because agents synthesize information rather than create it, their accuracy depends entirely on the quality and accessibility of underlying sources. Fragmented or ungoverned data leads to misleading results and security risks.
-
-Use this guidance to prepare your data estate for Microsoft SaaS agents, including Microsoft 365 Copilot, and custom agents built on Microsoft Foundry and Microsoft Copilot Studio. These architectural decisions ensure agents operate on authoritative content, respect compliance boundaries, and support rapid deployment. This planning is the final step in the **Plan for agents** phase of AI agent adoption (*see figure 1*).
+This article outlines how to prepare your data estate for AI agents, ensuring they operate on a unified, secure, and governed foundation. Because agents synthesize information rather than create it, their accuracy depends entirely on the quality and accessibility of underlying sources. Fragmented or ungoverned data leads to misleading results and security risks. This planning is the final step in the **Plan for agents** phase of AI agent adoption (*see figure 1*).
 
 :::image type="content" source="./images/ai-agent-adoption.svg" alt-text="Diagram showing a horizontal workflow with four connected phases: plan for agents (business strategy, technology strategy, people strategy, data strategy). Govern (responsible AI, organization agent governance). Build agents (single and multi-agent systems, build agents). Operate agents integrate (integrate agents). Measure (measure agents)." lightbox="./images/ai-agent-adoption.svg" border="false":::
 *Figure 1. Microsoft's AI agent adoption process.*
+
+Use this guidance to prepare your data estate for Microsoft SaaS agents, including Microsoft 365 Copilot, and custom agents built on Microsoft Foundry and Microsoft Copilot Studio. These architectural decisions ensure agents operate on authoritative content, respect compliance boundaries, and support rapid deployment.
 
 ## Conceptual data architecture
 

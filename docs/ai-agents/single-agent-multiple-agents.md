@@ -14,15 +14,16 @@ ms.collection: ce-skilling-ai-copilot
 # Single agent or multiple agents
 
 This article helps you determine whether to build a single-agent or multi-agent systems when implementing AI agent solutions. Organizations face this decision during the **Build agents** phase of AI agent adoption (*see figure 1*).
+
+:::image type="content" source="./images/ai-agent-adoption.svg" alt-text="Diagram that shows the process outlined in this guidance: plan, govern, build and secure, integrate, and measure agents across your organization." lightbox="./images/ai-agent-adoption.svg" border="false":::
+*Figure 1. Microsoft's AI agent adoption process.*
+
 Your choice affects development complexity, operational overhead, security boundaries, and integration patterns across your cloud estate.
 
 - **Single-agent systems** consolidate all logic into one entity. This consolidation simplifies implementation and reduces operational overhead.
 - **Multi-agent systems** distribute responsibilities across specialized agents. This distribution enables modularity but introduces coordination complexity. Without clear requirements for separation, the added complexity of multi-agent systems can create unnecessary complexity during development and higher maintenance effort.
 
 Organizations that default to multi-agent architectures without validating the need often encounter higher costs, increased latency, and more failure points than necessary.
-
-:::image type="content" source="./images/ai-agent-adoption.svg" alt-text="Diagram that shows the process outlined in this guidance: plan, govern, build and secure, integrate, and measure agents across your organization." lightbox="./images/ai-agent-adoption.svg" border="false":::
-*Figure 1. Microsoft's AI agent adoption process.*
 
 ## AI Agent decision tree
 

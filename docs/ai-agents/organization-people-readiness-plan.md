@@ -13,12 +13,12 @@ ms.collection: ce-skilling-ai-copilot
 
 # Organizational readiness for AI agents
 
-This article outlines strategies for organizational readiness, including platform governance, workload alignment, and AI Center of Excellence integration. Organizational readiness is the third step in the **Plan for agents** phase of AI agent adoption (*see figure 1*). 
-
-Organizational readiness aligns team structures and skills to support AI agent development. It establishes clear responsibilities and governance models that enable scalable innovation. Without this preparation, organizations risk isolated experiments, inconsistent security practices, and an inability to scale AI agents across the enterprise.
+This article outlines strategies for organizational readiness, including platform governance, workload alignment, and AI Center of Excellence integration. Organizational readiness is the third step in the **Plan for agents** phase of AI agent adoption (*see figure 1*).
 
 :::image type="content" source="./images/ai-agent-adoption.svg" alt-text="Diagram showing a horizontal workflow with four connected phases: plan for agents (business strategy, technology strategy, people strategy, data strategy). Govern (responsible AI, organization agent governance). Build agents (single and multi-agent systems, build agents). Operate agents integrate (integrate agents). Measure (measure agents)." lightbox="./images/ai-agent-adoption.svg" border="false":::
 *Figure 1. Microsoft's AI agent adoption process.*
+
+Organizational readiness aligns team structures and skills to support AI agent development. It establishes clear responsibilities and governance models that enable scalable innovation. Without this preparation, organizations risk isolated experiments, inconsistent security practices, and an inability to scale AI agents across the enterprise.
 
 ## Define responsibilities for agent development
 
