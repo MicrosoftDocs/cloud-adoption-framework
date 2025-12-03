@@ -36,7 +36,7 @@ After deciding to build a custom AI agent, determine whether to use a single-age
 
 ## When to start with a multi-agent system
 
-Multi-agent systems deploy two or more agents for distinct tasks within a single business process. This architecture enables different orhcestration patterns and specialization . The coordination between agents introduces latency at each handoff point and requires explicit state management between components. Organizations should choose multi-agent architecture only when specific criteria mandate separation.
+Multi-agent systems deploy two or more agents for distinct tasks within a single business process. This architecture enables different orchestration patterns and specialization. The coordination between agents introduces latency at each handoff point and requires explicit state management between components. Organizations should choose multi-agent architecture only when specific criteria mandate separation.
 
 1. **Crossing security and compliance boundaries.** Build multiple agents when regulations or policies mandate strict data isolation. Different security classifications need independent processing environments that single agents can't provide. This least-privilege design limits the blast radius of security incidents by containing breaches within individual agent boundaries. Financial services often require one agent to prepare transactions while another validates them, enforcing separation of duties through architecture.
 
@@ -77,7 +77,7 @@ Teams often assume multi-agent architectures are necessary based on untested bel
 
 6. **Different modalities involved.** Start with multimodal models that handle text, images, and other formats within one agent. Use specialized agents only when specific modalities require distinct optimization that general models can't provide. Complex image analysis or real-time audio processing sometimes justifies dedicated agents with specialized resources.
 
-## When to use a a single agent system
+## When to use a single agent system
 
 Single-agent architectures consolidate logic, context, and tool execution into one entity. This consolidation reduces design complexity, simplifies implementation, and streamlines governance. Organizations can focus on business value rather than orchestration mechanics. Single agents provide the most efficient starting point for **low complexity** use cases.
 
