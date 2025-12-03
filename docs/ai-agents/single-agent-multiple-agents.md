@@ -32,7 +32,7 @@ Organizations that default to multi-agent architectures without validating the n
 :::image-end:::
 *Figure 2. Microsoft's AI agent decision tree.*
 
-## Build multiple agents
+## When to build a multi-agent system
 
 Multi-agent systems deploy specialized agents for distinct tasks or roles within a single business process. This architecture enables parallel operation and domain optimization. The coordination between agents introduces latency at each handoff point and requires explicit state management between components. Organizations should choose multi-agent architecture only when specific criteria mandate separation.
 
@@ -59,7 +59,7 @@ See [Orchestration strategy](./build-secure-process.md#orchestration-strategy) f
 
 Each agent interaction requires protocol design, error handling, and state synchronization. Every component needs separate prompt engineering, monitoring infrastructure, and debugging capabilities. Security surfaces expand through extra credential management and data transit points between agents. Cost structures increase because each agent processes redundant context and communication overhead multiplies with agent count. Latency accumulates at each handoff point, potentially degrading user experience.
 
-## Prototype single and multiple agents
+## When to test a single agent first
 
 Teams often assume multi-agent architectures are necessary based on untested beliefs about complexity or performance requirements. This assumption leads to unnecessary overhead and delayed delivery. For scenarios with the following criteria, start with a single-agent prototype to establish baseline capabilities. Move to multi-agent architecture only when testing reveals specific limitations that can't be addressed through single-agent optimization.
 
@@ -75,7 +75,7 @@ Teams often assume multi-agent architectures are necessary based on untested bel
 
 6. **Different modalities involved.** Start with multimodal models that handle text, images, and other formats within one agent. Use specialized agents only when specific modalities require distinct optimization that general models can't provide. Complex image analysis or real-time audio processing sometimes justifies dedicated agents with specialized resources.
 
-## Build a single agent system
+## When to use a a single agent system
 
 Single-agent architectures consolidate logic, context, and tool execution into one entity. This consolidation reduces design complexity, simplifies implementation, and streamlines governance. Organizations can focus on business value rather than orchestration mechanics. Single agents provide the most efficient starting point for **low complexity** use cases.
 
