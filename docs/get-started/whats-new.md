@@ -30,7 +30,7 @@ Partner with us in our ongoing effort to develop the Cloud Adoption Framework.
 
 - [Governance, security, and compliance baseline for Azure Arc-enabled Kubernetes](../scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-governance-disciplines.md): We fixed typos, improved clarity, and corrected grammatical errors. We also standardized capitalization for *Kubernetes*.
 
-- [Enterprise-scale support for Azure Virtual Desktop](../scenarios/azure-virtual-desktop/enterprise-scale-landing-zone.md): We removed the introductory Cloud Adoption Framework fundamentals section and replaced verbose explanations with more concise, direct language throughout the article. We also fixed typos, removed emoji icons from design area lists, and standardized terminology.
+- [Deploy an enterprise-scale Azure landing zone for Azure Virtual Desktop](../scenarios/azure-virtual-desktop/enterprise-scale-landing-zone.md): We removed the introductory Cloud Adoption Framework fundamentals section and replaced verbose explanations with more concise, direct language throughout the article. We also fixed typos, removed emoji icons from design area lists, and standardized terminology.
 
 - [Business continuity and disaster recovery for Azure Virtual Desktop](../scenarios/azure-virtual-desktop/eslz-business-continuity-and-disaster-recovery.md): We clarified the active-active host pool section by explaining the two-region setup with user assignment and failover procedures, and we added guidance about FSLogix profile storage behavior in the active-passive scenario. We also standardized headings for consistency.
 
@@ -38,7 +38,7 @@ Partner with us in our ongoing effort to develop the Cloud Adoption Framework.
 
 - [Storage considerations for AKS](../scenarios/app-platform/aks/storage.md): We improved formatting consistency and fixed minor typos. We standardized capitalization and reformatted all recommendation bullet points to use consistent indentation. We also cleaned up link formatting by removing unnecessary URL parameters and improved readability in the network planning section.
 
-- [SAP on Azure landing zone accelerator](../scenarios/sap/enterprise-scale-landing-zone.md): We improved clarity and formatting. We simplified the zone resilience policy explanation by removing verbose phrasing and making the recommendation more direct and actionable. We also reformatted the Azure Center for SAP solutions capabilities section by converting inline bold headings to proper headings for better document structure and scannability.
+- [SAP on Azure landing zone accelerator](../scenarios/sap/enterprise-scale-landing-zone.md): We improved clarity and formatting. We simplified the zone resilience policy explanation by removing verbose phrasing and making the recommendation more direct and actionable. We also reformatted the *Azure Center for SAP solutions capabilities* section by converting inline bold headings to proper headings for better document structure and scannability.
 
 - [Manage your cloud estate with enhanced security](../secure/manage.md): We improved formatting consistency and clarity. We standardized indentation for nested bullet points under incident preparedness and Azure facilitation sections, and we enhanced the business continuity and disaster recovery recommendation by clarifying the distinction between disaster recovery planning and resilient architecture design with more precise, actionable language.
 
