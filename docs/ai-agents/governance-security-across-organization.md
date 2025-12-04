@@ -129,7 +129,7 @@ An environment is the controlled space where workloads and AI agents are develop
 
 2. **Govern the environments.** Governing environments means applying consistent organizational policies and controls across all platforms, whether PaaS, IaaS, or SaaS. Organizations are responsible for ensuring every environment aligns with corporate standards and regulatory requirements.
 
-    - **PaaS and IaaS platforms**: Establish consistently governed application landing zones for building agents. These application landing zones provide a foundation for identity, networking, and security controls. AI agents do not require a specialized application landing zone architecture, but governance policies should reflect the services in use.For detailed guidance, see [Ready your AI environment](../scenarios/ai/ready.md).
+    - **PaaS and IaaS platforms**: Establish consistently governed application landing zones for building agents. These application landing zones provide a foundation for identity, networking, and security controls. AI agents do not require a specialized application landing zone architecture, but governance policies should reflect the services in use. For detailed guidance, see [Ready your AI environment](../scenarios/ai/ready.md).
    
     - **SaaS platforms**: A landing zone foundation is not required because the platform is fully managed. Instead, focus on configuring identity, access, and data governance settings in line with organizational policies and best practices. Apply compliance controls wherever possible to maintain security and regulatory alignment.
 
