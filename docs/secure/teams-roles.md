@@ -21,25 +21,36 @@ Some security tasks will be performed directly by technology and cloud teams. Ot
 
 Use the guidance in this article to help understand specific functions that teams and roles perform and how different teams interact to cover the entirety of a cloud security organization. 
 
+## Minimum viable security team for small organisations
+
+Smaller organisations often cannot dedicate one person per security function. In such environments the goal is to cover essential responsibilities with as few roles as possible. A practical baseline is to combine cloud platform engineering and security into a single role that manages secure configuration, identity hygiene, monitoring and basic incident response. Tasks that require specialised expertise or continuous coverage, such as threat detection tuning, penetration testing or compliance reviews, can be outsourced to managed security providers. Cloud-native tools such as posture management, identity protection, configuration baselines and automated policy enforcement help maintain a consistent security level without large teams and reduce operational overhead.
+
 ## Transformation of security roles
 
-Security architecture, engineering, and operations roles are undergoing a significant transformation of their responsibilities and processes. (This transformation is similar to the cloud-driven transformation of infrastructure and platform roles.) This security role transformation has been driven by multiple factors: 
+Security architecture, engineering, and operations roles are undergoing a substantial shift as organizations adopt cloud platforms and modern development practices. This transformation affects how security work is performed, how teams collaborate, and how responsibilities are distributed across technical functions.
 
-- As security tools increasingly become SaaS based, there's less need to design, implement, test, and operate security tool infrastructures. These roles do still need to support the full lifecycle of configuring cloud services and solutions (including continuous improvement) to ensure they meet security requirements.
+Several factors are driving this change:
 
-- The recognition that security is everyone's job is driving a more collaborative and mature approach that enables security and technology teams to work together: 
+- **Shift to SaaS-based and cloud-native security tooling.**  
+  Many traditional security functions no longer require teams to deploy or maintain underlying infrastructure. Instead, security roles focus on configuring, integrating, and continuously improving cloud services to ensure they meet security requirements.
 
-    - Technical engineering teams are accountable for ensuring that security measures are applied effectively to their workloads. This change increases their need for context and expertise from security teams on how to meet these obligations effectively and efficiently.
+- **Security as a shared responsibility across engineering teams.**  
+  All technical teams are now directly accountable for applying security controls to the workloads and services they build or operate. Security teams provide patterns, guidance, automation, and guardrails that make secure implementation the default and reduce friction in delivery processes.
 
-    - Security teams are shifting from a (slightly adversarial) quality control role to a role that enables technical teams: making the secure path the easiest path. Security teams reduce friction and barriers by using automation, documentation, training, and other strategies.
+- **Broader, cross-technology skill requirements.**  
+  Security teams increasingly need to understand a wide range of technologies and how attackers move across systems. Because cloud platforms integrate identity, network, compute, application, and operations layers, security professionals must evaluate end-to-end attack paths rather than focus on narrow technical domains.
 
-- Security teams are increasingly broadening their skills to look at security problems across multiple technologies and systems. They address the full attacker lifecycle, rather than focusing on narrow technical areas (network security, endpoint security, application security, and cloud security, for example). The fact that cloud platforms integrate different technologies closely together amplifies this skill development need.
+- **Continuous change in cloud platforms and security capabilities.**  
+  Cloud services evolve rapidly, and new capabilities appear frequently. Security processes must adapt continuously to remain effective, requiring greater agility from architecture, engineering, and operations roles.
 
-- The increased rate of change from both technology and security cloud services requires that security processes are continuously updated to keep in sync and manage risk effectively.
+- **Increased reliance on Zero Trust principles.**  
+  Modern attackers routinely bypass network perimeter controls, making identity, device health, application context, and telemetry central to security decisions. Roles across engineering, operations, and security must incorporate Zero Trust thinking into design, configuration, and monitoring activities.
 
-- Security threats now reliably bypass network-based security controls, so security teams need to adopt a Zero Trust approach that includes identity, application security, endpoint security, cloud security, CI/CD, user education, and other controls.
+- **Integration of security into DevOps and platform engineering practices.**  
+  Accelerated release cycles require security activities to shift earlier in the lifecycle and operate through automation. Security roles increasingly collaborate with engineering and platform teams to embed security checks, policy enforcement, and validation into CI/CD workflows and operational processes.
 
-- The adoption of DevOps/DevSecOps processes necessitates that security roles be more agile to integrate security natively into the resulting accelerated solution development lifecycle.
+These changes reshape how existing roles work together rather than creating new roles. The goal is to ensure that security becomes an integrated, continuous part of how cloud services are designed, built, deployed, and operated.
+
 
 ## Overview of roles and teams
 
@@ -76,6 +87,11 @@ It's critical to ensure that everyone understands their role in security and how
 
 >[!NOTE]
 >A shared responsibility model is similar to a Responsible, Accountable, Consulted, Informed (RACI) model. The shared responsibility model helps illustrate a collaborative approach on who makes decisions and what teams must do to work together for particular items and outcomes.
+
+### Role overlap and responsibility boundaries
+
+Cloud security responsibilities frequently span multiple teams and disciplines. Platform engineering, security architecture, DevOps and central security operations often work on the same areas such as identity configuration, network controls, workload hardening or monitoring. To avoid gaps or duplicated effort, ownership should be explicitly defined for each responsibility. A simple model such as a RACI matrix helps determine who is responsible, who approves, who provides input and who must be informed. This clarity improves day-to-day operations and incident handling because every team knows their role across detection, investigation, remediation and post-incident learning. Ownership definitions should be reviewed regularly because responsibilities shift as new services, automation and organisational changes are introduced.
+
 
 ### Cloud service provider
 
@@ -179,19 +195,20 @@ All three of these disciplines operate across all technologies and systems to dr
 
 Cloud engineering and operation teams might work with **posture management** roles, **compliance and audit** teams, **security architecture and engineering**, or **chief information security officer (CISO)** roles on GRC topics.
 
-### Security education and policy
+### Security education, awareness, and policy
 
-Organizations must ensure that all roles have basic security literacy and guidance on what they're expected to do regarding security and how to do it. To achieve this goal, you need a combination of written policy and education. The education for cloud teams can be informal mentoring by security professionals who work directly with them, or it can be a formal program with documented curriculum and designated security champions. 
+Organizations must ensure that all roles have the knowledge, guidance, and confidence to apply security effectively in their daily work. Education and awareness are often the weakest links in an organization’s security posture, so they must be continuous, role-aware, and embedded into normal operations rather than treated as one-off training events.
 
-In a larger organization, security teams work with **organizational readiness / training** and **security education and engagement** roles on formal security training and setting up security champions within technical teams to evangelize and educate their peers on security.
+A strong program includes structured education, informal mentoring, and designated security champions within technical teams. Training should cover phishing awareness, identity hygiene, secure configuration practices, and a secure development mindset for engineering roles. These efforts reinforce a security-first culture, where individuals clearly understand why security matters, what actions are expected of them, and how to perform those actions correctly.
 
 Security education and policy must help each role understand:
 
-- **Why.** Show each role why security is important to them and their goals in the context of their role responsibilities. If people don't clearly understand why security matters to them, they'll judge it to be unimportant and move on to something else.
+- **Why.** Why security is important in the context of their responsibilities and goals. Without this understanding, individuals deprioritize security and focus on other tasks.
+- **What.** What specific security tasks and expectations apply to them, described in language aligned with their role. Without clarity, people assume security is not relevant to them.
+- **How.** How to correctly perform the required security tasks, such as patching systems, identifying phishing attempts, reviewing code securely, or completing a threat model. Without practical guidance, people fail even when willing.
 
-- **What.** Summarize what security tasks they need to do in language they already understand. If people don't know what they're being asked to do, they'll assume security isn't important or relevant to them and move on to something else.
+To ensure impact and accountability, organizations should define measurable security KPIs. Examples include training completion rates, reduction in repeated risky behaviors, vulnerability remediation timelines, patching cadence, and participation in security exercises. Tracking these metrics provides visibility into the effectiveness of security education, supports compliance requirements, and highlights areas where additional investment or support is needed.
 
-- **How.** Ensure that each role has clear instructions on how to apply security guidance in their role. If people don't know how to actually do what they're being asked to do (for example, patch servers, identify whether a link is a phishing link, report a message properly, review code, or perform a threat model), they'll fail and move on to something else.
 
 ## Example scenario: Typical interoperability among teams
 
