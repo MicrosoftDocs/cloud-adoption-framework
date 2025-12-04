@@ -22,22 +22,20 @@ Organizational readiness aligns team structures and skills to support AI agent d
 
 ## Define responsibilities for agent development
 
-A clear division of responsibilities supports scalable innovation. A proven model coordinates a central platform, distributed workloads, and an AI Center of Excellence (AI CoE). This structure allows workloads to deliver business-aligned solutions quickly, while the platform enforces consistency and the AI CoE drives strategy and standards (*see figure 2.*).
+Successful AI agent adoption relies on integrating agent responsibilities into your existing operating model. This integration requires a clear distinction between the platform that provides the foundation and the workloads that deliver the application logic. The platform team focuses on governance and security at scale, while workload teams concentrate on business value and agility. An AI Center of Excellence (AI CoE) unifies these efforts through shared standards and expert guidance (*see figure 2*).
 
 :::image type="content" source="./images/agent-teams.png" alt-text="Diagram that shows how workload teams, platform teams, and AI CoE work together." lightbox="./images/agent-teams.png" border="false":::
 *Figure 2. Typical AI agent responsibilities across an organization.*
 
-- **Platform responsibilities.** The platform team provides shared infrastructure, tools, and governance enforcement. Platform builders align platform products to ensure agent developers use them in accordance with [responsible AI policies](./responsible-ai-across-organization.md). This centralization reduces duplication and integrates security, observability, and compliance directly into the platform. Key functions include AI system monitoring for performance and fairness, risk check enforcement, and development standard maintenance. The platform team incorporates insights from incident and compliance events into continuous platform improvements. To establish an enterprise platform, follow [Azure landing zone](/azure/cloud-adoption-framework/ready/landing-zone/).
+- **Platform responsibilities.** The platform team manages the technical foundation and governance guardrails. They must audit and enforce the [responsible AI policies](./responsible-ai-across-organization.md) and [governance standards](./governance-security-across-organization.md) the organization adopts. This centralization ensures observability, compliance, and consistent risk management across the enterprise. For implementation guidance, see [prepare an agent environment](./governance-security-across-organization.md#prepare-environment).
 
-- **Workload responsibilities.** Agent workloads operate within business units and own the agents for their domains. Agent developers define requirements, provide domain-specific data, design conversation flows, and integrate agents into business processes. While platform guardrails ensure safe innovation, workload developers must evaluate and enforce agent compliance with responsible AI principles. This approach ensures agents remain relevant to specific business needs and adapt quickly to changing requirements.
+- **Workload responsibilities.** Workload teams operate within business units and own the end-to-end lifecycle of specific agents. They define business requirements, curate domain-specific data, design conversation flows, and integrate agents into business processes. These teams inherit the security controls of the platform and must follow the approved [process to build agents](./build-secure-process.md).
 
-- **AI Center of Excellence (AI CoE).** An AI CoE consists of an internal team of experts who drive successful and valuable AI outcomes. The AI CoE prevents fragmented or ungoverned AI adoption by establishing a strong foundation for AI initiatives. It provides business and technical consultation that supports successful AI integration. The CoE embeds responsible AI principles into policies, offers expert development guidance, conducts training, and researches emerging technologies to improve standards. For more information, see [Establish an AI CoE](/azure/cloud-adoption-framework/scenarios/ai/center-of-excellence).
+- **AI Center of Excellence (AI CoE).** The AI CoE acts as a centralized advisory body that drives strategy and prevents fragmented adoption. It provides the technical expertise and consultation needed to scale AI initiatives successfully. The CoE embeds responsible AI principles into organizational policy, offers expert development guidance, and leads training efforts. For more information, see [Establish an AI CoE](/azure/cloud-adoption-framework/scenarios/ai/center-of-excellence).
 
 ## Gain agent skills and training
 
-Organizations must identify the skills required to support AI agents and address gaps through training or hiring. Each project team needs access to the necessary expertise. Retrain existing staff where feasible, such as upskilling web developers to use Copilot Studio, and bring in specialists for advanced needs like ML engineers for complex Azure AI Foundry projects.
-
-Common skill areas include:
+Organizations must identify the skills required to support AI agents and address gaps through training or hiring. Each project team needs access to the necessary expertise. Retrain existing staff where feasible, such as upskilling web developers to use Copilot Studio, and bring in specialists for advanced needs like ML engineers for complex Foundry projects. Common skill areas include:
 
 | Skill area | Description |
 | :--- | :--- |
@@ -45,15 +43,15 @@ Common skill areas include:
 | **Agent optimization** | Processes for [fine-tuning models](/azure/ai-foundry/concepts/fine-tuning-overview), evaluating response quality against ground truth, and monitoring performance metrics. |
 | **AI ethics and governance** | Application of [responsible AI principles](./responsible-ai-across-organization.md) to ensure agents adhere to safety, fairness, and compliance standards. |
 | **Data engineering for AI** | Strategies for structuring unstructured data, managing vector indexes, and implementing [Retrieval-Augmented Generation (RAG)](/azure/ai-foundry/concepts/retrieval-augmented-generation) patterns. |
-| **AI security** | Methods for detecting and mitigating AI-specific threats, such as prompt injection and jailbreaks, using tools like [Azure AI Content Safety](/azure/ai-services/content-safety/overview). |
+| **AI security** | Methods for detecting and mitigating AI-specific threats, such as prompt injection and jailbreaks. |
 
 A structured training program builds AI competency across teams. Treat skills development as a core part of technology adoption rather than an afterthought.
 
-1. **Use Microsoft's free training resources.** Use Microsoft Learn's free online modules and certifications, such as [Azure AI Engineer Associate](/credentials/certifications/azure-ai-engineer/?practice-assessment-type=certification), to give teams a grounding in AI services. See the [AI agents hub](https://enablement.microsoft.com/ai-agents/) for helpful resources.
+1. **Use Microsoft's free training resources.** Use Microsoft Learn's free online modules and certifications, such as [Azure AI Engineer Associate](/credentials/certifications/azure-ai-engineer/?practice-assessment-type=certification), to give teams a grounding in AI services. See the [AI agents hub](https://enablement.microsoft.com/ai-agents/) for helpful resources. See also the [AI Skills Navigator](https://aiskillsnavigator.microsoft.com/?UTM_Source=Announcement&UTM_Medium=TechCom&UTM_Campaign=Blog&UTM_Content=AISN)
 
 2. **Run hands-on workshops.** Organize internal workshops or hackathons. For example, hold a prompt engineering lab where participants practice improving AI responses, or a hackathon where cross-functional teams prototype a simple agent. These activities build skills, enthusiasm, and idea-sharing.
 
-3. **Consider partner-led training.** Bring in Microsoft or [certified training partners](/training/educator-center/programs/global-training-partner/find-global-training-partner) for tailored sessions or bootcamps on specific tools like Azure AI Foundry or Copilot Studio. Training on actual data accelerates learning through expert guidance.
+3. **Consider partner-led training.** Bring in Microsoft or [certified training partners](/training/educator-center/programs/global-training-partner/find-global-training-partner) for tailored sessions or bootcamps on specific tools like Foundry or Copilot Studio. Training on actual data accelerates learning through expert guidance.
 
 4. **Encourage mentorship and peer learning.** Recognize employees who built AI agents as champions who can coach others. Create internal communities of practice, such as a Teams channel, for AI agent developers to ask questions and share tips.
 

@@ -22,7 +22,7 @@ Without clear responsible AI policies, organizations face significant risks from
 
 ## Define responsible AI standards
 
-Your responsible AI standards establish the ethical baseline for all AI agents in your organization. These standards translate abstract principles into concrete requirements that development teams can implement. The most effective standards integrate seamlessly with existing governance processes rather than creating parallel compliance tracks.
+Your responsible AI standards establish the baseline for all AI agents in your organization. These standards translate abstract principles into concrete requirements that development teams can implement. The most effective standards integrate seamlessly with existing governance processes rather than creating parallel compliance tracks.
 
 1. **Adopt industry frameworks as your baseline.** Start with established frameworks like [Microsoft's Responsible AI principles](https://www.microsoft.com/ai/responsible-ai?msockid=387b522e88e769ba0c90444a89ed68d0) or [NIST's AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework). These frameworks provide comprehensive coverage of fairness, privacy, transparency, and accountability considerations. Using proven frameworks accelerates policy development and ensures you address critical areas. Industry frameworks also provide credibility when communicating with stakeholders, regulators, and partners who recognize these standards.
 
