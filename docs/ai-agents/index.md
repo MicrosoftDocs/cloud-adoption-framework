@@ -13,12 +13,10 @@ ms.collection: ce-skilling-ai-copilot
 
 # AI agent adoption
 
-The AI agent adoption guidance extends the broader [AI adoption](/azure/cloud-adoption-framework/scenarios/ai/) in the Cloud Adoption Framework to address the uniqueness of AI agents within an organization. While the AI adoption scenario covers the full spectrum of AI, this guidance provides a framework for organizations to **(1) plan for agents**, **(2) govern agents**, **(3) build agents**, and **(4) operate agents** (*see figure 1.*).
+This guidance provides a structured framework to help organizations successfully adopt AI agents as part of their broader [AI adoption strategy](/azure/cloud-adoption-framework/scenarios/ai/). It addresses the unique considerations that AI agents introduce. The series highlights Microsoft 365 agents aand guidance for building custom agents using Microsoft Foundry and Microsoft Copilot Studio. It also includes strategies for designing an organization-wide data architecture to support AI agents at scale. Through this guidance, leaders will gain actionable insights across four key areas: **(1) plan for agents**, **(2) govern agents**, **(3) build agents**, and **(4) operate agents** (*see figure 1.*).
 
 :::image type="content" source="./images/ai-agent-adoption.svg" alt-text="Diagram showing a horizontal workflow with four connected phases: plan for agents (business strategy, technology strategy, people strategy, data strategy). Govern (responsible AI, organization agent governance). Build agents (single and multi-agent systems, build agents). Operate agents integrate (integrate agents). Measure (measure agents)." lightbox="./images/ai-agent-adoption.svg" border="false":::
 *Figure 1. Microsoft's AI agent adoption process.*
-
-It helps organizations move beyond isolated deployments to treat agents as strategic assets that automate tasks, increase productivity, and deliver digital services. The guidance focuses on Microsoft Foundry and Microsoft Copilot Studio for building and managing agents. It also addresses use cases for Microsoft Copilot and custom architectures using GPU-based infrastructure.
 
 ## What is an AI agent?
 
