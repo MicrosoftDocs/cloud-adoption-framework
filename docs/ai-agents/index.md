@@ -13,7 +13,9 @@ ms.collection: ce-skilling-ai-copilot
 
 # AI agent adoption
 
-This guidance provides a structured framework to help organizations successfully adopt AI agents as part of their broader [AI adoption strategy](/azure/cloud-adoption-framework/scenarios/ai/). It addresses the unique considerations that AI agents introduce. The series highlights Microsoft 365 agents aand guidance for building custom agents using Microsoft Foundry and Microsoft Copilot Studio. It also includes strategies for designing an organization-wide data architecture to support AI agents at scale. Through this guidance, leaders will gain actionable insights across four key areas: **(1) plan for agents**, **(2) govern and secure agents**, **(3) build agents**, and **(4) operate agents** (*see figure 1.*).
+This guidance provides a structured framework to help organizations successfully adopt AI agents as part of their broader [AI adoption strategy](/azure/cloud-adoption-framework/scenarios/ai/). It addresses the unique considerations that AI agents introduce. The series highlights Microsoft 365 agents aand guidance for building custom agents using Microsoft Foundry and Microsoft Copilot Studio. It also includes strategies for designing an organization-wide data architecture to support AI agents at scale.
+
+Through this guidance, leaders will gain actionable insights across four key areas: **(1) plan for agents**, **(2) govern and secure agents**, **(3) build agents**, and **(4) operate agents** (*see figure 1.*).
 
 :::image type="content" source="./images/ai-agent-adoption.svg" alt-text="Diagram showing a horizontal workflow with four connected phases: plan for agents (business strategy, technology strategy, people strategy, data strategy). Govern (responsible AI, organization agent governance). Build agents (single and multi-agent systems, build agents). Operate agents integrate (integrate agents). Measure (measure agents)." lightbox="./images/ai-agent-adoption.svg" border="false":::
 *Figure 1. Microsoft's AI agent adoption process.*
@@ -26,9 +28,13 @@ Agents are built on five core components:
 :::image type="content" source="./images/agent-overview.png" alt-text="Diagram showing agent architecture with four components feeding into a language model: instructions (defining agent scope and actions), knowledge (grounding data and context), tools (functions and APIs the agent can call), and memory (conversation history and state). The model produces output responses." lightbox="./images/agent-overview.png" border="false":::
 
 - **Generative AI model** serves as the agent’s reasoning engine. It processes instructions, integrates tool calls, and generates outputs, either as messages to other agents or as actionable results. 
+
 - **Instructions** define the scope, boundaries, and behavioral guidelines for the agent. Clear instructions prevent scope creep and ensure the agent adheres to business rules.
+
 - **Retrieval** provides the grounding data and context required for accurate responses. Access to relevant, high-quality data is critical for reducing hallucinations and ensuring relevance.
+
 - **Actions** are the functions, APIs, or systems the agent uses to perform tasks. Tools transform the agent from a passive information retriever into an active participant in business processes.
+
 - **Memory** stores conversation history and state. Memory ensures continuity across interactions, allowing the agent to handle multi-turn conversations and long-running tasks effectively.
 
 ### Difference from retrieval-augmented generation (RAG)
@@ -41,9 +47,11 @@ For technical definitions, see [What is an agent?](/agent-framework/overview/age
 
 Adopting AI agents drives specific organizational outcomes. Understanding these benefits helps justify investment and prioritize use cases.
 
-- **Efficiency.** Agents automate repetitive, low-value tasks. It reduces manual effort and operational costs, allowing resources to focus on strategic initiatives.
-- **Speed.** Agents can process information and execute decisions fast, which can improve service delivery times and responsiveness to market changes.
-- **Scalability.** Agents handle fluctuating workloads, and this elasticity supports growth and seasonal demand spikes.
+- **Efficiency**: Agents automate repetitive, low-value tasks. It reduces manual effort and operational costs, allowing resources to focus on strategic initiatives.
+
+- **Speed**: Agents can process information and execute decisions fast, which can improve service delivery times and responsiveness to market changes.
+
+- **Scalability**: Agents handle fluctuating workloads, and this elasticity supports growth and seasonal demand spikes.
 
 These benefits lead to measurable results such as lower operating costs, improved customer satisfaction, and faster innovation. For leaders, this means AI agents aren't just a technology investment. They're a strategic lever for growth and competitiveness. See [Business plan for AI agents](./business-strategy-plan.md) for more business rationale and use cases.
 
