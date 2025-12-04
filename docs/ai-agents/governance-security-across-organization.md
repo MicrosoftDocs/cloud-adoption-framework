@@ -133,8 +133,6 @@ An environment is the controlled space where workloads and AI agents are develop
    
     - **SaaS platforms**: A landing zone foundation is not required because the platform is fully managed. Instead, focus on configuring identity, access, and data governance settings in line with organizational policies and best practices. Apply compliance controls wherever possible to maintain security and regulatory alignment.
 
-4. **Standardize workload infrastructure.** For PaaS and IaaS, adopt standard application landing zone patterns to ensure consistency. Provide reference templates for common agent patterns in SaaS environments to promote secure, uniform implementations.
-
 **Microsoft facilitation:**<br>
 :::image type="icon" source="./images/foundry-icon.png"::: **Foundry**:  For infrastructure patterns, start with the [Foundry chat reference architecture](/azure/architecture/ai-ml/architecture/baseline-azure-ai-foundry-chat) and/or the [AI application landing zone](https://github.com/Azure/AI-Landing-Zones) and modify to fit your needs. Review the [AI workloads](/azure/well-architected/ai/) guidance in the Well-Architected Framework.
 
