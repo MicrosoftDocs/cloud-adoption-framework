@@ -33,7 +33,7 @@ Refer to the decision tree below to assess whether your use case is suitable for
 :::image-end:::
 
 **Microsoft facilitation:**<br>
-See [Microsoft Fabric data science](/fabric/data-science/data-science-overview), prebuilt speech, language, and translator models in [Foundry Tools](/azure/ai-foundry/agents/how-to/tools/azure-ai-speech?view=foundry&preserve-view=true), or [Azure Machine Learning](/azure/machine-learning/overview-what-is-azure-machine-learning).
+For nongenerative AI solutions, see [Microsoft Fabric data science](/fabric/data-science/data-science-overview). See also the prebuilt speech, language, and translator models in [Foundry Tools](/azure/ai-foundry/agents/how-to/tools/azure-ai-speech?view=foundry&preserve-view=true). Build your own predictive models in [Azure Machine Learning](/azure/machine-learning/overview-what-is-azure-machine-learning).
 
 ## When to use AI agents
 
