@@ -25,16 +25,18 @@ Your choice affects development complexity, operational overhead, security bound
 
 Organizations that default to multi-agent architectures without validating the need often encounter higher costs, increased latency, and more failure points than necessary.
 
-**AI Agent decision tree**: Determine the optimal architecture for your agent system by evaluating your use case against the criteria in the following decision tree (*see figure 2.*). The flowchart guides you through key decision points, including security boundaries and team structure. Follow the path that matches your specific constraints to select the appropriate approach. For more information on each criteria, use the guidance in this article.
+## AI Agent decision tree
+
+After deciding to build a custom AI agent, determine whether to use a single-agent or multi-agent architecture. Specific criteria drive this choice. Some requirements lead directly to multi-agent systems. Others indicate a single-agent solution. Many scenarios require testing a single agent first. Start with the least complex implementation and add complexity only as needed. Use the decision tree (*see figure 2*) to evaluate these criteria.
 
 :::image type="complex" source="./images/ai-agent-decision-tree.svg" alt-text="Decision tree diagram for selecting AI agent solutions based on business and technology requirements." lightbox="./images/ai-agent-decision-tree.svg" border="false":::
     A flowchart guides organizations through decisions about when and how to use AI agents. The diagram starts with a blue diamond labeled "Potential agent use case" and branches into multiple decision paths. The business plan path determines if AI agents should be used. If the answer is "No," the path leads to "Use code or nongenerative AI models" with icons for GitHub, Microsoft Fabric, AI models in Foundry, and Machine Learning. If Yes, it asks if the task involves static question or answer or content generation without reasoning. The technology plan path checks if SaaS agents meet functional requirements. If Yes, the path leads to Use SaaS agents. There are cons representing Microsoft 365 Copilot agents (App Builder, Workflows, Researcher, Analyst, Surveys). Then there are icons for GitHub Copilot agent, Microsoft Fabric data agents, Azure Copilot agents, Dynamics 365 agents, and Security Copilot agents. If SaaS agents don't meet needs, the path leads to "Build AI agents" with options for GPUs & Containers (open-source), Microsoft Foundry (PaaS pro-code), and Copilot Studio (SaaS no/low-code). The single or multiple agents decision path asks whether the use case involves security concerns, compliance requirements, multiple teams, or future growth. If Yes, it leads to "Build multiple agents" using workflows for orchestration. If No, it checks task complexity and requirements, leading to either "Test a single agent" or "Build a single agent" using workflows for integration and governance. The diagram uses color-coded shapes with diamonds representing decision points and rectangles representing actions, with arrows showing the flow between choices.
 :::image-end:::
 *Figure 2. Microsoft's AI agent decision tree.*
 
-## When to build a multi-agent system
+## When to start with a multi-agent system
 
-Multi-agent systems deploy specialized agents for distinct tasks or roles within a single business process. This architecture enables parallel operation and domain optimization. The coordination between agents introduces latency at each handoff point and requires explicit state management between components. Organizations should choose multi-agent architecture only when specific criteria mandate separation.
+Multi-agent systems deploy two or more agents for distinct tasks within a single business process. This architecture enables different orchestration patterns and specialization. The coordination between agents introduces latency at each handoff point and requires explicit state management between components. Organizations should choose multi-agent architecture only when specific criteria mandate separation.
 
 1. **Crossing security and compliance boundaries.** Build multiple agents when regulations or policies mandate strict data isolation. Different security classifications need independent processing environments that single agents can't provide. This least-privilege design limits the blast radius of security incidents by containing breaches within individual agent boundaries. Financial services often require one agent to prepare transactions while another validates them, enforcing separation of duties through architecture.
 
@@ -59,7 +61,7 @@ See [Orchestration strategy](./build-secure-process.md#orchestration-strategy) f
 
 Each agent interaction requires protocol design, error handling, and state synchronization. Every component needs separate prompt engineering, monitoring infrastructure, and debugging capabilities. Security surfaces expand through extra credential management and data transit points between agents. Cost structures increase because each agent processes redundant context and communication overhead multiplies with agent count. Latency accumulates at each handoff point, potentially degrading user experience.
 
-## When to test a single agent first
+## When to test a single agent system first
 
 Teams often assume multi-agent architectures are necessary based on untested beliefs about complexity or performance requirements. This assumption leads to unnecessary overhead and delayed delivery. For scenarios with the following criteria, start with a single-agent prototype to establish baseline capabilities. Move to multi-agent architecture only when testing reveals specific limitations that can't be addressed through single-agent optimization.
 

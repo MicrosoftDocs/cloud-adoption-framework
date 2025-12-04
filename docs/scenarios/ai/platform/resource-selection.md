@@ -13,7 +13,7 @@ This article explains how to select resources for Azure AI platform as a service
 
 | AI services | AI type | Description | Skills required |
 |---------|------------|---------| --- |
-| [Foundry](/azure/ai-foundry/what-is-azure-ai-foundry) | Generative AI and nongenerative AI | A platform for building and deploying generative and nongenerative AI applications | Developer and data science skills |
+| [Microsoft Foundry](/azure/ai-foundry/what-is-azure-ai-foundry) | Generative AI and nongenerative AI | A platform for building and deploying generative and nongenerative AI applications | Developer and data science skills |
 | [Azure AI services](/azure/ai-services/what-are-ai-services) | Generative AI and nongenerative AI | Various services that provide prebuilt generative and nongenerative AI models | Developer skills |
 | [Azure OpenAI](/azure/ai-foundry/openai/concepts/models) | Generative AI | A service for accessing OpenAI models | Developer and data science skills |
 | [Azure Machine Learning](/azure/machine-learning/overview-what-is-azure-machine-learning) | Machine learning | A service for training and deploying machine learning models | Developer skills and advanced data science skills |
@@ -29,7 +29,7 @@ Generative AI uses multiple resources to process input data and produce meaningf
 The following workflow matches the diagram above:
 
 1. The AI app receives a user query.
-2. An orchestrator, such as Azure AI Foundry Agent Service or the [Microsoft Agent Framework](https://devblogs.microsoft.com/foundry/introducing-microsoft-agent-framework-the-open-source-engine-for-agentic-ai-apps/), manages data flow.
+2. An orchestrator, such as Foundry Agent Service or the [Microsoft Agent Framework](https://devblogs.microsoft.com/foundry/introducing-microsoft-agent-framework-the-open-source-engine-for-agentic-ai-apps/), manages data flow.
 3. A search and retrieval mechanism finds the grounding data.
 4. The mechanism sends the grounding data to a generative AI platform.
 5. The generative AI platform creates a response using the user query and grounding data.
@@ -38,11 +38,11 @@ The following workflow matches the diagram above:
 
 Follow these steps to build generative RAG workloads:
 
-1. **Select a generative AI platform.** Use Azure AI Foundry or Azure OpenAI to deploy and manage generative AI models. Azure AI Foundry offers a code-first platform with built-in tools for development, deployment, and orchestration. Choose Azure OpenAI if you only need access to [OpenAI models](/azure/ai-services/openai/concepts/models).
+1. **Select a generative AI platform.** Use Foundry or Azure OpenAI to deploy and manage generative AI models. Foundry offers a code-first platform with built-in tools for development, deployment, and orchestration. Choose Azure OpenAI if you only need access to [OpenAI models](/azure/ai-services/openai/concepts/models).
 
-2. **Select an AI compute type.** Azure AI Foundry requires [compute instances](/azure/ai-studio/how-to/create-manage-compute) for specific features. Pick a compute type that fits your performance and budget needs.
+2. **Select an AI compute type.** Foundry requires [compute instances](/azure/ai-studio/how-to/create-manage-compute) for specific features. Pick a compute type that fits your performance and budget needs.
 
-3. **Select an orchestrator.** Use orchestrators like [Azure AI Foundry Agent Service](/azure/ai-foundry/agents/overview) or [Microsoft Agent Framework](https://devblogs.microsoft.com/foundry/introducing-microsoft-agent-framework-the-open-source-engine-for-agentic-ai-apps/) to manage data flow and interactions. If your workload uses multiple agents, make sure your orchestrator supports the [AI agent orchestration patterns](/azure/architecture/ai-ml/guide/ai-agent-design-patterns) you need.
+3. **Select an orchestrator.** Use orchestrators like [Foundry Agent Service](/azure/ai-foundry/agents/overview) or [Microsoft Agent Framework](https://devblogs.microsoft.com/foundry/introducing-microsoft-agent-framework-the-open-source-engine-for-agentic-ai-apps/) to manage data flow and interactions. If your workload uses multiple agents, make sure your orchestrator supports the [AI agent orchestration patterns](/azure/architecture/ai-ml/guide/ai-agent-design-patterns) you need.
 
 4. **Select a search and knowledge retrieval mechanism.** To ground generative AI models, create an index or vector database for relevant data. Use Azure AI Search to build traditional and vector indexes from various [data sources](/azure/search/search-indexer-overview#supported-data-sources), apply [data chunking](/azure/search/vector-search-integrated-vectorization), and use [multiple query types](/azure/search/search-query-overview#types-of-queries). For structured databases, consider [Azure Cosmos DB](/azure/cosmos-db/vector-database), [Azure Database for PostgreSQL](/azure/postgresql/flexible-server/how-to-use-pgvector), or [Azure Managed Redis](/azure/azure-cache-for-redis/cache-overview-vector-similarity).
 

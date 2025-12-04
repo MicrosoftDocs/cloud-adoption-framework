@@ -13,12 +13,10 @@ ms.collection: ce-skilling-ai-copilot
 
 # Business plan for AI agents
 
-This article describes how to create a business plan for AI agents that aligns technology investments with organizational strategy. A business plan is the initial step in the **Plan for agents** phase of AI agent adoption (*see figure 1*).
+This article describes how to create a business plan for AI agents that aligns technology investments with organizational strategy. It helps you determine when AI agents deliver measurable business value and when alternative solutions are more appropriate. It covers methods to identify high-value use cases, prioritize them based on business impact and feasibility, and define success metrics that track return on investment. A business plan is the initial step in the **Plan for agents** phase of AI agent adoption (*see figure 1*). Without a clear business plan, organizations risk wasting resources on unsuitable automation scenarios or failing to realize the competitive advantage that agents provide.
 
 :::image type="content" source="./images/ai-agent-adoption.svg" alt-text="Diagram showing a horizontal workflow with four connected phases: plan for agents (business strategy, technology strategy, people strategy, data strategy). Govern (responsible AI, organization agent governance). Build agents (single and multi-agent systems, build agents). Operate agents integrate (integrate agents). Measure (measure agents)." lightbox="./images/ai-agent-adoption.svg" border="false":::
 *Figure 1. Microsoft's AI agent adoption process.*
-
-This guidance helps you determine when AI agents deliver measurable business value and when alternative solutions are more appropriate. It covers methods to identify high-value use cases, prioritize them based on business impact and feasibility, and define success metrics that track return on investment. Without a clear business plan, organizations risk wasting resources on unsuitable automation scenarios or failing to realize the competitive advantage that agents provide.
 
 ## When not to use AI agents
 
@@ -39,9 +37,7 @@ See [Microsoft Fabric data science](/fabric/data-science/data-science-overview),
 
 ## When to use AI agents
 
-After eliminating unsuitable scenarios, focus on opportunities where agents drive strategic value. Unlike deterministic software that follows a fixed path, agents reason over data and tools to formulate plans. They adapt to variable inputs to achieve a specific goal. This capability bridges the gap between static automation and open-ended generative AI. See also [What is an AI agent?](./index.md#what-is-an-ai-agent).
-
-To maximize return on investment, start by identifying high-impact business areas, then validate that the specific processes within those areas require the unique reasoning capabilities of an agent.
+After eliminating unsuitable scenarios, focus on opportunities where agents drive strategic value. Unlike deterministic software that follows a fixed path, agents reason over data and tools to formulate plans. See also [What is an AI agent?](./index.md#what-is-an-ai-agent). To maximize return on investment, start by identifying high-impact business areas, then validate that the specific processes within those areas require the unique reasoning capabilities of an agent.
 
 1. **Target strategic areas.** Direct agent development toward pillars that scale operations and drive competitive advantage. Aligning agent capabilities with these strategic goals ensures measurable business value.
 
@@ -62,14 +58,14 @@ To maximize return on investment, start by identifying high-impact business area
 
    If a task fits these general criteria, an agent provides measurable value over standard automation or generative AI alone. If the process follows predictable logic with consistent inputs and outputs, use deterministic code or nongenerative AI models instead.
 
-3. **Validate value through rapid piloting.** Test the reasoning capabilities of an agent in a low-code environment before investing in custom code. Platforms like Microsoft Copilot Studio or Azure AI Foundry allow for rapid prototyping to verify that an agent can handle the required ambiguity. This step prevents over-engineering solutions that might use simpler automation.
+3. **Validate value through rapid piloting.** Test the reasoning capabilities of an agent in a low-code environment before investing in custom code. Platforms like Microsoft Copilot Studio or Microsoft Foundry allow for rapid prototyping to verify that an agent can handle the required ambiguity. This step prevents over-engineering solutions that might use simpler automation.
 
 **Microsoft facilitation:**<br>
 See the [Microsoft Scenario Library](https://adoption.microsoft.com/scenario-library/), [AI Use Cases catalog](https://www.microsoft.com/ai/use-case), and [Sample Solution Gallery](https://adoption.microsoft.com/sample-solution-gallery/) to benchmark internal ideas against proven patterns.
 
 ## How to prioritize AI agent use cases
 
-Not all agent initiatives deliver equal value. Prioritize use cases that align with strategic goals and demonstrate impact quickly. Focus on projects that offer high business value and low implementation complexity. Use three criteria to evaluate and rank candidate use cases: business impact (value), technical feasibility (complexity), and user desirability (value). See the following image for a framework on prioritizing AI agent use cases. The guidance that follows walks you through each of the criteria in more detail.
+Not all agent initiatives deliver equal value. Prioritize use cases that align with strategic goals and demonstrate impact quickly. Use three criteria to evaluate and rank candidate use cases: business impact (value), technical feasibility (complexity), and user desirability (value). See the following image for a framework on prioritizing AI agent use cases. The guidance that follows walks you through each of the criteria in more detail.
 
 :::image type="complex" source="./images/prioritize-agent-use-cases.png" alt-text="Diagram that shows a three-part evaluation framework showing business impact, technical feasibility, and user desirability criteria." lightbox="./images/prioritize-agent-use-cases.png" border="false":::
    Diagram with three sections. First section shows business impact evaluation criteria: executive strategy alignment, business value, and change management timeframe, each rated from low to high impact. Second section shows technical feasibility evaluation criteria: implementation and operation risks, sufficient safeguards, and technology fit, each rated from low to high feasibility. Third section shows user desirability assessment factors including user pain points, solution acceptance, change readiness, and stakeholder support for AI agent implementations.
@@ -107,7 +103,7 @@ Gather evidence through interviews or surveys to validate pain points and openne
 
 ## Define success metrics
 
-Establish measurable success criteria before development begins. Link these metrics directly to business outcomes such as reduced processing time or improved customer satisfaction.
+Establish measurable success criteria before development begins to ensure that agent adoption aligns with strategic business goals. Without clear metrics, organizations cannot validate whether an agent delivers the intended value or justifies the investment. These criteria serve as the benchmark for future management and measurement phases, enabling teams to track performance against initial objectives and make data-driven decisions about scaling, refining, or retiring solutions.
 
 1. **Set baseline business goals.** Identify the key performance indicators (KPIs) that the AI agent must improve. For existing processes, measure current performance to establish a baseline. This baseline comparison enables accurate tracking of post-deployment impact. For new processes or early-stage businesses, estimate initial performance targets and refine these targets as operations mature.
 
