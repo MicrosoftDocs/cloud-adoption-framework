@@ -15,7 +15,7 @@ ms.collection: ce-skilling-ai-copilot
 
 This article helps you determine whether to build a single-agent or multi-agent systems when implementing AI agent solutions. Organizations face this decision during the **Build agents** phase of AI agent adoption (*see figure 1*).
 
-:::image type="content" source="./images/ai-agent-adoption.svg" alt-text="Diagram that shows the process outlined in this guidance: plan, govern, build and secure, integrate, and measure agents across your organization." lightbox="./images/ai-agent-adoption.svg" border="false":::
+:::image type="content" source="./images/ai-agent-adoption.svg" alt-text="Diagram showing a horizontal workflow with four connected phases: plan for agents (sub-steps are business plan, technology plan, organizational readiness, and data architecture). Govern and secure agents (Sub-steps are Responsible AI, Governance and Security, and Prepare environment). Build agents (Sub-steps are single and multi-agent systems and process to build agents). Manage agents integrate (sub-processes Integrate agents and operate agents)." lightbox="./images/ai-agent-adoption.svg" border="false":::
 *Figure 1. Microsoft's AI agent adoption process.*
 
 Your choice affects development complexity, operational overhead, security boundaries, and integration patterns across your cloud estate.

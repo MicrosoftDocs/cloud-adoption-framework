@@ -15,7 +15,7 @@ ms.collection: ce-skilling-ai-copilot
 
 This article explains how to develop a business plan for AI agents that aligns your investment with organizational priorities. It guides you through identifying high-value use cases, ranking them by impact and feasibility, and defining success metrics to measure return on investment. Building this plan is the first step in the **Plan for agents** phase of AI agent adoption (*see figure 1*). Without a well-defined plan, organizations risk wasting time and resources on use cases that are poorly suited for AI agents.
 
-:::image type="content" source="./images/ai-agent-adoption.svg" alt-text="Diagram showing a horizontal workflow with four connected phases: plan for agents (business strategy, technology strategy, people strategy, data strategy). Govern (responsible AI, organization agent governance). Build agents (single and multi-agent systems, build agents). Operate agents integrate (integrate agents). Measure (measure agents)." lightbox="./images/ai-agent-adoption.svg" border="false":::
+:::image type="content" source="./images/ai-agent-adoption.svg" alt-text="Diagram showing a horizontal workflow with four connected phases: plan for agents (sub-steps are business plan, technology plan, organizational readiness, and data architecture). Govern and secure agents (Sub-steps are Responsible AI, Governance and Security, and Prepare environment). Build agents (Sub-steps are single and multi-agent systems and process to build agents). Manage agents integrate (sub-processes Integrate agents and operate agents)." lightbox="./images/ai-agent-adoption.svg" border="false":::
 *Figure 1. Microsoft's AI agent adoption process.*
 
 ## When not to use AI agents
