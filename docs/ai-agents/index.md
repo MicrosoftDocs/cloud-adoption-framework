@@ -13,7 +13,7 @@ ms.collection: ce-skilling-ai-copilot
 
 # AI agent adoption
 
-This guidance provides a structured framework to help organizations successfully adopt AI agents as part of their broader [AI adoption strategy](/azure/cloud-adoption-framework/scenarios/ai/). It addresses the unique considerations that AI agents introduce. The series highlights Microsoft 365 agents aand guidance for building custom agents using Microsoft Foundry and Microsoft Copilot Studio. It also includes strategies for designing an organization-wide data architecture to support AI agents at scale.
+This guidance provides a structured framework to help organizations successfully adopt AI agents as part of their broader [AI adoption strategy](/azure/cloud-adoption-framework/scenarios/ai/). It addresses the unique considerations that AI agents introduce. The series highlights Microsoft 365 agents and guidance for building custom agents using Microsoft Foundry and Microsoft Copilot Studio. It also includes strategies for designing an organization-wide data architecture to support AI agents at scale.
 
 Through this guidance, leaders will gain actionable insights across four key areas: **(1) plan for agents**, **(2) govern and secure agents**, **(3) build agents**, and **(4) operate agents** (*see figure 1.*).
 
