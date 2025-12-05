@@ -15,7 +15,7 @@ ms.collection: ce-skilling-ai-copilot
 
 This article explains how to establish governance and security practices for AI agents across your organization. The formation of AI agent governance policies is critical to the **Govern agents** step in the AI agent adoption process (*see figure 1*).
 
-:::image type="content" source="./images/ai-agent-adoption.svg" alt-text="Diagram that shows the process outlined in this guidance: plan, govern, build and secure, integrate, and measure agents across your organization." lightbox="./images/ai-agent-adoption.svg" border="false":::
+:::image type="content" source="./images/ai-agent-adoption.svg" alt-text="Diagram showing a horizontal workflow with four connected phases: plan for agents (sub-steps are business plan, technology plan, organizational readiness, and data architecture). Govern and secure agents (Sub-steps are Responsible AI, Governance and Security, and Prepare environment). Build agents (Sub-steps are single and multi-agent systems and process to build agents). Manage agents integrate (sub-processes Integrate agents and operate agents)." lightbox="./images/ai-agent-adoption.svg" border="false":::
 *Figure 1. Microsoft's AI agent adoption process.*
 
 Without proper governance, AI agents can introduce risks related to sensitive data exposure, compliance boundaries, and security vulnerabilities. This guidance shows how to implement controls that help protect data, support regulatory compliance, maintain visibility into agent behavior, and secure agent infrastructure throughout its lifecycle. Organizations that establish these controls are better positioned to avoid regulatory issues, data breaches, and operational disruptions associated with ungoverned agent behaviors.
