@@ -17,7 +17,7 @@ This guidance provides a structured framework to help organizations successfully
 
 Through this guidance, leaders will gain actionable insights across four key areas: **(1) plan for agents**, **(2) govern and secure agents**, **(3) build agents**, and **(4) operate agents** (*see figure 1.*).
 
-:::image type="content" source="./images/ai-agent-adoption.svg" alt-text="Diagram showing a horizontal workflow with four connected phases: plan for agents (business strategy, technology strategy, people strategy, data strategy). Govern (responsible AI, organization agent governance). Build agents (single and multi-agent systems, build agents). Operate agents integrate (integrate agents). Measure (measure agents)." lightbox="./images/ai-agent-adoption.svg" border="false":::
+:::image type="content" source="./images/ai-agent-adoption.svg" alt-text="Diagram showing a horizontal workflow with four connected phases: plan for agents (sub-steps are business plan, technology plan, organizational readiness, and data architecture). Govern and secure agents (Sub-steps are Responsible AI, Governance and Security, and Prepare environment). Build agents (Sub-steps are single and multi-agent systems and process to build agents). Manage agents integrate (sub-processes Integrate agents and operate agents)." lightbox="./images/ai-agent-adoption.svg" border="false":::
 *Figure 1. Microsoft's AI agent adoption process.*
 
 ## What is an AI agent?
