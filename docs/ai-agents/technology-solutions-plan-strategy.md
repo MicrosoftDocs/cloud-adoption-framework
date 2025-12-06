@@ -41,7 +41,7 @@ When no SaaS agents meet your functional requirements, build custom agents to ac
 
 ## Build AI agents
 
-Choose a build path based on your organization's technical capabilities, timeline, and control requirements. Microsoft provides two primary platforms: Foundry and Copilot Studio.
+Choose a build path based on your organization's technical capabilities, timeline, and control requirements. Microsoft provides two primary platforms, Foundry and Copilot Studio, with GPUs and containers (IaaS) as a third option.
 
 :::image type="complex" source="./images/build-overview.png" alt-text="Diagram showing build agent options across three platforms: Microsoft Foundry (pro-code with declarative agents, workflows, and hosted agents), Microsoft Copilot Studio (low-code with retrieval and task agents), and GPUs & Containers (custom infrastructure with code-first frameworks)." lightbox="./images/build-overview.png" border="false":::
     Overview of AI agent build options comparing three deployment paths. Microsoft Foundry offers pro-code development with declarative agents for focused tasks, workflows for multi-step orchestration, and hosted agents with managed runtime. Microsoft Copilot Studio provides low-code development with prebuilt connectors and retrieval and task agent capabilities. GPUs & Containers support custom infrastructure using Visual Studio Code and GitHub for maximum flexibility in agent deployment.
