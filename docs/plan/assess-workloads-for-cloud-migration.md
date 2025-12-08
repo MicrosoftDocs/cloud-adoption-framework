@@ -71,12 +71,11 @@ An application code assessment identifies compatibility issues and modernization
 
 ### Use automated tools to assess application code
 
-1. **Modernize .NET and Java applications with GitHub Copilot and AppCAT.** [AppCAT](/azure/migrate/appcat/overview) provides detailed assessments for .NET and Java workloads. AppCAT now has an integration with GitHub Copilot, creating an AI-powered solution for .NET and Java modernization. Use the GitHub Copilot app modernization tool instead of legacy AppCAT workflows. It combines AppCAT’s assessment capabilities with Copilot’s AI-driven assistance to make modernization faster and easier. This integration acts as a coding partner, helping you to:
+1. **Modernize .NET and Java applications with GitHub Copilot and AppCAT.** [AppCAT](/azure/migrate/appcat/overview) provides detailed assessments for .NET and Java workloads. AppCAT now has an integration with GitHub Copilot, creating an AI-powered solution for .NET and Java modernization. Use the GitHub Copilot app modernization tool instead of legacy AppCAT workflows. It combines AppCAT's assessment capabilities with Copilot's AI-driven assistance to make modernization faster and easier. This integration acts as a coding partner, helping you to:
     - Revise and optimize source code for Azure services
     - Containerize applications for flexible deployment
     - Generate deployment files to streamline migration
-
-1. **Use third-party tools for other application languages.** Tools such as CloudPilot and CAST Highlight support languages like Python, JavaScript, Node.js, and Go. These tools identify code-level changes required for Azure compatibility and provide modernization insights. Use these tools to assess non-.NET and non-Java workloads.
+    - Reduce effort with AI-assisted coding
 
 1. **Use assessment results to inform target architecture decisions.** Application compatibility findings can influence the selection of Azure services. For example, an application that isn't compatible with one service might be compatible with another with minimal code changes. Use this flexibility to migrate applications sooner and defer code modernization to a later phase. This approach reduces migration risk and accelerates time to cloud.
 
