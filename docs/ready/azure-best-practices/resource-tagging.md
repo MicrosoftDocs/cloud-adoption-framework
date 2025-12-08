@@ -9,7 +9,7 @@ ms.topic: concept-article
 
 # Define your tagging strategy
 
-This article shows you how to create an effective tagging strategy that supports cost management, governance, and automation across your Azure environment. Your tagging strategy should build on and complement your naming convention. [Define your naming convention](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-tagging) before developing a tagging strategy.
+This article shows you how to create an effective tagging strategy that supports cost management, governance, and automation across your Azure environment. Your tagging strategy should build on and complement your naming convention. [Define your naming convention](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming) before developing a tagging strategy.
 
 ## Why use Azure resource tags?
 
