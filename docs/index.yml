@@ -26,12 +26,12 @@ highlightedContent:
     - title: Introduction
       itemType: overview
       url: ./overview.md
-    - title: Agents
-      itemType: concept
-      url: ./ai-agents/index.md
     - title: AI adoption
       itemType: how-to-guide
       url: ./scenarios/ai/index.md
+    - title: Agents
+      itemType: concept
+      url: ./ai-agents/index.md
     - title: Azure landing zone
       itemType: architecture
       url: ./ready/landing-zone/index.md    
