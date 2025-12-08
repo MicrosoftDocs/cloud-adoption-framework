@@ -79,7 +79,7 @@ Test use cases with the [60-day free trial](/microsoft-copilot-studio/requiremen
 
 ### GPUs and containers
 
-You can also choose to deploy agents on GPU infrastructure using Azure Virtual Machines with containers as an alternative. It can be useful when you need flexibility for custom configurations, integration with existing VM-based workloads, or scenarios requiring advanced security controls. Costs scale with token consumption and compute usage. For deployment guidance, see [AI on IaaS](/azure/cloud-adoption-framework/scenarios/ai/infrastructure/cycle-cloud).
+You can also choose to deploy agents on GPU infrastructure using [Azure Container Apps serverless GPUs](/azure/container-apps/gpu-serverless-overview) (PaaS) or Azure Virtual Machines (IaaS). It can be useful when you need flexibility for custom configurations and integration with existing VM-based workloads. Use when you need granular control for AI performance, isolation, or compliance requirements. Costs scale with token consumption and compute usage. For more guidance, see [AI on IaaS](/azure/cloud-adoption-framework/scenarios/ai/infrastructure/cycle-cloud).
 
 ## Validate technology choices
 
@@ -96,9 +96,9 @@ Organizations often use multiple approaches to meet diverse requirements. Valida
 | Solution | Approach | Agent types | Best for |
 | :--- | :--- | :--- | :--- |
 | **SaaS agents** | Ready-to-use (SaaS) | Retrieval, Task | Personal productivity. Requires minimal customization to deliver immediate value. |
-| **Microsoft Foundry** | Low/no-code or pro-code (PaaS) | Retrieval, Task, Autonomous | Strategic transformation. Supports deep integration and custom logic. |
+| **Microsoft Foundry** | Pro-code and low/no-code (PaaS) | Retrieval, Task, Autonomous | Strategic transformation. Supports deep integration and custom logic. |
 | **Microsoft Copilot Studio** | Low/no-code (SaaS) | Retrieval, Task, Autonomous | Process transformation. Enables fast development with minimal coding and SaaS security. |
-| **GPUs & Containers** | Pro-code (IaaS) | Retrieval, Task, Autonomous | Custom infrastructure. Provides full control of the entire technology stack. |
+| **GPUs and containers** | Pro-code (PaaS or IaaS) | Retrieval, Task, Autonomous | Serverless or self-managed infrastructure. Provides full control of the entire technology stack. |
 
 See the general [AI decision tree](/azure/cloud-adoption-framework/scenarios/ai/strategy#microsoft-ai-decision-tree) for more guidance.
 
