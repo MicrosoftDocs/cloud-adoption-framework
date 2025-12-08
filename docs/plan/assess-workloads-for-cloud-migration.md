@@ -71,7 +71,11 @@ An application code assessment identifies compatibility issues and modernization
 
 ### Use automated tools to assess application code
 
-1. **Use AppCAT for .NET and Java applications.** [AppCAT](/azure/migrate/appcat/overview) provides detailed assessments for .NET and Java workloads. This tool identifies deprecated APIs, unsupported SDKs, and configuration issues that can prevent successful migration. Use AppCAT to generate compatibility and modernization recommendations for these workloads.
+1. **Modernize .NET and Java applications with GitHub Copilot and AppCAT.** [AppCAT](/azure/migrate/appcat/overview) provides detailed assessments for .NET and Java workloads. AppCAT now has an integration with GitHub Copilot, creating an AI-powered solution for .NET and Java modernization. This integration accelerates your journey by acting as a coding partner, helping you to:
+    - Revise and optimize source code for Azure services
+    - Containerize applications for flexible deployment
+    - Generate deployment files to streamline migration
+    - Reduce effort with AI-assisted coding
 
 1. **Use third-party tools for other application languages.** Tools such as CloudPilot and CAST Highlight support languages like Python, JavaScript, Node.js, and Go. These tools identify code-level changes required for Azure compatibility and provide modernization insights. Use these tools to assess non-.NET and non-Java workloads.
 

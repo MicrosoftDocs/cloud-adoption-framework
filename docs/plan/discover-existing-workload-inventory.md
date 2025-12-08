@@ -62,6 +62,7 @@ For an example, see [Migration adoption plan](./migration-adoption-plan.md#workl
 | Discovery | [Azure Migrate](/azure/migrate/migrate-services-overview) | Discovers servers, applications, and dependencies across your infrastructure |
 | Discovery | [Azure Migrate infrastructure](/azure/migrate/migrate-appliance) | Discovers on-premises infrastructure components |
 | Discovery | [Azure Migrate application discovery](/azure/migrate/how-to-discover-applications) | Identifies applications running in your environment |
+| Discovery | [Dr.Migrate](https://azuremarketplace.microsoft.com/marketplace/consulting-services/lab3solutions.drmigrate-standard-cons-deployment) | Analyze your existing workloads to identify migration readiness and modernization opportunities. Provides detailed insights into dependencies, configuration, and potential blockers to streamline your migration planning. |
 | Discovery | [Azure Migrate import template](https://go.microsoft.com/fwlink/?linkid=2109031) | Enables manual documentation of assets in restricted environments |
 | Assessment | [Azure Migrate assessment](/azure/migrate/tutorial-discover-physical) | Evaluates on-premises workloads for Azure migration |
 | Assessment | [Azure Migrate assessment for physical servers](/azure/migrate/tutorial-assess-physical) | Assesses physical and virtualized servers for cloud migration |
