@@ -49,7 +49,7 @@ Azure regions differ in services, pricing, and features. Before deployment:
 
 Single-region deployments can limit scalability and resiliency. Multi-region strategies improve performance, compliance, and disaster recovery.
 
-1. **Known when to use multiple regions.** A single Azure region might restrict your ability to scale, meet regulatory requirements, or deliver low-latency services worldwide. Consider multi-region deployment in these scenarios:
+1. **Know when to use multiple regions.** A single Azure region might restrict your ability to scale, meet regulatory requirements, or deliver low-latency services worldwide. Consider multi-region deployment in these scenarios:
 
     | Scenario | Why it matters | What to do |
     |----------|---------------|------------|
