@@ -10,6 +10,7 @@ ms.topic: concept-article
 # Prepare workloads for the cloud
 
 Before migrating to Azure, workloads must be cloud-ready. Cloud readiness reduces cutover risk and ensures compatibility with Azure services. Validate, secure, and automate workloads in Azure before production cutover. Use your [Azure architecture plan](../plan/estimate-total-cost-of-ownership.md#plan-your-azure-architecture) and your [workload assessment](../plan/assess-workloads-for-cloud-migration.md) to guide preparation.
+For application modernization, use the [GitHub Copilot](https://github.com/features/copilot) to accelerate code updates, containerization, and deployment file generation. This tool integrates with AppCAT to provide AI-powered workflows for modernizing .NET and Java apps.
 
 ## Fix compatibility issues in Azure
 
