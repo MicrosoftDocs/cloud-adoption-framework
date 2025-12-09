@@ -108,10 +108,11 @@ Both RAG and MCP work best when they draw from a unified and governed data found
 Begin with the RAG and MCP retrieval capabilities included in platforms such as Microsoft Foundry and Copilot Studio. Built-in options reduce integration complexity, accelerate deployment, and maintain consistency. Before investing in custom solutions, confirm whether these features meet your requirements for accuracy and governance. Examples of built-in capabilities include:
 
 - [Foundry IQ](/azure/ai-foundry/agents/how-to/tools/knowledge-retrieval?view=foundry&preserve-view=true&preserve-view=true&tabs=foundry%2Cpython)
+- [Fabric IQ](/fabric/iq/overview)
 - [Fabric data agents](/azure/ai-foundry/agents/how-to/tools/fabric?view=foundry&preserve-view=truen)
 - [Connect to MCP servers](/azure/ai-foundry/agents/how-to/tools/model-context-protocol?view=foundry&preserve-view=true)
 - [Sharepoint connection](/azure/ai-foundry/agents/how-to/tools/sharepoint?view=foundry&preserve-view=true)
-- [Azure AI Search](/azure/ai-foundry/agents/how-to/tools/ai-search?view=foundry&preserve-view=true&tabs=keys%2Cazurecli).
+- [Azure AI Search](/azure/ai-foundry/agents/how-to/tools/ai-search?view=foundry&preserve-view=true&tabs=keys%2Cazurecli)
 
 ### Plan for RAG for agents
 
