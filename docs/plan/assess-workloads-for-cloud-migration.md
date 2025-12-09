@@ -115,7 +115,7 @@ For more information, see [CAF Govern - Assess cloud risks](../govern/assess-clo
 |----------|------|-------------|
 | Discovery and Assessment | [Azure Migrate](/azure/migrate/) | Comprehensive discovery and assessment for on-premises servers, databases, and applications |
 | Arc-enabled servers | [Azure Arc](/azure/azure-arc/servers/) | Extends Azure management to on-premises and multicloud environments |
-| Code Assessment | [AppCAT](/azure/migrate/appcat/overview) | Automated compatibility analysis for .NET and Java applications |
+| Code Assessment | [GitHub Copilot](https://github.com/features/copilot) | Automated compatibility analysis for .NET and Java applications |
 | Database Migration | [Data Migration Assistant](/sql/dma/dma-overview) | Assessment and migration tool for SQL Server databases |
 | Multicloud mapping | [AWS to Azure service mapping](/azure/architecture/aws-professional/#primary-topics) | Service comparison guide for AWS to Azure migration |
 | Multicloud mapping | [Google Cloud to Azure service mapping](/azure/architecture/gcp-professional/services) | Service comparison guide for Google Cloud to Azure migration |
