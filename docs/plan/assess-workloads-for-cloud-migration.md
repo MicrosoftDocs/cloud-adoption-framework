@@ -72,12 +72,14 @@ An application code assessment identifies compatibility issues and modernization
 ### Use automated tools to assess application code
 
 1. **Modernize .NET and Java applications with GitHub Copilot and AppCAT.** [AppCAT](/azure/migrate/appcat/overview) provides detailed assessments for .NET and Java workloads. AppCAT now has an integration with GitHub Copilot, creating an AI-powered solution for .NET and Java modernization. Use the GitHub Copilot app modernization tool instead of legacy AppCAT workflows. It combines AppCAT's assessment capabilities with Copilot's AI-driven assistance to make modernization faster and easier. This integration acts as a coding partner, helping you to:
+    - Capture application related dependencies
     - Revise and optimize source code for Azure services
+    - Update code and remediate Common Vulnerability and Exposures (CVEs)
     - Containerize applications for flexible deployment
     - Generate deployment files to streamline migration
     - Reduce effort with AI-assisted coding
 
-1. **Use assessment results to inform target architecture decisions.** Application compatibility findings can influence the selection of Azure services. For example, an application that isn't compatible with one service might be compatible with another with minimal code changes. Use this flexibility to migrate applications sooner and defer code modernization to a later phase. This approach reduces migration risk and accelerates time to cloud.
+1. **Use assessment results to inform target architecture decisions.** Application compatibility findings can influence the selection of Azure services. For example, an application that isn't compatible with one service might be compatible with another with minimal code changes. Services like Managed Instance for App Service requires less code changes while container platform services might require more code update before deployment. Use this flexibility to migrate applications sooner and defer code modernization to a later phase. This approach reduces migration risk and accelerates time to cloud.
 
 ### Validate framework and SDK compatibility
 
