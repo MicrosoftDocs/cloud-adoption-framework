@@ -79,7 +79,7 @@ An application code assessment identifies compatibility issues and modernization
     - Generate deployment files to streamline migration
     - Reduce effort with AI-assisted coding
 
-1. **Use assessment results to inform target architecture decisions.** Application compatibility findings can influence the selection of Azure services. For example, an application that isn't compatible with one service might be compatible with another with minimal code changes. Services like Managed Instance for App Service requires less code changes while container platform services might require more code update before deployment. Use this flexibility to migrate applications sooner and defer code modernization to a later phase. This approach reduces migration risk and accelerates time to cloud.
+1. **Use assessment results to inform target architecture decisions.** Application compatibility findings can influence the selection of Azure services. For example, an application that isn't compatible with one service might be compatible with another with minimal code changes. Services like Managed Instance for App Service requires fewer code changes while container platform services might require more code update before deployment. Use this flexibility to migrate applications sooner and defer code modernization to a later phase. This approach reduces migration risk and accelerates time to cloud.
 
 ### Validate framework and SDK compatibility
 
