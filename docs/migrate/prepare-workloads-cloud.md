@@ -3,7 +3,7 @@ title: Prepare workloads for cloud migration to Azure
 description: Comprehensive guidance for validating, securing, and automating workloads before migrating to Azure, including steps to resolve compatibility issues, test performance, and create reusable infrastructure for reliable cloud adoption and operational maturity.
 author: stephen-sumner
 ms.author: pnp
-ms.date: 09/15/2025
+ms.date: 12/08/2025
 ms.topic: concept-article
 ---
 

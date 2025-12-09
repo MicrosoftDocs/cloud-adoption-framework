@@ -3,7 +3,7 @@ title: Discover your existing workload inventory
 description: Discover how to create a comprehensive workload inventory and prioritize assets for cloud migration. Learn to use Azure Migrate and other tools to assess your infrastructure, applications, and business requirements for successful Azure adoption.
 author: stephen-sumner
 ms.author: pnp
-ms.date: 07/15/2025
+ms.date: 12/08/2025
 ms.topic: concept-article
 ---
 
