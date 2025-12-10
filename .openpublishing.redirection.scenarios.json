@@ -649,6 +649,56 @@
         "source_path": "docs/scenarios/app-platform/ready.md",
         "redirect_url": "/azure/cloud-adoption-framework/scenarios/app-platform/",
         "redirect_document_id": true
+    },
+    {
+        "source_path": "docs/scenarios/hybrid/arc-enabled-data-service-sql-managed-instance/enterprise-scale-landing-zone-sandbox.md",
+        "redirect_url": "https://azurearcjumpstart.io/azure_jumpstart_arcbox",
+        "redirect_document_id": false
+    },
+    {
+        "source_path": "docs/scenarios/hybrid/arc-enabled-data-service-sql-managed-instance/eslz-arc-data-service-sql-managed-instance-business-continuity-disaster-recovery.md",
+        "redirect_url": "/azure/azure-sql/managed-instance/business-continuity-high-availability-disaster-recover-hadr-overview",
+        "redirect_document_id": false
+    },
+    {
+        "source_path": "docs/scenarios/hybrid/arc-enabled-data-service-sql-managed-instance/eslz-arc-data-service-sql-managed-instance-cost-governance.md",
+        "redirect_url": "/azure/azure-sql/managed-instance/frequently-asked-questions-faq#what-cost-benefits-are-available-for-sql-managed-instance",
+        "redirect_document_id": false
+    },
+    {
+        "source_path": "docs/scenarios/hybrid/arc-enabled-data-service-sql-managed-instance/eslz-arc-data-service-sql-managed-instance-governance-disciplines.md",
+        "redirect_url": "/azure/azure-sql/managed-instance/secure-managed-instance#compliance-and-governance",
+        "redirect_document_id": false
+    },
+    {
+        "source_path": "docs/scenarios/hybrid/arc-enabled-data-service-sql-managed-instance/eslz-arc-data-service-sql-managed-instance-identity-access-management.md",
+        "redirect_url": "/azure/azure-sql/managed-instance/secure-managed-instance#identity-management",
+        "redirect_document_id": false
+    },
+    {
+        "source_path": "docs/scenarios/hybrid/arc-enabled-data-service-sql-managed-instance/eslz-arc-data-service-sql-managed-instance-management-disciplines.md",
+        "redirect_url": "/azure/azure-sql/managed-instance/connectivity-architecture-overview",
+        "redirect_document_id": false
+    },
+    {
+        "source_path": "docs/scenarios/hybrid/arc-enabled-data-service-sql-managed-instance/eslz-arc-data-service-sql-managed-instance-network-connectivity.md",
+        "redirect_url": "/azure/azure-sql/managed-instance/connectivity-architecture-overview",
+        "redirect_document_id": false
+    },
+    {
+        "source_path": "docs/scenarios/hybrid/arc-enabled-data-service-sql-managed-instance/eslz-arc-data-service-sql-managed-instance-resource-organization.md",
+        "redirect_url": "/azure/cloud-adoption-framework/ready/azure-setup-guide/organize-resources",
+        "redirect_document_id": false
+    },
+    {
+        "source_path": "docs/scenarios/hybrid/arc-enabled-data-service-sql-managed-instance/eslz-arc-data-service-sql-managed-instance-storage-disciplines.md",
+        "redirect_url": "/azure/azure-sql/managed-instance/service-tiers-managed-instance-vcore#service-tiers",
+        "redirect_document_id": false
+    },
+    {
+        "source_path": "docs/scenarios/hybrid/arc-enabled-data-service-sql-managed-instance/eslz-arc-data-service-sql-managed-instance-upgradeability-disciplines.md",
+        "redirect_url": "/azure/azure-sql/managed-instance/maintenance-window",
+        "redirect_document_id": false
     }
-  ]
+   ]   
 }
