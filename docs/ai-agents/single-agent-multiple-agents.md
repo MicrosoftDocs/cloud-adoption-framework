@@ -13,21 +13,19 @@ ms.collection: ce-skilling-ai-copilot
 
 # Single agent or multiple agents
 
-This article helps you determine whether to build a single-agent or multi-agent systems when implementing AI agent solutions. Organizations face this decision during the **Build agents** phase of AI agent adoption (*see figure 1*).
+This article provides criteria to help you decide whether to build single-agent or multi-agent systems across your organization. Organizations face this decision during the **Build agents** phase of AI agent adoption (*see figure 1*).
 
 :::image type="content" source="./images/ai-agent-adoption.svg" alt-text="Diagram showing a horizontal workflow with four connected phases: plan for agents (sub-steps are business plan, technology plan, organizational readiness, and data architecture). Govern and secure agents (Sub-steps are Responsible AI, Governance and Security, and Prepare environment). Build agents (Sub-steps are single and multi-agent systems and process to build agents). Manage agents integrate (sub-processes Integrate agents and operate agents)." lightbox="./images/ai-agent-adoption.svg" border="false":::
 *Figure 1. Microsoft's AI agent adoption process.*
 
-Your choice affects development complexity, operational overhead, security boundaries, and integration patterns across your cloud estate.
+While workload teams need flexibility to make design decisions, organizations benefit from having a standard set of expectations. These expectations help guide how many agents are created and what will need to be governed and maintained over time. To ensure clarity, here are the key definitions:
 
-- **Single-agent systems** consolidate all logic into one entity. This consolidation simplifies implementation and reduces operational overhead.
-- **Multi-agent systems** distribute responsibilities across specialized agents. This distribution enables modularity but introduces coordination complexity. Without clear requirements for separation, the added complexity of multi-agent systems can create unnecessary complexity during development and higher maintenance effort.
-
-Organizations that default to multi-agent architectures without validating the need often encounter higher costs, increased latency, and more failure points than necessary.
+- **Single‑agent systems** consolidate all logic into a single agent. This approach simplifies implementation, reduces operational overhead, and offers a more predictable execution model.
+- **Multi‑agent systems** divide responsibilities across multiple specialized agents. This enables modularity, clearer separation of concerns, and improved scalability but requires additional coordination and orchestration.
 
 ## AI Agent decision tree
 
-After deciding to build a custom AI agent, determine whether to use a single-agent or multi-agent architecture. Specific criteria drive this choice. Some requirements lead directly to multi-agent systems. Others indicate a single-agent solution. Many scenarios require testing a single agent first. Start with the least complex implementation and add complexity only as needed. Use the decision tree (*see figure 2*) to evaluate these criteria.
+The AI agent decision tree (*see Figure 2*) helps you determine whether to begin with a multi‑agent system, run a single‑agent test, or default to a single‑agent design. The sections that follow explain every criterion in detail.
 
 :::image type="complex" source="./images/ai-agent-decision-tree.svg" alt-text="Decision tree diagram for selecting AI agent solutions based on business and technology requirements." lightbox="./images/ai-agent-decision-tree.svg" border="false":::
     A decision tree that guides organizations through decisions about when and how to use AI agents. It starts with "Potential agent use case" and branches into multiple decision paths. The business plan path determines if AI agents should be used. If the answer is "No," the path leads to "Use code or nongenerative AI models" with icons for GitHub, Microsoft Fabric, AI models in Foundry, and Machine Learning. If Yes, it asks if the task involves static question or answer or content generation without reasoning. The technology plan path checks if SaaS agents meet functional requirements. If Yes, the path leads to Use SaaS agents. There are icons representing Microsoft 365 Copilot agents (App Builder, Workflows, Researcher, Analyst, Surveys). Then there are icons for GitHub Copilot agent, Microsoft Fabric data agents, Azure Copilot agents, Dynamics 365 agents, and Security Copilot agents. If SaaS agents don't meet needs, the path leads to "Build AI agents" with options for GPUs & Containers (IaaS), Microsoft Foundry (PaaS pro-code), and Copilot Studio (SaaS no/low-code). You're going to start with multiple-agent systems if the use case cross security and compliance boundaries, has multiple teams involved, or you know there's going to be future growth of this system. Unless the system is low complexity, all other use cases should start with a single agent test to see if it could meet your requirements. Depending on the result, you'll align with a multi-agent system or single-agent system.
@@ -36,7 +34,7 @@ After deciding to build a custom AI agent, determine whether to use a single-age
 
 ## When to start with a multi-agent system
 
-Multi-agent systems deploy two or more agents for distinct tasks within a single business process. This architecture enables different orchestration patterns and specialization. The coordination between agents introduces latency at each handoff point and requires explicit state management between components. Organizations should choose multi-agent architecture only when specific criteria mandate separation.
+Multi-agent systems deploy two or more agents for distinct tasks within a single business process. This architecture enables different orchestration patterns and specialization. The coordination between agents introduces latency at each handoff point and requires explicit state management between components. Organizations should **start** multi-agent architecture only when specific criteria mandate separation, such as:
 
 1. **Crossing security and compliance boundaries.** Build multiple agents when regulations or policies mandate strict data isolation. Different security classifications need independent processing environments that single agents can't provide. This least-privilege design limits the blast radius of security incidents by containing breaches within individual agent boundaries. Financial services often require one agent to prepare transactions while another validates them, enforcing separation of duties through architecture.
 
@@ -63,7 +61,7 @@ Each agent interaction requires protocol design, error handling, and state synch
 
 ## When to test a single agent system first
 
-Teams often assume multi-agent architectures are necessary based on untested beliefs about complexity or performance requirements. This assumption leads to unnecessary overhead and delayed delivery. For scenarios with the following criteria, start with a single-agent prototype to establish baseline capabilities. Move to multi-agent architecture only when testing reveals specific limitations that can't be addressed through single-agent optimization.
+If your use cases don’t meet the criteria for multi-agent systems, you should generally start by testing them with a single agent. Validating key assumptions early is critical before selecting the best architecture for a given scenario. While multi-agent architectures are sometimes necessary, they are often chosen based on untested assumptions about complexity or performance. For use cases that meet the following criteria, begin with a single-agent prototype to establish baseline capabilities. Transition to a multi-agent architecture only when testing reveals limitations that cannot be resolved through single-agent optimization.
 
 1. **Clear roles involved.** Test a single agent using persona-switching or distinct system prompts before building separate agents. Multi-agent designs become necessary only when strict security boundaries or distinct organizational ownership make unified agents impossible. Single agents can handle most role-based requirements by adjusting behavior based on user context or request type.
 
