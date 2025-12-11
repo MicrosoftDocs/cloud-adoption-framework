@@ -47,7 +47,6 @@ The Microsoft cloud security benchmark includes high-impact security recommendat
 The Microsoft cloud security benchmark documentation specifies security controls and service recommendations.
 
 - [Security controls](/security/benchmark/azure/overview): The Microsoft cloud security benchmark recommendations are categorized by security controls. Security controls represent high-level vendor-agnostic security requirements, like network security and data protection. Each security control has a set of security recommendations and instructions that help you implement those recommendations.
-- [Service recommendations](/security/benchmark/azure/overview): When available, benchmark recommendations for Azure services will include Microsoft cloud security benchmark recommendations that are tailored specifically for that service.
 
 ### Azure Attestation
 
