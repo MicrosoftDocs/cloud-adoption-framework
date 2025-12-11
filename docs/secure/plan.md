@@ -62,7 +62,7 @@ Alignment between technology and business stakeholders is critical to the succes
 
 - **Plan for preparedness:** Plan for incident preparation by evaluating vulnerability management solutions, threat and incident detection systems, and robust infrastructure monitoring solutions. Plan for infrastructure hardening to reduce attack surfaces.
 
-- **Plan for incident response:** Build a robust incident response plan to help ensure cloud security. In the Plan phase, start drafting your incident response plan by identifying the roles and key phases, such as investigation, mitigation, and communications. You'll add details about these roles and phases as you create your cloud estate.
+- **Plan for incident response:** Build a robust incident response plan to help ensure cloud security. In the Plan phase, start drafting your incident response plan by identifying the roles and key phases, such as investigation, mitigation, and communications. You'll add details about these roles and phases as you create your cloud estate. Review the requirements of [Microsoft’s Secure Future Initiative (SFI)](https://learn.microsoft.com/en-us/security/zero-trust/sfi/integrate-nist-2-governance) and add them your assessments.
 
 ## Plan for confidentiality
 
