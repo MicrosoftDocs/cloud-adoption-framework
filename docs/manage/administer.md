@@ -65,7 +65,7 @@ Identity is your security perimeter. You must verify identities, restrict permis
 
 1. ***Manage authentication.*** Ensure users adopt strong authentication through multifactor authentication (MFA) and use [Microsoft Entra multifactor authentication (MFA)](/entra/identity/authentication/concept-mfa-howitworks). Always require [Conditional Access](/entra/identity/conditional-access/policy-all-users-mfa-strength) to enforce authentication based on user identity, device health, and access context. Configure [self-service password reset](/entra/identity/authentication/concept-sspr-howitworks) and [eliminate weak passwords](/entra/identity/authentication/concept-password-ban-bad-combined-policy).
 
-1. ***Manage security information.*** Use [Microsoft Sentinel](/azure/sentinel/overview) for security information and even management (SIEM) and security orchestration, automation, and response (SOAR).
+1. ***Manage security information.*** Use [Microsoft Sentinel](/azure/sentinel/overview) for security information and event management (SIEM) and security orchestration, automation, and response (SOAR).
 
 1. ***Control workload security.*** For workload security recommendations, see the Well-Architected Framework's [security checklist](/azure/well-architected/security/checklist#checklist) and [Azure service guides](/azure/well-architected/service-guides/#browse-the-catalog-of-azure-services) (*start with the Security section*).
 
@@ -239,7 +239,7 @@ Where you use virtual machines, you need to also manage the operating system. Fo
 | Manage security | [Azure service guides](/azure/well-architected/service-guides/#browse-the-catalog-of-azure-services) (*start with the Security section*)| Security configuration recommendations for Azure services |
 | Manage security                             | [Microsoft Entra ID](/entra/fundamentals/whatis)                     | Provides unified identity management                         |
 | Manage security                             | [Defender for Cloud](/azure/defender-for-cloud/security-policy-concept) | Aligns resource configurations with security standards         |
-| Manage security | [Microsoft Sentinel](/azure/sentinel/overview) | Provides security information and even management (SIEM) and security orchestration, automation, and response (SOAR) |
+| Manage security | [Microsoft Sentinel](/azure/sentinel/overview) | Provides security information and event management (SIEM) and security orchestration, automation, and response (SOAR) |
 | Manage security                             | [Azure RBAC](/azure/role-based-access-control/overview)               | Grants secure access with role-based assignments               |
 | Manage security                             | [Azure ABAC](/azure/role-based-access-control/conditions-overview)      | Grants secure access based on attribute conditions             |
 | Manage security                             | [Microsoft Entra ID Governance](/entra/id-governance/identity-governance-overview) | Manages access workflows and identity lifecycle           |
