@@ -131,7 +131,7 @@ The following sections describe how to identify, map, and implement regulatory c
 > [!TIP]
 > When you use Azure landing zone accelerators—such as the Portal, Bicep, or Terraform—the deployment assigns MCSB policy initiative to the Intermediate Root Management Group by default.
 
-Learn more about [policies assigned as part of an Azure landing zone Accelerator deployment](https://github.com/Azure/Enterprise-Scale/blob/main/docs/ESLZ-Policies.md).
+Learn more about [policies assigned as part of an Azure landing zone accelerator deployment](https://github.com/Azure/Enterprise-Scale/wiki/ALZ-Policies).
 
 ### Guidance for implementing policy in Azure landing zones
 
