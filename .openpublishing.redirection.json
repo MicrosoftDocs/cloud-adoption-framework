@@ -3879,6 +3879,21 @@
          "source_path": "docs/ready/landing-zone/sovereign-landing-zone.md",
          "redirect_url": "/industry/sovereign-cloud/sovereign-public-cloud/sovereign-landing-zone/overview-slz",
          "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/ready/enterprise-scale/index.md",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/implementation-options",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/ready/enterprise-scale/implementation.md",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/implementation-options",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/ready/enterprise-scale/scenario-specific-enterprise-scale-landing-zones.md",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/implementation-options",
+         "redirect_document_id": false
       }
    ]
 }
