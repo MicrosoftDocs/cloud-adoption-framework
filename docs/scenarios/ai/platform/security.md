@@ -15,7 +15,7 @@ This article provides security recommendations for organizations that run AI wor
 
 To secure AI resources, apply security baselines and best practices to protect the infrastructure that supports AI workloads on Azure. These measures reduce risks from external threats and ensure consistent security across your organization. Apply standardized security controls to maintain robust protection. Here's how:
 
-1. **Apply Azure security baselines to all AI resources.** Azure security baselines provide standardized security controls that address common vulnerabilities across AI platforms. These baselines ensure consistent protection and reduce configuration errors that could expose your infrastructure. Use the [Azure security baselines](/security/benchmark/azure/overview) for each AI platform you deploy.
+1. **Apply Azure security baselines to all AI resources.** Azure security baselines provide standardized security controls that address common vulnerabilities across AI platforms. These baselines ensure consistent protection and reduce configuration errors that could expose your infrastructure. Use the [Azure security baselines](/security/benchmark/azure/security-baselines-overview) for each AI platform you deploy.
 
 2. **Follow Azure Well-Architected Framework security guidance.** The [Azure Well-Architected Framework](/azure/well-architected/) provides service-specific security recommendations that complement baseline controls. These guidelines address unique security considerations for each AI service and help optimize your security posture. Review and implement the security recommendations in [Azure Service Guides](/azure/well-architected/service-guides/?product=popular) for your AI platforms.
 
