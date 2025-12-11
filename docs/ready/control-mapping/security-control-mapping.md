@@ -225,7 +225,6 @@ _Example:_ If you need to meet Canada Federal Protected B (PBMM) compliance and 
 
 MCSB focuses on Azure technical controls. It does not include non-technical objectives, such as training, or controls not directly related to technical security, such as data center security. Mark these items as Microsoft’s responsibility, and use evidence from MCSB content or Microsoft audit reports to demonstrate compliance. If you determine that an objective is a technical control, create a mitigating control in addition to the base controls for tracking. You can also send a request to *MCSBteam@microsoft.com* to address missing controls in future releases.
 
-## Resources
 ## Additional resources
 
 - [Service Trust Portal](https://servicetrust.microsoft.com/)
