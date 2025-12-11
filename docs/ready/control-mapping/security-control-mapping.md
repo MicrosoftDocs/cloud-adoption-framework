@@ -11,7 +11,7 @@ ms.topic: concept-article
 
 Many organizations are required to comply with certain industry/regional regulations before adopting and onboarding the Azure cloud services. These compliance regulations are identified by compliance domain and controls respectively. For example, **CMMC L3 AC 1.001** where AC is Access Control domain and 1.001 is a control ID in Cybersecurity Maturity Model Certification (CMMC) framework. The best practice recommendation is to map the required compliance controls to Microsoft cloud security benchmark (MCSB) and identify the custom set of the controls that are not covered by MCSB.
 
-In Addition, MCSB also provides the list of built-in policies and Policy initiatives GUIDs to addresses the required controls. For the controls that are not covered in MCSB, the control mapping guidance includes a step by step process on how to build policies and initiatives.
+In addition, MCSB also provides the list of built-in policies and Policy initiatives GUIDs to addresses the required controls. For the controls that are not covered in MCSB, the control mapping guidance includes a step by step process on how to build policies and initiatives.
 
 Mapping the required controls to Microsoft cloud security benchmark can greatly expedite secure Azure onboarding experience. Microsoft cloud security benchmark provides a canonical set of cloud-centric technical security controls based on widely used compliance control frameworks such as NIST, CIS, PCI. There are built-in regulatory compliance initiatives already available. If you're interested in a specific compliance domain, refer to [Regulatory compliance built-in initiatives](/azure/governance/policy/samples/azure-security-benchmark).
 
