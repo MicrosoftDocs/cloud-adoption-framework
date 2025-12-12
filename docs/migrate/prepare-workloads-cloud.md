@@ -19,7 +19,7 @@ Compatibility issues can block workload migration and must be resolved before pr
 
 After planning your cloud architecture and preparing your application landing zones, the next step is to deploy all workload components into Azure. This phase ensures that your environments are properly isolated, governed, and aligned with your architecture plan. Once deployed, validate the completeness of the test environment to ensure readiness for production.
 
-1. **Create Azure subscriptions for workload environments.** Create separate subscriptions for development, test, and production environments to ensure proper isolation, cost tracking, and governance. Place subscriptions in the appropriate management group and apply environment-specific governance policies, role-based access control assignments, and cost management budgets. For more information, see [Create your subscriptions](/azure/cloud-adoption-framework/ready/azure-best-practices/initial-subscriptions).
+1. **Create Azure subscriptions for workload environments.** Create separate subscriptions for development, test, and production environments to ensure proper isolation, cost tracking, and governance. Place subscriptions in the appropriate management group and apply environment-specific governance policies, role-based access control assignments, and cost management budgets. For more information, see [Create your subscriptions](../ready/azure-setup-guide/initial-subscriptions).
 
 2. **Use your architecture plan.** Deploy the Azure architecture defined during cloud adoption planning. Ensure it reflects any updated workload requirements. For guidance, see [Azure architecture planning](../plan/estimate-total-cost-of-ownership.md#plan-your-azure-architecture).
 
@@ -70,7 +70,7 @@ Functional and performance testing ensures the workload meets business requireme
 
 1. **Execute comprehensive functional testing.** Conduct user acceptance testing (UAT), integration testing, and regression testing to confirm that the application meets business and technical requirements. Test all critical user workflows and business processes to ensure they work correctly in the Azure environment. Document any functional issues and resolve them before production deployment.
 
-2. **Measure performance under realistic load conditions.** Use [Azure Load Testing](/azure/load-testing/overview-what-is-azure-load-testing) to simulate realistic user traffic and measure response times, throughput, and resource utilization. Configure load tests to reflect expected production usage patterns and peak load scenarios. Load Testing provides detailed performance metrics and identifies bottlenecks that could affect user experience.
+2. **Measure performance under realistic load conditions.** Use [Azure Load Testing](/azure/app-testing/load-testing/overview-what-is-azure-load-testing) to simulate realistic user traffic and measure response times, throughput, and resource utilization. Configure load tests to reflect expected production usage patterns and peak load scenarios. Load Testing provides detailed performance metrics and identifies bottlenecks that could affect user experience.
 
 3. **Validate performance against baseline.** Reference the performance baseline metrics documented during the [CAF Plan workload assessment](../plan/assess-workloads-for-cloud-migration.md). Compare test results to established performance baselines from your source environment. Identify any performance degradation and optimize configurations, scale resources, or modify code to meet performance targets.
 
