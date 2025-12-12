@@ -1,8 +1,8 @@
 ---
 title: Platform landing zone implementation options
 description: Determine which Platform landing zone implementation option best fits your requirements.
-author: stephen-sumner
-ms.author: pnp
+author: jtracey93
+ms.author: jatracey
 ms.date: 12/12/2025
 ms.topic: concept-article
 ms.custom: internal
@@ -24,6 +24,9 @@ But if your organization does not have the necessary expertise in IaC or prefers
 
 ## Azure landing zone Infrastructure-as-Code (IaC) Accelerator
 
+> [!TIP]
+> This is the recommended approach for deploying and managing your Platform landing zone.
+
 The [Azure Landing Zones IaC Accelerator](https://aka.ms/alz/accelerator) provides an opinionated, automated approach to deploying and managing the Platform landing zone using Bicep or Terraform (based on Azure Verified Modules (AVM)). It streamlines the setup of a continuous delivery environment, supporting both Azure DevOps and GitHub for Version Control Systems (VCS) with deployment pipelines, and runners.
 
 It is our recommended approach for organizations looking to implement a Platform landing zone due to its flexibility, repeatability, and scalability. The IaC Accelerator allows you to define your platform landing zone architecture as code, enabling you to version control, automate deployments, and easily replicate environments.
@@ -33,82 +36,32 @@ The Azure Landing Zones IaC Accelerator uses a streamlined, four-phase approach 
 In phase 0 (Planning) you'll make decisions about your IaC language of choice and VCS, then you’ll move into Phase 1 (Prerequisites) to set up credentials and subscriptions ready for the next phase. In Phase 2 (Bootstrap) you run the PowerShell module and bootstrap your Azure environment and VCS ready for the assets to deploy and manage your Platform landing zone. And finally in Phase 3 (Run) you make final changes to the IaC code based on the customizations you need in your organization before then triggering the Continuous Integration and Delivery (CI/CD) pipelines to deploy your Platform landing zone into your environment. 
 
 Perfect for teams looking to automate and standardize Platform landing zones quickly with recommended best practices.
-<!-- 
-# Landing zone implementation options
 
-[!INCLUDE [Azure landing zone under construction advisory](~/../includes/landing-zone-under-construction.md)]
+## Azure Verified Modules (AVM) for Platform landing zone (ALZ) - Bicep and Terraform
 
-An [Azure landing zone](./index.md) provides cloud adoption teams with a well-managed environment to run their workloads. Take advantage of the best practices described in [landing zone design areas](./design-areas.md) to build a strong foundation. You can then extend the foundation by implementing processes related to security, governance, and compliance.
+We have created and use many existing [Azure Verified Modules (AVM)](https://aka.ms/avm) to allow you to build your Platform landing zone using either [Bicep](https://aka.ms/alz/acc/bicep) or [Terraform](https://aka.ms/alz/acc/tf). These modules are reusable, customizable, and extensible building blocks that help you deploy a Platform landing zone aligned with best practices.
 
-## Environment development approaches
-
-There are two primary approaches. The choice will depend on how fast your teams can develop the required skills.
-
-- **Start with the Azure landing zone accelerator:** If your business requirements call for a rich initial implementation of landing zones with fully integrated governance, security, and operations from the start. If you need to, you can modify using Infrastructure-as-Code (IaC) to set up and configure an environment per your requirements. For IaC, your organization will require skills in Azure Resource Manager templates and GitHub.
-
-- **Customize:** If it's more important to build your environment to meet specific requirements, or develop internal skills. In this approach, focus on the basic landing zones considerations required to start cloud adoption. All technical and business requirements are considered complete when your environment configuration aligns with Azure landing zone conceptual architecture. You can then focus on enhancing your landing zone.
-
-> [!IMPORTANT]
-> Of the two approaches, the Azure landing zone accelerator is recommended because it's the quickest way to achieve a scaled-out and mature environment.
->
-> [![`DTA-Button-ALZ`](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.svg?sanitize=true)](https://aka.ms/caf/ready/accelerator)
-
-Beside the use of the Azure landing zone accelerator, there are use cases where organizations have specific business or technical requirements. For those cases, some customization might be needed.
-
-To address the customization use cases, consider the [implementation options](#implementation-options) given in this article. The options are intended for users with strong skills in technologies such as Azure Resource Manager, Azure Policy, DevOps tools, and third-party deployment tools. Those technologies are required for a solid foundation on which to build a landing zone.
-
-> [!CAUTION]
-> The best practices used for customization will ultimately be aligned with the [Azure landing zone](./index.md). However, there's added investment in time and effort which might be justified to fit specific business requirements.
-
-Finally, guidance in the [Govern](../../govern/index.md) and [Manage](../../manage/index.md) methodologies will build on top of your initial landing zones. The design of any Azure landing zone outline will likely require refactoring over time.
-
-## Implementation options
-
-Here are some implementation options for landing zones keeping in mind the development approaches described above. Each implementation option in this table is designed for a specific set of operating model dependencies to support your organizations nonfunctional requirements. Every option includes distinct automation approaches and tools. Even though each option is mapped to a different operating model, they have common design areas. The difference is how you choose to implement them and the level of technical experience required.
-
-### Azure landing zone accelerator approach
-
-| Implementation option | Description | Deployment instructions |
-|---|---|---|
-| [Enterprise-scale foundation](../enterprise-scale/index.md) | Enterprise-ready platform foundation with all the necessary shared services to support the full IT portfolio, where connectivity can be added later as needed. </br></br> [Design principles](./design-principles.md) </br> [Design areas](design-areas.md) | [![Dta-button]][DTA-WingTip]</br> [Readme: foundation](https://github.com/Azure/Enterprise-Scale/blob/main/docs/reference/wingtip/README.md)</br> [Readme: Network topology (Virtual WAN)](https://github.com/Azure/Enterprise-Scale/blob/main/docs/reference/contoso/Readme.md)</br> [Readme: Network topology (hub-spoke)](https://github.com/Azure/Enterprise-Scale/blob/main/docs/reference/adventureworks/README.md) |
-| [Azure landing zones modular](https://github.com/Azure/ALZ-Bicep/blob/main/docs/wiki/Home.md)|Modular approach using Bicep for deploying the core platform capabilities. | [Readme: Bicep modules](https://github.com/Azure/ALZ-Bicep/wiki/ConsumerGuide)
-| Enterprise-scale for small enterprises| This reference implementation is meant for organizations that don't have a large IT team and do not require fine grained administration delegation models. | [![Dta-button]][DTA-small-enterprises]</br>[Readme](https://github.com/Azure/Enterprise-Scale/blob/main/docs/reference/treyresearch/README.md) |
-| Enterprise-scale for Azure Government|Reference implementation that can be deployed to Azure Government Cloud. | [![Dta-button]][DTA-AzureGov] </br>[Readme](https://github.com/Azure/Enterprise-Scale#readme)|
-| [CAF enterprise-scale landing zone (Azure China 21Vianet regions)](https://github.com/Azure/Enterprise-Scale/tree/main/eslzArm#do-it-yourself-deployment-instructions-for-enterprise-scale-using-azure-powershell) | Reference implementation that can be deployed to Azure clouds in China. | [![Dta-button]][DTA-21Vianet] </br> [Deploy](https://github.com/Azure/Enterprise-Scale/blob/cf46ee50e2720a42bebdd5b43abc08738f349794/eslzArm/README-AzureChina.md) |
-| [Terraform Azure Verified Modules for Platform Landing Zones](deploy-landing-zones-with-terraform.md) | Deploys an enterprise-ready platform foundation by using Terraform. Use this option when you manage your platform by using Terraform and need to accelerate delivery of the recommended resource hierarchy and governance model. You can integrate shared services, network connectivity, and application workloads into your deployment or manage them independently. |[Docs](https://aka.ms/alz/tf) |
-| [Microsoft Sovereign Cloud](/industry/sovereignty/cloud-for-sovereignty) | A sovereign landing zone uses the same code base as the Azure landing zone Bicep approach but has more orchestration and deployment automation capabilities. It also has Azure Policy initiatives and assignments to help meet sovereignty requirements for public-sector customers, partners, and independent software vendors (ISVs). | [Readme](/industry/sovereignty/) |
-
-### Customize approach
-
-| Implementation option | Description | Deployment instructions |
-|---|---|---|
-| [Partner landing zones](./partner-landing-zone.md) | Partners who provide offerings aligned to the Ready methodology of the Cloud Adoption Framework can provide their own customized implementation option. </br>[Design principles](partner-landing-zone.md) | [Find a partner](https://www.microsoft.com/azure/partners/adopt?filters=ready) |
-
-## Next steps
-
-To proceed, choose one of the implementation options shown in the preceding tables. Each option includes a link to deployment instructions and the specific design principles that guide implementation.-->
-
-<!-- The following section is used to store references to external images and links to reduce maintenance overhead and enable tooltips -->
-
-<!-- [DTA-Button]: https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.svg?sanitize=true "Deploy Azure landing zone accelerator."
-
-[DTA-WingTip]: https://portal.azure.com/#blade/Microsoft_Azure_CreateUIDef/CustomDeploymentBlade/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FEnterprise-Scale%2Fmain%2FeslzArm%2FeslzArm.json/uiFormDefinitionUri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FEnterprise-Scale%2Fmain%2FeslzArm%2Feslz-portal.json
-[DTA-small-enterprises]: https://portal.azure.com/#blade/Microsoft_Azure_CreateUIDef/CustomDeploymentBlade/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FEnterprise-Scale%2Fmain%2FeslzArm%2FeslzArm.json/uiFormDefinitionUri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FEnterprise-Scale%2Fmain%2FeslzArm%2Feslz-portal.json
-[DTA-AzureGov]: https://portal.azure.us/#blade/Microsoft_Azure_CreateUIDef/CustomDeploymentBlade/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FEnterprise-Scale%2Fmain%2FeslzArm%2FeslzArm.json/uiFormDefinitionUri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FEnterprise-Scale%2Fmain%2FeslzArm%2Feslz-portal.json
-[DTA-21Vianet]: https://github.com/Azure/Enterprise-Scale/blob/cf46ee50e2720a42bebdd5b43abc08738f349794/eslzArm/README-AzureChina.md  -->
-
-
-
-<!-- 
-## Azure verified modules for your platform landing zone
-
-For infrastructure as code (IaC) deployments, you can use Azure verified modules for your platform landing zone. Available for both Bicep and Terraform, these modules provide a set of reusable, customizable, and extensible modules that help you deploy a platform landing zone. The modules are designed to help you accelerate the delivery of the recommended resource hierarchy and governance model. You can integrate shared services, network connectivity, and application workloads into your deployment or manage them independently.
-
-If you want to use Bicep or Terraform, see [Bicep and Terraform deployment options](/azure/architecture/landing-zones/landing-zone-deploy#platform).
+You can use these modules independently or as part of the [Azure Landing Zones IaC Accelerator](https://aka.ms/alz/accelerator) to deploy and manage your Platform landing zone
 
 ## Azure platform landing zone portal accelerator
 
-This accelerator is a ready-made deployment experience. The Azure landing zone portal accelerator deploys the reference architecture (*see figure 1*) and applies predetermined configurations to key components such as management groups and policies. It suits organizations whose reference architecture aligns with the planned operating model and resource structure.
+The [Azure platform landing zone portal accelerator](https://aka.ms/alz/portal) is a ready-made deployment experience that allows you to deploy the reference architecture via an Azure portal-based deployment. The portal accelerator deploys the reference architecture and applies predetermined configurations to key components such as management groups and policies.
 
-If you plan to manage your environment with the Azure portal, use the Azure platform landing zone portal accelerator. Deploying the Azure landing zone portal accelerator requires permissions to create resources at the tenant (`/`) scope. To grant these permissions, follow the guidance in [Tenant deployments with ARM templates: Required access](/azure/azure-resource-manager/templates/deploy-to-tenant?tabs=azure-powershell#required-access). -->
+[![`DTA-Button-ALZ`](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.svg?sanitize=true)](https://aka.ms/alz/portal)
 
+It suits organizations who don't have the necessary expertise in Infrastructure-as-Code (IaC) or prefer a more visual approach. However, it is less flexible and scalable compared to IaC options and we highly recommend using IaC options where possible. 
+
+See [Use infrastructure as code to update Azure landing zones](/azure/cloud-adoption-framework/ready/considerations/infrastructure-as-code-updates) for more information to help you understand why IaC is the preferred approach.
+
+## Next steps
+
+Choose the implementation option that best fits your organization's needs and expertise, and follow the relevant documentation to get started with deploying and managing your Platform landing zone.
+
+> [!div class="nextstepaction"]
+> [Azure landing zone IaC Accelerator documentation](https://aka.ms/alz/accelerator)
+
+> [!div class="nextstepaction"]
+> [Azure Verified Modules (AVM) for Platform landing zone (ALZ) - Bicep documentation](https://aka.ms/alz/acc/bicep)
+
+> [!div class="nextstepaction"]
+> [Azure Verified Modules (AVM) for Platform landing zone (ALZ) - Terraform documentation](https://aka.ms/alz/acc/tf)
