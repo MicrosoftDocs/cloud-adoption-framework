@@ -71,12 +71,6 @@ From the perspective of Azure landing zones, AI is just another workload or serv
 
 For more information on AI adoption in Azure, see the [AI adoption scenario](/azure/cloud-adoption-framework/scenarios/ai/). For specific focus on AI workloads and landing zones, see [Establish an AI foundation](/azure/cloud-adoption-framework/scenarios/ai/ready#establish-an-ai-foundation).
 
-## Azure verified modules for your platform landing zone
-
-For infrastructure as code (IaC) deployments, you can use Azure verified modules for your platform landing zone. Available for both Bicep and Terraform, these modules provide a set of reusable, customizable, and extensible modules that help you deploy a platform landing zone. The modules are designed to help you accelerate the delivery of the recommended resource hierarchy and governance model. You can integrate shared services, network connectivity, and application workloads into your deployment or manage them independently.
-
-If you want to use Bicep or Terraform, see [Bicep and Terraform deployment options](/azure/architecture/landing-zones/landing-zone-deploy#platform).
-
 ## Deploying and managing Azure landing zones
 
 There are multiple ways to deploy and manage Azure landing zones as detailed further in [Landing zone implementation options](./implementation-options.md). You can choose the method that best fits your organization's needs and expertise. There are multiple options available:
