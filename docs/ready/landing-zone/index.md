@@ -73,14 +73,16 @@ For more information on AI adoption in Azure, see the [AI adoption scenario](/az
 
 ## Deploying and managing Azure landing zone
 
-There are multiple ways to deploy and manage Azure landing zones as detailed further in [Landing zone implementation options](./implementation-options.md). You can choose the method that best fits your organization's needs and expertise. There are multiple options available:
+There are multiple ways to deploy and manage your Platform landing zone, which is part of the Azure landing zone (see above), as detailed further in [Landing zone implementation options](./implementation-options.md). You can choose the method that best fits your organization's needs and expertise. There are multiple options available:
 
 - [Azure landing zone Infrastructure-as-Code (IaC) Accelerator](https://aka.ms/alz/accelerator) ***(recommended approach)***
   - [Azure Verified Modules (AVM) for Platform landing zone (ALZ) - Terraform](https://aka.ms/alz/acc/tf) *(Can also be used outside of the accelerator, if desired)*
   - [Azure Verified Modules (AVM) for Platform landing zone (ALZ) - Bicep](https://aka.ms/alz/acc/bicep) *(Can also be used outside of the accelerator, if desired)*
 - [Azure platform landing zone portal accelerator](https://aka.ms/alz/portal)
 
-We highly recommend using Infrastructure-as-Code (IaC) options, such as Bicep or Terraform, via the Azure landing zone Infrastructure-as-Code (IaC) Accelerator for deploying and managing Azure landing zones. These options provide greater flexibility, repeatability, and scalability compared to the portal accelerator. But if your organization does not have the necessary expertise in IaC or prefers a more visual approach, the portal accelerator can be a suitable alternative. See [Use infrastructure as code to update Azure landing zones](/azure/cloud-adoption-framework/ready/considerations/infrastructure-as-code-updates) for more information to help you understand why IaC is the preferred approach.
+We highly recommend using Infrastructure-as-Code (IaC) options, such as Bicep or Terraform, via the Azure landing zone Infrastructure-as-Code (IaC) Accelerator for deploying and managing Azure landing zones. These options provide greater flexibility, repeatability, and scalability compared to the portal accelerator. 
+
+But if your organization does not have the necessary expertise in IaC or prefers a more visual approach, the portal accelerator can be a suitable alternative. See [Use infrastructure as code to update Azure landing zones](/azure/cloud-adoption-framework/ready/considerations/infrastructure-as-code-updates) for more information to help you understand why IaC is the preferred approach.
 
 ## Next steps
 

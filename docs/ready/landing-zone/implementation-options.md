@@ -1,13 +1,28 @@
 ---
-title: Landing zone implementation options
-description: Determine which landing zone implementation option best fits your requirements.
+title: Platform landing zone implementation options
+description: Determine which Platform landing zone implementation option best fits your requirements.
 author: stephen-sumner
 ms.author: pnp
-ms.date: 01/17/2025
+ms.date: 12/12/2025
 ms.topic: concept-article
 ms.custom: internal
 ---
+# Platform landing zone implementation options
 
+There are multiple ways to deploy and manage your Platform landing zone, which is part of the Azure landing zone (see [Platform landing zone vs. application landing zones](./index.md#platform-landing-zone-vs-application-landing-zones)). You can choose the method that best fits your organization's needs and expertise.
+
+To summarize, there are multiple options available:
+
+- [Azure landing zone Infrastructure-as-Code (IaC) Accelerator](https://aka.ms/alz/accelerator) ***(recommended approach)***
+  - [Azure Verified Modules (AVM) for Platform landing zone (ALZ) - Terraform](https://aka.ms/alz/acc/tf) *(Can also be used outside of the accelerator, if desired)*
+  - [Azure Verified Modules (AVM) for Platform landing zone (ALZ) - Bicep](https://aka.ms/alz/acc/bicep) *(Can also be used outside of the accelerator, if desired)*
+- [Azure platform landing zone portal accelerator](https://aka.ms/alz/portal)
+
+We highly recommend using Infrastructure-as-Code (IaC) options, such as Bicep or Terraform, via the Azure landing zone Infrastructure-as-Code (IaC) Accelerator for deploying and managing Azure landing zones. These options provide greater flexibility, repeatability, and scalability compared to the portal accelerator. 
+
+But if your organization does not have the necessary expertise in IaC or prefers a more visual approach, the portal accelerator can be a suitable alternative. See [Use infrastructure as code to update Azure landing zones](/azure/cloud-adoption-framework/ready/considerations/infrastructure-as-code-updates) for more information to help you understand why IaC is the preferred approach.
+
+<!-- 
 # Landing zone implementation options
 
 [!INCLUDE [Azure landing zone under construction advisory](~/../includes/landing-zone-under-construction.md)]
@@ -60,13 +75,29 @@ Here are some implementation options for landing zones keeping in mind the devel
 
 ## Next steps
 
-To proceed, choose one of the implementation options shown in the preceding tables. Each option includes a link to deployment instructions and the specific design principles that guide implementation.
+To proceed, choose one of the implementation options shown in the preceding tables. Each option includes a link to deployment instructions and the specific design principles that guide implementation.-->
 
 <!-- The following section is used to store references to external images and links to reduce maintenance overhead and enable tooltips -->
 
-[DTA-Button]: https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.svg?sanitize=true "Deploy Azure landing zone accelerator."
+<!-- [DTA-Button]: https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.svg?sanitize=true "Deploy Azure landing zone accelerator."
 
 [DTA-WingTip]: https://portal.azure.com/#blade/Microsoft_Azure_CreateUIDef/CustomDeploymentBlade/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FEnterprise-Scale%2Fmain%2FeslzArm%2FeslzArm.json/uiFormDefinitionUri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FEnterprise-Scale%2Fmain%2FeslzArm%2Feslz-portal.json
 [DTA-small-enterprises]: https://portal.azure.com/#blade/Microsoft_Azure_CreateUIDef/CustomDeploymentBlade/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FEnterprise-Scale%2Fmain%2FeslzArm%2FeslzArm.json/uiFormDefinitionUri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FEnterprise-Scale%2Fmain%2FeslzArm%2Feslz-portal.json
 [DTA-AzureGov]: https://portal.azure.us/#blade/Microsoft_Azure_CreateUIDef/CustomDeploymentBlade/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FEnterprise-Scale%2Fmain%2FeslzArm%2FeslzArm.json/uiFormDefinitionUri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FEnterprise-Scale%2Fmain%2FeslzArm%2Feslz-portal.json
-[DTA-21Vianet]: https://github.com/Azure/Enterprise-Scale/blob/cf46ee50e2720a42bebdd5b43abc08738f349794/eslzArm/README-AzureChina.md
+[DTA-21Vianet]: https://github.com/Azure/Enterprise-Scale/blob/cf46ee50e2720a42bebdd5b43abc08738f349794/eslzArm/README-AzureChina.md  -->
+
+
+
+<!-- 
+## Azure verified modules for your platform landing zone
+
+For infrastructure as code (IaC) deployments, you can use Azure verified modules for your platform landing zone. Available for both Bicep and Terraform, these modules provide a set of reusable, customizable, and extensible modules that help you deploy a platform landing zone. The modules are designed to help you accelerate the delivery of the recommended resource hierarchy and governance model. You can integrate shared services, network connectivity, and application workloads into your deployment or manage them independently.
+
+If you want to use Bicep or Terraform, see [Bicep and Terraform deployment options](/azure/architecture/landing-zones/landing-zone-deploy#platform).
+
+## Azure platform landing zone portal accelerator
+
+This accelerator is a ready-made deployment experience. The Azure landing zone portal accelerator deploys the reference architecture (*see figure 1*) and applies predetermined configurations to key components such as management groups and policies. It suits organizations whose reference architecture aligns with the planned operating model and resource structure.
+
+If you plan to manage your environment with the Azure portal, use the Azure platform landing zone portal accelerator. Deploying the Azure landing zone portal accelerator requires permissions to create resources at the tenant (`/`) scope. To grant these permissions, follow the guidance in [Tenant deployments with ARM templates: Required access](/azure/azure-resource-manager/templates/deploy-to-tenant?tabs=azure-powershell#required-access). -->
+
