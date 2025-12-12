@@ -19,7 +19,7 @@ Compatibility issues can block workload migration and must be resolved before pr
 
 After planning your cloud architecture and preparing your application landing zones, the next step is to deploy all workload components into Azure. This phase ensures that your environments are properly isolated, governed, and aligned with your architecture plan. Once deployed, validate the completeness of the test environment to ensure readiness for production.
 
-1. **Create Azure subscriptions for workload environments.** Create separate subscriptions for development, test, and production environments to ensure proper isolation, cost tracking, and governance. Place subscriptions in the appropriate management group and apply environment-specific governance policies, role-based access control assignments, and cost management budgets. For more information, see [Create your subscriptions](../ready/azure-setup-guide/initial-subscriptions).
+1. **Create Azure subscriptions for workload environments.** Create separate subscriptions for development, test, and production environments to ensure proper isolation, cost tracking, and governance. Place subscriptions in the appropriate management group and apply environment-specific governance policies, role-based access control assignments, and cost management budgets. For more information, see [Create your subscriptions](../ready/azure-setup-guide/initial-subscriptions.md).
 
 2. **Use your architecture plan.** Deploy the Azure architecture defined during cloud adoption planning. Ensure it reflects any updated workload requirements. For guidance, see [Azure architecture planning](../plan/estimate-total-cost-of-ownership.md#plan-your-azure-architecture).
 
