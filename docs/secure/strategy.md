@@ -70,7 +70,7 @@ Availability requirements and objectives span across the entire cloud estate, in
 
 ## Defining a strategy for sustaining security posture
 
-The journey toward a modern, robust security posture doesn't end with the initial implementation. To keep up with new threats, you need to continuously review and refine your security practices while maintaining strict adherence to standards. Sustaining security is an ongoing effort of running day-to-day operations that meet the expectations your organization has set for itself while preparing for emerging threats and technological changes. Adoption of this principle codifies your continuous improvement approach. It provides security teams with guiding standards for maintaining vigilant security practices and gives stakeholders confidence that security remains a cornerstone tenet of the cloud adoption journey. 
+The journey toward a modern, robust security posture doesn't end with the initial implementation. To keep up with new threats, you need to continuously review and refine your security practices while maintaining strict adherence to standards. Sustaining security is an ongoing effort of running day-to-day operations that meet the expectations your organization has set for itself while preparing for emerging threats and technological changes. Adoption of this principle codifies your continuous improvement approach. It provides security teams with guiding standards for maintaining vigilant security practices and gives stakeholders confidence that security remains a cornerstone tenet of the cloud adoption journey.
 
 When you develop a sustainment strategy, you focus on learning how your overall security strategy performs in the real world and on applying lessons to evolve it continuously. A sustainment strategy should incorporate long-term business goals to ensure that long-term security goals are aligned. When these goals are taken into account, the sustainment strategy defines how the security posture must evolve to stay in alignment.
 
@@ -135,7 +135,7 @@ As our global expansion progresses, our data estate will grow exponentially. Han
 As we expand across the globe, our LOB workload must maintain the high performance and zero-downtime availability that our customers rely on.
 
 - **Business owner:** COO
- 
+
 - **Technical owner:** CTO
 
 - **Security owner:** CISO
@@ -147,7 +147,7 @@ As we expand across the globe, our LOB workload must maintain the high performan
 **Security considerations:**
 
 - We must develop secure design patterns to ensure that we can efficiently and securely deploy identical infrastructure packages in each new region we expand into. Our [availability](#defining-a-strategy-for-availability) strategy should consider tradeoffs that we'll need to make to ensure that security isn't compromised by our performance designs and that our performance targets aren't affected by our security measures.
-    
+
     - We must include system [integrity](#defining-a-strategy-for-integrity) processes and mechanisms in our design patterns to ensure that our systems are protected by default when we deploy our workload in new geographies.
 
 ## Next step

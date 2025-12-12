@@ -94,7 +94,7 @@ Organizations can ensure that access controls are implemented and embraced by em
 
 ## Incident preparedness and response adoption
 
-After you establish your landing zone or other platform design with secure network segmentation and well-designed subscription and resource organization, you can begin implementation with a focus on incident preparedness and response. During this phase, developing your preparedness and response mechanisms, including your incident response plan, ensures that your cloud estate and operational practices align with business goals. This alignment is crucial for maintaining efficiency and achieving strategic objectives. The adoption phase should approach incident preparedness and response from two perspectives. These perspectives are threat readiness and mitigation, and infrastructure and application security.
+After you establish your landing zone or other platform design with secure network segmentation and well-designed subscription and resource organization, you can begin implementation with a focus on incident preparedness and response. During this phase, developing your preparedness and response mechanisms, including your incident response plan, ensures that your cloud estate and operational practices align with business goals. This alignment is crucial for maintaining efficiency and achieving strategic objectives. The adoption phase should approach incident preparedness and response from two perspectives. These perspectives are threat readiness and mitigation, and infrastructure and application security. Review the requirements of [Microsoft’s Secure Future Initiative (SFI)](/security/zero-trust/sfi/integrate-nist-2-governance) and add them your assessments.
 
 ### Threat readiness and mitigation
 
