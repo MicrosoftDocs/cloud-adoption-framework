@@ -22,7 +22,7 @@ This architecture is a starting point. You can modify it to fit your specific bu
 > *Polyglot persistence* refers to the practice of using multiple data storage or data store technologies to support your data types and their storage needs. Polyglot persistence means that an application can use more than one core database or storage technology.
 
 > [!IMPORTANT]
-> You must deploy your data management landing zone as a separate subscription under a management group that has the appropriate governance. Then you can control governance across your organization. The [Azure landing zone accelerator](../../../ready/landing-zone/index.md#azure-verified-modules-for-your-platform-landing-zone) describes how you should approach Azure landing zones.
+> You must deploy your data management landing zone as a separate subscription under a management group that has the appropriate governance. Then you can control governance across your organization. The [Azure landing zone](../../../ready/landing-zone/index.md) describes how you should approach Azure landing zones.
 
 ## Data governance
 

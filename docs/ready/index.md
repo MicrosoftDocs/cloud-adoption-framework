@@ -3,7 +3,7 @@ title: Ready your Azure environment for workloads
 description: Understand Azure landing zone and the process to use one. 
 author: stephen-sumner
 ms.author: pnp
-ms.date: 10/02/2025
+ms.date: 12/11/2025
 ms.topic: concept-article
 ms.custom: internal
 ms.update-cycle: 1095-days
@@ -50,16 +50,16 @@ Whether you’re starting fresh (Greenfield) or modernizing an existing setup (B
 Next, accelerate the deployment of your platform resources based on the Azure landing zone conceptual architecture. These components establish governance and shared services such as management group hierarchy, policy enforcement, connectivity, security, and monitoring. Deployment options include the Azure portal, Bicep, and Terraform:
 
 - [Accelerator portal](/azure/cloud-adoption-framework/ready/landing-zone/implementation-options#azure-landing-zone-accelerator-approach)
-- [Bicep modules](https://github.com/Azure/ALZ-Bicep)
-- [Bicep Accelerator](https://github.com/Azure/ALZ-Bicep/wiki/Accelerator)
-- [Terraform module](https://github.com/Azure/terraform-azurerm-caf-enterprise-scale/wiki/%5BExamples%5D-Deploy-Connectivity-Resources-With-Custom-Settings)
+- [ALZ IaC Accelerator](https://aka.ms/alz/accelerator)
+  - [Bicep modules](https://aka.ms/alz/bicep)
+  - [Terraform module](https://aka.ms/alz/tf)
 
 ### 3. Subscription vending process
 
 Once your platform is in place, you’ll need to create individual application landing zones within your Azure tenant. A subscription vending solution is recommended to automate this process. Vending helps deploy subscriptions along with core resources such as networking. Both Bicep and Terraform modules are available:
 
-- [Vending module (Terraform)](https://github.com/Azure/terraform-azurerm-lz-vending)
-- [Vending module (Bicep)](https://github.com/Azure/bicep-registry-modules/tree/main/avm/ptn/lz/sub-vending)
+- [Vending module (Terraform)](https://aka.ms/lz-vending/tf)
+- [Vending module (Bicep)](https://aka.ms/lz-vending/bicep)
 
 ### 4. Deploy application landing zone components
 
