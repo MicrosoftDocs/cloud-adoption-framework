@@ -291,8 +291,6 @@ items:
         - name: Implementation options
           href: ready/landing-zone/implementation-options.md
           items:
-          - name: Deploy Azure landing zones with Terraform
-            href: ready/landing-zone/deploy-landing-zones-with-terraform.md
           - name: ISV considerations for landing zones
             href: ready/landing-zone/isv-landing-zone.md
           - name: Get landing zone help
