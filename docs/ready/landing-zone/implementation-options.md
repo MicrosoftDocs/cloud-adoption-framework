@@ -22,6 +22,13 @@ We highly recommend using Infrastructure-as-Code (IaC) options, such as Bicep or
 
 But if your organization does not have the necessary expertise in IaC or prefers a more visual approach, the portal accelerator can be a suitable alternative. See [Use infrastructure as code to update Azure landing zones](/azure/cloud-adoption-framework/ready/considerations/infrastructure-as-code-updates) for more information to help you understand why IaC is the preferred approach.
 
+## Azure landing zone Infrastructure-as-Code (IaC) Accelerator
+
+The [Azure Landing Zones IaC Accelerator](https://aka.ms/alz/accelerator) provides an opinionated, automated approach to deploying and managing the Platform landing zone using Bicep or Terraform (based on Azure Verified Modules (AVM)). It streamlines the setup of a continuous delivery environment, supporting both Azure DevOps and GitHub for Version Control Systems (VCS) with deployment pipelines, and runners.
+
+It is our recommended approach for organizations looking to implement a Platform landing zone due to its flexibility, repeatability, and scalability. The IaC Accelerator allows you to define your platform landing zone architecture as code, enabling you to version control, automate deployments, and easily replicate environments.
+
+The Azure Landing Zones IaC Accelerator uses a streamlined, four-phase approach to get your environment ready for continuous delivery. In phase 0 (Planning) you'll make decisions about your IaC language of choice and VCS, then you’ll move into Phase 1 (Prerequisites) to set up credentials and subscriptions ready for the next phase, then into Phase 2 (Bootstrap) to run the PowerShell module and bootstrap your Azure environment and VCS ready for the assets to deploy and manage your Platform landing zone, and finally in Phase 3 (Run) you make final changes to the IaC code based on the customizations you need in your organization before then triggering the Continuous Integration and Delivery (CI/CD) pipelines to deploy your Platform landing zone into your environment. Perfect for teams looking to automate and standardize Platform landing zones quickly with recommended best practices.
 <!-- 
 # Landing zone implementation options
 
