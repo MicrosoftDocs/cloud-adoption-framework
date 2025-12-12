@@ -71,7 +71,7 @@ From the perspective of Azure landing zones, AI is just another workload or serv
 
 For more information on AI adoption in Azure, see the [AI adoption scenario](/azure/cloud-adoption-framework/scenarios/ai/). For specific focus on AI workloads and landing zones, see [Establish an AI foundation](/azure/cloud-adoption-framework/scenarios/ai/ready#establish-an-ai-foundation).
 
-## Deploying and managing Azure landing zones
+## Deploying and managing Azure landing zone
 
 There are multiple ways to deploy and manage Azure landing zones as detailed further in [Landing zone implementation options](./implementation-options.md). You can choose the method that best fits your organization's needs and expertise. There are multiple options available:
 

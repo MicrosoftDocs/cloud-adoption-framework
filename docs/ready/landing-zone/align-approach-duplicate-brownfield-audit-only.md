@@ -21,7 +21,7 @@ Prior to implementing this approach, review [Azure landing zone conceptual archi
 
 Use this approach to transition to the Azure landing zone conceptual architecture:
 
-1. Deploy the [Azure landing zone accelerator](/azure/architecture/landing-zones/landing-zone-deploy#platform) into the same Microsoft Entra ID tenant in parallel with the current environment. This method provides a smooth and phased transition to the new landing zone architecture with minimal disruption to active workloads.
+1. Deploy the [Azure landing zone](../landing-zone/index.md#deploying-and-managing-azure-landing-zone) into the same Microsoft Entra ID tenant in parallel with the current environment. This method provides a smooth and phased transition to the new landing zone architecture with minimal disruption to active workloads.
 
    This deployment creates a new management group structure. This structure aligns with Azure landing zone design principles and recommendations. It also ensures that these changes don't affect the existing environment.
 
