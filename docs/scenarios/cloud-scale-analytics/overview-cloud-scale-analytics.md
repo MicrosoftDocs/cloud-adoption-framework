@@ -12,7 +12,7 @@ ms.custom: e2e-data-management, think-tank
 
 Cloud-scale analytics builds upon Azure landing zones to simplify deployment and governance. The main purpose of an Azure landing zone is to ensure that, when you deploy an application or workload on Azure, the required infrastructure is already in place. Before you deploy your cloud-scale analytics landing zone, you need to work through the [Cloud Adoption Framework for Azure](/azure/cloud-adoption-framework/) to deploy an [Azure landing zone architecture](/azure/cloud-adoption-framework/ready/landing-zone/) that has platform landing zones.
 
-For sovereign workloads, Microsoft provides the [Sovereign Landing Zone (SLZ)](/industry/sovereignty/slz-overview), which is a variant of the enterprise-scale Azure landing zone. The SLZ is intended for organizations that need advanced sovereign controls. Cloud-scale analytics can be deployed against this Azure landing zone variant.
+For sovereign workloads, Microsoft provides the [Sovereign Landing Zone (SLZ)](/industry/sovereign-cloud/sovereign-public-cloud/sovereign-landing-zone/overview-slz), which is a variant of the Azure landing zone. The SLZ is intended for organizations that need advanced sovereign controls. Cloud-scale analytics can be deployed against this Azure landing zone variant.
 
 Cloud-scale analytics involves deploying to application landing zones. These zones typically reside under the landing zone management group. Policies filter down to the sample templates that Microsoft provides.
 

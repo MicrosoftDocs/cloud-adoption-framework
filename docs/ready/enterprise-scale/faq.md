@@ -162,6 +162,6 @@ You can reassign the subscription after you clean up the subscription. Here are 
 The sovereign landing zone is a component of Microsoft Sovereign Cloud that's intended for public sector customers who need advanced sovereignty controls. As a tailored version of the Azure landing zone conceptual architecture, the sovereign landing zone aligns Azure capabilities such as service residency, customer-managed keys, Azure Private Link, and confidential computing. Through this alignment, the sovereign landing zone creates a cloud architecture where data and workloads offer encryption and protection from threats by default.
 
 > [!NOTE]
-> Microsoft Sovereign Cloud is oriented toward government organizations with sovereignty needs. You should carefully consider whether you need the Microsoft Sovereign Cloud capabilities, and only then consider adopting the sovereign landing zone architecture.
+> Microsoft Sovereign Cloud is oriented toward organizations with sovereignty needs. You should carefully consider whether you need the Microsoft Sovereign Cloud capabilities, and only then consider adopting the sovereign landing zone architecture.
 
-For more information about the sovereign landing zone, see [Sovereignty considerations for Azure landing zones](../landing-zone/sovereign-landing-zone.md).
+For more information about the sovereign landing zone, see [Sovereign Landing Zone (SLZ)](/industry/sovereign-cloud/sovereign-public-cloud/sovereign-landing-zone/overview-slz).

@@ -291,21 +291,8 @@ items:
         - name: Implementation options
           href: ready/landing-zone/implementation-options.md
           items:
-          - name: Start with enterprise scale
-            items:
-            - name: Overview
-              href: ready/enterprise-scale/index.md
-            - name: Implement enterprise-scale landing zones
-              href: ready/enterprise-scale/implementation.md
-            - name: Scenario-specific enterprise-scale landing zones
-              href: ready/enterprise-scale/scenario-specific-enterprise-scale-landing-zones.md
-
-          - name: Deploy Azure landing zones with Terraform
-            href: ready/landing-zone/deploy-landing-zones-with-terraform.md
           - name: ISV considerations for landing zones
             href: ready/landing-zone/isv-landing-zone.md
-          - name: Sovereignty considerations and the sovereign landing zone
-            href: ready/landing-zone/sovereign-landing-zone.md
           - name: Get landing zone help
             href: ready/landing-zone/partner-landing-zone.md
 
