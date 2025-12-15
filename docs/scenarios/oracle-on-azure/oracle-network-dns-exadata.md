@@ -1,6 +1,6 @@
 ---
-title: Oracle Database@Azure DNS 
-description: Learn about key design considerations and recommendations for Oracle Database@Azure network topology and connectivity for your landing zone.
+title: Domain Name Service (DNS) for Oracle Database@Azure Exadata
+description: Learn about key design considerations and recommendations for Oracle Database@Azure Domain Name Service (DNS) for your landing zone.
 author: terrymandin
 ms.author: author: terrymandin
 ms.reviewer: sihbher
@@ -8,9 +8,10 @@ ms.date: 12/08/25
 ms.topic: concept-article
 ms.custom: e2e-oracle
 ---
+
 # Domain Name Service (DNS) for Oracle Database@Azure Exadata
 
-This article outlines key considerations and best practices for configuring Domain Name Service (DNS) when deploying Oracle Database@Azure Exadata. Its primary objective is to deliver technical guidance that supports a reliable and optimized cloud environment, ensuring a seamless customer experience. The content assumes familiarity with Oracle Database technologies and as Azure compute and networking fundamentals. As part of your planning and architecture design process, refer to this resource for detailed recommendations. For additional context, see [Private Link and DNS integration at scale](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/private-link-and-dns-integration-at-scale) and [DNS for on-premises and Azure resources](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/dns-for-on-premises-and-azure-resources). 
+This article outlines key considerations and best practices for configuring Domain Name Service (DNS) when deploying Oracle Database@Azure Exadata. Its primary objective is to deliver technical guidance that supports a reliable and optimized cloud environment, ensuring a seamless customer experience. The content assumes familiarity with Oracle Database technologies and as Azure compute and networking fundamentals. As part of your planning and architecture design process, refer to this resource for detailed recommendations. For additional context, see [Private Link and DNS integration at scale](/azure/cloud-adoption-framework/ready/azure-best-practices/private-link-and-dns-integration-at-scale) and [DNS for on-premises and Azure resources](/azure/cloud-adoption-framework/ready/azure-best-practices/dns-for-on-premises-and-azure-resources). 
 
 This guidance addresses critical considerations for Domain Name Service (DNS) configuration when deploying Oracle Database@Azure. At an enterprise level, DNS design impacts service reliability, security posture, and interoperability across hybrid environments. Misalignment can lead to name resolution failures, operational delays, and increased support costs. Establishing clear standards ensures consistent deployments and reduces risk.
 
