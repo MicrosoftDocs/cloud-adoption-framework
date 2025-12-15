@@ -2,7 +2,7 @@
 title: Domain Name Service (DNS) for Oracle Database@Azure Exadata
 description: Learn about key design considerations and recommendations for Oracle Database@Azure Domain Name Service (DNS) for your landing zone.
 author: terrymandin
-ms.author: author: terrymandin
+ms.author: terrymandin
 ms.reviewer: sihbher
 ms.date: 12/08/25
 ms.topic: concept-article
