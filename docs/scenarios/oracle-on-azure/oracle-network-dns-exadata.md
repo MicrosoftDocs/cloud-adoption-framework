@@ -10,7 +10,7 @@ ms.custom: e2e-oracle
 ---
 # Domain Name Service (DNS) for Oracle Database@Azure Exadata
 
-This article outlines key considerations and best practices for configuring Domain Name Service (DNS) when deploying Oracle Database@Azure Exadata.  Its primary objective is to deliver technical guidance that supports a reliable and optimized cloud environment, ensuring a seamless customer experience. The content assumes familiarity with Oracle Database technologies as well as Azure compute and networking fundamentals. As part of your planning and architecture design process, refer to this resource for detailed recommendations. For additional context, see [Private Link and DNS integration at scale](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/private-link-and-dns-integration-at-scale) and [DNS for on-premises and Azure resources](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/dns-for-on-premises-and-azure-resources). 
+This article outlines key considerations and best practices for configuring Domain Name Service (DNS) when deploying Oracle Database@Azure Exadata. Its primary objective is to deliver technical guidance that supports a reliable and optimized cloud environment, ensuring a seamless customer experience. The content assumes familiarity with Oracle Database technologies and as Azure compute and networking fundamentals. As part of your planning and architecture design process, refer to this resource for detailed recommendations. For additional context, see [Private Link and DNS integration at scale](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/private-link-and-dns-integration-at-scale) and [DNS for on-premises and Azure resources](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/dns-for-on-premises-and-azure-resources). 
 
 This guidance addresses critical considerations for Domain Name Service (DNS) configuration when deploying Oracle Database@Azure. At an enterprise level, DNS design impacts service reliability, security posture, and interoperability across hybrid environments. Misalignment can lead to name resolution failures, operational delays, and increased support costs. Establishing clear standards ensures consistent deployments and reduces risk.
 
@@ -38,7 +38,7 @@ Custom DNS is supported but requires **manual setup and lifecycle management**. 
 *   Environments that mandate integration with external DNS providers.
 
 **Trade-offs:**  
-While custom DNS offers flexibility, it introduces additional operational burden and risk of misconfiguration. Governance teams must define approval workflows and document configuration standards.
+While custom DNS offers flexibility, it introduces more operational burden and risk of misconfiguration. Governance teams must define approval workflows and document configuration standards.
 
 ## **Hybrid Integration**
 
@@ -49,7 +49,7 @@ This approach ensures seamless name resolution across hybrid environments withou
 
 ## **Scaling DNS Across a Large Number of instances**
 
-When deploying a large number of Oracle Database@Azure Exadata instances, managing and linking multiple private DNS zones can  become an operational burden.
+When your team deploys a large number of Oracle Database@Azure Exadata instances, the process of managing and linking multiple private DNS zones can become an operational burden.
 
 *   Consider **network anchors** (hub-and-spoke or virtual network peering models) to centralize DNS resolution.
 *   Define governance policies for anchor networks to prevent sprawl and maintain security boundaries.
@@ -60,4 +60,4 @@ Centralized DNS resolution reduces administrative overhead, improves scalability
 
 ## Next step
 
-Now that you understand Domain Name Service (DNS) for Oracle Database@Azure Exadata, see the [BCDR connectivity design](./business-continuity-disaster-recovery-connectivity-design.md) guidance. This guidance helps you establish the required network foundations and best practices needed to support business continuity and disaster recovery strategies.
+Now that you understand Domain Name Service (DNS) for Oracle Database@Azure Exadata, see the [Business Continuity and Disaster Recovery (BCDR) design](./business-continuity-disaster-recovery-connectivity-design.md) guidance. This guidance helps you establish the required network foundations and best practices needed to support business continuity and disaster recovery strategies.
