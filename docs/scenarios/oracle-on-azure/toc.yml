@@ -21,6 +21,8 @@ items:
             href: core-network-design.md
           - name: Application connectivity design
             href: application-connectivity-design.md
+          - name: DNS design
+            href: oracle-network-dns-exadata.md
           - name: BCDR connectivity design
             href: business-continuity-disaster-recovery-connectivity-design.md
           - name: Migration connectivity design
