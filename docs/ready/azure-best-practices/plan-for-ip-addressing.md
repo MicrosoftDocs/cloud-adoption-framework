@@ -69,9 +69,9 @@ For in-depth recommendations and best practices regarding your cloud architectur
 **Design considerations:**
 
 - Phase your IPv6 adoption. Based on your business needs, implement IPv6 where needed. Remember that IPv4 and IPv6 can coexist as long as necessary.
-- In scenarios where applications rely on infrastructure as a service (IaaS) services that have full IPv6 support, like  virtual machines (VMs), native end-to-end use of IPv4 and IPv6 is possible. This configuration avoids translation complications and provides the most information to the server and application.  
+- In scenarios where applications rely on infrastructure as a service (IaaS) services that have full IPv6 support, like virtual machines (VMs), native end-to-end use of IPv4 and IPv6 is possible. This configuration avoids translation complications and provides the most information to the server and application.  
 
-   You can deploy Standard-SKU internet-facing Azure Load Balancers with an IPv6 address. This configuration enables native end-to-end IPv6 connectivity between the public internet and Azure VMs via the load balancer. This approach also facilitates native end-to-end outbound connections between VMs and IPv6-enabled clients on the public internet. Note that this approach requires every device in the path to handle IPv6 traffic.
+   You can deploy a Standard-SKU internet-facing Azure Load Balancer with an IPv6 address. This configuration enables native end-to-end IPv6 connectivity between the public internet and Azure VMs via the load balancer. This approach also facilitates native end-to-end outbound connections between VMs and IPv6-enabled clients on the public internet. Note that this approach requires every device in the path to handle IPv6 traffic.
 
   The native end-to-end approach is most useful for direct server-to-server or client-to-server communication. It's not useful for most web services and applications, which are typically protected by firewalls, web application firewalls, or reverse proxies.
 
