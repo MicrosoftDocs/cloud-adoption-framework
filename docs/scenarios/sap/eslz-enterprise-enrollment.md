@@ -13,8 +13,10 @@ ms.custom: think-tank, e2e-sap
 
 # Enterprise enrollment for SAP
 
-Azure landing zones for SAP do not have any specific considerations or recommendations which would impact enterprise enrollment or Microsoft Entra ID tenant decisions.
+Azure landing zones for SAP do not introduce additional requirements that affect enterprise enrollment or Microsoft Entra ID tenant decisions.
 
-However, it could be important to understand any decisions previously made by the cloud platform team to be aware of existing [enterprise enrollment or Microsoft Entra tenant decisions](../../ready/landing-zone/design-area/azure-billing-microsoft-entra-tenant.md).
+However, review decisions that the cloud platform team has already made. These decisions may affect existing [enterprise enrollment or Microsoft Entra ID tenant choices](../../ready/landing-zone/design-area/azure-billing-microsoft-entra-tenant.md).
 
-You may also want to review the [identity and access management considerations](./eslz-identity-and-access-management.md) to understand how the Microsoft Entra ID tenant is applied in the design of authentication and authorization solutions. You may also want to evaluate the [resource organization considerations](./eslz-resource-organization.md) to understand how the enrollment may be organized into management groups, subscriptions, and resource groups.
+Review the [identity and access management considerations](./eslz-identity-and-access-management.md) to see how the Microsoft Entra ID tenant supports authentication and authorization.
+
+Also review the [resource organization considerations](./eslz-resource-organization.md). This guidance explains how enrollment can map to management groups, subscriptions, and resource groups.
