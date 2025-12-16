@@ -18,7 +18,7 @@ Reliability involves minimizing downtime and ensuring consistent performance for
 
 - *Set up health monitoring with Azure Monitor.* Track CPU, memory, and network performance on your VMs using Azure Monitor and configure alerts to notify you of performance degradation or failures in the infrastructure supporting your models. For more information, see [Azure Monitor VM Insights](/azure/azure-monitor/vm/vminsights-health-overview).
 
-- *Automate patching and updates with rolling instances.* Use Azure Update Management to apply patches in a rolling manner, allowing one instance to be updated while others continue to serve traffic, preventing downtime during maintenance.
+- *Automate patching and updates with rolling instances.* Use Azure Update Manager to apply patches in a rolling manner across VMs, allowing one instance to be updated while others continue to serve traffic, preventing downtime during maintenance.
 
 - *Design for graceful degradation during partial failures.* Ensure core functionality remains available by serving less complex AI models or limiting specific features when some VMs become unavailable, allowing users access to essential services even during outages.
 
