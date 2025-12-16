@@ -116,4 +116,4 @@ Having this strategic brief approved by stakeholders ensures everyone is aligned
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Plan for hybrid and multicloud](plan.md)
+> [Ready your environment](enterprise-scale-landing-zone.md)
