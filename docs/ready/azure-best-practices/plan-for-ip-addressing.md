@@ -69,9 +69,9 @@ For in-depth recommendations and best practices regarding your cloud architectur
 **Design considerations:**
 
 - Phase your IPv6 adoption. Based on your business needs, implement IPv6 where needed. Remember that IPv4 and IPv6 can coexist as long as necessary.
-- In scenarios where applications rely on infrastructure as a service (IaaS) services that have full IPv6 support, like  virtual machines (VMs), native end-to-end use of IPv4 and IPv6 is possible. This configuration avoids translation complications and provides the most information to the server and application.  
+- In scenarios where applications rely on infrastructure as a service (IaaS) services that have full IPv6 support, like virtual machines (VMs), native end-to-end use of IPv4 and IPv6 is possible. This configuration avoids translation complications and provides the most information to the server and application.  
 
-   You can deploy Basic-SKU internet-facing Azure load balancers with an IPv6 address. This configuration enables native end-to-end IPv6 connectivity between the public internet and Azure VMs via the load balancer. This approach also facilitates native end-to-end outbound connections between VMs and IPv6-enabled clients on the public internet. Note that this approach requires every device in the path to handle IPv6 traffic.
+   You can deploy a Standard-SKU internet-facing Azure Load Balancer with an IPv6 address. This configuration enables native end-to-end IPv6 connectivity between the public internet and Azure VMs via the load balancer. This approach also facilitates native end-to-end outbound connections between VMs and IPv6-enabled clients on the public internet. Note that this approach requires every device in the path to handle IPv6 traffic.
 
   The native end-to-end approach is most useful for direct server-to-server or client-to-server communication. It's not useful for most web services and applications, which are typically protected by firewalls, web application firewalls, or reverse proxies.
 
@@ -88,7 +88,7 @@ Here's a closer look at what a typical architecture might look like:
 
 ![Diagram that shows an IPv4/IPv6 load balancer providing access to an IPv4-only back end.](./media/azure-ipv4-ipv6-vmss-flex.png)
 
-- Deploy the NVA in [Virtual Machine Scale Sets with Flexible orchestration](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-orchestration-modes#scale-sets-with-flexible-orchestration) (VMSS Flex) for resiliency and expose them to the internet through [Azure Load-Balancer](/azure/load-balancer/load-balancer-ipv6-overview), which has a public IP address front end.
+- Deploy the NVA in [Virtual Machine Scale Sets with Flexible orchestration](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-orchestration-modes#scale-sets-with-flexible-orchestration) (VMSS Flex) for resiliency and expose them to the internet through [Azure Standard Load Balancer](/azure/load-balancer/load-balancer-overview), which has a public IP address front end.
 
    The NVAs accept IPv4 and IPv6 traffic and translate it into IPv4-only traffic to access the application in the application subnet. The approach reduces complexity for the application team and reduces the attack surface.
 - Deploy [Azure Front Door](/azure/frontdoor/front-door-overview) to provide global routing for web traffic.
