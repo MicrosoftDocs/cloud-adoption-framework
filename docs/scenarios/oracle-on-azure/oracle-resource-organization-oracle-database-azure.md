@@ -77,7 +77,7 @@ To implement comprehensive isolation measures that protect both Oracle Database@
 
 - **Configure monitoring and alerting systems.** Security monitoring detects anomalous activity across Oracle Database@Azure deployments and enables rapid incident response.
 
-  - Deploy Azure Security Center for unified security management.
+  - Enable Microsoft Defender for Cloud for unified security management.
 
   - Configure Microsoft Sentinel for security information and event management (SIEM).
   - Establish automated alerts for suspicious Oracle database access patterns or configuration changes.
