@@ -22,6 +22,6 @@ Review the [identity and access management considerations](./eslz-identity-and-a
 
 Next, review the [resource organization considerations](./eslz-resource-organization.md).  
 This article shows how enterprise enrollment maps to these Azure constructs:
-- Management groups, which you use to organize subscriptions at scale  
-- Subscriptions, which define billing and access boundaries  
+- Management groups, which you use to organize subscriptions at scale
+- Subscriptions, which define billing and access boundaries
 - Resource groups, which hold and manage related Azure resources
