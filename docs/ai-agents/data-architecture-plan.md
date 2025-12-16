@@ -95,17 +95,20 @@ This adaptive model improves flexibility and performance because it prioritizes 
 
 ## Data retrieval strategies for custom agents
 
-Organizations that build custom AI agents must decide how those agents access data to answer questions and perform tasks. Retrieval strategies directly influence accuracy, timeliness, and security. Two complementary approaches enable this access: retrieval-augmented generation (RAG) and Model Context Protocol (MCP) servers. These approaches work together to provide complete and accurate responses. For example, when an employee reports a VPN issue, an effective agent uses both approaches:
+Organizations building AI agents must decide how the agent accesses data to answer questions and perform tasks. These choices directly affect accuracy, timeliness, and security. Agents generally combine two complementary approaches: agentic retrieval and Model Context Protocol (MCP) servers.
 
-- **RAG**: The agent retrieves the VPN troubleshooting guide from the knowledge base.
-- **MCP (read)**: The agent checks the current VPN service status from an IT monitoring system.
-- **MCP (write)**: The agent creates a helpdesk ticket if the user requests it.
+When an employee reports a VPN issue, an effective agent uses agentic retrieval to pull the troubleshooting guide from the organization’s approved knowledge sources. It checks the real‑time VPN service status through an MCP read operation, and it can create a helpdesk ticket through an MCP write operation if the user requests it. Agentic retrieval provides curated, authoritative knowledge. MCP provides operational data and the ability to take actions.
 
-Both RAG and MCP work best when they draw from a unified and governed data foundation. Microsoft Fabric provides this foundation through OneLake and the medallion architecture, which organizes structured, semi-structured, and unstructured data. Adaptive Gold extends this model by enabling agent-driven optimization based on usage patterns. See [agentic RAG](/azure/ai-foundry/concepts/retrieval-augmented-generation?view=foundry&preserve-view=true#agentic-rag-modern-approach-to-retrieval) and [MCP servers](/azure/ai-foundry/agents/how-to/tools/model-context-protocol?view=foundry&preserve-view=true).
+**Agentic retrieval and RAG**: Agentic retrieval includes the retrieval‑and‑grounding aspects of traditional RAG, but extends them with reasoning, decomposition, parallel evidence gathering, and multi‑source synthesis. It is the preferred term and recommended pattern for enterprise AI agents.
+
+Both approaches work best when they draw from a unified, governed data foundation. Microsoft Fabric supports this through OneLake and the medallion architecture, organizing structured, semi‑structured, and unstructured content. Adaptive Gold extends this model by allowing agents to optimize knowledge curation based on usage patterns.
+
+See [agentic RAG](/azure/ai-foundry/concepts/retrieval-augmented-generation?view=foundry&preserve-view=true#agentic-rag-modern-approach-to-retrieval) and [MCP servers](/azure/ai-foundry/agents/how-to/tools/model-context-protocol?view=foundry&preserve-view=true).
 
 ### Start with built-in retrieval options
 
-Begin with the RAG and MCP retrieval capabilities included in platforms such as Microsoft Foundry and Copilot Studio. Built-in options reduce integration complexity, accelerate deployment, and maintain consistency. Before investing in custom solutions, confirm whether these features meet your requirements for accuracy and governance. Examples of built-in capabilities include:
+Begin with the retrieval capabilities built into Microsoft Foundry and Copilot Studio. Built‑in agentic retrieval and MCP features reduce integration complexity, accelerate deployment, and maintain governance consistency. Before investing in custom solutions, confirm whether these capabilities satisfy requirements for accuracy, compliance, and operational control.
+Examples of built‑in capabilities include:
 
 - [Foundry IQ](/azure/ai-foundry/agents/how-to/tools/knowledge-retrieval?view=foundry&preserve-view=true&preserve-view=true&tabs=foundry%2Cpython)
 - [Fabric IQ](/fabric/iq/overview)
@@ -114,15 +117,15 @@ Begin with the RAG and MCP retrieval capabilities included in platforms such as 
 - [Sharepoint connection](/azure/ai-foundry/agents/how-to/tools/sharepoint?view=foundry&preserve-view=true)
 - [Azure AI Search](/azure/ai-foundry/agents/how-to/tools/ai-search?view=foundry&preserve-view=true&tabs=keys%2Cazurecli)
 
-### Plan for RAG for agents
+### Plan for agentic retrieval
 
-**When to use RAG?**: Use RAG when agents need to look up, explain, and cite information. It excels at unstructured and semi-structured content such as policies, manuals, FAQs, product documentation, and curated extracts because it retrieves just-in-time context and grounds answers in sources. Agentic RAG improves accuracy by decomposing a user’s question into subqueries, running them in parallel, and synthesizing results with citations.
+**When to use agentic retrieval**: Use agentic retrieval when an agent must look up, explain, and cite information, especially from unstructured or semi‑structured content such as policies, manuals, FAQs, product documentation, and curated extracts. Unlike a static RAG application that queries a single fixed index, agentic retrieval orchestrates a broader reasoning process. It decomposes user questions into sub‑queries, runs parallel searches across approved sources, reconciles conflicting information, and synthesizes an answer grounded with citations. This provides just‑in‑time context and higher accuracy without locking the system into a static retrieval corpus or ranking strategy.
 
-1. **Plan for a unified knowledge layer.** Traditional RAG requires every team to rebuild data connections, chunking logic, embeddings, routing, and permissions from scratch. It creates fragmented pipelines and duplicated effort. To avoid this situation, implement a unified knowledge layer that consolidates retrievable data into a single endpoint or knowledge base that any agent can use with approval. Define reusable knowledge bases around topics such as employee policies, product documentation, or support content. From there, multiple agents and applications can connect and use the same knowledge base for grounding responses. Use **Foundry IQ** to build your agent knowledge layer. Consider incorporating curated Silver, Gold, or Adaptive Gold datasets from Fabric Data Agents or Azure AI Search indexes for authoritative answers. See [Foundry IQ](/azure/ai-foundry/agents/how-to/tools/knowledge-retrieval?view=foundry&preserve-view=true&tabs=foundry%2Cpython).
+1. **Plan for a unified knowledge layer.** A unified knowledge layer consolidates retrievable content behind an approved endpoint or shared knowledge base so multiple agents and applications can produce consistent, grounded answers. These reusable knowledge bases typically center on domains such as employee policies, product documentation, and support content. Foundry IQ is the preferred service for building this layer. It can incorporate curated Silver, Gold, and Adaptive Gold datasets produced by Fabric data agents, along with Azure AI Search indexes when authoritative answers are required. See [Foundry IQ](/azure/ai-foundry/agents/how-to/tools/knowledge-retrieval?view=foundry&preserve-view=true&tabs=foundry%2Cpython).
 
-2. **Plan for traditional RAG.** When teams need granular control over chunking, indexing, and retrieval, build a traditional RAG pipeline. Treat each index as a data product with clear governance. Decide whether separate indexes for structured and unstructured data are necessary or if hybrid search meets your needs. Plan update cadence, rollback strategies, and latency targets early. See [Design an index for agentic retrieval](/azure/search/agentic-retrieval-how-to-create-index) and [Design and develop a RAG solution](/azure/architecture/ai-ml/guide/rag/rag-solution-design-and-evaluation-guide).
+2. **Plan for indexes.** If you need tightly controlled retrieval behavior, like custom chunking, custom embeddings, fine‑tuned ranking, or deterministic search over a well‑defined corpus, use an Azure AI Search index alongside the unified knowledge layer. Create [search indexers](/azure/search/search-how-to-index-onelake-files) on Silver‑layer data in Fabric OneLake. Agents use Silver‑layer datasets to detect relationships and patterns, and when an agent produces a curated dataset, store it as a registered data product in Purview or preserve the curation logic as a specification file in Git for version control. This ensures reproducibility and governance. For architectural guidance, see [Fabric enterprise architecture](/azure/architecture/example-scenario/analytics/enterprise-bi-microsoft-fabric).
 
-#### Plan for building MCP servers
+### Plan for building MCP servers
 
 **When to use MCP?** Choose MCP when agents must take actions or access real‑time data. For example, "How many units of SKU123 are in stock right now?" or "Create an incident ticket." MCP gives agents a standardized way to call tools hosted on remote servers, with identity, policy, and audit controls.
 
