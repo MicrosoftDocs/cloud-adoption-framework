@@ -15,6 +15,9 @@ ms.custom: think-tank, e2e-sap, UpdateFrequency2
 
 This article builds on several considerations and recommendations defined in the article [Azure landing zone design area for identity and access management](../../ready/landing-zone/design-area/identity-access.md). This article describes the identity and access-management recommendations for deploying an SAP platform on Microsoft Azure. SAP is a mission-critical platform, so you should include the Azure landing zone design area guidance in your design.
 
+> [!IMPORTANT]
+> SAP SE has [sunset](https://community.sap.com/t5/technology-blogs-by-sap/preparing-for-sap-identity-management-s-end-of-maintenance-in-2027/ba-p/13596101) the SAP Identity Management (IDM) product and recommends all its customers to migrate to [Microsoft Entra ID Governance](/entra/id-governance/scenarios/migrate-from-sap-idm).
+
 ## Design considerations
 
 - Review the required Azure administration and management activities for your team. Consider your SAP on Azure landscape. Determine the best possible distribution of responsibilities within your organization.
@@ -57,7 +60,7 @@ Here are common administration and management activities of SAP on Azure:
 
 ## Design recommendations
 
-- Use Microsoft Entra ID Governance for identity lifecycle management, access governance, and role management for SAP landscapes.
+- [Migrate](/entra/id-governance/scenarios/migrate-from-sap-idm) your SAP Identity Management (IDM) solution to Microsoft Entra ID Governance.
 
 - Implement SSO by using Windows AD, Microsoft Entra ID, or AD FS, depending on the access type, so that the end users can connect to SAP applications without a user ID and password once the central identity provider successfully authenticates them.
   - Implement SSO to SAP SaaS applications like [SAP Analytics Cloud](/entra/identity/saas-apps/sapboc-tutorial), [SAP Business Technology Platform (BTP)](/entra/identity/saas-apps/sap-hana-cloud-platform-tutorial), [Business by design](/entra/identity/saas-apps/sapbusinessbydesign-tutorial), [SAP Qualtrics](/entra/identity/saas-apps/qualtrics-tutorial) and [SAP C4C](/entra/identity/saas-apps/sap-customer-cloud-tutorial) with Microsoft Entra ID using SAML.
