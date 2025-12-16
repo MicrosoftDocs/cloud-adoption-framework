@@ -11,10 +11,15 @@ ms.custom: think-tank, e2e-sap
 <!-- docutune:casing "Azure Fence Agent" -->
 <!-- docutune:ignore DB -->
 
-# Enterprise enrollment for SAP
+# Decide how to enroll your enterprise when deploying SAP on Azure
 
-Azure landing zones for SAP do not have any specific considerations or recommendations which would impact enterprise enrollment or Active Directory tenant decisions.
+Azure landing zones for SAP do not add new enterprise enrollment requirements. They also do not require you to create a new Microsoft Entra ID tenant.
 
-However, it could be important to understand any decisions previously made by the cloud platform team to be aware of existing [enterprise enrollment or Microsoft Entra tenant decisions](../../ready/landing-zone/design-area/azure-billing-microsoft-entra-tenant.md).
+Before you proceed, review the decisions your cloud platform team has already made. These decisions affect how you configure enterprise enrollment and your Microsoft Entra ID tenant. For background, see [enterprise enrollment and Microsoft Entra ID tenant choices](../../ready/landing-zone/design-area/azure-billing-microsoft-entra-tenant.md).
 
-You may also want to review the [identity and access management considerations](./eslz-identity-and-access-management.md) to understand how the Active Directory tenant is applied in the design of authentication and authorization solutions. You may also want to evaluate the [resource organization considerations](./eslz-resource-organization.md) to understand how the enrollment may be organized into management groups, subscriptions, and resource groups.
+Review the [identity and access management considerations](./eslz-identity-and-access-management.md). This article explains how your Microsoft Entra ID tenant manages authentication and authorization for SAP on Azure, such as user sign-in and role-based access.
+
+Next, review the [resource organization considerations](./eslz-resource-organization.md). This article shows how enterprise enrollment maps to these Azure constructs:
+- Management groups, which you use to organize subscriptions at scale
+- Subscriptions, which define billing and access boundaries
+- Resource groups, which hold and manage related Azure resources

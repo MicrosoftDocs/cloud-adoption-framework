@@ -50,7 +50,7 @@ Here are common administration and management activities of SAP on Azure:
 - Consider that a migration to Azure might be an opportunity to review and realign identity and access management processes. Review the processes in your SAP landscape and the processes at your enterprise level:
   - Review the SAP dormant user lockout policies.
   - Review the SAP user password policy and align it with Microsoft Entra ID.
-  - Review the leavers, movers, and starters (LMS) procedures and align them with Microsoft Entra ID. If you're using SAP Human Capital Management (HCM), SAP HCM likely drives the LMS process.
+  - Review the leavers, movers, and starters (LMS) procedures and align them with Microsoft Entra ID governance capabilities. If you're using SAP Human Capital Management (HCM), SAP HCM can drive the LMS process.
 
 - Consider using [SAP principal propagation](/power-platform/sap/connect/entra-id-apim-oauth) to forward a Microsoft identity to your SAP landscape.
 
