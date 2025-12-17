@@ -79,9 +79,9 @@ Test use cases with the [60-day free trial](/microsoft-copilot-studio/requiremen
 
 ### GPUs and containers
 
-You can run GPU‑backed containers when you need full control of the models that your agents depend on. This is useful when you want to host your own models instead of using Foundry endpoints. Each agent can reference a model that you host in your own environment. The agent runs in a container, and you choose the compute platform that fits the size of the model and the level of control you need.
+You can host the model that an agent uses on GPU‑backed containers. This works well when you want to run your own models instead of using Foundry endpoints. The agent simply calls the model you host in your environment, and the agent itself does not need a GPU. Only the model requires GPU compute. You choose the compute platform based on the size of the model and how much control you need over the environment.
 
-Azure Container Apps works well for small language models. It provides a simple [serverless GPU](/azure/container-apps/gpu-serverless-overview) platform that handles scaling automatically and keeps operational work low. Azure Kubernetes Service works better for large language models because it supports large GPU clusters, higher throughput, and advanced control over scaling and networking. If you need the highest level of control, you can host models on GPU‑enabled Azure Virtual Machines. This helps when you have strict requirements for customization, networking, or compliance. For detailed guidance, see [AI on IaaS](/azure/cloud-adoption-framework/scenarios/ai/infrastructure/cycle-cloud).
+Azure Container Apps works well for small language models (SLMs). It provides a simple [serverless GPU](/azure/container-apps/gpu-serverless-overview) platform that handles scaling automatically and keeps operational work low. Azure Kubernetes Service works better for large language models (LLMs) because it supports large GPU clusters, higher throughput, and advanced control over scaling and networking. If you need the highest level of control, you can host models on GPU‑enabled Azure Virtual Machines. This helps when you have strict requirements for customization, networking, or compliance. For detailed guidance, see [AI on IaaS](/azure/cloud-adoption-framework/scenarios/ai/infrastructure/cycle-cloud).
 
 ## Validate technology choices
 
