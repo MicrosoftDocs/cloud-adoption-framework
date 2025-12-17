@@ -79,7 +79,7 @@ Test use cases with the [60-day free trial](/microsoft-copilot-studio/requiremen
 
 ### GPUs and containers
 
-You can also choose to deploy the AI models used by your agents on [Azure Container Apps serverless GPUs](/azure/container-apps/gpu-serverless-overview) (PaaS) or Azure Virtual Machines (IaaS). This approach is ideal when you need custom model configurations, private networking, or integration with existing VM-based workloads. Use GPU-backed infrastructure when you require high-performance inferencing, fine-tuning, or compliance-driven isolation. Costs scale with GPU runtime and token consumption. For detailed guidance, see [AI on IaaS](/azure/cloud-adoption-framework/scenarios/ai/infrastructure/cycle-cloud).
+You can also choose to deploy the AI models used by your agents on [Azure Container Apps serverless GPUs](/azure/container-apps/gpu-serverless-overview) (PaaS) or Azure Virtual Machines (IaaS). This approach is ideal when you need custom model configurations, private networking, or integration with existing VM-based workloads. Use GPU-backed infrastructure when you require high-performance inferencing, fine-tuning, or compliance-driven isolation. Costs scale with compute usage. For detailed guidance, see [AI on IaaS](/azure/cloud-adoption-framework/scenarios/ai/infrastructure/cycle-cloud).
 
 ## Validate technology choices
 
@@ -98,7 +98,7 @@ Organizations often use multiple approaches to meet diverse requirements. Valida
 | **SaaS agents** | Ready-to-use (SaaS) | Retrieval, Task | Personal productivity. Requires minimal customization to deliver immediate value. |
 | **Microsoft Foundry** | Pro-code and low/no-code (PaaS) | Retrieval, Task, Autonomous | Strategic transformation. Supports deep integration and custom logic. |
 | **Microsoft Copilot Studio** | Low/no-code (SaaS) | Retrieval, Task, Autonomous | Process transformation. Enables fast development with minimal coding and SaaS security. |
-| **GPUs and containers** | Pro-code (PaaS or IaaS) | Retrieval, Task, Autonomous | Provides full control of the entire technology stack. |
+| **GPUs and containers** | Pro-code (PaaS or IaaS) | Retrieval, Task, Autonomous |  Compliance-sensitive or highly customized (custom model configurations, private networking, strict isolation) workloads with full control of the entire technology stack. |
 
 See the general [AI decision tree](/azure/cloud-adoption-framework/scenarios/ai/strategy#microsoft-ai-decision-tree) for more guidance.
 
