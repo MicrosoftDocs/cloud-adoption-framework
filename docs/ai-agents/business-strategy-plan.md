@@ -20,7 +20,7 @@ This article explains how to develop a business plan for AI agents that aligns y
 
 ## When not to use AI agents
 
-The first step in identifying high‑value agent use cases is understanding when not to use an agent. Agents introduce nondeterministic behavior, latency, and cost that are unnecessary for many scenarios. By ruling out low‑complexity or static tasks early, you focus investment on opportunities where agentic reasoning and tool orchestration create measurable business value.
+The first step in identifying high‑value agent use cases is understanding when not to use an agent. Agents introduce nondeterministic behavior, latency, and cost that are unnecessary for many scenarios. By eliminating unsuitable use cases early, you narrow the focus to opportunities where agents deliver measurable business value. Agents aren't well-suited for the following use cases:
 
 - **Structured and predictable tasks.** If a workflow is rule‑based, follows a fixed path, and doesn’t require reasoning, use deterministic code or non‑generative automation. These approaches are faster, cheaper, and more reliable than agents for predictable processes with well‑defined inputs and outputs.
 
