@@ -79,7 +79,9 @@ Test use cases with the [60-day free trial](/microsoft-copilot-studio/requiremen
 
 ### GPUs and containers
 
-You can also choose to deploy the AI models used by your agents on [Azure Container Apps serverless GPUs](/azure/container-apps/gpu-serverless-overview) (PaaS) or Azure Virtual Machines (IaaS). This approach is ideal when you need custom model configurations, private networking, or integration with existing VM-based workloads. Use GPU-backed infrastructure when you require high-performance inferencing, fine-tuning, or compliance-driven isolation. Costs scale with compute usage. For detailed guidance, see [AI on IaaS](/azure/cloud-adoption-framework/scenarios/ai/infrastructure/cycle-cloud).
+You can run GPU‑backed containers when you need full control of the models that your agents depend on. This is useful when you want to host your own models instead of using Foundry endpoints. Each agent can reference a model that you host in your own environment. The agent runs in a container, and you choose the compute platform that fits the size of the model and the level of control you need.
+
+Azure Container Apps works well for small language models. It provides a simple [serverless GPU](/azure/container-apps/gpu-serverless-overview) platform that handles scaling automatically and keeps operational work low. Azure Kubernetes Service works better for large language models because it supports large GPU clusters, higher throughput, and advanced control over scaling and networking. If you need the highest level of control, you can host models on GPU‑enabled Azure Virtual Machines. This helps when you have strict requirements for customization, networking, or compliance. For detailed guidance, see [AI on IaaS](/azure/cloud-adoption-framework/scenarios/ai/infrastructure/cycle-cloud).
 
 ## Validate technology choices
 
