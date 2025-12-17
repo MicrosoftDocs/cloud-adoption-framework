@@ -699,6 +699,26 @@
         "source_path": "docs/scenarios/hybrid/arc-enabled-data-service-sql-managed-instance/eslz-arc-data-service-sql-managed-instance-upgradeability-disciplines.md",
         "redirect_url": "/azure/azure-arc/data/upgrade-sql-managed-instance-auto",
         "redirect_document_id": false
+    },
+    {
+        "source_path": "docs/scenarios/hybrid/migrate.md",
+        "redirect_url": "/azure/cloud-adoption-framework/plan/assess-workloads-for-cloud-migration",
+        "redirect_document_id": false
+    },
+    {
+        "source_path": "docs/scenarios/hybrid/govern.md",
+        "redirect_url": "/azure/cloud-adoption-framework/govern/build-cloud-governance-team",
+        "redirect_document_id": false
+    },
+    {
+        "source_path": "docs/scenarios/hybrid/manage.md",
+        "redirect_url": "/azure/cloud-adoption-framework/manage/ready-cloud-operations",
+        "redirect_document_id": false
+    },
+    {
+        "source_path": "docs/scenarios/hybrid/plan.md",
+        "redirect_url": "/azure/cloud-adoption-framework/scenarios/hybrid/strategy",
+        "redirect_document_id": false
     }
    ]   
 }
