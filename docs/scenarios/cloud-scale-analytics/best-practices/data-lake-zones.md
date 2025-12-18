@@ -36,9 +36,9 @@ The previous table shows the standard number of containers we recommend per data
 >
 >For more information about separating data lake accounts, see [Storage accounts in a logical data lake](../../data-management/best-practices/data-lake-overview.md#storage-accounts-in-a-logical-data-lake).
 
-Enable Azure Storage with the [hierarchical name space feature](/azure/storage/blobs/data-lake-storage-namespace), which allows you to efficiently manage files. The hierarchical name space feature organizes objects and files within an account into a hierarchy of directories and nested subdirectories. This hierarchy is organized the same way as the file system on your computer.
+Enable Azure Storage with the [hierarchical namespace feature](/azure/storage/blobs/data-lake-storage-namespace), which allows you to efficiently manage files. The hierarchical namespace feature organizes objects and files within an account into a hierarchy of directories and nested subdirectories. This hierarchy is organized the same way as the file system on your computer.
 
-When your data agnostic ingestion engine or onboarding application registers a new system of record, it creates required folders in containers in the raw, enriched, and standardized data layers. If a source-aligned data application ingests the data, your data application team needs your data landing zone team to create the folders and security groups. Put a service principle name or managed identity into the correct group, and assign a permission level. Document this process for your data landing zone and data application teams.
+When your data agnostic ingestion engine or onboarding application registers a new system of record, it creates required folders in containers in the raw, enriched, and standardized data layers. If a source-aligned data application ingests the data, your data application team needs your data landing zone team to create the folders and security groups. Put a service principal name or managed identity into the correct group, and assign a permission level. Document this process for your data landing zone and data application teams.
 
 For more information on teams, see [Understand roles and teams for cloud-scale analytics in Azure](../organize-roles-teams.md).
 

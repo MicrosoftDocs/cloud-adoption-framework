@@ -22,7 +22,7 @@ This security evaluation determines whether the software meets each control or w
 Red Hat works with many standards bodies to ensure that the configuration points, measurements, and remediations are known, verified, and referenceable for Azure software. The standards bodies can create benchmarks or checklists of the evaluations that describe the SRG for their industry. Examples of these benchmarks include:
 
 - Payment Card Industry Data Security Standard (PCI DSS) for the payment card industry.
-- Health Insurance Portability and Accountability Act (HIPPA) for the healthcare industry.
+- Health Insurance Portability and Accountability Act (HIPAA) for the healthcare industry.
 - Defense Information Systems Agency (DISA) and Security Technical Implementation Guide (STIG) for government and related industries.
 
 The Security Content and Automation Protocol (SCAP) provides these checklists. SCAP is a suite of specifications, such as definitions of checks and automation methods, for exchanging security automation content. You can use this content to assess configuration compliance and to detect the presence of vulnerable versions of software. Red Hat works with NIST and the MITRE corporation to write and publish content. Scanning tools use the content to evaluate and report on a wide variety of compliance standards for the RHEL operating system and other Red Hat software.

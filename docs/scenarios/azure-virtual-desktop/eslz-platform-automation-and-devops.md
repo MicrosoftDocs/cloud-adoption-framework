@@ -107,7 +107,7 @@ We recommend using [Git](https://git-scm.com/) for managing source code and [kee
 
 Your pipeline deployment system is dictated by which source code management system you choose.
 
-If your organization has standardized on Azure DevOps, use [Azure Pipelines](/azure/devops/pipelines/get-started/what-is-azure-pipelines). If your organization has standardized on GitHub, use [GitHub Actions](https://docs.github.com/actions). Either option provides the ability to deploy a self-hosted agent within in your network, which has several benefits, including:
+If your organization has standardized on Azure DevOps, use [Azure Pipelines](/azure/devops/pipelines/get-started/what-is-azure-pipelines). If your organization has standardized on GitHub, use [GitHub Actions](https://docs.github.com/actions). Either option provides the ability to deploy a self-hosted agent within your network, which has several benefits, including:
 
 - Allowance for longer build times
 - Ability to access resources within your network
