@@ -3,7 +3,7 @@ title: Azure billing offers and Microsoft Entra tenants
 description: Understand Azure billing offers and Microsoft Entra tenants.
 author: jtracey93
 ms.author: jatracey
-ms.date: 11/28/2024
+ms.date: 12/18/2025
 ms.update-cycle: 180-days
 ms.topic: concept-article
 ms.custom: think-tank, UpdateFrequency.5
