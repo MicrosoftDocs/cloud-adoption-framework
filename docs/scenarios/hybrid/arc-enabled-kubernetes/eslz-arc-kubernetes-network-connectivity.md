@@ -51,7 +51,6 @@ For more information about your hybrid and multicloud cloud journey, see the fol
 
 - Review the [prerequisites](/azure/azure-arc/kubernetes/quickstart-connect-cluster?tabs=azure-cli#prerequisites) for Azure Arc-enabled Kubernetes.
 - Review [validated Kubernetes distributions](/azure/azure-arc/kubernetes/validation-program#validated-distributions) for Azure Arc-enabled Kubernetes.
-- Review [Manage hybrid and multicloud environments](../manage.md).
 - Learn how to [Connect an existing Kubernetes cluster to Azure Arc](/azure/azure-arc/kubernetes/quickstart-connect-cluster?tabs=azure-cli).
 - Learn about [Azure Arc-enabled Kubernetes connectivity modes](/azure/azure-arc/kubernetes/conceptual-connectivity-modes).
 - Learn about [Data exchanged between Azure Arc-enabled Kubernetes clusters and Azure](/azure/azure-arc/kubernetes/conceptual-data-exchange).
