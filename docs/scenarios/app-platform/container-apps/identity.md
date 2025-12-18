@@ -9,7 +9,7 @@ ms.topic: concept-article
 
 # Identity management in Azure Container Apps - Landing Zone Accelerator
 
-To secure your application, you can enable authentication and authorization via an identity provider such as Microsoft Entra ID or [Microsoft Entra External ID (preview)](/entra/external-id/external-identities-overview).
+To secure your application, you can enable authentication and authorization via an identity provider such as Microsoft Entra ID or [Microsoft Entra External ID](/entra/external-id/external-identities-overview).
 
 Consider using [managed identity](/azure/container-apps/managed-identity) instead of a service principal to connect to other resources in your container app. Managed identity is preferable as it negates the need for managing credentials. You can use [system-assigned or user-assigned managed identities](/entra/identity/managed-identities-azure-resources/overview). System-assigned managed identities offer the advantage of sharing a lifecycle with the Azure resource to which they are attached, such as a Container App. Conversely, a user-assigned managed identity is an independent Azure resource that can be reused across multiple resources, promoting a more efficient and centralized approach to identity management.
 

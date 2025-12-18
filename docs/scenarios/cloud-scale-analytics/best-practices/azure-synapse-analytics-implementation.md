@@ -29,7 +29,7 @@ You might need extra Azure Synapse Analytics workspaces if your data product nee
 
 ## Azure Synapse Analytics setup
 
-The first step in the deployment Azure Synapse Analytics is to set up an Azure Synapse workspace which is [connected to an Microsoft Purview account](/azure/synapse-analytics/catalog-and-governance/quickstart-connect-azure-purview).
+The first step in the deployment Azure Synapse Analytics is to set up an Azure Synapse workspace which is [connected to a Microsoft Purview account](/azure/synapse-analytics/catalog-and-governance/quickstart-connect-azure-purview).
 
 ### Azure Synapse Analytics networking
 
@@ -60,4 +60,3 @@ When deploying an Azure Synapse Analytics workspace, you need an Azure Data Lake
 > We recommend using a dedicated container on the [Development layer or data lake three](../../cloud-scale-analytics/best-practices/data-lake-zones.md#development-layer-or-data-lake-three) account. This container is used as primary storage to store Spark metadata.
 
 Refer to [Azure Synapse Analytics data access control](data-lake-access.md#azure-synapse-analytics-data-access-control) for recommendations on how to set up data access.
-
