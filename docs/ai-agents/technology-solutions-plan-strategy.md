@@ -79,9 +79,11 @@ Test use cases with the [60-day free trial](/microsoft-copilot-studio/requiremen
 
 ### GPUs and containers
 
-You can host the model that an agent uses on GPU‑backed containers. This approach works well when you want to run your own models instead of using Foundry endpoints. The agent simply calls the model you host in your environment, and the agent itself does not need a GPU. Only the model requires GPU compute. You choose the compute platform based on the size of the model and how much control you need over the environment.
+You can host the AI model that an agent uses on GPU-backed containers. This approach is ideal when you want to run your own models rather than relying on Foundry endpoints. In this setup, the AI model runs on GPUs while the agent itself runs on CPUs. When configuring your agent and specifying the model it will use, you point it to the hosted model. The choice of compute platform depends on the size of the model and the level of control you need over the environment.
 
-Azure Container Apps (ACA) works well for small language models (SLMs). It provides a simple [serverless GPU](/azure/container-apps/gpu-serverless-overview) platform that handles scaling automatically and keeps operational work low. Azure Kubernetes Service (AKS) works better for large language models (LLMs) because it supports large GPU clusters, higher throughput, and advanced control over scaling and networking. If you need the highest level of control, you can host models on GPU‑enabled Azure Virtual Machines. This option helps when you have strict requirements for customization, networking, or compliance. For detailed guidance, see [AI on IaaS](/azure/cloud-adoption-framework/scenarios/ai/infrastructure/cycle-cloud).
+For hosting **AI models**, Azure Container Apps with serverless GPU support is a good option for small language models because it automatically handles scaling and minimizes operational overhead. For large language models, Azure Kubernetes Service is recommended since it supports large GPU clusters, offers higher throughput, and provides advanced control over scaling and networking.
+
+For hosting **AI agents**, you can use either Azure Kubernetes Service or Azure Container Apps with CPU-based clusters to run agents with a custom orchestration framework.
 
 ## Validate technology choices
 
