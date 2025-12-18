@@ -13,7 +13,7 @@ ms.custom: think-tank, e2e-aks
 A number of Azure products and services can support your modern application platform needs. Selecting the right product requires intimate knowledge of the application and operations needs. To make that selection process simpler, this article will help prioritize which products to consider based on a few strategic questions:
 
 - **Application platform:** Does the application require a *custom runtime*? Can the development team consider a *cloud runtime* definition set by the cloud provider?
-- **Operations:** Will the operations of the application, application platform, or container host require *customized operations*? Or, is a *standardized operations* approach preferred to centralize operations across workloads? Alternatively, would *cloud operations* supported by the cloud provider by preferred?
+- **Operations:** Will the operations of the application, application platform, or container host require *customized operations*? Or, is a *standardized operations* approach preferred to centralize operations across workloads? Alternatively, would *cloud operations* supported by the cloud provider be preferred?
 - **Location:** Will this solution run in the *public cloud*? Or does it need to be deployed to *private cloud* or *edge* environments? Does the solution require *workload portability*?
 - **Workload consolidation:** Will each application or workload require a *dedicated host*? Can the workload operate on a *shared host*? Or can this decision be deferred to the *cloud provider*?
 
@@ -68,7 +68,7 @@ Azure Kubernetes Service (AKS) provides a customizable runtime option based on K
 - **Developers** require the ability to customize the application platform to meet the runtime requirements of the application.
 - **Operations teams** have specific constraints:
   - Must run in public cloud only.
-  - Requires custom operations defined by the container orchestrator and programmatic deployment of the hosts and containers, making this an idea solution for workload-specific DevOps teams with minimal dependency on centralized operations support.
+  - Requires custom operations defined by the container orchestrator and programmatic deployment of the hosts and containers, making this an ideal solution for workload-specific DevOps teams with minimal dependency on centralized operations support.
     - Alternatively, container orchestrator can also be standardized across Kubernetes containers, allowing for centralized operations at scale.
   - AKS is designed to support dedicated containers per workload.
     - AKS can also be used to consolidate workloads, allowing central operations to extend support to container hosts.

@@ -71,7 +71,7 @@ Considerations related to the operations of the platform, hosts, and workloads.
 - **Primary cloud platform:** Organizations should define a primary cloud platform to provide operations management tooling. Some organizations might have more than one primary cloud platform to manage various types of operations. What is the primary cloud platform to operate this workload?
 - **Additional operations platforms:** Will this workload also be managed by any additional operations platforms?
 - **Cloud hosting requirements:** Does this workload require a specific cloud hosting strategy? Public cloud, private cloud, or cloud portability
-- **Standardized orchestration platform:** If the company has a standard solution for container orchestration, include the name of the standardized platform to be considered. Examples: Azure Kubernetes Service (AKS), AKS engine, or Kubernetes.
+- **Standardized orchestration platform:** If the company has a standard solution for container orchestration, include the name of the standardized platform to be considered. Examples: Azure Kubernetes Service (AKS) or Kubernetes.
 - **Custom orchestration considerations:** Is there a requirement for a non-standard container orchestration platform? If so, explain that requirement.
 - **Standardized host operations:** It's assumed that workloads are non-hostile and can be hosted on shared containers supported by standardized host operations. Is this workload compatible with this approach?
 - **Customized host operations considerations:** If the workload is not compatible with standardized operations, what specific requirements should be considered when establishing host operations practices for this workload?
@@ -105,7 +105,7 @@ Consider using a more lightweight solution for your containers with workloads th
 
 ### Standardized orchestration with custom runtimes and operations in the public cloud
 
-For those workloads that cannot run in a fully managed PaaS platform and must relay on infrastructure-level controls, desire to use advanced deployment features such as those offered by container orchestrators, or expect to grow in modular complexity, turn to Azure Kubernetes Service (AKS). AKS solves for both container hosting, but also provides extensive architectural, SRE, security, deployment, monitoring, and infrastructure options.
+For those workloads that cannot run in a fully managed PaaS platform and must rely on infrastructure-level controls, desire to use advanced deployment features such as those offered by container orchestrators, or expect to grow in modular complexity, turn to Azure Kubernetes Service (AKS). AKS solves for both container hosting, but also provides extensive architectural, SRE, security, deployment, monitoring, and infrastructure options.
 
 The platform's feature set comes with a requirement to learn the platform both at the cluster operator level and at the workload level. Factor the education of your operations teams, architecture teams, and workload engineering teams into migration timelines. Also, because AKS is a platform, ensure workloads teams understand the separation of responsibilities within this platform versus their current hosting arrangement. It might be similar in some ways, but likely will be novel in others.
 

@@ -37,7 +37,7 @@ An Azure landing zone consists of one platform landing zone and one or more appl
 
 Application landing zones are nested under appropriate management groups, such as `Online` or `Corp`, to inherit Azure Policy definitions from the parent management group(s). This structure ensures that workload subscriptions are deployed in a controlled and consistent manner, while still allowing flexibility for individual workload needs. 
 
-In the Azure landing zone architecture (*see figure 1*), the "Landing zone A2 subscription", for example, is an application landing zone. The architecture depicts representative resources and policies applied to the "Landing zone A2 subscription". The "Landing zone P1 subscription" is use by platform teams to build and deploy services that support multiple application landing zones and teams, such as VM image repositories and container registries. These services are not application-specific, and the subscription remains subject to governance policies applied at the application landing zone level.
+In the Azure landing zone architecture (*see figure 1*), the "Landing zone A2 subscription", for example, is an application landing zone. The architecture depicts representative resources and policies applied to the "Landing zone A2 subscription". The "Landing zone P1 subscription" is used by platform teams to build and deploy services that support multiple application landing zones and teams, such as VM image repositories and container registries. These services are not application-specific, and the subscription remains subject to governance policies applied at the application landing zone level.
 
 :::image type="content" source="./media/alz-application-platform.svg" alt-text="A reference architecture diagram of an Azure landing zone with Application Landing Zones & Platform Landing Zone overlaid." lightbox="./media/alz-application-platform.svg":::
 *Figure 2: Azure landing zone reference architecture with Application Landing Zones & Platform Landing Zone overlaid. Download a [Visio file](https://github.com/MicrosoftDocs/cloud-adoption-framework/raw/main/docs/ready/enterprise-scale/media/enterprise-scale-architecture.vsdx) or [PDF file](https://github.com/MicrosoftDocs/cloud-adoption-framework/raw/main/docs/ready/enterprise-scale/media/enterprise-scale-architecture.pdf) of this architecture.*
@@ -95,4 +95,4 @@ Review the design principles behind Azure landing zones to understand how they g
 > [Implementation options](./implementation-options.md)
 
 > [!div class="nextstepaction"]
-> [Frequently Asked Questions (FAQ)](/azure/cloud-adoption-framework/ready/enterprise-scale/faq) 
+> [Frequently Asked Questions (FAQ)](/azure/cloud-adoption-framework/ready/enterprise-scale/faq)

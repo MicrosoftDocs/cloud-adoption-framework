@@ -38,7 +38,7 @@ Ask basic security questions during the design phase, such as how your organizat
 
 - If using [Azure Government](/azure/azure-government/documentation-government-welcome) review the guidance around Microsoft Entra tenants in [Planning identity for Azure Government applications](/azure/azure-government/documentation-government-plan-identity)
 
-- If using Azure Government, Azure China 21Vianet, Azure Germany ([closed on October 29, 2021](https://www.microsoft.com/cloud-platform/germany-cloud-regions)) then review [National/Regional clouds](/entra/identity-platform/authentication-national-cloud) for further guidance around Microsoft Entra ID
+- If using Azure Government or Azure China 21Vianet, review [National/Regional clouds](/entra/identity-platform/authentication-national-cloud) for further guidance around Microsoft Entra ID
 
 **Design recommendations:**
 
