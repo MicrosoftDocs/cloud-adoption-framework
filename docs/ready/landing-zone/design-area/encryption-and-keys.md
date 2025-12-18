@@ -48,7 +48,7 @@ Encryption is a vital step toward ensuring data privacy, compliance, and data re
   - Data-in-transit encryption
   - Data-at-rest encryption
 
-- Review [How to choose the right Azure key management solution](/azure/security/fundamentals/key-management-choosement) to choose the right key management approach for your organization and applications.
+- Review [How to choose the right Azure key management solution](/azure/security/fundamentals/key-management-choose) to choose the right key management approach for your organization and applications.
 
 ## Design recommendations
 
