@@ -3,7 +3,7 @@ title: Independent software vendor (ISV) considerations for Azure landing zones
 description: Discuss Independent Software Vendor (ISV) specific considerations for Azure landing zones.
 author: arsenvlad
 ms.author: arsenv
-ms.date: 07/30/2024
+ms.date: 12/18/2025
 ms.topic: concept-article
 ms.custom: internal
 ---
@@ -174,6 +174,11 @@ In your organization, you might have a single team that manages all shared platf
 If you instead will have separate teams that manage different parts of your centralized platform, you should deploy further levels in the management group hierarchy under the **Platform** management group. This allows you to assign separate policies for each part of your centralized platform.
 
 The following diagram illustrates two potential implementations of the **Platform** management group. Option A shows a more comprehensive scenario, where the **Platform** management group contains three child management groups: **Management and DevOps**, **Identity and Security**, and **Connectivity**. Each child management group contains a subscription with the relevant resources. Option B shows a more simple scenario, where the **Platform** management group contains a single platform subscription.
+
+> [!NOTE]
+> Please note that the **Security** management group that was recently added to the Azure landing zone is currently not show in the below diagrams. However, it is recommended to include a separate **Security** management group under the **Platform** management group for ISVs, just the same as the **Management** management group. 
+>
+> The **Security** management group will be shown in future updates to this document and associated diagrams.
 
 ![Diagram that shows two management group hierarchies. Option A shows separate platform management groups for management, connectivity, and identity. Option B includes a platform management group option with a single management group.](./media/isv-landing-zone/isv-platform-management-group.png)
 
