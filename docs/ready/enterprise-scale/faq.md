@@ -16,9 +16,9 @@ For FAQs about **implementing Azure landing zone architecture**, see [Enterprise
 
 <!-- GENERAL -->
 
-## What is the Azure landing zone reference architecture?
+## What is the Azure landing zone portal accelerator?
 
-The Azure landing zone reference architecture is an Azure portal-based deployment experience. It deploys an opinionated implementation based on the [Azure landing zone reference architecture](../landing-zone/index.md#azure-landing-zone-architecture).
+The Azure landing zone portal accelerator is an Azure portal-based deployment experience. It deploys an opinionated implementation based on the [Azure landing zone reference architecture](../landing-zone/index.md#azure-landing-zone-architecture).
 
 ## Which are the recommended accelerators and implementations for Azure landing zones?
 

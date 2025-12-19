@@ -2,7 +2,7 @@
 title: Update Azure landing zone custom policies
 description: Use this guidance to update already-deployed Azure landing zone custom policies and policy initiatives.
 author: jtracey93
-ms.author: jtracey93
+ms.author: jatracey
 ms.date: 12/19/2025
 ms.topic: concept-article
 ms.custom: internal, devx-track-bicep, devx-track-terraform, UpdateFrequency2

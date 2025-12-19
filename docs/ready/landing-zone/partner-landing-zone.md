@@ -27,7 +27,7 @@ The easiest option to find an ALZ partner is through Azure Azure Accelerate
 
 ### How to find an Azure Azure Accelerate partner
 
-Take 5 minutes to [fill out the Azure Azure Accelerate form](https://azure.microsoft.com/en-gb/solutions/azure-accelerate/). Someone from the team will help you find the right partner.
+Take 5 minutes to [fill out the Azure Azure Accelerate form](https://azure.microsoft.com/solutions/azure-accelerate/). Someone from the team will help you find the right partner.
 
 ### What to expect from an Azure Azure Accelerate partner
 
