@@ -1,9 +1,9 @@
 ---
 title: Transition an existing Azure environment to the Azure landing zone reference architecture
 description: Learn how to onboard existing environments and move resources to the Azure landing zone reference architecture.
-author: JefferyMitchell
-ms.author: jemitche
-ms.date: 02/27/2025
+author: jtracey93
+ms.author: jatracey
+ms.date: 12/19/2025
 ms.topic: concept-article
 ms.custom: think-tank, csu
 --- 
@@ -20,10 +20,10 @@ This article provides recommendations to help your organization navigate changes
 
 You can move some resources in Azure after creation. There are different approaches that are subject to a user's Azure role-based access control (RBAC) permissions at and across scopes. The following table outlines which resources you can move, at which scope, and the pros and cons associated with each resource.
 
-| Scope | Destination | Pro | Con |
-| ----- | ----------- | ---- | ---- |
-| Resources in resource groups. | You can move to a new resource group in the same or different subscription. | You can modify the resource composition in a resource group after deployment. | Not supported by all resourceTypes. <br><br> Some resourceTypes have specific limitations or requirements. <br><br> ResourceIds are updated and it affects existing monitoring, alerts, and control plane operations. <br><br> Resource groups are locked during the move period. <br><br> Requires an assessment of policies and RBAC pre-move and post-move operation. |
-| Subscriptions in a tenant. | You can move to different management groups. | No effect on existing resources within the subscription because resourceId values don't change. | Requires an assessment of policies and RBAC pre-move and post-move operation. |
+| Scope                         | Destination                                                                 | Pro                                                                                             | Con                                                                                                                                                                                                                                                                                                                                                                      |
+| ----------------------------- | --------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Resources in resource groups. | You can move to a new resource group in the same or different subscription. | You can modify the resource composition in a resource group after deployment.                   | Not supported by all resourceTypes. <br><br> Some resourceTypes have specific limitations or requirements. <br><br> ResourceIds are updated and it affects existing monitoring, alerts, and control plane operations. <br><br> Resource groups are locked during the move period. <br><br> Requires an assessment of policies and RBAC pre-move and post-move operation. |
+| Subscriptions in a tenant.    | You can move to different management groups.                                | No effect on existing resources within the subscription because resourceId values don't change. | Requires an assessment of policies and RBAC pre-move and post-move operation.                                                                                                                                                                                                                                                                                            |
 
 To determine which move strategy you should use, consider the following examples.
 
@@ -92,7 +92,7 @@ The following scenarios describe how to migrate and transition an existing envir
   - [Transition a regional organization to the Azure landing zone reference architecture](./../landing-zone/align-scenario-regional-org.md)
 
 - **Alignment approaches**
-  - [Transition an environment by duplicating a landing zone management group](./../landing-zone/align-approach-duplicate-brownfield-audit-only.md)
+  - [Transition an environment by duplicating a landing zone management group **(Recommended)**](./../landing-zone/align-approach-duplicate-brownfield-audit-only.md)
 
 > [!div class="nextstepaction"]
 > [Journey toward the target architecture](./../landing-zone/landing-zone-journey.md)

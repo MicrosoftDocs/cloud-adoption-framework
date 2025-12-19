@@ -1,9 +1,9 @@
 ---
-title: Security control mapping with Azure landing zones
-description: Learn about security control mapping with Azure landing zones for regional and other regulatory compliance.
-author: Tshah2808
-ms.author: tanshah
-ms.date: 02/27/2025
+title: Security control mapping with Azure landing zone
+description: Learn about security control mapping with Azure landing zone for regional and other regulatory compliance.
+author: jtracey93
+ms.author: jatracey
+ms.date: 12/19/2025
 ms.topic: concept-article
 ---
 
@@ -131,43 +131,29 @@ The following sections describe how to identify, map, and implement regulatory c
 > [!TIP]
 > When you use Azure landing zone reference architectures—such as the Portal, Bicep, or Terraform—the deployment assigns MCSB policy initiative to the Intermediate Root Management Group by default.
 
-Learn more about [policies assigned as part of an Azure landing zone reference architecture deployment](https://github.com/Azure/Enterprise-Scale/wiki/ALZ-Policies).
+Learn more about [policies assigned as part of an Azure landing zone reference architecture deployment](https://aka.ms/alz/policies).
 
 ### Guidance for implementing policy in Azure landing zones
 
 Depending on your control objectives, you may need to create custom [policy definitions](/azure/governance/policy/concepts/definition-structure), [policy initiative definitions](/azure/governance/policy/concepts/initiative-definition-structure), and [policy assignments](/azure/governance/policy/concepts/assignment-structure).
 
-Refer to the following guidance for each Azure landing zone reference architecture implementation option.
+Refer to the following guidance for each Azure landing zone reference [implementation options](../landing-zone/implementation-options.md).
 
 #### Azure landing zone reference architecture portal
 
-When using the [Azure landing zone portal-based experience](https://aka.ms/caf/ready/accelerator):
+When using the [Azure landing zone portal accelerator](https://aka.ms/alz/portal):
 
 - [Create custom security policies in Microsoft Defender for Cloud](/azure/defender-for-cloud/custom-security-policies?pivots=azure-portal)
 - [Tutorial: Create a custom policy definition](/azure/governance/policy/tutorials/create-custom-policy-definition)
 - [Assign Azure Policy or policy initiatives](/azure/governance/policy/assign-policy-portal)
 
-#### Azure Resource Manager with AzOps
+#### Terraform modules
 
-When using the [Resource Manager templates](https://aka.ms/alz/arm) with the [AzOps Accelerator](https://github.com/azure/azops-accelerator), refer to the deployment article to learn how to operate the Azure platform using infrastructure as code.
-
-- [Adding Custom Azure Policy definitions and initiatives](https://aka.ms/alz/wiki/azops)
-- [Assigning Azure Policy](https://aka.ms/alz/wiki/azops)
-
-#### Terraform module
-
-When using the [Azure landing zones Terraform module](https://aka.ms/alz/tf/wiki), refer to the repository wiki for guidance on how to manage additional policy definitions and assignments.
-
-- [Adding Custom Azure Policy definitions and assignments](https://aka.ms/alz/terraform/custompolicy)
-- [Assigning a built-in Azure Policy](https://aka.ms/alz/terraform/assignpolicy)
-- [Expand built-in archetype definitions](https://github.com/Azure/terraform-azurerm-caf-enterprise-scale/wiki/%5BExamples%5D-Expand-Built-in-Archetype-Definitions)
+When using the [Azure Verified Modules (AVM) for Platform landing zone (ALZ) - Terraform](https://aka.ms/alz/acc/tf), refer to the following guidance on [using a custom library](https://azure.github.io/Azure-Landing-Zones/terraform/howtos/customlibrary/).
 
 #### Bicep
 
-When using the Azure landing zones Bicep implementation, learn how to [create your own policy definitions and assignments](https://github.com/Azure/ALZ-Bicep/wiki/PolicyDeepDive).
-
-- [Adding Custom Azure Policy definitions and initiatives](https://aka.ms/alz/bicep/custompolicy)
-- [Assigning Azure Policies](https://aka.ms/alz/bicep/assignpolicy)
+When using the [Azure Verified Modules (AVM) for Platform landing zone (ALZ) - Bicep](https://aka.ms/alz/acc/bicep), refer to the following guidance on [modifying policy assignments](https://azure.github.io/Azure-Landing-Zones/bicep/howtos/modifyingpolicyassignments/).
 
 ### Implement custom policies when not using an Azure landing zones implementation
 
