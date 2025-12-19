@@ -1,10 +1,10 @@
 ---
 title: Scenario- Transition a regional organization environment to the Azure landing zone reference architecture
 description: Learn how to transition existing regional Azure environments comprised of multiple management groups into the Azure landing zone reference architecture.
-author: sebassem
-ms.author: sebassem
+author: jtracey93
+ms.author: jatracey
 ms.reviewer: tozimmergren
-ms.date: 02/27/2025
+ms.date: 12/19/2025
 ms.topic: concept-article
 ms.service: caf
 ---

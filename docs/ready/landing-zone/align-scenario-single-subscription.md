@@ -1,10 +1,10 @@
 ---
-title: Scenario- Transition a single subscription with no management groups to the Azure landing zone reference architecture
+title: Scenario - Transition a single subscription with no management groups to the Azure landing zone reference architecture
 description: Learn how to transition existing Azure environments with a single subscription with no management groups into the Azure landing zone reference architecture.
 author: jtracey93
 ms.author: jatracey
 ms.reviewer: tozimmergren
-ms.date: 01/17/2025
+ms.date: 12/19/2025
 ms.topic: concept-article
 ---
 

@@ -313,9 +313,6 @@ items:
               - name: Transition by duplicating a landing zone management group
                 href: ready/landing-zone/align-approach-duplicate-brownfield-audit-only.md
 
-          - name: Brownfield landing zone considerations
-            href: ready/landing-zone/brownfield-considerations.md
-
         - name: Enhance
           items:
           - name: Expand your landing zone
