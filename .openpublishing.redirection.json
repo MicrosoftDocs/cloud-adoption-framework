@@ -3904,6 +3904,11 @@
          "source_path": "docs/ready/landing-zone/brownfield-considerations.md",
          "redirect_url": "/azure/cloud-adoption-framework/ready/enterprise-scale/transition",
          "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/ready/considerations/infrastructure-as-code.md",
+         "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/implementation-options",
+         "redirect_document_id": false
       }
    ]
 }
