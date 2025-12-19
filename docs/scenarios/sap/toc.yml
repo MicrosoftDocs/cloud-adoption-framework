@@ -36,7 +36,6 @@ items:
           href: sap-lza-sentinel-for-sap.md
         - name: Security operations
           href: sap-lza-security-operations.md
-    - name: SAP and data
     - name: Implementation options
       items:
       - name: Start small and expand with SAP HANA scale-up on Linux
