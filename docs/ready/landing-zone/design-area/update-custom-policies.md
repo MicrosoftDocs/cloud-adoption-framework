@@ -1,9 +1,9 @@
 ---
 title: Update Azure landing zone custom policies
 description: Use this guidance to update already-deployed Azure landing zone custom policies and policy initiatives.
-author: DaFitRobsta
-ms.author: Rolightn
-ms.date: 01/17/2025
+author: jtracey93
+ms.author: jtracey93
+ms.date: 12/19/2025
 ms.topic: concept-article
 ms.custom: internal, devx-track-bicep, devx-track-terraform, UpdateFrequency2
 ---
@@ -12,10 +12,11 @@ ms.custom: internal, devx-track-bicep, devx-track-terraform, UpdateFrequency2
 
 Over time, Azure landing zone custom policies and policy initiatives update to newer versions that you can incorporate into your Azure environment. This article describes how to update your Azure landing zone custom policies and policy initiatives when newer versions release.
 
-The article describes high-level manual update steps, and provides references on handling updates for [Terraform](https://github.com/Azure/terraform-azurerm-caf-enterprise-scale) and [Bicep](https://aka.ms/alz/bicep) modular implementations. To migrate Azure landing zone custom policies to Azure built-in policies with Bicep, see [Migrate Azure landing zone policies to Azure built-in policies](./migrate-azure-landing-zone-policies.md).
+The article describes high-level manual update steps, and provides references on handling updates for [Terraform](https://aka.ms/alz/acc/tf) and [Bicep](https://aka.ms/alz/acc/bicep) modular implementations. To migrate Azure landing zone custom policies to Azure built-in policies with Bicep, see [Migrate Azure landing zone policies to Azure built-in policies](./migrate-azure-landing-zone-policies.md).
 
 The following infographic provides a decision tree and process flow for Azure landing zone custom policy updates:
 :::image type="content" source="./media/azure-landing-zone-policy-to-newer-version.png" lightbox="./media/azure-landing-zone-policy-to-newer-version-large.png" alt-text="Diagram that shows a decision tree for the Azure landing zone custom policy update process.":::
+
 > [!CAUTION]
 > When you delete existing policy assignments, your environment isn't protected during the time it takes to reassign policies. After you assign updated policies, review your policy compliance section for any unhealthy resources and remediate them.
 
@@ -110,19 +111,11 @@ For detailed guidance, see the [Azure landing zones user guide](https://aka.ms/a
 
 ## Update steps for Terraform Azure Verified Modules for Platform Landing Zones
 
-If you use [the Terraform module](https://aka.ms/alz/tf/module), see the [update guide](https://aka.ms/alz/tf/update).
+If you use [the Terraform modules](https://aka.ms/alz/tf/module), see the [update guide](https://aka.ms/alz/tf/update).
 
-## Update steps for Bicep module deployments
+## Update steps for Bicep Azure Verified Modules for Platform Landing Zones
 
-If you use the [ALZ-Bicep modules](https://github.com/Azure/alz-bicep) to manage your Azure landing zone deployment, this section provides resources for updating Azure landing zone custom policies and initiatives.
-
-### Detect updates with Bicep
-
-Use the methods in [Detect updates](#detect-updates) to determine whether policies have changed. You can also see changes to ALZ-Bicep policies in [ALZ-Bicep releases](https://github.com/Azure/ALZ-Bicep/releases).
-
-### Update with Bicep
-
-ALZ-Bicep provides generic guidance for updating Azure landing zone custom policies to newer policies. For more information, see [How to migrate Azure landing zone custom policies to Azure built-in policies](https://github.com/Azure/ALZ-Bicep/wiki/PolicyDeepDive#how-to-migrate-alz-custom-policies-to-azure-built-in-policies).
+If you use [the Bicep modules](https://aka.ms/alz/acc/bicep), see the [update guide](https://aka.ms/alz/bicep/update).
 
 ## Next steps
 
