@@ -42,7 +42,7 @@ The Cloud Solution Provider (CSP) service gives Microsoft partners access to Mic
 
 - Work with your CSP partner to ensure that Azure Lighthouse is used for administer on behalf of (AOBO) access for most support scenarios. For more information, see [Azure Lighthouse and the Cloud Solution Provider program](/azure/lighthouse/concepts/cloud-solution-provider).
 
-- Partners, should use, or migrate, to [granular delegated admin privileges (GDAP)](/partner-center/gdap-introduction) instead of utilizing delegated admin privileges (DAP).
+- Partners should use, or migrate, to [granular delegated admin privileges (GDAP)](/partner-center/gdap-introduction) instead of utilizing delegated admin privileges (DAP).
 
 - Follow and implement the [Customer security best practices](/partner-center/customer-security-best-practices)
 
