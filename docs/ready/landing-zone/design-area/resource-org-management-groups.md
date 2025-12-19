@@ -3,7 +3,7 @@ title: Management groups
 description: Learn about the resource organization and management group design considerations and recommendations.
 author: jtracey93
 ms.author: jatracey
-ms.date: 07/07/2025
+ms.date: 12/19/2025
 ms.update-cycle: 180-days
 ms.topic: concept-article
 ms.custom: internal, UpdateFrequency.5
@@ -45,13 +45,13 @@ For more information, see [Management groups](/azure/governance/management-group
 
 - Use resource tags to query and horizontally navigate across the management group hierarchy. You can use Azure Policy to enforce or append resource tags. Then you can group resources for search needs without having to use a complex management group hierarchy.
 
-- Create a sandbox management group so that you can immediately experiment with resources before you move them to production environments. The sandbox provides isolation from your development, test, and production environments.
+- Create a `sandbox` management group so that you can immediately experiment with resources before you move them to production environments. The `sandbox` provides isolation from your development, test, and production environments.
 
 - Create a platform management group under the root management group to support common platform policies and Azure role assignments. This grouping structure ensures that you can apply various policies to the subscriptions in your Azure foundation. This approach also centralizes the billing for common resources in one set of foundational subscriptions.
 
 - Create management groups under your landing zone management group to represent the types of workloads that you host. These groups are based on the security, compliance, connectivity, and feature needs of the workloads. With this grouping structure, you can have a set of Azure policies applied at the management group level. Use this grouping structure for all workloads that require the same security, compliance, connectivity, and feature settings. 
 
-  - Use management groups to organize subscriptions by workload type, such as online, corporate, or sandbox. This organization helps you apply policies and RBAC roles that are specific to the workload type. For more information, see [Tailor the Azure landing zone architecture to meet requirements](../tailoring-alz.md).
+  - Use management groups to organize subscriptions by workload type, such as `online`, `corporate`, or `sandbox`. This organization helps you apply policies and RBAC roles that are specific to the workload type. For more information, see [Tailor the Azure landing zone architecture to meet requirements](../tailoring-alz.md).
 
 - Limit the number of Azure Policy assignments at the root management group scope. This limitation minimizes debugging inherited policies in lower-level management groups.
 
@@ -59,7 +59,7 @@ For more information, see [Management groups](/azure/governance/management-group
 
 - Ensure that only privileged users can operate management groups in the tenant. Enable Azure RBAC authorization in the management group [hierarchy settings](/azure/governance/management-groups/how-to/protect-resource-hierarchy#setting-require-authorization) to refine user privileges. By default, all users can create their own management groups under the root management group.
 
-- Configure a default, dedicated management group for new subscriptions. This group ensures that no subscriptions go under the root management group. This group is especially important if users have Microsoft Developer Network (MSDN) or Visual Studio benefits and subscriptions. A good candidate for this type of management group is a sandbox management group. For more information, see [Set a default management group](/azure/governance/management-groups/how-to/protect-resource-hierarchy#setting---default-management-group).
+- Configure a default, dedicated management group for new subscriptions. This group ensures that no subscriptions go under the root management group. This group is especially important if users have Microsoft Developer Network (MSDN) or Visual Studio benefits and subscriptions. A good candidate for this type of management group is a `sandbox` management group. For more information, see [Set a default management group](/azure/governance/management-groups/how-to/protect-resource-hierarchy#setting---default-management-group).
 
 - Don't create management groups for production, testing, and development environments. If necessary, separate these groups into different subscriptions in the same management group. For more information, see:
 
