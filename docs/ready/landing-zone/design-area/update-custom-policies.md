@@ -113,7 +113,7 @@ For detailed guidance, see the [Azure landing zones user guide](https://aka.ms/a
 
 If you use [the Terraform modules](https://aka.ms/alz/tf/module), see the [update guide](https://aka.ms/alz/tf/update).
 
-## Update steps for Bicep Azure Verified Modules for Platform Landing Zones
+## Update your platform landing zone with Bicep Azure Verified Modules
 
 If you use [the Bicep modules](https://aka.ms/alz/acc/bicep), see the [update guide](https://aka.ms/alz/bicep/update).
 
