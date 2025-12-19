@@ -10,7 +10,7 @@ ms.custom: internal
 
 # Advanced Azure Policy management
 
-This article describes how to manage Azure Policy at scale by using infrastructure as code (IaC). Policy-driven governance is a design principle for Azure landing zones. It helps to ensure that the applications you deploy comply with your organization's platform. It can take considerable effort to manage and test policy objects across an environment to ensure that compliance is met. [Azure landing zone accelerators](/azure/architecture/landing-zones/landing-zone-deploy) help to establish a secure baseline, but your organization might have further compliance requirements that you must meet by deploying other policies.
+This article describes how to manage Azure Policy at scale by using infrastructure as code (IaC). Policy-driven governance is a design principle for Azure landing zones. It helps to ensure that the applications you deploy comply with your organization's platform. It can take considerable effort to manage and test policy objects across an environment to ensure that compliance is met. [Azure landing zone reference architectures](/azure/architecture/landing-zones/landing-zone-deploy) help to establish a secure baseline, but your organization might have further compliance requirements that you must meet by deploying other policies.
 
 ## What is Enterprise Policy as Code (EPAC)?
 
@@ -32,7 +32,7 @@ You can use EPAC to deploy and manage Azure landing zone policies. You might wan
 
 - You have an Azure deployment that doesn't fully align to an Azure landing zone, for example multiple management group structures for testing or a nonconventional management group structure. The default assignment structure that other Azure landing zone deployment methods provide might not fit your strategy.
 - You have a team that's not responsible for infrastructure deployment, for example a security team that might want to deploy and manage policies.
-- You require features from policies that aren't available in the Azure landing zone accelerator deployments, for example policy exemptions and documentation.
+- You require features from policies that aren't available in the Azure landing zone reference architecture deployments, for example policy exemptions and documentation.
 
 ## Get started
 
@@ -50,9 +50,9 @@ For issues with the code or documentation, [submit an issue in the GitHub reposi
 
 ## Replace existing policy deployment solutions
 
-EPAC replaces the policy deployment capabilities of the Azure landing zone accelerators. When you use these accelerators, you shouldn't use them to deploy Azure Policy because EPAC is the source of truth for policy in the environment.
+EPAC replaces the policy deployment capabilities of the Azure landing zone reference architectures. When you use these accelerators, you shouldn't use them to deploy Azure Policy because EPAC is the source of truth for policy in the environment.
 
-For more information, see the following resources for policy management with Bicep and Terraform Azure landing zone accelerators:
+For more information, see the following resources for policy management with Bicep and Terraform Azure landing zone reference architectures:
 
 - [How Does ALZ-Bicep implement Azure policies?](https://github.com/Azure/ALZ-Bicep/wiki/PolicyDeepDive)
 - [Archetype definitions](https://github.com/Azure/terraform-azurerm-caf-enterprise-scale/wiki/%5BUser-Guide%5D-Archetype-Definitions)

@@ -3,7 +3,7 @@ title: Cloud Solution Provider service
 description: Learn how to understand Cloud Solution Provider (CSP) service agreements and Microsoft Entra tenants.
 author: jtracey93
 ms.author: jatracey
-ms.date: 11/28/2024
+ms.date: 12/18/2025
 ms.update-cycle: 180-days
 ms.topic: concept-article
 ms.custom: think-tank, UpdateFrequency.5
@@ -42,7 +42,7 @@ The Cloud Solution Provider (CSP) service gives Microsoft partners access to Mic
 
 - Work with your CSP partner to ensure that Azure Lighthouse is used for administer on behalf of (AOBO) access for most support scenarios. For more information, see [Azure Lighthouse and the Cloud Solution Provider program](/azure/lighthouse/concepts/cloud-solution-provider).
 
-- Partners, should use, or migrate, to [granular delegated admin privileges (GDAP)](/partner-center/gdap-introduction) instead of utilizing delegated admin privileges (DAP).
+- Partners should use, or migrate, to [granular delegated admin privileges (GDAP)](/partner-center/gdap-introduction) instead of utilizing delegated admin privileges (DAP).
 
 - Follow and implement the [Customer security best practices](/partner-center/customer-security-best-practices)
 
@@ -55,6 +55,8 @@ The Cloud Solution Provider (CSP) service gives Microsoft partners access to Mic
 - Use [Microsoft Cost Management](/azure/cost-management-billing/cost-management-billing-overview) reports and views. These reports can use Azure metadata, like tags and location, to explore and analyze your organization's costs.
 
 - Any user that has permissions upon an invoice section, billing profile or billing account to create subscriptions, as detailed [here](/azure/cost-management-billing/manage/understand-mca-roles#subscription-billing-roles-and-tasks), must be protected with multifactor authentication (MFA) as any other privileged account should be as documented in [here](/entra/identity/role-based-access-control/security-planning?bc=%2Fazure%2Fcloud-adoption-framework%2F_bread%2Ftoc.json&toc=%2Fazure%2Fcloud-adoption-framework%2Ftoc.json)
+
+- CSP partners should provision Azure subscriptions into customers' Microsoft Entra tenants that follow the guidance in [Define Microsoft Entra tenants](azure-ad-define.md) to ensure a secure and well-managed identity foundation. Not into a partner-managed Microsoft Entra tenant.
 
 ## Next steps
 

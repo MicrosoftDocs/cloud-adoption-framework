@@ -1,10 +1,10 @@
 ---
 title: Scenario- Transition an environment by duplicating a landing zone management group
-description: Learn about an approach to transition to the Azure landing zone conceptual architecture by duplicating a landing zone management group.
-author: sebassem
-ms.author: sebassem
+description: Learn about an approach to transition to the Azure landing zone reference architecture by duplicating a landing zone management group.
+author: jtracey93
+ms.author: jatracey
 ms.reviewer: tozimmergren
-ms.date: 02/27/2025
+ms.date: 12/19/2025
 ms.topic: concept-article
 ms.service: caf
 ---
@@ -13,13 +13,13 @@ ms.service: caf
 
 # Scenario: Transition an environment by duplicating a landing zone management group
 
-This article describes an example approach that transitions an environment to the Azure landing zone conceptual architecture by duplicating the landing zone management group with policies in *audit only* mode. With this approach, you can quickly access the new desired target architecture and then assess the application or workload subscriptions for compliance. This approach eliminates the risk of affecting the application teams because the policies are in *audit only* mode.
+This article describes an example approach that transitions an environment to the Azure landing zone reference architecture by duplicating the landing zone management group with policies in *audit only* mode. With this approach, you can quickly access the new desired target architecture and then assess the application or workload subscriptions for compliance. This approach eliminates the risk of affecting the application teams because the policies are in *audit only* mode.
 
-## Transition to the Azure landing zone conceptual architecture
+## Transition to the Azure landing zone reference architecture
 
-Prior to implementing this approach, review [Azure landing zone conceptual architecture](./index.md), [Azure landing zone design principles](./design-principles.md), and [Azure landing zone design areas](./design-areas.md).
+Prior to implementing this approach, review [Azure landing zone reference architecture](./index.md), [Azure landing zone design principles](./design-principles.md), and [Azure landing zone design areas](./design-areas.md).
 
-Use this approach to transition to the Azure landing zone conceptual architecture:
+Use this approach to transition to the Azure landing zone reference architecture:
 
 1. Deploy the [Azure landing zone](../landing-zone/index.md#deploying-and-managing-azure-landing-zone) into the same Microsoft Entra ID tenant in parallel with the current environment. This method provides a smooth and phased transition to the new landing zone architecture with minimal disruption to active workloads.
 
@@ -36,7 +36,7 @@ Use this approach to transition to the Azure landing zone conceptual architectur
    > [!NOTE]
    > This approach has no additional cost because it only duplicates the management group hierarchy and the assigned policies, not the workloads.
 
-1. (Optional) Work with application or service teams to migrate the workloads that are deployed in the original subscriptions into new Azure subscriptions. For more information, see [Transition existing Azure environments to the Azure landing zone conceptual architecture](./../enterprise-scale/transition.md#move-resources-in-azure). You can place workloads into the newly duplicated management group hierarchy under the correct management group, such as *corporate brownfield* or *online brownfield* in this example.
+1. (Optional) Work with application or service teams to migrate the workloads that are deployed in the original subscriptions into new Azure subscriptions. For more information, see [Transition existing Azure environments to the Azure landing zone reference architecture](./../enterprise-scale/transition.md#move-resources-in-azure). You can place workloads into the newly duplicated management group hierarchy under the correct management group, such as *corporate brownfield* or *online brownfield* in this example.
 
    For information about the effect on resources when migrating, see [Policies](./../enterprise-scale/transition.md#policies).
 
@@ -55,4 +55,4 @@ The following diagram shows the state of this scenario during the migration.
 
 ## Summary
 
-You used this approach to safely migrate your workloads in Azure by deploying the [Azure landing zone conceptual architecture](./index.md#azure-landing-zone-architecture) in parallel with your existing environment with minimal disruption.
+You used this approach to safely migrate your workloads in Azure by deploying the [Azure landing zone reference architecture](./index.md#azure-landing-zone-architecture) in parallel with your existing environment with minimal disruption.

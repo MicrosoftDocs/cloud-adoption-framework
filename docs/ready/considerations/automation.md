@@ -44,7 +44,7 @@ In software defined cloud infrastructure, teams use various tools and techniques
 - Use one of the available accelerators that matches your team's capabilities to get started with deploying Azure Landing Zones.
 - Plan to use a layered deployment approach to add capabilities that aren't covered by an accelerator but are needed to fully support your workload teams.
 - Establish a process for using code to implement quick fixes. Always register quick fixes in your team's backlog so each fix can be reworked at a later point and you can limit technical debt.
-- Use [Infrastructure as Code](./infrastructure-as-code.md) to deploy and manage [Azure Policies](/azure/governance/policy/overview) (often referred to as Policy-as-Code)
+- Use [Infrastructure as Code](../landing-zone/implementation-options.md) to deploy and manage [Azure Policies](/azure/governance/policy/overview) (often referred to as Policy-as-Code)
 - Implement an exemption process for policies. Plan for your workload teams to request exemptions from policies, and be ready to unblock the teams when needed.
 - Use "Policy-driven-governance" to block workload teams when they attempt to deploy resources that don't meet a security control. This helps reduce configuration drift, where code declares a different state than what ends up being deployed.
 

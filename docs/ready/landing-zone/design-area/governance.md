@@ -1,10 +1,9 @@
 ---
 title: Azure governance design area
 description: Explore the design area for governing your Azure environment to establish tooling to support cloud governance, compliance auditing, and automated guardrails.
-author: stephen-sumner
-ms.author: pnp
-ms.reviewer: ssumner
-ms.date: 05/07/2024
+author: jtracey93
+ms.author: jatracey
+ms.date: 12/18/2025 
 ms.update-cycle: 180-days
 ms.topic: concept-article
 ms.custom: internal, UpdateFrequency.5
@@ -18,7 +17,7 @@ Use Azure governance to establish the tooling that you need to support cloud gov
 
 **Roles or functions:** Azure governance originates from cloud governance. You might need to implement the [cloud platform](../../../organize/cloud-platform.md) to define and apply certain technical requirements. Governance focuses on enforcing operations and security requirements, which might require [cloud security](../../../secure/teams-roles.md), central IT, or [cloud operations](../../../organize/cloud-operations.md).
 
-**Scope:** Consider your decisions from [identity](./identity-access.md), [network](./network-topology-and-connectivity.md), [security](./security.md), and [management](./management.md) design area reviews. Your team can compare review decisions from automated governance, which is part of the Azure landing zone accelerator. Review decisions can help you determine what to audit or enforce and what policies to automatically deploy.
+**Scope:** Consider your decisions from [identity](./identity-access.md), [network](./network-topology-and-connectivity.md), [security](./security.md), and [management](./management.md) design area reviews. Your team can compare review decisions from automated governance, which is part of the Azure landing zone reference architecture. Review decisions can help you determine what to audit or enforce and what policies to automatically deploy.
 
 **Out of scope:** Azure governance establishes the foundation for networking. But it doesn't address compliance-related components, such as advanced network security or automated guardrails to enforce networking decisions. You can address these networking decisions when you review compliance design areas that are related to [security](./security.md) and [governance](./governance.md). The cloud platform team should address initial networking requirements before addressing more complex components.
 
@@ -62,9 +61,9 @@ Azure Policy helps ensure security and compliance for enterprise technical estat
 
 Change advisory review boards can hinder your organization's innovation and business agility. Azure Policy replaces such reviews with automated guardrails and adherence audits to improve workload efficiency.
 
-- Determine which Azure policies you need based on your business controls or compliance regulations. Use the policies included in the Azure landing zone accelerator as a starting point.
+- Determine which Azure policies you need based on your business controls or compliance regulations. Use the policies included in the Azure landing zone reference architecture as a starting point.
 
-- Use the [policies included in Azure landing zones reference implementation](https://github.com/Azure/Enterprise-Scale/wiki/ALZ-Policies) to consider other policies that might align to your business requirements.
+- Use the [policies included in Azure landing zones reference implementation](https://aka.ms/alz/policies) to consider other policies that might align to your business requirements.
 
 - Enforce automated networking, identity, management, and security conventions.
 
@@ -155,9 +154,9 @@ Change advisory review boards can hinder your organization's innovation and busi
 - Use Cost Management to implement financial oversight on resources in your environment.
 - Use tags, such as the cost center or project name, to append the resource metadata. This approach helps enable granular analysis of expenses.
 
-## Azure governance in the Azure landing zone accelerator
+## Azure governance in the Azure landing zone reference architecture
 
-The Azure landing zone accelerator provides organizations with mature governance controls.
+The Azure landing zone reference architecture provides organizations with mature governance controls.
 
 For example, you can implement:
 

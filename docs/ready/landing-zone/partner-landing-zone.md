@@ -3,7 +3,7 @@ title: Get help building a landing zone
 description: How to get help building a landing zone and what to expect.
 author: stephen-sumner
 ms.author: ssumner
-ms.date: 02/27/2025
+ms.date: 12/19/2025
 ms.topic: concept-article
 ms.custom: internal
 ---
@@ -15,25 +15,25 @@ We'll show you how to find a partner and what to expect from your partner.
 
 There are two options to find an ALZ partner (*see image*).
 
-- *Option 1* - use Azure Migrate and Modernize.
+- *Option 1* - use Azure Azure Accelerate
 - *Option 2* - find a partner offer for a landing zone in our marketplace.
 
 
-![A graphic that summarizes the two options to find a partner: Azure Migrate and Modernize and partner marketplace. The graphic lists the expectations for both options.](./media/alz-partner-options-v5.png)
+![A graphic that summarizes the two options to find a partner: Azure Azure Accelerate and partner marketplace. The graphic lists the expectations for both options.](./media/alz-partner-options-v5.png)
 
-## Option 1 - Azure Migrate and Modernize
+## Option 1 - Azure Azure Accelerate
 
-The easiest option to find an ALZ partner is through Azure Migrate and Modernize.
+The easiest option to find an ALZ partner is through Azure Azure Accelerate
 
-### How to find an Azure Migrate and Modernize partner
+### How to find an Azure Azure Accelerate partner
 
-Take 5 minutes to [fill out the Azure Migrate and Modernize form](https://azure.microsoft.com/migration/migration-modernization-program/#program-form). Someone from the team will help you find the right partner.
+Take 5 minutes to [fill out the Azure Azure Accelerate form](https://azure.microsoft.com/solutions/azure-accelerate/). Someone from the team will help you find the right partner.
 
-### What to expect from an Azure Migrate and Modernize partner
+### What to expect from an Azure Azure Accelerate partner
 
 All the partners in the program adhere to ALZ best-practices. We vet partners to ensure customers receive ALZ guidance that follows CAF principles. Here are some of the deliverables you and your partner will work through together.
 
-1. *ALZ planning* – The Azure Migrate and Modernize partner will work with you to create the business and technical foundation needed to build your ALZ. ALZ planning includes:
+1. *ALZ planning* – The Azure Azure Accelerate partner will work with you to create the business and technical foundation needed to build your ALZ. ALZ planning includes:
 
     - Selecting your operating models
     - Reviewing your ALZ implementation options
@@ -81,7 +81,7 @@ This flexibility creates value for you and allows you to find an offer that meet
 
 1. *Meet potential partners* – Use the **Contact me** button to reach out to partners. Meet with several landing zone partners to find the right fit. Get a sense of their process, experience, and successes.
 
-1. *Understand the offers* – Partners have more freedom to customize their ALZ approach outside of Azure Migrate and Modernize. Read the offer. Ask follow-up questions. Make sure you understand the offer and define expectations.
+1. *Understand the offers* – Partners have more freedom to customize their ALZ approach outside of Azure Azure Accelerate Read the offer. Ask follow-up questions. Make sure you understand the offer and define expectations.
 
 1. *Pick an offer* - Pick the offer that best meets your needs. Formalize the agreement and start building your landing zone with your partner.
 
@@ -91,12 +91,12 @@ Partner offers are vetted and approved for the marketplace. They follow CAF prin
 
 ## Links to find a landing zone partner
 
-- Option 1 - [Azure Migrate and Modernize](https://azure.microsoft.com/migration/migration-modernization-program/#program-form)
+- Option 1 - [Azure Azure Accelerate](https://azure.microsoft.com/migration/migration-modernization-program/#program-form)
 - Option 2 - [Find an Azure partner](https://azure.microsoft.com/partners/)
 
 ## Next steps
 
-Learn about the process for refactoring landing zones.
+Learn about the process for implementing an Azure landing zone.
 
 > [!div class="nextstepaction"]
-> [Refactor landing zones](./refactor.md)
+> [Implementation options](./implementation-options.md)

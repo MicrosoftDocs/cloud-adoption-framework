@@ -1,9 +1,9 @@
 ---
 title: Platform automation and DevOps design area
 description: Learn how platform automation and DevOps evaluate opportunities to modernize your approach to environmental deployment with infrastructure as code options.
-author: alguadam
-ms.author: alguadam
-ms.date: 02/27/2025
+author: jtracey93
+ms.author: jatracey
+ms.date: 12/19/2025
 ms.update-cycle: 180-days
 ms.topic: concept-article
 ms.custom: internal, UpdateFrequency.5
@@ -45,7 +45,7 @@ These resources address platform automation for DevOps.
 These resources address development strategy.
 
 - [Development lifecycle](../../considerations/development-strategy-development-lifecycle.md) explores key design considerations and recommendations for the creation of a landing zone by using automation. This resource discusses the repository, branch, automated builds, deployment, and rollback strategy.
-- [Infrastructure as Code](../../considerations/infrastructure-as-code.md) explains the benefits of implementing Azure Landing Zones by using Infrastructure as Code. Learn about considerations around code structure, tools, and technology.
+- [Infrastructure as Code](../implementation-options.md) explains the benefits of implementing Azure Landing Zones by using Infrastructure as Code. Learn about considerations around code structure, tools, and technology.
 - [Environments](../../considerations/environments.md) explains the purpose of multienvironments to build, test, and release code with greater speed and frequency. This approach makes deployment as straightforward as possible.
 - [Test-driven development](../../considerations/development-strategy-test-driven-development.md) addresses how to use unit testing to improve the quality of new features and improvements in the Azure Landing Zone code-base.
 

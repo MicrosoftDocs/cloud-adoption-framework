@@ -1,9 +1,9 @@
 ---
 title: Security design in Azure
 description: Learn about design area guidance to establish a foundation for security in Azure, hybrid, or multicloud environments.
-author: stephen-sumner
-ms.author: pnp
-ms.date: 02/27/2025
+author: jtracey93
+ms.author: jatracey
+ms.date: 12/19/2025
 ms.update-cycle: 180-days
 ms.topic: concept-article
 ms.custom: internal, UpdateFrequency.5
@@ -129,9 +129,9 @@ Implementing Zero Trust can go beyond just identity and access management. You s
 
 - Implement a [zero-trust approach for access](/security/zero-trust/deploy/identity) to the Azure platform where appropriate.
 
-## Security in the Azure landing zone accelerator
+## Security in the Azure landing zone reference architecture
 
-Security is at the core of the Azure landing zone accelerator. As part of the implementation, many tools and controls are deployed to help organizations quickly achieve a security baseline.
+Security is at the core of the Azure landing zone reference architecture. As part of the implementation, many tools and controls are deployed to help organizations quickly achieve a security baseline.
 
 For example, the following are included:
 

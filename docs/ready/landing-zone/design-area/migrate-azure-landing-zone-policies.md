@@ -1,9 +1,9 @@
 ---
 title: Migrate Azure landing zone custom policies to Azure built-in policies
 description: Learn how to use governance guidance to migrate previously deployed Azure landing zone policies to Azure built-in policies.
-author: Jfaurskov
-ms.author: janfaurs
-ms.date: 01/17/2025
+author: jtracey93
+ms.author: jatracey
+ms.date: 12/19/2025
 ms.topic: concept-article
 ms.custom: internal, devx-track-bicep, devx-track-terraform, UpdateFrequency2
 ---
@@ -12,7 +12,7 @@ ms.custom: internal, devx-track-bicep, devx-track-terraform, UpdateFrequency2
 
 Over time, Azure landing zone custom policies and policy initiatives might be deprecated or superseded by Azure built-in policies. If so, they should be removed or migrated. This article describes how to migrate Azure landing zone custom policies and policy initiatives to Azure built-in policies.
 
-The guidance in this article describes the manual, high-level steps to migrate your policies. It also provides references on how to process implementations managed through the Azure Verified Modules for Platform Landing Zones [Terraform](#update-steps-for-terraform-azure-verified-modules-for-platform-landing-zones-module-deployments) or [Bicep](#update-steps-for-alz-bicep-deployments) offerings.
+The guidance in this article describes the manual, high-level steps to migrate your policies. It also provides references on how to process implementations managed through the Azure Verified Modules for Platform Landing Zones [Terraform](#update-steps-for-terraform-azure-verified-modules-for-platform-landing-zones-module-deployments) or [Bicep](#update-steps-for-bicep-azure-verified-modules-for-platform-landing-zones-module-deployments) offerings.
 
 The following infographic shows the update process flow.
 
@@ -76,23 +76,11 @@ If an Azure landing zone custom policy initiative is fully superseded by a built
 
 ## Update steps for Terraform Azure Verified Modules for Platform Landing Zones module deployments
 
-If you use [the Terraform module](https://aka.ms/alz/tf/module), see the [update guide](https://aka.ms/alz/tf/update).
+If you use [the Terraform modules](https://aka.ms/alz/tf/module), see the [update guide](https://aka.ms/alz/tf/update).
 
-### Migration steps for Azure landing zone Terraform module
+## Update steps for Bicep Azure Verified Modules for Platform Landing Zones module deployments
 
-The Azure landing zone Terraform module provides update guidance when you deploy breaking changes. Follow the upgrade guidance for your specific version that's at the end of this article.
-
-## Update steps for ALZ-Bicep deployments
-
-If you're using the [ALZ-Bicep](https://github.com/Azure/alz-bicep) to manage your Azure landing zone deployment, this section references resources on how to migrate Azure landing zone custom policies and initiatives to Azure built-in policies.
-
-### Detect updates for ALZ-Bicep policy changes
-
-Use the methods described in [Detect updates for Azure landing zone policies](#detect-updates-for-azure-landing-zone-policies) to determine whether policies have changed in ALZ-Bicep. You'll also see changes to policies in [ALZ-Bicep releases](https://github.com/Azure/ALZ-Bicep/releases).
-
-### Migration steps for ALZ-Bicep policies
-
-ALZ-Bicep provides generic guidance for migrating policies from Azure landing zone custom policies to Azure built-in policies. For more information, see [How to migrate Azure landing zone custom policies to Azure built-in policies](https://github.com/Azure/ALZ-Bicep/wiki/PolicyDeepDive#how-to-migrate-alz-custom-policies-to-azure-built-in-policies).
+If you use [the Bicep modules](https://aka.ms/alz/acc/bicep), see the [update guide](https://aka.ms/alz/bicep/update).
 
 ## Next steps
 

@@ -3,7 +3,7 @@ title: Microsoft customer agreement and Microsoft Entra tenants
 description: Understand mca agreements and Microsoft Entra tenants.
 author: jtracey93
 ms.author: jatracey
-ms.date: 11/28/2024
+ms.date: 12/18/2025
 ms.update-cycle: 180-days
 ms.topic: concept-article
 ms.custom: think-tank, UpdateFrequency.5
@@ -25,6 +25,8 @@ The Microsoft customer agreement often represents an organization's hierarchy, w
 
 ## Design considerations
 
+- Review the guidance on [Subscription vending](/azure/cloud-adoption-framework/ready/landing-zone/design-area/subscription-vending) to plan from the start of your Azure landing zone journey how to automate subscription creation and management as a self-service function within your organization.
+
 - The agreement provides a hierarchical organizational structure to govern how subscriptions are managed. For more information, see [Organize costs by customizing your billing account](/azure/cost-management-billing/manage/mca-section-invoice).
 
 - An agreement billing account is managed by a single Microsoft Entra tenant. However, subscriptions across different Microsoft Entra tenants are supported by a single agreement. For more information, see [How tenants and subscriptions relate to billing account](/azure/cost-management-billing/microsoft-customer-agreement/manage-tenants#how-tenants-and-subscriptions-relate-to-billing-account) and [Manage subscriptions under multiple tenants in a single Microsoft customer agreement](/azure/cost-management-billing/microsoft-customer-agreement/manage-tenants#manage-subscriptions-under-multiple-tenants-in-a-single-microsoft-customer-agreement).
@@ -44,6 +46,8 @@ The Microsoft customer agreement often represents an organization's hierarchy, w
 - Use [Microsoft Cost Management](/azure/cost-management-billing/cost-management-billing-overview) reports and views, which explore and analyze your organization's costs with Azure metadata.
 
 ## Design recommendations
+
+- Implement a [Subscription vending](/azure/cloud-adoption-framework/ready/landing-zone/design-area/subscription-vending) strategy to automate subscription creation and management as a self-service function within your organization.
 
 - Set up a Notification Contact email address on the agreement billing account to ensure notifications are sent to an appropriate group mailbox.
 

@@ -1,9 +1,9 @@
 ---
 title: Overview of network topology and connectivity for Azure
 description: Examine key design considerations and best practices surrounding networking and connectivity.
-author: stephen-sumner
-ms.author: pnp
-ms.date: 02/27/2025
+author: jtracey93
+ms.author: jatracey
+ms.date: 12/19/2025
 ms.update-cycle: 180-days
 ms.topic: concept-article
 ms.custom: internal, UpdateFrequency.5
@@ -27,13 +27,22 @@ Network topology and connectivity are fundamental for organizations that are pla
 
 [![Diagram of networking areas of ALZ conceptual Management Group Hierarchy.](media/network-design-overview-mg.png)](media/network-design-overview-mg.png#lightbox)
 
-In the [conceptual Azure landing zone architecture](../../enterprise-scale/media/azure-landing-zone-architecture-diagram-hub-spoke.svg), there are two main management groups hosting workloads: Corp and Online. These management groups serve distinct purposes in organizing and governing Azure subscriptions. The networking relationship between the various Azure landing zones management groups depends on the organization's specific requirements and network architecture. The next few sections discuss the networking relationship between **Corp**, **Online**, and the **Connectivity** management groups in relation to what the Azure landing zone accelerator provides.
+In the [conceptual Azure landing zone architecture](../../enterprise-scale/media/azure-landing-zone-architecture-diagram-hub-spoke.svg), there are two main management groups hosting workloads: Corp and Online. These management groups serve distinct purposes in organizing and governing Azure subscriptions. The networking relationship between the various Azure landing zones management groups depends on the organization's specific requirements and network architecture. 
+
+The next few sections discuss the networking relationship between **Corp**, **Online**, and the **Connectivity** management groups in relation to what the Azure landing zone reference architecture provides.
 
 ### What is the purpose of Connectivity, Corp, and Online Management Groups?
 
 - **Connectivity management group**: This management group contains dedicated subscriptions for connectivity, commonly a single subscription for most organizations. These subscriptions host the Azure networking resources required for the platform, like Azure Virtual WAN, Virtual Network Gateways, Azure Firewall, and Azure DNS private zones. It's also where hybrid connectivity is established between the cloud and on-premises environments, using services like ExpressRoute etc.
+
 - **Corp management group**: The dedicated management group for corporate landing zones. This group is intended to contain subscriptions that host workloads that require traditional IP routing connectivity or hybrid connectivity with the corporate network via the hub in the connectivity subscription and therefore form part of the same routing domain. Workloads such as internal systems aren't exposed directly to the internet, but may be exposed via reverse proxies etc., such as Application Gateways.
+
 - **Online management group**: The dedicated management group for online landing zones. This group is intended to contain subscriptions used for public-facing resources, such as websites, e-commerce applications, and customer-facing services. For example, organizations can use the Online management group to isolate public-facing resources from the rest of the Azure environment, reducing the attack surface and ensuring that public-facing resources are secure and available to customers.
+
+> [!TIP]
+> A simplified way to think about the `Corp` and `Online` management groups is:
+>   - `Corp`: Internal-facing applications and workloads  and services (aka. private/intranet)
+>   - `Online`: Public-facing applications and workloads and services (aka. public/internet)
 
 ### Why did we create Corp and Online management groups to separate workloads?
 
