@@ -1,8 +1,8 @@
 ---
 title: Management for Azure environments
 description: Learn about some design considerations and recommendations for managing your Azure environment.
-author: stephen-sumner
-ms.author: pnp
+author: jtracey93
+ms.author: jatracey
 ms.date: 12/19/2025
 ms.update-cycle: 180-days
 ms.topic: concept-article
