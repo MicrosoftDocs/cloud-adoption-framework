@@ -1,9 +1,9 @@
 ---
 title: Keep your Azure landing zone up to date
 description: Learn best practices for keeping your Azure landing zones up to date.
-author: Jfaurskov
-ms.author: Janfaurs
-ms.date: 02/27/2025
+author: jtracey93
+ms.author: jatracey
+ms.date: 12/19/2025
 ms.topic: concept-article
 ms.custom: internal, UpdateFrequency2
 ---
@@ -24,7 +24,7 @@ Here are a few reasons to keep your landing zone up to date:
     - Improvements to network features.
     - New features.
     
-    The longer drift is left unattended, the more technical debt it incurs. This debt requires remediation. So that you can avoid spending increased time on remediation activities, we encourage you to regularly review the latest [changes to landing zones](https://github.com/Azure/Enterprise-Scale/wiki/Whats-new).
+    The longer drift is left unattended, the more technical debt it incurs. This debt requires remediation. So that you can avoid spending increased time on remediation activities, we encourage you to regularly review the latest [changes to landing zones](https://aka.ms/alz/whatsnew).
 - **Optimize for Azure improvements.** As new Azure features and services are released, landing zones might be modified to include them. Likewise, as older Azure features are deprecated, changes might also be made to landing zones.
 - **Get support.** A landing zone, as a deployable reference and implementation, is an open-source project, so support is limited to community engagement. Keeping your landing zone aligned to the current implementation makes community support more likely.
 
@@ -44,4 +44,4 @@ Maintain your ALZ environment with IaC to consistently stay updated with ALZ. To
 
 ## Next steps
 
-- [Latest updates to landing zones](https://github.com/Azure/Enterprise-Scale/wiki/Whats-new)
+- [Latest updates to Azure landing zone](https://aka.ms/alz/whatsnew)
