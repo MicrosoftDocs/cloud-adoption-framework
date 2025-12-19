@@ -298,7 +298,7 @@ items:
 
         - name: Align
           items:
-          - name: Transition to the Azure landing zone conceptual architecture
+          - name: Transition to the Azure landing zone reference architecture
             href: ready/enterprise-scale/transition.md
           - name: Alignment scenarios
             items:

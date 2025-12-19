@@ -1,6 +1,6 @@
 ---
-title: Transition an existing Azure environment to the Azure landing zone conceptual architecture
-description: Learn how to onboard existing environments and move resources to the Azure landing zone conceptual architecture.
+title: Transition an existing Azure environment to the Azure landing zone reference architecture
+description: Learn how to onboard existing environments and move resources to the Azure landing zone reference architecture.
 author: JefferyMitchell
 ms.author: jemitche
 ms.date: 02/27/2025
@@ -10,11 +10,11 @@ ms.custom: think-tank, csu
 
 <!-- docutune:casing resourceType resourceTypes resourceId resourceIds -->
 
-# Transition an existing Azure environment to the Azure landing zone conceptual architecture
+# Transition an existing Azure environment to the Azure landing zone reference architecture
 
 Many organizations have an existing Azure footprint, one or more subscriptions, and potentially an existing management group structure. Depending on their business requirements and scenarios, they might have Azure resources deployed, such as Azure VPN Gateway or Azure ExpressRoute for hybrid connectivity.
 
-This article provides recommendations to help your organization navigate changes based on your existing Azure environment that's transitioning into the Azure landing zone conceptual architecture. This article also describes considerations for moving resources in Azure, for example moving a subscription from one existing management group to another management group. Consider these recommendations to help you evaluate and plan the transition of your existing Azure environment.
+This article provides recommendations to help your organization navigate changes based on your existing Azure environment that's transitioning into the Azure landing zone reference architecture. This article also describes considerations for moving resources in Azure, for example moving a subscription from one existing management group to another management group. Consider these recommendations to help you evaluate and plan the transition of your existing Azure environment.
 
 ## Move resources in Azure
 
@@ -84,12 +84,12 @@ When you move the resources into a new resource group in the same subscription, 
 
 ## Scenarios
 
-The following scenarios describe how to migrate and transition an existing environment into the Azure landing zone conceptual architecture.
+The following scenarios describe how to migrate and transition an existing environment into the Azure landing zone reference architecture.
 
 - **Alignment scenarios**
-  - [Transition a single subscription with no management groups to the Azure landing zone conceptual architecture](./../landing-zone/align-scenario-single-subscription.md)
-  - [Transition management groups to the Azure landing zone conceptual architecture](./../landing-zone/align-scenario-multiple-management-groups.md)
-  - [Transition a regional organization to the Azure landing zone conceptual architecture](./../landing-zone/align-scenario-regional-org.md)
+  - [Transition a single subscription with no management groups to the Azure landing zone reference architecture](./../landing-zone/align-scenario-single-subscription.md)
+  - [Transition management groups to the Azure landing zone reference architecture](./../landing-zone/align-scenario-multiple-management-groups.md)
+  - [Transition a regional organization to the Azure landing zone reference architecture](./../landing-zone/align-scenario-regional-org.md)
 
 - **Alignment approaches**
   - [Transition an environment by duplicating a landing zone management group](./../landing-zone/align-approach-duplicate-brownfield-audit-only.md)

@@ -24,7 +24,7 @@ Use the resource organization design area to establish consistent patterns when 
 - Subscription design
 - Management group design
 
-The initial scope of this exercise assumes a subscription design that aligns with the Azure landing zone conceptual architecture. Workload-level or application-level subscription and landing zone assignment supports separation of duties and subscription democratization requirements.
+The initial scope of this exercise assumes a subscription design that aligns with the Azure landing zone reference architecture. Workload-level or application-level subscription and landing zone assignment supports separation of duties and subscription democratization requirements.
 
 The following assumptions are the basis for workload subscription design pattern guidance:
 

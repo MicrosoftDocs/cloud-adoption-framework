@@ -57,7 +57,7 @@ These examples demonstrate how to project Azure Arc resources as metadata resour
 
 Active Directory Domain Services (AD DS) deployments exist within most customer environments. Domain controllers are critical components of AD DS and the overall architecture that organizations use for identity services.
 
-Azure landing zone conceptual architecture includes a dedicated identity landing zone subscription that hosts identity-based resources. You can host identity resources in Azure with AD DS domain controller (DC) virtual machines (VMs), or you can project identity resources into Azure from any other location through Azure Arc-enabled servers. This flexibility enables organizations to maintain existing identity infrastructure while they gain centralized management capabilities.
+Azure landing zone reference architecture includes a dedicated identity landing zone subscription that hosts identity-based resources. You can host identity resources in Azure with AD DS domain controller (DC) virtual machines (VMs), or you can project identity resources into Azure from any other location through Azure Arc-enabled servers. This flexibility enables organizations to maintain existing identity infrastructure while they gain centralized management capabilities.
 
 ### Example two: Project on-premises datacenters into Azure
 

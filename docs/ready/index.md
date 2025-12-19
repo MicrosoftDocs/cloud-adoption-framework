@@ -47,7 +47,7 @@ Whether you’re starting fresh (Greenfield) or modernizing an existing setup (B
 
 ### 2. Deploy platform landing zone components
 
-Next, accelerate the deployment of your platform resources based on the Azure landing zone conceptual architecture. These components establish governance and shared services such as management group hierarchy, policy enforcement, connectivity, security, and monitoring. Deployment options include the Azure portal, Bicep, and Terraform:
+Next, accelerate the deployment of your platform resources based on the Azure landing zone reference architecture. These components establish governance and shared services such as management group hierarchy, policy enforcement, connectivity, security, and monitoring. Deployment options include the Azure portal, Bicep, and Terraform:
 
 - [Accelerator portal](/azure/cloud-adoption-framework/ready/landing-zone/implementation-options#azure-landing-zone-accelerator-approach)
 - [ALZ IaC Accelerator](https://aka.ms/alz/accelerator)
