@@ -86,7 +86,7 @@ Networking for implementing Azure Machine Learning in Azure landing zones is set
 
 ### Identity and access management
 
-Consider the following recommendations for managing user identities and access with Azure Azure Machine Learning:
+Consider the following recommendations for managing user identities and access with Azure Machine Learning:
 
 - Data stores in Azure Machine Learning can be configured to use credential- or identity-based authentication. When you use [access control and data lake configurations in Azure Data Lake Storage Gen2](./data-lake-access.md?branch=scenario-data-management), configure data stores to use identity-based authentication; this allows Azure Machine Learning to optimize user access permissions for storage.
 

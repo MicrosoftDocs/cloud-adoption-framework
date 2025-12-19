@@ -168,7 +168,7 @@ Default route advertisement from Azure is possible with a third-party NVA in eit
 - For more information on how to transit from on-premises VPN to Azure VMware Solution, see the following [VPN to ExR transit how to article:](https://github.com/Azure/Enterprise-Scale-for-AVS/tree/main/BrownField/Networking/Step-By-Step-Guides/Hub%20VNET%20with%20VPN%20to%20ExpressRoute%20Gateway%20transit)
 - For more information about Azure VMware Solution in hub-and-spoke networks, see [Integrate Azure VMware Solution in a hub and spoke architecture](/azure/azure-vmware/concepts-hub-and-spoke).
 - For more information on VMware NSX-T Data Center network segments, see [Configure NSX-T Data Center network components using Azure VMware Solution](/azure/azure-vmware/configure-nsx-network-components-azure-portal#create-an-nsx-t-segment-in-the-azure-portal).
-- For more information Azure Router Server, see the product overview [What is Azure Route Server?](/azure/route-server/overview)
+- For more information Azure Route Server, see the product overview [What is Azure Route Server?](/azure/route-server/overview)
 
 Next, observe other design patterns for establishing connectivity to the Azure VMware Solution
 

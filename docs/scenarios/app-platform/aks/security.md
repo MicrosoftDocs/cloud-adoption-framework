@@ -125,7 +125,7 @@ Configure Kubernetes clusters to separate network traffic into discrete virtual 
 
 You can use taints and tolerances to isolate deployments to specific sets of nodes by sensitivity levels. Avoid hosting highly sensitive workloads within the same node as those workloads with lower sensitivities. Using separate managed clusters is a safer option.
 
-Segment containers by purpose, sensitivity, and thread posture to provide extra protection for sensitive workloads. By segmenting containers this way, it's more difficult for an attacker who has gained access to one segment to gain access to other segments. This configuration has the added advantage of ensuring residual data, such as caches or volume mounts, are isolated by sensitivity level.
+Segment containers by purpose, sensitivity, and threat posture to provide extra protection for sensitive workloads. By segmenting containers this way, it's more difficult for an attacker who has gained access to one segment to gain access to other segments. This configuration has the added advantage of ensuring residual data, such as caches or volume mounts, are isolated by sensitivity level.
 
 Kubernetes clusters should be configured to:
 

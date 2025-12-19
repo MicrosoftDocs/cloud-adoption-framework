@@ -109,7 +109,7 @@ The following table only serves as a baseline. It doesn't consider other product
 
 VMware might need more bandwidth than indicated. Assess your bandwidth needs during your PoC phase. If you need support, reach out to your local contact.
 
-| Data size   | Bandwidth of 1 Gpbs  | Bandwidth of 10 Gbps  |
+| Data size   | Bandwidth of 1 Gbps  | Bandwidth of 10 Gbps  |
 |-------------|-------------|-------------|
 | 1 TB | 3 hours | 15 min |
 | 10 TB| 1 day | 3 hours |
