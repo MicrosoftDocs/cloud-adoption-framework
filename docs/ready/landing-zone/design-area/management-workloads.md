@@ -41,7 +41,7 @@ For more information, see [Monitoring in a cloud environment](../../../manage/mo
 
 You can use centralized Azure Monitor components to manage and monitor workloads:
 
-- Use a Azure Monitor Logs workspace to collect logs and metrics from IaaS and PaaS workload resources.
+- Use an Azure Monitor Logs workspace to collect logs and metrics from IaaS and PaaS workload resources.
 
 - Control workspace and log access with Azure RBAC. For more information, see [Azure Monitor access control overview](/azure/azure-monitor/platform/design-logs-deployment#access-control-overview).
 
