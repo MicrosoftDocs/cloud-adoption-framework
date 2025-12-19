@@ -1,9 +1,9 @@
 ---
 title: Inventory and visibility considerations
 description: Learn how to manage inventory and visibility in your Azure platform services.
-author: stephen-sumner
-ms.author: pnp
-ms.date: 02/20/2025
+author: jtracey93
+ms.author: jatracey
+ms.date: 12/19/2025
 ms.update-cycle: 180-days
 ms.topic: concept-article
 ms.custom: internal, UpdateFrequency.5
@@ -24,12 +24,12 @@ Use the guidance in this article to consider how you should approach inventory a
 
 Consider the following items related to logging data to inform what types of data you might want to collate and use.
 
-|Scope|Context|
-|-|-|
-|Application-centric platform monitoring <br>  |Include both hot and cold telemetry paths for metrics and logs, respectively. <br> Operating system metrics, such as performance counters and custom metrics. <br> Operating system logs, such as: <br> <ul> <li>Internet Information Services</li> <li>Event Tracing for Windows, and syslogs</li> <li>Resource health events</li> </ul>|
-|Security audit logging  |Aim to achieve a horizontal security lens across your organization's entire Azure estate. <br> <ul> <li>Potential integration with on-premises security information and event management (SIEM) systems such as ArcSight or the Onapsis security platform</li> <li>Potential integration with software as a service (SaaS) offerings like ServiceNow</li> <li>Azure activity logs</li> <li>Microsoft Entra audit reports</li> <li>Azure diagnostic services, logs, and metrics, Azure Key Vault audit events, network security group (NSG) flow logs, and event logs</li> <li>Azure Monitor, Azure Network Watcher, Microsoft Defender for Cloud, and Microsoft Sentinel</li> </ul>|
- Azure data retention thresholds and archiving requirements|<ul> <li>The default retention period for Azure Monitor Logs is 30 days, with a maximum analytics retention of two years and archive of seven years.</li> <li>The default retention period for Microsoft Entra reports (premium) is 30 days.</li> <li>The default retention period for the Azure Activity logs and Application Insights logs is 90 days.</li> </ul>|
-Operational requirements|<ul> <li>Operational dashboards with native tools such as Azure Monitor Logs or third-party tooling</li> <li>Use of centralized roles to control privileged activities</li> <li>Managed identities for Azure resources](/entra/identity/managed-identities-azure-resources/overview) for access to Azure services</li> <li>Resource locks to protect from editing and deleting resources</li> </ul>|
+| Scope                                                      | Context                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| ---------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Application-centric platform monitoring <br>               | Include both hot and cold telemetry paths for metrics and logs, respectively. <br> Operating system metrics, such as performance counters and custom metrics. <br> Operating system logs, such as: <br> <ul> <li>Internet Information Services</li> <li>Event Tracing for Windows, and syslogs</li> <li>Resource health events</li> </ul>                                                                                                                                                                                                                                                                                                                                           |
+| Security audit logging                                     | Aim to achieve a horizontal security lens across your organization's entire Azure estate. <br> <ul> <li>Potential integration with on-premises security information and event management (SIEM) systems such as ArcSight or the Onapsis security platform</li> <li>Potential integration with software as a service (SaaS) offerings like ServiceNow</li> <li>Azure activity logs</li> <li>Microsoft Entra audit reports</li> <li>Azure diagnostic services, logs, and metrics, Azure Key Vault audit events, network security group (NSG) flow logs, and event logs</li> <li>Azure Monitor, Azure Network Watcher, Microsoft Defender for Cloud, and Microsoft Sentinel</li> </ul> |
+| Azure data retention thresholds and archiving requirements | <ul> <li>The default retention period for Azure Monitor Logs is 30 days, with a maximum analytics retention of two years and archive of seven years.</li> <li>The default retention period for Microsoft Entra reports (premium) is 30 days.</li> <li>The default retention period for the Azure Activity logs and Application Insights logs is 90 days.</li> </ul>                                                                                                                                                                                                                                                                                                                 |
+| Operational requirements                                   | <ul> <li>Operational dashboards with native tools such as Azure Monitor Logs or third-party tooling</li> <li>Use of centralized roles to control privileged activities</li> <li>Managed identities for Azure resources](/entra/identity/managed-identities-azure-resources/overview) for access to Azure services</li> <li>Resource locks to protect from editing and deleting resources</li> </ul>                                                                                                                                                                                                                                                                                 |
 
 ### Visibility considerations
 
@@ -89,7 +89,7 @@ In this model, application teams benefit from the use of existing platform infra
 
 For non-compute resources, like web apps or Azure Cosmos DB databases, your application teams can use their own Log Analytics workspaces. They can then route diagnostics and metrics to those workspaces.
 
-Application teams may also decide to duplicate some of the logs that are available in the central platform team Log Analytics Workspace for operational efficiencies within their team. This is also a supported approach within the Azure landing zone architecture and guidance.
+Application teams should also decide to duplicate some of the logs that are available in the central platform team Log Analytics Workspace for operational efficiencies within their team. This is also a supported approach within the Azure landing zone architecture and guidance.
 
 ## Next step
 
