@@ -1,9 +1,9 @@
 ---
 title: Incorporate Zero Trust practices in your landing zone
 description: Learn how to incorporate Zero Trust-specific deployment objectives in your landing zone design areas, including specific guidance for each design area.
-author: brsteph
-ms.author: pnp
-ms.date: 02/27/2025
+author: jtracey93
+ms.author: jatracey
+ms.date: 12/19/2025
 ms.topic: concept-article
 ---
 
@@ -57,7 +57,7 @@ For information about deployment objectives for securing identity, see [Securing
 
 #### Identity considerations
 
-- You can use [Azure landing zone reference implementations](/azure/architecture/landing-zones/landing-zone-deploy#platform) to deploy resources that extend your existing identity platform into Azure, and manage the identity platform by implementing Azure best practices.
+- You can use [Azure landing zone implementation options](../implementation-options.md) to deploy resources that extend your existing identity platform into Azure, and manage the identity platform by implementing Azure best practices.
 
 - You can configure many of the controls for Zero Trust practices in your Microsoft Entra tenant. You can also control access to Microsoft 365 and other cloud services that use Microsoft Entra ID.
 - You must plan configuration requirements beyond what's in your Azure landing zone.
@@ -127,7 +127,7 @@ For information about deployment objectives for securing data, see [Secure data 
 - Enable access control.
 - Implement data loss protection.
 
-For information about logging and managing data resources, see [Azure landing zone reference implementations](/azure/architecture/landing-zones/landing-zone-deploy#platform).
+For information about logging and managing data resources, see [Azure landing zone implementation options](../implementation-options.md).
 
 A Zero Trust approach involves extensive controls for data. From an implementation standpoint, [Microsoft Purview](/purview/purview) provides tools for data governance, protection, and risk management. You can use Microsoft Purview as part of a [cloud-scale analytics](../../../scenarios/cloud-scale-analytics/index.md) deployment to provide a solution that you can implement at scale.
 
@@ -135,7 +135,7 @@ A Zero Trust approach involves extensive controls for data. From an implementati
 
 - In accordance with the landing zone subscription democratization principle, you can create access and network isolation for data resources, and also establish logging practices.
 
-  There are [policies](https://github.com/Azure/Enterprise-Scale/wiki/ALZ-Policies) in the reference implementations for logging and managing data resources.
+  There are [policies](https://aka.ms/alz/policies) in the reference implementations for logging and managing data resources.
 
 - You need other controls beyond securing Azure resources to meet the deployment objectives. Zero Trust data security involves classifying data, labeling it for sensitivity, and controlling data access. It also extends beyond database and file systems. You need to consider how to protect data in Microsoft Teams, Microsoft 365 Groups, and SharePoint.
 
@@ -167,7 +167,7 @@ For information about deployment objectives for securing infrastructure, see [Se
 
 #### Infrastructure recommendations
 
-- Use the standard [Azure landing zone policies](https://github.com/Azure/Enterprise-Scale/wiki/ALZ-Policies) to block noncompliant deployments and resources, and to enforce logging patterns.
+- Use the standard [Azure landing zone policies](https://aka.ms/alz/policies) to block noncompliant deployments and resources, and to enforce logging patterns.
 
 - Configure [Privileged Identity Management](/entra/id-governance/privileged-identity-management/pim-configure) in Microsoft Entra ID to provide just-in-time access to highly privileged roles.
 - Configure [just-in-time access](/azure/defender-for-cloud/just-in-time-access-usage) in Defender for Cloud for your landing zone to restrict access to virtual machines.
@@ -207,15 +207,12 @@ For information about deployment objectives for visibility, automation, and orch
 
 #### Visibility, automation, and orchestration considerations
 
-- The [Azure landing zone reference implementations](/azure/architecture/landing-zones/landing-zone-deploy#platform) contain deployments of [Microsoft Sentinel](/azure/sentinel/overview) that you can use to quickly establish visibility in your Azure environment.
-
 - The reference implementations provide policies for Azure logging, but additional integration is needed for other services.
 - You should configure automation tools, like Azure DevOps and GitHub, to send signals.
 
 #### Visibility, automation, and orchestration recommendations
 
 - Deploy Microsoft Sentinel as part of your Azure landing zone.
-
 - Create a plan to integrate signals from Microsoft Entra ID and tools into Microsoft 365 to your Microsoft Sentinel workspace.
 - Create a plan for conducting threat-hunting exercises and continual security improvements.
 

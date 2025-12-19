@@ -63,7 +63,7 @@ Change advisory review boards can hinder your organization's innovation and busi
 
 - Determine which Azure policies you need based on your business controls or compliance regulations. Use the policies included in the Azure landing zone reference architecture as a starting point.
 
-- Use the [policies included in Azure landing zones reference implementation](https://github.com/Azure/Enterprise-Scale/wiki/ALZ-Policies) to consider other policies that might align to your business requirements.
+- Use the [policies included in Azure landing zones reference implementation](https://aka.ms/alz/policies) to consider other policies that might align to your business requirements.
 
 - Enforce automated networking, identity, management, and security conventions.
 
