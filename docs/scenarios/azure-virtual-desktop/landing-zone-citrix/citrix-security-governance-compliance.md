@@ -194,7 +194,7 @@ To limit potential attack vectors and increase deployment security, use NSGs to 
 | Cloud connectors | Cloud connectors | TCP | 9095 | Orchestration service |
 | Cloud connectors | VDA | TCP, User Datagram Protocol (UDP) | 1494 | ICA/HDX protocol <br><br> Enlightened Data Transport (EDT) requires UDP |
 | Cloud connectors | VDA | TCP, UDP | 2598 | Session reliability <br><br> EDT requires UDP |
-| Cloud connector | VDA | TCP | 80 (bidirect) | Application and performance discovery |
+| Cloud connector | VDA | TCP | 80 (bidirectional) | Application and performance discovery |
 | VDA | Gateway service | TCP | 443 | Rendezvous Protocol |
 | VDA | Gateway service | UDP | 443 | EDT and UDP over 443 to Gateway service |
 | VDA | `*.nssvc.net` <br><br> `*.c.nssv.net` <br><br> `*.g.nssv.net` | TCP, UDP | 443 | Gateway service domains and subdomains |

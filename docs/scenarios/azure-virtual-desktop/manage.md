@@ -71,7 +71,7 @@ The Azure Virtual Desktop architecture separates the host compute from the user 
 
 You can manage user profiles in solutions such as [FSLogix profile containers](/azure/virtual-desktop/create-host-pools-user-profile) in order to store the complete user profile in a single container. This configuration enables the profile to roam between virtual desktops.
 
-In addition, using concepts such as [MSIX app attach](/azure/virtual-desktop/app-attach-image-prep) also helps separate the applications from the operating system. It's then easier to provision virtual machines.
+In addition, using [Azure Virtual Desktop App Attach](/azure/virtual-desktop/app-attach-overview) helps separate applications from the operating system, making virtual machines easier to provision and manage.
 
 ### Workload operations
 
