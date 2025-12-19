@@ -80,7 +80,7 @@ The following shows the Azure landing zones architecture management group hierar
 
 | Management group| Description |
 |---|---|
-|**Intermediate root management group**| This management group is directly under the tenant root group. The organization provides this management group with a prefix so that they don't have to use the root group. The organization can move existing Azure subscriptions into the hierarchy. This approach also sets up future scenarios. This management group is a parent to all the other management groups created by the Azure landing zone accelerator.|
+|**Intermediate root management group**| This management group is directly under the tenant root group. The organization provides this management group with a prefix so that they don't have to use the root group. The organization can move existing Azure subscriptions into the hierarchy. This approach also sets up future scenarios. This management group is a parent to all the other management groups created by the Azure landing zone reference architecture.|
 |**Platform**| This management group contains all the platform child management groups, like management, connectivity, and identity. |
 |**Security** | This management group contains a dedicated subscription for security/SIEM team tooling. This subscription hosts Microsoft Sentinel, syslog collectors, and other security/SIEM related tooling. |
 |**Management**| This management group contains a dedicated subscription for management, monitoring, and security. This subscription hosts an Azure Monitor Logs workspace, including associated solutions. |

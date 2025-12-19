@@ -129,9 +129,9 @@ Implementing Zero Trust can go beyond just identity and access management. You s
 
 - Implement a [zero-trust approach for access](/security/zero-trust/deploy/identity) to the Azure platform where appropriate.
 
-## Security in the Azure landing zone accelerator
+## Security in the Azure landing zone reference architecture
 
-Security is at the core of the Azure landing zone accelerator. As part of the implementation, many tools and controls are deployed to help organizations quickly achieve a security baseline.
+Security is at the core of the Azure landing zone reference architecture. As part of the implementation, many tools and controls are deployed to help organizations quickly achieve a security baseline.
 
 For example, the following are included:
 

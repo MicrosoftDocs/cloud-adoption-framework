@@ -16,9 +16,9 @@ For FAQs about **implementing Azure landing zone architecture**, see [Enterprise
 
 <!-- GENERAL -->
 
-## What is the Azure landing zone accelerator?
+## What is the Azure landing zone reference architecture?
 
-The Azure landing zone accelerator is an Azure portal-based deployment experience. It deploys an opinionated implementation based on the [Azure landing zone reference architecture](../landing-zone/index.md#azure-landing-zone-architecture).
+The Azure landing zone reference architecture is an Azure portal-based deployment experience. It deploys an opinionated implementation based on the [Azure landing zone reference architecture](../landing-zone/index.md#azure-landing-zone-architecture).
 
 ## Which are the recommended accelerators and implementations for Azure landing zones?
 
@@ -84,9 +84,9 @@ No, you do not need a separate AI landing zone. Instead, you can use the existin
 
 For more information, see [Manage application development environments in Azure landing zones](../landing-zone/design-area/management-application-environments.md).
 
-## Why are we asked to specify Azure regions during the Azure landing zone accelerator deployment and what are they used for?
+## Why are we asked to specify Azure regions during the Azure landing zone reference architecture deployment and what are they used for?
 
-When you deploy Azure landing zone architecture by using the Azure landing zone accelerator portal-based experience, select an Azure region to deploy into. The first tab, **Deployment location**, determines where the deployment data is stored. For more information, see [Tenant deployments with ARM templates](/azure/azure-resource-manager/templates/deploy-to-tenant#deployment-location-and-name). Some parts of a landing zone are deployed globally but their deployment metadata is tracked in a regional metadata store. The metadata regarding their deployment is stored in the region selected on the **Deployment location** tab.
+When you deploy Azure landing zone architecture by using the Azure landing zone reference architecture portal-based experience, select an Azure region to deploy into. The first tab, **Deployment location**, determines where the deployment data is stored. For more information, see [Tenant deployments with ARM templates](/azure/azure-resource-manager/templates/deploy-to-tenant#deployment-location-and-name). Some parts of a landing zone are deployed globally but their deployment metadata is tracked in a regional metadata store. The metadata regarding their deployment is stored in the region selected on the **Deployment location** tab.
 
 The region selector on the **Deployment location** tab is also used to select which Azure region any region-specific resources should be stored, such as a Log Analytics workspace, if required.
 

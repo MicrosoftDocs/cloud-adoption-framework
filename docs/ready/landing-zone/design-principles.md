@@ -12,7 +12,7 @@ ms.custom: think-tank
 
 The Azure landing zone reference architecture universally applies to any Azure landing zone process or implementation. At the foundation of the architecture, a set of core design principles serve as a compass for subsequent design decisions across critical technical domains.
 
-The principles are intentionally aspirational, to help you strive for an optimum design of the target architecture. If you choose to deploy an implementation that's an Azure landing zone accelerator, or any version of the enterprise-scale landing zone code base, build on the architecture by applying the design principles this article describes.
+The principles are intentionally aspirational, to help you strive for an optimum design of the target architecture. If you choose to deploy an implementation that's an Azure landing zone reference architecture, or any version of the enterprise-scale landing zone code base, build on the architecture by applying the design principles this article describes.
 
 Use these principles in your implementation as a useful guide to realize the benefits of cloud technologies. This cloud-oriented or *cloud native* approach represents ways of working and technical options for your organization that legacy technology approaches don't typically offer.
 

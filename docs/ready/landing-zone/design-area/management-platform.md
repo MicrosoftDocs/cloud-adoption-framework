@@ -69,19 +69,19 @@ Operational requirements|<ul> <li>Operational dashboards with native tools such 
 
 - Don't send raw log entries back to on-premises monitoring systems. Instead, adopt the principle that *data born in Azure stays in Azure*. If you require on-premises SIEM integration, send [critical alerts](/azure/security-center/continuous-export) instead of logs.
 
-## Azure landing zone accelerator and management
+## Azure landing zone reference architecture and management
 
-The Azure landing zone accelerator includes opinionated configuration to deploy key Azure management capabilities that help your organization quickly scale and mature.
+The Azure landing zone reference architecture includes opinionated configuration to deploy key Azure management capabilities that help your organization quickly scale and mature.
 
-The Azure landing zone accelerator deployment includes key management and monitoring tools like:
+The Azure landing zone reference architecture deployment includes key management and monitoring tools like:
 
 - A Log Analytics workspace
 - Microsoft Defender for Cloud monitoring
 - Diagnostic settings for activity logs, virtual machines, and platform as a service (PaaS) resources sent to Log Analytics
 
-### Centralized logging in the Azure landing zone accelerator
+### Centralized logging in the Azure landing zone reference architecture
 
-In the context of the Azure landing zone accelerator, centralized logging is primarily concerned with platform operations.
+In the context of the Azure landing zone reference architecture, centralized logging is primarily concerned with platform operations.
 
 This emphasis doesn't prevent use of the same workspace for VM-based application logging. Within a workspace configured in resource-centric access control mode, granular Azure RBAC is enforced, which ensures that your application teams only have access to the logs from their resources.
 

@@ -98,7 +98,7 @@ The following guidance can help you find the right tools to automate compliance 
 
 - **Restrict deployments to specific regions.** Control where resources are deployed to comply with regulatory requirements, manage costs, and reduce latency. For example, use the `Allowed locations` policy definition in Azure Policy. Also [enforce regional restrictions](/azure/governance/policy/tutorials/policy-devops-pipelines) in your deployment pipeline.
 
-- **Use infrastructure as code (IaC).** Automate infrastructure deployments using [Bicep, Terraform, or Azure Resource Manager templates (ARM templates)](/azure/templates/). Store your IaC configurations in a source control system (GitHub or Azure Repos) to track changes and collaborate. Use [Azure landing zone accelerators](/azure/cloud-adoption-framework/ready/landing-zone/#azure-landing-zone-accelerators) to govern the deployment of your platform and application resources and avoid configuration drift over time.
+- **Use infrastructure as code (IaC).** Automate infrastructure deployments using [Bicep, Terraform, or Azure Resource Manager templates (ARM templates)](/azure/templates/). Store your IaC configurations in a source control system (GitHub or Azure Repos) to track changes and collaborate. Use [Azure landing zone reference architectures](/azure/cloud-adoption-framework/ready/landing-zone/#azure-landing-zone-accelerators) to govern the deployment of your platform and application resources and avoid configuration drift over time.
 
 - **Govern hybrid and multicloud environments.** [Govern hybrid and multicloud resources](/azure/azure-arc/overview). Maintain consistency in management and policy enforcement.
 

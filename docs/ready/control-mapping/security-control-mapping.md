@@ -129,17 +129,17 @@ After your internal security or audit team approves that the platform and core s
 The following sections describe how to identify, map, and implement regulatory compliance controls as part of an Azure landing zone deployment. This deployment includes policies aligned with MCSB for platform-level security controls.
 
 > [!TIP]
-> When you use Azure landing zone accelerators—such as the Portal, Bicep, or Terraform—the deployment assigns MCSB policy initiative to the Intermediate Root Management Group by default.
+> When you use Azure landing zone reference architectures—such as the Portal, Bicep, or Terraform—the deployment assigns MCSB policy initiative to the Intermediate Root Management Group by default.
 
-Learn more about [policies assigned as part of an Azure landing zone accelerator deployment](https://github.com/Azure/Enterprise-Scale/wiki/ALZ-Policies).
+Learn more about [policies assigned as part of an Azure landing zone reference architecture deployment](https://github.com/Azure/Enterprise-Scale/wiki/ALZ-Policies).
 
 ### Guidance for implementing policy in Azure landing zones
 
 Depending on your control objectives, you may need to create custom [policy definitions](/azure/governance/policy/concepts/definition-structure), [policy initiative definitions](/azure/governance/policy/concepts/initiative-definition-structure), and [policy assignments](/azure/governance/policy/concepts/assignment-structure).
 
-Refer to the following guidance for each Azure landing zone accelerator implementation option.
+Refer to the following guidance for each Azure landing zone reference architecture implementation option.
 
-#### Azure landing zone accelerator portal
+#### Azure landing zone reference architecture portal
 
 When using the [Azure landing zone portal-based experience](https://aka.ms/caf/ready/accelerator):
 
