@@ -176,6 +176,10 @@ The following sections contain recommendations to help you plan and create subsc
 
   - For more information, see [Handle dev/test/production workload landing zones](../../enterprise-scale/faq.md#how-do-we-handle-devtestproduction-workload-landing-zones-in-azure-landing-zone-architecture) and [Establish common subscription vending product lines](../design-area/subscription-vending-product-lines.md)
 
+### Operational excellence recommendations
+
+- Always enable [Azure Service Health](/azure/service-health/overview) on every subscription to get alerts and guidance when Azure service issues affect resources in your subscriptions.
+
 ### Multiple regions recommendations
 
 - Create additional subscriptions for each region only if you have region-specific governance and management requirements, for example data sovereignty or to scale beyond quota limits.
@@ -199,6 +203,8 @@ The following sections contain recommendations to help you plan and create subsc
 - Use [Quota Groups](/azure/quotas/quota-groups) to manage and share quotas across multiple subscriptions.
 
 - Automate quota requests, where possible, by using the [Azure Quota REST API](/rest/api/quota/).
+
+- Configure [quota alerts](/azure/quotas/how-to-guide-monitoring-alerting) to notify subscription owners when they're approaching their quota limits.
 
 ### Tenant transfer restriction recommendations
 
