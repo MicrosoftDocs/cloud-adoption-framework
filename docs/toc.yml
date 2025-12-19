@@ -274,8 +274,6 @@ items:
               items:
               - name: Development lifecycle
                 href: ready/considerations/development-strategy-development-lifecycle.md
-              - name: Infrastructure as Code
-                href: ready/considerations/infrastructure-as-code.md
               - name: Environments
                 href: ready/considerations/environments.md
               - name: Test-driven development for Azure Landing Zones
@@ -298,7 +296,7 @@ items:
 
         - name: Align
           items:
-          - name: Transition to the Azure landing zone conceptual architecture
+          - name: Transition to the Azure landing zone reference architecture
             href: ready/enterprise-scale/transition.md
           - name: Alignment scenarios
             items:
@@ -312,9 +310,6 @@ items:
             items:
               - name: Transition by duplicating a landing zone management group
                 href: ready/landing-zone/align-approach-duplicate-brownfield-audit-only.md
-
-          - name: Brownfield landing zone considerations
-            href: ready/landing-zone/brownfield-considerations.md
 
         - name: Enhance
           items:

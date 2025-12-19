@@ -1,19 +1,19 @@
 ---
-title: Scenario- Transition a regional organization environment to the Azure landing zone conceptual architecture
-description: Learn how to transition existing regional Azure environments comprised of multiple management groups into the Azure landing zone conceptual architecture.
-author: sebassem
-ms.author: sebassem
+title: Scenario- Transition a regional organization environment to the Azure landing zone reference architecture
+description: Learn how to transition existing regional Azure environments comprised of multiple management groups into the Azure landing zone reference architecture.
+author: jtracey93
+ms.author: jatracey
 ms.reviewer: tozimmergren
-ms.date: 02/27/2025
+ms.date: 12/19/2025
 ms.topic: concept-article
 ms.service: caf
 ---
 
 <!-- docutune:casing resourceType resourceTypes resourceId resourceIds -->
 
-# Scenario: Transition a regional organization environment to the Azure landing zone conceptual architecture
+# Scenario: Transition a regional organization environment to the Azure landing zone reference architecture
 
-This article describes considerations and instructions to migrate and transition your Azure environment into the Azure landing zone conceptual architecture. This scenario covers a regional organization with management groups that are separated into development, testing, and production (dev/test/prod) environments.
+This article describes considerations and instructions to migrate and transition your Azure environment into the Azure landing zone reference architecture. This scenario covers a regional organization with management groups that are separated into development, testing, and production (dev/test/prod) environments.
 
 In this scenario, the customer has a large footprint on Azure. They have a management group hierarchy that's organized by dev/test/prod environments and then by region. Their current implementation limits their scalability and growth. They have applications deployed across the globe. A central IT team manages each region. In this scenario the regions are America; Europe, the Middle East, and Africa (EMEA); and Asia-Pacific (APAC).
 
@@ -40,11 +40,11 @@ The following diagram shows the current state of this sample scenario.
 
 ![Diagram that shows the regional organization environment.](./media/align-scenario-regional.png)
 
-## Transition to the Azure landing zone conceptual architecture
+## Transition to the Azure landing zone reference architecture
 
-Prior to implementing this approach, review [Azure landing zone conceptual architecture](./index.md), [Azure landing zone design principles](./design-principles.md), and [Azure landing zone design areas](./design-areas.md).
+Prior to implementing this approach, review [Azure landing zone reference architecture](./index.md), [Azure landing zone design principles](./design-principles.md), and [Azure landing zone design areas](./design-areas.md).
 
-To transition from this scenario's current state to an Azure landing zone conceptual architecture, use this approach:
+To transition from this scenario's current state to an Azure landing zone reference architecture, use this approach:
 
 1. Deploy the [Azure landing zone](../landing-zone/index.md#deploying-and-managing-azure-landing-zone) into the same Microsoft Entra ID tenant in parallel with the current environment. This method provides a smooth and phased transition to the new landing zone architecture with minimal disruption to active workloads.
 
@@ -56,7 +56,7 @@ To transition from this scenario's current state to an Azure landing zone concep
 
    For information about minimizing disruption to applications and services during the migration, see [Adopt policy-driven guardrails guidance](../enterprise-scale/dine-guidance.md).
 
-1. (Optional) Work with application or service teams to migrate the workloads that are deployed in the original subscriptions into new Azure subscriptions. For more information, see [Transition existing Azure environments to the Azure landing zone conceptual architecture](./../enterprise-scale/transition.md#move-resources-in-azure). You can place workloads into the newly deployed Azure landing zone conceptual architecture management group hierarchy under the correct management group, such as *corporate* or *online* in the following diagram.
+1. (Optional) Work with application or service teams to migrate the workloads that are deployed in the original subscriptions into new Azure subscriptions. For more information, see [Transition existing Azure environments to the Azure landing zone reference architecture](./../enterprise-scale/transition.md#move-resources-in-azure). You can place workloads into the newly deployed Azure landing zone reference architecture management group hierarchy under the correct management group, such as *corporate* or *online* in the following diagram.
 
    For details about the effect on resources when migrating, see [Policies](./../enterprise-scale/transition.md#policies).
 
@@ -75,4 +75,4 @@ The following diagram shows the state of this scenario during the migration.
 
 ## Summary
 
-In this scenario, the customer established the necessary foundation to support their growth and scale plans for their workloads in Azure by deploying the [Azure landing zone conceptual architecture](./index.md#azure-landing-zone-architecture) in parallel to their existing environment.
+In this scenario, the customer established the necessary foundation to support their growth and scale plans for their workloads in Azure by deploying the [Azure landing zone reference architecture](./index.md#azure-landing-zone-architecture) in parallel to their existing environment.

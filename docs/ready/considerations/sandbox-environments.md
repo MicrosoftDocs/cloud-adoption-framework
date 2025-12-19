@@ -12,7 +12,7 @@ ms.topic: overview
 A sandbox is an isolated environment where you can test and experiment without affecting other environments, like production, development, or user acceptance testing (UAT) environments. Conduct proof of concepts (POCs) with Azure resources in a controlled environment. Each sandbox has its own Azure subscription, and Azure policies control the subscription. The policies are applied at the sandbox management group level, and the management group inherits policies from the hierarchy above it. Depending on its purpose, an individual or a team can use a sandbox.
 
 >[!TIP]
-> For information about the default Azure landing zones policy assignments, see [Policies included in Azure landing zones reference implementations](https://github.com/Azure/Enterprise-Scale/wiki/ALZ-Policies#sandbox).
+> For information about the default Azure landing zones policy assignments, see [Policies included in Azure landing zones reference implementations](https://aka.ms/alz/policies#sandbox).
 
 Sandbox environments are the best place for hands-on Azure learning. Some common use cases include:
 
@@ -42,7 +42,7 @@ Use the [deny ExpressRoute/VPN/Virtual WAN creation](https://www.azadvertizer.ne
 
 For security, it's important to enable audit logging for a sandbox environment. Enable a diagnostic setting that includes at least the administrative and security log categories (audit) for all sandbox subscriptions. Store audit logs in a central destination like the Azure landing zone default Log Analytics workspace so you can review them easily. Or you can integrate them with a security information and event management (SIEM) platform, like [Microsoft Sentinel](/azure/sentinel/overview). For more information, see [Inventory and visibility recommendations](/azure/cloud-adoption-framework/ready/landing-zone/design-area/management-platform#inventory-and-visibility-recommendations).
 
-The [Azure policies included in the enterprise-scale landing zone reference implementation](https://github.com/Azure/Enterprise-Scale/wiki/ALZ-Policies#intermediate-root) have an Azure policy definition ("Configure Azure activity logs to stream to specified Log Analytics workspace") that enables audit logging for all subscriptions. The sandbox management group should inherit this policy to enable sandbox subscription diagnostic logging.
+The [Azure policies included in the enterprise-scale landing zone reference implementation](https://aka.ms/alz/policies#intermediate-root) have an Azure policy definition ("Configure Azure activity logs to stream to specified Log Analytics workspace") that enables audit logging for all subscriptions. The sandbox management group should inherit this policy to enable sandbox subscription diagnostic logging.
 
 ### Sandbox access
 
@@ -54,7 +54,7 @@ To ensure reliable and efficient sandbox environment performance, consider the f
 
 ### Sandbox expiration
 
-You can cancel or delete a sandbox when necessary. Plan a strategy for removing sandboxes to save on costs and ensure that security remains dependable. Consider the cost and sandbox expiration date to determine when to remove a sandbox. After a sandbox expires, move it to the [decommissioned](https://github.com/Azure/Enterprise-Scale/wiki/ALZ-Policies#decommissioned) management group.
+You can cancel or delete a sandbox when necessary. Plan a strategy for removing sandboxes to save on costs and ensure that security remains dependable. Consider the cost and sandbox expiration date to determine when to remove a sandbox. After a sandbox expires, move it to the [decommissioned](https://aka.ms/alz/policies#decommissioned) management group.
 
 #### Cost
 

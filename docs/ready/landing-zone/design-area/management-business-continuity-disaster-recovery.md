@@ -3,7 +3,7 @@ title: Business continuity and disaster recovery
 description: Design area guidance for business continuity and disaster recovery
 author: stephen-sumner
 ms.author: pnp
-ms.date: 02/27/2025
+ms.date: 12/19/2025
 ms.update-cycle: 180-days
 ms.topic: concept-article
 ms.custom: internal, UpdateFrequency.5

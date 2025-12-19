@@ -3,7 +3,7 @@ title: Azure billing offers and Microsoft Entra tenants
 description: Understand Azure billing offers and Microsoft Entra tenants.
 author: jtracey93
 ms.author: jatracey
-ms.date: 11/28/2024
+ms.date: 12/18/2025
 ms.update-cycle: 180-days
 ms.topic: concept-article
 ms.custom: think-tank, UpdateFrequency.5
@@ -30,7 +30,7 @@ The Azure service presents a range of [active subscription offers](https://azure
 The Azure landing zone architecture supports subscriptions from any [Azure offer](https://azure.microsoft.com/support/legal/offer-details/). Subscriptions can only exist within one Microsoft Entra tenant to then relocate into the management group hierarchy within that tenant. They can then be managed by the various controls with enterprise-scale platforms like Azure Policy and role-based access control (RBAC).
 
 > [!NOTE]
-> The Azure landing zone accelerator implementation is scoped and deployed to one Microsoft Entra tenant; however, billing options can span across multiple Microsoft Entra tenants. For example, an Enterprise Agreement enrollment supports Azure subscriptions across different Microsoft Entra tenants.
+> The Azure landing zone reference architecture implementation is scoped and deployed to one Microsoft Entra tenant; however, billing options can span across multiple Microsoft Entra tenants. For example, an Enterprise Agreement enrollment supports Azure subscriptions across different Microsoft Entra tenants.
 
 Explore the further information, considerations and recommendations for each approach below:
 

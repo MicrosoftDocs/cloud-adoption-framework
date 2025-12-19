@@ -3,7 +3,7 @@ title: Azure Lighthouse usage in Azure landing zones multitenant scenarios
 description: Learn how Azure Lighthouse is used in environments with multiple Microsoft Entra tenants with Azure landing zones.
 author: jtracey93
 ms.author: jatracey
-ms.date: 11/28/2024
+ms.date: 12/19/2025
 ms.topic: concept-article
 ms.custom: think-tank
 ---

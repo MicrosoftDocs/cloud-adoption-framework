@@ -3,7 +3,7 @@ title: Azure landing zones and multiple Microsoft Entra tenants
 description: Learn how multiple Microsoft Entra tenants work within the context of Azure landing zones and the benefits of using a single tenant.
 author: jtracey93
 ms.author: jatracey
-ms.date: 11/28/2024
+ms.date: 12/19/2025
 ms.topic: concept-article
 ms.custom: think-tank
 ---
