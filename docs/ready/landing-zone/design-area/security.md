@@ -1,9 +1,9 @@
 ---
 title: Security design in Azure
 description: Learn about design area guidance to establish a foundation for security in Azure, hybrid, or multicloud environments.
-author: stephen-sumner
-ms.author: pnp
-ms.date: 02/27/2025
+author: jtracey93
+ms.author: jatracey
+ms.date: 12/19/2025
 ms.update-cycle: 180-days
 ms.topic: concept-article
 ms.custom: internal, UpdateFrequency.5
