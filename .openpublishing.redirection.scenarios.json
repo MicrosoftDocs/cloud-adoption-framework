@@ -638,17 +638,52 @@
     {
         "source_path": "docs/scenarios/hybrid/index.md",
         "redirect_url": "/azure/cloud-adoption-framework/scenarios/hybrid/strategy",
-        "redirect_document_id": true
+        "redirect_document_id": false 
     },
     {
         "source_path": "docs/scenarios/hybrid/ready.md",
         "redirect_url": "/azure/cloud-adoption-framework/scenarios/hybrid/enterprise-scale-landing-zone",
-        "redirect_document_id": true
+        "redirect_document_id": false
     },
     {
         "source_path": "docs/scenarios/app-platform/ready.md",
         "redirect_url": "/azure/cloud-adoption-framework/scenarios/app-platform/",
-        "redirect_document_id": true
+        "redirect_document_id": false
+    },
+    {
+        "source_path": "docs/scenarios/app-platform/azure-products.md",
+        "redirect_url": "/azure/cloud-adoption-framework/scenarios/app-platform/",
+        "redirect_document_id": false
+    }
+    {
+        "source_path": "docs/scenarios/app-platform/govern.md",
+        "redirect_url": "/azure/cloud-adoption-framework/scenarios/app-platform/",
+        "redirect_document_id": false
+    },
+    {
+        "source_path": "docs/scenarios/app-platform/manage.md",
+        "redirect_url": "/azure/cloud-adoption-framework/scenarios/app-platform/",
+        "redirect_document_id": false
+    },
+    {
+        "source_path": "docs/scenarios/app-platform/migrate.md",
+        "redirect_url": "/azure/cloud-adoption-framework/scenarios/app-platform/",
+        "redirect_document_id": false
+    },
+    {
+        "source_path": "docs/scenarios/app-platform/plan.md",
+        "redirect_url": "/azure/cloud-adoption-framework/scenarios/app-platform/",
+        "redirect_document_id": false
+    },
+    {
+        "source_path": "docs/scenarios/app-platform/strategy.md",
+        "redirect_url": "/azure/cloud-adoption-framework/scenarios/app-platform/",
+        "redirect_document_id": false
+    },
+    {
+        "source_path": "docs/scenarios/app-platform/innovate.md",
+        "redirect_url": "/azure/cloud-adoption-framework/scenarios/app-platform/",
+        "redirect_document_id": false
     }
   ]
 }
