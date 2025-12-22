@@ -64,7 +64,7 @@ Based on the kind of SAP workload and requirements, the SAP workload's data poin
 - Requirement to perform Unicode conversion (non-Unicode to Unicode).
 - The DBMS that needs to be either changed or the internal format of the same DBMS system needs to change to the little-endian format supported in the Intel world; for example, migrating from the IBM pSeries to Azure.
 
-**Classical migration:** The SAP Software Provisioning Manager is a software logistics tool for database migrations. Classical migration uses a homogeneous or heterogenous system copy approach, sometimes called a *two-step migration*. This approach is commonly used when the following observations surface in the migration plan:
+**Classical migration:** The SAP Software Provisioning Manager is a software logistics tool for database migrations. Classical migration uses a homogeneous or heterogeneous system copy approach, sometimes called a *two-step migration*. This approach is commonly used when the following observations surface in the migration plan:
 
 - The operating systems (OS) and DBMS are compatible with Azure.
 - There aren't other requirements to upgrade or replatform the OS or DBMS systems.

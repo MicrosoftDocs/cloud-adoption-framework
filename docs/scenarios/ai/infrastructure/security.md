@@ -15,7 +15,7 @@ This article provides security recommendations for organizations running AI work
 
 Azure service security requires configuring each Azure service used in an AI architecture to meet specific security standards and benchmarks.
 
-- *Harden Azure services.* To apply secure configurations to Azure services, use the [Azure security baselines](/security/benchmark/azure/security-baselines-overview) for each service in your architecture. Common Azure services in AI workloads on Azure infrastructure include: [Windows virtual machines](/security/benchmark/azure/baselines/virtual-machines-windows-virtual-machines-security-baseline), [Linux virtual machines](/security/benchmark/azure/baselines/virtual-machines-linux-virtual-machines-security-baseline), [Azure CycleCloud](/azure/cyclecloud/concepts/security-best-practices), and [Key Vault](/security/benchmark/azure/baselines/key-vault-security-baseline).
+- *Harden Azure services.* To apply secure configurations to Azure services, use the Azure security baselines for each service in your architecture. Common Azure services in AI workloads on Azure infrastructure include: [Windows virtual machines](/security/benchmark/azure/baselines/virtual-machines-windows-virtual-machines-security-baseline), [Linux virtual machines](/security/benchmark/azure/baselines/virtual-machines-linux-virtual-machines-security-baseline), [Azure CycleCloud](/azure/cyclecloud/concepts/security-best-practices), and [Key Vault](/security/benchmark/azure/baselines/key-vault-security-baseline).
 
 - *Consider secure compute options.* Secure the boot process and integrity of your VMs using [trusted launch](/azure/virtual-machines/trusted-launch). Depending on your industry and use case, consider using confidential AI. [Confidential AI](/azure/confidential-computing/confidential-ai) is for cryptographically verifiable protection for AI data and models during training, fine-tuning, and inferencing.
 
@@ -61,11 +61,11 @@ Preparing for incident response involves collecting logs and integrating them wi
 
 ## Secure operating systems
 
-Securing operating systems requires keeping virtual machines and container images up-to-date with the latest patches and running antimalware software. These practices protect AI infrastructure from vulnerabilities, malware, and other security threats. They help maintain a secure and reliable environment for AI operations.
+Securing operating systems requires keeping virtual machines and container images up-to-date with the latest patches and running endpoint protection software. These practices protect AI infrastructure from vulnerabilities, malware, and other security threats. They help maintain a secure and reliable environment for AI operations.
 
 - *Patch virtual machine guests.* Regularly apply patches to virtual machines and container images. Consider enabling [automatic guest patching](/azure/virtual-machines/automatic-vm-guest-patching) for your virtual machines and scale sets.
 
-- *Use antimalware.* Use [Microsoft Antimalware for Azure](/azure/security/fundamentals/antimalware) on your virtual machines to protect them from malicious files, adware, and other threats.
+- *Use endpoint protection.* Use [Microsoft Defender for Endpoint](/azure/defender-for-cloud/integration-defender-for-endpoint) on your virtual machines to provide modern endpoint detection and response (EDR), malware protection, and advanced threat detection.
 
 ## Next step
 

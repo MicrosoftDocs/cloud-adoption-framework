@@ -1,18 +1,18 @@
 ---
-title: Scenario- Transition a single subscription with no management groups to the Azure landing zone conceptual architecture
-description: Learn how to transition existing Azure environments with a single subscription with no management groups into the Azure landing zone conceptual architecture.
+title: Scenario - Transition a single subscription with no management groups to the Azure landing zone reference architecture
+description: Learn how to transition existing Azure environments with a single subscription with no management groups into the Azure landing zone reference architecture.
 author: jtracey93
 ms.author: jatracey
 ms.reviewer: tozimmergren
-ms.date: 01/17/2025
+ms.date: 12/19/2025
 ms.topic: concept-article
 ---
 
 <!-- docutune:casing resourceType resourceTypes resourceId resourceIds -->
 
-# Scenario: Transition a single subscription with no management groups to the Azure landing zone conceptual architecture
+# Scenario: Transition a single subscription with no management groups to the Azure landing zone reference architecture
 
-This article describes considerations and instructions to migrate and transition your Azure environment into the Azure landing zone conceptual architecture. This scenario covers a single subscription with no management groups.
+This article describes considerations and instructions to migrate and transition your Azure environment into the Azure landing zone reference architecture. This scenario covers a single subscription with no management groups.
 
 In this scenario, the customer already uses Azure and already hosts a few applications or services within the platform. But their current implementation limits their scalability and growth related to their *cloud first* strategy.
 
@@ -39,17 +39,17 @@ The following diagram shows the current state of this scenario.
 
 ![Diagram that shows a single subscription environment.](./media/alz-align-scenario-single-sub.png)
 
-## Transition to the Azure landing zone conceptual architecture
+## Transition to the Azure landing zone reference architecture
 
-Prior to implementing this approach, review [Azure landing zone conceptual architecture](./index.md) and [Azure landing zone design areas](./design-areas.md).
+Prior to implementing this approach, review [Azure landing zone reference architecture](./index.md) and [Azure landing zone design areas](./design-areas.md).
 
-To transition from this scenario's current state to an Azure landing zone conceptual architecture, use this approach:
+To transition from this scenario's current state to an Azure landing zone reference architecture, use this approach:
 
-1. Deploy the [Azure landing zone accelerator](./index.md#azure-platform-landing-zone-portal-accelerator) into the same Microsoft Entra ID tenant in parallel with the current environment. This method provides a smooth and phased transition to the new landing zone architecture with minimal disruption to active workloads.
+1. Deploy the [Azure landing zone](../landing-zone/index.md#deploying-and-managing-azure-landing-zone) into the same Microsoft Entra ID tenant in parallel with the current environment. This method provides a smooth and phased transition to the new landing zone architecture with minimal disruption to active workloads.
 
    This deployment creates a new management group structure. This structure aligns with Azure landing zones design principles and recommendations. It also ensures that these changes don't affect the existing environment.
 
-1. (Optional) Work with application or service teams to migrate the workloads that are deployed in the original subscription into new Azure subscriptions. For more information, see [Transition existing Azure environments to the Azure landing zone conceptual architecture](./../enterprise-scale/transition.md#move-resources-in-azure). You can place workloads into the newly deployed Azure landing zone conceptual architecture management group hierarchy under the correct management group, such as *corporate* or *online* in the following diagram.
+2. (Optional) Work with application or service teams to migrate the workloads that are deployed in the original subscription into new Azure subscriptions. For more information, see [Transition existing Azure environments to the Azure landing zone reference architecture](./../enterprise-scale/transition.md#move-resources-in-azure). You can place workloads into the newly deployed Azure landing zone reference architecture management group hierarchy under the correct management group, such as *corporate* or *online* in the following diagram.
 
    For details about the effect on resources when migrating, see [Policies](./../enterprise-scale/transition.md#policies).
 
@@ -58,7 +58,7 @@ To transition from this scenario's current state to an Azure landing zone concep
    > [!NOTE]
    > You don't necessarily have to migrate the existing applications or services into new landing zones, or Azure subscriptions.
 
-1. Create new Azure subscriptions to provide landing zones that can support migration projects from on-premises. Place them under the proper management group, such as *corporate* or *online* in the following diagram.
+3. Create new Azure subscriptions to provide landing zones that can support migration projects from on-premises. Place them under the proper management group, such as *corporate* or *online* in the following diagram.
 
    For more information, see [Readying your landing zone for migration guidance](../.././migrate/azure-migration-guide/ready-alz.md).
 
@@ -68,4 +68,4 @@ The following diagram shows the state of this scenario during the migration.
 
 ## Summary
 
-In this scenario, the customer accomplished their expansion and scaling plans within Azure by deploying the [Azure landing zone conceptual architecture](./index.md#azure-landing-zone-architecture) in parallel to their existing environment.
+In this scenario, the customer accomplished their expansion and scaling plans within Azure by deploying the [Azure landing zone reference architecture](./index.md#azure-landing-zone-architecture) in parallel to their existing environment.

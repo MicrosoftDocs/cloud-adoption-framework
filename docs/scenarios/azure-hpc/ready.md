@@ -12,9 +12,9 @@ ms.custom: think-tank
 
 The [Ready methodology](../../ready/index.md) of the Cloud Adoption Framework for Azure can guide you through preparing your environment for cloud adoption. During the readiness phase, you can use an Azure landing zone. A landing zone is a technical accelerator that provides the basic building block for any cloud adoption environment. A landing zone can automate the configuration of your Azure environment, aligning with best practice guidance from the Cloud Adoption Framework. While preparing for high-performance computing (HPC), you might encounter environment configurations that depend on your industry use case and requirements.
 
-## Azure landing zone conceptual architecture
+## Azure landing zone reference architecture
 
-As you prepare your environment for sustained cloud adoption, you can use an Azure landing zone conceptual architecture that represents a target end state. For HPC, there are multiple conceptual architecture references that are based on the three industries that the Cloud Adoption Framework currently addresses:
+As you prepare your environment for sustained cloud adoption, you can use an Azure landing zone reference architecture that represents a target end state. For HPC, there are multiple conceptual architecture references that are based on the three industries that the Cloud Adoption Framework currently addresses:
 
 - [Energy, such as oil and gas](./azure-hpc-landing-zone-accelerator.md#example-conceptual-reference-architecture-for-energy)
 - [Finance](./azure-hpc-landing-zone-accelerator.md#example-conceptual-reference-architecture-for-finance)

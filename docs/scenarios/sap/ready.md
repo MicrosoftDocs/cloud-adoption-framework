@@ -14,7 +14,7 @@ The [Ready methodology](../../ready/index.md) of the Cloud Adoption Framework he
 
 With Azure landing zones, you can start with a small implementation and expand over time. For more sophisticated environments, you can start with enterprise-scale implementation options, which will include operations, security, and governance services in the initial environment.
 
-## Azure landing zone conceptual architecture
+## Azure landing zone reference architecture
 
 When preparing any environment for sustained cloud adoption, we use the [Azure landing zones](../../ready/landing-zone/index.md) conceptual architecture to represent what a target end state should look like in Azure, as pictured below.
 

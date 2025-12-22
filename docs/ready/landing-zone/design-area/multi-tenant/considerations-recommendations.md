@@ -3,7 +3,7 @@ title: Considerations and recommendations for multitenant Azure landing zone sce
 description: Learn about the considerations and recommendations when handling multiple Microsoft Entra tenants with Azure landing zones.
 author: jtracey93
 ms.author: jatracey
-ms.date: 11/28/2024
+ms.date: 12/18/2025
 ms.topic: concept-article
 ms.custom:
   - think-tank
@@ -74,6 +74,8 @@ This section explains key considerations and recommendations about Azure landing
 #### Azure products and services Microsoft Entra integration
 
 Many Azure products and services don't support Microsoft Entra B2B as part of their native Microsoft Entra integration. There are only a few services that support Microsoft Entra B2B authentication as part of their Microsoft Entra integrations. It's safer for the service default to not support Microsoft Entra B2B as part of their Microsoft Entra integration.
+
+Azure services and products do not commonly support Microsoft Entra B2B/External ID scenarios as part of their initial preview or GA releases. Often it takes feature requests from multiple customers and considerable time (6 months or more) before Microsoft adds support for Microsoft Entra B2B/External ID scenarios to the desired Azure services and products. You should be conscious of this fact when considering your Microsoft Entra tenant strategy and factor this into your design. Do not assume that the service will support Microsoft Entra B2B/External ID scenarios if it does not support it at the time of your design.
 
 Services that provide a native integration with Microsoft Entra ID, such as Azure Storage, Azure SQL, Azure Files, and Azure Virtual Desktop, use a "one-click" or "no-click" style approach to integrate. They require [authentication and authorization](/entra/identity-platform/authentication-vs-authorization) scenarios as part of their service. This approach is typically supported against the “home tenant”, and some services might enable support for Microsoft Entra B2B/External ID scenarios. For more information about the Azure subscription's relationship to Microsoft Entra ID, see [Associate or add an Azure subscription to your Microsoft Entra tenant](/entra/fundamentals/how-subscriptions-associated-directory).
 

@@ -3,7 +3,7 @@ title: Azure Enterprise Agreement enrollment design area guidance
 description: Understand the Enterprise Agreement enrollments and Microsoft Entra tenants design area.
 author: jtracey93
 ms.author: jatracey
-ms.date: 11/28/2024
+ms.date: 12/18/2025
 ms.update-cycle: 180-days
 ms.topic: concept-article
 ms.custom: think-tank, UpdateFrequency.5
@@ -49,6 +49,8 @@ For example, a finance user is granted an Enterprise Administrator role on the E
 
 ## Design considerations
 
+- Review the guidance on [Subscription vending](/azure/cloud-adoption-framework/ready/landing-zone/design-area/subscription-vending) to plan from the start of your Azure landing zone journey how to automate subscription creation and management as a self-service function within your organization.
+
 - The enrollment provides a hierarchical organizational structure to govern how subscriptions are managed. For more information, see [Managing Azure Enterprise Agreement roles](/azure/cost-management-billing/manage/understand-ea-roles#azure-enterprise-portal-hierarchy).
 
 - A range of administrators can be assigned to a single enrollment.
@@ -68,6 +70,8 @@ For example, a finance user is granted an Enterprise Administrator role on the E
 > [!WARNING]
 > You will not be able to create new subscriptions or transfer existing subscriptions from an enrollment account if the associated UPN is deleted from Microsoft Entra ID.
 ## Design recommendations
+
+- Implement a [Subscription vending](/azure/cloud-adoption-framework/ready/landing-zone/design-area/subscription-vending) strategy to automate subscription creation and management as a self-service function within your organization.
 
 - Only use the authentication type `Work or school account` for all account types. Avoid using the `Microsoft account (MSA)` account type.
 

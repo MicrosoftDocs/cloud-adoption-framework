@@ -16,9 +16,9 @@ For FAQs about **implementing Azure landing zone architecture**, see [Enterprise
 
 <!-- GENERAL -->
 
-## What is the Azure landing zone accelerator?
+## What is the Azure landing zone portal accelerator?
 
-The Azure landing zone accelerator is an Azure portal-based deployment experience. It deploys an opinionated implementation based on the [Azure landing zone conceptual architecture](../landing-zone/index.md#azure-landing-zone-architecture).
+The Azure landing zone portal accelerator is an Azure portal-based deployment experience. It deploys an opinionated implementation based on the [Azure landing zone reference architecture](../landing-zone/index.md#azure-landing-zone-architecture).
 
 ## Which are the recommended accelerators and implementations for Azure landing zones?
 
@@ -31,9 +31,9 @@ To learn how to tailor your Azure landing zones deployment to meet your needs, s
 >[!TIP]
 > To request an addition to the accelerator and implementation list, raise a GitHub issue on the [ALZ repository](https://github.com/Azure/Enterprise-Scale/issues/new/choose).
 
-## What is the Azure landing zone conceptual architecture?
+## What is the Azure landing zone reference architecture?
 
-The Azure landing zone conceptual architecture represents scale and maturity decisions. It's based on lessons learned and feedback from customers who adopted Azure as part of their digital estate. This conceptual architecture can help your organization set a direction for designing and implementing a landing zone.
+The Azure landing zone reference architecture represents scale and maturity decisions. It's based on lessons learned and feedback from customers who adopted Azure as part of their digital estate. This conceptual architecture can help your organization set a direction for designing and implementing a landing zone.
 
 ## What does a landing zone map to in Azure in the context of Azure landing zone architecture?
 
@@ -71,7 +71,7 @@ The Cloud Adoption Framework landing zones [open source project (OSS)](https://a
 
 Review the following documentation sections:
 
-- [Transition existing Azure environments to the Azure landing zone conceptual architecture - "Policy" section](./transition.md#policies)
+- [Transition existing Azure environments to the Azure landing zone reference architecture - "Policy" section](./transition.md#policies)
 - [Quickstart: Create a policy assignment to identify non-compliant resources - "Identify non-compliant resources" section](/azure/governance/policy/assign-policy-portal#identify-non-compliant-resources)
 
 ## Do I need a dedicated or separate AI landing zone?
@@ -84,9 +84,9 @@ No, you do not need a separate AI landing zone. Instead, you can use the existin
 
 For more information, see [Manage application development environments in Azure landing zones](../landing-zone/design-area/management-application-environments.md).
 
-## Why are we asked to specify Azure regions during the Azure landing zone accelerator deployment and what are they used for?
+## Why are we asked to specify Azure regions during the Azure landing zone reference architecture deployment and what are they used for?
 
-When you deploy Azure landing zone architecture by using the Azure landing zone accelerator portal-based experience, select an Azure region to deploy into. The first tab, **Deployment location**, determines where the deployment data is stored. For more information, see [Tenant deployments with ARM templates](/azure/azure-resource-manager/templates/deploy-to-tenant#deployment-location-and-name). Some parts of a landing zone are deployed globally but their deployment metadata is tracked in a regional metadata store. The metadata regarding their deployment is stored in the region selected on the **Deployment location** tab.
+When you deploy Azure landing zone architecture by using the Azure landing zone reference architecture portal-based experience, select an Azure region to deploy into. The first tab, **Deployment location**, determines where the deployment data is stored. For more information, see [Tenant deployments with ARM templates](/azure/azure-resource-manager/templates/deploy-to-tenant#deployment-location-and-name). Some parts of a landing zone are deployed globally but their deployment metadata is tracked in a regional metadata store. The metadata regarding their deployment is stored in the region selected on the **Deployment location** tab.
 
 The region selector on the **Deployment location** tab is also used to select which Azure region any region-specific resources should be stored, such as a Log Analytics workspace, if required.
 
@@ -159,9 +159,9 @@ You can reassign the subscription after you clean up the subscription. Here are 
 
 ## What is a sovereign landing zone and how is it related to the Azure landing zone architecture?
 
-The sovereign landing zone is a component of Microsoft Sovereign Cloud that's intended for public sector customers who need advanced sovereignty controls. As a tailored version of the Azure landing zone conceptual architecture, the sovereign landing zone aligns Azure capabilities such as service residency, customer-managed keys, Azure Private Link, and confidential computing. Through this alignment, the sovereign landing zone creates a cloud architecture where data and workloads offer encryption and protection from threats by default.
+The sovereign landing zone is a component of Microsoft Sovereign Cloud that's intended for public sector customers who need advanced sovereignty controls. As a tailored version of the Azure landing zone reference architecture, the sovereign landing zone aligns Azure capabilities such as service residency, customer-managed keys, Azure Private Link, and confidential computing. Through this alignment, the sovereign landing zone creates a cloud architecture where data and workloads offer encryption and protection from threats by default.
 
 > [!NOTE]
-> Microsoft Sovereign Cloud is oriented toward government organizations with sovereignty needs. You should carefully consider whether you need the Microsoft Sovereign Cloud capabilities, and only then consider adopting the sovereign landing zone architecture.
+> Microsoft Sovereign Cloud is oriented toward organizations with sovereignty needs. You should carefully consider whether you need the Microsoft Sovereign Cloud capabilities, and only then consider adopting the sovereign landing zone architecture.
 
-For more information about the sovereign landing zone, see [Sovereignty considerations for Azure landing zones](../landing-zone/sovereign-landing-zone.md).
+For more information about the sovereign landing zone, see [Sovereign Landing Zone (SLZ)](/industry/sovereign-cloud/sovereign-public-cloud/sovereign-landing-zone/overview-slz).

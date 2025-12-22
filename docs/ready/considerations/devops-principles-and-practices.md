@@ -37,7 +37,7 @@ The decisions you make when reviewing cloud operating models can influence how y
 
 - Determine the [DevOps practices](#define-devops-practices-for-your-azure-landing-zones-management) your team should implement first based on their current skilling, and design a roadmap to incrementally apply new practices that help your team improve their DevOps metrics. Investing in engineering capabilities and resources is critical.
 
-- Determine the [DevOps toolchain](#define-your-devops-technology-ecosystem) your team should use to implement the DevOps practices. Make sure that the tools are consistent with your overall DevOps strategy to avoid scenarios of heterogenous DevOps ecosystems increasing the complexity of Azure landing zone or workload deployments.
+- Determine the [DevOps toolchain](#define-your-devops-technology-ecosystem) your team should use to implement the DevOps practices. Make sure that the tools are consistent with your overall DevOps strategy to avoid scenarios of heterogeneous DevOps ecosystems increasing the complexity of Azure landing zone or workload deployments.
 
 - Evaluate the effect that your implemented DevOps practices and DevOps tools have on the design of your Azure Landing Zones.
 

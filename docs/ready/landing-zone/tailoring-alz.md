@@ -3,7 +3,7 @@ title: Tailor the Azure landing zone architecture
 description: Understand how to tailor the Azure landing zone architecture to meet your business requirements.
 author: jtracey93
 ms.author: jatracey
-ms.date: 12/16/2024
+ms.date: 12/19/2025
 ms.update-cycle: 180-days
 ms.topic: concept-article
 ms.custom: think-tank, UpdateFrequency.5
@@ -11,14 +11,9 @@ ms.custom: think-tank, UpdateFrequency.5
 
 # Tailor the Azure landing zone architecture to meet requirements
 
-As part of the Azure landing zone guidance, several reference [implementation options](../enterprise-scale/implementation.md) are available:
+As part of the Azure landing zone guidance, several reference [implementation options](./implementation-options.md) are available.
 
-- Azure landing zone with Azure Virtual WAN
-- Azure landing zone with traditional hub and spoke
-- Azure landing zone foundation
-- Azure landing zone for small enterprises
-
-These options can help your organization get started quickly by using configurations that deliver the Azure landing zone conceptual architecture and best practices in the design areas.
+These options can help your organization get started quickly by using configurations that deliver the Azure landing zone reference architecture and best practices in the design areas.
 
 The reference implementations are based on the best practices and learnings of Microsoft teams from engagements with customers and partners. This knowledge represents the "80" side of the 80/20 rule. The various implementations take positions on technical decisions that are part of the architecture design process.
 
@@ -36,7 +31,7 @@ Consider each management group in the resource hierarchy as contributing to the 
 
 There's a close relationship between management groups and landing zone archetypes, but a management group alone isn't a landing zone archetype. Instead, it forms part of the framework that's used to implement each of the landing zone archetypes in your environment.
 
-You can see this relationship in the Azure landing zone conceptual architecture. Policy assignments are created at the intermediate root management group, for example *Contoso*, for settings that must apply to all workloads. More policy assignments are created at lower levels of the hierarchy for more specific requirements.
+You can see this relationship in the Azure landing zone reference architecture. Policy assignments are created at the intermediate root management group, for example *Contoso*, for settings that must apply to all workloads. More policy assignments are created at lower levels of the hierarchy for more specific requirements.
 
 Subscription placement within the management group hierarchy determines the resultant set of Azure Policy and access control (IAM) assignments that are inherited, applied, and enforced to that particular landing zone (Azure subscription).
 
@@ -52,28 +47,28 @@ More processes and tooling might be required to ensure a landing zone has the re
 >
 > For more information, see [Adopt policy-driven guardrails](../enterprise-scale/dine-guidance.md).
 
-## Built-in archetypes for the Azure landing zone conceptual architecture
+## Built-in archetypes for the Azure landing zone reference architecture
 
 The conceptual architecture includes example landing zone archetypes for application workloads such as *corp* and *online*. These archetypes might apply to your organization and meet your requirements. You might want to make changes to these archetypes or create new ones. Your decision depends on your organization's needs and requirements.
 
 > [!TIP]
-> To review the landing zone archetypes in the Azure landing zone accelerator, see [Management groups in the Azure landing zone accelerator](./design-area/resource-org-management-groups.md).
+> To review the landing zone archetypes in the Azure landing zone reference architecture, see [Management groups in the Azure landing zone reference architecture](./design-area/resource-org-management-groups.md#management-groups-in-the-azure-landing-zone-architecture).
 
 You might also want to create changes elsewhere in the resource hierarchy. When you plan the hierarchy for your implementation of Azure landing zones for your organization, follow the guidelines in the [design areas](./design-areas.md).
 
 The following landing zone archetype examples from the conceptual architecture help you to understand their purpose and intended use:
 
-| Landing zone archetype (management group) | Purpose or use                                                                                                                                                                                                                                                          |
-| ----------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Corp                                      | The dedicated management group for corporate landing zones. This group is for workloads that require connectivity or hybrid connectivity with the corporate network via the hub in the connectivity subscription. |
-| Online                                    | The dedicated management group for online landing zones. This group is for workloads that might require direct internet inbound/outbound connectivity or for workloads that might not require a virtual network.     |
-| Sandbox | The dedicated management group for subscriptions that will only be used for testing and exploration by an organization. These subscriptions will be securely disconnected from the corporate and online landing zones. Sandboxes also have a less restrictive set of policies assigned to enable testing, exploration, and configuration of Azure services. |
+| Landing zone archetype (management group) | Purpose or use                                                                                                                                                                                                                                                                                                                                              |
+| ----------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Corp                                      | The dedicated management group for corporate landing zones. This group is for workloads that require connectivity or hybrid connectivity with the corporate network via the hub in the connectivity subscription.                                                                                                                                           |
+| Online                                    | The dedicated management group for online landing zones. This group is for workloads that might require direct internet inbound/outbound connectivity or for workloads that might not require a virtual network.                                                                                                                                            |
+| Sandbox                                   | The dedicated management group for subscriptions that will only be used for testing and exploration by an organization. These subscriptions will be securely disconnected from the corporate and online landing zones. Sandboxes also have a less restrictive set of policies assigned to enable testing, exploration, and configuration of Azure services. |
 
 ## Scenarios where tailoring might be required
 
-As mentioned, we provide common landing zone archetypes in [Azure landing zone conceptual architecture](./index.md#azure-landing-zone-architecture). They are *corp* and *online*. These archetypes aren't fixed and aren't the only permitted landing zone archetypes for application workloads. You might need to tailor landing zone archetypes to suit your needs and requirements.
+As mentioned, we provide common landing zone archetypes in [Azure landing zone reference architecture](./index.md#azure-landing-zone-architecture). They are *corp* and *online*. These archetypes aren't fixed and aren't the only permitted landing zone archetypes for application workloads. You might need to tailor landing zone archetypes to suit your needs and requirements.
 
-Before you tailor landing zone archetypes, it's important to understand the concepts and also visualize the area of the hierarchy that we suggest you customize. The following diagram shows the default hierarchy of the Azure landing zone conceptual architecture.
+Before you tailor landing zone archetypes, it's important to understand the concepts and also visualize the area of the hierarchy that we suggest you customize. The following diagram shows the default hierarchy of the Azure landing zone reference architecture.
 
 :::image type="content" source="./media/alz-tailor-hierarchy-default.png" alt-text="Diagram that shows Azure landing zone default hierarchy with tailoring areas highlighted." lightbox="./media/alz-tailor-hierarchy-default.png":::
 
@@ -92,7 +87,7 @@ Now you can place new or move existing Azure subscriptions into the new **PCI** 
 Another example is [Microsoft Sovereign Cloud](/industry/sovereignty/cloud-for-sovereignty), which adds management groups for confidential compute and is aligned for use in regulated industries. [Microsoft Sovereign Cloud](/industry/sovereignty/cloud-for-sovereignty) provides tools, guidance, and guardrails for public cloud adoption with appropriate sovereignty controls.
 
 > [!TIP]
-> You need to know what to consider and what happens when you move Azure subscriptions between management groups in relation to RBAC and Azure Policy. For more information, see [Transition existing Azure environments to the Azure landing zone conceptual architecture](../enterprise-scale/transition.md#move-subscriptions).
+> You need to know what to consider and what happens when you move Azure subscriptions between management groups in relation to RBAC and Azure Policy. For more information, see [Transition existing Azure environments to the Azure landing zone reference architecture](../enterprise-scale/transition.md#move-subscriptions).
 
 ### Tailor platform landing zone archetypes
 

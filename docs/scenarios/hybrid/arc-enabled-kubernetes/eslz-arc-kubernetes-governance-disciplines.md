@@ -197,7 +197,6 @@ For more information about your hybrid and multicloud cloud journey, see the fol
 
 - Review the [prerequisites](/azure/azure-arc/kubernetes/quickstart-connect-cluster?tabs=azure-cli#prerequisites) for Azure Arc-enabled Kubernetes.
 - Review the [validated Kubernetes distributions](/azure/azure-arc/kubernetes/validation-program#validated-distributions) for Azure Arc-enabled Kubernetes.
-- Learn how to [Manage hybrid and multicloud environments](../manage.md).
 - Learn how to [Connect an existing Kubernetes cluster to Azure Arc](/azure/azure-arc/kubernetes/quickstart-connect-cluster?tabs=azure-cli).
 - Learn about [Secret and certificate management](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_k8s/day2/cluster_api/cluster_api_keyvault_extension/).
 - Learn about [Threat protection and cloud security posture management](/azure/defender-for-cloud/).

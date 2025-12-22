@@ -35,7 +35,7 @@ An Azure subscription is a logical limit of scale that you can use to allocate r
 The following considerations can help you decide between a single-subscription or multiple-subscription architecture:
 
 -	**Scale.** What percentage of your organization will have workloads on Azure? Will long term usage exceed 5,000 virtual machines?
--	**Use cases.** Are your use cases known? If so, are your target use cases predominately virtualized applications or multi-session desktops? Is VDI considered more niche (less than 5-10% of total user count)?
+-	**Use cases.** Are your use cases known? If so, are your target use cases predominantly virtualized applications or multi-session desktops? Is VDI considered more niche (less than 5-10% of total user count)?
 -	**Operations.** Do you have a clear line of ownership between teams that manage server and client operating systems? Do these teams also have separate cost centers? Is there a shared change control or user onboarding process?
 
 In a multiple-subscription architecture, you should deploy management components in a Citrix Shared Services subscription. The virtual apps and desktops should be contained in Workload subscriptions. [Azure management groups](/azure/governance/management-groups/overview) aren't needed for every Citrix deployment on Azure. However, if you use a multiple-subscription approach, management groups can help you simplify the application of Azure governance requirements to the overall Citrix deployment.

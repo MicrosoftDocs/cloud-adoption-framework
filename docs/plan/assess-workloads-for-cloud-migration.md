@@ -9,15 +9,15 @@ ms.topic: concept-article
 
 # Assess your workloads for cloud migration
 
-The assessment phase ensures you have full visibility into every component, dependency, and requirement before moving to Azure. By collecting detailed information on architecture, performance, security, code, and databases, you can anticipate issues, minimize risks, and make informed migration decisions.
+The assessment phase ensures you have full visibility into every component, dependency, and requirement before moving to Microsoft Azure. By collecting detailed information on architecture, performance, security, code, and databases, you can anticipate issues, minimize risks, and make informed migration decisions.
 
 [!INCLUDE [discovery and assessment table](./includes/discovery-assessment-table.md)]
 
 ## Assess workload architecture
 
-Complete architectural assessment gives visibility into all workload components and how they interact. This supports accurate migration planning by identifying what needs to move together and what might require modification.
+A complete architectural assessment gives you visibility into all workload components and how they interact. This visibility supports accurate migration planning by identifying what components need to move together and what components might require modification.
 
-1. **Use assessment tools.** Tools like Azure Migrate or other products automate discovery of workload components and configurations. These tools reduce manual effort and provide consistent data collection across your environment, though they might miss undocumented dependencies. You can use a tool like Cloudockit to generate your diagrams. You can also create your own by using [Azure icons](/azure/architecture/icons/) or tweaking the downloadable diagrams in [Azure Architecture Center](/azure/architecture/).
+1. **Use assessment tools.** Tools like Azure Migrate or other products automate discovery of workload components and configurations. These tools reduce manual effort and provide consistent data collection across your environment, though they might miss undocumented dependencies. You can use a tool like Cloudockit to generate your diagrams. You can also create your own diagrams by using [Azure icons](/azure/architecture/icons/) or tweaking the downloadable diagrams in [Azure Architecture Center](/azure/architecture/).
 
 1. **Validate architecture with subject matter expertise.** Workload owners can confirm tool findings and identify missing or outdated information. Conduct interviews or architecture review sessions to close gaps in the automated discovery data.
 
@@ -25,13 +25,13 @@ Complete architectural assessment gives visibility into all workload components 
 
 ### Assess workload components
 
-For each workload, collect detailed baseline performance and usage metrics from the current environment. This data is critical for right-sizing Azure resources and for comparing performance after migration
+For each workload, collect detailed baseline performance and usage metrics from the current environment. This data is critical for right-sizing Azure resources and for comparing performance after migration.
 
-1. **Gather workload metrics.**  Track CPU utilization, memory usage, disk I/O (reads/writes, IOPS), network throughput, and peak concurrency or user load. Identify daily or weekly peaks to understand capacity needs. Measure average response times for user transactions, throughput of jobs processed per hour, and any SLA-related metrics. This helps ensure the migrated workloads meets the same business performance requirements.
+1. **Gather workload metrics.**  Track CPU utilization, memory usage, disk I/O (reads/writes, IOPS), network throughput, and peak concurrency or user load. Identify daily or weekly peaks to understand capacity needs. Measure average response times for user transactions, throughput of jobs processed per hour, and any SLA-related metrics. This information helps ensure the migrated workloads meet the same business performance requirements.
 
-1. **Capture configuration details.** Note scaling configurations, current VM sizes or physical server specs (CPU cores, RAM), OS type and version, storage type (SSD/HDD) and capacity, and any special hardware like GPUs. These details inform the choice of Azure VM sizes or PaaS services. Also record software licensing info, as this might enable use of Azure Hybrid Benefit or require license migration.
+1. **Capture configuration details.** Note scaling configurations, current virtual machine (VM) sizes, physical server specs (CPU cores, RAM), OS type and version, storage type (SSD/HDD) and capacity, and any special hardware like GPUs. These details inform the choice of Azure VM sizes or PaaS services. Also record software licensing info. This info might enable use of Azure Hybrid Benefit or require license migration.
 
-1. **Document all security and identity configurations.** Inventory all security and identity configurations: list service accounts, any hard-coded credentials, encryption methods used, and firewall rules. These configurations have to be replicated or adjusted in Azure.
+1. **Document all security and identity configurations.** Inventory all security and identity configurations: list service accounts, any hard-coded credentials, encryption methods used, and firewall rules. These configurations need to be replicated or adjusted in Azure.
 
     | Security Component | Action | Purpose |
     |-------------------|---------|----------|
@@ -41,11 +41,11 @@ For each workload, collect detailed baseline performance and usage metrics from 
 
 1. **Identify compatibility issues.** Automated tools provide systematic analysis of operating systems, middleware, and application frameworks against Azure support policies. These tools flag components that are unsupported, deprecated, or approaching end of support. Tools like Azure Migrate and other assessment tools can detect these issues across your environment without manual configuration reviews.
 
-1. **List required remediations.** Create a comprehensive list of all compatibility issues and their remediation requirements. Prioritize the ones that must be fixed premigration (blockers) and ones that could be done post-migration if needed. Engage vendors if necessary to understand upgrade paths for commercial software.
+1. **List required remediations.** Create a comprehensive list of all compatibility issues and their remediation requirements. Prioritize the ones that must be fixed before migration (blockers) and ones that could be addressed after migration if needed. Engage vendors if necessary to understand upgrade paths for commercial software.
 
 ### Map internal and external dependencies
 
-1. **Map internal dependencies.** Map how the components of a workload talk to each other and other systems within your organization. Use network monitoring tools or application performance monitoring to see runtime connections between services. This mapping helps determine grouping in migration waves. For example, if App A constantly calls Database B, you either migrate them together or provide network connectivity between Azure and the source environment until both are in cloud.
+1. **Map internal dependencies.** Map how the components of a workload communicate with each other and with other systems within your organization. Use network monitoring tools or application performance monitoring to see runtime connections between services. This mapping helps you determine grouping in migration waves. For example, if App A constantly calls Database B, you either migrate them together or provide network connectivity between Azure and the source environment until both are in the cloud.
 
 1. **Identify all external dependencies.** List any external services the workload interacts with. These dependencies include SaaS platforms, partner APIs, on-premises systems, and third-party services that applications require to function properly. You must catalog all upstream and downstream integrations, shared services, and data pipelines to understand the complete dependency landscape. Document APIs, messaging systems, ETL processes, shared databases, authentication methods, data exchange patterns, and service-level agreements. Review integration documentation and conduct interviews with application owners to ensure complete visibility into all external connections. This comprehensive mapping prevents integration failures and supports accurate migration sequencing.
 
@@ -53,7 +53,7 @@ For each workload, collect detailed baseline performance and usage metrics from 
 
 1. **Document all dependencies in a central repository.** Store dependency data in a format that supports cross-team collaboration and migration planning, such as spreadsheets, architecture diagrams, or dependency mapping tools. Ensure the repository is accessible and regularly updated to reflect changes during the migration process.
 
-1. **Use dependencies to plan migrations.** Organize workloads into migration waves that minimize broken dependencies For more information, see [Migration wave planning](../migrate/migration-wave-planning.md).
+1. **Use dependencies to plan migrations.** Organize workloads into migration waves that minimize broken dependencies. For more information, see [Migration wave planning](../migrate/migration-wave-planning.md).
 
 ### Assess compliance and operational requirements
 
@@ -71,11 +71,17 @@ An application code assessment identifies compatibility issues and modernization
 
 ### Use automated tools to assess application code
 
-1. **Use AppCAT for .NET and Java applications.** [AppCAT](/azure/migrate/appcat/overview) provides detailed assessments for .NET and Java workloads. This tool identifies deprecated APIs, unsupported SDKs, and configuration issues that can prevent successful migration. Use AppCAT to generate compatibility and modernization recommendations for these workloads.
+1. **Use the GitHub Copilot app modernization tool (.NET and Java).** GitHub Copilot app modernization provides detailed assessments for .NET and Java workloads. It combines AppCAT's assessment capabilities with Copilot's AI-driven assistance to make modernization faster and easier. This integration acts as a coding partner, helping you to:
+    - Capture application related dependencies
+    - Revise and optimize source code for Azure services
+    - Update code and remediate Common Vulnerability and Exposures (CVEs)
+    - Containerize applications for flexible deployment
+    - Generate deployment files to streamline migration
+    - Reduce effort with AI-assisted coding
 
 1. **Use third-party tools for other application languages.** Tools such as CloudPilot and CAST Highlight support languages like Python, JavaScript, Node.js, and Go. These tools identify code-level changes required for Azure compatibility and provide modernization insights. Use these tools to assess non-.NET and non-Java workloads.
 
-1. **Use assessment results to inform target architecture decisions.** Application compatibility findings can influence the selection of Azure services. For example, an application that isn't compatible with one service might be compatible with another with minimal code changes. Use this flexibility to migrate applications sooner and defer code modernization to a later phase. This approach reduces migration risk and accelerates time to cloud.
+1. **Use assessment results to inform target architecture decisions.** Application compatibility findings can influence the selection of Azure services. For example, an application that isn't compatible with one service might be compatible with another with minimal code changes. For example, services like Azure App Service typically require fewer code changes while container platform services might require more code update before deployment. Use this flexibility to migrate applications sooner and defer code modernization to a later phase. This approach reduces migration risk and accelerates time to cloud.
 
 ### Validate framework and SDK compatibility
 
@@ -83,7 +89,7 @@ An application code assessment identifies compatibility issues and modernization
 
 1. **Check Azure support for your application's language and framework.** Confirm that Azure supports your version of [.NET](/azure/dotnet/azure/intro#access-azure-services-from-net-applications), [Java](/azure/developer/java/), [Python](/azure/developer/python/get-started#write-your-python-app), [JavaScript, Node.js](/azure/developer/javascript/core/what-is-azure-for-javascript-development#use-azure-client-libraries-with-javascript), and [Go](/azure/developer/go/overview). Use the official Azure documentation to validate compatibility.
 
-1. **Avoid unnecessary framework changes.** Only migrate to a new framework (such as .NET Framework to .NET Core) if there's a strong business justification. Framework changes require significant development effort and testing.
+1. **Avoid unnecessary framework changes.** Only migrate to a new framework (such as Microsoft .NET Framework to .NET Core) if there's a strong business justification. Framework changes require significant development effort and testing.
 
 ## Assess databases
 
@@ -97,11 +103,11 @@ Database dependencies often determine the success of application migration. Shar
 
 ### Create and maintain a risk register
 
-A risk register is a document or tool used to identify, assess, prioritize, and monitor potential risks that could affect cloud adoption and outlines mitigation strategies. Maintaining this register ensures proactive risk management.
+A risk register is a document or tool you use to identify, assess, prioritize, and monitor potential risks that could affect cloud adoption. It outlines mitigation strategies. Maintaining this register ensures proactive risk management.
 
 1. **Establish a risk register for all workloads.** Record risks related to technical, operational, and organizational factors. This register provides visibility into potential blockers and their value.
 
-2. **Define mitigation strategies and track their status.** For each risk, document mitigation actions, responsible parties, and resolution timelines. This tracking ensures that risks are actively managed and resolved.
+1. **Define mitigation strategies and track their status.** For each risk, document mitigation actions, responsible parties, and resolution timelines. This tracking ensures that you actively manage and resolve risks.
 
 For more information, see [CAF Govern - Assess cloud risks](../govern/assess-cloud-risks.md)
 
@@ -111,7 +117,7 @@ For more information, see [CAF Govern - Assess cloud risks](../govern/assess-clo
 |----------|------|-------------|
 | Discovery and Assessment | [Azure Migrate](/azure/migrate/) | Comprehensive discovery and assessment for on-premises servers, databases, and applications |
 | Arc-enabled servers | [Azure Arc](/azure/azure-arc/servers/) | Extends Azure management to on-premises and multicloud environments |
-| Code Assessment | [AppCAT](/azure/migrate/appcat/overview) | Automated compatibility analysis for .NET and Java applications |
+| Code Assessment | [GitHub Copilot](https://aka.ms/ghcp-appmod) | Automated compatibility analysis for .NET and Java applications |
 | Database Migration | [Data Migration Assistant](/sql/dma/dma-overview) | Assessment and migration tool for SQL Server databases |
 | Multicloud mapping | [AWS to Azure service mapping](/azure/architecture/aws-professional/#primary-topics) | Service comparison guide for AWS to Azure migration |
 | Multicloud mapping | [Google Cloud to Azure service mapping](/azure/architecture/gcp-professional/services) | Service comparison guide for Google Cloud to Azure migration |
