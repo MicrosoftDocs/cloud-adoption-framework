@@ -1,9 +1,9 @@
 ---
 title: Security design in Azure
 description: Learn about design area guidance to establish a foundation for security in Azure, hybrid, or multicloud environments.
-author: stephen-sumner
-ms.author: pnp
-ms.date: 02/27/2025
+author: jtracey93
+ms.author: jatracey
+ms.date: 12/19/2025
 ms.update-cycle: 180-days
 ms.topic: concept-article
 ms.custom: internal, UpdateFrequency.5
@@ -32,8 +32,8 @@ The security design area focuses on considerations and recommendations for landi
 **Existing (brownfield) cloud environment:** Consider using the following [Microsoft Entra](https://www.microsoft.com/security/business/microsoft-entra) identity and access services if you are interested in applying the principles from security design area to existing Azure environments:
 
 - Deploy [Microsoft Entra Connect cloud sync](/entra/identity/hybrid/cloud-sync/what-is-cloud-sync) to provide your local Active Directory Domain Services (AD DS) users with secure single sign-on (SSO) to your Microsoft Entra ID-backed applications. An additional benefit to configuring hybrid identity is you can enforce [Microsoft Entra multifactor authentication (MFA)](/entra/identity/authentication/concept-mfa-howitworks) and [Microsoft Entra Password Protection](/entra/identity/authentication/concept-password-ban-bad-on-premises) to further protect these identities
-- Consider [Microsoft Entra Conditional Access](/entra/identity/conditional-access/policy-all-users-mfa-strength) to provided secure authentication to your cloud apps and Azure resources.
-- Implement [Microsoft Entra Privileged Identity Management](/entra/id-governance/privileged-identity-management/pim-configure) to ensure least-privilege access and deep reporting in your entire Azure environment. Teams should begin recurring access reviews to ensure the right people and service principles have current and correct authorization levels.
+- Consider [Microsoft Entra Conditional Access](/entra/identity/conditional-access/policy-all-users-mfa-strength) to provide secure authentication to your cloud apps and Azure resources.
+- Implement [Microsoft Entra Privileged Identity Management](/entra/id-governance/privileged-identity-management/pim-configure) to ensure least-privilege access and deep reporting in your entire Azure environment. Teams should begin recurring access reviews to ensure the right people and service principals have current and correct authorization levels.
 - Make use of the recommendations, alerting, and remediation capabilities of [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction). Your security team can also integrate Microsoft Defender for Cloud into [Microsoft Sentinel](/azure/sentinel/overview) if they need a more robust, centrally managed hybrid and multicloud Security Information Event Management (SIEM)/Security Orchestration and Response (SOAR) solution.
 
 The [Azure Landing Zones Bicep - Deployment Flow](https://github.com/Azure/ALZ-Bicep/wiki/DeploymentFlow) repository contains a number of Bicep deployment templates that can accelerate your greenfield and brownfield Azure landing zone deployments. These templates already have Microsoft proven-practice security guidance integrated within them.
@@ -47,7 +47,6 @@ The Microsoft cloud security benchmark includes high-impact security recommendat
 The Microsoft cloud security benchmark documentation specifies security controls and service recommendations.
 
 - [Security controls](/security/benchmark/azure/overview): The Microsoft cloud security benchmark recommendations are categorized by security controls. Security controls represent high-level vendor-agnostic security requirements, like network security and data protection. Each security control has a set of security recommendations and instructions that help you implement those recommendations.
-- [Service recommendations](/security/benchmark/azure/security-baselines-overview): When available, benchmark recommendations for Azure services will include Microsoft cloud security benchmark recommendations that are tailored specifically for that service.
 
 ### Azure Attestation
 
@@ -130,9 +129,9 @@ Implementing Zero Trust can go beyond just identity and access management. You s
 
 - Implement a [zero-trust approach for access](/security/zero-trust/deploy/identity) to the Azure platform where appropriate.
 
-## Security in the Azure landing zone accelerator
+## Security in the Azure landing zone reference architecture
 
-Security is at the core of the Azure landing zone accelerator. As part of the implementation, many tools and controls are deployed to help organizations quickly achieve a security baseline.
+Security is at the core of the Azure landing zone reference architecture. As part of the implementation, many tools and controls are deployed to help organizations quickly achieve a security baseline.
 
 For example, the following are included:
 

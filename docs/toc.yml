@@ -274,8 +274,6 @@ items:
               items:
               - name: Development lifecycle
                 href: ready/considerations/development-strategy-development-lifecycle.md
-              - name: Infrastructure as Code
-                href: ready/considerations/infrastructure-as-code.md
               - name: Environments
                 href: ready/considerations/environments.md
               - name: Test-driven development for Azure Landing Zones
@@ -291,27 +289,14 @@ items:
         - name: Implementation options
           href: ready/landing-zone/implementation-options.md
           items:
-          - name: Start with enterprise scale
-            items:
-            - name: Overview
-              href: ready/enterprise-scale/index.md
-            - name: Implement enterprise-scale landing zones
-              href: ready/enterprise-scale/implementation.md
-            - name: Scenario-specific enterprise-scale landing zones
-              href: ready/enterprise-scale/scenario-specific-enterprise-scale-landing-zones.md
-
-          - name: Deploy Azure landing zones with Terraform
-            href: ready/landing-zone/deploy-landing-zones-with-terraform.md
           - name: ISV considerations for landing zones
             href: ready/landing-zone/isv-landing-zone.md
-          - name: Sovereignty considerations and the sovereign landing zone
-            href: ready/landing-zone/sovereign-landing-zone.md
           - name: Get landing zone help
             href: ready/landing-zone/partner-landing-zone.md
 
         - name: Align
           items:
-          - name: Transition to the Azure landing zone conceptual architecture
+          - name: Transition to the Azure landing zone reference architecture
             href: ready/enterprise-scale/transition.md
           - name: Alignment scenarios
             items:
@@ -325,9 +310,6 @@ items:
             items:
               - name: Transition by duplicating a landing zone management group
                 href: ready/landing-zone/align-approach-duplicate-brownfield-audit-only.md
-
-          - name: Brownfield landing zone considerations
-            href: ready/landing-zone/brownfield-considerations.md
 
         - name: Enhance
           items:

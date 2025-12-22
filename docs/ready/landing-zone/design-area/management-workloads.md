@@ -1,9 +1,9 @@
 ---
 title: Azure workload management and monitoring
 description: Get design area guidance for managing and monitoring workloads in an Azure landing zone.
-author: stephen-sumner
-ms.author: pnp
-ms.date: 02/27/2025
+author: jtracey93
+ms.author: jatracey
+ms.date: 12/19/2025
 ms.update-cycle: 180-days
 ms.topic: concept-article
 ms.custom: internal, UpdateFrequency.5
@@ -41,7 +41,7 @@ For more information, see [Monitoring in a cloud environment](../../../manage/mo
 
 You can use centralized Azure Monitor components to manage and monitor workloads:
 
-- Use a centralized Azure Monitor Logs workspace to collect logs and metrics from IaaS and PaaS workload resources.
+- Use an Azure Monitor Logs workspace to collect logs and metrics from IaaS and PaaS workload resources.
 
 - Control workspace and log access with Azure RBAC. For more information, see [Azure Monitor access control overview](/azure/azure-monitor/platform/design-logs-deployment#access-control-overview).
 
@@ -54,5 +54,9 @@ You can use centralized Azure Monitor components to manage and monitor workloads
   Logs contain different types of data organized into records with different sets of properties. Logs are useful for analyzing complex data from a range of sources, such as performance data, events, and traces. If necessary, use shared storage accounts in the landing zone for Azure diagnostic extension log storage.
 
 - Use [Azure Monitor alerts](/azure/azure-monitor/platform/alerts-overview) for generating operational alerts. Azure Monitor alerts unify metric and log alerts, and use features like actions and smart groups for advanced management and remediation.
+
+- Use [Azure Service Groups](/azure/governance/service-groups/overview) to organize workload resources for monitoring and management. Service groups enable you to group related resources across subscriptions and resource groups. You can use service groups to simplify monitoring.
+
+- Use [Health models in Azure Monitor (preview)](/azure/azure-monitor/health-models/overview) to define and track the health of the Azure resources in your service groups and the resources they depend on
 
 For more workload management considerations and recommendations, see [Operational excellence](/azure/architecture/framework/#operational-excellence) in the Azure Well-Architected Framework.

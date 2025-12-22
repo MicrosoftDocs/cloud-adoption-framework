@@ -203,7 +203,7 @@ Manage your security controls to detect threats to your cloud estate. Follow the
 
 1. ***Standardize security tooling.*** Use standardized tools to detect threats, fix vulnerabilities, investigate issues, secure data, harden resources, and enforce compliance at scale. Refer to [Azure security tools](#azure-security-tools).
 
-1. ***Baseline your environment.*** Document the normal state of your cloud estate. [Monitor security](/azure/cloud-adoption-framework/manage/monitor#monitor-security) and document network traffic patterns and user behaviors. Use [Azure security baselines](/security/benchmark/azure/security-baselines-overview) and [Azure service guides](/azure/well-architected/service-guides/?product=popular) to develop baseline configurations for services. This baseline makes it easier to detect anomalies and potential security weaknesses.
+1. ***Baseline your environment.*** Document the normal state of your cloud estate. [Monitor security](/azure/cloud-adoption-framework/manage/monitor#monitor-security) and document network traffic patterns and user behaviors. Use the [Microsoft cloud security benchmark v2](/security/benchmark/azure/overview) and [Azure service guides](/azure/well-architected/service-guides/?product=popular) to develop baseline configurations for services. This baseline makes it easier to detect anomalies and potential security weaknesses.
 
 1. ***Apply security controls.*** Implement security measures, such as access controls, encryption, and multifactor authentication, strengthens the environment and reduces the probability of compromise. For more information, see [Manage security](./administer.md#manage-security).
 
@@ -234,7 +234,7 @@ For more information, see [Manage incident response (CAF Secure)](/azure/cloud-a
 | Threat detection                 | [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) |
 | Security information management  | [Microsoft Sentinel](/azure/sentinel/overview?tabs=azure-portal)                   |
 | Data security and governance     | [Microsoft Purview](/purview/purview)                                        |
-| Cloud resource security          | [Azure security baselines](/security/benchmark/azure/security-baselines-overview) |
+| Cloud resource security          | [Microsoft cloud security benchmark v2](/security/benchmark/azure/overview) |
 | Cloud governance                 | [Azure Policy](/azure/governance/policy/overview)                                  |
 | Endpoint security                | [Microsoft Defender for Endpoint](/defender-endpoint/microsoft-defender-endpoint) |
 | Network security                 | [Azure Network Watcher](/azure/network-watcher/network-watcher-overview)           |

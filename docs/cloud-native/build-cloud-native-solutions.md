@@ -59,7 +59,7 @@ Comprehensive testing validates that your solution meets business requirements a
 
 2. **Conduct user acceptance testing with business stakeholders.** Engage actual users or business representatives to validate that the solution meets their needs and expectations. Have them test key scenarios in a UAT environment and provide feedback on usability and functionality. Obtain formal approval from stakeholders before proceeding to production deployment.
 
-3. **Perform load testing under realistic conditions to validate performance.** Use [Azure Load Testing](/azure/load-testing/overview-what-is-azure-load-testing) to simulate expected user volumes and data throughput. Test at peak load levels and beyond to identify performance bottlenecks and scaling limits. Measure response times, throughput, and resource utilization to ensure your solution meets performance requirements.
+3. **Perform load testing under realistic conditions to validate performance.** Use [Azure Load Testing](/azure/app-testing/load-testing/overview-what-is-azure-load-testing) to simulate expected user volumes and data throughput. Test at peak load levels and beyond to identify performance bottlenecks and scaling limits. Measure response times, throughput, and resource utilization to ensure your solution meets performance requirements.
 
 4. **Execute security and compliance testing to identify vulnerabilities.** Run automated security scans on application code, container images, and infrastructure configurations. Use Microsoft Defender for Cloud to check for security misconfigurations and compliance violations. Address high-risk vulnerabilities before deployment and implement compensating controls for accepted risks.
 

@@ -1,9 +1,9 @@
 ---
 title: Encryption and key management in Azure
 description: Learn about encryption and key management as part of an Azure landing zone
-author: stephen-sumner
-ms.author: pnp
-ms.date: 01/04/2022
+author: jtracey93
+ms.author: jatracey
+ms.date: 12/18/2025
 ms.update-cycle: 180-days
 ms.topic: concept-article
 ms.custom: internal, UpdateFrequency.5
@@ -48,6 +48,8 @@ Encryption is a vital step toward ensuring data privacy, compliance, and data re
   - Data-in-transit encryption
   - Data-at-rest encryption
 
+- Review [How to choose the right Azure key management solution](/azure/security/fundamentals/key-management-choose) to choose the right key management approach for your organization and applications.
+
 ## Design recommendations
 
 - Use a federated Azure Key Vault model to avoid transaction scale limits.
@@ -70,6 +72,11 @@ Encryption is a vital step toward ensuring data privacy, compliance, and data re
 
 - Default to Microsoft-managed keys for principal encryption functionality, and use customer-managed keys when required.
 
-- Don't use centralized instances of Key Vault for application keys or secrets.
+- Don't use centralized instances of Key Vault for application keys or secrets, unless utilizing a Managed HSM instance.
+
+  - Having multiple key vaults:
+    - Reduces blast radius in the event of a compromise and reduces the risk of misconfiguration.
+    - Improves performance by reducing latency for applications accessing keys and secrets and reducing chances of throttling from noisy neighbors.
+    - Simplifies management by aligning key vaults to application or workload boundaries.
 
 - To avoid secret sharing across environments, don't share Key Vault instances between applications.

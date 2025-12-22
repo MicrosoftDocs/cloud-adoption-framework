@@ -76,7 +76,7 @@ The governance section on [data catalogs](govern-data-catalog.md) explores how y
 
 ## Set SLAs, SLIs and SLOs
 
-Your organization's teams can adopt DevOps-style Site Reliability Engineering (SRE) practices for data monitoring. Service level agreements (SLAs), service level indicators (SLIs), and service level objectives (SLOs) can help your organization reduce downtime and ensure your data's data reliability.
+Your organization's teams can adopt DevOps-style Site Reliability Engineering (SRE) practices for data monitoring. Service level agreements (SLAs), service level indicators (SLIs), and service level objectives (SLOs) can help your organization reduce downtime and ensure your data reliability.
 
 ### Service level agreements (SLAs)
 
@@ -117,7 +117,7 @@ Suppose Contoso's data team identifies key metrics from different areas to meet 
 |Pipeline total run time in minutes| To measure if a pipeline takes more time than expected to run|
 |Pipeline failure and success rates| To measure how many pipelines fail or succeed|
 |Data quality metrics (downstream)| To ensure the data delivered by the data pipeline meets expectations|
-|Data quality metrics (upstream)| To ensure that upstream decencies of raw data quality are met|
+|Data quality metrics (upstream)| To ensure that upstream dependencies of raw data quality are met|
 |Transformation metadata updates| To ensure that lineage from upstream to downstream contains metadata about all transformations applied to data|
 |Downstream data indexing and updates| To ensure the sales team discovers all data sets that power their dashboard|
 |Defined process for measuring TTD and TTR| To measure TTD and TTR and ensure TTR < 6 hours|

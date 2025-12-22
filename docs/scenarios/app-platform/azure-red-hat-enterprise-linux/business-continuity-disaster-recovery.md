@@ -108,7 +108,7 @@ You can use Compute Gallery to store golden images for deployments. Use these im
 
 ### Recovery cluster nodes
 
-Use active or standby remote [recovery cluster](https://docs.redhat.com/documentation/red_hat_enterprise_linux/8/html/configuring_and_managing_high_availability_clusters/assembly_configuring-disaster-recovery-configuring-and-managing-high-availability-clusters) nodes to reduce RTO while your primary architecture patterns provide resilience. You must configure disaster recovery cluster items manually. For example, you must apply configurations to set up resources and copy data.
+Use active or standby remote recovery cluster nodes to reduce RTO while your primary architecture patterns provide resilience. You must configure disaster recovery cluster items manually. For example, you must apply configurations to set up resources and copy data.
 
 ## Next steps
 

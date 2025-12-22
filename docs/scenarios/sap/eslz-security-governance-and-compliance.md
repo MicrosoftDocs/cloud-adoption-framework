@@ -80,7 +80,7 @@ Single sign-on (SSO) is the foundation for integrating SAP and Microsoft product
 
 You can also encrypt data in transit from the user's front end towards the SAP application by integrating the third-party security product with secure network communications (SNC) for DIAG (SAP GUI), RFC, and SPNEGO for HTTPS.
 
-Microsoft Entra ID with SAML 2.0 can also provide SSO to a range of SAP applications and platforms like SAP NetWeaver, SAP HANA, and the SAP Cloud Platform. Find more details on the [identity and access management section](eslz-identity-and-access-management.md).
+Microsoft Entra ID with SAML 2.0 can also provide SSO to a range of SAP applications and platforms like SAP NetWeaver, SAP HANA, and SAP Business Technology Platform. Find more details on the [identity and access management section](eslz-identity-and-access-management.md).
 
 ### Harden operating systems
 
@@ -141,7 +141,7 @@ To control and manage disk encryption keys and secrets for non-HANA Windows and 
 
 For internet-facing applications like SAP Fiori, make sure to distribute load per application requirements while maintaining security levels. For Layer 7 security, you can use a third-party Web Application Firewall (WAF) available in the Azure Marketplace.
 
-For mobile apps, [Microsoft Enterprise Mobility + Security](https://www.microsoft.com/security/business/enterprise-mobility-security) can integrate SAP internet-facing applications as it helps to protect and secure your organization and empowers your employees to work in new and flexible ways.
+For mobile apps, Microsoft Intune and Microsoft Entra ID can integrate with SAP internet-facing applications to help protect organizational data, manage devices and apps, and enable secure, flexible work scenarios.
 
 ### Securely manage traffic
 
@@ -155,7 +155,7 @@ For more information, see [Azure load balancing options](/azure/architecture/gui
 
 ### Monitor security
 
-[Azure Monitor for SAP Solutions](/azure/virtual-machines/workloads/sap/monitor-sap-on-azure) is an Azure-native monitoring product for SAP landscapes that works with both [SAP on Azure Virtual Machines](/azure/virtual-machines/workloads/sap/hana-get-started) and [HANA Large Instances](/azure/virtual-machines/workloads/sap/hana-overview-architecture). With Azure Monitor for SAP Solutions, you can collect telemetry data from Azure infrastructure and databases in one central location and visually correlate telemetry data for faster troubleshooting.
+[Azure Monitor for SAP Solutions](/azure/virtual-machines/workloads/sap/monitor-sap-on-azure) is an Azure-native monitoring product for SAP landscapes that works with SAP on Azure Virtual Machines. With Azure Monitor for SAP Solutions, you can collect telemetry data from Azure infrastructure and databases in one central location and visually correlate telemetry data for faster troubleshooting.
 
 ### Security scoping decisions
 

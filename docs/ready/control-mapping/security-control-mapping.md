@@ -1,51 +1,51 @@
 ---
-title: Security control mapping with Azure landing zones
-description: Learn about security control mapping with Azure landing zones for regional and other regulatory compliance.
-author: Tshah2808
-ms.author: tanshah
-ms.date: 02/27/2025
+title: Security control mapping with Azure landing zone
+description: Learn about security control mapping with Azure landing zone for regional and other regulatory compliance.
+author: jtracey93
+ms.author: jatracey
+ms.date: 12/19/2025
 ms.topic: concept-article
 ---
 
 # Security control mapping with Azure landing zones
 
-Many organizations are required to comply with certain industry/regional regulations before adopting and onboarding the Azure cloud services. These compliance regulations are identified by compliance domain and controls respectively. For example, **CMMC L3 AC 1.001** where AC is Access Control domain and 1.001 is a control ID in Cybersecurity Maturity Model Certification (CMMC) framework. The best practice recommendation is to map the required compliance controls to Microsoft cloud security benchmark (MCSB) and identify the custom set of the controls that are not covered by MCSB.
+Many organizations must comply with industry or regional regulations before adopting Azure cloud services. Each regulation defines compliance domains and specific controls. For example, **CMMC L3 AC 1.001** refers to the Access Control (AC) domain and control ID 1.001 in the Cybersecurity Maturity Model Certification (CMMC) framework. As a best practice, map your required compliance controls to the Microsoft cloud security benchmark (MCSB). Identify any custom controls that MCSB does not cover.
 
-In Addition, MCSB also provides the list of built-in policies and Policy initiatives GUIDs to addresses the required controls. For the controls that are not covered in MCSB, the control mapping guidance includes a step by step process on how to build policies and initiatives.
+MCSB provides a list of built-in policies and policy initiative GUIDs (Globally Unique Identifiers) that address required controls. For controls not covered by MCSB, follow the control mapping guidance to build custom policies and initiatives using the provided step-by-step process.
 
-Mapping the required controls to Microsoft cloud security benchmark can greatly expedite secure Azure onboarding experience. Microsoft cloud security benchmark provides a canonical set of cloud-centric technical security controls based on widely used compliance control frameworks such as NIST, CIS, PCI. There are built-in regulatory compliance initiatives already available. If you're interested in a specific compliance domain, refer to [Regulatory compliance built-in initiatives](/azure/governance/policy/samples/azure-security-benchmark).
+Mapping your required controls to MCSB can speed up your secure Azure onboarding process. MCSB offers a standard set of cloud-focused technical security controls based on widely used compliance frameworks. Examples include the National Institute of Standards and Technology (NIST), Center for Internet Security (CIS), and Payment Card Industry (PCI). Azure provides built-in regulatory compliance initiatives. To find initiatives for a specific compliance domain, see [Regulatory compliance built-in initiatives](/azure/governance/policy/samples/azure-security-benchmark).
 
 > [!NOTE]
-> The control mappings between Microsoft cloud security benchmark and industry benchmarks, such as CIS, NIST, and PCI, only indicate that a specific Azure feature can be used to fully or partially address a control requirement defined in these industry benchmarks. You should be aware that such implementation does not necessarily translate to the full compliance of the corresponding controls in these industry benchmarks.
+> Control mappings between MCSB and industry benchmarks, such as CIS, NIST, and PCI, show that a specific Azure feature can fully or partially address a control requirement. However, using these features does not guarantee full compliance with the corresponding controls in these industry benchmarks.
 
-The following diagram shows the process flow of control mapping:
+The following diagram illustrates the control mapping process flow:
 
 :::image type="content" source="media/control-mapping-process-flow.png" alt-text="Diagram of control mapping process flow with Azure landing zones." lightbox="media/control-mapping-process-flow.png":::
 
-## Control mapping steps
+## Steps to map security controls in Azure
 
-1. Identify the controls required.
-2. Map required controls to Microsoft cloud security benchmark.
-3. Identify the controls not mapped with Microsoft cloud security benchmark and respective policies.
-4. Perform platform and service level assessment.
+1. Identify the required controls.
+2. Map required controls to MCSB.
+3. Identify controls not mapped with MCSB and their respective policies.
+4. Perform platform and service-level assessment.
 5. Implement guardrails with policy initiatives using Azure landing zone tooling, native tooling, or third-party tooling.
 
 > [!TIP]
-> You should review the guidance for how to [tailor the Azure landing zone architecture](../landing-zone/tailoring-alz.md) to support your control mapping requirements.
+> Review the guidance on how to [tailor the Azure landing zone architecture](../landing-zone/tailoring-alz.md) to support your control mapping requirements.
 
-### 1. Identify the controls required
+### 1. Identify the required controls
 
-Gather all existing and required lists of compliance controls from the Security team. If the list doesn’t exist, capture the control requirements in an Excel spreadsheet. Please use the format below as guidance to build the list. A list would consist of controls from one or many compliance frameworks. 
+Gather all existing and required compliance controls from your security team. If no list exists, document the control requirements in an Excel spreadsheet. Use the format below as a guide. Your list may include controls from one or more compliance frameworks.
 
 :::image type="content" source="./media/formalized-controls-list-template.jpg" alt-text="Screenshot of a formalized controls list template." lightbox="./media/formalized-controls-list-template.jpg":::
 
 *A sample of formalized controls list.*
 
-### 2. Map the controls to Microsoft cloud security benchmark and create set of custom controls
+### 2. Map controls to Microsoft cloud security benchmark and create custom controls
 
-For each control you've captured, use appropriate control titles, domain categories, and guidance/description to identify related controls. Align the intent of each control as close as possible and note the deviance or gaps in the spreadsheet.
+For each control you capture, use the correct control title, domain category, and description to identify related controls. Align each control’s intent as closely as possible. Note any differences or gaps in your spreadsheet.
 
-You can also use common frameworks that are mapped to both your organization’s and Microsoft cloud security benchmark where they exist. For example, if both yours and Microsoft cloud security benchmark controls are already mapped to NIST 800-53 r4 or CIS 7.1, you could join the data sets together on that pivot. Intermediate common frameworks can be found in the [resources section](/security/benchmark/azure/v2-cis-benchmark)
+You can also use common frameworks that map to both your organization’s controls and MCSB, if available. For example, if both your controls and MCSB map to NIST 800-53 Revision 4 or CIS 7.1, you can join the data sets using that shared framework. Find intermediate common frameworks in the [resources section](/security/benchmark/azure/v2-cis-benchmark).
 
 :::image type="content" source="./media/single-control-mapping-sample.jpg" alt-text="Screenshot of single control sample." lightbox="./media/single-control-mapping-sample.jpg":::
 
@@ -53,24 +53,24 @@ You can also use common frameworks that are mapped to both your organization’s
 
 *The table above shows one of the unique control objectives with key words highlighted.*
 
-In this example, we can look at the existing categorization of a given control ‘Application Security' to identify it as an application-related control. The content in the requirement field is to implement **application firewalls** and to **harden and patch their applications.** Looking at the Microsoft cloud security benchmark controls and guidance for a proper match, we can see that there are many controls that might apply and map appropriately.
+In this example, review the categorization of a control labeled ‘Application Security’ to identify it as an application-related control. The requirement is to implement **application firewalls** and to **harden and patch applications**. When you review MCSB controls and guidance, you may find several controls that apply and map to this requirement.
 
-To quickly search a given version of the Microsoft cloud security benchmark, we provide [Excel download files](/security/benchmark/azure/overview#download) for each release that can be quickly searched by control ID or part of the description verbiage. In this step, the process identifies and maps controls that are covered under Microsoft cloud security benchmark.
+To quickly search a specific version of MCSB, download the [Excel files](/security/benchmark/azure/overview#download) for each release. Search these files by control ID or keywords in the description. Use this step to identify and map controls that MCSB covers.
 
-### 3. Identify the controls not mapped with Microsoft cloud security benchmark and respective policies
+### 3. Identify controls not mapped with Microsoft cloud security benchmark and respective policies
 
-Any identified controls that might not map directly should be marked as needing mitigating automation, and a custom policy or automation script should be developed in the guardrail implementation process.
+Mark any controls that do not map directly as needing mitigation. Develop a custom policy or automation script for these controls during the guardrail implementation process.
 
 > [!TIP]
-> [AzAdvertizer](https://www.azadvertizer.net/azpolicyadvertizer_all.html#%7B%7D) is a community driven tool endorsed by the Cloud Adoption Framework. It can help you discover policies that are built-in, from Azure landing zones or from the [community Azure Policy repo](https://github.com/Azure/Community-Policy) in a single place.
+> [AzAdvertizer](https://www.azadvertizer.net/azpolicyadvertizer_all.html#%7B%7D) is a community-driven tool endorsed by the Cloud Adoption Framework. Use it to discover built-in policies from Azure landing zones or from the [community Azure Policy repository](https://github.com/Azure/Community-Policy) in one place.
 
-### 4. Perform platform and service level assessment
+### 4. Perform platform and service-level assessment
 
-Once you have your controls and objectives clearly mapped to Microsoft cloud security benchmark and have gathered the supporting information on responsibility, guidance, and monitoring, the IT security office or supporting organization must review all provided information in an official platform assessment.
+After you map your controls and objectives to MCSB and gather supporting information on responsibility, guidance, and monitoring, your IT security office or supporting organization should review all information in an official platform assessment.
 
-This platform assessment will determine if the Microsoft cloud security benchmark meets the minimum threshold for usage and if it can meet all security and compliance requirements imposed by the regulations.
+This platform assessment determines whether MCSB meets the minimum requirements for use and satisfies all security and compliance needs imposed by regulations.
 
-If there are gaps identified, you can still use Microsoft cloud security benchmark but might need to develop mitigating controls until these gaps are closed and the benchmark can release updates to address them. In addition, you can map the custom controls by creating a [policy definition](/azure/governance/policy/overview#policy-definition) and optionally adding to an [initiative definition](/azure/governance/policy/overview#initiative-definition).
+If you identify gaps, you can still use MCSB, but you may need to develop mitigating controls until you close these gaps or the benchmark releases updates to address them. You can also map custom controls by creating a [policy definition](/azure/governance/policy/overview#policy-definition) and, if needed, add them to an [initiative definition](/azure/governance/policy/overview#initiative-definition).
 
 #### Checklists for approval
 
@@ -107,7 +107,7 @@ If there are gaps identified, you can still use Microsoft cloud security benchma
 - Gaps
 - Approval/non-approval for service usage
 
-After the approval from your internal security/audit team that the platform and core services meet their needs, you need to implement the agreed upon appropriate monitoring and guardrails. During the mapping and assessment process, if there were mitigating controls that extend beyond Microsoft cloud security benchmark, then built-in controls or Azure Policy will need to be implemented using [policy definitions](/azure/governance/policy/overview#policy-definition) and optionally adding to an [initiative definition](/azure/governance/policy/overview#initiative-definition).
+After your internal security or audit team approves that the platform and core services meet their needs, implement the agreed monitoring and guardrails. If you identified mitigating controls that extend beyond MCSB, implement built-in controls or Azure Policy using [policy definitions](/azure/governance/policy/overview#policy-definition). Add these controls to an [initiative definition](/azure/governance/policy/overview#initiative-definition) if needed.
 
 #### Checklist - service level
 
@@ -126,48 +126,34 @@ After the approval from your internal security/audit team that the platform and 
 
 ### 5. Implement guardrails using Azure landing zone or native tools
 
-The following sections describe the process of identifying, mapping, and implementing regulatory compliance-related controls as part of Azure landing zone deployment. Deployment covers policies that are aligned with Microsoft cloud security benchmark for platform-level security controls.
+The following sections describe how to identify, map, and implement regulatory compliance controls as part of an Azure landing zone deployment. This deployment includes policies aligned with MCSB for platform-level security controls.
 
 > [!TIP]
-> As part of the Azure landing zone accelerators ([Portal](../landing-zone/index.md), [Bicep](https://aka.ms/alz/bicep) & [Terraform](https://aka.ms/alz/tf)), we assign the Microsoft cloud security benchmark policy initiative to Intermediate Root Management Group by default.
+> When you use Azure landing zone reference architectures—such as the Portal, Bicep, or Terraform—the deployment assigns MCSB policy initiative to the Intermediate Root Management Group by default.
 
-You can learn about [policies assigned as part of an Azure landing zone Accelerator deployment](https://github.com/Azure/Enterprise-Scale/blob/main/docs/ESLZ-Policies.md).
+Learn more about [policies assigned as part of an Azure landing zone reference architecture deployment](https://aka.ms/alz/policies).
 
-### Implementation policy guidance
+### Guidance for implementing policy in Azure landing zones
 
-Depending on your control objectives, you might need to create custom [policy definitions](/azure/governance/policy/concepts/definition-structure), [policy initiative definitions](/azure/governance/policy/concepts/initiative-definition-structure) and [policy assignments](/azure/governance/policy/concepts/assignment-structure).
+Depending on your control objectives, you may need to create custom [policy definitions](/azure/governance/policy/concepts/definition-structure), [policy initiative definitions](/azure/governance/policy/concepts/initiative-definition-structure), and [policy assignments](/azure/governance/policy/concepts/assignment-structure).
 
-Refer to the following guidance for each accelerator implementation option.
+Refer to the following guidance for each Azure landing zone reference [implementation options](../landing-zone/implementation-options.md).
 
-#### Azure landing zone accelerator portal
+#### Azure landing zone reference architecture portal
 
-When using the [Azure landing zone portal-based experience](https://aka.ms/caf/ready/accelerator):
+When using the [Azure landing zone portal accelerator](https://aka.ms/alz/portal):
 
 - [Create custom security policies in Microsoft Defender for Cloud](/azure/defender-for-cloud/custom-security-policies?pivots=azure-portal)
 - [Tutorial: Create a custom policy definition](/azure/governance/policy/tutorials/create-custom-policy-definition)
 - [Assign Azure Policy or policy initiatives](/azure/governance/policy/assign-policy-portal)
 
-#### Azure Resource Manager with AzOps
+#### Terraform modules
 
-When using the [Resource Manager templates](https://aka.ms/alz/arm) with the [AzOps Accelerator](https://github.com/azure/azops-accelerator), refer to the deployment article to learn how to operate the Azure platform using infrastructure as code.
-
-- [Adding Custom Azure Policy definitions and initiatives](https://aka.ms/alz/wiki/azops)
-- [Assigning Azure Policy](https://aka.ms/alz/wiki/azops)
-
-#### Terraform module
-
-When using the [Azure landing zones Terraform module](https://aka.ms/alz/tf/wiki), refer to the repository wiki for guidance on how to manage additional policy definitions and assignments.
-
-- [Adding Custom Azure Policy definitions and assignments](https://aka.ms/alz/terraform/custompolicy)
-- [Assigning a built-in Azure Policy](https://aka.ms/alz/terraform/assignpolicy)
-- [Expand built-in archetype definitions](https://github.com/Azure/terraform-azurerm-caf-enterprise-scale/wiki/%5BExamples%5D-Expand-Built-in-Archetype-Definitions)
+When using the [Azure Verified Modules (AVM) for Platform landing zone (ALZ) - Terraform](https://aka.ms/alz/acc/tf), refer to the following guidance on [using a custom library](https://azure.github.io/Azure-Landing-Zones/terraform/howtos/customlibrary/).
 
 #### Bicep
 
-When using the Azure landing zones Bicep implementation, learn how to [create your own policy definitions and assignments](https://github.com/Azure/ALZ-Bicep/wiki/PolicyDeepDive).
-
-- [Adding Custom Azure Policy definitions and initiatives](https://aka.ms/alz/bicep/custompolicy)
-- [Assigning Azure Policies](https://aka.ms/alz/bicep/assignpolicy)
+When using the [Azure Verified Modules (AVM) for Platform landing zone (ALZ) - Bicep](https://aka.ms/alz/acc/bicep), refer to the following guidance on [modifying policy assignments](https://azure.github.io/Azure-Landing-Zones/bicep/howtos/modifyingpolicyassignments/).
 
 ### Implement custom policies when not using an Azure landing zones implementation
 
@@ -209,32 +195,27 @@ When using the Bicep templates, refer to the following articles.
 - [Bicep and Resource Manager policy set (initiative) template reference](/azure/templates/microsoft.authorization/policysetdefinitions?tabs=bicep)
 - [Bicep and Resource Manager policy assignment template reference](/azure/templates/microsoft.authorization/policyassignments?tabs=bicep)
 
-## Guidance for using Microsoft Defender for Cloud
+## Use Microsoft Defender for Cloud to monitor compliance
 
-[Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) continually compares the configuration of your resources with requirements in industry standards, regulations, and benchmarks. The regulatory compliance dashboard provides insight into your compliance posture. Learn more about [improving your regulatory compliance](/azure/defender-for-cloud/regulatory-compliance-dashboard).
+[Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) continuously compares your resource configurations with requirements in industry standards, regulations, and benchmarks. The regulatory compliance dashboard shows your compliance posture. Learn more about [improving your regulatory compliance](/azure/defender-for-cloud/regulatory-compliance-dashboard).
 
 ## Frequently asked questions
 
-### We're using a framework not mapped to Microsoft cloud security benchmark, how can I still onboard our control objectives?
+### How do I onboard control objectives if my framework is not mapped to the Microsoft cloud security benchmark?
 
-We provide Microsoft cloud security benchmark mappings to many of the most in-demand industry frameworks. However, for the controls that are currently not covered, a manual mapping exercise is needed. In these instances, refer to our steps for performing a manual control mapping.
+Microsoft provides cloud security benchmark (MCSB) mappings to many leading industry frameworks. If your required controls are not covered, perform a manual mapping. Follow the steps in this article for manual control mapping.
 
-_[Example]_ We need to meet Canada Federal Protected B (PBMM) compliance, and Microsoft cloud security benchmark doesn't yet have a mapping to PBMM. To bridge this mapping, you can find a shared framework mapping such as NIST SP 800-53 R4 that's available and mapped to both PBMM and MCSB v2. Using this common framework, you can understand what recommendations and guidance you must follow in Azure to meet your desired framework.
+_Example:_ If you need to meet Canada Federal Protected B (PBMM) compliance and the Microsoft cloud security benchmark does not yet map to PBMM, find a shared framework such as NIST Special Publication (SP) 800-53 Revision 4. If both PBMM and MCSB v2 map to NIST SP 800-53 R4, use this common framework to identify the recommendations and guidance you need to follow in Azure.
 
-### Our control objectives aren’t covered by the Microsoft cloud security benchmark controls, how can I unblock them from onboarding?
+### How do I address control objectives not covered by the Microsoft cloud security benchmark?
 
-Microsoft cloud security benchmark is focused on Azure technical controls. Objective areas surrounding non-technical items such as training, or for items that aren't direct technical security, such as data center security, are omitted by design. These items can be marked as Microsoft responsibility, and evidence of compliance can be provided from Microsoft cloud security benchmark content or Microsoft audit reports. If you find that the objective truly is a technical control, then create a mitigating control in-addition to the base for tracking, and send a request to *MCSBteam@microsoft.com* to address the missing controls in future releases.
+MCSB focuses on Azure technical controls. It does not include non-technical objectives, such as training, or controls not directly related to technical security, such as data center security. Mark these items as Microsoft’s responsibility, and use evidence from MCSB content or Microsoft audit reports to demonstrate compliance. If you determine that an objective is a technical control, create a mitigating control in addition to the base controls for tracking. You can also send a request to *MCSBteam@microsoft.com* to address missing controls in future releases.
 
-## Resources
+## Additional resources
 
-[Service Trust Portal](https://servicetrust.microsoft.com/)
-
-[Cloud Security Alliance](/compliance/regulatory/offering-csa-star-attestation)
-
-[Datacenter Security Overview](/compliance/assurance/assurance-datacenter-security)
-
-[Financial Services Overview](https://servicetrust.microsoft.com/viewpage/financialservicesoverview)
-
-[Financial Institution Risk Assessment Overview](https://servicetrust.microsoft.com/ViewPage/RiskAssessmentOverview)
-
-[Service Level Agreement](https://azure.microsoft.com/support/legal/sla/)
+- [Service Trust Portal](https://servicetrust.microsoft.com/)
+- [Cloud Security Alliance (CSA)](/compliance/regulatory/offering-csa-star-attestation)
+- [Datacenter Security Overview](/compliance/assurance/assurance-datacenter-security)
+- [Financial Services Overview](https://servicetrust.microsoft.com/viewpage/financialservicesoverview)
+- [Financial Institution Risk Assessment Overview](https://servicetrust.microsoft.com/ViewPage/RiskAssessmentOverview)
+- [Service Level Agreement](https://azure.microsoft.com/support/legal/sla/)

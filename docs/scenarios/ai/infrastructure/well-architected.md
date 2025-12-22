@@ -18,7 +18,7 @@ Reliability involves minimizing downtime and ensuring consistent performance for
 
 - *Set up health monitoring with Azure Monitor.* Track CPU, memory, and network performance on your VMs using Azure Monitor and configure alerts to notify you of performance degradation or failures in the infrastructure supporting your models. For more information, see [Azure Monitor VM Insights](/azure/azure-monitor/vm/vminsights-health-overview).
 
-- *Automate patching and updates with rolling instances.* Use Azure Update Management to apply patches in a rolling manner, allowing one instance to be updated while others continue to serve traffic, preventing downtime during maintenance.
+- *Automate patching and updates with rolling instances.* Use Azure Update Manager to apply patches in a rolling manner across VMs, allowing one instance to be updated while others continue to serve traffic, preventing downtime during maintenance.
 
 - *Design for graceful degradation during partial failures.* Ensure core functionality remains available by serving less complex AI models or limiting specific features when some VMs become unavailable, allowing users access to essential services even during outages.
 
@@ -96,7 +96,7 @@ Increase the clock rate of a graphics processing unit (GPU) to improve performan
 
 - *Optimize scratch storage.* Scratch needs to have high throughput and low latency. The training job requires reading data, processing it, and using this storage location as scratch space while the job runs. Ideally, you would use the local SSD directly on each VM. If you need a shared filesystem for scratch, combining all NVMe SSDs to create a Parallel File System (PFS) might be a great option in terms of cost and performance, assuming it has sufficient capacity. One method is to use [Azure Managed Lustre](/azure/azure-managed-lustre/amlfs-overview). If Azure Managed Lustre isn't suitable, you can explore storage options like [Azure NetApp Files](/azure/azure-netapp-files/azure-netapp-files-introduction) or [Azure Native Qumulo](/azure/partner-solutions/qumulo/qumulo-overview).
 
-- *Implement checkpoint storage.* Large deep learning training jobs can run for weeks, depending on the number of VMs used. Just like any HPC cluster, you can encounter failures, such as InfiniBand issues, dual in-line memory module (DIMM) failures, error-correcting ode (ECC) errors in GPU memory. It's critical to have a checkpointing strategy. Know the checkpoint interval (when data is saved). Understand how much data is transferred each time. Have a storage solution that meets capacity and performance requirements. Use Blob Storage, if it meets the performance needs.
+- *Implement checkpoint storage.* Large deep learning training jobs can run for weeks, depending on the number of VMs used. Just like any HPC cluster, you can encounter failures, such as InfiniBand issues, dual in-line memory module (DIMM) failures, error-correcting code (ECC) errors in GPU memory. It's critical to have a checkpointing strategy. Know the checkpoint interval (when data is saved). Understand how much data is transferred each time. Have a storage solution that meets capacity and performance requirements. Use Blob Storage, if it meets the performance needs.
 
 ### Benchmarking tests
 
