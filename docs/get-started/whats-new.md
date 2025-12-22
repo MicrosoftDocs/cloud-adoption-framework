@@ -355,7 +355,6 @@ This month, we refactored the Azure high-performance computing (HPC) scenario to
 
 - [Compute Large-Scale HPC Application Workloads in Azure Virtual Machines](../scenarios/azure-hpc/compute.md)
 - [Identity and Access Management for Azure HPC](../scenarios/azure-hpc/identity-access-management.md)
-- [Network Topology and Connectivity for Azure HPC](../scenarios/azure-hpc/network-topology-connectivity.md)
 - [Storage for Azure HPC Workloads](../scenarios/azure-hpc/storage.md)
 - [Azure HPC landing zone accelerator](../scenarios/azure-hpc/azure-hpc-landing-zone-accelerator.md)
 

@@ -791,6 +791,11 @@
         "redirect_document_id": false
     },
     {
+        "source_path": "docs/scenarios/azure-hpc/network-topology-connectivity.md",
+        "redirect_url": "/azure/high-performance-computing/",
+        "redirect_document_id": false
+    },
+    {
         "source_path": "docs/scenarios/azure-hpc/secure.md",
         "redirect_url": "/azure/high-performance-computing/",
         "redirect_document_id": false
