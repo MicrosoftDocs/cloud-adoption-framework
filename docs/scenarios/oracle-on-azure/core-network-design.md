@@ -56,6 +56,25 @@ When you design your network topology for Oracle Exadata Database@Azure, conside
 
 Oracle Exadata Database@Azure integration with Azure Key Vault for TDE key management requires Private Endpoint configuration and additional DNS setup. Plan delegated subnet sizing to accommodate the Key Vault Private Endpoint network interface in addition to database infrastructure requirements. The integration requires creating the `privatelink.vaultcore.azure.net` Private DNS zone in the OCI Private View that matches your database VCN. For complete Azure Key Vault integration guidance including network prerequisites, see [Azure Key Vault integration for Oracle Exadata Database@Azure](oracle-azure-key-vault-integration-exadata.md).
 
+### Domain Name Service (DNS)
+
+#### Use Private DNS Zones
+Private DNS zones provide the simplest and most reliable approach for name resolution in Azure. Use Azure-provided private DNS zones linked to hub virtual networks as the default configuration. This approach accelerates deployment, reduces operational overhead, and aligns with Azure-native services.When designing DNS note [Oracle Database@Azure Exadata DNS limitations](https://docs.oracle.com/iaas/Content/database-at-azure/network-dns.htm). 
+
+Use Azure private DNS zones unless the organization explicitly requires:
+- Custom namespaces for internal governance or branding.
+- Integration with a third-party DNS solution.
+- Advanced governance controls beyond what Azure DNS offers.
+
+#### Use custom DNS only if required
+[Custom DNS](https://docs.oracle.com/iaas/Content/database-at-azure/network-dns.htm#custom-dns)  introduces flexibility but adds operational complexity and risk. Reserve this option for scenarios with strict namespace requirements, compliance-driven DNS policies, or mandatory integration with external DNS providers. 
+
+#### Enable hybrid DNS resolution
+For on-premises integration, use [Azure Private DNS Resolver](/azure/dns/dns-private-resolver-overview) to bridge DNS resolution between on-premises and Azure-hosted Oracle databases. This ensures seamless name resolution without exposing private endpoints publicly and supports compliance and security objectives.
+
+#### Centralize DNS for scale
+When deploying a large number of Oracle Database@Azure Exadata instances, centralize DNS resolution to your hub network. Define governance policies for DNS to prevent sprawl and maintain security boundaries. Centralization reduces administrative overhead and enforces consistent governance.
+
 ### Other guidance
 
 Beyond the core network design concepts for Oracle Exadata Database@Azure, also consider the connectivity requirements for your applications, other Azure services (like Azure Blob Storage or Azure NetApp Files), on-premises environments, and your BCDR configuration.
