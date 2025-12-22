@@ -35,7 +35,7 @@ Data preservation maintains regulatory compliance and legal discovery capabiliti
 
 1. **Identify unmigrated data subject to regulatory requirements.** Conduct a data inventory of source systems to identify unmigrated data that might be subject to regulatory retention mandates such as HIPAA, SOX, GDPR, or SEC 17a-4. Work with legal and compliance teams to classify data by regulatory frameworks and document retention periods. Include legacy systems, archived files, and backup repositories that contain regulated data. This assessment prevents compliance violations during source system decommissioning.
 
-2. **Implement compliant storage architecture with Azure Storage.** Use [Azure Blob Storage tiers](/azure/storage/blobs/access-tiers-overview) with appropriate compliance features for archived data. Apply [immutable storage policies](/azure/storage/blobs/immutable-storage-overview) for regulatory compliance, including Write-Once-Read-Many (WORM) capabilities. Configure [legal hold policies](/azure/storage/blobs/immutable-legal-hold-overview) for litigation support. Use cool tier for medium-term retention and archive tier for long-term retention requirements. Enable audit logging and configure [Azure Policy](/azure/governance/policy/overview) compliance controls to enforce data protection standards.
+2. **Implement compliant storage architecture with Azure Storage.** Use [Azure Blob Storage tiers](/azure/storage/blobs/access-tiers-overview) with appropriate compliance features for archived data. Apply [immutable storage policies](/azure/storage/blobs/immutable-storage-overview) for regulatory compliance, including Write-Once-Read-Many (WORM) capabilities. Configure [legal hold policies](/azure/storage/blobs/immutable-storage-overview#legal-holds) for litigation support. Use cool tier for medium-term retention and archive tier for long-term retention requirements. Enable audit logging and configure [Azure Policy](/azure/governance/policy/overview) compliance controls to enforce data protection standards.
 
 3. **Create data recovery and access procedures.** Document processes for retrieving archived data from Azure Storage when needed for compliance audits or legal discovery. Establish service level agreements for data retrieval times based on storage tiers used. Train compliance and legal teams on Azure-based data access procedures. Test data recovery processes before completing source system decommissioning. This preparation ensures business continuity for compliance and legal requirements.
 
@@ -59,9 +59,9 @@ Documentation updates confirm the final environment state after source decommiss
 | Cost management | [Microsoft Cost Management](/azure/cost-management-billing/) | Tracks and optimizes Azure spending and license usage |
 | Data archival | [Azure Blob Storage tiers](/azure/storage/blobs/access-tiers-overview) | Provides cost-effective storage options for archived data with compliance features |
 | Compliance | [Azure Policy](/azure/governance/policy/overview) | Enforces governance and compliance controls across Azure resources |
-| Documentation | [Azure DevOps](/azure/devops/) | Centralizes project documentation, approvals, and change tracking |
+| Documentation | [Azure DevOps](/azure/devops) | Centralizes project documentation, approvals, and change tracking |
 
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Modernize workloads in Azure](/azure/cloud-adoption-framework/modernize/)
+> [Modernize workloads in Azure](/azure/cloud-adoption-framework/modernize/prepare-organization-cloud-modernization)

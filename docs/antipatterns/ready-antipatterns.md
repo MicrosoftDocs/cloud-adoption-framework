@@ -54,9 +54,9 @@ When the VM fails, their application can't recover. Unexpected downtime results.
 See trusted, mature resources for information on architectural best practices that can reduce the scope of failures:
 
 - [Reference architectures](/azure/architecture/browse/)
-- [Microsoft Azure Well-Architected Framework](/azure/architecture/framework/)
+- [Microsoft Azure Well-Architected Framework](/azure/well-architected)
 
-Identify the right balance between costs and features such as [high resiliency and availability](/azure/architecture/framework/resiliency/design-resiliency). Higher resiliency typically increases cost. For instance:
+Identify the right balance between costs and features such as [high resiliency and availability](/azure/well-architected/reliability/metrics). Higher resiliency typically increases cost. For instance:
 
 - A single VM might have an SLA with a guaranteed uptime of 99.9%.
 - Two VMs running the same workload would provide an SLA with an uptime between 99.95 and 99.99 percent.
@@ -93,5 +93,5 @@ For cloud workloads, advise IT to use familiar procedures that operate safely an
 
 ## Next steps
 
-- [Overview of the reliability pillar](/azure/architecture/framework/resiliency/design-resiliency)
+- [Overview of the reliability pillar](/azure/well-architected/reliability/principles)
 - [First adoption project](../strategy/motivations.md)

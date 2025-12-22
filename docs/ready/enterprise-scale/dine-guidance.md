@@ -3,7 +3,7 @@ title: Adopt policy-driven guardrails
 description: Understand how to adopt policy-driven guardrails in the Azure landing zone.
 author: jtracey93
 ms.author: jatracey
-ms.date: 12/16/2024
+ms.date: 12/19/2025
 ms.topic: concept-article
 ms.custom: think-tank
 ---
@@ -26,7 +26,7 @@ For example, consider a scenario where a new landing zone subscription is provis
 >[!NOTE]
 > You can disable the preceding options at any time or during deployment of the Azure landing zone reference implementations.
 >  
-> The preceding list shows a subset of all the policies that are assigned as part of the Azure landing zone accelerator. For a full list of policies that can be assigned by the Azure landing zone reference implementation, see [Policies included in Azure landing zones reference implementations](https://aka.ms/alz/policies).
+> The preceding list shows a subset of all the policies that are assigned as part of the Azure landing zone reference architecture. For a full list of policies that can be assigned by the Azure landing zone reference implementation, see [Policies included in Azure landing zones reference implementations](https://aka.ms/alz/policies).
 >
 > The [Azure landing zones bicep repo](https://github.com/Azure/ALZ-Bicep) is modular. The above default policies can be deployed with the [ALZ Default Policy Assignments module](https://github.com/Azure/ALZ-Bicep/blob/main/infra-as-code/bicep/modules/policy/assignments/alzDefaults/README.md).  
 
@@ -39,7 +39,7 @@ The Azure landing zones reference implementations use [DINE](/azure/governance/p
 - Lack of expertise, experience, and understanding of how to manage and use DINE policies.
 - Organizational requirements that all workload resource configuration, including auxiliary resources, supporting resources, and settings, are defined in infrastructure as code (IaC) by the workload application teams.
 
-If you fit into the preceding examples or similar scenarios, this article helps you understand how to adopt the [Azure landing zone conceptual architecture](../landing-zone/index.md#azure-landing-zone-architecture) and adhere to its [design principles](../landing-zone/design-principles.md). Although you won't use certain policies initially, you can choose to gradually enable them in the future. The goal is to help you achieve [policy-driven governance](../landing-zone/design-principles.md#policy-driven-governance).
+If you fit into the preceding examples or similar scenarios, this article helps you understand how to adopt the [Azure landing zone reference architecture](../landing-zone/index.md#azure-landing-zone-architecture) and adhere to its [design principles](../landing-zone/design-principles.md). Although you won't use certain policies initially, you can choose to gradually enable them in the future. The goal is to help you achieve [policy-driven governance](../landing-zone/design-principles.md#policy-driven-governance).
 
 >[!IMPORTANT]
 > Throughout this article, you'll see two possible values used for the enforcement mode terms:
@@ -77,7 +77,7 @@ The following diagram summarizes the suggested phased approach:
 Because of regulatory compliance restrictions, some customers can never move past phase 1. This isn't an issue and is supported to remain in this state, if necessary. Other customers can progress to phases 2 and 3 to fully adopt DINE and Modify policies to assist with policy-driven governance for their Azure environment.
 
 >[!NOTE]
-> The scenario and approach outlined in this article isn't intended for or recommended for the majority of customers. Review the section [Why use DINE and Modify policies?](#why-use-dine-and-modify-policies) before you decide whether these policies are suitable and required for your environment.
+> The scenario and approach outlined in this article isn't intended for or recommended for the majority of customers. Most customers can and should use DINE and Modify policies as part of their overall policy-driven governance strategy to help them stay right from the start.
 
 ### Phase 1: Disable DINE and Modify policies automated actions
 

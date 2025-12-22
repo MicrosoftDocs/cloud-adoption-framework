@@ -3,7 +3,7 @@ title: Establish common subscription vending product lines
 description: Learn about the benefits of offering different subscription vending product lines to give application teams the flexibility to deliver their workloads and services effectively.
 author: jtracey93
 ms.author: jatracey
-ms.date: 12/16/2024
+ms.date: 12/19/2025
 ms.topic: concept-article
 ---
 
@@ -204,7 +204,7 @@ You can place the subscriptions that you vend in the shared application portfoli
 The following diagram shows an example of the shared application portfolio subscription vending product line.
 
 :::image type="complex" source="./media/subscription-vending-product-line-3.svg" alt-text="Diagram that shows an example of the shared application portfolio subscription vending product line." lightbox="./media/subscription-vending-product-line-3.svg" border="false":::
-This diagram shows an example of the shared application portfolio subscription vending product line that includes a network architecture diagram with a Routable hub labeled 10.0.0.0/24 at the center. This hub connects to various smaller elements, like a single virtual machine or storage account, for many applications that the same team controls. This includes a Routable spoke labeled 10.1.1.0/24, all in a single subscription carved into resource groups. The diagram also shows Additional landing zones that contain icons for different network components such as databases, storage services, and virtual machines that the share application portfolio subscription can connect to via virtual network peering through the hub.
+This diagram shows an example of the shared application portfolio subscription vending product line that includes a network architecture diagram with a Routable hub labeled 10.0.0.0/24 at the center. This hub connects to various smaller elements, like a single virtual machine or storage account, for many applications that the same team controls. This includes a Routable spoke labeled 10.1.1.0/24, all in a single subscription carved into resource groups. The diagram also shows Additional landing zones that contain icons for different network components such as databases, storage services, and virtual machines that the shared application portfolio subscription can connect to via virtual network peering through the hub.
 :::image-end:::
 
 

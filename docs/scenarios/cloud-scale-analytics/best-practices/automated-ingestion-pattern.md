@@ -10,7 +10,7 @@ ms.custom: e2e-data-management, think-tank
 
 # Data agnostic ingestion engine
 
-This article explains how you can implement data agnostic ingestion engine scenarios using a combination of PowerApps, Azure Logic Apps, and metadata-driven copy tasks within Azure Data Factory.
+This article explains how you can implement data agnostic ingestion engine scenarios using a combination of Power Apps, Azure Logic Apps, and metadata-driven copy tasks within Azure Data Factory.
 
 Data agnostic ingestion engine scenarios are typically focused on letting non-technical (non-data-engineer) users publish data assets to a Data Lake for further processing. To implement this scenario, you must have onboarding capabilities that enable:
 
@@ -37,7 +37,7 @@ To provide the metadata used to drive automated ingestion, you need data asset r
 - **Technical information:** Data asset name, source system, type, format and frequency.
 - **Governance information:** Owner, stewards, visibility (for discovery purposes) and sensitivity.
 
-PowerApps is used to capture metadata describing each data asset. Use a model-driven app to enter the information that gets persisted to a custom Dataverse table. When metadata is created or updated within Dataverse, it triggers an Automated Cloud flow that invokes further processing steps.
+Power Apps is used to capture metadata describing each data asset. Use a model-driven app to enter the information that gets persisted to a custom Dataverse table. When metadata is created or updated within Dataverse, it triggers an Automated Cloud flow that invokes further processing steps.
 
 ![Diagram of an data asset registration.](../images/ingestion-step-1-registration.png)
 

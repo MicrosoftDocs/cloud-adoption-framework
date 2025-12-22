@@ -1,14 +1,10 @@
 items:
   - name: Hybrid and multicloud - Microsoft Cloud Adoption Framework
     href: strategy.md
-  - name: Technical planning
-    href: plan.md
   - name: Ready environment
     items:
     - name: Azure Arc landing zone accelerator
       href: enterprise-scale-landing-zone.md
-    - name: Arc Jumpstart
-      href: https://jumpstart.azure.com/azure_arc_jumpstart
   - name: Adopt solutions
     items:
     - name: Azure Arc-enabled servers
@@ -49,12 +45,6 @@ items:
         href: arc-enabled-kubernetes/eslz-arc-kubernetes-services-observability.md
       - name: Cost governance
         href: arc-enabled-kubernetes/eslz-arc-kubernetes-cost-governance.md
-  - name: Migrate to the cloud
-    href: migrate.md
-  - name: Govern your portfolio
-    href: govern.md
-  - name: Manage your portfolio
-    href: manage.md
 
   - name: Hybrid architectures
     href: /azure/architecture/browse/?azure_categories=hybrid&bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/hybrid/toc.json

@@ -132,7 +132,7 @@ The following diagram shows the relationship between Microsoft Entra ID roles an
 
 - New role definitions are regularly added to Entra ID. Periodically review [What's new in Microsoft Entra RBAC](/entra/identity/role-based-access-control/whats-new) to determine whether new role definitions help you achieve the access controls you need.
 
-- The Azure landing zone accelerator includes several custom roles for common administrative functions. You can use these roles alongside Azure built-in roles. The following table describes the custom administrative roles or areas for the Azure landing zone accelerator:
+- The Azure landing zone reference architecture includes several custom roles for common administrative functions. You can use these roles alongside Azure built-in roles. The following table describes the custom administrative roles or areas for the Azure landing zone reference architecture:
 
    | Administrative role or area | Description | Actions | NotActions |
    |---|---|---|---|
@@ -160,7 +160,7 @@ The following diagram shows the relationship between Microsoft Entra ID roles an
 
 - When you delegate administrative responsibility to others, such as application teams, consider whether they require the full set of privileges or only a subset. Follow the principle of least privilege (PoLP). For example, you might assign the User Access Administrator role or RBAC Administrator role to a user who needs to manage access to Azure resources but doesn't need to manage the resources themselves. To limit the identities, identity types, and roles that users can delegate and assign Azure RBAC assignments to, use [delegated role assignments with conditions](/azure/role-based-access-control/delegate-role-assignments-overview). Application teams can use conditions to manage their own security principals within the constraints that the platform team sets. More privileged role assignments require escalation to the platform team. Consider the following factors when you use conditions to delegate RBAC roles:
 
-  - Review current role assignments for built-in and custom privileged roles and evaluate if you should add appropriate conditions to those existing assignments. For example, you can add conditions to the Subscription Owner and Application Owner custom roles that the Azure landing zone accelerator provides. These conditions can restrict the principal types that they can assign roles to or limit specific roles that they can assign.
+  - Review current role assignments for built-in and custom privileged roles and evaluate if you should add appropriate conditions to those existing assignments. For example, you can add conditions to the Subscription Owner and Application Owner custom roles that the Azure landing zone reference architecture provides. These conditions can restrict the principal types that they can assign roles to or limit specific roles that they can assign.
   
   - Follow the PoLP when you add conditions to role assignments. For example, limit delegates to only assign roles to groups or enable delegates to assign all roles except privileged administrator roles like Owner, User Access Administrator, and RBAC Administrator.
   
@@ -174,21 +174,21 @@ The following diagram shows the relationship between Microsoft Entra ID roles an
 
   | Resource | User | Role assignment | Assignment target | Assignment scope |
   |--|--|--|--|--|
-  | Application *X* Production landing zone | Application *X* owners | Application Owner (custom, included in Azure landing zone accelerator) | `Application X Prod Admins` security group | Application *X* production subscriptions |
-  | Application *X* Dev/Test landing zone | Application *X* owners | Application Owner (custom, included in Azure landing zone accelerator) | `Application X DevTest Admins` security group | Application *X* dev/test subscriptions |
+  | Application *X* Production landing zone | Application *X* owners | Application Owner (custom, included in Azure landing zone reference architecture) | `Application X Prod Admins` security group | Application *X* production subscriptions |
+  | Application *X* Dev/Test landing zone | Application *X* owners | Application Owner (custom, included in Azure landing zone reference architecture) | `Application X DevTest Admins` security group | Application *X* dev/test subscriptions |
   | Application *X* Production landing zone | Application *X* security administrators | Application Access Administrator (custom, with role assignment conditions to manage access to their own application) | `Application X Prod Security Admins` security group | Application *X* production subscriptions |
   | Application *X* Dev/Test landing zone | Application *X* security administrators | Application Access Administrator (custom, with role assignment conditions to manage access to their own application) | `Application X DevTest Security Admins` security group | Application *X* dev/test subscriptions |
   | Application *X* Production landing zone | Application *X* production data administrator | Data Administrator (custom, with permissions on required data resources) | `Application X Prod Data Team` security group | Application *X* production subscriptions |
   | Application *X* Dev/Test landing zone | Application *X* dev/test data administrator | Data Administrator (custom, with permissions on required data resources) | `Application X DevTest Data Team` security group | Application *X* dev/test subscriptions |
-  | Application *Y* Production landing zone | Application *Y* owners | Application Owner (custom, included in Azure landing zone accelerator) | `Application Y Prod Admins` security group | Application *Y* production subscriptions |
-  | Application *Y* Dev/Test landing zone | Application *Y* owners | Application Owner (custom, included in Azure landing zone accelerator) | `Application Y DevTest Admins` security group | Application *Y* dev/test subscriptions |
+  | Application *Y* Production landing zone | Application *Y* owners | Application Owner (custom, included in Azure landing zone reference architecture) | `Application Y Prod Admins` security group | Application *Y* production subscriptions |
+  | Application *Y* Dev/Test landing zone | Application *Y* owners | Application Owner (custom, included in Azure landing zone reference architecture) | `Application Y DevTest Admins` security group | Application *Y* dev/test subscriptions |
   | Application *Y* Dev/Test landing zone | Application *Y* testing team | Test Contributor (custom, with permissions required for application testing) | `Application Y Test Team` security group | Application *Y* dev/test subscription |
   | Sandbox | Application Z development team | Owner (built-in) | `Application Z developers` security group | Application Z resource groups in sandbox subscription |
   | Platform resources | Platform management team | Contributor (built-in) | `Platform Admins` PIM group | `Platform` management group |
   | Platform landing zones | Platform management team | Reader (built-in) | `Platform Team` security group | Organizational top-level management group |
-  | Tenant-wide | Security team | Security Operations (custom, included in Azure landing zone accelerator) | `Security Ops` security group | Organizational top-level management group |
+  | Tenant-wide | Security team | Security Operations (custom, included in Azure landing zone reference architecture) | `Security Ops` security group | Organizational top-level management group |
   | Tenant-wide | Security team | Conditional Access Administrator (built-in, with protected actions enabled) | `Security administrators` security group | Microsoft Entra ID tenant |
-  | Tenant-wide | Network team | Network Operations (Custom, included in Azure landing zone accelerator) | `Network Ops` security group | All subscriptions |
+  | Tenant-wide | Network team | Network Operations (Custom, included in Azure landing zone reference architecture) | `Network Ops` security group | All subscriptions |
   | Tenant-wide | FinOps team | Billing Reader (built-in) | `FinOps Team` security group | Organizational top-level management group |
 
 - Azure Policy assignments that have the `DeployIfNotExists` effect require a [managed identity](/entra/identity/managed-identities-azure-resources/managed-identity-best-practice-recommendations) to remediate noncompliant resources. If you use a system-assigned managed identity as part of the Azure Policy assignment process, Azure automatically grants the required permissions. If you use a user-assigned managed identity, the permissions must be granted manually. The managed identity role assignments must follow the PoLP and enable only the required permissions to carry out the policy remediation on the target scope. Policy remediation managed identities don't support custom role definitions. Apply role assignments directly to managed identities and not to groups.
@@ -207,13 +207,13 @@ The following diagram shows the relationship between Microsoft Entra ID roles an
 
 - Use [protected actions](/entra/identity/role-based-access-control/protected-actions-overview) with Microsoft Entra PIM to add extra layers of protection. In Microsoft Entra ID, protected actions are permissions that are assigned [Conditional Access policies](/entra/identity/conditional-access/overview). When a user attempts to perform a protected action, they must first satisfy the Conditional Access policies that are assigned to the required permissions. For example, to allow administrators to update cross-tenant access settings, you can require that they first satisfy the [phishing-resistant MFA policy](/entra/identity/conditional-access/policy-admin-phish-resistant-mfa).
 
-## Identity and access management in the Azure landing zone accelerator
+## Identity and access management in the Azure landing zone reference architecture
 
-Identity and access management are core features of Azure landing zone accelerator implementation. The deployment includes a subscription dedicated to identity, where organizations can deploy AD DS domain controllers or other identity services, such as Microsoft Entra Connect servers, that are required for their environment. Not all organizations require services in the subscription. For example, some organizations might have applications that are already fully integrated with Microsoft Entra ID.
+Identity and access management are core features of Azure landing zone reference architecture implementation. The deployment includes a subscription dedicated to identity, where organizations can deploy AD DS domain controllers or other identity services, such as Microsoft Entra Connect servers, that are required for their environment. Not all organizations require services in the subscription. For example, some organizations might have applications that are already fully integrated with Microsoft Entra ID.
 
 The identity subscription has a virtual network peered to the hub virtual network in the platform subscription. With this configuration, the platform team can manage the identity subscription, and application owners have access to identity services as required. You must secure the identity subscription and virtual network to protect identity services from unauthorized access.
 
-Azure landing zone accelerator implementation also includes options to:
+Azure landing zone reference architecture implementation also includes options to:
 
 - Assign recommended policies to govern identity and domain controllers.
 - Create a virtual network, and connect to the hub via virtual network peering.

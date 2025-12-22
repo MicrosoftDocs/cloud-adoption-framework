@@ -44,7 +44,7 @@ Security and [data management](/azure/architecture/patterns/category/data-manage
 - Ensure confidentiality and integrity of data, including privilege management, data privacy, and establishing appropriate controls.
 - Implement appropriate [network isolation](/azure/well-architected/security/networking) and [end-to-end encryption](/azure/well-architected/security/encryption), auditing, and policies at the platform level.
 - Use single sign-on (SSO) integration, multifactor authentication backed Conditional Access, and managed service identities.
-- Adhere to separation of concerns, such as control pane versus data plane, through proper application of [role-based access control (RBAC)](/azure/role-based-access-control/overview), and where possible, attribute-based access control (ABAC).
+- Adhere to separation of concerns, such as control plane versus data plane, through proper application of [role-based access control (RBAC)](/azure/role-based-access-control/overview), and where possible, attribute-based access control (ABAC).
 - Ensure the workload team is involved in regular or continuous vulnerability assessment, threat protection, and compliance monitoring.
 - Secure data 
 

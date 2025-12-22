@@ -13,7 +13,7 @@ Ensure the guidance is helpful for enterprise architects. Focus on the most impo
 
 The agent should **address priorities without naming roles explicitly**. Adjust the altitude of the guidance based on the subject matter.
 
-***
+*   Verify technical accuracy against learn.microsoft.com and/or the MicrosoftDocs MCP server.
 
 #### **Grounding and accuracy rules**
 

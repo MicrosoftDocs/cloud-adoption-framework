@@ -73,13 +73,17 @@ Choose a build path based on your organization's technical capabilities, timelin
 
 [Microsoft Copilot Studio](/microsoft-copilot-studio/) offers a software-as-a-service (SaaS) platform for low-code development. It enables business teams to deploy agents quickly with moderate customization. The platform includes prebuilt connectors, supports retrieval and task agents, and integrates with Azure AI Search. Built-in responsible AI features reduce the need for custom safeguards.
 
-You can use Copilot Studio's low-code interface with Foundry's advanced models to handle sophisticated use cases while maintaining SaaS security and reliability. This hybrid approach allows business teams to build agents without extensive coding while accessing enterprise-grade AI capabilities. The combination reduces development time compared to full pro-code solutions while providing more customization than standard SaaS agents.
+Use Copilot Studio's low-code interface with Foundry's advanced models to handle sophisticated use cases while maintaining SaaS security and reliability. This hybrid approach allows business teams to build agents without extensive coding while accessing enterprise-grade AI capabilities. The combination reduces development time compared to full pro-code solutions while providing more customization than standard SaaS agents.
 
 Test use cases with the [60-day free trial](/microsoft-copilot-studio/requirements-licensing-subscriptions#copilot-studio-for-microsoft-teams-plans) before committing to production deployment. Review available [access options](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio#access-copilot-studio) to determine the best entry point for your organization.
 
 ### GPUs and containers
 
-You can also choose to deploy agents on GPU infrastructure using Azure Virtual Machines with containers as an alternative. It can be useful when you need flexibility for custom configurations, integration with existing VM-based workloads, or scenarios requiring advanced security controls. Costs scale with token consumption and compute usage. For deployment guidance, see [AI on IaaS](/azure/cloud-adoption-framework/scenarios/ai/infrastructure/cycle-cloud).
+You can host the AI model that an agent uses on GPU-backed containers. This approach is ideal when you want to run your own models rather than relying on Foundry endpoints. In this setup, the AI model runs on GPUs while the agent itself runs on CPUs. When configuring your agent and specifying the model it will use, you point it to the hosted model. The choice of compute platform depends on the size of the model and the level of control you need over the environment.
+
+For hosting **AI models**, Azure Container Apps with serverless GPU support is a good option for small language models because it automatically handles scaling and minimizes operational overhead. For large language models, Azure Kubernetes Service is recommended since it supports large GPU clusters, offers higher throughput, and provides advanced control over scaling and networking.
+
+For hosting **AI agents**, you can use either Azure Kubernetes Service or Azure Container Apps with CPU-based clusters to run agents with a custom orchestration framework.
 
 ## Validate technology choices
 
@@ -87,7 +91,7 @@ Organizations often use multiple approaches to meet diverse requirements. Valida
 
 :::image type="content" source="./images/technology-options.png" alt-text="Diagram that shows how to ready-to-use vs. build technology options. Compare Microsoft SaaS agents (ready-to-use) vs. Low-code (Microsoft Copilot Studio) and pro-code (Foundry) build options." lightbox="./images/technology-options.png" border="false":::
 
-1. **Run time-boxed experiments.** Build short prototypes for each candidate solution. Allocate one to two weeks per option. Compare low-code agents in Copilot Studio with pro-code solutions in Foundry. Evaluate development speed, functional coverage, and integration complexity.
+1. **Run time-boxed experiments.** Build short prototypes for each candidate solution. Allocate one to two weeks per option. Compare low-code agents in Copilot Studio with pro-code solutions in Microsoft Foundry. Evaluate development speed, functional coverage, and integration complexity.
 
 2. **Require documentation and stakeholder review.** Document findings and present clear recommendations. If a low-code solution meets functional and security requirements, proceed with that option. If not, shift to pro-code or adjust scope. Stakeholder review reduces rework and increases confidence.
 
@@ -96,9 +100,9 @@ Organizations often use multiple approaches to meet diverse requirements. Valida
 | Solution | Approach | Agent types | Best for |
 | :--- | :--- | :--- | :--- |
 | **SaaS agents** | Ready-to-use (SaaS) | Retrieval, Task | Personal productivity. Requires minimal customization to deliver immediate value. |
-| **Microsoft Foundry** | Low/no-code or pro-code (PaaS) | Retrieval, Task, Autonomous | Strategic transformation. Supports deep integration and custom logic. |
+| **Microsoft Foundry** | Pro-code and low/no-code (PaaS) | Retrieval, Task, Autonomous | Strategic transformation. Supports deep integration and custom logic. |
 | **Microsoft Copilot Studio** | Low/no-code (SaaS) | Retrieval, Task, Autonomous | Process transformation. Enables fast development with minimal coding and SaaS security. |
-| **GPUs & Containers** | Pro-code (IaaS) | Retrieval, Task, Autonomous | Custom infrastructure. Provides full control of the entire technology stack. |
+| **GPUs and containers** | Pro-code (PaaS or IaaS) | Retrieval, Task, Autonomous | Compliance-sensitive or highly customized (custom model configurations, private networking, strict isolation) workloads with full control of the entire technology stack. |
 
 See the general [AI decision tree](/azure/cloud-adoption-framework/scenarios/ai/strategy#microsoft-ai-decision-tree) for more guidance.
 

@@ -64,7 +64,7 @@ Review the following considerations and recommendations for infrastructure manag
 - Use the same Log Analytics workspace that you use for the Azure Virtual Desktop platform.
 - Use a centralized Log Analytics workspace in the region that contains your session hosts.
 - Configure diagnostic settings, events, and performance counters by implementing an [Azure Virtual Desktop Insights workbook](/azure/virtual-desktop/insights).
-- Set up Network Performance Monitor in the same region as your Azure Virtual Network and session hosts.
+- Set up Azure Network Watcher Connection Monitor in the same region as your Azure Virtual Network and session hosts.
 - Incorporate Azure policies and governance for enterprise-scale into the Azure Virtual Desktop landing zone.
 
 ## Next steps

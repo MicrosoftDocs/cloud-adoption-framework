@@ -55,29 +55,25 @@ Microsoft Fabric addresses these needs through OneLake, a single logical data la
 
 ### What data should you unify?
 
-Start by asking a clear question: "Does this data help explain or measure a business process?" If the answer is yes, prepare that data for analytics and AI. If the answer is no, keep it in collaboration tools for reference and teamwork.
+Unify data that supports operational decisions, performance tracking, or automation. Start by asking a clear question: "Does this data help explain or measure a business process?" If the answer is yes, prepare that data for analytics and AI. If the answer is no, keep it in collaboration tools for reference and teamwork.
 
-Unify data that supports operational decisions, performance tracking, or automation. Examples include transactional records, customer interactions, inventory details, financial metrics, and curated signals extracted from collaboration content. These datasets provide measurable outcomes and enable agents to reason over structured information. Exclude content that serves only collaborative purposes, such as drafts, brainstorming notes, or informal meeting summaries, unless those files contain structured data relevant for analysis. Keep personal or unplanned documents in OneDrive or SharePoint for collaboration only.
-
-Microsoft Fabric organizes unified data using the medallion architecture, which supports structured tables alongside semi-structured and unstructured datasets. It includes content ingested from SharePoint and OneDrive. Unstructured files such as PDFs and Word documents typically lack a fixed schema. They become semi-structured when enriched with metadata or tags (for example, XML or JSON wrappers). They become structured when cognitive services extract fields and map them to Fabric tables. This progression ensures that AI agents can query and interpret data accurately.
-
-### Use Fabric data agents
-
-Fabric Data Agents allow business teams to query structured data using natural language. These agents translate questions into precise SQL statements and return accurate results when they operate on high-quality, certified tables. They work best on mirrored or shortcut tables designated as Gold sources, because these tables provide curated and governed data that supports consistent metrics and reliable analytics.
-
-Organizations should prioritize creating and certifying Gold tables for critical business domains such as finance, supply chain, and customer operations. This step ensures that AI agents deliver accurate insights and reduces the risk of inconsistent reporting.
+Examples of data you should unify include transactional records, customer interactions, inventory details, financial metrics, and curated signals extracted from collaboration content. These datasets provide measurable outcomes and enable agents to reason over structured information. Exclude content that serves only collaborative purposes, such as drafts, brainstorming notes, or informal meeting summaries, unless those files contain structured data relevant for analysis. Keep personal or unplanned documents in OneDrive or SharePoint for collaboration only.
 
 ### Medallion architecture layers
 
-The medallion architecture organizes data into three layers that progressively improve quality and usability:
+You should apply a medallion architecture to semi-structured and unstructured datasets. It includes content ingested from SharePoint and OneDrive. Unstructured files such as PDFs and Word documents typically lack a fixed schema. They become semi-structured when enriched with metadata or tags (for example, XML or JSON wrappers). The medallion architecture organizes data into three layers that progressively improve quality and usability:
 
 1. **Bronze (raw ingestion)**: Store all data in its original form in OneLake, including tabular files, JSON/XML, PDFs, and Office documents. Keep this layer immutable for audit and lineage. Use shortcuts or mirroring for external sources to avoid duplication and maintain consistency.
 
 2. **Silver (validated)**: Clean and standardize data. Remove duplicates, normalize formats, and apply schemas. For example, convert PDFs to text or transform JSON into Delta tables. This layer supports accurate joins and indexing for retrieval.
 
-3. **Gold (business context)**: Aggregate data with business meaning, add semantic layers, optimize performance, and certify datasets. Register these curated data products in Microsoft Purview to enforce governance and compliance.
+3. **Gold (business context)**: Aggregate data with business meaning, add semantic layers, optimize performance, and certify datasets. Register these curated data products in Microsoft Purview to enforce governance and compliance. Organizations should prioritize creating and certifying Gold tables for critical business domains such as finance, supply chain, and customer operations. This step ensures that AI agents deliver accurate insights and reduces the risk of inconsistent reporting.
 
 To enable retrieval, create OneLake [search indexers](/azure/search/search-how-to-index-onelake-files) with Azure AI Search on Silver-layer data. Agents use Silver datasets to identify relationships and patterns. When an agent creates a curated set, store it as a registered data product in Purview or keep the instructions as a specification file in Git for version control. This process ensures reproducibility and governance. For an architecture, see [Fabric enterprise architecture](/azure/architecture/example-scenario/analytics/enterprise-bi-microsoft-fabric).
+
+### Use Fabric data agents
+
+Fabric Data Agents allow business teams to query **structured data** using natural language. These agents translate questions into precise SQL statements and return accurate results when they operate on high-quality, certified tables. They work best on mirrored or shortcut tables designated as Gold sources because these tables provide curated and governed data that supports consistent metrics and reliable analytics. Organizations should prioritize creating and certifying Gold tables for critical business domains such as finance, supply chain, and customer operations. This step ensures that AI agents deliver accurate insights and reduces the risk of inconsistent reporting.
 
 ### Adaptive Gold (dynamic)
 
@@ -99,39 +95,45 @@ This adaptive model improves flexibility and performance because it prioritizes 
 
 ## Data retrieval strategies for custom agents
 
-Organizations that build custom AI agents must decide how those agents access data to answer questions and perform tasks. Retrieval strategies directly influence accuracy, timeliness, and security. Two complementary approaches enable this access: retrieval-augmented generation (RAG) and Model Context Protocol (MCP) servers. These approaches work together to provide complete and accurate responses. For example, when an employee reports a VPN issue, an effective agent uses both approaches:
+Organizations building AI agents must decide how the agent accesses data to answer questions and perform tasks. These choices directly affect accuracy, timeliness, and security. Agents generally combine two complementary approaches: agentic retrieval and Model Context Protocol (MCP) servers.
 
-- **RAG**: The agent retrieves the VPN troubleshooting guide from the knowledge base.
-- **MCP (read)**: The agent checks the current VPN service status from an IT monitoring system.
-- **MCP (write)**: The agent creates a helpdesk ticket if the user requests it.
+When an employee reports a VPN issue, an effective agent uses agentic retrieval to pull the troubleshooting guide from the organization’s approved knowledge sources. It checks the real‑time VPN service status through an MCP read operation, and it can create a helpdesk ticket through an MCP write operation if the user requests it. Agentic retrieval provides curated, authoritative knowledge. MCP provides operational data and the ability to take actions.
 
-Both RAG and MCP work best when they draw from a unified and governed data foundation. Microsoft Fabric provides this foundation through OneLake and the medallion architecture, which organizes structured, semi-structured, and unstructured data. Adaptive Gold extends this model by enabling agent-driven optimization based on usage patterns. See [agentic RAG](/azure/ai-foundry/concepts/retrieval-augmented-generation?view=foundry&preserve-view=true#agentic-rag-modern-approach-to-retrieval) and [MCP servers](/azure/ai-foundry/agents/how-to/tools/model-context-protocol?view=foundry&preserve-view=true).
+**Agentic retrieval and RAG**: Agentic retrieval includes the retrieval‑and‑grounding aspects of traditional RAG, but extends them with reasoning, decomposition, parallel evidence gathering, and multi‑source synthesis. It is the preferred term and recommended pattern for enterprise AI agents.
+
+Both approaches work best when they draw from a unified, governed data foundation. Microsoft Fabric supports this through OneLake and the medallion architecture, organizing structured, semi‑structured, and unstructured content. Adaptive Gold extends this model by allowing agents to optimize knowledge curation based on usage patterns.
+
+See [agentic RAG](/azure/ai-foundry/concepts/retrieval-augmented-generation?view=foundry&preserve-view=true#agentic-rag-modern-approach-to-retrieval) and [MCP servers](/azure/ai-foundry/agents/how-to/tools/model-context-protocol?view=foundry&preserve-view=true).
 
 ### Start with built-in retrieval options
 
-Begin with the RAG and MCP retrieval capabilities included in platforms such as Microsoft Foundry and Copilot Studio. Built-in options reduce integration complexity, accelerate deployment, and maintain consistency. Before investing in custom solutions, confirm whether these features meet your requirements for accuracy and governance. Examples of built-in capabilities include:
+Begin with the retrieval capabilities built into Microsoft Foundry and Copilot Studio. Built‑in agentic retrieval and MCP features reduce integration complexity, accelerate deployment, and maintain governance consistency. Before investing in custom solutions, confirm whether these capabilities satisfy requirements for accuracy, compliance, and operational control.
+Examples of built‑in capabilities include:
 
 - [Foundry IQ](/azure/ai-foundry/agents/how-to/tools/knowledge-retrieval?view=foundry&preserve-view=true&preserve-view=true&tabs=foundry%2Cpython)
+- [Fabric IQ](/fabric/iq/overview)
 - [Fabric data agents](/azure/ai-foundry/agents/how-to/tools/fabric?view=foundry&preserve-view=truen)
 - [Connect to MCP servers](/azure/ai-foundry/agents/how-to/tools/model-context-protocol?view=foundry&preserve-view=true)
 - [Sharepoint connection](/azure/ai-foundry/agents/how-to/tools/sharepoint?view=foundry&preserve-view=true)
-- [Azure AI Search](/azure/ai-foundry/agents/how-to/tools/ai-search?view=foundry&preserve-view=true&tabs=keys%2Cazurecli).
+- [Azure AI Search](/azure/ai-foundry/agents/how-to/tools/ai-search?view=foundry&preserve-view=true&tabs=keys%2Cazurecli)
 
-### Plan for RAG for agents
+### Plan for agentic retrieval
 
-**When to use RAG?**: Use RAG when agents need to look up, explain, and cite information. It excels at unstructured and semi-structured content such as policies, manuals, FAQs, product documentation, and curated extracts because it retrieves just-in-time context and grounds answers in sources. Agentic RAG improves accuracy by decomposing a user’s question into subqueries, running them in parallel, and synthesizing results with citations.
+**When to use agentic retrieval**: Use agentic retrieval when an agent must look up, explain, and cite information, especially from unstructured or semi‑structured content such as policies, manuals, FAQs, product documentation, and curated extracts. Unlike a static RAG application that queries a single fixed index, agentic retrieval orchestrates a broader reasoning process. It decomposes user questions into sub‑queries, runs parallel searches across approved sources, reconciles conflicting information, and synthesizes an answer grounded with citations. This provides just‑in‑time context and higher accuracy without locking the system into a static retrieval corpus or ranking strategy.
 
-1. **Plan for a unified knowledge layer.** Traditional RAG requires every team to rebuild data connections, chunking logic, embeddings, routing, and permissions from scratch. It creates fragmented pipelines and duplicated effort. To avoid this situation, implement a unified knowledge layer that consolidates retrievable data into a single endpoint or knowledge base that any agent can use with approval. Define reusable knowledge bases around topics such as employee policies, product documentation, or support content. From there, multiple agents and applications can connect and use the same knowledge base for grounding responses. Use **Foundry IQ** to build your agent knowledge layer. Consider incorporating curated Silver, Gold, or Adaptive Gold datasets from Fabric Data Agents or Azure AI Search indexes for authoritative answers. See [Foundry IQ](/azure/ai-foundry/agents/how-to/tools/knowledge-retrieval?view=foundry&preserve-view=true&tabs=foundry%2Cpython).
+1. **Plan for a unified knowledge layer.** A unified knowledge layer consolidates retrievable content behind an approved endpoint or shared knowledge base so multiple agents and applications can produce consistent, grounded answers. These reusable knowledge bases typically center on domains such as employee policies, product documentation, and support content. Foundry IQ is the preferred service for building this layer. It can incorporate curated Silver, Gold, and Adaptive Gold datasets produced by Fabric data agents, along with Azure AI Search indexes when authoritative answers are required. See [Foundry IQ](/azure/ai-foundry/agents/how-to/tools/knowledge-retrieval?view=foundry&preserve-view=true&tabs=foundry%2Cpython).
 
-2. **Plan for traditional RAG.** When teams need granular control over chunking, indexing, and retrieval, build a traditional RAG pipeline. Treat each index as a data product with clear governance. Decide whether separate indexes for structured and unstructured data are necessary or if hybrid search meets your needs. Plan update cadence, rollback strategies, and latency targets early. See [Design an index for agentic retrieval](/azure/search/agentic-retrieval-how-to-create-index) and [Design and develop a RAG solution](/azure/architecture/ai-ml/guide/rag/rag-solution-design-and-evaluation-guide).
+2. **Plan for indexes.** Use an Azure AI Search index when you need tightly controlled retrieval behavior, including custom chunking, embeddings, fine‑tuned ranking, or deterministic search over a defined corpus. Indexes complement, not replace, the unified knowledge layer.
 
-#### Plan for building MCP servers
+    **Retrieval from Fabric OneLake**: Create Azure AI Search OneLake Search [search indexers](/azure/search/search-how-to-index-onelake-files) over Silver‑layer data. Silver is the correct layer for agent grounding because Silver retains the raw relationships, structure, and patterns. Gold datasets introduce aggregations and transformations that improve analytics but remove the detail agents need for reasoning, inference, and multi‑source synthesis. Agents use Silver datasets to identify relationships and patterns, and may generate a curated dataset as a result. The curated dataset can be registered as a data product in Purview, or it can be stored as an instruction/specification file in Git so the agent can regenerate the curated set on demand. For architectural guidance, see [Fabric enterprise architecture](/azure/architecture/example-scenario/analytics/enterprise-bi-microsoft-fabric).
+
+### Plan for building MCP servers
 
 **When to use MCP?** Choose MCP when agents must take actions or access real‑time data. For example, "How many units of SKU123 are in stock right now?" or "Create an incident ticket." MCP gives agents a standardized way to call tools hosted on remote servers, with identity, policy, and audit controls.
 
 1. **Identify candidate systems.**  Prioritize systems where live queries or transactions add value: CRM for pipeline updates, ERP for inventory and orders, ITSM for tickets, IoT telemetry for sensor readings, and internal APIs for specialized processes.
 
-2. **Build or connect MCP servers.** Where there are available and built-in MCP servers in Foundry and Copilot Studio, use them. When there aren’t, you need to build. Clarify the type of interaction the AI agent needs. Some systems require read-only access for queries, while others demand read-write capabilities to create or update records. This distinction influences security controls and compliance requirements. Define these roles early to avoid unnecessary risk and ensure governance aligns with operational needs. See Connect to MCP servers or Build and register an MCP server. See [Connect to MCP servers](/azure/ai-foundry/agents/how-to/tools/model-context-protocol?view=foundry&preserve-view=true) or [Build an register an MCP server](/azure/ai-foundry/mcp/build-your-own-mcp-server?view=foundry&preserve-view=true).
+2. **Build or connect MCP servers.** Where there are available and built-in MCP servers in Foundry and Copilot Studio, use them. When there aren’t, you need to build. Clarify the type of interaction the AI agent needs. Some systems require read-only access for queries, while others demand read-write capabilities to create or update records. This distinction influences security controls and compliance requirements. Define these roles early to avoid unnecessary risk and ensure governance aligns with operational needs. See Connect to MCP servers or Build and register an MCP server. See [Connect to MCP servers](/azure/ai-foundry/agents/how-to/tools/model-context-protocol?view=foundry&preserve-view=true) or [Build and register an MCP server](/azure/ai-foundry/mcp/build-your-own-mcp-server?view=foundry&preserve-view=true).
 
 3. **Enforce security and compliance for MCP.** Require authentication for every tool call. Foundry supports key‑based access, Microsoft Entra Agent Identity, project managed identity, and OAuth identity passthrough. It provides detailed auditing of tool invocations and data flows. Use RBAC on both the Foundry project and the target service, and prefer identity passthrough when user‑level permissions must persist. See [Authentication support for MCP tool](/azure/ai-foundry/agents/how-to/mcp-authentication?view=foundry&preserve-view=true).
 

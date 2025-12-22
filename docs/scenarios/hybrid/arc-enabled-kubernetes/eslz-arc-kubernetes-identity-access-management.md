@@ -93,7 +93,6 @@ For more information on your hybrid and multicloud cloud journey, see the follow
 
 - Review the [prerequisites](/azure/azure-arc/kubernetes/quickstart-connect-cluster?tabs=azure-cli#prerequisites) for Azure Arc-enabled Kubernetes.
 - Review the [validated Kubernetes distributions](/azure/azure-arc/kubernetes/validation-program#validated-distributions) for Azure Arc-enabled Kubernetes.
-- Review [Manage hybrid and multicloud environments](../manage.md).
 - Review [common Conditional Access policies](/entra/identity/conditional-access/concept-conditional-access-policy-common?tabs=secure-foundation#template-categories) to apply when using Azure RBAC for Azure Arc-enabled Kubernetes cluster.
 - [Resource organization](./eslz-arc-kubernetes-resource-organization.md) can help you plan and apply governance and security using Azure RBAC.
 - Learn how to [Integrate Microsoft Entra ID with Azure Arc-enabled Kubernetes clusters](/azure/azure-arc/kubernetes/azure-rbac).

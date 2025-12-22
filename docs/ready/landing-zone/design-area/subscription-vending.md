@@ -3,7 +3,7 @@ title: Subscription vending
 description: Subscription vending
 author: stephen-sumner
 ms.author: pnp
-ms.date: 02/20/2025
+ms.date: 12/11/2025
 ms.update-cycle: 180-days
 ms.topic: concept-article
 ms.custom: internal, UpdateFrequency.5
@@ -97,7 +97,7 @@ You can now create and configure the requested subscription. The goal is to crea
 - [MCA required role(s)](/azure/cost-management-billing/manage/programmatically-create-subscription-microsoft-customer-agreement#prerequisites)
 - [MPA required role](/azure/cost-management-billing/manage/programmatically-create-subscription-microsoft-partner-agreement#prerequisites)
 
-There are example subscription vending [Bicep](https://github.com/Azure/bicep-registry-modules/tree/main/avm/ptn/lz/sub-vending) and [Terraform](https://github.com/Azure/terraform-azurerm-lz-vending#terraform-landing-zone-vending-module-for-azure) modules to help you adopt a subscription vending model regardless of your enrollment in a commercial agreement. You should use GitHub actions or Azure Pipelines to orchestrate the automation.
+There are subscription vending [Bicep](https://aka.ms/lz-vending/bicep) and [Terraform](https://aka.ms/lz-vending/tf) modules to help you adopt a subscription vending model regardless of your commercial agreement. You should use GitHub actions or Azure DevOps Pipelines to orchestrate the automation.
 
 **Use tags for cost management.** You should automate the consistent assignment of tags to each subscription for cost management and reporting purposes in Microsoft Cost Management. Although you receive billing reports with your commercial agreements, Cost Management provides greater functionality. For example, you can create reports for subscriptions with specific tags. For more information, see [How to use tags in cost and usage data](/azure/cost-management-billing/costs/understand-cost-mgt-data#how-tags-are-used-in-cost-and-usage-data) and [Group and allocate costs using tag inheritance](/azure/cost-management-billing/costs/enable-tag-inheritance)
 
