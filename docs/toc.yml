@@ -551,8 +551,6 @@ items:
           href: organize/cloud-operations.md
         - name: Cloud center of excellence functions
           href: organize/cloud-center-of-excellence.md
-        - name: Cloud platform functions
-          href: organize/cloud-platform.md
         - name: Cloud automation functions
           href: organize/cloud-automation.md
         - name: Cloud data functions
