@@ -58,16 +58,16 @@ Oracle Exadata Database@Azure integration with Azure Key Vault for TDE key manag
 
 ### Domain Name Service (DNS)
 
-#### Use Private DNS Zones
-Private DNS zones provide the simplest and most reliable approach for name resolution in Azure. Use Azure-provided private DNS zones linked to hub virtual networks as the default configuration. This approach accelerates deployment, reduces operational overhead, and aligns with Azure-native services.When designing DNS note [Oracle Database@Azure Exadata DNS limitations](https://docs.oracle.com/iaas/Content/database-at-azure/network-dns.htm). 
+#### Use Azure Private DNS zones by default
+Use **Azure Private DNS zones** linked to your hub virtual network as the default pattern. This approach aligns with Azure‑native services, accelerates deployment, and reduces operational overhead. When designing DNS, also review [Oracle Exadata Database@Azure DNS limitations (https://docs.oracle.com/iaas/Content/database-at-azure/network-dns.htm).
 
-Use Azure private DNS zones unless the organization explicitly requires:
+Use Azure Private DNS zones unless your organization explicitly requires one of the following:
 - Custom namespaces for internal governance or branding.
 - Integration with a third-party DNS solution.
-- Advanced governance controls beyond what Azure DNS offers.
+- Advanced governance controls that exceed Azure DNS capabilities.
 
 #### Use custom DNS only if required
-[Custom DNS](https://docs.oracle.com/iaas/Content/database-at-azure/network-dns.htm#custom-dns)  introduces flexibility but adds operational complexity and risk. Reserve this option for scenarios with strict namespace requirements, compliance-driven DNS policies, or mandatory integration with external DNS providers. 
+[Custom DNS](https://docs.oracle.com/iaas/Content/database-at-azure/network-dns.htm#custom-dns)  adds flexibility but also operational complexity and risk. Reserve this option for strict namespace requirements, compliance‑driven policies, or mandatory integration with external DNS providers. 
 
 #### Enable hybrid DNS resolution
 For on-premises integration, use [Azure Private DNS Resolver](/azure/dns/dns-private-resolver-overview) to bridge DNS resolution between on-premises and Azure-hosted Oracle databases. This ensures seamless name resolution without exposing private endpoints publicly and supports compliance and security objectives.
