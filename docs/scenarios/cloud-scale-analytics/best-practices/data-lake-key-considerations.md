@@ -73,7 +73,7 @@ Log entries are created only for requests against the service endpoint. The foll
 - Successful requests
 - Failed requests, including timeouts, throttling, network problems, authorization problems, and other errors
 - Requests that use a shared access signature (SAS) or OAuth, including failed and successful requests
-- Requests to analytics data, like classic log data in the `$logs` container and class metric data in the `$metric` tables
+- Requests to analytics data, like classic log data in the `$logs` container and classic metric data in the `$metric` tables
 
 Requests made by the storage service itself, like log creation or deletion, aren't logged. The following types of anonymous requests are logged:
 

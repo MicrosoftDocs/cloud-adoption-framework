@@ -150,7 +150,7 @@ The control plane and the data plane are implemented as described here:
 
   Supernets, instead of the exact prefixes that comprise those address spaces, must be announced, because the exact prefixes are already announced in the opposite direction by the Azure VMware Solution private cloud and the on-premises site. You can use supernets as large as RFC 1918 prefixes if they're compatible with the network configuration of the on-premises sites. In most cases, you should instead use the smallest supernets that include the Azure VMware Solution private cloud's address space and the on-premises address space. Doing so minimizes the risks of conflicts with the routing configuration of the on-premises sites. 
 
-  The routes for the supernets are originated by BGP-capable NVAs. The NVAs are configured to establish a BPG session with the Azure Route Server. The NVAs are only part of the control plane and don't route actual traffic between the on-premises site and the Azure VMware Solution private cloud. The control plane implementation is represented by the dashed lines in the preceding figure.
+  The routes for the supernets are originated by BGP-capable NVAs. The NVAs are configured to establish a BGP session with the Azure Route Server. The NVAs are only part of the control plane and don't route actual traffic between the on-premises site and the Azure VMware Solution private cloud. The control plane implementation is represented by the dashed lines in the preceding figure.
 - Data plane. The control plane implementation that's described previously attracts the following traffic to the ExpressRoute gateway: 
    - Traffic from the on-premises site that's destined to the Azure VMware Solution private cloud.
    - Traffic from the Azure VMware Solution private cloud that's destined to the on-premises site. 
@@ -179,4 +179,4 @@ The control plane and the data plane are implemented as described here:
 Learn about connectivity between Azure VMware Solution and Azure virtual networks.
 
 > [!div class="nextstepaction"]
-> [Connectivity between Azure VMware Solution and Azure virtual networks](virtual-network-connectivity.md) 
+> [Connectivity between Azure VMware Solution and Azure virtual networks](virtual-network-connectivity.md)

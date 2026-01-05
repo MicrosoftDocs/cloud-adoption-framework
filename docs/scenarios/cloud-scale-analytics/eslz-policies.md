@@ -173,7 +173,7 @@ Other policies that are applied in the Databricks workspace through cluster poli
 |Deny-EventHub-Ipfilterrules|Network Isolation|Deny adding ip filter rules for Azure Event Hubs.|
 |Deny-EventHub-MaximumThroughputUnits|Network Isolation|Denies public network access for my SQL servers.|
 |Deny-EventHub-NetworkRuleSet|Network Isolation|Enforces default virtual network rules for Azure Event Hubs.|
-|Deny-EventHub-Sku|Resource Management|Denies certain AKUs for Azure Event Hubs.|
+|Deny-EventHub-Sku|Resource Management|Denies certain SKUs for Azure Event Hubs.|
 |Deny-EventHub-Virtualnetworkrules|Network Isolation|Deny adding virtual network rules for Azure Event Hubs.|
 
 ## Azure Stream Analytics
@@ -326,7 +326,7 @@ Other policies that are applied in the Databricks workspace through cluster poli
 |Deny-Cache-MinimumTlsVersion|Encryption|Enforces minimum TLS version for Redis Cache.|
 |Deny-Cache-NonSslPort|Network Isolation|Enforces turning off the non-SSL port for Redis Cache.|
 |Deny-Cache-PublicNetworkAccess|Network Isolation|Enforces no public network access for Redis Cache.|
-|Deny-Cache-Sku|Resource Management|Enforces certain SkKUs for Redis Cache.|
+|Deny-Cache-Sku|Resource Management|Enforces certain SKUs for Redis Cache.|
 |Deny-Cache-VnetInjection|Network Isolation|Enforces use of private endpoints and denies virtual network injection for Redis Cache.|
 
 ## Container instances

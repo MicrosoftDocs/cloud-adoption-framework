@@ -96,13 +96,13 @@ The following diagram shows an example of the Service Mesh Proxy functionality o
 
 With the integration between Azure API Management and Azure Arc on Kubernetes, you can deploy the API Management gateway component as an extension in your Azure Arc-enabled Kubernetes cluster. This allows a containerized version of API Management gateway to run in your cluster. All self-hosted gateways are managed from the API Management service they're federated with, providing you with visibility and a unified management experience across all internal and external APIs.
 
-Configuring the self-hosted gateway to accept incoming traffic to direct to your services requires policy creation. Its management can become more complex as your service scale grows.
+Configuring the self-hosted gateway to accept incoming traffic to direct to your services requires policy creation. Management of the gateway can be increasingly complex as your service scale grows.
 
 For more information, see the [self-hosted gateway overview](/azure/api-management/self-hosted-gateway-overview)
 
 ## API Management Self-hosted gateway Observability
 
-The self-hosted gateway emits metrics, stdout logs, and stderr logs. It's emitted metrics can be configured by a ConfigMap in your cluster. For information on advanced monitoring with API Management, see [Advanced monitoring](/azure/api-management/api-management-log-to-eventhub-sample).
+The self-hosted gateway emits metrics, stdout logs, and stderr logs. Emitted metrics can be configured by a ConfigMap in your cluster. For information on advanced monitoring with API Management, see [Advanced monitoring](/azure/api-management/api-management-log-to-eventhub-sample).
 
 Self-hosted gateway observability accounts for external traffic (north-south) coming into your cluster, but doesn't provide any observability for pod-to-pod traffic inside your cluster (east-west).
 
