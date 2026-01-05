@@ -57,7 +57,7 @@ We can utilize this information to visualize the overall health of our resources
 
 ## Design Recommendations
 
-- Set up **Application Insights** so that it uses a Log Analytics Workspace as it’s data source (known as a [workspace-based resource](/azure/azure-monitor/app/convert-classic-resource)). Doing so allows logging and performance data to be kept in a consolidated location.
+- Set up **Application Insights** so that it uses a Log Analytics Workspace as its data source (known as a [workspace-based resource](/azure/azure-monitor/app/convert-classic-resource)). Doing so allows logging and performance data to be kept in a consolidated location.
 
 - Set up alerts for all resources to notify appropriate teams of events related to individual resources or to the workload.
 

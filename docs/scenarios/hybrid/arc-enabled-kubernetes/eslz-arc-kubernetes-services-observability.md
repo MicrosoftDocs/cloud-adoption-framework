@@ -102,7 +102,7 @@ For more information, see the [self-hosted gateway overview](/azure/api-manageme
 
 ## API Management Self-hosted gateway Observability
 
-The self-hosted gateway emits metrics, stdout logs, and stderr logs. It's emitted metrics can be configured by a ConfigMap in your cluster. For information on advanced monitoring with API Management, see [Advanced monitoring](/azure/api-management/api-management-log-to-eventhub-sample).
+The self-hosted gateway emits metrics, stdout logs, and stderr logs. Its emitted metrics can be configured by a ConfigMap in your cluster. For information on advanced monitoring with API Management, see [Advanced monitoring](/azure/api-management/api-management-log-to-eventhub-sample).
 
 Self-hosted gateway observability accounts for external traffic (north-south) coming into your cluster, but doesn't provide any observability for pod-to-pod traffic inside your cluster (east-west).
 

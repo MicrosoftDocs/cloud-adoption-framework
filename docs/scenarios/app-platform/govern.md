@@ -52,7 +52,7 @@ Since Kubernetes is itself a platform, the second is the governance of what happ
 
 Consider standardizing around common tooling and patterns as well, if practicable to do. Put forth recommendations on technologies like Helm, service mesh, ingress controllers, GitOps operators, persistent volumes, and so on. Included in here would also be governance around the usage of pod managed identity and sourcing secrets from Key Vault.
 
-Drive strong expectations around access to telemetry, to ensure workload owners have appropriate access to the metrics and data they need to improve their product, while also ensuring cluster operators have access to system telemetric to improve their service offering. Data often needs to be cross correlated between the two, ensure governance policies are in place to ensure appropriate access when necessary.
+Drive strong expectations around access to telemetry, to ensure workload owners have appropriate access to the metrics and data they need to improve their product, while also ensuring cluster operators have access to system telemetry to improve their service offering. Data often needs to be cross correlated between the two, ensure governance policies are in place to ensure appropriate access when necessary.
 
 Azure Policy for AKS applied at the cluster level can help deliver some of these, but not all.
 
