@@ -96,7 +96,7 @@ The following diagram shows an example of the Service Mesh Proxy functionality o
 
 With the integration between Azure API Management and Azure Arc on Kubernetes, you can deploy the API Management gateway component as an extension in your Azure Arc-enabled Kubernetes cluster. This allows a containerized version of API Management gateway to run in your cluster. All self-hosted gateways are managed from the API Management service they're federated with, providing you with visibility and a unified management experience across all internal and external APIs.
 
-Configuring the self-hosted gateway to accept incoming traffic to direct to your services requires policy creation. Its management can become more complex as your service scale grows.
+Configuring the self-hosted gateway to accept incoming traffic to direct to your services requires policy creation. It's management can become more complex as your service scale grows.
 
 For more information, see the [self-hosted gateway overview](/azure/api-management/self-hosted-gateway-overview)
 
