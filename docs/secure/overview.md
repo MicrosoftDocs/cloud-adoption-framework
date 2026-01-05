@@ -17,7 +17,7 @@ The Cloud Adoption Framework for Azure Secure methodology provides a structured 
 
 ## Modernize security posture
 
-Security posture modernization is the continuous elevation of your defenses, detections, and resilience capabilities. This modernization matters here because static controls degrade quickly against evolving attacker trade craft. You should align modernization work with the [Microsoft Zero Trust adoption framework](/security/zero-trust/adopt/zero-trust-adoption-overview) and enrich each phase task with Zero Trust improvements.
+Security posture modernization is the continuous elevation of your defenses, detections, and resilience capabilities. This modernization matters here because static controls degrade quickly against evolving attacker tradecraft. You should align modernization work with the [Microsoft Zero Trust adoption framework](/security/zero-trust/adopt/zero-trust-adoption-overview) and enrich each phase task with Zero Trust improvements.
 
 Integrate identity strengthening, segmentation, just-in-time and least-privilege access, threat detection tuning, data protection, and platform baseline automation into your landing zones and operations. Prioritize modernization sprints based on measurable risk reduction (for example, exposed privileges, insecure configurations, unmonitored assets). Automate validation through policy, infrastructure as code, continuous compliance scanning, and secure score tracking in Microsoft Defender for Cloud.
 

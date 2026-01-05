@@ -38,7 +38,7 @@ For example, if you have public and private applications, separate them into dif
 
 - Choose a management group hierarchy based on the general scale and alignment of environments and hosts required to support overall portfolio requirements:
 
-  - Flat structure to support many dedicated hosts in dedicated environments for decentralized operations run be each workload team.
+  - Flat structure to support many dedicated hosts in dedicated environments for decentralized operations run by each workload team.
   - Segmented structure to create a management group for centrally managed hosts and a separate management group for decentralized operations.
   - Hierarchical structure further segmenting environments to reflect billing, governance, or operational requirements.
 
