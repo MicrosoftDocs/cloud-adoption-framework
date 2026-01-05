@@ -81,7 +81,7 @@ This flexibility creates value for you and allows you to find an offer that meet
 
 1. *Meet potential partners* – Use the **Contact me** button to reach out to partners. Meet with several landing zone partners to find the right fit. Get a sense of their process, experience, and successes.
 
-1. *Understand the offers* – Partners have more freedom to customize their ALZ approach outside of Azure Accelerate Read the offer. Ask follow-up questions. Make sure you understand the offer and define expectations.
+1. *Understand the offers* – Partners have more freedom to customize their ALZ approach outside of Azure Accelerate. Read the offer. Ask follow-up questions. Make sure you understand the offer and define expectations.
 
 1. *Pick an offer* - Pick the offer that best meets your needs. Formalize the agreement and start building your landing zone with your partner.
 
