@@ -353,7 +353,7 @@
     {
       "source_path": "docs/scenarios/aks/azure-products.md",
       "redirect_url": "/azure/cloud-adoption-framework/scenarios/app-platform/azure-products",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "docs/scenarios/aks/enterprise-scale-landing-zone.md",
@@ -423,7 +423,7 @@
     {
       "source_path": "docs/scenarios/aks/govern.md",
       "redirect_url": "/azure/cloud-adoption-framework/scenarios/app-platform/govern",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "docs/scenarios/aks/index.md",
@@ -433,7 +433,7 @@
     {
       "source_path": "docs/scenarios/aks/innovate.md",
       "redirect_url": "/azure/cloud-adoption-framework/scenarios/app-platform/innovate",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "docs/scenarios/oracle-iaas/oracle-disaster-recovery-odaa.md",
@@ -443,17 +443,17 @@
     {
       "source_path": "docs/scenarios/aks/manage.md",
       "redirect_url": "/azure/cloud-adoption-framework/scenarios/app-platform/manage",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "docs/scenarios/aks/migrate.md",
       "redirect_url": "/azure/cloud-adoption-framework/scenarios/app-platform/migrate",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "docs/scenarios/aks/plan.md",
       "redirect_url": "/azure/cloud-adoption-framework/scenarios/app-platform/plan",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "docs/scenarios/aks/ready.md",
@@ -463,7 +463,7 @@
     {
       "source_path": "docs/scenarios/aks/strategy.md",
       "redirect_url": "/azure/cloud-adoption-framework/scenarios/app-platform/strategy",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "docs/scenarios/cloud-scale-analytics/architectures/reference-architecture-relecloud.md",
@@ -717,6 +717,41 @@
     },
       {
         "source_path": "docs/scenarios/app-platform/ready.md",
+        "redirect_url": "/azure/cloud-adoption-framework/scenarios/app-platform/",
+        "redirect_document_id": false
+    },
+    { 
+        "source_path": "docs/scenarios/app-platform/azure-products.md",
+        "redirect_url": "/azure/cloud-adoption-framework/scenarios/app-platform/",
+        "redirect_document_id": false
+    },
+    {
+        "source_path": "docs/scenarios/app-platform/govern.md",
+        "redirect_url": "/azure/cloud-adoption-framework/scenarios/app-platform/",
+        "redirect_document_id": false
+    },
+    {
+        "source_path": "docs/scenarios/app-platform/manage.md",
+        "redirect_url": "/azure/cloud-adoption-framework/scenarios/app-platform/",
+        "redirect_document_id": false
+    },
+    {
+        "source_path": "docs/scenarios/app-platform/migrate.md",
+        "redirect_url": "/azure/cloud-adoption-framework/scenarios/app-platform/",
+        "redirect_document_id": false
+    },
+    {
+        "source_path": "docs/scenarios/app-platform/plan.md",
+        "redirect_url": "/azure/cloud-adoption-framework/scenarios/app-platform/",
+        "redirect_document_id": false
+    },
+    {
+        "source_path": "docs/scenarios/app-platform/strategy.md",
+        "redirect_url": "/azure/cloud-adoption-framework/scenarios/app-platform/",
+        "redirect_document_id": false
+    },
+    {
+        "source_path": "docs/scenarios/app-platform/innovate.md",
         "redirect_url": "/azure/cloud-adoption-framework/scenarios/app-platform/",
         "redirect_document_id": false
     }
