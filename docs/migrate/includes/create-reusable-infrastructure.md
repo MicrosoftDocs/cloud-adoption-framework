@@ -9,4 +9,4 @@ Automate installing app dependencies, configuring settings, and [secrets managem
 
 4. **Test the IaC and automation end-to-end.** Use a separate Azure subscription or resource group as a sandbox and practice deploying your entire environment from scratch using your templates and scripts. Test that your IaC templates, pipelines, and scripts can create the complete infrastructure stack from nothing. Test different deployment scenarios including initial deployment, configuration updates, and rollback procedures to confirm the automation works correctly.
 
-For more information, see [Design a workload development supply change](/azure/well-architected/operational-excellence/workload-supply-chain) and [Infrastructure as code](/azure/well-architected/operational-excellence/infrastructure-as-code-design) in WAF.
+For more information, see [Design a workload development supply chain](/azure/well-architected/operational-excellence/workload-supply-chain) and [Infrastructure as code](/azure/well-architected/operational-excellence/infrastructure-as-code-design) in WAF.

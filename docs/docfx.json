@@ -73,7 +73,7 @@
         "get-started/**/*.md": "caf-get-started",
         "govern/**/*.md": "caf-methodology-govern",
         "infrastructure/mainframe-migration/**/*.md": "caf-methodology-adopt",
-        "cloud-native/**/*.md": "caf-methodology-adopt",
+        "cloud-native/**/*.md": "caf-methodology-adopt-cloud-native",
         "manage/**/*.md": "caf-methodology-manage",
         "migrate/**/*.md": "caf-methodology-adopt-migrate",
         "modernize/**/*.md": "caf-methodology-adopt-modernize",
