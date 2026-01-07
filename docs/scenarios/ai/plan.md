@@ -62,7 +62,7 @@ Strategic prioritization ensures you focus resources on projects that deliver ma
 
 3. **Create a prioritized implementation roadmap with clear success criteria.** A structured roadmap provides clear direction for implementation teams and enables progress tracking against defined milestones. This roadmap helps manage stakeholder expectations and resource allocation. Select top-priority use cases and define specific success metrics, timelines, and resource requirements for each project.
 
-## Validate concepts through proof of concepts
+## Create AI proof of concepts
 
 Proof of concepts reduce implementation risk by validating technical feasibility and business value before full-scale development. PoCs help identify potential challenges and refine requirements in a controlled environment. You must create focused validation projects that test core assumptions and gather data for informed decision-making. Here's how:
 
@@ -78,7 +78,13 @@ Proof of concepts reduce implementation risk by validating technical feasibility
 
 3. **Use PoC results to refine your use case prioritization and implementation approach.** PoC insights reveal practical challenges and opportunities that inform future project planning and resource allocation. This feedback loop ensures your AI roadmap remains realistic and achievable. Document lessons learned, technical challenges, and business value demonstrated. Adjust your use case priorities based on proven feasibility and measured impact.
 
-## Establish responsible AI practices
+4. **Use proof of concept results to estimate implementation timelines for each use case.** PoC data provides realistic baseline estimates that account for your organization's specific capabilities and constraints. This approach produces more accurate timelines than theoretical estimates. Document development time, testing cycles, and deployment complexity observed during PoC implementation.
+
+5. **Account for organizational maturity and complexity factors in timeline planning.** Different AI solutions have characteristic implementation timelines that vary based on organizational readiness and project scope. This understanding helps set appropriate expectations with stakeholders. Microsoft Copilots typically provide the shortest timelines for return on investment (days to weeks), while custom Azure AI workloads require several weeks to months to reach production readiness.
+
+6. **Build in buffer time for learning, iteration, and unexpected challenges.** AI projects often encounter unforeseen technical challenges and require multiple iterations to achieve desired outcomes. Buffer time prevents schedule pressure that could compromise quality or ethical considerations. Add 20-30% contingency time to initial estimates and plan for multiple development cycles.
+
+## Implement responsible AI
 
 Responsible AI practices protect your organization from ethical, legal, and reputational risks while ensuring AI systems align with organizational values. Early integration of responsible AI principles prevents costly redesigns and builds stakeholder trust. You must embed ethical considerations, governance frameworks, and security measures into your implementation plan from the beginning. Here's how:
 
@@ -87,27 +93,6 @@ Responsible AI practices protect your organization from ethical, legal, and repu
 2. **Implement AI governance frameworks to guide project decisions and monitor system behavior.** Governance frameworks provide consistent decision-making criteria and ensure accountability across AI projects. These frameworks help organizations maintain control over AI development and deployment. Establish policies covering roles, responsibilities, compliance requirements, and ethical standards. See [Govern AI](./govern.md) for detailed guidance on governance implementation.
 
 3. **Apply AI security and operations best practices throughout the implementation lifecycle.** Security and operational excellence ensure AI systems remain reliable, secure, and cost-effective throughout their lifecycle. These practices prevent security incidents and operational failures. Implement AI operations frameworks like GenAIOps or MLOps for deployment tracking and performance monitoring. See [Manage AI](./manage.md) and [Secure AI](./secure.md) for detailed implementation guidance.
-
-## Estimate delivery timelines
-
-Realistic timeline estimation enables effective resource planning and stakeholder management while ensuring project success. Timeline accuracy depends on project complexity, organizational maturity, and resource availability. You must base timeline estimates on empirical data from your proof of concepts and organizational capabilities. Here's how:
-
-1. **Use proof of concept results to estimate implementation timelines for each use case.** PoC data provides realistic baseline estimates that account for your organization's specific capabilities and constraints. This approach produces more accurate timelines than theoretical estimates. Document development time, testing cycles, and deployment complexity observed during PoC implementation.
-
-2. **Account for organizational maturity and complexity factors in timeline planning.** Different AI solutions have characteristic implementation timelines that vary based on organizational readiness and project scope. This understanding helps set appropriate expectations with stakeholders. Microsoft Copilots typically provide the shortest timelines for return on investment (days to weeks), while custom Azure AI workloads require several weeks to months to reach production readiness.
-
-3. **Build in buffer time for learning, iteration, and unexpected challenges.** AI projects often encounter unforeseen technical challenges and require multiple iterations to achieve desired outcomes. Buffer time prevents schedule pressure that could compromise quality or ethical considerations. Add 20-30% contingency time to initial estimates and plan for multiple development cycles.
-
-## Azure resources
-
-| Category | Tool | Description |
-|----------|------|-------------|
-| Learning & Certification | [AI learning hub](/ai/) | Provides free AI training, certifications, and product guidance for skill development |
-| Assessment & Planning | [AI impact assessment template](https://www.microsoft.com/ai/tools-practices) | Evaluates social, economic, and ethical effects of AI initiatives |
-| Development Platform | [Foundry](/azure/ai-foundry/quickstarts/get-started-playground) | Development platform for building AI applications and agents with access to generative AI models and nongenerative models for vision, speech, language, and decision-making |
-| Model Training | [Azure Machine Learning](/azure/machine-learning/tutorial-azure-ml-in-a-day) | End-to-end machine learning lifecycle management and model deployment |
-| Conversational AI | [Microsoft Copilot Studio](/microsoft-copilot-studio/fundamentals-get-started) | Platform for building custom conversational AI agents and chatbots |
-| Partner Network | [Microsoft partners marketplace](https://partner.microsoft.com/partnership/find-a-partner) | Access to certified partners with AI, data, and Azure expertise |
 
 ## Next step
 

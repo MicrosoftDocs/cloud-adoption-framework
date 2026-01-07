@@ -13,7 +13,7 @@ This article outlines the organizational process for building AI workloads in Az
 
 :::image type="content" source="./images/ai-ready.svg" alt-text="Diagram that shows the 6 phases of AI adoption: Strategy, Plan, Ready, Govern, Secure, Manage." lightbox="./images/ai-ready.svg" border="false":::
 
-## Establish governance boundaries for AI workloads
+## Establish AI governance
 
 AI governance requires proper resource organization and policy management to ensure secure, compliant, and cost-effective operations. You must create clear governance boundaries to protect sensitive data and control AI resource access effectively. Here's how:
 
@@ -23,7 +23,7 @@ AI governance requires proper resource organization and policy management to ens
 
 3. **Deploy AI resources within workload-specific subscriptions.** AI resources must inherit governance policies from their workload management group rather than platform subscriptions. This separation prevents development bottlenecks that platform team controls create and enables workload teams to operate with appropriate autonomy. Deploy AI workloads to application landing zone subscriptions in Azure landing zone environments.
 
-## Establish secure connectivity for AI workloads
+## Establish AI networking
 
 AI networking encompasses network infrastructure design, security measures, and efficient data transfer patterns for AI workloads. You must implement proper security controls and connectivity options to prevent network-based disruptions and maintain consistent performance. Here's how:
 
@@ -37,7 +37,7 @@ AI networking encompasses network infrastructure design, security measures, and 
 
    - **Use Azure VPN Gateway for moderate data transfer.** [Azure VPN Gateway](/azure/vpn-gateway/vpn-gateway-about-vpngateways) works well for moderate data volumes, infrequent data transfer, or when public internet access is required. VPN Gateway offers simpler setup and cost-effective operation for smaller datasets compared to ExpressRoute. Use the appropriate [topology and design](/azure/vpn-gateway/design) for your AI workloads, including site-to-site VPN for cross-premises connectivity and point-to-site VPN for secure device access.
 
-## Establish AI reliability across regions
+## Establish AI reliability
 
 AI reliability requires strategic region placement and redundancy planning to ensure consistent performance and high availability. Organizations must address model hosting, data locality, and disaster recovery to maintain reliable AI services. You need to plan your regional deployment strategy to avoid service interruptions and optimize performance. Here's how:
 
