@@ -12,7 +12,7 @@ ms.custom: internal
 
 # DevOps team topologies
 
-Organizations of struggle to structure teams that maintain governance and security while enabling the speed and agility that modern cloud development demands. The way you organize your teams directly impacts your ability to deliver value, respond to business needs, and maintain operational excellence.
+Organizations struggle to structure teams that maintain governance and security while enabling the speed and agility that modern cloud development demands. The way you organize your teams directly impacts your ability to deliver value, respond to business needs, and maintain operational excellence.
 
 This article helps you design team structures that balance control with autonomy. You learn how to organize platform teams that provide consistent foundations, empower application teams to innovate rapidly, and deploy enabling teams to accelerate capability development across your organization. By aligning your team structure with your architectural goals, you can reduce delivery friction, minimize technical debt, and create a sustainable operating model for Azure Landing Zones.
 
