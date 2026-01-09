@@ -15,8 +15,6 @@ Platform automation and DevOps evaluate opportunities to modernize your approach
 
 ## Design area review
 
-**Involved roles or functions:** Platform automation and DevOps might require support from one of the following functions or roles to make decisions: [cloud platform](../../../organize/cloud-platform.md) and [cloud center of excellence](../../../organize/cloud-center-of-excellence.md).
-
 **Scope:** The goal of platform automation and DevOps is to align your desired DevOps principles and practices to Azure Landing Zone lifecycle management. This goal includes provisioning, management, evolution, and operations through extreme automation and Infrastructure as Code.
 
 ## Design area overview

@@ -15,8 +15,6 @@ Use the resource organization design area to establish consistent patterns when 
 
 ## Design area review
 
-**Involved roles or functions:** This design area requires support from one or more [cloud platform](../../../organize/cloud-platform.md) and [cloud center of excellence](../../../organize/cloud-center-of-excellence.md) functions to make and implement decisions.
-
 **Scope:** Resource organization decisions provide a foundation for all compliance-related design areas. When you plan your resource organization, you can establish consistent patterns for the following areas:
 
 - Naming

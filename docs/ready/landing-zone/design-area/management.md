@@ -16,8 +16,6 @@ This design area establishes a foundation for operations management across your 
 
 ## Design area review
 
-**Involved roles or functions:** This design area is led by central IT or [cloud operations](../../../organize/cloud-operations.md), specifically the [security architects within that team](../../../secure/teams-roles.md). The [cloud platform](../../../organize/cloud-platform.md) will likely be required to define and implement the technical requirements coming from this exercise. More advanced operations guardrails might also require support from cloud governance.
-
 **Scope:** The goal of this exercise is to understand operations management requirements and implement those requirements consistently across all workloads in your cloud platform. The primary scope of this exercise focuses on operations tooling. You'll use operations tooling to manage the collective portfolio of workloads with a set of common tools and processes. This initial set of operations tooling is also referred to as your operations baseline.
 
 **Out of scope:** You can use the operations baseline defined in this exercise consistently across all workloads. The operations baseline can also be expanded with other tools and processes as outlined in the [Manage methodology](../../../manage/index.md) of the Cloud Adoption Framework. Doing so helps to improve operations for specific technology platforms or individual workloads.
