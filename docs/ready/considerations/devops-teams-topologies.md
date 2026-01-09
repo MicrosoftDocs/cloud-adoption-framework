@@ -1,122 +1,63 @@
 ---
 title: DevOps teams topologies
-description: Design area guidance for DevOps teams topologies in Azure Landing Zones
+description: Learn how to structure teams with DevOps principles in Azure Landing Zones to balance operational control and development agility. Optimize team topologies for faster delivery and innovation.
+#customer intent: As a technology lead, I want to understand how to structure platform teams so that I can ensure consistent governance and security across Azure Landing Zones.
 author: alguadam
 ms.author: alguadam
-ms.date: 06/24/2022
+ms.reviewer: ssumner
+ms.date: 01/09/2026
 ms.topic: concept-article
 ms.custom: internal
 ---
 
-# DevOps teams topologies
+# DevOps team topologies
 
-The distribution of roles, responsibilities, and trust between IT teams and applications teams is paramount to the operational transformation involved in cloud adoption at scale.
+Organizations struggle to structure teams that maintain governance and security while enabling the speed and agility that modern cloud development demands. The way you organize your teams directly impacts your ability to deliver value, respond to business needs, and maintain operational excellence.
 
-IT teams strive to maintain control. Application owners seek to maximize agility. The balance you ultimately establish between these two goals greatly influences the success of your cloud operating model.
+This article helps you design team structures that balance control with autonomy. You learn how to organize platform teams that provide consistent foundations, empower application teams to innovate rapidly, and deploy enabling teams to accelerate capability development across your organization. By aligning your team structure with your architectural goals, you can reduce delivery friction, minimize technical debt, and create a sustainable operating model for Azure Landing Zones.
 
-According to Conway's law, teams produce Architectures based on their communication structure. Understanding this principle is critical as you work to achieve the necessary balance between autonomy and control. Any organization that designs a system (defined broadly) will produce a design structure that's a copy of that organization's communication structure.
-
-![Diagram illustrating Conway's Law.](./media/conways-law.png)
-
-
-From a DevOps perspective, organizations must optimize for rapid response to customer needs. Teams that own, design, and implement their applications and systems find their highest level of autonomy in architectures with the following characteristics:
-
-- Evolutionary architecture that supports constant changes
-- Deployability
-- Testability
-
-Conway's solution is to outmaneuver Conway's Law. If your organization follows a particular structure to produce services and products and is looking to optimize, you need to rethink your organizational structure. Evolve your team and organizational structure to achieve your desired architecture.
-
-![Diagram of Reverse Conway Maneuver.](./media/reverse-conway-maneuver.png)
-
-
-This principle leads to intentionally designed [team topologies](https://teamtopologies.com/) in which teams are responsible for the end-to-end of any applications, systems, or platforms they own in order to achieve the full discipline of DevOps.
-
-The following table provides a simplified categorization of these teams.
-
-| Team type | Definition
+| Team type | Definition |
 | - | - |
-| Application workload teams | These teams build applications that drive direct business outcomes for a segment of the business domain. In the context of Azure Landing Zones, these teams are responsible for the end-to-end lifecycle of application workloads.
-| Platform teams | These teams build compelling internal platforms to accelerate delivery and reduce the cognitive load of application workload teams. In the context of Azure Landing Zones, these teams are responsible for the end-to-end lifecycle of the Azure Landing Zone.
-| Enabling teams | These teams help overcome skill gaps by assisting other teams with specialized capabilities like DevOps.
+| Application workload teams | These teams build applications that drive direct business outcomes for a segment of the business domain. These teams own the end-to-end lifecycle of application workloads in Azure Landing Zones. |
+| Platform teams | These teams build internal platforms to accelerate delivery and reduce the cognitive load of application workload teams. These teams own the end-to-end lifecycle of the Azure Landing Zone. |
+| Enabling teams | These teams help overcome skill gaps by assisting other teams with specialized capabilities like DevOps. |
 
-## Design considerations
+## Structure platform teams for consistency
 
-- Establish a cross-functional platform team to design, build, provision, manage, and maintain your Azure Landing Zone lifecycle. This team can include members from your central IT team, security, compliance, and business units to ensure that a wide spectrum of your enterprise is represented. Make sure you avoid [antipatterns](../../antipatterns/ready-antipatterns.md#antipattern-become-a-cloud-provider).
+Platform teams provide the foundation that accelerates delivery across your organization while maintaining governance and security standards. Organizations without dedicated platform teams face inconsistent implementations, duplicated effort across application teams, and difficulty enforcing enterprise-wide policies. A well-structured platform team ensures consistent practices, reduces complexity for application teams, and embeds governance and security into the platforms used to develop workloads. Use the following guidance to structure platform teams for consistency:
 
-- Consider establishing an enabling team that can provide DevOps functions to support applications and platforms that don't have existing DevOps capabilities, or a business case to establish one (for example, legacy applications with minimal development capabilities).
+1. **Create a cross-functional platform team.** Form a platform team that designs, builds, and manages the Azure landing zone lifecycle. Include members from IT, security, compliance, and business units to represent enterprise priorities. This composition ensures that the platform addresses technical requirements, security concerns, compliance obligations, and business needs simultaneously. Cross-functional representation prevents silos and accelerates decision-making because the team resolves conflicts internally rather than through lengthy approval processes.
 
-- Don't restrict your application workload teams to central artifacts, since it can hinder their agility. You can use policy-driven governance and Azure role-based access control (Azure RBAC) to enforce consistent baseline configurations and ensure that application (business unit) teams are flexible enough to innovate yet still able to draw from a predefined set of templates.
+2. **Define clear platform responsibilities.** Assign the platform team responsibility for enterprise-wide functions that require consistent implementation across all workloads. The following table lists common responsibilities of the platform:
 
-- Don't force your application teams to use a central process or provisioning pipeline for the application resource instantiation or management. Existing teams that already rely on a DevOps pipeline for application delivery can still use their current tools. Remember, you can use [Azure Policy](/azure/governance/policy/overview) helps to enforce organizational standards and to assess compliance at-scale and address [security considerations](./security-considerations-overview.md) for your DevOps processes.
+    | Responsibility category | Responsibilities |
+    | - | - |
+    | Governance and compliance | Architecture governance, policy management and enforcement, security monitoring and audits |
+    | Resource provisioning | Subscription provisioning and delegation, platform as code (management of templates, scripts, and other assets) |
+    | Identity and access | Identity and access management policies, Azure RBAC, role definitions |
+    | Network management | Network management, delegation of network policies |
+    | Operations | Overall operations on Azure within your Microsoft Entra tenant, management of service principals, Microsoft Graph API registration |
+    | Key management | Key management for central services (simple mail-transfer protocol and domain controllers) |
+    | Platform observability | Platform management and monitoring, cost management |
 
-- Blanket application of a DevOps model doesn't instantly establish capable DevOps teams.
+3. **Build platforms that reduce cognitive load.** Design the platform to abstract complexity from application workload teams. Provide self-service capabilities, automated provisioning, and clear guardrails that enable application teams to move quickly without requiring deep expertise in infrastructure management. This approach balances autonomy with control because application teams gain speed while the platform team maintains governance through automated policy enforcement rather than manual gates.
 
-- Investment in engineering capabilities and resources is critical.
+## Empower application workload teams for agility
 
-- Application teams for some legacy applications might not have the engineering resources required to align with a DevOps strategy.
+Application workload teams drive direct business outcomes and require autonomy to respond quickly to changing requirements. Organizations that centralize too many functions or force application teams through manual approval processes slow delivery and create bottlenecks that reduce competitive advantage. Empowering application workload teams while maintaining governance requires policy-driven controls rather than centralized gatekeeping. Use the following guidance to empower application workload teams for agility:
 
-## Design recommendations
+1. **Delegate ownership of application lifecycle.** Assign application workload teams full responsibility for the creation and management of application resources through a DevOps model. This ownership includes database management, application migration or transformation, application management and monitoring, Azure RBAC for application resources, security monitoring and audits for application resources, secrets and keys management for application keys, cost management for application resources, and network management for application resources. End-to-end ownership creates accountability and enables teams to optimize their applications without waiting for central teams to implement changes.
 
-The following sections contain design recommendations to guide you as you design your team topologies.
+1. **Enforce governance through policy, not process.** Avoid centralization that limits agility. Don't force application workload teams to use centralized artifacts or provisioning pipelines. Instead, enforce governance through policy-driven controls and Azure Role Based Access Control (RBAC). This balance preserves innovation while maintaining compliance and security standards. Policy-based governance scales better than process-based governance because it automates compliance checks and provides immediate feedback without human intervention.
 
-### Align team topologies with your cloud operating model
+1. **Establish clear boundaries and interfaces.** Define clear contracts between the platform team and application workload teams. Document what the platform provides, what application teams control, and how teams request changes to shared services. Clear boundaries reduce friction and prevent conflicts that slow delivery.
 
-Make sure you align your team topologies with your desired cloud operating model.
+## Deploy enabling teams to close skill gaps
 
-Establish a core process for operational fitness reviews so you fully understand the problems that can result from your team structures.
+Enabling teams provide specialized expertise that helps application and platform teams reach the necessary level of capability without building every skill in-house. Organizations without enabling teams face uneven adoption of best practices, repeated mistakes across teams, and slower progress because teams must independently develop expertise in complex areas. Enabling teams accelerate adoption and reduce risk by providing focused support, training, and coaching. Use the following guidance to deploy enabling teams to close skill gaps:
 
-### Define functions for your platform team
+1. **Identify capability gaps across teams.** Assess your application and platform teams to identify common skill gaps or areas where teams struggle to adopt best practices. Focus enabling team efforts on high-impact areas where specialized support creates the most value, such as DevOps practices, security implementation, or cloud-native architecture patterns.
 
-The following list provides a recommended set of functions for the platform team responsible for your Azure Landing Zones:
+1. **Provide time-bound support and coaching.** Introduce enabling teams to close skill gaps and assist with DevOps practices for applications or platforms that lack dedicated capabilities. This support is critical for legacy workloads where building full DevOps capacity isn't feasible. Enabling teams help reduce risk and improve adoption speed. Define horizontal (cross-function) guidance and capabilities to help acquire the right expertise across your organization, which ensures alignment with your overall target cloud operating model. Provide support, training, and coaching for other teams to reach the necessary level of expertise. Time-bound engagements prevent dependency and ensure teams develop internal capability.
 
-- Architecture governance
-- Subscription provisioning and delegation of required network, identity and access management policies
-- Platform management and monitoring (holistic)
-- Cost management (holistic)
-- Platform-as-code (management of templates, scripts, and other assets)
-- Overall operations on Microsoft Azure within your Microsoft Entra tenant (management of service principals, Microsoft Graph API registration, and role definitions)
-- Azure RBAC (holistic)
-- Key management for central services (simple mail-transfer protocol and domain controllers)
-- Policy management and enforcement (holistic)
-- Security monitoring and audits (holistic)
-- Network management (holistic)
-    
-### Define functions for your application workload teams
-
-The following list provides a recommended set of functions for your application teams responsible for application workloads:
-
-- Creation and management of application resources through a DevOps model
-- Database management
-- Application migration or transformation
-- Application management and monitoring (application resources)
-- Azure RBAC (application resources)
-- Security monitoring and audits (application resources)
-- Secrets and Keys management (application keys)
-- Cost management (application resources)
-- Network management (application resources)
-
-### Define functions for enabling teams
-
-The following list provides a recommended set of functions for an enabling team responsible for assisting your other teams:
-
-- Definition of horizontal (cross-function) guidance and capabilities to help acquire the right expertise across your organization, which ensures alignment with your overall target cloud operating model (like DevOps)
-- Support, training and coaching for other teams to reach the necessary level of expertise
-- Establishment of a common set of reusable templates and libraries for your application or platform teams, and fostering InnerSourcing, such as [Azure verified modules](https://aka.ms/avm).
-
-### Define interaction modes between teams
-
-The goals of interactions between your teams are to:
-
-- Achieve autonomy
-- Unblock dependencies
-- Minimize waste time
-- Avoid bottlenecks
-
-[Team Topologies](https://teamtopologies.com/) outlines three team interaction modes:
-
-| Interaction mode | Description |
-| - | - |
-| **Collaboration** | Teams work closely together. |
-| **X-as-a-Service** | Teams consume or provide something to other teams with minimum collaboration, similar to third-party vendor interactions. |
-| **Facilitating** | Teams help or are helped by another team to remove impediments. |
+1. **Build reusable assets and foster collaboration.** Establish a common set of reusable templates and libraries for your application or platform teams, and foster InnerSourcing, such as [Azure verified modules](https://aka.ms/avm). Reusable assets accelerate delivery across teams and ensure consistent implementation of best practices. InnerSourcing encourages teams to contribute improvements back to shared assets, which creates a continuous improvement cycle that benefits the entire organization.
