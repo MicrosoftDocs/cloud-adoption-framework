@@ -136,10 +136,3 @@ Support from IT stakeholders should include the following activities:
 - **Create a buffer:** The CCoE team experiments with new approaches.
 
   Some new approaches won't align well with existing operations or technical constraints. The CCoE team might experience pressure or recourse from other teams when experiments fail. It's important to encourage and buffer the CCoE team from the consequences of "fast fail" learning opportunities. It's equally important to hold the team accountable to a growth mindset to ensure that they learn from those experiments and find better solutions.
-
-## Next steps
-
-A CCoE model requires cloud platform functions and cloud automation functions. The next step is to align cloud platform functions.
-
-> [!div class="nextstepaction"]
-> [Cloud platform functions](./cloud-platform.md)
