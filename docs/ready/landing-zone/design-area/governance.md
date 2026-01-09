@@ -15,8 +15,6 @@ Use Azure governance to establish the tooling that you need to support cloud gov
 
 ## Design area review
 
-**Roles or functions:** Azure governance originates from cloud governance. You might need to implement the [cloud platform](../../../organize/cloud-platform.md) to define and apply certain technical requirements. Governance focuses on enforcing operations and security requirements, which might require [cloud security](../../../secure/teams-roles.md), central IT, or [cloud operations](../../../organize/cloud-operations.md).
-
 **Scope:** Consider your decisions from [identity](./identity-access.md), [network](./network-topology-and-connectivity.md), [security](./security.md), and [management](./management.md) design area reviews. Your team can compare review decisions from automated governance, which is part of the Azure landing zone reference architecture. Review decisions can help you determine what to audit or enforce and what policies to automatically deploy.
 
 **Out of scope:** Azure governance establishes the foundation for networking. But it doesn't address compliance-related components, such as advanced network security or automated guardrails to enforce networking decisions. You can address these networking decisions when you review compliance design areas that are related to [security](./security.md) and [governance](./governance.md). The cloud platform team should address initial networking requirements before addressing more complex components.
