@@ -61,6 +61,8 @@ For GitHub, Azure DevOps, or third party CI/CD platforms, use secure and scoped 
 
 User Assigned Managed Identities are managed by Azure Resource Manager. Application Registrations (Service Principals) are managed by Entra ID. User Assigned Managed Identities more easily integrate with your subscription vending process, ensuring they're decommissioned along with your other resources when no longer needed.
 
+With self-hosted agents utilizing Azure compute it is possible to use System or User Assigned Managed Identities directly on the agent. Although this approach can be secure, it is recommended to use OpenId Connect (Workload Identity Federation) with either User Assigned Managed Identities or Application Registrations (Service Principals) for greater flexibility and control. When using a compute attached managed identity, if you attach multiple User Assigned Managed Identities to the agent, anything running on the agent has access to all of them. It is usually cost prohibitive to have separate agents per application and environment to ensure least privilege access.
+
 ### Azure DevOps
 
 Always use a [service connection](/azure/devops/pipelines/library/service-endpoints) to deploy infrastructure or application code in an Azure environment. A service connection is a wrapper for the identity in Azure.
