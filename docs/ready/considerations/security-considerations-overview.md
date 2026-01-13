@@ -44,17 +44,48 @@ Consider following an incremental approach to securing your YAML pipelines. For 
 
 You can use Microsoft-hosted or self-hosted agents to power Azure DevOps and GitHub pipelines. There are trade-offs for each type of agent.
 
-With Microsoft-hosted agents, you don't need to worry about upgrades or maintenance. With self-hosted agents, you have greater flexibility to implement security guardrails. You control the agent hardware, operating system, and installed tools.
+With Microsoft-hosted agents, you don't need to worry about upgrades or maintenance. With self-hosted agents, you have greater flexibility to implement security guardrails. You control the agent hardware, operating system, and installed tools. Self-hosted agents can also provide private networking access to resources behind firewalls or virtual networks.
 
 See [Azure Pipelines agents](/azure/devops/pipelines/agents/agents) to review the differences between the types of agents and identify potential security considerations.
 
-## Use secure and scoped service connections
+## Use secure and scoped service identities
 
-Whenever possible, use a [service connection](/azure/devops/pipelines/library/service-endpoints) to deploy infrastructure or application code in an Azure environment. The service connection should have limited deployment access to specific Azure resources or resource groups, to reduce any potential attack surfaces. Also, consider creating separate service connections for development, testing, QA, and production environments.
+For GitHub, Azure DevOps, or third party CI/CD platforms, use secure and scoped identities to deploy code and infrastructure to Azure environments.
+
+- User Assigned Managed Identities or Application Registrations (Service Principals) in Entra ID can be used. Never use a User Account.
+- Implement [OpenId Connect (Workload Identity Federation)](/azure/active-directory/develop/workload-identity-federation) authentication with Federated Credentials for the identity. Never user client secrets or certificates.
+- Create a separate identity for each application and environment you deploy to, ensuring granular permissions can be applied.
+- Create a separate identity per each application and environment for read-only operations, such as Terraform plan or Bicep what-if.
+- Scope the identity permissions to only the Azure subscription or resource groups required for deployment. Use the principle of least privilege to assign only the necessary roles to the identity.
+- Deploy your identities and Federated Credentials through infrastructure as code (IaC) in a secure subscription vending process. For more information, see [Automate subscription deployment and configuration](/azure/cloud-adoption-framework/ready/landing-zones/deploy-subscription).
+
+User Assigned Managed Identities can be managed through Azure Resource Manager, while Application Registrations (Service Principals) can only be managed through Entra ID. Using User Assigned Managed Identities allows you to easily manage the lifecycle of the identities alongside your subscription vending process with IaC and ensures they are torn down when no longer needed.
+
+### Azure DevOps
+
+Always use a [service connection](/azure/devops/pipelines/library/service-endpoints) to deploy infrastructure or application code in an Azure environment. A service connection is a wrapper for the identity in Azure.
+
+- Create a separate service connection and identity for each application and environment you deploy to, ensuring granular permissions can be applied.
+- Create [approvals](/azure/devops/pipelines/process/approvals?view=azure-devops&tabs=check-pass#approvals) on the service connection. Do not create them on Environments, as that can be by-passed in code.
+- Create [required templates](/azure/devops/pipelines/process/approvals?view=azure-devops&tabs=check-pass#required-template) (also known as governed pipelines) on the service connection to ensure that malicious code cannot be injected without approval.
+- Ensure your identity Federated Credentials are scoped to the service connection only.
+- Deploy your service connections through infrastructure as code (IaC) in a secure subscription vending process. For more information, see [Automate subscription deployment and configuration](/azure/cloud-adoption-framework/ready/landing-zones/deploy-subscription).
+
+### GitHub Actions
+
+Always use the built in Actions or environment variables to specify the identity.
+
+- Create approvals on a GitHub Actions Environment.
+- Update your [subject claims](https://docs.github.com/actions/reference/security/oidc#customizing-the-token-claims) to include the `environment` claim to ensure you identity can only be used in the scope of the specified environment. Add this claim to your identity Federated Credential.
+- Update you [subject claims](https://docs.github.com/actions/reference/security/oidc#customizing-the-token-claims) to include the `job_workflow_ref` (also known as governed pipelines) claim to ensure your identity can only be used in the scope of the specified workflow. Add this claim to your identity Federated Credential.
+- Update your [subject claims](https://docs.github.com/actions/reference/security/oidc#customizing-the-token-claims) to remove `repository` and use `repository_owner_id` and `repository_id` instead to ensure your identity can only be used in the scope of the specified repository even if it is renamed. Add this claim to your identity Federated Credential.
+- Update your subjects claims through infrastructure as code (IaC) in a secure subscription vending process. For more information, see [Automate subscription deployment and configuration](/azure/cloud-adoption-framework/ready/landing-zones/deploy-subscription).
 
 ## Use a secret store
 
-Never hard-code secrets in code or auxiliary documentation in your repositories. Adversaries scan repositories, searching for exposed confidential data to exploit. Set up a secret store such as [Azure Key Vault](/azure/key-vault/general/basic-concepts), and reference the store in Azure Pipelines to securely retrieve keys, secrets, or certificates. For more information, see [Secure the pipeline and CI/CD workflow](/security/zero-trust/develop/secure-devops-environments-zero-trust). You can also [use Key Vault secrets in GitHub Actions workflows](/azure/developer/github/github-key-vault).
+Always avoid using secrets, prefer OpenId Connect (Workload Identity Federation) or Managed Identities wherever possible.
+
+In the case that you can't avoid using a secret, never hard-code them in code or auxiliary documentation in your repositories. Adversaries scan repositories, searching for exposed confidential data to exploit. Set up a secret store such as [Azure Key Vault](/azure/key-vault/general/basic-concepts), and reference the store in Azure Pipelines to securely retrieve keys, secrets, or certificates. For more information, see [Secure the pipeline and CI/CD workflow](/security/zero-trust/develop/secure-devops-environments-zero-trust). You can also [use Key Vault secrets in GitHub Actions workflows](/azure/developer/github/github-key-vault).
 
 ## Use hardened DevOps workstations to build and deploy code
 

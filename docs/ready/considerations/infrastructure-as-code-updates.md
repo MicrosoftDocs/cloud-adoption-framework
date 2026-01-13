@@ -62,13 +62,33 @@ Infrastructure as code deployments are backed by a definition file, so you can u
 
 When you use source control practices, it creates a new branch of your IaC to add changes and revisions. The branch's history in your source control system captures the iterations and changes. You can use it to deploy changes to a test environment until you’re ready to merge and deploy the changes to production. For more information, see [Testing approach for Azure landing zones](../enterprise-scale/testing-approach.md). Throughout this cycle, the deployment records capture the version that's used and the resources that are deployed, which provides a highly visible history.
 
-Use these testing methods with Bicep for general testing purposes. With these methods, you can perform testing before you deploy the code, and you can test in non-production environments from your branch.  
+Use these testing methods with Bicep for general testing purposes. With these methods, you can perform testing before you deploy the code, and you can test in non-production environments from your branch.
+
+## Harden security
+
+Follow our guidance for securing your infrastructure as code deployment identities in the [Security considerations](/ready/considerations/security-considerations-overview.md) article.
+
+Specifically for infrastructure as code deployments, consider the following methods to harden security.
+
+- Always use continuous delivery pipelines to deploy infrastructure as code. Avoid running deployments from local developer machines or other unmanaged devices.
+- Use separate identities for Terraform plan and Bicep what-if operations versus apply and deploy operations. The plan and what-if operations only need read access, while the apply and deploy operations need write access.
+- Use human approval gates for the production apply / deploy stage, don't rely on automated checks alone. Ensure some checks the Terraform plan or Bicep what-if output before applying changes to production.
+- Use governed pipelines by specifying a template stored and managed in a central location. This method ensures that all deployments follow the same security and compliance guardrails.
 
 ### Testing environments
 
 IaC deployments are repeatable, so you can use the same definition to deploy a second (or more) environment based on the deployment. This method is valuable for testing changes.
 
-For example, if you want to replace your Azure Firewall by using the Premium SKU, you can deploy a test environment and validate the changes without changing production.  
+For example, if you want to replace your Azure Firewall by using the Premium SKU, you can deploy a test environment and validate the changes without changing production.
+
+### Repository structure
+
+You need to have confidence that what you deploy to lower environments and test is the same as what you deploy to production. Use a repository structure that supports this practice.
+
+- Use trunk based development with feature branches to ensure that all changes are merged back to the main branch prior to deployment to any environment.
+- Use the same code for all environments. Use variables and variable files to differentiate between environments.
+- Never copy and paste code between folders or branches to updated different environments. This practice leads to configuration drift and divergence between environments.
+- You can run a Terraform plan or Bicep what-if against all your environments including production in a Pull Request (PR) to validate the changes before merging them to main. The use of separate read-only identities enables this practice securely.
 
 ### Catch configuration drifts
 
