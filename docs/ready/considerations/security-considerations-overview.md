@@ -19,7 +19,7 @@ Consider the following critical security areas whether you deploy environments t
 Follow the principle of least privilege by using role-based access control (RBAC) through [Microsoft Entra ID](/entra/fundamentals/whatis). Give users and services the minimum amount of access to your DevOps platforms that they need to do their business functions. For more information, see the following articles:
 
 - [Connect your organization to Microsoft Entra ID](/azure/devops/organizations/accounts/connect-organization-to-azure-ad)
-- [Microsoft Entra Single Sign-On (SSO) integration with GitHub Enterprise Cloud](/entra/identity/saas-apps/github-enterprise-cloud-enterprise-account-tutorial)
+- [Microsoft Entra single sign-on (SSO) integration with GitHub Enterprise Cloud](/entra/identity/saas-apps/github-enterprise-cloud-enterprise-account-tutorial)
 - [Azure DevOps security best practices](/azure/devops/organizations/security/security-best-practices)
 
 After you establish Microsoft Entra ID as your identity management plane, follow best practices to manage Azure DevOps role assignments with [Microsoft Entra group memberships](../../secure/govern.md). You can [assign Azure DevOps roles to Microsoft Entra groups](../../secure/govern.md), and adjust a user's Microsoft Entra membership to change or remove their Azure DevOps access.
@@ -59,26 +59,26 @@ For GitHub, Azure DevOps, or third party CI/CD platforms, use secure and scoped 
 - Scope the identity permissions to only the Azure subscription or resource groups required for deployment. Use the principle of least privilege to assign only the necessary roles to the identity.
 - Deploy your identities and Federated Credentials through infrastructure as code (IaC) in a secure subscription vending process. For more information, see [Automate subscription deployment and configuration](/azure/cloud-adoption-framework/ready/landing-zone/design-area/subscription-vending).
 
-User Assigned Managed Identities are managed by Azure Resource Manager. Application Registrations (Service Principals) are managed by Entra ID. User Assigned Managed Identities more easily integrate with your subscription vending process, ensuring they are decommissioned along with your other resources when no longer needed.
+User Assigned Managed Identities are managed by Azure Resource Manager. Application Registrations (Service Principals) are managed by Entra ID. User Assigned Managed Identities more easily integrate with your subscription vending process, ensuring they're decommissioned along with your other resources when no longer needed.
 
 ### Azure DevOps
 
 Always use a [service connection](/azure/devops/pipelines/library/service-endpoints) to deploy infrastructure or application code in an Azure environment. A service connection is a wrapper for the identity in Azure.
 
 - Create a separate service connection and identity for each application and environment you deploy to, ensuring granular permissions can be applied.
-- Create [approvals](/azure/devops/pipelines/process/approvals?view=azure-devops&tabs=check-pass#approvals) on the service connection. Do not create them on Environments, as that can be by-passed in code.
-- Create [required templates](/azure/devops/pipelines/process/approvals#required-template) (also known as governed pipelines) on the service connection to ensure that malicious code cannot be injected without approval.
+- Create [approvals](/azure/devops/pipelines/process/approvals?view=azure-devops&tabs=check-pass#approvals) on the service connection. Don't create them on Environments, as that can be bypassed in code.
+- Create [required templates](/azure/devops/pipelines/process/approvals#required-template) (also known as governed pipelines) on the service connection to ensure that malicious code can't be injected without approval.
 - Ensure your identity Federated Credentials are scoped to the service connection only.
 - Deploy your service connections through infrastructure as code (IaC) in a secure subscription vending process. For more information, see [Automate subscription deployment and configuration](/azure/cloud-adoption-framework/ready/landing-zone/design-area/subscription-vending).
 
 ### GitHub Actions
 
-Always use the built in Actions or environment variables to specify the identity.
+Always use the built-in Actions or environment variables to specify the identity.
 
 - Create approvals on a GitHub Actions Environment.
-- Update your [subject claims](https://docs.github.com/actions/reference/security/oidc#customizing-the-token-claims) to include the `environment` claim to ensure you identity can only be used in the scope of the specified environment. Add this claim to your identity Federated Credential.
+- Update your [subject claims](https://docs.github.com/actions/reference/security/oidc#customizing-the-token-claims) to include the `environment` claim to ensure your identity can only be used in the scope of the specified environment. Add this claim to your identity Federated Credential.
 - Update you [subject claims](https://docs.github.com/actions/reference/security/oidc#customizing-the-token-claims) to include the `job_workflow_ref` (also known as governed pipelines) claim to ensure your identity can only be used in the scope of the specified workflow. Add this claim to your identity Federated Credential.
-- Update your [subject claims](https://docs.github.com/actions/reference/security/oidc#customizing-the-token-claims) to remove `repository` and use `repository_owner_id` and `repository_id` instead to ensure your identity can only be used in the scope of the specified repository even if it is renamed. Add this claim to your identity Federated Credential.
+- Update your [subject claims](https://docs.github.com/actions/reference/security/oidc#customizing-the-token-claims) to remove `repository` and use `repository_owner_id` and `repository_id` instead to ensure your identity can only be used in the scope of the specified repository even if it's renamed. Add this claim to your identity Federated Credential.
 - Update your subjects claims through infrastructure as code (IaC) in a secure subscription vending process. For more information, see [Automate subscription deployment and configuration](/azure/cloud-adoption-framework/ready/landing-zone/design-area/subscription-vending).
 
 ## Use a secret store
