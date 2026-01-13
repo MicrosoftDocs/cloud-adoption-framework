@@ -19,7 +19,7 @@ For more information, see [Keep your Azure landing zone up to date](../landing-z
 
 IaC refers to the practice and tools for managing the lifecycle of infrastructure resources by using machine-readable definition files. The definition for the infrastructure is written, versioned, deployed through pipelines, and then it becomes a part of the deployment for workloads.
 
-IaC technologies are *declarative*, which means when IaC runs, it sets the configuration to what's described in the code, regardless of its current state. When you configure infrastructure through scripts, such as the Azure CLI or Azure PowerShell, they're *imperative*. Imperative scripts perform a set of actions, and the result depends on the current state plus the state after the actions.
+IaC technologies are *declarative*, which means when IaC runs, it takes the desired state of your infrastructure in code and brings the actual state inline with desired state. When you configure infrastructure through scripts, such as the Azure CLI or Azure PowerShell, they're *imperative*. Imperative scripts perform a set of actions, and the result depends on the current state plus the state after the actions.
 
 So, if you have an infrastructure as code definition for an Azure resource, you can run that definition as often as you want, and it only creates a change if:
 
@@ -36,7 +36,7 @@ For Azure landing zones, there are two main options for infrastructure as code:
 - Azure Bicep, which is a domain-specific language that's used to deploy Microsoft developed Azure resources. For more information, see [Azure landing zones - Bicep modules design considerations](/azure/architecture/landing-zones/bicep/landing-zone-bicep).
 - Terraform, a product produced by Hashicorp, to deploy infrastructure to the cloud and on-premises. Terraform has specific Microsoft produced resource providers for the deployment of Azure resources. For more information, see [Azure landing zones - Terraform module design considerations](/azure/architecture/landing-zones/terraform/landing-zone-terraform).
 
-## The benefits of updating ALZ with infrastructure as code
+## The benefits of updating Azure Landing Zone (ALZ) with infrastructure as code
 
 The following benefits describe why you should use infrastructure as code to make your landing zone updates.
 
@@ -45,8 +45,7 @@ The following benefits describe why you should use infrastructure as code to mak
 It takes less effort to use infrastructure as code to perform updates compared to making manual changes. The IaC deployment helps answer the following questions:
 
 - How are resources configured today?
-- How will it be configured by this update?
-- What changes will be made to bring it in line with this update?
+- How will resources be changed by this update?
 
 When an infrastructure as code toolset runs, it can produce a comparison or "differential" readout of the changes. Review this readout before you commit changes to the environment.
 
@@ -72,7 +71,7 @@ Specifically for infrastructure as code deployments, consider the following meth
 
 - Always use continuous delivery pipelines to deploy infrastructure as code. Avoid running deployments from local developer machines or other unmanaged devices.
 - Use separate identities for Terraform plan and Bicep what-if operations versus apply and deploy operations. The plan and what-if operations only need read access, while the apply and deploy operations need write access.
-- Use human approval gates for the production apply / deploy stage, don't rely on automated checks alone. Ensure some checks the Terraform plan or Bicep what-if output before applying changes to production.
+- Use human approval gates for the production apply / deploy stage. Don't rely on automated checks alone. Ensure some checks the Terraform plan or Bicep what-if output before applying changes to production.
 - Use governed pipelines by specifying a template stored and managed in a central location. This method ensures that all deployments follow the same security and compliance guardrails.
 
 ### Testing environments
@@ -85,7 +84,7 @@ For example, if you want to replace your Azure Firewall by using the Premium SKU
 
 You need to have confidence that what you deploy to lower environments and test is the same as what you deploy to production. Use a repository structure that supports this practice.
 
-- Use trunk based development with feature branches to ensure that all changes are merged back to the main branch prior to deployment to any environment.
+- Use trunk based development with feature branches to ensure that all changes are merged back to the main branch before deployment to any environment.
 - Use the same code for all environments. Use variables and variable files to differentiate between environments.
 - Never copy and paste code between folders or branches to updated different environments. This practice leads to configuration drift and divergence between environments.
 - You can run a Terraform plan or Bicep what-if against all your environments including production in a Pull Request (PR) to validate the changes before merging them to main. The use of separate read-only identities enables this practice securely.

@@ -59,7 +59,7 @@ For GitHub, Azure DevOps, or third party CI/CD platforms, use secure and scoped 
 - Scope the identity permissions to only the Azure subscription or resource groups required for deployment. Use the principle of least privilege to assign only the necessary roles to the identity.
 - Deploy your identities and Federated Credentials through infrastructure as code (IaC) in a secure subscription vending process. For more information, see [Automate subscription deployment and configuration](/azure/cloud-adoption-framework/ready/landing-zone/design-area/subscription-vending).
 
-User Assigned Managed Identities can be managed through Azure Resource Manager, while Application Registrations (Service Principals) can only be managed through Entra ID. Using User Assigned Managed Identities allows you to easily manage the lifecycle of the identities alongside your subscription vending process with IaC and ensures they are torn down when no longer needed.
+User Assigned Managed Identities are managed by Azure Resource Manager. Application Registrations (Service Principals) are managed by Entra ID. User Assigned Managed Identities more easily integrate with your subscription vending process, ensuring they are decommissioned along with your other resources when no longer needed.
 
 ### Azure DevOps
 
