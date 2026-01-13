@@ -720,7 +720,7 @@
         "redirect_url": "/azure/cloud-adoption-framework/scenarios/app-platform/",
         "redirect_document_id": false
     },
-    { 
+    {
         "source_path": "docs/scenarios/app-platform/azure-products.md",
         "redirect_url": "/azure/cloud-adoption-framework/scenarios/app-platform/",
         "redirect_document_id": false
