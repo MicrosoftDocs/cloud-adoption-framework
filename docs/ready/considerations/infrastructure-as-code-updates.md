@@ -63,7 +63,7 @@ When you use source control practices, it creates a new branch of your IaC to ad
 
 Use these testing methods with Bicep for general testing purposes. With these methods, you can perform testing before you deploy the code, and you can test in non-production environments from your branch.
 
-## Harden security
+### Harden security
 
 Follow our guidance for securing your infrastructure as code deployment identities in the [Security considerations](./security-considerations-overview.md) article.
 
