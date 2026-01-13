@@ -86,7 +86,7 @@ Always use the built-in Actions or environment variables with OpenID Connect (Wo
 - Update your [subject claims](https://docs.github.com/actions/reference/security/oidc#customizing-the-token-claims) to remove `repository` and use `repository_owner_id` and `repository_id` instead to ensure your identity can only be used in the scope of the specified repository even if it's renamed. Add this claim to your identity Federated Credential.
 - Update your subjects claims through infrastructure as code (IaC) in a secure subscription vending process. For more information, see [Automate subscription deployment and configuration](/azure/cloud-adoption-framework/ready/landing-zone/design-area/subscription-vending).
 
-Example code and workflows can be found in the [GitHub Actions Workload Identity Federation](/samples/azure-samples/github-actions-terraform-oidc-ci-cd/github-actions-terraform-oidc-ci-cd/) code sample.
+Example code and workflows can be found in the [GitHub Actions Workload Identity Federation](/samples/azure-samples/github-terraform-oidc-ci-cd/github-terraform-oidc-ci-cd/) code sample.
 
 ## Use a secret store
 
