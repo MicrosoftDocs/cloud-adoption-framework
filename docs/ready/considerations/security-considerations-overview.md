@@ -55,7 +55,7 @@ For GitHub, Azure DevOps, or third party CI/CD platforms, use secure and scoped 
 - User Assigned Managed Identities or Application Registrations (Service Principals) in Entra ID can be used. Never use a User Account.
 - Implement [OpenId Connect (Workload Identity Federation)](/azure/active-directory/develop/workload-identity-federation) authentication with Federated Credentials for the identity. Never use client secrets or certificates.
 - Create a separate identity for each application and environment you deploy to, ensuring granular permissions can be applied.
-- Create a separate identity per each application and environment for read-only operations, such as Terraform plan or Bicep what-if.
+- Create a separate identity per application and environment for read-only operations, such as Terraform plan or Bicep what-if.
 - Scope the identity permissions to only the Azure subscription or resource groups required for deployment. Use the principle of least privilege to assign only the necessary roles to the identity.
 - Deploy your identities and Federated Credentials through infrastructure as code (IaC) in a secure subscription vending process. For more information, see [Automate subscription deployment and configuration](/azure/cloud-adoption-framework/ready/landing-zone/design-area/subscription-vending).
 
