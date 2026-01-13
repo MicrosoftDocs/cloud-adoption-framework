@@ -66,7 +66,7 @@ Use these testing methods with Bicep for general testing purposes. With these me
 
 ## Harden security
 
-Follow our guidance for securing your infrastructure as code deployment identities in the [Security considerations](/ready/considerations/security-considerations-overview.md) article.
+Follow our guidance for securing your infrastructure as code deployment identities in the [Security considerations](./security-considerations-overview.md) article.
 
 Specifically for infrastructure as code deployments, consider the following methods to harden security.
 

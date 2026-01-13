@@ -57,7 +57,7 @@ For GitHub, Azure DevOps, or third party CI/CD platforms, use secure and scoped 
 - Create a separate identity for each application and environment you deploy to, ensuring granular permissions can be applied.
 - Create a separate identity per each application and environment for read-only operations, such as Terraform plan or Bicep what-if.
 - Scope the identity permissions to only the Azure subscription or resource groups required for deployment. Use the principle of least privilege to assign only the necessary roles to the identity.
-- Deploy your identities and Federated Credentials through infrastructure as code (IaC) in a secure subscription vending process. For more information, see [Automate subscription deployment and configuration](/azure/cloud-adoption-framework/ready/landing-zones/deploy-subscription).
+- Deploy your identities and Federated Credentials through infrastructure as code (IaC) in a secure subscription vending process. For more information, see [Automate subscription deployment and configuration](/azure/cloud-adoption-framework/ready/landing-zone/design-area/subscription-vending).
 
 User Assigned Managed Identities can be managed through Azure Resource Manager, while Application Registrations (Service Principals) can only be managed through Entra ID. Using User Assigned Managed Identities allows you to easily manage the lifecycle of the identities alongside your subscription vending process with IaC and ensures they are torn down when no longer needed.
 
@@ -67,9 +67,9 @@ Always use a [service connection](/azure/devops/pipelines/library/service-endpoi
 
 - Create a separate service connection and identity for each application and environment you deploy to, ensuring granular permissions can be applied.
 - Create [approvals](/azure/devops/pipelines/process/approvals?view=azure-devops&tabs=check-pass#approvals) on the service connection. Do not create them on Environments, as that can be by-passed in code.
-- Create [required templates](/azure/devops/pipelines/process/approvals?view=azure-devops&tabs=check-pass#required-template) (also known as governed pipelines) on the service connection to ensure that malicious code cannot be injected without approval.
+- Create [required templates](/azure/devops/pipelines/process/approvals#required-template) (also known as governed pipelines) on the service connection to ensure that malicious code cannot be injected without approval.
 - Ensure your identity Federated Credentials are scoped to the service connection only.
-- Deploy your service connections through infrastructure as code (IaC) in a secure subscription vending process. For more information, see [Automate subscription deployment and configuration](/azure/cloud-adoption-framework/ready/landing-zones/deploy-subscription).
+- Deploy your service connections through infrastructure as code (IaC) in a secure subscription vending process. For more information, see [Automate subscription deployment and configuration](/azure/cloud-adoption-framework/ready/landing-zone/design-area/subscription-vending).
 
 ### GitHub Actions
 
@@ -79,7 +79,7 @@ Always use the built in Actions or environment variables to specify the identity
 - Update your [subject claims](https://docs.github.com/actions/reference/security/oidc#customizing-the-token-claims) to include the `environment` claim to ensure you identity can only be used in the scope of the specified environment. Add this claim to your identity Federated Credential.
 - Update you [subject claims](https://docs.github.com/actions/reference/security/oidc#customizing-the-token-claims) to include the `job_workflow_ref` (also known as governed pipelines) claim to ensure your identity can only be used in the scope of the specified workflow. Add this claim to your identity Federated Credential.
 - Update your [subject claims](https://docs.github.com/actions/reference/security/oidc#customizing-the-token-claims) to remove `repository` and use `repository_owner_id` and `repository_id` instead to ensure your identity can only be used in the scope of the specified repository even if it is renamed. Add this claim to your identity Federated Credential.
-- Update your subjects claims through infrastructure as code (IaC) in a secure subscription vending process. For more information, see [Automate subscription deployment and configuration](/azure/cloud-adoption-framework/ready/landing-zones/deploy-subscription).
+- Update your subjects claims through infrastructure as code (IaC) in a secure subscription vending process. For more information, see [Automate subscription deployment and configuration](/azure/cloud-adoption-framework/ready/landing-zone/design-area/subscription-vending).
 
 ## Use a secret store
 
