@@ -63,9 +63,9 @@ User Assigned Managed Identities are managed by Azure Resource Manager. Applicat
 
 With self-hosted agents utilizing Azure compute it's possible to use System or User Assigned Managed Identities directly on the agent. Although this approach can be secure, it's recommended to use OpenId Connect (Workload Identity Federation) with either User Assigned Managed Identities or Application Registrations (Service Principals) for greater flexibility and control. When you use a compute attached managed identity, if you attach multiple User Assigned Managed Identities to the agent, anything running on the agent has access to all of them. It's usually cost prohibitive to have separate agents per application and environment to ensure least privilege access.
 
-### Azure DevOps
+### Azure DevOps identities
 
-Always use a [service connection](/azure/devops/pipelines/library/service-endpoints) to deploy infrastructure or application code in an Azure environment. A service connection is a wrapper for the identity in Azure.
+Always use a [service connection](/azure/devops/pipelines/library/service-endpoints) with OpenID Connect (Workload Identity Federation) to deploy infrastructure or application code in an Azure environment. A service connection is a wrapper for the identity in Azure.
 
 - Create a separate service connection and identity for each application and environment you deploy to, ensuring granular permissions can be applied.
 - Create [approvals](/azure/devops/pipelines/process/approvals#approvals) on the service connection. Don't create them on Environments, as that can be bypassed in code.
@@ -73,9 +73,11 @@ Always use a [service connection](/azure/devops/pipelines/library/service-endpoi
 - Ensure your identity Federated Credentials are scoped to the service connection only.
 - Deploy your service connections through infrastructure as code (IaC) in a secure subscription vending process. For more information, see [Automate subscription deployment and configuration](/azure/cloud-adoption-framework/ready/landing-zone/design-area/subscription-vending).
 
-### GitHub Actions
+Example code and pipelines can be found in the [Azure DevOps Workload Identity Federation](/samples/azure-samples/azure-devops-terraform-oidc-ci-cd/azure-devops-terraform-oidc-ci-cd/) code sample.
 
-Always use the built-in Actions or environment variables to specify the identity.
+### GitHub Actions identities
+
+Always use the built-in Actions or environment variables with OpenID Connect (Workload Identity Federation) to deploy infrastructure or application code in an Azure environment.
 
 - Create a identity for each application and environment you deploy to, ensuring granular permissions can be applied.
 - Create approvals on a GitHub Actions Environment.
@@ -83,6 +85,8 @@ Always use the built-in Actions or environment variables to specify the identity
 - Update you [subject claims](https://docs.github.com/actions/reference/security/oidc#customizing-the-token-claims) to include the `job_workflow_ref` (also known as governed pipelines) claim to ensure your identity can only be used in the scope of the specified workflow. Add this claim to your identity Federated Credential.
 - Update your [subject claims](https://docs.github.com/actions/reference/security/oidc#customizing-the-token-claims) to remove `repository` and use `repository_owner_id` and `repository_id` instead to ensure your identity can only be used in the scope of the specified repository even if it's renamed. Add this claim to your identity Federated Credential.
 - Update your subjects claims through infrastructure as code (IaC) in a secure subscription vending process. For more information, see [Automate subscription deployment and configuration](/azure/cloud-adoption-framework/ready/landing-zone/design-area/subscription-vending).
+
+Example code and workflows can be found in the [GitHub Actions Workload Identity Federation](/samples/azure-samples/github-actions-terraform-oidc-ci-cd/github-actions-terraform-oidc-ci-cd/) code sample.
 
 ## Use a secret store
 
