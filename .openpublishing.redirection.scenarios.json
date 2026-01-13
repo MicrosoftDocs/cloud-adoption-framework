@@ -715,7 +715,7 @@
         "redirect_url": "/azure/cloud-adoption-framework/scenarios/hybrid/strategy",
         "redirect_document_id": false
     },
-      {
+    {
         "source_path": "docs/scenarios/app-platform/ready.md",
         "redirect_url": "/azure/cloud-adoption-framework/scenarios/app-platform/",
         "redirect_document_id": false
