@@ -86,7 +86,7 @@ You need to have confidence that what you deploy to lower environments and test 
 
 - Use trunk based development with feature branches to ensure that all changes are merged back to the main branch before deployment to any environment.
 - Use the same code for all environments. Use variables and variable files to differentiate between environments.
-- Never copy and paste code between folders or branches to updated different environments. This practice leads to configuration drift and divergence between environments.
+- Never copy and paste code between folders or branches to update different environments. This practice leads to configuration drift and divergence between environments.
 - You can run a Terraform plan or Bicep what-if against all your environments including production in a Pull Request (PR) to validate the changes before merging them to main. The use of separate read-only identities enables this practice securely.
 
 ### Catch configuration drifts
