@@ -29,12 +29,6 @@ Many of the fundamental concepts of identity and access management are the same 
 
 ## Design area review
 
-**Functions:** Identity and access management requires the support of one or more of the following functions. The roles that perform these functions can help make and implement decisions.
-
-- [Cloud platform functions](../../../organize/cloud-platform.md)
-- [Cloud center of excellence functions](../../../organize/cloud-center-of-excellence.md)
-- [Cloud security team functions](../../../secure/teams-roles.md)
-
 **Scope:** The goal of this design area is to help you evaluate options for your identity and access foundation. When you design your identity strategy, you should perform the following tasks:
 
 - Authenticate users and workload identities.

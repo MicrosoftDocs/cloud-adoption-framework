@@ -90,26 +90,17 @@ Azure infrastructure services provide granular control for AI performance, isola
 | --------------|----|-------------| ---------| ---- |
 | Train and inference your own AI models. Bring your own models to Azure. | [Azure Virtual Machines with CycleCloud for HPC workloads](./infrastructure/cycle-cloud.md) <br>or<br>[Azure Kubernetes Service](/azure/aks/gpu-cluster) | Yes | Infrastructure management, IT, program installation, model training, model benchmarking, orchestration, deploying endpoints, securing endpoints, and consuming endpoints in apps | Compute, compute node orchestrator, managed disks (optional), storage services, Azure Bastion, and other Azure services used |
 
-## Develop an AI data strategy that grows with your needs
+## Define a data strategy
 
-Your data strategy is the control plane for scalable, trustworthy AI. It defines how data is sourced, classified, secured, enriched, monitored, and retired while sustaining compliance and minimizing exposure risk. A durable strategy ensures priority AI use cases across Microsoft 365, Azure, and hybrid estates have governed, high-quality, lineage-traceable data. Concentrate on governance baselines, elasticity planning, lifecycle instrumentation, and responsible usage enforcement.
+Your data strategy defines how data is sourced, classified, secured, enriched, monitored, and retired while sustaining compliance and minimizing exposure risk. A durable strategy ensures priority AI use cases across Microsoft 365, Azure, and hybrid estates have governed, high-quality, lineage-traceable data. Concentrate on governance baselines, elasticity planning, lifecycle instrumentation, and responsible usage enforcement.
 
-1. **Set up data governance for AI projects.** **Data governance** ensures you use AI data securely and comply with regulations through access controls and policies. Start by classifying data based on sensitivity and required access. Use [Microsoft Purview Data Security Posture Management (DSPM) for AI](/purview/dspm-for-ai) to protect generative AI applications; it includes capabilities for AI data security.
+1. **Set up data governance for AI projects.** **Data governance** ensures you use AI data securely and comply with regulations through access controls and policies. Start by classifying data based on sensitivity and required access. Use [Microsoft Purview Data Security Posture Management (DSPM) for AI](/purview/dspm-for-ai) to protect generative AI applications. It includes capabilities for AI data security.
 
 2. **Plan for data growth and performance.** Ensure the data environment supports current AI projects and future growth without performance degradation or excessive cost. Document current data volume, processing frequency, and required data types per use case. This information helps you choose appropriate Azure services.
 
 3. **Manage data throughout its lifecycle.** Define how you collect, store, and retire data while keeping it accessible and secure for AI use. Set up systematic collection from databases, APIs, IoT devices, and third-party sources. Choose Azure storage tiers based on access frequency. Build **ETL/ELT pipelines** (data processing workflows) to maintain quality and use the [Responsible AI Dashboard](https://github.com/microsoft/responsible-ai-toolbox#introducing-responsible-ai-dashboard) to check for bias in training data.
 
 4. **Follow responsible data practices.** Ensure AI systems use data ethically and meet regulatory requirements. Track data sources and usage with [Microsoft Fabric data lineage](/fabric/governance/lineage) or [Microsoft Purview data lineage](/purview/concept-data-lineage). Set quality standards, check for bias, and evaluate fairness in training datasets. Create retention policies that balance AI performance with privacy and compliance.
-
-> [!TIP]
-> **Data decision accelerators** (all derived from existing guidance):
->
-> - Start classification before large-scale RAG ingestion to avoid rework.
-> - Pair lineage tracking with retention policies to reduce orphaned sensitive data.
-> - Treat bias evaluation (Responsible AI Dashboard) as a recurring control, not a one-time gate.
-> - Use cost telemetry (tokens, storage, egress) early to flag unbounded data growth.
->
 
 ## Develop a responsible AI strategy
 
@@ -134,33 +125,6 @@ This example AI strategy uses a fictional company, Contoso. Contoso operates a c
 | **Inventory management and product purchasing** | Automate business process | Reduce costs | Shorter shelf life of inventory | Machine learning, training models | Azure Machine Learning | Historical inventory and sales data | Machine learning and app development | Estimated usage | Establish governance for sales data and detect and address biases in data. | Assign AI accountability and comply with financial regulations. |
 | **Daily work across company** | Enhance individual productivity | Improve employee experience | Increased employee satisfaction | SaaS generative AI | Microsoft 365 Copilot | OneDrive data | General IT | Subscription costs | Implement data governance for employee data and ensure data privacy. | Assign AI accountability and utilize built-in responsible AI features. |
 | **E-commerce app for regulated industry chat feature** | Automate business process | Increase sales | Increased sales | IaaS generative AI model training | Azure Virtual Machines | Domain-specific training data | Cloud infrastructure and app development | Infrastructure and software | Define governance for regulated data and plan lifecycle with compliance measures. | Assign AI accountability and adhere to industry regulations. |
-
-## Azure tools and resources for AI strategy implementation
-
-| Category | Tool | Description |
-|----------|------|-------------|
-| AI Strategy Planning | [Azure AI Architecture Center](/azure/architecture/ai-ml/) | Comprehensive reference architectures and design patterns for AI solutions across industries and enterprise use cases |
-| Agent Development Platform | [Foundry Agent Service](/azure/ai-foundry/agents/overview) | Full-featured platform for building, deploying, and managing intelligent AI agents with enterprise security |
-| Enterprise Generative AI | [Azure OpenAI Service](/azure/ai-services/openai/overview) | Enterprise-grade access to GPT-4 family (including GPT-4o) and DALL·E models with security, compliance, and responsible AI features |
-| AI Data Governance | [Microsoft Purview Data Security Posture Management (DSPM) for AI](/purview/dspm-for-ai) | AI data risk visibility, data protection controls, and monitoring for generative AI workloads |
-| Responsible AI Tooling | [Microsoft Responsible AI Dashboard](https://github.com/microsoft/responsible-ai-toolbox#introducing-responsible-ai-dashboard) | Comprehensive tools for bias detection, fairness assessment, and AI model interpretability |
-| AI Development Platform | [Foundry](/azure/ai-foundry/concepts/retrieval-augmented-generation) | Unified platform for RAG applications, foundation model fine-tuning, and AI workload deployment |
-| Low-Code AI Development | [Microsoft Copilot Studio](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio) | Build conversational AI agents and automation workflows with natural language interface |
-| Enterprise AI Productivity | [Microsoft 365 Copilot](/copilot/microsoft-365/microsoft-365-copilot-overview) | AI-powered productivity across Microsoft 365 applications with enterprise data integration |
-
-## Key takeaways for AI strategy success
-
-**Strategic planning delivers faster results**: A documented AI strategy produces consistent, auditable outcomes. Success depends on prioritizing business-aligned use cases, selecting the correct Microsoft AI service model (SaaS, PaaS, IaaS), and instituting scalable data governance and DSPM controls.
-
-**Microsoft AI portfolio supports adoption patterns**: The integrated Microsoft AI ecosystem increases productivity with **Microsoft 365 Copilot**, enables differentiated solutions with **Foundry** (RAG, agents, evaluations, model orchestration), and provides specialization and isolation through **Azure infrastructure services**.
-
-**Responsible AI is essential**: Embed governance, transparency tooling, content safety, fairness assessment, and regulatory alignment at inception, not post-deployment, to reduce remediation cost and strengthen stakeholder confidence.
-
-**Important AI terms to know**: AI adoption framework, Foundry, AI agents, generative AI, retrieval-augmented generation (RAG), Microsoft 365 Copilot, responsible AI governance, machine learning workloads, AI data strategy, Microsoft Purview Data Security Posture Management (DSPM) for AI, Copilot Studio, Azure OpenAI Service, AI agent orchestration, shared responsibility model, AI lineage, content safety, data minimization.
-
-## In summary
-
-An enterprise AI strategy combines outcome-driven use case prioritization, the appropriate Microsoft AI service model (SaaS for acceleration, PaaS for differentiation, IaaS for specialization), governed and lineage-traceable data foundations, and enforceable Responsible AI controls. Use Foundry for unified agent and RAG development, use Microsoft 365 Copilot for early productivity impact, integrate Microsoft Purview DSPM for proactive data risk reduction, and apply continuous evaluation and observability to sustain trust, performance, and compliance at scale.
 
 ## Next step
 

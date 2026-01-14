@@ -74,4 +74,3 @@ Use these design recommendations to plan your platform automation and DevOps for
 ## Next steps
 
 - [Review your environment or Azure landing zones](../ready.md)
-- [Plan for modern application platform](../plan.md)

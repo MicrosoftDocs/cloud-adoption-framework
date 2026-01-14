@@ -3909,6 +3909,11 @@
          "source_path": "docs/ready/considerations/infrastructure-as-code.md",
          "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/implementation-options",
          "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/organize/cloud-platform.md",
+         "redirect_url": "/azure/cloud-adoption-framework/manage/ready-cloud-operations#identify-your-management-responsibilities",
+         "redirect_document_id": false
       }
    ]
 }
