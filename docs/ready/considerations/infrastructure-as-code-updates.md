@@ -82,7 +82,7 @@ For example, if you want to replace your Azure Firewall by using the Premium SKU
 
 ### Repository structure
 
-You need to have confidence that what you deploy to lower environments and test is the same as what you deploy to production. Use a repository structure that supports this practice.
+You need to have confidence that what you deploy to non-production environments and test is the same as what you deploy to production. Use a repository structure that supports this practice.
 
 - Use trunk based development with feature branches to ensure that all changes are merged back to the main branch before deployment to any environment.
 - Use the same code for all environments. Use variables and variable files to differentiate between environments.
