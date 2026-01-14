@@ -24,7 +24,7 @@ Partner with us in our ongoing effort to develop the Cloud Adoption Framework.
 
 - [Security considerations for the Azure Integration Services landing zone accelerator](../scenarios/app-platform/integration-services/security.md): We updated the integration services security guidance to fix typos, correct grammatical errors, and improve consistency. We also cleaned up link formatting by removing unnecessary URL parameters.
 
-- [Business continuity and disaster recovery for Azure Virtual Desktop](../scenarios/azure-virtual-desktop/eslz-business-continuity-and-disaster-recovery.md): We clarified the active-active host pool section by explaining the two-region setup with user assignment and failover procedures, and we added guidance about FSLogix profile storage behavior in the active-passive scenario. 
+- [Business continuity and disaster recovery for Azure Virtual Desktop](../scenarios/azure-virtual-desktop/eslz-business-continuity-and-disaster-recovery.md): We clarified the active-active host pool section by explaining the two-region setup with user assignment and failover procedures, and we added guidance about FSLogix profile storage behavior in the active-passive scenario.
 
 - [Manage your cloud estate with enhanced security](../secure/manage.md): We improved formatting consistency and clarity. We enhanced the business continuity and disaster recovery recommendation by clarifying the distinction between disaster recovery planning and resilient architecture design with more precise, actionable language.
 
@@ -395,3 +395,4 @@ We made security updates to the following Cloud Scale Analytics articles:
 - [Authentication for cloud-scale analytics in Azure](../scenarios/cloud-scale-analytics/secure-authentication.md)
 - [Data privacy for cloud-scale analytics in Azure](../scenarios/cloud-scale-analytics/secure-data-privacy.md)
 - [Integrate cloud-scale analytics into your cloud adoption strategy](../scenarios/cloud-scale-analytics/strategy.md)
+
