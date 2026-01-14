@@ -58,22 +58,19 @@ Oracle Exadata Database@Azure integration with Azure Key Vault for TDE key manag
 
 ### Domain Name Service (DNS)
 
-#### Use Azure Private DNS zones by default
-Use **Azure Private DNS zones** linked to your hub virtual network as the default pattern. This approach aligns with Azure‑native services, accelerates deployment, and reduces operational overhead. When designing DNS, also review [Oracle Exadata Database@Azure DNS limitations (https://docs.oracle.com/iaas/Content/database-at-azure/network-dns.htm).
+A consistent DNS strategy supports reliable name resolution, reduces operational risk, and simplifies connectivity decisions across the organization. DNS choices influence network architecture, hybrid connectivity, compliance controls, and the way Azure services integrate with on‑premises environments. Compare Azure Private DNS, hybrid DNS, and custom DNS options. Use Azure Private DNS zones unless your organization explicitly requires one of the following:
 
-Use Azure Private DNS zones unless your organization explicitly requires one of the following:
-- Custom namespaces for internal governance or branding.
-- Integration with a third-party DNS solution.
-- Advanced governance controls that exceed Azure DNS capabilities.
+    - Custom namespaces for internal governance or branding.
+    - Integration with a third-party DNS solution.
+    - Advanced governance controls that exceed Azure DNS capabilities.
 
-#### Use custom DNS only if required
-[Custom DNS](https://docs.oracle.com/iaas/Content/database-at-azure/network-dns.htm#custom-dns)  adds flexibility but also operational complexity and risk. Reserve this option for strict namespace requirements, compliance‑driven policies, or mandatory integration with external DNS providers. 
+1. **Use Azure Private DNS zones by default.** Use Azure Private DNS zones linked to your hub virtual network as the default DNS choice. This approach aligns with Azure‑native services, accelerates deployment, and reduces operational overhead. See also [Oracle Exadata Database@Azure DNS limitations](https://docs.oracle.com/iaas/Content/database-at-azure/network-dns.htm).
 
-#### Enable hybrid DNS resolution
-For on-premises integration, use [Azure Private DNS Resolver](/azure/dns/dns-private-resolver-overview) to bridge DNS resolution between on-premises and Azure-hosted Oracle databases. This ensures seamless name resolution without exposing private endpoints publicly and supports compliance and security objectives.
+2. **Use custom DNS only if required.** [Custom DNS](https://docs.oracle.com/iaas/Content/database-at-azure/network-dns.htm#custom-dns)  adds flexibility but also operational complexity and risk. Reserve this option for strict namespace requirements, compliance‑driven policies, or mandatory integration with external DNS providers. 
 
-#### Centralize DNS for scale
-When deploying a large number of Oracle Database@Azure Exadata instances, centralize DNS resolution to your hub network. Define governance policies for DNS to prevent sprawl and maintain security boundaries. Centralization reduces administrative overhead and enforces consistent governance.
+3. **Enable hybrid DNS resolution.** For on-premises integration, use [Azure Private DNS Resolver](/azure/dns/dns-private-resolver-overview) to bridge DNS resolution between on-premises and Azure-hosted Oracle databases. This ensures seamless name resolution without exposing private endpoints publicly and supports compliance and security objectives.
+
+4. **Centralize DNS for scale.** When deploying a large number of Oracle Database@Azure Exadata instances, centralize DNS resolution to your hub network. Define governance policies for DNS to prevent sprawl and maintain security boundaries. Centralization reduces administrative overhead and enforces consistent governance.
 
 ### Other guidance
 
