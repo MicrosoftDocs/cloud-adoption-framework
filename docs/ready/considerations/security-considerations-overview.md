@@ -90,7 +90,7 @@ Example code and workflows can be found in the [GitHub Actions Workload Identity
 
 ## Use a secret store
 
-Always avoid using secrets, prefer OpenId Connect (Workload Identity Federation) or Managed Identities wherever possible.
+Always avoid using secrets, prefer OpenID Connect (workload identity federation) or managed identities wherever possible.
 
 In the case that you can't avoid using a secret, never hard-code them in code or auxiliary documentation in your repositories. Adversaries scan repositories, searching for exposed confidential data to exploit. Set up a secret store such as [Azure Key Vault](/azure/key-vault/general/basic-concepts), and reference the store in Azure Pipelines to securely retrieve keys, secrets, or certificates. For more information, see [Secure the pipeline and CI/CD workflow](/security/zero-trust/develop/secure-devops-environments-zero-trust). You can also [use Key Vault secrets in GitHub Actions workflows](/azure/developer/github/github-key-vault).
 
