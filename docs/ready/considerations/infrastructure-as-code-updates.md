@@ -71,7 +71,7 @@ Specifically for infrastructure as code deployments, consider the following meth
 
 - Always use continuous delivery pipelines to deploy infrastructure as code. Avoid running deployments from local developer machines or other unmanaged devices.
 - Use separate identities for Terraform plan and Bicep what-if operations versus apply and deploy operations. The plan and what-if operations only need read access, while the apply and deploy operations need write access.
-- Use human approval gates for the production apply / deploy stage. Don't rely on automated checks alone. Ensure some checks the Terraform plan or Bicep what-if output before applying changes to production.
+- Use human approval gates for the production apply / deploy stage. Don't rely on automated checks alone. Ensure someone checks the Terraform plan or Bicep what-if output before applying changes to production.
 - Use governed pipelines by specifying a template stored and managed in a central location. This method ensures that all deployments follow the same security and compliance guardrails.
 
 ### Testing environments
