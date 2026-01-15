@@ -19,7 +19,7 @@ For more information, see [Keep your Azure landing zone up to date](../landing-z
 
 IaC refers to the practice and tools for managing the lifecycle of infrastructure resources by using machine-readable definition files. The definition for the infrastructure is written, versioned, deployed through pipelines, and then it becomes a part of the deployment for workloads.
 
-IaC technologies are *declarative*, which means when IaC runs, it takes the desired state of your infrastructure in code and brings the actual state inline with desired state. When you configure infrastructure through scripts, such as the Azure CLI or Azure PowerShell, they're *imperative*. Imperative scripts perform a set of actions, and the result depends on the current state plus the state after the actions.
+IaC technologies are *declarative*, which means when IaC runs, it takes the desired state of your infrastructure in code and brings the actual state inline with the desired state. When you configure infrastructure through scripts, such as the Azure CLI or Azure PowerShell, they're *imperative*. Imperative scripts perform a set of actions, and the result depends on the current state plus the state after the actions.
 
 So, if you have an infrastructure as code definition for an Azure resource, you can run that definition as often as you want, and it only creates a change if:
 
