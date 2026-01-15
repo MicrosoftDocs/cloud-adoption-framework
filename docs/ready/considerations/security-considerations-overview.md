@@ -77,7 +77,7 @@ Example code and pipelines can be found in the [Azure DevOps Workload Identity F
 
 ### GitHub Actions identities
 
-Always use the built-in Actions or environment variables with OpenID Connect (Workload Identity Federation) to deploy infrastructure or application code in an Azure environment.
+Always use the built-in Actions or environment variables with OpenID Connect (workload identity federation) to deploy infrastructure or application code in an Azure environment.
 
 - Create an identity for each application and environment you deploy to, ensuring granular permissions can be applied.
 - Create approvals on a GitHub Actions environment.
