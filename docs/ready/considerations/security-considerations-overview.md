@@ -53,7 +53,7 @@ See [Azure Pipelines agents](/azure/devops/pipelines/agents/agents) to review th
 For GitHub, Azure DevOps, or third party CI/CD platforms, use secure and scoped identities to deploy code and infrastructure to Azure environments.
 
 - User-assigned managed identities or application registrations (service principals) in Entra ID can be used. Never use a user account.
-- Implement [OpenId Connect (Workload Identity Federation)](/azure/active-directory/develop/workload-identity-federation) authentication with Federated Credentials for the identity. Never use client secrets or certificates.
+- Implement [OpenID Connect (workload identity federation)](/azure/active-directory/develop/workload-identity-federation) authentication with federated credentials for the identity. Never use client secrets or certificates.
 - Create a separate identity for each application and environment you deploy to, ensuring granular permissions can be applied.
 - Create a separate identity per application and environment for read-only operations, such as Terraform plan or Bicep what-if.
 - Scope the identity permissions to only the Azure subscription or resource groups required for deployment. Use the principle of least privilege to assign only the necessary roles to the identity.
