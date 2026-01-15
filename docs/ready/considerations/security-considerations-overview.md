@@ -19,7 +19,7 @@ Consider the following critical security areas whether you deploy environments t
 Follow the principle of least privilege by using role-based access control (RBAC) through [Microsoft Entra ID](/entra/fundamentals/whatis). Give users and services the minimum amount of access to your DevOps platforms that they need to do their business functions. For more information, see the following articles:
 
 - [Connect your organization to Microsoft Entra ID](/azure/devops/organizations/accounts/connect-organization-to-azure-ad)
-- [Microsoft Entra Single Sign-On (SSO) integration with GitHub Enterprise Cloud](/entra/identity/saas-apps/github-enterprise-cloud-enterprise-account-tutorial)
+- [Microsoft Entra single sign-on (SSO) integration with GitHub Enterprise Cloud](/entra/identity/saas-apps/github-enterprise-cloud-enterprise-account-tutorial)
 - [Azure DevOps security best practices](/azure/devops/organizations/security/security-best-practices)
 
 After you establish Microsoft Entra ID as your identity management plane, follow best practices to manage Azure DevOps role assignments with [Microsoft Entra group memberships](../../secure/govern.md). You can [assign Azure DevOps roles to Microsoft Entra groups](../../secure/govern.md), and adjust a user's Microsoft Entra membership to change or remove their Azure DevOps access.
@@ -44,17 +44,55 @@ Consider following an incremental approach to securing your YAML pipelines. For 
 
 You can use Microsoft-hosted or self-hosted agents to power Azure DevOps and GitHub pipelines. There are trade-offs for each type of agent.
 
-With Microsoft-hosted agents, you don't need to worry about upgrades or maintenance. With self-hosted agents, you have greater flexibility to implement security guardrails. You control the agent hardware, operating system, and installed tools.
+With Microsoft-hosted agents, you don't need to worry about upgrades or maintenance. With self-hosted agents, you have greater flexibility to implement security guardrails. You control the agent hardware, operating system, and installed tools. Self-hosted agents can also provide private networking access to resources behind firewalls or virtual networks.
 
 See [Azure Pipelines agents](/azure/devops/pipelines/agents/agents) to review the differences between the types of agents and identify potential security considerations.
 
-## Use secure and scoped service connections
+## Use secure and scoped service identities
 
-Whenever possible, use a [service connection](/azure/devops/pipelines/library/service-endpoints) to deploy infrastructure or application code in an Azure environment. The service connection should have limited deployment access to specific Azure resources or resource groups, to reduce any potential attack surfaces. Also, consider creating separate service connections for development, testing, QA, and production environments.
+For GitHub, Azure DevOps, or third party CI/CD platforms, use secure and scoped identities to deploy code and infrastructure to Azure environments.
+
+- User-assigned managed identities or application registrations (service principals) in Entra ID can be used. Never use a user account.
+- Implement [OpenID Connect (workload identity federation)](/azure/active-directory/develop/workload-identity-federation) authentication with federated credentials for the identity. Never use client secrets or certificates.
+- Create a separate identity for each application and environment you deploy to, ensuring granular permissions can be applied.
+- Create a separate identity per application and environment for read-only operations, such as Terraform plan or Bicep what-if.
+- Scope the identity permissions to only the Azure subscription or resource groups required for deployment. Use the principle of least privilege to assign only the necessary roles to the identity.
+- Deploy your identities and federated credentials through infrastructure as code (IaC) in a secure subscription vending process. For more information, see [Automate subscription deployment and configuration](/azure/cloud-adoption-framework/ready/landing-zone/design-area/subscription-vending).
+
+User-assigned managed identities are managed by Azure Resource Manager. Application registrations (service principals) are managed by Entra ID. User-assigned managed identities more easily integrate with your subscription vending process, ensuring they're decommissioned along with your other resources when no longer needed.
+
+With self-hosted agents utilizing Azure compute it's possible to use system or user-assigned managed identities directly on the agent. Although this approach can be secure, it's recommended to use OpenID Connect (workload identity federation) with either user-assigned managed identities or application registrations (service principals) for greater flexibility and control. When you use a compute attached managed identity, if you attach multiple user-assigned managed identities to the agent, anything running on the agent has access to all of them. It's usually cost prohibitive to have separate agents per application and environment to ensure least privilege access.
+
+### Azure DevOps identities
+
+Always use a [service connection](/azure/devops/pipelines/library/service-endpoints) with OpenID Connect (workload identity federation) to deploy infrastructure or application code in an Azure environment. A service connection is a wrapper for the identity in Azure.
+
+- Create a separate service connection and identity for each application and environment you deploy to, ensuring granular permissions can be applied.
+- Create [approvals](/azure/devops/pipelines/process/approvals#approvals) on the service connection. Don't create them on environments, as that can be bypassed in code.
+- Create [required templates](/azure/devops/pipelines/process/approvals#required-template) (also known as governed pipelines) on the service connection to ensure that malicious code can't be injected without approval.
+- Ensure your identity federated credentials are scoped to the service connection only.
+- Deploy your service connections through infrastructure as code (IaC) in a secure subscription vending process. For more information, see [Automate subscription deployment and configuration](/azure/cloud-adoption-framework/ready/landing-zone/design-area/subscription-vending).
+
+Example code and pipelines can be found in the [Azure DevOps Workload Identity Federation](/samples/azure-samples/azure-devops-terraform-oidc-ci-cd/azure-devops-terraform-oidc-ci-cd/) code sample.
+
+### GitHub Actions identities
+
+Always use the built-in Actions or environment variables with OpenID Connect (workload identity federation) to deploy infrastructure or application code in an Azure environment.
+
+- Create an identity for each application and environment you deploy to, ensuring granular permissions can be applied.
+- Create approvals on a GitHub Actions environment.
+- Update your [subject claims](https://docs.github.com/actions/reference/security/oidc#customizing-the-token-claims) to include the `environment` claim to ensure your identity can only be used in the scope of the specified environment. This ensures your approvals cannot be bypassed. Add this claim to your identity federated credential.
+- Update you [subject claims](https://docs.github.com/actions/reference/security/oidc#customizing-the-token-claims) to include the `job_workflow_ref` (also known as governed pipelines) claim to ensure your identity can only be used in the scope of the specified workflow. Add this claim to your identity federated credential.
+- Update your [subject claims](https://docs.github.com/actions/reference/security/oidc#customizing-the-token-claims) to remove `repository` and use `repository_owner_id` and `repository_id` instead to ensure your identity can only be used in the scope of the specified repository even if it's renamed. Add this claim to your identity federated credential.
+- Update your subject claims through infrastructure as code (IaC) in a secure subscription vending process. For more information, see [Automate subscription deployment and configuration](/azure/cloud-adoption-framework/ready/landing-zone/design-area/subscription-vending).
+
+Example code and workflows can be found in the [GitHub Actions Workload Identity Federation](/samples/azure-samples/github-terraform-oidc-ci-cd/github-terraform-oidc-ci-cd/) code sample.
 
 ## Use a secret store
 
-Never hard-code secrets in code or auxiliary documentation in your repositories. Adversaries scan repositories, searching for exposed confidential data to exploit. Set up a secret store such as [Azure Key Vault](/azure/key-vault/general/basic-concepts), and reference the store in Azure Pipelines to securely retrieve keys, secrets, or certificates. For more information, see [Secure the pipeline and CI/CD workflow](/security/zero-trust/develop/secure-devops-environments-zero-trust). You can also [use Key Vault secrets in GitHub Actions workflows](/azure/developer/github/github-key-vault).
+Always avoid using secrets, prefer OpenID Connect (workload identity federation) or managed identities wherever possible.
+
+In the case that you can't avoid using a secret, never hard-code them in code or auxiliary documentation in your repositories. Adversaries scan repositories, searching for exposed confidential data to exploit. Set up a secret store such as [Azure Key Vault](/azure/key-vault/general/basic-concepts), and reference the store in Azure Pipelines to securely retrieve keys, secrets, or certificates. For more information, see [Secure the pipeline and CI/CD workflow](/security/zero-trust/develop/secure-devops-environments-zero-trust). You can also [use Key Vault secrets in GitHub Actions workflows](/azure/developer/github/github-key-vault).
 
 ## Use hardened DevOps workstations to build and deploy code
 
