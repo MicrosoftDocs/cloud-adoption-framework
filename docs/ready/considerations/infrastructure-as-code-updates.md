@@ -36,7 +36,7 @@ For Azure landing zones, there are two main options for infrastructure as code:
 - Azure Bicep, which is a domain-specific language that's used to deploy Microsoft developed Azure resources. For more information, see [Azure landing zones - Bicep modules design considerations](/azure/architecture/landing-zones/bicep/landing-zone-bicep).
 - Terraform, a product produced by Hashicorp, to deploy infrastructure to the cloud and on-premises. Terraform has specific Microsoft produced resource providers for the deployment of Azure resources. For more information, see [Azure landing zones - Terraform module design considerations](/azure/architecture/landing-zones/terraform/landing-zone-terraform).
 
-## The benefits of updating Azure Landing Zone (ALZ) with infrastructure as code
+## The benefits of updating Azure landing zones (ALZ) with infrastructure as code
 
 The following benefits describe why you should use infrastructure as code to make your landing zone updates.
 
