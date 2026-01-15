@@ -57,7 +57,7 @@ For GitHub, Azure DevOps, or third party CI/CD platforms, use secure and scoped 
 - Create a separate identity for each application and environment you deploy to, ensuring granular permissions can be applied.
 - Create a separate identity per application and environment for read-only operations, such as Terraform plan or Bicep what-if.
 - Scope the identity permissions to only the Azure subscription or resource groups required for deployment. Use the principle of least privilege to assign only the necessary roles to the identity.
-- Deploy your identities and Federated Credentials through infrastructure as code (IaC) in a secure subscription vending process. For more information, see [Automate subscription deployment and configuration](/azure/cloud-adoption-framework/ready/landing-zone/design-area/subscription-vending).
+- Deploy your identities and federated credentials through infrastructure as code (IaC) in a secure subscription vending process. For more information, see [Automate subscription deployment and configuration](/azure/cloud-adoption-framework/ready/landing-zone/design-area/subscription-vending).
 
 User-assigned managed identities are managed by Azure Resource Manager. Application registrations (service principals) are managed by Entra ID. User-assigned managed identities more easily integrate with your subscription vending process, ensuring they're decommissioned along with your other resources when no longer needed.
 
