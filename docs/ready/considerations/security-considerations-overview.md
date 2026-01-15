@@ -68,7 +68,7 @@ With self-hosted agents utilizing Azure compute it's possible to use system or u
 Always use a [service connection](/azure/devops/pipelines/library/service-endpoints) with OpenID Connect (workload identity federation) to deploy infrastructure or application code in an Azure environment. A service connection is a wrapper for the identity in Azure.
 
 - Create a separate service connection and identity for each application and environment you deploy to, ensuring granular permissions can be applied.
-- Create [approvals](/azure/devops/pipelines/process/approvals#approvals) on the service connection. Don't create them on Environments, as that can be bypassed in code.
+- Create [approvals](/azure/devops/pipelines/process/approvals#approvals) on the service connection. Don't create them on environments, as that can be bypassed in code.
 - Create [required templates](/azure/devops/pipelines/process/approvals#required-template) (also known as governed pipelines) on the service connection to ensure that malicious code can't be injected without approval.
 - Ensure your identity federated credentials are scoped to the service connection only.
 - Deploy your service connections through infrastructure as code (IaC) in a secure subscription vending process. For more information, see [Automate subscription deployment and configuration](/azure/cloud-adoption-framework/ready/landing-zone/design-area/subscription-vending).
