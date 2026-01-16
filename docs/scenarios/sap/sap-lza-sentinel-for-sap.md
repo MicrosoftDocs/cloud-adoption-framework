@@ -40,7 +40,7 @@ See the following design considerations for each component.
   > [!NOTE]
   >You can only achieve high availability for the data connector by using an AKS or a Kubernetes deployment.
 
-- A Kubernetes cluster only supports a single data connector that fetches data from an SAP system and sends the data to a single Log Analytics workspace. If you run multiple pods in a Kubernetes cluster that connect to same SAP system and send data to the same Log Analytics workspace, multiple copies of the data are sent, which might result in increased charges for data retention.
+- A Kubernetes cluster only supports a single data connector that fetches data from an SAP system and sends the data to a single Log Analytics workspace. If you run multiple pods in a Kubernetes cluster that connect to the same SAP system and send data to the same Log Analytics workspace, multiple copies of the data are sent, which might result in increased charges for data retention.
 
 - When you use Docker containers, all data from an SAP system goes into a single Log Analytics workspace.
 
@@ -55,7 +55,7 @@ See the following design considerations for each component.
 
 ### SAP application servers
 
-- Use an SAP connector to connect ABAP servers to Microsoft Sentinel.
+- Use an SAP connector to connect to ABAP servers to Microsoft Sentinel.
 - Install the SAP connector on a separate virtual machine.
 - Each SAP system with a unique system ID requires a separate SAP connector.
 - Store the credentials in Azure Key Vault.
@@ -70,7 +70,7 @@ See the following design considerations for each component.
 
 - To push the SAP HANA syslog to a Microsoft Sentinel workspace, install [Azure Monitor Agent](/azure/azure-monitor/agents/agents-overview) parallel to the standard version of Microsoft Operations Management Suite. By default, Operations Management Suite pushes data to the telemetry workspace. You can redirect the Azure Monitor Agent logs to the Microsoft Sentinel workspace.
 
-- By default, the SAP HANA auditing trail is written to a database table called CSTABLE. The security team uses functionalities, like capturing firefighter logins, to consume the audit logs from the databases. You can't repoint the default logging to syslog, but you can redirect different audit trails to different targets, so that all the Microsoft Sentinel-related audit policies point to the alert level. When you implement this change, all alert-level logs go to syslog.
+- By default, the SAP HANA audit trail is written to a database table called CSTABLE. The security team uses functionalities, like capturing firefighter logins, to consume the audit logs from the databases. You can't repoint the default logging to syslog, but you can redirect different audit trails to different targets, so that all the Microsoft Sentinel-related audit policies point to the alert level. When you implement this change, all alert-level logs go to syslog.
 
 ### Microsoft Sentinel rules
 

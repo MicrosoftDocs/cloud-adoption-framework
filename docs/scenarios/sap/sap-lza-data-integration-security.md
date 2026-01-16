@@ -1,6 +1,6 @@
 ---
 title: Data integration security for SAP on Azure
-description: Learn about data integrations security for SAP on Azure, including an example architecture and considerations for each component.
+description: Learn about data integration security for SAP on Azure, including an example architecture and considerations for each component.
 author: PmeshramPM
 ms.author: pameshra
 ms.reviewer: tozimmergren

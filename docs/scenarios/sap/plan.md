@@ -18,7 +18,7 @@ Resources in the Cloud Adoption Framework can help your organization to capture 
 
 Like most complex platforms, your SAP digital estate will include three asset categories that should be recognized in your plan: platform, foundational, and workload assets.
 
-- **Platform assets:** Your SAP platform runs on a collection of dedicated applications, data, virtual machines or server, and potentially appliances. Regardless of what your organization does on that platform, those assets are as defined by SAP deployment requirements.
+- **Platform assets:** Your SAP platform runs on a collection of dedicated applications, data, virtual machines or servers, and potentially appliances. Regardless of what your organization does on that platform, those assets are as defined by SAP deployment requirements.
 
 - **Foundational assets:** Your SAP platform and the supporting environment are also upheld by a collection of necessary assets like identity providers, networking, operational management tools, and more. Azure refers to these assets as foundational utilities, and this article series will later describe how to deploy an Azure landing zone to provide them.
 
@@ -76,7 +76,7 @@ You can use the [Azure DevOps web interface](/azure/devops/project/navigation/) 
 
 Once you have a general work plan, you can begin aligning team members and estimating the work.
 
-This project's team members could be SAP or Azure experts, but it's unlikely for the team to have equal expertise in both areas. Use the cloud adoption plan to determine the skills that the team will need to acquire. Then, map those skills to team members to gain a clearer picture of readiness, skilling, and training needs. The Cloud Adoption Framework [building a skills readiness plan](../../plan/adapt-roles-skills-processes.md).
+This project's team members could be SAP or Azure experts, but it's unlikely for the team to have equal expertise in both areas. Use the cloud adoption plan to determine the skills that the team will need to acquire. Then, map those skills to team members to gain a clearer picture of readiness, skilling, and training needs. The Cloud Adoption Framework includes [building a skills readiness plan](../../plan/adapt-roles-skills-processes.md).
 
 ## Next step: Review your environment or Azure landing zone for an SAP enterprise-scale migration
 
