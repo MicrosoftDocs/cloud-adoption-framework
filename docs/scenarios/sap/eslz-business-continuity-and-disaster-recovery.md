@@ -26,7 +26,7 @@ Incorporate principles into your architecture that address on-premises business 
 > [!TIP]
 > Determine a high availability and disaster recovery (HADR) solution for each of the archetypes in your SAP landscape early on. Ensure that the solution covers all SAP components.
 > 
-> Configure an HADR solution on Azure early, in least one landscape, and keep it active. Then your teams can get experience with the solution's technologies, which might differ from existing technologies. Configure HADR early to help develop and evolve your standard operating procedures (SOPs).
+> Configure an HADR solution on Azure early, in at least one landscape, and keep it active. Then your teams can get experience with the solution's technologies, which might differ from existing technologies. Configure HADR early to help develop and evolve your standard operating procedures (SOPs).
 > 
 > Plan to have complete high availability, disaster recovery, and backup protection for production workloads as soon as the system is live.
 
@@ -52,7 +52,7 @@ When you implement high availability, the goal is to provide availability for SA
 
 For other scenarios, don't restrict availability to infrastructure failures or software failures. Apply availability to all necessary lifecycle management tasks. For example, you can patch the OS in the VMs, the database management system (DBMS), and the SAP software. To minimize outages that might happen during planned downtime and lifecycle management operations, use common tools that help protect your systems against unplanned service disruptions.
 
-SAP and SAP databases support automatic failover clusters. In Windows, the Windows Server 2022 failover clustering feature supports failover. In Linux, Linux Pacemaker or partner tools like SIOS Protection Suite and Veritas InfoScale support failover. In Azure, you can deploy only a subset high availability configuration in your own datacenter.
+SAP and SAP databases support automatic failover clusters. In Windows, the Windows Server 2022 failover clustering feature supports failover. In Linux, Linux Pacemaker or partner tools like SIOS Protection Suite and Veritas InfoScale support failover. In Azure, you can deploy only a subset of high availability configuration in your own datacenter.
 
 For more information, see [Supported scenarios for SAP workloads on Azure VMs](/azure/virtual-machines/workloads/sap/sap-planning-supported-configurations) and [Supported scenarios for SAP HANA Large Instances](/azure/virtual-machines/workloads/sap/hana-supported-scenario).
 
@@ -216,7 +216,7 @@ Most organizations use both regions for operating SAP systems. Organizations tha
 
 When you choose a disaster recovery region, be sure to have ExpressRoute connectivity to that region. If you have multiple ExpressRoute circuits connecting to Azure, at least one of those circuits must connect to the primary Azure region. The others should connect to the disaster recovery region. This type of architecture connects you to the Azure network in a different geographic or geopolitical area and helps protect your connection if a catastrophe affects one of the Azure regions.
 
-Some organizations use a combination high availability and disaster recovery architecture, which groups high availability with disaster recovery in the same Azure region. But grouping high availability with disaster recovery isn't ideal. [Azure availability zones](/azure/reliability/availability-zones-overview) support this architecture. The distance between availability zones within one Azure region isn't as large as the distance between two Azure regions, so a natural disaster could jeopardize the application services in the region where it occurs. You also need to consider the latency between SAP application servers and database servers. According to [SAP note 1100926](https://launchpad.support.sap.com/#/notes/1100926), a roundtrip time of less than or equal to 0.3 ms is a good value, and a time of less than or equal to 0.7 ms is a moderate value. So for zones with high latencies, have operational procedures to ensure that SAP application servers and database servers always run in the same zone. Organizations choose this architecture for the following reasons:
+Some organizations use a combination of high availability and disaster recovery architecture, which groups high availability with disaster recovery in the same Azure region. But grouping high availability with disaster recovery isn't ideal. [Azure availability zones](/azure/reliability/availability-zones-overview) support this architecture. The distance between availability zones within one Azure region isn't as large as the distance between two Azure regions, so a natural disaster could jeopardize the application services in the region where it occurs. You also need to consider the latency between SAP application servers and database servers. According to [SAP note 1100926](https://launchpad.support.sap.com/#/notes/1100926), a roundtrip time of less than or equal to 0.3 ms is a good value, and a time of less than or equal to 0.7 ms is a moderate value. So for zones with high latencies, have operational procedures to ensure that SAP application servers and database servers always run in the same zone. Organizations choose this architecture for the following reasons:
 
 - Compliance is sufficient with configurations that support smaller distances between production deployment and a disaster recovery target.
 
@@ -236,7 +236,7 @@ Another factor to consider when you choose your disaster recovery region is the 
 - Replicate key vault contents like certificates, secrets, or keys across regions so that you can decrypt data in the disaster recovery region.
 - Use [cross-region replication in Azure NetApp Files](/azure/azure-netapp-files/cross-region-replication-introduction) to synchronize file volumes between the primary region and the disaster recovery region.
 - Use native database replication, rather than Site Recovery, to synchronize data to the disaster recovery site.
-- Peer the primary and disaster recovery virtual networks. For example, for HANA system replication, you need to peer an SAP HANA DB virtual network needs to the disaster recovery site's SAP HANA DB virtual network.
+- Peer the primary and disaster recovery virtual networks. For example, for HANA system replication, you need to peer an SAP HANA DB virtual network to the disaster recovery site's SAP HANA DB virtual network.
 - If you use Azure NetApp Files storage for your SAP deployments, at a minimum, create two Azure NetApp Files accounts in the Premium tier, in two regions.
 - Consider grouping systems based on their business importance and proximity dependency based on application performance. To minimize the business effect of a regional outage, deploy each group to a separate region in a paired region construct. For example, to minimize the effect of a regional outage, you can deploy two critical ERP Central Component systems that serve two different business units, in UK South and UK West.
 

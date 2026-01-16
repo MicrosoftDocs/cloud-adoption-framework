@@ -21,7 +21,7 @@ This article is part of the "SAP extend and innovate data: Best practices" artic
 - [Data integration security for SAP on Azure](./sap-lza-data-integration-security.md)
 - [SAP data integration generic architecture](./sap-lza-data-example-architecture.md)
 
-There are many ways to connect to the SAP system for data integration. The sections below describes general and connector-specific considerations and recommendations.
+There are many ways to connect to the SAP system for data integration. The sections below describe general and connector-specific considerations and recommendations.
 
 ## Performance
 
@@ -78,7 +78,7 @@ The idea of partitioning is to split a large initial dataset into multiple small
 
 > [!NOTE]
 >
->- The number of partitions executed in parallel are limited by the number of driver cores in the Azure IR. A resolution for this limitation is currently underway.
+>- The number of partitions executed in parallel is limited by the number of driver cores in the Azure IR. A resolution for this limitation is currently underway.
 >- Each unit or package in SAP transaction ODQMON is a single file in the staging folder.
 
 ## Design considerations when running the pipelines using CDC
@@ -116,7 +116,7 @@ The idea of partitioning is to split a large initial dataset into multiple small
 
 ## Design recommendations when using a Table connector
 
-- **Partition:** When you partition in the SAP Table connector, it splits one underlying select statement into several by using where clauses are on a suitable field, for example a field with high cardinality. If your SAP table has a large volume of data, enable partitioning to split the data into smaller partitions. Try to optimize the number of partitions (parameter `maxPartitionsNumber`) so that the partitions are small enough to avoid memory dumps in SAP but large enough to speed up extraction.
+- **Partition:** When you partition in the SAP Table connector, it splits one underlying select statement into several by using where clauses on a suitable field, for example a field with high cardinality. If your SAP table has a large volume of data, enable partitioning to split the data into smaller partitions. Try to optimize the number of partitions (parameter `maxPartitionsNumber`) so that the partitions are small enough to avoid memory dumps in SAP but large enough to speed up extraction.
 
 - **Parallelism:** The degree of copy parallelism (parameter `parallelCopies`) works in tandem with partitioning and instructs the SHIR to make parallel RFC calls to the SAP system. For example, if you set this parameter to 4, the service concurrently generates and runs four queries based on your specified partition option and settings. Each query retrieves a portion of data from your SAP table.
 
@@ -138,10 +138,10 @@ The idea of partitioning is to split a large initial dataset into multiple small
 
 - **If only one batch job is triggered**, set the SAP source partitions to have performance improvement in the mapping data flow in Data Factory. For more information, see step 6 in [Map data flow properties](/azure/data-factory/connector-sap-change-data-capture#mapping-data-flow-properties).
 
-- **If multiple batch jobs are triggered in the SAP system** and there's a significant difference between each batch job's start time, change the size of Azure IR. When you increase the number of driver nodes in Azure IR, the parallelism of batch jobs in the SAP side increase.
+- **If multiple batch jobs are triggered in the SAP system** and there's a significant difference between each batch job's start time, change the size of Azure IR. When you increase the number of driver nodes in Azure IR, the parallelism of batch jobs in the SAP side increases.
 
   > [!NOTE]
-  > The maximum number of driver nodes for Azure IR is 16. Each driver node can only trigger one batch processes.
+  > The maximum number of driver nodes for Azure IR is 16. Each driver node can only trigger one batch process.
 
 - **Check the logs in SHIR**. To view logs, go to SHIR VM. Open Event viewer > Applications and service logs > Connectors > Integration runtime.
 
@@ -195,7 +195,7 @@ The idea of partitioning is to split a large initial dataset into multiple small
 
 - **Reset subscriptions.** To start with a fresh extraction or stop replication data, remove the subscription in the ODQMON. This action also removes entries from LTRC. After resetting the subscription, it might take a couple of minutes before you see the effect in LTRC. Schedule Operational Data Provisioning (ODP) housekeeping jobs to keep the delta queues clean, for example `ODQ_CLEANUP_CLIENT_004`
 
-- **CDS_VIEW (DHCDCMON transaction).** As of S/4HANA 1909, SAP replicates data from CDS views that uses data-based triggers instead of date columns. The concept is similar to SLT, but instead of using the LTRC transaction to monitor it, you use the DHCDCMON transaction.
+- **CDS_VIEW (DHCDCMON transaction).** As of S/4HANA 1909, SAP replicates data from CDS views that use data-based triggers instead of date columns. The concept is similar to SLT, but instead of using the LTRC transaction to monitor it, you use the DHCDCMON transaction.
 
 ## SLT troubleshooting
 

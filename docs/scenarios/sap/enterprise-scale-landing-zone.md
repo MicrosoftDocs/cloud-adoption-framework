@@ -104,7 +104,7 @@ This architecture has three or four subnets, depending on the tier. For example,
 
 - **Azure NetApp Files**: A [delegated subnet](/azure/azure-netapp-files/azure-netapp-files-delegate-subnet) for using Azure NetApp Files for different SAP on Azure scenarios.
 - **Azure Application Gateway**: A subnet that handles traffic coming from the internet. For example, this subnet might handle Fiori apps.
-- **SAP applications**: A subnet that contains SAP application servers, SAP Central Services, SAP enqueue replication services instances, and web dispatchers.
+- **SAP applications**: A subnet that contains SAP application servers, SAP Central Services, SAP enqueue replication service instances, and web dispatchers.
 - **Database**: A subnet that contains only database virtual machines.
   
 > [!NOTE]
@@ -130,7 +130,7 @@ Ensure Azure resources in the workload use zone-redundant configurations or span
 - Detect: Audit subscriptions for non-compliance of these policies.
 - Prevent configurations using the Deny effect for resources that do not adhere to zone resiliency standards.
 
-Compliance with this initiative can be checked at the end of the Implementation process. More information of the Azure Policy Initiative for Zone Resilience can be found here.
+Compliance with this initiative can be checked at the end of the Implementation process. More information on the Azure Policy Initiative for Zone Resilience can be found here.
 
 #### Azure NetApp Files and Azure Files
 
@@ -158,7 +158,7 @@ The example SAP systems architecture uses [private endpoints](/azure/private-lin
 
 Azure Private Link is now generally available. SAP Private Link Service currently supports connections from SAP BTP, the Cloud Foundry runtime, and other services on top of [Private Link resources](https://help.sap.com/docs/PRIVATE_LINK/42acd88cb4134ba2a7d3e0e62c9fe6cf/e8bc0c6440834a47a0ff57cb4efc0dc2.html?locale=en-US) for the most common load balancer plus virtual machine scenarios. Example scenarios include SAP S/4HANA or SAP ERP running on the virtual machine and connecting to Azure native services like [Azure Database for MySQL](https://help.sap.com/docs/PRIVATE_LINK/42acd88cb4134ba2a7d3e0e62c9fe6cf/5c70499ee70b415d954145a795e43355.html?locale=en-US).
 
-The example architecture shows an SAP Private Link Service connection to BTP environments. SAP Private Link Service establishes a private connection between specific SAP BTP services and specific services in your infrastructure as service provider accounts. If you reuse the private link functionality, BTP services can access your S/4 HANA environment through private network connections, which avoids data transfer over the public internet.
+The example architecture shows an SAP Private Link Service connection to BTP environments. SAP Private Link Service establishes a private connection between specific SAP BTP services and specific services in your infrastructure as a service provider accounts. If you reuse the private link functionality, BTP services can access your S/4 HANA environment through private network connections, which avoids data transfer over the public internet.
 
 For more information about scenarios for connecting to BTP services, see the SAP Community blog post about the [architecture effect of Private Link Service](https://blogs.sap.com/2021/07/27/btp-private-linky-swear-with-azure-how-many-pinkies-do-i-need/).
 

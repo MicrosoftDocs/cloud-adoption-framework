@@ -32,7 +32,7 @@ For more information about the shared responsibility model, see [Shared responsi
 
 Security is a shared responsibility between Microsoft and customers. You can upload your own virtual machine (VM) and database images to Azure, or use images from the Azure Marketplace. However, these images need security controls that meet application and organizational requirements. You must apply your customer-specific security controls to the operating system, data, and SAP application layer.
 
-For generally-accepted security guidance, refer to the [cybersecurity best practices](https://www.cisecurity.org/cybersecurity-best-practices/) from the Center for Internet Security (CIS).
+For generally accepted security guidance, refer to the [cybersecurity best practices](https://www.cisecurity.org/cybersecurity-best-practices/) from the Center for Internet Security (CIS).
 
 Azure Landing Zones have specific guidance regarding zero-trust based network security to secure network perimeter and traffic flows. For more information, see [Network security strategies on Azure](../../ready/landing-zone/design-area/security.md#zero-trust).
 
@@ -46,13 +46,13 @@ Enterprises that use hub-spoke network topologies often deploy cloud architectur
 
 Enable Microsoft Defender for Cloud Standard for SAP on Azure subscriptions to:
 
-- Strengthen the security posture your datacenters and provide advanced threat protection for on-premises and hybrid workloads across Azure and other clouds.
+- Strengthen the security posture of your datacenters and provide advanced threat protection for on-premises and hybrid workloads across Azure and other clouds.
 
 - See all-up security posture across SAP on Azure subscriptions, and see resource security hygiene across SAP VMs, disks, and applications.
 
 - Delegate an SAP admin custom role with [just-in-time access](/azure/security-center/just-in-time-explained).
 
-- Use the dedicated Microsoft Defender for Endpoint configuration for SAP hosts running on Linux and Windows to ensure that the SAP landscape is secure and SAP server performance is optimized. For more information use below references:
+- Use the dedicated Microsoft Defender for Endpoint configuration for SAP hosts running on Linux and Windows to ensure that the SAP landscape is secure and SAP server performance is optimized. For more information, use the references below:
 
   - [Microsoft Defender for Endpoint on Linux for SAP](/defender-endpoint/mde-linux-deployment-on-sap)
   - [Microsoft Defender for Endpoint on Windows Server with SAP](/defender-endpoint/mde-sap-windows-server)
@@ -183,7 +183,7 @@ Cost management is very important. Microsoft offers various ways to optimize cos
 
 ### Automate SAP deployments
 
-Save time and reduce errors by automating SAP deployments. Deploying complex SAP landscapes into a public cloud is not an easy task. SAP basic teams might be very familiar with the traditional tasks of installing and configuring on-premises SAP systems. Designing, building, and testing cloud deployments often require additional domain knowledge. For more information, see [SAP enterprise-scale platform automation and DevOps](./eslz-platform-automation-and-devops.md).
+Save time and reduce errors by automating SAP deployments. Deploying complex SAP landscapes into a public cloud is not an easy task. SAP Basis teams might be very familiar with the traditional tasks of installing and configuring on-premises SAP systems. Designing, building, and testing cloud deployments often require additional domain knowledge. For more information, see [SAP enterprise-scale platform automation and DevOps](./eslz-platform-automation-and-devops.md).
 
 ### Lock resources for production workloads
 
@@ -195,7 +195,7 @@ Customize role-based access control (RBAC) roles for SAP on Azure spoke subscrip
 
 ### Use Azure Connector for SAP LaMa
 
-Within a typical SAP estate, several application landscapes are often deployed, such an ERP, SCM, and BW, and there is an ongoing need to perform SAP system copies and SAP system refreshes. Examples are creating new SAP projects for technical or application releases, or periodically refreshing QA systems from production copies. The end-to-end process for SAP system copies and refreshes can be both time-consuming and labor intensive.
+Within a typical SAP estate, several application landscapes are often deployed, such as ERP, SCM, and BW, and there is an ongoing need to perform SAP system copies and SAP system refreshes. Examples are creating new SAP projects for technical or application releases, or periodically refreshing QA systems from production copies. The end-to-end process for SAP system copies and refreshes can be both time-consuming and labor intensive.
 
 SAP Landscape Management (LaMa) Enterprise Edition can support operational efficiencies by automating several steps involved in the SAP system copy or refresh. [Azure Connector for LaMa](/azure/virtual-machines/workloads/sap/lama-installation) enables copying, deletion, and relocation of Azure-managed disks to help your SAP operations team perform SAP system copies and system refreshes rapidly, reducing manual efforts.
 
