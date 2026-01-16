@@ -87,7 +87,7 @@ There are several considerations to take into account when you integrate SAP wit
 **Security and compliance**
   
 - _Authentication mechanisms_: Plan for high-security authentication methods like single sign-on (SSO) via Microsoft Entra ID (formerly Azure Active Directory). See this blog post to get information about the setup: [SAP OData Connector: Single sign-on through Microsoft Azure API Management](https://www.microsoft.com/power-platform/blog/power-apps/announcing-public-preview-of-expanded-single-sign-on-authentication-options-for-sap-connectors/). This post also contains a reference that you can use if you prefer to use the API Management capability of SAP Integration Suite.
-- _Data protection_: Ensure compliance with data protection regulations (for example, GDPR and HIPAA) by implementing relevant best practices. See [Compliance and data privacy](/power-platform/admin/wp-compliance-data-privacy) in the Microsoft Power Platform documentation.
+- _Data protection_: Ensure compliance with data protection regulations by implementing relevant best practices. See [Compliance and data privacy](/power-platform/admin/wp-compliance-data-privacy) in the Microsoft Power Platform documentation.
 - _Data residency_: Consider data residency requirements that might affect where data can be stored or processed. Choose the [location of your Microsoft Power Platform environment](/power-platform/admin/new-datacenter-regions) accordingly.
 
 **Technical readiness**
