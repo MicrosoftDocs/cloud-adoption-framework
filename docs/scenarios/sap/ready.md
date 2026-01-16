@@ -43,7 +43,7 @@ The primary difference between the two options above resides in how separation o
 
 ## Azure landing zone design areas
 
-Regardless of your initial implementation option, all Azure landing zones for SAP should adhere to a set of common design considerations and recommendations outlined in the following articles series. These checklists of considerations and recommendations can help the SAP team evaluate any landing zone to ensure it is ready to host the SAP platform in production:
+Regardless of your initial implementation option, all Azure landing zones for SAP should adhere to a set of common design considerations and recommendations outlined in the following article series. These checklists of considerations and recommendations can help the SAP team evaluate any landing zone to ensure it is ready to host the SAP platform in production:
 
 - [Enterprise enrollment](./eslz-enterprise-enrollment.md)
 - [Identity and access management](./eslz-identity-and-access-management.md)

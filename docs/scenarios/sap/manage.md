@@ -24,20 +24,20 @@ Most organizations require a mixture of platform operations, **SAP Basis Operati
    > [!NOTE]
    > When a higher level of operations is required, consider workload operations on a case-by-case basis.
 
-During business alignment, strive to separate the operation's needs of the environment, the workloads, and your core SAP platform to evaluate the right level of investments required at each level. This is in alignment to the **Modern Cloud Service Management**.
+During business alignment, strive to separate the operations' needs of the environment, the workloads, and your core SAP platform to evaluate the right level of investments required at each level. This is in alignment to the **Modern Cloud Service Management**.
 
 ## Baseline operations
 
-When adopting SAP in Azure, your operation's baseline will not likely change. The assets that run your SAP platform and workloads, will be included in the standard processes and tools to create visibility, optimize operations, and recover.
+When adopting SAP in Azure, your operations baseline will not likely change. The assets that run your SAP platform and workloads, will be included in the standard processes and tools to create visibility, optimize operations, and recover.
 
 > [!NOTE]
-> If operation's baseline are unchanged, you might still need additional processes and tools as part of your SAP specific platform operations deployment.
+> If the operations baseline is unchanged, you might still need additional processes and tools as part of your SAP specific platform operations deployment.
 
 ## Platform operations
 
 Given the mission critical nature of your SAP platform, most organizations support a dedicated operations staff responsible for the operational management of the core SAP platform.
 
-The core platform team, referred as **SAP Basis Operations**, is either staffed in-house or provided by a service provider, and is familiar with:
+The core platform team, referred to as **SAP Basis Operations**, is either staffed in-house or provided by a service provider, and is familiar with:
 
 - The configuration of your SAP landing zone
 - The operations baseline provided to all Azure resources

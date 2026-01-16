@@ -22,7 +22,7 @@ This article is part of the "SAP extend and innovate data: Best practices" artic
 
 This article is Part 2 of the SAP extend and innovate data: Best practices series. For the first article in the series, see [Identify SAP data sources](./sap-lza-identify-sap-data-sources.md).
 
-SAP applications often run several mission-critical and core business processes, which generate a huge amount valuable business data. There are many SAP applications and solutions across OLTP, such as ECC, CRM, SCM, and OLAP, such as BW. SAP applications expose data in several ways. When customers combine SAP and non-SAP data and apply advanced data services, such as analytics and AI, they extract real-time, predictive insights. This method improves business outcomes. SAP data integration can be a large, complex project.
+SAP applications often run several mission-critical and core business processes, which generate a huge amount of valuable business data. There are many SAP applications and solutions across OLTP, such as ECC, CRM, SCM, and OLAP, such as BW. SAP applications expose data in several ways. When customers combine SAP and non-SAP data and apply advanced data services, such as analytics and AI, they extract real-time, predictive insights. This method improves business outcomes. SAP data integration can be a large, complex project.
 
 ## Design considerations for integrating SAP data with Azure
 
@@ -104,7 +104,7 @@ There might be more than one connector available for a scenario. Your choice dep
    ![Diagram showing SAP ECC and S/4 HANA connectors.](./media/sap-s4-hana-connector-decision.png)
 
  **SAP BW integration** -
-    Extracts data from SAP BW and B/4 HANA.
+    Extracts data from SAP BW and BW/4 HANA.
     ![Diagram showing SAP BW and BW/4 HANA connectors.](./media/sap-bw4-hana-decision.png)
 
 ## Next steps
