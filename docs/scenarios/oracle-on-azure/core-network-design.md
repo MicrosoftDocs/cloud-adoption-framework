@@ -60,9 +60,9 @@ Oracle Exadata Database@Azure integration with Azure Key Vault for TDE key manag
 
 A consistent DNS strategy supports reliable name resolution, reduces operational risk, and simplifies connectivity decisions across the organization. DNS choices influence network architecture, hybrid connectivity, compliance controls, and the way Azure services integrate with on‑premises environments. Compare Azure Private DNS, hybrid DNS, and custom DNS options. Use Azure Private DNS zones unless your organization explicitly requires one of the following:
 
-    - Custom namespaces for internal governance or branding.
-    - Integration with a third-party DNS solution.
-    - Advanced governance controls that exceed Azure DNS capabilities.
+- Custom namespaces for internal governance or branding.
+- Integration with a third-party DNS solution.
+- Advanced governance controls that exceed Azure DNS capabilities.
 
 1. **Use Azure Private DNS zones by default.** Use Azure Private DNS zones linked to your hub virtual network as the default DNS choice. This approach aligns with Azure‑native services, accelerates deployment, and reduces operational overhead. See also [Oracle Exadata Database@Azure DNS limitations](https://docs.oracle.com/iaas/Content/database-at-azure/network-dns.htm).
 
