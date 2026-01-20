@@ -716,6 +716,101 @@
         "redirect_document_id": false
     },
     {
+        "source_path": "docs/scenarios/azure-hpc/azure-hpc-landing-zone-accelerator.md",
+        "redirect_url": "/azure/high-performance-computing/",
+        "redirect_document_id": false
+    },
+    {
+        "source_path": "docs/scenarios/azure-hpc/compute.md",
+        "redirect_url": "/azure/high-performance-computing/",
+        "redirect_document_id": false
+    },
+    {
+        "source_path": "docs/scenarios/azure-hpc/govern.md",
+        "redirect_url": "/azure/high-performance-computing/",
+        "redirect_document_id": false
+    },
+    {
+        "source_path": "docs/scenarios/azure-hpc/identity-access-management.md",
+        "redirect_url": "/azure/high-performance-computing/",
+        "redirect_document_id": false
+    },
+    {
+        "source_path": "docs/scenarios/azure-hpc/index.md",
+        "redirect_url": "/azure/high-performance-computing/",
+        "redirect_document_id": false
+    },
+    {
+        "source_path": "docs/scenarios/azure-hpc/innovate.md",
+        "redirect_url": "/azure/high-performance-computing/",
+        "redirect_document_id": false
+    },
+    {
+        "source_path": "docs/scenarios/azure-hpc/manage.md",
+        "redirect_url": "/azure/high-performance-computing/",
+        "redirect_document_id": false
+    },
+    {
+        "source_path": "docs/scenarios/azure-hpc/migrate.md",
+        "redirect_url": "/azure/high-performance-computing/",
+        "redirect_document_id": false
+    },
+    {
+        "source_path": "docs/scenarios/azure-hpc/modernize.md",
+        "redirect_url": "/azure/high-performance-computing/",
+        "redirect_document_id": false
+    },
+    {
+        "source_path": "docs/scenarios/azure-hpc/network-connectivity.md",
+        "redirect_url": "/azure/high-performance-computing/",
+        "redirect_document_id": false
+    },
+    {
+        "source_path": "docs/scenarios/azure-hpc/organize.md",
+        "redirect_url": "/azure/high-performance-computing/",
+        "redirect_document_id": false
+    },
+    {
+        "source_path": "docs/scenarios/azure-hpc/plan.md",
+        "redirect_url": "/azure/high-performance-computing/",
+        "redirect_document_id": false
+    },
+    {
+        "source_path": "docs/scenarios/azure-hpc/ready.md",
+        "redirect_url": "/azure/high-performance-computing/",
+        "redirect_document_id": false
+    },
+    {
+        "source_path": "docs/scenarios/azure-hpc/resource-organization.md",
+        "redirect_url": "/azure/high-performance-computing/",
+        "redirect_document_id": false
+    },
+    {
+        "source_path": "docs/scenarios/azure-hpc/network-topology-connectivity.md",
+        "redirect_url": "/azure/high-performance-computing/",
+        "redirect_document_id": false
+    },
+    {
+        "source_path": "docs/scenarios/azure-hpc/secure.md",
+        "redirect_url": "/azure/high-performance-computing/",
+        "redirect_document_id": false
+    },
+    {
+        "source_path": "docs/scenarios/azure-hpc/storage.md",
+        "redirect_url": "/azure/high-performance-computing/",
+        "redirect_document_id": false
+    },
+    {
+        "source_path": "docs/scenarios/azure-hpc/strategy.md",
+        "redirect_url": "/azure/high-performance-computing/",
+        "redirect_document_id": false
+    },
+    {
+        "source_path": "docs/scenarios/azure-hpc/well-architected-framework.md",
+        "redirect_url": "/azure/high-performance-computing/",
+        "redirect_document_id": false
+    },
+    {
         "source_path": "docs/scenarios/app-platform/ready.md",
         "redirect_url": "/azure/cloud-adoption-framework/scenarios/app-platform/",
         "redirect_document_id": false
