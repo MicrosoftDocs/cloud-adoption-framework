@@ -24,7 +24,7 @@ Partner with us in our ongoing effort to develop the Cloud Adoption Framework.
 
 - [Security considerations for the Azure Integration Services landing zone accelerator](../scenarios/app-platform/integration-services/security.md): We updated the integration services security guidance to fix typos, correct grammatical errors, and improve consistency. We also cleaned up link formatting by removing unnecessary URL parameters.
 
-- [Business continuity and disaster recovery for Azure Virtual Desktop](../scenarios/azure-virtual-desktop/eslz-business-continuity-and-disaster-recovery.md): We clarified the active-active host pool section by explaining the two-region setup with user assignment and failover procedures, and we added guidance about FSLogix profile storage behavior in the active-passive scenario. 
+- [Business continuity and disaster recovery for Azure Virtual Desktop](../scenarios/azure-virtual-desktop/eslz-business-continuity-and-disaster-recovery.md): We clarified the active-active host pool section by explaining the two-region setup with user assignment and failover procedures, and we added guidance about FSLogix profile storage behavior in the active-passive scenario.
 
 - [Manage your cloud estate with enhanced security](../secure/manage.md): We improved formatting consistency and clarity. We enhanced the business continuity and disaster recovery recommendation by clarifying the distinction between disaster recovery planning and resilient architecture design with more precise, actionable language.
 
@@ -210,9 +210,6 @@ We updated the following articles with prerequisites for Azure account setup and
 - [Organize your Azure resources effectively](../ready/azure-setup-guide/organize-resources.md): We reorganized the content and added links to best practices for resource tagging strategies and organization.
 - [Deploy Azure App Service at scale with landing zone accelerator](../scenarios/app-platform/app-services/landing-zone-accelerator.md): We added more detailed, process-oriented guidance and step-by-step recommendations for flexible implementation and customization. We also added a new architecture diagram that shows Azure Front Door and App Service Environment v3 integration.
 - [Microsoft Cloud Adoption Framework for Azure](../overview.md): We streamlined this article to focus on why you should use the framework, who should use the framework, and how to use the framework. We also added a new section on cloud adoption scenarios.
-- [Azure high-performance computing (HPC) landing zone accelerator](../scenarios/azure-hpc/azure-hpc-landing-zone-accelerator.md): We made updates to improve accuracy and added links to instructions about how to deploy the HPC landing zone accelerator.
-- [Compute large-scale HPC application workloads in Azure Virtual Machines](../scenarios/azure-hpc/compute.md): We made updates to improve accuracy, updated version numbers, and added links. We also consolidated the **Next steps** section.
-- [Azure landing zone for HPC](../scenarios/azure-hpc/ready.md): We updated links, made changes to improve accuracy, and updated AzHop references to Azure CycleCloud Workspace for Slurm.
 - [Capacity planning for Oracle workloads on Azure Virtual Machines](../scenarios/oracle-on-azure/oracle-capacity-planning.md): We made changes to reflect the latest Azure capabilities and best practices for Oracle workload capacity planning, with specific emphasis on newer virtual machine (VM) series and storage technologies.
 - [Select Azure regions](../ready/azure-setup-guide/regions.md): We updated the Azure region selection section with clearer decision-making criteria and reliability, capability, and cost considerations.
 - [Azure setup guide overview](../ready/azure-setup-guide/index.md): We removed Azure portal integration and interactive elements and replaced the checklist format with a comprehensive table that describes each step in the Azure setup guide.
@@ -263,7 +260,6 @@ This month, we made significant updates to the Manage methodology. The Manage me
 - [AI Plan - Process to plan for AI adoption](../scenarios/ai/plan.md): We made adjustments to the AI maturity level table, and modifications to various sections such as "Acquire AI skills," "Access AI resources," "Prioritize AI use cases," and "Create an AI proof of concept."
 - [AI Strategy - Process to develop an AI strategy](../scenarios/ai/strategy.md): We reorganized and streamlined the AI technology strategy, extensibility tools for Microsoft 365 Copilot, and responsible AI strategy sections. New content was added to highlight the use of Microsoft Fabric and Azure services in various AI applications.
 - [Secure AI – Process to secure AI](../scenarios/ai/secure.md): We made minor updates to align this article with the NIST Cybersecurity Framework and the Microsoft Security Reference Architecture.
-- [Storage for Azure HPC Workloads](../scenarios/azure-hpc/storage.md): We made adjustments for clarity and details and considerations were added, including new sections on compute node distribution, design recommendations and HPC components.
 
 ## February 2025
 
@@ -348,16 +344,6 @@ This month, we made significant updates to the Strategy methodology. The Strateg
 
 - [Authorization for cloud-scale analytics in Azure](../scenarios/cloud-scale-analytics/secure-authorization.md): Find guidance on managing data access and role-based access control (RBAC) for cloud-scale analytics. Learn how to use Microsoft Entra ID for centralized identity management, implementing RBAC and Access Control Lists (ACLs) for data services, and best practices for securing Azure Databases, Azure Data Lake Storage, and Azure Databricks.
 
-#### Azure HPC
-
-This month, we refactored the Azure high-performance computing (HPC) scenario to provide refreshed guidance on compute, identity and access management, network topology and connectivity, and storage for HPC workloads in Azure. Explore the new content to see how you can apply these recommendations in your organization:
-
-- [Compute Large-Scale HPC Application Workloads in Azure Virtual Machines](../scenarios/azure-hpc/compute.md)
-- [Identity and Access Management for Azure HPC](../scenarios/azure-hpc/identity-access-management.md)
-- [Network Topology and Connectivity for Azure HPC](../scenarios/azure-hpc/network-topology-connectivity.md)
-- [Storage for Azure HPC Workloads](../scenarios/azure-hpc/storage.md)
-- [Azure HPC landing zone accelerator](../scenarios/azure-hpc/azure-hpc-landing-zone-accelerator.md)
-
 ### Updated articles
 
 - [Enterprise-Scale Example Architectures for Connectivity to Azure VMware Solution](../scenarios/azure-vmware/example-architectures.md): We made changes to clarify various architectural considerations and requirements including traffic inspection requirements and recommended solution designs for different scenarios. We enhanced the description of key networking scenario points and added a new section on enabling Azure VMware Solution to on-premises traffic inspection with Azure Firewall.
@@ -406,3 +392,4 @@ We made security updates to the following Cloud Scale Analytics articles:
 - [Authentication for cloud-scale analytics in Azure](../scenarios/cloud-scale-analytics/secure-authentication.md)
 - [Data privacy for cloud-scale analytics in Azure](../scenarios/cloud-scale-analytics/secure-data-privacy.md)
 - [Integrate cloud-scale analytics into your cloud adoption strategy](../scenarios/cloud-scale-analytics/strategy.md)
+
