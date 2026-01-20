@@ -1,5 +1,5 @@
 ---
-title: Network topology and connectivity for Oracle Database@Azure
+title: Core networking for Oracle Database@Azure
 description: Learn how to design and optimize network topology for Oracle Database@Azure. Explore key concepts, best practices, and connectivity recommendations.
 author: moisesjgomez
 ms.author: mgomezcortez
@@ -9,9 +9,9 @@ ms.topic: concept-article
 ms.custom: e2e-oracle
 ---
 
-# Network topology and connectivity for Oracle Database@Azure
+# Core networking for Oracle Database@Azure
 
-This article provides design considerations and recommendations for network connectivity that supports Oracle Exadata Database@Azure workloads. Oracle Database@Azure has a unique architecture compared to most Azure services. The service runs within an Azure datacenter and provides default connectivity to the Oracle Cloud Infrastructure (OCI) control plane. Understanding this core networking architecture is foundational for successful adoption.
+This article provides design considerations and recommendations for network connectivity in Oracle Database@Azure workloads. Oracle Database@Azure has a unique architecture compared to most Azure services—it runs within an Azure datacenter while maintaining default connectivity to the Oracle Cloud Infrastructure (OCI) control plane. Understanding this core networking architecture is foundational for successful adoption.
 
 The following diagram illustrates the core networking architecture and relationship between Azure virtual networks and OCI virtual cloud networks (VCNs) for Oracle Exadata Database@Azure.
 
