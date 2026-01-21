@@ -18,7 +18,7 @@ Partner with us in our ongoing effort to develop the Cloud Adoption Framework.
 
 ## December 2025
 
-### New articles
+### New guidance
 
 [AI agent adoption guidance for organizations](../ai-agents/index.md): Discover how to adopt AI agents effectively by using a step-by-step framework for planning, governance, integration, and measurement that maximizes business impact.
 
