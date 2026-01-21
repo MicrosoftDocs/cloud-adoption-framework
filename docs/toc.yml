@@ -361,14 +361,12 @@ items:
 
       - name: Resources
         items:
-        - name: Define your naming convention
+        - name: 1. Define your naming convention
           href: ready/azure-best-practices/resource-naming.md
+        - name: 2. Define your tagging strategy
+          href: ready/azure-best-practices/resource-tagging.md
         - name: Abbreviations for Azure resources
           href: ready/azure-best-practices/resource-abbreviations.md
-        - name: Define your tagging strategy
-          href: ready/azure-best-practices/resource-tagging.md
-        - name: Skills relevant to ready and landing zones
-          href: ready/suggested-skills.md
 
     - name: Adopt
       expanded: true
@@ -533,8 +531,6 @@ items:
         href: ready/azure-setup-guide/manage-costs.md
       - name: Set up monitoring
         href: ready/azure-setup-guide/monitoring-reporting.md
-      - name: Stay current with Azure
-        href: ready/azure-setup-guide/staying-current.md  
     - name: Azure Architecture Center
       href: /azure/architecture/
     - name:  Well-Architected Framework
@@ -564,7 +560,3 @@ items:
         href: organize/cost-conscious-organization.md
     - name: Tools
       href: resources/tools-templates.md
-    - name: Additional resources
-      items:
-      - name: App Modernization Guidance for Azure
-        href: /azure/app-modernization-guidance
