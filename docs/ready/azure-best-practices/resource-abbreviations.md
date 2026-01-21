@@ -166,6 +166,7 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | Resource | Resource provider namespace | Abbreviation |
 |--|--|--|
 | Azure Managed Grafana | `Microsoft.Dashboard/grafana` | `amg` |
+| Managed DevOps Pools | `Microsoft.DevOpsInfrastructure/pools` | `mdp` |
 
 ## Integration
 
