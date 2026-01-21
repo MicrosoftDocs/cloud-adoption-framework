@@ -3914,6 +3914,16 @@
          "source_path": "docs/organize/cloud-platform.md",
          "redirect_url": "/azure/cloud-adoption-framework/manage/ready-cloud-operations#identify-your-management-responsibilities",
          "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/ready/azure-setup-guide/staying-current.md",
+         "redirect_url": "/azure/cloud-adoption-framework/get-started/whats-new",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/ready/suggested-skills.md",
+         "redirect_url": "/azure/cloud-adoption-framework/plan/prepare-people-for-cloud",
+         "redirect_document_id": false
       }
    ]
 }

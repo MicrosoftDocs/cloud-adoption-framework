@@ -60,12 +60,6 @@ Partner with us in our ongoing effort to develop the Cloud Adoption Framework.
 
 - [Virtual WAN network topology in an Azure landing zone](../ready/azure-best-practices/virtual-wan-network-topology.md): We clarified implementation steps for Azure landing zones. We reorganized the content into distinct sections that cover hub-and-spoke architecture creation, deployment planning, connectivity options, routing configuration, security controls, and monitoring practices. We enhanced the article with updated diagrams, improved accessibility descriptions, and simplified the migration guidance to focus on essential steps for implementing Virtual WAN within enterprise environments.
 
-We updated the following articles with prerequisites for Azure account setup and startup credits. We also added links to important related guidance.
-
-- [Manage costs and billing for your Azure resources](../ready/azure-setup-guide/manage-costs.md)
-- [Monitoring and reporting in Azure](../ready/azure-setup-guide/monitoring-reporting.md)
-- [Stay current with Azure](../ready/azure-setup-guide/staying-current.md)
-
 ## September 2025
 
 ### New articles

@@ -93,7 +93,6 @@ Define and align your DevOps implementation journey with your organization's [cl
   - DevOps practices your team has adopted for Azure Landing Zones management.
     - Use tools like the [DevOps Capability Assessment](/assessments/56ec577c-acb6-4c7b-ad13-e224b0846153/) to assess the current state of your team's DevOps status.
   - Current team [structure](../../organize/index.md#structure-type), including [roles and responsibilities](../../organize/raci-alignment.md) and owned [cloud functions](../../organize/index.md#understand-required-cloud-functions).
-  - What [technical skills](../suggested-skills.md) your team has.
   - Which [cloud operations model](../../plan/prepare-organization-for-cloud.md#choose-a-cloud-operating-model) your team currently follows.
 - Use your organization's cloud adoption plan to define a desired model for your team.
 - Establish an iterative roadmap for implementing the desired model in an iterative and incremental mode that aligns with your organization's [transformation timeline](../../strategy/digital-transformation-timeline.md).

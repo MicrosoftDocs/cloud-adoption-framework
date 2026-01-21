@@ -34,9 +34,7 @@ The Cloud Adoption Framework for Azure has tools, templates, and assessments tha
 | [Azure naming tool](https://github.com/mspnp/AzureNamingTool) | Develop your comprehensive Azure naming convention in minutes. |
 | [Terraform modules](../ready/landing-zone/deploy-landing-zones-with-terraform.md) | Use the Terraform open-source code base to build your Cloud Adoption Framework Azure landing zone. |
 | [Terraform registry](https://registry.terraform.io/search?q=aztfmod) | Use Terraform to create your landing zone. Filter the Terraform registry website to list requisite Cloud Adoption Framework modules. |
-| [Enterprise-scale landing zone](https://github.com/Azure/Enterprise-Scale/) | Deploy your open-source code base for the enterprise-scale implementation of the Cloud Adoption Framework Azure landing zone. |
-| [Data management zone](https://github.com/Azure/data-management-zone) | Deploy a single data management zone to your subscription. Deploy the data management zone before the data landing zone.|
-| [Data landing zone](https://github.com/Azure/data-landing-zone) | Expand your landing zone with data. Data landing zone shared services include data storage, ingestion services, and management services. |
+| [Azure landing zone](https://github.com/Azure/Enterprise-Scale/) | Deploy your open-source code base for the enterprise-scale implementation of the Cloud Adoption Framework Azure landing zone. |
 
 ## Govern
 
