@@ -92,7 +92,7 @@ Here are some considerations for authentication with SAP on Azure.
 
 - The **SAP ABAP NetWeaver system** doesn't require SQL Server logins because all connections use Windows authentication. For example, for the user `SAPService<SID>` or `<SID>administrator`, you can disable the SQL Server authentication feature.
 
-- The **SAP JAVA NetWeaver system** requires the SQL Server authentication feature because it uses a SQL Server sign in, such as `SAP<SID>DB`, for the connection.
+- The **SAP JAVA NetWeaver system** requires the SQL Server authentication feature because it uses a SQL Server sign-in, such as `SAP<SID>DB`, for the connection.
 
 - For **SAP on SQL Server**, you can disable the SQL Server system administrator account because the SAP systems on SQL Server don't use the account. Ensure that another user with system administrator rights can access the server before disabling the original system administrator account.
 

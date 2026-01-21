@@ -35,7 +35,7 @@ SAP systems are business-critical in an enterprise landscape. To ensure that onl
 - **Just-in-time (JIT) access** provides authorized personnel temporary elevated access to critical systems. With JIT access, administrators grant temporary access to a specific VM or set of VMs only when it's necessary to perform certain tasks, such as system maintenance or troubleshooting.
 
 - When you run SAP on Azure, use **Azure Key Vault** to manage and protect sensitive data, such as SAP administrator passwords, SAP service account credentials, and encryption keys. Common scenarios to use Key Vault are:
-  - **SAP password storage**: SAP systems require passwords for components, such as databases, application servers , and other SAP services. Use Key Vault to securely store these passwords. Retrieve them during system startup or when you need to access the SAP server.
+  - **SAP password storage**: SAP systems require passwords for components, such as databases, application servers, and other SAP services. Use Key Vault to securely store these passwords. Retrieve them during system startup or when you need to access the SAP server.
   - **Encryption key storage**: SAP systems often require encryption for data protection. Use Key Vault to store encryption keys and protect them by using hardware security modules, which are tamper-resistant devices that protect cryptographic keys.
   - **Certificate storage**: Use Key Vault to store and manage SSL/TLS certificates, which are required for secure communication between SAP systems and other applications.
 
@@ -45,9 +45,8 @@ Azure provides a comprehensive set of security controls to help you protect your
 
 - **ISO/IEC 27001**: Azure is certified under the ISO/IEC 27001 standard, which provides a framework for implementing and maintaining an information security management system (ISMS). This certification covers security controls and best practices, including network security, access control, and risk management.
 - **SOC 1, SOC 2, and SOC 3**: Azure is audited under the service organization controls (SOC) framework, which provides a set of controls for service providers to manage customer data. SOC 1 is for financial reporting, SOC 2 is for security, availability, processing integrity, confidentiality, and privacy, and SOC 3 is for public disclosure of the SOC 2 report.
-- **General Data Protection Regulation (GDPR)**: Azure is compliant with the GDPR, which is a data privacy regulation that applies to organizations that process personal data of individuals in the European Union (EU). This compliance offering includes features, like data protection, data breach notification, and privacy by design.
 
-You can monitor this security baseline, review recommendations, and take remediation actions for noncompliance baseline for SAP workloads by using Microsoft Defender for Cloud.
+You can monitor this security baseline, review recommendations, and take remediation actions for noncompliance with the baseline for SAP workloads by using Microsoft Defender for Cloud.
 
 :::image type="content" source="./media/sap-lza-defender.png" alt-text="Screenshot that shows the Defender for Cloud configuration." lightbox="./media/sap-lza-defender.png":::
 
@@ -57,14 +56,14 @@ For your SAP environment in Azure, there are two important types of security pat
 
 ### Operating system security patches
 
-Operating system security patches prevent security breaches, comply with industry regulations, improve performance, and protect your business' reputation. If you run Windows and Linux VMs in Azure, on-premises, or in other cloud environments, you can use the **Update management center** in Azure Automation to manage operating system updates, including security patches.
+Operating system security patches prevent security breaches, comply with industry regulations, improve performance, and protect your business's reputation. If you run Windows and Linux VMs in Azure, on-premises, or in other cloud environments, you can use the **Update management center** in Azure Automation to manage operating system updates, including security patches.
 
 :::image type="content" source="./media/sap-lza-update-management.png" alt-text="Screenshot that shows the Update management center window." lightbox="./media/sap-lza-update-management.png":::
 
 Critical and security updates are released each month. Automate updates and enable automatic VM guest patching to maintain security compliance for your SAP virtual machines.
 
 > [!NOTE]
->Some Linux images for SAP workload, like Red Hat Enterprise Linux (RHEL) for SAP and SUSE Linux Enterprise Server (SLES) for SAP, aren't supported. Windows server images are supported. For information about requirements to enable automatic VM guest patching and supported operating system images, see [Automatic VM guest patching for Azure VMs](/azure/virtual-machines/automatic-vm-guest-patching#supported-os-images).
+> Some Linux images for SAP workload, like Red Hat Enterprise Linux (RHEL) for SAP and SUSE Linux Enterprise Server (SLES) for SAP, aren't supported. Windows server images are supported. For information about requirements to enable automatic VM guest patching and supported operating system images, see [Automatic VM guest patching for Azure VMs](/azure/virtual-machines/automatic-vm-guest-patching#supported-os-images).
 
 ### SAP security patches
 

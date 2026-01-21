@@ -82,7 +82,7 @@ Partner with us in our ongoing effort to develop the Cloud Adoption Framework.
 
 - [Security considerations for the Azure Integration Services landing zone accelerator](../scenarios/app-platform/integration-services/security.md): We updated the integration services security guidance to fix typos, correct grammatical errors, and improve consistency. We also cleaned up link formatting by removing unnecessary URL parameters.
 
-- [Business continuity and disaster recovery for Azure Virtual Desktop](../scenarios/azure-virtual-desktop/eslz-business-continuity-and-disaster-recovery.md): We clarified the active-active host pool section by explaining the two-region setup with user assignment and failover procedures, and we added guidance about FSLogix profile storage behavior in the active-passive scenario. 
+- [Business continuity and disaster recovery for Azure Virtual Desktop](../scenarios/azure-virtual-desktop/eslz-business-continuity-and-disaster-recovery.md): We clarified the active-active host pool section by explaining the two-region setup with user assignment and failover procedures, and we added guidance about FSLogix profile storage behavior in the active-passive scenario.
 
 - [Manage your cloud estate with enhanced security](../secure/manage.md): We improved formatting consistency and clarity. We enhanced the business continuity and disaster recovery recommendation by clarifying the distinction between disaster recovery planning and resilient architecture design with more precise, actionable language.
 
@@ -268,11 +268,7 @@ We updated the following articles with prerequisites for Azure account setup and
 - [Organize your Azure resources effectively](../ready/azure-setup-guide/organize-resources.md): We reorganized the content and added links to best practices for resource tagging strategies and organization.
 - [Deploy Azure App Service at scale with landing zone accelerator](../scenarios/app-platform/app-services/landing-zone-accelerator.md): We added more detailed, process-oriented guidance and step-by-step recommendations for flexible implementation and customization. We also added a new architecture diagram that shows Azure Front Door and App Service Environment v3 integration.
 - [Microsoft Cloud Adoption Framework for Azure](../overview.md): We streamlined this article to focus on why you should use the framework, who should use the framework, and how to use the framework. We also added a new section on cloud adoption scenarios.
-- [Azure high-performance computing (HPC) landing zone accelerator](../scenarios/azure-hpc/azure-hpc-landing-zone-accelerator.md): We made updates to improve accuracy and added links to instructions about how to deploy the HPC landing zone accelerator.
-- [Compute large-scale HPC application workloads in Azure Virtual Machines](../scenarios/azure-hpc/compute.md): We made updates to improve accuracy, updated version numbers, and added links. We also consolidated the **Next steps** section.
-- [Azure landing zone for HPC](../scenarios/azure-hpc/ready.md): We updated links, made changes to improve accuracy, and updated AzHop references to Azure CycleCloud Workspace for Slurm.
 - [Capacity planning for Oracle workloads on Azure Virtual Machines](../scenarios/oracle-on-azure/oracle-capacity-planning.md): We made changes to reflect the latest Azure capabilities and best practices for Oracle workload capacity planning, with specific emphasis on newer virtual machine (VM) series and storage technologies.
-- [Manage modern application platform solutions for optimal performance and reliability](../scenarios/app-platform/manage.md): We made significant changes to this article to provide a more practical and comprehensive approach to managing modern application platforms. We also clarified the implementation guidance and added specific Azure tooling recommendations.
 - [Select Azure regions](../ready/azure-setup-guide/regions.md): We updated the Azure region selection section with clearer decision-making criteria and reliability, capability, and cost considerations.
 - [Azure setup guide overview](../ready/azure-setup-guide/index.md): We removed Azure portal integration and interactive elements and replaced the checklist format with a comprehensive table that describes each step in the Azure setup guide.
 - [AI strategy](../scenarios/ai/strategy.md): We provided a more comprehensive and strategic approach to AI adoption by adding clearer implementation steps and enhanced guidance for data strategy and responsible AI practices.
@@ -322,7 +318,6 @@ This month, we made significant updates to the Manage methodology. The Manage me
 - [AI Plan - Process to plan for AI adoption](../scenarios/ai/plan.md): We made adjustments to the AI maturity level table, and modifications to various sections such as "Acquire AI skills," "Access AI resources," "Prioritize AI use cases," and "Create an AI proof of concept."
 - [AI Strategy - Process to develop an AI strategy](../scenarios/ai/strategy.md): We reorganized and streamlined the AI technology strategy, extensibility tools for Microsoft 365 Copilot, and responsible AI strategy sections. New content was added to highlight the use of Microsoft Fabric and Azure services in various AI applications.
 - [Secure AI – Process to secure AI](../scenarios/ai/secure.md): We made minor updates to align this article with the NIST Cybersecurity Framework and the Microsoft Security Reference Architecture.
-- [Storage for Azure HPC Workloads](../scenarios/azure-hpc/storage.md): We made adjustments for clarity and details and considerations were added, including new sections on compute node distribution, design recommendations and HPC components.
 
 ## February 2025
 
@@ -400,3 +395,59 @@ This month, we made significant updates to the Strategy methodology. The Strateg
 - [Deploy Azure landing zones by using Terraform](../ready/landing-zone/deploy-landing-zones-with-terraform.md): Explore new guidance on various network architectures, including multiple-region virtual WAN with Azure Firewall, multiple-region hub and spoke virtual network, and single-region virtual WAN with Azure Firewall. Explore how to use Azure Verified Modules for Platform Landing Zones Terraform for infrastructure as code deployments.
 - [Migrate Azure landing zone custom policies to Azure built-in policies](../ready/landing-zone/design-area/migrate-azure-landing-zone-policies.md): Find refreshed migration guidance detailing the use of Azure Verified Modules for Platform Landing Zones, and updated references to Terraform and Bicep module resources.
 - [What is an Azure landing zone](../ready/landing-zone/index.md): We updated guidance on the use of Bicep and Terraform for deploying platform landing zones and added a more detailed description of the Azure Platform Landing Zones Portal Accelerator.
+
+## December 2024
+
+### New articles
+
+- [Authorization for cloud-scale analytics in Azure](../scenarios/cloud-scale-analytics/secure-authorization.md): Find guidance on managing data access and role-based access control (RBAC) for cloud-scale analytics. Learn how to use Microsoft Entra ID for centralized identity management, implementing RBAC and Access Control Lists (ACLs) for data services, and best practices for securing Azure Databases, Azure Data Lake Storage, and Azure Databricks.
+
+### Updated articles
+
+- [Enterprise-Scale Example Architectures for Connectivity to Azure VMware Solution](../scenarios/azure-vmware/example-architectures.md): We made changes to clarify various architectural considerations and requirements including traffic inspection requirements and recommended solution designs for different scenarios. We enhanced the description of key networking scenario points and added a new section on enabling Azure VMware Solution to on-premises traffic inspection with Azure Firewall.
+
+We made security updates to the following Cloud Scale Analytics articles:
+
+- [Common Data Model](../scenarios/cloud-scale-analytics/architectures/common-industry-data-models.md)
+- [Network topology and connectivity for connecting to environments privately](../scenarios/cloud-scale-analytics/architectures/connect-to-environments-privately.md)
+- [Cloud-scale analytics data applications (source-aligned)](../scenarios/cloud-scale-analytics/architectures/data-application-source-aligned.md)
+- [Data contracts](../scenarios/cloud-scale-analytics/architectures/data-contracts.md)
+- [Data domains](../scenarios/cloud-scale-analytics/architectures/data-domains.md)
+- [Cloud-scale analytics data products in Azure](../scenarios/cloud-scale-analytics/architectures/data-landing-zone-data-products.md)
+- [Data landing zones](../scenarios/cloud-scale-analytics/architectures/data-landing-zone.md)
+- [Data management landing zone overview](../scenarios/cloud-scale-analytics/architectures/data-management-landing-zone.md)
+- [Getting started checklist](../scenarios/cloud-scale-analytics/architectures/data-mesh-checklist.md)
+- [Data marketplace](../scenarios/cloud-scale-analytics/architectures/data-mesh-data-marketplace.md)
+- [Manage master data in data mesh](../scenarios/cloud-scale-analytics/architectures/data-mesh-master-data-management.md)
+- [A financial institution scenario for data mesh](../scenarios/cloud-scale-analytics/architectures/data-mesh-scenario.md)
+- [Data application reference patterns](../scenarios/cloud-scale-analytics/architectures/data-reference-patterns.md)
+- [Operationalize data mesh for AI/ML domain driven feature engineering](../scenarios/cloud-scale-analytics/architectures/operationalize-data-mesh-for-ai-ml.md)
+- [Adatum Corporation scenario for cloud-scale analytics in Azure](../scenarios/cloud-scale-analytics/architectures/reference-architecture-adatum.md)
+- [Lamna Healthcare scenario for cloud-scale analytics in Azure](../scenarios/cloud-scale-analytics/architectures/reference-architecture-lamna.md)
+- [Multiple data zones for cloud-scale analytics in Azure](../scenarios/cloud-scale-analytics/architectures/reference-architecture-multizone.md)
+- [Scale cloud-scale analytics in Azure](../scenarios/cloud-scale-analytics/architectures/scale-architectures.md)
+- [Data agnostic ingestion engine](../scenarios/cloud-scale-analytics/best-practices/automated-ingestion-pattern.md)
+- [The ingest process with cloud-scale analytics in Azure](../scenarios/cloud-scale-analytics/best-practices/data-ingestion.md)
+- [Business continuity and disaster recovery for cloud-scale analytics](../scenarios/cloud-scale-analytics/eslz-business-continuity-and-disaster-recovery.md)
+- [Identity and access management for cloud-scale analytics](../scenarios/cloud-scale-analytics/eslz-identity-and-access-management.md)
+- [Cross-region data landing zone connectivity](../scenarios/cloud-scale-analytics/eslz-network-considerations-cross-region.md)
+- [Single-region data landing zone connectivity](../scenarios/cloud-scale-analytics/eslz-network-considerations-single-region.md)
+- [Network topology and connectivity for cloud-scale analytics landing zones](../scenarios/cloud-scale-analytics/eslz-network-topology-and-connectivity.md)
+- [Policies in cloud-scale analytics](../scenarios/cloud-scale-analytics/eslz-policies.md)
+- [Security, governance, and compliance for enterprise-scale cloud-scale analytics](../scenarios/cloud-scale-analytics/eslz-security-governance-and-compliance.md)
+- [Data governance processes](../scenarios/cloud-scale-analytics/govern-components.md)
+- [Data quality](../scenarios/cloud-scale-analytics/govern-data-quality.md)
+- [Data lifecycle management](../scenarios/cloud-scale-analytics/govern-lifecycle.md)
+- [Data lineage](../scenarios/cloud-scale-analytics/govern-lineage.md)
+- [Manage master data](../scenarios/cloud-scale-analytics/govern-master-data.md)
+- [Metadata standards](../scenarios/cloud-scale-analytics/govern-metadata-standards.md)
+- [Requirements for governing data](../scenarios/cloud-scale-analytics/govern-requirements.md)
+- [Understand the roles and teams for cloud-scale analytics in Azure](../scenarios/cloud-scale-analytics/organize-roles-teams.md)
+- [Understand teams and functions for cloud-scale analytics in Azure](../scenarios/cloud-scale-analytics/organize-team-functions.md)
+- [Introduction to cloud-scale analytics](../scenarios/cloud-scale-analytics/overview-cloud-scale-analytics.md)
+- [Develop a plan for cloud-scale analytics](../scenarios/cloud-scale-analytics/plan.md)
+- [Review your environment for Azure landing zones for cloud-scale analytics](../scenarios/cloud-scale-analytics/ready.md)
+- [Authentication for cloud-scale analytics in Azure](../scenarios/cloud-scale-analytics/secure-authentication.md)
+- [Data privacy for cloud-scale analytics in Azure](../scenarios/cloud-scale-analytics/secure-data-privacy.md)
+- [Integrate cloud-scale analytics into your cloud adoption strategy](../scenarios/cloud-scale-analytics/strategy.md)
+
