@@ -172,8 +172,3 @@ To explore Microsoft Sentinel, go to the [Azure portal](https://portal.azure.com
 See [Microsoft Sentinel documentation](/azure/sentinel/) to learn more.
 
 ::: zone-end
-
-## Next step
-
-> [!div class="nextstepaction"]
-> [Stay current](./staying-current.md)
