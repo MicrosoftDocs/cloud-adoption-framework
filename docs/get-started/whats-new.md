@@ -20,27 +20,8 @@ Partner with us in our ongoing effort to develop the Cloud Adoption Framework.
 
 ### New articles
 
-- [Build agents across your organization by using Microsoft Foundry and Microsoft Copilot Studio](../ai-agents/build-secure-process.md): Learn how to build and secure AI agents across your organization by using Foundry and Copilot Studio. Follow a strategic framework for consistent, governed development.
+[AI agent adoption guidance for organizations](../ai-agents/index.md): Discover how to adopt AI agents effectively by using a step-by-step framework for planning, governance, integration, and measurement that maximizes business impact.
 
-- [Business plan for AI agents](../ai-agents/business-strategy-plan.md): Discover how to create a business strategy for AI agents that aligns with organizational goals, enhances operations, and drives innovation.
-
-- [Data architecture for AI agents across your organization](../ai-agents/data-architecture-plan.md): Learn how Microsoft Fabric and OneLake provide unified, trusted data that lets AI agents make better decisions and automate processes effectively.
-
-- [Governance and security for AI agents across the organization](../ai-agents/governance-security-across-organization.md): Explore best practices for governing AI agents, from data residency laws to corporate compliance, to ensure secure and responsible AI deployment.
-
-- [AI agent adoption guidance for organizations](../ai-agents/index.md): Discover how to adopt AI agents effectively by using a step-by-step framework for planning, governance, integration, and measurement that maximizes business impact.
-
-- [Manage AI agents across your organization](../ai-agents/integrate-manage-operate.md): Learn how to integrate and operate AI agents across your organization to enhance workflows, ensure security, and optimize costs by using Microsoft tools.
-
-- [Organizational readiness for AI agents](../ai-agents/organization-people-readiness-plan.md): Explore strategies for organizational readiness, including platform governance, workload alignment, and AI Center of Excellence integration.
-
-- [Establish responsible AI policies for AI agents across organizations](../ai-agents/responsible-ai-across-organization.md): Explore the principles of responsible AI to design ethical, transparent, and accountable AI agents for your organization.
-
-- [Choose between building a single-agent system or multi-agent system](../ai-agents/single-agent-multiple-agents.md): Explore decision criteria for selecting single-agent or multi-agent architectures to optimize AI-powered solutions for your organization.
-
-- [Create a technology plan for AI agents across your organization by using the Microsoft ecosystem](../ai-agents/technology-solutions-plan-strategy.md): Learn how to define a technology plan for AI agents across your organization by using Microsoft software as a service (SaaS) agents, Foundry, and Copilot Studio.
-
-- [Azure Key Vault integration for Oracle Exadata Database@Azure](../scenarios/oracle-on-azure/oracle-azure-key-vault-integration-exadata.md): Learn how to integrate Key Vault with Oracle Exadata Database@Azure for centralized transparent data encryption (TDE) key management.
 
 ### Updated articles
 
