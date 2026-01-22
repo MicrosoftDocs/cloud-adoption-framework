@@ -3,7 +3,7 @@ title: What's New in the Microsoft Cloud Adoption Framework
 description: Learn about recent updates to the Microsoft Cloud Adoption Framework for Azure.
 author: stephen-sumner
 ms.author: pnp
-ms.date: 12/04/2025
+ms.date: 01/14/2026
 ai-usage: ai-assisted
 ms.update-cycle: 180-days
 ms.topic: concept-article
@@ -15,6 +15,45 @@ ms.custom: UpdateFrequency.5, historical
 We build the Microsoft Cloud Adoption Framework collaboratively with our customers, partners, and internal Microsoft Teams. We release new and updated content for the framework as it becomes available. These new releases pose an opportunity for you to test, validate, and refine the Cloud Adoption Framework guidance along with us.
 
 Partner with us in our ongoing effort to develop the Cloud Adoption Framework.
+
+## December 2025
+
+### New guidance
+
+[AI agent adoption guidance for organizations](../ai-agents/index.md): Discover how to adopt AI agents effectively by using a step-by-step framework for planning, governance, integration, and measurement that maximizes business impact.
+
+
+### Updated articles
+
+- [Security control mapping with Azure landing zone](../ready/control-mapping/security-control-mapping.md): We improved clarity and readability throughout the article, simplified terminology for the Microsoft Cloud Security Benchmark, and updated implementation guidance to reference Azure Verified Modules for Terraform and Bicep deployments.
+
+- [Azure landing zone frequently asked questions (FAQs)](../ready/enterprise-scale/faq.md): We broadened sovereign landing zone guidance to apply to all organizations that have sovereignty needs rather than only government organizations.
+
+- [Encryption and key management in Azure](../ready/landing-zone/design-area/encryption-and-keys.md): We added guidance about choosing the right Azure key management solution. We enhanced Key Vault recommendations by clarifying when to use Azure Key Vault Managed HSM for centralized scenarios and explaining the benefits of multiple key vaults.
+
+- [Azure workload management and monitoring](../ready/landing-zone/design-area/management-workloads.md): We added guidance about using Azure service groups to organize workload resources across subscriptions and resource groups. We introduced health models in Azure Monitor (preview) to define and track resource health.
+
+- [Migrate Azure landing zone custom policies to Azure built-in policies](../ready/landing-zone/design-area/migrate-azure-landing-zone-policies.md): We simplified the policy migration guidance by consolidating references to Azure Verified Modules for Terraform and Bicep update guides and removing redundant step-by-step instructions.
+
+- [Overview of network topology and connectivity for Azure](../ready/landing-zone/design-area/network-topology-and-connectivity.md): We improved readability by adding better formatting to the Connectivity, Corp, and Online management group descriptions. We added a tip that simplifies understanding the Corp (internal-facing) and Online (public-facing) management groups.
+
+- [Subscription considerations and recommendations](../ready/landing-zone/design-area/resource-org-subscriptions.md): We enhanced platform subscription guidance to include a separate dedicated security subscription and emphasized not combining platform responsibilities into a single subscription. We added recommendations for quota management using quota groups and automation. We also introduced an operational excellence section that includes Azure Service Health guidance.
+
+- [Update Azure landing zone custom policies](../ready/landing-zone/design-area/update-custom-policies.md): We simplified policy update guidance by consolidating Bicep update instructions and updating references to Azure Verified Modules for Terraform and Bicep.
+
+- [Independent software vendor (ISV) considerations for Azure landing zones](../ready/landing-zone/isv-landing-zone.md): We added a recommendation for ISVs to include a separate Security management group under the Platform management group. We noted that we plan to add the Security management group to future updates.
+
+- [Platform landing zone implementation options](../ready/landing-zone/implementation-options.md): We restructured the article to focus specifically on platform landing zone implementation and simplified guidance to two main approaches. It includes the recommended infrastructure as code (IaC) accelerator with a detailed four-phase approach, and the portal-based accelerator. We replaced multiple implementation variants with improved options and enhanced Azure Verified Modules guidance for both Bicep and Terraform.
+
+- [What is an Azure landing zone?](../ready/landing-zone/index.md): We restructured deployment guidance to emphasize the IaC accelerator as the recommended approach. We enhanced application landing zone descriptions with subscription vending details and clarified the *landing zone P1 subscription* purpose.
+
+- [Enterprise enrollment considerations for SAP](../scenarios/sap/eslz-enterprise-enrollment.md): We clarified that SAP landing zones don't add new enrollment requirements or require a new Microsoft Entra ID tenant. We restructured the content to provide clearer instructions to review identity and access management and resource organization considerations. We explained how enrollment maps to management groups, subscriptions, and resource groups.
+
+- [Manage your cloud estate with enhanced security](../secure/manage.md): We added guidance to review Microsoft Secure Future Initiative requirements and integrate them into security assessments.
+
+- [Assess your workloads for cloud migration](../plan/assess-workloads-for-cloud-migration.md): We replaced AppCAT references with the GitHub Copilot app modernization tool and detailed its capabilities, including dependency capture, code revision, containerization, deployment file generation, and AI-assisted coding.
+
+- [Security teams, roles, and functions](../secure/teams-roles.md): We added a new section about minimum viable security teams for small organizations and enhanced explanations about how security roles transform with cloud adoption and modern development practices.
 
 ## November 2025
 
@@ -332,58 +371,4 @@ This month, we made significant updates to the Strategy methodology. The Strateg
 - [Migrate Azure landing zone custom policies to Azure built-in policies](../ready/landing-zone/design-area/migrate-azure-landing-zone-policies.md): Find refreshed migration guidance detailing the use of Azure Verified Modules for Platform Landing Zones, and updated references to Terraform and Bicep module resources.
 - [What is an Azure landing zone](../ready/landing-zone/index.md): We updated guidance on the use of Bicep and Terraform for deploying platform landing zones and added a more detailed description of the Azure Platform Landing Zones Portal Accelerator.
 
-## December 2024
-
-### New articles
-
-- [Authorization for cloud-scale analytics in Azure](../scenarios/cloud-scale-analytics/secure-authorization.md): Find guidance on managing data access and role-based access control (RBAC) for cloud-scale analytics. Learn how to use Microsoft Entra ID for centralized identity management, implementing RBAC and Access Control Lists (ACLs) for data services, and best practices for securing Azure Databases, Azure Data Lake Storage, and Azure Databricks.
-
-### Updated articles
-
-- [Enterprise-Scale Example Architectures for Connectivity to Azure VMware Solution](../scenarios/azure-vmware/example-architectures.md): We made changes to clarify various architectural considerations and requirements including traffic inspection requirements and recommended solution designs for different scenarios. We enhanced the description of key networking scenario points and added a new section on enabling Azure VMware Solution to on-premises traffic inspection with Azure Firewall.
-
-We made security updates to the following Cloud Scale Analytics articles:
-
-- [Common Data Model](../scenarios/cloud-scale-analytics/architectures/common-industry-data-models.md)
-- [Network topology and connectivity for connecting to environments privately](../scenarios/cloud-scale-analytics/architectures/connect-to-environments-privately.md)
-- [Cloud-scale analytics data applications (source-aligned)](../scenarios/cloud-scale-analytics/architectures/data-application-source-aligned.md)
-- [Data contracts](../scenarios/cloud-scale-analytics/architectures/data-contracts.md)
-- [Data domains](../scenarios/cloud-scale-analytics/architectures/data-domains.md)
-- [Cloud-scale analytics data products in Azure](../scenarios/cloud-scale-analytics/architectures/data-landing-zone-data-products.md)
-- [Data landing zones](../scenarios/cloud-scale-analytics/architectures/data-landing-zone.md)
-- [Data management landing zone overview](../scenarios/cloud-scale-analytics/architectures/data-management-landing-zone.md)
-- [Getting started checklist](../scenarios/cloud-scale-analytics/architectures/data-mesh-checklist.md)
-- [Data marketplace](../scenarios/cloud-scale-analytics/architectures/data-mesh-data-marketplace.md)
-- [Manage master data in data mesh](../scenarios/cloud-scale-analytics/architectures/data-mesh-master-data-management.md)
-- [A financial institution scenario for data mesh](../scenarios/cloud-scale-analytics/architectures/data-mesh-scenario.md)
-- [Data application reference patterns](../scenarios/cloud-scale-analytics/architectures/data-reference-patterns.md)
-- [Operationalize data mesh for AI/ML domain driven feature engineering](../scenarios/cloud-scale-analytics/architectures/operationalize-data-mesh-for-ai-ml.md)
-- [Adatum Corporation scenario for cloud-scale analytics in Azure](../scenarios/cloud-scale-analytics/architectures/reference-architecture-adatum.md)
-- [Lamna Healthcare scenario for cloud-scale analytics in Azure](../scenarios/cloud-scale-analytics/architectures/reference-architecture-lamna.md)
-- [Multiple data zones for cloud-scale analytics in Azure](../scenarios/cloud-scale-analytics/architectures/reference-architecture-multizone.md)
-- [Scale cloud-scale analytics in Azure](../scenarios/cloud-scale-analytics/architectures/scale-architectures.md)
-- [Data agnostic ingestion engine](../scenarios/cloud-scale-analytics/best-practices/automated-ingestion-pattern.md)
-- [The ingest process with cloud-scale analytics in Azure](../scenarios/cloud-scale-analytics/best-practices/data-ingestion.md)
-- [Business continuity and disaster recovery for cloud-scale analytics](../scenarios/cloud-scale-analytics/eslz-business-continuity-and-disaster-recovery.md)
-- [Identity and access management for cloud-scale analytics](../scenarios/cloud-scale-analytics/eslz-identity-and-access-management.md)
-- [Cross-region data landing zone connectivity](../scenarios/cloud-scale-analytics/eslz-network-considerations-cross-region.md)
-- [Single-region data landing zone connectivity](../scenarios/cloud-scale-analytics/eslz-network-considerations-single-region.md)
-- [Network topology and connectivity for cloud-scale analytics landing zones](../scenarios/cloud-scale-analytics/eslz-network-topology-and-connectivity.md)
-- [Policies in cloud-scale analytics](../scenarios/cloud-scale-analytics/eslz-policies.md)
-- [Security, governance, and compliance for enterprise-scale cloud-scale analytics](../scenarios/cloud-scale-analytics/eslz-security-governance-and-compliance.md)
-- [Data governance processes](../scenarios/cloud-scale-analytics/govern-components.md)
-- [Data quality](../scenarios/cloud-scale-analytics/govern-data-quality.md)
-- [Data lifecycle management](../scenarios/cloud-scale-analytics/govern-lifecycle.md)
-- [Data lineage](../scenarios/cloud-scale-analytics/govern-lineage.md)
-- [Manage master data](../scenarios/cloud-scale-analytics/govern-master-data.md)
-- [Metadata standards](../scenarios/cloud-scale-analytics/govern-metadata-standards.md)
-- [Requirements for governing data](../scenarios/cloud-scale-analytics/govern-requirements.md)
-- [Understand the roles and teams for cloud-scale analytics in Azure](../scenarios/cloud-scale-analytics/organize-roles-teams.md)
-- [Understand teams and functions for cloud-scale analytics in Azure](../scenarios/cloud-scale-analytics/organize-team-functions.md)
-- [Introduction to cloud-scale analytics](../scenarios/cloud-scale-analytics/overview-cloud-scale-analytics.md)
-- [Develop a plan for cloud-scale analytics](../scenarios/cloud-scale-analytics/plan.md)
-- [Review your environment for Azure landing zones for cloud-scale analytics](../scenarios/cloud-scale-analytics/ready.md)
-- [Authentication for cloud-scale analytics in Azure](../scenarios/cloud-scale-analytics/secure-authentication.md)
-- [Data privacy for cloud-scale analytics in Azure](../scenarios/cloud-scale-analytics/secure-data-privacy.md)
-- [Integrate cloud-scale analytics into your cloud adoption strategy](../scenarios/cloud-scale-analytics/strategy.md)
 
