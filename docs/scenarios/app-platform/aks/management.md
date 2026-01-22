@@ -117,7 +117,7 @@ The following are best practices for your design:
 
 - Whenever possible, [remove service state from inside containers](/azure/aks/operator-best-practices-multi-region#remove-service-state-from-inside-containers). Instead, use an Azure platform as a service (PaaS) that supports multiregion replication.
 
-- Ensure pod resources. It's highly recommended that deployments specify pod resource requirements. The scheduler can then appropriately schedule the pod. Reliability depreciates when pods aren't scheduled.
+- Ensure pod resources. It's highly recommended that deployments specify pod resource requirements. The scheduler can then appropriately schedule the pod. Reliability degrades when pods aren't scheduled.
 
 - Set up multiple replicas in the deployment to handle disruptions like hardware failures. For planned events like updates and upgrades, a disruption budget can ensure the required number of pod replicas exist to handle the expected application load.
 
@@ -136,7 +136,7 @@ The following are best practices for your design:
 
 - Store your container images in [Azure Container Registry](/azure/aks/operator-best-practices-multi-region#enable-geo-replication-for-container-images) and geo-replicate the registry to each AKS region.
 
-- Use the [Uptime SLA](/azure/aks/uptime-sla) to enable a financially backed, higher SLA for all clusters hosting production workloads. Uptime SLA guarantees 99.95% availability of the Kubernetes API server endpoint for clusters that use Availability Zones and 99.9% of availability for clusters that don't use Availability Zones. Your nodes, node pools, and other resources are covered under their SLA. AKS offers a free tier with a service level objective (SLO) of 99.5% for its control plane components. Clusters without the Uptime SLA enabled shouldn't be used for production workloads.
+- Use the [Uptime SLA](/azure/aks/uptime-sla) to enable a financially backed, higher SLA for all clusters hosting production workloads. Uptime SLA guarantees 99.95% availability of the Kubernetes API server endpoint for clusters that use Availability Zones and 99.9% availability for clusters that don't use Availability Zones. Your nodes, node pools, and other resources are covered under their SLA. AKS offers a free tier with a service level objective (SLO) of 99.5% for its control plane components. Clusters without the Uptime SLA enabled shouldn't be used for production workloads.
 
 - Use multiple regions and peering locations for [Azure ExpressRoute](/azure/expressroute/expressroute-introduction) connectivity.
 
