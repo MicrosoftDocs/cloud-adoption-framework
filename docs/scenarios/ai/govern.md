@@ -34,7 +34,14 @@ AI risk assessment identifies potential risks that AI technologies introduce int
 
 1. **Identify risks from external dependencies.** External dependencies introduce additional risk vectors that require careful evaluation. You must assess risks from third-party data sources, AI models, software libraries, and API integrations that your AI workloads depend on. Address potential issues such as security vulnerabilities, data quality problems, bias in external datasets, intellectual property conflicts, and vendor reliability by establishing clear policies that ensure external dependencies align with your organizational privacy, security, and compliance standards.
 
-1. **Assess integration risks.** AI workloads rarely operate in isolation and create new risks when integrated with existing systems. You must evaluate how AI workloads connect with current applications, databases, and business processes to identify potential failure points. Document specific risks such as dependency cascades where AI failure affects multiple systems, increased system complexity that makes troubleshooting difficult, data format incompatibilities, performance bottlenecks, and security gaps at integration points that could compromise overall system functionality.
+1. **Assess integration risks.** AI workloads rarely operate in isolation and create new risks when integrated with existing systems. You must evaluate how AI workloads connect with current applications, databases, and business processes to identify potential failure points.
+
+Document specific risks that could compromise overall system functionality, such as:
+* Dependency cascades where AI failure affects multiple systems
+* Increased system complexity that makes troubleshooting difficult
+* Data format incompatibilities
+* Performance bottlenecks
+* Security gaps at integration points
 
 ## Document AI governance policies
 
