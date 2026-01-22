@@ -10,7 +10,7 @@ ms.custom: think-tank, e2e-avd
 
 # Azure Virtual Desktop assessment
 
-The Azure Virtual Desktop [proof of concept](./proof-of-concept.md) provides an initial scope as a baseline implementation. However, the output of that proof of concept is unlikely to meet its production needs as-is.
+The Azure Virtual Desktop [proof of concept](./proof-of-concept.md) provides an initial scope as a baseline implementation. However, the output of that proof of concept is unlikely to meet production needs as-is.
 
 The Azure Virtual Desktop assessment exercise serves as a focused means of testing assumptions through a data-driven process. Assessment data will help the team answer a series of important questions, validate or invalidate their assumptions, and refine the scope as necessary to support the team's Azure Virtual Desktop scenario. By using this assumption-validation approach, the team can accelerate the migration or deployment of its end-user desktops to Azure Virtual Desktop.
 
