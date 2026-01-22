@@ -19,7 +19,7 @@ AI risk assessment identifies potential risks that AI technologies introduce int
 
 1. **Understand your AI workloads.** Each AI workload presents unique risks based on its purpose, scope, and implementation. You must clarify the specific function, data sources, and intended outcomes for each AI workload to map associated risks effectively. Document any assumptions and limitations related to each AI workload to establish clear boundaries for risk assessment.
 
-1. **Use Responsible AI principles to identify risks.** Responsible AI principles provide a structured framework for comprehensive risk assessment. You must evaluate each AI workload against these principles to identify potential vulnerabilities and ethical concerns. Use the following table to guide your risk identification process:
+2. **Use Responsible AI principles to identify risks.** Responsible AI principles provide a structured framework for comprehensive risk assessment. You must evaluate each AI workload against these principles to identify potential vulnerabilities and ethical concerns. Use the following table to guide your risk identification process:
 
     | Responsible AI principle    | Definition  | Risk assessment question    |
     |-----------------------------|-------------|----------------|
@@ -30,18 +30,17 @@ AI risk assessment identifies potential risks that AI technologies introduce int
     | Transparency                 | AI workloads should be understandable.               | What aspects of AI decision-making could be difficult for users to understand or explain?|
     | Accountability               | People should be accountable for AI workloads.       | Where could accountability be unclear or difficult to establish in the development or use of AI?|
 
-1. **Identify specific AI risks.** Risk identification requires systematic evaluation of security, operational, and ethical vulnerabilities. You must assess potential data breaches, unauthorized access, model manipulation, and misuse scenarios for each AI workload. Consult stakeholders from different departments to uncover risks that technical teams might overlook, and evaluate both quantitative impacts (financial losses, performance degradation) and qualitative impacts (reputational damage, user trust) to determine your organization's risk tolerance.
+3. **Identify specific AI risks.** Risk identification requires systematic evaluation of security, operational, and ethical vulnerabilities. You must assess potential data breaches, unauthorized access, model manipulation, and misuse scenarios for each AI workload. Consult stakeholders from different departments to uncover risks that technical teams might overlook, and evaluate both quantitative impacts (financial losses, performance degradation) and qualitative impacts (reputational damage, user trust) to determine your organization's risk tolerance.
 
-1. **Identify risks from external dependencies.** External dependencies introduce additional risk vectors that require careful evaluation. You must assess risks from third-party data sources, AI models, software libraries, and API integrations that your AI workloads depend on. Address potential issues such as security vulnerabilities, data quality problems, bias in external datasets, intellectual property conflicts, and vendor reliability by establishing clear policies that ensure external dependencies align with your organizational privacy, security, and compliance standards.
+4. **Identify risks from external dependencies.** External dependencies introduce additional risk vectors that require careful evaluation. You must assess risks from third-party data sources, AI models, software libraries, and API integrations that your AI workloads depend on. Address potential issues such as security vulnerabilities, data quality problems, bias in external datasets, intellectual property conflicts, and vendor reliability by establishing clear policies that ensure external dependencies align with your organizational privacy, security, and compliance standards.
 
-1. **Assess integration risks.** AI workloads rarely operate in isolation and create new risks when integrated with existing systems. You must evaluate how AI workloads connect with current applications, databases, and business processes to identify potential failure points.
+5. **Assess integration risks.** AI workloads rarely operate in isolation and create new risks when integrated with existing systems. You must evaluate how AI workloads connect with current applications, databases, and business processes to identify potential failure points. Document specific risks that could compromise overall system functionality, such as:
 
-    Document specific risks that could compromise overall system functionality, such as:
-    * Dependency cascades where AI failure affects multiple systems
-    * Increased system complexity that makes troubleshooting difficult
-    * Data format incompatibilities
-    * Performance bottlenecks
-    * Security gaps at integration points
+    - Dependency cascades where AI failure affects multiple systems
+    - Increased system complexity that makes troubleshooting difficult
+    - Data format incompatibilities
+    - Performance bottlenecks
+    - Security gaps at integration points
 
 ## Document AI governance policies
 
