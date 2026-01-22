@@ -90,7 +90,7 @@ Performance efficiency refers to maximizing the processing power of Azure infras
 
 Increase the clock rate of a graphics processing unit (GPU) to improve performance, especially for tasks requiring high graphical processing or complex computations. Higher clock speeds allow the GPU to execute more operations in a given time period, enhancing overall efficiency. Use this [GPU-optimization script](https://github.com/Azure/azurehpc/tree/master/experimental/gpu_optimizations#gpu-optimization) to set the GPU clock frequencies to their maximum values.
 
-- *Enable Accelerated Networking.* Accelerated Networking is a hardware acceleration technology that allows virtual machines to use single root I/O virtualization (SR-IOV) on supported virtual machines types. It provides lower latency, reduced jitter, and decreased CPU utilization. Enable accelerated Networking offers substantial enhancements in front-end network performance.
+- *Enable Accelerated Networking.* Accelerated Networking is a hardware acceleration technology that allows virtual machines to use single root I/O virtualization (SR-IOV) on supported virtual machine types. It provides lower latency, reduced jitter, and decreased CPU utilization. Enabling accelerated Networking offers substantial enhancements in front-end network performance.
 
 ### I/O tuning
 
@@ -118,7 +118,7 @@ NVIDIA Megatron-LM is an open-source framework for training large language model
 
 Megatron-LM deploys on Azure HPC infrastructure, and it uses Azure’s scalability for large language models without requiring on-premises hardware.
 
-#### Megatron-LM test set up
+#### Megatron-LM test setup
 
 Deploying Megatron-LM requires specific software and hardware.
 
@@ -144,7 +144,7 @@ This setup ensures efficient deployment and training of large language models on
 
 ### NCCL bandwidth test
 
-To verify and optimize GPU communication across nodes, run the NCCL bandwidth test. The NCCL bandwidth test is specialized tool within NCCL, a library that facilitates high-speed communication between GPUs. NCCL supports collective operations, including all-reduce, all-gather, reduce, broadcast, and reduce-scatter, across single or multi-GPU nodes, and achieves optimal performance on platforms with PCIe, NVLink, NVswitch, or networking setups like InfiniBand or TCP/IP. For more information, see [NVIDIA/NCCL tests](https://github.com/nvidia/nccl).
+To verify and optimize GPU communication across nodes, run the NCCL bandwidth test. The NCCL bandwidth test is a specialized tool within NCCL, a library that facilitates high-speed communication between GPUs. NCCL supports collective operations, including all-reduce, all-gather, reduce, broadcast, and reduce-scatter, across single or multi-GPU nodes, and achieves optimal performance on platforms with PCIe, NVLink, NVswitch, or networking setups like InfiniBand or TCP/IP. For more information, see [NVIDIA/NCCL tests](https://github.com/nvidia/nccl).
 
 #### NCCL performance metrics
 
