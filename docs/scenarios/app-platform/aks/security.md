@@ -87,7 +87,7 @@ Access to registries that contain sensitive images should require authentication
 
 Access to these registries should be federated and take advantage of business-line-level access policies. For example, you can configure your CI/CD pipeline to push images to repositories only after they've passed vulnerability scanning compliance assessment and quality control tests.
 
-Container registries, now considered artifact registries, are becoming a primary way to deploy any content type, not just container images. Every cloud provider offers a registry containing open-source projects and vendor-supplied artifacts that can be used in on‑premises, private, or cloud‑hosted environments. Artifacts are promoted within and across registries from their initial build through production deployment.
+Container registries, now considered artifact registries, are becoming a primary way to deploy any content type, not just container images. Every cloud provider offers a registry containing open-source projects and vendor-supplied artifacts that can be used in on-premises, private, or cloud-hosted environments. Artifacts are promoted within and across registries from their initial build through production deployment.
 
 How can you ensure the integrity of the content that went into the registry is the same content that comes out of the registry? Adopting an image signing solution makes sure that deployments are only coming from trusted registries and are deploying trusted content.
 
