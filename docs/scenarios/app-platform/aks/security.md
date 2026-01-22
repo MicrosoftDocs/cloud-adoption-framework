@@ -87,7 +87,7 @@ Access to registries that contain sensitive images should require authentication
 
 Access to these registries should be federated and take advantage of business-line-level access policies. For example, you can configure your CI/CD pipeline to push images to repositories only after they've passed vulnerability scanning compliance assessment and quality control tests.
 
-Container registries now considered artifact registries are becoming a primary means to deploy any content type, not just container images. Every cloud provides a registry with open-source projects and vendor products that are available for on-premises or private hosting within cloud providers. Content is promoted within and across registries from their initial build to their production deployment.
+Container registries, now considered artifact registries, are becoming a primary way to deploy any content type, not just container images. Every cloud provider offers a registry containing open-source projects and vendor-supplied artifacts that can be used in on-premises, private, or cloud-hosted environments. Artifacts are promoted within and across registries from their initial build through production deployment.
 
 How can you ensure the integrity of the content that went into the registry is the same content that comes out of the registry? Adopting an image signing solution makes sure that deployments are only coming from trusted registries and are deploying trusted content.
 
@@ -136,7 +136,7 @@ Kubernetes clusters should be configured to:
 
 It must be easy for a compromised node to be isolated and removed from the cluster without affecting the performance of the cluster. AKS makes that simple.
 
-Define container runtime configuration standards to automatically ensure compliance. There are many policies within Azure that makes this process easy, and users can create their own policies too. Use Azure security features to continuously assess configuration settings across the environment and actively enforce them.
+Define container runtime configuration standards to automatically ensure compliance. There are many policies within Azure that make this process easy, and users can create their own policies too. Use Azure security features to continuously assess configuration settings across the environment and actively enforce them.
 
 Automatically ensure that vulnerabilities of the Kubernetes components are being addressed. Use separate environments for development, test, and production, each with their own controls and role-based access control (RBAC) for container management. Associate all container creation with individual user identities and it should be logged for auditing. This configuration helps to reduce the risk of rogue containers.
 
@@ -203,7 +203,7 @@ Never store secrets in application code or file systems. Secrets should be store
 Avoid the use of untrusted images and registries and ensure that only images from trusted sets are allowed to run in their clusters. For a multilayered approach:
 
 - Centrally control exactly what images and registries are trusted.
-- Discretely identify each image by cryptographic signature.
+- Uniquely identify each image by cryptographic signature.
 - Put policies in place that ensure all hosts only run images that are from the approved set.
 - Validate these signatures before execution.
 - Monitor and update these images and registries as vulnerabilities and configuration requirements change.
