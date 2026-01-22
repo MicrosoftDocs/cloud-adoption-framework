@@ -23,7 +23,7 @@ This article outlines how to design network topology and connectivity for Azure 
 
 - [**Network security groups**](/azure/virtual-network/network-security-groups-overview) are used to filter network traffic to and from Azure resources in an Azure virtual network. A network security group contains security rules that allow or deny inbound network traffic to, or outbound network traffic from, several types of Azure resources.
 - [**Application security groups**](/azure/virtual-network/application-security-groups) provide a way for you to configure network security as a natural extension of an application's structure. You can use application security groups to group virtual machines and define network security policies that are based on those groups. You can reuse your security policy at scale without needing to manually maintain explicit IP addresses.
-- A [**NAT Gateway**](/azure/nat-gateway/nat-overview) provide NAT service for private subnets egress traffic to the internet. It doesn't allow inbound traffic except for response packets. This setup provides Azure Virtual Desktop environments the ability to explicitly egress to the internet and also mitigate performance effects of sending AVD service traffic through a Firewall or NVA.
+- A [**NAT Gateway**](/azure/nat-gateway/nat-overview) provides NAT service for private subnets egress traffic to the internet. It doesn't allow inbound traffic except for response packets. This setup provides Azure Virtual Desktop environments the ability to explicitly egress to the internet and also mitigate performance effects of sending AVD service traffic through a Firewall or NVA.
 
 ### Routing and optimization
 
@@ -222,7 +222,7 @@ For detailed deployment guidance, see [RDP Shortpath connectivity for public net
 This scenario is ideal if:
 
 - Your Azure Virtual Desktop client connections traverse the public internet. Typical scenarios include work-from-home users, remote-branch office users who aren't connected to corporate networks, and remote contractor users.
-- You have high-latency or low-bandwidth connections to Azure Virtual Desktops session hosts.
+- You have high-latency or low-bandwidth connections to Azure Virtual Desktop session hosts.
 - You need to limit bandwidth usage of Azure Virtual Desktop session hosts via QoS network policies.
 - You want to prioritize Azure Virtual Desktop traffic on your network via QoS policies.
 - Client RDP connections start from networks with inconsistent bandwidth and speed.

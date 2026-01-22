@@ -152,7 +152,7 @@ For most scenarios, we recommend that you use Azure Files or Azure NetApp Files 
 
 - When possible, use Azure Storage built-in replication mechanisms for BCDR for environments that are less critical.
   - Use zone-redundant storage (ZRS) or GRS for Azure Files.
-  - Use local redundant storage (LRS) with local-only resiliency if no zone or region protection is required.
+  - Use locally redundant storage (LRS) with local-only resiliency if no zone or region protection is required.
 
   > [!NOTE]
   > GRS isn't available with the Azure Files Premium tier or Standard tier if large file support is enabled.

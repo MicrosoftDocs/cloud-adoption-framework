@@ -20,7 +20,7 @@ After reviewing the conceptual design recommendations for Citrix on Azure, see [
 
 ## Architecture
 
-The following diagram shows a reference architecture that demonstrates key design areas and best practices for deploying Citrix Cloud and Azure environment.
+The following diagram shows a reference architecture that demonstrates key design areas and best practices for deploying Citrix Cloud and an Azure environment.
 
 [![Diagram of a reference architecture that demonstrates major design areas and design best practices in a Citrix Cloud and Azure environment.](../media/citrix-cloud-azure-virtual-desktop-architecture.png)](../media/citrix-cloud-azure-virtual-desktop-architecture.png#lightbox)
 

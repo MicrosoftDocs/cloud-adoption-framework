@@ -52,11 +52,11 @@ You can also use a build checklist to scale up. If you have a large environment,
 
 We don't recommend using your existing image to create a VM that you update with new applications and configuration changes and then capture for use as your "new" gold image. Maintaining this scenario involves significant risk and is a major factor in desktop virtualization environments becoming static and fragile.
 
-There are many automation tools for creating gold images, including the Packer process we describe later in this article. Use the tool set that's most appropriate for your organization. Regardless of which tools that you choose, automate as much of your gold image creation as possible so you can more easily maintain your Azure Virtual Desktop environment's health.
+There are many automation tools for creating gold images, including the Packer process we describe later in this article. Use the tool set that's most appropriate for your organization. Regardless of which tools you choose, automate as much of your gold image creation as possible so you can more easily maintain your Azure Virtual Desktop environment's health.
 
 ### Application installation
 
-Applications can be made available to your users two ways: installed in the image, or delivered dynamically per user.
+Applications can be made available to your users in two ways: installed in the image, or delivered dynamically per user.
 
 Applications installed in the image should be universal to your users and a part of your automated image creation process. Image-installed applications can include security products and the Microsoft 365 suite.
 
@@ -71,7 +71,7 @@ As your Azure Virtual Desktop environments start to scale out, you might need to
 
 ### Deployment locations
 
-Azure Virtual Desktop offers more freedom around the geographic placement of your host pools than traditional desktop environments do. This freedom exists because all Azure locations support Azure Virtual Desktop. Avoid creating VMs from an image across a broad wide area network (WAN) by making your gold image available in each of the same locations as your users.
+Azure Virtual Desktop offers more freedom around the geographic placement of your host pools than traditional desktop environments do. This freedom exists because all Azure locations support Azure Virtual Desktop. Avoid creating VMs from an image across a wide area network (WAN) by making your gold image available in each of the same locations as your users.
 
 ### Host pool gold image updates
 
@@ -142,7 +142,7 @@ The Packer method has the following prerequisites:
 
 - Azure DevOps licensing must use the full suite of Packer tools.
 - You must assign a user the appropriate role in Microsoft Entra ID.
-- You must give a service principals contributor access to the subscription.
+- You must give a service principal contributor access to the subscription.
 - You must have an Azure Key Vault to store secrets in, giving the service principal **secret management** in the access policy.
 
 When working with Packer in your deployment pipeline:
@@ -200,7 +200,7 @@ Below is a recommended host pool update strategy:
 - Upon successful testing in the validation pool, put existing session hosts into drain mode - tagged VMs will be easy to identify.
 - Deploy new session hosts and allow users to connect.
 - Upon successful testing in production, begin to deallocate old session hosts to not incur any more compute charges and eventually delete to not incur any more managed disk charges.
-- Deleted sessions hosts will only be removed from Azure. Computer objects will remain in your AD, so these computer objects will need to be deleted manually or via script.
+- Deleted session hosts will only be removed from Azure. Computer objects will remain in your AD, so these computer objects will need to be deleted manually or via script.
 
 The example above shows one method of image automation using Azure DevOps and a continuous integration and continuous delivery (CI/CD) pipeline. This is a cloud-native approach and offers a less disruptive rollout of new session hosts with no downtime. It's important to note that you should consider the surge in virtual machine counts as you phase old images out and bring new images online.
 

@@ -22,7 +22,7 @@ For information about Microsoft tools to use with Citrix DaaS, visit the [Citrix
 
 ## Citrix design recommendations
 
-### Metrics and alert Thresholds
+### Metrics and alert thresholds
 
 For a Citrix deployment, focus on the Guest OS metrics of Citrix virtual machines. Poor server performance metrics typically indicate that the users are about to experience performance issues, or that they already have. For instance, when the Max Input Delay for a user session reaches a predefined value, we know that users are experiencing latency. You can configure the Action group to send an email to the Citrix administrators that alerts them to the issue so that they can intervene proactively.
 
@@ -78,7 +78,7 @@ Here is the list of perfmon counters to monitor for all Citrix servers in the de
   - Use Task Manager or Citrix Monitor to look for applications that are causing the high disk usage. Investigate what might be causing the high disk usage. Use this metric with other logical and physical disk metrics.
   - If all activity looks normal, look for a way to move the applications to disks that have higher performing disk subsystems.
 - Network Interface\Bytes Total/sec
-  - This counter shows the rate at which the network adaptor is processing data packets for the network.
+  - This counter shows the rate at which the network adapter is processing data packets for the network.
   - Alert when Bytes Total per second is greater than 80% of the NIC capacity for 5 minutes.
   - Use Task Manager to look for applications that are causing the high network usage. Try to determine what might be causing the high network utilization. Use this metric with other logical and physical network metrics.
   - If all activity looks normal, look for a way to increase the network bandwidth or increase the capacity to the delivery group.
@@ -96,7 +96,7 @@ Here are some general recommendations and practices to consider as you use these
 
 - Tracking performance monitor metrics for virtual machines and the network is easier to do from Azure Monitor. The Azure Monitor metrics are more granular than what is available from Citrix Monitor. Use Azure Monitor for the performance metrics to have more control over the metrics that are collected.
 - Set your monitoring data retention to as short a period as possible for your business requirements. Most monitoring data is only useful for a short period of time. Save costs by not storing monitoring data long-term. Create an automation job to clean up stale data in your storage accounts.
-- Azure includes alerts for metrics, logs, service outages, planned maintenance, monthly cost, and security. Using alerts can be a life saver. This article provides many recommendations about alerts to create for your Citrix deployment. Implement the ones that make the most sense in your environment. Send critical alerts via SMS and email to ensure that they're acted upon quickly. Set a reminder on your calendar each quarter to update the alert notification lists.
+- Azure includes alerts for metrics, logs, service outages, planned maintenance, monthly cost, and security. Using alerts can be a lifesaver. This article provides many recommendations about alerts to create for your Citrix deployment. Implement the ones that make the most sense in your environment. Send critical alerts via SMS and email to ensure that they're acted upon quickly. Set a reminder on your calendar each quarter to update the alert notification lists.
 - Monitoring and alerting on a metric comes with a monthly cost. Choose wisely which metrics to track. If you don't plan on taking action when an alert fires, then consider whether the metric has value.
 - Set up a custom dashboard for your Citrix resource groups and enable links to key services such as Microsoft Sentinel, Service Health, Network Insights (Azure Monitor), and Advisor. On the dashboard, include  charts from Azure Monitor Network Insights that show the performance of your ExpressRoute or VPN connections, your Cloud Connectors, and Citrix VDA hosts. To protect sensitive information, restrict dashboard access to only those individuals who need it.
 - When troubleshooting an issue, look at multiple data sources to help correlate the symptoms to the root cause. For instance, if the average logon duration is high, you can view the metrics in Azure to determine where resource constraints exist.
