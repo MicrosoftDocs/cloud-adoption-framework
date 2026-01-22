@@ -51,7 +51,7 @@ AI governance policies provide a structured framework for responsible AI use wit
 
 ## Enforce AI governance policies
 
-The enforcement of your AI governance policies maintains consistent and ethical AI practices across your organization. You should use automated tools and manual interventions ensure policy adherence across all AI deployments. Here's how:
+The enforcement of your AI governance policies maintains consistent and ethical AI practices across your organization. You should use automated tools and manual interventions to ensure policy adherence across all AI deployments. Here's how:
 
 1. **Automate policy enforcement where possible.** Automated enforcement reduces human error and ensures consistent policy application across all AI deployments. Automation provides real-time monitoring and immediate response to policy violations, which manual processes cannot match effectively. Use platforms like Azure Policy and Microsoft Purview to enforce policies automatically across AI deployments, and regularly assess areas where automation can improve policy adherence.
 

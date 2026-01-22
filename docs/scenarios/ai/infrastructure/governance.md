@@ -39,7 +39,7 @@ Cost management monitors and controls expenses related to AI workloads on Azure.
 
 - *View spending patterns.* Use the Azure [Cost analysis](/azure/cost-management-billing/costs/quick-acm-cost-analysis) tool to regularly review spending patterns. This process identifies trends and reveals areas for potential savings, especially in VM usage.
 
-- *Allow specific virtual machine SKUs.* Use Azure policy to allow only the virtual machines SKUs that align with your AI budget. The built-in policy definition [*Allowed virtual machine SKUs*](https://ms.portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2Fcccc23c7-8427-4f53-ad12-b6a63eb452b3) can enforce this control.
+- *Allow specific virtual machine SKUs.* Use Azure policy to allow only the virtual machine SKUs that align with your AI budget. The built-in policy definition [*Allowed virtual machine SKUs*](https://ms.portal.azure.com/#view/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2Fcccc23c7-8427-4f53-ad12-b6a63eb452b3) can enforce this control.
 
 - *Consider autoscaling.* Use a [virtual machine scale set](/azure/virtual-machine-scale-sets/overview) to dynamically adjust VM counts based on demand, optimizing costs.
 
