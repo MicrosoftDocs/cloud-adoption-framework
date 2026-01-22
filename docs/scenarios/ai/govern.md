@@ -36,12 +36,12 @@ AI risk assessment identifies potential risks that AI technologies introduce int
 
 1. **Assess integration risks.** AI workloads rarely operate in isolation and create new risks when integrated with existing systems. You must evaluate how AI workloads connect with current applications, databases, and business processes to identify potential failure points.
 
-Document specific risks that could compromise overall system functionality, such as:
-* Dependency cascades where AI failure affects multiple systems
-* Increased system complexity that makes troubleshooting difficult
-* Data format incompatibilities
-* Performance bottlenecks
-* Security gaps at integration points
+    Document specific risks that could compromise overall system functionality, such as:
+    * Dependency cascades where AI failure affects multiple systems
+    * Increased system complexity that makes troubleshooting difficult
+    * Data format incompatibilities
+    * Performance bottlenecks
+    * Security gaps at integration points
 
 ## Document AI governance policies
 
