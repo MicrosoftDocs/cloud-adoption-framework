@@ -27,7 +27,7 @@ A platform foundation provides shared services such as networking, identity, sec
 
 This AKS landing zone accelerator includes a reference architecture that supports AKS deployments in an Azure landing zone.
 
-1. **Use the templates from the official GitHub repository.** Use the [AKS landing zone accelerator](https://aka.ms/aks-reference-implementation) repo to access ARM template, Bicep, and Terraform templates for deploying AKS infrastructure components to fit your environment. Modify environment variables and parameters to align with your organization’s naming conventions, policies, and operational requirements.
+1. **Use the templates from the official GitHub repository.** Use the [AKS landing zone accelerator](https://aka.ms/aks-reference-implementation) repo to access ARM templates, Bicep templates, and Terraform templates for deploying AKS infrastructure components to fit your environment. Modify environment variables and parameters to align with your organization’s naming conventions, policies, and operational requirements.
 
 2. **Deploy the accelerator in the landing zones management group.** Place the AKS workload in the appropriate subscription and management group to ensure alignment with platform governance and policy enforcement.
 
