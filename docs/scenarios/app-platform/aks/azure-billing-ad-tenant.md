@@ -24,4 +24,4 @@ Most customers will identify their primary Microsoft Entra tenant as their Kuber
 - Are there heightened compliance requirements, which specify separation of duties between the people operating the host and the accounts that operate the landing zone environment?
 - In a centrally managed environment with multiple hosts in a single landing zone, is there a need for extended blast radius control for compromised identities?
 
-Managing multiple Microsoft Entra tenants comes at a management cost that must be weighed against the benefits gained from such a topology. There are seldom cases with multiple tenants would be part of any Microsoft recommendation. But the above questions could indicate a need to consider this option.
+Managing multiple Microsoft Entra tenants comes at a management cost that must be weighed against the benefits gained from such a topology. There are seldom cases where multiple tenants would be part of any Microsoft recommendation. But the above questions could indicate a need to consider this option.

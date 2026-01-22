@@ -107,14 +107,14 @@ If you're using Azure private endpoints for backend traffic, DNS resolution for 
 
 It's possible to create the A-records manually, but associating the private DNS zone with the private endpoint results in a setup less prone to misconfigurations.
 
-Backend connectivity from AKS pods to Azure PaaS services exposed through private endpoints follow this sequence:
+Backend connectivity from AKS pods to Azure PaaS services exposed through private endpoints follows this sequence:
 
 ![Backend traffic](./media/network-backend-access.png)
 
 1. The AKS pods resolve the FQDN of the Azure platform as a service (PaaS) using the central DNS servers in the connectivity subscription, which are defined as custom DNS servers in the AKS virtual network.
 2. The resolved IP is the private IP address of the private endpoints, which are accessed directly from the AKS pods.
 
-Traffic between the AKS pods and the private endpoints per default won't go through the Azure Firewall in the hub virtual network (or the secure virtual hub if using Virtual WAN), even if the AKS cluster is configured for [egress filtering with Azure Firewall](/azure/aks/limit-egress-traffic). The reason is that the private endpoint creates a `/32` route in the subnets of the application virtual network, where AKS is deployed.
+Traffic between the AKS pods and the private endpoints by default won't go through the Azure Firewall in the hub virtual network (or the secure virtual hub if using Virtual WAN), even if the AKS cluster is configured for [egress filtering with Azure Firewall](/azure/aks/limit-egress-traffic). The reason is that the private endpoint creates a `/32` route in the subnets of the application virtual network, where AKS is deployed.
 
 ## Design recommendations
 
