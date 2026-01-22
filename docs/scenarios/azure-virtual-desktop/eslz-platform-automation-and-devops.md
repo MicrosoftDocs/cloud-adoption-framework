@@ -142,7 +142,7 @@ The Packer method has the following prerequisites:
 
 - Azure DevOps licensing must use the full suite of Packer tools.
 - You must assign a user the appropriate role in Microsoft Entra ID.
-- You must give a service principal contributor access to the subscription.
+- You must assign the Contributor role to the service principal at the subscription scope.
 - You must have an Azure Key Vault to store secrets in, giving the service principal **secret management** in the access policy.
 
 When working with Packer in your deployment pipeline:
