@@ -14,7 +14,7 @@ This article explains how to use Azure role-based access control (RBAC) for iden
 
 ## Role-based access control (RBAC) design
 
-RBAC enables separation of duties across the teams and individuals managing Azure Virtual Desktop deployment. It simplifies user management and enhances security by assigning roles based on responsibilities. To achieve this, follow these steps:
+RBAC enables separation of duties across the teams and individuals managing the Azure Virtual Desktop deployment. It simplifies user management and enhances security by assigning roles based on responsibilities. To achieve this, follow these steps:
 
 1. **Define role assignments.** Determine role assignments and create corresponding security groups for each role. This approach simplifies user management and ensures clear separation of duties. Use [Azure built-in roles](/azure/role-based-access-control/built-in-roles) alongside custom roles tailored for Azure Virtual Desktop.
 

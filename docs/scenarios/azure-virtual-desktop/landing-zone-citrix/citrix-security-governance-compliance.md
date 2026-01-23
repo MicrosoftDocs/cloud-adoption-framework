@@ -212,6 +212,6 @@ Antivirus software is a crucial element for user environment protection. To ensu
 
 ## Next step
 
-Review the critical design considerations and recommendations for business continuity and disaster recovery that's specific to the deployment of Citrix on Azure.
+Review the critical design considerations and recommendations for business continuity and disaster recovery that are specific to the deployment of Citrix on Azure.
 
 - [Business continuity and disaster recovery](citrix-business-continuity-disaster-recovery.md)
