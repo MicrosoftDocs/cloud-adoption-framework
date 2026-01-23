@@ -16,7 +16,7 @@ The Microsoft Cloud Adoption Framework (CAF) is a structured roadmap that helps 
 
 ## How does the Cloud Adoption Framework work?
 
-The Cloud Adoption Framework organizes Azure guidance into seven core methodologies that together guide an organization’s cloud journey. The foundational methodologies (Strategy, Plan, Ready, and Adopt) are sequential. They help you define business outcomes, prepare your organization and environment, and deploy workloads to Azure. These phases are where most organizations start and are revisited as cloud adoption matures. Once workloads are running in Azure, the operational methodologies (Govern, Secure, and Manage) run continuously. These phases define different aspects of your cloud operations that organizations run in parallel to ensure cloud environments remain compliant, protected, and optimized over time.
+The Cloud Adoption Framework organizes Azure guidance into seven core methodologies that together guide an organization’s cloud journey. The foundational methodologies (Strategy, Plan, Ready, and Adopt) are sequential. They help you define business outcomes, prepare your organization and environment, and deploy workloads to Azure. These phases are where most organizations start and are revisited as cloud adoption matures. Once workloads are running in Azure, the operational methodologies (Govern, Secure, and Manage) define different aspects of your cloud operations that help ensure your Azure environment remains compliant, protected, and optimized over time.
 
 | CAF methodology (phases) | Outcome | How |
 |-------------|---------|-------|
@@ -30,19 +30,11 @@ The Cloud Adoption Framework organizes Azure guidance into seven core methodolog
 
 ## Why use the Cloud Adoption Framework?
 
-The Cloud Adoption Framework addresses the critical challenges that commonly cause cloud adoption projects to exceed budget or timeline expectations. This comprehensive methodology eliminates common failure points through structured guidance for Azure cloud adoption:
-
-- **Reduce migration risks** with methodologies validated across thousands of organizational deployments spanning Fortune 500 enterprises to startups
-- **Optimize cloud costs** through proven patterns for resource rightsizing, cost governance, and operational efficiency best practices
-- **Accelerate deployment timelines** with prescriptive roadmaps for planning, migrating, and optimizing workloads at enterprise scale
-- **Ensure security and compliance** through integrated governance frameworks and security controls aligned with industry standards (SOC 2, PCI DSS, HIPAA)
-- **Avoid common pitfalls** that derail cloud projects, including governance gaps, security vulnerabilities, and cost overruns
-
-The framework integrates seamlessly with the [Well-Architected Framework](/azure/well-architected/) and [Azure Architecture Center](/azure/architecture/) to deliver end-to-end guidance for designing, building, and managing secure, scalable, and resilient cloud solutions that meet enterprise requirements.
+The Cloud Adoption Framework is about adopting cloud technologies and integrating them into your business. It provides proven practices to govern, secure, and manage all workloads. It provides structured processes for migrating, modernizing, and building cloud‑native solutions. Throughout each stage of adoption, the framework guides you to the right tools, architectures, and other resources to help you achieve your organizational goals. The framework integrates with the [Well-Architected Framework](/azure/well-architected/) and [Azure Architecture Center](/azure/architecture/).
 
 ## Who is the Cloud Adoption Framework for?
 
-The Microsoft Cloud Adoption Framework serves organizations across all industries and scales pursuing strategic Azure cloud adoption. This framework adapts to your specific cloud maturity level, from initial Azure evaluation through advanced multi-cloud optimization strategies.
+The Microsoft Cloud Adoption Framework serves organizations across all industries and scales pursuing strategic Azure cloud adoption. This framework adapts to your specific cloud maturity level, from initial Azure evaluation through advanced multicloud optimization strategies. It's designed for anyone in the organization responsible for technology adoption, whether that responsibility spans business strategy, technology governance, cloud integration, or day‑to‑day operations.
 
 | Organization Type   | How the framework accelerates success   |
 |---------------------|-----------------------------------------|
