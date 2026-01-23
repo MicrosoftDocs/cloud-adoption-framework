@@ -38,31 +38,4 @@ Motivations to adopt an SAP platform in the cloud are often based on an organiza
 
 ## How to measure progress during an SAP adoption
 
-Once you understand the top motivations for this scenario, the cloud strategy team can define measurable outcomes to further guide adoption activities. Examples of business outcomes commonly seen during cloud adoption can be reviewed in the article on [business outcomes](../../strategy/business-outcomes/index.md).
-
-Given the impact of an SAP platform, you need to define a number of defined objectives and measurable key results. Commonly known as OKRs, objectives and key results can help you to break down SAP adoption into manageable efforts. Read [objectives and key results](../../strategy/business-outcomes/okr.md) to understand OKRs in more detail.
-
-## How to build a business justification for cloud migration
-
-[Building a business justification for cloud migration](../../strategy/cloud-migration-business-case.md) can dispel a number of common myths for your team's financial plan. However, your finance team might need to develop a detailed financial model to account for the moving pieces associated with SAP cloud adoption.
-
-The [Forrester study on the total economic impact of Microsoft Azure for SAP](https://azure.microsoft.com/resources/sap-on-azure-forrester-tei/) offers an analysis where the following justifications are typically defendable:
-
-- Time to market benefits exceed $3 million USD
-- Cost avoidance exceeds $7 million USD
-- 102-percent return on investment
-- Payback in nine months
-
-Actual returns are likely to vary for individual customers. However, the tables in the Forrester study can capture your organization's financial data for validation and business justification activities.
-
-Understand that your initial business justification is a directional estimate that can help to drive strategic alignment. Your organization can create transparency between the cloud strategy team and other stakeholders by affirming that this justification can change significantly throughout planning activities. Look for consensus that there's enough value to [gather inventory and develop a plan](./plan.md). Once your digital estate is catalogued and assessed, you can refine your justification and present clearer plans for financial returns.
-
-## Next step: Plan for an SAP cloud adoption in Azure
-
-The following articles provide guidance for specific points throughout the cloud adoption journey to help you succeed in adopting SAP in Azure.
-
-- [Plan for SAP cloud adoption in Azure](./plan.md)
-- [Review your environment or Azure landing zones](./ready.md)
-- [Migrate an SAP platform to Azure](./migrate.md)
-- [Innovate with SAP](./innovate.md)
-- [Manage SAP](./manage.md)
+Once you understand the top motivations for this scenario, the cloud strategy team can define measurable outcomes to further guide adoption activities. Given the impact of an SAP platform, you need to define a number of defined objectives and measurable key results. Commonly known as OKRs, objectives and key results can help you to break down SAP adoption into manageable efforts.

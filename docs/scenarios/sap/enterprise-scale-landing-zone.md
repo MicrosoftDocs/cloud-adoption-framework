@@ -271,10 +271,8 @@ Whether you're creating a new SAP system or registering an existing system, Azur
 
 Review the following design areas for your SAP on Azure landing zone accelerator architecture:
 
-- [Enterprise enrollment](eslz-enterprise-enrollment.md)
 - [Identity and access management](eslz-identity-and-access-management.md)
 - [Network topology and connectivity](eslz-network-topology-and-connectivity.md)
-- [Resource organization](eslz-resource-organization.md)
 - [Governance](eslz-security-governance-and-compliance.md)
 - [Business continuity and disaster recovery](eslz-business-continuity-and-disaster-recovery.md)
 - [Deployment options](eslz-platform-automation-and-devops.md)
