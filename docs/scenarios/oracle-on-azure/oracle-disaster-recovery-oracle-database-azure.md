@@ -55,7 +55,7 @@ The multiple-zone BCDR architecture is recommended for customers who require a z
 
 This solution includes a secondary Oracle Exadata Database@Azure deployment in a different availability zone within the same region. Implement a standby database in the secondary instance to achieve recoverability for site-level failures. Zone separation also adds resiliency by limiting the impact of a single zone fault.
 
-:::image type="content" source="./media/cross-availability-zones.svg" alt-text="Diagram that shows a multiple-zone BCDR architecture for Oracle Exadata Database@Azure Azure landing zone accelerator." lightbox="./media/cross-availability-zones.svg" border="false":::
+:::image type="content" source="./media/cross-availability-zones.svg" alt-text="Diagram that shows a multiple-zone BCDR architecture for Oracle Exadata Database@Azure landing zone accelerator." lightbox="./media/cross-availability-zones.svg" border="false":::
 
 - **Data Guard redo transport mode:** Configure Data Guard redo transport mode according to your application services and RPO requirements:
 
@@ -72,9 +72,9 @@ This solution includes a secondary Oracle Exadata Database@Azure deployment in a
 
     For this setup, extra VMs that run Oracle Data Guard Observers are required to enable Data Guard Fast-Start Failover. These observer VMs monitor the database and replication status, which automates the failover process.
 
-  :::image type="content" source="./media/fast-start-failover.svg" alt-text="A diagram of the Fast-Start Failover architecture for Oracle Database@Azure Azure landing zone accelerator." lightbox="./media/fast-start-failover.svg" border="false":::
+  :::image type="content" source="./media/fast-start-failover.svg" alt-text="A diagram of the Fast-Start Failover architecture for Oracle Database@Azure landing zone accelerator." lightbox="./media/fast-start-failover.svg" border="false":::
 
-  If you require a symmetrical DR architecture if there's a failover, you should position an observer instance at the location where the secondary Oracle Exadata Database@Azure deployment is configured.
+  If you require a symmetrical disaster recovery (DR) architecture when there's a failover, you should position an observer instance at the location where the secondary Oracle Exadata Database@Azure deployment is configured.
 
 ### Multiregional BCDR
 
@@ -85,7 +85,7 @@ This solution includes a secondary Oracle Exadata Database@Azure deployment in a
   > [!NOTE]
   > Automated Data Guard only allows the Maximum Performance Mode (ASYNC) configuration for cross-region deployments.
 
-:::image type="content" source="./media/gold-cross-region.svg" alt-text="A diagram of multiregional BCDR architecture for Oracle Exadata Database@Azure Azure landing zone accelerator." lightbox="./media/gold-cross-region.svg" border="false":::
+:::image type="content" source="./media/gold-cross-region.svg" alt-text="A diagram of multiregional BCDR architecture for Oracle Exadata Database@Azure landing zone accelerator." lightbox="./media/gold-cross-region.svg" border="false":::
 
 - Multiple-zone and multiregional BCDR recommendations primarily address recoverability (meeting RTO/RPO) while also improving resiliency through geographic and zonal isolation. To enhance overall workload reliability, combine these recovery architectures with Azure services such as Azure Virtual Machine Scale Sets, Azure Site Recovery, and Azure Front Door across availability zones or regions.
 
@@ -99,7 +99,7 @@ A local standby database on an Oracle Exadata Database@Azure deployment resides 
 
 A remote standby database on an Oracle Exadata Database@Azure instance that's located in a different region addresses regional DR requirements.
 
-:::image type="content" source="./media/local-standby.svg" alt-text="A diagram of local and remote standby BCDR architecture for Oracle Exadata Database@Azure Azure landing zone accelerator." lightbox="./media/local-standby.svg" border="false":::
+:::image type="content" source="./media/local-standby.svg" alt-text="A diagram of local and remote standby BCDR architecture for Oracle Exadata Database@Azure landing zone accelerator." lightbox="./media/local-standby.svg" border="false":::
 
 This architecture is ideal for mission-critical workloads and requires a minimum of three Oracle Exadata Database@Azure deployments.
 
@@ -111,9 +111,9 @@ This architecture is ideal for mission-critical workloads and requires a minimum
 
 You can meet the requirement to implement zero data loss replication at any distance by using the Data Guard Far Sync configuration. This approach includes placing a [far sync instance](https://docs.oracle.com/en/database/oracle/oracle-database/19/sbydb/creating-oracle-data-guard-far-sync-instance.html) closer to the primary Oracle Exadata Database@Azure deployment, essentially in another availability zone within the same region, to synchronously send the redo logs. The far sync instance then transfers these logs asynchronously to the standby database that runs in the secondary Oracle Exadata Database@Azure deployment in another region. This setup effectively results in zero data loss replication between regions.
 
-:::image type="content" source="./media/far-sync.svg" alt-text="A diagram of Far Sync BCDR architecture for Oracle Exadata Database@Azure Azure landing zone accelerator." lightbox="./media/far-sync.svg" border="false":::
+:::image type="content" source="./media/far-sync.svg" alt-text="A diagram of Far Sync BCDR architecture for Oracle Exadata Database@Azure landing zone accelerator." lightbox="./media/far-sync.svg" border="false":::
 
-If you look for a symmetrical DR architecture if there's a failover, place a far sync instance in a separate availability zone where the secondary Oracle Exadata Database@Azure deployment is configured.
+If you need a symmetrical DR architecture when there's a failover, place a far sync instance in a separate availability zone where the secondary Oracle Exadata Database@Azure deployment is configured.
 
 > [!NOTE]
 > The Far Sync architecture requires an Active Data Guard license and must be manually configured.
