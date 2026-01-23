@@ -50,7 +50,6 @@ Regardless of your initial implementation option, all Azure landing zones for SA
 - [Network topology and connectivity](./eslz-network-topology-and-connectivity.md)
 - [Resource Organization](./eslz-resource-organization.md)
 - [Governance disciplines](./eslz-security-governance-and-compliance.md)
-- [Operations baseline](./eslz-management-and-monitoring.md)
 - [Business continuity and disaster recovery](./eslz-business-continuity-and-disaster-recovery.md)
 - [Deployment options](./eslz-platform-automation-and-devops.md)
 

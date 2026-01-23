@@ -33,7 +33,6 @@ As you plan the implementation of your enterprise-scale landing zone, you need t
 
 - [Identity and access management](./eslz-identity-and-access-management.md)
 - [Network topology and connectivity](./eslz-network-topology-and-connectivity.md)
-- [Management and monitoring](./eslz-management-and-monitoring.md)
 - [Business continuity and disaster recovery](./eslz-business-continuity-and-disaster-recovery.md)
 - [Security, governance, and compliance](./eslz-security-governance-and-compliance.md)
 - [Platform automation and DevOps](./eslz-platform-automation-and-devops.md)
@@ -277,6 +276,5 @@ Review the following design areas for your SAP on Azure landing zone accelerator
 - [Network topology and connectivity](eslz-network-topology-and-connectivity.md)
 - [Resource organization](eslz-resource-organization.md)
 - [Governance](eslz-security-governance-and-compliance.md)
-- [Operations baseline](eslz-management-and-monitoring.md)
 - [Business continuity and disaster recovery](eslz-business-continuity-and-disaster-recovery.md)
 - [Deployment options](eslz-platform-automation-and-devops.md)
