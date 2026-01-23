@@ -3,20 +3,20 @@ title: Microsoft's Cloud Adoption Framework
 description: Learn to adopt the Azure cloud and integrate within your enterprise and business technology
 author: stephen-sumner
 ms.author: pnp
-ms.date: 09/04/2025
+ms.date: 01/23/2026
 ms.update-cycle: 1095-days
 ms.topic: concept-article
 ---
 
 # What is the Microsoft Cloud Adoption Framework?
 
-The Microsoft Cloud Adoption Framework (CAF) is a structured roadmap that helps organizations successfully adopt Azure and integrate cloud technologies into their existing enterprise architecture.
+The Microsoft Cloud Adoption Framework (CAF) is a structured roadmap that helps organizations successfully adopt Azure and integrate it into their existing IT environments. It provides best practices and guidance to help organizations make the right decisions for their business throughout the cloud journey.
 
 :::image type="content" source="caf-overview.png" alt-text="Diagram overview of the Cloud Adoption Framework for Azure showing seven core methodologies: Strategy, Plan, Ready, Adopt, Govern, Secure, and Manage. Foundational methodologies flow sequentially. Operational methodologies run in parallel during operations." lightbox="caf-overview.png" border="false":::
 
 ## How does the Cloud Adoption Framework work?
 
-The Cloud Adoption Framework organizes Azure guidance into seven core methodologies or phases that orchestrate your complete cloud transformation journey. The Strategy, Plan, Ready, Adopt are sequential steps to build Azure foundations (foundational phases). It's where you start if you're new and revisit if you need to improve aspects of your Azure adoption. After you have workloads in Azure, you start executing the Govern, Secure, Manage (operational phases).
+The Cloud Adoption Framework organizes Azure guidance into seven core methodologies that together guide an organization’s cloud journey. The foundational methodologies (Strategy, Plan, Ready, and Adopt) are sequential. They help you define business outcomes, prepare your organization and environment, and deploy workloads to Azure. These phases are where most organizations start and are revisited as cloud adoption matures. Once workloads are running in Azure, the operational methodologies (Govern, Secure, and Manage) run continuously. These phases define different aspects of your cloud operations that organizations run in parallel to ensure cloud environments remain compliant, protected, and optimized over time.
 
 | CAF methodology (phases) | Outcome | How |
 |-------------|---------|-------|
@@ -30,12 +30,12 @@ The Cloud Adoption Framework organizes Azure guidance into seven core methodolog
 
 ## Why use the Cloud Adoption Framework?
 
-The Cloud Adoption Framework addresses the critical challenges that commonly cause cloud adoption projects to exceed budget or timeline expectations. This comprehensive methodology eliminates common failure points through structured guidance for Azure cloud transformation:
+The Cloud Adoption Framework addresses the critical challenges that commonly cause cloud adoption projects to exceed budget or timeline expectations. This comprehensive methodology eliminates common failure points through structured guidance for Azure cloud adoption:
 
-- **Reduce migration risks significantly** with methodologies validated across thousands of organizational deployments spanning Fortune 500 enterprises to startups
-- **Optimize cloud costs effectively** through proven patterns for resource rightsizing, cost governance, and operational efficiency best practices
-- **Accelerate deployment timelines substantially** with prescriptive roadmaps for planning, migrating, and optimizing workloads at enterprise scale
-- **Ensure security and compliance from day one** through integrated governance frameworks and security controls aligned with industry standards (SOC 2, PCI DSS, HIPAA)
+- **Reduce migration risks** with methodologies validated across thousands of organizational deployments spanning Fortune 500 enterprises to startups
+- **Optimize cloud costs** through proven patterns for resource rightsizing, cost governance, and operational efficiency best practices
+- **Accelerate deployment timelines** with prescriptive roadmaps for planning, migrating, and optimizing workloads at enterprise scale
+- **Ensure security and compliance** through integrated governance frameworks and security controls aligned with industry standards (SOC 2, PCI DSS, HIPAA)
 - **Avoid common pitfalls** that derail cloud projects, including governance gaps, security vulnerabilities, and cost overruns
 
 The framework integrates seamlessly with the [Well-Architected Framework](/azure/well-architected/) and [Azure Architecture Center](/azure/architecture/) to deliver end-to-end guidance for designing, building, and managing secure, scalable, and resilient cloud solutions that meet enterprise requirements.

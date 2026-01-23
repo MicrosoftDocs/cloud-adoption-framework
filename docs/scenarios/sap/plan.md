@@ -1,18 +1,16 @@
 ---
-title: Plan for SAP cloud adoption in Azure
-description: Understand how to plan SAP cloud adoption in Azure.
-author: JefferyMitchell
-ms.author: jemitche
-ms.date: 03/01/2021
+title: Plan for SAP cloud adoption on Azure
+description: Discover key strategies for SAP cloud adoption in Azure, including asset rationalization, hybrid considerations, and environment planning. Build your roadmap now.
+author: stephen-sumner
+ms.author: pnp
+ms.reviewer: ssumner
+ms.date: 01/23/2026
 ms.topic: concept-article
-ms.custom: think-tank, e2e-sap
 ---
 
 # Plan for SAP cloud adoption in Azure
 
-As discussed in the SAP [strategy](./strategy.md) article, the returns from SAP cloud adoption can be very high, but so can the risk of missed expectations. Developing a clear financial plan that's based on your digital estate will ensure greater accuracy in the expectations that you set. The same financial planning exercises will provide the cloud adoption team with the data needed to plan technical activities.
-
-Resources in the Cloud Adoption Framework can help your organization to capture a suitable plan for SAP cloud adoption.
+This article guides you through creating a comprehensive plan for SAP cloud adoption that aligns technical decisions with business objectives.
 
 ## SAP digital estate planning
 
