@@ -35,7 +35,7 @@ Establish proactive monitoring for key performance indicators that directly affe
 
 1. **Implement Azure Arc agent monitoring for infrastructure health.** Monitor Azure Arc agent connectivity and health status to ensure continuous management capabilities. Configure Azure Arc agent status monitoring with 5-minute frequency and immediate alerting for disconnected status, Azure Arc-enabled server health monitoring with 10-minute frequency, and Azure Policy compliance monitoring with 30-minute frequency for configuration drift detection.
 
-1. **Create unified monitoring dashboard.** Build a [custom dashboard in the Azure portal](/azure/azure-portal/azure-portal-dashboards) that aggregates metrics from all three monitoring layers. This unified view provides operators with complete visibility across database performance, infrastructure health, and security status without switching between multiple tools.
+1. **Create a unified monitoring dashboard.** Build a [custom dashboard in the Azure portal](/azure/azure-portal/azure-portal-dashboards) that aggregates metrics from all three monitoring layers. This unified view provides operators with complete visibility across database performance, infrastructure health, and security status without switching between multiple tools.
 
 1. **Configure alert action groups for incident response.** Set up [Azure Monitor action groups](/azure/azure-monitor/alerts/action-groups) that automatically notify appropriate stakeholders when critical thresholds are exceeded. Configure escalation procedures that coordinate database administrators, infrastructure teams, and security personnel based on alert severity and type.
 

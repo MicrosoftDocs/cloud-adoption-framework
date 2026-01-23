@@ -10,7 +10,7 @@ ms.custom: think-tank, e2e-avd
 
 # Manage an Azure Virtual Desktop environment
 
-The [Cloud Adoption Framework provides a core methodology to define operation management processes](../../manage/index.md) for the cloud in an agnostic sense. Its guidance helps establish an operations management baseline and other specialized layers of operations. This article outlines what you need to integrate into your existing operations to prepare for virtual desktop management.
+The [Cloud Adoption Framework provides a core methodology to define operations management processes](../../manage/index.md) for the cloud in an agnostic sense. Its guidance helps establish an operations management baseline and other specialized layers of operations. This article outlines what you need to integrate into your existing operations to prepare for virtual desktop management.
 
 ## Business alignment for operations management needs
 
@@ -75,7 +75,7 @@ In addition, using [Azure Virtual Desktop App Attach](/azure/virtual-desktop/app
 
 ### Workload operations
 
-The platform operations section above illustrates a common conversation when managing Azure Virtual Desktop. Will the virtual desktops platform and applications be managed centrally? Or are they a workload tool that should be managed by the teams who own each of the workloads? The answer is different for different organizations. The constant seen across most organizations is that virtual desktops are designed to give the users more flexibility in how they want to work and access applications in a secure way.
+The platform operations section above illustrates a common conversation when managing Azure Virtual Desktop. Will the virtual desktop platform and applications be managed centrally? Or are they a workload tool that should be managed by the teams who own each of the workloads? The answer is different for different organizations. The constant seen across most organizations is that virtual desktops are designed to give the users more flexibility in how they want to work and access applications in a secure way.
 
 Workload operations can build on your existing operations baseline and platform-specific operations. You can also safely operate an Azure Virtual Desktop environment using completely decentralized workload operations.
 

@@ -1,18 +1,16 @@
 ---
-title: Plan for SAP cloud adoption in Azure
-description: Understand how to plan SAP cloud adoption in Azure.
-author: JefferyMitchell
-ms.author: jemitche
-ms.date: 03/01/2021
+title: Plan for SAP cloud adoption on Azure
+description: Discover key strategies for SAP cloud adoption in Azure, including asset rationalization, hybrid considerations, and environment planning. Build your roadmap now.
+author: stephen-sumner
+ms.author: pnp
+ms.reviewer: ssumner
+ms.date: 01/23/2026
 ms.topic: concept-article
-ms.custom: think-tank, e2e-sap
 ---
 
 # Plan for SAP cloud adoption in Azure
 
-As discussed in the SAP [strategy](./strategy.md) article, the returns from SAP cloud adoption can be very high, but so can the risk of missed expectations. Developing a clear financial plan that's based on your digital estate will ensure greater accuracy in the expectations that you set. The same financial planning exercises will provide the cloud adoption team with the data needed to plan technical activities.
-
-Resources in the Cloud Adoption Framework can help your organization to capture a suitable plan for SAP cloud adoption.
+This article guides you through creating a comprehensive plan for SAP cloud adoption that aligns technical decisions with business objectives.
 
 ## SAP digital estate planning
 
@@ -22,11 +20,7 @@ Like most complex platforms, your SAP digital estate will include three asset ca
 
 - **Foundational assets:** Your SAP platform and the supporting environment are also upheld by a collection of necessary assets like identity providers, networking, operational management tools, and more. Azure refers to these assets as foundational utilities, and this article series will later describe how to deploy an Azure landing zone to provide them.
 
-- **Workload assets:** Most organizations extend or integrate SAP into various business processes that are supported by a range of workloads across the portfolio. Those workloads are supported by their collections of applications, data, and virtual machines that aren't part of the core platform deployment. Each workload with a dependency on the SAP platform should be named, inventoried, rationalized, and tracked individually to allow for granular financial and technical planning decisions.
-
-For guidance on SAP cloud adoption planning, look through the processes outlined in the article series on [planning for migrations](../../plan/discover-existing-workload-inventory.md). The best practice article on [assessing workloads for migration to Azure](../../migrate/assess/index.md) proposes Azure Migrate and other assessment tools to make that theoretical guidance from the prior article actionable.
-
-Several considerations should be included in those processes when planning for SAP adoption:
+- **Workload assets:** Most organizations extend or integrate SAP into various business processes that are supported by a range of workloads across the portfolio. Those workloads are supported by their collections of applications, data, and virtual machines that aren't part of the core platform deployment. Each workload with a dependency on the SAP platform should be named, inventoried, rationalized, and tracked individually to allow for granular financial and technical planning decisions.Several considerations should be included in those processes when planning for SAP adoption:
 
 - **Evaluate dependencies:** Dependencies on a core platform like SAP are often undocumented. Be sure to include a dependency analysis for all assets in the portfolio.
 
@@ -62,27 +56,10 @@ Once these considerations are integrated into your digital estate evaluation, yo
 
 ## SAP cloud adoption plan
 
-The Cloud Adoption Framework includes a tool and several templates for creating a cloud adoption plan or Azure DevOps backlog, which are based on the tasks outlined in each methodology. Learn more about templates in the [cloud adoption plan and Azure DevOps](../../plan/template.md) article.
+The Cloud Adoption Framework includes a tool and several templates for creating a cloud adoption plan or Azure DevOps backlog, which are based on the tasks outlined in each methodology.
 
 Whether you use templates or your own project planning tools, factor in the following SAP-specific actions:
 
 - Evaluate your foundational assets, and deploy an appropriate Azure landing zone.
 - Use your platform rationalization efforts to finish migrating the SAP platform.
 - Account for each workload (or wave of workloads) to be migrated.
-
-You can use the [Azure DevOps web interface](/azure/devops/project/navigation/) to add those line items to the plan. If you're working from a current asset inventory, you could build your plan faster with the Microsoft Excel integration outlined in the Cloud Adoption Framework article about [migration plan template](../../plan/migration-adoption-plan.md).
-
-## SAP readiness plan
-
-Once you have a general work plan, you can begin aligning team members and estimating the work.
-
-This project's team members could be SAP or Azure experts, but it's unlikely for the team to have equal expertise in both areas. Use the cloud adoption plan to determine the skills that the team will need to acquire. Then, map those skills to team members to gain a clearer picture of readiness, skilling, and training needs. The Cloud Adoption Framework includes [building a skills readiness plan](../../plan/adapt-roles-skills-processes.md).
-
-## Next step: Review your environment or Azure landing zone for an SAP enterprise-scale migration
-
-The following articles provide guidance for specific points throughout the cloud adoption journey to help you succeed in adopting SAP in Azure.
-
-- [Review your environment or Azure landing zones](./ready.md)
-- [Migrate an SAP platform to Azure](./migrate.md)
-- [Innovate with SAP](./innovate.md)
-- [Manage SAP](./manage.md)

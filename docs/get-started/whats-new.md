@@ -47,8 +47,6 @@ Partner with us in our ongoing effort to develop the Cloud Adoption Framework.
 
 - [What is an Azure landing zone?](../ready/landing-zone/index.md): We restructured deployment guidance to emphasize the IaC accelerator as the recommended approach. We enhanced application landing zone descriptions with subscription vending details and clarified the *landing zone P1 subscription* purpose.
 
-- [Enterprise enrollment considerations for SAP](../scenarios/sap/eslz-enterprise-enrollment.md): We clarified that SAP landing zones don't add new enrollment requirements or require a new Microsoft Entra ID tenant. We restructured the content to provide clearer instructions to review identity and access management and resource organization considerations. We explained how enrollment maps to management groups, subscriptions, and resource groups.
-
 - [Manage your cloud estate with enhanced security](../secure/manage.md): We added guidance to review Microsoft Secure Future Initiative requirements and integrate them into security assessments.
 
 - [Assess your workloads for cloud migration](../plan/assess-workloads-for-cloud-migration.md): We replaced AppCAT references with the GitHub Copilot app modernization tool and detailed its capabilities, including dependency capture, code revision, containerization, deployment file generation, and AI-assisted coding.

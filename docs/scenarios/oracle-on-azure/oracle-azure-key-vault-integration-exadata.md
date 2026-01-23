@@ -28,7 +28,7 @@ Define your Azure Key Vault integration architecture based on security requireme
 
 3. **Establish key management strategy and operational procedures.** Define key rotation schedules aligned with security policies, typically annual or event-driven rotation. Plan backup encryption key management considering that database backups encrypt with current master keys. Establish disaster recovery procedures ensuring standby Oracle Exadata environments can access encryption keys during failover scenarios. Document key lifecycle management processes including creation, rotation, retention, and decommissioning procedures.
 
-4. **Deploy Azure Key Vault in same region as Oracle Exadata Database@Azure.** Colocation minimizes network latency for TDE operations and ensures optimal database startup and transaction processing performance. Cross-region key access introduces latency that can impact database availability during startup sequences and failover operations. Regional deployment also supports data residency requirements and compliance with geographic data sovereignty mandates.
+4. **Deploy Azure Key Vault in the same region as Oracle Exadata Database@Azure.** Colocation minimizes network latency for TDE operations and ensures optimal database startup and transaction processing performance. Cross-region key access introduces latency that can impact database availability during startup sequences and failover operations. Regional deployment also supports data residency requirements and compliance with geographic data sovereignty mandates.
 
 ## Implementation considerations
 
@@ -51,13 +51,13 @@ Private endpoint connectivity through Azure Private Link eliminates internet exp
 
 ### Identity and access management integration
 
-Oracle Identity Connector enables secure communication between Oracle Exadata Database@Azure and Azure Key Vault through Azure Arc-enabled servers with managed identity authentication. The connector automatically registers database virtual machines as Azure Arc resources and creates system-assigned managed identities for each database node. Implement group-based RBAC approach using Microsoft Entra ID security groups with Key Vault Crypto Officer and Key Vault Reader roles to simplify permission management across multiple database nodes and support future scalability.
+Oracle Identity Connector enables secure communication between Oracle Exadata Database@Azure and Azure Key Vault through Azure Arc-enabled servers with managed identity authentication. The connector automatically registers database virtual machines as Azure Arc resources and creates system-assigned managed identities for each database node. Implement a group-based RBAC approach using Microsoft Entra ID security groups with Key Vault Crypto Officer and Key Vault Reader roles to simplify permission management across multiple database nodes and support future scalability.
 
 For complete technical procedures including token generation, connector creation, RBAC configuration, and permission validation, see [Integrate Oracle Exadata Database@Azure with Azure Key Vault - Steps 2-3](/azure/oracle/oracle-db/manage-oracle-transparent-data-encryption-azure-key-vault#step-2-configure-microsoft-entra-id-permissions-for-key-vault-access).
 
 ### Database configuration approach
 
-Azure Key Vault integration follows cluster-first configuration pattern where VM cluster enablement precedes individual database configuration. Cluster-level enablement installs required Oracle libraries without automatically switching existing databases, allowing gradual migration from Oracle Wallet to Azure Key Vault. This approach prevents configuration failures, ensures consistent functionality across database instances, and supports coexistence of both key management methods during transition periods.
+Azure Key Vault integration follows a cluster-first configuration pattern where VM cluster enablement precedes individual database configuration. Cluster-level enablement installs required Oracle libraries without automatically switching existing databases, allowing gradual migration from Oracle Wallet to Azure Key Vault. This approach prevents configuration failures, ensures consistent functionality across database instances, and supports coexistence of both key management methods during transition periods.
 
 Configure new databases with Azure Key Vault from creation by selecting appropriate vault and key during provisioning. Migrate existing databases from Oracle Wallet through online re-encryption process that doesn't require database shutdown. Note that migration from Azure Key Vault back to Oracle Wallet isn't supported through OCI Console or API, making this architectural decision effectively permanent.
 
