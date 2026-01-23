@@ -849,6 +849,36 @@
         "source_path": "docs/scenarios/app-platform/innovate.md",
         "redirect_url": "/azure/cloud-adoption-framework/scenarios/app-platform/",
         "redirect_document_id": false
+    },
+    {
+        "source_path": "docs/scenarios/sap/eslz-enterprise-enrollment.md",
+        "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/design-area/azure-billing-microsoft-entra-tenant",
+        "redirect_document_id": false
+    },
+    {
+        "source_path": "docs/scenarios/sap/eslz-management-and-monitoring.md",
+        "redirect_url": "/azure/sap/monitor/about-azure-monitor-sap-solutions",
+        "redirect_document_id": false
+    },
+    {
+        "source_path": "docs/scenarios/sap/eslz-resource-organization.md",
+        "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org",
+        "redirect_document_id": false
+    },
+    {
+        "source_path": "docs/scenarios/sap/index.md",
+        "redirect_url": "/azure/cloud-adoption-framework/scenarios/sap/strategy",
+        "redirect_document_id": false
+    },
+    {
+        "source_path": "docs/scenarios/sap/innovate.md",
+        "redirect_url": "/azure/cloud-adoption-framework/scenarios/sap/strategy",
+        "redirect_document_id": false
+    },
+    {
+        "source_path": "docs/scenarios/sap/manage.md",
+        "redirect_url": "/azure/cloud-adoption-framework/scenarios/sap/strategy",
+        "redirect_document_id": false
     }
    ]   
 }

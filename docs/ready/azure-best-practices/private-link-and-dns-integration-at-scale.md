@@ -1,8 +1,8 @@
 ---
 title: Private Link and DNS Integration at Scale
 description: Learn how to integrate Azure Private Link for PaaS services with Azure Private DNS zones in hub-and-spoke network architectures.
-author: JefferyMitchell
-ms.author: jemitche
+author: stephen-sumner
+ms.author: pnp
 ms.date: 01/10/2025
 ms.topic: concept-article
 ms.custom: think-tank, UpdateFrequency2
