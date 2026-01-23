@@ -24,7 +24,7 @@ Oracle on Azure workloads primarily use Oracle Data Guard, which is a built-in O
 
 ## Configure your workload for high availability
 
-Azure Virtual Machines instances that run Oracle workloads benefit from the Azure Virtual Machine Scale Sets architecture, specifically the flexible orchestration mode. A high availability configuration provides near real-time data replication with potentially fast failover capabilities. A high availability configuration doesn't provide protection for Azure datacenter-level or region-level failures.
+Azure virtual machines (VMs) that run Oracle workloads benefit from the Azure Virtual Machine Scale Sets architecture, specifically the flexible orchestration mode. A high availability configuration provides near real-time data replication with potentially fast failover capabilities. A high availability configuration doesn't provide protection for Azure datacenter-level or region-level failures.
 
 ### Choose the right high availability option
 
@@ -42,7 +42,7 @@ For a step-by-step configuration of Data Guard on Azure, see [Implement Oracle D
 
 ### Use Data Guard in maximum protection mode for high availability
 
-If you require a transactionally consistent copy of your database, consider using Data Guard in maximum protection mode. However, maximum protection mode doesn't allow transactions to continue when the standby database isn't available. Therefore, despite using Virtual Machines Scale Sets flexible orchestration, your SLA is reduced to 99.9% x 99.9% = 99.8% when you use maximum protection mode. This configuration ensures a consistent copy of data but doesn't necessarily increase availability.
+If you require a transactionally consistent copy of your database, consider using Data Guard in maximum protection mode. However, maximum protection mode doesn't allow transactions to continue when the standby database isn't available. Therefore, despite using Virtual Machine Scale Sets flexible orchestration, your SLA is reduced to 99.9% x 99.9% = 99.8% when you use maximum protection mode. This configuration ensures a consistent copy of data but doesn't necessarily increase availability.
 
 Other attributes of this architecture are the same as the maximum availability mode. For example, the RPO is zero, and the RTO is less than or equal to two minutes.
 
@@ -97,7 +97,7 @@ The latency within a single datacenter is less than the latency between datacent
 
 Additionally, when you send data across Azure regions or datacenters, you pay egress costs for data, like redo logs, that's sent to a disaster recovery site. If you don't need to replicate all the data in your database, you can use Oracle Golden Gate-based replication to replicate only partial data as needed, which reduces egress costs.
 
-For a step-by-step configuration of Data Guard on Azure, see [Implement Data Guard on a Linux-based Azure Linux VM](/azure/virtual-machines/workloads/oracle/configure-oracle-dataguard).
+For a step-by-step configuration of Data Guard on Azure, see [Implement Data Guard on a Linux-based Azure VM](/azure/virtual-machines/workloads/oracle/configure-oracle-dataguard).
 
 ### Use Golden Gate for disaster recovery
 
