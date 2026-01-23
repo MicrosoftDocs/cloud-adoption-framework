@@ -9,7 +9,7 @@ ms.topic: article
 
 # Deploy an enterprise-scale Azure landing zone for Azure Virtual Desktop
 
-This document provides technical stakeholders responsible for platform and workload landing zones with guidance on Azure Virtual Desktop using enterprise-scale methodologies. It describes how both prepare and use the application landing zone accelerator for Azure Virtual Desktop which will shorten deployment time and apply enterprise governance, security, networking, and automation patterns. Follow this guidance to standardize deployments, enforce compliance controls, and scale AVD across regions with predictable operations. 
+This document provides technical stakeholders responsible for platform and workload landing zones with guidance on Azure Virtual Desktop using enterprise-scale methodologies. It describes how to both prepare and use the application landing zone accelerator for Azure Virtual Desktop which will shorten deployment time and apply enterprise governance, security, networking, and automation patterns. Follow this guidance to standardize deployments, enforce compliance controls, and scale AVD across regions with predictable operations.
 
 **This documentation enables your team(s) to:**
 
