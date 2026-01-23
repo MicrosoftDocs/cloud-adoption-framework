@@ -72,7 +72,7 @@ This solution includes a secondary Oracle Exadata Database@Azure deployment in a
 
     For this setup, extra VMs that run Oracle Data Guard Observers are required to enable Data Guard Fast-Start Failover. These observer VMs monitor the database and replication status, which automates the failover process.
 
-  :::image type="content" source="./media/fast-start-failover.svg" alt-text="A diagram of the Fast-Start Failover architecture for Oracle Database@Azure landing zone accelerator." lightbox="./media/fast-start-failover.svg" border="false":::
+  :::image type="content" source="./media/fast-start-failover.svg" alt-text="A diagram of the Fast-Start Failover architecture for Oracle Exadata Database@Azure landing zone accelerator." lightbox="./media/fast-start-failover.svg" border="false":::
 
   If you require a symmetrical disaster recovery (DR) architecture when there's a failover, you should position an observer instance at the location where the secondary Oracle Exadata Database@Azure deployment is configured.
 

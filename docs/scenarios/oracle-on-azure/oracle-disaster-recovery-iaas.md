@@ -24,7 +24,7 @@ Oracle on Azure workloads primarily use Oracle Data Guard, which is a built-in O
 
 ## Configure your workload for high availability
 
-Azure Virtual Machine instances that run Oracle workloads benefit from the Azure Virtual Machine Scale Sets architecture, specifically the flexible orchestration mode. A high availability configuration provides near real-time data replication with potentially fast failover capabilities. A high availability configuration doesn't provide protection for Azure datacenter-level or region-level failures.
+Azure virtual machines (VMs) that run Oracle workloads benefit from the Azure Virtual Machine Scale Sets architecture, specifically the flexible orchestration mode. A high availability configuration provides near real-time data replication with potentially fast failover capabilities. A high availability configuration doesn't provide protection for Azure datacenter-level or region-level failures.
 
 ### Choose the right high availability option
 
