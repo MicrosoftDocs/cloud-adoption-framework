@@ -1,68 +1,56 @@
 ---
-title: Microsoft Cloud Adoption Framework
-description: Learn to adopt the cloud with proven guidance to be successful.
+title: Microsoft's Cloud Adoption Framework
+description: Learn to adopt the Azure cloud and integrate within your enterprise and business technology
 author: stephen-sumner
 ms.author: pnp
-ms.date: 09/04/2025
+ms.date: 01/23/2026
 ms.update-cycle: 1095-days
 ms.topic: concept-article
-ms.subservice: caf-general
 ---
 
 # What is the Microsoft Cloud Adoption Framework?
 
-The Microsoft Cloud Adoption Framework for Azure delivers comprehensive, step-by-step guidance for cloud adoption success. This framework enables organizations to plan, deploy, and operate Azure cloud solutions that drive measurable business outcomes while minimizing risks and maximizing return on investment.
+The Microsoft Cloud Adoption Framework (CAF) is a structured roadmap that helps organizations successfully adopt Azure and integrate it into their existing IT environments. It provides best practices and guidance to help organizations make the right decisions for their business throughout the cloud journey.
 
 :::image type="content" source="caf-overview.png" alt-text="Diagram overview of the Cloud Adoption Framework for Azure showing seven core methodologies: Strategy, Plan, Ready, Adopt, Govern, Secure, and Manage. Foundational methodologies flow sequentially. Operational methodologies run in parallel during operations." lightbox="caf-overview.png" border="false":::
 
 ## How does the Cloud Adoption Framework work?
 
-The Cloud Adoption Framework organizes Azure guidance into seven core methodologies or phases that orchestrate your complete cloud transformation journey. The foundational methodologies (Strategy, Plan, Ready, Adopt) execute sequentially to build enterprise-grade Azure foundations, while the operational methodologies (Govern, Secure, Manage) run in parallel throughout your cloud lifecycle to ensure sustained success and operational excellence.
+The Cloud Adoption Framework organizes Azure guidance into seven core methodologies that together guide an organization’s cloud journey. The foundational methodologies (Strategy, Plan, Ready, and Adopt) are sequential. They help you define business outcomes, prepare your organization and environment, and deploy workloads to Azure. These phases are where most organizations start and are revisited as cloud adoption matures. Once workloads are running in Azure, the operational methodologies (Govern, Secure, and Manage) define different aspects of your cloud operations that help ensure your Azure environment remains compliant, protected, and optimized over time.
 
-| CAF methodology | Strategic outcome | Implementation approach |
+| CAF methodology (phases) | Outcome | How |
 |-------------|---------|-------|
-| 🚀 [**1. Strategy**](/azure/cloud-adoption-framework/strategy/) | Align cloud adoption initiatives to measurable business goals and ROI targets. | Use the Cloud Adoption Framework to map business drivers to quantifiable cloud outcomes and establish success metrics. |
-| 📝 [**2. Plan**](/azure/cloud-adoption-framework/plan/) | Create a comprehensive, stakeholder-aligned plan for cloud transformation. | Prepare people, processes, and technology infrastructure for digital transformation while establishing realistic timelines and budget parameters. |
-| 🛠️ [**3. Ready**](/azure/cloud-adoption-framework/ready/) | Deploy enterprise-ready Azure environments that scale securely. | Use the Cloud Adoption Framework and Azure Architecture Center to establish foundational governance controls and deploy Azure platform landing zones with integrated security. |
-| 🌐 [**4. Adopt**](/azure/cloud-adoption-framework/adopt/) | Deploy production workloads in Azure that deliver business value. | Use the Cloud Adoption Framework, Azure Architecture Center, and Well-Architected Framework to architect and deploy workloads to Azure application landing zones with automated deployment accelerators. |
-| 🛡️ [**5. Govern**](/azure/cloud-adoption-framework/govern/) | Maintain enterprise control, compliance, and cost optimization. | Use the Cloud Adoption Framework, Azure Architecture Center, and Well-Architected Framework to define governance policies, automate compliance enforcement, and implement cost management strategies. |
-| 🔒 [**6. Secure**](/azure/cloud-adoption-framework/secure/) | Protect workloads against evolving cyber threats and vulnerabilities. | Implement zero-trust security controls, deploy continuous threat monitoring, and execute incident response procedures to minimize risk and protect critical assets. |
-| ⚙️ [**7. Manage**](/azure/cloud-adoption-framework/manage/) | Ensure operational excellence and continuous optimization. | Optimize application performance, maintain high availability SLAs, and drive continuous improvement through automation, monitoring, and DevOps best practices. |
+| 🚀 [**1. Strategy**](/azure/cloud-adoption-framework/strategy/) | Cloud adoption aligned to business goals | Pap business drivers to cloud outcomes. |
+| 📝 [**2. Plan**](/azure/cloud-adoption-framework/plan/) | A plan for cloud adoption | Operating model, cloud skills, migration plan, and cloud cost estimation. |
+| 🛠️ [**3. Ready**](/azure/cloud-adoption-framework/ready/) | An Azure environment ready for workloads | Azure purchasing, tenant setup, platform landing zone, application landing zones. |
+| 🌐 [**4. Adopt**](/azure/cloud-adoption-framework/adopt/) | Workloads in Azure meeting business needs | Migrate, modernize, or build-cloud native workloads. |
+| 🛡️ [**5. Govern**](/azure/cloud-adoption-framework/govern/) | Control workloads | Assess cloud risks and mitigate with Azure and Microsoft tools. |
+| 🔒 [**6. Secure**](/azure/cloud-adoption-framework/secure/) | Protect workloads | Apply security control with with Azure and Microsoft tools. |
+| ⚙️ [**7. Manage**](/azure/cloud-adoption-framework/manage/) | Optimize workloads | Administer workloads with Azure and Microsoft tools. |
 
 ## Why use the Cloud Adoption Framework?
 
-The Cloud Adoption Framework addresses the critical challenges that commonly cause cloud adoption projects to exceed budget or timeline expectations. This comprehensive methodology eliminates common failure points through structured guidance for Azure cloud transformation:
-
-- **Reduce migration risks significantly** with methodologies validated across thousands of organizational deployments spanning Fortune 500 enterprises to startups
-- **Optimize cloud costs effectively** through proven patterns for resource rightsizing, cost governance, and operational efficiency best practices
-- **Accelerate deployment timelines substantially** with prescriptive roadmaps for planning, migrating, and optimizing workloads at enterprise scale
-- **Ensure security and compliance from day one** through integrated governance frameworks and security controls aligned with industry standards (SOC 2, PCI DSS, HIPAA)
-- **Avoid common pitfalls** that derail cloud projects, including governance gaps, security vulnerabilities, and cost overruns
-
-The framework integrates seamlessly with the [Well-Architected Framework](/azure/well-architected/) and [Azure Architecture Center](/azure/architecture/) to deliver end-to-end guidance for designing, building, and managing secure, scalable, and resilient cloud solutions that meet enterprise requirements.
+The Cloud Adoption Framework is about adopting cloud technologies and integrating them into your business. It provides proven practices to govern, secure, and manage all workloads. It provides structured processes for migrating, modernizing, and building cloud‑native solutions. Throughout each stage of adoption, the framework guides you to the right tools, architectures, and other resources to help you achieve your organizational goals. The framework integrates with the [Well-Architected Framework](/azure/well-architected/) and [Azure Architecture Center](/azure/architecture/).
 
 ## Who is the Cloud Adoption Framework for?
 
-The Microsoft Cloud Adoption Framework serves organizations across all industries and scales pursuing strategic Azure cloud adoption. This framework adapts to your specific cloud maturity level, from initial Azure evaluation through advanced multi-cloud optimization strategies.
+The Microsoft Cloud Adoption Framework serves organizations across all industries and scales pursuing strategic Azure cloud adoption. This framework adapts to your specific cloud maturity level, from initial Azure evaluation through advanced multicloud optimization strategies. It's designed for anyone in the organization responsible for technology adoption, whether that responsibility spans business strategy, technology governance, cloud integration, or day‑to‑day operations.
 
 | Organization Type   | How the framework accelerates success   |
 |---------------------|-----------------------------------------|
-| **Technology Startups**        | Build cloud-native applications from inception using proven architectural patterns and DevOps best practices. Access [Microsoft for Startups](https://www.microsoft.com/startups) for Azure credits and technical resources. |
-| **Enterprise Organizations**     | Navigate complex multi-workload migrations, hybrid cloud architectures, and large-scale operations with enterprise governance, security controls, and compliance frameworks. |
-| **New Azure adopters** | Accelerate Azure learning through structured guidance, hands-on labs, and architectural best practices that prevent common implementation mistakes. |
-| **Existing Azure customers** | Optimize current Azure deployments, implement advanced cost management strategies, and mature cloud operations through automation and monitoring. |
+| **Startups**        | Build cloud-native applications using best practices. Access [Microsoft for Startups](https://www.microsoft.com/startups) for Azure credits and technical resources. |
+| **Enterprise**     | Establish a governance foundation to control workloads at enterprise scale. |
 
 ## Cloud Adoption Framework scenarios
 
-The Cloud Adoption Framework provides technology-focused guidance tailored to complex business requirements and technical architectures. These scenarios apply the framework's proven methodologies to real-world implementation challenges, delivering actionable roadmaps and technology-specific best practices for accelerated deployment success.
+The Cloud Adoption Framework has specific guidance aligned to common scenarios across our customer base.
 
-| CAF Scenario | Business challenge solved | Ideal for organizations requiring |
+| CAF Scenario | Purpose |
 |--------------|-----------------|----------------------------------|
-| [AI agents](./ai-agents/index.md) | Build, deploy, and govern AI agents to automate business processes and enhance workforce productivity. | Business process automation, agentic workflows, individual productivity, agent governance |
-| [AI adoption](./scenarios/ai/index.md) | Implement responsible AI solutions with governance, ethics compliance, and MLOps automation. | Responsible AI deployment, machine learning model governance, AI ethics compliance, MLOps automation |
-| [Azure Virtual Desktop](./scenarios/azure-virtual-desktop/index.md) | Deliver and manage virtual desktops at enterprise scale with security and compliance controls. | Remote work enablement, desktop virtualization, end-user computing, security compliance |
-| [Azure VMware Solution](./scenarios/azure-vmware/index.md) | Migrate VMware workloads to Azure with zero downtime and maintained operational consistency. | VMware infrastructure migration, hybrid cloud strategy, disaster recovery modernization |
-| [Cloud-Scale Analytics](./scenarios/data-management/index.md) | Build secure, scalable data platforms with advanced analytics and real-time insights. | Data modernization, analytics platforms, data governance, real-time processing |
-| [Modern Application Platform](./scenarios/app-platform/index.md) | Modernize applications using containers, microservices architecture, and Azure PaaS services. | Application modernization, container adoption, microservices architecture, DevOps transformation |
-| [Oracle on Azure](./scenarios/oracle-on-azure/index.md) | Run enterprise Oracle workloads in Azure with optimized performance and cost efficiency. | Oracle database migration, enterprise application continuity, performance optimization |
-| [SAP on Azure](./scenarios/sap/index.md) | Deploy and operate SAP solutions using Azure-native tools with enterprise-grade reliability. | SAP migration, ERP modernization, mission-critical workloads, high availability |
+| [AI agents](./ai-agents/index.md) | How and when to adopt AI agents |
+| [AI adoption](./scenarios/ai/index.md) | How to adopt AI (generative and nongenerative) |
+| [Azure Virtual Desktop](./scenarios/azure-virtual-desktop/index.md) | How to adopt Azure Virtual Desktop |
+| [Azure VMware Solution](./scenarios/azure-vmware/index.md) | How to adopt Azure VMware Solution |
+| [Cloud-Scale Analytics](./scenarios/data-management/index.md) | How to do analytics in the cloud |
+| [Oracle on Azure](./scenarios/oracle-on-azure/index.md) | Run Oracle workloads on Azure. |
+| [SAP on Azure](./scenarios/sap/strategy.md) | How to run SAP workloads on Azure |

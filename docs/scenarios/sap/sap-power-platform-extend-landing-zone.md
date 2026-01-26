@@ -10,12 +10,6 @@ ms.custom: e2e-sap
 
 # Extend an SAP landing zone to support Microsoft Power Platform
 
-This article is part of the **SAP and Power Platform** article series:
-
-- [Extend SAP by using Microsoft Power Platform](./sap-power-platform-fundamental.md)
-- [SAP and Power Platform architecture workflow](./sap-power-platform-architecture-workflow.md)
-- Extend your SAP landing zone to support Power Platform 
-
 When you integrate SAP systems with Microsoft Power Platform, the actions you take depend on your use cases and the connector that you use. Each connector has unique technical requirements that you need to address.
 
 This article outlines integration options and provides links to implementation guides that can help you establish the connections and technical setup required for each scenario. Based on your organization's needs and use cases, you can select and implement the appropriate components to extend your SAP environment by using Microsoft Power Platform.
@@ -108,11 +102,5 @@ In addition to basic, anonymous, and API key authentication, the SAP OData conne
 
 To learn more about the options for using SSO, see these resources:
 
-- [SAP OData connector: SSO through Microsoft Azure API Management](https://www.microsoft.com/power-platform/blog/power-apps/announcing-public-preview-of-expanded-single-sign-on-authentication-options-for-sap-connectors/) 
 - [SAP OData connector now supports OAuth2 and SAP principal propagation](https://community.powerplatform.com/blogs/post/?postid=c6a609ab-3556-ef11-a317-6045bda95bf0)
 - [Integrating low-code solutions with Microsoft using SAP API Management](https://community.sap.com/t5/enterprise-resource-planning-blogs-by-members/integrating-low-code-solutions-with-microsoft-using-sap-integration-suite/ba-p/13789298)
-
-### Next step
-
-> [!div class="nextstepaction"]
-> [Innovate with SAP and Azure](./innovate.md)

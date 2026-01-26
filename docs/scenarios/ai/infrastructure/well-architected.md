@@ -90,7 +90,7 @@ Performance efficiency refers to maximizing the processing power of Azure infras
 
 Increase the clock rate of a graphics processing unit (GPU) to improve performance, especially for tasks requiring high graphical processing or complex computations. Higher clock speeds allow the GPU to execute more operations in a given time period, enhancing overall efficiency. Use this [GPU-optimization script](https://github.com/Azure/azurehpc/tree/master/experimental/gpu_optimizations#gpu-optimization) to set the GPU clock frequencies to their maximum values.
 
-- *Enable Accelerated Networking.* Accelerated Networking is a hardware acceleration technology that allows virtual machines to use single root I/O virtualization (SR-IOV) on supported virtual machine types. It provides lower latency, reduced jitter, and decreased CPU utilization. Enabling accelerated Networking offers substantial enhancements in front-end network performance.
+- *Enable Accelerated Networking.* Accelerated Networking is a hardware acceleration technology that allows virtual machines to use single root I/O virtualization (SR-IOV) on supported virtual machine types. It provides lower latency, reduced jitter, and decreased CPU utilization. Enabling Accelerated Networking offers substantial enhancements in front-end network performance.
 
 ### I/O tuning
 

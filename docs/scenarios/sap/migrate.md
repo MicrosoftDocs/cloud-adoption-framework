@@ -55,8 +55,6 @@ Several sizing considerations should be made prior to deploying an SAP platform.
 - High-availability/redundancy factors
 - Database high-availability factors
 
-Explore the [SAP on Azure Architecture Guide](/azure/architecture/reference-architectures/sap/sap-overview?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json) to see examples of reference architectures and sizing considerations.
-
 ## Migrate the platform
 
 Based on the kind of SAP workload and requirements, the SAP workload's data points help to choose the appropriate migration approach: classical or an SAP Database Migration Option (DMO). Some of the critical data points to consider include:
@@ -75,16 +73,3 @@ Based on the kind of SAP workload and requirements, the SAP workload's data poin
 - There's a plan to upgrade to SAP S/4HANA during migration.
 
 Explore [Migrating an SAP platform to Azure](/training/modules/migrate-sap-workloads-azure/) to learn more about each process for migrating the SAP platform.
-
-## Migrate the workload
-
-After migrating the core platform, you can use standardized [migration factory processes](../../migrate/index.md) to migrate each dependent workload. See the [introduction to an SAP adoption scenario](./index.md) for individual workload group architectures and their unique scenarios.
-
-## Next step: Innovate with SAP
-
-The following articles provide guidance for specific points throughout the cloud adoption journey to help you succeed in adopting SAP in Azure.
-
-- [Innovate with SAP](./innovate.md)
-- [Manage SAP](./manage.md)
-
-Learn more about operating systems, database management systems, and other [SAP software supported for Azure deployments](/azure/virtual-machines/workloads/sap/sap-supported-product-on-azure).
