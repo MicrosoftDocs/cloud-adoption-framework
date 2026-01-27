@@ -1,6 +1,6 @@
 ---
 title: Get AI architecture guidance for Azure platform services (PaaS) for AI
-description: Find AI architectures and guides to build AI workloads with Azure AI platform services like Foundry, Azure OpenAI, Azure Machine Learning, and Foundry tools.
+description: Find AI architectures and guides to build AI workloads with Azure AI platform services like Foundry, Azure OpenAI, Azure Machine Learning, and Foundry Tools.
 author: stephen-sumner
 ms.author: ssumner
 ms.date: 07/01/2025
@@ -85,7 +85,7 @@ The following articles provide best practices for adopting AI workloads using Az
 | Platform Services | [Foundry](/azure/ai-foundry/what-is-azure-ai-foundry) | Unified platform for building and deploying generative and nongenerative AI applications |
 | Platform Services | [Azure OpenAI](/azure/ai-services/openai/) | Access to OpenAI models with enterprise security and compliance |
 | Platform Services | [Azure Machine Learning](/azure/machine-learning/overview-what-is-azure-machine-learning) | End-to-end machine learning lifecycle management platform |
-| Platform Services | [Foundry tools](/azure/ai-services/what-are-ai-services) | Prebuilt AI capabilities for vision, speech, language, and decision making |
+| Platform Services | [Foundry Tools](/azure/ai-services/what-are-ai-services) | Prebuilt AI capabilities for vision, speech, language, and decision making |
 | Architecture Guidance | [Azure Architecture Center AI/ML](/azure/architecture/ai-ml/) | Comprehensive collection of AI and machine learning architecture patterns |
 | Best Practices | [Well-Architected Framework AI Workloads](/azure/well-architected/ai/get-started) | Design principles and recommendations for AI workloads on Azure |
 

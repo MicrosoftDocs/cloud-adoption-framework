@@ -56,7 +56,7 @@ Cloud-scale analytics contains custom policies related to **resource and cost ma
 - [Azure Data Explorer](#azure-data-explorer)
 - [Azure Cosmos DB](#azure-cosmos-db)
 - [Azure Container Registry](#azure-container-registry)
-- [Foundry tools](#azure-ai-services)
+- [Foundry Tools](#azure-ai-services)
 - [Azure Machine Learning](#azure-machine-learning)
 - [Azure SQL Managed Instance](#azure-sql-managed-instance)
 - [Azure SQL Database](#azure-sql-database)
@@ -213,7 +213,7 @@ Other policies that are applied in the Databricks workspace through cluster poli
 |Deny-ContainerRegistry-PublicNetworkAccess|Network Isolation|Denies public network access for container registry.|
 |Deny-ContainerRegistry-Sku|Resource Management|Enforces premium Sku for container registry.|
 
-## Foundry tools
+## Foundry Tools
 
 |Policy name  |Policy area  |Description  |
 |---------|---------|---------|

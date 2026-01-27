@@ -23,7 +23,7 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | Resource | Resource provider namespace | Abbreviation |
 |--|--|--|
 | AI Search | `Microsoft.Search/searchServices` | `srch` |
-| Foundry tools (multi-service account) | `Microsoft.CognitiveServices/accounts` (kind: `CognitiveServices`) | `ais` |
+| Foundry Tools (multi-service account) | `Microsoft.CognitiveServices/accounts` (kind: `CognitiveServices`) | `ais` |
 | Foundry account | `Microsoft.CognitiveServices/accounts` (kind: `AIServices`) | `aif` |
 | Foundry account project | `Microsoft.CognitiveServices/accounts/projects` | `proj` |
 | Foundry hub | `Microsoft.MachineLearningServices/workspaces` (kind: `Hub`) | `hub` |

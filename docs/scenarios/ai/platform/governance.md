@@ -13,11 +13,11 @@ This article describes governance practices for organizations that use Azure AI 
 
 ## Govern AI platforms
 
-AI platform governance uses policy controls to keep Foundry tools operating consistently. Platform-level governance enforces security, compliance, and operational standards across your AI environment. Implement comprehensive policies to maintain oversight and improve AI management. To govern Azure AI platforms, follow these steps:
+AI platform governance uses policy controls to keep Foundry Tools operating consistently. Platform-level governance enforces security, compliance, and operational standards across your AI environment. Implement comprehensive policies to maintain oversight and improve AI management. To govern Azure AI platforms, follow these steps:
 
 1. **Apply built-in governance policies for each AI platform.** Azure Policy offers predefined policy definitions for common governance needs in AI services. These policies enforce security settings, cost controls, and compliance requirements without custom development. Use Azure Policy to apply built-in policy definitions for:
 - [Microsoft Foundry](/azure/ai-foundry/how-to/azure-policy)
-- [Foundry tools](/azure/ai-services/policy-reference)
+- [Foundry Tools](/azure/ai-services/policy-reference)
 - [Azure AI Search](/azure/search/policy-reference)
 
 2. **Enable Azure landing zone AI policies for comprehensive coverage.** Azure landing zones provide curated policy sets for workload-specific governance. These policies use tested configurations that follow Microsoft recommendations for AI workloads. When you deploy an Azure landing zone, select the policy initiative under the *Workload Specific Compliance* category. Available options include:
@@ -88,7 +88,7 @@ AI security governance protects AI workloads from threats to data, models, or in
 
 4. **Apply just-in-time access for administrative operations.** Privileged Identity Management (PIM) provides temporary elevated access to resources for administrative tasks. This approach minimizes exposure time for high-privilege accounts and reduces security risks. Use [Privileged Identity Management](/entra/id-governance/privileged-identity-management/pim-configure) for administrative access to AI resources. Require approval workflows for sensitive operations, such as modifying access to production AI models.
 
-5. **Secure network access to AI endpoints.** Network controls help prevent unauthorized access to AI services from untrusted networks. Private endpoints and virtual network integration protect AI resources from internet-based attacks. Configure [private endpoints](/azure/ai-services/cognitive-services-virtual-networks) for Foundry tools. Use [virtual network service endpoints](/azure/virtual-network/virtual-network-service-endpoints-overview) to restrict access to approved networks.
+5. **Secure network access to AI endpoints.** Network controls help prevent unauthorized access to AI services from untrusted networks. Private endpoints and virtual network integration protect AI resources from internet-based attacks. Configure [private endpoints](/azure/ai-services/cognitive-services-virtual-networks) for Foundry Tools. Use [virtual network service endpoints](/azure/virtual-network/virtual-network-service-endpoints-overview) to restrict access to approved networks.
 
 ## Govern AI operations
 
@@ -99,9 +99,9 @@ AI operations governance sets controls for AI service management and maintenance
 2. **Implement business continuity and disaster recovery plans.** Disaster recovery plans protect AI operations against service interruptions and data loss. For example, configure backup and failover for Azure AI model endpoints to maintain service availability during outages. These plans help ensure business operations continue during outages and maintain service availability for critical AI workloads. Configure baseline disaster recovery for resources that host AI model endpoints, including:
 - [Foundry](/azure/ai-studio/how-to/disaster-recovery)
 - [Azure OpenAI](/azure/ai-services/openai/how-to/business-continuity-disaster-recovery)
-- Foundry tools
+- Foundry Tools
 
-3. **Configure monitoring and alerting for AI workloads.** Baseline metrics provide early warning of performance degradation and operational issues before they affect users. Alert rules enable proactive responses to prevent service disruptions. Enable recommended alert rules for [Azure AI Search](/azure/search/monitor-azure-cognitive-search#azure-ai-search-alert-rules), [Foundry Agent Service deployments](/azure/ai-foundry/agents/how-to/metrics), and individual Foundry tools.
+3. **Configure monitoring and alerting for AI workloads.** Baseline metrics provide early warning of performance degradation and operational issues before they affect users. Alert rules enable proactive responses to prevent service disruptions. Enable recommended alert rules for [Azure AI Search](/azure/search/monitor-azure-cognitive-search#azure-ai-search-alert-rules), [Foundry Agent Service deployments](/azure/ai-foundry/agents/how-to/metrics), and individual Foundry Tools.
 
 ## Govern AI regulatory compliance
 
