@@ -110,7 +110,7 @@ The following guidance can help you find the right tools to automate compliance 
 
 - **Govern output generation.** Help [prevent abuse and harmful content generation](/legal/cognitive-services/openai/data-privacy). Use [AI content filtering](/azure/ai-services/openai/concepts/content-filter) and [AI abuse monitoring](/azure/ai-services/openai/concepts/abuse-monitoring).
 
-- **Configure data loss prevention.** Configure [data loss prevention for Azure AI services](/azure/ai-services/cognitive-services-data-loss-prevention). Configure the list of outbound URLs that their AI services resources are allowed to access.
+- **Configure data loss prevention.** Configure [data loss prevention for Foundry tools](/azure/ai-services/cognitive-services-data-loss-prevention). Configure the list of outbound URLs that their AI services resources are allowed to access.
 
 - **Use system messages.** Use [system messages](/azure/ai-services/openai/concepts/system-message) to guide the behavior of an AI system and tailor the outputs.
 

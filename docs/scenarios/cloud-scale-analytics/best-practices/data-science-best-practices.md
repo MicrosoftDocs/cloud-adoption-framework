@@ -28,7 +28,7 @@ Develop a data science template for your organization with the following guideli
 
 ### Real-time
 
-- Include an Azure Data Factory or Azure Synapse deployment in templates and Azure AI services.
+- Include an Azure Data Factory or Azure Synapse deployment in templates and Foundry tools.
 - The templates should provide all necessary tools to execute the data science exploration phase and the initial operationalization of the model.
 
 ### Considerations for an initial setup
@@ -43,7 +43,7 @@ Templates should be deployed on a per-project basis after they've been set up. E
 
 The same access rights typically apply to different types of artifacts. It's important to separate development from production to prevent the deletion of production pipelines or endpoints within a workspace. Along with the template, a process needs to be built to give data product teams the option to request new environments.
 
-We recommend setting up different AI services like Azure AI services on a per-project basis. By setting up different AI services on a per-project basis, deployments occur for each data product resource group. This policy creates a clear separation from a data access standpoint and mitigates the risk of unauthorized data access by the wrong teams.
+We recommend setting up different AI services like Foundry tools on a per-project basis. By setting up different AI services on a per-project basis, deployments occur for each data product resource group. This policy creates a clear separation from a data access standpoint and mitigates the risk of unauthorized data access by the wrong teams.
 
 ### Streaming scenario
 
