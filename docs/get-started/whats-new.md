@@ -271,7 +271,6 @@ We retired the articles that formerly made up the defense scenario. The content 
 - [Management recommendations for AI workloads on Azure](../scenarios/ai/platform/management.md): We added guidance for managing AI deployments, including finding the best region, using AI hubs, and managing multiple deployments.
 - [Protect your Azure cloud estate](../manage/protect.md): We made updates for clarity and refreshed the content to reflect the latest Azure services and best practices for protecting your cloud estate.
 - [Ready your Azure cloud operations](../manage/ready.md): We made significant updates for clarity and accuracy.
-- [Resource selection recommendations for AI workloads on Azure](../scenarios/ai/platform/resource-selection.md): We made updates to separate and clarify the guidance on selecting nongenerative AI platforms to provide more details on the differences between Azure AI services and Azure Machine Learning.
 - [Testing approach for Azure landing zones](../ready/enterprise-scale/testing-approach.md): We made significant updates to Azure Landing Zone canary guidance to improve the clarity and usability of the content based on customer feedback.
 - [What is an Azure landing zone?](../ready/landing-zone/index.md): We added a conceptual architecture diagram to differentiate between platform and application landing zones.
 
