@@ -732,14 +732,14 @@
 			<title>Sheet.2224</title>
 			<g id="shape2111-254" v:mID="2111" v:groupContext="shape">
 				<title>Sheet.2111</title>
-				<desc>Azure AI Services</desc>
+				<desc>Foundry Tools</desc>
 				<v:userDefs>
 					<v:ud v:nameU="visNavOrder" v:prompt="" v:val="VT0(30000):26"/>
 				</v:userDefs>
 				<v:textBlock v:margins="rect(4,4,4,4)"/>
 				<v:textRect cx="52.4219" cy="342.288" width="104.85" height="18.9232"/>
 				<rect x="0" y="332.827" width="104.844" height="18.9232" class="st40"/>
-				<text x="10.86" y="345.89" class="st30" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Azure AI Services</text>			</g>
+				<text x="10.86" y="345.89" class="st30" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Foundry Tools</text>			</g>
 			<g id="group2207-257" transform="translate(29.9219,-19.3104)" v:mID="2207" v:groupContext="group">
 				<v:userDefs>
 					<v:ud v:nameU="visNavOrder" v:val="VT0(76000):26"/>
