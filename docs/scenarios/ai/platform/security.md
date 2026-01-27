@@ -61,7 +61,7 @@ To secure AI data, implement data boundaries and access controls to prevent comp
 
 3. **Configure role-based data access controls.** Configure role-based controls to ensure users and applications access only data appropriate for their function and clearance level. This approach reduces privilege escalation risks and unauthorized data exposure. Implement Azure RBAC policies that align data access permissions with user roles and application requirements.
 
-4. **Use Microsoft Purview for data governance.** Use Microsoft Purview for centralized data discovery, classification, and compliance management across your AI ecosystem. Purview maintains visibility into data usage and ensures compliance with organizational policies. Deploy [Microsoft Purview for Foundry tools](/purview/ai-azure-services) and [AI agents](/purview/ai-agents) to monitor data lineage, classify sensitive information, and enforce data governance policies.
+4. **Use Microsoft Purview for data governance.** Use Microsoft Purview for centralized data discovery, classification, and compliance management across your AI ecosystem. Purview maintains visibility into data usage and ensures compliance with organizational policies. Deploy [Microsoft Purview for Foundry](/purview/ai-azure-services) and [AI agents](/purview/ai-agents) to monitor data lineage, classify sensitive information, and enforce data governance policies.
 
 ## Secure AI execution
 
