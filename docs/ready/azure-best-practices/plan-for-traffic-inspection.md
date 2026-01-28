@@ -10,9 +10,7 @@ ms.custom: think-tank
 
 # Plan for traffic inspection
 
-Knowing what goes in and out of your network is essential to maintaining your security posture. You should capture all inbound and outbound traffic and perform near real-time analysis on that traffic to detect threats and mitigate network vulnerabilities.
-
-This section explores key considerations and recommended approaches for capturing and analyzing traffic within an Azure virtual network.
+Effective network traffic inspection is critical for maintaining security and compliance in Azure environments. This article outlines key considerations, recommended tools, and best practices for capturing and analyzing network traffic within Azure virtual networks. You'll learn how to leverage Azure services to monitor traffic, detect threats, and support regulatory requirements across various scenarios, including infrastructure as a service (IaaS), SaaS platforms, and operational technology environments. Use this guidance to plan and implement a comprehensive traffic inspection strategy tailored to your organization's needs.
 
 ## Design considerations
 
@@ -52,6 +50,10 @@ This section explores key considerations and recommended approaches for capturin
 - Use Network Watcher packet capture regularly to get a more detailed understanding of your network traffic. Run packet capture sessions at various times throughout the week to get a good understanding of the types of traffic traversing your network.
 
 - Don't develop a custom solution to mirror traffic for large deployments. The complexity and supportability issues tend to make custom solutions inefficient.
+
+## SaaS network security
+
+ Microsoft manages network security for SaaS platforms like Microsoft Fabric and Microsoft 365. These platforms use Zero Trust principles and prioritize identity-based access controls over network perimeter inspection. All communications are encrypted and traverse the Microsoft global network. Review their compliance certifications in the [Service Trust Portal](https://servicetrust.microsoft.com/). Customers should follow the platform‑specific guidance for packet inspection and routing in [Microsoft Fabric security overview](/fabric/security/security-overview) and [Microsoft 365 network connectivity overview](/microsoft-365/enterprise/microsoft-365-networking-overview). See also the [Microsoft Fabric security baseline](/security/benchmark/azure/baselines/fabric-security-baseline) and the [Microsoft 365 Zero Trust deployment plan](/security/zero-trust/microsoft-365-zero-trust).
 
 ## Other platforms
 
