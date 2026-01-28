@@ -53,9 +53,7 @@ Effective network traffic inspection is critical for maintaining security and co
 
 ## SaaS network security
 
- Microsoft manages network security for SaaS platforms like Microsoft Fabric and Microsoft 365. These platforms use Zero Trust principles and prioritize identity-based access controls over network perimeter inspection. All communications are encrypted and traverse the Microsoft global network. Review their compliance certifications in the [Service Trust Portal](https://servicetrust.microsoft.com/). Customers should follow the platform‑specific guidance for packet inspection and routing in [Microsoft Fabric security overview](/fabric/security/security-overview) and [Microsoft 365 network connectivity overview](/microsoft-365/enterprise/microsoft-365-networking-overview).
-
-See also the [Microsoft Fabric security baseline](/security/benchmark/azure/baselines/fabric-security-baseline) and the [Microsoft 365 Zero Trust deployment plan](/security/zero-trust/microsoft-365-zero-trust).
+ Microsoft manages network security for SaaS platforms like Microsoft Fabric and Microsoft 365. These platforms use Zero Trust principles and prioritize identity-based access controls over network perimeter inspection. All communications are encrypted and traverse the Microsoft global network. Review their compliance certifications in the [Service Trust Portal](https://servicetrust.microsoft.com/). Customers should follow the platform‑specific guidance for packet inspection and routing in [Microsoft Fabric security overview](/fabric/security/security-overview) and [Microsoft 365 network connectivity overview](/microsoft-365/enterprise/microsoft-365-networking-overview). See also the [Microsoft Fabric security baseline](/security/benchmark/azure/baselines/fabric-security-baseline) and the [Microsoft 365 Zero Trust deployment plan](/security/zero-trust/microsoft-365-zero-trust).
 
 ## Other platforms
 
