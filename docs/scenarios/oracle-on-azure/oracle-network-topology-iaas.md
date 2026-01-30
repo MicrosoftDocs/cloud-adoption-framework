@@ -37,7 +37,7 @@ The Oracle database subnet should include an NSG that allows the following traff
 
 - Inbound port 22 or 3389 if Oracle database services are running on Windows from a secure source only. For more information about secure VM access, see [Plan for VM remote access](../../ready/azure-best-practices/plan-for-virtual-machine-remote-access.md).
 
-- Inbound port 1521 from the front-end subnet only. The front-end subnet should follow [best practices for internet facing workloads](/events/azure-iaas-day-2021-best-practices-securing-internet-facing-cloud-architecture-azure).
+- Inbound port 1521 from the front-end subnet only. The front-end subnet should follow [best practices for internet facing workloads](/shows/).
 
 - Change ports when security requires obfuscation. Don't use default ports.
 

@@ -124,7 +124,7 @@ If you plan to use ExpressRoute for your migration, ensure that its [resilience 
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Oracle database migration to Azure](/azure/architecture/solution-ideas/articles/reference-architecture-for-oracle-database-migration-to-azure)
+> [Oracle database migration to Azure](/azure/architecture/databases/idea/topic-migrate-oracle-azure)
 >
 > [!div class="nextstepaction"]
 > [Oracle on Azure IaaS landing zone accelerator](oracle-landing-zone-accelerator.md)
