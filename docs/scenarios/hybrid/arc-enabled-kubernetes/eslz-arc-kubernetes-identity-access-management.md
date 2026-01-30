@@ -12,7 +12,7 @@ ms.custom: e2e-hybrid, think-tank
 
 Azure Arc-enabled Kubernetes supports on-premises and other cloud environments that are integrated with different identity and access management systems. In addition to existing Kubernetes cluster role-based access control (RBAC), Azure Arc-enabled Kubernetes supports Azure RBAC to unify access management across Kubernetes clusters and minimize operational overhead.
 
-The combination RBAC models your organization should use depends on what usage needs your organization has. Some examples are:
+The combination of RBAC models your organization should use depends on what usage needs your organization has. Some examples are:
 
 - Onboarding a Kubernetes cluster to Azure Arc
 - Managing an Arc-enabled Kubernetes cluster
@@ -32,7 +32,7 @@ To design the right architecture for your organization, you need to understand [
 
 The following diagram shows various Azure Arc-enabled Kubernetes components and how they interact when [Azure RBAC](/azure/azure-arc/kubernetes/conceptual-azure-rbac#architecture---azure-rbac-on-azure-arc-enabled-kubernetes) is used to manage a Kubernetes cluster.
 
-[![A diagram showing Azure R B A C on Azure Arc-enabled Kubernetes.](./media/arc-enabled-kubernetes-azure-ad-integration.png)](./media/arc-enabled-kubernetes-azure-ad-integration.png#lightbox)
+[![A diagram showing Azure RBAC on Azure Arc-enabled Kubernetes.](./media/arc-enabled-kubernetes-azure-ad-integration.png)](./media/arc-enabled-kubernetes-azure-ad-integration.png#lightbox)
 
 ### Securely access Azure Arc-enabled Kubernetes cluster from anywhere
 
@@ -74,7 +74,7 @@ Review the [identity and access management design area](../../../ready/landing-z
 - Enable periodic [access reviews](/entra/id-governance/privileged-identity-management/pim-create-roles-and-resource-roles-review) in Microsoft Entra ID to remove users that no longer need access to the Kubernetes clusters.
 - Create [Conditional Access policies](/entra/identity/conditional-access/policy-admin-phish-resistant-mfa) when using Azure RBAC for cluster management to enforce various conditions to meet security and governance policies.
   
-## Role based access controls
+## Role-based access controls
 
 Azure Arc-enabled Kubernetes manages Kubernetes clusters using Azure RBAC and supports the following Roles for onboarding Kubernetes clusters to Azure Arc.
 
@@ -89,7 +89,7 @@ Azure Arc-enabled Kubernetes manages Kubernetes clusters using Azure RBAC and su
 
 ## Next steps
 
-For more information on your hybrid and multicloud cloud journey, see the following articles:
+For more information on your hybrid and multicloud journey, see the following articles:
 
 - Review the [prerequisites](/azure/azure-arc/kubernetes/quickstart-connect-cluster?tabs=azure-cli#prerequisites) for Azure Arc-enabled Kubernetes.
 - Review the [validated Kubernetes distributions](/azure/azure-arc/kubernetes/validation-program#validated-distributions) for Azure Arc-enabled Kubernetes.

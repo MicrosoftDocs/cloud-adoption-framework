@@ -34,7 +34,7 @@ The following diagram illustrates the three pillars of Services Observability wi
 
 [![A diagram depicting Services Observability Pillars.](./media/arc-enabled-kubernetes-obs-pillars.png)](./media/arc-enabled-kubernetes-obs-pillars.png#lightbox)
 
-The following diagram shows various Open Service Mesh components running in an Arc-enabled Kubernetes cluster. It also shows a sample application enabled in the service mesh, which is automatically configured with an Envoy side-car container.
+The following diagram shows various Open Service Mesh components running in an Arc-enabled Kubernetes cluster. It also shows a sample application enabled in the service mesh, which is automatically configured with an Envoy sidecar container.
 
 [![A diagram depicting Open Service Mesh running in Azure Arc-enabled Kubernetes.](./media/arc-enabled-kubernetes-obs-osm.png)](./media/arc-enabled-kubernetes-obs-osm.png#lightbox)
 
@@ -46,7 +46,7 @@ The three pillars of observability are metrics, logs, and traces. Incorporate th
 
 The following screenshot shows a visualization of an example HTTP request metric for a service. The metric in this example is displayed as HTTP request rate per minute over a specified time period.  
 
-[![A screenshot showing H T T P request metric for a service.](./media/arc-enabled-kubernetes-obs-metrics-example.png)](./media/arc-enabled-kubernetes-obs-metrics-example.png#lightbox)
+[![A screenshot showing HTTP request metric for a service.](./media/arc-enabled-kubernetes-obs-metrics-example.png)](./media/arc-enabled-kubernetes-obs-metrics-example.png#lightbox)
 
 - **Logs** can store various data types that have their own structures. A log contains details about transactions that can allow you to obtain a more complete story for a given event. Application logs typically include timestamps, log levels, and any information necessary to understand the context of an event. Logs are collected and shipped to a log service for storage and analysis.
 
@@ -66,7 +66,7 @@ The following table shows collection impact for the three pillars.
 | Immune to cardinality issues      | No      |   Yes |   Yes |
 | Cost  | Low      |    High |    Low |
 
-There are different ways you can achieve service observability. You can use a service mesh to do it at the platform layer, where your application is unaware and unchanged. You can also instrument an application with a library, which is commonly done using an Application Performance Monitoring (APM) tool like [Application Insights](/azure/azure-monitor/app/app-insights-overview). API gateways provide observability into north-south traffic, but lack observability into pod to pod communication and ease of configuration at scale.
+There are different ways you can achieve service observability. You can use a service mesh to do it at the platform layer, where your application is unaware and unchanged. You can also instrument an application with a library, which is commonly done using an Application Performance Monitoring (APM) tool like [Application Insights](/azure/azure-monitor/app/app-insights-overview). API gateways provide observability into north-south traffic, but lack observability into pod-to-pod communication and ease of configuration at scale.
 
 The following sections explain how you can use a service mesh and the self-hosted API Gateway available for Azure Arc to achieve services observability.
 
@@ -76,7 +76,7 @@ A service mesh provides capabilities like traffic management, resiliency, policy
 
 - Azure Arc-enabled Kubernetes supports [Open Service Mesh (OSM)](https://openservicemesh.io/), a Cloud Native Computing Foundation (CNCF) project, which is deployed as an [extension](/azure/azure-arc/kubernetes/tutorial-arc-enabled-open-service-mesh). Open Service Mesh is a lightweight, extensible, cloud native service mesh that allows users to uniformly manage, secure, and gain out-of-the-box observability features for highly dynamic microservice environments.
 - Other popular Service Meshes that require vendor support include [Istio](https://istio.io/), [Consul Connect](https://www.hashicorp.com/products/consul/multi-platform-service-mesh/), and [Linkerd](https://linkerd.io/2.11/overview/).
-- Depending on what features you use when implementing a service mesh, extra responsibility might be put on Application Operators to define a configuration for each service (such as access rules and onboarding services). Also, Cluster Operators must manage and be aware of the service mesh controller. Due to the way service mesh uses the [side-car pattern](/azure/architecture/patterns/sidecar), access logs from the service mesh control plane and sidecar are needed when debugging Egress and Ingress.
+- Depending on what features you use when implementing a service mesh, extra responsibility might be put on Application Operators to define a configuration for each service (such as access rules and onboarding services). Also, Cluster Operators must manage and be aware of the service mesh controller. Due to the way service mesh uses the [sidecar pattern](/azure/architecture/patterns/sidecar), access logs from the service mesh control plane and sidecar are needed when debugging Egress and Ingress.
 
 ## Service mesh observability
 
