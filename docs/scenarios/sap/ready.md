@@ -8,7 +8,7 @@ ms.date: 01/23/2026
 ms.topic: concept-article
 ---
 
-# Prepare Azure Landing Zones for SAP Migration
+# Azure landing zone for SAP on Azure
 
 With Azure landing zones, you can start with a small implementation and expand over time. For more sophisticated environments, you can start with enterprise-scale implementation options, which will include operations, security, and governance services in the initial environment.
 
