@@ -42,7 +42,7 @@ Enterprises that use hub-spoke network topologies often deploy cloud architectur
 
 ![Diagram showing an enterprise cloud deployment with security issues.](./media/security-issues.png)
 
-[Microsoft Defender for Cloud](/azure/security-center/security-center-introduction) provides threat protection and gives you a holistic view of your entire enterprise security posture.
+[Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) provides threat protection and gives you a holistic view of your entire enterprise security posture.
 
 Enable Microsoft Defender for Cloud Standard for SAP on Azure subscriptions to:
 
@@ -50,7 +50,7 @@ Enable Microsoft Defender for Cloud Standard for SAP on Azure subscriptions to:
 
 - See all-up security posture across SAP on Azure subscriptions, and see resource security hygiene across SAP VMs, disks, and applications.
 
-- Delegate an SAP admin custom role with [just-in-time access](/azure/security-center/just-in-time-explained).
+- Delegate an SAP admin custom role with [just-in-time access](/azure/defender-for-cloud/just-in-time-access-overview).
 
 - Use the dedicated Microsoft Defender for Endpoint configuration for SAP hosts running on Linux and Windows to ensure that the SAP landscape is secure and SAP server performance is optimized. For more information, use the references below:
 
@@ -63,7 +63,7 @@ The following screenshot shows the workload protection dashboard in the Azure po
 
 ### Enable Microsoft Sentinel Solution for SAP
 
-[Microsoft Sentinel](/azure/sentinel/overview) is a scalable, cloud-native, security information event management (SIEM) and security orchestration automated response (SOAR) solution. Microsoft Sentinel delivers intelligent security analytics and threat intelligence across the enterprise, providing a single solution for alert detection, threat visibility, proactive hunting, and threat response.
+[Microsoft Sentinel](/azure/sentinel/overview) is a scalable, cloud-native, security information and event management (SIEM) and security orchestration, automation, and response (SOAR) solution. Microsoft Sentinel delivers intelligent security analytics and threat intelligence across the enterprise, providing a single solution for alert detection, threat visibility, proactive hunting, and threat response.
 
 The [Microsoft Sentinel solution for SAP](/azure/sentinel/sap/solution-overview) provides the following benefits:
 

@@ -26,7 +26,7 @@ SAP applications often run several mission-critical and core business processes,
 
 ## Design considerations for integrating SAP data with Azure
 
-Azure Data Factory pipelines provide several ways and connectors to integrate SAP data into Azure. The approach and SAP connectors you choose depends on several factors, such as the type of SAP application, type of data and how it's exposed, volume of data and expected latency, what you want to do with the data, and where you want to store it. Data can be stored in SAP or outside of SAP.
+Azure Data Factory pipelines provide several ways and connectors to integrate SAP data into Azure. The approach and SAP connectors you choose depend on several factors, such as the type of SAP application, type of data and how it's exposed, volume of data and expected latency, what you want to do with the data, and where you want to store it. Data can be stored in SAP or outside of SAP.
 
 We recommend the following considerations to help you determine your approach and plan a high-level architecture.
 
@@ -40,7 +40,7 @@ We recommend the following considerations to help you determine your approach an
 - Define governance, classification, access, security, and networking requirements.
 - Determine if a single architecture pattern serves all use cases or if you need to establish multiple patterns based on the previous requirements.
 - Identify the Azure services and internal organizations involved, and identify the skills and resources required, such as SAP, Azure data platform, security, and networking.
-- Consider running a proof of concept with well-defined goal, scope, approach, and success criteria.
+- Consider running a proof of concept with a well-defined goal, scope, approach, and success criteria.
 
 > [!TIP]
 > Validate that present and future SAP components and versions support the solution.
