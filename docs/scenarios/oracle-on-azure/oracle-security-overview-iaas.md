@@ -92,7 +92,7 @@ In general, JIT access minimizes but doesn't eliminate exposure to risks by rest
 
 Azure Bastion is essentially a hardened jump box that helps prevent access from the open internet. However, there are [numerous limitations to Azure Bastion](/azure/bastion/bastion-faq) for you to consider.
 
-- **Use X-Windows and Virtual Networking Computing (VNC)**: Oracle database software usually requires that you use X-Windows because connectivity between the Linux VM in Azure and your desktop or laptop might traverse across firewalls and Azure NSGs. Because of this, you should use SSH port forwarding to tunnel the X-Windows or VNC connections through SSH. For an example that uses the `-L 5901:localhost:5901` parameter, see [Open a VNC client and test your deployment](https://docs.oracle.com/en/learn/ol-install-vnc/#open-a-vnc-client-and-test-your-deployment).
+- **Use X-Windows and Virtual Network Computing (VNC)**: Oracle database software usually requires that you use X-Windows because connectivity between the Linux VM in Azure and your desktop or laptop might traverse across firewalls and Azure NSGs. Because of this, you should use SSH port forwarding to tunnel the X-Windows or VNC connections through SSH. For an example that uses the `-L 5901:localhost:5901` parameter, see [Open a VNC client and test your deployment](https://docs.oracle.com/en/learn/ol-install-vnc/#open-a-vnc-client-and-test-your-deployment).
 
 ## Azure policy-based security
 
