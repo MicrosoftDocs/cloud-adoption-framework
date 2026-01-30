@@ -12,7 +12,7 @@ ms.custom: think-tank, e2e-sap
 
 # Business continuity and disaster recovery for an SAP migration
 
-This article builds on the considerations and recommendations in the [Azure landing zone design area for BCDR](../../ready/landing-zone/design-area/management-business-continuity-disaster-recovery.md). That article describes unique constraints on landing zones that support an SAP platform. SAP is a mission-critical platform, so you should also incorporate other [mission-critical guidance](/azure/architecture/reference-architectures/containers/aks-mission-critical/mission-critical-intro) into your design.
+This article builds on the considerations and recommendations in the [Azure landing zone design area for BCDR](../../ready/landing-zone/design-area/management-business-continuity-disaster-recovery.md). That article describes unique constraints on landing zones that support an SAP platform. SAP is a mission-critical platform, so you should also incorporate other [mission-critical guidance](/azure/architecture/reference-architectures/containers/aks-mission-critical/mission-critical-intro#key-design-strategies) into your design.
 
 ## Scenario and scope
 
@@ -54,7 +54,7 @@ For other scenarios, don't restrict availability to infrastructure failures or s
 
 SAP and SAP databases support automatic failover clusters. In Windows, the Windows Server 2022 failover clustering feature supports failover. In Linux, Linux Pacemaker or partner tools like SIOS Protection Suite and Veritas InfoScale support failover. In Azure, you can deploy only a subset of high availability configuration in your own datacenter.
 
-For more information, see [Supported scenarios for SAP workloads on Azure VMs](/azure/sap/workloads/planning-supported-configurations) and [Supported scenarios for SAP HANA Large Instances](/azure/sap/large-instances/decommission-sap-hana).
+For more information, see [Supported scenarios for SAP workloads on Azure VMs](/azure/sap/workloads/planning-supported-configurations).
 
 For the DBMS layer, the common architecture pattern is to replicate databases at the same time and with different storage stacks than the ones that the primary VMs and secondary VMs use. Azure doesn't support architectures in which the primary VMs and secondary VMs share storage for DBMS data. Azure also doesn't support transaction logs or redo logs. The guiding principle is to use two independent storage stacks, even if they're based on Network File System (NFS) shares. These limitations are exclusive to Azure solutions and not on-premises solutions.
 
