@@ -30,7 +30,7 @@ Azure Arc service endpoints vary by Azure region and affect connectivity perform
 
 1. **Validate Azure Arc service endpoint availability in your target region.** Confirm that all required Azure Arc service endpoints are available in your Oracle Exadata Database@Azure deployment region before you implement the integration. For service availability by region, see [Azure products by region](https://azure.microsoft.com/global-infrastructure/services/).
 
-1. **Assess cross-region connectivity implications when regions differ.** If your Oracle infrastructure and Azure Arc management must operate in different regions, evaluate the latency impact on Azure Arc agent operations and compliance requirements for cross-region data flows. For cross-region networking guidance, see [Azure regions are paired](/azure/reliability/regions-paired).
+1. **Assess cross-region connectivity implications when regions differ.** If your Oracle infrastructure and Azure Arc management must operate in different regions, evaluate the latency impact on Azure Arc agent operations and compliance requirements for cross-region data flows.
 
 1. **Plan for bandwidth requirements across regions.** Cross-region Azure Arc connectivity introduces extra bandwidth costs and latency considerations for heartbeat traffic, monitoring data, and policy evaluation communications. For bandwidth planning, see [Azure bandwidth pricing](https://azure.microsoft.com/pricing/details/bandwidth/).
 
