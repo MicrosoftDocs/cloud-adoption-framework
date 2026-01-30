@@ -72,4 +72,4 @@ Based on the kind of SAP workload and requirements, the SAP workload's data poin
 - The current OS or DBMS isn't supported in Azure, requiring an upgrade or replatform.
 - There's a plan to upgrade to SAP S/4HANA during migration.
 
-Explore [Migrating an SAP platform to Azure](/training/modules/migrate-sap-workloads-azure/) to learn more about each process for migrating the SAP platform.
+Explore [Migrating an SAP platform to Azure](/training/paths/migrate-sap-workloads-to-azure/) to learn more about each process for migrating the SAP platform.

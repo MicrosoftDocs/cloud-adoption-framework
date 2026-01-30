@@ -33,7 +33,7 @@ See the following design considerations for each component.
 
 - The topology of the SAP architecture can have multiple SAP products spread across multiple system IDs, clients, and instance numbers. The architecture might have several front-end ABAP servers, but it requires only one ABAP server connection. Consider connecting to the SAP message server, which routes the connector to the correct ABAP server and gathers data for your SAP system.
 
-- The connector deploys as a Docker container on a host virtual machine (VM) or physical server. The connector container supports deployment on an on-premises machine and an Azure-based VM. The data connector doesn't support an out-of-the-box high-availability configuration. If your scenario requires a high availability option, consider deploying the connector container into a Kubernetes cluster or on [Azure Kubernetes Service (AKS)](/azure/aks/intro-kubernetes).
+- The connector deploys as a Docker container on a host virtual machine (VM) or physical server. The connector container supports deployment on an on-premises machine and an Azure-based VM. The data connector doesn't support an out-of-the-box high-availability configuration. If your scenario requires a high availability option, consider deploying the connector container into a Kubernetes cluster or on [Azure Kubernetes Service (AKS)](/azure/aks/what-is-aks).
 
   For the step-by-step configuration of AKS, see [Deploy Microsoft Sentinel Threat Monitoring for an SAP agent into an AKS or a Kubernetes cluster](https://techcommunity.microsoft.com/t5/microsoft-sentinel-blog/deploying-microsoft-sentinel-threat-monitoring-for-sap-agent/ba-p/3528040).
 
@@ -68,7 +68,7 @@ See the following design considerations for each component.
 
 - Microsoft Sentinel relies on the logs pushed to its workspace by SAP HANA through system logging protocol (syslog). There are no SAP connectors in this scenario.
 
-- To push the SAP HANA syslog to a Microsoft Sentinel workspace, install [Azure Monitor Agent](/azure/azure-monitor/agents/agents-overview) parallel to the standard version of Microsoft Operations Management Suite. By default, Operations Management Suite pushes data to the telemetry workspace. You can redirect the Azure Monitor Agent logs to the Microsoft Sentinel workspace.
+- To push the SAP HANA syslog to a Microsoft Sentinel workspace, install [Azure Monitor Agent](/azure/azure-monitor/agents/azure-monitor-agent-overview) parallel to the standard version of Microsoft Operations Management Suite. By default, Operations Management Suite pushes data to the telemetry workspace. You can redirect the Azure Monitor Agent logs to the Microsoft Sentinel workspace.
 
 - By default, the SAP HANA audit trail is written to a database table called CSTABLE. The security team uses functionalities, like capturing firefighter logins, to consume the audit logs from the databases. You can't repoint the default logging to syslog, but you can redirect different audit trails to different targets, so that all the Microsoft Sentinel-related audit policies point to the alert level. When you implement this change, all alert-level logs go to syslog.
 
