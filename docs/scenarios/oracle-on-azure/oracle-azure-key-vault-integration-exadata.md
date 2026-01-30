@@ -97,4 +97,4 @@ For comprehensive troubleshooting procedures including diagnostic steps, resolut
 - [Manage and monitor Oracle Database@Azure](oracle-manage-monitor-oracle-database-azure.md)
 - [Business continuity and disaster recovery for Oracle Database@Azure](oracle-disaster-recovery-oracle-database-azure.md)
 - [Integrate Oracle Exadata Database@Azure with Azure Key Vault](/azure/oracle/oracle-db/manage-oracle-transparent-data-encryption-azure-key-vault)
-- [Azure Key Vault best practices](/azure/key-vault/general/best-practices)
+- [Azure Key Vault best practices](/azure/key-vault/general/secure-key-vault)
