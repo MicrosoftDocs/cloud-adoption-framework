@@ -63,4 +63,4 @@ Consider the following cost efficiency considerations for your cloud adoption st
 ## Next step
 
 > [!div class="nextstepaction"]
-> [AI considerations](./ai.md)
+> [Resiliency considerations for your cloud strategy](./resiliency.md)
