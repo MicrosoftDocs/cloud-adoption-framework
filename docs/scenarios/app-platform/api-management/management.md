@@ -60,7 +60,7 @@ Learn more about the [management](../../../ready/landing-zone/design-area/manage
 - Use [named values](/azure/api-management/api-management-howto-properties) to store common values that can be used in policies.
 - Use Key Vault to store secrets that named values can reference. Secrets updated in the key vault are automatically rotated in API Management
 - Develop a communication strategy to notify users of breaking API version updates.
-- Configure [diagnostic settings](/azure/api-management/api-management-howto-use-azure-monitor#resource-logs) to forward AllMetrics and AllLogs to Log Analytics workspace.
+- Configure [diagnostic settings](/azure/api-management/api-management-howto-use-azure-monitor#resource-logs) to forward AllMetrics and AllLogs to a Log Analytics workspace.
 
 ## Business continuity and disaster recovery
 
