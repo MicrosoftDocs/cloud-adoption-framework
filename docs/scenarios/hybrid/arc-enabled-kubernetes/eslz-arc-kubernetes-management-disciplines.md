@@ -45,7 +45,7 @@ The following architecture diagram shows Azure Arc-enabled Kubernetes cluster mo
 **Cluster management:**
 
 - [Azure Arc-enabled Kubernetes extensions](/azure/azure-arc/kubernetes/extensions) require you to allow more URLs on firewalls or proxy servers. Depending on the extensions you're installing, planning ahead to accommodate extra URLs can help you minimize change management timelines.
-- If you onboard an on-premises or multicloud Kubernetes cluster with the [auto-upgrade toggle off](/azure/azure-arc/kubernetes/agent-upgrade#toggle-auto-upgrade-on-or-off-when-connecting-cluster-to-azure-arc), consider upgrading Azure Arc-enabled Kubernetes agents regularly so they stay up to date with latest product releases and you avoid expensive upgrade processes in the future.
+- If you onboard an on-premises or multicloud Kubernetes cluster with the [auto-upgrade toggle off](/azure/azure-arc/kubernetes/agent-upgrade#toggle-auto-upgrade-on-or-off-when-connecting-cluster-to-azure-arc), consider upgrading Azure Arc-enabled Kubernetes agents regularly so they stay up to date with the latest product releases and you avoid expensive upgrade processes in the future.
 - Consider using [GitOps](/azure/azure-arc/kubernetes/tutorial-use-gitops-flux2) to manage Arc-enabled Kubernetes agent and cluster extension updates and maintain consistent deployments across all clusters and environments. For detailed guidance, see the [CI/CD workflow using GitOps](./eslz-arc-kubernetes-cicd-gitops-disciplines.md) and [platform disciplines](./eslz-arc-kubernetes-automation-disciplines.md) critical design areas.
 - Consider using the [Azure Arc-enabled Kubernetes cluster connect](/azure/azure-arc/kubernetes/conceptual-cluster-connect) feature to connect to *apiserver* without needing any inbound port to be enabled on your firewall. To understand how this feature works, review the [network connectivity critical design area](./eslz-arc-kubernetes-network-connectivity.md).
 
@@ -54,7 +54,7 @@ The following architecture diagram shows Azure Arc-enabled Kubernetes cluster mo
 - Review and consider the [supported configuration for Azure Monitor Container insights](/azure/azure-monitor/containers/container-insights-enable-arc-enabled-clusters?toc=/azure/azure-arc/kubernetes/toc.json#supported-configurations) with Azure Arc-enabled Kubernetes. Decide if Azure Monitor Container insights meet your organization's needs for Azure Arc-enabled Kubernetes cluster monitoring or not.
 - Consider using a dedicated Log Analytics workspace for each region to collect logs and metrics from Azure Arc-enabled Kubernetes clusters and monitor and report across multiple clusters in a specific environment. For more information, see [Designing your Azure Monitor Logs deployment](/azure/azure-monitor/logs/design-logs-deployment).
 - Consider using Azure Monitor [ITSM connector integration](/azure/azure-monitor/alerts/itsmc-overview) with your organization's IT service management tools to raise incidents for Azure Monitor alerts and track issue resolution.
-- If you use the [semi-connected network connectivity mode](/azure/azure-arc/kubernetes/conceptual-connectivity-modes#understand-connectivity-modes), consider using private endpoints to connect to [Azure Log Analytics](/azure/azure-monitor/logs/private-link-design) workspaces through Azure ExpressRoute or VPN connectivity so you can collect logs and metrics from Azure Arc-enabled Kubernetes clusters and monitors.
+- If you use the [semi-connected network connectivity mode](/azure/azure-arc/kubernetes/conceptual-connectivity-modes#understand-connectivity-modes), consider using private endpoints to connect to [Azure Log Analytics](/azure/azure-monitor/logs/private-link-design) workspaces through Azure ExpressRoute or VPN connectivity so you can collect logs and metrics from Azure Arc-enabled Kubernetes clusters and monitor.
 
 ## Design recommendations
 
@@ -83,7 +83,7 @@ The following diagram shows Azure Resource Graph being used for status monitorin
 
 ## Next steps
 
-For more information about your hybrid and multicloud cloud journey, see the following articles:
+For more information about your hybrid and multicloud journey, see the following articles:
 
 - Review the [prerequisites](/azure/azure-arc/kubernetes/quickstart-connect-cluster?tabs=azure-cli#prerequisites) for Azure Arc-enabled Kubernetes.
 - Review the [validated Kubernetes distributions](/azure/azure-arc/kubernetes/validation-program#validated-distributions) for Azure Arc-enabled Kubernetes.

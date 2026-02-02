@@ -12,7 +12,7 @@ ms.custom: e2e-hybrid, think-tank, e2e-arc-enabled-kubernetes
 
 This article contains key design considerations and best practices for managing extensions of Azure Arc-enabled Kubernetes deployments.
 
-Before you read this article, be sure you understand governance principles and review [Enterprise-scale for AKS](/azure/cloud-adoption-framework/scenarios/aks/enterprise-scale-landing-zone) so you understand the relevant concepts for using Azure landing zones in a container environment.
+Before you read this article, be sure you understand governance principles and review [Enterprise-scale for AKS](/azure/cloud-adoption-framework/scenarios/app-platform/aks/landing-zone-accelerator) so you understand the relevant concepts for using Azure landing zones in a container environment.
 
 ## Architecture
 
@@ -44,7 +44,7 @@ The following diagram illustrates overall integration for extensions for Azure A
 
 ## Next steps
 
-For more information about your hybrid and multicloud cloud journey, see the following articles.
+For more information about your hybrid and multicloud journey, see the following articles.
 
 - Review the [prerequisites](/azure/azure-arc/kubernetes/quickstart-connect-cluster?tabs=azure-cli#prerequisites) for Azure Arc-enabled Kubernetes.
 - Review the [validated Kubernetes distributions](/azure/azure-arc/kubernetes/validation-program#validated-distributions) for Azure Arc-enabled Kubernetes.

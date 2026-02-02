@@ -83,12 +83,12 @@ During the onboarding process, Azure Arc-enabled Kubernetes provisions agents in
 
 ## Next steps
 
-For more information about your hybrid and multicloud cloud journey, see the following articles.
+For more information about your hybrid and multicloud journey, see the following articles.
 
 - Review the [prerequisites](/azure/azure-arc/kubernetes/quickstart-connect-cluster?tabs=azure-cli#prerequisites) for Azure Arc-enabled Kubernetes.
 - Review the [validated Kubernetes distributions](/azure/azure-arc/kubernetes/validation-program#validated-distributions) for Azure Arc-enabled Kubernetes.
 - Learn about [GitHub Actions for Azure](/azure/developer/github/github-actions) to understand how you can use GitHub Actions to automate Azure resource deployments.
-- Learn about [Azure Pipelines](/azure/devops/pipelines/get-started/what-is-azure-pipelines) to understand you can use Azure Pipelines for automation.
+- Learn about [Azure Pipelines](/azure/devops/pipelines/get-started/what-is-azure-pipelines) to understand how you can use Azure Pipelines for automation.
 - Experience Azure Arc-enabled Kubernetes automated scenarios with [Azure Arc Jumpstart](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_k8s/).
 - Learn about Azure Arc via the [Azure Arc learning path](/training/paths/manage-hybrid-infrastructure-with-azure-arc/).
 - See [Frequently Asked Questions - Azure Arc-enabled](/azure/azure-arc/kubernetes/faq) to find answers to most common questions.

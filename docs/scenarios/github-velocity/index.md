@@ -14,7 +14,7 @@ ms.custom: think-tank
 
 Innovation is the new currency in today's competitive landscape. Ride sharing, streaming content, self-driving cars, and other services have fundamentally changed people's daily rhythms while turning markets upside down and showing how the competitive landscape has moved from physical assets to digital experiences.
 
-These types of superior digital experience are leading a disruption where well-established businesses face stiff competition from companies that can innovate and deliver value to their customers faster. To compete and avoid disruption, businesses need to build a culture of innovation and use the best and most fitting tools and cloud services.
+These types of superior digital experiences are leading a disruption where well-established businesses face stiff competition from companies that can innovate and deliver value to their customers faster. To compete and avoid disruption, businesses need to build a culture of innovation and use the best and most fitting tools and cloud services.
 
 GitHub provides a range of features that can help companies to:
 
@@ -60,15 +60,15 @@ The following architecture diagram highlights the security checks that run in th
 
 - [GitHub Actions](https://docs.github.com/actions/learn-github-actions) are custom workflows that provide CI/CD capabilities directly in repositories. Computers named runners host these CI/CD jobs.
 
-- [Microsoft Entra ID](/entra/fundamentals/whatis) is a multitenant, cloud-based identity service that controls access to Azure and other cloud applications like Microsoft 365 and GitHub.
+- [Microsoft Entra ID](/entra/fundamentals/what-is-entra) is a multitenant, cloud-based identity service that controls access to Azure and other cloud applications like Microsoft 365 and GitHub.
 
 - [Azure App Service](https://azure.microsoft.com/services/app-service/) provides a framework for building, deploying, and scaling web apps. This platform offers built-in infrastructure maintenance, security patching, and scaling.
 
 - [Azure Policy](/azure/governance/policy/overview) helps teams manage and prevent IT issues through policy definitions that can enforce rules for cloud resources. For instance, if a project is about to deploy a virtual machine with an unrecognized SKU, Azure Policy sends alerts about the problem and stops the deployment.
 
-- [Microsoft Defender for Cloud](/azure/security-center/security-center-introduction) provides unified security management and advanced threat protection across hybrid cloud workloads.
+- [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) provides unified security management and advanced threat protection across hybrid cloud workloads.
 
-- [Azure Monitor](/azure/azure-monitor/overview) collects and analyzes performance metrics, activity logs, and other application telemetry. This service alerts applications and personnel when it identifies irregular conditions.
+- [Azure Monitor](/azure/azure-monitor/fundamentals/overview) collects and analyzes performance metrics, activity logs, and other application telemetry. This service alerts applications and personnel when it identifies irregular conditions.
 
 ## InnerSource
 
@@ -136,7 +136,7 @@ GitHub DevSecOps installations cover many security scenarios. Possibilities incl
 
 For more information, see:
 
-- [DevSecOps in GitHub: Azure solution ideas](/azure/architecture/solution-ideas/articles/devsecops-in-github)
+- [DevSecOps in GitHub: Azure solution ideas](/devops/devsecops/enable-devsecops-azure-github)
 - [Code scanning a GitHub repository using GitHub advanced security within an Azure DevOps pipeline](https://github.blog/2020-10-27-code-scanning-a-github-repository-using-github-advanced-security-within-an-azure-devops-pipeline/)
 - [Applying DevSecOps to your software supply chain](https://github.blog/2020-12-03-applying-devsecops-to-your-software-supply-chain/)
 

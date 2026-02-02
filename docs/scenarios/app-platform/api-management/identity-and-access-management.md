@@ -32,7 +32,7 @@ Learn more about the [identity and access management](../../../ready/landing-zon
 - Create appropriate [groups](/azure/api-management/api-management-howto-create-groups) to control the visibility of the products.
 - Manage access to the developer portal using [Microsoft Entra External ID](/azure/api-management/api-management-howto-entra-external-id).
 - Reporting:
-  - Make use of built-in [analytics](/azure/api-management/howto-use-analytics).
+  - Make use of built-in [analytics](/azure/api-management/monitor-api-management).
   - Integrate API Management with [Application Insights](/azure/api-management/api-management-howto-app-insights).
   - Review [diagnostic logs](/azure/api-management/api-management-howto-use-azure-monitor#resource-logs).
   - Create custom reports.

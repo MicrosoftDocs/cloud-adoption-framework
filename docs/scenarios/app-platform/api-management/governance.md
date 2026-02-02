@@ -25,6 +25,6 @@ Learn more about the [Azure governance](../../../ready/landing-zone/design-area/
 ## Design recommendations
 
 - Use Azure built-in roles to provide least-privilege permissions to manage the API Management service.
-- Configure [diagnostics settings](/azure/api-management/api-management-howto-use-azure-monitor) within API Management to output logs and metrics to Azure Monitor.
+- Configure [diagnostic settings](/azure/api-management/api-management-howto-use-azure-monitor) within API Management to output logs and metrics to Azure Monitor.
 - Implement an [error handling policy](/azure/api-management/api-management-error-handling-policies) at the global level.
 - All API Management policies should include a [`<base/>`](/azure/api-management/set-edit-policies#use-base-element-to-set-policy-evaluation-order) element.
