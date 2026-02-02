@@ -180,7 +180,7 @@ The Kubernetes API receives requests to perform actions in the cluster. As this 
 
 ## Microservices observability and security
 
-Implementing a service mesh lets you introduce authentication and authorization to your services connections, which enforces the least privilege principle and creates a more secure environment. By default, pods sit on a flat trusted network. In a service mesh implementation, a set of sidecars is deployed that act as network proxies. These sidecars manage east-west communication, encrypt traffic, and improve traffic observability overall.
+Implementing a service mesh lets you introduce authentication and authorization to your service connections, which enforces the least privilege principle and creates a more secure environment. By default, pods sit on a flat trusted network. In a service mesh implementation, a set of sidecars is deployed that act as network proxies. These sidecars manage east-west communication, encrypt traffic, and improve traffic observability overall.
 
 Service mesh implementations can protect against:
 
@@ -193,7 +193,7 @@ For more information, review the [Open Service Mesh implementation critical desi
 
 ## Next steps
 
-For more information about your hybrid and multicloud cloud journey, see the following articles.
+For more information about your hybrid and multicloud journey, see the following articles.
 
 - Review the [prerequisites](/azure/azure-arc/kubernetes/quickstart-connect-cluster?tabs=azure-cli#prerequisites) for Azure Arc-enabled Kubernetes.
 - Review the [validated Kubernetes distributions](/azure/azure-arc/kubernetes/validation-program#validated-distributions) for Azure Arc-enabled Kubernetes.

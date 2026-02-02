@@ -34,7 +34,7 @@ The following diagram provides a visual overview of resource tagging for Azure A
 
 ## Next steps
 
-For more information about your hybrid and multicloud cloud journey, see the following articles:
+For more information about your hybrid and multicloud journey, see the following articles:
 
 - Review the [prerequisites](/azure/azure-arc/kubernetes/quickstart-connect-cluster?tabs=azure-cli#prerequisites) for Azure Arc-enabled Kubernetes.
 - Review the [validated Kubernetes distributions](/azure/azure-arc/kubernetes/validation-program#validated-distributions) for Azure Arc-enabled Kubernetes.
