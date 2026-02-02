@@ -20,7 +20,7 @@ The Cloud Adoption Framework organizes Azure guidance into seven core methodolog
 
 | CAF methodology (phases) | Outcome | How |
 |-------------|---------|-------|
-| 🚀 [**1. Strategy**](/azure/cloud-adoption-framework/strategy/) | Cloud adoption aligned to business goals | Pap business drivers to cloud outcomes. |
+| 🚀 [**1. Strategy**](/azure/cloud-adoption-framework/strategy/) | Cloud adoption aligned to business goals | Map business drivers to cloud outcomes. |
 | 📝 [**2. Plan**](/azure/cloud-adoption-framework/plan/) | A plan for cloud adoption | Operating model, cloud skills, migration plan, and cloud cost estimation. |
 | 🛠️ [**3. Ready**](/azure/cloud-adoption-framework/ready/) | An Azure environment ready for workloads | Azure purchasing, tenant setup, platform landing zone, application landing zones. |
 | 🌐 [**4. Adopt**](/azure/cloud-adoption-framework/adopt/) | Workloads in Azure meeting business needs | Migrate, modernize, or build-cloud native workloads. |
