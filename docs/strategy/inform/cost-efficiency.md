@@ -48,7 +48,7 @@ To implement cost efficiency in cloud adoption, you must effectively manage and 
 
 Proper financial management plays a crucial role in this process. It helps prevent cost overruns and align spending with actual operational needs. It also helps ensure that every dollar that you invest in the cloud directly contributes to achieving business objectives. Effective financial management safeguards against inefficiencies and reinforces strategic alignment across teams.
 
-Embrace FinOps to cultivate a culture of financial responsibility that emphasizes accountability and data-driven decision making. Essential practices empower this culture, such as accurate forecasting, strategic budgeting, and real-time cost tracking. FinOps also encourage collaboration between finance, operations, and engineering teams to ensure shared ownership of cloud spending and outcomes.
+Embrace FinOps to cultivate a culture of financial responsibility that emphasizes accountability and data-driven decision making. Essential practices empower this culture, such as accurate forecasting, strategic budgeting, and real-time cost tracking. FinOps also encourages collaboration between finance, operations, and engineering teams to ensure shared ownership of cloud spending and outcomes.
 
 Implement FinOps to find the right balance between innovation and cost effectiveness. A proper balance helps you make your cloud adoption a strategic advantage rather than a financial burden.
 
@@ -58,7 +58,7 @@ Consider the following cost efficiency considerations for your cloud adoption st
 
 - _Explore the FinOps Framework:_ Check out the [FinOps Framework](/cloud-computing/finops/) for best practices to maximize cloud business value.
 
-- _Assess your financial posture:_ Use the [FinOps Review assessment](/assessments/ad1c0f6b-396b-44a4-924b-7a4c778a13d3/) to get recommendations for maximizing cloud business value.
+- _Assess your financial posture:_ Use the [FinOps Review assessment](/assessments/60c02533-b280-4dec-ac5f-3f10cdd238b9/) to get recommendations for maximizing cloud business value.
 
 ## Next step
 

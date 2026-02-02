@@ -47,7 +47,7 @@ Use the Microsoft [Zero Trust guidance](/security/zero-trust/zero-trust-overview
 
 - Provides a tightly focused and structured [adoption framework](/security/zero-trust/adopt/zero-trust-adoption-overview) that aligns with the adoption journey phases of the Cloud Adoption Framework for Azure. Use this guidance to align your overall cloud adoption with the Zero Trust approach.
 
-- Explains how [Azure](/security/zero-trust/azure-infrastructure-overview), [Microsoft 365](/microsoft-365/security/microsoft-365-zero-trust), and [AI services](/security/zero-trust/copilots/apply-zero-trust-copilots-overview) can help you align your cloud estate to the Zero Trust principles.
+- Explains how [Azure](/security/zero-trust/azure-infrastructure-overview), [Microsoft 365](/security/zero-trust/microsoft-365-zero-trust), and [AI services](/security/zero-trust/copilots/apply-zero-trust-copilots-overview) can help you align your cloud estate to the Zero Trust principles.
 - Provides guidance about aligning your [development practices](/security/zero-trust/develop/overview) to the Zero Trust principles.
 
 **Recommendations:**
