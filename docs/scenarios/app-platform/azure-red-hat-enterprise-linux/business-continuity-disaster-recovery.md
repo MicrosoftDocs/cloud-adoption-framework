@@ -63,7 +63,7 @@ For more information about BCDR capabilities for an RHEL platform infrastructure
 
 For cloud-native applications in Linux containers, use a Kubernetes-based platform to ensure scalability, high availability, and redundancy. Consider using the [Azure Red Hat OpenShift](https://azure.microsoft.com/products/openshift) platform or a self-managed OpenShift deployment with replicated or geo-replicated storage.
 
-For native web application front ends and stateless applications, you can use many of the Azure-native services that provide application availability. For an architecture that use such services, see [Baseline highly available zone-redundant web application](/azure/architecture/web-apps/app-service/architectures/baseline-zone-redundant).
+For native web application front ends and stateless applications, you can use many of the Azure-native services that provide application availability. For an architecture that uses such services, see [Baseline highly available zone-redundant web application](/azure/architecture/web-apps/app-service/architectures/baseline-zone-redundant).
 
 
 The preceding architectures use various Azure services for availability zones. The multiregion architecture uses geo-replication features for content and Azure Front Door as a load balancing service.
