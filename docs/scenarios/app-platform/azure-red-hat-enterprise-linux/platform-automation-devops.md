@@ -239,7 +239,7 @@ Azure Arc represents a significant advancement in cloud computing and offers a u
 
 :::image type="content" source="images/platform-automation-devops/arc-ecosystem.png" alt-text="Diagram that shows the Azure Arc ecosystem." border="false" lightbox="images/platform-automation-devops/arc-ecosystem.png":::
 
-For more information, see [Connect an existing Linux server to Azure Arc](/azure/cloud-adoption-framework/scenarios/hybrid/strategy).
+For more information about hybrid and multicloud strategy with Azure Arc, see the [Cloud Adoption Framework hybrid and multicloud with Azure Arc guidance](/azure/cloud-adoption-framework/scenarios/hybrid/strategy).
 
 ### ARM templates
 

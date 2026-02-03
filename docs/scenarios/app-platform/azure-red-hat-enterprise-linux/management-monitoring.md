@@ -185,7 +185,7 @@ To enable advanced monitoring in Azure Monitor for VMs:
   
    > [!Note]
    >
-   > To create a new Log Analytics workspace to store the monitoring data from the VM, see [Create a Log Analytics workspace](/azure/azure-monitor/logs/quick-create-workspace). The workspace must belong to one of the [supported regions](/azure/azure-monitor/vm/vminsights-enable).
+   > To create a new Log Analytics workspace to store the monitoring data from the VM, see [Create a Log Analytics workspace](/azure/azure-monitor/logs/quick-create-workspace). The workspace must be in a region that supports Azure Monitor for VMs. For more information, see [Enable Azure Monitor for VMs](/azure/azure-monitor/vm/vminsights-enable).
   
    After you enable monitoring, you might need to wait several minutes before you can view the performance metrics for the VM.
 
