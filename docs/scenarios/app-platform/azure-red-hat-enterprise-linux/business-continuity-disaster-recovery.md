@@ -36,7 +36,7 @@ For mission-critical systems, measure the RPO in minutes or seconds to help avoi
 
 High availability and disaster recovery design considerations for RHEL-based workloads depend on the technologies that support those workloads. Many modern workloads can take advantage of native Azure services to provide redundancy across availability zones and across regions. Use Azure services to manage data replication, automatically scale availability sets, and control update and fault domains. These practices make it easier to ensure the availability of RHEL deployments.
 
-Database solutions and other stateful applications might need operating system-centric solutions to provide high availability and disaster recovery. Consult with the application developer or vendor to verify the solutions that the applications support. For more information, see [High availability and disaster recovery for IaaS apps](/azure/architecture/virtual-machines/baseline).
+Database solutions and other stateful applications might need operating system-centric solutions to provide high availability and disaster recovery. Consult with the application developer or vendor to verify the solutions that the applications support.
 
 | Azure feature or service| Definition | Considerations |
 |----|----|----|
