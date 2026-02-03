@@ -29,7 +29,7 @@ Azure offers technologies that work together to facilitate highly secure remote 
   -  VMs deployed with classic deployment models.
   -  VMs protected by Azure Firewalls on the same virtual network as the VM.
   -  VMs protected by Azure firewalls controlled by Azure Firewall Manager.
-- [Azure Bastion](/azure/bastion/bastion-overview) provides an extra layer of control. It enables highly secure and seamless RDP and SSH connectivity to your VMs directly from the Azure portal or [native client](/azure/bastion/connect-native-client-windows) over a secure TLS channel. Azure Bastion also negates the need for hybrid connectivity.
+- [Azure Bastion](/azure/bastion/bastion-overview) provides an extra layer of control. It enables highly secure and seamless RDP and SSH connectivity to your VMs directly from the Azure portal or [native client](/azure/bastion/native-client) over a secure TLS channel. Azure Bastion also negates the need for hybrid connectivity.
 - Use the appropriate Azure Bastion SKU based on your requirements. For more information, see [Azure Bastion configuration settings](/azure/bastion/configuration-settings).
 - Review the [Azure Bastion FAQ](/azure/bastion/bastion-faq) for answers to common questions about the service.
 - Azure Bastion with Kerberos authentication requires that both the domain controllers and Azure Bastion be located in the same virtual network. For more information, see [Azure Bastion Kerberos authentication](/azure/bastion/kerberos-authentication-portal).
@@ -39,14 +39,14 @@ Azure offers technologies that work together to facilitate highly secure remote 
   - Azure Bastion must use the Premium or Standard SKU. The *IP-based connection* feature must be enabled on the Azure Bastion resource. For more information, see [Azure Bastion IP-based connection documentation](/azure/bastion/connect-ip-address).
   - Azure Bastion can be deployed in any spoke virtual network that's connected to a Virtual WAN. Azure Bastion provides access to VMs in its own virtual network via Virtual WAN virtual network connections. It can also provide access to VMs in other virtual networks that are connected to the same Virtual WAN through its associated hubs. A successful deployment requires the appropriate [routing](/azure/virtual-wan/about-virtual-hub-routing) configuration. For example, you can deploy Azure Bastion by using the [virtual hub extension pattern](/azure/architecture/networking/guide/private-link-virtual-wan-dns-virtual-hub-extension-pattern).
   - The Azure Bastion Standard SKU requires a dedicated subnet (AzureBastionSubnet), while the Developer SKU doesn't.
-- The [Developer SKU](/azure/bastion/quickstart-developer-sku) is a free, zero-configuration, always-on version of the Azure Bastion service. Unlike the Standard SKU, the Developer SKU isn't a dedicated resource but it operates as part of a shared pool and doesn't support virtual network peering.
+- The [Developer SKU](/azure/bastion/quickstart-host-portal) is a free, zero-configuration, always-on version of the Azure Bastion service. Unlike the Standard SKU, the Developer SKU isn't a dedicated resource but it operates as part of a shared pool and doesn't support virtual network peering.
 
 > [!TIP]
 > Azure Bastion IP-based connection also allows for connectivity to on-premises-based machines if hybrid connectivity exists between the Azure Bastion resource and the machine that you want to connect to. For more information, see [Connect to a VM via a specified private IP address](/azure/bastion/connect-ip-address).
 
 ## Design recommendations
 
-- For production workloads, deploy the Azure Bastion Premium or Standard SKU. For sandbox and test environments, use the Developer SKU in [selected regions](/azure/bastion/quickstart-developer-sku).
+- For production workloads, deploy the Azure Bastion Premium or Standard SKU. For sandbox and test environments, use the Developer SKU in [selected regions](/azure/bastion/quickstart-host-portal).
 
 - Use existing ExpressRoute or VPN connectivity to provide remote access to Azure VMs that are accessible from your on-premises network.
 - In a Virtual WAN-based network topology where you require remote access to VMs over the internet, you can deploy Azure Bastion in each spoke virtual network of the respective VMs.
@@ -65,7 +65,7 @@ Azure offers technologies that work together to facilitate highly secure remote 
   :::image type="content" source="./media/azure-standalone-bastion.png" alt-text="Diagram that shows an Azure standalone virtual network topology." lightbox="./media/azure-standalone-bastion.png" border="false":::
 
 - Configure NSG rules to protect Azure Bastion and the VMs to which it provides connectivity. For more information, see [Work with VMs and NSGs in Azure Bastion](/azure/bastion/bastion-nsg).
-- Configure Azure Bastion diagnostic logs to be sent to the central Log Analytics workspace. For more information, see [Enable and work with Azure Bastion resource logs](/azure/bastion/diagnostic-logs).
+- Configure Azure Bastion diagnostic logs to be sent to the central Log Analytics workspace. For more information, see [Enable and work with Azure Bastion resource logs](/azure/bastion/monitor-bastion).
 - Ensure that you create the [required RBAC role assignments](/azure/bastion/bastion-faq#roles) for the users or groups that connect to the VMs via Azure Bastion.
 - If you connect to Linux VMs via SSH, establish the connection via a [private key in Azure Key Vault](/azure/bastion/bastion-connect-vm-ssh-linux#akv).
 - Deploy Azure Bastion and ExpressRoute or VPN access to address specific needs like emergency break-glass access.

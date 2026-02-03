@@ -37,7 +37,7 @@ This article also describes how application teams can ensure that services autom
 
 Private DNS zones are typically hosted centrally in the same Azure subscription where the hub virtual network deploys. This central hosting practice is driven by [cross-premises DNS name resolution][link-4] and other needs for central DNS resolution such as Windows Server Active Directory. In most cases, only networking and identity administrators have permissions to manage DNS records in the zones.
 
-Application teams have permissions to create Azure resource in their own subscription. They don't have any permissions in the central networking connectivity subscription, which includes managing DNS records in the private DNS zones. This access limitation means that they don't have the ability to [create the DNS records required][link-4] when deploying Azure PaaS services with private endpoints.
+Application teams have permissions to create Azure resources in their own subscription. They don't have any permissions in the central networking connectivity subscription, which includes managing DNS records in the private DNS zones. This access limitation means that they don't have the ability to [create the DNS records required][link-4] when deploying Azure PaaS services with private endpoints.
 
 The following diagram shows a typical high-level architecture for enterprise environments with central DNS resolution and name resolution for Private Link resources via Azure Private DNS:
 
@@ -50,7 +50,7 @@ In the previous diagram, it's important to highlight that:
 - The DNS private resolver hosted in the hub virtual network uses the Azure-provided DNS (168.63.129.16) as a forwarder.
 - The hub virtual network must be linked to the Private DNS zone names for Azure services, such as `privatelink.blob.core.windows.net`, as shown in the diagram.
 - All Azure virtual networks use the DNS private resolver that's hosted in the hub virtual network.
-- The DNS private resolver isn't authoritative for customer's corporate domains, like Active Directory domain names, because it's just a forwarder. The DNS private resolver should have outbound endpoint forwarders to the customer's corporate domains, pointing to the on-premises DNS servers (172.16.1.10 and 172.16.1.11) or DNS servers deployed in Azure that are authoritative for such zones.
+- The DNS private resolver isn't authoritative for customers' corporate domains, like Active Directory domain names, because it's just a forwarder. The DNS private resolver should have outbound endpoint forwarders to the customers' corporate domains, pointing to the on-premises DNS servers (172.16.1.10 and 172.16.1.11) or DNS servers deployed in Azure that are authoritative for such zones.
 
 > [!NOTE] 
 > You can deploy a DNS private resolver in your hub virtual network alongside your ExpressRoute gateway. However, you must ensure that the resolution of public FQDNs is permitted and replies with a valid response via a DNS forwarding ruleset rule to the targeted DNS server. Some Azure services rely on the ability to resolve public DNS names to function. For more information, see [DNS forwarding ruleset rules](/azure/dns/private-resolver-endpoints-rulesets#rules).
@@ -136,7 +136,7 @@ In addition to the private DNS zones, you also need to [create a set of custom A
 
 2. `Deny` the ability to create a private DNS zone with the `privatelink` prefix policy.
 
-   Use a centralized DNS architecture with a conditional forwarder and private DNS zones hosted in the subscriptions managed by the platform team. It's necessary to prevent the application teams owners from creating their own Private Link private DNS zones and linking services into their subscriptions.
+   Use a centralized DNS architecture with a conditional forwarder and private DNS zones hosted in the subscriptions managed by the platform team. It's necessary to prevent the application team owners from creating their own Private Link private DNS zones and linking services into their subscriptions.
 
    Ensure that when your application team creates a private endpoint, the option to `Integrate with private DNS zone` is set to `No` in the Azure portal.
 
@@ -422,7 +422,7 @@ After policy definitions are deployed, [assign the policies][link-7] at the desi
 
 After the platform team finishes the configuration:
 
-* The applications teams' Azure subscriptions are ready for the team to create Azure PaaS services that have exclusive private endpoint access.
+* The application teams' Azure subscriptions are ready for the team to create Azure PaaS services that have exclusive private endpoint access.
 
 * The team must ensure that the DNS records for private endpoints are automatically registered to the corresponding private DNS zones, and that the DNS records are removed after a private endpoint is deleted.
 
@@ -460,7 +460,7 @@ After the platform team deploys the platform infrastructure components (private 
 
    ![A screenshot that shows where to review the private endpoint, FQDN, and private IP.][image-12]
 
-10. Check the activity log for the resource group where the private endpoint was created. Or you can check the activity log of the private endpoint itself. After a few minutes, a `DeployIfNotExist` policy action runs, which configures the DNS zone group on the private endpoint:
+10. Check the activity log for the resource group where the private endpoint was created. Or you can check the activity log of the private endpoint itself. After a few minutes, a `DeployIfNotExists` policy action runs, which configures the DNS zone group on the private endpoint:
 
     ![A screenshot that shows the activity log for the resource group and the private endpoint.][image-13]
 

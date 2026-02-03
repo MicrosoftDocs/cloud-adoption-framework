@@ -22,13 +22,13 @@ This article provides recommended connectivity approaches for using Azure PaaS s
 
   - Many PaaS services allow public access restrictions based on **Trusted Azure Services** E.g. [Azure Container Registry](/azure/container-registry/allow-access-trusted-services#trusted-services)
   
-  - **Virtual network injection** provides [dedicated private deployments](/azure/virtual-network/virtual-network-for-azure-services) for supported services. Management plane traffic still flows through public IP addresses.
+  - **Virtual network injection** provides [dedicated private deployments](/azure/virtual-network/vnet-integration-for-azure-services) for supported services. Management plane traffic still flows through public IP addresses.
 
   ![A diagram showing V Net injected service connectivity.](./media/deploy-service-into-vnet.png)
 
-  - Some PaaS services are compatible with [Azure **Private Link**](/azure/private-link/private-endpoint-overview#private-link-resource) which allows private access via an IP address within a customer. For more information, see [Key benefits of Private Link](/azure/private-link/private-link-overview#key-benefits).
+  - Some PaaS services are compatible with [Azure **Private Link**](/azure/private-link/private-endpoint-overview#private-link-resource) which allows private access via an IP address within a customer's network. For more information, see [Key benefits of Private Link](/azure/private-link/private-link-overview#key-benefits).
 
-  - [Virtual network **service endpoints**](/azure/virtual-network/virtual-network-service-endpoints-overview) provide service-level access from selected subnets to selected PaaS services. Azure Storage offers [Service Endpoint Policies](/azure/virtual-network/virtual-network-service-endpoint-policies-overview) which allow further restricting the use of Service Endpoints to specific Storage Account. It is also possible to utilize Network Virtual Appliances (NVA) to perform Layer-7 inspection and FQDN filtering in combination with Service Endpoints, but this approach comes with additional performance and scaling considerations.
+  - [Virtual network **service endpoints**](/azure/virtual-network/virtual-network-service-endpoints-overview) provide service-level access from selected subnets to selected PaaS services. Azure Storage offers [Service Endpoint Policies](/azure/virtual-network/virtual-network-service-endpoint-policies-overview) which allow further restricting the use of Service Endpoints to a specific Storage Account. It is also possible to utilize Network Virtual Appliances (NVA) to perform Layer-7 inspection and FQDN filtering in combination with Service Endpoints, but this approach comes with additional performance and scaling considerations.
 
 > [What is the difference between service endpoints and private endpoints?](/azure/private-link/private-link-faq#what-is-the-difference-between-service-endpoints-and-private-endpoints-) offers an explanation of differences between Private Link endpoints and VNet service endpoints.
 

@@ -20,7 +20,7 @@ Effective network traffic inspection is critical for maintaining security and co
 
 *Azure Network Watcher* has multiple tools you should consider if you're using infrastructure as a service (IaaS) solutions:
 
-- *Packet capture:* Network Watcher lets you create temporary capture packet sessions on traffic headed to and from a virtual machine. Each packet capture session has a time limit. When the session ends, packet capture creates a `pcap` file that you can download and analyze. Network Watcher packet capture can't give you continuous port mirroring with these time constraints. For more information, see [Packet capture overview](/azure/network-watcher/network-watcher-packet-capture-overview).
+- *Packet capture:* Network Watcher lets you create temporary capture packet sessions on traffic headed to and from a virtual machine. Each packet capture session has a time limit. When the session ends, packet capture creates a `pcap` file that you can download and analyze. Network Watcher packet capture can't give you continuous port mirroring with these time constraints. For more information, see [Packet capture overview](/azure/network-watcher/packet-capture-overview).
 
 - *Virtual network flow logs:* [Virtual network flow logs](/azure/network-watcher/vnet-flow-logs-overview) operate at Layer 4 and record all IP flows going through a virtual network. Azure Storage receives flow data from virtual network flow logs or a Log Analytics Workspace through [traffic analytics](/azure/network-watcher/traffic-analytics). You can access the data and export it to any visualization tool, security information and event management solution, or intrusion detection system. For more information, see [data analysis options](/azure/network-watcher/flow-logs-read?tabs=vnet).
 
@@ -30,7 +30,7 @@ Effective network traffic inspection is critical for maintaining security and co
 
 ## Design recommendations
 
-- Use [virtual network flow logs](/azure/network-watcher/vnet-flow-logs-overview) and migrate from existing [NSG flow logs](/azure/network-watcher/network-watcher-nsg-flow-logging-overview) configuration. Virtual network benefits and guidance:
+- Use [virtual network flow logs](/azure/network-watcher/vnet-flow-logs-overview) and migrate from existing [NSG flow logs](/azure/network-watcher/nsg-flow-logs-overview) configuration. Virtual network benefits and guidance:
 
   - Plan and migrate your current NSG flow logs configuration to virtual network flow logs. See [Migrate NSG flow logs](/azure/network-watcher/nsg-flow-logs-migrate).
 

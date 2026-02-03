@@ -12,7 +12,7 @@ ms.custom: think-tank
 
 # Plan for IP addressing
 
-It's important your organization plans for IP addressing in Azure. Planning ensures the IP address space doesn't overlap across on-premises locations and Azure regions.
+It's important that your organization plans for IP addressing in Azure. Planning ensures the IP address space doesn't overlap across on-premises locations and Azure regions.
 
 **Design considerations:**
 
@@ -22,11 +22,11 @@ It's important your organization plans for IP addressing in Azure. Planning ensu
 
   :::image type="content" source="./media/vpn-nat.png" alt-text="{Diagram that shows how NAT works with VPN Gateway.}":::
 
-- You can add address space after you create a virtual network. This process doesn't need an outage if the virtual network is already connected to another virtual network via virtual network peering. Instead, each remote peering needs a [resync operation](/azure/architecture/networking/prefixes/add-ip-space-peered-vnet) done after the network space has changed.
+- You can add address space after you create a virtual network. This process doesn't need an outage if the virtual network is already connected to another virtual network via virtual network peering. Instead, each remote peering needs a [resync operation](/azure/virtual-network/update-virtual-network-peering-address-space) done after the network space has changed.
 
 - Azure [reserves five IP addresses](/azure/virtual-network/virtual-networks-faq#are-there-any-restrictions-on-using-ip-addresses-within-these-subnets) within each subnet. Factor in those addresses when you're sizing virtual networks and encompassed subnets.
 
-- Some Azure services require [dedicated subnets](/azure/virtual-network/virtual-network-for-azure-services#services-that-can-be-deployed-into-a-virtual-network). These services include Azure Firewall and Azure VPN Gateway.
+- Some Azure services require [dedicated subnets](/azure/virtual-network/vnet-integration-for-azure-services#services-that-can-be-deployed-into-a-virtual-network). These services include Azure Firewall and Azure VPN Gateway.
 
 - You can delegate subnets to certain services to create instances of a service within the subnet.
 
@@ -55,7 +55,7 @@ It's important your organization plans for IP addressing in Azure. Planning ensu
 
 - Take the services you're going to use into consideration, there are some services with reserved IPs (IP Addresses), like [AKS with CNI networking](/azure/aks/configure-azure-cni#prerequisites)
 
-- Use [nonroutable landing zone spoke virtual networks](/azure/architecture/guide/networking/ipv4-exhaustion#method-1-nonroutable-landing-zone-spoke-virtual-networks) and [Azure Private Link service](/azure/architecture/guide/networking/ipv4-exhaustion#method-2-azure-private-link-services) to prevent IPv4 exhaustion.
+- Use [nonroutable landing zone spoke virtual networks](/azure/architecture/networking/guide/internet-protocol-version-4-exhaustion#method-1-nonroutable-landing-zone-spoke-virtual-networks) and [Azure Private Link service](/azure/architecture/networking/guide/internet-protocol-version-4-exhaustion#method-2-azure-private-link-services) to prevent IPv4 exhaustion.
 
 ## IPv6 considerations
 
@@ -97,7 +97,7 @@ Here's a closer look at what a typical architecture might look like:
 
    ![Diagram that shows Azure Front Door providing access to an IPv4-only back end.](./media/azure-ipv4-ipv6-azure-front-door.png)
 
-These are main differences between the NVA approach and the Azure Front Door approach:
+These are the main differences between the NVA approach and the Azure Front Door approach:
  
 - NVAs are customer-managed, work at Layer 4 of the OSI model, and can be deployed in the same Azure virtual network as the application, with a private and public interface.
 - Azure Front Door is a global Azure PaaS service and operates at Layer 7 (HTTP/HTTPS). The application back end is an internet-facing service that can be locked down to accept only traffic from Azure Front Door.
@@ -124,7 +124,7 @@ Using an IPAM tool can assist you with IP address planning in Azure as it provid
 
 **Design considerations:**
 
-Numerous IPAM tools are available for your consideration, depending on your requirements and the size of your organization. The options spans from having a basic Excel-based inventory to open-source community-driven solution or comprehensive enterprise products with advanced features and support.
+Numerous IPAM tools are available for your consideration, depending on your requirements and the size of your organization. The options span from having a basic Excel-based inventory to open-source community-driven solutions or comprehensive enterprise products with advanced features and support.
 
 - Consider these factors when evaluating what IPAM tool to implement:
   - Minimum features required by your organization
@@ -137,7 +137,7 @@ Numerous IPAM tools are available for your consideration, depending on your requ
 
 - Consider evaluating an open-source IPAM tool like [Azure IPAM](https://azure.github.io/ipam). Azure IPAM is a lightweight solution built on the Azure platform. It automatically discovers IP address utilization within your Azure tenant and enables you to manage it all from a centralized UI or via a RESTful API.
 
-- Consider your organizations operating model and the ownership of the IPAM tool. The goal of implementing an IPAM tool is to streamline the process of requesting new IP address spaces for application teams without dependencies and bottlenecks.
+- Consider your organization's operating model and the ownership of the IPAM tool. The goal of implementing an IPAM tool is to streamline the process of requesting new IP address spaces for application teams without dependencies and bottlenecks.
 
 - An important part of the IPAM tool functionality is to inventory IP address space usage and logically organize it.
 
@@ -154,4 +154,4 @@ Numerous IPAM tools are available for your consideration, depending on your requ
 
 - Create a systematic arrangement for your IP address spaces by structuring them according to Azure regions and workload archetypes, ensuring a clean and traceable network inventory.
 
-- The decommissioning process for workloads should include the removal of IP address spaces that is no longer used, which can later be repurposed for upcoming new workloads, promoting efficient resource utilization.
+- The decommissioning process for workloads should include the removal of IP address spaces that are no longer used, which can later be repurposed for upcoming new workloads, promoting efficient resource utilization.
