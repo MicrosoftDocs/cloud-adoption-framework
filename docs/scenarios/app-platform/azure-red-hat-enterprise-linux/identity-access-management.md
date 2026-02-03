@@ -86,7 +86,7 @@ Consider the following critical design recommendations for your Red Hat IdM depl
 
 - Configure Red Hat Satellite for Red Hat IdM integration to automate management tasks such as forward and reverse DNS zones, host registration, and Secure Shell (SSH) key generation and registration within Red Hat IdM. Red Hat IdM provides an integrated DNS service. Combine this integration with the Windows Server Active Directory trust so that Windows Server Active Directory users can seamlessly sign in to RHEL systems and services via SSO.
 
-- Back up your Red Hat IdM resources. Typically, you deploy Red Hat IdM in a self-managed multi-main replica configuration, but you must also ensure that you have proper system and data backups. Use Red Hat IdM hidden replicas to implement full offline backups without interrupting service availability. Use Azure Backup for encrypted backup facility. 
+- Back up your Red Hat IdM resources. Typically, you deploy Red Hat IdM in a self-managed multi-main replica configuration, but you must also ensure that you have proper system and data backups. Use Red Hat IdM hidden replicas to implement full offline backups without interrupting service availability. Use Azure Backup for an encrypted backup facility. 
 
 - Have an external certificate authority (CA), corporate CA, or partner CA sign the Red Hat IdM root certificate when you deploy RHEL with the integrated CA.
 
@@ -98,7 +98,7 @@ Use the [Planning Identity Management guide](https://docs.redhat.com/documentati
 
 - Use Azure RHEL virtual machines with Microsoft Entra ID to limit user rights and minimize the number of users who have administrator rights. Limit user rights to protect the configuration and secrets access. For more information, see [Azure built-in roles for compute](/azure/role-based-access-control/built-in-roles/compute).
 
-- Follow the principle of least privilege, and assign the minimum permissions that users need for authorized tasks. Give full access and just-in-time access only as needed. Use [Microsoft Entra PIM](/azure/defender-for-cloud/just-in-time-access-usage) and [IAM in Azure landing zones](/azure/cloud-adoption-framework/ready/landing-zone/design-area/identity-access).  
+- Follow the principle of least privilege, and assign the minimum permissions that users need for authorized tasks. Give full access and just-in-time access only as needed. Use [Microsoft Entra PIM](/azure/defender-for-cloud/enable-just-in-time-access) and [IAM in Azure landing zones](/azure/cloud-adoption-framework/ready/landing-zone/design-area/identity-access).  
 
 - Use [managed identities](/entra/identity/managed-identities-azure-resources/overview) to access Microsoft Entra ID protected RHEL resources without needing to manage secrets for workloads that run on Azure.
 

@@ -36,7 +36,7 @@ For mission-critical systems, measure the RPO in minutes or seconds to help avoi
 
 High availability and disaster recovery design considerations for RHEL-based workloads depend on the technologies that support those workloads. Many modern workloads can take advantage of native Azure services to provide redundancy across availability zones and across regions. Use Azure services to manage data replication, automatically scale availability sets, and control update and fault domains. These practices make it easier to ensure the availability of RHEL deployments.
 
-Database solutions and other stateful applications might need operating system-centric solutions to provide high availability and disaster recovery. Consult with the application developer or vendor to verify the solutions that the applications support. For more information, see [High availability and disaster recovery for IaaS apps](/azure/architecture/example-scenario/infrastructure/iaas-high-availability-disaster-recovery).
+Database solutions and other stateful applications might need operating system-centric solutions to provide high availability and disaster recovery. Consult with the application developer or vendor to verify the solutions that the applications support. For more information, see [High availability and disaster recovery for IaaS apps](/azure/architecture/virtual-machines/baseline).
 
 | Azure feature or service| Definition | Considerations |
 |----|----|----|
@@ -66,7 +66,7 @@ For cloud-native applications in Linux containers, use a Kubernetes-based platfo
 For native web application front ends and stateless applications, you can use many of the Azure-native services that provide application availability. For architectures that use such services, see:
 
 - [Baseline highly available zone-redundant web application](/azure/architecture/web-apps/app-service/architectures/baseline-zone-redundant).
-- [Highly available multiregion web application](/azure/architecture/web-apps/app-service/architectures/multi-region).
+- [Highly available multiregion web application](/azure/architecture/web-apps/guides/enterprise-app-patterns/reliable-web-app/dotnet/guidance).
 
 The preceding architectures use various Azure services for availability zones. The multiregion architecture uses geo-replication features for content and Azure Front Door as a load balancing service.
 
