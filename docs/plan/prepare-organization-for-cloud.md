@@ -31,17 +31,21 @@ A cloud operating model defines how your organization manages cloud resources, t
 
 1. **"Decentralized" cloud operating model**: In a decentralized model, each team owns its platform landing zone and manages its workloads independently, including governance and operations. This approach suits highly skilled teams in startups or innovation programs. To mitigate security and compliance risks, assess team capabilities, provide training, and conduct regular audits.
 
-1. **Understand hybrid cloud operating models.** Many organizations benefit from a hybrid approach, where different teams operate under different models based on their maturity and needs. For example, core systems might follow a centralized or shared model, while innovation teams operate more independently. Evaluate team capabilities and business priorities to determine where hybrid models add value without compromising governance.
-
-1. **Evolve operations as needed.** As your organization scales, reassess whether your current operations approach supports your goals. Regularly reassess whether your current model supports your strategic goals and operational needs.
-
-1. **Engage business and IT leadership.** Successful cloud operations require alignment across the organization. Engage both business and IT leaders to ensure the operations approach reflects shared priorities. This collaboration fosters buy-in, secures necessary resources, and ensures the model has the authority to drive change.
-
 | Operations approach | Best for | Responsibilities | Pros | Cons |
 |-----------------|----------|------------------|------|------|
 | Centralized | Startups, single-cloud estates | One cloud team manages every function | Simpler control, uniform standards | One team becomes a bottleneck as scale grows |
 | Shared Management | Mid-size or enterprise estates, hybrid, or multicloud | Platform teams build the [platform landing zones](../ready/index.md), manages shared services, and governance guardrails. <br> Workload teams work autonomously within guardrails | Balances standards with team agility | Requires clear responsibilities and strong coordination |
 | Decentralized | Tech-savvy startups, innovation programs | Each team owns every cloud task | High speed and autonomy | Weaker standardization, higher risk of security gaps |
+
+## Align cloud operations with organizational strategy
+
+As your cloud adoption matures, it becomes increasingly important to define how your organization will operate, govern, and scale its cloud environment. The following principles help ensure that your cloud operating model remains aligned with business priorities, team capabilities, and long‑term strategic goals. They emphasize the importance of choosing the right operational approach, adapting it over time, and securing strong alignment across business and IT leadership.
+
+1. **Understand hybrid cloud operating models.** Many organizations benefit from a hybrid approach, where different teams operate under different models based on their maturity and needs. For example, core systems might follow a centralized or shared model, while innovation teams operate more independently. Evaluate team capabilities and business priorities to determine where hybrid models add value without compromising governance.
+
+1. **Evolve operations as needed.** As your organization scales, reassess whether your current operations approach supports your goals. Regularly reassess whether your current model supports your strategic goals and operational needs.
+
+1. **Engage business and IT leadership.** Successful cloud operations require alignment across the organization. Engage both business and IT leaders to ensure the operations approach reflects shared priorities. This collaboration fosters buy-in, secures necessary resources, and ensures the model has the authority to drive change.
 
 ## Plan your cloud responsibilities
 
