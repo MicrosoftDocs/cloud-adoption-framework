@@ -65,7 +65,6 @@ For cloud-native applications in Linux containers, use a Kubernetes-based platfo
 
 For native web application front ends and stateless applications, you can use many of the Azure-native services that provide application availability. For architectures that use such services, see:
 
-- [Highly available multiregion web application](/azure/architecture/web-apps/guides/enterprise-app-patterns/reliable-web-app/dotnet/guidance).
 
 The preceding architectures use various Azure services for availability zones. The multiregion architecture uses geo-replication features for content and Azure Front Door as a load balancing service.
 
