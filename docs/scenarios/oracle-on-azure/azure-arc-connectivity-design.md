@@ -58,7 +58,7 @@ Azure Arc agents require secure outbound connectivity to Azure service endpoints
 
 1. **Consider Azure NAT Gateway for simplified outbound connectivity.** For organizations requiring simpler outbound connectivity without advanced firewall features, use [Azure NAT Gateway](/azure/nat-gateway/nat-overview) to provide secure outbound internet access for Azure Arc agents. NAT Gateway offers a cost-effective alternative when centralized security monitoring through firewalls isn't required. For NAT Gateway design patterns, see [NAT Gateway design guidance](/azure/nat-gateway/nat-gateway-design).
 
-1. **Configure network virtual appliances (NVAs) to allow required service endpoints.** Update your NVA configurations to permit Azure Arc service endpoints while maintaining existing security rules for OCI management traffic. For NVA integration patterns, see [NVAs in Azure](/azure/architecture/reference-architectures/dmz/nva-ha).
+1. **Configure network virtual appliances (NVAs) to allow required service endpoints.** Update your NVA configurations to permit Azure Arc service endpoints while maintaining existing security rules for OCI management traffic. For NVA integration patterns, see [Network virtual appliance high availability](/azure/architecture/networking/guide/network-virtual-appliance-high-availability).
 
 1. **Validate DNS resolution for Azure Arc service endpoints.** Ensure that Domain Name System (DNS) resolution works correctly for all required Azure Arc endpoints from your VM cluster nodes. Test connectivity before you deploy Azure Arc agents. For DNS configuration guidance, see [Name resolution for resources in Azure virtual networks](/azure/virtual-network/virtual-networks-name-resolution-for-vms-and-role-instances).
 
@@ -74,7 +74,7 @@ Organizations using TLS inspection can integrate Azure Arc agents with their sec
 
 1. **Exclude specific Azure Arc extensions from TLS inspection when required.** Some Azure Arc extensions require exclusion from TLS inspection to function properly. Identify these extensions and configure appropriate bypass rules. For extension management guidance, see [Azure Arc-enabled servers extensions](/azure/azure-arc/servers/manage-vm-extensions).
 
-1. **Maintain security monitoring for Azure Arc traffic.** Configure your TLS inspection infrastructure to monitor and log Azure Arc communications while allowing the necessary traffic to flow. This approach provides security visibility without blocking functionality. For security monitoring patterns, see [Azure Monitor network insights](/azure/azure-monitor/insights/network-insights-overview).
+1. **Maintain security monitoring for Azure Arc traffic.** Configure your TLS inspection infrastructure to monitor and log Azure Arc communications while allowing the necessary traffic to flow. This approach provides security visibility without blocking functionality. For security monitoring patterns, see [Azure Monitor network insights](/azure/network-watcher/network-insights-overview).
 
 1. **Test Azure Arc functionality after TLS inspection configuration.** Validate that all Azure Arc features work correctly with your TLS inspection setup before you deploy to production environments. For testing and validation guidance, see [Troubleshoot Azure Arc-enabled servers connectivity](/azure/azure-arc/servers/troubleshoot-connectivity).
 
@@ -88,9 +88,9 @@ Azure Arc-specific Defender integration requirements include:
 
 1. **Configure security endpoint accessibility.** Verify that [Microsoft Defender for Cloud network requirements](/azure/defender-for-cloud/defender-for-cloud-introduction) and [Microsoft Sentinel integration endpoints](/azure/sentinel/connect-services-diagnostic-setting-based) are accessible through your Azure Arc connectivity setup.
 
-1. **Coordinate with existing Oracle security monitoring.** Integrate Defender alerts with existing Oracle security tools to avoid duplication while enhancing overall security posture. For integration patterns, see [Microsoft Defender for Cloud integration](/azure/defender-for-cloud/integration-overview).
+1. **Coordinate with existing Oracle security monitoring.** Integrate Defender alerts with existing Oracle security tools to avoid duplication while enhancing overall security posture. For integration patterns, see [Microsoft Defender for Cloud integration with ServiceNow](/azure/defender-for-cloud/integration-servicenow).
 
-### Use Entra ID for SSH Authentication and Privileged Access Monitoring on Arc-Enabled Cluster Nodes
+### Use Entra ID for SSH authentication and privileged access monitoring on Arc-enabled cluster nodes
 
 Enable secure and scalable SSH access to Azure Arc-enabled Oracle Exadata cluster nodes using Entra ID.
 
@@ -146,7 +146,7 @@ Implement Azure Policy and machine configuration policies to enforce network sec
 
 1. **Use Azure Policy for Azure Arc-enabled servers to monitor network security compliance.** Implement [Azure Policy for Azure Arc-enabled servers](/azure/governance/policy/samples/built-in-policies#guest-configuration) to continuously monitor compliance with your network security policies and configurations.
 
-1. **Implement machine configuration policies for operating system-level network controls.** Use [Azure machine configuration policies](/azure/governance/machine-configuration/overview) to enforce network security settings at the operating system level. This approach provides group policy object (GPO)-like control over Azure Arc-connected servers and ensures consistent security configurations.
+1. **Implement machine configuration policies for operating system-level network controls.** Use [Azure machine configuration policies](/azure/governance/machine-configuration/overview/01-overview-concepts) to enforce network security settings at the operating system level. This approach provides group policy object (GPO)-like control over Azure Arc-connected servers and ensures consistent security configurations.
 
 1. **Establish governance baseline for comprehensive security management.** Follow the [Governance, security, and compliance baseline for Azure Arc-enabled servers](/azure/cloud-adoption-framework/scenarios/hybrid/arc-enabled-servers/eslz-security-governance-and-compliance) to implement comprehensive governance across your hybrid infrastructure.
 
@@ -206,10 +206,10 @@ Monitor Azure Arc connectivity health by tracking agent connectivity status, net
 | Connectivity | [Azure Arc-enabled servers](/azure/azure-arc/servers/overview) | Hybrid server management for Oracle Database@Azure VM clusters |
 | Network security | [Azure Firewall](/azure/firewall/overview) | Network security and Azure Arc endpoint access control |
 | Outbound connectivity | [Azure NAT Gateway](/azure/nat-gateway/nat-overview) | Simplified outbound internet connectivity for Azure Arc agents |
-| Monitoring | [Azure Monitor](/azure/azure-monitor/overview) | Azure Arc connectivity and performance monitoring |
+| Monitoring | [Azure Monitor](/azure/azure-monitor/fundamentals/overview) | Azure Arc connectivity and performance monitoring |
 | Security | [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) | Security monitoring for Azure Arc-enabled Oracle infrastructure |
 | Governance | [Azure Policy](/azure/governance/policy/overview) | Policy-driven governance and compliance for Azure Arc-enabled Oracle infrastructure |
-| Configuration | [Azure machine configuration](/azure/governance/machine-configuration/overview) | Operating system configuration management and compliance |
+| Configuration | [Azure machine configuration](/azure/governance/machine-configuration/overview/01-overview-concepts) | Operating system configuration management and compliance |
 | Connectivity | [Azure Arc gateway (preview)](/azure/azure-arc/servers/arc-gateway) | Simplified endpoint management for Azure Arc connectivity |
 | Documentation | [Azure Arc Jumpstart](https://azurearcjumpstart.io/) | Comprehensive guidance and automation examples for Azure Arc scenarios |
 
