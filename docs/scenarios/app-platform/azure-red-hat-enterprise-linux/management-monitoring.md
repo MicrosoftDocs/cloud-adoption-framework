@@ -12,7 +12,7 @@ ms.custom: sfi-image-nochange
 
 This article describes how to use various services and tools to manage and monitor Red Hat Enterprise Linux (RHEL) on Azure.
 
-If you do a greenfield deployment, you can use the Azure [change tracking](/azure/automation/change-tracking/overview) feature to easily identify changes. You can also use the Azure Automation [update management feature](/azure/automation/update-management/overview) to manage operating system updates for your RHEL virtual machines (VMs).
+If you do a greenfield deployment, you can use the Azure [change tracking](/azure/azure-change-tracking-inventory/overview-monitoring-agent) feature to easily identify changes. You can also use [Update Manager](/azure/update-manager/workflow-update-manager) to manage operating system updates for your RHEL virtual machines (VMs).
 
 For existing brownfield deployments, you can use [Red Hat Satellite](https://access.redhat.com/documentation/red_hat_satellite/6.15), and extend the service into Azure from on-premises environments to take advantage of existing skill sets.
 
@@ -34,7 +34,7 @@ Content in Satellite flows from external content sources to Satellite Server. Ca
 
 ## Deployment strategy
 
-We recommend that you use automated software update management solutions instead of manual update installation processes. Consider the integration with on-premises solutions when you work with brownfield installations. When you deploy net-new workloads on Azure, use cloud-native tooling, such as [update management](/azure/automation/update-management/overview) or [Ansible on Azure](/azure/developer/ansible/overview), to significantly reduce the time to value compared to using other partner open-source software.
+We recommend that you use automated software update management solutions instead of manual update installation processes. Consider the integration with on-premises solutions when you work with brownfield installations. When you deploy net-new workloads on Azure, use cloud-native tooling, such as [Update Manager](/azure/update-manager/workflow-update-manager) or [Ansible on Azure](/azure/developer/ansible/overview), to significantly reduce the time to value compared to using other partner open-source software.
 
 ### Considerations
 
@@ -54,7 +54,7 @@ Implement the following recommendations to help manage and monitor your environm
 
 #### Use custom images instead of Azure Marketplace images
 
-You can use predefined Azure Marketplace images to build Azure VMs. Or you can use [custom Linux images](/azure/virtual-machines/linux/create-upload-generic) to build and control your specific compliance and security needs. If you use supported Linux distributions, such as RHEL, follow specific guidance for building your customer image, such as [RHEL 8 guidance](/azure/virtual-machines/linux/redhat-create-upload-vhd#rhel-8-using-hyper-v-manager). If you use custom Linux images, follow the [update manager best practice guidance](/azure/update-manager/manage-updates-customized-images).
+You can use predefined Azure Marketplace images to build Azure VMs. Or you can use [custom Linux images](/azure/virtual-machines/linux/create-upload-generic) to build and control your specific compliance and security needs. If you use supported Linux distributions, such as RHEL, follow specific guidance for building your custom image, such as [RHEL 8 guidance](/azure/virtual-machines/linux/redhat-create-upload-vhd#rhel-8-using-hyper-v-manager). If you use custom Linux images, follow the [Update Manager best practice guidance](/azure/update-manager/manage-updates-customized-images).
 
 #### Perform update tests in a nonproduction environment
 
@@ -138,7 +138,7 @@ For more information, see:
 
 RHEL provides a robust set of [command line tools](https://access.redhat.com/documentation/red_hat_enterprise_linux/8/html/monitoring_and_managing_system_status_and_performance/overview-of-performance-monitoring-options_monitoring-and-managing-system-status-and-performance) that provide deep-level performance and tuning of the operating system, running processes, and infrastructure components on an individual VM.
 
-You can use [Azure Monitor](/azure/azure-monitor/overview) to collect data, analyze data, and create reports for both your cloud and on-premises environments. The following diagram shows the tools that you can use.
+You can use [Azure Monitor](/azure/azure-monitor/fundamentals/overview) to collect data, analyze data, and create reports for both your cloud and on-premises environments. The following diagram shows the tools that you can use.
 
 :::image type="content" source="images/management-monitoring/azure-monitor-tools.png" alt-text="Diagram that shows Azure Monitor tools." border="false" lightbox="images/management-monitoring/azure-monitor-tools.png":::
 
@@ -185,7 +185,7 @@ To enable advanced monitoring in Azure Monitor for VMs:
   
    > [!Note]
    >
-   > To create a new Log Analytics workspace to store the monitoring data from the VM, see [Create a Log Analytics workspace](/azure/azure-monitor/learn/quick-create-workspace). The workspace must belong to one of the [supported regions](/azure/azure-monitor/insights/vminsights-configure-workspace#supported-regions).
+   > To create a new Log Analytics workspace to store the monitoring data from the VM, see [Create a Log Analytics workspace](/azure/azure-monitor/logs/quick-create-workspace). The workspace must be in a region that supports Azure Monitor for VMs. For more information, see [Enable Azure Monitor for VMs](/azure/azure-monitor/vm/vminsights-enable).
   
    After you enable monitoring, you might need to wait several minutes before you can view the performance metrics for the VM.
 
@@ -215,4 +215,3 @@ The following example creates an alert for average CPU usage.
 ## Next step
 
 - [Governance and compliance for Red Hat Enterprise Linux on Azure](./governance-compliance.md)
-

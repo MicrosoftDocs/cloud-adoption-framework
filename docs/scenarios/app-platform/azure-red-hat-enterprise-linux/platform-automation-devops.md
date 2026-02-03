@@ -146,7 +146,7 @@ For more information, see:
 
 - [Development lifecycle](/azure/cloud-adoption-framework/ready/considerations/development-strategy-development-lifecycle). Explore key design considerations and recommendations about using automation to create a landing zone. This guidance discusses the repository, branch, automated builds, deployment, and rollback strategy.
 
-- [IaC](/azure/cloud-adoption-framework/ready/considerations/infrastructure-as-code). Explore the benefits of implementing Azure landing zones via IaC. Learn about considerations related to code structure, tools, and technology. 
+- [IaC](/azure/cloud-adoption-framework/ready/landing-zone/implementation-options). Explore the benefits of implementing Azure landing zones via IaC. Learn about considerations related to code structure, tools, and technology. 
 - [Environments](/azure/cloud-adoption-framework/ready/considerations/environments). Learn how to use multiple environments to build, test, and release code with greater speed and frequency. This approach makes deployment as straightforward as possible.
 - [Test-driven development](/azure/cloud-adoption-framework/ready/considerations/development-strategy-test-driven-development). Learn how to use unit testing to improve the quality of new features and make improvements in the Azure landing zone code base. 
 
@@ -239,7 +239,7 @@ Azure Arc represents a significant advancement in cloud computing and offers a u
 
 :::image type="content" source="images/platform-automation-devops/arc-ecosystem.png" alt-text="Diagram that shows the Azure Arc ecosystem." border="false" lightbox="images/platform-automation-devops/arc-ecosystem.png":::
 
-For more information, see [Connect an existing Linux server to Azure Arc](/azure/cloud-adoption-framework/manage/hybrid/server/best-practices/onboard-server-linux).
+For more information about hybrid and multicloud strategy with Azure Arc, see the [Cloud Adoption Framework hybrid and multicloud with Azure Arc guidance](/azure/cloud-adoption-framework/scenarios/hybrid/strategy).
 
 ### ARM templates
 
@@ -392,5 +392,3 @@ This integration ensures that resources that you deploy and manage through Azure
 - [Install Azure CLI on Linux](/cli/azure/install-azure-cli-linux)
 - [Run Azure CLI in a Docker container](/cli/azure/run-azure-cli-docker)
 - [Azure CLI documentation](/cli/azure)
-
-

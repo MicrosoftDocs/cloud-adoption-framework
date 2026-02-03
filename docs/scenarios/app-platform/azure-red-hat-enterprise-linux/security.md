@@ -93,7 +93,7 @@ To define the RBAC roles that you assign to RHEL machines, understand the roles 
 
 ### Use antivirus software
 
-Ensure that you have the appropriate antivirus software on your RHEL machine. Consider onboarding [Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint-linux) on Linux for protection against the latest vulnerabilities. Keep in mind that you shouldn't enable Defender for Cloud Standard on RHEL machines that you use to host SAP databases. Ensure that each RHEL machine and workload can run your endpoint-protection software.
+Ensure that you have the appropriate antivirus software on your RHEL machine. Consider onboarding [Microsoft Defender for Endpoint](/defender-endpoint/microsoft-defender-endpoint-linux) on Linux for protection against the latest vulnerabilities. Keep in mind that you shouldn't enable Defender for Cloud Standard on RHEL machines that you use to host SAP databases. Ensure that each RHEL machine and workload can run your endpoint-protection software.
 
 ### Manage secrets
 
@@ -109,7 +109,7 @@ You can incorporate RHEL system auditing and security compliance tools. Focus on
 
 Monitor and integrate with Ansible Automation Platform to identify, alert on, and remediate critical system files.
 
-Use complimentary operating system-level components on all Azure-based RHEL instances.
+Use complementary operating system-level components on all Azure-based RHEL instances.
 
 - **Enforce the code execution policy**: Use the *fapolicyd* daemon to limit the applications that can run in the RHEL instance.
 
