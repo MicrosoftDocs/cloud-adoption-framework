@@ -25,11 +25,11 @@ To monitor an Oracle workload on Virtual Machines landing zone accelerator, you 
 
 The first step is to set up general VM and managed disk monitoring.
 
-1. Enable [VM insights](/azure/azure-monitor/vm/vminsights-enable-portal).
+1. Enable [VM insights](/azure/azure-monitor/vm/vminsights-enable).
 
-1. Deploy Azure Monitor Agent and configure [data collection rules](/azure/azure-monitor/essentials/data-collection-rule-overview).
+1. Deploy Azure Monitor Agent and configure [data collection rules](/azure/azure-monitor/data-collection/data-collection-rule-overview).
 
-1. Collect [custom logs](/azure/azure-monitor/agents/data-collection-text-log?tabs=portal).
+1. Collect [custom logs](/azure/azure-monitor/vm/data-collection-log-text).
 
 1. Monitor managed disk metrics.
 
@@ -74,7 +74,7 @@ The following table lists the performance metrics that the Oracle administrator 
 > [!NOTE]
 > In the **Severity** category, **0** has the highest severity and **2** has the lowest severity.
 
-When you monitor disk metrics, it's important to ensure that you don't exceed the database VM limits. The specific limits for managed disks are detailed in the technical specifications for each VM SKU. For more information, see [Sizes for VMs in Azure](/azure/virtual-machines/sizes). When you select the appropriate VM SKU, refer to the table and column **Max uncached disk throughput: IOPS/MB/s** to see how multiple managed disks attached to the VM can cumulatively provide higher combined IOPS and throughput. If the database I/O requirements during peak load exceed the maximum uncached disk throughput of the VM, the VM's I/O operations might be throttled. If there's insufficient IOPS or storage throughput per disk, throttling might occur at both the VM and disk levels.
+When you monitor disk metrics, it's important to ensure that you don't exceed the database VM limits. The specific limits for managed disks are detailed in the technical specifications for each VM SKU. For more information, see [Sizes for VMs in Azure](/azure/virtual-machines/sizes/overview). When you select the appropriate VM SKU, refer to the table and column **Max uncached disk throughput: IOPS/MB/s** to see how multiple managed disks attached to the VM can cumulatively provide higher combined IOPS and throughput. If the database I/O requirements during peak load exceed the maximum uncached disk throughput of the VM, the VM's I/O operations might be throttled. If there's insufficient IOPS or storage throughput per disk, throttling might occur at both the VM and disk levels.
 
 For more information, see [Disk metrics](/azure/virtual-machines/disks-metrics).
 
@@ -82,7 +82,7 @@ For more information, see [Disk metrics](/azure/virtual-machines/disks-metrics).
 
 If the database files are stored in Azure NetApp Files volumes, monitor Azure NetApp Files allocated storage, storage usage, volume IOPS, throughput, and latency. For more information about how to monitor Azure NetApp Files and related performance metrics, see [Ways to monitor Azure NetApp Files](/azure/azure-netapp-files/monitor-azure-netapp-files) and [Metrics for Azure NetApp Files](/azure/azure-netapp-files/azure-netapp-files-metrics).
 
-When you monitor Azure NetApp Files metrics, it's also important to monitor the VM's network bandwidth to ensure that its limit isn't exceeded. Because Azure NetApp Files volumes are mounted over the network by using the Network File System (NFS) protocol, they aren't restricted by the cumulative I/O throughput limits of any VM instance type. Instead, Azure NetApp Files is only limited by the network bandwidth of the database VM series. The specific limit for NFS-mounted storage is detailed in the column named **Max network bandwidth (MB/s)**. For more information about the technical specifications of the VM series, see [Edv5 and Edsv5-series](/azure/virtual-machines/edv5-edsv5-series).
+When you monitor Azure NetApp Files metrics, it's also important to monitor the VM's network bandwidth to ensure that its limit isn't exceeded. Because Azure NetApp Files volumes are mounted over the network by using the Network File System (NFS) protocol, they aren't restricted by the cumulative I/O throughput limits of any VM instance type. Instead, Azure NetApp Files is only limited by the network bandwidth of the database VM series. The specific limit for NFS-mounted storage is detailed in the column named **Max network bandwidth (MB/s)**. For more information about the technical specifications of the VM series, see [Edv5 and Edsv5-series](/azure/virtual-machines/sizes/memory-optimized/edv5-series).
 
 ### Configure the alerts for Azure VM metrics
 
