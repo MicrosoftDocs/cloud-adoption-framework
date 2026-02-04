@@ -209,6 +209,7 @@ Monitor Azure Arc connectivity health by tracking agent connectivity status, net
 | Monitoring | [Azure Monitor](/azure/azure-monitor/fundamentals/overview) | Azure Arc connectivity and performance monitoring |
 | Security | [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) | Security monitoring for Azure Arc-enabled Oracle infrastructure |
 | Governance | [Azure Policy](/azure/governance/policy/overview) | Policy-driven governance and compliance for Azure Arc-enabled Oracle infrastructure |
+| Configuration | [Azure machine configuration](/azure/governance/machine-configuration/overview) | Operating system configuration management and compliance |
 | Connectivity | [Azure Arc gateway (preview)](/azure/azure-arc/servers/arc-gateway) | Simplified endpoint management for Azure Arc connectivity |
 | Documentation | [Azure Arc Jumpstart](https://azurearcjumpstart.io/) | Comprehensive guidance and automation examples for Azure Arc scenarios |
 
