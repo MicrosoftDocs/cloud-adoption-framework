@@ -123,7 +123,7 @@ For more information, see [Provisioning Oracle Key Vault in Azure](https://docs.
 
 ### Integrate audit trails
 
-Application log monitoring is essential for detecting security threats at the application layer. Use the Microsoft Sentinel – Oracle Database Audit solution to collect and analyze Oracle database audit events. The Oracle Database Audit solution ingests Oracle audit records via Syslog using the [Azure Monitor Agent (AMA)](/azure/azure-monitor/agents/azure-monitor-agent-migration) into Azure Monitor Logs. This approach lets you correlate Oracle audit data with Azure platform logs and guest OS (Linux or Windows) logs in one workspace. The solution includes KQL parsers, analytics rules, hunting queries, and a workbook, so events are normalized and actionable once they land in your workspace.
+Application log monitoring is essential for detecting security threats at the application layer. Use the Microsoft Sentinel – Oracle Database Audit solution to collect and analyze Oracle database audit events. The Oracle Database Audit solution ingests Oracle audit records via Syslog using the [Azure Monitor Agent (AMA)](/azure/azure-monitor/agents/azure-monitor-agent-overview) into Azure Monitor Logs. This approach lets you correlate Oracle audit data with Azure platform logs and guest OS (Linux or Windows) logs in one workspace. The solution includes KQL parsers, analytics rules, hunting queries, and a workbook, so events are normalized and actionable once they land in your workspace.
 
 ## Next step
 
