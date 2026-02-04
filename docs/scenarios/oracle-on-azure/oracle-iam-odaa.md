@@ -81,7 +81,7 @@ For comprehensive security guidance beyond identity management, see [Security gu
 
 | Category | Tool | Description |
 |----------|------|-------------|
-| Identity federation | [Microsoft Entra ID](/entra/fundamentals/whatis) | Identity and access management platform for Azure and OCI federation |
+| Identity federation | [Microsoft Entra ID](/entra/fundamentals/what-is-entra) | Identity and access management platform for Azure and OCI federation |
 | Access control | [Azure RBAC](/azure/role-based-access-control/overview) | RBAC for Oracle Database@Azure resources |
 | Privileged access | [Microsoft Entra Privileged Identity Management](/entra/id-governance/privileged-identity-management/pim-configure) | Just-in-time privileged access management |
 | Identity protection | [Microsoft Entra ID Protection](/entra/id-protection/overview-identity-protection) | Risk-based identity security and automated remediation |

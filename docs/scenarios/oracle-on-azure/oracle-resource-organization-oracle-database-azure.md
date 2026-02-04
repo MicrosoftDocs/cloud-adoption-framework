@@ -173,7 +173,7 @@ The following table lists Azure tools and resources that support Oracle Database
 |----------|------|-------------|
 | Resource organization | [Azure Resource Manager](/azure/azure-resource-manager/management/overview) | Provides deployment and management capabilities for Oracle Database@Azure resources across multiple subscriptions |
 | Cost management | [Cost Management](/azure/cost-management-billing/costs/overview-cost-management) | Tracks expenses and usage patterns across Oracle Database@Azure deployments in multiple subscriptions |
-| Identity and access | [Microsoft Entra ID](/entra/fundamentals/whatis) | Manages user identities and access permissions for Oracle Database@Azure resources |
+| Identity and access | [Microsoft Entra ID](/entra/fundamentals/what-is-entra) | Manages user identities and access permissions for Oracle Database@Azure resources |
 | Resource tagging | [Azure resource tags](/azure/azure-resource-manager/management/tag-resources) | Organizes Oracle Database@Azure resources for cost allocation and governance |
 | Security monitoring | [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) | Provides unified security management for Oracle Database@Azure resources |
 | Network security | [Azure NSGs](/azure/virtual-network/network-security-groups-overview) | Controls network access to Oracle Database@Azure resources |
