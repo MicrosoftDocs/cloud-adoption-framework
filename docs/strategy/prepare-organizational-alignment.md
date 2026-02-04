@@ -134,4 +134,4 @@ Consider the following:
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Inform your cloud adoption strategy](./inform/index.md)
+> [Inform your cloud adoption strategy](./inform/cost-efficiency.md)
