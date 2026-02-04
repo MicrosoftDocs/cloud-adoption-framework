@@ -146,7 +146,7 @@ Implement Azure Policy and machine configuration policies to enforce network sec
 
 1. **Use Azure Policy for Azure Arc-enabled servers to monitor network security compliance.** Implement [Azure Policy for Azure Arc-enabled servers](/azure/governance/policy/samples/built-in-policies#guest-configuration) to continuously monitor compliance with your network security policies and configurations.
 
-1. **Implement machine configuration policies for operating system-level network controls.** Use [Azure machine configuration policies](/azure/governance/machine-configuration/overview/01-overview-concepts) to enforce network security settings at the operating system level. This approach provides group policy object (GPO)-like control over Azure Arc-connected servers and ensures consistent security configurations.
+1. **Implement machine configuration policies for operating system-level network controls.** Use [Azure machine configuration policies](/azure/governance/machine-configuration/overview) to enforce network security settings at the operating system level. This approach provides group policy object (GPO)-like control over Azure Arc-connected servers and ensures consistent security configurations.
 
 1. **Establish governance baseline for comprehensive security management.** Follow the [Governance, security, and compliance baseline for Azure Arc-enabled servers](/azure/cloud-adoption-framework/scenarios/hybrid/arc-enabled-servers/eslz-security-governance-and-compliance) to implement comprehensive governance across your hybrid infrastructure.
 
