@@ -88,7 +88,7 @@ Azure Arc-specific Defender integration requirements include:
 
 1. **Configure security endpoint accessibility.** Verify that [Microsoft Defender for Cloud network requirements](/azure/defender-for-cloud/defender-for-cloud-introduction) and [Microsoft Sentinel integration endpoints](/azure/sentinel/connect-services-diagnostic-setting-based) are accessible through your Azure Arc connectivity setup.
 
-1. **Coordinate with existing Oracle security monitoring.** Integrate Defender alerts with existing Oracle security tools to avoid duplication while enhancing overall security posture. For integration patterns, see [Microsoft Defender for Cloud integration with ServiceNow](/azure/defender-for-cloud/integration-servicenow).
+1. **Coordinate with existing Oracle security monitoring.** Integrate Defender alerts with existing Oracle security tools to avoid duplication while enhancing overall security posture. For integration patterns, see [Microsoft Defender for Cloud integration](/azure/defender-for-cloud/integration-servicenow).
 
 ### Use Entra ID for SSH authentication and privileged access monitoring on Arc-enabled cluster nodes
 
