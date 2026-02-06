@@ -71,7 +71,8 @@ An application code assessment identifies compatibility issues and modernization
 
 ### Use automated tools to assess application code
 
-1. **Use the GitHub Copilot app modernization tool (.NET and Java).** GitHub Copilot app modernization provides detailed assessments for .NET and Java workloads. It combines AppCAT's assessment capabilities with Copilot's AI-driven assistance to make modernization faster and easier. This integration acts as a coding partner, helping you to:
+1. **Use the GitHub Copilot app modernization tool (.NET and Java).** [GitHub Copilot app modernization](/dotnet/core/porting/github-copilot-app-modernization/overview) provides detailed assessments for .NET and Java workloads. It combines AppCAT's assessment capabilities with Copilot's AI-driven assistance to make modernization faster and easier. This integration acts as a coding partner, helping you to:
+
     - Capture application related dependencies
     - Revise and optimize source code for Azure services
     - Update code and remediate Common Vulnerability and Exposures (CVEs)
