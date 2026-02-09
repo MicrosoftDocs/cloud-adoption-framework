@@ -19,7 +19,7 @@ Modernizing an app isn't a one-time event. You often can further fine-tune once 
 
 2. **Tweak service-specific settings.** Each Azure service has its own configuration settings and best practices. Use the Azure Well-Architected Framework's [Azure services guides](/azure/well-architected/service-guides/?product=popular) to align configurations with best practices.
 
-3. **Address security configuration gaps immediately.** Run Azure security assessment tools now that the system is in steady state. [Microsoft Defender for Cloud](/azure/defender-for-cloud/review-security-recommendations) to see if there are any high or medium security recommendations for your resources. Resolve critical and high-severity findings within 48 hours to maintain security posture. Configure continuous assessment to detect new issues as workloads evolve.
+3. **Address security configuration gaps immediately.** Now that the system is in a steady state, run Azure security assessment tools. [Microsoft Defender for Cloud](/azure/defender-for-cloud/review-security-recommendations) to see if there are any high or medium security recommendations for your resources. Resolve critical and high-severity findings within 48 hours to maintain security posture. Configure continuous assessment to detect new issues as workloads evolve.
 
 ## Validate operational readiness
 
