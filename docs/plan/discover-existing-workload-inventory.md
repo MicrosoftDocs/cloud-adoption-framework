@@ -43,7 +43,7 @@ A long inventory list can be overwhelming. The plan should include a method to p
 
 For each workload identified, the plan should capture key business context and requirements. This information guides migration strategy (next section) and ensures decisions align with business needs. Important details to document
 
-1. **Owners and stakeholders**: Document who  (VP of Sales for a CRM) and from an IT perspective (application owner, infrastructure owner). List all stakeholders who must be involved in planning its move.
+1. **Owners and stakeholders**: Document who owns the workload from a business perspective (for example, VP of Sales for a CRM) and from an IT perspective (application owner, infrastructure owner). List all stakeholders who must be involved in planning its move.
 
 1. **Business function and criticality**: Document what the workload does, and how important it is. Record a short description of its purpose and classify its criticality level (high/medium/low). Criticality often ties to how much downtime can be tolerated.
 
