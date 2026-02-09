@@ -29,7 +29,7 @@ A complete inventory of your technical assets forms the foundation of your cloud
 
 A long inventory list can be overwhelming. The plan should include a method to prioritize which workloads to tackle first in the cloud adoption effort. Not all workloads are equally important or equally suitable for immediate migration, so use a prioritization framework.
 
-1. **Use business criticality.** Rank workloads by how critical they're to business operations, revenue, or customer experience. Often, a few workloads are mission-critical (if they go down, major business losses) while others are less critical. High business value systems might be high priority to ensure they benefit from cloud scalability or resilience, or sometimes lower priority if risk of migrating them is too high.
+1. **Use business criticality.** Rank workloads by how critical they are to business operations, revenue, or customer experience. Often, a few workloads are mission-critical (if they go down, major business losses) while others are less critical. High business value systems might be high priority to ensure they benefit from cloud scalability or resilience, or sometimes lower priority if risk of migrating them is too high.
 
 1. **Estimate cloud readiness.** Make quick, high-level estimates of how ready each workload is for cloud migration, based on what you already know. A detailed technical assessment comes later, but for now, consider factors like technical complexity, legacy components, and known risks. Some workloads might be easy wins, while others might require significant rework. You might prioritize simpler workloads to build momentum, or choose a moderately complex but high-value system to maximize early success.
 
@@ -43,15 +43,15 @@ A long inventory list can be overwhelming. The plan should include a method to p
 
 For each workload identified, the plan should capture key business context and requirements. This information guides migration strategy (next section) and ensures decisions align with business needs. Important details to document
 
-1. **Owners and stakeholders**: Document "owns" the workload from a business perspective (VP of Sales for a CRM) and from an IT perspective (application owner, infrastructure owner). List all stakeholders who must be involved in planning its move.
+1. **Owners and stakeholders**: Document who owns the workload from a business perspective (for example, VP of Sales for a CRM) and from an IT perspective (application owner, infrastructure owner). List all stakeholders who must be involved in planning its move.
 
 1. **Business function and criticality**: Document what the workload does, and how important it is. Record a short description of its purpose and classify its criticality level (high/medium/low). Criticality often ties to how much downtime can be tolerated.
 
-1. **Data sensitivity and compliance**: Note the classification of data the system handles (public, internal, confidential, highly confidential). Document compliance requirements (PCI, HIPAA, GDPR) that apply to this workload. For instance, if data residency is required in a certain region, that influences the cloud architecture for it.
+1. **Data sensitivity and compliance**: Note the classification of data the system handles (public, internal, confidential, highly confidential). Document compliance requirements that apply to this workload. For instance, if data residency is required in a certain region, that influences the cloud architecture for it.
 
 1. **Operational constraints**: Document specific maintenance windows, blackout periods (high-traffic periods), and uptime requirements. Document any such constraints because they affect migration scheduling and target architecture (high-availability needs).
 
-1. **Projected timeline or deadlines**: If there’s a desired timeline for migrating this workload, note that as well. For example, maybe you have contract renewals or data center lease ending. These factors feed into the overall roadmap scheduling.
+1. **Projected timeline or deadlines**: If there’s a desired timeline for migrating this workload, note that as well. For example, maybe you have contract renewals or data center leases ending. These factors feed into the overall roadmap scheduling.
 
 For an example, see [Migration adoption plan](./migration-adoption-plan.md#workload-business-details-for-migration).
 
