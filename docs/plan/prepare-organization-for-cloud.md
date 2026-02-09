@@ -15,9 +15,9 @@ Successful cloud adoption, whether startup or larger organization, requires more
 
 Every organization’s cloud journey is different. Startups often begin cloud-native, while enterprises must assess and migrate existing workloads. Knowing your starting point helps you navigate the Cloud Adoption Framework (CAF) effectively.
 
-1. **Build cloud-native.** If you’re a startup with no existing workloads, you build your business cloud-native from the ground up. This approach fosters rapid development using cloud-native design. You follow a portion of CAF Plan: prepare, plan, estimate, document. Then you use [CAF Ready](/azure/cloud-adoption-framework/ready/azure-setup-guide/organize-resources) to quickly establish your Azure environment and [CAF Cloud-native](/azure/cloud-adoption-framework/innovate/) to create cloud-native apps.
+1. **Build cloud-native.** If you’re a startup with no existing workloads, you build your business cloud-native from the ground up. This approach fosters rapid development using cloud-native design. You follow a portion of CAF Plan: prepare, plan, estimate, document. Then you use [CAF Ready](/azure/cloud-adoption-framework/ready/azure-setup-guide/organize-resources) to quickly establish your Azure environment and [CAF Cloud-native](/azure/cloud-adoption-framework/cloud-native/plan-cloud-native-solutions) to create cloud-native apps.
 
-2. **Migrate existing workloads.** Enterprises must evaluate their existing IT estate and determine the best migration strategy for each workload based on business drivers. You follow all of CAF Plan: prepare, plan, discovery, select, assess, estimate, document. Then, you prepare your enterprise environment using an Azure landing zone in [CAF Ready](/azure/cloud-adoption-framework/ready/landing-zone/). Then, you execute migration using [CAF Migrate](/azure/cloud-adoption-framework/migrate/plan-migration) and modernize using [CAF Modernize](/azure/cloud-adoption-framework/modernize/).
+2. **Migrate existing workloads.** Enterprises must evaluate their existing IT estate and determine the best migration strategy for each workload based on business drivers. You follow all of CAF Plan: prepare, plan, discovery, select, assess, estimate, document. Then, you prepare your enterprise environment using an Azure landing zone in [CAF Ready](/azure/cloud-adoption-framework/ready/landing-zone/). Then, you execute migration using [CAF Migrate](/azure/cloud-adoption-framework/migrate/plan-migration) and modernize using [CAF Modernize](/azure/cloud-adoption-framework/modernize/prepare-organization-cloud-modernization).
 
     :::image type="content" source="./images/cloud-adoption-planning-decision-tree.svg" alt-text="Diagram showing a cloud adoption decision tree. Startups should build cloud-native and follow CAF Plan, CAF Ready, and CAF Cloud-native development. Organizations with existing workloads should pick a migration strategy: retire, rehost, refactor, rearchitect, replace, rebuild, or retain. Base the decision on the business driver for each workload." lightbox="./images/cloud-adoption-planning-decision-tree.svg" border="false":::
 
@@ -51,7 +51,7 @@ Clearly defined responsibilities are essential for consistent governance, securi
 
 2. **Plan for cloud security.** Embed security into every stage of the cloud lifecycle from development to operations. A secure foundation protects against threats and ensures compliance. See [Security Teams, Roles, and Functions](/azure/cloud-adoption-framework/secure/teams-roles) to start your security plan.
 
-3. **Plan for cloud management.** Define operational processes to align cloud operations with business goals and ensure consistent service delivery. See [Ready your Azure cloud operations](/azure/cloud-adoption-framework/manage/ready) for a detailed list of responsibilities.
+3. **Plan for cloud management.** Define operational processes to align cloud operations with business goals and ensure consistent service delivery. See [Ready your Azure cloud operations](/azure/cloud-adoption-framework/manage/ready-cloud-operations) for a detailed list of responsibilities.
 
 4. **Plan for AI adoption.** AI is a transformational technology that every organization needs to prepare for. Start by developing your [AI Strategy](/azure/cloud-adoption-framework/scenarios/ai/strategy) and [building an AI team](/azure/cloud-adoption-framework/scenarios/ai/center-of-excellence). Also review how to [govern AI](/azure/cloud-adoption-framework/scenarios/ai/govern), [secure AI](/azure/cloud-adoption-framework/scenarios/ai/secure), and [manage AI](/azure/cloud-adoption-framework/scenarios/ai/manage).
 
@@ -75,7 +75,7 @@ Well-documented cloud responsibilities are essential for clarity, accountability
 | Operations approach | [Shared management operations approach](./shared-management-operating-model.md) | Provides detailed guidance on implementing the shared responsibility model for enterprise organizations. |
 | Governance | [Build a cloud governance team](/azure/cloud-adoption-framework/govern/build-cloud-governance-team) | Offers guidance on forming a team to assess risks, document policies, and enforce governance standards. |
 | Security | [Security teams, roles, and functions](/azure/cloud-adoption-framework/secure/teams-roles) | Details roles and responsibilities for integrating security into the cloud lifecycle. |
-| Manage | [Ready your Azure cloud operations](/azure/cloud-adoption-framework/manage/ready) | Provides a checklist for preparing operational processes to manage Azure environments effectively. |
+| Manage | [Ready your Azure cloud operations](/azure/cloud-adoption-framework/manage/ready-cloud-operations) | Provides a checklist for preparing operational processes to manage Azure environments effectively. |
 
 ## Next steps
 

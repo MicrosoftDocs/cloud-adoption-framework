@@ -82,13 +82,13 @@ An application code assessment identifies compatibility issues and modernization
 
 1. **Use third-party tools for other application languages.** Tools such as CloudPilot and CAST Highlight support languages like Python, JavaScript, Node.js, and Go. These tools identify code-level changes required for Azure compatibility and provide modernization insights. Use these tools to assess non-.NET and non-Java workloads.
 
-1. **Use assessment results to inform target architecture decisions.** Application compatibility findings can influence the selection of Azure services. For example, an application that isn't compatible with one service might be compatible with another with minimal code changes. For example, services like Azure App Service typically require fewer code changes while container platform services might require more code update before deployment. Use this flexibility to migrate applications sooner and defer code modernization to a later phase. This approach reduces migration risk and accelerates time to cloud.
+1. **Use assessment results to inform target architecture decisions.** Application compatibility findings can influence the selection of Azure services. For example, an application that isn't compatible with one service might be compatible with another with minimal code changes. For example, services like Azure App Service typically require fewer code changes while container platform services might require more code updates before deployment. Use this flexibility to migrate applications sooner and defer code modernization to a later phase. This approach reduces migration risk and accelerates time to cloud.
 
 ### Validate framework and SDK compatibility
 
 1. **Understand code compatibility.** Framework and SDK compatibility ensures that applications run reliably in Azure. Unsupported versions or incompatible SDKs can cause runtime failures or require significant rework. You must verify that Azure supports your application's language version and framework.
 
-1. **Check Azure support for your application's language and framework.** Confirm that Azure supports your version of [.NET](/azure/dotnet/azure/intro#access-azure-services-from-net-applications), [Java](/azure/developer/java/), [Python](/azure/developer/python/get-started#write-your-python-app), [JavaScript, Node.js](/azure/developer/javascript/core/what-is-azure-for-javascript-development#use-azure-client-libraries-with-javascript), and [Go](/azure/developer/go/overview). Use the official Azure documentation to validate compatibility.
+1. **Check Azure support for your application's language and framework.** Confirm that Azure supports your version of [.NET](/dotnet/azure/intro#access-azure-services-from-net-applications), [Java](/azure/developer/java/), [Python](/azure/developer/python/get-started#write-your-python-app), [JavaScript, Node.js](/azure/developer/javascript/what-is-azure-for-javascript-development#use-azure-client-libraries-with-javascript), and [Go](/azure/developer/go/overview). Use the official Azure documentation to validate compatibility.
 
 1. **Avoid unnecessary framework changes.** Only migrate to a new framework (such as Microsoft .NET Framework to .NET Core) if there's a strong business justification. Framework changes require significant development effort and testing.
 
@@ -119,13 +119,13 @@ For more information, see [CAF Govern - Assess cloud risks](../govern/assess-clo
 | Discovery and Assessment | [Azure Migrate](/azure/migrate/) | Comprehensive discovery and assessment for on-premises servers, databases, and applications |
 | Arc-enabled servers | [Azure Arc](/azure/azure-arc/servers/) | Extends Azure management to on-premises and multicloud environments |
 | Code Assessment | [GitHub Copilot](https://aka.ms/ghcp-appmod) | Automated compatibility analysis for .NET and Java applications |
-| Database Migration | [Data Migration Assistant](/sql/dma/dma-overview) | Assessment and migration tool for SQL Server databases |
+| Database Migration | [Data Migration Assistant](/previous-versions/sql/dma/dma-overview?view=sql-server-ver16) | Assessment and migration tool for SQL Server databases |
 | Multicloud mapping | [AWS to Azure service mapping](/azure/architecture/aws-professional/#primary-topics) | Service comparison guide for AWS to Azure migration |
 | Multicloud mapping | [Google Cloud to Azure service mapping](/azure/architecture/gcp-professional/services) | Service comparison guide for Google Cloud to Azure migration |
-| Azure Development | [.NET on Azure](/azure/dotnet/azure/intro#access-azure-services-from-net-applications) | Guidance for accessing Azure services from .NET applications |
+| Azure Development | [.NET on Azure](/dotnet/azure/intro#access-azure-services-from-net-applications) | Guidance for accessing Azure services from .NET applications |
 | Azure Development | [Java on Azure](/azure/developer/java/) | Resources for Java developers building on Azure |
 | Azure Development | [Python on Azure](/azure/developer/python/get-started#write-your-python-app) | Resources for Python developers building on Azure |
-| Azure Development | [JavaScript and Node.js on Azure](/azure/developer/javascript/core/what-is-azure-for-javascript-development#use-azure-client-libraries-with-javascript) | Guidance for JavaScript and Node.js development on Azure |
+| Azure Development | [JavaScript and Node.js on Azure](/azure/developer/javascript/what-is-azure-for-javascript-development#use-azure-client-libraries-with-javascript) | Guidance for JavaScript and Node.js development on Azure |
 | Azure Development | [Go on Azure](/azure/developer/go/overview) | Resources for Go developers building on Azure |
 | Cloud Adoption Framework | [Define reliability requirements](/azure/cloud-adoption-framework/manage/protect#define-reliability-requirements) | Guidance for defining reliability requirements for cloud workloads |
 

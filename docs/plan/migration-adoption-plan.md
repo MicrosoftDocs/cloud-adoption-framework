@@ -66,7 +66,7 @@ For each workload in your inventory, gather business and technical details.
 | Compliance requirements | Regulatory standards or certifications required |
 | Maintenance windows | Scheduled times for updates and changes |
 | Business freeze periods | Dates when no changes are permitted |
-| Timelines | List the target date to complete migration strategy |
+| Timelines | List the target date to complete the migration strategy |
 | Geographic restrictions | Document any data residency or access location requirements. |
 | Success metrics | Define specific measurements to evaluate the success of the migration. |
 
