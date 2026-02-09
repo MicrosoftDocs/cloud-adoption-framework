@@ -88,7 +88,7 @@ Confirm that monitoring data is flowing correctly and that no data is missing or
 
 1. **Adjust configurations based on observed behavior.** Tweak configurations if needed. For example, scale out more if usage is higher than anticipated. If logs are too verbose or too sparse, modify logging levels. These changes help maintain performance and observability during peak usage. Ensure that any issues discovered in this phase are addressed or entered into your tracking system for future improvement.
 
-1. **Log and triage all issues discovered during stabilization.** This active support phase catches issues that are only revealed under production conditions and ensure the workload truly meets its goals. After this stabilization period, and once you're confident in the system’s performance, you can transition to normal operations and monitoring procedures.
+1. **Log and triage all issues discovered during stabilization.** This active support phase catches issues that are only revealed under production conditions and ensures the workload truly meets its goals. After this stabilization period, and once you're confident in the system’s performance, you can transition to normal operations and monitoring procedures.
 
 1. **Define the exit criteria for stabilization.** Set clear thresholds for system performance, error rates, and user satisfaction. Once the system meets these criteria consistently, transition to standard operations and monitoring procedures. These criteria ensure a smooth handoff and avoid premature closure of the support phase.
 
