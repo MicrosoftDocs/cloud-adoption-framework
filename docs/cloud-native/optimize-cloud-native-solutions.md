@@ -91,10 +91,10 @@ For more information, see [Manage business continuity](/azure/cloud-adoption-fra
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Govern Azure](/azure/cloud-adoption-framework/secure/overview)
+> [Govern Azure](/azure/cloud-adoption-framework/secure/)
 
 > [!div class="nextstepaction"]
-> [Secure Azure ](/azure/cloud-adoption-framework/secure/overview)
+> [Secure Azure](/azure/cloud-adoption-framework/secure/)
 
 > [!div class="nextstepaction"]
-> [Manage Azure](/azure/cloud-adoption-framework/manage/ready-cloud-operations)
+> [Manage Azure](/azure/cloud-adoption-framework/manage/)
