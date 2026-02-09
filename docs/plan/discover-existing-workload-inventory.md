@@ -47,7 +47,7 @@ For each workload identified, the plan should capture key business context and r
 
 1. **Business function and criticality**: Document what the workload does, and how important it is. Record a short description of its purpose and classify its criticality level (high/medium/low). Criticality often ties to how much downtime can be tolerated.
 
-1. **Data sensitivity and compliance**: Note the classification of data the system handles (public, internal, confidential, highly confidential). Document compliance requirements (PCI, HIPAA, GDPR) that apply to this workload. For instance, if data residency is required in a certain region, that influences the cloud architecture for it.
+1. **Data sensitivity and compliance**: Note the classification of data the system handles (public, internal, confidential, highly confidential). Document compliance requirements that apply to this workload. For instance, if data residency is required in a certain region, that influences the cloud architecture for it.
 
 1. **Operational constraints**: Document specific maintenance windows, blackout periods (high-traffic periods), and uptime requirements. Document any such constraints because they affect migration scheduling and target architecture (high-availability needs).
 
