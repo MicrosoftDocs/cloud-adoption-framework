@@ -31,7 +31,7 @@ The deployment steps differ slightly based on whether it’s a new standalone wo
 
 1. **Smoke test.** Once deployed, perform smoke tests in production (basic checks) to ensure all services are up and the core functionality works in the live environment. Verify that key services are running, databases are accessible, and the application responds (hit a health check endpoint or a couple of key pages). Check [Azure Service Health](/azure/service-health/overview) for any platform issues in your region that could affect your components. This testing is a check before any users are directed to the system.
 
-1. **Rollout to a small group of users.** Implement the progressive rollout by exposing the new system to a small set of users. This rollout could be done by releasing a feature to only internal users, or routing a small percentage of live to the new deployment. Monitor closely for any errors or performance issues. Use Application Insights and custom dashboards to watch error rates, response times, and resource utilization in real time. Also gather qualitative feedback from any pilot users on the canary version.
+1. **Rollout to a small group of users.** Implement the progressive rollout by exposing the new system to a small set of users. This rollout could be done by releasing a feature to only internal users, or routing a small percentage of live traffic to the new deployment. Monitor closely for any errors or performance issues. Use Application Insights and custom dashboards to watch error rates, response times, and resource utilization in real time. Also gather qualitative feedback from any pilot users on the canary version.
 
 1. **Monitor and gradually expand.** Gradual rollout reduces risk and allows for real-world validation before full release. Release the application to a small group of canary users. Use a load balancer, such as Azure Front Door or Traffic Manager, to route a subset of traffic to the new deployment. Collect feedback and monitor performance. Scale up or open access to all users after successful validation.
 
@@ -88,9 +88,9 @@ Confirm that monitoring data is flowing correctly and that no data is missing or
 
 1. **Adjust configurations based on observed behavior.** Tweak configurations if needed. For example, scale out more if usage is higher than anticipated. If logs are too verbose or too sparse, modify logging levels. These changes help maintain performance and observability during peak usage. Ensure that any issues discovered in this phase are addressed or entered into your tracking system for future improvement.
 
-1. **Log and triage all issues discovered during stabilization.** This active support phase catches issues that only reveal under production conditions and ensure the workload truly meets its goals. After this stabilization period, and once you're confident in the system’s performance, you can transition to normal operations and monitoring procedures.
+1. **Log and triage all issues discovered during stabilization.** This active support phase catches issues that are only revealed under production conditions and ensures the workload truly meets its goals. After this stabilization period, and once you're confident in the system’s performance, you can transition to normal operations and monitoring procedures.
 
-1. **Define the exit criteria for stabilization.** Set clear thresholds for system performance, error rates, and user satisfaction. Once the system meets these criteria consistently, transition to standard operations and monitoring procedures. These criteria ensure a smooth handoff and avoids premature closure of the support phase.
+1. **Define the exit criteria for stabilization.** Set clear thresholds for system performance, error rates, and user satisfaction. Once the system meets these criteria consistently, transition to standard operations and monitoring procedures. These criteria ensure a smooth handoff and avoid premature closure of the support phase.
 
 ## Next step
 
