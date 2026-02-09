@@ -17,7 +17,7 @@ A deployed solution must evolve to remain secure, cost-effective, and performant
 
 2. **Implement service-specific optimization settings.** Use the Well-Architected Framework's (WAF) [Azure services guides](/azure/well-architected/service-guides/?product=popular) to align configurations with best practices. This guidance helps ensure workloads are optimized for Azure
 
-3. **Address security findings immediately.** Post-deployment, keep a close eye on security posture. Use tools like [Microsoft Defender for Cloud](/azure/defender-for-cloud/review-security-recommendations) to identify any security misconfigurations, missing updates, or compliance issues. Fix security gaps as soon as they’re discovered to protect the workload and maintain compliance. Security isn't a one-time activity task. Continuous monitoring and quick mitigation are key to safe cloud operations.
+3. **Address security findings immediately.** Post-deployment, keep a close eye on security posture. Use tools like [Microsoft Defender for Cloud](/azure/defender-for-cloud/review-security-recommendations) to identify any security misconfigurations, missing updates, or compliance issues. Fix security gaps as soon as they’re discovered to protect the workload and maintain compliance. Security isn't a one-time activity. Continuous monitoring and quick mitigation are key to safe cloud operations.
 
 ## Validate operational readiness
 
@@ -84,17 +84,17 @@ For more information, see [Manage business continuity](/azure/cloud-adoption-fra
 
 1. **Schedule periodic workload reviews.** Periodically, revisit the architecture of the solution in light of the [Well-Architected Framework’s](/azure/well-architected/pillars) five pillars. As your usage patterns or business requirements change, certain design decisions might need revisiting. Perform a [Well-Architected Review](/assessments/azure-architecture-review/) to identify any areas for improvement. Document any findings and create action items for things to optimize or refactor in the next cycle. Regular reviews help catch drift from best practices and keep the system aligned with current needs.
 
-2. **Automated optimization where possible.** Look for opportunities to use automation to manage and optimize the solution. For example, use Azure Policy to enforce tagging, security configurations, or resource sizing standards on new deployments so they always remain optimized. Set up autoscaling rules to handle changes in load without manual intervention. Use cost anomaly detection in Microsoft Cost Management to automatically alert if spending spikes unexpectedly. By letting Azure’s automation features handle routine optimizations (like shutting down unused virtual machines on a schedule), your team can focus on higher-level improvements. Automation ensures consistency and can react faster than human intervention for many operational adjustments.
+2. **Automate optimization where possible.** Look for opportunities to use automation to manage and optimize the solution. For example, use Azure Policy to enforce tagging, security configurations, or resource sizing standards on new deployments so they always remain optimized. Set up autoscaling rules to handle changes in load without manual intervention. Use cost anomaly detection in Microsoft Cost Management to automatically alert if spending spikes unexpectedly. By letting Azure’s automation features handle routine optimizations (like shutting down unused virtual machines on a schedule), your team can focus on higher-level improvements. Automation ensures consistency and can react faster than human intervention for many operational adjustments.
 
 3. **Share lessons and best practices.** Capture what you learned from this cloud-native build and share it with other teams in your organization. For instance, if you developed an effective pattern for blue-green deployments or a useful script for seeding test data, make it available for others. Document the successes and pitfalls encountered during the project as internal case studies. This effort might involve creating a short post-mortem or project retrospective document that highlights what went well and what could be better next time. Contribute updates to your organization’s cloud adoption framework or playbooks so that the next projects can build on your experience. By fostering knowledge sharing, you help improve cloud practices across the organization and drive overall cloud maturity forward.
 
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Govern Azure](/azure/cloud-adoption-framework/secure/)
+> [Govern Azure](/azure/cloud-adoption-framework/secure/overview)
 
 > [!div class="nextstepaction"]
-> [Secure Azure ](/azure/cloud-adoption-framework/secure/)
+> [Secure Azure ](/azure/cloud-adoption-framework/secure/overview)
 
 > [!div class="nextstepaction"]
-> [Manage Azure](/azure/cloud-adoption-framework/manage/)
+> [Manage Azure](/azure/cloud-adoption-framework/manage/ready-cloud-operations)
