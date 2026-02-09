@@ -19,7 +19,7 @@ Modernizing an app isn't a one-time event. You often can further fine-tune once 
 
 2. **Tweak service-specific settings.** Each Azure service has its own configuration settings and best practices. Use the Azure Well-Architected Framework's [Azure services guides](/azure/well-architected/service-guides/?product=popular) to align configurations with best practices.
 
-3. **Address security configuration gaps immediately.** Run Azure security assessment tools now that system is in steady state. [Microsoft Defender for Cloud](/azure/defender-for-cloud/review-security-recommendations) to see if there are any high or medium security recommendations for your resources. Resolve critical and high-severity findings within 48 hours to maintain security posture. Configure continuous assessment to detect new issues as workloads evolve.
+3. **Address security configuration gaps immediately.** Now that the system is in a steady state, run Azure security assessment tools. [Microsoft Defender for Cloud](/azure/defender-for-cloud/review-security-recommendations) to see if there are any high or medium security recommendations for your resources. Resolve critical and high-severity findings within 48 hours to maintain security posture. Configure continuous assessment to detect new issues as workloads evolve.
 
 ## Validate operational readiness
 
@@ -56,7 +56,7 @@ Modernization isn’t a one-time project; it can be an ongoing part of IT strate
 | Category | Tool | Description |
 |----------|------|-------------|
 | Optimization | [Azure Advisor](/azure/advisor/advisor-overview) | Provides personalized recommendations for cost, performance, reliability, and security optimization |
-| Monitoring | [Azure Monitor](/azure/azure-monitor/overview) | Comprehensive monitoring solution for collecting and analyzing workload data |
+| Monitoring | [Azure Monitor](/azure/azure-monitor/fundamentals/overview) | Comprehensive monitoring solution for collecting and analyzing workload data |
 | Cost management | [Microsoft Cost Management](/azure/cost-management-billing/cost-management-billing-overview) | Tools for tracking, analyzing, and optimizing Azure spending |
 | Security | [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) | Security posture management and threat protection for Azure workloads |
 | Backup | [Azure Backup](/azure/backup/backup-overview) | Centralized backup solution for Azure and hybrid workloads |
@@ -64,10 +64,10 @@ Modernization isn’t a one-time project; it can be an ongoing part of IT strate
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Govern Azure](/azure/cloud-adoption-framework/secure/)
+> [Govern Azure](/azure/cloud-adoption-framework/secure/overview)
 
 > [!div class="nextstepaction"]
-> [Secure Azure ](/azure/cloud-adoption-framework/secure/)
+> [Secure Azure](/azure/cloud-adoption-framework/secure/overview)
 
 > [!div class="nextstepaction"]
-> [Manage Azure](/azure/cloud-adoption-framework/manage/)
+> [Manage Azure](/azure/cloud-adoption-framework/manage/ready-cloud-operations)
