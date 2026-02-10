@@ -11,6 +11,6 @@ Data lake layers use different terminology depending on technology and vendor. T
 | Cloud-scale analytics | Delta Lake | Other terms             | Description                                                                                                      |
 |-------------------------------|------------|-------------------------|------------------------------------------------------------------------------------------------------------------|
 | Raw                           | Bronze     | Landing and conformance | Ingestion tables                                                                                                 |
-| Enriched                      | Silver     | Standardization zone    | Refined tables. Stored full entity, consumption-ready recordsets from systems of record.                        |
+| Enriched                      | Silver     | Standardization zone    | Refined tables. Store full entity, consumption-ready recordsets from systems of record.                        |
 | Curated                       | Gold       | Product zone            | Feature or aggregated tables. Primary zone for applications, teams, and users to consume data products.           |
 | Development                     | --         | Development zone        | Location for data engineers and scientists, which consists of an analytics sandbox and a product development zone. |
