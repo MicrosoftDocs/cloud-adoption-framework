@@ -41,11 +41,10 @@ Use a cloud adoption strategy to help you:
 This guidance is designed to help you develop a cloud adoption strategy that aligns with your business goals. The guidance is organized into five steps, suitable both for enterprises and startups alike:
 
 1. **Assess your cloud adoption strategy.** Evaluate your organization's readiness for cloud adoption.
-1. **Define your motivations.** Identify the reasons for adopting cloud technologies.
-1. **Define your mission and objectives.** Establish a clear mission and measurable objectives for your cloud motivations.
-1. **Define your strategy team.** Identify the individuals and teams who will help you build and execute your strategy.
-1. **Prepare your organization.** Get leadership and executive buy-in, align your organizational strategies, understand your operating model's readiness for cloud, and consider a shift to a product model.
-1. **Inform your strategy.** Discover strategic considerations for important cloud strategy areas, such as financial efficiency, AI, resiliency, security, and sustainability.
+2. **Define your motivations, mission, and objectives.** Identify the reasons for adopting cloud technologies.
+3. **Define your strategy team.** Identify the individuals and teams who will help you build and execute your strategy.
+4. **Prepare your organization.** Get leadership and executive buy-in, align your organizational strategies, understand your operating model's readiness for cloud, and consider a shift to a product model.
+5. **Inform your strategy.** Discover strategic considerations for important cloud strategy areas, such as financial efficiency, AI, resiliency, security, and sustainability.
 
 Use the following checklist to guide you through the cloud adoption strategy steps.
 
@@ -56,8 +55,7 @@ The following checklist provides an overview of the tasks for each cloud adoptio
 | Cloud adoption strategy step | Startup tasks | Enterprise tasks |
 |---------------------|-------------------|----------------------|
 | Assess your cloud adoption strategy | &#9744; [Assess your strategy](./assessment.md) |  &#9744; [Assess your strategy](./assessment.md) |
-| Define your motivations | &#9744; [Define your motivations](./motivations.md#define-your-motivations) | &#9744; [Define your motivations](./motivations.md#define-your-motivations) <br>&#9744; [Classify your motivations](./motivations.md#classify-motivations) |
-| Define your mission and objectives | &#9744; [Define your mission and objectives](./mission-objectives.md#define-your-mission-and-objectives) <br>&#9744; [Measure success](./mission-objectives.md#measure-success) | &#9744; [Define your mission and objectives](./mission-objectives.md#define-your-mission-and-objectives) <br>&#9744; [Measure success](./mission-objectives.md#measure-success) |
+| Define your motivations, mission, and objectives | &#9744; [Define your motivations](./motivations.md#define-your-motivations) <br> &#9744; [Define your mission and objectives](./motivations.md#define-your-mission-and-objectives) <br>&#9744; [Measure success](./motivations.md#measure-success)  | &#9744; [Define your motivations](./motivations.md#define-your-motivations) <br>&#9744; [Classify your motivations](./motivations.md#classify-motivations) <br>&#9744; [Define your mission and objectives](./motivations.md#define-your-mission-and-objectives) <br>&#9744; [Measure success](./motivations.md#measure-success) |
 | Define your strategy team | &#9744; [Define your team](./define-your-team.md) | &#9744; [Define your team](./define-your-team.md) |
 | Prepare your organization | &#9744; [Ensure leadership and executive buy-in](./prepare-organizational-alignment.md#leadership-and-executive-buy-in)  | &#9744; [Ensure leadership and executive buy-in](./prepare-organizational-alignment.md#leadership-and-executive-buy-in) <br>&#9744; [Align organizational strategies](./prepare-organizational-alignment.md#align-organizational-strategies) <br>&#9744; [Understand your operating model's readiness](./prepare-organizational-alignment.md#understand-your-operating-models-readiness-for-cloud) <br>&#9744; [Shift from a project model to a product model](./prepare-organizational-alignment.md#shift-from-a-project-model-to-product-model) <br>&#9744; [Identify and define partner relationships](./prepare-organizational-alignment.md#identify-and-define-partner-relationships) |
 | Inform your strategy | &#9744; [Integrate AI](./inform/ai.md) <br>&#9744; [Address security](./inform/security.md) | &#9744; [Ensure cost efficiency](./inform/cost-efficiency.md) <br>&#9744; [Integrate AI](./inform/ai.md) <br>&#9744; [Create resiliency](./inform/resiliency.md) <br>&#9744; [Address security](./inform/security.md) <br>&#9744; [Adopt sustainability](./inform/sustainability.md) |

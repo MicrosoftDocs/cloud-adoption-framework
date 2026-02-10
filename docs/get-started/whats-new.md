@@ -331,7 +331,6 @@ This month, we made significant updates to the Strategy methodology. The Strateg
 - [Develop a cloud adoption strategy](../strategy/index.md): Learn how to develop a cloud adoption strategy to migrate or innovate in the cloud, in alignment with your business goals.
 - [Assess your cloud adoption strategy](../strategy/assessment.md): Learn about the importance of assessing your cloud adoption strategy and how to evaluate your current state, define your future state, and identify gaps and opportunities.
 - [Determine your motivations](../strategy/motivations.md): Learn how to identify your motivations for adopting cloud technologies and how to classify them based on your organization's goals and objectives.
-- [Define your mission and objectives](../strategy/mission-objectives.md): Find recommendations for defining your mission and objectives to provide direction and purpose for your cloud adoption.
 - [Define your strategy team](../strategy/define-your-team.md): Learn about the key roles and responsibilities of a cloud strategy team and how to build a cross-functional team to drive your cloud adoption strategy.
 - [Prepare your organization](../strategy/prepare-organizational-alignment.md): Learn how to align your cloud adoption strategy with your organization's goals and objectives.
   - [Inform your cloud adoption strategy](../strategy/inform/index.md): Learn about the importance of informing your cloud adoption strategy and how to gather information, assess your current state, and define your future state.
