@@ -326,8 +326,6 @@ items:
         items:
           - name: Overview
             href: /azure/container-instances/container-instances-overview?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/app-platform/toc.json
-          - name: About Azure Container Instances
-            href: /azure/container-instances/container-instances-overview?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/app-platform/toc.json
           - name: Deploy a container instance - CLI
             href: /azure/container-instances/container-instances-quickstart?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/app-platform/toc.json
           - name: Deploy a container instance - Azure portal
