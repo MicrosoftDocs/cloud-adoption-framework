@@ -301,8 +301,6 @@ items:
             href: /azure/app-service/overview?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/app-platform/toc.json
           - name: ASP.NET Core
             href: /azure/app-service/quickstart-dotnetcore?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/app-platform/toc.json
-          - name: ASP.NET
-            href: /azure/app-service/quickstart-dotnetcore?toc=/azure/cloud-adoption-framework/scenarios/app-platform/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
           - name: Node.js
             href: /azure/app-service/quickstart-nodejs?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/app-platform/toc.json
           - name: PHP
