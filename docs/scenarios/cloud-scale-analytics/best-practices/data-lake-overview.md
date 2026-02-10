@@ -62,7 +62,7 @@ Data Lake Storage Gen2 is a fully managed platform as a service (PaaS). Multiple
 Consider the following factors when deciding between a consolidated or three storage account approach:
 
 - Isolation of data environments and predictability
-    - You might isolate activities that run in the raw and development zones to avoid potential affect on the curated zone, which holds data with great business value needed for critical decision making
+    - You might isolate activities that run in the raw and development zones to avoid affecting the curated zone, which holds data with great business value needed for critical decision making
 - Features and functionality at the storage account level
     - You can choose if lifecycle management options or firewall rules must be applied at the data landing zone or data lake level.
     - Create multiple storage accounts, but not unwanted silos.
