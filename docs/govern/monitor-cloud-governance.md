@@ -31,7 +31,7 @@ Implement monitoring solutions to track compliance with your cloud governance po
 
 6. **Provide access to governance monitoring.** Configure the appropriate level of access to governance monitoring results so the teams responsible for governance can evaluate the effectiveness of enforcement controls.
 
-7. **Audit monitoring effectiveness.** Manually review compliance to validate compliance. For example, ensure tags are receiving the right values and not an undesired value, such as *NA*.
+7. **Audit monitoring effectiveness.** Manually review compliance reports and resources to validate monitoring effectiveness. For example, ensure tags are receiving the right values and not an undesired value, such as *NA*.
 
 ### Azure facilitation: Configuring cloud governance monitoring
 
