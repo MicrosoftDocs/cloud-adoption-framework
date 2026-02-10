@@ -26,7 +26,7 @@ Domain Name System (DNS) is a critical design topic in the overall landing zone 
 
 - For environments where only name resolution in Azure is required, use Azure Private DNS zones for resolution. Create a delegated zone for name resolution, such as `azure.contoso.com`. Enable auto-registration for the Azure Private DNS zone to automatically manage the lifecycle of the DNS records for the virtual machines that are deployed within a virtual network.
 
-- For environments where name resolution across Azure and on-premises is required, use DNS Private Resolver along with Azure Private DNS zones. DNS Private Resolver provides many benefits over virtual machine-based DNS solution, including cost reduction, built-in high availability, scalability, and flexibility.
+- For environments where name resolution across Azure and on-premises is required, use DNS Private Resolver along with Azure Private DNS zones. DNS Private Resolver provides many benefits over virtual machine-based DNS solutions, including cost reduction, built-in high availability, scalability, and flexibility.
 
   If you need to use existing DNS infrastructure, such as Windows Server Active Directory integrated DNS, ensure that the DNS server role is deployed onto at least two virtual machines, and configure DNS settings in virtual networks to use these custom DNS servers.
   

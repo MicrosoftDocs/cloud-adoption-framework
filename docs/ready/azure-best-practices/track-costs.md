@@ -99,7 +99,6 @@ After you establish access to a well-managed environment hierarchy, the followin
 
 ### Use Cost Management to govern AWS costs
 
-- [Set up AWS Cost and Usage Reports integration](/azure/cost-management-billing/costs/overview-cost-management)
 - [Manage AWS costs](/azure/cost-management-billing/costs/overview-cost-management)
 
 ### Establish access, roles, and scope
