@@ -1,6 +1,6 @@
 ---
 title: Protect your Azure cloud estate
-description: Learn how to ensure the reliability and security your Azure cloud estate as part of your cloud operations.
+description: Learn how to ensure the reliability and security of your Azure cloud estate as part of your cloud operations.
 author: stephen-sumner
 ms.author: pnp
 ms.date: 04/01/2025
@@ -23,7 +23,7 @@ Reliability management involves using redundancy, replication, and defined recov
 | Priority   | Business impact  | Minimum uptime SLO | Max downtime per month | Architecture redundancy  | Load balancing  | Data replication and backups  | Example scenario     |
 |---|---|---|---|----|---|---|---|
 | High (mission-critical)  | Immediate and severe effects on company reputation or revenue.   | 99.99%       | 4.32 minutes     | Multi-region & Multiple availability zones in each region | Active-active | Synchronous, cross-region data replication & backups for recovery | [Mission-critical baseline](/azure/architecture/reference-architectures/containers/aks-mission-critical/mission-critical-intro)  |
-| Medium       | Measurable effects on company reputation or revenue.   | 99.9%  | 43.20 minutes | Multiple region & Multiple availability zones in each region | Active-passive     | Asynchronous, cross-region data replication & backups for recovery | [Reliable web app pattern](/azure/architecture/web-apps/guides/enterprise-app-patterns/reliable-web-app/dotnet/guidance) |
+| Medium       | Measurable effects on company reputation or revenue.   | 99.9%  | 43.20 minutes | Multiple regions & Multiple availability zones in each region | Active-passive     | Asynchronous, cross-region data replication & backups for recovery | [Reliable web app pattern](/azure/architecture/web-apps/guides/enterprise-app-patterns/reliable-web-app/dotnet/guidance) |
 | Low       | No effect on company reputation, processes, or profits.    | 99%       | 7.20 hours    | Single region & Multiple availability zones   | Availability zone redundancy   | Synchronous data replication across availability zones & backups for recovery | [App Service baseline](/azure/architecture/web-apps/app-service/architectures/baseline-zone-redundant)<br>[Virtual machine baseline](/azure/architecture/virtual-machines/baseline) |
 
 ### Identify reliability responsibilities
@@ -85,10 +85,10 @@ You must align data reliability configurations with the RTO and RPO requirements
 
     For more information, see [Replication: Redundancy for data](/azure/reliability/concept-redundancy-replication-backup#replication-redundancy-for-data).
 
-1. ***Manage data backups.*** Backups are for disaster recovery (service failure), data recovery (deletion or corruption), and incident response (security). Backups must support your RTO and RPO requirements for each workload. Prefer backup solutions built-in to your Azure service, such as native backup features in Azure Cosmos DB and Azure SQL Database. Where native backups are unavailable, including on-premises data, use [Azure Backup](/azure/backup/). For more information, see [Backup](/azure/reliability/concept-redundancy-replication-backup#backup) and [Azure Business Continuity Center](/azure/business-continuity-center/business-continuity-center-overview).
+1. ***Manage data backups.*** Backups are for disaster recovery (service failure), data recovery (deletion or corruption), and incident response (security). Backups must support your RTO and RPO requirements for each workload. Prefer backup solutions built-in to your Azure service, such as native backup features in Azure Cosmos DB and Azure SQL Database. Where native backups are unavailable, including on-premises data, use [Azure Backup](/azure/backup/). For more information, see [Backup](/azure/reliability/concept-redundancy-replication-backup#backup) and [Azure Business Continuity Center](/azure/resiliency/resiliency-overview).
 
 
-1. ***Design workload data reliability.*** For workload data reliability design, see the Well-Architected Framework [Data partitioning guide](/azure/well-architected/reliability/partition-data) and [Azure service guides](/azure/well-architected/service-guides/?product=popular) (*start with the Reliability section*).
+1. ***Design workload data reliability.*** For workload data reliability design, see the Well-Architected Framework [Data partitioning guide](/azure/well-architected/design-guides/partition-data) and [Azure service guides](/azure/well-architected/service-guides/?product=popular) (*start with the Reliability section*).
 
 ### Manage code and runtime reliability
 
@@ -158,7 +158,7 @@ Your approach must implement architecture redundancy to meet the reliability req
 
     | Workload reliability | Guidance |
     | ---| --- |
-    | Reliability pillar | [Highly available multi-region design](/azure/well-architected/reliability/highly-available-multi-region-design)<br>[Designing for redundancy](/azure/well-architected/reliability/redundancy)<br>[Using availability zones and regions](/azure/well-architected/reliability/regions-availability-zones)|
+    | Reliability pillar | [Highly available multi-region design](/azure/well-architected/reliability/redundancy)<br>[Designing for redundancy](/azure/well-architected/reliability/redundancy)<br>[Using availability zones and regions](/azure/well-architected/design-guides/regions-availability-zones)|
     |Service guide| [Azure service guides](/azure/well-architected/service-guides/?product=popular) (*start with the Reliability section*)|
 
 For more information, see [Redundancy](/azure/reliability/concept-redundancy-replication-backup#redundancy).
@@ -187,7 +187,7 @@ Recovering from a failure requires a clear strategy to restore services quickly 
 
 | Use case                        | Solution                                                                                                                   |
 |---------------------------------|----------------------------------------------------------------------------------------------------------------------------|
-| Data replication, backup, and business continuity| [Azure service guides](/azure/well-architected/service-guides/?product=popular) (*start with the Reliability section*)<br><br>Quick reference:<br>[Azure Cosmos DB](/azure/well-architected/service-guides/cosmos-db)<br>[Azure SQL Database](/azure/well-architected/service-guides/azure-sql-database-well-architected-framework#azure-sql-database-and-reliability)<br>[Azure Blob Storage](/azure/well-architected/service-guides/azure-blob-storage)<br>[Azure Files](/azure/well-architected/service-guides/azure-files)                                                          |
+| Data replication, backup, and business continuity| [Azure service guides](/azure/well-architected/service-guides/?product=popular) (*start with the Reliability section*)<br><br>Quick reference:<br>[Azure Cosmos DB](/azure/well-architected/service-guides/cosmos-db)<br>[Azure SQL Database](/azure/well-architected/service-guides/azure-sql-database#azure-sql-database-and-reliability)<br>[Azure Blob Storage](/azure/well-architected/service-guides/azure-blob-storage)<br>[Azure Files](/azure/well-architected/service-guides/azure-files)                                                          |
 | Data backup    | [Azure Backup](/azure/backup/backup-overview)                                                                              |
 | Business continuity (IaaS)        | [Azure Site Recovery](/azure/site-recovery/azure-to-azure-tutorial-enable-replication)                                     |
 | Multi-region load balancer      | [Azure Front Door](/azure/frontdoor/front-door-overview) (HTTP)<br>[Azure Traffic Manager](/azure/traffic-manager/traffic-manager-overview) (non-HTTP)                                        |
@@ -229,7 +229,7 @@ For more information, see [Manage incident response (CAF Secure)](/azure/cloud-a
 
 | Security capability              | Microsoft solution                                                                 |
 |----------------------------------|------------------------------------------------------------------------------------|
-| Identity and access management   | [Microsoft Entra ID](/entra/fundamentals/whatis)                             |
+| Identity and access management   | [Microsoft Entra ID](/entra/fundamentals/what-is-entra)                             |
 | Role-based access control        | [Azure role-based access control](/azure/role-based-access-control/overview)       |
 | Threat detection                 | [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) |
 | Security information management  | [Microsoft Sentinel](/azure/sentinel/overview?tabs=azure-portal)                   |

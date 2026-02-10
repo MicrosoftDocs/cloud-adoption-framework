@@ -57,7 +57,7 @@ Change is the most common source of problems in the cloud. As a result, you need
 
 Identity is your security perimeter. You must verify identities, restrict permissions, and maintain secure resource configurations. Follow these steps:
 
-1. ***Manage identities.*** Use [Microsoft Entra ID](/entra/fundamentals/whatis) as your unified identity management solution. Clearly define permissions by applying [role-based access control (RBAC)](/entra/identity/role-based-access-control/custom-overview). Use [Microsoft Entra ID Governance](/entra/id-governance/identity-governance-overview) to control access request workflows, access reviews, and identity lifecycle management. Enable [Privileged Identity Management](/entra/id-governance/privileged-identity-management/pim-configure) to grant just-in-time privileged access. This strategy reduces unnecessary elevated access. Manage all three identity types (user, application, device) consistently to ensure proper authentication and authorization.
+1. ***Manage identities.*** Use [Microsoft Entra ID](/entra/fundamentals/what-is-entra) as your unified identity management solution. Clearly define permissions by applying [role-based access control (RBAC)](/entra/identity/role-based-access-control/custom-overview). Use [Microsoft Entra ID Governance](/entra/id-governance/identity-governance-overview) to control access request workflows, access reviews, and identity lifecycle management. Enable [Privileged Identity Management](/entra/id-governance/privileged-identity-management/pim-configure) to grant just-in-time privileged access. This strategy reduces unnecessary elevated access. Manage all three identity types (user, application, device) consistently to ensure proper authentication and authorization.
 
 1. ***Manage access.*** Use Azure [role-based access control](/azure/role-based-access-control/overview) (RBAC) and [attribute-based access control](/azure/role-based-access-control/conditions-overview) (ABAC) to grant the least permission to accomplish the job. To limit management overhead, prefer role assignments based on [groups](/azure/role-based-access-control/overview#groups). Grant permissions at the lowest required [scope](/azure/role-based-access-control/role-assignments-steps#step-3-identify-the-needed-scope), such as subscriptions, resource groups, or individual resources. Avoid overly broad permission scopes to prevent unintended privilege escalation. Assign only the necessary permissions for each user's role.
 
@@ -88,7 +88,7 @@ For more information, see [Enforcing compliance in Azure](/azure/cloud-adoption-
 
 Managing data in cloud operations involves actively classifying, segmenting, securing access, and protecting against deletion. You must safeguard sensitive information, maintains compliance, and ensures data reliability during operational changes. Follow these steps:
 
-1. ***Discover and classify data.*** Identify and categorize data according to sensitivity and importance. This classification guides tailored controls for each data type. Use [Microsoft Purview](/purview/data-governance-overview) for data governance. For more information, see [Data sources that connect to Microsoft Purview Data Map](/purview/microsoft-purview-connector-overview#azure).
+1. ***Discover and classify data.*** Identify and categorize data according to sensitivity and importance. This classification guides tailored controls for each data type. Use [Microsoft Purview](/purview/data-governance-overview) for data governance. For more information, see [Data sources that connect to Microsoft Purview Data Map](/purview/data-map-data-sources#azure).
 
 1. ***Control data residency.*** Select regions within your [geography](/azure/reliability/regions-overview#understand-azure-regions-and-geographies), such as the United States or Europe, to meet data residency requirements. Verify any exceptions because [certain Azure services](https://azure.microsoft.com/explore/global-infrastructure/data-residency#select-your-geography) might store data outside your selected region. Regularly review Azure data residency settings and compliance requirements to maintain full control over your customer data.
 
@@ -195,7 +195,7 @@ Manage configuration drift by identifying and correcting discrepancies between y
 
 Resource sprawl describes the uncontrolled growth of cloud resources. This growth increases costs, security risks, and management complexity. Follow these steps:
 
-1. ***Implement governance policies.*** Use [Azure Policy](/azure/governance/policy/overview) to enforce standards for [resource provisioning](./administer.md#manage-cloud-resources) and [tagging](/azure/azure-resource-manager/management/tag-policies) across your organization. Create a clear [naming strategy](/azure/cloud-adoption-framework/ready/azure-best-practices/naming-and-tagging) for easier resource visibility.
+1. ***Implement governance policies.*** Use [Azure Policy](/azure/governance/policy/overview) to enforce standards for [resource provisioning](./administer.md#manage-cloud-resources) and [tagging](/azure/azure-resource-manager/management/tag-policies) across your organization. Create a clear [naming strategy](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming) for easier resource visibility.
 
 2. ***Organize resources effectively.*** Structure resources hierarchically with management groups and subscriptions aligned to your organization's needs. This structure improves visibility and resource management. Refer to the [Azure landing zone](/azure/cloud-adoption-framework/ready/landing-zone/) guidance for proven best practices.
 
@@ -221,11 +221,11 @@ For more information, see [Relocate workloads](/azure/azure-resource-manager/man
 
 Where you use virtual machines, you need to also manage the operating system. Follow these steps:
 
-1. ***Automate virtual machine maintenance.*** In Azure, use [automation tools](/azure/virtual-machines/infrastructure-automation) to create and manage Azure virtual machines. Use [Azure Machine Configuration](/azure/governance/machine-configuration/overview) to audit or configure operating system settings as code for machines running in Azure and hybrid.
+1. ***Automate virtual machine maintenance.*** In Azure, use [automation tools](/azure/virtual-machines/infrastructure-automation) to create and manage Azure virtual machines. Use [Azure Machine Configuration](/azure/governance/machine-configuration/overview/01-overview-concepts) to audit or configure operating system settings as code for machines running in Azure and hybrid.
 
 1. ***Update operating systems.*** You need to [manage guest updates and host maintenance](/azure/virtual-machines/updates-maintenance-overview) to ensure the operating systems are up to date for security purposes.
 
-1. ***Monitor in-guest operations.*** Use the [Azure Change Tracking and Inventory service](/azure/automation/change-tracking/overview-monitoring-agent) to enhance the auditing and governance for in-guest operations. It monitors changes and provides detailed inventory logs for servers across Azure, on-premises, and other cloud environments.
+1. ***Monitor in-guest operations.*** Use the [Azure Change Tracking and Inventory service](/azure/azure-change-tracking-inventory/overview-monitoring-agent) to enhance the auditing and governance for in-guest operations. It monitors changes and provides detailed inventory logs for servers across Azure, on-premises, and other cloud environments.
 
 ## Azure management tools
 
@@ -237,7 +237,7 @@ Where you use virtual machines, you need to also manage the operating system. Fo
 | Manage security | [Security controls of the Microsoft cloud security benchmark v2](/security/benchmark/azure/overview) | Provides guidance on available security capabilities and optimal security configurations |
 | Manage security | [Well Architected Framework's security pillar](/azure/well-architected/security/) | Security guidance for workload design |
 | Manage security | [Azure service guides](/azure/well-architected/service-guides/#browse-the-catalog-of-azure-services) (*start with the Security section*)| Security configuration recommendations for Azure services |
-| Manage security                             | [Microsoft Entra ID](/entra/fundamentals/whatis)                     | Provides unified identity management                         |
+| Manage security                             | [Microsoft Entra ID](/entra/fundamentals/what-is-entra)                     | Provides unified identity management                         |
 | Manage security                             | [Defender for Cloud](/azure/defender-for-cloud/security-policy-concept) | Aligns resource configurations with security standards         |
 | Manage security | [Microsoft Sentinel](/azure/sentinel/overview) | Provides security information and event management (SIEM) and security orchestration, automation, and response (SOAR) |
 | Manage security                             | [Azure RBAC](/azure/role-based-access-control/overview)               | Grants secure access with role-based assignments               |
@@ -267,8 +267,8 @@ Where you use virtual machines, you need to also manage the operating system. Fo
 | Manage drift                                | [Bicep what-if](/azure/azure-resource-manager/bicep/deploy-what-if?tabs=azure-powershell%2CCLI) | Previews potential configuration changes                       |
 | Manage drift                                | [Terraform plan](https://developer.hashicorp.com/terraform/cli/commands/plan) | Previews potential changes before Terraform deployment           |
 | Manage drift | [ARM template what-if](/azure/azure-resource-manager/templates/deploy-what-if) | Previews potential configuration changes |
-| Manage operating systems                    | [Azure Machine Configuration](/azure/governance/machine-configuration/overview) | Audits and configures operating system settings as code         |
-| Manage operating systems                    | [Azure Change Tracking and Inventory service](/azure/automation/change-tracking/overview-monitoring-agent) | Monitors and logs changes for operating systems                |
+| Manage operating systems                    | [Azure Machine Configuration](/azure/governance/machine-configuration/overview/01-overview-concepts) | Audits and configures operating system settings as code         |
+| Manage operating systems                    | [Azure Change Tracking and Inventory service](/azure/azure-change-tracking-inventory/overview-monitoring-agent) | Monitors and logs changes for operating systems                |
 | Manage operating systems                    | [Automation tools](/azure/virtual-machines/infrastructure-automation) | Automates virtual machine maintenance                           |
 
 ## Next steps
