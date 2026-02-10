@@ -221,7 +221,7 @@ For more information, see [Relocate workloads](/azure/azure-resource-manager/man
 
 Where you use virtual machines, you need to also manage the operating system. Follow these steps:
 
-1. ***Automate virtual machine maintenance.*** In Azure, use [automation tools](/azure/virtual-machines/infrastructure-automation) to create and manage Azure virtual machines. Use [Azure Machine Configuration](/azure/governance/machine-configuration/overview/01-overview-concepts) to audit or configure operating system settings as code for machines running in Azure and hybrid.
+1. ***Automate virtual machine maintenance.*** In Azure, use [automation tools](/azure/virtual-machines/infrastructure-automation) to create and manage Azure virtual machines. Use [Azure Machine Configuration](/azure/governance/machine-configuration/overview/) to audit or configure operating system settings as code for machines running in Azure and hybrid.
 
 1. ***Update operating systems.*** You need to [manage guest updates and host maintenance](/azure/virtual-machines/updates-maintenance-overview) to ensure the operating systems are up to date for security purposes.
 
@@ -267,7 +267,7 @@ Where you use virtual machines, you need to also manage the operating system. Fo
 | Manage drift                                | [Bicep what-if](/azure/azure-resource-manager/bicep/deploy-what-if?tabs=azure-powershell%2CCLI) | Previews potential configuration changes                       |
 | Manage drift                                | [Terraform plan](https://developer.hashicorp.com/terraform/cli/commands/plan) | Previews potential changes before Terraform deployment           |
 | Manage drift | [ARM template what-if](/azure/azure-resource-manager/templates/deploy-what-if) | Previews potential configuration changes |
-| Manage operating systems                    | [Azure Machine Configuration](/azure/governance/machine-configuration/overview/01-overview-concepts) | Audits and configures operating system settings as code         |
+| Manage operating systems                    | [Azure Machine Configuration](/azure/governance/machine-configuration/overview/) | Audits and configures operating system settings as code         |
 | Manage operating systems                    | [Azure Change Tracking and Inventory service](/azure/azure-change-tracking-inventory/overview-monitoring-agent) | Monitors and logs changes for operating systems                |
 | Manage operating systems                    | [Automation tools](/azure/virtual-machines/infrastructure-automation) | Automates virtual machine maintenance                           |
 
