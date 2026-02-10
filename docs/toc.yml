@@ -12,19 +12,17 @@ items:
     items:
     - name: Strategy
       items:
-      - name: 1. Overview
+      - name: Overview
         href: strategy/index.md
-      - name: 2. Assess your cloud adoption strategy
+      - name: 1. Assess your cloud adoption strategy
         href: strategy/assessment.md
-      - name: 3. Determine your motivations
+      - name: 2. Determine motivations, mission and objectives
         href: strategy/motivations.md
-      - name: 4. Define your mission and objectives
-        href: strategy/mission-objectives.md
-      - name: 5. Define your strategy team
+      - name: 3. Define your strategy team
         href: strategy/define-your-team.md
-      - name: 6. Prepare your organization
+      - name: 4. Prepare your organization
         href: strategy/prepare-organizational-alignment.md
-      - name: 7. Inform your strategy
+      - name: 5. Inform your strategy
         items:
           - name: Cost efficiency
             href: strategy/inform/cost-efficiency.md
