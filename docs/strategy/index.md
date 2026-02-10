@@ -14,7 +14,7 @@ A cloud adoption strategy is a comprehensive plan that outlines your organizatio
 
 To establish a cloud adoption strategy, you must understand the specific needs and objectives of your business so that you can effectively align your cloud initiatives with overall business goals.
 
-The journey to successfully maturing in the cloud, or to expanding your footprint, starts with the Cloud Adoption Framework Strategy methodology, which consists of the following five steps.
+The journey to successfully maturing in the cloud, or to expanding your footprint, starts with the Cloud Adoption Framework Strategy methodology, which consists of the following six steps.
 
 :::image type="content" source="./media/caf-strategy-overview.svg" alt-text="Diagram that shows how to best consume the Cloud Adoption Framework Strategy guidance." border="false":::
 
@@ -38,7 +38,7 @@ Use a cloud adoption strategy to help you:
 
 ## How to build a cloud adoption strategy?
 
-This guidance is designed to help you develop a cloud adoption strategy that aligns with your business goals. The guidance is organized into five steps, suitable both for enterprises and startups alike:
+This guidance is designed to help you develop a cloud adoption strategy that aligns with your business goals. The guidance is organized into six steps, suitable both for enterprises and startups alike:
 
 1. **Assess your cloud adoption strategy.** Evaluate your organization's readiness for cloud adoption.
 1. **Define your motivations.** Identify the reasons for adopting cloud technologies.
