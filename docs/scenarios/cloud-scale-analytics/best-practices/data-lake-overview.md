@@ -19,7 +19,7 @@ Each storage account within your data landing zone stores data in one of three s
 - Enriched (silver) and curated data (gold)
 - Development data lakes
 
-A [data application](../architectures/data-landing-zone-data-products.md) can consume enriched and curated data from a storage account which has been ingested by an automated data agnostic ingestion service. You can create a [source aligned data application](../../cloud-scale-analytics/architectures/data-application-source-aligned.md) if you don't implement data agnostic engine or facilitate complex connections for ingesting data from operational sources. This data application follows the same flow as a data agnostic engine when ingesting data from external data sources.
+A [data application](../architectures/data-landing-zone-data-products.md) can consume enriched and curated data from a storage account which has been ingested by an automated data agnostic ingestion service. You can create a [source aligned data application](../../cloud-scale-analytics/architectures/data-application-source-aligned.md) if you don't implement a data agnostic engine or facilitate complex connections for ingesting data from operational sources. This data application follows the same flow as a data agnostic engine when ingesting data from external data sources.
 
 Data Lake Storage Gen2 supports fine-grained [access control lists](/azure/storage/blobs/data-lake-storage-access-control) (ACLs) that protect data at the file and folder levels. Access control lists can help your organization implement tight security measures for authentication and authorization for data products to:
 
@@ -28,7 +28,7 @@ Data Lake Storage Gen2 supports fine-grained [access control lists](/azure/stora
 
 ## Data lake planning
 
-When you plan a data lake, always consider appropriate consideration of structure, governance, and security. Multiple factors influence each data lake's structure and organization:
+When you plan a data lake, always give appropriate consideration to structure, governance, and security. Multiple factors influence each data lake's structure and organization:
 
 - The type of data stored
 - How its data is transformed
@@ -45,7 +45,7 @@ A data swamp is an unmanaged data lake that is almost inaccessible to users. Dat
 
 Proper governance and organization prevent data swamps. When you build a solid foundation for your data lake, it increases your chance of sustained data lake success and business value.
 
-As the size, complexity, number of data assets, and number of users or departments of your data lake grows, it's increasingly critical for you to have a robust data catalog system. Your data catalog system ensures that your users can find, tag, and classify data while they process, consume, and govern your data lake.
+As the size, complexity, number of data assets, and number of users or departments of your data lake grow, it's increasingly critical for you to have a robust data catalog system. Your data catalog system ensures that your users can find, tag, and classify data while they process, consume, and govern your data lake.
 
 For more information, see [data governance overview](../govern.md).
 
@@ -53,7 +53,7 @@ For more information, see [data governance overview](../govern.md).
 
 Consider whether your organization needs one or many storage accounts, and consider what file systems you require to build your logical data lake. Single storage technology provides multiple data access methods and helps you standardize across your organization.
 
-Data Lake Storage Gen2 is a fully managed platform as a service (PaaS). Multiple storage accounts or file systems can't incur a monetary cost until data is accessed or stored. Each Azure resource has administrative and operational overhead during provisioning, security, and governance, including backups and disaster recovery.
+Data Lake Storage Gen2 is a fully managed platform as a service (PaaS). Multiple storage accounts or file systems don't incur a monetary cost until data is accessed or stored. Each Azure resource has administrative and operational overhead during provisioning, security, and governance, including backups and disaster recovery.
 
 > [!NOTE]
 >
@@ -62,7 +62,7 @@ Data Lake Storage Gen2 is a fully managed platform as a service (PaaS). Multiple
 Consider the following factors when deciding between a consolidated or three storage account approach:
 
 - Isolation of data environments and predictability
-    - You might isolate activities that run in the raw and development zones to avoid potential effect on the curated zone, which holds data with great business value needed for critical decision making
+    - You might isolate activities that run in the raw and development zones to avoid potential affect on the curated zone, which holds data with great business value needed for critical decision making
 - Features and functionality at the storage account level
     - You can choose if lifecycle management options or firewall rules must be applied at the data landing zone or data lake level.
     - Create multiple storage accounts, but not unwanted silos.
