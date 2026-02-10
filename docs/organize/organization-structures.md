@@ -1,6 +1,6 @@
 ---
 title: Mature team structures
-description: Use these examples of common team structures, to find the organizational structure that best aligns with your operational needs during cloud adoption.
+description: Use these examples of common team structures to find the organizational structure that best aligns with your operational needs during cloud adoption.
 author: stephen-sumner
 ms.author: pnp
 ms.date: 02/18/2022
@@ -42,7 +42,7 @@ The nucleus of all cloud adoption efforts is the cloud adoption team. This team 
 
 ![Diagram that shows cloud adoption team only.](../_images/ready/org-ready-adoption-only.png)
 
-For small-scale or early-stage adoption efforts, this team might be as small as one person. In larger-scale or late-stage efforts, it's common to have several cloud adoption teams, each with around six engineers. Regardless of size or tasks, the consistent aspect of any cloud adoption team is that it provides the means to onboarding solutions into the cloud. For some organizations, this might be a sufficient organizational structure. The cloud adoption team article provides more insight into the structure, composition, and function of the cloud adoption team.
+For small-scale or early-stage adoption efforts, this team might be as small as one person. In larger-scale or late-stage efforts, it's common to have several cloud adoption teams, each with around six engineers. Regardless of size or tasks, the consistent aspect of any cloud adoption team is that it provides the means for onboarding solutions into the cloud. For some organizations, this might be a sufficient organizational structure. The cloud adoption team article provides more insight into the structure, composition, and function of the cloud adoption team.
 
 > [!WARNING]
 > Operating with only a cloud adoption team (or multiple cloud adoption teams) is considered an antipattern and should be avoided. At a minimum, consider the [MVP best practice](#best-practice-minimum-viable-product-mvp).
@@ -76,7 +76,7 @@ Cloud adoption plans heavily focused on platform as a service (PaaS), DevOps, or
 
 As the investment in cloud adoption grows and business values are realized, business stakeholders often become more engaged. A defined cloud strategy team aligns those business stakeholders to maximize the value realized by cloud adoption investments.
 
-When maturity happens organically, as a result of IT-led cloud adoption efforts, strategic alignment is preceded by a governance or central IT team. When cloud adoption efforts are lead by the business, the focus on operating model and organization tends to happen earlier. Whenever possible, define business outcomes and the cloud strategy team early in the process.
+When maturity happens organically, as a result of IT-led cloud adoption efforts, strategic alignment is preceded by a governance or central IT team. When cloud adoption efforts are led by the business, the focus on operating model and organization tends to happen earlier. Whenever possible, define business outcomes and the cloud strategy team early in the process.
 
 ## Operational alignment
 
