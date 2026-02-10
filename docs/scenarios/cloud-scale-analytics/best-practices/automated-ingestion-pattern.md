@@ -26,7 +26,7 @@ You can see how these capabilities interact:
 
 The following diagram shows how to implement this process using a combination of Azure services:
 
-:::image type="content" source="../images/automated-ingestion-flow.png" alt-text="Diagram of an data agnostic engine ingestion process":::
+:::image type="content" source="../images/automated-ingestion-flow.png" alt-text="Diagram of a data agnostic engine ingestion process":::
 
 *Figure 2: Automated ingestion process.*
 
@@ -39,7 +39,7 @@ To provide the metadata used to drive automated ingestion, you need data asset r
 
 Power Apps is used to capture metadata describing each data asset. Use a model-driven app to enter the information that gets persisted to a custom Dataverse table. When metadata is created or updated within Dataverse, it triggers an Automated Cloud flow that invokes further processing steps.
 
-![Diagram of an data asset registration.](../images/ingestion-step-1-registration.png)
+![Diagram of a data asset registration.](../images/ingestion-step-1-registration.png)
 
 *Figure 3: Data asset registration.*
 
@@ -68,7 +68,7 @@ Figure 5 shows the detailed registration process for automating the ingestion of
 
 - Source details are registered, including production and data factory environments.
 - Data shape, format, and quality constraints are captured.
-- Data application teams should indicate if data is **sensitive (Personal data)** This classification drives the process during which data lake folders are created to ingest raw, enriched and curated data. The source names raw and enriched data and the data product names curated data.
+- Data application teams should indicate if data is **sensitive (Personal data)**. This classification drives the process during which data lake folders are created to ingest raw, enriched and curated data. The source names raw and enriched data and the data product names curated data.
 - Service principal and security groups are created for ingesting and giving access to a dataset.
 - An ingestion job is created in the data landing zone Data Factory metastore.
 - An API inserts the data definition into Microsoft Purview.
@@ -120,7 +120,7 @@ Operational metadata can be used to track:
 
 Microsoft Purview REST APIs should be used to register data during the initial ingestion. You can use the APIs to submit data to your data catalog soon after it's ingested.
 
-For more information, see [how to use Microsoft Purview REST APIs](/azure/purview/tutorial-using-rest-apis).
+For more information, see [how to use Microsoft Purview REST APIs](/purview/data-gov-api-rest-data-plane).
 
 ### Register data sources
 
@@ -180,11 +180,11 @@ The following examples show how to use the Microsoft Purview REST API to registe
 ```
 
 > [!NOTE]
-> The `<collection-name>`is a current collection that exists in an Microsoft Purview account.
+> The `<collection-name>` is a current collection that exists in a Microsoft Purview account.
 
 ### Create a scan
 
-[Learn how you can create credentials](/azure/purview/manage-credentials) to authenticate sources in Microsoft Purview before setting up and running a scan.
+[Learn how you can create credentials](/purview/data-map-data-scan-credentials) to authenticate sources in Microsoft Purview before setting up and running a scan.
 
 Use the following API call to scan data sources:
 

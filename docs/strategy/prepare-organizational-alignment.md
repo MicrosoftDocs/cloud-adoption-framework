@@ -77,7 +77,7 @@ It's important that leadership identify and acknowledge their current limitation
 
 Organizations moving or expanding their footprint in cloud who are wanting to ensure they can broadly scale their cloud services at speed might need to shift from a traditional project delivery model to a product delivery model for operations.
 
-This shift is a fundamental change in how business' structure, develop, and manage IT and technology investments as part of a cloud adoption strategy.
+This shift is a fundamental change in how businesses structure, develop, and manage IT and technology investments as part of a cloud adoption strategy.
 
 - _A project model_: Task-driven against a clearly defined scope, clear start and end time frames, and a budget typically focused on CAPEX. Once projects are complete, the ownership often shifts to another team for operations and maintenance.
 

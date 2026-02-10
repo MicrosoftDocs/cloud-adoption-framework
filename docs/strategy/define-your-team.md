@@ -36,7 +36,7 @@ Here's a list of typical functions and their relevance for a cloud adoption stra
 - _Business decision makers (BDM)_ ensure that cloud strategies drive business value and align with revenue generation, customer engagement, and operational goals.
 - _IT decision makers (ITDM)_ bridge the gap between technology and business. They help balance technological feasibility with business needs and ensure that new solutions align with existing IT frameworks and capabilities.  
 - _Lead architects_ translate the business objectives into technical architectures that ensure cloud solutions are secure, scalable, reliable, and adaptable.
-- _Cloud security teams_ help ensure that you protect your data end systems. They ensure that new initiatives follow security standards to reduce the risks that are associated with cloud adoption.
+- _Cloud security teams_ help ensure that you protect your data and systems. They ensure that new initiatives follow security standards to reduce the risks that are associated with cloud adoption.
 - _Compliance teams_ minimize legal and compliance risks. They help ensure that all cloud practices meet regulatory and organizational compliance standards.
 - _Financial teams_. Consider including representatives from financial teams to help inform the IT and business decision makers about the opportunities and risks of cloud investments.
 - _Executives_ provide top-down support and strategic oversight. Including someone from your leadership team or executive stakeholders can help drive organizational commitments to ensure that cloud adoption aligns with the company’s overall mission and strategic objectives.

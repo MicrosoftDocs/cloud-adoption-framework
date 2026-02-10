@@ -39,7 +39,7 @@ In other cases, a full data science project might be required, complete with a d
 
 ### The setup process
 
-Templates should be deployed on a per-project basis after they've been set up. Each project should receive at least two instances for development and production environments to be separated. In the production environment, no individual person should have access, and everything should be deployed through continuous integration or continuous development pipelines and a service principal. These production environment principles are important because Azure Machine Learning doesn't provide a granular role-based access control model within a workspace. You can't limit user access to a specific set of experiments, endpoints, or pipelines.
+Templates should be deployed on a per-project basis after they've been set up. Each project should receive at least two instances for development and production environments to be separated. In the production environment, no individual person should have access, and everything should be deployed through continuous integration or continuous deployment pipelines and a service principal. These production environment principles are important because Azure Machine Learning doesn't provide a granular role-based access control model within a workspace. You can't limit user access to a specific set of experiments, endpoints, or pipelines.
 
 The same access rights typically apply to different types of artifacts. It's important to separate development from production to prevent the deletion of production pipelines or endpoints within a workspace. Along with the template, a process needs to be built to give data product teams the option to request new environments.
 
@@ -51,7 +51,7 @@ For real-time and streaming use cases, deployments should be tested on a downsiz
 
 Next, you can deploy models to the service you want. This deployment compute target is the only one that's generally available and recommended for production workloads in an AKS cluster. This step is more necessary if graphics processing unit (GPU) or field-programmable gate array support is required. Other native deployment options that support these hardware requirements aren't currently available in Azure Machine Learning.
 
-Azure Machine Learning requires one-to-one mapping to AKS clusters. Every new connection to an Azure Machine Learning workspace breaks the previous connection between AKS and Azure Machine Learning. After that limitation is mitigated, we recommended deploying central AKS clusters as shared resources and attach them to their respective workspaces.
+Azure Machine Learning requires one-to-one mapping to AKS clusters. Every new connection to an Azure Machine Learning workspace breaks the previous connection between AKS and Azure Machine Learning. After that limitation is mitigated, we recommend deploying central AKS clusters as shared resources and attach them to their respective workspaces.
 
 Another central test AKS instance should be hosted if stress tests should be done before you move a model to the production AKS. The test environment should provide the same compute resource as the production environment to ensure that the results are as similar as possible to the production environment.
 

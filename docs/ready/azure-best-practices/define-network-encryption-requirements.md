@@ -16,7 +16,7 @@ This section explores key recommendations to achieve network encryption between 
 
 - Cost and available bandwidth are inversely proportional to the length of the encryption tunnel between endpoints.
 
-- [Azure Virtual Network encryption](/azure/virtual-network/virtual-network-encryption-overview) enhances existing encryption-in-transit capabilities in Azure and allows seamless traffic encryption and decryption between virtual machines (VMs) and virtual machines scale sets.
+- [Azure Virtual Network encryption](/azure/virtual-network/virtual-network-encryption-overview) enhances existing encryption-in-transit capabilities in Azure and allows seamless traffic encryption and decryption between virtual machines (VMs) and virtual machine scale sets.
 
 - When you're using a VPN to connect to Azure, traffic is encrypted over the internet via IPsec tunnels.
 
