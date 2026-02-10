@@ -169,7 +169,7 @@ The following diagram shows options for hub-to-hub connectivity:
 
 - Use [Azure Virtual Network Manager](/azure/virtual-network-manager/overview) to manage connectivity and security configuration of virtual networks globally across subscriptions.
 
-- Use [Azure Monitor network insights](/azure/network-watcher/network-insights-overview) to monitor the end-to-end state of your networks on Azure.
+- Use [Network Watcher network insights](/azure/network-watcher/network-insights-overview) to monitor the end-to-end state of your networks on Azure.
 
 - You must consider the following two [limits](/azure/azure-resource-manager/management/azure-subscription-service-limits) when you connect spoke virtual networks to the central hub virtual network:
 
