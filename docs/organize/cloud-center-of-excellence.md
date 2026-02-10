@@ -89,7 +89,7 @@ In healthy cloud-forward companies, this negotiation process is a dynamic conver
 
 Before you proceed with this model, consider the company's tolerance for a growth mindset and IT's comfort level with releasing central responsibilities. As mentioned earlier, a CCoE exchanges control for agility and speed.
 
-This type of change takes time, experimentation, and negotiation. There will be bumps and set backs during the process, but if the team stays diligent and isn't discouraged from experimentation, there's a high probability of success in improving agility, speed, and reliability. One of the biggest success factors is support from leadership and key stakeholders.
+This type of change takes time, experimentation, and negotiation. There will be bumps and setbacks during the process, but if the team stays diligent and isn't discouraged from experimentation, there's a high probability of success in improving agility, speed, and reliability. One of the biggest success factors is support from leadership and key stakeholders.
 
 ### Key stakeholders
 
@@ -119,7 +119,7 @@ CCoE teams can demonstrate quick returns in some areas, but the higher-level goa
 
 During the first six to nine months of CCoE efforts, we recommend that business stakeholders meet monthly with IT leadership and the CCoE. There's little need for formal ceremony to these meetings. Simply reminding the CCoE members and their leadership of the importance of this program can go a long way toward CCoE success.
 
-We also recommend that the business stakeholders stay informed of the progress and the blocking issues that the CCoE team  experiences. Their efforts might seem like technical minutiae, but business stakeholders need to understand the progress of the plan so that they can engage when the team loses steam or becomes distracted by other priorities.
+We also recommend that the business stakeholders stay informed of the progress and the blocking issues that the CCoE team experiences. Their efforts might seem like technical minutiae, but business stakeholders need to understand the progress of the plan so that they can engage when the team loses steam or becomes distracted by other priorities.
 
 ### Support from IT stakeholders
 
