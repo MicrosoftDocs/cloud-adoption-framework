@@ -79,9 +79,9 @@ The following guidance is meant to help you configure cloud governance monitorin
 
 #### Configure monitoring for AI governance
 
-- **Monitor AI system outputs.** Use Azure for [abuse monitoring](/azure/ai-foundry/openai/concepts/abuse-monitoring?view=foundry-classic) and [content filtering](/azure/ai-foundry/foundry-models/concepts/content-filter?view=foundry-classic) of AI systems.
+- **Monitor AI system outputs.** Use Azure for [abuse monitoring](/azure/ai-foundry/openai/concepts/abuse-monitoring) and [content filtering](/azure/ai-foundry/foundry-models/concepts/content-filter) of AI systems.
 
-- **Red team AI systems.** Regularly [red team language models](/azure/ai-foundry/openai/concepts/red-teaming?view=foundry-classic) to find harmful outputs. Use both manual tests and automated tools to review the risk baseline.
+- **Red team AI systems.** Regularly [red team language models](/azure/ai-foundry/openai/concepts/red-teaming) to find harmful outputs. Use both manual tests and automated tools to review the risk baseline.
 
 ## 2. Configure cloud governance alerts
 
@@ -111,7 +111,7 @@ The following guidance helps you start configuring cloud governance alerts in Az
 
 - **Resource management governance alerts.** Configure alerts for when a noncompliance resource deploys. For example, use build warnings in your deployment pipeline or monitor noncompliance states.
 
-- **AI governance alerts.** Configure alerts when are harmful inputs and outputs in your AI systems. For example, monitor emails from Azure OpenAI that notify you of [abusive behavior](/azure/ai-foundry/openai/concepts/abuse-monitoring?view=foundry-classic).
+- **AI governance alerts.** Configure alerts when are harmful inputs and outputs in your AI systems. For example, monitor emails from Azure OpenAI that notify you of [abusive behavior](/azure/ai-foundry/openai/concepts/abuse-monitoring).
 
 ## 3. Develop a remediation plan
 
