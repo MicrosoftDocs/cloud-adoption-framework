@@ -111,7 +111,7 @@ The following guidance helps you start configuring cloud governance alerts in Az
 
 - **Resource management governance alerts.** Configure alerts for when a noncompliance resource deploys. For example, use build warnings in your deployment pipeline or monitor noncompliance states.
 
-- **AI governance alerts.** Configure alerts when are harmful inputs and outputs in your AI systems. For example, monitor emails from Azure OpenAI that notify you of [abusive behavior](/azure/ai-foundry/openai/concepts/abuse-monitoring).
+- **AI governance alerts.** Configure alerts when there are harmful inputs and outputs in your AI systems. For example, monitor emails from Azure OpenAI that notify you of [abusive behavior](/azure/ai-foundry/openai/concepts/abuse-monitoring).
 
 ## 3. Develop a remediation plan
 
