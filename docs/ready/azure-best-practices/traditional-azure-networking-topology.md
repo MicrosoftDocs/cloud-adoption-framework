@@ -11,7 +11,7 @@ ms.custom: think-tank
 # Traditional Azure networking topology
 
 > [!IMPORTANT]
-> Try the [topology](/azure/network-watcher/network-insights-topology) experience, which offers a visualization of Azure resources for ease of inventory management and monitoring network at scale. Use the topology feature to visualize resources and their dependencies across subscriptions, regions, and locations.
+> Try the [topology](/azure/network-watcher/network-insights-topology) experience, which offers a visualization of Azure resources for ease of inventory management and monitoring networks at scale. Use the topology feature to visualize resources and their dependencies across subscriptions, regions, and locations.
 
 This article describes key design considerations and recommendations for network topologies in Microsoft Azure. The following diagram shows a traditional Azure network topology:
 
@@ -25,7 +25,7 @@ This article describes key design considerations and recommendations for network
 
 - Virtual network peering is the preferred method to connect virtual networks in Azure. You can use virtual network peering to connect virtual networks in the same region, across different Azure regions, and across different Microsoft Entra tenants.
 
-- Virtual network peering and global virtual network peering aren't transitive. To enable a transit network, you need user-defined routes (UDRs) and network virtual appliances (NVAs). For more information, see [Hub-spoke network topology in Azure](/azure/architecture/reference-architectures/hybrid-networking/hub-spoke).
+- Virtual network peering and global virtual network peering aren't transitive. To enable a transit network, you need user-defined routes (UDRs) and network virtual appliances (NVAs). For more information, see [Hub-spoke network topology in Azure](/azure/architecture/networking/architecture/hub-spoke).
 
 - You can share an Azure DDoS Protection plan across all virtual networks in a single Microsoft Entra tenant to protect resources with public IP addresses. For more information, see [DDoS Protection](/azure/ddos-protection/ddos-protection-overview).
 
@@ -149,7 +149,7 @@ The following diagram shows options for hub-to-hub connectivity:
 
   - Requires hub-and-spoke network architectures across more than two Azure regions.
 
-  - Requires global transit connectivity between landing zones virtual networks across Azure regions.
+  - Requires global transit connectivity between landing zone virtual networks across Azure regions.
 
   - Wants to minimize network management overhead.
 
@@ -163,13 +163,13 @@ The following diagram shows options for hub-to-hub connectivity:
 
   - To simplify route configuration, [disable BGP propagation](/azure/virtual-network/virtual-networks-udr-overview#border-gateway-protocol) on the spoke route tables.
 
-- When your organization requires hub-and-spoke network architectures across more than two Azure regions and global transit connectivity between landing zones virtual networks across Azure regions, and you want to minimize network management overhead, we recommended a managed global transit network architecture that's based on [Virtual WAN](./virtual-wan-network-topology.md).
+- When your organization requires hub-and-spoke network architectures across more than two Azure regions and global transit connectivity between landing zone virtual networks across Azure regions, and you want to minimize network management overhead, we recommend a managed global transit network architecture that's based on [Virtual WAN](./virtual-wan-network-topology.md).
 
 - Deploy each region's hub network resources into separate resource groups, and sort them into each deployed region.
 
 - Use [Azure Virtual Network Manager](/azure/virtual-network-manager/overview) to manage connectivity and security configuration of virtual networks globally across subscriptions.
 
-- Use [Azure Monitor network insights](/azure/azure-monitor/insights/network-insights-overview) to monitor the end-to-end state of your networks on Azure.
+- Use [Network Watcher network insights](/azure/network-watcher/network-insights-overview) to monitor the end-to-end state of your networks on Azure.
 
 - You must consider the following two [limits](/azure/azure-resource-manager/management/azure-subscription-service-limits) when you connect spoke virtual networks to the central hub virtual network:
 
@@ -177,7 +177,7 @@ The following diagram shows options for hub-to-hub connectivity:
   
   - The maximum number of prefixes that ExpressRoute with private peering advertises from Azure to on-premises.
 
-  - Ensure that the number of spoke virtual networks connected to the hub virtual network don't exceed these limits.
+  - Ensure that the number of spoke virtual networks connected to the hub virtual network doesn't exceed these limits.
 
 ## Next step
 

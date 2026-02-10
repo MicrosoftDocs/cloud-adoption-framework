@@ -52,13 +52,13 @@ This section expands on the network topology to consider recommended models for 
 
 - When low latency is required, or throughput from on-premises to Azure must be greater than 10 Gbps, enable [FastPath](/azure/expressroute/about-fastpath) to bypass the ExpressRoute gateway from the data path.
 
-- Use VPN gateways to connect branches or remote locations to Azure. For higher resilience, deploy [zone-redundant gateways](/azure/vpn-gateway/about-zone-redundant-vnet-gateways). See the [retirement announcement](https://azure.microsoft.com/updates?id=vpngw1-5-non-az-skus-will-be-retired-on-30-september-2026) of VpnGw1–5 (non-availability zones SKUs) for more information on new, existing deployments, pricing and migration guidance.
+- Use VPN gateways to connect branches or remote locations to Azure. For higher resilience, deploy [zone-redundant gateways](/azure/reliability/reliability-virtual-network-gateway). See the [retirement announcement](https://azure.microsoft.com/updates?id=vpngw1-5-non-az-skus-will-be-retired-on-30-september-2026) of VpnGw1–5 (non-availability zones SKUs) for more information on new, existing deployments, pricing and migration guidance.
 
 - Use ExpressRoute [Global Reach](/azure/expressroute/expressroute-global-reach) to connect large offices, regional headquarters, or datacenters connected to Azure via ExpressRoute.
 
 - When traffic isolation or dedicated bandwidth is required, such as for separating production and nonproduction environments, use different ExpressRoute circuits. It will help you ensure isolated routing domains and alleviate noisy-neighbor risks.
 
-- Use ExpressRoute [network insights](/azure/expressroute/monitor-expressroute) to monitor your ExpressRoute components (peerings, connections, gateways). ExpressRoute uses network insights to provide a detailed topology mapping of all ExpressRoute components (peerings, connections, gateways) and has preloaded metrics dashboard for availability, throughput, packet drops, and gateway metrics.
+- Use ExpressRoute [network insights](/azure/expressroute/monitor-expressroute) to monitor your ExpressRoute components (peerings, connections, gateways). ExpressRoute uses network insights to provide a detailed topology mapping of all ExpressRoute components (peerings, connections, gateways) and has a preloaded metrics dashboard for availability, throughput, packet drops, and gateway metrics.
   - Use [Connection Monitor for ExpressRoute](/azure/expressroute/how-to-configure-connection-monitor) to monitor connectivity between Azure cloud deployments and on-premises locations (branch offices, and so on.), detect network issues, identify and eliminate connectivity problems.
 
 - Don't explicitly use ExpressRoute circuits from a single peering location. This creates a single point of failure and makes your organization susceptible to peering location outages.

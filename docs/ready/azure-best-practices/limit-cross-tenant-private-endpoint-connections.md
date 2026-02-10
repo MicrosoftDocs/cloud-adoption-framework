@@ -12,7 +12,7 @@ ms.custom:
 
 # Limit cross-tenant private endpoint connections in Azure
 
-Customers are increasingly using private endpoints in their tenants to connect to their Azure platform as a service (PaaS) services privately and securely. Private endpoints can connect to services across Microsoft Entra tenants. For security and compliance, you might need to block cross Microsoft Entra tenants connections on your private endpoints. This guidance shows you recommended configuration options to limit or prevent cross-tenant private endpoint connections. These options help you create data leakage prevention (DLP) controls inside your Azure environment.
+Customers are increasingly using private endpoints in their tenants to connect privately and securely to Azure platform as a service (PaaS) services. Private endpoints can connect to services across Microsoft Entra tenants. For security and compliance, you might need to block cross Microsoft Entra tenant connections on your private endpoints. This guidance shows you recommended configuration options to limit or prevent cross-tenant private endpoint connections. These options help you create data leakage prevention (DLP) controls inside your Azure environment.
 
 ## Introduction to private endpoints
 
@@ -29,7 +29,7 @@ For both scenarios, you specify the resource ID of the service and manually appr
 
 Connections C and D in Figure 1 show scenarios that customers generally want to allow. The private endpoint connections are kept within the corporate Microsoft Entra tenant. They don't represent a security risk so these two scenarios aren't covered in this article.
 
-The following information gives you options to prevent private endpoints provisioning across Microsoft Entra tenants.
+The following information gives you options to prevent private endpoint provisioning across Microsoft Entra tenants.
 
 ## Deny private endpoints linked to services in other tenants
 

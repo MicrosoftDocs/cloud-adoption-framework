@@ -19,20 +19,20 @@ This article lists considerations and recommendations for inbound and outbound c
 
 - If your organization prefers to use non-Azure network virtual appliance (NVAs) or in situations where native services don't satisfy specific requirements, the Azure landing zone architecture is fully compatible with partner NVAs.
 
-- Azure provides several direct internet outbound connectivity methods, such as network address translation (NAT) gateways or load balancers, for virtual machines (VMs) or compute instances on a virtual network. [Azure NAT Gateway](/azure/virtual-network/nat-gateway/nat-overview) is recommended as the default for enabling outbound connectivity as it is operationally the simplest to set up, and is the most scalable and efficient option among all outbound connectivity methods available in Azure. For more information, see [Azure outbound connectivity methods](/azure/load-balancer/load-balancer-outbound-connections#scenarios).
+- Azure provides several direct internet outbound connectivity methods, such as network address translation (NAT) gateways or load balancers, for virtual machines (VMs) or compute instances on a virtual network. [Azure NAT Gateway](/azure/nat-gateway/nat-overview) is recommended as the default for enabling outbound connectivity as it is operationally the simplest to set up, and is the most scalable and efficient option among all outbound connectivity methods available in Azure. For more information, see [Azure outbound connectivity methods](/azure/load-balancer/load-balancer-outbound-connections#scenarios).
 
 > [!NOTE]
 > The *Azure Firewall Management NIC* was originally required only for forced tunneling. However, this requirement has been updated to support new Azure Firewall features that depend on the management NIC. The Azure Firewall documentation reflects this change. To take advantage of these upcoming features, ensure that your Azure Firewall is deployed with the management NIC *enabled*. For more information, see [Azure Firewall Management NIC](/azure/firewall/management-nic).
 
 ## Design recommendations
 
-- Use Azure NAT Gateway for direct outbound connectivity to the internet. A NAT gateway is a fully managed, highly resilient NAT service that provides [scalable and on-demand SNAT](/azure/virtual-network/nat-gateway/nat-gateway-resource#source-network-address-translation).
+- Use Azure NAT Gateway for direct outbound connectivity to the internet. A NAT gateway is a fully managed, highly resilient NAT service that provides [scalable and on-demand SNAT](/azure/nat-gateway/nat-gateway-resource).
 
   - Use a NAT gateway for:
 
     - Dynamic or large workloads sending traffic to the internet.
     - Static and predictable public IP addresses for outbound connectivity. NAT gateway can be associated with up to 16 public IP addresses or a /28 public IP prefix.
-    - Mitigation of issues with SNAT port exhaustion commonly experienced with [Load balancer outbound rules](/azure/load-balancer/troubleshoot-outbound-connection#use-a-nat-gateway-for-outbound-connectivity-to-the-internet), [Azure Firewall](/azure/firewall/integrate-with-nat-gateway), or [Azure App Services](/azure/app-service/networking/nat-gateway-integration).
+    - Mitigation of issues with SNAT port exhaustion commonly experienced with [Load balancer outbound rules](/azure/load-balancer/troubleshoot-outbound-connection#use-a-nat-gateway-for-outbound-connectivity-to-the-internet), [Azure Firewall](/azure/firewall/integrate-with-nat-gateway), or [Azure App Service](/azure/app-service/overview-nat-gateway-integration).
     - Security and privacy of resources within your network. Only outbound and return traffic can pass through the NAT gateway.
 
 - Use Azure Firewall to govern:

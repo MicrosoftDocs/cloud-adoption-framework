@@ -93,14 +93,13 @@ After you establish access to a well-managed environment hierarchy, the followin
 ### Use Cost Management
 
 - [Create and manage budgets](/azure/cost-management-billing/costs/tutorial-acm-create-budgets)
-- [Export cost data](/azure/cost-management-billing/costs/tutorial-export-acm-data)
+- [Export cost data](/azure/cost-management-billing/costs/tutorial-improved-exports)
 - [Optimize costs based on recommendations](/azure/cost-management-billing/costs/tutorial-acm-opt-recommendations)
 - [Use cost alerts to monitor usage and spending](/azure/cost-management-billing/costs/cost-mgt-alerts-monitor-usage-spending)
 
 ### Use Cost Management to govern AWS costs
 
-- [Set up AWS Cost and Usage Reports integration](/azure/cost-management-billing/costs/aws-integration-set-up-configure)
-- [Manage AWS costs](/azure/cost-management-billing/costs/aws-integration-manage)
+- [Manage AWS costs](/azure/cost-management-billing/costs/overview-cost-management)
 
 ### Establish access, roles, and scope
 
