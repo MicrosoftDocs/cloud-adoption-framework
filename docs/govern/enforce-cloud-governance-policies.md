@@ -10,7 +10,7 @@ ms.custom: internal, UpdateFrequency2
 
 # Enforce cloud governance policies
 
-Defining policies is not enough. The organization must enforce governance policies to ensure compliance. Cloud governance enforcement means implementing controls, processes, and tools so that cloud usage adheres to the governance policies. The cloud governance team sets the strategy and oversee enforcement, but enforcement is a shared responsibility. The cloud platform and workload teams take on day-to-day enforcement within their domains. It’s generally recommended to automate enforcement wherever feasible, using cloud-native tools to enforce or check compliance. Use manual processes only where automation isn’t possible.
+Defining policies is not enough. The organization must enforce governance policies to ensure compliance. Cloud governance enforcement means implementing controls, processes, and tools so that cloud usage adheres to the governance policies. The cloud governance team sets the strategy and oversees enforcement, but enforcement is a shared responsibility. The cloud platform and workload teams take on day-to-day enforcement within their domains. It’s generally recommended to automate enforcement wherever feasible, using cloud-native tools to enforce or check compliance. Use manual processes only where automation isn’t possible.
 
 :::image type="content" source="./images/enforce.png" alt-text="Diagram showing the process to set up and maintain cloud governance. The diagram shows five sequential steps: build a cloud governance team, document cloud governance policies, enforce cloud governance policies, and monitor cloud governance. The first step you perform once. The last four steps you perform once to set up cloud governance and continuously to maintain cloud governance." lightbox="./images/enforce.png" border="false":::
 
@@ -22,7 +22,7 @@ Start by creating an overarching strategy for how policies will be enforced acro
 
 2. **Adopt an inheritance model.** Apply a hierarchical governance model where specific workloads inherit governance policies from the platform. This model helps ensure that organizational standards apply to the correct environments, such as purchasing requirements for cloud services. Follow the [design principles](/azure/cloud-adoption-framework/ready/landing-zone/design-principles) of Azure landing zones and its [resource organization](/azure/cloud-adoption-framework/ready/landing-zone/design-areas) design area to establish a proper inheritance model.
 
-3. **Discuss enforcement specifics.** Discuss where and how you apply governance policies. The goal is to find cost effective ways to enforce compliance that accelerates productivity. Without a discussion, you risk blocking the progress of specific teams. It's important to find a balance that supports the business objectives while managing risk effectively.
+3. **Discuss enforcement specifics.** Discuss where and how you apply governance policies. The goal is to find cost-effective ways to enforce compliance that accelerates productivity. Without a discussion, you risk blocking the progress of specific teams. It's important to find a balance that supports the business objectives while managing risk effectively.
 
 4. **Have a monitor-first stance.** Don't block actions unless you understand them first. For lower priority risk, start by monitoring compliance with cloud governance policies. After you understand the risk, you can move to more restrictive enforcement controls. A monitor-first approach gives you an opportunity to discuss the governance needs and realign the cloud governance policy and enforcement control to those needs.
 
@@ -36,7 +36,7 @@ Use Azure’s management and governance services to automate policy enforcement 
 
 1. **Start with a small set of automated policies.** Automate compliance on a small set of essential cloud governance policies. Implement and test automation to avoid operational disruptions. Expand your list of automated enforcement controls when ready.
 
-2. **Use cloud governance tools.** Use the tools available in your cloud environment to enforce compliance. Azure's primary governance tool is [Azure Policy](/azure/governance/policy/overview). Supplement Azure Policy with [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) (security), [Microsoft Purview](/purview/purview) (data), [Microsoft Entra ID Governance](/entra/id-governance/identity-governance-overview) (identity), [Azure Monitor](/azure/azure-monitor/overview) (operations), [management groups](/azure/governance/management-groups/overview) (resource management), [infrastructure as code (IaC)](/devops/deliver/what-is-infrastructure-as-code) (resource management), and configurations within each Azure service.
+2. **Use cloud governance tools.** Use the tools available in your cloud environment to enforce compliance. Azure's primary governance tool is [Azure Policy](/azure/governance/policy/overview). Supplement Azure Policy with [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) (security), [Microsoft Purview](/purview/purview) (data), [Microsoft Entra ID Governance](/entra/id-governance/identity-governance-overview) (identity), [Azure Monitor](/azure/azure-monitor/fundamentals/overview) (operations), [management groups](/azure/governance/management-groups/overview) (resource management), [infrastructure as code (IaC)](/devops/deliver/what-is-infrastructure-as-code) (resource management), and configurations within each Azure service.
 
 3. **Apply governance policies at the right scope.** Use an inheritance system where policies are set at a higher level, such as management groups. Policies at higher levels automatically apply to lower levels, such as subscriptions and resource groups. Policies apply even when there are changes within the cloud environment, lowering management overhead.
 
@@ -82,7 +82,7 @@ The following guidance can help you find the right tools to automate compliance 
 
 #### Automate data governance
 
-- **Automate data governance.** Automate [data governance](/purview/governance-solutions-overview) tasks, such as cataloging, mapping, securely sharing, and applying policies.
+- **Automate data governance.** Automate [data governance](/purview/data-governance-overview) tasks, such as cataloging, mapping, securely sharing, and applying policies.
 
 - **Automate data lifecycle management.** Implement storage policies and [lifecycle management for storage](/azure/storage/blobs/lifecycle-management-policy-configure?tabs=azure-portal) to ensure data is stored efficiently and compliantly.
 
@@ -104,21 +104,21 @@ The following guidance can help you find the right tools to automate compliance 
 
 #### Automate AI governance
 
-- **Use the retrieval augmented generation (RAG) pattern.** RAG adds an information retrieval system to control the grounding data that a language model uses to generate a response. For example, you can use [the Azure OpenAI Service on your own data feature](/azure/ai-services/openai/concepts/use-your-data) or set up RAG with [Azure AI Search](/azure/search/retrieval-augmented-generation-overview) to constrain generative AI to your content.
+- **Use the retrieval augmented generation (RAG) pattern.** RAG adds an information retrieval system to control the grounding data that a language model uses to generate a response. For example, you can use [the Azure OpenAI Service on your own data feature](/azure/ai-foundry/openai/concepts/use-your-data) or set up RAG with [Azure AI Search](/azure/search/retrieval-augmented-generation-overview) to constrain generative AI to your content.
 
 - **Use AI development tools.** Use AI tools, like [Microsoft Agent Framework](https://devblogs.microsoft.com/foundry/introducing-microsoft-agent-framework-the-open-source-engine-for-agentic-ai-apps/), that facilitate and standardize AI orchestration when developing applications that use AI.
 
-- **Govern output generation.** Help [prevent abuse and harmful content generation](/legal/cognitive-services/openai/data-privacy). Use [AI content filtering](/azure/ai-services/openai/concepts/content-filter) and [AI abuse monitoring](/azure/ai-services/openai/concepts/abuse-monitoring).
+- **Govern output generation.** Help [prevent abuse and harmful content generation](/azure/ai-foundry/responsible-ai/openai/data-privacy). Use [AI content filtering](/azure/ai-foundry/foundry-models/concepts/content-filter) and [AI abuse monitoring](/azure/ai-foundry/openai/concepts/abuse-monitoring).
 
 - **Configure data loss prevention.** Configure [data loss prevention for Foundry Tools](/azure/ai-services/cognitive-services-data-loss-prevention). Configure the list of outbound URLs that their AI services resources are allowed to access.
 
-- **Use system messages.** Use [system messages](/azure/ai-services/openai/concepts/system-message) to guide the behavior of an AI system and tailor the outputs.
+- **Use system messages.** Use [system messages](/azure/ai-foundry/openai/concepts/system-message) to guide the behavior of an AI system and tailor the outputs.
 
 - **Apply the AI security baseline.** Use the [Azure AI security baseline](/security/benchmark/azure/baselines/cognitive-services-security-baseline) to govern the security of AI systems.
 
 ## 3. Enforce cloud governance policies manually
 
-Not everything can be automated perfectly. Sometimes a tool limitation or cost makes automated enforcement unpractical. There will be cases, especially initially or for very custom processes, where manual governance is necessary. Also, smaller organizations might start with manual governance before automating. Key manual enforcement practices include:
+Not everything can be automated perfectly. Sometimes a tool limitation or cost makes automated enforcement impractical. There will be cases, especially initially or for very custom processes, where manual governance is necessary. Also, smaller organizations might start with manual governance before automating. Key manual enforcement practices include:
 
 1. **Use checklists.** Use governance checklists to make it easy for your teams to follow the cloud governance policies. For more information, see the [example compliance checklists](#example-cloud-governance-compliance-checklists).
 
@@ -126,7 +126,7 @@ Not everything can be automated perfectly. Sometimes a tool limitation or cost m
 
 3. **Schedule regular reviews.** Implement a schedule for regular reviews and audits of cloud resources and processes to ensure compliance with governance policies. These reviews are critical for identifying deviations from established policies and taking corrective actions.
 
-4. **Monitor manually.** Assign dedicated personnel to monitor the cloud environment for compliance with governance policies. Consider tracking the use of resources, managing access controls, and ensuring data protection measures are in place to align with the policies. For example, define a [comprehensive cost management approach](/azure/cost-management-billing/finops/) to govern cloud costs.
+4. **Monitor manually.** Assign dedicated personnel to monitor the cloud environment for compliance with governance policies. Consider tracking the use of resources, managing access controls, and ensuring data protection measures are in place to align with the policies. For example, define a [comprehensive cost management approach](/cloud-computing/finops/) to govern cloud costs.
 
 ## 4. Review policy enforcement
 

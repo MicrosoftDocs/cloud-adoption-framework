@@ -20,7 +20,7 @@ Begin by compiling a comprehensive list of risks that the organization faces in 
 
 1. **List all cloud assets.** List all your cloud assets so you can comprehensively identify the risks associated with them. For example, you can use the Azure portal, Azure Resource Graph, PowerShell, and Azure CLI to view all resources in a subscription.
 
-2. **Discover cloud risks.** Develop a stable risk catalog to guide cloud governance policies. To prevent frequent adjustments, focus on general cloud risks, not risks unique to a specific workload. Start with high-priority risks and develop a more comprehensive list over time. Common categories of risk are regulatory compliance, security, operations, cost, data, resources, and AI. Include risks that are unique to your organization, such non-Microsoft software, partner or vendor support, and internal cloud competencies.
+2. **Discover cloud risks.** Develop a stable risk catalog to guide cloud governance policies. To prevent frequent adjustments, focus on general cloud risks, not risks unique to a specific workload. Start with high-priority risks and develop a more comprehensive list over time. Common categories of risk are regulatory compliance, security, operations, cost, data, resources, and AI. Include risks that are unique to your organization, such as non-Microsoft software, partner or vendor support, and internal cloud competencies.
 
 3. **Involve key stakeholders.** Gather input from diverse organizational roles (IT, security, legal, finance, and business units) to consider all potential risks. This collaborative approach ensures a holistic view of risks related to the cloud.
 
@@ -34,7 +34,7 @@ The following guidance is meant to help you identify cloud risks in Azure. It pr
 
 - **Identify security risks.** Identify threats and vulnerabilities that jeopardize the confidentiality, integrity, and availability of the cloud environment. Use Azure to assess your [cloud security posture](/azure/defender-for-cloud/concept-cloud-security-posture-management) and detect [identity risks](/entra/id-protection/overview-identity-protection).
 
-- **Identify cost risks.** Identify risks related to the costs of cloud resources. Cost-related risks include overprovisioning, underprovisioning, underutilization, and unexpected costs from data transfer fees or service scaling. Use a [cost assessment](/assessments/ad1c0f6b-396b-44a4-924b-7a4c778a13d3/) to identify cost risk. Use Azure to estimate costs with the [Azure pricing calculator](/azure/cost-management-billing/costs/pricing-calculator). [Analyze and forecast](/azure/cost-management-billing/costs/quick-acm-cost-analysis) costs on current resources. Identify [unexpected changes](/azure/cost-management-billing/understand/analyze-unexpected-charges) in cloud costs.
+- **Identify cost risks.** Identify risks related to the costs of cloud resources. Cost-related risks include overprovisioning, underprovisioning, underutilization, and unexpected costs from data transfer fees or service scaling. Use a [cost assessment](/assessments/60c02533-b280-4dec-ac5f-3f10cdd238b9/) to identify cost risk. Use Azure to estimate costs with the [Azure pricing calculator](/azure/cost-management-billing/costs/pricing-calculator). [Analyze and forecast](/azure/cost-management-billing/costs/quick-acm-cost-analysis) costs on current resources. Identify [unexpected changes](/azure/cost-management-billing/understand/analyze-unexpected-charges) in cloud costs.
 
 - **Identify operations risks.** Identify risks that threaten the continuity of cloud operations, such as downtime and data loss. Use Azure tools to identify risks to [reliability and performance](/azure/advisor/advisor-overview).
 
@@ -42,7 +42,7 @@ The following guidance is meant to help you identify cloud risks in Azure. It pr
 
 - **Identify resource management risks.** Identify risks stemming from the provisioning, deployment, configuration, and management of cloud resources. Identify risks to [operational excellence](/azure/advisor/advisor-overview).
 
-- **Identify AI risks.** Regularly [red team language models](/azure/ai-services/openai/concepts/red-teaming). Manually test AI systems and supplement manual tests with [automated risk identification tools for AI](https://github.com/Azure/PyRIT#python-risk-identification-tool-for-generative-ai-pyrit). Look for common [human-AI interaction failures](https://www.microsoft.com/en-us/haxtoolkit/playbook/). Consider risks associated with use, access, and output of AI systems. Review the tenets of [responsible AI](https://www.microsoft.com/ai/responsible-ai) and the responsible AI [maturity model](https://www.microsoft.com/research/publication/responsible-ai-maturity-model/).
+- **Identify AI risks.** Regularly [red team language models](/azure/ai-foundry/openai/concepts/red-teaming). Manually test AI systems and supplement manual tests with [automated risk identification tools for AI](https://github.com/Azure/PyRIT#python-risk-identification-tool-for-generative-ai-pyrit). Look for common [human-AI interaction failures](https://www.microsoft.com/en-us/haxtoolkit/playbook/). Consider risks associated with use, access, and output of AI systems. Review the tenets of [responsible AI](https://www.microsoft.com/ai/responsible-ai) and the responsible AI [maturity model](https://www.microsoft.com/research/publication/responsible-ai-maturity-model/).
 
 ## 2. Analyze cloud risks
 
@@ -90,7 +90,7 @@ Categorize each risk into one of three levels: major risks (level 1), subrisks (
 
 ### Determine risk management strategy
 
-For each risk, identify appropriate risk treatment options, such as avoiding, mitigating, transferring, or accepting the risk. Provide an explanation of the choice. For example, if you decide to accept a risk because the cost of mitigating it's too expensive, you should document that reasoning for future reference.
+For each risk, identify appropriate risk treatment options, such as avoiding, mitigating, transferring, or accepting the risk. Provide an explanation of the choice. For example, if you decide to accept a risk because the cost of mitigating it is too expensive, you should document that reasoning for future reference.
 
 ### Assign risk owners
 
@@ -119,7 +119,7 @@ For more information, see [Risk list example](#example-risk-list).
 
 ## 4. Communicate cloud risks
 
-Clearly convey identified cloud risks to the executive sponsor and executive-level management. The goal is to ensure the organization prioritizes cloud risks. Provide regular updates on cloud risk management and communicate when you need extra resources to manage risks. Promote a culture where managing cloud risks management and governance is a part of daily operations.
+Clearly convey identified cloud risks to the executive sponsor and executive-level management. The goal is to ensure the organization prioritizes cloud risks. Provide regular updates on cloud risk management and communicate when you need extra resources to manage risks. Promote a culture where managing cloud risks and governance is a part of daily operations.
 
 ## 5. Review cloud risks
 
