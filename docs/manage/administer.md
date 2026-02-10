@@ -80,7 +80,7 @@ Compliance management ensures that Azure operations remain aligned with establis
     | Recommendation | Details |
     |----------------|---------|
     | Start with [General policy definitions](/azure/governance/policy/samples/built-in-policies#general) | Begin with Azure Policy's general definitions, including allowed locations, disallowed resource types, and audit custom RBAC roles. |
-    | Align with [regulatory standards](/azure/governance/policy/samples/#regulatory-compliance) | Use Azure Policy's free, built-in definitions aligned with regulatory standards such as [ISO 27001](/azure/governance/policy/samples/iso-27001), [NIST SP 800-53](/azure/governance/policy/samples/nist-sp-800-53-r5), [PCI DSS](/azure/governance/policy/samples/pci-dss-4-0), [EU GDPR](/azure/governance/policy/samples/built-in-initiatives#regulatory-compliance) |
+    | Align with [regulatory standards](/azure/governance/policy/samples/#regulatory-compliance) | Use Azure Policy's free, built-in definitions aligned with regulatory standards such as [ISO 27001](/azure/governance/policy/samples/iso-27001), [NIST SP 800-53](/azure/governance/policy/samples/nist-sp-800-53-r5), and [PCI DSS](/azure/governance/policy/samples/pci-dss-4-0). |
 
 For more information, see [Enforcing compliance in Azure](/azure/cloud-adoption-framework/govern/enforce-cloud-governance-policies#azure-facilitation-enforcing-cloud-governance-policies-automatically).
 

@@ -158,7 +158,7 @@ Your approach must implement architecture redundancy to meet the reliability req
 
     | Workload reliability | Guidance |
     | ---| --- |
-    | Reliability pillar | [Highly available multi-region design](/azure/well-architected/reliability/redundancy)<br>[Designing for redundancy](/azure/well-architected/reliability/redundancy)<br>[Using availability zones and regions](/azure/well-architected/design-guides/regions-availability-zones)|
+    | Reliability pillar | [Architecture strategies for designing for redundancy](/azure/well-architected/reliability/redundancy)<br>[Using availability zones and regions](/azure/well-architected/design-guides/regions-availability-zones)|
     |Service guide| [Azure service guides](/azure/well-architected/service-guides/?product=popular) (*start with the Reliability section*)|
 
 For more information, see [Redundancy](/azure/reliability/concept-redundancy-replication-backup#redundancy).
