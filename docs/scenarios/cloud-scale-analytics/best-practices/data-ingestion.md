@@ -25,11 +25,11 @@ Proprietary native and third-party tooling provides niche capabilities to integr
 - [Azure Data Share](/azure/data-share/) supports organizations to securely share data with multiple external customers and partners. After you create a data share account and add data products, customers and partners can be invited to the data share. Data providers are always in control of the data that they've shared. Azure Data Share makes it simple to manage and monitor what data is shared, when it was shared, and who shared it.
 
 > [!IMPORTANT]
-> Every data landing zone can have an [data ingestion resource group](../architectures/data-landing-zone.md#data-ingestion) that exists for businesses with an data agnostic ingestion engine. If you don't have this framework engine, the only recommended resource is deploying an Azure Databricks analytics workspace, which would be used by data integrations to run complex ingestion. See the [data agnostic ingestion engine](./automated-ingestion-pattern.md) for potential automation patterns.
+> Every data landing zone can have an [data ingestion resource group](../architectures/data-landing-zone.md#data-ingestion) that exists for businesses with a data agnostic ingestion engine. If you don't have this framework engine, the only recommended resource is deploying an Azure Databricks analytics workspace, which would be used by data integrations to run complex ingestion. See the [data agnostic ingestion engine](./automated-ingestion-pattern.md) for potential automation patterns.
 
 ## Ingest considerations for Azure Data Factory
 
-If you have an data agnostic ingestion engine, you should deploy a single Data Factory for each data landing zone in the data ingestion resource group. The Data Factory workspace should be locked off to users, and only managed identity and service principals will have access to deploy. Data landing zone operations should have read access to allow pipeline debugging.
+If you have a data agnostic ingestion engine, you should deploy a single Data Factory for each data landing zone in the data ingestion resource group. The Data Factory workspace should be locked off to users, and only managed identity and service principals will have access to deploy. Data landing zone operations should have read access to allow pipeline debugging.
 
 Data applications can have their own Data Factory for data movement. Having a Data Factory in each data application resource group supports a complete continuous integration (CI) and continuous deployment (CD) experience by only allowing pipelines to be deployed from Azure DevOps or GitHub.
 

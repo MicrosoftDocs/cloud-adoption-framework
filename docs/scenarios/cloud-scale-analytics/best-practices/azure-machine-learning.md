@@ -49,7 +49,7 @@ The following design principles can guide the implementation of Azure Machine Le
 
 ### Workspace organization and setup
 
-You can deploy the number of machine learning workspaces that your workloads require and for every landing zone that you deploy. The following recommendations can help your setup:
+You can deploy the number of machine learning workspaces that your workloads require for every landing zone that you deploy. The following recommendations can help your setup:
 
 - Deploy at least one machine learning workspace per project.
 
@@ -68,7 +68,7 @@ For each default resource configuration in a data landing zone, an Azure Machine
 
 ### Integration with data landing zone core services
 
-The data landing zone comes with a default set of services that are deployed in the [platform services layer](../architectures/data-landing-zone.md#platform-services). These core services can be configured when Azure Machine Learning is deployed in data landing zone.
+The data landing zone comes with a default set of services that are deployed in the [platform services layer](../architectures/data-landing-zone.md#platform-services). These core services can be configured when Azure Machine Learning is deployed in a data landing zone.
 
 - Connect Databricks workspaces as linked services to integrate data and process big data.
 
@@ -92,9 +92,9 @@ Consider the following recommendations for managing user identities and access w
 
 - Use Microsoft Entra groups to manage user permissions for storage and machine learning resources.
 
-- Azure Machine Learning can use [user-assigned managed identities for access control](/azure/machine-learning/how-to-use-managed-identities?tabs=python) and limit the range of access to Azure Container Registry, Key Vault, Azure Storage, and Application Insights.
+- Azure Machine Learning can use [user-assigned managed identities for access control](/azure/machine-learning/how-to-identity-based-service-authentication?tabs=python) and limit the range of access to Azure Container Registry, Key Vault, Azure Storage, and Application Insights.
 
-- Create user-assigned managed identities to managed compute clusters created in Azure Machine Learning.
+- Create user-assigned managed identities for managed compute clusters created in Azure Machine Learning.
 
 ### Provision infrastructure through self-service
 
@@ -118,7 +118,7 @@ Self-service can be enabled and governed with [policies for Azure Machine Learni
 
 ## Recommendations for managing your environment
 
-Cloud-scale analytics data landing zones outline reference implementation for repeatable deployments, which can help you to set up manageable and governable environments. Consider the following recommendations for using Azure Machine Learning to manage your environment:
+Cloud-scale analytics data landing zones outline a reference implementation for repeatable deployments, which can help you to set up manageable and governable environments. Consider the following recommendations for using Azure Machine Learning to manage your environment:
 
 - Use Microsoft Entra groups to manage access to machine learning resources.
 

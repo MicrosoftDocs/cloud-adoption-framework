@@ -66,7 +66,7 @@ Enable the following data-protection features to enhance end-to-end blob data pr
 
 In a data landing zone, send all monitoring to your [Azure landing zone management subscription](../../../ready/landing-zone/design-area/management.md) for analysis.
 
-For more information, see [Monitor Azure resources with Azure Monitor](/azure/azure-monitor/essentials/monitor-azure-resource) and [Monitor Blob Storage](/azure/storage/blobs/monitor-blob-storage).
+For more information, see [Monitor Azure resources with Azure Monitor](/azure/azure-monitor/platform/monitor-azure-resource) and [Monitor Blob Storage](/azure/storage/blobs/monitor-blob-storage).
 
 Log entries are created only for requests against the service endpoint. The following types of authenticated requests are logged:
 
