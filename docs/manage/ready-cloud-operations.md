@@ -142,7 +142,7 @@ Optimize your Azure cloud environment by promoting continuous improvement. Regul
 | Development | [Developer resource hub](https://developer.microsoft.com/) | A hub for developer tools and resources |
 | Deployment   | [Bicep, Terraform, and ARM templates](/azure/templates/)   | IaC templates for every Azure resource    |
 | Deployment   | [Azure region pairs](/azure/reliability/regions-paired#list-of-region-pairs)| List of Azure paired regions    |
-| Deployment   | [Directory of Azure Cloud Services](https://azure.microsoft.com//products/) | Directory of all Azure services |
+| Deployment   | [Directory of Azure Cloud Services](https://azure.microsoft.com/products/) | Directory of all Azure services |
 | Deployment | [Workload deployment](/azure/well-architected/design-guides/release-engineering-continuous-integration) | Workload guidance for continuous integration |
 | Monitoring | [Monitor your Azure cloud estate](./monitor.md) | Comprehensive Azure monitoring guidance |
 | Monitoring | [Workload monitoring](/azure/well-architected/operational-excellence/observability) | Workload guidance for monitoring |

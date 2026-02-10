@@ -86,7 +86,7 @@ For more information, see [Enforcing compliance in Azure](/azure/cloud-adoption-
 
 ## Manage data
 
-Managing data in cloud operations involves actively classifying, segmenting, securing access, and protecting against deletion. You must safeguard sensitive information, maintains compliance, and ensures data reliability during operational changes. Follow these steps:
+Managing data in cloud operations involves actively classifying, segmenting, securing access, and protecting against deletion. You must safeguard sensitive information, maintain compliance, and ensure data reliability during operational changes. Follow these steps:
 
 1. ***Discover and classify data.*** Identify and categorize data according to sensitivity and importance. This classification guides tailored controls for each data type. Use [Microsoft Purview](/purview/data-governance-overview) for data governance. For more information, see [Data sources that connect to Microsoft Purview Data Map](/purview/data-map-data-sources#azure).
 
