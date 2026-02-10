@@ -10,7 +10,7 @@ ms.custom: internal, UpdateFrequency2
 
 # Build a cloud governance team
 
-Cloud governance is how an organization controls its use of cloud services by establishing guardrails. These guardrails are set of policies, procedures, and tools that define acceptable and unacceptable cloud activities. Effective cloud governance aligns cloud usage with business objectives, mitigates risks, ensures regulatory compliance, and prevents unmanaged or unauthorized cloud actions. In practice, cloud governance covers key domains such as security, regulatory compliance, operations, cost management, data management, resource provisioning, and even emerging areas like AI.
+Cloud governance is how an organization controls its use of cloud services by establishing guardrails. These guardrails are a set of policies, procedures, and tools that define acceptable and unacceptable cloud activities. Effective cloud governance aligns cloud usage with business objectives, mitigates risks, ensures regulatory compliance, and prevents unmanaged or unauthorized cloud actions. In practice, cloud governance covers key domains such as security, regulatory compliance, operations, cost management, data management, resource provisioning, and even emerging areas like AI.
 
 **Quick links:** [Azure governance tools](./enforce-cloud-governance-policies.md#azure-facilitation-enforcing-cloud-governance-policies-automatically) and [Example governance RACI matrix](#example-cloud-governance-raci-matrix)
 

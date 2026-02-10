@@ -31,7 +31,7 @@ Implement monitoring solutions to track compliance with your cloud governance po
 
 6. **Provide access to governance monitoring.** Configure the appropriate level of access to governance monitoring results so the teams responsible for governance can evaluate the effectiveness of enforcement controls.
 
-7. **Audit monitoring effectiveness.** Manually review compliance to validate compliancy. For example, ensure tags are receiving the right values and not an undesired value, such as *NA*.
+7. **Audit monitoring effectiveness.** Manually review compliance to validate compliance. For example, ensure tags are receiving the right values and not an undesired value, such as *NA*.
 
 ### Azure facilitation: Configuring cloud governance monitoring
 
@@ -55,13 +55,13 @@ The following guidance is meant to help you configure cloud governance monitorin
 
 - **Create budgets.** [Create a budget](/azure/cost-management-billing/costs/tutorial-acm-create-budgets) that aligns with your desired investment in the cloud.
 
-- **Gather cost data.** Use [cost optimization recommendations](/azure/cost-management-billing/costs/tutorial-acm-opt-recommendations) and the [cost optimization workbook](/azure/advisor/advisor-cost-optimization-workbook) to guide cost management efforts, such as detection of idle resources. [Identify anomalies and unexpected changes in cost](/azure/cost-management-billing/understand/analyze-unexpected-charges).
+- **Gather cost data.** Use [cost optimization recommendations](/azure/cost-management-billing/costs/tutorial-acm-opt-recommendations) and the [cost optimization workbook](/azure/advisor/advisor-workbook-cost-optimization) to guide cost management efforts, such as detection of idle resources. [Identify anomalies and unexpected changes in cost](/azure/cost-management-billing/understand/analyze-unexpected-charges).
 
 #### Configure monitoring for operations governance
 
 - **Monitor policies on cloud operations.** Use Azure Policy to track compliance with governance policies that apply to operations.
 
-- **Monitor logs and metrics.** To track [availability](/azure/azure-monitor/app/availability-overview) and [performance](/azure/azure-monitor/app/failures-and-performance-views), analyze [logs](/azure/azure-monitor/logs/log-analytics-overview) and [metrics](/azure/azure-monitor/essentials/analyze-metrics) across cloud environments.
+- **Monitor logs and metrics.** To track [availability](/azure/azure-monitor/app/availability) and [performance](/azure/azure-monitor/app/failures-performance-transactions), analyze [logs](/azure/azure-monitor/logs/log-analytics-overview) and [metrics](/azure/azure-monitor/metrics/analyze-metrics) across cloud environments.
 
 - **Monitor resource optimization.** [Use Azure Advisor](/azure/advisor/advisor-overview#what-is-advisor) to monitor Azure resources for reliability, security, operational excellence, performance, and cost. [Set alerts](/azure/advisor/advisor-alerts-portal) for any new Advisor recommendations.
 
@@ -69,7 +69,7 @@ The following guidance is meant to help you configure cloud governance monitorin
 
 #### Configure monitoring for data governance
 
-- **Monitor data governance.** [Monitor data compliance, management, and usage](/purview/concept-insights).
+- **Monitor data governance.** [Monitor data compliance, management, and usage](/purview/legacy/concept-insights).
 
 - **Use dashboards.** Use dashboards to monitor compliance with any data plane policies.
 
@@ -79,9 +79,9 @@ The following guidance is meant to help you configure cloud governance monitorin
 
 #### Configure monitoring for AI governance
 
-- **Monitor AI system outputs.** Use Azure for [abuse monitoring](/azure/ai-services/openai/concepts/abuse-monitoring) and [content filtering](/azure/ai-services/openai/concepts/content-filter) of AI systems.
+- **Monitor AI system outputs.** Use Azure for [abuse monitoring](/azure/ai-foundry/openai/concepts/abuse-monitoring?view=foundry-classic) and [content filtering](/azure/ai-foundry/foundry-models/concepts/content-filter?view=foundry-classic) of AI systems.
 
-- **Red team AI systems.** Regularly [red team language models](/azure/ai-services/openai/concepts/red-teaming) to find harmful outputs. Use both manual tests and automated tools to review the risk baseline.
+- **Red team AI systems.** Regularly [red team language models](/azure/ai-foundry/openai/concepts/red-teaming?view=foundry-classic) to find harmful outputs. Use both manual tests and automated tools to review the risk baseline.
 
 ## 2. Configure cloud governance alerts
 
@@ -101,17 +101,17 @@ The following guidance helps you start configuring cloud governance alerts in Az
 
 - **Regulatory compliance governance alerts.** Use Azure activity logs to [generate alerts](/azure/governance/policy/how-to/get-compliance-data#azure-monitor-logs) for noncompliance across Azure.
 
-- **Security governance alerts.** Configure [security alerts](/azure/defender-for-cloud/managing-and-responding-alerts) and noncompliance [alerts](/azure/governance/policy/how-to/get-compliance-data#azure-monitor-logs).
+- **Security governance alerts.** Configure [security alerts](/azure/defender-for-cloud/manage-respond-alerts) and noncompliance [alerts](/azure/governance/policy/how-to/get-compliance-data#azure-monitor-logs).
 
 - **Cost governance alerts.** Set up alerts to notify teams of potential cost overruns and spending anomalies. Configure [cost alerts](/azure/cost-management-billing/costs/cost-mgt-alerts-monitor-usage-spending) and [cost anomaly alerts](/azure/cost-management-billing/understand/analyze-unexpected-charges#create-an-anomaly-alert). Set [reservation utilization alerts](/azure/cost-management-billing/costs/reservation-utilization-alerts) to keep reservations and savings plans usage at or close to full usage.
 
 - **Operations governance alerts.** [Configure alerts](/azure/azure-monitor/alerts/alerts-overview) on specific logs and metrics. [Set alerts](/azure/advisor/advisor-alerts-portal) for new recommendations aligned to reliability and performance. Configure service health alerts to get notified of current and upcoming service health problems. Configure [resource health alerts](/azure/service-health/resource-health-alert-monitor-guide) to get notified of the current and historical health status of your Azure resources.
 
-- **Data governance alerts.** [Configure data governance alerts](/purview/alert-policies) to report data governance violations.
+- **Data governance alerts.** [Configure data governance alerts](/defender-xdr/alert-policies) to report data governance violations.
 
 - **Resource management governance alerts.** Configure alerts for when a noncompliance resource deploys. For example, use build warnings in your deployment pipeline or monitor noncompliance states.
 
-- **AI governance alerts.** Configure alerts when are harmful inputs and outputs in your AI systems. For example, monitor emails from Azure OpenAI that notify you of [abusive behavior](/azure/ai-services/openai/concepts/abuse-monitoring).
+- **AI governance alerts.** Configure alerts when are harmful inputs and outputs in your AI systems. For example, monitor emails from Azure OpenAI that notify you of [abusive behavior](/azure/ai-foundry/openai/concepts/abuse-monitoring?view=foundry-classic).
 
 ## 3. Develop a remediation plan
 
