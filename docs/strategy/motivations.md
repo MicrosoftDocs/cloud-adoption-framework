@@ -12,7 +12,7 @@ ms.update-cycle: 1095-days
 
 The purpose of this article is to help you understand and define motivations, mission, and objectives for your cloud adoption strategy. These are crucial for IT decision-makers and executives because they help ensure alignment with strategic business objectives, maximize return on investment, and facilitate informed decision making.
 
-:::image type="content" source="./media/caf-strategy-motivations-objectives.svg" alt-text="Diagram that shows the phase for defining motivations for your cloud adoption strategy." lightbox="./media/caf-strategy-motivations-objectives.svg":::
+:::image type="content" source="./media/caf-strategy-motivations-objectives.svg" alt-text="Diagram that shows the phase for defining motivations, mission, and objectives for your cloud adoption strategy." lightbox="./media/caf-strategy-motivations-objectives.svg":::
 
 ## Define your motivations
 

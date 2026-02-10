@@ -14,7 +14,7 @@ A cloud adoption strategy is a comprehensive plan that outlines your organizatio
 
 To establish a cloud adoption strategy, you must understand the specific needs and objectives of your business so that you can effectively align your cloud initiatives with overall business goals.
 
-The journey to successfully maturing in the cloud, or to expanding your footprint, starts with the Cloud Adoption Framework Strategy methodology, which consists of the following six steps.
+The journey to successfully maturing in the cloud, or to expanding your footprint, starts with the Cloud Adoption Framework Strategy methodology, which consists of the following five steps.
 
 :::image type="content" source="./media/caf-strategy-overview.svg" alt-text="Diagram that shows how to best consume the Cloud Adoption Framework Strategy guidance." border="false":::
 
@@ -38,7 +38,7 @@ Use a cloud adoption strategy to help you:
 
 ## How to build a cloud adoption strategy?
 
-This guidance is designed to help you develop a cloud adoption strategy that aligns with your business goals. The guidance is organized into six steps, suitable both for enterprises and startups alike:
+This guidance is designed to help you develop a cloud adoption strategy that aligns with your business goals. The guidance is organized into five steps, suitable both for enterprises and startups alike:
 
 1. **Assess your cloud adoption strategy.** Evaluate your organization's readiness for cloud adoption.
 2. **Define your motivations, mission, and objectives.** Identify the reasons for adopting cloud technologies.
@@ -55,7 +55,7 @@ The following checklist provides an overview of the tasks for each cloud adoptio
 | Cloud adoption strategy step | Startup tasks | Enterprise tasks |
 |---------------------|-------------------|----------------------|
 | Assess your cloud adoption strategy | &#9744; [Assess your strategy](./assessment.md) |  &#9744; [Assess your strategy](./assessment.md) |
-| Define your motivations, mission, and objectives | &#9744; [Define your motivations](./motivations.md#define-your-motivations) <br>&#9744;[Define your mission and objectives](./motivations.md#define-your-mission-and-objectives) <br>&#9744; [Measure success](./motivations.md#measure-success)  | &#9744; [Define your motivations](./motivations.md#define-your-motivations) <br>&#9744; [Classify your motivations](./motivations.md#classify-motivations) <br>&#9744; [Define your mission and objectives](./motivations.md#define-your-mission-and-objectives) <br>&#9744; [Measure success](./motivations.md#measure-success) |
+| Define your motivations, mission, and objectives | &#9744; [Define your motivations](./motivations.md#define-your-motivations) <br> &#9744; [Define your mission and objectives](./motivations.md#define-your-mission-and-objectives) <br>&#9744; [Measure success](./motivations.md#measure-success)  | &#9744; [Define your motivations](./motivations.md#define-your-motivations) <br>&#9744; [Classify your motivations](./motivations.md#classify-motivations) <br>&#9744; [Define your mission and objectives](./motivations.md#define-your-mission-and-objectives) <br>&#9744; [Measure success](./motivations.md#measure-success) |
 | Define your strategy team | &#9744; [Define your team](./define-your-team.md) | &#9744; [Define your team](./define-your-team.md) |
 | Prepare your organization | &#9744; [Ensure leadership and executive buy-in](./prepare-organizational-alignment.md#leadership-and-executive-buy-in)  | &#9744; [Ensure leadership and executive buy-in](./prepare-organizational-alignment.md#leadership-and-executive-buy-in) <br>&#9744; [Align organizational strategies](./prepare-organizational-alignment.md#align-organizational-strategies) <br>&#9744; [Understand your operating model's readiness](./prepare-organizational-alignment.md#understand-your-operating-models-readiness-for-cloud) <br>&#9744; [Shift from a project model to a product model](./prepare-organizational-alignment.md#shift-from-a-project-model-to-product-model) <br>&#9744; [Identify and define partner relationships](./prepare-organizational-alignment.md#identify-and-define-partner-relationships) |
 | Inform your strategy | &#9744; [Integrate AI](./inform/ai.md) <br>&#9744; [Address security](./inform/security.md) | &#9744; [Ensure cost efficiency](./inform/cost-efficiency.md) <br>&#9744; [Integrate AI](./inform/ai.md) <br>&#9744; [Create resiliency](./inform/resiliency.md) <br>&#9744; [Address security](./inform/security.md) <br>&#9744; [Adopt sustainability](./inform/sustainability.md) |
