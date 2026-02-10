@@ -127,9 +127,7 @@ items:
         items:
           - name: Overview
             href: /azure/aks/intro-kubernetes?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/app-platform/toc.json
-          - name: Deploy an AKS cluster in the Azure portal
-            href: /azure/aks/kubernetes-walkthrough-portal?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/app-platform/toc.json
-          - name: Deploy an AKS cluster with an ARM template
+          - name: Deploy an AKS cluster using Azure portal
             href: /azure/aks/kubernetes-walkthrough-portal?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/app-platform/toc.json
           - name: Develop with Helm
             href: /azure/aks/quickstart-helm?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/app-platform/toc.json
@@ -149,16 +147,6 @@ items:
                 href: /azure/aks/tutorial-kubernetes-app-update?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/app-platform/toc.json
               - name: Upgrade cluster
                 href: /azure/aks/tutorial-kubernetes-upgrade-cluster?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/scenarios/app-platform/toc.json
-          - name: Develop with Kubernetes
-            items:
-              - name: Overview
-                href: /visualstudio/bridge/overview-bridge-to-kubernetes?toc=/azure/cloud-adoption-framework/scenarios/app-platform/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
-              - name: Bridge to Kubernetes
-                href: /visualstudio/bridge/bridge-to-kubernetes-vs?toc=/azure/cloud-adoption-framework/scenarios/app-platform/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
-              - name: How Bridge to Kubernetes works
-                href: /visualstudio/bridge/overview-bridge-to-kubernetes?toc=/azure/cloud-adoption-framework/scenarios/app-platform/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
-              - name: Configure Bridge to Kubernetes
-                href: /visualstudio/bridge/configure-bridge-to-kubernetes?toc=/azure/cloud-adoption-framework/scenarios/app-platform/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json
           - name: Multitenancy
             items:
               - name: Cluster isolation
