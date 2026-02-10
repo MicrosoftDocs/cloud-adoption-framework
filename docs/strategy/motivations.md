@@ -101,10 +101,6 @@ Use your classified motivations to inform the priorities and urgency of your goa
 
 For a successful cloud adoption, you must define your mission and objectives. A clear mission provides direction and purpose. The objectives outline the steps that you take to achieve that mission. A mission is only valuable if you can take action on it, achieve objectives effectively, and measure the results.  
 
-:::image type="content" source="./media/caf-strategy-motivations-objectives.svg" alt-text="Diagram that shows the phase for defining mission and objectives for your cloud adoption strategy." border="false":::
-
-You can use frameworks, such as objectives and key results (OKRs), to break your mission down into actionable steps. Frameworks can help you drive accountability and align your cloud adoption strategy with your organization's overall strategic objectives to ensure coherence and focus.
-
 > [!NOTE]
 > The following section uses OKRs to show examples of how you can break down your cloud adoption strategy objectives into measurable key results. But you can use this guidance and these examples with any methodology or framework when you define and measure your business goals.
 
