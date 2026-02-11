@@ -30,7 +30,7 @@ Automation doesn't have to mean integration with DevOps, but integration does of
 
 ### Infrastructure as Code
 
-As you move towards embracing DevOps practices, you have to choose a tool to deploy your Azure resources. There are two different [categories of IaC tooling](/azure/well-architected/operational-excellence/infrastructure-as-code-design#categories-of-iac-tooling). The preferred option is a declarative IaC tool. 
+As you move towards embracing DevOps practices, you have to choose a tool to deploy your Azure resources. There are two different [categories of IaC tooling](/azure/well-architected/operational-excellence/infrastructure-as-code-design#categories-of-iac-tooling). The preferred option is a declarative IaC tool.
 
 Azure provides native options with [ARM templates](/azure/azure-resource-manager/templates/overview) and [Azure Bicep](/azure/azure-resource-manager/bicep/overview).
 
