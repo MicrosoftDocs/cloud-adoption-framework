@@ -23,10 +23,10 @@ Review the following sections to find recommended security controls and governan
 - Use [**Azure Managed Identity**](/entra/identity/managed-identities-azure-resources/overview) or [service principal with certificate credentials](/entra/identity-platform/howto-authenticate-service-principal-powershell) for automation and services for Azure Virtual Desktop. Assign least privilege to the automation account and scope limited to Azure Virtual Desktop landing zone(s). You can use Azure Key Vault with Azure managed identities so that runtime environments (like an Azure Function) can retrieve automation credentials from the key vault.
 
 - Ensure that you collect user and administrator activity logging for Microsoft Entra ID and Azure Virtual Desktop landing zone(s). Monitor these logs with your Security Information and Event Management (SIEM) tool. You can collect logs from various sources, such as:
-  - [Azure Activity Log](/azure/azure-monitor/essentials/activity-log)
+  - [Azure Activity Log](/azure/azure-monitor/platform/activity-log)
   - [Microsoft Entra Activity Log](/entra/identity/monitoring-health/concept-log-monitoring-integration-options-considerations)
-  - [Microsoft Entra ID](/entra/fundamentals/whatis)
-  - [Session hosts](/azure/azure-monitor/agents/agent-windows)
+  - [Microsoft Entra ID](/entra/fundamentals/what-is-entra)
+  - [Session hosts](/previous-versions/azure/azure-monitor/agents/agent-windows)
   - [Key Vault logs](/azure/key-vault/general/logging)
 
 - Use Microsoft Entra groups rather than individual users when assigning access to Azure Virtual Desktop application groups. Consider using existing security groups that map to business functions within your organization, which lets you reuse existing user provisioning and de-provisioning processes.
@@ -35,47 +35,47 @@ Review the following sections to find recommended security controls and governan
 
 - Provision or reuse a dedicated virtual network for your Azure Virtual Desktop landing zone(s). Plan IP address space to accommodate the scale of your session hosts. Establish your baseline subnet size based on the minimum and maximum number of session hosts per host pool. Map your business unit requirements to your host pools.
 
-- Use Network Security Groups (NSGs) and/or [Azure Firewall](/azure/firewall/protect-azure-virtual-desktop) (or third-party firewall appliance) to establish micro-segmentation. Use Azure Virtual Network service tags and application service groups (ASGs) to define network access controls on network security groups or an Azure Firewall configured for your Azure Virtual Desktop resources. Verify that the session host's outgoing access to [required URLs](/azure/virtual-desktop/safe-url-list) is bypassed by proxy (if used within session hosts) and Azure Firewall (or third-party firewall appliance).
+- Use Network Security Groups (NSGs) and/or [Azure Firewall](/azure/firewall/protect-azure-virtual-desktop) (or third-party firewall appliance) to establish micro-segmentation. Use Azure Virtual Network service tags and application service groups (ASGs) to define network access controls on network security groups or an Azure Firewall configured for your Azure Virtual Desktop resources. Verify that the session host's outgoing access to [required URLs](/azure/virtual-desktop/required-fqdn-endpoint) is bypassed by proxy (if used within session hosts) and Azure Firewall (or third-party firewall appliance).
 
 - Based on your applications and enterprise segmentation strategy, restrict traffic between your session hosts and internal resources through security group rules or Azure Firewall (or a third-party firewall appliance) at scale.
 
-- Enable [Azure DDoS standard protection](/azure/virtual-network/manage-ddos-protection) for Azure Firewall (or a third-party firewall appliance) to help secure your Azure Virtual Desktop landing zone(s).
+- Enable [Azure DDoS standard protection](/azure/ddos-protection/manage-ddos-protection) for Azure Firewall (or a third-party firewall appliance) to help secure your Azure Virtual Desktop landing zone(s).
 
 - If you use a proxy for outbound internet access from your session hosts:
   - Configure proxy servers in the same geography as Azure Virtual Desktop session hosts and clients (if using cloud proxy providers).
   - [Don't use TLS inspection](/azure/virtual-desktop/proxy-server-support#dont-use-ssl-termination-on-the-proxy-server). In Azure Virtual Desktop, traffic is [encrypted in transit](/azure/virtual-desktop/network-connectivity#connection-security) by default.
   - [Avoid proxy configuration that requires user authentication](/azure/virtual-desktop/proxy-server-support#session-host-configuration-recommendations). Azure Virtual Desktop components on the session host run in the context of their operating system, so they don't support proxy servers that require authentication. System-wide proxy must be enabled for you to configure the host level proxy on your session host.
 
-- Verify your end-users have access to [Azure Virtual Desktop client URLs](/azure/virtual-desktop/safe-url-list#remote-desktop-clients). If proxy agent/configuration is used on your users' devices, make sure you bypass the Azure Virtual Desktop client URLs as well.
+- Verify your end-users have access to [Azure Virtual Desktop client URLs](/azure/virtual-desktop/required-fqdn-endpoint#remote-desktop-clients). If proxy agent/configuration is used on your users' devices, make sure you bypass the Azure Virtual Desktop client URLs as well.
 
-- Use [Just-in-Time access](/azure/defender-for-cloud/just-in-time-access-usage?tabs=jit-config-asc%2Cjit-request-asc) for administration and troubleshooting your session hosts. Avoid granting direct RDP access to session hosts. AVD session hosts use Reverse Connect transport to establish remote sessions.
+- Use [Just-in-Time access](/azure/defender-for-cloud/enable-just-in-time-access?tabs=jit-config-asc%2Cjit-request-asc) for administration and troubleshooting your session hosts. Avoid granting direct RDP access to session hosts. AVD session hosts use Reverse Connect transport to establish remote sessions.
 
-- Use [Adaptive Network Hardening features](/azure/defender-for-cloud/adaptive-network-hardening) in Microsoft Defender for Cloud to find network security group configurations that limit ports and source IPs with reference to external network traffic rules.
+- Use [Adaptive Network Hardening features](/azure/defender-for-cloud/prepare-deprecation-log-analytics-mma-agent#feature-functionality) in Microsoft Defender for Cloud to find network security group configurations that limit ports and source IPs with reference to external network traffic rules.
 
 - Collect your Azure Firewall (or third-party firewall appliance) logs with Azure Monitor or a partner monitoring solution. You should also monitor logs by SIEM, using Microsoft Sentinel or a similar service.
 
-- Only use a private endpoint for Azure files that are used for [FSLogix Profile containers](/fslogix/configure-profile-container-tutorial).
+- Only use a private endpoint for Azure files that are used for [FSLogix Profile containers](/fslogix/how-to-configure-profile-containers).
 
-- [Configure the RDP Shortpath](/azure/virtual-desktop/shortpath) to complement reverse connect transport.
+- [Configure the RDP Shortpath](/azure/virtual-desktop/rdp-shortpath) to complement reverse connect transport.
 
 ## Session hosts
 
 - Create a dedicated Organizational Unit (OU) in the Active Directory for the Azure Virtual Desktop session hosts. Apply a dedicated Group Policy to your session hosts to manage controls such as:
   - [Enable screen capture protection](/azure/virtual-desktop/screen-capture-protection) to prevent sensitive screen information from being captured on the client endpoints.
-  - Set [maximum inactive/disconnection time policies](/windows/security/threat-protection/security-policy-settings/microsoft-network-server-amount-of-idle-time-required-before-suspending-session) and [screen locks](/windows/security/threat-protection/security-policy-settings/interactive-logon-machine-inactivity-limit).
+  - Set [maximum inactive/disconnection time policies](/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/microsoft-network-server-amount-of-idle-time-required-before-suspending-session) and [screen locks](/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/interactive-logon-machine-inactivity-limit).
   - [Hide local and remote drive mappings](/troubleshoot/windows-client/group-policy/using-group-policy-objects-hide-specified-drives) in Windows Explorer.
-  - Optionally, configuration parameters for [FSLogix Profile Containers](/fslogix/profile-container-configuration-reference) and [FSLogix Cloud Cache](/fslogix/cloud-cache-configuration-reference).
+  - Optionally, configuration parameters for [FSLogix Profile Containers](/fslogix/reference-configuration-settings?tabs=profiles#tabpanel_1_profiles) and [FSLogix Cloud Cache](/fslogix/reference-configuration-settings?tabs=ccd#tabpanel_1_ccd).
 
 - [Control device redirection](/azure/virtual-desktop/customize-rdp-properties) for your session hosts. Commonly disabled devices include local hard drive access and USB or port restrictions. Limiting camera redirection and remote printing can help protect your organization's data. Disable clipboard redirection to prevent remote content from being copied to endpoints.
 
-- Enable next-generation antivirus endpoint protection like [Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint?view=o365-worldwide&preserve-view=true) on your session hosts. If you use a partner endpoint solution, ensure that Microsoft Defender for Cloud is [able to verify](/azure/defender-for-cloud/endpoint-protection-recommendations-technical) its state. You should also include [antivirus exclusions for FSLogix profile containers](/fslogix/overview-prerequisites#configure-antivirus-file-and-folder-exclusions). Microsoft Defender for Endpoint directly integrates with multiple Microsoft Defender solutions, including:
+- Enable next-generation antivirus endpoint protection like [Microsoft Defender for Endpoint](/defender-endpoint/microsoft-defender-endpoint?view=o365-worldwide&preserve-view=true) on your session hosts. If you use a partner endpoint solution, ensure that Microsoft Defender for Cloud is [able to verify](/azure/defender-for-cloud/endpoint-detection-response-solution-recommendations) its state. You should also include [antivirus exclusions for FSLogix profile containers](/fslogix/overview-prerequisites#configure-antivirus-file-and-folder-exclusions). Microsoft Defender for Endpoint directly integrates with multiple Microsoft Defender solutions, including:
   - [Microsoft Defender for Cloud](/azure/defender-for-cloud/integration-defender-for-endpoint?tabs=windows)
   - [Microsoft Sentinel](/azure/sentinel/microsoft-365-defender-sentinel-integration)
-  - [Intune](/mem/intune/protect/advanced-threat-protection-configure)
+  - [Intune](/intune/intune-service/protect/microsoft-defender-integrate)
 
-- Enable threat and vulnerability management assessments. Integrate Microsoft Defender for Endpoint's [threat and vulnerability management solution with Microsoft Defender for Cloud](/azure/defender-for-cloud/deploy-vulnerability-assessment-tvm) or a third-party vulnerability management solution). Microsoft Defender for Cloud natively integrates with [Qualys vulnerability assessment solution](/azure/defender-for-cloud/deploy-vulnerability-assessment-vm).
+- Enable threat and vulnerability management assessments. Integrate Microsoft Defender for Endpoint's [threat and vulnerability management solution with Microsoft Defender for Cloud](/azure/defender-for-cloud/deploy-vulnerability-assessment-defender-vulnerability-management) or a third-party vulnerability management solution). Microsoft Defender for Cloud natively integrates with [Qualys vulnerability assessment solution](/azure/defender-for-cloud/deploy-vulnerability-assessment-vm).
 
-- Use application control through [Windows Defender Application Control (WDAC) or AppLocker](/windows/security/threat-protection/windows-defender-application-control/feature-availability) to ensure applications are trustworthy before execution. Application control policies can also block unsigned scripts and MSIs and restrict Windows PowerShell to run in [Constrained Language Mode](/powershell/module/microsoft.powershell.core/about/about_language_modes?view=powershell-7.2&preserve-view=true).
+- Use application control through [Windows Defender Application Control (WDAC) or AppLocker](/windows/security/application-security/application-control/app-control-for-business/feature-availability) to ensure applications are trustworthy before execution. Application control policies can also block unsigned scripts and MSIs and restrict Windows PowerShell to run in [Constrained Language Mode](/powershell/module/microsoft.powershell.core/about/about_language_modes?view=powershell-7.5&viewFallbackFrom=powershell-7.2&preserve-view=true).
 
 - Enable [Trusted launch](/azure/virtual-machines/trusted-launch) for Gen2 Azure virtual machines to enable features such as Secure Boot, vTPM and Virtualization-based security (VBS). Microsoft Defender for Cloud can monitor session hosts configured with trusted launch.
 
@@ -86,9 +86,9 @@ Review the following sections to find recommended security controls and governan
 
 - Establish a patch management strategy for your session hosts. [Microsoft Endpoint Configuration Manager](/azure/virtual-desktop/configure-automatic-updates) enables Azure Virtual Desktop session hosts to receive updates automatically. You should patch base images at minimum at least once every 30 days. Consider using [Azure Image Builder (AIB)](/azure/virtual-machines/image-builder-overview) to establish your own [imaging pipeline for Azure Virtual Desktop base image](/azure/virtual-machines/windows/image-builder-virtual-desktop).
 
-For more information on best practices for Azure Virtual Desktop session host security, see [Session host security best practices](/azure/virtual-desktop/security-guide#session-host-security-best-practices).
+For more information on best practices for Azure Virtual Desktop session host security, see [Session host security best practices](/azure/virtual-desktop/security-recommendations#session-host-security-best-practices).
 
-For a detailed list of best practices for Azure VM security, see [Security recommendations for virtual machines in Azure](/azure/virtual-machines/security-recommendations).
+For a detailed list of best practices for Azure VM security, see [Security recommendations for virtual machines in Azure](/security/benchmark/azure/baselines/virtual-machines-windows-virtual-machines-security-baseline).
 
 ## Data protection
 
@@ -97,11 +97,11 @@ For a detailed list of best practices for Azure VM security, see [Security recom
   - Infrastructure encryption using platform-managed keys. By default, disks are automatically encrypted at rest through platform-managed encryption keys.
   - [Encryption at the VM host](/azure/virtual-machines/disk-encryption#encryption-at-host---end-to-end-encryption-for-your-vm-data) (Azure server that your VM is allocated to). Each virtual machine's temporary disk and OS/data disk cache data are stored on the VM host. When encryption at the VM host is enabled, that data is encrypted at rest and flows encrypted to the Storage service to be persisted.  
 
-- Deploy an information protection solution like [Microsoft Purview Information Protection](/microsoft-365/compliance/information-protection?view=o365-worldwide&preserve-view=true) or a third party solution, which makes sure sensitive information is stored, processed, and transmitted securely by your organization's technology systems.
+- Deploy an information protection solution like [Microsoft Purview Information Protection](/purview/information-protection?view=o365-worldwide&preserve-view=true) or a third party solution, which makes sure sensitive information is stored, processed, and transmitted securely by your organization's technology systems.
 
-- Use the [Security Policy Advisor for Microsoft 365 Apps for enterprise](/deployoffice/admincenter/overview-office-cloud-policy-service) to improve Office deployment security. This tool identifies policies you can apply to your deployment for more security, and also recommends policies based on their effects on your security and productivity.
+- Use the [Security Policy Advisor for Microsoft 365 Apps for enterprise](/microsoft-365-apps/admin-center/overview-cloud-policy) to improve Office deployment security. This tool identifies policies you can apply to your deployment for more security, and also recommends policies based on their effects on your security and productivity.
 
-- [Configure identity-based authentication for Azure Files](/azure/storage/files/storage-files-active-directory-overview) used for FSLogix User Profiles through on-premises Active Directory Domain Services (AD DS) and Microsoft Entra Domain Services. Configure [NTFS permissions](/fslogix/fslogix-storage-config-ht) so authorized users can access your Azure Files.
+- [Configure identity-based authentication for Azure Files](/azure/storage/files/storage-files-active-directory-overview) used for FSLogix User Profiles through on-premises Active Directory Domain Services (AD DS) and Microsoft Entra Domain Services. Configure [NTFS permissions](/fslogix/how-to-configure-storage-permissions) so authorized users can access your Azure Files.
 
 ## Cost management
 
@@ -115,19 +115,19 @@ For a detailed list of best practices for Azure VM security, see [Security recom
 
 - Configure the [Start VM on Connect feature](/azure/virtual-desktop/start-virtual-machine-connect) to save costs by allowing end users to turn on their VMs only when they need them.
 
-- Deploy scaling solutions for pooled session hosts through [Azure Automation](/azure/virtual-desktop/start-virtual-machine-connect) or [Autoscale feature (preview)](/azure/virtual-desktop/autoscale-scaling-plan).
+- Deploy scaling solutions for pooled session hosts through [Azure Automation](/azure/virtual-desktop/start-virtual-machine-connect) or [Autoscale feature (preview)](/azure/virtual-desktop/autoscale-create-assign-scaling-plan).
 
 ## Resource consistency
 
-- [Use Intune for Azure Virtual Desktop personal session hosts](/mem/intune/fundamentals/azure-virtual-desktop) to apply existing or create new configurations and secure your VMs with compliance policy and Conditional Access. Intune management doesn't depend on or interfere with Azure Virtual Desktop management of the same virtual machine.
+- [Use Intune for Azure Virtual Desktop personal session hosts](/intune/intune-service/fundamentals/azure-virtual-desktop) to apply existing or create new configurations and secure your VMs with compliance policy and Conditional Access. Intune management doesn't depend on or interfere with Azure Virtual Desktop management of the same virtual machine.
 
-- [Multi-session session hosts management with Intune](/mem/intune/fundamentals/azure-virtual-desktop-multi-session) allows you to manage Windows 10 or Windows 11 Enterprise multi-session remote desktops in the Intune admin center, just as you can manage a shared Windows 10 or Windows 11 client device. When managing such virtual machines (VMs), you can use both device-based configuration targeted to devices or user-based configuration targeted to users.
+- [Multi-session session hosts management with Intune](/intune/intune-service/fundamentals/azure-virtual-desktop-multi-session) allows you to manage Windows 10 or Windows 11 Enterprise multi-session remote desktops in the Intune admin center, just as you can manage a shared Windows 10 or Windows 11 client device. When managing such virtual machines (VMs), you can use both device-based configuration targeted to devices or user-based configuration targeted to users.
 
-- Audit and configure the hardening of your session hosts' operating system by using [Azure Policy machine configuration](/azure/governance/machine-configuration/overview). Use the [Windows security baselines](/windows/security/threat-protection/windows-security-configuration-framework/windows-security-baselines) as a starting point for securing your Windows operating system.
+- Audit and configure the hardening of your session hosts' operating system by using [Azure Policy machine configuration](/azure/governance/machine-configuration/overview/01-overview-concepts). Use the [Windows security baselines](/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines) as a starting point for securing your Windows operating system.
 
-- [Use Azure Policy built-in definitions](/azure/azure-monitor/policy-reference)  to configure the diagnostics settings for Azure Virtual Desktop resources like workspaces, application groups, and host pools.
+- [Use Azure Policy built-in definitions](/azure/azure-monitor/fundamentals/policy-reference)  to configure the diagnostics settings for Azure Virtual Desktop resources like workspaces, application groups, and host pools.
 
-Review the [security best practices for Azure Virtual Desktop](/azure/virtual-desktop/security-guide) as a starting point for security within your environment.
+Review the [security best practices for Azure Virtual Desktop](/azure/virtual-desktop/security-recommendations) as a starting point for security within your environment.
 
 ## Compliance
 
@@ -163,9 +163,9 @@ Nearly all organizations must comply with various government or industry regulat
 
 - Use group policy and device management tools like Intune and Microsoft Endpoint Configuration Manager to maintain a thorough security and compliance practice for your session hosts.
 
-- Configure [alerts](/azure/defender-for-cloud/alerts-overview) and [automated responses](/azure/defender-for-cloud/workflow-automation) in Microsoft Defender for Cloud to ensure the overall compliance of Azure Virtual Desktop landing zones.
+- Configure [alerts](/azure/defender-for-cloud/alerts-overview) and [automated responses](/azure/defender-for-cloud/workflow-automations) in Microsoft Defender for Cloud to ensure the overall compliance of Azure Virtual Desktop landing zones.
 
-- Review the [Microsoft Secure Score](/microsoft-365/security/defender/microsoft-secure-score?view=o365-worldwide&preserve-view=true) to measure overall organization security posture across the following products:
+- Review the [Microsoft Secure Score](/defender-xdr/microsoft-secure-score?view=o365-worldwide&preserve-view=true) to measure overall organization security posture across the following products:
 
   - Microsoft 365 (including Exchange Online)
   - Microsoft Entra ID
@@ -178,8 +178,8 @@ Nearly all organizations must comply with various government or industry regulat
 
 ## Recommended security best practices and baselines
 
-- [Azure Virtual Desktop recommended security practices](/azure/virtual-desktop/security-guide)
-- [Security baseline for Azure Virtual Desktop based on Azure Security Benchmark](/security/benchmark/azure/baselines/virtual-desktop-security-baseline)
+- [Azure Virtual Desktop recommended security practices](/azure/virtual-desktop/security-recommendations)
+- [Security baseline for Azure Virtual Desktop based on Azure Security Benchmark](/security/benchmark/azure/baselines/azure-virtual-desktop-security-baseline)
 - [Apply Zero Trust principles to an Azure Virtual Desktop deployment](/security/zero-trust/azure-infrastructure-avd)
 
 ## Next steps
