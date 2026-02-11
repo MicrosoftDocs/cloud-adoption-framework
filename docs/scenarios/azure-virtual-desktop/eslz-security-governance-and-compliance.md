@@ -50,7 +50,6 @@ Review the following sections to find recommended security controls and governan
 
 - Use [Just-in-Time access](/azure/defender-for-cloud/enable-just-in-time-access?tabs=jit-config-asc%2Cjit-request-asc) for administration and troubleshooting your session hosts. Avoid granting direct RDP access to session hosts. AVD session hosts use Reverse Connect transport to establish remote sessions.
 
-- Use [Adaptive Network Hardening features](/azure/defender-for-cloud/prepare-deprecation-log-analytics-mma-agent#feature-functionality) in Microsoft Defender for Cloud to find network security group configurations that limit ports and source IPs with reference to external network traffic rules.
 
 - Collect your Azure Firewall (or third-party firewall appliance) logs with Azure Monitor or a partner monitoring solution. You should also monitor logs by SIEM, using Microsoft Sentinel or a similar service.
 
@@ -73,7 +72,7 @@ Review the following sections to find recommended security controls and governan
   - [Microsoft Sentinel](/azure/sentinel/microsoft-365-defender-sentinel-integration)
   - [Intune](/intune/intune-service/protect/microsoft-defender-integrate)
 
-- Enable threat and vulnerability management assessments. Integrate Microsoft Defender for Endpoint's [threat and vulnerability management solution with Microsoft Defender for Cloud](/azure/defender-for-cloud/deploy-vulnerability-assessment-defender-vulnerability-management) or a third-party vulnerability management solution). Microsoft Defender for Cloud natively integrates with [Qualys vulnerability assessment solution](/azure/defender-for-cloud/deploy-vulnerability-assessment-vm).
+- Enable threat and vulnerability management assessments. Integrate Microsoft Defender for Endpoint's [threat and vulnerability management solution with Microsoft Defender for Cloud](/azure/defender-for-cloud/deploy-vulnerability-assessment-defender-vulnerability-management) or a third-party vulnerability management solution. Microsoft Defender for Cloud natively integrates with [Qualys vulnerability assessment solution](/azure/defender-for-cloud/deploy-vulnerability-assessment-vm).
 
 - Use application control through [Windows Defender Application Control (WDAC) or AppLocker](/windows/security/application-security/application-control/app-control-for-business/feature-availability) to ensure applications are trustworthy before execution. Application control policies can also block unsigned scripts and MSIs and restrict Windows PowerShell to run in [Constrained Language Mode](/powershell/module/microsoft.powershell.core/about/about_language_modes?view=powershell-7.5&viewFallbackFrom=powershell-7.2&preserve-view=true).
 
