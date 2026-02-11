@@ -26,7 +26,6 @@ Review the following sections to find recommended security controls and governan
   - [Azure Activity Log](/azure/azure-monitor/platform/activity-log)
   - [Microsoft Entra Activity Log](/entra/identity/monitoring-health/concept-log-monitoring-integration-options-considerations)
   - [Microsoft Entra ID](/entra/fundamentals/what-is-entra)
-  - [Session hosts](/previous-versions/azure/azure-monitor/agents/agent-windows)
   - [Key Vault logs](/azure/key-vault/general/logging)
 
 - Use Microsoft Entra groups rather than individual users when assigning access to Azure Virtual Desktop application groups. Consider using existing security groups that map to business functions within your organization, which lets you reuse existing user provisioning and de-provisioning processes.
