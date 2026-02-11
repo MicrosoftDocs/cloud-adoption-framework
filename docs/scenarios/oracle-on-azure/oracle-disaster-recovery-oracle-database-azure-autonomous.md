@@ -25,7 +25,7 @@ Organizations must establish clear recovery objectives before they implement BCD
 
 - **Define your recovery objectives based on business requirements.** Oracle Autonomous Database@Azure supports different availability levels that align with [Oracle Maximum Availability Architecture (MAA) principles](https://docs.oracle.com/en/database/oracle/oracle-database/26/haiad/maara_overview.html). The default configuration provides MAA Silver-level protection against instance and hardware failures. Choose an architecture that meets specific RTO and RPO requirements for different failure scenarios.
 
-- **Address regional limitations and cross-region requirements.** Oracle Autonomous Database@Azure operates within a single availability region where you create the instance. Multiregional resiliency requires more cross-region disaster recovery instances. Identify geographic distribution requirements for your compliance and data residency needs when you design your deployment topology.
+- **Address regional limitations and cross-region requirements.** Oracle Autonomous Database@Azure operates within a single availability region where you create the instance. Multiregional resiliency requires additional cross-region disaster recovery instances. Identify geographic distribution requirements for your compliance and data residency needs when you design your deployment topology.
 
 ## Implement Autonomous Data Guard for high availability
 
