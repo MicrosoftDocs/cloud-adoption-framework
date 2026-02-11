@@ -123,7 +123,7 @@ For a detailed list of best practices for Azure VM security, see [Security recom
 
 - [Multi-session session hosts management with Intune](/intune/intune-service/fundamentals/azure-virtual-desktop-multi-session) allows you to manage Windows 10 or Windows 11 Enterprise multi-session remote desktops in the Intune admin center, just as you can manage a shared Windows 10 or Windows 11 client device. When managing such virtual machines (VMs), you can use both device-based configuration targeted to devices or user-based configuration targeted to users.
 
-- Audit and configure the hardening of your session hosts' operating system by using [Azure Policy machine configuration](/azure/governance/machine-configuration/overview/01-overview-concepts). Use the [Windows security baselines](/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines) as a starting point for securing your Windows operating system.
+- Audit and configure the hardening of your session hosts' operating system by using [Azure Policy machine configuration](/azure/governance/machine-configuration/overview/). Use the [Windows security baselines](/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines) as a starting point for securing your Windows operating system.
 
 - [Use Azure Policy built-in definitions](/azure/azure-monitor/fundamentals/policy-reference)  to configure the diagnostics settings for Azure Virtual Desktop resources like workspaces, application groups, and host pools.
 
