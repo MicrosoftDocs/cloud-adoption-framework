@@ -35,7 +35,7 @@ Integrating AI agents requires embedding these tools into daily business operati
 3. **Validate value through phased expansion.** Introduce agents to specific business units or high-impact use cases before a broad organizational rollout. This targeted approach allows you to measure actual business impact, gather qualitative feedback, and refine agent behaviors based on real-world interactions. Expanding based on proven value rather than technical readiness ensures that the agent evolves in alignment with business priorities.
 
 **Microsoft facilitation:**<br>
-:::image type="icon" source="./images/foundry-icon.png"::: **Foundry**: Use [cost analysis dashboards](/azure/ai-foundry/concepts/manage-costs?view=foundry&preserve-view=true) to monitor token consumption and identify usage patterns.
+:::image type="icon" source="./images/foundry-icon.png"::: **Foundry**: Use the agent [deployment](/azure/ai-foundry/agents/how-to/publish-agent?view=foundry&preserve-view=true) and [rollout guidance](/azure/ai-foundry/concepts/planning?view=foundry&preserve-view=true).
 
 :::image type="icon" source="./images/copilot-studio-icon.png"::: **Copilot Studio:** Use [analytics](/microsoft-copilot-studio/analytics-summary) to track engagement and [conversation metrics](/microsoft-copilot-studio/analytics-improve-agent-effectiveness).
 
@@ -48,7 +48,7 @@ Standardization accelerates adoption and ensures consistent governance, while co
 2. **Implement continuous improvement cycles.** Agents require ongoing refinement to remain effective as business needs and data sources evolve. Capture user feedback and operational data to drive iterative improvements rather than treating deployment as a one-time event. Maintain a prioritized backlog of unresolved queries and feature requests to guide development efforts toward high-impact issues that block value delivery.
 
 **Microsoft facilitation:**<br>
-:::image type="icon" source="./images/foundry-icon.png"::: **Foundry**: See [deployment guidance](/azure/ai-foundry/agents/how-to/publish-agent?view=foundry&preserve-view=true), [rollout guidance](/azure/ai-foundry/concepts/planning?view=foundry&preserve-view=true), [Bicep](/azure/ai-foundry/how-to/create-resource-template?view=foundry&preserve-view=true&tabs=cli), and [Terraform](/azure/ai-foundry/how-to/create-resource-terraform?view=foundry&preserve-view=true&tabs=azapi) resources.
+:::image type="icon" source="./images/foundry-icon.png"::: **Foundry**: See [Bicep](/azure/ai-foundry/how-to/create-resource-template?view=foundry&preserve-view=true&tabs=cli) and [Terraform](/azure/ai-foundry/how-to/create-resource-terraform?view=foundry&preserve-view=true&tabs=azapi) resources.
 
 :::image type="icon" source="./images/copilot-studio-icon.png"::: **Copilot Studio:** Use [agent builder templates](/microsoft-365-copilot/extensibility/agent-builder-templates) to accelerate integration and ensure consistency across deployments.
 
@@ -113,7 +113,7 @@ Administration centralizes control over the AI agent ecosystem to ensure consist
 
 1. **Maintain comprehensive project visibility.** Keep an up-to-date inventory of all AI agent projects and deployments across the organization. Visibility forms the foundation of effective governance, as you can't secure or optimize resources you can't see. Regular inventory updates ensure new deployments receive appropriate oversight from creation, preventing shadow deployments from creating unmanaged risk.
 
-2. **Implement an AI gateway.** Route all AI traffic through a managed gateway to create a unified control point for policy enforcement. This abstraction layer enables centralized monitoring, security controls, and traffic management without modifying individual agent implementations. The gateway provides consistent logging, throttling, and access control across heterogeneous agent deployments, simplifying governance and reducing complexity.
+2. **Use an AI gateway.** Route all AI traffic through a managed gateway to create a unified control point for policy enforcement. This abstraction layer enables centralized monitoring, security controls, and traffic management without modifying individual agent implementations. The gateway provides consistent logging, throttling, and access control across heterogeneous agent deployments, simplifying governance and reducing complexity.
 
 3. **Enforce granular controls.** Configure token limits and usage quotas at the project or individual agent level based on business requirements. Implement pause and resume capabilities for external agents and tools to respond quickly to security incidents or operational issues. These controls prevent runaway costs and enable rapid containment when problems arise, ensuring resources are used efficiently while maintaining operational flexibility.
 

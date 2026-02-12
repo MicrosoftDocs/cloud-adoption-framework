@@ -24,6 +24,23 @@ Without proper governance, AI agents can introduce risks related to sensitive da
     The diagram illustrates a comprehensive governance and security framework organized into four layers. The top layer, "Data governance and compliance," includes Microsoft Purview Compliance Manager, Microsoft Purview APIs, Copilot Studio governance features, and data location controls. The second layer, "Agent observability," contains Agent 365, Microsoft Defender for Cloud, Azure Log Analytics, Application Insights, and Microsoft Cost Management. The third layer, "Agent security," shows Microsoft Defender for Cloud AI threat protection, Azure AI Content Safety, AI Red Teaming Agent, Azure role-based access control (RBAC), and Microsoft Sentinel. The bottom layer, "Agent development," lists Microsoft Agent Framework, Foundry SDK, Model Context Protocol (MCP), and Agent-to-Agent Protocol (A2A). Each layer connects to specific Microsoft services that support governance objectives at that level.
 :::image-end:::
 
+## Establish a single agent control plane
+
+A control plane keeps the organization in command of every agent. Microsoft Agent 365 provides this when available. When it is not, Entra, Purview, Azure Monitor, and Defender together deliver the same governance fundamentals until Agent 365 can be adopted. Create one place where all production agents are recorded, identifiable, and governed. Here's how: 
+
+1. **Create an authoritative registry for every agent.** Register each agent, capture owner and sponsor, and store the agent’s purpose, allowed data domains, and lifecycle state. Require publication with a Microsoft Entra Agent ID so access control, policy, and auditing bind to a first‑class identity. Choose this approach over ad hoc lists or spreadsheets when shadow deployments and unclear ownership begin to appear, because a single registry enables consistent policy and faster incident response. In Agent 365, use the Registry to inventory agents and enforce publish‑time identity requirements.
+
+2. **Make identity the contract for every action an agent can take.**
+Use Entra Agent ID for each agent and assign least‑privilege roles to downstream services. When an agent must act for a person, require delegated user identity and Conditional Access; when it acts autonomously, use a managed identity scoped to the task. Prefer this model over API keys because it supports clean revocation, access reviews, and detailed audit trails.
+
+Use the plane to decide what to scale, fix, or retire.
+Review the control plane’s visualizations and performance views to see relationships, activity, and outcomes, then prioritize agents that show strong value and acceptable risk. This beats expanding based on demand alone and prevents cost or risk from outpacing impact. 
+
+**Microsoft facilitation:**<br>
+:::image type="icon" source="./images/foundry-icon.png"::: **Foundry**: Publish agents with Entra Agent ID and register them in Agent 365. Publish agents from Microsoft Foundry into Agent 365 and bind each to an Entra Agent ID so lifecycle, access, and audit follow the agent across environments. Use this when Agent 365 is available to consolidate inventory and policy; if not available, still create Agent IDs and maintain a temporary inventory in Azure and Purview, then migrate into the plane later with minimal friction. 
+
+:::image type="icon" source="./images/copilot-studio-icon.png"::: **Copilot Studio**: Register low‑code agents in the same plane and enforce environments. When Agent 365 is available, register production Copilot Studio agents in the plane and connect audit to Purview. When waiting on rollout, keep strict separation of dev/test/prod environments and apply DLP and connector controls so policy remains consistent and portable to the plane.
+
 ## Data governance and compliance
 
 Organizations require concrete mechanisms to control how agents access, process, and store data. These mechanisms translate regulatory requirements and corporate policies into technical controls that enforce boundaries around agent behavior. Data governance establishes the foundation for responsible AI deployment by defining what data agents can use, where they can operate, and how long they can retain information.
