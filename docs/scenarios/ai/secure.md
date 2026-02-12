@@ -42,6 +42,8 @@ Comprehensive security measures protect your AI investments and maintain stakeho
     - [Azure PaaS security](./platform/security.md)
     - [Azure IaaS security](./infrastructure/security.md)
 
+4. **Control AI agent permissions and autonomy.** AI agents with autonomous capabilities can perform actions that exceed intended authorization boundaries, introducing security and compliance risks. To mitigate excessive agency, as described in [OWASP LLM06](https://owasp.org/www-project-top-10-for-large-language-model-applications/), represent AI agents as first-class identities using [Microsoft Entra Agent ID](https://learn.microsoft.com/entra/agent-id/identity-professional/microsoft-entra-agent-identities-for-ai-agents) where supported. Use [Azure role-based access control (RBAC)](https://learn.microsoft.com/azure/role-based-access-control/overview) to scope agent permissions to the minimum set of resources required for their tasks, implement [human-in-the-loop (HITL)](https://learn.microsoft.com/agent-framework/tutorials/agents/function-tools-approvals) checkpoints for high-impact operations such as financial transactions or data modifications, and, where available, apply [Conditional Access](https://learn.microsoft.com/entra/identity/conditional-access/overview) policies to evaluate agent-initiated activity in alignment with [Zero Trust principles](https://learn.microsoft.com/security/zero-trust/zero-trust-overview).
+
 ### Secure AI data
 
 AI workloads rely on data and artifacts that require robust protection to prevent unauthorized access, data leaks, and compliance violations. You must implement comprehensive data security measures to protect AI data and artifacts. Here's how:
