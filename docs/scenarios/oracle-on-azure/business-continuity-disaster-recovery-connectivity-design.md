@@ -18,13 +18,13 @@ You must address the following key requirements:
 
 - **Business continuity and disaster recovery (BCDR):** HA of your Oracle Exadata Database@Azure and related applications is crucial to maintain business operations that have low RTO or RPO.
 
-Network connectivity between primary and standby Oracle Exadata Database@Azure instances can be established via Azure networking and Oracle Cloud Infrastructure (OCI) networking. The default route for this connectivity is through Azure. This article focuses on architecting for networking within Azure to meet BCDR requirements. For more information, see [BCDR for Oracle Database@Azure](./oracle-disaster-recovery-oracle-database-azure-autonomous.md).
+Network connectivity between primary and standby Oracle Exadata Database@Azure instances uses Azure networking and Oracle Cloud Infrastructure (OCI) networking. The default route for this connectivity is through Azure. This article covers networking within Azure to meet BCDR requirements. For more information, see [BCDR for Oracle Database@Azure](./oracle-disaster-recovery-oracle-database-azure-autonomous.md).
 
 ## Redundancy within the same region
 
 For single-region redundancy, you need two separate Oracle Exadata Database@Azure deployments. Each deployment should be in a different virtual network and aligned with a different availability zone.
 
-The following diagram illustrates a single-region redundant setup that uses two Oracle Exadata Database@Azure deployments in separate virtual networks to span multiple availability zones.
+The following diagram shows a single-region redundant setup with two Oracle Exadata Database@Azure deployments in separate virtual networks spanning multiple availability zones.
 
 :::image type="content" source="./media/multiple-availability-zone.svg" alt-text="Diagram that shows in-region redundancy for Oracle Exadata Database@Azure." border="false" lightbox="./media/multiple-availability-zone.svg":::
 
@@ -33,7 +33,7 @@ The following diagram illustrates a single-region redundant setup that uses two 
 
 ## Redundancy across regions
 
-To achieve cross-region redundancy with Oracle Database@Azure, deploy your primary and standby Exadata infrastructures in separate virtual networks in different Azure regions. You can establish direct connectivity by using global virtual network peering, which enables low-latency, high-throughput replication between regions.
+To achieve cross-region redundancy with Oracle Database@Azure, deploy your primary and standby Exadata infrastructures in separate virtual networks in different Azure regions. You can establish direct connectivity using global virtual network peering, which enables low-latency, high-throughput replication between regions.
 
 The following diagram shows the recommended cross-region configuration that uses global virtual network peering.
 
@@ -49,7 +49,7 @@ The following diagram shows the recommended cross-region configuration that uses
 
 - **Network virtual appliances (NVAs):** Minimize the use of NVAs and other appliances in the network path because each extra hop adds latency that can degrade Data Guard replication performance.
 
-- **Asynchronous replication for cross-region DR:** Because of higher latency between geographically distant regions, consider using asynchronous Data Guard replication. This mode can handle increased latency without affecting production performance.
+- **Asynchronous replication for cross-region DR:** Due to higher cross-region latency, consider using asynchronous Data Guard replication. This mode can handle increased latency without affecting production performance.
 
 ## Next step
 
