@@ -123,7 +123,7 @@ Use variable groups when working in Azure Pipelines.
 
 ### Create Azure Virtual Desktop images
 
-Use the [Azure Image Builder](/azure/virtual-machines/image-builder-overview) (AIB) service to automate the build, update, sysprep, and distribution processes for your gold images. This service can use a supported base image from the Azure Marketplace for each build to ensure you have the latest updates.
+Use the [Azure Image Builder](/azure/virtual-machines/image-builder-overview) (AIB) service to automate the build, update, sysprep, and distribution processes for your gold images. This service can use a supported base image from the Microsoft Marketplace for each build to ensure you have the latest updates.
 
 > [!NOTE]
 > Azure Image Builder is currently available within [select regions](/azure/virtual-machines/image-builder-overview), but you can distribute images outside of these regions.

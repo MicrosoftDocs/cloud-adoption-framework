@@ -20,7 +20,7 @@ The following approach to the migration process is simplified to outline a proof
 
 - **[Step 2: Migrate](./migrate-deploy.md):**
 
-  - The team [creates a host pool](/azure/virtual-desktop/create-host-pools-azure-marketplace) for pooled desktops by using a Windows 10 Enterprise multi-session gallery image from Azure Marketplace and the sizing from assessment step 1.
+  - The team [creates a host pool](/azure/virtual-desktop/create-host-pools-azure-marketplace) for pooled desktops by using a Windows 10 Enterprise multi-session gallery image from Microsoft Marketplace and the sizing from assessment step 1.
   - The team [creates either desktop or RemoteApp application groups](/azure/virtual-desktop/manage-app-groups#create-a-remoteapp-group) for workloads that it has already migrated.
   - The team [creates an FSLogix profile container](/azure/virtual-desktop/create-host-pools-user-profile) to store user profiles.
 
@@ -39,7 +39,7 @@ The adoption team should assume the production deployment will require a separat
 
 - End users have a low-latency connection to the assigned landing zone in Azure.
 - All users can work from a shared pool of desktops.
-- All users can use the Windows 10 Enterprise multi-session image from Azure Marketplace.
+- All users can use the Windows 10 Enterprise multi-session image from Microsoft Marketplace.
 - All user profiles will be migrated to either Azure Files, Azure NetApp Files, or a VM-based storage service for the FSLogix profile containers.
 - All users can be described by a common persona with a density of six users per virtual central processing unit (vCPU) and 4&nbsp;gigabytes (GB) of RAM, [as per the VM sizing recommendations](/windows-server/remote/remote-desktop-services/virtual-machine-recs#multi-session-recommendations).
 - All workloads are compatible with Windows 10 Enterprise multi-session.

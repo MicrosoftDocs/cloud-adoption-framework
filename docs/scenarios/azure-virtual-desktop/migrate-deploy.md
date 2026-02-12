@@ -16,7 +16,7 @@ The guidance in this article assumes that you've [established a plan for Azure V
 
 The deployment of Azure Virtual Desktop instances follows a process that's similar to the [proof of concept](./proof-of-concept.md) process. Use this initial scope as a baseline to explain the various scope changes that are required by the output of the assessment.
 
-- [Create a host pool](/azure/virtual-desktop/create-host-pools-azure-marketplace) for pooled desktops by using a Windows&nbsp;10 gallery image from Azure Marketplace and the sizing from the first step of that procedure.
+- [Create a host pool](/azure/virtual-desktop/create-host-pools-azure-marketplace) for pooled desktops by using a Windows&nbsp;10 gallery image from Microsoft Marketplace and the sizing from the first step of that procedure.
 - Create desktop or [RemoteApp application groups](/azure/virtual-desktop/manage-app-groups#create-a-remoteapp-group) for workloads that have already been migrated.
 - [Create an FSLogix profile container](/azure/virtual-desktop/create-host-pools-user-profile) to store user profiles.
 

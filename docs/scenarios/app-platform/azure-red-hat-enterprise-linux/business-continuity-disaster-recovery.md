@@ -68,7 +68,7 @@ For native web application front ends and stateless applications, you can use ma
 
 The preceding architectures use various Azure services for availability zones. The multiregion architecture uses geo-replication features for content and Azure Front Door as a load balancing service.
 
-For many traditional stateful applications that require high availability, RHEL offers the Pacemaker high availability add-on. You can get systems that have this feature from Azure Marketplace, or you can deploy a custom image with the required software components embedded. For more information, see [Configure a Red Hat high availability cluster on Microsoft Azure](https://docs.redhat.com/documentation/red_hat_enterprise_linux/9/html/deploying_rhel_9_on_microsoft_azure/configuring-rhel-high-availability-on-azure_cloud-content-azure).
+For many traditional stateful applications that require high availability, RHEL offers the Pacemaker high availability add-on. You can get systems that have this feature from Microsoft Marketplace, or you can deploy a custom image with the required software components embedded. For more information, see [Configure a Red Hat high availability cluster on Microsoft Azure](https://docs.redhat.com/documentation/red_hat_enterprise_linux/9/html/deploying_rhel_9_on_microsoft_azure/configuring-rhel-high-availability-on-azure_cloud-content-azure).
 
 Availability problems affect service outages and service response times. Service degradation can occur, which might degrade your customer's service experience. To ensure that you maintain performance levels and sufficient capacity within the required regions, use the Azure [on-demand capacity reservation](/azure/virtual-machines/capacity-reservation-overview) feature.
 
