@@ -183,7 +183,7 @@ For most scenarios, we recommend that you use Azure Files or Azure NetApp Files 
 
 ## Next steps
     
-- Learn about security, governance, and compliance for an Azure Virtual Desktop enterprise-scale scenario.
+Learn about security, governance, and compliance for an Azure Virtual Desktop enterprise-scale scenario.
 
   > [!div class="nextstepaction"]
   > [Security, governance, and compliance](./eslz-security-governance-and-compliance.md)
