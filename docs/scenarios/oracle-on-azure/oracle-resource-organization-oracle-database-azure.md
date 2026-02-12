@@ -94,7 +94,7 @@ Design a subscription model that assigns a dedicated Azure subscription to each 
 
 - **Configure subscription billing alignment.** Ensure that all subscriptions use the same billing account as the primary subscription to maintain consistent cost management and avoid billing complications across your Oracle Database@Azure deployment.
 
-- **Plan for workload isolation in production.** For mission-critical workloads using Oracle Autonomous Database@Azure, create separate production subscriptions for each major application to minimize impact radius and simplify RBAC management.
+- **Plan for workload isolation in production.** For mission-critical workloads using Oracle Autonomous Database@Azure, create separate production subscriptions for each major application to minimize the impact radius and simplify RBAC management.
 
 ### Verify onboarding permissions
 

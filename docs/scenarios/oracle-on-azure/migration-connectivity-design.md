@@ -29,7 +29,7 @@ The following diagram illustrates how Oracle Exadata Database@Azure can connect 
 
 ## Design recommendations
 
-- **Prefer ExpressRoute over VPN:** For on-premises to Oracle Exadata Database@Azure connectivity, we recommend ExpressRoute because of its dedicated bandwidth, predictable performance, lower latency, and higher security.
+- **Prefer ExpressRoute over VPN:** For on-premises to Oracle Exadata Database@Azure connectivity, we recommend ExpressRoute because of its dedicated bandwidth, predictable performance, lower latency, and increased security.
 
 - **Capacity planning:** Ensure that your chosen ExpressRoute or VPN connection has adequate bandwidth to support migration workloads and avoid service impact. If necessary, use bandwidth limiting.
 
