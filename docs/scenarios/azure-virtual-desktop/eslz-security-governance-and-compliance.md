@@ -34,11 +34,11 @@ Review the following sections to find recommended security controls and governan
 
 - Provision or reuse a dedicated virtual network for your Azure Virtual Desktop landing zone(s). Plan IP address space to accommodate the scale of your session hosts. Establish your baseline subnet size based on the minimum and maximum number of session hosts per host pool. Map your business unit requirements to your host pools.
 
-- Use Network Security Groups (NSGs) and/or [Azure Firewall](/azure/firewall/protect-azure-virtual-desktop) (or third-party firewall appliance) to establish micro-segmentation. Use Azure Virtual Network service tags and application service groups (ASGs) to define network access controls on network security groups or an Azure Firewall configured for your Azure Virtual Desktop resources. Verify that the session host's outgoing access to [required URLs](/azure/virtual-desktop/required-fqdn-endpoint) is bypassed by proxy (if used within session hosts) and Azure Firewall (or third-party firewall appliance).
+- Use Network Security Groups (NSGs) and/or [Azure Firewall](/azure/firewall/protect-azure-virtual-desktop) (or non-Microsoft firewall appliance) to establish micro-segmentation. Use Azure Virtual Network service tags and application service groups (ASGs) to define network access controls on network security groups or an Azure Firewall configured for your Azure Virtual Desktop resources. Verify that the session host's outgoing access to [required URLs](/azure/virtual-desktop/required-fqdn-endpoint) is bypassed by proxy (if used within session hosts) and Azure Firewall (or non-Microsoft firewall appliance).
 
-- Based on your applications and enterprise segmentation strategy, restrict traffic between your session hosts and internal resources through security group rules or Azure Firewall (or a third-party firewall appliance) at scale.
+- Based on your applications and enterprise segmentation strategy, restrict traffic between your session hosts and internal resources through security group rules or Azure Firewall (or a non-Microsoft firewall appliance) at scale.
 
-- Enable [Azure DDoS standard protection](/azure/ddos-protection/manage-ddos-protection) for Azure Firewall (or a third-party firewall appliance) to help secure your Azure Virtual Desktop landing zone(s).
+- Enable [Azure DDoS standard protection](/azure/ddos-protection/manage-ddos-protection) for Azure Firewall (or a non-Microsoft firewall appliance) to help secure your Azure Virtual Desktop landing zone(s).
 
 - If you use a proxy for outbound internet access from your session hosts:
   - Configure proxy servers in the same geography as Azure Virtual Desktop session hosts and clients (if using cloud proxy providers).
@@ -50,7 +50,7 @@ Review the following sections to find recommended security controls and governan
 - Use [Just-in-Time access](/azure/defender-for-cloud/enable-just-in-time-access?tabs=jit-config-asc%2Cjit-request-asc) for administration and troubleshooting your session hosts. Avoid granting direct RDP access to session hosts. AVD session hosts use Reverse Connect transport to establish remote sessions.
 
 
-- Collect your Azure Firewall (or third-party firewall appliance) logs with Azure Monitor or a partner monitoring solution. You should also monitor logs by SIEM, using Microsoft Sentinel or a similar service.
+- Collect your Azure Firewall (or non-Microsoft firewall appliance) logs with Azure Monitor or a partner monitoring solution. You should also monitor logs by SIEM, using Microsoft Sentinel or a similar service.
 
 - Only use a private endpoint for Azure files that are used for [FSLogix Profile containers](/fslogix/how-to-configure-profile-containers).
 
@@ -71,7 +71,7 @@ Review the following sections to find recommended security controls and governan
   - [Microsoft Sentinel](/azure/sentinel/microsoft-365-defender-sentinel-integration)
   - [Intune](/intune/intune-service/protect/microsoft-defender-integrate)
 
-- Enable threat and vulnerability management assessments. Integrate Microsoft Defender for Endpoint's [threat and vulnerability management solution with Microsoft Defender for Cloud](/azure/defender-for-cloud/deploy-vulnerability-assessment-defender-vulnerability-management) or a third-party vulnerability management solution. Microsoft Defender for Cloud natively integrates with [Qualys vulnerability assessment solution](/azure/defender-for-cloud/deploy-vulnerability-assessment-vm).
+- Enable threat and vulnerability management assessments. Integrate Microsoft Defender for Endpoint's [threat and vulnerability management solution with Microsoft Defender for Cloud](/azure/defender-for-cloud/deploy-vulnerability-assessment-defender-vulnerability-management) or a non-Microsoft vulnerability management solution. Microsoft Defender for Cloud natively integrates with [Qualys vulnerability assessment solution](/azure/defender-for-cloud/deploy-vulnerability-assessment-vm).
 
 - Use application control through [Windows Defender Application Control (WDAC) or AppLocker](/windows/security/application-security/application-control/app-control-for-business/feature-availability) to ensure applications are trustworthy before execution. Application control policies can also block unsigned scripts and MSIs and restrict Windows PowerShell to run in [Constrained Language Mode](/powershell/module/microsoft.powershell.core/about/about_language_modes?view=powershell-7.5&viewFallbackFrom=powershell-7.2&preserve-view=true).
 
@@ -95,7 +95,7 @@ For a detailed list of best practices for Azure VM security, see [Azure security
   - Infrastructure encryption using platform-managed keys. By default, disks are automatically encrypted at rest through platform-managed encryption keys.
   - [Encryption at the VM host](/azure/virtual-machines/disk-encryption#encryption-at-host---end-to-end-encryption-for-your-vm-data) (Azure server that your VM is allocated to). Each virtual machine's temporary disk and OS/data disk cache data are stored on the VM host. When encryption at the VM host is enabled, that data is encrypted at rest and flows encrypted to the Storage service to be persisted.  
 
-- Deploy an information protection solution like [Microsoft Purview Information Protection](/purview/information-protection?view=o365-worldwide&preserve-view=true) or a third-party solution, which ensures sensitive information is stored, processed, and transmitted securely.
+- Deploy an information protection solution like [Microsoft Purview Information Protection](/purview/information-protection?view=o365-worldwide&preserve-view=true) or a non-Microsoft solution, which ensures sensitive information is stored, processed, and transmitted securely.
 
 - Use the [Security Policy Advisor for Microsoft 365 Apps for enterprise](/microsoft-365-apps/admin-center/overview-cloud-policy) to improve Office deployment security. This tool identifies security policies for your deployment and recommends policies based on their security and productivity effects.
 

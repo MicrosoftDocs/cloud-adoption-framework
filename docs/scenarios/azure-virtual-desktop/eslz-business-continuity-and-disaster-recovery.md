@@ -182,11 +182,6 @@ For most scenarios, we recommend that you use Azure Files or Azure NetApp Files 
 
 
 ## Next steps
-
-- Carefully review your resiliency and BCDR plans for dependent resources. These resources include networking, authentication, applications, and other internal services in Azure or on-premises.
-  - Network infrastructure, as part of a hub-and-spoke or virtual wide area network (WAN) architecture, must be available in the secondary region.
-  - Hybrid connectivity must be highly available in the primary and secondary regions.
-  - Active Directory authentication must be available in the disaster recovery region, or connectivity to the on-premises domain must be guaranteed.
     
 - Learn about security, governance, and compliance for an Azure Virtual Desktop enterprise-scale scenario.
 

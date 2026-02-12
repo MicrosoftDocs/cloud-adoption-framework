@@ -21,11 +21,11 @@ RBAC enables separation of duties across the teams and individuals managing the 
 1. **Combine roles for cross-service permissions.** Combine Azure Virtual Desktop-specific roles with other RBAC roles to grant users the necessary permissions across Azure services such as virtual machines and networking. For more information, see [Built-in roles for Azure Virtual Desktop](/azure/virtual-desktop/rbac).
 
 ## Single sign-on
-Single sign-on (SSO) for Azure Virtual Desktop with Microsoft Entra ID offers a seamless authentication experience for users connecting to session hosts. SSO enhances user experience and security by enabling passwordless authentication and supporting third-party identity providers federated with Microsoft Entra ID. To implement SSO, follow these steps:
+Single sign-on (SSO) for Azure Virtual Desktop with Microsoft Entra ID offers a seamless authentication experience for users connecting to session hosts. SSO enhances user experience and security by enabling passwordless authentication and supporting non-Microsoft identity providers federated with Microsoft Entra ID. To implement SSO, follow these steps:
 
 1. **Enable SSO for session hosts.** Configure SSO to allow users to sign in to Windows using a Microsoft Entra ID token. This setup streamlines authentication and supports Microsoft Entra ID-based resources within the session. For configuration details, see [Configure single sign-on for Azure Virtual Desktop using Microsoft Entra ID](/azure/virtual-desktop/configure-single-sign-on).
 
-1. **Integrate third-party identity providers.** Use federated third-party identity providers with Microsoft Entra ID to extend authentication capabilities. This integration simplifies access for users and enhances security.
+1. **Integrate non-Microsoft identity providers.** Use federated non-Microsoft identity providers with Microsoft Entra ID to extend authentication capabilities. This integration simplifies access for users and enhances security.
 
 ## Azure Virtual Desktop design considerations
 
@@ -75,21 +75,21 @@ The following table summarizes identity scenarios supported by Azure Virtual Des
 
 Follow these design recommendations to optimize identity and access management for Azure Virtual Desktop:
 
-1. **Synchronize identities.** Use Microsoft Entra Connect to synchronize all identities to a single Microsoft Entra tenant. For more information, see [What is Microsoft Entra Connect?](/entra/identity/hybrid/connect/whatis-azure-ad-connect).
+- **Synchronize identities.** Use Microsoft Entra Connect to synchronize all identities to a single Microsoft Entra tenant. For more information, see [What is Microsoft Entra Connect?](/entra/identity/hybrid/connect/whatis-azure-ad-connect).
 
-2. **Ensure directory connectivity.** Ensure Azure Virtual Desktop session hosts can communicate with either Microsoft Entra Domain Services or Active Directory Domain Services.
+- **Ensure directory connectivity.** Ensure Azure Virtual Desktop session hosts can communicate with either Microsoft Entra Domain Services or Active Directory Domain Services.
 
-3. **Enable smart card support.** Use the Kerberos Key Distribution Center proxy solution to proxy smart-card authentication traffic and enable remote sign-in. For more information, see [Configure a Kerberos Key Distribution Center proxy](/azure/virtual-desktop/key-distribution-center-proxy).
+- **Enable smart card support.** Use the Kerberos Key Distribution Center proxy solution to proxy smart-card authentication traffic and enable remote sign-in. For more information, see [Configure a Kerberos Key Distribution Center proxy](/azure/virtual-desktop/key-distribution-center-proxy).
 
-4. **Organize session hosts.** Segregate session host virtual machines into Active Directory organizational units for each host pool to simplify policy management and orphaned objects. For more information, see [Virtual machine details](/azure/virtual-desktop/deploy-azure-virtual-desktop#virtual-machine-details).
+- **Organize session hosts.** Segregate session host virtual machines into Active Directory organizational units for each host pool to simplify policy management and orphaned objects. For more information, see [Virtual machine details](/azure/virtual-desktop/deploy-azure-virtual-desktop#virtual-machine-details).
 
-5. **Secure local admin accounts.** Use a solution like Local Administrator Password Solution (LAPS) to frequently rotate local administrator passwords on Azure Virtual Desktop session hosts. For more information, see [Security assessment: Microsoft LAPS usage](/defender-for-identity/security-posture-assessments/accounts).
+- **Secure local admin accounts.** Use a solution like Local Administrator Password Solution (LAPS) to frequently rotate local administrator passwords on Azure Virtual Desktop session hosts. For more information, see [Security assessment: Microsoft LAPS usage](/defender-for-identity/security-posture-assessments/accounts).
 
-6. **Assign access with RBAC.** Grant user access to Azure Virtual Desktop application groups by assigning the Desktop Virtualization User built-in role to appropriate security groups. For more information, see [Delegated access in Azure Virtual Desktop](/azure/virtual-desktop/delegated-access-virtual-desktop).
+- **Assign access with RBAC.** Grant user access to Azure Virtual Desktop application groups by assigning the Desktop Virtualization User built-in role to appropriate security groups. For more information, see [Delegated access in Azure Virtual Desktop](/azure/virtual-desktop/delegated-access-virtual-desktop).
 
-7. **Implement conditional access.** Create Conditional Access policies for Azure Virtual Desktop to enforce multifactor authentication based on conditions like risky sign-ins. For more information, see [Enable Microsoft Entra multifactor authentication for Azure Virtual Desktop](/azure/virtual-desktop/set-up-mfa).
+- **Implement conditional access.** Create Conditional Access policies for Azure Virtual Desktop to enforce multifactor authentication based on conditions like risky sign-ins. For more information, see [Enable Microsoft Entra multifactor authentication for Azure Virtual Desktop](/azure/virtual-desktop/set-up-mfa).
 
-8. **Enable single sign-on with AD FS.** Configure Active Directory Federation Service (AD FS) to enable single sign-on for users on the corporate network.
+- **Enable single sign-on with AD FS.** Configure Active Directory Federation Service (AD FS) to enable single sign-on for users on the corporate network.
 
 ## Next steps
 
