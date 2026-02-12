@@ -12,7 +12,7 @@ ms.custom: think-tank, e2e-avd
 
 Azure Virtual Desktop is a Microsoft managed service that provides a control plane for your desktop virtualization environment. Costs for the service are included as part of eligible licenses, see [Azure Virtual Desktop Pricing](https://azure.microsoft.com/pricing/details/virtual-desktop/). Microsoft doesn't offer a financially backed [service-level agreement (SLA)](https://azure.microsoft.com/support/legal/sla/virtual-desktop) for the services. Despite no SLA, we try to achieve at least 99.9 percent availability for the Azure Virtual Desktop service URLs.
 
-A good business continuity and disaster recovery (BCDR) strategy keeps your critical applications and workload up and running during planned and unplanned service or Azure outages. Your strategy should consider resources that are deployed in your subscription as part of the Azure Virtual Desktop data plane, including host pools and storage.
+A good business continuity and disaster recovery (BCDR) strategy keeps your critical applications and workloads up and running during planned and unplanned service or Azure outages. Your strategy should consider resources that are deployed in your subscription as part of the Azure Virtual Desktop data plane, including host pools and storage.
 
 To ensure business continuity, Azure Virtual Desktop also preserves customer metadata during region outages. If an outage occurs, the service infrastructure components fail over to the secondary location and continue to function as usual.
 
@@ -35,7 +35,7 @@ For an Azure Virtual Desktop host pool, you can use either an *active-active* or
 - For FSLogix Cloud Cache, this [guidance for BCDR](/fslogix/concepts-container-recovery-business-continuity) can be used.
 
 - This configuration is limited to a *pooled* (shared) host pool type. For a *personal* (dedicated) type, when a desktop is assigned to a user on a certain session host VM, the desktop doesn't change, even if the VM isn't available.
-- Cloud Cache doesn't improve the users' sign-on and sign out experience when using poor performing storage. It's common for environments using Cloud Cache to have slightly slower sign-on and sign out times, relative to using traditional VHDLocations, using the same storage. [Review the FSLogix Cloud Cache documentation for recommendations regarding local cache storage](/fslogix/cloud-cache-resiliency-availability-cncpt).
+- Cloud Cache doesn't improve the users' sign-on and sign out experience when using poor performing storage. It's common for environments using Cloud Cache to have slightly slower sign-on and sign out times, relative to using traditional VHDLocations, using the same storage. [Review the FSLogix Cloud Cache documentation for recommendations regarding local cache storage](/fslogix/concepts-fslogix-cloud-cache).
 - The active-active host pools configuration often is complex and comes with additional cost both for infrastructure and management.
 
 #### Active-passive host pool
@@ -75,7 +75,7 @@ Before you begin your BCDR planning and design for Azure Virtual Desktop, consid
 
 ### Optimal storage for profile and Office containers
 
-The storage location you use for your FSLogix containers is critical to ensure the lowest latency from the host pool VM. If you configure the `VHDLocations` registry entry, the FSLogix agent can support multiple profile locations for higher resiliency. You can use Cloud Cache or ensure that a proper [replication mechanism](/azure/virtual-desktop/disaster-recovery#fslogix-configuration) is in place based on the type of storage you use.
+The storage location you use for your FSLogix containers is critical to ensure the lowest latency from the host pool VM. If you configure the `VHDLocations` registry entry, the FSLogix agent can support multiple profile locations for higher resiliency. You can use Cloud Cache or ensure that a proper [replication mechanism](/azure/virtual-desktop/disaster-recovery-concepts#fslogix-configuration) is in place based on the type of storage you use.
 
 Azure offers multiple storage solutions that you can use to store your FSLogix profile and Office containers.
 
@@ -89,7 +89,7 @@ You can reduce the time it takes to back up, restore, and replicate data after a
 
 - Separate user profile and Office container disks. FSLogix offers the option to place disks in separate storage locations.
 - Don't make the Office disk resilient. In normal usage, the Office disk might consume many more gigabytes than the profile disk. It's a cache of data that you can download again from Microsoft 365 online services.
-- Use OneDrive to redirect [standard folders](/onedrive/redirect-known-folders) like *Desktop*, *Documents*, *Pictures*, *Saved Pictures*, and *Camera Roll*. The redirection ensures the resilience of this data without special consideration in a BCDR scenario.
+- Use OneDrive to redirect [standard folders](/sharepoint/redirect-known-folders) like *Desktop*, *Documents*, *Pictures*, *Saved Pictures*, and *Camera Roll*. The redirection ensures the resilience of this data without special consideration in a BCDR scenario.
 - Don't include cache data for the profile disk, so that you can more quickly back up, replicate, and restore the disk.
 
   > [!NOTE]
@@ -97,7 +97,7 @@ You can reduce the time it takes to back up, restore, and replicate data after a
 
 You can use multiple replication mechanisms and strategies for user data in [FSLogix](/fslogix/concepts-configuration-examples) containers.
 
-- **Profile pattern #1:** Use native Azure Storage replication mechanisms. For example, use [geo-redundant storage (GRS)](/azure/storage/common/storage-redundancy#redundancy-in-a-secondary-region) for standard file shares. You can use [cross-region replication](/azure/azure-netapp-files/cross-region-replication-introduction) for Azure NetApp Files, or use [Azure File Sync](/azure/storage/file-sync/file-sync-deployment-guide) for VM-based file servers.
+- **Profile pattern #1:** Use native Azure Storage replication mechanisms. For example, use [geo-redundant storage (GRS)](/azure/storage/common/storage-redundancy#redundancy-in-a-secondary-region) for standard file shares. You can use [cross-region replication](/azure/azure-netapp-files/replication) for Azure NetApp Files, or use [Azure File Sync](/azure/storage/file-sync/file-sync-deployment-guide) for VM-based file servers.
 
 - **Profile pattern #2:** FSLogix [Cloud Cache](/fslogix/concepts-configuration-examples#example-2-standard--high-availability-cloud-cache) has a built-in automatic mechanism to replicate containers between up to four different storage accounts.
 
@@ -182,13 +182,8 @@ For most scenarios, we recommend that you use Azure Files or Azure NetApp Files 
 
 
 ## Next steps
-
-- Carefully review your resiliency and BCDR plans for dependent resources. These resources include networking, authentication, applications, and other internal services in Azure or on-premises.
-  - Network infrastructure, as part of a hub-and-spoke or virtual wide area network (WAN) architecture, must be available in the secondary region.
-  - Hybrid connectivity must be highly available in the primary and secondary regions.
-  - Active Directory authentication must be available in the disaster recovery region, or connectivity to the on-premises domain must be guaranteed.
     
-- Learn about security, governance, and compliance for an Azure Virtual Desktop enterprise-scale scenario.
+Learn about security, governance, and compliance for an Azure Virtual Desktop enterprise-scale scenario.
 
   > [!div class="nextstepaction"]
   > [Security, governance, and compliance](./eslz-security-governance-and-compliance.md)

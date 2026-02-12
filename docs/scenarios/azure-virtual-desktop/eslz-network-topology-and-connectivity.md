@@ -16,7 +16,7 @@ This article outlines how to design network topology and connectivity for Azure 
 ### Core networking components
 
 - [**Azure Virtual Network**](/azure/virtual-network/virtual-networks-overview) is the fundamental building block for private networks in Azure. With Virtual Network, many types of Azure resources, such as Azure Virtual Machines, can communicate with each other, the internet, and on-premises datacenters. A virtual network is similar to a traditional network that you operate in your own datacenter. But a virtual network offers the Azure infrastructure benefits of scale, availability, and isolation.
-- [**Hub-Spoke Network Topology**](/azure/architecture/reference-architectures/hybrid-networking/hub-spoke?tabs=cli) is a type of network architecture in which a hub virtual network acts as a central point of connectivity to several spoke virtual networks. The hub can also be the connectivity point to on-premises datacenters. The spoke virtual networks peer with the hub and help to isolate workloads.
+- [**Hub-Spoke Network Topology**](/azure/architecture/networking/architecture/hub-spoke?tabs=cli) is a type of network architecture in which a hub virtual network acts as a central point of connectivity to several spoke virtual networks. The hub can also be the connectivity point to on-premises datacenters. The spoke virtual networks peer with the hub and help to isolate workloads.
 - [**Azure Virtual WAN**](/azure/virtual-wan/virtual-wan-about) is a networking service that brings networking, security, and routing functions together in a single operational interface.
 
 ### Secure access and traffic control
@@ -79,7 +79,7 @@ For more information, see [Implement Quality of Service (QoS) for Azure Virtual 
 
 Azure Virtual Desktop compute resources and clients require access to specific public endpoints, so they need internet-bound connections. Network scenarios, such as forced tunneling to enhance security and filtering, are supported when Azure Virtual Desktop requirements are met.
 
-To understand requirements for Azure Virtual Desktop session hosts and client devices, see [Required URLs for Azure Virtual Desktop](/azure/virtual-desktop/safe-url-list).
+To understand requirements for Azure Virtual Desktop session hosts and client devices, see [Required URLs for Azure Virtual Desktop](/azure/virtual-desktop/required-fqdn-endpoint).
 
 ### Validate AVD port and protocol requirements
 
@@ -152,7 +152,7 @@ You can implement this scenario with:
 #### Considerations for hub and spoke with hybrid connectivity
 
 - This scenario doesn't accommodate direct network connectivity between a client and a public or private session host. You can't use RDP Shortpath in this scenario.
-- The Azure Virtual Desktop control plane gateway, which uses a public endpoint, manages client connections. As a result, Azure Virtual Desktop clients can create outbound connections to required Azure Virtual Desktop URLs. For more information about required URLs, see the Internet section of this article and [Required URLs for Azure Virtual Desktop](/azure/virtual-desktop/safe-url-list?tabs=azure).
+- The Azure Virtual Desktop control plane gateway, which uses a public endpoint, manages client connections. As a result, Azure Virtual Desktop clients can create outbound connections to required Azure Virtual Desktop URLs. For more information about required URLs, see the Internet section of this article and [Required URLs for Azure Virtual Desktop](/azure/virtual-desktop/required-fqdn-endpoint?tabs=azure).
 - No public IP addresses or other public inbound paths to session hosts are needed. Traffic from clients to session hosts flows through the Azure Virtual Desktop control plane gateway.
 - There's no virtual network peering between Azure Virtual Desktop spokes. All traffic goes through the connectivity hub.
 - The outbound internet connections from Azure Virtual Desktop session hosts go through the default Azure outbound network address translation (NAT) process. Dynamic Azure public IP addresses are used. Customers have no control over the outbound public IP addresses that are used.
@@ -206,7 +206,7 @@ You can implement this scenario with:
 - A domain GPO or local GPO must be used to [enable UDP](/azure/virtual-desktop/configure-rdp-shortpath?tabs=managed-networks) over managed networks.
 - Hybrid connectivity must have sufficient bandwidth to allow for UDP direct connections to VM hosts.
 - Hybrid connectivity must have direct routing to allow connections to VM hosts.
-- The Azure Virtual Desktop control plane gateway, which uses a public endpoint, manages client connections. As a result, Azure Virtual Desktop clients can create outbound connections to required Azure Virtual Desktop URLs. For more information about required URLs, see the Internet section of this article and [Required URLs for Azure Virtual Desktop](/azure/virtual-desktop/safe-url-list?tabs=azure).
+- The Azure Virtual Desktop control plane gateway, which uses a public endpoint, manages client connections. As a result, Azure Virtual Desktop clients can create outbound connections to required Azure Virtual Desktop URLs. For more information about required URLs, see the Internet section of this article and [Required URLs for Azure Virtual Desktop](/azure/virtual-desktop/required-fqdn-endpoint?tabs=azure).
 - No public IP addresses or other public inbound paths to session hosts are needed. Traffic from clients to session hosts flows through the Azure Virtual Desktop control plane gateway.
 - The outbound internet connection from Azure Virtual Desktop session hosts goes through the default Azure outbound NAT process. Dynamic Azure public IP addresses are used. Customers have no control over the outbound public IP addresses that are used.
 - Connections from session hosts to Azure Files storage accounts are established by using private endpoints.
@@ -253,8 +253,8 @@ You can implement this scenario with:
   - Outbound UDP connections from Azure Virtual Desktop session hosts to the Azure Virtual Desktop Session Traversal Utilities for NAT (STUN) and Traversal Using Relay NAT (TURN) services on port 3478
   - UDP connections from RDP clients in the port range 49152–65535
 
-  The setting that configures these connections is turned on by default and maintains the same level of encryption as Transmission Control Protocol (TCP) reverse connect. For information about limiting RDP client port ranges, see [Limit the port range when using RDP Shortpath for public networks](/azure/virtual-desktop/configure-rdp-shortpath-limit-ports-public-networks).
-- The Azure Virtual Desktop control plane gateway, which uses a public endpoint, manages client connections. As a result, Azure Virtual Desktop clients can create outbound connections to required Azure Virtual Desktop URLs. For more information about required URLs, see the Internet section of this article and [Required URLs for Azure Virtual Desktop](/azure/virtual-desktop/safe-url-list?tabs=azure).
+  The setting that configures these connections is turned on by default and maintains the same level of encryption as Transmission Control Protocol (TCP) reverse connect. For information about limiting RDP client port ranges, see [Limit the port range when using RDP Shortpath for public networks](/azure/virtual-desktop/configure-rdp-shortpath).
+- The Azure Virtual Desktop control plane gateway, which uses a public endpoint, manages client connections. As a result, Azure Virtual Desktop clients can create outbound connections to required Azure Virtual Desktop URLs. For more information about required URLs, see the Internet section of this article and [Required URLs for Azure Virtual Desktop](/azure/virtual-desktop/required-fqdn-endpoint?tabs=azure).
 - Consumer routers that are typically found in home user networks should have Universal Plug and Play (UPnP) enabled.
 - No public IP addresses or other public inbound paths to session hosts are needed. Traffic from clients to session hosts flows through the Azure Virtual Desktop control plane gateway.
 - The outbound internet connection from Azure Virtual Desktop session hosts goes through the default Azure outbound NAT process. Dynamic Azure public IP addresses are used. Customers have no control over the outbound public IP addresses that are used.
