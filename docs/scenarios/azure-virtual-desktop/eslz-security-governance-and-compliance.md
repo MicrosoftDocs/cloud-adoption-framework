@@ -86,7 +86,7 @@ Review the following sections to find recommended security controls and governan
 
 For more information on best practices for Azure Virtual Desktop session host security, see [Session host security best practices](/azure/virtual-desktop/security-recommendations#session-host-security-best-practices).
 
-For a detailed list of best practices for Azure VM security, see [Security recommendations for virtual machines in Azure](/security/benchmark/azure/baselines/virtual-machines-windows-virtual-machines-security-baseline).
+For a detailed list of best practices for Azure VM security, see [Azure security baseline for Virtual Machines](/security/benchmark/azure/baselines/virtual-machines-windows-virtual-machines-security-baseline).
 
 ## Data protection
 
