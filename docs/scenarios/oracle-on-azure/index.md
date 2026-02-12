@@ -25,9 +25,9 @@ Oracle on Azure adoption scenarios provide two principal technology platform opt
 
 You can use Oracle on Azure to integrate database services for Oracle with Azure cloud capabilities. Apply data analytics and generative AI to your Oracle data. Monitor your apps and Oracle database service with a single view in Azure.
 
-The following diagrams provide a conceptual reference architecture for Oracle on Azure Virtual Machines and Oracle Database@Azure that you can use to accelerate cloud adoption. The diagrams show critical design areas for Azure landing zones and incorporate a multi-region design to enhance availability and disaster recovery. They also present a network layout that demonstrates architectural principles across multiple regions, but they don't detail an entire enterprise network.
+The following diagrams show reference architectures for Oracle on Azure Virtual Machines and Oracle Database@Azure to accelerate cloud adoption. The diagrams show critical design areas for Azure landing zones and incorporate a multi-region design to enhance availability and disaster recovery. They also present a network layout that demonstrates architectural principles across multiple regions, but they don't detail an entire enterprise network.
 
-Use the multi-region reference architectures as a starting point. Modify them to fit your specific business and technical requirements when you implement your landing zone. A multi-region architecture supports business continuity and recoverability from regional outages (rapid restoration with defined RTO/RPO) while improving resiliency by reducing the blast radius of localized failures. It aligns with best practices for high availability and scalability.
+Use the multi-region reference architectures as a starting point. Modify them to fit your specific business and technical requirements when you implement your landing zone. A multi-region architecture supports business continuity and disaster recovery while improving resiliency by reducing the impact of localized failures. It aligns with best practices for high availability and scalability.
 
 ### Landing zone architecture for Oracle on Azure virtual machines
 

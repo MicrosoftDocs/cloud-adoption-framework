@@ -60,7 +60,7 @@ Security isolation protects Oracle Database@Azure deployments from unauthorized 
 
 To implement comprehensive isolation measures that protect both Oracle Database@Azure resources and supporting Azure infrastructure, apply the following practices:
 
-- **Apply logical isolation between environments.** Each Oracle Database@Azure environment requires separate security boundaries to prevent cross-environment access and maintain compliance requirements. To ensure that development teams can't access production Oracle databases, use Azure subscriptions as primary isolation boundaries and implement Azure role-based access control (RBAC) by using environment-specific permissions.
+- **Apply logical isolation between environments.** Each Oracle Database@Azure environment requires separate security boundaries to prevent cross-environment access and maintain compliance requirements. To ensure development teams can't access production Oracle databases, use Azure subscriptions as primary isolation boundaries and implement Azure role-based access control (RBAC) with environment-specific permissions.
 
 - **Enforce least privilege access principles.** Oracle Database@Azure resources need restricted access that grants users only the minimum permissions necessary for their roles.
   
@@ -94,7 +94,7 @@ Design a subscription model that assigns a dedicated Azure subscription to each 
 
 - **Configure subscription billing alignment.** Ensure that all subscriptions use the same billing account as the primary subscription to maintain consistent cost management and avoid billing complications across your Oracle Database@Azure deployment.
 
-- **Plan for workload isolation in production.** For mission-critical workloads that use Oracle Autonomous Database@Azure, create separate production subscriptions for each major application to minimize the impact radius and simplify RBAC management.
+- **Plan for workload isolation in production.** For mission-critical workloads using Oracle Autonomous Database@Azure, create separate production subscriptions for each major application to minimize impact radius and simplify RBAC management.
 
 ### Verify onboarding permissions
 
@@ -121,13 +121,13 @@ For the complete permissions matrix organized by persona and task, see [Onboardi
 
 ### Monitor billing across subscriptions
 
-Cost tracking requires careful monitoring across multiple subscription architectures because Oracle Database@Azure billing consolidates under the primary subscription. Understand cost allocation patterns and use appropriate tools for comprehensive expense tracking.
+Cost tracking requires monitoring across multiple subscription architectures because Oracle Database@Azure billing consolidates under the primary subscription. Understand cost allocation patterns and use appropriate tools for comprehensive expense tracking.
 
 Use Microsoft Cost Management tools to track overall Azure expenses across all subscriptions:
 
 - **Review costs regularly by using Cost Management tools.** These tools provide insights into overall Azure expenses and track resource usage patterns across your Oracle Database@Azure deployment.
 
-- **Understand billing consolidation.** Charges related to the Oracle Account resource in the primary subscription consolidate under that subscription through the private offer. Individual per-subscription billing details aren't itemized in Azure for Oracle Database@Azure resources.
+- **Understand billing consolidation.** Charges for the Oracle Account resource in the primary subscription consolidate under that subscription through the private offer. Individual per-subscription billing details aren't itemized in Azure for Oracle Database@Azure resources.
 
 - **Track independent charges through OCI.** For detailed cost tracking and invoicing specific to Oracle Database@Azure usage, refer to OCI cost management tools and reports.
 
@@ -151,7 +151,7 @@ When you plan deployments across subscriptions, consider how infrastructure plac
 
 Consider the following factors when you design the subscription setup for Oracle Database@Azure:
 
-- **Primary subscription:** During onboarding, choose an initial Azure subscription. This subscription serves as the primary subscription for Oracle Database@Azure and forms the foundation for all Oracle Database@Azure deployments.
+- **Primary subscription:** During onboarding, choose an initial Azure subscription. This subscription serves as the primary subscription for Oracle Database@Azure and forms the foundation for all deployments.
 
   - **Onboarding permissions and resource providers:** See the [onboarding permissions table](https://docs.oracle.com/en-us/iaas/Content/database-at-azure/oaaprerequisites.htm#oaaprereq_1_permissions__onboarding-permissions-table-title) for the minimum Azure and OCI roles required.
   - **Resource registration:** Oracle Database@Azure operates on Azure as a bare-metal service. [Register the following resource providers](https://docs.oracle.com/en-us/iaas/Content/database-at-azure/oaaprerequisites.htm#oaaprereq_4_register_resource_provider) before you begin Oracle Database@Azure onboarding:

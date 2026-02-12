@@ -24,7 +24,7 @@ The colocated approach provides simpler management and no extra peering costs, b
 
 :::image type="content" source="./media/same-virtual-network.svg" alt-text="Diagram that shows the colocation of the database and application tiers in the same virtual network." border="false" lightbox="./media/same-virtual-network.svg":::
 
-The peered virtual network approach adds virtual network peering costs and more complexity, but it provides enhanced isolation, independent scalability, and governance boundaries. This approach can also improve your security posture by providing more granular access control over the resources and enhanced network segmentation. The following diagram shows the database and application tiers in directly peered virtual networks.
+The peered virtual network approach adds virtual network peering costs and more complexity, but it provides enhanced isolation, independent scalability, and governance boundaries. This approach can also improve your security posture by providing more granular access control over resources and enhanced network segmentation. The following diagram shows the database and application tiers in directly peered virtual networks.
 
 :::image type="content" source="./media/separate-virtual-network.svg" alt-text="Diagram that shows directly peered virtual networks." border="false" lightbox="./media/separate-virtual-network.svg":::
 
@@ -38,7 +38,7 @@ This pattern helps ensure direct connectivity from the database and application 
 
 - **Connectivity options:** There are two main options for achieving optimal performance between the application and database tiers. You can deploy them in either the same virtual network or in peered virtual networks. Both options provide comparable latency and throughput when resources are deployed in the same physical availability zone. The choice between them depends more on management scope, team boundaries, and network segmentation requirements than on performance.
 
-- **Availability zone placement:** If you deploy the application tier in a separate subscription from the subscription that hosts the Oracle Exadata Database@Azure service, logical availability zones might differ from physical availability zones across subscriptions. To validate the correct availability zones, use the following command. Replace `eastus` with your desired region.
+- **Availability zone placement:** If you deploy the application tier in a separate subscription from the Oracle Exadata Database@Azure service, logical availability zones might differ from physical availability zones. To validate the correct availability zones, use the following command. Replace `eastus` with your desired region.
 
   ```bash
   az rest --method get --uri '/subscriptions/{subscriptionId}/locations?api-version=2022-12-01' \
@@ -49,9 +49,9 @@ This pattern helps ensure direct connectivity from the database and application 
 
 - **Optimize for bandwidth and latency:** Colocate workload-related resources within the same physical availability zones to minimize latency and maximize throughput.
 
-- **Optimize for smaller workload scopes:** Colocate applications and databases in the same virtual network if you have a limited number of Oracle databases that serve a small application portfolio that a single team manages. This approach reduces latency and simplifies the network design.
+- **Optimize for smaller workload scopes:** Colocate applications and databases in the same virtual network if you have few Oracle databases serving a small application portfolio managed by one team. This approach reduces latency and simplifies the network design.
 
-- **Use segmentation for complex environments:** For larger or more complex environments, treat Oracle Exadata Database@Azure as a dedicated service by deploying it in one or more dedicated subscriptions to manage multiple databases for different applications and teams. Deploy application solutions in separate subscriptions and use virtual network peering to connect the application networks to the database networks. This approach enables independent management of application and database resources while helping to maintain secure and performant connectivity.
+- **Use segmentation for complex environments:** For larger environments, deploy Oracle Exadata Database@Azure in dedicated subscriptions to manage multiple databases for different applications and teams. Deploy application solutions in separate subscriptions and use virtual network peering to connect the application networks to the database networks. This approach enables independent management of application and database resources while maintaining secure and performant connectivity.
 
 ## Next step
 

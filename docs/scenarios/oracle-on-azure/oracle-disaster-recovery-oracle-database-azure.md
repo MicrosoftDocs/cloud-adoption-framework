@@ -11,7 +11,7 @@ ai-usage: ai-assisted
 
 # Business continuity and disaster recovery considerations for Oracle Exadata Database@Azure
 
-Oracle Database@Azure provides business continuity and disaster recovery (BCDR) options that support recoverability. Resiliency is addressed through redundancy and high availability features. This article provides an overview of key BCDR considerations, design strategies, and best practices for deploying Oracle Exadata Database@Azure so you can build a secure, reliable architecture that meets your organization's requirements.
+Oracle Database@Azure provides business continuity and disaster recovery (BCDR) options that support recoverability. Resiliency is addressed through redundancy and high availability features. This article covers key BCDR considerations, design strategies, and best practices for deploying Oracle Exadata Database@Azure to build a secure, reliable architecture that meets your requirements.
 
 ## Design considerations
 
@@ -104,7 +104,7 @@ A remote standby database on an Oracle Exadata Database@Azure instance that's lo
 This architecture is ideal for mission-critical workloads and requires a minimum of three Oracle Exadata Database@Azure deployments.
 
 > [!NOTE]
-> If a symmetrical configuration is required because of a failover scenario, place an extra standby database on Oracle Exadata Database@Azure in the secondary region, within a different availability zone. 
+> If failover requires a symmetrical configuration, place an extra standby database in the secondary region's different availability zone. 
 >
 
 #### Data Guard Far Sync architecture
@@ -120,13 +120,13 @@ If you need a symmetrical DR architecture when there's a failover, place a far s
 
 ### Backup recommendations
 
-If you plan to use backups as your only solution for BCDR requirements, keep in mind that RTO is higher compared to replication scenarios because it's based on database size and the backup methods that you use.
+If you plan to use backups as your only BCDR solution, note that RTO is higher than replication scenarios due to database size and backup methods.
 
 - **Back up data within Azure:** To meet organizational requirements that mandate data and backups remain in Azure, consider the following solutions:
 
   - **Use Autonomous Recovery Service (ARS) in Azure:** During backup policy configuration, choose to [store backup data in the same cloud provider as the database](https://docs.oracle.com/en/cloud/paas/recovery-service/dbrsu/azure-multicloud-recoveryservice.html) to use the ARS in Azure.
   
-  - **Use Storage services:** Use Storage services like Blob Storage, Azure Files, and Azure NetApp Files to mount storage as network file system (NFS) points on the database server and stream Oracle Recovery Manager (RMAN) backups to Storage.
+  - **Use Storage services:** Use Storage services like Blob Storage, Azure Files, and Azure NetApp Files to mount storage as NFS points and stream RMAN backups to Storage.
 
 - **Configure long-term backup retention:** If your organization requires long-term backup retention, two solutions are available:
 

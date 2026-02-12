@@ -41,9 +41,9 @@ The Oracle database subnet should include an NSG that allows the following traff
 
 - Change ports when security requires obfuscation. Don't use default ports.
 
-- Limit Oracle management access to a minimal number of authorized users by using [Azure Bastion](/azure/bastion/) to connect securely to the VMs in the Oracle subnet.
+- Limit Oracle management access to few authorized users by using [Azure Bastion](/azure/bastion/) to connect securely to the VMs in the Oracle subnet.
 
-- If you use Azure Bastion to access the Oracle database server, make sure the **AzureBastionSubnet** includes an NSG that allows inbound traffic on port 443.
+- If you use Azure Bastion to access the Oracle database server, ensure the **AzureBastionSubnet** includes an NSG that allows inbound traffic on port 443.
 
 - If needed configure proximity placement groups for Oracle application servers and Oracle database servers to minimize network latency.
 

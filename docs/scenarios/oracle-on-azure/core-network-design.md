@@ -11,7 +11,7 @@ ms.custom: e2e-oracle
 
 # Core networking for Oracle Database@Azure
 
-This article provides design considerations and recommendations for network connectivity in Oracle Database@Azure workloads. Oracle Database@Azure has a unique architecture compared to most Azure services—it runs within an Azure datacenter while maintaining default connectivity to the Oracle Cloud Infrastructure (OCI) control plane. Understanding this core networking architecture is foundational for successful adoption.
+This article covers network connectivity design for Oracle Database@Azure workloads. Oracle Database@Azure has a unique architecture compared to most Azure services—it runs within an Azure datacenter while maintaining default connectivity to the Oracle Cloud Infrastructure (OCI) control plane. Understanding this architecture is essential for successful adoption.
 
 The following diagram illustrates the core networking architecture and relationship between Azure virtual networks and OCI virtual cloud networks (VCNs) for Oracle Exadata Database@Azure.
 
@@ -23,20 +23,20 @@ The client subnet in the OCI VCN maps to the Oracle Database delegated subnet in
 
 Oracle Exadata Database@Azure requires careful network planning due to its hybrid nature across Azure and OCI. Several architectural constraints and capabilities influence how you design your network topology.
 
-Consider the following factors when you design your network topology for Oracle Exadata Database@Azure:
+Consider these factors when designing your network topology for Oracle Exadata Database@Azure:
 
 | Factor | Description |
 |--------|-------------|
 | **Inherited region and availability zone settings** | When you deploy an Exadata Infrastructure instance, the region and availability zones map to it. Any virtual machine (VM) clusters created within the Exadata Infrastructure instance inherit the same settings. |
 | **VM cluster limits** | Each Oracle Exadata Database@Azure SKU can include up to [eight VM clusters](https://docs.oracle.com/iaas/exadatacloud/doc/exa-service-desc.html#ECSCM-GUID-B0820870-D946-4879-85BF-C95FF25979CF). Configure your virtual network before VM cluster creation, and decide whether to connect clusters to the same virtual network or separate virtual networks. |
-| **Scheduled patching** | Scheduled patching for Oracle Exadata Database@Azure is delivered through the OCI control plane and does not require direct internet access. This method reduces the need for outbound connectivity in typical maintenance scenarios. |
+| **Scheduled patching** | Scheduled patching for Oracle Exadata Database@Azure is delivered through the OCI control plane and does not require direct internet access. This reduces outbound connectivity needs in typical maintenance scenarios. |
 | **Internet access requirements** | Oracle Exadata Database@Azure has no direct internet access by default. If internet access is required for one-off patching, outbound telemetry, or downloading packages, you must explicitly configure it. |
 | **Delegated subnet limitation** | You can create only one Oracle Database@Azure delegated subnet for each virtual network. You can create up to five Oracle-delegated subnets in a region. If you need more subnets, submit a support ticket with Oracle to increase the limit. For more information, see [Network planning for Oracle Database@Azure](/azure/oracle/oracle-db/oracle-database-network-plan). |
 | **Split DNS model** | Oracle Database@Azure follows a split DNS model. Configure DNS on both Azure and OCI. For more information, see [Oracle Database@Azure DNS setup](https://techcommunity.microsoft.com/blog/fasttrackforazureblog/oracle-databaseazure-dns-setup/4304513). |
 
 ## Plan subnet and IP address sizing
 
-Proper subnet sizing ensures your Oracle Exadata Database@Azure deployment has adequate IP address space for current needs and future growth. Define subnet sizes according to Oracle's SKU specifications, which differ based on the chosen instance type. Here's how to plan subnet and IP address sizing:
+Proper subnet sizing ensures adequate IP address space for current needs and future growth. Define subnet sizes according to Oracle's SKU specifications, which differ based on the chosen instance type. Here's how to plan subnet and IP address sizing:
 
 1. **Review SKU requirements.** Consult the sizing guidelines in [Plan for IP address space for Oracle Exadata Database@Azure](/azure/oracle/oracle-db/oracle-database-plan-ip) to determine the required IP address range for your chosen instance type.
 
