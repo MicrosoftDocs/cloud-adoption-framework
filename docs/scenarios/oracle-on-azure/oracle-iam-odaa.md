@@ -31,7 +31,7 @@ Identity federation between Azure and OCI enables unified access management acro
 
 Oracle Database@Azure deployment requires specific Azure permissions and creates default identity groups. Plan the deployment process to align with your organization's identity governance and operational model.
 
-1. **Assign Contributor role for Oracle Database@Azure deployment.** Ensure that deployment personnel have the [Contributor role](/azure/role-based-access-control/built-in-roles#contributor) for the target subscription before accepting the [private offer](/marketplace/private-offers-overview) on Azure Marketplace. This role provides minimum permissions for Oracle Database@Azure service deployment. For subscription access management, see [Assign Azure roles by using the Azure portal](/azure/role-based-access-control/role-assignments-portal).
+1. **Assign Contributor role for Oracle Database@Azure deployment.** Ensure that deployment personnel have the [Contributor role](/azure/role-based-access-control/built-in-roles#contributor) for the target subscription before accepting the [private offer](/marketplace/private-offers-overview) on Azure Marketplace. This role provides the minimum required permissions for Oracle Database@Azure service deployment. For subscription access management, see [Assign Azure roles by using the Azure portal](/azure/role-based-access-control/role-assignments-portal).
 
 2. **Plan for automatic group creation.** Oracle Database@Azure deployment automatically creates specific default groups in Microsoft Entra ID and the corresponding OCI tenant during provisioning. These [groups](/azure/oracle/oracle-db/oracle-database-groups-roles) include predefined permissions for Oracle Database@Azure operations.
 
@@ -43,7 +43,7 @@ Oracle Database@Azure deployment requires specific Azure permissions and creates
 
 Implement granular access control with Azure role-based access control (Azure RBAC) and OCI policies to enforce least privilege access across Oracle Database@Azure resources. Configure access controls that align with your organizational security requirements.
 
-1. **Apply least privilege principles to Database@Azure roles.** Use Azure RBAC to control user access to Oracle Database@Azure resources with minimum permissions. Assign users to specific Oracle Database@Azure roles based on their job functions instead of granting broad access. For more information, see [Best practices for Azure RBAC](/azure/role-based-access-control/best-practices).
+1. **Apply least privilege principles to Database@Azure roles.** Use Azure RBAC to control user access to Oracle Database@Azure resources with minimum required permissions. Assign users to specific Oracle Database@Azure roles based on their job functions instead of granting broad access. For more information, see [Best practices for Azure RBAC](/azure/role-based-access-control/best-practices).
 
 2. **Customize group names for enhanced security.** Create custom group names for Oracle Database@Azure roles when default names don't align with organizational naming conventions. Custom group names require manual policy configuration in both Azure and OCI. For policy management guidance, see [Azure Policy overview](/azure/governance/policy/overview).
 

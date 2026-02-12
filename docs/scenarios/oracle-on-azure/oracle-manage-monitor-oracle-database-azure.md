@@ -37,7 +37,7 @@ Establish proactive monitoring for key performance indicators that directly affe
 
 1. **Create a unified monitoring dashboard.** Build a [custom dashboard in the Azure portal](/azure/azure-portal/azure-portal-dashboards) that aggregates metrics from all three monitoring layers. This unified view provides operators with complete visibility across database performance, infrastructure health, and security status without switching between multiple tools.
 
-1. **Configure alert action groups for incident response.** Set up Azure Monitor action groups to automatically notify stakeholders when thresholds are exceeded. Configure escalation procedures that coordinate database administrators, infrastructure teams, and security personnel based on alert severity and type.
+1. **Configure alert action groups for incident response.** Set up [Azure Monitor action groups](/azure/azure-monitor/alerts/action-groups) to automatically notify stakeholders when thresholds are exceeded. Configure escalation procedures that coordinate database administrators, infrastructure teams, and security personnel based on alert severity and type.
 
 ## Integrate security monitoring capabilities
 
