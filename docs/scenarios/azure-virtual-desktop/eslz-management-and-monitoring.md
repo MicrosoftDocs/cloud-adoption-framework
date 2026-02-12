@@ -46,7 +46,7 @@ Read more about [creating data collection rules](/azure/azure-monitor/vm/data-co
 
 - Application groups can be segregated in many ways. We recommend separating them based on which department or user type (for example, power, engineering, or general) the user is.
 
-For a glossary, data storage cost estimations, and more troubleshooting guidance, see [Azure Monitor next steps](/azure/virtual-desktop/insights#next-steps).
+For a glossary, data storage cost estimations, and more troubleshooting guidance, see [Enable Insights to monitor Azure Virtual Desktop](/azure/virtual-desktop/insights#next-steps).
 
 ## Infrastructure management and monitoring
 
