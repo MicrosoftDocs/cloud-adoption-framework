@@ -29,7 +29,7 @@ When you plan the number of Azure Virtual Desktop virtual machines (VMs) that yo
 
 - Avoid deploying more than 5,000 VMs in a single region because it can create performance bottlenecks, exceed subscription limits, and decrease resiliency. You can accommodate extra user sessions by increasing individual session host VM resources.
 
-- For [enterprise environments](/azure/architecture/example-scenario/azure-virtual-desktop/azure-virtual-desktop) that exceed 5,000 VMs per subscription in each region, create multiple Azure subscriptions by using a [hub-and-spoke architecture](/azure/architecture/networking/architecture/hub-spoke) and connect them through [virtual network peering](/azure/virtual-network/virtual-network-peering-overview). Alternatively, VMs can be deployed within the same subscription but across different regions to increase the number of VMs.
+- For [enterprise environments](/azure/architecture/landing-zones/azure-virtual-desktop/design-guide?tabs=baseline) that exceed 5,000 VMs per subscription in each region, create multiple Azure subscriptions by using a [hub-and-spoke architecture](/azure/architecture/networking/architecture/hub-spoke) and connect them through [virtual network peering](/azure/virtual-network/virtual-network-peering-overview). Alternatively, VMs can be deployed within the same subscription but across different regions to increase the number of VMs.
 
 ### Regions for host deployment
 
@@ -67,7 +67,7 @@ The following image shows an example of the recommended structure and resource g
 
 #### Components
 
-- **Azure Virtual Desktop service objects:** Create a resource group for Azure Virtual Desktop service objects from the host pool VMs. Service objects include workspaces, host pools, and application groups.
+- **Azure Virtual Desktop service objects:** Create a resource group for Azure Virtual Desktop service objects, separate from the host pool VMs. Service objects include workspaces, host pools, and application groups.
 
 - **Networking:** Networking is typically created as part of your Azure landing zone.
 
@@ -96,7 +96,7 @@ A consistent naming standard helps organize resources, streamline management, en
 
 - Operational details should include information that helps IT teams identify the workload, application, environment, criticality, and other relevant aspects necessary for managing resources.
 
-A well-structured naming system enables rapid resource identification for both management and accounting. Consistent naming across resources helps identify any deviations from agreed-upon policies. Consider whether to align your cloud naming conventions with existing IT standards or to establish unique conventions for the cloud. For more information, see [Develop a naming strategy for Azure resources](/azure/cloud-adoption-framework/ready/azure-best-practices/naming-and-tagging).
+A well-structured naming system enables rapid resource identification for both management and accounting. Consistent naming across resources helps identify any deviations from agreed-upon policies. Consider whether to align your cloud naming conventions with existing IT standards or to establish unique conventions for the cloud. For more information, see [Develop a naming strategy for Azure resources](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming).
 
 ### Resource tags
 
@@ -116,7 +116,7 @@ Common uses for tags include:
 
 For more information about Azure Virtual Desktop organization and management, see:
 
-- [Azure Virtual Desktop for the enterprise](/azure/architecture/example-scenario/azure-virtual-desktop/azure-virtual-desktop#azure-limitations)
+- [Azure Virtual Desktop for the enterprise](/azure/architecture/landing-zones/azure-virtual-desktop/design-guide?tabs=baseline#azure-limitations)
 - [Organize your Azure resources effectively](../../ready/azure-setup-guide/organize-resources.md)
 - [Resource naming and tagging decision guide](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming)
 
