@@ -121,7 +121,7 @@ For the complete permissions matrix organized by persona and task, see [Onboardi
 
 ### Monitor billing across subscriptions
 
-Cost tracking requires monitoring across multiple subscription architectures because Oracle Database@Azure billing consolidates under the primary subscription. Understand cost allocation patterns and use appropriate tools for comprehensive expense tracking.
+Cost tracking requires careful monitoring across multiple subscription architectures because Oracle Database@Azure billing consolidates under the primary subscription. Understand cost allocation patterns and use appropriate tools for comprehensive expense tracking.
 
 Use Microsoft Cost Management tools to track overall Azure expenses across all subscriptions:
 
