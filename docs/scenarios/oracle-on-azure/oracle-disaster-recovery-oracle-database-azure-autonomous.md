@@ -63,7 +63,7 @@ Application continuity features ensure minimal disruption to applications during
 
 ## Test and validate disaster recovery procedures
 
-Regular disaster recovery testing ensures that BCDR solutions meet defined business objectives and identifies potential problems before actual disasters. Testing validates technical capabilities and operational procedures across all system components. It ensures reliable recovery performance.
+Regular disaster recovery testing ensures that BCDR solutions meet defined business objectives and identifies potential problems before disasters occur. Testing validates technical capabilities and operational procedures across all system components. It ensures reliable recovery performance.
 
 - **Conduct regular disaster recovery drills across all application layers.** Perform scheduled failover and switchover operations to verify that you can achieve RTO and RPO requirements in real scenarios. Test all components of the application stack, not only the database layer, to ensure complete system recovery. Document test results and update procedures based on your findings.
 

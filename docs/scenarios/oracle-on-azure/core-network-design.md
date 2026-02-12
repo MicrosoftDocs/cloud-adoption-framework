@@ -36,7 +36,7 @@ Consider these factors when designing your network topology for Oracle Exadata D
 
 ## Plan subnet and IP address sizing
 
-Proper subnet sizing ensures adequate IP address space for current needs and future growth. Define subnet sizes according to Oracle's SKU specifications, which differ based on the chosen instance type. Here's how to plan subnet and IP address sizing:
+Proper subnet sizing ensures your Oracle Exadata Database@Azure deployment has adequate IP address space for current needs and future growth. Define subnet sizes according to Oracle's SKU specifications, which differ based on the chosen instance type. Here's how to plan subnet and IP address sizing:
 
 1. **Review SKU requirements.** Consult the sizing guidelines in [Plan for IP address space for Oracle Exadata Database@Azure](/azure/oracle/oracle-db/oracle-database-plan-ip) to determine the required IP address range for your chosen instance type.
 
