@@ -9,7 +9,7 @@ ms.custom: e2e-oracle
 ---
 # Introduction to Oracle on Azure adoption scenarios
 
-This article describes how to set up and manage Oracle workloads within your Azure landing zone. The architectures described incorporate a multi-region design. The article also describes specific architectural strategies and provides reference implementations for Oracle database systems that cross multiple regions on Azure. The guidance assumes that you have an Azure landing zone that's configured to support multi-region deployments. For more information, see [What is an Azure landing zone?](/azure/cloud-adoption-framework/ready/landing-zone/implementation-options) and [Landing zone implementation options](/azure/cloud-adoption-framework/ready/landing-zone/implementation-options).
+This article describes how to set up and manage Oracle workloads within your Azure landing zone. The architectures described incorporate a multi-region design. The article also describes specific architectural strategies and provides reference implementations for Oracle database systems that cross multiple regions on Azure. The guidance assumes that you have an Azure landing zone that's configured to support multi-region deployments. For more information, see [What is an Azure landing zone?](/azure/cloud-adoption-framework/ready/landing-zone/) and [Landing zone implementation options](/azure/cloud-adoption-framework/ready/landing-zone/implementation-options).
 
 ## Define Oracle on Azure
 
