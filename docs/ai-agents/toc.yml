@@ -2,7 +2,6 @@ items:
   - name: AI Agent adoption overview
     href: index.md
   - name: 1. Plan for agents
-    expanded: true
     items:
       - name: Business plan
         href: business-strategy-plan.md
@@ -13,16 +12,12 @@ items:
       - name: Data architecture
         href: data-architecture-plan.md 
   - name: 2. Govern & secure agents
-    expanded: true
     items:
       - name: Responsible AI
         href: responsible-ai-across-organization.md
       - name: Governance and security
         href: governance-security-across-organization.md
-      - name: Prepare environment
-        href: governance-security-across-organization.md#prepare-environment
   - name: 3. Build agents
-    expanded: true
     items:
       - name: Single or multiple agents?
         href: single-agent-multiple-agents.md

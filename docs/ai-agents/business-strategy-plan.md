@@ -1,7 +1,7 @@
 ---
-title: Business Plan for AI Agents
+title: Business plan for AI agents
 ms.reviewer: ssumner
-description: Discover how to create a business strategy for AI agents that aligns with organizational goals, enhances operations, and drives innovation.
+description: Discover how to identity use cases for AI agents that align with organizational goals, enhances operations, and drives innovation.
 #customer technology decision maker, I want to understand how AI agents create business value. I need clarity on when to use agents and when not to, so we avoid wasting time and resources on unsuitable use cases. Once we identify a set of use cases, I want guidance on how to prioritize them, define success criteria, and establish methods to measure success over time.
 author: stephen-sumner
 ms.author: pnp
@@ -15,7 +15,7 @@ ms.collection: ce-skilling-ai-copilot
 
 Successful AI agent adoption starts with a clear business plan. Every organization should create one before exploring tools or building solutions. This plan sets the direction for where to invest, which problems to solve, and how to measure success. It prevents scattered efforts and helps the organization focus on work that produces strong, repeatable value.
 
-:::image type="content" source="./images/ai-agent-adoption.svg" alt-text="Diagram showing a horizontal workflow with four connected phases: plan for agents (substeps are business plan, technology plan, organizational readiness, and data architecture). Govern and secure agents (Substeps are Responsible AI, Governance and Security, and Prepare environment). Build agents (Substeps are single and multi-agent systems and process to build agents). Manage agents integrate (subprocesses Integrate agents and operate agents)." lightbox="./images/ai-agent-adoption.svg" border="false":::
+:::image type="content" source="./images/ai-agent-adoption.svg" alt-text="Diagram showing a horizontal workflow with four connected phases: plan for agents (substeps are business plan, technology plan, organizational readiness, and data architecture). Govern and secure agents (substeps are Responsible AI, Governance and Security, and Prepare environment). Build agents (substeps are single and multi-agent systems and process to build agents). Manage agents integrate (subprocesses Integrate agents and operate agents)." lightbox="./images/ai-agent-adoption.svg" border="false":::
 *Figure 1. Microsoft's AI agent adoption process.*
 
 ## When not to use AI agents
