@@ -235,7 +235,7 @@ Here are some other design considerations for AKS security governance and compli
 - Evaluate using [`seccomp` (secure computing)](/azure/aks/operator-best-practices-cluster-security#secure-computing) at the process level to limit the process calls that containers can perform. For example, the Azure Policy applied as part of the generic enterprise-scale landing zone implementation in the landing zones management group to prevent container privilege escalation to root uses `seccomp` through Azure policies for Kubernetes.
 - Decide whether your container registry is accessible via the internet or only within a specific virtual network. Disabling internet access in a container registry can have negative effects on other systems that rely on public connectivity to access it. Examples include continuous integration pipelines or Microsoft Defender for image scanning. For more information, see [Connect privately to a container registry by using Azure Private Link](/azure/container-registry/container-registry-private-link).
 - Decide whether your private container registry is shared across multiple landing zones or if you deploy a dedicated container registry to each landing zone subscription.
-- Consider using a security solution like [Microsoft Defender for Kubernetes](/azure/defender-for-cloud/defender-for-containers-introduction) for threat detection.
+- Consider using a security solution like [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-containers-introduction) for threat detection.
 - Consider scanning your container images for vulnerabilities.
 - Consider disabling Microsoft Defender for Servers in the AKS subscription if there are no non-AKS virtual machines, to avoid unnecessary costs.
 
