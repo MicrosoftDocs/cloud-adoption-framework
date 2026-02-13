@@ -23,7 +23,7 @@ Review features and services of Azure Container Apps available to help you desig
 
 - Use logging and monitoring to provide insight into any issues associated with your applications.
 
-- Use [alerts](/azure/container-apps/log-monitoring?tabs=bash) during critical application and system events to ensure operations staff can take swift action in the event application failures.
+- Use [alerts](/azure/container-apps/alerts) during critical application and system events to ensure operations staff can take swift action in the event application failures.
 
 - Define a [scaling strategy](/azure/container-apps/scale-app?pivots=azure-cli) to ensure enough capacity available to handle traffic to your application, while minimizing unused capacity. Scaling triggers include CPU or memory usage, along with any KEDA-supported scaler.
 
@@ -33,7 +33,7 @@ Review features and services of Azure Container Apps available to help you desig
 
 - Depending on the specific requirements for your application, you may need to use high-availability measures to ensure continued operation if there are issues with the underlying Azure platform. In Azure, the various zones and regions allow you to build solutions for high-availability:
 
-  - [Availability Zones](/azure/container-apps/disaster-recovery) are fault isolation constructs in Azure datacenter design. Each zone has its own power, network and cooling to minimize the chance of outages spreading across zones. To use Availability Zones, each Azure resource can be deployed either to a specific zone ("zonal") or to all zones ("zone redundant").
+  - [Availability Zones](/azure/reliability/reliability-container-apps#resilience-to-availability-zone-failures) are fault isolation constructs in Azure datacenter design. Each zone has its own power, network and cooling to minimize the chance of outages spreading across zones. To use Availability Zones, each Azure resource can be deployed either to a specific zone ("zonal") or to all zones ("zone redundant").
 
   - Multi-region solutions provide the highest level of fault isolation and the highest reliability, but are often more difficult to implement because of the higher latency between the geographic regions. This latency can cause data-replication delays. For more information on multi-region design, see the [Azure Mission Critical documentation](/azure/architecture/framework/mission-critical/mission-critical-application-design).
 

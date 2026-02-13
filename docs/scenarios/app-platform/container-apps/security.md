@@ -28,6 +28,6 @@ The Landing Zone Accelerator recommendations include:
 
 - **Secure outbound traffic**: To secure outbound traffic, you can configure a route table that instructs outgoing traffic to go through an [Azure Firewall](/azure/firewall/overview) that is deployed in the Hub network.
 
-- **Log security related activity**: Use extensive use of [observability tools](/azure/container-apps/observability) and [Log Analytics](/azure/azure-monitor/logs/log-analytics-tutorial) to record information on sensitive actions.
+- **Log security related activity**: Use extensive use of [observability tools](/azure/container-apps/observability) and [Log Analytics](/azure/azure-monitor/logs/log-analytics-overview) to record information on sensitive actions.
 
 - **Security profiles**: Use the [Container Apps security profile](/security/benchmark/azure/baselines/azure-container-apps-security-baseline#security-profile) as a starting point for securing your Container Apps.
