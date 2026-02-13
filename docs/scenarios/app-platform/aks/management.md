@@ -54,7 +54,7 @@ Consider the following factors:
 
 - Use [automatic node pool scaling](/azure/aks/cluster-autoscaler) feature together with [horizontal pod autoscaler](/azure/aks/concepts-scale#horizontal-pod-autoscaler) to meet application demands and to mitigate peak hours loads.
 
-- Use Azure Advisor to get best practice recommendations on cost, security, reliability, operational excellence, and performance. Also, use [Microsoft Defender for Cloud](/azure/security-center/defender-for-kubernetes-introduction) to prevent and detect threats like image vulnerabilities.
+- Use Azure Advisor to get best practice recommendations on cost, security, reliability, operational excellence, and performance. Also, use [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-containers-introduction) to prevent and detect threats like image vulnerabilities.
 
 - Use [Azure Arc](/azure/azure-arc/kubernetes/overview)-enabled Kubernetes to manage non-AKS Kubernetes clusters in Azure using Azure Policy, Defender for Cloud, GitOps, and so on.
 

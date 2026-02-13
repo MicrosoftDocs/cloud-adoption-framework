@@ -94,7 +94,7 @@ The following are best practices for your design:
 	- Using RWX storage with inbuilt [Azure Files storage class](/azure/openshift/howto-create-a-storageclass).
 	- Using CSI Drivers for storage provisioning.
 - Create application backup and plan for restore:
-	- Include [persistent volumes](/azure/openshift/howto-create-a-backup#create-a-backup-with-velero-to-include-snapshots) in the backup.
+	- Include [persistent volumes](/azure/openshift/openshift-service-definitions#storage) in the backup.
 - Estimate pod resource limits. Test and establish a baseline. Start with equal values for requests and limits. Then, gradually tune those values until you've established a threshold that can cause instability in the cluster. Pod limits can be specified in your deployment manifests. [Vertical pod autoscaler](https://docs.openshift.com/container-platform/4.10/nodes/pods/nodes-pods-vertical-autoscaler.html) optimizes the CPU and memory request values and can maximize the efficiency of cluster resources.
   - The built-in features can handle failures and disruptions in service architecture. These configurations help to simplify both design and deployment automation. When an organization defines a standard for the SLA, RTO, and RPO, it can use services built into Kubernetes and Azure to achieve business goals.
 - Consider blue/green or canary strategies to deploy new releases of application.
