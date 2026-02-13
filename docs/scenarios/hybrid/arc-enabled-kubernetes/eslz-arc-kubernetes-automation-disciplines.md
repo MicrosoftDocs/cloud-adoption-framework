@@ -67,7 +67,7 @@ The following sections contain design recommendations for Azure Arc-enabled Kube
 - If you're deploying an extension only to a specific Azure Arc-enabled Kubernetes cluster or clusters, automate the installation of these extensions through Azure CLI and/or ARM templates using tools such as Azure DevOps or GitHub Actions.
 - If an extension is common across all your Arc-enabled Kubernetes clusters or large groups of Arc-enabled Kubernetes clusters, use [Azure Policy](/azure/governance/policy/overview) to automate the deployment of Arc extensions at scale.
   - Review the [Extensions Management critical design area](./eslz-arc-kubernetes-extensions-management.md). The following is an overview of its steps:
-    - Create an [initiative](/azure/governance/policy/overview#azure-policy-objects) to deploy Azure Arc-enabled Kubernetes extensions at scale.
+    - Create an [initiative](/azure/governance/policy/tutorials/create-and-manage#create-and-assign-an-initiative-definition) to deploy Azure Arc-enabled Kubernetes extensions at scale.
     - Use a "[DeployIfNotExists](/azure/governance/policy/concepts/effects#deployifnotexists)" policy effect to ensure your Azure Arc-enabled Kubernetes extensions are deployed automatically. As you onboard more Kubernetes clusters, use Azure Policy to remediate any clusters where the extensions have been removed.
   - For more details on using Azure Policy with Azure Arc-enabled Kubernetes clusters, review the [Governance and security disciplines critical design area](./eslz-arc-kubernetes-governance-disciplines.md).
 
