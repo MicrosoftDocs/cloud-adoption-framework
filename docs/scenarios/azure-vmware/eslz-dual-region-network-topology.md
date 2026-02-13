@@ -92,7 +92,7 @@ Changing a private cloud's internet connectivity configuration after the initial
 
 #### Azure-native internet breakout
 
-If a secure internet edge was built in Azure Virtual Network prior to Azure VMware Solution adoption, it might be necessary to use it for internet access for Azure VMware Solution private clouds. Using a secure internet edge in this way is necessary for the centralized management of network security policies, cost optimization, and more. Internet security edges in Azure Virtual Network can be implemented using Azure Firewall or third-party firewall and proxy network virtual appliances (NVAs) available on the Azure Marketplace.
+If a secure internet edge was built in Azure Virtual Network prior to Azure VMware Solution adoption, it might be necessary to use it for internet access for Azure VMware Solution private clouds. Using a secure internet edge in this way is necessary for the centralized management of network security policies, cost optimization, and more. Internet security edges in Azure Virtual Network can be implemented using Azure Firewall or third-party firewall and proxy network virtual appliances (NVAs) available on the Microsoft Marketplace.
 
 Internet-bound traffic emitted by Azure VMware Solution virtual machines can be attracted to an Azure VNet by originating a default route and announcing it, over border gateway protocol (BGP), to the private cloud's managed ExpressRoute circuit. This internet connectivity option can be configured through the Azure portal (or via PowerShell, CLI or ARM/Bicep templates) at deployment time, as shown in the following Figure 6. For more information, see [Disable internet access or enable a default route](/azure/azure-vmware/disable-internet-access).
 

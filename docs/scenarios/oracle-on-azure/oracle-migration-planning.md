@@ -19,7 +19,7 @@ When you migrate Oracle workloads, you have to transition databases and applicat
 
 - **Applications on Virtual Machines:** Run Oracle enterprise applications, such as Siebel, PeopleSoft, JD Edwards, E-Business Suite, or customized WebLogic Server applications on Azure infrastructure.
 
-- **Oracle Standard Edition or Enterprise Edition Databases on Virtual Machines:** In this scenario, you deploy your Oracle Database on a Virtual Machine. There are several options available, from self-managed to managed Databases. If you prefer a managed database solution, review [Tessell](https://azuremarketplace.microsoft.com/marketplace/apps/tessellinc1655919615020.tessell_database_service?tab=overview).
+- **Oracle Standard Edition or Enterprise Edition Databases on Virtual Machines:** In this scenario, you deploy your Oracle Database on a Virtual Machine. There are several options available, from self-managed to managed Databases. If you prefer a managed database solution, review [Tessell](https://marketplace.microsoft.com/marketplace/apps/tessellinc1655919615020.tessell_database_service?tab=overview).
 
 - **Oracle Database@Azure:** Oracle Database@Azure is an Oracle database service that runs on Oracle Cloud Infrastructure (OCI) and that's colocated in Microsoft datacenters.
 

@@ -36,7 +36,7 @@ Azure Monitor provides a single unified hub for all monitoring and diagnostics d
 
 ::: zone target="docs"
 
-Find more solutions in the Azure Marketplace for monitoring other resource types.
+Find more solutions in the [Microsoft Marketplace](https://marketplace.microsoft.com) for monitoring other resource types.
 
 To explore Azure Monitor, go to the [Azure portal](https://portal.azure.com/#blade/Microsoft_Azure_Monitoring/AzureMonitoringBrowseBlade/overview).
 
