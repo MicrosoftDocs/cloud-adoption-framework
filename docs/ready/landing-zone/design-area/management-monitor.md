@@ -44,7 +44,7 @@ The following subsets of Azure components have one or more alerts defined:
 - Azure Virtual Machine
 - Azure Storage account
 
-For more information, see [Alert details](https://azure.github.io/azure-monitor-baseline-alerts/patterns/alz/Getting-started/Alerts-Details/).
+For more information, see [Alert details](/azure/azure-monitor/alerts/alerts-overview).
 
 To ensure that your organization's resources are properly monitored and secured, you also need to properly configure alerts and implement appropriate processes to respond to alerts. Configure action groups with the appropriate notification channels and test the alerts to ensure that they work as expected. In accordance with the Cloud Adoption Framework principle of subscription democratization, configure at least one action group for each subscription so that relevant staff is notified of alerts. As a minimum form of notification, the action group should include an email notification channel. If you use Azure Monitor alert processing rules to route alerts to one or more action groups, note that service health alerts don't support alert processing rules. Configure service health alerts directly with the action group.
 

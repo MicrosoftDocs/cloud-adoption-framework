@@ -3,7 +3,7 @@ title: Scenario- Transition an environment by duplicating a landing zone managem
 description: Learn about an approach to transition to the Azure landing zone reference architecture by duplicating a landing zone management group.
 author: jtracey93
 ms.author: jatracey
-ms.reviewer: tozimmergren
+
 ms.date: 12/19/2025
 ms.topic: concept-article
 ms.service: caf

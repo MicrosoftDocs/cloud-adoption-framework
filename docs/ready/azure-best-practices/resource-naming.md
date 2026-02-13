@@ -91,7 +91,7 @@ Consider these examples when you define your Azure naming convention. The exampl
 |--|--|--|
 | **Azure SQL database** | Azure SQL Server | *sqldb-\<workload,&nbsp;application,&nbsp;or&nbsp;project>-\<environment>* <br><br> <li> `sqldb-users-prod` <li> `sqldb-users-dev` |
 | **Azure Cosmos DB database** | Global | *cosmos-\<workload,&nbsp;application,&nbsp;or&nbsp;project>-\<environment>* <br><br> <li> `cosmos-navigator-prod` <li> `cosmos-emissions-dev` |
-| **Azure Cache for Redis instance** | Global | *redis-\<workload,&nbsp;application,&nbsp;or&nbsp;project>-\<environment>* <br><br> <li> `redis-navigator-prod` <li> `redis-emissions-dev` |
+| **Azure Managed Redis instance** | Global | *redis-\<workload,&nbsp;application,&nbsp;or&nbsp;project>-\<environment>* <br><br> <li> `redis-navigator-prod` <li> `redis-emissions-dev` |
 
 ### Integration
 
