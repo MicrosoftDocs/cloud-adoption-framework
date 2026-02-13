@@ -24,7 +24,7 @@ Choose a suitable virtual machine image, such as the Data Science Virtual Machin
 
 - *Start with the Data Science Virtual Machines images.* The [Data Science Virtual Machine](/azure/machine-learning/data-science-virtual-machine/overview) image offers preconfigured access to data science tools. These tools include PyTorch, TensorFlow, scikit-learn, Jupyter, Visual Studio Code, Azure CLI, and PySpark. When used with GPUs, the image also includes Nvidia drivers, CUDA Toolkit, and cuDNN. These images serve as your baseline image. If you need more software, add it via a script at boot time or embed it into a custom image. They maintain compatibility with your orchestration solutions.
 
-- *Find alternative images as needed.* If the Data Science Virtual Machine image doesn't meet your needs, use [Microsoft Marketplace](https://marketplace.microsoft.com/en-us/search/products?page=1&product=virtual-machines) or other search [methods](/azure/virtual-machines/overview#distributions) to find alternate images. For example, with GPUs, you might need [Linux images](/azure/virtual-machines/configure) that include InfiniBand drivers, NVIDIA drivers, communication libraries, MPI libraries, and monitoring tools.
+- *Find alternative images as needed.* If the Data Science Virtual Machine image doesn't meet your needs, use [Microsoft Marketplace](https://marketplace.microsoft.com/search/products?page=1&product=virtual-machines) or other search [methods](/azure/virtual-machines/overview#distributions) to find alternate images. For example, with GPUs, you might need [Linux images](/azure/virtual-machines/configure) that include InfiniBand drivers, NVIDIA drivers, communication libraries, MPI libraries, and monitoring tools.
 
 ## Pick a virtual machine size
 

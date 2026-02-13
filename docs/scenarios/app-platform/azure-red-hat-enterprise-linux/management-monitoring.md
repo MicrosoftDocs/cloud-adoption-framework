@@ -52,7 +52,7 @@ If you register a system to Red Hat Subscription Management, the attached subscr
 
 Implement the following recommendations to help manage and monitor your environment.
 
-#### Use custom images instead of [Microsoft Marketplace](https://marketplace.microsoft.com) images
+#### Use custom images or Microsoft Marketplace
 
 You can use predefined [Microsoft Marketplace](https://marketplace.microsoft.com) images to build Azure VMs. Or you can use [custom Linux images](/azure/virtual-machines/linux/create-upload-generic) to build and control your specific compliance and security needs. If you use supported Linux distributions, such as RHEL, follow specific guidance for building your custom image, such as [RHEL 8 guidance](/azure/virtual-machines/linux/redhat-create-upload-vhd#rhel-8-using-hyper-v-manager). If you use custom Linux images, follow the [Update Manager best practice guidance](/azure/update-manager/manage-updates-customized-images).
 

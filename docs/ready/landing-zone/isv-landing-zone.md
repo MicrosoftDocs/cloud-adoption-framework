@@ -65,7 +65,7 @@ In the following diagram, an ISV provides a software package or [Microsoft Marke
 
 The *Customer's other workload* element in the diagram can represent either a customer's own workload or another ISV product the customer has deployed within their Azure subscription. Customers frequently deploy multiple products from different ISVs into their Azure subscriptions. They combine these individual products to create solutions. For example, a customer might deploy a database product from one ISV, a network virtual appliance from another ISV, and a web application from a third ISV.
 
-Examples of customer-deployed ISV products include the many [virtual machine images](https://marketplace.microsoft.com/en-us/search/products?page=1&product=virtual-machines) (such as network and storage virtual appliances) and [Azure applications](https://marketplace.microsoft.com/en-us/search/products?page=1&product=azure-applications) in the Microsoft Marketplace.
+Examples of customer-deployed ISV products include the many [virtual machine images](https://marketplace.microsoft.com/search/products?page=1&product=virtual-machines) (such as network and storage virtual appliances) and [Azure applications](https://marketplace.microsoft.com/search/products?page=1&product=azure-applications) in the Microsoft Marketplace.
 
 For some customer-deployed solutions, an organization might provide management of and updates for the solution deployed within their end-customer Azure subscriptions by using [Azure Lighthouse](/azure/lighthouse/overview) or [Azure Managed Applications](/azure/azure-resource-manager/managed-applications/overview). ISVs, Solution Integrators (SIs), and Managed Service Providers (MSPs) all can use this strategy when it meets their particular needs.
 
