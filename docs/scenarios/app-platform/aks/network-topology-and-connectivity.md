@@ -3,7 +3,7 @@ title: Network topology and connectivity for Azure Kubernetes Service (AKS)
 description: Learn how to improve the network topology and connectivity of the Azure Kubernetes Service (AKS).
 author: balunywa
 ms.author: mubaluny
-ms.reviewer: tozimmergren
+
 ms.date: 05/23/2023
 ms.topic: concept-article
 ms.custom: think-tank, e2e-aks
