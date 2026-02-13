@@ -300,6 +300,7 @@ The table provides a near complete list of the monitoring articles for every Azu
 | Azure Managed Grafana | [Monitor an Azure Managed Grafana instance with logs](/azure/managed-grafana/how-to-monitor-managed-grafana-workspace) | |
 | Azure Managed Instance for Apache Cassandra | [Monitor Azure Managed Instance for Apache Cassandra](/azure/managed-instance-apache-cassandra/monitor-clusters) | |
 | Azure Managed Lustre | [Monitor Azure Managed Lustre](/azure/azure-managed-lustre/monitor-file-system)<br><br>[Monitoring data reference for Azure Managed Lustre](/azure/azure-managed-lustre/monitor-file-system-reference) | |
+| Azure Managed Redis | [Monitor Azure Managed Redis data using diagnostic settings](/azure/redis/monitor-diagnostic-settings)
 | Azure NAT Gateway | [Monitor Azure NAT Gateway](/azure/nat-gateway/monitor-nat-gateway)<br><br>[Monitoring data reference for Azure NAT Gateway](/azure/nat-gateway/monitor-nat-gateway-reference) | |
 | Azure NetApp Files | [Ways to monitor Azure NetApp Files](/azure/azure-netapp-files/monitor-azure-netapp-files)<br><br>[Metrics for Azure NetApp Files](/azure/azure-netapp-files/azure-netapp-files-metrics) | |
 | Azure Notification Hubs | [Monitor Azure Notification Hubs](/azure/notification-hubs/monitor-notification-hubs)<br><br>[Monitoring data reference for Azure Notification Hubs](/azure/notification-hubs/monitor-notification-hubs-reference) | |
