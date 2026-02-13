@@ -24,7 +24,7 @@ Consider the following before you onboard Azure Arc-enabled Kubernetes clusters 
 
 ### Requirements
 
-- Review the list of [validated distributions](/azure/azure-arc/kubernetes/validation-program#validated-distributions) for the [supported Kubernetes distributions](/azure/azure-arc/kubernetes/overview#supported-kubernetes-distribution) distribution your cluster runs.
+- Review the list of [validated distributions](/azure/azure-arc/kubernetes/validation-program#validated-distributions) for the [supported Kubernetes distribution](/azure/azure-arc/kubernetes/overview#supported-kubernetes-distribution) your cluster runs.
 - Review the Azure Arc-enabled Kubernetes [agent overview](/azure/azure-arc/kubernetes/conceptual-agent-overview).
 
 ### Environment Preparation
