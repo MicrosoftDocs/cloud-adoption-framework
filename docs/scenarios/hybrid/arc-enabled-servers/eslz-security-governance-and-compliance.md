@@ -89,7 +89,7 @@ At creation, the Microsoft Entra system-assigned identity can only be used to up
 
 ### Secret and certificate management
 
-Consider using [Azure Key Vault](/azure/key-vault/general/basic-concepts) to manage certificates on your Azure Arc-enabled servers. Azure Arc-enabled servers have managed identity, which is used by the connected machine and other Azure agents to authenticate back to their respective services. The key vault VM extension allows you to manage the certificate lifecycle on [Key Vault VM extension for Windows](/azure/virtual-machines/extensions/key-vault-windows) and [Key Vault VM extension for Linux](/azure/virtual-machines/extensions/key-vault-linux) machines.
+Consider using [Azure Key Vault](/azure/key-vault/general/basic-concepts) to manage certificates on your Azure Arc-enabled servers. Azure Arc-enabled servers have managed identity, which is used by the connected machine and other Azure agents to authenticate back to their respective services. The key vault VM extension allows you to manage the certificate lifecycle on [Windows](/azure/virtual-machines/extensions/key-vault-windows) and [Linux](/azure/virtual-machines/extensions/key-vault-linux) machines.
 
 The following image displays conceptual reference architecture that demonstrates the Azure Key Vault integration for Azure Arc-enabled servers:
 
