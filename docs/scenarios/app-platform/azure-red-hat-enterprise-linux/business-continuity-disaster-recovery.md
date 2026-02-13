@@ -78,7 +78,7 @@ Many of the concepts that apply to infrastructure as a service VM infrastructure
 
 ### Clusters
 
-Azure doesn't support combining Application Server Central Services and database high availability within a single RHEL Pacemaker cluster. To address this limitation, separate them into individual clusters. You can combine up to [five central services clusters](/azure/sap/workloads/high-availability-guide-suse-multi-sid) in a pair of VMs.
+Azure doesn't support combining Application Server Central Services and database high availability within a single RHEL Pacemaker cluster. To address this limitation, separate them into individual clusters. You can combine up to [five central services clusters](/azure/sap/workloads/high-availability-guide-rhel-multi-sid) in a pair of VMs.
 
 For [BCDR on SAP](/azure/cloud-adoption-framework/scenarios/sap/eslz-business-continuity-and-disaster-recovery), consider the following services to run SAP central services clusters:
 
