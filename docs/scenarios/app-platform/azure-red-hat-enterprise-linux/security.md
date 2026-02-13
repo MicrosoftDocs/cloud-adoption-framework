@@ -19,7 +19,7 @@ To provide security for RHEL systems, in Azure or elsewhere, ensure that you sta
 
 ### Harden images
 
-You can find images in Microsoft Marketplace and *private product* offering sections in which Red Hat, or Red Hat Limited in Europe, Middle East, and Africa (EMEA) regions, publishes the record. Red Hat and Microsoft verify and validate these images to ensure source integrity and provide secure default configurations for RHEL operating system instances.
+You can find images in [Microsoft Marketplace](https://marketplace.microsoft.com) and *private product* offering sections in which Red Hat, or Red Hat Limited in Europe, Middle East, and Africa (EMEA) regions, publishes the record. Red Hat and Microsoft verify and validate these images to ensure source integrity and provide secure default configurations for RHEL operating system instances.
 
 To meet your organization's runtime security requirements for the target workload, properly configure instances that you build from these images. To help streamline your security measures, use Red Hat published images from Microsoft Marketplace to deploy your RHEL systems. Follow Red Hat guidance for system and image specifications for your workload. To reduce the attack surface, start with a minimal, Azure-optimized RHEL image. You don't have to create and configure all instances from this base image. To meet various hardening requirements, we recommend that you use composable components to build workload-specific images.
 

@@ -59,7 +59,7 @@ ISVs building pure SaaS solutions should consider the following questions:
 
 In the customer-deployed model, your end customers purchase software from you and then deploy it into their own Azure subscriptions. They might initiate the deployment from the Microsoft Marketplace, or do it manually by following instructions and using scripts you provide.
 
-In the following diagram, an ISV provides a software package or Microsoft Marketplace catalog product, and users deploy that resource into their own Azure subscriptions alongside their other workloads:
+In the following diagram, an ISV provides a software package or [Microsoft Marketplace](https://marketplace.microsoft.com) catalog product, and users deploy that resource into their own Azure subscriptions alongside their other workloads:
 
 ![Diagram that shows a customer-deployed deployment model. A customer deploys resources provided by the ISV into their own Azure subscription, and users use those resources.](./media/isv-landing-zone/isv-customer-deployed-deployment.png)
 

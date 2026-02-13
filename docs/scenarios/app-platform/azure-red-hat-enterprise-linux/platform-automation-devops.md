@@ -103,7 +103,7 @@ For AAP on Azure in self-managed mode, consider the following factors:
 - Event-Driven Ansible is included in the self-managed offering on Azure. Event-driven automation helps you reduce manual tasks and deliver an efficient IT environment that focuses on innovation. Event-Driven Ansible processes events, determines the appropriate responses, and then runs automated actions to remediate the event.
 
 - Subscriptions are available in 100 active managed node increments. They're available in public offers or private offers. 
-- VM resources that underpin AAP on Azure in self-managed mode can consist entirely of Microsoft Marketplace images or a mix of Microsoft Marketplace images and customer-managed images. 
+- VM resources that underpin AAP on Azure in self-managed mode can consist entirely of Microsoft Marketplace images or a mix of [Microsoft Marketplace](https://marketplace.microsoft.com) images and customer-managed images. 
 
 ## Design recommendations
 

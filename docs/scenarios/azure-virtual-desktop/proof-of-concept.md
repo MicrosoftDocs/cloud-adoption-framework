@@ -20,7 +20,7 @@ The following approach to the migration process is simplified to outline a proof
 
 - **[Step 2: Migrate](./migrate-deploy.md):**
 
-  - The team [creates a host pool](/azure/virtual-desktop/create-host-pools-azure-marketplace) for pooled desktops by using a Windows 10 Enterprise multi-session gallery image from Microsoft Marketplace and the sizing from assessment step 1.
+  - The team [creates a host pool](/azure/virtual-desktop/create-host-pools-azure-marketplace) for pooled desktops by using a Windows 10 Enterprise multi-session gallery image from [Microsoft Marketplace](https://marketplace.microsoft.com) and the sizing from assessment step 1.
   - The team [creates either desktop or RemoteApp application groups](/azure/virtual-desktop/manage-app-groups#create-a-remoteapp-group) for workloads that it has already migrated.
   - The team [creates an FSLogix profile container](/azure/virtual-desktop/create-host-pools-user-profile) to store user profiles.
 
