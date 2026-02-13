@@ -37,7 +37,7 @@ Azure Arc-enabled servers provide two types of services:
 
 - **Governance:** Define a governance model for your hybrid servers that translates into Azure policies, tags, naming standards, and least-privilege controls.
 - **Azure Monitor:** [Azure Monitor](/azure/azure-monitor/overview) includes functionality for the collection and analysis of log data of your Azure Arc-enabled servers (billed by data ingestion, retention, and export), collection of metrics, health monitoring, alerts, and notifications. Features of Azure Monitor that are automatically enabled are provided at no cost - such as the collection of standard metrics, activity logs, and insights.
-- **Microsoft Defender for Cloud** (formerly known as Azure Security Center): Microsoft Defender for Cloud is offered in [two modes](/azure/security-center/security-center-pricing):
+- **Microsoft Defender for Cloud** (formerly known as Azure Security Center): Microsoft Defender for Cloud is offered in [two modes](/azure/defender-for-cloud/concept-cloud-security-posture-management):
 
    **Without enhanced security features (Free)** - [Defender for Cloud](/azure/security-center/defender-for-cloud-introduction) is enabled for free on all your Azure subscriptions when you visit the workload protection dashboard in the Azure portal for the first time, or if enabled programmatically via API. Using this free mode provides the secure score and its related features: security policy, continuous security assessment, and actionable security recommendations to help you protect your Azure resources.
 

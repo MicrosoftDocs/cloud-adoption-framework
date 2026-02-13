@@ -78,7 +78,7 @@ We recommended automating the deployment of VM extensions at scale via [Azure Po
 
 Overview of steps:
 
-- Create an [initiative](/azure/security-center/security-policy-concept#what-is-a-security-initiative) to deploy VM extensions at scale.
+- Create an [initiative](/azure/governance/policy/tutorials/create-and-manage#create-and-assign-an-initiative-definition) to deploy VM extensions at scale.
 - Use a "[DeployIfNotExists](/azure/governance/policy/concepts/effects#deployifnotexists)" policy effect to ensure the VM extensions get deployed automatically, as more servers are onboarded, and remediate any servers where the VM extensions have been removed.
 - More details on using policy with Azure Arc-enabled servers can be found in the [Security, governance and compliance for Azure Arc-enabled servers](./eslz-security-governance-and-compliance.md) section of this guide.
 
