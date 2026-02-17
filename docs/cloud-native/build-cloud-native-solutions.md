@@ -9,7 +9,7 @@ ms.topic: concept-article
 
 # Build cloud-native solutions
 
-With the planning complete, the next phase is to build and configure the solution in a development environment, adhering to best practices and ensuring quality through testing. A cloud-native solution uses scalable, resilient, and observable architecture patterns to maximize the benefits of Azure services. Building in a nonproduction environment with strong testing and automation practices ensures quality and readiness for production deployment.
+After planning, build and configure the solution in a development environment. Follow best practices and ensure quality through testing. A cloud-native solution uses scalable, resilient, and observable architecture patterns to maximize the benefits of Azure services. Building in a nonproduction environment with strong testing and automation practices ensures quality and readiness for production deployment.
 
 ## Develop new cloud-native solutions
 
@@ -17,11 +17,11 @@ Cloud-native development requires a structured approach that integrates quality 
 
 ### Apply Well-Architected Framework principles during development
 
-A cloud-native solution benefits from consistent application of the Well-Architected Framework (WAF) principles [Well-Architected Framework (WAF)](/azure/well-architected/pillars) provides essential principles that guide effective cloud-native development. Integrate these five pillars into your development process to create robust applications that perform well in production.
+A cloud-native solution benefits from applying Well-Architected Framework (WAF) principles [Well-Architected Framework (WAF)](/azure/well-architected/) provides principles for effective cloud-native development. Integrate these five pillars to create robust applications that perform well in production.
 
 ### Develop solutions in a nonproduction environment
 
-1. **Create development environments that mirror production configurations.** Set up nonproduction environments (development, test, QA) that closely mirror the production configuration. The closer your test environments are to prod, the more confidence you have that things work upon release. This approach is especially important when adding new features to an existing workload.
+1. **Create development environments that mirror production configurations.** Set up nonproduction environments (development, test, QA) that closely mirror production. The closer your test environments are to production, the more confidence you have that things work upon release. This approach is especially important when adding new features to an existing workload.
 
 2. **Use realistic datasets that represent production data volumes.** Test with data that matches the size and complexity of production workloads. Large datasets expose performance bottlenecks and scaling issues that small test datasets miss. Anonymize production data or generate synthetic data that preserves the statistical properties of real data.
 
@@ -55,7 +55,7 @@ For more information, see [Design a monitoring system](/azure/well-architected/o
 
 Comprehensive testing validates that your solution meets business requirements and performs reliably under real-world conditions. Each type of testing serves a specific purpose in ensuring solution quality.
 
-1. **Execute end-to-end functional testing to verify business workflows.** Test complete user scenarios from authentication through transaction completion using realistic data and interactions. Validate that new features work correctly and that existing functionality remains intact after changes. Run regression tests to catch unintended side effects of new development.
+1. **Execute end-to-end functional testing to verify business workflows.** Test complete user scenarios from authentication through transaction completion using realistic data and interactions. Validate that new features work correctly and that existing functionality remains intact after changes. Run regression tests to catch unintended side effects.
 
 2. **Conduct user acceptance testing with business stakeholders.** Engage actual users or business representatives to validate that the solution meets their needs and expectations. Have them test key scenarios in a UAT environment and provide feedback on usability and functionality. Obtain formal approval from stakeholders before proceeding to production deployment.
 
