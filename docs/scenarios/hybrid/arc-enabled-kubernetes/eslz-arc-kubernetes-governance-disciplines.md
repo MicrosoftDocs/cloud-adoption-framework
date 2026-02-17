@@ -82,7 +82,7 @@ This section contains design recommendations you should follow while planning th
 
 - Define a strategy for onboarding your clusters into Azure Arc, including automation for bulk enrollment. Establish a formal plan that considers the scope of your deployment and includes objectives, selection criteria, success criteria, training plans, rollback, and risks.
 
-- You can [use a service principal](/azure/azure-arc/servers/onboard-service-principal#create-a-service-principal-for-onboarding-at-scale) to integrate agent provisioning as part of your continuous integration and continuous deployment (CI/CD) pipelines. Limit the privileges of this service principal and only assign the roles required to onboard Kubernetes to Azure (the "Kubernetes Cluster - Azure Arc Onboarding" role), since it can only be used to onboard Kubernetes, not undoing the process or deleting the resource.
+- You can [use a service principal](/azure/azure-arc/servers/onboard-service-principal#create-a-service-principal-for-onboarding-at-scale) to integrate agent provisioning as part of your continuous integration and continuous deployment (CI/CD) pipelines. Limit the privileges of this service principal and only assign the roles required to onboard Kubernetes to Azure (the "Kubernetes Cluster - Azure Arc Onboarding" role), since it can only onboard Kubernetes, not undo the process or delete the resource.
 
 ### Agent management
 
