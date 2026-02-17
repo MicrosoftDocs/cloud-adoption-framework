@@ -60,7 +60,7 @@ The following sections contain design recommendations for Azure Arc-enabled Kube
 
 ### Onboard Azure Arc-enabled Kubernetes clusters
 
-- When onboarding multiple clusters, create a service principal and onboard your clusters using tooling like Azure DevOps, GitHub Actions, or another automation tool you use to manage Kubernetes clusters.
+- When onboarding multiple clusters, create a service principal and onboard your clusters using tooling like Azure DevOps or GitHub Actions to manage Kubernetes clusters.
 
 ### Arc-enabled Kubernetes extensions
 
