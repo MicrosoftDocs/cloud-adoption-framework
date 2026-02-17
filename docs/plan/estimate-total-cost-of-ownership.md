@@ -37,7 +37,7 @@ An architecture plan provides the context required to estimate the total cost of
 
 ### Select the appropriate service tier
 
-1. **Understand service tiers.** Each Azure service offers multiple service tiers (also known as SKUs) that provide different levels of performance, scalability, availability, and available features. The right tier is essential to meet workload-specific requirements with all the features needed and avoid over- or under-provisioning. There are certain features available only on specific SKUs so even if your performance data applies to lower SKU you might need some feature that is available on higher SKU. You must use your workload requirements to determine the most appropriate service tier.
+1. **Understand service tiers.** Each Azure service offers multiple service tiers (also known as SKUs) that provide different levels of performance, scalability, availability, and available features. The right tier is essential to meet workload-specific requirements with all the features needed and avoid over- or under-provisioning. There are certain features available only on specific SKUs so even if your performance data applies to a lower SKU you might need some feature that is available on a higher SKU. You must use your workload requirements to determine the most appropriate service tier.
 
 2. **Migrated workloads should use assessment data to select SKUs.** Assessment data includes performance baselines, usage patterns, and architecture dependencies. This data maps existing workload characteristics to equivalent Azure SKUs. This mapping ensures continuity and minimizes performance regressions after migration.
 
@@ -65,7 +65,7 @@ A regional deployment strategy establishes the reliability, compliance, and reco
 
 2. **Use reliability requirements.** Identify whether the workload operates in a single region or multiple regions. Define service level objectives (SLOs), recovery point objectives (RPOs), and recovery time objectives (RTOs). For more information, see [Manage reliability in Azure](/azure/cloud-adoption-framework/manage/protect#manage-reliability).
 
-3. **Validate compliance with regulatory and industry standards.** Ensure that your deployment architecture and backup configurations meet applicable compliance requirements, such as MARS-E, HIPAA, or GDPR. Multi-region deployments might introduce data residency or sovereignty concerns. Work with your compliance team to validate that your regional strategy aligns with legal and regulatory obligations.
+3. **Validate compliance with regulatory and industry standards.** Ensure that your deployment architecture and backup configurations meet applicable compliance requirements, such as MARS-E or HIPAA. Multi-region deployments might introduce data residency or sovereignty concerns. Work with your compliance team to validate that your regional strategy aligns with legal and regulatory obligations.
 
 ## Estimate costs based on architecture
 
