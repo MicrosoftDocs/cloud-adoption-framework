@@ -65,7 +65,7 @@ A regional deployment strategy establishes the reliability, compliance, and reco
 
 2. **Use reliability requirements.** Identify whether the workload operates in a single region or multiple regions. Define service level objectives (SLOs), recovery point objectives (RPOs), and recovery time objectives (RTOs). For more information, see [Manage reliability in Azure](/azure/cloud-adoption-framework/manage/protect#manage-reliability).
 
-3. **Validate compliance with regulatory and industry standards.** Ensure that your deployment architecture and backup configurations meet applicable compliance requirements, such as MARS-E, HIPAA, or GDPR. Multi-region deployments might introduce data residency or sovereignty concerns. Work with your compliance team to validate that your regional strategy aligns with legal and regulatory obligations.
+3. **Validate compliance with regulatory and industry standards.** Ensure that your deployment architecture and backup configurations meet applicable compliance requirements, such as MARS-E or HIPAA. Multi-region deployments might introduce data residency or sovereignty concerns. Work with your compliance team to validate that your regional strategy aligns with legal and regulatory obligations.
 
 ## Estimate costs based on architecture
 
