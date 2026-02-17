@@ -12,22 +12,22 @@ ms.custom: e2e-hybrid, think-tank, e2e-arc-enabled-kubernetes
 
 This article contains key design considerations and best practices for managing extensions of Azure Arc-enabled Kubernetes deployments.
 
-Before you read this article, be sure you understand governance principles and review [Enterprise-scale for AKS](/azure/cloud-adoption-framework/scenarios/app-platform/aks/landing-zone-accelerator) so you understand the relevant concepts for using Azure landing zones in a container environment.
+Before you read this article, be sure you understand governance principles and review [Enterprise-scale for AKS](/azure/cloud-adoption-framework/scenarios/app-platform/aks/landing-zone-accelerator) to understand Azure landing zones in a container environment.
 
 ## Architecture
 
-You can think of extensions for Azure Arc-enabled Kubernetes as being split into two categories: extensions for Azure Arc-enabled infrastructure services and extensions for Azure Arc-enabled services. This distinction isn't explicit in individual extension names.
+You can think of extensions for Azure Arc-enabled Kubernetes as split into two categories: extensions for Azure Arc-enabled infrastructure services and extensions for Azure Arc-enabled services. This distinction isn't explicit in individual extension names.
 
-Keep these two categories in mind as you design your deployment of Azure Arc-enabled Kubernetes. For example, think of the Microsoft Defender for Cloud extension as an extension for Azure Arc-enabled infrastructure services, but consider the Azure App Service for Azure Arc extension as an Azure Arc-enabled services extension.
+Keep these two categories in mind as you design your deployment of Azure Arc-enabled Kubernetes. For example, Microsoft Defender for Cloud is an Azure Arc-enabled infrastructure services extension, while Azure App Service for Azure Arc is an Azure Arc-enabled services extension.
 
-The following diagram illustrates overall integration for extensions for Azure Arc-enabled Kubernetes clusters.
+The following diagram illustrates extension integration for Azure Arc-enabled Kubernetes clusters.
 
 [![A diagram showing overall integration for extensions in an Azure Arc-enabled Kubernetes cluster.](./media/arc-enabled-kubernetes-cluster-extensions.png)](./media/arc-enabled-kubernetes-cluster-extensions.png#lightbox)
 
 ## Design considerations
 
 - **Extension Installation**
-  - Extensions provide extra capability to Azure Arc-enabled Kubernetes clusters. Consider your specific use case along with the following factors as you decide how to use Azure Arc-enabled Kubernetes extensions:
+  - Extensions provide extra capability to Azure Arc-enabled Kubernetes clusters. Consider your specific use case and these factors when deciding how to use Azure Arc-enabled Kubernetes extensions:
     - Review which [extensions are currently available](/azure/azure-arc/kubernetes/extensions).
     - Review which [extensions are built on top of Helm](/azure/azure-arc/kubernetes/conceptual-extensions).
 
@@ -37,10 +37,10 @@ The following diagram illustrates overall integration for extensions for Azure A
 ## Design recommendations
 
 - **Extension installation**
-  - Standardize the way extensions are installed, whether through the Portal, Azure Policy, CLI, ARM templates, or another mechanism. Verify that extensions have been properly installed after every installation.
+  - Standardize the way extensions are installed, whether through the Portal, Azure Policy, CLI, ARM templates, or another mechanism. Verify that extensions are installed correctly after each installation.
 
 - **Update extensions**
-  - Extensions must be periodically updated. Use the `--auto-upgrade-minor-version` flag to automatically upgrade minor versions of extensions, as described in [Usage of Cluster Extensions](/azure/azure-arc/kubernetes/extensions#usage-of-cluster-extensions). Refer to each extension's documentation to learn which settings can be configured during creation and update.
+  - Periodically update extensions. Use the `--auto-upgrade-minor-version` flag to automatically upgrade minor versions of extensions, as described in [Usage of Cluster Extensions](/azure/azure-arc/kubernetes/extensions#usage-of-cluster-extensions). Refer to each extension's documentation to learn which settings can be configured during creation and update.
 
 ## Next steps
 

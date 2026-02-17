@@ -10,9 +10,9 @@ ms.custom: think-tank, e2e-hybrid
 
 # Network connectivity for Azure Arc-enabled Kubernetes
 
-Arc-enabled Kubernetes supports [fully connected and semi-connected modes](/azure/azure-arc/kubernetes/conceptual-connectivity-modes#understand-connectivity-modes) for onboarding and managing Kubernetes clusters with Azure Arc's control plane. Azure Arc-enabled Kubernetes agents communicate with Azure Arc endpoints to [exchange different types of metadata information](/azure/azure-arc/kubernetes/conceptual-data-exchange) using pull and push methods from Kubernetes clusters.
+Arc-enabled Kubernetes supports [fully connected and semi-connected modes](/azure/azure-arc/kubernetes/conceptual-connectivity-modes#understand-connectivity-modes) for onboarding and managing Kubernetes clusters with Azure Arc's control plane. Azure Arc-enabled Kubernetes agents communicate with Azure Arc endpoints to [exchange metadata](/azure/azure-arc/kubernetes/conceptual-data-exchange) using pull and push methods from Kubernetes clusters.
 
-This document explains network architecture, design considerations, and design recommendations that help you enable connectivity to the Azure control plane so you can manage and operate Arc-enabled Kubernetes clusters running in on-premises and other cloud environments.
+This document explains network architecture, design considerations, and design recommendations for enabling Azure control plane connectivity to Arc-enabled Kubernetes clusters in on-premises and other cloud environments.
 
 ## Architecture
 
@@ -20,7 +20,7 @@ The following diagram displays an Azure Arc-enabled Kubernetes network architect
 
 [![A diagram showing Azure Arc-enabled Kubernetes network architecture.](./media/arc-enabled-kubernetes-network.png)](./media/arc-enabled-kubernetes-network.png#lightbox)
 
-The following diagram displays a network architecture that allows cluster access from any network location using [Azure Arc-enabled Kubernetes Cluster Connect capability](/azure/azure-arc/kubernetes/conceptual-cluster-connect) feature.
+The following diagram displays a network architecture that allows cluster access from any network location using [Azure Arc-enabled Kubernetes Cluster Connect capability](/azure/azure-arc/kubernetes/conceptual-cluster-connect).
 
 [![A diagram showing Azure Arc-enabled Kubernetes Cluster Connect network architecture.](./media/arc-enabled-kubernetes-cluster-connect-network.png)](./media/arc-enabled-kubernetes-cluster-connect-network.png#lightbox)
 
@@ -28,12 +28,12 @@ The following diagram displays a network architecture that allows cluster access
 
 - Review the [network topology and connectivity design area](../../../ready/landing-zone/design-area/network-topology-and-connectivity.md) of the Azure landing zones to assess the effect of Azure Arc-enabled Kubernetes on your connectivity model.
 - Review the [network requirements](/azure/azure-arc/kubernetes/quickstart-connect-cluster?tabs=azure-cli#meet-network-requirements) for Azure Arc-enabled Kubernetes to understand how clusters communicate with Azure from on-premises network or other cloud providers.
-- Consider trade-offs between your organization's security and compliance requirements and the benefits Azure Arc-enabled Kubernetes offers your organization. Decide between [fully connected mode and semi-connected mode](/azure/azure-arc/kubernetes/conceptual-connectivity-modes#understand-connectivity-modes) for your implementation.
+- Consider trade-offs between your organization's security and compliance requirements and the benefits Azure Arc-enabled Kubernetes offers. Decide between [fully connected mode and semi-connected mode](/azure/azure-arc/kubernetes/conceptual-connectivity-modes#understand-connectivity-modes) for your implementation.
 - Decide whether to use public or [private endpoints](/azure/private-link/private-endpoint-overview) when connecting to Azure Log Analytics workspaces through ExpressRoute or VPN versus internet connectivity.
 - Decide whether to use public or private endpoints when connecting to [Azure Key Vaults](/azure/azure-arc/kubernetes/tutorial-akv-secrets-provider) through ExpressRoute or VPN versus internet connectivity.
-- Choose your network connectivity options for Azure Arc-enabled Kubernetes cluster management, since Azure Arc-enabled Kubernetes clusters support [cluster management from any network](/azure/azure-arc/kubernetes/conceptual-cluster-connect). For design considerations and recommendations when deciding on network independent cluster management, see [Identity and Access Management](./eslz-arc-kubernetes-identity-access-management.md).
-- Consider securely managing Azure Arc-enabled Kubernetes cluster through the [Cluster Connect capability to access anywhere](/azure/azure-arc/kubernetes/conceptual-cluster-connect), which eliminates inbound network port opening and allows only outbound communication to Azure Arc services in Azure.
-- When using on-premises or multicloud [firewalls or proxy servers for TLS inspection](/azure/firewall/premium-features#tls-inspection) of your outbound traffic and network intrusion detection and prevention system (IDPS), decide whether or not to exempt Azure Arc-enabled Kubernetes endpoints, since some of the server certificates aren't trusted by these firewalls or proxy servers.
+- Choose your network connectivity options for Azure Arc-enabled Kubernetes cluster management, since Azure Arc-enabled Kubernetes clusters support [cluster management from any network](/azure/azure-arc/kubernetes/conceptual-cluster-connect). For design considerations and recommendations for network independent cluster management, see [Identity and Access Management](./eslz-arc-kubernetes-identity-access-management.md).
+- Consider securely managing Azure Arc-enabled Kubernetes cluster through the [Cluster Connect capability to access anywhere](/azure/azure-arc/kubernetes/conceptual-cluster-connect), which eliminates opening inbound network ports and allows only outbound communication to Azure Arc services in Azure.
+- When using on-premises or multicloud [firewalls or proxy servers for TLS inspection](/azure/firewall/premium-features#tls-inspection) of your outbound traffic and network intrusion detection and prevention system (IDPS), decide whether to exempt Azure Arc-enabled Kubernetes endpoints, since some of the server certificates aren't trusted by these firewalls or proxy servers.
 
 ## Design recommendations
 

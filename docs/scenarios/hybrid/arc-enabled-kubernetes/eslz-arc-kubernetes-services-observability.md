@@ -19,7 +19,7 @@ A system's observability has a significant effect on its operating cost. Observa
 
 Service observability is important because it helps you understand performance of and issues in distributed and cloud systems based on dynamic architectures.
 
-Implementing a solution to achieve services observability can help you:
+Implementing services observability can help you:
 
 - Ensure that end users can consume your application and your business expectations are met.
 - Understand an entire system and how it works together using a single pane of glass.
@@ -42,15 +42,15 @@ The following diagram shows various Open Service Mesh components running in an A
 
 The three pillars of observability are metrics, logs, and traces. Incorporate them into your observability strategy to help make your system observable.
 
-- **Metrics** are numerical values that describe some aspect of a system at a particular point in time, and they're always collected at regular intervals.
+- **Metrics** are numerical values that describe some aspect of a system at a point in time, and they're always collected at regular intervals.
 
 The following screenshot shows a visualization of an example HTTP request metric for a service. The metric in this example is displayed as HTTP request rate per minute over a specified time period.  
 
 [![A screenshot showing HTTP request metric for a service.](./media/arc-enabled-kubernetes-obs-metrics-example.png)](./media/arc-enabled-kubernetes-obs-metrics-example.png#lightbox)
 
-- **Logs** can store various data types that have their own structures. A log contains details about transactions that can allow you to obtain a more complete story for a given event. Application logs typically include timestamps, log levels, and any information necessary to understand the context of an event. Logs are collected and shipped to a log service for storage and analysis.
+- **Logs** can store various data types that have their own structures. A log contains details about transactions that provide a more complete story for a given event. Application logs typically include timestamps, log levels, and any information necessary to understand the context of an event. Logs are collected and shipped to a log service for storage and analysis.
 
-- **Distributed tracing** is a diagnostic technique that helps users localize failures and performance issues within applications, especially any that are distributed across multiple machines or processes. This technique tracks requests through an application, correlating work done by different application components and separating that from other work the application might be doing for concurrent requests.
+- **Distributed tracing** is a diagnostic technique that helps users localize failures and performance issues within applications, especially any that are distributed across multiple machines or processes. This technique tracks requests through an application, correlating work by different components and separating it from other concurrent work.
 
 The following screenshot shows a visualization of an end-to-end transaction using Application Insights. This visual allows for easy understanding of response times, response codes, and any exceptions that occur between requests in a transaction chain.  
 
@@ -74,13 +74,13 @@ The following sections explain how you can use a service mesh and the self-hoste
 
 A service mesh provides capabilities like traffic management, resiliency, policy enforcement, transport security, identity security, and observability to your workloads. Your application is decoupled from these operational capabilities; the service mesh moves them out of the application layer and down into the infrastructure layer. This is done through a high-performance proxy that mediates all inbound and outbound traffic to your service.
 
-- Azure Arc-enabled Kubernetes supports [Open Service Mesh (OSM)](https://openservicemesh.io/), a Cloud Native Computing Foundation (CNCF) project, which is deployed as an [extension](/azure/azure-arc/kubernetes/tutorial-arc-enabled-open-service-mesh). Open Service Mesh is a lightweight, extensible, cloud native service mesh that allows users to uniformly manage, secure, and gain out-of-the-box observability features for highly dynamic microservice environments.
+- Azure Arc-enabled Kubernetes supports [Open Service Mesh (OSM)](https://openservicemesh.io/), a Cloud Native Computing Foundation (CNCF) project, which is deployed as an [extension](/azure/azure-arc/kubernetes/tutorial-arc-enabled-open-service-mesh). Open Service Mesh is a lightweight, extensible, cloud native service mesh that lets users uniformly manage, secure, and get out-of-the-box observability for highly dynamic microservice environments.
 - Other popular Service Meshes that require vendor support include [Istio](https://istio.io/), [Consul Connect](https://www.hashicorp.com/products/consul/multi-platform-service-mesh/), and [Linkerd](https://linkerd.io/2.11/overview/).
-- Depending on what features you use when implementing a service mesh, extra responsibility might be put on Application Operators to define a configuration for each service (such as access rules and onboarding services). Also, Cluster Operators must manage and be aware of the service mesh controller. Due to the way service mesh uses the [sidecar pattern](/azure/architecture/patterns/sidecar), access logs from the service mesh control plane and sidecar are needed when debugging Egress and Ingress.
+- Depending on features used, implementing a service mesh may require Application Operators to define a configuration for each service (such as access rules and onboarding services). Also, Cluster Operators must manage and be aware of the service mesh controller. Due to the way service mesh uses the [sidecar pattern](/azure/architecture/patterns/sidecar), access logs from the service mesh control plane and sidecar are needed when debugging Egress and Ingress.
 
 ## Service mesh observability
 
-Observability is an important functionality among the many that service meshes provide. Choose a Service Mesh that meets your minimum observability requirements so you reduce the amount of complexity and components that the service mesh can come with and requires to be configured. Evaluate the following common features and use cases of observability that service meshes provide:
+Observability is an important functionality among the many that service meshes provide. Choose a Service Mesh that meets your minimum observability requirements to reduce complexity and required configuration. Evaluate the following common features and use cases of observability that service meshes provide:
 
 - Metrics generation, including the four golden signals: latency, traffic, errors, and saturation.
 - The RED method (Rates-calls/sec, Errors, Duration-call latencies), which is a subset of the four golden signals and is used to measure services. Your service mesh should provide a standardized way to collect RED metrics, traces, etc.
@@ -96,7 +96,7 @@ The following diagram shows an example of the Service Mesh Proxy functionality o
 
 With the integration between Azure API Management and Azure Arc on Kubernetes, you can deploy the API Management gateway component as an extension in your Azure Arc-enabled Kubernetes cluster. This allows a containerized version of API Management gateway to run in your cluster. All self-hosted gateways are managed from the API Management service they're federated with, providing you with visibility and a unified management experience across all internal and external APIs.
 
-Configuring the self-hosted gateway to accept incoming traffic to direct to your services requires policy creation. Management of the gateway can be increasingly complex as your service scale grows.
+Configuring the self-hosted gateway to accept incoming traffic to direct to your services requires policy creation. Managing the gateway becomes more complex as your service scale grows.
 
 For more information, see the [self-hosted gateway overview](/azure/api-management/self-hosted-gateway-overview)
 
@@ -133,7 +133,7 @@ Implement Open Service Mesh to gain observability into the health and performanc
 
 Enable Open Service Mesh by using the Azure Arc-enabled Kubernetes cluster extension capability, which allows Microsoft to manage the control plane for you. For more information, see [Deploy Azure Arc-enabled Open Service Mesh (Preview)](/azure/azure-arc/kubernetes/tutorial-arc-enabled-open-service-mesh).
 
-To maximize the availability and performance of your applications and services, enable [Azure Monitor Container Insights](/azure/azure-monitor/containers/container-insights-enable-arc-enabled-clusters). It provides a comprehensive solution for collecting, analyzing, and acting on telemetry from your cloud and on-premises environments. Azure Arc-enabled Open Service Mesh integrates deeply with Azure Monitor, giving you a seamless method of viewing and responding to critical KPIs provided by OSM metrics and application container logs. You can enable OSM metrics by following [these steps](/azure/azure-arc/kubernetes/tutorial-arc-enabled-open-service-mesh#monitoring-application-using-azure-monitor-and-applications-insights). For distributed tracing, we recommend [Jaeger](https://docs.openservicemesh.io/docs/guides/observability/tracing/), which can integrate with your OSM control plane.
+To maximize the availability and performance of your applications and services, enable [Azure Monitor Container Insights](/azure/azure-monitor/containers/container-insights-enable-arc-enabled-clusters). It provides a comprehensive solution for collecting, analyzing, and acting on telemetry from your cloud and on-premises environments. Azure Arc-enabled Open Service Mesh integrates deeply with Azure Monitor, providing a seamless way to view and respond to critical KPIs from OSM metrics and application container logs. You can enable OSM metrics by following [these steps](/azure/azure-arc/kubernetes/tutorial-arc-enabled-open-service-mesh#monitoring-application-using-azure-monitor-and-applications-insights). For distributed tracing, we recommend [Jaeger](https://docs.openservicemesh.io/docs/guides/observability/tracing/), which can integrate with your OSM control plane.
 
 Open Service Mesh also provides documented [observability integrations](https://docs.openservicemesh.io/docs/guides/observability/) for metrics with Prometheus and Grafana, tracing with Jaeger, and log forwarding with Fluent Bit. These integrations provide alternative options if you aren't using Azure monitoring solutions. You can use these integrations to extend to other in-house monitoring tools as needed.
 

@@ -10,7 +10,7 @@ ms.custom: e2e-hybrid, think-tank
 
 # Cost governance for Azure Arc-enabled servers
 
-Cost governance is the continuous process of implementing policies, to control the costs of services you're using on Azure. This document walks you through the various cost governance considerations and recommendations, when using Azure Arc-enabled servers.
+Cost governance is the continuous process of implementing policies, to control the costs of services you're using on Azure. This document covers cost governance considerations and recommendations when using Azure Arc-enabled servers.
 
 ## How much does Azure Arc-enabled servers cost?
 
@@ -36,7 +36,7 @@ Azure Arc-enabled servers provide two types of services:
 ## Design considerations
 
 - **Governance:** Define a governance model for your hybrid servers that translates into Azure policies, tags, naming standards, and least-privilege controls.
-- **Azure Monitor:** [Azure Monitor](/azure/azure-monitor/overview) includes functionality for the collection and analysis of log data of your Azure Arc-enabled servers (billed by data ingestion, retention, and export), collection of metrics, health monitoring, alerts, and notifications. Features of Azure Monitor that are automatically enabled are provided at no cost - such as the collection of standard metrics, activity logs, and insights.
+- **Azure Monitor:** [Azure Monitor](/azure/azure-monitor/overview) includes functionality to collect and analyze log data of your Azure Arc-enabled servers (billed by data ingestion, retention, and export), collection of metrics, health monitoring, alerts, and notifications. Features of Azure Monitor that are automatically enabled are provided at no cost - such as the collection of standard metrics, activity logs, and insights.
 - **Microsoft Defender for Cloud**: Microsoft Defender for Cloud is offered in [two modes](/azure/defender-for-cloud/concept-cloud-security-posture-management):
 
    **Without enhanced security features (Free)** - [Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) is enabled for free on all your Azure subscriptions when you visit the workload protection dashboard in the Azure portal for the first time, or if enabled programmatically via API. Using this free mode provides the secure score and its related features: security policy, continuous security assessment, and actionable security recommendations to help you protect your Azure resources.
@@ -44,7 +44,7 @@ Azure Arc-enabled servers provide two types of services:
    **Defender for Cloud with all enhanced security features (Paid)** - enabling [Microsoft Defender for Cloud](/azure/security-center/azure-defender) enhanced security extends the capabilities of the free mode to workloads running in private and other public clouds, providing unified security management and threat protection across your hybrid cloud workloads.
 
 - **Microsoft Sentinel:** Microsoft Sentinel provides intelligent security analytics across your enterprise. The data for this analysis is stored in an Azure Monitor Log Analytics workspace. Microsoft Sentinel is billed based on the volume of data ingested for analysis in Microsoft Sentinel, and stored in the Azure Monitor Log Analytics workspace for your Azure Arc-enabled servers.
-- **Azure Update Manager:** Azure Update Manager is a unified service to help manage and govern updates for all your machines. You can monitor Windows and Linux update compliance across your deployments in Azure, on-premises, and on other cloud platforms from a single dashboard. Azure Update Manager is billed per server per day.
+- **Azure Update Manager:** Azure Update Manager is a unified service to manage and govern updates for all your machines. You can monitor Windows and Linux update compliance across your deployments in Azure, on-premises, and on other cloud platforms from a single dashboard. Azure Update Manager is billed per server per day.
 - **Azure Policy machine configuration:** Azure Policy machine configuration can audit and enforce operating system and application settings across your fleet of servers. Azure Policy machine configuration is billed per server per month, and includes usage rights for Azure Automation State Configuration, change tracking, and inventory.
 - **Azure Automation configuration management:** Azure Automation configuration management includes software Change Tracking and Inventory for your servers, as well as state configuration to configure your servers at-scale with PowerShell Desired State Configuration. Azure Automation configuration management is billed per server per month, and includes usage rights for Azure Policy machine configuration.
 - **Azure Key Vault:** The Azure Key Vault VM extension allows you to manage the certificate lifecycle on [Windows](/azure/virtual-machines/extensions/key-vault-windows) and [Linux](/azure/virtual-machines/extensions/key-vault-linux) Azure Arc-enabled servers. Azure Key Vault is billed by the operations performed on the certificates, keys, and secrets.
@@ -55,12 +55,12 @@ Azure Arc-enabled servers provide two types of services:
 Here are some general design recommendations for Azure Arc-enabled servers cost governance:
 
 > [!Note]
-> In this section, pricing information described in the provided screenshots are examples and provided to allow demonstrating the usage of the Azure Calculator and don't reflect the actual pricing information you might be seeing in your own Azure Arc deployments.
+> In this section, pricing information in the screenshots is examples that demonstrate using the Azure Calculator and don't reflect actual pricing in your Azure Arc deployments.
 
 ### Governance
 
 - Ensure that all Azure Arc-enabled servers follow proper [naming and tagging conventions](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming).
-- Use least privilege Azure RBAC by assigning **Azure Connected Machine Onboarding role** to only administrators who onboards Azure Arc-enabled servers to avoid unnecessary costs.
+- Use least privilege Azure RBAC by assigning **Azure Connected Machine Onboarding role** to only administrators who onboard Azure Arc-enabled servers to avoid unnecessary costs.
 - Use least privilege Azure RBAC by assigning **Azure Connected Machine Resource Administrator** to only administrators who need to read, write, delete, and re-onboard Azure connected machines.
 
 ### Azure Monitor
@@ -73,7 +73,7 @@ Here are some general design recommendations for Azure Arc-enabled servers cost 
 
 [![Screenshot that shows Azure pricing calculator for Azure Monitor.](./media/pricing-calculator-azure-monitor.png)](./media/pricing-calculator-azure-monitor.png#lightbox)
 
-- Use [Microsoft Cost Management](/azure/azure-monitor/usage-estimated-costs#azure-cost-management--billing) to have visibility on Azure Monitor costs.
+- Use [Microsoft Cost Management](/azure/azure-monitor/usage-estimated-costs#azure-cost-management--billing) to monitor Azure Monitor costs.
 
 [![Screenshot that shows Microsoft Cost Management.](./media/cost-management-billing-azure.png)](./media/cost-management-billing-azure.png#lightbox)
 
@@ -81,8 +81,8 @@ Here are some general design recommendations for Azure Arc-enabled servers cost 
 
 :::image type="content" source="./media/insights-log-analytics.png" alt-text="Screenshot that shows Log Analytics insights." lightbox="./media/insights-log-analytics.png":::
 
-- Evaluate possible data ingestion volume reducing. Refer to [Tips for reducing data volume](/azure/azure-monitor/logs/manage-cost-storage#tips-for-reducing-data-volume) documentation, to help configure data ingestion properly.
-- Consider how long you want to retain data on Log Analytics. Data ingested into Log Analytics workspace can be retained at no additional charge, up to the first 31 days. Consider general aspects to configure the [Log Analytics workspace level default retention](/azure/azure-monitor/logs/manage-cost-storage#workspace-level-default-retention), and specific needs to configure data [retention by data type](/azure/azure-monitor/logs/manage-cost-storage#retention-by-data-type), that can be as minimal as four days. Example: performance data doesn't usually need to be retained for long periods, but security logs might need to be retained for extended periods.
+- Evaluate reducing data ingestion volume. Refer to [Tips for reducing data volume](/azure/azure-monitor/logs/manage-cost-storage#tips-for-reducing-data-volume) documentation, to help configure data ingestion properly.
+- Consider how long you want to retain data on Log Analytics. Data ingested into Log Analytics workspace can be retained at no additional charge, up to the first 31 days. Consider general aspects to configure the [Log Analytics workspace level default retention](/azure/azure-monitor/logs/manage-cost-storage#workspace-level-default-retention), and specific needs to configure data [retention by data type](/azure/azure-monitor/logs/manage-cost-storage#retention-by-data-type), that can be as minimal as four days. Example: performance data doesn't usually need long retention, but security logs might need extended retention.
 - To retain data longer than 730 days, consider using [Log Analytics workspace data export](/azure/azure-monitor/logs/logs-data-export).
 - Consider using [commitment tier](/azure/azure-monitor/logs/manage-cost-storage#pricing-model) pricing based on your data ingestion volume.
 
@@ -100,7 +100,7 @@ Review the [recommendations for security and compliance](./eslz-security-governa
 
 :::image type="content" source="./media/azure-sentinel-costs.png" alt-text="Screenshot that shows an example Microsoft Sentinel costs." lightbox="./media/azure-sentinel-costs.png":::
 
-- Use [Cost Management](/azure/sentinel/azure-sentinel-billing#manage-and-monitor-azure-sentinel-costs) to have visibility on Microsoft Sentinel analysis costs.
+- Use [Cost Management](/azure/sentinel/azure-sentinel-billing#manage-and-monitor-azure-sentinel-costs) to monitor Microsoft Sentinel analysis costs.
 
 :::image type="content" source="./media/cost-management-azure-sentinel.png" alt-text="Screenshot that shows Microsoft Sentinel cost analysis." lightbox="./media/cost-management-azure-sentinel.png":::
 

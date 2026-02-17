@@ -15,7 +15,7 @@ ms.custom:
 
 This article covers the key design considerations and best practices when implementing security, governance, and compliance for Azure Arc-enabled servers deployments. While the enterprise-scale landing zone documentation covers "[Governance](../../../ready/landing-zone/design-area/governance.md)" and "[Security](../../../ready/landing-zone/design-area/security.md)" as separate topics, for Azure Arc-enabled servers, these critical design areas are consolidated as a single topic.
 
-Defining and applying the proper control mechanisms is key in any cloud implementation, as it's the foundational element to stay secured and compliant. In a traditional environment, these mechanisms usually involve review processes and manual controls. However, the cloud has introduced a new approach to IT governance with automated guardrails and checks. [Azure Policy](/azure/governance/policy/overview) and [Microsoft Defender for Cloud](/azure/security-center/defender-for-cloud-introduction) are cloud-native tools that allow the implementation of these controls, reports, and remediation tasks in an automated fashion. By combining them with Azure Arc, you can extend your governance policies and security to any resource in public or private clouds.
+Defining and applying the proper control mechanisms is key in any cloud implementation, as it's foundational to remain secure and compliant. In a traditional environment, these mechanisms usually involve review processes and manual controls. However, the cloud has introduced a new approach to IT governance with automated guardrails and checks. [Azure Policy](/azure/governance/policy/overview) and [Microsoft Defender for Cloud](/azure/security-center/defender-for-cloud-introduction) are cloud-native tools that allow the implementation of these controls, reports, and remediation tasks in an automated fashion. By combining them with Azure Arc, you can extend your governance policies and security to any resource in public or private clouds.
 
 By the end of this article, you'll understand the critical design areas for security, governance, and compliance with clear Microsoft guidance.
 
@@ -27,7 +27,7 @@ The following image displays conceptual reference architecture that demonstrates
 
 ## Design considerations
 
-As your hybrid and multicloud resources become a part of Azure Resource Manager, they can be managed and governed with Azure tools, just like Azure native VMs.
+As your hybrid and multicloud resources become part of Azure Resource Manager, Azure tools can manage and govern them like Azure native VMs.
 
 ### Identity and access management
 
@@ -51,14 +51,14 @@ As your hybrid and multicloud resources become a part of Azure Resource Manager,
 
 ### Management disciplines
 
-- **Agent management:** The [Azure connected machine agent](/azure/azure-arc/servers/agent-overview) plays a critical role in your hybrid operations. It enables you to manage your Windows and Linux machines, hosted outside of Azure, and enforce governance policies. It's important to implement solutions that keep track of unresponsive agents.
+- **Agent management:** The [Azure connected machine agent](/azure/azure-arc/servers/agent-overview) plays a critical role in your hybrid operations. It enables you to manage your Windows and Linux machines, hosted outside of Azure, and enforce governance policies. Implement solutions to track unresponsive agents.
 - **Log management strategy:** Plan for metrics and log collection of your hybrid resources into a Log Analytics workspace for further analysis and auditing.
 
 ### Platform automation
 
 - **Agent provisioning:** Define a strategy for provisioning the Azure Arc-enabled servers and protecting access to the onboarding credentials. Consider the level and method of automation for [bulk enrollment](/azure/azure-arc/servers/learn/quick-enable-hybrid-vm). Consider how to structure [pilot and production deployments](/azure/azure-arc/servers/plan-at-scale-deployment) and establish a formal plan. The scope and plan for a deployment should account for objectives, selection criteria, success criteria, training plans, rollback, and risks.
 - **Software updates:**
-  - Define a strategy to assess the status of available updates to maintain security compliance, with critical and security updates of your operating systems.
+  - Assess available updates to maintain security compliance with critical and security updates of your operating systems.
   - Define a strategy to inventory the Windows operating system versions and monitor end of support deadlines. For servers that cannot be migrated to Azure or upgraded, plan for [Extended Security Updates](/azure/azure-arc/servers/prepare-extended-security-updates) (ESUs) through Azure Arc.
 
 ## Design recommendations
@@ -69,7 +69,7 @@ If using a [service principal](/azure/azure-arc/servers/onboard-service-principa
 
 ### Agent management
 
-The Azure connected machine agent is the key piece for Azure Arc-enabled servers. It contains several logical components that play a role in security, governance, and management operations. If the Azure connected machine agent stops sending heartbeats to Azure, or goes offline, you will not be able to perform operational tasks on it. Hence, it's necessary to [develop a plan](/azure/azure-arc/servers/plan-at-scale-deployment#phase-3-manage-and-operate) for notifications and responses.
+The Azure connected machine agent is the key piece for Azure Arc-enabled servers. It contains several logical components that play a role in security, governance, and management operations. If the Azure connected machine agent stops sending heartbeats to Azure, or goes offline, you will not be able to perform operational tasks on it. Therefore, [develop a plan](/azure/azure-arc/servers/plan-at-scale-deployment#phase-3-manage-and-operate) for notifications and responses.
 
 Azure activity log can be used to set up [resource health notifications](/azure/service-health/resource-health-alert-monitor-guide). Remain informed on the current and historical health status of the Azure connected machine agent by implementing a [query](/azure/azure-arc/servers/plan-at-scale-deployment#phase-3-manage-and-operate).
 
@@ -81,7 +81,7 @@ Evaluate restricting the extensions and machine configuration capabilities with 
 
 ## Managed identity
 
-At creation, the Microsoft Entra system-assigned identity can only be used to update the status of the Azure Arc-enabled servers (for example, the 'last seen' heartbeat). In granting this system-assigned identity additional access to Azure resources, it becomes possible to allow an application on your server to use the system-assigned identity to access Azure resources (for example, to request secrets from a Key Vault). You should:
+At creation, the Microsoft Entra system-assigned identity can only be used to update the status of the Azure Arc-enabled servers (for example, the 'last seen' heartbeat). Granting this system-assigned identity additional access to Azure resources allows applications on your server to use it to access Azure resources (for example, to request secrets from a Key Vault). You should:
 
 - Consider which legitimate use-cases exist for server applications to [obtain access tokens](/azure/azure-arc/servers/managed-identity-authentication) and access Azure resources, while also planning for access control of these resources.
 - Control privileged user roles on Azure Arc-enabled servers (members of the local administrators or [Hybrid Agent Extensions Applications group](/azure/azure-arc/servers/agent-overview#windows-agent-installation-details) on Windows and members of the [himds](/azure/azure-arc/servers/agent-overview#agent-component-details) group on Linux) to avoid system-managed identities being misused to gain unauthorized access to Azure resources.
