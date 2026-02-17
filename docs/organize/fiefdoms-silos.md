@@ -49,7 +49,7 @@ The organic and responsive growth within IT that creates healthy IT teams can al
 
 As mentioned earlier, healthy IT teams can create natural resistance and positive friction. Silos and fiefdoms are a different challenge. There's no documented leading indicator for either antipattern. These antipatterns tend to be identified after months of [cloud center of excellence](./cloud-center-of-excellence.md) and [cloud governance team](./cloud-governance.md) efforts. They're discovered as the result of ongoing resistance.
 
-Even in toxic cultures, the efforts of the CCoE and the cloud governance team should help drive cultural growth and technical progress. After months of effort, a few teams might still show no signs of inclusive behaviors and stand firm in their resistance to change. These teams are likely operating in one of the following antipattern models: silos and fiefdoms. Although these models have similar symptoms, the root cause and approaches to addressing resistance is radically different between them.
+Even in toxic cultures, the efforts of the CCoE and the cloud governance team should help drive cultural growth and technical progress. After months of effort, a few teams might still show no signs of inclusive behaviors and stand firm in their resistance to change. These teams are likely operating in one of the following antipattern models: silos and fiefdoms. Although these models have similar symptoms, the root cause and approaches to addressing resistance are radically different between them.
 
 ## IT silos
 
