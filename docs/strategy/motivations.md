@@ -10,7 +10,7 @@ ms.update-cycle: 1095-days
 
 # Determine your motivations, mission, and objectives
 
-The purpose of this article is to help you understand and define motivations, mission, and objectives for your cloud adoption strategy. These are crucial for IT decision-makers and executives because they help ensure alignment with strategic business objectives, maximize return on investment, and facilitate informed decision making.
+This article helps you understand and define motivations, mission, and objectives for your cloud adoption strategy. These are crucial for IT decision-makers and executives because they help ensure alignment with strategic business objectives, maximize return on investment, and inform decisions.
 
 :::image type="content" source="./media/caf-strategy-motivations-objectives.svg" alt-text="Diagram that shows the phase for defining motivations, mission, and objectives for your cloud adoption strategy." lightbox="./media/caf-strategy-motivations-objectives.svg":::
 
@@ -34,7 +34,7 @@ Motivations for adopting and expanding your cloud footprint can vary. The follow
 
 - **Compliance management:** Minimize compliance risks by using policies that block or alert deployments that don't align with your compliance requirements.  
 
-- **Financial transparency:** Gain more visibility into financial aspects of cloud investments for leadership teams, including detailed billing and usage reports.
+- **Financial transparency:** Gain visibility into financial aspects of cloud investments for leadership teams, including detailed billing and usage reports.
 
 - **Cloud scale:** Use the cloud's built-in redundancy and DR capabilities to help ensure business continuity and mitigate operational risks.
 
@@ -42,7 +42,7 @@ Motivations for adopting and expanding your cloud footprint can vary. The follow
 
 - **AI:** Access cutting-edge AI capabilities for transformative solutions.
 
-- **Cloud native:** Benefit from exclusive cloud capabilities that aren't available elsewhere.
+- **Cloud native:** Benefit from exclusive cloud capabilities.
 
 - **Security:** Use robust security controls to securely enhance innovation.
 
@@ -54,11 +54,11 @@ Motivations for adopting and expanding your cloud footprint can vary. The follow
 
 - **Compliance empowerment:** Apply policies to make compliance a feature of the solutions that you develop instead of an assessment that they need to pass later.
 
-- **Cost flexibility:** Use the pay-as-you-go cost model to easily drive short-term innovative projects and proof-of-concept solutions without the need to own anything when you shut them down.
+- **Cost flexibility:** Use the pay-as-you-go cost model to easily drive short-term innovative projects and proof-of-concept solutions without owning anything when you shut them down.
 
 ### Enhance agility and efficiency
 
-- **Profitability improvement potential:** Accelerate business growth and optimize investments by using operational efficiency opportunities, cloud innovation, enhanced security, flexibility, and scalability.
+- **Profitability improvement potential:** Accelerate business growth and optimize investments through operational efficiency, cloud innovation, enhanced security, flexibility, and scalability.
 
 - **Multicloud opportunities:** Support multicloud strategies by using Azure integration.
 
@@ -106,7 +106,7 @@ For a successful cloud adoption, you must define your mission and objectives. A 
 
 ### Mission statement and objectives
 
-Your cloud adoption strategy should clarify the role of the cloud within your organization. It should also define how and when you apply the cloud to support the objectives and desired outcomes of your business, digital, and IT strategies.
+Your cloud adoption strategy should clarify the role of the cloud within your organization. It should also define how and when you apply the cloud to support the objectives and outcomes of your business, digital, and IT strategies.
 
 #### Mission statement
 
@@ -140,13 +140,13 @@ To define your mission and objectives, consider the following recommendations.
 
 - _Define key results for objectives._ After you define and align objectives, establish specific key results to achieve the objectives, including key performance indicators (KPIs), to measure progress.
 
-- _Establish accountability._ Ensure key results have accountable roles assigned to them and ensure that key results and associated KPIs are reviewed periodically, preferably at least quarterly at the strategic level.
+- _Establish accountability._ Assign accountable roles to key results and review key results and associated KPIs periodically, preferably quarterly.
 
-- _Prioritize clarity._ Ensure that your objectives, key results, and accountability are clear, concise, accessible and easy to understand for everyone.
+- _Prioritize clarity._ Ensure that your objectives, key results, and accountability are clear, concise, and accessible to everyone.
 
 ### Measure success
 
-To understand if you're on track to meet your objectives, you must be able to effectively measure and track your key results. Establish KPIs or other ways to gauge progress on your mission and objectives.
+To understand if you're on track to meet your objectives, you must effectively measure and track your key results. Establish KPIs or other ways to gauge progress on your mission and objectives.
 
 These metrics should provide insights into your progress against each key result and highlight areas for improvement.  
 

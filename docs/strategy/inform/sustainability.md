@@ -9,7 +9,7 @@ ms.date: 02/03/2025
 
 # Sustainability considerations in your cloud strategy
 
-Sustainability is an increasingly important performance indicator for organizations. As sustainability becomes a crucial part of organizations' operations across industries, it adds pressure from new types of stakeholders, challenges existing profit pools, and creates opportunities to open new profit pools. Organizations must respond effectively with new types of solutions and technology-enabled approaches.
+Sustainability is an increasingly important performance indicator for organizations. As sustainability becomes a crucial part of organizations' operations across industries, it adds pressure from new stakeholders, challenges existing profit pools, and opens new profit pools. Organizations must respond effectively with new types of solutions and technology-enabled approaches.
 
 This transformation is good for business. Research from multiple sources indicates that sustainability front-runners:
 
@@ -27,9 +27,9 @@ This transformation is good for business. Research from multiple sources indicat
 
 Customers demand that organizations and their executives, stakeholders, and investors are transparent about the environmental impact of the organization's operations. Proactively working toward sustainability helps you establish a positive brand for your organization.
 
-A sustainable business model helps you build a good reputation. It can also build trust and attract new talent, partners, and investors. You can also strengthen your business's messaging by including communication about its sustainability model and the reasoning behind it.
+A sustainable business model helps you build a good reputation. It can also build trust and attract new talent, partners, and investors. You can also strengthen your business's messaging by communicating its sustainability model and the reasoning behind it.
 
-Sustainability is crucial to help ensure long-term success as a player in a dynamic business space. Moving your organization toward a green business model can attract talented employees who have an active interest in sustainability.
+Sustainability is crucial to ensure long-term success as a player in a dynamic business space. Moving your organization toward a green business model can attract talented employees interested in sustainability.
 
 **Recommendations:**
 
@@ -40,7 +40,7 @@ Consider these recommendations to incorporate sustainability in favor of your co
 
 ## Incorporate sustainability into your cloud strategy
 
-Consider some of the benefits of using the cloud in combination with and to drive your sustainability efforts:
+Consider some of the benefits of using the cloud to drive your sustainability efforts:
 
 - Meet regulatory compliance requirements.
 - Help your organization reduce carbon emissions by using modern cloud tools.
@@ -49,7 +49,7 @@ Consider some of the benefits of using the cloud in combination with and to driv
 - Increase revenue by optimizing your technical landscape.
 - Reduce operating costs by driving efficiency.
 - Improve brand trust by driving sustainability and green IT practices.
-- Achieve sustainable outcomes by combining financial efficiency and cost optimization. Cost optimization often represents a greater sustainability posture.
+- Achieve sustainable outcomes by combining financial efficiency and cost optimization. Cost optimization often indicates greater sustainability.
 
 **Recommendations:**
 
@@ -73,7 +73,7 @@ Consider these Azure-specific recommendations to help you drive sustainability e
 
 - _Emissions savings estimator for Microsoft Cloud:_ Use this tool to define your on-premises infrastructure workloads. Then, use that information to report your current on-premises footprint and comparable Azure footprint. For more information, see the [emissions savings estimator for Microsoft Cloud](https://gw.us-il301.gateway.prod.island.powerapps.com/customerenrollmentservice/estimator/index.html).
 
-- _Emissions impact dashboard:_ Evaluate your carbon emissions, and emissions that you saved that are associated with using Microsoft Azure and Microsoft 365 cloud services. The [emissions impact dashboard](https://www.microsoft.com/sustainability/emissions-impact-dashboard) can help you make targeted decisions.
+- _Emissions impact dashboard:_ Evaluate your carbon emissions and emissions saved from using Microsoft Azure and Microsoft 365 cloud services. The [emissions impact dashboard](https://www.microsoft.com/sustainability/emissions-impact-dashboard) can help you make targeted decisions.
 
 ## Related resources
 
