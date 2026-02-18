@@ -76,14 +76,14 @@ A service mesh provides capabilities like traffic management, resiliency, policy
 
 - Azure Arc-enabled Kubernetes supports [Open Service Mesh (OSM)](https://openservicemesh.io/), a Cloud Native Computing Foundation (CNCF) project, which is deployed as an [extension](/azure/azure-arc/kubernetes/tutorial-arc-enabled-open-service-mesh). Open Service Mesh is a lightweight, extensible, cloud native service mesh that lets users uniformly manage, secure, and get out-of-the-box observability for highly dynamic microservice environments.
 - Other popular Service Meshes that require vendor support include [Istio](https://istio.io/), [Consul Connect](https://www.hashicorp.com/products/consul/multi-platform-service-mesh/), and [Linkerd](https://linkerd.io/2.11/overview/).
-- Depending on features used, implementing a service mesh may require Application Operators to define a configuration for each service (such as access rules and onboarding services). Also, Cluster Operators must manage and be aware of the service mesh controller. Due to the way service mesh uses the [sidecar pattern](/azure/architecture/patterns/sidecar), access logs from the service mesh control plane and sidecar are needed when debugging Egress and Ingress.
+- Depending on features used, implementing a service mesh can require Application Operators to define a configuration for each service (such as access rules and onboarding services). Also, Cluster Operators must manage and be aware of the service mesh controller. Due to the way service mesh uses the [sidecar pattern](/azure/architecture/patterns/sidecar), access logs from the service mesh control plane and sidecar are needed when debugging Egress and Ingress.
 
 ## Service mesh observability
 
 Observability is an important functionality among the many that service meshes provide. Choose a Service Mesh that meets your minimum observability requirements to reduce complexity and required configuration. Evaluate the following common features and use cases of observability that service meshes provide:
 
 - Metrics generation, including the four golden signals: latency, traffic, errors, and saturation.
-- The RED method (Rates-calls/sec, Errors, Duration-call latencies), which is a subset of the four golden signals and is used to measure services. Your service mesh should provide a standardized way to collect RED metrics, traces, etc.
+- The RED method (Rates-calls/sec, Errors, Duration-call latencies), which is a subset of the four golden signals and is used to measure services. Your service mesh should provide a standardized way to collect RED metrics, traces, and other telemetry.
 - Observability increases, from increasing the breadth of coverage to all services that are part of your service mesh.
 - Features that increase adoption of observability by auto-instrumenting all services.
 - Strong integration with service observability pillars. Your service mesh should be able to scrape metrics and collect logs that are surfaced into your monitoring solution. Ensure your service mesh's telemetry collection supports your business needs and integrates well with your existing monitoring solution.

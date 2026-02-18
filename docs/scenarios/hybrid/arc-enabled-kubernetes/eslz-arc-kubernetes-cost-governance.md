@@ -66,7 +66,7 @@ Azure Arc-enabled Kubernetes provides two types of services:
 The following sections contain design recommendations for Azure Arc-enabled Kubernetes cost governance.
 
 > [!Note]
-> Pricing information shown in the provided screenshots are examples and provided to demonstrate Azure Calculator, and don't reflect the actual pricing information you might see in your own Azure Arc deployments.
+> Pricing information shown in the provided screenshots are provided to demonstrate Azure Calculator and don't reflect the actual pricing information you might see in your own Azure Arc deployments.
 
 ### Governance
 

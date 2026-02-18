@@ -39,7 +39,7 @@ ArcBox supports four deployment methods:
 
 Depending on your deployment method, install either [Azure CLI](/cli/azure/install-azure-cli) or [Terraform CLI](https://learn.hashicorp.com/tutorials/terraform/install-cli).
 
-You can practice your skills with an automated, easy-to-deploy Azure Arc sandbox solution named ArcBox. The Azure sandbox solution is powered by Azure Arc Jumpstart. ArcBox is self-contained in a single Azure subscription and resource group. It lets you get hands-on with the Azure Arc-enabled servers technology requiring only an Azure subscription.
+You can practice your skills with an automated, easy-to-deploy Azure Arc sandbox solution named ArcBox. The Azure sandbox solution is powered by Azure Arc Jumpstart. ArcBox is self-contained in a single Azure subscription and resource group. It lets you get hands-on with the Azure Arc-enabled Kubernetes technology requiring only an Azure subscription.
 
 ## Next steps
 

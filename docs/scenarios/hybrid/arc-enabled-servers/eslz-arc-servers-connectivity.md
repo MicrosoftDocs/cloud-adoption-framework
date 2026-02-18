@@ -25,7 +25,7 @@ Consider the following network design recommendations for Azure Arc-enabled serv
 
 ### Define an Azure Arc agent connectivity method
 
-First, review existing infrastructure and security requirements. Then review the [network topology and connectivity design area](../../../ready/landing-zone/design-area/network-topology-and-connectivity.md) to assess how Azure Arc-enabled servers affect overall connectivity. Then, decide how the connected machine agent should [communicate with Azure](/azure/azure-arc/servers/network-requirements) from on-premises networks or other cloud providers. This connection can go over the internet, through a proxy server, or via [Azure Private Link](/azure/azure-arc/servers/private-link-security) for a private connection. For Azure Arc over the internet (with or without a proxy), use [Azure Arc gateway](/azure/azure-arc/servers/arc-gateway), which is now generally available. This feature helps reduce the overall number of endpoints that the proxy needs to allow access to.
+First, review existing infrastructure and security requirements. Then review the [network topology and connectivity design area](../../../ready/landing-zone/design-area/network-topology-and-connectivity.md) to assess how Azure Arc-enabled servers affect overall connectivity. Then, decide how the connected machine agent should [communicate with Azure](/azure/azure-arc/servers/network-requirements) from on-premises networks or other cloud providers. This connection can go over the internet, through a proxy server, or via [Azure Private Link](/azure/azure-arc/servers/private-link-security) for a private connection. For Azure Arc over the internet (with or without a proxy), use [Azure Arc gateway](/azure/azure-arc/servers/arc-gateway), which is generally available. This feature helps reduce the overall number of endpoints that the proxy needs to allow access to.
 
 #### Direct connection
 
@@ -41,7 +41,7 @@ Azure Arc-enabled servers can provide [direct connectivity to Azure public endpo
 
 #### Azure Arc gateway
 
-[Azure Arc gateway](/azure/azure-arc/servers/arc-gateway) reduces the total number of outbound HTTPS endpoints that a proxy needs for Azure Arc to work. It eliminates most wildcard endpoints and reduces the total number of required endpoints to eight for agent connectivity. Extension endpoints may require additional configuration. The Azure Arc gateway service doesn't support Private Link or ExpressRoute peering; it requires internet access for outbound connectivity. Review Azure Arc gateway documentation for the latest supported scenarios and limitations.
+[Azure Arc gateway](/azure/azure-arc/servers/arc-gateway) reduces the total number of outbound HTTPS endpoints that a proxy needs for Azure Arc to work. It eliminates most wildcard endpoints and reduces the total number of required endpoints to eight for agent connectivity. Some extension endpoints can require additional configuration. The Azure Arc gateway service doesn't support Private Link or ExpressRoute peering; it requires internet access for outbound connectivity. Review Azure Arc gateway documentation for the latest supported scenarios and limitations.
 
 #### Private Link
 

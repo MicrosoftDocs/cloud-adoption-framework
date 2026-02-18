@@ -86,7 +86,7 @@ Overview of steps:
 
 After your servers are onboarded to Azure, we recommend that you enable patch management to simplify OS lifecycle management on your Azure Arc-enabled servers. Azure Update Manager allows you to view and schedule operating system updates and patches for your Azure Arc-enabled servers at scale. See [Azure Update Manager overview](/azure/update-manager/overview) for more information.
 
-You can use the [User Hybrid Runbook Worker](/azure/automation/extension-based-hybrid-runbook-worker-install?tabs=windows) feature of Azure Automation to run runbooks directly on Azure Arc-enabled servers.
+You can use the [extension-based Hybrid Runbook Worker](/azure/automation/extension-based-hybrid-runbook-worker-install?tabs=windows) feature of Azure Automation to run runbooks directly on Azure Arc-enabled servers.
 
 ## Next steps
 
