@@ -9,15 +9,15 @@ ms.topic: concept-article
 
 # Optimize the cloud-native solutions after deployment
 
-A deployed solution must evolve to remain secure, cost-effective, and performant. Post-deployment optimization ensures that the workload continues to meet business and technical requirements as usage patterns change.
+A deployed solution must evolve to remain secure, cost-effective, and performant. Post-deployment optimization ensures the workload continues to meet business and technical requirements as usage patterns change.
 
 ## Fine-tune service configurations
 
 1. **Apply Azure Advisor recommendations.** [Azure Advisor](/azure/advisor/advisor-overview) analyzes workload monitoring data and provides actionable recommendations across cost, performance, reliability, and security. Review the recommendations weekly and implement critical changes first. Access Azure Advisor from the Azure portal and filter recommendations by workload or resource group.
 
-2. **Implement service-specific optimization settings.** Use the Well-Architected Framework's (WAF) [Azure services guides](/azure/well-architected/service-guides/?product=popular) to align configurations with best practices. This guidance helps ensure workloads are optimized for Azure
+2. **Implement service-specific optimization settings.** Use the Well-Architected Framework's (WAF) [Azure service guides](/azure/well-architected/service-guides/) to align configurations with best practices. This guidance optimizes workloads for Azure services.
 
-3. **Address security findings immediately.** Post-deployment, keep a close eye on security posture. Use tools like [Microsoft Defender for Cloud](/azure/defender-for-cloud/review-security-recommendations) to identify any security misconfigurations, missing updates, or compliance issues. Fix security gaps as soon as they’re discovered to protect the workload and maintain compliance. Security isn't a one-time activity. Continuous monitoring and quick mitigation are key to safe cloud operations.
+3. **Address security findings immediately.** Monitor security posture. Use tools like [Microsoft Defender for Cloud](/azure/defender-for-cloud/review-security-recommendations) to identify any security misconfigurations, missing updates, or compliance issues. Fix security gaps immediately to protect the workload and maintain compliance. Continuous monitoring and quick mitigation ensure safe cloud operations.
 
 ## Validate operational readiness
 
@@ -25,9 +25,9 @@ An operationally ready solution can meet real-world demands and recover from fai
 
 ### Verify monitoring completeness and accuracy
 
-1. **Enable logging and metrics for all critical components.** Confirm that Azure Monitor and any other tools collect logs and metrics from every essential service. Ensure diagnostic settings are configured to send data to Log Analytics, Event Hubs, or Storage Accounts as needed.
+1. **Enable logging and metrics for all critical components.** Confirm that Azure Monitor (and any other monitoring tools in use) collect logs and metrics from every essential service. Ensure diagnostic settings are configured to send data to Log Analytics, Event Hubs, or Storage Accounts as needed.
 
-2. **Test alerting functionality.** Simulate failure scenarios or performance thresholds to verify that alerts trigger correctly. For example, induce a CPU spike or application error and confirm that alerts notify the appropriate teams.
+2. **Test alerting functionality.** Simulate failure scenarios or performance thresholds to verify alerts trigger correctly. For example, induce a CPU spike or application error to confirm alerts notify the appropriate teams.
 
 3. **Review dashboards for relevance and clarity.** Ensure dashboards reflect the current architecture and provide actionable insights. Include key performance indicators (KPIs), health metrics, and service dependencies.
 
@@ -74,7 +74,7 @@ For more information, see [Manage business continuity](/azure/cloud-adoption-fra
 
 ## Collect user feedback and measure outcomes
 
-1. **Gather structured user feedback regularly.** Establish channels for users to provide input on the solution’s performance, reliability, and usability. For instance, you could send out a Microsoft Forms survey to end users or internal users after launch and then on a periodic basis. Also pay attention to support tickets or helpdesk calls related to the new solution. Categorize and tally them to spot recurring pain points. Focus on feedback around business-critical workflows. If users find a particular process slow or cumbersome, that’s valuable insight. Regular feedback loops ensure you’re hearing about issues or praise directly from users.
+1. **Gather structured user feedback regularly.** Establish channels for user input on the solution’s performance, reliability, and usability. For instance, you could send out a Microsoft Forms survey to end users or internal users after launch and then on a periodic basis. Also pay attention to support tickets or helpdesk calls related to the new solution. Categorize and tally them to spot recurring pain points. Focus on feedback around business-critical workflows. If users find a particular process slow or cumbersome, that’s valuable insight. Regular feedback loops ensure you’re hearing about issues or praise directly from users.
 
 2. **Track and resolve feedback systematically.** Treat feedback items as work items in your development backlog. Use Azure DevOps or GitHub Issues (or your project management tool of choice) to log each piece of feedback or reported issue. Prioritize them by value and urgency. For example, a bug preventing order submissions is critical, whereas a minor UI suggestion is lower priority. Assign owners to investigate and resolve feedback items, and set target dates for resolution. By managing feedback like any other requirement, you ensure it gets triaged and not lost. Close the loop by updating or informing the stakeholders when you act upon the feedback. This process shows users that their input is valued and leads to tangible improvements.
 
@@ -82,7 +82,7 @@ For more information, see [Manage business continuity](/azure/cloud-adoption-fra
 
 ## Continue to evolve and improve
 
-1. **Schedule periodic workload reviews.** Periodically, revisit the architecture of the solution in light of the [Well-Architected Framework’s](/azure/well-architected/pillars) five pillars. As your usage patterns or business requirements change, certain design decisions might need revisiting. Perform a [Well-Architected Review](/assessments/azure-architecture-review/) to identify any areas for improvement. Document any findings and create action items for things to optimize or refactor in the next cycle. Regular reviews help catch drift from best practices and keep the system aligned with current needs.
+1. **Schedule periodic workload reviews.** Periodically, revisit the architecture of the solution in light of the [Well-Architected Framework](/azure/well-architected/) five pillars. As your usage patterns or business requirements change, certain design decisions might need revisiting. Perform an [Azure Well-Architected Review](/assessments/azure-architecture-review/) to identify any areas for improvement. Document any findings and create action items for things to optimize or refactor in the next cycle. Regular reviews help catch drift from best practices and keep the system aligned with current needs.
 
 2. **Automate optimization where possible.** Look for opportunities to use automation to manage and optimize the solution. For example, use Azure Policy to enforce tagging, security configurations, or resource sizing standards on new deployments so they always remain optimized. Set up autoscaling rules to handle changes in load without manual intervention. Use cost anomaly detection in Microsoft Cost Management to automatically alert if spending spikes unexpectedly. By letting Azure’s automation features handle routine optimizations (like shutting down unused virtual machines on a schedule), your team can focus on higher-level improvements. Automation ensures consistency and can react faster than human intervention for many operational adjustments.
 
@@ -91,7 +91,7 @@ For more information, see [Manage business continuity](/azure/cloud-adoption-fra
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Govern Azure](/azure/cloud-adoption-framework/secure/)
+> [Govern Azure](/azure/cloud-adoption-framework/govern/)
 
 > [!div class="nextstepaction"]
 > [Secure Azure](/azure/cloud-adoption-framework/secure/)

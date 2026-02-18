@@ -9,19 +9,19 @@ ms.topic: concept-article
 
 # Plan the cloud-native solutions
 
-A cloud-native solution creates new business value by building new workloads (applications) or adding new features to existing workloads. Whether you're developing a brand-new application or adding new features to an existing system, cloud-native development is a journey through planning, building, deploying, and optimizing your workloads. This framework provides end-to-end guidance to ensure your cloud-native application is aligned with business goals, well-architected, and delivered with minimal risk.
+A cloud-native solution creates business value by building new workloads or enhancing existing ones. Whether you're developing a new application or adding new features to an existing system, cloud-native development is a journey through planning, building, deploying, and optimizing your workloads. This framework provides guidance to align your application with business goals, architectural best practices, and risk management.
 
 **Prerequisites:** [Azure landing zone](/azure/cloud-adoption-framework/ready)
 
 :::image type="complex" source="./images/cloud-native-process.png" alt-text="Diagram showing Microsoft and Azure services with decision points for each service." lightbox="./images/cloud-native-process.png" border="false":::
-    On the left, three labeled boxes, Startups, Enterprises, and Existing workloads, are grouped under the heading "Create new business value." Arrows lead from these boxes to a vertical sequence of four steps: 1 Plan cloud-native, 2 Build cloud-native, 3 Deploy cloud-native, and 4 Optimize cloud-native. A final arrow points to an Azure indicated it's where "Cloud-native apps, workloads, & features" live.
+    On the left, three labeled boxes, Startups, Enterprises, and Existing workloads, are grouped under the heading "Create new business value." Arrows lead from these boxes to a vertical sequence of four steps: 1 Plan cloud-native, 2 Build cloud-native, 3 Deploy cloud-native, and 4 Optimize cloud-native. A final arrow points to an Azure icon, indicating that it's where "Cloud-native apps, workloads, & features" live.
 :::image-end:::
 
 ## Define business objectives for cloud-native solutions
 
-1. **Start with clear business goals.**  Define the specific outcomes your cloud-native solution should achieve, such as enabling a new digital product, entering a new market, improving customer experience, or reducing operational costs. Use measurable indicators like revenue growth, time-to-market reduction, or support ticket volume to quantify success. For new features, define goals such as improving customer experience, reducing operational costs, or increasing system scalability.
+1. **Start with clear business goals.**  Define the specific outcomes your solution should achieve, such as enabling a new digital product, entering a new market, improving customer experience, or reducing operational costs. Use measurable indicators like revenue growth, time-to-market reduction, or support ticket volume to quantify success. For new features, define goals such as improving customer experience, reducing operational costs, or increasing system scalability.
 
-2. **Identify constraints and success criteria.** Document any business constraints such as budget, compliance, or delivery timelines. Define what success looks like for each goal. For example, "launch a new customer portal by Q4" or "reduce checkout latency by 40%." These criteria guide prioritization and help evaluate tradeoffs during planning.
+2. **Identify constraints and success criteria.** Document any business constraints such as budget, compliance, or delivery timelines. Define what success looks like for each goal. For example, "launch a new customer portal by Q4" or "reduce checkout latency by 40%." These criteria guide prioritization and help evaluate trade-offs during planning.
 
 3. **Validate stakeholder alignment.** Confirm all stakeholders (business and technical) agree on the goals, constraints, and what success looks like. This alignment might involve workshops or formal sign-offs. Early alignment prevents later miscommunication and avoids costly rework, ensuring everyone shares the same expectations from the start.
 
@@ -39,7 +39,7 @@ A well-planned architecture is critical to meeting your goals and requirements. 
 
 ### Explore validated cloud-native architectures
 
-1. **Review architecture fundamentals and best practices.** Before inventing an architecture from scratch, review validated reference architectures and fundamentals from the [Azure Architecture Center](/azure/architecture/browse/). Familiar architectural styles include to explore validated reference architectures for common workloads. These architectures help accelerate design decisions and reduce risk.
+1. **Review architecture fundamentals.** Before inventing an architecture from scratch, review validated reference architectures and fundamentals from the [Azure Architecture Center](/azure/architecture/browse/). Explore validated reference architectures for common workloads. These architectures help accelerate design decisions and reduce risk.
 
 1. **Select an appropriate architecture style.** Choose an [architecture style](/azure/architecture/guide/architecture-styles/) based on your workload’s characteristics and team capabilities. Architecture styles include N-tier (monolithic), microservices, event-driven (message-based), web-queue-worker. For example, if you need rapid development for a relatively simple application, a well-structured N-tier monolith might suffice. For a large-scale or rapidly evolving application with distinct domains, microservices or event-driven approaches offer flexibility (at the cost of complexity). In practice, many systems end up with a hybrid style. For example, there's a microservices core with some shared services or an event-driven subsystem. The key is understanding the trade-offs of each style and selecting the approach that best meets your scalability, resilience, and agility requirements.
 
@@ -101,7 +101,7 @@ Development and deployment practices ensure consistent delivery and operational 
 
 ### Plan deployment for new workloads
 
-1. **Use progressive exposure to limit impact.** For a new application (greenfield) with no existing users, you should do a soft launch. Deploy to production but expose it only to internal users or a pilot group initially. This approach is a canary deployment for a new workload. If it’s truly brand new and isolated, a one-time deployment to full production is possible, but progressive exposure is still recommended to catch any issues in a controlled way. Don’t unleash the system on 100% of users on day one without some real-world validation first. For more information, see [WAF - Adopt a progressive exposure model](/azure/well-architected/operational-excellence/safe-deployments#adopt-a-progressive-exposure-model).
+1. **Use progressive exposure to limit impact.** For a new application (greenfield) with no existing users, you should do a soft launch. Deploy to production but expose it only to internal users or a pilot group initially. This approach is a canary deployment for a new workload. If it’s truly brand new and isolated, a one-time deployment to full production is possible, but progressive exposure is still recommended to catch any issues in a controlled way. Don’t release the system to all users on day one without some real-world validation first. For more information, see [WAF - Adopt a progressive exposure model](/azure/well-architected/operational-excellence/safe-deployments#adopt-a-progressive-exposure-model).
 
 1. **Document operational procedures and escalation paths.** Create clear documentation for restarting services, accessing logs, handling common issues, and escalating incidents. Store this documentation in a shared repository such as SharePoint or GitHub to ensure availability for support teams.
 
