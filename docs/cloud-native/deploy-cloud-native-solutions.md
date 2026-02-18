@@ -89,7 +89,7 @@ After you deploy a new workload or feature, it's essential to confirm that the s
 
 1. **Log and triage all issues discovered during stabilization.** This support phase catches issues revealed under production conditions and ensures the workload truly meets its goals. After this stabilization period, and once you're confident in the system’s performance, you can transition to normal operations and monitoring procedures.
 
-1. **Define the exit criteria for stabilization.** Set clear thresholds for system performance, error rates, and user satisfaction. Once the system meets these criteria, transition to standard operations and monitoring procedures. These criteria ensure a smooth handoff and avoid premature closure of the support phase.
+1. **Define the exit criteria for stabilization.** Set clear thresholds for system performance, error rates, and user satisfaction. Once the system consistently meets these criteria, transition to standard operations and monitoring procedures. These criteria ensure a smooth handoff and avoid premature closure of the support phase.
 
 ## Next step
 
