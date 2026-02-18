@@ -15,7 +15,7 @@ Now, deploy the solution to the live Azure environment following the planned str
 
 1. **Announce the deployment schedule and expected impact.** Before production deployment, communicate the plan and value to stakeholders. Announce the deployment schedule and expected user effects. For example, for new features, note any downtime or user-visible changes well in advance. Stakeholders might identify conflicts with business events or raise concerns about timing. Provide a channel for feedback and confirm that the deployment window aligns with operational priorities. Adjust the schedule to avoid disruption.
 
-1. **Notify support teams and affected groups.** Ensure support teams are on standby to handle any user issues or inquiries. If the deployment affects end-users or other systems, notify them.
+1. **Notify support teams and affected groups.** Ensure support teams are on standby and are aware of what is being released so they can handle any user issues or inquiries. If the deployment might affect end-users or other systems, notify those groups too.
 
 1. **Set expectations for functionality during the deployment window.** A deployment window might involve reduced functionality or temporary delays. Inform stakeholders to prevent confusion and ensure business continuity. Include fallback procedures or workarounds if applicable.
 
@@ -29,7 +29,7 @@ The deployment steps differ slightly based on whether it’s a new standalone wo
 
 1. **Create production environment.** Use your CI/CD pipeline to deploy using the configuration tested in staging. Use the same build artifacts, IaC templates, and deployment scripts that passed validation in staging. Since you're deploying to a separate environment, create all Azure resources via your IaC templates and then deploy the application code or artifacts.
 
-1. **Smoke test.** Once deployed, perform smoke tests to ensure all services are up and the core functionality works in the live environment. Verify that key services are running, databases are accessible, and the application responds (hit a health check endpoint or a couple of key pages). Check [Azure Service Health](/azure/service-health/overview) for any platform issues in your region that could affect your components. This testing is a check before any users are directed to the system.
+1. **Smoke test.** Once deployed, perform smoke tests to ensure all services are up and the core functionality works in production. Verify that key services are running, databases are accessible, and the application responds (hit a health check endpoint or a couple of key pages). Check [Azure Service Health](/azure/service-health/overview) for any platform issues in your region that could affect your components. This testing is a check before any users are directed to the system.
 
 1. **Rollout to a small group of users.** Implement the progressive rollout by exposing the new system to a small set of users. This rollout could be done by releasing a feature to only internal users or by routing a small percentage of live traffic to the new deployment. Monitor closely for any errors or performance issues. Use Application Insights and custom dashboards to watch error rates, response times, and resource utilization in real time. Also gather qualitative feedback from any pilot users on the canary version.
 
@@ -41,7 +41,7 @@ When you deploy a new feature to an existing cloud-native workload, choose the d
 
 #### Use in-place deployment for gradual rollout within the same environment
 
-Use in-place deployment when adding a feature without provisioning a separate environment. This approach enables a safe, incremental rollout with minimal infrastructure overhead.
+Use in-place deployment when adding a new feature to an existing workload without provisioning a separate environment. This approach enables a safe, incremental rollout with minimal infrastructure overhead.
 
 1. **Enable feature for small user segment.** Deploy the new feature to the existing environment using feature flags or configuration toggles. Enable the feature for a limited audience, such as internal users, beta testers, or a small percentage of live traffic. This approach allows real-world validation while maintaining the ability to quickly disable the feature if issues arise. Ensure user interactions are tagged to distinguish between users or sessions with the feature enabled versus disabled, enabling side-by-side comparison.
 
