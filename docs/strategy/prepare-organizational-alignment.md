@@ -97,7 +97,7 @@ This shift is a fundamental change in how businesses structure, develop, and man
 
 - **Focus**: A project delivery model is focused on completing tasks and delivering a "finished" solution, whereas a Product delivery model is focused on ongoing improvements and continuous value delivery.
 
-- **Outcomes**: A project delivery model's outcome is typically based on a completed solution at a point in time versus a product delivery model's outcomes are based on a continuously evolving service.  
+- **Outcomes**: A project delivery model's outcome is typically based on a completed solution at a point in time, while a product delivery model's outcome is based on a continuously evolving service.  
 
 - **Ownership**: A project delivery model usually has temporary project teams with a clearly defined end date, versus a product delivery model which has persistent product teams responsible for the lifecycle of the service.
 

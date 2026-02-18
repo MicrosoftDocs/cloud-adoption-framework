@@ -9,7 +9,7 @@ ms.date: 02/03/2025
 
 # Sustainability considerations in your cloud strategy
 
-Sustainability is an increasingly important performance indicator for organizations. As sustainability becomes a crucial part of organizations' operations across industries, it adds pressure from new stakeholders, challenges existing profit pools, and opens new profit pools. Organizations must respond effectively with new types of solutions and technology-enabled approaches.
+Sustainability is an increasingly important performance indicator for organizations. As sustainability becomes a crucial part of organizations' operations across industries, it adds pressure from new stakeholders, challenges existing profit pools, and creates opportunities for new profit pools. Organizations must respond effectively with new types of solutions and technology-enabled approaches.
 
 This transformation is good for business. Research from multiple sources indicates that sustainability front-runners:
 
