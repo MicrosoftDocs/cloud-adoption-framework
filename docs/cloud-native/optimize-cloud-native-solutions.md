@@ -9,7 +9,7 @@ ms.topic: concept-article
 
 # Optimize the cloud-native solutions after deployment
 
-A deployed solution must evolve to remain secure, cost-effective, and performant. Post-deployment optimization ensures the workload meets business and technical requirements as usage patterns change.
+A deployed solution must evolve to remain secure, cost-effective, and performant. Post-deployment optimization ensures the workload continues to meet business and technical requirements as usage patterns change.
 
 ## Fine-tune service configurations
 
@@ -25,7 +25,7 @@ An operationally ready solution can meet real-world demands and recover from fai
 
 ### Verify monitoring completeness and accuracy
 
-1. **Enable logging and metrics for all critical components.** Confirm Azure Monitor collects logs and metrics from every essential service. Ensure diagnostic settings are configured to send data to Log Analytics, Event Hubs, or Storage Accounts as needed.
+1. **Enable logging and metrics for all critical components.** Confirm that Azure Monitor (and any other monitoring tools in use) collect logs and metrics from every essential service. Ensure diagnostic settings are configured to send data to Log Analytics, Event Hubs, or Storage Accounts as needed.
 
 2. **Test alerting functionality.** Simulate failure scenarios or performance thresholds to verify alerts trigger correctly. For example, induce a CPU spike or application error to confirm alerts notify the appropriate teams.
 

@@ -13,13 +13,13 @@ Now, deploy the solution to the live Azure environment following the planned str
 
 ## Prepare stakeholders for cloud-native deployments
 
-1. **Announce the deployment schedule and expected impact.** Before production deployment, communicate the plan and value to stakeholders. Announce the deployment schedule and expected user effects. For example, for new features, note any downtime or user-visible changes well in advance. Stakeholders might identify conflicts with business events or raise concerns about timing. Provide a channel for feedback and confirm that the deployment window aligns with operational priorities. Adjust the schedule to avoid disruption.
+1. **Announce the deployment schedule and expected impact.** Before production deployment, communicate the plan and value to stakeholders. Announce the deployment schedule and expected user effects. For example, for new features, note any downtime or user-visible changes well in advance. Stakeholders might identify conflicts with business events or raise concerns about timing. Provide a channel for feedback and confirm that the deployment window aligns with operational priorities. Adjust the schedule if necessary to avoid disruption.
 
 1. **Notify support teams and affected groups.** Ensure support teams are on standby and are aware of what is being released so they can handle any user issues or inquiries. If the deployment might affect end-users or other systems, notify those groups too.
 
 1. **Set expectations for functionality during the deployment window.** A deployment window might involve reduced functionality or temporary delays. Inform stakeholders to prevent confusion and ensure business continuity. Include fallback procedures or workarounds if applicable.
 
-1. **Conduct a predeployment readiness review.** A readiness review confirms all teams understand their roles and access. Hold a meeting with representatives from each support team to review the deployment plan, success criteria, and rollback criteria. Verify support teams have system access and monitoring tools configured. This preparation ensures a coordinated response to any issues that arise during migration.
+1. **Conduct a predeployment readiness review.** A readiness review confirms that all teams understand their roles and have the necessary access. Hold a meeting with representatives from each support team to review the deployment plan, success criteria, and rollback criteria. Verify support teams have system access and monitoring tools configured. This preparation ensures a coordinated response to any issues that arise during migration.
 
 ## Execute the cloud-native deployments
 
