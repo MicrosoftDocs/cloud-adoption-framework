@@ -11,10 +11,10 @@ ms.topic: concept-article
 
 A cloud-native solution creates business value by building new workloads or enhancing existing ones. Whether you're developing a new application or adding new features to an existing system, cloud-native development is a journey through planning, building, deploying, and optimizing your workloads. This framework provides guidance to align your application with business goals, architecture best practices, and risk management.
 
-**Prerequisites:** [Azure landing zone](/azure/cloud-adoption-framework/ready/landing-zone/)
+**Prerequisites:** [Azure landing zone](/azure/cloud-adoption-framework/ready/landing-zone/ready)
 
 :::image type="complex" source="./images/cloud-native-process.png" alt-text="Diagram showing Microsoft and Azure services with decision points for each service." lightbox="./images/cloud-native-process.png" border="false":::
-    On the left, three labeled boxes, Startups, Enterprises, and Existing workloads, are grouped under the heading "Create new business value." Arrows lead from these boxes to a vertical sequence of four steps: 1 Plan cloud-native, 2 Build cloud-native, 3 Deploy cloud-native, and 4 Optimize cloud-native. A final arrow points to an Azure indicating it's where "Cloud-native apps, workloads, & features" live.
+    On the left, three labeled boxes, Startups, Enterprises, and Existing workloads, are grouped under the heading "Create new business value." Arrows lead from these boxes to a vertical sequence of four steps: 1 Plan cloud-native, 2 Build cloud-native, 3 Deploy cloud-native, and 4 Optimize cloud-native. A final arrow points to an Azure icon, indicating that it's where "Cloud-native apps, workloads, & features" live.
 :::image-end:::
 
 ## Define business objectives for cloud-native solutions
@@ -69,7 +69,7 @@ A well-planned architecture is critical to meeting your goals and requirements. 
 
 2. **Define usage patterns and performance requirements to select service tiers.** Service tier selection affects both cost and capability. Document expected transaction volumes, concurrent user loads, storage requirements, and performance targets such as response times and throughput. Use these metrics to select an initial service tier (SKU) that meets baseline requirements without significant over-provisioning. Plan to adjust tiers based on actual usage patterns after deployment.
 
-3. **Validate feature compatibility across selected service tiers.** Critical features such as advanced security capabilities, high availability options, or integration APIs vary by service tier. Create a feature matrix that maps required capabilities to available SKUs. Ensure the selected tier supports all necessary features to avoid costly migrations or architectural changes later. Reference [service-specific documentation](/azure/azure-resource-manager/management/azure-subscription-service-limits) to confirm feature availability and limitations.
+3. **Validate feature compatibility across selected service tiers.** Critical features such as advanced security capabilities, high availability options, or integration APIs vary by service tier. Create a feature matrix that maps required capabilities to available SKUs. Ensure the selected tier supports all necessary features to avoid costly migrations or architectural changes later. Reference [service-specific documentation](/azure/well-architected/performance-efficiency/select-services) to confirm feature availability and limitations.
 
 ### Select how many regions to use
 

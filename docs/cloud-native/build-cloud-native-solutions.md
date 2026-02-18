@@ -17,7 +17,7 @@ Cloud-native development requires a structured approach that integrates quality 
 
 ### Apply Well-Architected Framework principles during development
 
-A cloud-native solution benefits from applying Well-Architected Framework (WAF) principles [Well-Architected Framework (WAF)](/azure/well-architected/) provides principles for effective cloud-native development. Integrate these five pillars to create robust applications that perform well in production.
+A cloud-native solution benefits from applying Well-Architected Framework (WAF) principles. The [Well-Architected Framework](/azure/well-architected/) provides principles for effective cloud-native development. Integrate these five pillars to create robust applications that perform well in production.
 
 ### Develop solutions in a nonproduction environment
 
