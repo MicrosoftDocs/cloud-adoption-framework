@@ -84,7 +84,7 @@ Confirm monitoring data flows correctly and no data is missing or misrouted.
 
 1. **Establish a heightened monitoring and support posture.** Deploying to production isn't the end of the journey. Immediately following a go-live, increase your monitoring and support vigilance while the system "ramps up" under real-world load. Have the development team on call alongside the operations team to quickly investigate and resolve any problems, since they know the new changes best.
 
-1. **Track system metrics and user feedback continuously.** Treat the first weeks as a stabilization period. Monitor metrics such as CPU, memory, error rates, and response times using Azure Monitor and Application Insights. Collect user feedback through support channels or direct outreach. This helps detect issues that automated systems might miss.
+1. **Track system metrics and user feedback continuously.** Treat the first few weeks as a stabilization period. Monitor metrics such as CPU, memory, error rates, and response times using Azure Monitor and Application Insights. Collect user feedback through support channels or direct outreach. This helps detect issues that automated systems might miss.
 
 1. **Adjust configurations based on observed behavior.** Tweak configurations if needed. For example, scale out more if usage is higher than anticipated. If logs are too verbose or too sparse, modify logging levels. These changes help maintain performance and observability during peak usage. Ensure that any issues discovered in this phase are addressed or entered into your tracking system for future improvement.
 
