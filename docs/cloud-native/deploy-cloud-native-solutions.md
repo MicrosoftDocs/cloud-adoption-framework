@@ -72,7 +72,7 @@ After you deploy a new workload or feature, it's essential to confirm that the s
 1. **Verify background processes and integrations.** Check that background processes, integrations, and scheduled jobs are running correctly. Check logs, job statuses, and integration endpoints to ensure they function as expected. This step prevents silent failures that might not be immediately visible to users.
 
 1. **Review monitoring dashboards for system health.** Use Azure Monitor and Application Insights to inspect logs and metrics. Look for anomalies in error rates, latency, CPU/memory usage, and throughput.
-Confirm monitoring data flows correctly and no data is missing or misrouted.
+    Confirm monitoring data flows correctly and no data is missing or misrouted.
 
 1. **Inspect alerting for unexpected triggers.** Review alerts for failure rates, latency, or resource usage. Confirm that no alerts are firing unexpectedly. If alerts are triggered, investigate root causes and assess whether they indicate a deployment-related issue.
 

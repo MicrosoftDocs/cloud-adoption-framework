@@ -9,7 +9,7 @@ ms.topic: concept-article
 
 # Plan the cloud-native solutions
 
-A cloud-native solution creates business value by building new workloads or enhancing existing ones. Whether you're developing a new application or adding new features to an existing system, cloud-native development is a journey through planning, building, deploying, and optimizing your workloads. This framework provides guidance to align your application with business goals, architecture best practices, and risk management.
+A cloud-native solution creates business value by building new workloads or enhancing existing ones. Whether you're developing a new application or adding new features to an existing system, cloud-native development is a journey through planning, building, deploying, and optimizing your workloads. This framework provides guidance to align your application with business goals, architectural best practices, and risk management.
 
 **Prerequisites:** [Azure landing zone](/azure/cloud-adoption-framework/ready)
 
