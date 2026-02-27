@@ -39,7 +39,7 @@ Here's a list of typical functions and their relevance for a cloud adoption stra
 - _Cloud security teams_ help ensure that you protect your data and systems. They ensure that new initiatives follow security standards to reduce the risks that are associated with cloud adoption.
 - _Compliance teams_ minimize legal and compliance risks. They help ensure that all cloud practices meet regulatory and organizational compliance standards.
 - _Financial teams_. Consider including representatives from financial teams to help inform the IT and business decision makers about the opportunities and risks of cloud investments.
-- _Executives_ provide top-down support and strategic oversight. Including someone from your leadership team or executive stakeholders can help drive organizational commitments to ensure that cloud adoption aligns with the company’s overall mission and strategic objectives.
+- _Executives_ provide top-down support and strategic oversight. Including someone from your leadership team or executive stakeholders can help drive organizational commitments to ensure that cloud adoption aligns with the company's overall mission and strategic objectives.
 
 ## Seek input
 
