@@ -196,7 +196,7 @@ To maintain a highly available cloud estate, teams that operate the cloud system
 
 - **Robust and continuous observability:** An organization's ability to detect security incidents as they happen allows them to initiate their incident response plans quickly. This strategy helps minimize the business effects as much as possible. Incident detection is only possible through a well-designed monitoring and alerting system, which follows best practices for threat detection. For more information, see the [observability guide](/azure/well-architected/operational-excellence/observability) and [Security monitoring and threat detection guide](/azure/well-architected/security/monitor-threats).
 
-- **Proactive maintenance:** Standardize and enforce system updates through policies. Schedule regular maintenance windows to apply updates and patches to systems without disrupting services. Conduct regular health checks and maintenance activities to ensure that all components are functioning optimally.
+- **Proactive maintenance:** Standardize and enforce system updates through policies. Schedule regular maintenance windows to apply updates and patches to systems without disrupting services. Conduct regular health checks and maintenance activities to ensure all components are functioning optimally.
 
 - **Standardized governance policies:** Enforce all security standards through tooling-supported policies. Use a policy management tool to ensure that all of your systems are compliant with your business requirements by default and that your policies are easily auditable.
 
