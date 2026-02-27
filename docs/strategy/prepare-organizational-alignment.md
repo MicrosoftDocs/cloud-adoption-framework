@@ -85,7 +85,7 @@ This shift is a fundamental change in how businesses structure, develop, and man
 
 ### Key benefits of a product delivery model
 
-- _Democratization and scalability_: A product delivery model ensures all cloud platform teams' services are productized to make them more easily consumable and accessible to all parts of the organization to drive cloud adoption and maturity.  
+- _Democratization and scalability_: A product delivery model ensures all cloud platform teams' services are productized to make them more easily consumable and accessible to all parts of the organization to drive cloud adoption and maturity.
 
 - _Drives innovation_: Product models align with cloud-native technologies, making it easier to experiment, scale, and roll out new features.
 
