@@ -47,7 +47,7 @@ Organizations must identify the skills required to support AI agents and address
 
 A structured training program builds AI competency across teams. Treat skills development as a core part of technology adoption rather than an afterthought.
 
-1. **Use Microsoft's free training resources.** Use Microsoft Learn's free online modules and certifications, such as [Azure AI Engineer Associate](/credentials/certifications/azure-ai-engineer/?practice-assessment-type=certification), to give teams a grounding in AI services. See the [AI agents hub](https://enablement.microsoft.com/ai-agents/) for helpful resources. See also the [AI Skills Navigator](https://aiskillsnavigator.microsoft.com/?UTM_Source=Announcement&UTM_Medium=TechCom&UTM_Campaign=Blog&UTM_Content=AISN)
+1. **Use Microsoft's free training resources.** Use Microsoft Learn's free online modules and certifications, such as [Azure AI Engineer Associate](/credentials/certifications/azure-ai-engineer/?practice-assessment-type=certification), to give teams a grounding in AI services. See the [AI agents hub](https://enablement.microsoft.com/ai-agents/) for helpful resources. See also the [AI Skills Navigator](https://aiskillsnavigator.microsoft.com/?UTM_Source=Announcement&UTM_Medium=TechCom&UTM_Campaign=Blog&UTM_Content=AISN).
 
 2. **Run hands-on workshops.** Organize internal workshops or hackathons. For example, hold a prompt engineering lab where participants practice improving AI responses, or a hackathon where cross-functional teams prototype a simple agent. These activities build skills, enthusiasm, and idea-sharing.
 
