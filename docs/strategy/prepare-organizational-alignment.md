@@ -61,7 +61,7 @@ Understanding your organization's current operating model plays a crucial role i
 - _Organizational culture_: Highly regulated or risk-averse organizations might have a non-collaborative and command and control culture. Cloud might introduce resistance to change in the ways of working. The cloud adoption strategy needs to factor in how to address the organization's culture needs to enable the benefits of cloud.
 - _Roles and skills_: Organizations that are primarily on-premises might lack expertise in cloud architecture, DevOps, and cloud-native security practices. The cloud adoption strategy needs to factor in the training and skilling plan to address the adequate adoption and enablement of cloud services.
 
-It's important that leadership identify and acknowledge their current limitations across their existing operating model for the cloud adoption strategy to provide suitable attention and resourcing to plan the cloud journey.
+It's important that leadership identifies and acknowledges its current limitations across its existing operating model for the cloud adoption strategy to provide suitable attention and resourcing to plan the cloud journey.
 
 **Recommendations:**
 
