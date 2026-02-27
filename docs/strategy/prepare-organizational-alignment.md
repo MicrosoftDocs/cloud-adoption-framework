@@ -65,7 +65,7 @@ It's important that leadership identifies and acknowledges its current limitatio
 
 **Recommendations:**
 
-- _Understand the current operating model_: Evaluate the organization's current capabilities and structures either through a workshop with leadership or through a third party and benchmark your organization's current operating model's readiness for cloud.
+- _Understand the current operating model_: Evaluate the organization's current capabilities and structures either through a workshop with leadership or through a third party and benchmark the readiness of your organization's current operating model for cloud.
 
 - _Identify gaps_: Based on the benchmark, hold a workshop with leadership to identify the readiness gaps for cloud and the strategic objectives and determine how the cloud adoption strategy needs to be aligned.
 
