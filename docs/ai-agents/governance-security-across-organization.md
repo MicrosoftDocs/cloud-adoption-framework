@@ -60,7 +60,7 @@ Organizations require concrete mechanisms to control how agents access, process,
 **Microsoft facilitation:**<br>
 :::image type="icon" source="./images/foundry-icon.png"::: **Foundry**: Review [Microsoft Purview capabilities for Foundry](/purview/ai-azure-services) to understand data governance and protection options. Use [Manage agent identities](/azure/ai-foundry/agents/concepts/agent-identity?tabs=rest-api#manage-agent-identities) to control access. Use [Azure Policy](/azure/ai-foundry/how-to/azure-policy) to control infrastructure configurations and [model deployment](/azure/ai-foundry/how-to/model-deployment-policy). [Create custom policies](/azure/ai-foundry/how-to/custom-policy-definition) as needed.
 
-:::image type="icon" source="./images/copilot-studio-icon.png"::: **Copilot Studio**: [Create and manage solution pipelines](/microsoft-copilot-studio/authoring-solutions-overview#create-and-manage-solution-pipelines) and use [reusable component collections](/microsoft-copilot-studio/authoring-export-import-copilot-components) and enforcing version governance.
+:::image type="icon" source="./images/copilot-studio-icon.png"::: **Copilot Studio**: [Create and manage solution pipelines](/microsoft-copilot-studio/authoring-solutions-overview#create-and-manage-solution-pipelines) and use [reusable component collections](/microsoft-copilot-studio/authoring-export-import-copilot-components) and enforce version governance.
 
 ## Agent observability
 

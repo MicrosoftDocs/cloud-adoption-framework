@@ -1,5 +1,5 @@
 ---
-title: Process to build agents process across your organization with Microsoft Foundry and Copilot Studio
+title: Process to build agents across your organization with Microsoft Foundry and Copilot Studio
 ms.reviewer: ssumner
 description: Learn how to build and secure AI agents across your organization using Microsoft Foundry and Microsoft Copilot Studio. Follow a strategic framework for consistent, governed development.
 #customer intent: As an enterprise architect, I want to gain a clear understanding of the processes and decision-making involved in building AI agents across my organization—particularly within the Microsoft ecosystem—using Microsoft Foundry as the primary platform and Microsoft Copilot Studio as a complementary tool.
@@ -49,7 +49,7 @@ Orchestration determines how agents coordinate, make decisions, and execute task
 
 ### Agent instructions
 
-Instructions function as the operational logic for AI agents interpret intent and execute tasks. Treating instructions as configuration code, rather than ad-hoc text, enables version control, peer review, and rollback when issues arise.
+Instructions function as the operational logic for AI agents to interpret intent and execute tasks. Treating instructions as configuration code, rather than ad-hoc text, enables version control, peer review, and rollback when issues arise.
 
 1. **Standardize instruction architecture.** Consistent structures reduce behavioral drift and ensure compliance. Structure instructions to explicitly define:
 
