@@ -19,11 +19,11 @@ Now, deploy the solution to the live Azure environment following the planned str
 
 1. **Set expectations for functionality during the deployment window.** A deployment window might involve reduced functionality or temporary delays. Inform stakeholders to prevent confusion and ensure business continuity. Include fallback procedures or workarounds if applicable.
 
-1. **Conduct a predeployment readiness review.** A readiness review confirms that all teams understand their roles and have the necessary access. Hold a meeting with representatives from each support team to review the deployment plan, success criteria, and rollback criteria. Verify support teams have system access and monitoring tools configured. This preparation ensures a coordinated response to any issues that arise during migration.
+1. **Conduct a predeployment readiness review.** A readiness review confirms that all teams understand their roles and have the necessary access. Hold a meeting with representatives from each support team to review the deployment plan, success criteria, and rollback criteria. Verify support teams have system access and monitoring tools configured. This preparation ensures a coordinated response to any issues that arise during deployment.
 
 ## Execute the cloud-native deployments
 
-The deployment steps differ slightly based on whether it’s a new standalone workload or a feature update to an existing system:
+The deployment steps differ slightly based on whether it's a new standalone workload or a feature update to an existing system:
 
 ### Deploy new cloud-native workloads
 
@@ -65,7 +65,7 @@ Use a blue-green deployment when introducing a feature by deploying it into a pa
 
 ## Validate deployment success
 
-After you deploy a new workload or feature, it's essential to confirm that the system is functioning correctly, both technically and from the user’s perspective.
+After you deploy a new workload or feature, it's essential to confirm that the system is functioning correctly, both technically and from the user's perspective.
 
 1. **Validate critical user journeys.** Verify that all key user flows work as expected in the live environment. Use automated test suites or manual QA to validate real-world scenarios. Focus on high-value paths such as authentication, transactions, and data workflows. This testing applies whether the deployment introduced a new system or enhanced an existing one.
 
@@ -87,7 +87,7 @@ After you deploy a new workload or feature, it's essential to confirm that the s
 
 1. **Adjust configurations based on observed behavior.** Tweak configurations if needed. For example, scale out more if usage is higher than anticipated. If logs are too verbose or too sparse, modify logging levels. These changes help maintain performance and observability during peak usage. Ensure that any issues discovered in this phase are addressed or entered into your tracking system for future improvement.
 
-1. **Log and triage all issues discovered during stabilization.** This support phase catches issues revealed under production conditions and ensures the workload truly meets its goals. After this stabilization period, and once you're confident in the system’s performance, you can transition to normal operations and monitoring procedures.
+1. **Log and triage all issues discovered during stabilization.** This support phase catches issues revealed under production conditions and ensures the workload truly meets its goals. After this stabilization period, and once you're confident in the system's performance, you can transition to normal operations and monitoring procedures.
 
 1. **Define the exit criteria for stabilization.** Set clear thresholds for system performance, error rates, and user satisfaction. Once the system consistently meets these criteria, transition to standard operations and monitoring procedures. These criteria ensure a smooth handoff and avoid premature closure of the support phase.
 
