@@ -58,7 +58,7 @@ As your hybrid and multicloud resources become part of Azure Resource Manager, A
 
 - **Agent provisioning:** Define a strategy for provisioning the Azure Arc-enabled servers and protecting access to the onboarding credentials. Consider the level and method of automation for [bulk enrollment](/azure/azure-arc/servers/learn/quick-enable-hybrid-vm). Consider how to structure [pilot and production deployments](/azure/azure-arc/servers/plan-at-scale-deployment) and establish a formal plan. The scope and plan for a deployment should account for objectives, selection criteria, success criteria, training plans, rollback, and risks.
 - **Software updates:**
-  - Assess available updates to maintain security compliance with critical and security updates of your operating systems.
+  - Assess available updates to maintain security compliance.
   - Define a strategy to inventory the Windows operating system versions and monitor end of support deadlines. For servers that cannot be migrated to Azure or upgraded, plan for [Extended Security Updates](/azure/azure-arc/servers/prepare-extended-security-updates) (ESUs) through Azure Arc.
 
 ## Design recommendations
