@@ -126,7 +126,7 @@ Review the following security considerations when planning to implement GitOps f
 
 ### Repo and branch security
 
-- Set branch permissions and policies on your configuration repository. As your Git repo becomes the central piece of your Kubernetes deployments, it's critical to set up permissions to control who can read and update the code in a branch and to implement policies that enforce your team's code quality and change management. Otherwise, your GitOps workflow can ship code that isn't up to your organizations' standards.
+- Set branch permissions and policies on your configuration repository. As your Git repo becomes the central piece of your Kubernetes deployments, it's critical to set up permissions to control who can read and update the code in a branch and to implement policies that enforce your team's code quality and change management. Otherwise, your GitOps workflow can ship code that isn't up to your organization's standards.
 - Pull request (PR) Pipelines can work with your branch policies to validate YAML configuration or deploy test environments as needed. Gates help eliminate configuration errors and increase deployment security and confidence.
 - When assigning access permissions, consider which users in your organization should have repository read access, PR creation access, and PR approval access.
 
