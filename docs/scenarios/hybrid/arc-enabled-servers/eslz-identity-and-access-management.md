@@ -19,7 +19,7 @@ This article provides actionable guidance to secure Azure Arc-enabled servers th
 
 ## Configure managed identities
 
-System-assigned managed identities provide secure authentication for Azure Arc-enabled servers without storing credentials. The Azure Connected Machine agent creates these identities automatically during server onboarding, but they have no permissions by default and require explicit Azure RBAC role assignments.
+System-assigned managed identities provide secure authentication for Azure Arc-enabled servers without storing credentials. The Azure Connected Machine agent creates these identities automatically during server onboarding, but they have no permissions by default and require explicit Azure RBAC role assignments to access Azure resources.
 
 > [!TIP]
 > **Start here**: If you're new to managed identities, review the [managed identity authentication guide](/azure/azure-arc/servers/managed-identity-authentication) for step-by-step implementation instructions.

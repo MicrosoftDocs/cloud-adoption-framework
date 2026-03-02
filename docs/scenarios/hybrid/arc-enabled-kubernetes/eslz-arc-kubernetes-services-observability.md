@@ -19,7 +19,7 @@ A system's observability has a significant effect on its operating cost. Observa
 
 Service observability is important because it helps you understand performance of and issues in distributed and cloud systems based on dynamic architectures.
 
-Implementing services observability can help you:
+Implementing service observability can help you:
 
 - Ensure that end users can consume your application and your business expectations are met.
 - Understand an entire system and how it works together using a single pane of glass.
@@ -80,7 +80,7 @@ A service mesh provides capabilities like traffic management, resiliency, policy
 
 ## Service mesh observability
 
-Observability is an important functionality among the many that service meshes provide. Choose a Service Mesh that meets your minimum observability requirements to reduce complexity and required configuration. Evaluate the following common features and use cases of observability that service meshes provide:
+Observability is an important functionality among the many that service meshes provide. Choose a service mesh that meets your minimum observability requirements to reduce complexity and required configuration. Evaluate the following common features and use cases of observability that service meshes provide:
 
 - Metrics generation, including the four golden signals: latency, traffic, errors, and saturation.
 - The RED method (Rates-calls/sec, Errors, Duration-call latencies), which is a subset of the four golden signals and is used to measure services. Your service mesh should provide a standardized way to collect RED metrics, traces, and other telemetry.

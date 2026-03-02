@@ -56,7 +56,7 @@ Consider the different layers of configuration in your Kubernetes cluster and th
 #### Responsibilities
 
 - Application Developers are responsible for pushing their source code, triggering builds, and creating container images.
-- Application Operators maintain the application repositories, configurations, environment variables, app-specific helm charts, Kustomizations etc.
+- Application Operators maintain the application repositories, configurations, environment variables, app-specific helm charts, Kustomizations, and other application-specific configuration assets.
   - [Apply a Flux configuration by using the Azure CLI](/azure/azure-arc/kubernetes/tutorial-use-gitops-flux2#apply-a-flux-configuration-by-using-the-azure-cli)
   - [Flux2 helm and kustomize example](https://github.com/fluxcd/flux2-kustomize-helm-example)
 - Cluster Operators set up your cluster baseline. They're typically concerned with setting up cluster-wide components and policies. They maintain a Git repo directory or directories containing common infrastructure tools such as Namespaces, Service Accounts, RoleBindings, CRDs, cluster-wide policies, and Ingress components.
