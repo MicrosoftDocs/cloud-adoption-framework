@@ -152,7 +152,7 @@ Three Git repositories are included in the design:
   - Use a development branching strategy that is easy to understand and limits the number of undesired long-running branches.
 - **Application configuration repository**
   - This repository stores application configurations, including Kubernetes objects such as ConfigMaps, Deployments, Services, and HPA objects. Structure this repository with different directories for each application. Flux will synchronize changes from this repository and target branch to your cluster.
-  - Incorporate tools that make it easier for application developers and operators to build initial configurations per environment. Application Operators should define a Kubernetes specific application configuration that uses package managers like Helm or configuration tools like Kustomize to simplify configuration.
+  - Incorporate tools that make it easier for application developers and operators to build initial configurations per environment. Application Operators should define a Kubernetes-specific application configuration that uses package managers like Helm or configuration tools like Kustomize to simplify configuration.
   - Create a branch to represent each environment type. This approach allows fine-grained control of changes into each specific environment, such as non-prod and production environments.
   - When an application is deployed to a particular namespace, use the namespace scope feature within the GitOps configuration to enforce configuration for only a certain namespace.
 - **Cluster-wide configuration repository**
