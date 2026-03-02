@@ -12,7 +12,7 @@ ms.update-cycle: 1095-days
 
 A cloud adoption strategy is a comprehensive plan that outlines your organization's approach when you adopt and integrate cloud technologies.
 
-To establish a cloud adoption strategy, you must understand the specific needs and objectives of your business so that you can effectively align your cloud initiatives with overall business goals.
+To establish a cloud adoption strategy, understand your business needs and objectives to align cloud initiatives with business goals.
 
 The journey to successfully maturing in the cloud, or to expanding your footprint, starts with the Cloud Adoption Framework Strategy methodology, which consists of the following five steps.
 
@@ -20,11 +20,11 @@ The journey to successfully maturing in the cloud, or to expanding your footprin
 
 Organizations typically mature in iterations. Consider the Cloud Adoption Framework Strategy guide an iterative supplement to your cloud adoption strategy. Revisit the guide to reassess and iterate regularly.
 
-Whether you're an existing cloud customer who wants to mature your cloud environment or you're new to the cloud, this guidance helps you establish a clear mission, goals, and measurable results. It also provides strategic insights to help you make informed decisions about your cloud investments.
+Whether you're an existing cloud customer who wants to mature your cloud environment or you're new to the cloud, this guidance helps you establish a clear mission, goals, and measurable results. It also provides insights to inform your cloud investment decisions.
 
 ## Why build a cloud adoption strategy?
 
-Use a cloud adoption strategy to help you:
+Use a cloud adoption strategy to:
 
 - **Realize value.** A well-defined cloud adoption strategy helps you realize the full value of your cloud investments. Optimize cloud investments to provide financial efficiency, cost optimization, and business agility.
 
@@ -38,19 +38,19 @@ Use a cloud adoption strategy to help you:
 
 ## How to build a cloud adoption strategy?
 
-This guidance is designed to help you develop a cloud adoption strategy that aligns with your business goals. The guidance is organized into five steps, suitable both for enterprises and startups alike:
+This guidance helps you develop a cloud adoption strategy that aligns with your business goals. The guidance is organized into five steps, suitable for both enterprises and startups:
 
 1. **Assess your cloud adoption strategy.** Evaluate your organization's readiness for cloud adoption.
 2. **Define your motivations, mission, and objectives.** Identify the reasons for adopting cloud technologies.
-3. **Define your strategy team.** Identify the individuals and teams who will help you build and execute your strategy.
+3. **Define your strategy team.** Identify the individuals and teams who will build and execute your strategy.
 4. **Prepare your organization.** Get leadership and executive buy-in, align your organizational strategies, understand your operating model's readiness for cloud, and consider a shift to a product model.
-5. **Inform your strategy.** Discover strategic considerations for important cloud strategy areas, such as financial efficiency, AI, resiliency, security, and sustainability.
+5. **Inform your strategy.** Discover strategic considerations for key cloud areas, such as financial efficiency, AI, resiliency, security, and sustainability.
 
 Use the following checklist to guide you through the cloud adoption strategy steps.
 
 ## Cloud adoption strategy checklist
 
-The following checklist provides an overview of the tasks for each cloud adoption strategy step. Focus on the startup tasks if your organization is smaller and might have fewer resources. Focus on the enterprise tasks if your organization is larger and has extensive resources. Some tasks correspond to both scenarios.
+The following checklist provides an overview of the tasks for each cloud adoption strategy step. Focus on the startup tasks if your organization is smaller and has fewer resources. Focus on the enterprise tasks if your organization is larger and has extensive resources. Some tasks correspond to both scenarios.
 
 | Cloud adoption strategy step | Startup tasks | Enterprise tasks |
 |---------------------|-------------------|----------------------|

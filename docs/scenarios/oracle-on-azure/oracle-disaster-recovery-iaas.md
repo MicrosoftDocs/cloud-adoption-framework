@@ -12,7 +12,7 @@ ms.custom: e2e-oracle
 
 # Business continuity and disaster recovery for Oracle on Azure Virtual Machines landing zone accelerator
 
-This article builds on the considerations and recommendations that are defined in the [Azure landing zone design area for business continuity and disaster recovery (BCDR)](../../ready/landing-zone/design-area/management-business-continuity-disaster-recovery.md). This article follows that guidance and describes design considerations and best practices about BCDR options for Oracle workload deployments on Azure infrastructure virtual machines (VMs).
+This article builds on the considerations and recommendations in the [Azure landing zone design area for business continuity and disaster recovery (BCDR)](../../ready/landing-zone/design-area/management-business-continuity-disaster-recovery.md). This article follows that guidance and describes design considerations and best practices about BCDR options for Oracle workload deployments on Azure infrastructure virtual machines (VMs).
 
 Azure provides services that you can use to design architectures that continue operating during localized faults and that can be restored quickly after broader incidents. This guide outlines options and best practices for resiliency and disaster recovery for Oracle databases on the Azure Virtual Machines landing zone accelerator. It also describes how to configure accompanying Azure services to achieve end-to-end workload reliability.
 
@@ -34,7 +34,7 @@ Use the following flow chart to choose the best high availability option for you
 
 ### Use Data Guard in maximum availability mode for high availability
 
-Data Guard in maximum availability mode provides the highest availability with a zero data loss promise (RPO=0) for normal operations. For a highly available configuration of two Oracle database servers that are created within a Virtual Machine Scale Sets flexible orchestration, Azure provides 99.95% service availability for a service-level agreement (SLA) for instances that are spread across fault domains. Azure provides 99.99% service availability for instances that are spread across [availability zones](/azure/reliability/availability-zones-overview). For more information, see [High availability for Virtual Machine Scale Sets](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-orchestration-modes#high-availability).
+Data Guard in maximum availability mode provides the highest availability with a zero data loss promise (RPO=0) for normal operations. For highly available Oracle database servers in Virtual Machine Scale Sets flexible orchestration, Azure provides 99.95% service availability (SLA) for instances spread across fault domains. Azure provides 99.99% service availability for instances that are spread across [availability zones](/azure/reliability/availability-zones-overview). For more information, see [High availability for Virtual Machine Scale Sets](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-orchestration-modes#high-availability).
 
 :::image type="content" source="media/high-availability-configuration-data-guard.png" alt-text="Diagram that shows a high availability configuration with Data Guard for Oracle on Virtual Machines landing zone accelerator." border="false" lightbox="media/high-availability-configuration-data-guard.png":::
 
@@ -52,7 +52,7 @@ The following sections describe special considerations for high availability.
 
 #### Use availability zones for improved high availability
 
-[Azure availability zones](/azure/reliability/availability-zones-overview) are Azure datacenters that are within the same Azure region. Availability zones have a roundtrip latency of less than two milliseconds. You typically use availability zones for disaster recovery purposes, but you can use them to improve high availability. If you do, you must make sure that your solution can run with the amount of latency and throughput that your availability zones provide.
+[Azure availability zones](/azure/reliability/availability-zones-overview) are Azure datacenters that are within the same Azure region. Availability zones have a roundtrip latency of less than two milliseconds. You typically use availability zones for disaster recovery purposes, but you can use them to improve high availability. If you do, you must ensure your solution can run with your availability zones' latency and throughput.
 
 An advantage of availability zones with a Virtual Machine Scale Sets flexible orchestration is that your VM availability SLA increases to 99.99%.
 
@@ -75,7 +75,7 @@ A disaster recovery architecture provides recoverability after failures that aff
 
 Choose your disaster recovery architecture based on your solution requirements. You determine your requirements based on your RTO and RPO. Disaster recovery architectures are for exceptional failure cases, so failover processes are manual. In the high availability design, failover processes are automatic. In a disaster recovery architecture, you should have more relaxed requirements for RTO and RPO, which saves money.
 
-This article focuses on scenarios in which the primary server and secondary servers are both on Azure. You can also have a primary server on-premises and a secondary server on Azure for disaster recovery purposes. For more information, see [Primary site on-premises and disaster recovery site on Azure](/azure/virtual-machines/workloads/oracle/oracle-disaster-recovery#scenario-2-primary-site-on-premises-and-dr-site-on-azure).
+This article focuses on scenarios where the primary server and secondary servers are both on Azure. You can also have a primary server on-premises and a secondary server on Azure for disaster recovery purposes. For more information, see [Primary site on-premises and disaster recovery site on Azure](/azure/virtual-machines/workloads/oracle/oracle-disaster-recovery#scenario-2-primary-site-on-premises-and-dr-site-on-azure).
 
 ### Choose the right disaster recovery option
 
@@ -87,7 +87,7 @@ Use the following flow chart to choose the best disaster recovery option for you
 
 You can use Data Guard to replicate data to your disaster recovery site. Use that site as another availability zone in the same region or in a different region depending on your requirements for data protection. Your configuration also depends on the availability zone structure on your production site. A Data Guard implementation in a disaster recovery scenario is similar to the high availability scenario discussed earlier, with a few important differences. For example:
 
-- When you fail over to a secondary replica in the high availability scenario, you configure Azure Load Balancer to redirect requests to the new primary database instance.
+- When you fail over to a secondary replica in high availability scenarios, you configure Azure Load Balancer to redirect requests to the new primary database.
 
 - When you fail over to the disaster recovery site, you fail over the *entire* solution to the new site. To avoid latency challenges, you typically need to configure failover for application services. 
 

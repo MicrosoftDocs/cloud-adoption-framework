@@ -3,7 +3,7 @@ title: Azure landing zone Azure Arc-enabled servers sandbox
 description: Learn how to deploy Azure landing zone Azure Arc-enabled servers sandbox to accelerate adoption of hybrid or multicloud architectures.
 author: likamrat
 ms.author: likamrat
-ms.reviewer: tozimmergren
+
 ms.date: 02/17/2023
 ms.topic: concept-article
 ms.custom: think-tank, e2e-hybrid, engagement-fy23

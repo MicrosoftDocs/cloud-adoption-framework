@@ -15,7 +15,7 @@ A successful AI strategy requires structured planning in four core areas. Identi
 
 :::image type="content" source="./images/ai-strategy.svg" alt-text="Diagram that shows the 6 phases of AI adoption: Strategy, Plan, Ready, Govern, Secure, Manage." lightbox="./images/ai-strategy.svg" border="false":::
 
-**Why strategic AI planning matters**: A documented AI strategy produces consistent, faster, auditable outcomes compared to ad-hoc experimentation. This guide lists actionable steps for Microsoft Copilot deployment, Foundry environment setup, AI agent adoption, Azure OpenAI integration, and organization-wide AI governance with Microsoft Purview.
+**Why strategic AI planning matters**: A documented AI strategy produces consistent, faster, auditable outcomes compared to ad-hoc experimentation. This guide lists actionable steps for Microsoft Copilot deployment, Microsoft Foundry environment setup, AI agent adoption, Azure OpenAI integration, and organization-wide AI governance with Microsoft Purview.
 
 ## Identify AI use cases
 

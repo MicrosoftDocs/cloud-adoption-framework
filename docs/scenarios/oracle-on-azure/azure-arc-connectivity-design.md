@@ -28,11 +28,11 @@ Azure Arc service endpoints vary by Azure region and affect connectivity perform
 
 1. **Deploy Azure Arc connectivity in the same region as your Oracle Exadata Database@Azure infrastructure.** This approach minimizes latency for Azure Arc agent communications and ensures optimal performance for monitoring and governance operations. For regional considerations, see [Azure regions and availability zones](/azure/reliability/availability-zones-overview).
 
-1. **Validate Azure Arc service endpoint availability in your target region.** Confirm that all required Azure Arc service endpoints are available in your Oracle Exadata Database@Azure deployment region before you implement the integration. For service availability by region, see [Azure products by region](https://azure.microsoft.com/global-infrastructure/services/).
+1. **Validate Azure Arc service endpoint availability in your target region.** Confirm that all required Azure Arc service endpoints are available in your Oracle Exadata Database@Azure deployment region before implementing. For service availability by region, see [Azure products by region](https://azure.microsoft.com/global-infrastructure/services/).
 
 1. **Assess cross-region connectivity implications when regions differ.** If your Oracle infrastructure and Azure Arc management must operate in different regions, evaluate the latency impact on Azure Arc agent operations and compliance requirements for cross-region data flows.
 
-1. **Plan for bandwidth requirements across regions.** Cross-region Azure Arc connectivity introduces extra bandwidth costs and latency considerations for heartbeat traffic, monitoring data, and policy evaluation communications. For bandwidth planning, see [Azure bandwidth pricing](https://azure.microsoft.com/pricing/details/bandwidth/).
+1. **Plan for bandwidth requirements across regions.** Cross-region Azure Arc connectivity adds bandwidth costs and latency considerations for heartbeat traffic, monitoring data, and policy evaluation communications. For bandwidth planning, see [Azure bandwidth pricing](https://azure.microsoft.com/pricing/details/bandwidth/).
 
 ### Preserve existing network topology and security boundaries
 
@@ -44,7 +44,7 @@ Azure Arc-specific network preservation requirements include:
 
 1. **Consider network security group (NSG) configuration dependencies.** Azure Arc integration works within the existing network configuration where NSG support depends on network features configuration. Review security rules on both Azure and Oracle (OCI) sides to avoid conflicts that can affect Azure Arc connectivity. For NSG best practices, see [NSG overview](/azure/virtual-network/network-security-groups-overview).
 
-1. **Use existing private endpoint configurations.** Azure Arc agents operate with your current private endpoint setup for Azure services without requiring modifications. For private endpoint integration, see [What is Azure Private Endpoint?](/azure/private-link/private-endpoint-overview) and [Azure Arc with Azure Private Link](/azure/azure-arc/servers/private-link-security).
+1. **Use existing private endpoint configurations.** Azure Arc agents operate with your current private endpoint setup for Azure services without modification. For private endpoint integration, see [What is Azure Private Endpoint?](/azure/private-link/private-endpoint-overview) and [Azure Arc with Azure Private Link](/azure/azure-arc/servers/private-link-security).
 
 1. **Maintain outbound-only connectivity model.** Arc integration uses only outbound HTTPS connections and doesn't require inbound internet access or security group modifications.
 
@@ -60,7 +60,7 @@ Azure Arc agents require secure outbound connectivity to Azure service endpoints
 
 1. **Configure network virtual appliances (NVAs) to allow required service endpoints.** Update your NVA configurations to permit Azure Arc service endpoints while maintaining existing security rules for OCI management traffic. For NVA integration patterns, see [Network virtual appliance high availability](/azure/architecture/networking/guide/network-virtual-appliance-high-availability).
 
-1. **Validate DNS resolution for Azure Arc service endpoints.** Ensure that Domain Name System (DNS) resolution works correctly for all required Azure Arc endpoints from your VM cluster nodes. Test connectivity before you deploy Azure Arc agents. For DNS configuration guidance, see [Name resolution for resources in Azure virtual networks](/azure/virtual-network/virtual-networks-name-resolution-for-vms-and-role-instances).
+1. **Validate DNS resolution for Azure Arc service endpoints.** Ensure DNS resolution works for all required Azure Arc endpoints from your VM cluster nodes. Test connectivity before you deploy Azure Arc agents. For DNS configuration guidance, see [Name resolution for resources in Azure virtual networks](/azure/virtual-network/virtual-networks-name-resolution-for-vms-and-role-instances).
 
 For complete endpoint requirements, see [Connected Machine agent network requirements](/azure/azure-arc/servers/network-requirements).
 

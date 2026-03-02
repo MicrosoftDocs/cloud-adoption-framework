@@ -3,7 +3,7 @@ title: SQL Server database security for SAP on Azure
 description: Learn how to enable SAP with SQL Server database security on Azure by using transparent data encryption, backup encryption, and proper configurations.
 author: msclash
 ms.author: pameshra
-ms.reviewer: tozimmergren
+
 ms.date: 10/14/2024
 ms.topic: concept-article
 ms.subservice: caf-scenario-sap

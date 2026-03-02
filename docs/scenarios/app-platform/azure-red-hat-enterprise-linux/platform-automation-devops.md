@@ -66,7 +66,7 @@ Deploy [Red Hat AAP on Microsoft Azure](https://www.redhat.com/en/technologies/m
 
 [Red Hat AAP on Microsoft Azure](https://www.redhat.com/technologies/management/ansible/azure) is available via a managed application or self-managed application, which provides the following benefits:
 
-- **A rapid return on investment (ROI) due to ease of use**: You can deploy AAP on Azure directly from Azure Marketplace. This managed solution is active immediately after deployment, and you can start automating the management of your Azure resources in minutes. Red Hat manages the infrastructure, so you're free to think about other systems that are critical to your enterprise.
+- **A rapid return on investment (ROI) due to ease of use**: You can deploy AAP on Azure directly from Microsoft Marketplace. This managed solution is active immediately after deployment, and you can start automating the management of your Azure resources in minutes. Red Hat manages the infrastructure, so you're free to think about other systems that are critical to your enterprise.
 
 - **Streamlined integration**: AAP on Azure is integrated with Azure services. Microsoft and Red Hat developed and security tested the Ansible collection for Azure, so you need minimal setup, and you get maximum support. Use AAP on Azure as part of your hybrid cloud automation strategy to unify management and automation across hybrid cloud, Internet of Things, and edge deployments.
 - **Existing committed Azure spend**: You can use existing committed spending with Microsoft to purchase Red Hat AAP on Azure. Use committed spending so that teams across your entire organization can deploy, configure, and automate components seamlessly. Integrated billing means you get one bill and full visibility into the cost. 
@@ -103,7 +103,7 @@ For AAP on Azure in self-managed mode, consider the following factors:
 - Event-Driven Ansible is included in the self-managed offering on Azure. Event-driven automation helps you reduce manual tasks and deliver an efficient IT environment that focuses on innovation. Event-Driven Ansible processes events, determines the appropriate responses, and then runs automated actions to remediate the event.
 
 - Subscriptions are available in 100 active managed node increments. They're available in public offers or private offers. 
-- VM resources that underpin AAP on Azure in self-managed mode can consist entirely of Azure Marketplace images or a mix of Azure Marketplace images and customer-managed images. 
+- VM resources that underpin AAP on Azure in self-managed mode can consist entirely of Microsoft Marketplace images or a mix of [Microsoft Marketplace](https://marketplace.microsoft.com) images and customer-managed images. 
 
 ## Design recommendations
 

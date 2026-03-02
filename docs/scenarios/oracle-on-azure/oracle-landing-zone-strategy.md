@@ -10,17 +10,17 @@ ms.custom: e2e-oracle
 
 # The strategic impact of Oracle on Azure
 
-This article describes technical considerations that might affect your strategy when you migrate Oracle workloads to Azure. You can use the [Strategy methodology](/azure/cloud-adoption-framework/strategy) of the Azure Cloud Adoption Framework to create a single, centralized cloud adoption strategy.
+This article describes technical considerations that might affect your strategy when you migrate Oracle workloads to Azure. You can use the [Strategy methodology](/azure/cloud-adoption-framework/strategy) of the Azure Cloud Adoption Framework to create a centralized cloud adoption strategy.
 
 ## Oracle on Azure adoption motivations
 
-Motivations to migrate an Oracle implementation to the cloud are often based on an organization's strategic objectives and aren't necessarily limited to a specific workload. To successfully migrate an Oracle workload to the cloud, you need a cloud strategy team that includes business and IT leaders to review and prioritize motivations. This input helps the cloud adoption team make informed decisions throughout the implementation process. The following motivations tend to shape cloud adoption plans when an organization considers a cloud strategy for Oracle:
+Motivations to migrate an Oracle implementation to the cloud are often based on an organization's strategic objectives and aren't necessarily limited to a specific workload. To successfully migrate an Oracle workload to the cloud, you need a cloud strategy team that includes business and IT leaders to review and prioritize motivations. This input helps the cloud adoption team make informed decisions throughout the implementation process. The following motivations tend to shape cloud adoption plans for Oracle:
 
-- **Cost-optimization motivations**: Refreshing an on-premises infrastructure for Oracle requires significant capital. Migration to the cloud can minimize these costs by reducing investment in physical assets.
+- **Cost-optimization motivations**: Refreshing an on-premises infrastructure for Oracle requires significant capital. Migration to the cloud can minimize these costs by reducing physical asset investment.
 
 - **Innovation motivations**: The cloud unlocks new opportunities like AI and data modernization for the Oracle workload to be transformed and modernized. However, this opportunity might not be in scope for the initial migration.
 
-- **Scalability motivations**: The cloud offers the ability to seamlessly scale up and down with infrastructure, including Oracle workloads, as part of business transformation.
+- **Scalability motivations**: The cloud enables seamless scaling up and down with infrastructure, including Oracle workloads, as part of business transformation.
 
 - **Contractual and software motivations**: Annual renewals of Oracle maintenance contracts and updates to newer Oracle software versions can trigger a migration to the cloud to capitalize on technological upgrades.  
 
@@ -38,7 +38,7 @@ Typical outcomes for migrating an Oracle workload to Azure include:
 
 ## Build a business case for cloud migration
 
-A business case for cloud migration can dispel several common myths for your team's financial plan. However, your finance team might need to develop a detailed financial model to account for the moving pieces that are associated with Oracle cloud adoption.
+A business case for cloud migration can dispel several common myths for your team's financial plan. However, your finance team might need to develop a detailed financial model to account for the moving pieces in Oracle cloud adoption.
 
 Understand that your initial business case is a directional estimate that can help to drive strategic alignment. Your organization can create transparency between the cloud strategy team and other stakeholders by affirming that this justification can change significantly throughout planning activities. Look for consensus that there's enough value to gather inventory and develop a plan. After you catalog and assess your digital estate, you can refine your business case and present clearer plans for financial returns.
 

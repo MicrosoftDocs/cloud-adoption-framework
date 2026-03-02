@@ -17,7 +17,7 @@ Oracle Database@Azure requires specialized network configuration within Azure la
 
 ## Follow a sequential network design approach
 
-Implement Oracle Database@Azure network topology by using a structured approach that addresses foundational requirements before advanced connectivity scenarios. This sequential method ensures proper network foundation and reduces implementation complexity.
+Implement Oracle Database@Azure network topology using a structured approach that addresses foundational requirements before advanced connectivity scenarios. This sequential method ensures proper network foundation and reduces implementation complexity.
 
 1. **Start with core network design fundamentals.** Begin your Oracle Database@Azure network implementation with [core network design guidance](core-network-design.md). This foundational step introduces essential networking principles and constraints specific to Oracle Exadata Database@Azure that must be understood before you implement any connectivity scenarios.
 

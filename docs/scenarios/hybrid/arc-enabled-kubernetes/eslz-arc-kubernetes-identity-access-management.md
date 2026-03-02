@@ -72,7 +72,7 @@ Review the [identity and access management design area](../../../ready/landing-z
 - Avoid direct user assignment to Azure RBAC roles, since it's difficult to govern access management.
 - Decentralize and delegate access management responsibility and audit assignments by assigning security group owners.
 - Enable periodic [access reviews](/entra/id-governance/privileged-identity-management/pim-create-roles-and-resource-roles-review) in Microsoft Entra ID to remove users that no longer need access to the Kubernetes clusters.
-- Create [Conditional Access policies](/entra/identity/conditional-access/policy-admin-phish-resistant-mfa) when using Azure RBAC for cluster management to enforce various conditions to meet security and governance policies.
+- Create [Conditional Access policies](/entra/identity/conditional-access/overview) when using Azure RBAC for cluster management to enforce various conditions to meet security and governance policies.
   
 ## Role-based access controls
 

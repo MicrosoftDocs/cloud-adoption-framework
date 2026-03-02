@@ -45,7 +45,7 @@ Effective network traffic inspection is critical for maintaining security and co
 
 - Enable traffic analytics. The tool lets you easily capture and analyze network traffic with out-of-the-box dashboard visualization and security analysis.
 
-- If you need more capabilities than traffic analytics offers, you can supplement traffic analytics with one of our partner solutions. You can find available partner solutions in [Azure Marketplace](https://azuremarketplace.microsoft.com/home).
+- If you need more capabilities than traffic analytics offers, you can supplement traffic analytics with one of our partner solutions. You can find available partner solutions in [Microsoft Marketplace](https://marketplace.microsoft.com/home).
 
 - Use Network Watcher packet capture regularly to get a more detailed understanding of your network traffic. Run packet capture sessions at various times throughout the week to get a good understanding of the types of traffic traversing your network.
 

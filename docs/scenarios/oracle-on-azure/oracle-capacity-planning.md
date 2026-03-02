@@ -10,7 +10,7 @@ ms.custom: UpdateFrequency2, e2e-oracle
 
 # Capacity planning for migrating Oracle workloads to Azure Virtual Machines
 
-This article builds on Cloud Adoption Framework for Azure guidance and provides considerations about infrastructure capacity planning for Oracle workloads on Microsoft Azure. This guidance includes recommendations and tools to support this planning process.
+This article builds on Cloud Adoption Framework for Azure guidance and covers infrastructure capacity planning for Oracle workloads on Microsoft Azure. This guidance includes recommendations and tools to support this planning process.
 
 Capacity planning helps ensure efficient performance and cost management when you run Oracle database workloads on Azure. This article describes guidelines, methods, and tools to allocate resources efficiently, balance performance needs, and optimize costs. Your specific capacity requirements depend on the performance characteristics of the database workload. These characteristics are transactional, analytical, or mixed. Processing power, memory, and throughput typically constrain Oracle database workloads.
 
@@ -18,13 +18,13 @@ Capacity planning helps you select the appropriate infrastructure for Oracle arc
 
 ## Capacity planning considerations
 
-Capacity planning for Oracle workloads on Azure infrastructure as a service (IaaS) requires a deep understanding of the workload requirements and available Azure resources.
+Capacity planning for Oracle workloads on Azure infrastructure as a service (IaaS) requires understanding the workload requirements and available Azure resources.
 
 ### Overall performance considerations
 
-- Use Oracle Automatic Workload Repository (AWR) reports to understand workload performance characteristics for migration. Your existing environment might not serve as an accurate sizing measure for Oracle database workload requirements on Azure. AWR reports contain performance statistics for Oracle database workloads.
+- Use Oracle Automatic Workload Repository (AWR) reports to understand workload performance characteristics for migration. Your existing environment might not accurately measure Oracle database workload requirements on Azure. AWR reports contain performance statistics for Oracle database workloads.
 
-- Use your existing environment to size application servers if AWR performance statistics aren't available. Collect performance metrics from application servers to ensure proper sizing for both application servers and platform as a service (PaaS) solutions.
+- Use your existing environment to size application servers if AWR performance statistics aren't available. Collect performance metrics from application servers to properly size both application servers and platform as a service (PaaS) solutions.
 
   > [!NOTE]
   > To collect AWR reports, purchase the Oracle Diagnostic Pack license for your database workload. Use Statspack reports as an alternative to AWR reports. Statspack reports are a subset of AWR reports and don't require the Diagnostic Pack license.
@@ -53,7 +53,7 @@ After you determine the basic performance requirements for the database workload
 
 ### Storage considerations
 
-The performance and reliability of Oracle database workloads rely heavily on the design and configuration of the underlying storage infrastructure. Consider the following guidance for storage planning:
+Oracle database workload performance and reliability depend on the underlying storage infrastructure design and configuration. Consider the following guidance for storage planning:
 
 - Select the appropriate managed disk type based on workload requirements. Use Azure Premium SSD for operating system-related activities to ensure reliable performance. For data disks, use Azure Premium SSD v2 for enhanced performance capabilities. Azure Ultra Disk Storage suits workloads that require extremely high throughput and low latency. Avoid Azure Standard SSD or Azure Standard HDD for production Oracle workloads. For more information, see [Azure managed disks](/azure/virtual-machines/disks-types).
 

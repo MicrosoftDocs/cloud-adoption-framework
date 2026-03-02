@@ -11,13 +11,13 @@ ms.custom: e2e-oracle
 
 # Manage and monitor Oracle Database@Azure
 
-This article provides management and monitoring guidance for Oracle Database@Azure deployments. These recommendations enable comprehensive visibility, proactive issue resolution, and optimal performance across your Oracle Database@Azure infrastructure while integrating with Azure-native monitoring capabilities.
+This article provides management and monitoring guidance for Oracle Database@Azure deployments. These recommendations provide comprehensive monitoring and optimal performance for Oracle Database@Azure with Azure-native integration.
 
 Oracle Database@Azure requires coordinated monitoring across database, infrastructure, and security layers. Implement these recommendations to establish robust monitoring practices that support operational excellence and business continuity for your Oracle Autonomous Database@Azure and Oracle Exadata Database@Azure services.
 
 ## Establish a comprehensive monitoring strategy
 
-Implement a three-tier monitoring approach that provides visibility across database operations, infrastructure health, and security posture. This comprehensive strategy ensures complete operational coverage while avoiding monitoring gaps.
+Implement a three-tier monitoring approach that provides visibility across database operations, infrastructure health, and security posture. This comprehensive strategy ensures complete operational coverage.
 
 1. **Deploy a three-tier monitoring architecture.** Oracle Database@Azure provides monitoring capabilities across three distinct layers that work together to provide complete operational visibility. Deploy all three layers to ensure comprehensive coverage. This coverage includes virtual machine (VM) cluster monitoring through Azure Monitor, diagnostic log collection through Azure Monitor and Log Analytics, and individual VM monitoring through Azure Arc-enabled servers. For Azure Arc integration guidance, see [Azure Arc connectivity design for Oracle Database@Azure](azure-arc-connectivity-design.md).
 
@@ -29,15 +29,15 @@ Implement a three-tier monitoring approach that provides visibility across datab
 
 ## Configure critical performance monitoring
 
-Establish proactive monitoring for key performance indicators that directly affect business operations. Configure alerts and thresholds that enable early detection of problems before they affect service availability.
+Establish proactive monitoring for key performance indicators that directly affect business operations. Configure alerts and thresholds to detect problems before they affect availability.
 
-1. **Monitor database performance metrics with appropriate thresholds.** Configure monitoring for critical database metrics by using proven thresholds that indicate potential problems. Set CPU utilization monitoring at 90% threshold with 5-minute collection frequency, storage utilization at 90% with 30-minute frequency, and memory usage at 90% with 15-minute frequency. For complete metric specifications, see the [database and cluster metrics reference table](#database-and-cluster-metrics).
+1. **Monitor database performance metrics with appropriate thresholds.** Monitor critical database metrics using thresholds that indicate potential problems. Set CPU utilization monitoring at 90% threshold with 5-minute collection frequency, storage utilization at 90% with 30-minute frequency, and memory usage at 90% with 15-minute frequency. For complete metric specifications, see the [database and cluster metrics reference table](#database-and-cluster-metrics).
 
 1. **Implement Azure Arc agent monitoring for infrastructure health.** Monitor Azure Arc agent connectivity and health status to ensure continuous management capabilities. Configure Azure Arc agent status monitoring with 5-minute frequency and immediate alerting for disconnected status, Azure Arc-enabled server health monitoring with 10-minute frequency, and Azure Policy compliance monitoring with 30-minute frequency for configuration drift detection.
 
 1. **Create a unified monitoring dashboard.** Build a [custom dashboard in the Azure portal](/azure/azure-portal/azure-portal-dashboards) that aggregates metrics from all three monitoring layers. This unified view provides operators with complete visibility across database performance, infrastructure health, and security status without switching between multiple tools.
 
-1. **Configure alert action groups for incident response.** Set up [Azure Monitor action groups](/azure/azure-monitor/alerts/action-groups) that automatically notify appropriate stakeholders when critical thresholds are exceeded. Configure escalation procedures that coordinate database administrators, infrastructure teams, and security personnel based on alert severity and type.
+1. **Configure alert action groups for incident response.** Set up [Azure Monitor action groups](/azure/azure-monitor/alerts/action-groups) to automatically notify stakeholders when thresholds are exceeded. Configure escalation procedures that coordinate database administrators, infrastructure teams, and security personnel based on alert severity and type.
 
 ## Integrate security monitoring capabilities
 

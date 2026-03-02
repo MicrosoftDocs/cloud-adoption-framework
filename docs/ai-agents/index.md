@@ -27,7 +27,7 @@ Agents are built on five core components:
 
 :::image type="content" source="./images/agent-overview.png" alt-text="Diagram showing agent architecture with four components feeding into a language model: instructions (defining agent scope and actions), knowledge (grounding data and context), tools (functions and APIs the agent can call), and memory (conversation history and state). The model produces output responses." lightbox="./images/agent-overview.png" border="false":::
 
-- **Generative AI model** serves as the agent’s reasoning engine. It processes instructions, integrates tool calls, and generates outputs, either as messages to other agents or as actionable results. 
+- **Generative AI model** serves as the agent's reasoning engine. It processes instructions, integrates tool calls, and generates outputs, either as messages to other agents or as actionable results. 
 
 - **Instructions** define the scope, boundaries, and behavioral guidelines for the agent. Clear instructions prevent scope creep and ensure the agent adheres to business rules.
 

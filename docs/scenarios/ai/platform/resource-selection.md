@@ -69,11 +69,11 @@ The following workflow matches the diagram above:
 
 Follow these steps to build nongenerative AI workloads:
 
-1. **Select a nongenerative AI platform.** Use AI services or Machine Learning based on your needs. AI services offer prebuilt models that simplify deployment and reduce the need for advanced data science skills. Machine Learning lets you develop custom models with your data and integrate them into your workloads.
+1. **Select a nongenerative AI platform.** Use Foundry Tools or Machine Learning based on your needs. Foundry Tools offer prebuilt models that simplify deployment and reduce the need for advanced data science skills. Machine Learning lets you develop custom models with your data and integrate them into your workloads.
 
-2. **Select an AI compute type.** Machine Learning requires [compute resources](/azure/machine-learning/concept-azure-machine-learning-v2) to run jobs or host endpoints. Pick a compute type that fits your performance and budget needs. AI services do not require compute resources.
+2. **Select an AI compute type.** Machine Learning requires [compute resources](/azure/machine-learning/concept-azure-machine-learning-v2) to run jobs or host endpoints. Pick a compute type that fits your performance and budget needs. Foundry Tools do not require compute resources.
 
-3. **Select a data source.** Use supported [data sources](/azure/machine-learning/how-to-datastore) to host training data for Machine Learning. Many AI services do not require fine-tuning data. Some AI services, such as Azure AI Custom Vision, let you upload local files to managed storage.
+3. **Select a data source.** Use supported [data sources](/azure/machine-learning/how-to-datastore) to host training data for Machine Learning. Many Foundry Tools do not require fine-tuning data. Some Foundry Tools, such as Azure AI Custom Vision, let you upload local files to managed storage.
 
 4. **Select a compute platform.** Use the Azure [compute decision tree](/azure/architecture/guide/technology-choices/compute-decision-tree) to choose the right platform for your workload.
 

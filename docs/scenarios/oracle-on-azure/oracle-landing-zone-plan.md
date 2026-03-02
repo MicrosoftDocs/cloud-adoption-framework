@@ -12,7 +12,7 @@ ms.custom: e2e-oracle
 
 This article describes how to plan for an Oracle on Azure adoption and builds on the [Oracle on Azure strategy](oracle-landing-zone-strategy.md) article. Consider the various factors that affect your decision to move to Azure to get the most out of your migration.
 
-Resources in the Cloud Adoption Framework for Azure can help your organization to capture a suitable plan for adopting Oracle on Azure. Use the [Plan methodology](/azure/cloud-adoption-framework/plan/) of the Cloud Adoption Framework to create an overall cloud adoption plan and help guide your team. This guidance provides templates for creating your backlog and plans for building necessary skills across your teams based on what you want to do in the cloud. This article describes how to include Oracle on Azure adoption into the overall cloud adoption plan.
+Resources in the Cloud Adoption Framework for Azure help your organization create a suitable plan for adopting Oracle on Azure. Use the [Plan methodology](/azure/cloud-adoption-framework/plan/) of the Cloud Adoption Framework to create an overall cloud adoption plan and help guide your team. This guidance provides templates for creating your backlog and plans for building necessary skills across your teams based on what you want to do in the cloud. This article describes how to include Oracle on Azure adoption into the overall cloud adoption plan.
 
 ## Plan your Oracle on Azure estate
 
@@ -20,9 +20,9 @@ Like most complex platforms, your Oracle digital estate includes three asset cat
 
 - **Platform assets**: On-premises Oracle estates can run on various types of infrastructure. To some extent, the on-premises assets define the requirements for Oracle deployment on Azure whether your on-premises implementation is Linux-x86 or includes more advanced features. Advanced features include Oracle Real Application Clusters, Exadata configurations, or large endian platforms such as Hewlett Packard Unix (HP-UX), Advanced Interactive Executive (AIX), or a similar platform.
 
-- **Foundational assets**: Your Oracle platform and the supporting environment are comprised of a collection of necessary assets like networking, disaster recovery, and monitoring tools. These assets have corresponding Azure services that you can use to replace or augment your existing Oracle environment. You should inventory and rationalize these assets.
+- **Foundational assets**: Your Oracle platform and supporting environment include assets like networking, disaster recovery, and monitoring tools. These assets have corresponding Azure services that you can use to replace or augment your existing Oracle environment. You should inventory and rationalize these assets.
 
-- **Workload assets**: Your existing Oracle solution can consist of Oracle applications, partner applications, or custom applications. Individually name, inventory, rationalize, and track each workload that has a dependency on Oracle database services to prepare for granular financial and technical planning decisions.
+- **Workload assets**: Your existing Oracle solution can consist of Oracle applications, partner applications, or custom applications. Name, inventory, rationalize, and track each workload with Oracle database dependencies for granular financial and technical planning.
 
 Consider the following items when planning for migrating Oracle workloads to Azure:
 
@@ -34,7 +34,7 @@ Consider the following items when planning for migrating Oracle workloads to Azu
 
 - **Plan your environment**: Determine whether you're moving production and nonproduction Oracle workloads concurrently or separately. Customers often move their nonproduction workload to Azure initially, which creates an environment for learning and reduces risk. The path to migrating the production environment is smoother after the team is comfortable with how the Oracle solution performs and operates on Azure.
 
-- **Rationalize your platform**: You should consider identifying and eliminating redundant or obsolete assets as part of the digital estate planning. This process can help you to reduce costs and improve efficiency.
+- **Rationalize your platform**: You should consider identifying and eliminating redundant or obsolete assets as part of the digital estate planning. This process helps reduce costs and improve efficiency.
 
 After you integrate these considerations into your digital estate evaluation, you can refine your business justification. You're ready to build out your Oracle cloud adoption plan.
 
@@ -58,7 +58,7 @@ You can use the Azure DevOps web interface to add the preceding items to you
 
 After you have a general work plan, you can begin aligning team members and estimating the work.
 
-This project's team should have Oracle and Azure experts, but it's unlikely for the team to have equal expertise in both areas. Use the cloud adoption plan to determine if your team needs to acquire any skills. Then map those skills to team members to gain a clearer picture of readiness, skilling, and training needs. To help your team to track and address skilling gaps to create stronger cross-functional collaboration in each sprint, see [Prepare your people for the cloud](/azure/cloud-adoption-framework/plan/prepare-people-for-cloud).
+This project's team should have Oracle and Azure experts, but it's unlikely for the team to have equal expertise in both areas. Use the cloud adoption plan to determine if your team needs to acquire any skills. Then map those skills to team members to gain a clearer picture of readiness, skilling, and training needs. To help your team track and address skilling gaps to create stronger cross-functional collaboration in each sprint, see [Prepare your people for the cloud](/azure/cloud-adoption-framework/plan/prepare-people-for-cloud).
 
 ## Next steps
 

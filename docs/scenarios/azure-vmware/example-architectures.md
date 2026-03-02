@@ -169,7 +169,7 @@ You must disable ExpressRoute Global Reach in this scenario. The non-Microsoft N
 
 - Don't configure ExpressRoute Global Reach for this scenario because Azure VMware Solution traffic flows directly between Microsoft Enterprise Edge (MSEE) ExpressRoute routers. The traffic skips the hub virtual network.
 
-- Deploy Route Server in your hub virtual network. Route Server must be Border Gateway Protocol (BGP)-peered with the NVAs in the transit virtual network. Configure Route Server to allow [branch-to-branch](/azure/route-server/quickstart-configure-route-server-portal#configure-route-exchange) connectivity.
+- Deploy Route Server in your hub virtual network. Route Server must be Border Gateway Protocol (BGP)-peered with the NVAs in the transit virtual network. Configure Route Server to allow [branch-to-branch](/azure/route-server/configure-route-server#configure-route-exchange-with-virtual-network-gateways) connectivity.
 - Use custom route tables and user-defined routes to route traffic in both directions between Azure VMware Solution and the non-Microsoft firewall NVAs' load balancer. This setup supports all high-availability modes, including active/active and active/standby, and helps ensure routing symmetry.
 - If you need high availability for NVAs, see your NVA vendor documentation and [deploy highly available NVAs](/azure/architecture/reference-architectures/dmz/nva-ha).
 

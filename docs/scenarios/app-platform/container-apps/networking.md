@@ -80,7 +80,7 @@ External environments expose container apps by using a virtual IP address that i
 ## References
 
 * [Networking architecture in Azure Container Apps](/azure/container-apps/networking)
-* [Securing a custom VNET in Azure Container Apps](/azure/container-apps/firewall-integration)
+* [Securing a custom VNET in Azure Container Apps](/azure/container-apps/custom-virtual-networks)
 * [Network proxying in Azure Container Apps](/azure/container-apps/network-proxy)
 * [IP ingress restrictions in Azure Container Apps](/azure/container-apps/ip-restrictions)
 * [Support for User Defined Routes](/azure/container-apps/user-defined-routes)

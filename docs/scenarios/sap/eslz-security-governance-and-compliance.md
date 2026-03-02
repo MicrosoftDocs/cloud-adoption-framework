@@ -30,7 +30,7 @@ For more information about the shared responsibility model, see [Shared responsi
 
 ## Security design recommendations
 
-Security is a shared responsibility between Microsoft and customers. You can upload your own virtual machine (VM) and database images to Azure, or use images from the Azure Marketplace. However, these images need security controls that meet application and organizational requirements. You must apply your customer-specific security controls to the operating system, data, and SAP application layer.
+Security is a shared responsibility between Microsoft and customers. You can upload your own virtual machine (VM) and database images to Azure, or use images from the Microsoft Marketplace. However, these images need security controls that meet application and organizational requirements. You must apply your customer-specific security controls to the operating system, data, and SAP application layer.
 
 For generally accepted security guidance, refer to the [cybersecurity best practices](https://www.cisecurity.org/cybersecurity-best-practices/) from the Center for Internet Security (CIS).
 
@@ -139,7 +139,7 @@ To control and manage disk encryption keys and secrets for non-HANA Windows and 
 
 ### Secure web and mobile applications
 
-For internet-facing applications like SAP Fiori, make sure to distribute load per application requirements while maintaining security levels. For Layer 7 security, you can use a third-party Web Application Firewall (WAF) available in the Azure Marketplace.
+For internet-facing applications like SAP Fiori, make sure to distribute load per application requirements while maintaining security levels. For Layer 7 security, you can use a third-party Web Application Firewall (WAF) available in the Microsoft Marketplace.
 
 For mobile apps, Microsoft Intune and Microsoft Entra ID can integrate with SAP internet-facing applications to help protect organizational data, manage devices and apps, and enable secure, flexible work scenarios.
 

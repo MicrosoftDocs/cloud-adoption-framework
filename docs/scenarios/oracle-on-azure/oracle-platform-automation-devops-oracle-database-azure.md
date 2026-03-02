@@ -19,7 +19,7 @@ Oracle Exadata Database@Azure combines Oracle database services with Azure infra
 
 Infrastructure as code (IaC) provides consistent deployment patterns across Azure environments. IaC tools reduce manual errors and accelerate Oracle Database@Azure provisioning. You must choose the appropriate Terraform provider for your deployment scenario.
 
-Multiple Terraform providers support Oracle Exadata Database@Azure infrastructure deployments. Each provider offers different capabilities and API coverage. Review the following provider comparison table to select the best option for your infrastructure requirements.
+Multiple Terraform providers support Oracle Exadata Database@Azure infrastructure deployments. Each provider offers different capabilities and API coverage. Review the provider comparison table below to select the best option for your requirements.
 
 | Provider | Description |
 | --- | --- |
@@ -36,7 +36,7 @@ For detailed network connectivity requirements and configuration guidance, see [
 
 ## Use Azure Verified Modules
 
-Azure Verified Modules provide standardized deployment templates for Oracle Database@Azure infrastructure. These modules help ensure compliance with Azure best practices for reliability and security. Deploy Oracle Database@Azure infrastructure by using the available Azure Verified Modules. [Azure Verified Modules](https://aka.ms/avm) provide prebuilt templates for Oracle Exadata Database@Azure infrastructure and clusters. These modules follow the [Azure Well-Architected Framework](/azure/well-architected/) principles to help ensure reliable and secure deployments.
+Azure Verified Modules provide standardized deployment templates for Oracle Database@Azure infrastructure. These modules help ensure compliance with Azure best practices for reliability and security. Deploy Oracle Database@Azure infrastructure using the available Azure Verified Modules. [Azure Verified Modules](https://aka.ms/avm) provide prebuilt templates for Oracle Exadata Database@Azure infrastructure and clusters. These modules follow the [Azure Well-Architected Framework](/azure/well-architected/) principles to ensure reliable and secure deployments.
 
 | Azure Verified Modules | Language | Module classification | Description |
 | --- | --- | --- | --- |
@@ -62,13 +62,13 @@ For more information, see [Quickstart Oracle Database@Azure with Terraform or Op
 
 Oracle Exadata Database@Azure infrastructure and VM clusters deploy completely by using Azure Terraform providers or Azure Verified Modules. However, only some properties update by using Azure REST APIs and Azure Terraform providers or modules. When an interface isn't available, OCI Terraform is required to update the resource. For example, scaling operations are only available through OCI Terraform. Resource updates via OCI Terraform lead to Terraform idempotency problems when Azure Terraform runs again.
 
-Idempotency problems occur when Azure and OCI Terraform providers attempt to manage the same resource properties. You must configure the Terraform `ignore_changes` feature in your Azure Terraform code to avoid configuration drift. Take the following steps:
+Idempotency problems occur when Azure and OCI Terraform providers attempt to manage the same resource properties. Configure the Terraform `ignore_changes` feature in your Azure Terraform code to avoid configuration drift. Take the following steps:
 
 1. **Configure `ignore_changes` for properties that OCI Terraform manages.** The Terraform [ignore_changes](https://developer.hashicorp.com/terraform/language/meta-arguments/lifecycle#ignore_changes) feature prevents Azure Terraform from attempting updates on properties that OCI manages. This configuration prevents resource conflicts and ensures deployment stability.
 
 1. **Identify properties that require OCI management.** Review the Oracle Database@Azure documentation to determine which properties you can update only through OCI Terraform. Common examples include scaling operations, database configurations, and performance tuning parameters.
 
-Failure to use `ignore_changes` on Azure Terraform causes Terraform to attempt updates on properties that can't be updated. These attempts can cause the following unintended consequences:
+Failure to use `ignore_changes` on Azure Terraform causes Terraform to attempt updates on properties that can't be updated. These attempts can cause unintended consequences:
 
 - Terraform attempts to modify existing resources.
 - Destruction and re-creation of infrastructure or clusters.

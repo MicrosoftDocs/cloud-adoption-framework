@@ -134,7 +134,7 @@ The SAP system is the actual SAP application, as it contains all Azure Artifacts
 - The number of web dispatchers, if any
 - The number of central-services instances
 - VM sizes
-- Decide whether to use an Azure Marketplace or a custom-built image. Custom-built images have several advantages like customer-specific operating system configurations, security hardening, and compliance tooling. Custom-built images can also help with streamlining the image lifecycle.
+- Decide whether to use the [Microsoft Marketplace](https://marketplace.microsoft.com) or a custom-built image. Custom-built images have several advantages like customer-specific operating system configurations, security hardening, and compliance tooling. Custom-built images can also help with streamlining the image lifecycle.
 - Is the deployment a greenfield deployment lacking Azure infrastructure for the workload or a brownfield deployment where some or all of the artifacts supporting the workload zone already exist?
 - The IP allocation strategy (Azure or provided by the customer)
 - Naming Azure resources

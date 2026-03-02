@@ -10,15 +10,15 @@ ms.custom: e2e-oracle
 
 # Capacity planning for Oracle Autonomous Database@Azure
 
-Effective capacity planning ensures optimal performance, cost efficiency, and scalability for Oracle workloads in Oracle Autonomous Database@Azure. Follow the recommendations in this article to establish a successful Oracle Autonomous Database@Azure deployment that scales with your business needs.
+Effective capacity planning ensures optimal performance, cost efficiency, and scalability for Oracle workloads in Oracle Autonomous Database@Azure. Follow these recommendations to deploy an Oracle Autonomous Database@Azure deployment that scales with your business needs.
 
 ## Configure compute resources to meet performance goals
 
-Compute resources in Oracle Autonomous Database@Azure are measured in elastic compute processing units (ECPUs), which directly affect database performance and cost. To optimize compute allocation, do the following steps:
+Compute resources in Oracle Autonomous Database@Azure are measured in elastic compute processing units (ECPUs), which directly affect database performance and cost. To optimize compute allocation:
 
 1. **Select the appropriate ECPU allocation based on your workload needs.** ECPU allocation determines query performance and scalability. Oracle Autonomous Database@Azure supports configurations from 2 to 512 ECPUs. Choose the appropriate size based on workload intensity and performance targets.
 
-1. **Enable compute autoscaling for workloads that have variable demand.** Autoscaling adjusts compute resources automatically during peak demand. The system scales up to three times the base ECPU count. To request extra ECPUs beyond this limit, follow the procedure in [Request increased ECPU limits](https://docs.oracle.com/iaas/Content/database-at-azure-autonomous/odadb-managing-autonomous-database-resources-azure.html).
+1. **Enable compute autoscaling for workloads that have variable demand.** Autoscaling adjusts compute resources automatically during peak demand. The system scales up to three times the base ECPU count. To request extra ECPUs beyond this limit, see [Request increased ECPU limits](https://docs.oracle.com/iaas/Content/database-at-azure-autonomous/odadb-managing-autonomous-database-resources-azure.html).
 
    - **Verify autoscaling settings in the Azure and Oracle Cloud Infrastructure portals.** Confirm that autoscaling is enabled and configured correctly. Use the **Resource Allocation** interface under **Settings** in the Autonomous Database Service page in the Azure portal. For more information, see [Use autoscaling](https://docs.oracle.com/en/cloud/paas/autonomous-database/serverless/adbsb/autonomous-auto-scale.html).
 
@@ -26,7 +26,7 @@ Compute resources in Oracle Autonomous Database@Azure are measured in elastic co
 
 ## Configure storage to support workload requirements
 
-Storage capacity affects both performance and cost. Take the following steps to plan and manage storage effectively.
+Storage capacity affects both performance and cost. Plan and manage storage effectively:
 
 1. **Select the appropriate workload types.** Choose the correct workload configuration based on your use case:
 
@@ -36,7 +36,7 @@ Storage capacity affects both performance and cost. Take the following steps to 
 
 1. **Enable storage autoscaling to support growth.** Autoscaling expands storage up to three times the reserved capacity. This feature is disabled by default, so enable it proactively to avoid manual intervention during growth.
 
-   - **Request extra storage capacity when needed.** Request extra storage capacity as needed through the [resource management process](https://docs.oracle.com/iaas/Content/database-at-azure-autonomous/odadb-managing-autonomous-database-resources-azure.html#GUID-2C088312-BC30-468E-A15A-00740D2818F5).
+   - **Request extra storage capacity when needed.** Request extra storage capacity through the [resource management process](https://docs.oracle.com/iaas/Content/database-at-azure-autonomous/odadb-managing-autonomous-database-resources-azure.html#GUID-2C088312-BC30-468E-A15A-00740D2818F5).
 
 ## Manage resources independently and efficiently
 

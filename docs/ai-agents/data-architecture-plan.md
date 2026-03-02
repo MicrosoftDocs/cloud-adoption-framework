@@ -51,7 +51,7 @@ AI agents can technically operate without a unified platform by connecting direc
 | Improved discoverability | Certified data products are easier to find and consume, enabling agents to reason over trusted datasets. |
 | Better performance for AI | Retrieval strategies like RAG and MCP operate on optimized, governed data rather than fragmented sources. |
 
-Microsoft Fabric addresses these needs through OneLake, a single logical data lake where teams organize data by domain and publish certified data products. This approach preserves domain ownership while making data easier to consume and govern. It’s not just an analytics architecture. It’s a foundation for AI agents to operate effectively and securely.
+Microsoft Fabric addresses these needs through OneLake, a single logical data lake where teams organize data by domain and publish certified data products. This approach preserves domain ownership while making data easier to consume and govern. It's not just an analytics architecture. It's a foundation for AI agents to operate effectively and securely.
 
 ### What data should you unify?
 
@@ -97,7 +97,7 @@ This adaptive model improves flexibility and performance because it prioritizes 
 
 Organizations building AI agents must decide how the agent accesses data to answer questions and perform tasks. These choices directly affect accuracy, timeliness, and security. Agents generally combine two complementary approaches: agentic retrieval and Model Context Protocol (MCP) servers.
 
-When an employee reports a VPN issue, an effective agent uses agentic retrieval to pull the troubleshooting guide from the organization’s approved knowledge sources. It checks the real‑time VPN service status through an MCP read operation, and it can create a helpdesk ticket through an MCP write operation if the user requests it. Agentic retrieval provides curated, authoritative knowledge. MCP provides operational data and the ability to take actions.
+When an employee reports a VPN issue, an effective agent uses agentic retrieval to pull the troubleshooting guide from the organization's approved knowledge sources. It checks the real‑time VPN service status through an MCP read operation, and it can create a helpdesk ticket through an MCP write operation if the user requests it. Agentic retrieval provides curated, authoritative knowledge. MCP provides operational data and the ability to take actions.
 
 **Agentic retrieval and RAG**: Agentic retrieval includes the retrieval‑and‑grounding aspects of traditional RAG, but extends them with reasoning, decomposition, parallel evidence gathering, and multi‑source synthesis. It is the preferred term and recommended pattern for enterprise AI agents.
 
@@ -114,7 +114,7 @@ Examples of built‑in capabilities include:
 - [Fabric IQ](/fabric/iq/overview)
 - [Fabric data agents](/azure/ai-foundry/agents/how-to/tools/fabric?view=foundry&preserve-view=truen)
 - [Connect to MCP servers](/azure/ai-foundry/agents/how-to/tools/model-context-protocol?view=foundry&preserve-view=true)
-- [Sharepoint connection](/azure/ai-foundry/agents/how-to/tools/sharepoint?view=foundry&preserve-view=true)
+- [SharePoint connection](/azure/ai-foundry/agents/how-to/tools/sharepoint?view=foundry&preserve-view=true)
 - [Azure AI Search](/azure/ai-foundry/agents/how-to/tools/ai-search?view=foundry&preserve-view=true&tabs=keys%2Cazurecli)
 
 ### Plan for agentic retrieval
@@ -133,7 +133,7 @@ Examples of built‑in capabilities include:
 
 1. **Identify candidate systems.**  Prioritize systems where live queries or transactions add value: CRM for pipeline updates, ERP for inventory and orders, ITSM for tickets, IoT telemetry for sensor readings, and internal APIs for specialized processes.
 
-2. **Build or connect MCP servers.** Where there are available and built-in MCP servers in Foundry and Copilot Studio, use them. When there aren’t, you need to build. Clarify the type of interaction the AI agent needs. Some systems require read-only access for queries, while others demand read-write capabilities to create or update records. This distinction influences security controls and compliance requirements. Define these roles early to avoid unnecessary risk and ensure governance aligns with operational needs. See Connect to MCP servers or Build and register an MCP server. See [Connect to MCP servers](/azure/ai-foundry/agents/how-to/tools/model-context-protocol?view=foundry&preserve-view=true) or [Build and register an MCP server](/azure/ai-foundry/mcp/build-your-own-mcp-server?view=foundry&preserve-view=true).
+2. **Build or connect MCP servers.** Where there are available and built-in MCP servers in Foundry and Copilot Studio, use them. When there aren't, you need to build. Clarify the type of interaction the AI agent needs. Some systems require read-only access for queries, while others demand read-write capabilities to create or update records. This distinction influences security controls and compliance requirements. Define these roles early to avoid unnecessary risk and ensure governance aligns with operational needs. See Connect to MCP servers or Build and register an MCP server. See [Connect to MCP servers](/azure/ai-foundry/agents/how-to/tools/model-context-protocol?view=foundry&preserve-view=true) or [Build and register an MCP server](/azure/ai-foundry/mcp/build-your-own-mcp-server?view=foundry&preserve-view=true).
 
 3. **Enforce security and compliance for MCP.** Require authentication for every tool call. Foundry supports key‑based access, Microsoft Entra Agent Identity, project managed identity, and OAuth identity passthrough. It provides detailed auditing of tool invocations and data flows. Use RBAC on both the Foundry project and the target service, and prefer identity passthrough when user‑level permissions must persist. See [Authentication support for MCP tool](/azure/ai-foundry/agents/how-to/mcp-authentication?view=foundry&preserve-view=true).
 

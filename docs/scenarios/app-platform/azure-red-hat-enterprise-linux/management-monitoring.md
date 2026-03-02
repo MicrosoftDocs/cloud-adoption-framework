@@ -12,7 +12,7 @@ ms.custom: sfi-image-nochange
 
 This article describes how to use various services and tools to manage and monitor Red Hat Enterprise Linux (RHEL) on Azure.
 
-If you do a greenfield deployment, you can use the Azure [change tracking](/azure/azure-change-tracking-inventory/overview-monitoring-agent) feature to easily identify changes. You can also use [Update Manager](/azure/update-manager/workflow-update-manager) to manage operating system updates for your RHEL virtual machines (VMs).
+If you do a greenfield deployment, you can use the Azure [change tracking](/azure/azure-change-tracking-inventory/overview-monitoring-agent) feature to easily identify changes. You can also use [Update Manager](/azure/update-manager/overview) to manage operating system updates for your RHEL virtual machines (VMs).
 
 For existing brownfield deployments, you can use [Red Hat Satellite](https://access.redhat.com/documentation/red_hat_satellite/6.15), and extend the service into Azure from on-premises environments to take advantage of existing skill sets.
 
@@ -34,7 +34,7 @@ Content in Satellite flows from external content sources to Satellite Server. Ca
 
 ## Deployment strategy
 
-We recommend that you use automated software update management solutions instead of manual update installation processes. Consider the integration with on-premises solutions when you work with brownfield installations. When you deploy net-new workloads on Azure, use cloud-native tooling, such as [Update Manager](/azure/update-manager/workflow-update-manager) or [Ansible on Azure](/azure/developer/ansible/overview), to significantly reduce the time to value compared to using other partner open-source software.
+We recommend that you use automated software update management solutions instead of manual update installation processes. Consider the integration with on-premises solutions when you work with brownfield installations. When you deploy net-new workloads on Azure, use cloud-native tooling, such as [Update Manager](/azure/update-manager/overview) or [Ansible on Azure](/azure/developer/ansible/overview), to significantly reduce the time to value compared to using other partner open-source software.
 
 ### Considerations
 
@@ -52,9 +52,9 @@ If you register a system to Red Hat Subscription Management, the attached subscr
 
 Implement the following recommendations to help manage and monitor your environment.
 
-#### Use custom images instead of Azure Marketplace images
+#### Use custom images or Microsoft Marketplace
 
-You can use predefined Azure Marketplace images to build Azure VMs. Or you can use [custom Linux images](/azure/virtual-machines/linux/create-upload-generic) to build and control your specific compliance and security needs. If you use supported Linux distributions, such as RHEL, follow specific guidance for building your custom image, such as [RHEL 8 guidance](/azure/virtual-machines/linux/redhat-create-upload-vhd#rhel-8-using-hyper-v-manager). If you use custom Linux images, follow the [Update Manager best practice guidance](/azure/update-manager/manage-updates-customized-images).
+You can use predefined [Microsoft Marketplace](https://marketplace.microsoft.com) images to build Azure VMs. Or you can use [custom Linux images](/azure/virtual-machines/linux/create-upload-generic) to build and control your specific compliance and security needs. If you use supported Linux distributions, such as RHEL, follow specific guidance for building your custom image, such as [RHEL 8 guidance](/azure/virtual-machines/linux/redhat-create-upload-vhd#rhel-8-using-hyper-v-manager). If you use custom Linux images, follow the [Update Manager best practice guidance](/azure/update-manager/manage-updates-customized-images).
 
 #### Perform update tests in a nonproduction environment
 

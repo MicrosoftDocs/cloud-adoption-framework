@@ -3,7 +3,7 @@ title: Azure Virtual Network Manager in Azure landing zones
 description: Learn about key considerations for designing network topologies in Azure with Azure Virtual Network Manager. Learn how to implement Azure landing zone design principles to accommodate application migrations, modernization, and innovation at scale.
 author: sitarant
 ms.author: sitarant
-ms.reviewer: tozimmergren
+
 ms.date: 05/21/2024
 ms.topic: concept-article
 ---

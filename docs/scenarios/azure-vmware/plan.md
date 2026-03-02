@@ -85,7 +85,7 @@ The focus is to ensure all domain owners within your organization understand the
 **Production:** Plan the transition of production VMware workloads to the new Azure VMware Solution environment. Start a migration ramp-up plan for node capacity requirements for the Azure VMware Solution private cloud. To investigate the number of nodes your environment requires, use the resources and guidance for Azure migrations:
 
 - [Create your first Azure VMware Solution assessment](/azure/migrate/how-to-create-azure-vmware-solution-assessment)
-- [How to review an Azure VMware Solution assessment](/azure/migrate/tutorial-assess-vmware-azure-vmware-solution)
+- [How to review an Azure VMware Solution assessment](/azure/migrate/review-azure-vmware-solution-assessment)
 - [Azure migration center](https://azure.microsoft.com/migration/)
 
 **Extend and modernize:** Once you established your Azure VMware Solution environment, the hub-and-spoke network connection ensures seamless extension to other Azure public cloud services. Customers often optimize through resource management, monitoring and security, storage, and other integrations to modernize applications in the current infrastructure design.
@@ -97,7 +97,7 @@ The focus is to ensure all domain owners within your organization understand the
 The following resources help organizations skill up and familiarize themselves with the technical components of Azure VMware Solution:
 
 - [Tech community blog](https://techcommunity.microsoft.com/t5/azure-migration-and/bg-p/AzureMigrationBlog)
-- [Azure VMware Solution quickstart guides](/azure/azure-vmware/plan-private-cloud-deployment)
+- [Azure VMware Solution quickstart guides](/azure/azure-vmware/tutorial-create-private-cloud)
 - [Azure VMware Solution hands-on labs](https://labs.hol.vmware.com/HOL/)
 
 ## Next steps

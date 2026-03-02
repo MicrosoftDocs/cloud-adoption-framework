@@ -40,7 +40,7 @@ After you deploy Azure VMware Solution, the new environment's vCenter contains a
 
   - Provide lifecycle operation on the `vsphere.local\CloudAdmins` group.
 
-- Create groups in Active Directory and use RBAC to manage vCenter Server and NSX-T Data Center. You can create [custom roles](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.security.doc/GUID-41E5E52E-A95B-4E81-9724-6AD6800BEF78.html) and [assign](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.security.doc/GUID-18071E9A-EED1-4968-8D51-E0B4F526FDA3.html) Active Directory groups to the custom roles.
+- Create groups in Active Directory and use RBAC to manage vCenter Server and NSX-T Data Center. You can create [custom roles](https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/7-0/vsphere-security/vsphere-permissions-and-user-management-tasks/using-roles-to-assign-privileges/create-a-custom-role.html) and [assign](https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/7-0/vsphere-security.html) Active Directory groups to the custom roles.
 
 ## Next steps
 

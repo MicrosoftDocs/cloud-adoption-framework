@@ -3,7 +3,7 @@ title: Monitoring and reporting in Azure
 description: Learn how to use the Cloud Adoption Framework to set up monitoring, reporting, and alerts in Azure.
 author: stephen-sumner
 ms.author: pnp
-ms.reviewer: tozimmergren
+
 ms.date: 12/13/2022
 ms.topic: concept-article
 ms.custom: think-tank, fasttrack-edit, AQC, setup, engagement-fy23
@@ -36,7 +36,7 @@ Azure Monitor provides a single unified hub for all monitoring and diagnostics d
 
 ::: zone target="docs"
 
-Find more solutions in the Azure Marketplace for monitoring other resource types.
+Find more solutions in the [Microsoft Marketplace](https://marketplace.microsoft.com) for monitoring other resource types.
 
 To explore Azure Monitor, go to the [Azure portal](https://portal.azure.com/#blade/Microsoft_Azure_Monitoring/AzureMonitoringBrowseBlade/overview).
 

@@ -42,7 +42,7 @@ Consider the following factors when designing BCDR for application workloads:
 
 - Network connectivity if a failover occurs:
   - Bandwidth capacity planning for Azure ExpressRoute.
-  - Traffic routing during a regional, zonal, or network outage.
+  - Traffic routing during a regional, zone, or network outage.
 
 - Planned and unplanned failovers:
   - IP address consistency requirements, and the potential need to maintain IP addresses after failover and failback.

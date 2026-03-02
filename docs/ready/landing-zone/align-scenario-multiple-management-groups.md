@@ -3,7 +3,7 @@ title: Scenario- Transition management groups to the Azure landing zone referenc
 description: Learn how to transition existing Azure environments comprised of single or few management groups into the Azure landing zone reference architecture.
 author: jtracey93
 ms.author: jatracey
-ms.reviewer: tozimmergren
+
 ms.date: 12/19/2025
 ms.topic: concept-article
 ms.service: caf

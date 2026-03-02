@@ -139,7 +139,7 @@ Your approach must implement architecture redundancy to meet the reliability req
         | Azure service type | Azure services with Availability Zone SLAs |
         |--------------------|-------------------------------------------|
         | Compute Platform | App Service<br>Azure Kubernetes Service<br>Virtual Machines |
-        | Datastore | Azure Service Bus<br>Azure Storage Accounts<br>Azure Cache for Redis<br>Azure Files Premium Tier |
+        | Datastore | Azure Service Bus<br>Azure Storage Accounts<br>Azure Managed Redis<br>Azure Files Premium Tier |
         | Database | Azure Cosmos DB<br>Azure SQL Database<br>Azure Database for MySQL<br>Azure Database for PostgreSQL<br>Azure Managed Instance for Apache Cassandra |
         | Load Balancer | Application Gateway |
         | Security | Azure Firewall |

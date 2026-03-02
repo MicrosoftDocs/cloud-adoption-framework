@@ -12,11 +12,11 @@ ms.custom: e2e-oracle
 
 The Oracle on Azure infrastructure as a service (IaaS) landing zone accelerator is an open-source collection of Terraform, Bicep, and Ansible templates. You can use these templates to automate the deployment of an environment that can host Oracle on Azure virtual machines. The landing zone accelerator provides a specific architectural approach and reference implementation that you can use to prepare your landing zones. These landing zones adhere to the architecture and best practices of the Cloud Adoption Framework for Azure.
 
-You can adopt Oracle on Azure IaaS in various ways. You can adapt the landing zone accelerator to produce an architecture that fits your scenario and puts your organization on a path to scale sustainably.
+You can adopt Oracle on Azure IaaS in various ways. You can adapt the landing zone accelerator to produce an architecture that fits your scenario and enables sustainable scaling.
 
 ## Prerequisites
 
-The Oracle on Azure IaaS landing zone accelerator assumes that you already successfully implemented an Azure landing zone. However, you can use the Oracle on Azure IaaS landing zone accelerator if your infrastructure doesn't conform to Azure landing zones. For more information, see these articles:
+The Oracle on Azure IaaS landing zone accelerator assumes you already implemented an Azure landing zone. You can still use the accelerator if your infrastructure doesn't conform to Azure landing zones. For more information, see these articles:
 
 - [Start with Cloud Adoption Framework enterprise-scale landing zones](../../ready/enterprise-scale/index.md)
 - [Implement Cloud Adoption Framework enterprise-scale landing zones in Azure](../../ready/enterprise-scale/implementation.md)
@@ -29,7 +29,7 @@ The landing zone accelerator provides these assets to support your project:
 - Design guidelines that help you make critical decisions.
 - The landing zone architecture.
 - An implementation that includes:
-  - A deployable reference that can create the environment for your Oracle on Azure IaaS deployment.
+  - A deployable reference that creates the environment for your Oracle on Azure IaaS deployment.
   - A Microsoft-recommended Oracle on Azure IaaS reference implementation to test the deployed environment.
 
 ## Design guidelines
@@ -43,7 +43,7 @@ For guidelines to create your landing zone, see these articles:
 
 ## Example conceptual reference architecture
 
-This diagram shows an example conceptual reference architecture that illustrates design areas and best practices.
+This diagram shows a reference architecture that illustrates design areas and best practices.
 
 :::image type="content" source="media/index/reference-architecture-oracle-infrastructure-landing-zone.svg" alt-text="A diagram that shows a reference architecture of the Oracle on Azure landing zone accelerator." border="false" lightbox="media/index/reference-architecture-oracle-infrastructure-landing-zone.svg":::
 

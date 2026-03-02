@@ -21,7 +21,7 @@ In this article, you learn how to do the following tasks:
 
 ## Set availability requirements for Oracle Autonomous Database@Azure
 
-Organizations must establish clear recovery objectives before they implement BCDR solutions for Oracle Autonomous Database@Azure. RTO represents the maximum acceptable downtime after a failure. RPO defines the maximum acceptable data loss. These critical metrics determine the appropriate BCDR architecture and Oracle technologies for your cloud database environment.
+Organizations must establish clear recovery objectives before implementing BCDR solutions for Oracle Autonomous Database@Azure. RTO represents the maximum acceptable downtime after a failure. RPO defines the maximum acceptable data loss. These critical metrics determine the appropriate BCDR architecture and Oracle technologies.
 
 - **Define your recovery objectives based on business requirements.** Oracle Autonomous Database@Azure supports different availability levels that align with [Oracle Maximum Availability Architecture (MAA) principles](https://docs.oracle.com/en/database/oracle/oracle-database/26/haiad/maara_overview.html). The default configuration provides MAA Silver-level protection against instance and hardware failures. Choose an architecture that meets specific RTO and RPO requirements for different failure scenarios.
 
@@ -29,7 +29,7 @@ Organizations must establish clear recovery objectives before they implement BCD
 
 ## Implement Autonomous Data Guard for high availability
 
-Oracle Autonomous Data Guard provides automated disaster recovery capabilities designed for Oracle Autonomous Database@Azure deployments. This enterprise-grade solution combines Oracle Data Guard technology with Fast Start Failover (FSFO) to provide continuous database protection with automatic failover capabilities and minimal administrative overhead.
+Oracle Autonomous Data Guard provides automated disaster recovery for Oracle Autonomous Database@Azure deployments. This enterprise-grade solution combines Oracle Data Guard technology with Fast Start Failover (FSFO) to provide continuous database protection with automatic failover and minimal administrative overhead.
 
 - **Configure local standby databases for fast recovery.** Create a local standby database within the same region as your primary instance to achieve rapid failover with minimal data loss. Local standby configurations provide automatic failover capabilities with an RTO of two minutes and an RPO of 10 seconds. This configuration protects against instance-level failures while maintaining optimal performance.
 

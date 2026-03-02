@@ -64,7 +64,7 @@ Review the [management disciplines critical design area design considerations an
 
 ### Threat protection and cloud security posture management
 
-Enforce threat protection and introduce controls to detect security misconfigurations and track compliance. Use [Azure's intelligence](/azure/sentinel/overview) to protect your hybrid workloads against threats. Enable security baseline monitoring, security posture management, and threat protection for all subscriptions containing Azure Arc-enabled Kubernetes by enabling [Microsoft Defender for Containers](/azure/defender-for-cloud/defender-for-containers-introduction?tabs=defender-for-container-arch-aks).
+Enforce threat protection and introduce controls to detect security misconfigurations and track compliance. Use [Microsoft Sentinel](/azure/sentinel/overview) to protect your hybrid workloads against threats. Enable security baseline monitoring, security posture management, and threat protection for all subscriptions containing Azure Arc-enabled Kubernetes by enabling [Microsoft Defender for Containers](/azure/defender-for-cloud/defender-for-containers-introduction?tabs=defender-for-container-arch-aks).
 
 ### Secure cluster access
 

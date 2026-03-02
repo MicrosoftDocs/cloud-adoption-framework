@@ -30,7 +30,7 @@ The platform group consists of two teams:
 
 ### Respond to new data landing zone requests
 
-The data platform ops team must provide the tools and services to support the templates they've created. IT service management tools like ServiceNow can handle ticket requests approved by the data platform ops team for creating new data landing zones. After its approved, a new landing zone would fork from the base template to create a new DevOps project, and pipelines would deploy templates to a new environment.
+The data platform ops team must provide the tools and services to support the templates they've created. IT service management tools like ServiceNow can handle ticket requests approved by the data platform ops team for creating new data landing zones. After it's approved, a new landing zone would fork from the base template to create a new DevOps project, and pipelines would deploy templates to a new environment.
 
 ### The data platform ops feedback and enhancement loop
 
@@ -64,11 +64,11 @@ As the owner of the landing zone, Azure DevOps routes the approval for changes t
 
 ### Respond to new data product requests
 
-Data landing zone ops support data application teams in creating new data products. When a data application team requests assistance, an IT service management solution, such as an automation logic app, orchestrates the approval or deployment of a new data application repository. Data landing zone ops are notified of new requests and approve or decline deployments. After approved, a new DevOps project is created, the main template and artifacts are forked, and a new data application is deployed.
+Data landing zone ops support data application teams in creating new data products. When a data application team requests assistance, an IT service management solution, such as an automation logic app, orchestrates the approval or deployment of a new data application repository. Data landing zone ops are notified of new requests and approve or decline deployments. After approval, a new DevOps project is created, the main template and artifacts are forked, and a new data application is deployed.
 
 ### Adhere to the Azure Well-Architected Framework
 
-Data landing zone ops are responsible for the data landing zone, and it's recommended for the team to be proficient in the [Azure Well-Architected Framework](/azure/architecture/framework/), which provides guidance on cost optimization, reliability, and security.
+Data landing zone ops are responsible for the data landing zone, and it's recommended for the team to be proficient in the [Azure Well-Architected Framework](/azure/well-architected/), which provides guidance on cost optimization, reliability, and security.
 
 ### Business as usual
 

@@ -19,7 +19,7 @@ Learn more about the [identity and access management](../../../ready/landing-zon
 When you use the landing zone accelerator to deploy an App Service solution, there are some key considerations for key identity and access management:
 
 - Determine the level of security and isolation required for the app and its data. Public access allows anyone with the app URL to access the app, while private access restricts access to only authorized users and networks.
-- Determine the type of authentication and authorization needed for your App Service solution: anonymous, internal corporate users, social accounts, other [identity provider](/azure/app-service/overview-managed-identity), or a combination of these types.
+- Determine the type of authentication and authorization needed for your App Service solution: anonymous, internal corporate users, social accounts, other [identity provider](/azure/app-service/overview-authentication-authorization#identity-providers), or a combination of these types.
 - Determine whether to use system-assigned or user-assigned [managed identities](/azure/app-service/overview-managed-identity) when your App Service solution connects to back-end resources that are protected by Microsoft Entra ID.
 - Consider creating [custom roles](/entra/identity/role-based-access-control/custom-create), following the principle of least privilege when out-of-box roles require modifications to existing permissions.
 - Choose enhanced-security storage for keys, secrets, certificates, and application configuration.
@@ -34,7 +34,7 @@ You should incorporate the following best practices into your App Service deploy
   - If access to the entire App Service solution needs to be restricted to authenticated users, disable anonymous access.
   - Use the [built-in authentication and authorization](/azure/app-service/overview-authentication-authorization) capabilities of App Service instead of writing your own authentication and authorization code.
   - Use separate [application registrations](/entra/identity-platform/quickstart-register-app) for separate [slots](/azure/app-service/deploy-staging-slots) or environments.
-  - If the App Service solution is intended for internal users only, use [client certificate authentication](/azure/app-service/deploy-staging-slots) for increased security.
+  - If the App Service solution is intended for internal users only, use [client certificate authentication](/azure/app-service/app-service-web-configure-tls-mutual-auth) for increased security.
   - If the App Service solution is intended for external users, use [Microsoft Entra External ID](/entra/external-id/customers/overview-customers-ciam) to authenticate to social accounts and Microsoft Entra accounts.
 - Use [Azure built-in roles](/azure/role-based-access-control/built-in-roles#web-plan-contributor) whenever possible. These roles are designed to provide a set of permissions that are commonly needed for specific scenarios, like the Reader role for users who need read-only access and the Contributor role for users who need to be able to create and manage resources.
     - If built-in roles don't meet your needs, you can create custom roles by combining the permissions from one or more built-in roles. By doing so, you can grant the exact set of permissions that your users need while still following the principle of least privilege.

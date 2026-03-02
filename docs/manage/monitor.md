@@ -240,7 +240,6 @@ The table provides a near complete list of the monitoring articles for every Azu
 | Azure Application Gateway | [Monitor Azure Application Gateway](/azure/application-gateway/monitor-application-gateway)<br><br>[Monitoring data reference for Azure Application Gateway](/azure/application-gateway/monitor-application-gateway-reference) | [Application Gateway health probes overview](/azure/application-gateway/application-gateway-probe-overview)<br><br>[Backend health](/azure/application-gateway/application-gateway-backend-health)<br><br>[Azure Monitor metrics for Application Gateway](/azure/application-gateway/application-gateway-metrics) |
 | Azure Arc resource bridge | [Azure Arc resource bridge maintenance operations](/azure/azure-arc/resource-bridge/maintenance) | |
 | Azure Arc site manager | [How to configure Azure Monitor alerts for a site](/azure/azure-arc/site-manager/how-to-configure-monitor-site) | |
-| Azure Arc-enabled data services | [Azure Data Studio dashboards for Azure Arc](/azure/azure-arc/data/azure-data-studio-dashboards) | |
 | Azure Arc-enabled Kubernetes | [Enable monitoring for Azure Kubernetes Service (AKS) cluster](/azure/azure-monitor/containers/kubernetes-monitoring-enable) | |
 | Azure Arc-enabled servers | [Monitor a hybrid machine with Azure Monitor VM insights](/azure/azure-arc/servers/learn/tutorial-enable-vm-insights) | |
 | Azure Archive Storage | [Monitor Azure Blob Storage](/azure/storage/blobs/monitor-blob-storage)<br><br>[Monitoring data reference for Azure Blob Storage](/azure/storage/blobs/monitor-blob-storage-reference) | |
@@ -300,6 +299,7 @@ The table provides a near complete list of the monitoring articles for every Azu
 | Azure Managed Grafana | [Monitor an Azure Managed Grafana instance with logs](/azure/managed-grafana/how-to-monitor-managed-grafana-workspace) | |
 | Azure Managed Instance for Apache Cassandra | [Monitor Azure Managed Instance for Apache Cassandra](/azure/managed-instance-apache-cassandra/monitor-clusters) | |
 | Azure Managed Lustre | [Monitor Azure Managed Lustre](/azure/azure-managed-lustre/monitor-file-system)<br><br>[Monitoring data reference for Azure Managed Lustre](/azure/azure-managed-lustre/monitor-file-system-reference) | |
+| Azure Managed Redis | [Monitor Azure Managed Redis data using diagnostic settings](/azure/redis/monitor-diagnostic-settings)
 | Azure NAT Gateway | [Monitor Azure NAT Gateway](/azure/nat-gateway/monitor-nat-gateway)<br><br>[Monitoring data reference for Azure NAT Gateway](/azure/nat-gateway/monitor-nat-gateway-reference) | |
 | Azure NetApp Files | [Ways to monitor Azure NetApp Files](/azure/azure-netapp-files/monitor-azure-netapp-files)<br><br>[Metrics for Azure NetApp Files](/azure/azure-netapp-files/azure-netapp-files-metrics) | |
 | Azure Notification Hubs | [Monitor Azure Notification Hubs](/azure/notification-hubs/monitor-notification-hubs)<br><br>[Monitoring data reference for Azure Notification Hubs](/azure/notification-hubs/monitor-notification-hubs-reference) | |

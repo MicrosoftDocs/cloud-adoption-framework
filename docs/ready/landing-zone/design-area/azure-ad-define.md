@@ -13,7 +13,7 @@ ms.custom: think-tank, UpdateFrequency.5
 
 A Microsoft Entra tenant provides identity and access management, which is an important part of your security posture. A Microsoft Entra tenant ensures that authenticated and authorized users only access the resources to which they have permissions. Microsoft Entra ID provides these services to applications and services deployed in and outside of Azure (such as on-premises or third-party cloud providers).
 
-Microsoft Entra ID is also used by software as a service (SaaS) applications such as Microsoft 365 and Azure Marketplace. Organizations already using on-premises AD can integrate it with their current infrastructure and extend cloud authentication. Each Microsoft Entra directory has one or more domains. A directory can have many subscriptions associated with it but only one Microsoft Entra tenant.
+Microsoft Entra ID is also used by software as a service (SaaS) applications such as Microsoft 365 and Microsoft Marketplace. Organizations already using on-premises AD can integrate it with their current infrastructure and extend cloud authentication. Each Microsoft Entra directory has one or more domains. A directory can have many subscriptions associated with it but only one Microsoft Entra tenant.
 
 Ask basic security questions during the design phase, such as how your organization manages credentials and how it controls human, application, and programmatic access.
 

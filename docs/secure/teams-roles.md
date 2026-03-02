@@ -40,7 +40,7 @@ The following sections describe the teams and roles that typically perform key c
 
 ### Cloud service provider
 
-Cloud service providers are effectively virtual team members that provide security functions and capabilities for the underlying cloud platform. Some cloud providers also provide security features and capabilities that your teams can use to manage your security posture and incidents. For more information on what cloud services providers perform, see the [cloud shared responsibility model](/azure/security/fundamentals/shared-responsibility).  
+Cloud service providers are effectively virtual team members that provide security functions and capabilities for the underlying cloud platform. Some cloud providers also provide security features and capabilities that your teams can use to manage your security posture and incidents. For more information on what cloud service providers perform, see the [cloud shared responsibility model](/azure/security/fundamentals/shared-responsibility).  
 
 Many cloud service providers provide information on their security practices and controls upon request or via a portal like the [Microsoft service trust portal](https://servicetrust.microsoft.com/).
 
@@ -116,9 +116,9 @@ Security teams work with infrastructure and platform roles (and others) to help 
 
 The SecOps team is sometimes referred to as a Security Operations Center (SOC). The SecOps team focuses on rapidly finding and removing adversary access to the organization's assets. They work in close partnership with technology operations and engineering teams. SecOps roles can work across all technologies in the organization, including traditional IT, operational technology (OT), and Internet of Things (IoT). Following are the SecOps roles that most often interact with cloud teams:
 
-   - **Triage analysts (tier 1).** Responds to incident detections for well-known attack techniques and follows documented procedures to rapidly resolve them (or escalate them to investigation analysts as appropriate). Depending on the SecOps scope and maturity level, this might include detections and alerts from email, endpoint antimalware solutions, cloud services, network detections, or other technical systems.
+   - **Triage analysts (tier 1).** Respond to incident detections for well-known attack techniques and follow documented procedures to rapidly resolve them (or escalate them to investigation analysts as appropriate). Depending on the SecOps scope and maturity level, this might include detections and alerts from email, endpoint antimalware solutions, cloud services, network detections, or other technical systems.
 
-   - **Investigation analysts (tier 2).** Responds to higher-complexity and higher-severity incident investigations that require more experience and expertise (beyond well-documented resolution procedures). This team typically investigates attacks that are conducted by live human adversaries and attacks that affect multiple systems. It works in close partnership with technology operations and engineering teams to investigate incidents and resolve them.
+   - **Investigation analysts (tier 2).** Respond to higher-complexity and higher-severity incident investigations that require more experience and expertise (beyond well-documented resolution procedures). This team typically investigates attacks that are conducted by live human adversaries and attacks that affect multiple systems. It works in close partnership with technology operations and engineering teams to investigate incidents and resolve them.
 
    - **Threat hunting.** Proactively searches for hidden threats within the technical estate that have evaded standard detection mechanisms. This role uses advanced analytics and hypothesis-driven investigations.
 
@@ -138,11 +138,11 @@ Security Governance, Risk, and Compliance (GRC) is a set of interrelated discipl
 
 All three of these disciplines operate across all technologies and systems to drive organizational outcomes across all teams. All three also rely on context they get from each other and benefit significantly from current high-fidelity data on threats, business, and the technology environment. These disciplines also rely on architecture to express an actionable vision that can be implemented and security education and policy to establish rules and guide teams through the many daily decisions.
 
-Cloud engineering and operation teams might work with **posture management** roles, **compliance and audit** teams, **security architecture and engineering**, or **chief information security officer (CISO)** roles on GRC topics.
+Cloud engineering and operations teams might work with **posture management** roles, **compliance and audit** teams, **security architecture and engineering**, or **chief information security officer (CISO)** roles on GRC topics.
 
 ### Security education, awareness, and policy
 
-Organizations must ensure that all roles have the knowledge, guidance, and confidence to apply security effectively in their daily work. Education and awareness are often the weakest links in an organization’s security posture, so they must be continuous, role-aware, and embedded into normal operations rather than treated as one-off training events.
+Organizations must ensure that all roles have the knowledge, guidance, and confidence to apply security effectively in their daily work. Education and awareness are often the weakest links in an organization's security posture, so they must be continuous, role-aware, and embedded into normal operations rather than treated as one-off training events.
 
 A strong program includes structured education, informal mentoring, and designated security champions within technical teams. Training should cover phishing awareness, identity hygiene, secure configuration practices, and a secure development mindset for engineering roles. These efforts reinforce a security-first culture, where individuals clearly understand why security matters, what actions are expected of them, and how to perform those actions correctly.
 

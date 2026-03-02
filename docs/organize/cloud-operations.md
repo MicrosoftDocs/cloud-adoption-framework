@@ -32,7 +32,7 @@ You need to identify who provides these functions in your organization:
 
 ## Prepare your team for cloud operations
 
-Cloud operations teams need specific knowledge to succeed. Focus your preparation on the Azure adoption fundamentals and ongoing operational [skills](../plan/prepare-people-for-cloud.md#understand-the-cloud-skills-you-need)
+Cloud operations teams need specific knowledge to succeed. Focus your preparation on the Azure adoption fundamentals and ongoing operational [skills](../plan/prepare-people-for-cloud.md#understand-the-cloud-skills-you-need).
 
 ## Define the scope of cloud operations
 

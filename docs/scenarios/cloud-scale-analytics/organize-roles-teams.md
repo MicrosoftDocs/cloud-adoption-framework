@@ -14,7 +14,7 @@ For Cloud-scale analytics, we recommend moving teams like ingest, processing, an
 
 ![Overview of Cloud-scale analytics teams.](./images/enterprise-scale-analytics-ai-teams.png)
 
-Within scale analytics, we identify the following teams:
+Within cloud-scale analytics, we identify the following teams:
 
 - Platform ops
 - Data platform ops
@@ -49,7 +49,7 @@ Another option is when a business doesn't have a data office to build out their 
 Individuals should work within multidisciplinary teams in both scenarios, sharing goals and diverse experiences, skills, and approaches. This collaboration supports more effective outcomes than working in silos.
 
 > [!NOTE]
-> In the scenario where only one data landing zone is deployed, it's common for businesses to overlap in one data landing zone. This could create crossover functions where data application teams are sourced from central and business data offices. However, data landing zone operations functions to be located in the central data office for this scenario.
+> In the scenario where only one data landing zone is deployed, it's common for businesses to overlap in one data landing zone. This could create crossover functions where data application teams are sourced from central and business data offices. However, data landing zone operations functions should be located in the central data office for this scenario.
 
 ## Teams within the platform group
 
