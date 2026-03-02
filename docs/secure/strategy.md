@@ -48,7 +48,7 @@ When you define a strategy for adopting confidentiality in an enterprise cloud e
 
 - **Plan for a risk management strategy.** Identify and assess potential risks to data confidentiality and develop strategies to mitigate these risks.
 
-- **Develop a data loss protection (DLP) strategy.** DLP is a set of tools and processes that helps ensure that sensitive data isn't lost, misused, or accessed by unauthorized users. In terms of the principle of confidentiality, it involves defining clear data protection objectives and establishing a framework for implementing robust encryption and access controls. During the strategy phase, DLP is integrated into the overall security vision to help ensure that sensitive data is protected from unauthorized access.
+- **Develop a data loss prevention (DLP) strategy.** DLP is a set of tools and processes that helps ensure that sensitive data isn't lost, misused, or accessed by unauthorized users. In terms of the principle of confidentiality, it involves defining clear data protection objectives and establishing a framework for implementing robust encryption and access controls. During the strategy phase, DLP is integrated into the overall security vision to help ensure that sensitive data is protected from unauthorized access.
 
 ## Defining a strategy for integrity
 
