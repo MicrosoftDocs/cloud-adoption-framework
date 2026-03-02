@@ -42,7 +42,7 @@ Motivations for adopting and expanding your cloud footprint can vary. The follow
 
 - **AI:** Access cutting-edge AI capabilities for transformative solutions.
 
-- **Cloud native:** Benefit from exclusive cloud capabilities that aren't available elsewhere.
+- **Cloud native:** Benefit from cloud capabilities not available on-premises.
 
 - **Security:** Use robust security controls to securely enhance innovation.
 
