@@ -28,7 +28,7 @@ Potential changes to your organization might introduce stress and conflict. For 
 
 ## Understand the Microsoft Secure Future Initiative
 
-As a worldwide cloud provider, Microsoft prioritizes security above all other concerns and recognizes the critical need to prevent security breaches. The [Microsoft Secure Future Initiative](https://www.microsoft.com/trust-center/security/secure-future-initiative) addresses these concerns and provides an overall approach to build and maintain Microsoft products.
+As a worldwide cloud provider, Microsoft prioritizes security above all other concerns and recognizes the critical need to prevent security breaches. The [Microsoft Secure Future Initiative](https://www.microsoft.com/trust-center/security/secure-future-initiative) addresses these concerns and provides guidance on building and maintaining Microsoft products.
 
 The extent to which you prioritize security over other concerns, like reliability, performance, and costs, depends on many factors. You define these factors when you create your overall adoption strategy. Regardless of your priorities, you should understand the pillars of the Microsoft Secure Future Initiative to help focus on key areas of your cloud estate's security that you want to strengthen.
 
