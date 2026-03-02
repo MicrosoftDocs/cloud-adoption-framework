@@ -52,7 +52,7 @@ Review the [identity and access management design area](../../../ready/landing-z
 **For Kubernetes cluster management:**
 
 - As Azure Arc-enabled Kubernetes brings Microsoft Entra authentication and Azure RBAC to on-premises or other cloud Kubernetes environments, you must decide between existing Kubernetes access management and [Azure RBAC](/azure/azure-arc/kubernetes/conceptual-azure-rbac), depending on your organization's security and governance requirements.
-- Determine if Azure Arc-enabled Kubernetes Cluster Connect lets you [manage Kubernetes cluster](/azure/azure-arc/kubernetes/conceptual-cluster-connect) without opening your inbound firewall ports to your on-premises or other cloud networks.
+- Determine if Azure Arc-enabled Kubernetes Cluster Connect lets you [manage a Kubernetes cluster](/azure/azure-arc/kubernetes/conceptual-cluster-connect) without opening your inbound firewall ports to your on-premises or other cloud networks.
 - Determine if Azure RBAC is the right choice when you have many Kubernetes clusters in on-premises and cloud environments and need to simplify cluster administration.
 
 ## Design recommendations

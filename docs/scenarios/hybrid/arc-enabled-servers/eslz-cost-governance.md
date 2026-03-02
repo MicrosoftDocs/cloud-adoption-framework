@@ -10,7 +10,7 @@ ms.custom: e2e-hybrid, think-tank
 
 # Cost governance for Azure Arc-enabled servers
 
-Cost governance is the continuous process of implementing policies, to control the costs of services you're using on Azure. This document covers cost governance considerations and recommendations when using Azure Arc-enabled servers.
+Cost governance is the continuous process of implementing policies to control the costs of services you're using on Azure. This document covers cost governance considerations and recommendations when using Azure Arc-enabled servers.
 
 ## How much does Azure Arc-enabled servers cost?
 
