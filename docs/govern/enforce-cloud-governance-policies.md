@@ -26,7 +26,7 @@ Start by creating an overarching strategy for how policies will be enforced acro
 
 4. **Have a monitor-first stance.** Don't block actions unless you understand them first. For lower priority risk, start by monitoring compliance with cloud governance policies. After you understand the risk, you can move to more restrictive enforcement controls. A monitor-first approach gives you an opportunity to discuss the governance needs and realign the cloud governance policy and enforcement control to those needs.
 
-5. **Prefer blocklists.** Prefer blocklists over allowlists. Blocklists prevent the deployment of specific services. It's better to have a small list of services that you shouldn't use than a long list of services you can use. To avoid lengthy blocklists, don't add new services to the blocklist by default.
+5. **Prefer block lists.** Prefer block lists over allow lists. Block lists prevent the deployment of specific services. It's better to have a small list of services that you shouldn't use than a long list of services you can use. To avoid lengthy block lists, don't add new services to the block list by default.
 
 6. **Define a tagging and naming strategy.** Establish systematic guidelines for naming and tagging cloud resources. It provides a structured framework for resource categorization, cost management, security, and compliance across the cloud environment. Allow teams, such as development teams, to add other tags for their unique needs.
 
