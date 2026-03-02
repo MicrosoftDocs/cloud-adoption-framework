@@ -28,7 +28,7 @@ The principle of least privilege ensures users receive only the permissions requ
     | Management group | Role permissions apply to all subscriptions and resources within the management group. |
     | Subscription     | Role permissions apply to all resource groups and resources within the subscription. |
     | Resource group   | Role permissions apply to all resources within that resource group.        |
-    | Resource         | Role permissions apply only to the specific resource (for example, an Foundry instance). |
+    | Resource         | Role permissions apply only to the specific resource (for example, a Foundry instance). |
 
 For detailed steps, see [Apply Azure RBAC roles](/azure/role-based-access-control/role-assignments-portal).
 

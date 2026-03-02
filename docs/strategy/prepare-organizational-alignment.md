@@ -20,7 +20,7 @@ Without leadership buy-in for your adoption strategies and plans, you risk signi
 
 **Recommendations:**
 
-- _Align leadership with strategic goals_: Help your leadership better understand and justify the investments into adoption projects, ensuring they’re fully aware of the benefits, challenges, and risks.
+- _Align leadership with strategic goals_: Help your leadership better understand and justify the investments into adoption projects, ensuring they're fully aware of the benefits, challenges, and risks.
 
 - _Obtain the required resources_: Adoption projects often require significant investments in technology, talent, and time. Secure leadership buy-in to obtain the necessary resources for your projects.
 
@@ -55,17 +55,17 @@ For an organization to efficiently use cloud benefits, they need organizational 
 
 An organization's operating model is essentially how an organization structures itself to meet its strategic objectives to provide value to its customers and stakeholders. A full operating model represents all the value streams, capabilities, organizational structures, management systems, information systems, delivery partners and locations.  
 
-Understanding your organization’s current operating model plays a crucial role in developing your cloud adoption strategy:
+Understanding your organization's current operating model plays a crucial role in developing your cloud adoption strategy:
 
 - _Organizational capabilities and processes_: Organizations with traditional support, technical change, security, finance, and architecture capabilities might struggle to keep up with the continuous change and scale from cloud services. The adoption strategy must then consider evolving these capabilities to support and enable cloud effectively.
 - _Organizational culture_: Highly regulated or risk-averse organizations might have a non-collaborative and command and control culture. Cloud might introduce resistance to change in the ways of working. The cloud adoption strategy needs to factor in how to address the organization's culture needs to enable the benefits of cloud.
 - _Roles and skills_: Organizations that are primarily on-premises might lack expertise in cloud architecture, DevOps, and cloud-native security practices. The cloud adoption strategy needs to factor in the training and skilling plan to address the adequate adoption and enablement of cloud services.
 
-Leadership must identify and acknowledge current operating model limitations so the cloud adoption strategy can provide suitable attention and resourcing for the cloud journey.
+It's important that leadership identifies and acknowledges its current limitations across its existing operating model for the cloud adoption strategy to provide suitable attention and resourcing to plan the cloud journey.
 
 **Recommendations:**
 
-- _Understand the current operating model_: Evaluate the organization's current capabilities and structures either through a workshop with leadership or through a third party and benchmark your organization's current operating model's readiness for cloud.
+- _Understand the current operating model_: Evaluate the organization's current capabilities and structures either through a workshop with leadership or through a third party and benchmark the readiness of your organization's current operating model for cloud.
 
 - _Identify gaps_: Based on the benchmark, hold a workshop with leadership to identify the readiness gaps for cloud and the strategic objectives and determine how the cloud adoption strategy needs to be aligned.
 
@@ -85,7 +85,7 @@ This shift is a fundamental change in how businesses structure, develop, and man
 
 ### Key benefits of a product delivery model
 
-- _Democratization and scalability_: A product delivery model ensures all cloud platform teams services are productized to make them more easily consumable and accessible to all parts of the organization to drive cloud adoption and maturity.  
+- _Democratization and scalability_: A product delivery model ensures all cloud platform teams' services are productized to make them more easily consumable and accessible to all parts of the organization to drive cloud adoption and maturity.
 
 - _Drives innovation_: Product models align with cloud-native technologies, making it easier to experiment, scale, and roll out new features.
 
@@ -95,7 +95,7 @@ This shift is a fundamental change in how businesses structure, develop, and man
 
 ### Examples of what the shift looks like
 
-- **Focus**: A project delivery model is focused on completing tasks and delivering a "finished" solution, whereas a Product delivery model is focused on ongoing improvements and continuous value delivery.
+- **Focus**: A project delivery model is focused on completing tasks and delivering a "finished" solution, whereas a product delivery model is focused on ongoing improvements and continuous value delivery.
 
 - **Outcomes**: A project delivery model's outcome is typically based on a completed solution at a point in time, while a product delivery model's outcome is based on a continuously evolving service.  
 
