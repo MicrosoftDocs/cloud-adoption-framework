@@ -11,7 +11,7 @@ ms.topic: concept-article
 
 Azure Arc-enabled servers let you manage Windows and Linux servers and virtual machines hosted outside Azure, on your corporate network, or on a third-party cloud provider.
 
-This article will help you operate Azure Arc-enabled servers on Azure enterprise estate, with centralized management and monitoring at the [platform level](../../../ready/landing-zone/design-area/management.md). This article presents key recommendations for your operations team, to maintain Azure Arc-enabled servers.
+This article will help you operate Azure Arc-enabled servers on Azure enterprise estate, with centralized management and monitoring at the [platform level](../../../ready/landing-zone/design-area/management.md). This article presents key recommendations for your operations team to maintain Azure Arc-enabled servers.
 
 ## Architecture
 
@@ -40,7 +40,7 @@ Here are some general design considerations for Azure Arc-enabled servers monito
 ### Azure Monitor agents deployment
 
 - The Azure Monitor agents should be automatically deployed to Azure Arc-enabled Windows and Linux servers, through [Azure Policy](/azure/governance/policy/overview), as part of the [enterprise-scale landing zone](../../../ready/landing-zone/design-area/management.md).
-- Logs should be stored centrally on the Log Analytics workspace, a dedicated platform, and control log access with Azure [role-based access control (RBAC)](/azure/azure-monitor/platform/design-logs-deployment#access-control-overview). A separate workspace for management, data sovereignty, or compliance may limit single pane of glass and event correlation across Azure Arc-enabled servers.
+- Logs should be stored centrally on the Log Analytics workspace, a dedicated platform, and control log access with Azure [role-based access control (RBAC)](/azure/azure-monitor/platform/design-logs-deployment#access-control-overview). A separate workspace for management, data sovereignty, or compliance can limit single pane of glass and event correlation across Azure Arc-enabled servers.
 
 ### Azure Monitor configuration
 
