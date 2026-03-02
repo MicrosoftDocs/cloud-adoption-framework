@@ -11,7 +11,7 @@ ms.date: 02/03/2025
 
 Cost efficiency in your cloud adoption means that you effectively manage and optimize costs that are associated with cloud service usage. Cost efficiency involves strategic decisions to help ensure that your organization gets the best value for your investment and minimizes unnecessary expenses.
 
-Cloud adoption helps drive business growth, expand market share, and increase revenue. Implement cost efficiency to help optimize your cloud adoption journey.
+Cloud adoption helps drive business growth, expand market share, and increase revenue. Implement cost efficiency to optimize your cloud adoption journey.
 
 ## Shift from a CapEx model to an OpEx model
 
