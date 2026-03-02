@@ -127,7 +127,7 @@ Review the current cloud risk list to ensure it's valid and accurate. Reviews sh
 
 - **Schedule regular assessments.** Set a recurring schedule to review and assess cloud risks, such as quarterly, biannually, or yearly. Find a review frequency that best accommodates personnel availability, the rate of cloud environment changes, and organizational risk tolerance.
 
-- **Conduct event-based reviews.** Review risks in response to specific events, such as the failed prevention of a risk. Consider reviewing risks when you adopt new technologies, change business processes, and discover new security threats events. Also consider reviewing when technology, regulatory compliance, and organizational risk tolerance changes.
+- **Conduct event-based reviews.** Review risks in response to specific events, such as the failed prevention of a risk. Consider reviewing risks when you adopt new technologies, change business processes, and discover new security threat events. Also consider reviewing when technology, regulatory compliance, and organizational risk tolerance changes.
 
 - **Review cloud governance policies.** Keep, update, or remove cloud governance policies to address new risks, existing risks, or outdated risks. Review the cloud governance policy statement and cloud governance enforcement strategy as needed. When you remove a risk, evaluate if the cloud governance policies associated with it are still relevant. Consult with stakeholders to remove the cloud governance policies or update the policies to associate them with a new risk.
 
