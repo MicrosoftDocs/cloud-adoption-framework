@@ -10,7 +10,7 @@ ms.custom: e2e-hybrid, think-tank
 
 # CI/CD and GitOps disciplines with Azure Arc-enabled Kubernetes
 
-As a cloud-native construct, Kubernetes requires a cloud-native approach for deployment and operations. With GitOps, you declare the desired state of your application-based deployments in files stored in Git repositories. Applications need Kubernetes objects to run, including Deployments, Horizontal-Pod-Autoscalers, Services, and ConfigMaps. Kubernetes operators run in the clusters and continuously reconcile each cluster's state with the desired state declared in your Git repository. These operators pull files from your Git repositories and apply the desired state to your clusters. The operators also continuously ensure that your cluster remains in the desired state.
+As a cloud-native construct, Kubernetes requires a cloud-native approach for deployment and operations. With GitOps, you declare the desired state of your application-based deployments in files stored in Git repositories. Applications need Kubernetes objects to run, including Deployments, Horizontal-Pod-Autoscalers, Services, and ConfigMaps. Kubernetes operators run in the clusters and continuously reconcile each cluster's state with the desired state declared in your Git repository. These operators pull files from your Git repositories and apply the desired state to your clusters. The operators also continuously verify that your cluster remains in the desired state.
 
 Implementing GitOps lets you:
 
@@ -73,7 +73,7 @@ For your GitOps configuration repositories, consider the following strategies ba
   - Allows the most flexibility for controlling Git policies and permissions for each branch that represents an environment.
   - The drawback is that there's no sharing of the common config among environments, since tooling such as [Kustomize](https://kustomize.io/) doesn't work with Git branches.
 - **Single repository (Directory per environment):**
-  - You can implement this approach using tooling like Kustomize, which allows you to define a base configuration for Kubernetes objects and a set of artifacts (patches) for your environment that overrides configurations in the base.
+  - You can implement this approach using tooling like Kustomize to define a base configuration for Kubernetes objects and a set of artifacts (patches) for your environment that overrides configurations in the base.
   - This approach can reduce duplicate YAML files for each environment, but also reduces the configuration separation between environments. Making a single change to the repository can affect all environments at once, so changes to base directories must be fully understood and applied carefully.
 - **Multiple repositories (each serving a specific purpose):**
   - You can use this approach for separating configuration repositories for each application, team, layer, or tenant.
@@ -121,7 +121,7 @@ Review the following security considerations when planning to implement GitOps f
 
 ### Repository auth
 
-- You can use a public or private Git repository with GitOps, but due to the sensitive nature of Kubernetes configurations, use a private repository that requires authentication by SSH key or API key. GitOps also works with Git repositories that are only accessible within a private network as long as your Kubernetes cluster can access it, but this setup limits your ability to use cloud-based Git providers like Azure Repos or GitHub.
+- You can use a public or private Git repository with GitOps, but due to the sensitive nature of Kubernetes configurations, use a private repository that requires authentication by using an SSH key or an API key. GitOps also works with Git repositories that are only accessible within a private network as long as your Kubernetes cluster can access it, but this setup limits your ability to use cloud-based Git providers like Azure Repos or GitHub.
 - Both HTTPS and SSH protocols offer a reliable and secure connection you can use to connect to your source control tool. However, HTTPS is often easier to set up, and uses a port that rarely requires you to open more ports in your firewalls.
 
 ### Repo and branch security
