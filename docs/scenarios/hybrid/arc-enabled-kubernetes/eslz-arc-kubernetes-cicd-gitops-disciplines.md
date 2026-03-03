@@ -139,7 +139,7 @@ Review the following security considerations when planning to implement GitOps f
 
 Review the following design recommendations when planning to implement GitOps for Azure Arc-enabled Kubernetes.
 
-The following diagram contains a reference architecture that illustrates the responsibilities, repositories, and pipelines needed to implement a GitOps process using the Azure Arc-enabled Kubernetes [Flux Extension](/azure/azure-arc/kubernetes/tutorial-use-Gitops-flux2).
+The following diagram contains a reference architecture that illustrates the responsibilities, repositories, and pipelines needed to implement a GitOps process using the Azure Arc-enabled Kubernetes [Flux Extension](/azure/azure-arc/kubernetes/tutorial-use-gitops-flux2).
 
 [![Diagram that shows a GitOps Reference flow.](./media/arc-enabled-kubernetes-cicd-flow.png)](./media/arc-enabled-kubernetes-cicd-flow.png#lightbox)
 
