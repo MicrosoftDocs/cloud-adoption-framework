@@ -74,7 +74,7 @@ Afterwards, be sure to [verify your connection](/azure/azure-arc/servers/onboard
 
 To simplify managing hybrid servers throughout their lifecycle, [VM extensions](/azure/azure-arc/servers/manage-vm-extensions) can be deployed to Azure Arc-enabled servers from the Azure portal. Virtual machine (VM) extensions are small applications that provide post-deployment configuration and automation tasks on Azure VMs. For example, if a virtual machine requires software installation, anti-virus protection, or to run a script in it, a VM extension can be used. Many VM extensions are supported for both [Windows](/azure/azure-arc/servers/manage-vm-extensions#windows-extensions) and [Linux](/azure/azure-arc/servers/manage-vm-extensions#linux-extensions) Azure Arc-enabled servers.
 
-We recommend automating VM extension deployment at scale via [Azure Policy](/azure/governance/policy/overview) to deploy extensions to your Azure Arc-enabled servers and regularly check policy compliance data to identify and remediate servers without the agent.
+We recommend automating VM extension deployment at scale via [Azure Policy](/azure/governance/policy/overview) to deploy extensions to your Azure Arc-enabled servers and regularly check policy compliance data to identify and remediate servers that don't have the agent installed.
 
 Overview of steps:
 
