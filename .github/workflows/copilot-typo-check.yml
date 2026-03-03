@@ -1,0 +1,110 @@
+# Copilot: Weekly Typo Check
+#
+# Creates a draft PR and comments @copilot to trigger the coding agent.
+# Rotates through docs/ subfolders each Friday at midnight UTC.
+# Issues are disabled on this repo, so we use PRs as the trigger instead.
+
+name: "Copilot: Weekly Typo Check"
+
+on:
+  schedule:
+    - cron: "0 0 * * 5" # Every Friday at midnight UTC
+  workflow_dispatch:
+    inputs:
+      folder:
+        description: "Folder to review (e.g. docs/govern). Leave empty for auto-rotation."
+        required: false
+        type: string
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  trigger-copilot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.TARGET_REPO_TOKEN }}
+
+      - name: Determine target folder
+        id: folder
+        env:
+          INPUT_FOLDER: ${{ inputs.folder }}
+        run: |
+          if [ -n "$INPUT_FOLDER" ]; then
+            echo "target=$INPUT_FOLDER" >> "$GITHUB_OUTPUT"
+          else
+            folders=(
+              "docs/strategy"
+              "docs/plan"
+              "docs/ready"
+              "docs/adopt"
+              "docs/govern"
+              "docs/manage"
+              "docs/secure"
+              "docs/organize"
+              "docs/scenarios"
+              "docs/migrate"
+              "docs/relocate"
+              "docs/antipatterns"
+              "docs/get-started"
+              "docs/resources"
+            )
+            week=$(date +%V)
+            index=$(( 10#$week % ${#folders[@]} ))
+            echo "target=${folders[$index]}" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Create branch with empty commit
+        id: branch
+        env:
+          TARGET_FOLDER: ${{ steps.folder.outputs.target }}
+        run: |
+          BRANCH="copilot/typo-check-$(date +%Y%m%d-%H%M%S)"
+          echo "name=$BRANCH" >> "$GITHUB_OUTPUT"
+
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git checkout -b "$BRANCH"
+          git commit --allow-empty -m "chore: trigger Copilot typo check for $TARGET_FOLDER"
+          git push origin "$BRANCH"
+
+      - name: Create draft PR
+        id: pr
+        env:
+          GH_TOKEN: ${{ secrets.TARGET_REPO_TOKEN }}
+          BRANCH: ${{ steps.branch.outputs.name }}
+          TARGET_FOLDER: ${{ steps.folder.outputs.target }}
+        run: |
+          PR_URL=$(gh pr create \
+            --title "Copilot: Fix typos in $TARGET_FOLDER" \
+            --body "Automated weekly typo check. Copilot will scan \`$TARGET_FOLDER/**/*.md\` for typos and punctuation issues.
+
+          **Target folder:** \`$TARGET_FOLDER\`
+          **Triggered by:** ${{ github.event_name }} (run [${{ github.run_id }}](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}))
+          **Skills:** fix-typos, fix-punctuation" \
+            --draft \
+            --head "$BRANCH" \
+            --base main)
+
+          echo "url=$PR_URL" >> "$GITHUB_OUTPUT"
+          echo "Created draft PR: $PR_URL"
+
+      - name: Trigger Copilot via comment
+        env:
+          GH_TOKEN: ${{ secrets.TARGET_REPO_TOKEN }}
+          PR_URL: ${{ steps.pr.outputs.url }}
+          TARGET_FOLDER: ${{ steps.folder.outputs.target }}
+        run: |
+          gh pr comment "$PR_URL" --body "@copilot Use the **fix-typos** and **fix-punctuation** skills to scan all \`.md\` files in \`$TARGET_FOLDER\` and push fixes to this PR branch.
+
+          **Instructions:**
+          1. Find and fix typos, misspellings, and punctuation errors in every \`.md\` file under \`$TARGET_FOLDER/\`.
+          2. Do NOT change technical terms, product names, code blocks, YAML frontmatter, or URLs.
+          3. Each fix should be minimal — change only what is necessary.
+          4. Commit your changes directly to this PR branch."
