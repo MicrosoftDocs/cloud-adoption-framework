@@ -146,7 +146,7 @@ At minimum, you should define the following three RED metrics and measure them f
 Open Service Mesh provides several pre-configured service workbooks in Azure Monitor so you don't have to manually set up dashboards and charts. This detailed telemetry lets you observe service behavior and empowers you to troubleshoot, maintain, and optimize your applications. The OSM monitoring workbook in Azure Monitor lets you:
 
 - Get an overview of all services in your mesh, and gain critical service-level metrics for three of the four golden signals of monitoring: latency, requests, and errors.
-- Define, review and set [alerts](/azure/azure-monitor/alerts/alerts-overview) against service level objectives (SLOs), which summarize your service's user-visible performance.
+- Define, review, and set [alerts](/azure/azure-monitor/alerts/alerts-overview) against service level objectives (SLOs), which summarize your service's user-visible performance.
 - View metric charts for individual services so you can deeply analyze them using filtering and breakdowns, sifting data by response code, protocol, destination pod, traffic source, and more.
 
 Use visualizations from the Jaeger UI to:

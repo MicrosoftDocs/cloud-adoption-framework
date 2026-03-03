@@ -121,7 +121,7 @@ Review the following security considerations when planning to implement GitOps f
 
 ### Repository auth
 
-- You can use a public or private Git repository with GitOps, but due to the sensitive nature of Kubernetes configurations, use a private repository that requires authentication by using an SSH key or API key. GitOps also works with Git repositories that are only accessible within a private network as long as your Kubernetes cluster can access it, but this setup limits your ability to use cloud-based Git providers like Azure Repos or GitHub.
+- You can use a public or private Git repository with GitOps, but due to the sensitive nature of Kubernetes configurations, use a private repository that requires authentication by using an SSH key or an API key. GitOps also works with Git repositories that are only accessible within a private network as long as your Kubernetes cluster can access it, but this setup limits your ability to use cloud-based Git providers like Azure Repos or GitHub.
 - Both HTTPS and SSH protocols offer a reliable and secure connection you can use to connect to your source control tool. However, HTTPS is often easier to set up, and uses a port that rarely requires you to open more ports in your firewalls.
 
 ### Repo and branch security
