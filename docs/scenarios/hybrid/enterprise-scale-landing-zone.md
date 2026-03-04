@@ -76,7 +76,7 @@ Organizations must project Azure Arc resources for their applications into the s
 
 ### Example four: Project on-premises servers that reached end of support into Azure to use Extended Security Updates delivered through Azure Arc
 
-Windows Server versions reach end of support, and organizations cannot always meet end-of-support deadlines while servers need to remain on-premises. Organizations can purchase [Extended Security Updates](/windows-server/get-started/extended-security-updates-overview) enabled by [Azure Arc](https://azure.microsoft.com/products/azure-arc/) to maintain security support for these servers.
+Windows Server versions reach end of support, and organizations cannot always meet end-of-support deadlines while servers need to remain on-premises. Organizations can purchase [Extended Security Updates](/windows-server/get-started/extended-security-updates-overview) enabled by [Azure Arc](/azure/azure-arc/overview) to maintain security support for these servers.
 
 Whether deploying or operating Azure Landing Zones, organizations can treat their on-premises datacenters as normal landing zones and place datacenter resources into new or existing landing zones based on their needs. Common approaches include:
 
