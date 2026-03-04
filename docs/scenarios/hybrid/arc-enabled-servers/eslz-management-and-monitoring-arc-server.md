@@ -61,7 +61,7 @@ Here are some design factors for monitoring and managing Azure Arc-enabled serve
 
 - Use [Azure Update Manager](/azure/update-manager/overview) to patch both Azure Arc-enabled Windows and Linux servers long term. You can view and schedule OS updates and patches for your Azure Arc-enabled servers at scale.
 - On Azure Arc-enabled Windows servers, Azure Update Manager can also automate agent upgrades through Windows updates.
-- Some Azure Arc-enabled Windows servers may have reached [End of Support](/lifecycle/faq/windows#when-a-windows-operating-system--os--reaches-the-end-of-its-lifecycle-or-is-no-longer-supported--does-that-mean-new-programs-will-not-run-on-that-os-). These servers can't move to Azure or upgrade. Enable [Extended Security Updates](/azure/azure-arc/servers/prepare-extended-security-updates) (ESUs) on those servers to keep getting critical security patches.
+- Some Azure Arc-enabled Windows servers could have reached [End of Support](/lifecycle/faq/windows#when-a-windows-operating-system--os--reaches-the-end-of-its-lifecycle-or-is-no-longer-supported--does-that-mean-new-programs-will-not-run-on-that-os-). These servers can't move to Azure or upgrade. Enable [Extended Security Updates](/azure/azure-arc/servers/prepare-extended-security-updates) (ESUs) on those servers to keep getting critical security patches.
 
 ## Next steps
 

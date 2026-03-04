@@ -104,7 +104,7 @@ Policy-driven governance is a core part of cloud-native tasks and the Cloud Adop
 
 Azure Arc-enabled servers support [Azure Policy](/azure/governance/policy/overview) at the Azure resource management layer. They also support policy within the machine OS using [machine configuration policies](/azure/governance/machine-configuration/overview).
 
-Learn the [scope of Azure Policy](/azure/role-based-access-control/scope-overview) and where you can apply it. Scope levels include management group, subscription, resource group, or single resource. Create a management group design following the best practices in the [Cloud Adoption Framework enterprise-scale](../../../ready/landing-zone/design-area/resource-org.md)
+Learn the [scope of Azure Policy](/azure/role-based-access-control/scope-overview) and where you can apply it. Scope levels include management group, subscription, resource group, or single resource. Create a management group design following the best practices in the [Cloud Adoption Framework enterprise-scale](../../../ready/landing-zone/design-area/resource-org.md).
 
 - Find what Azure policies you need by defining business, regulatory, and security needs for Azure Arc-enabled servers.
 - Enforce tagging and set up [remediation tasks](/azure/governance/policy/how-to/remediate-resources).
@@ -150,7 +150,7 @@ Check and update your OS as part of your overall management plan. Apply critical
 
 ### Role-based access control (RBAC)
 
-Follow the [least privilege principle](/security/benchmark/azure/baselines/arc-enabled-security-baseline#pa-7-follow-just-enough-administration-least-privilege-principle). Users, groups, or apps with roles like "contributor," "owner," or "Azure Connected Machine Resource Administrator" can deploy extensions. These extensions grant root access on Azure Arc-enabled servers. Use these roles with caution to limit the blast radius, or replace them with custom roles.
+Follow the [least privilege principle](/security/benchmark/azure/baselines/arc-enabled-security-baseline#pa-7-follow-just-enough-administration-least-privilege-principle). Users, groups, or apps with roles like "Contributor," "Owner," or "Azure Connected Machine Resource Administrator" can deploy extensions. These extensions grant root access on Azure Arc-enabled servers. Use these roles with caution to limit the blast radius, or replace them with custom roles.
 
 To limit a user's access and only let them onboard servers to Azure, use the Azure Connected Machine Onboarding role. This role can only onboard servers. It can't re-onboard or delete the server resource. Review the [Azure Arc-enabled servers security overview](/azure/azure-arc/servers/security-overview) for more info about access controls.
 
