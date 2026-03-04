@@ -1,3 +1,16 @@
+---
+title: Operational Standards for Data 
+description: Operational standards in Microsoft Fabric and Azure help unify data processes, ensuring data product production and scalable consumption by AI and analytics
+#customer intent: As a decision maker, I want best practices and decision guidance to help standardize how we ingest data, create data products in Microsoft Fabric OneLake, secure data products, and consume data prodcuts for analytics and AI across Microsoft and Azure services.
+author: stephen-sumner
+ms.author: ssumner
+ms.reviewer: ssumner
+ms.date: 03/09/2026
+ms.topic: concept-article
+ms.collection: ce-advocates-ai-copilot
+---
+
+
 # Operational standards
 
 With a unified architecture and governance guardrails in place, focus on the **day-to-day practices** for handling data. Operational standards ensure that every data domain follows consistent processes to move data from source systems into OneLake, transform it into high-quality data products, and make those products available for use. By standardizing these processes, you achieve a single source of truth in OneLake and make analytics and AI outcomes repeatable and trustworthy. This section covers best practices for data ingestion, processing, publishing, securing, and consuming data products. 
@@ -6,10 +19,9 @@ With a unified architecture and governance guardrails in place, focus on the **
 
 **Cost operational standards** define how leaders expect teams to manage cost once Microsoft Fabric is running. Recommendation: **Decision makers must set clear expectations for cost decisions and reviews that occur throughout normal operations.** Here’s a checklist:
 
-1.  **Review monitoring and cost outcomes at the leadership level**. Leadership review ensures monitoring data drives decisions, not just reports. **Best practice:** Effective organizations review Fabric health, reliability, and cost metrics together in leadership forums. This keeps the data platform aligned with business priorities. **Decision guidance:** Decide how often to review outcomes. Choose quarterly for stable environments. Choose monthly when growth is rapid. More frequent reviews increase alignment but require focus. See [Understand your Fabric capacity Azure bill](/fabric/enterprise/azure-billing) and [Evaluate and optimize your Microsoft Fabric capacity](/fabric/enterprise/optimize-capacity)
+1. **Review monitoring and cost outcomes at the leadership level**. Leadership review ensures monitoring data drives decisions, not just reports. **Best practice:** Effective organizations review Fabric health, reliability, and cost metrics together in leadership forums. This keeps the data platform aligned with business priorities. **Decision guidance:** Decide how often to review outcomes. Choose quarterly for stable environments. Choose monthly when growth is rapid. More frequent reviews increase alignment but require focus. See [Understand your Fabric capacity Azure bill](/fabric/enterprise/azure-billing) and [Evaluate and optimize your Microsoft Fabric capacity](/fabric/enterprise/optimize-capacity)
 
-2.  **Define how scaling decisions are made and approved**  
-    Scaling a Fabric capacity affects both cost and performance. Teams must not scale based on short term pressure. **Best practice:** Leaders define a clear path for how scaling requests are evaluated and who approves them. Scaling decisions are tied to business demand and reliability targets. **Decision guidance:** Use central approval when scaling affects shared budgets. Allow delegated approval only after teams show cost discipline. Central approval lowers financial risk. Delegation improves speed when trust is earned. See [Pause and resume your capacity](/fabric/enterprise/pause-resume) and [Scale your Fabric capacity](/fabric/enterprise/scale-capacity).
+2. **Define how scaling decisions are made and approved.** Scaling a Fabric capacity affects both cost and performance. Teams must not scale based on short term pressure. **Best practice:** Leaders define a clear path for how scaling requests are evaluated and who approves them. Scaling decisions are tied to business demand and reliability targets. **Decision guidance:** Use central approval when scaling affects shared budgets. Allow delegated approval only after teams show cost discipline. Central approval lowers financial risk. Delegation improves speed when trust is earned. See [Pause and resume your capacity](/fabric/enterprise/pause-resume) and [Scale your Fabric capacity](/fabric/enterprise/scale-capacity).
 
 3.  **Set standards for throttling and surge scenarios**. Throttling and surge protection define how the platform behaves under heavy load. **Best practice:** Mature teams monitor throttling patterns and act before impact. They predefine responses using capacity scaling or workload priority. Leaders treat throttling as an early warning, not a steady state. **Decision guidance:** Decide when throttling is acceptable. Accept it only for non critical workloads. Add capacity when reliability expectations are strict. More capacity improves experience but increases cost. See [Understand your Fabric capacity throttling](/fabric/enterprise/throttling) and [Surge protection](/fabric/enterprise/surge-protection).
 
@@ -57,7 +69,7 @@ Adopt the medallion architecture as the standard for creating data products. Suc
 
 1.  **Bronze (raw ingestion)**: The Bronze layer is the system of record. It captures data exactly as it enters OneLake. Data is immutable and append only. Nothing is corrected or enriched at this stage. **Standard to enforce:** Every piece of data that comes into OneLake should land in a Bronze area first, even if it’s quickly transformed afterward. Teams should not directly modify or use raw data without going through this layering, to avoid confusion about what’s original data.
 
-2.  **Silver (validated)**: The Silver layer represents trust. Data here is cleaned, validated, and standardized. Errors are removed. Formats are aligned. Basic business rules are applied. **Standard to enforce: **Data in the Silver layer should be considered the official cleansed data for the organization. Once data is in Silver, teams should not need to go back to raw sources for cleansed data. This means governance of the Silver layer is critical. It should be well documented, and changes should be managed.** **
+2.  **Silver (validated)**: The Silver layer represents trust. Data here is cleaned, validated, and standardized. Errors are removed. Formats are aligned. Basic business rules are applied. **Standard to enforce: ** Data in the Silver layer should be considered the official cleansed data for the organization. Once data is in Silver, teams should not need to go back to raw sources for cleansed data. This means governance of the Silver layer is critical. It should be well documented, and changes should be managed.
 
 3.  **Gold (business context, data products)**: The Gold layer delivers value. It contains certified business data products that leaders rely on to run the business. Data is aligned to business definitions. Metrics and KPIs are clear and approved. Conflicting numbers are eliminated. **Best practices:** Design Gold data with the end-user in mind. These datasets should be optimized for easy consumption. They might have business-friendly column names, predefined calculations (like year-to-date totals, common KPIs), and performance optimizations (indexes, pre-aggregations). Ensure that every Gold dataset is registered in **Microsoft Purview as a data product**, with clear metadata (description, owner, update schedule, so any user or system can discover and trust it). **Standard to enforce:** No “rogue” data products. Every dataset that is used for important decisions or by multiple teams must be in the Gold layer (or certified as such), meaning it’s governed.
 
@@ -146,8 +158,6 @@ Microsoft Foundry lets you build AI agents that can use data from Fabric, OneLak
 Agents can pull information from four main sources: Foundry IQ, Azure AI Search indexes, MCP servers, and Fabric data agents. Each one handles data security differently, so it’s important to choose the right method for your scenario:
 
 - **Foundry IQ**: Uses Azure AI Search knowledge bases and enforces access through index‑level metadata (ACLs or sensitivity labels). Only authorized content is returned. Governance quality depends on the underlying search index. See [Connect Agents to Foundry IQ Knowledge Bases](/azure/ai-foundry/agents/how-to/tools/knowledge-retrieval?view=foundry&tabs=search%2Cpython#authentication-and-permissions).
-
-<!-- -->
 
 - **Azure AI Search index.** Foundry agents can query Azure AI Search indexes.  
   When you use this approach, you must follow the Azure AI Search data security best practices. Azure AI Search enforces access rules during queries only when the index contains ACL metadata or sensitivity labels. Without this information, any caller with access to the index can retrieve all its content. See [Connect an Azure AI Search index to Foundry agents](/azure/ai-foundry/agents/how-to/tools/ai-search?view=foundry&tabs=keys%2Cazurecli&pivots=python)

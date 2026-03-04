@@ -1,4 +1,14 @@
-# Governance and security baselines
+---
+title: Data governance and security baselines with Microsoft Purview
+description: "Data governance and security baselines with Microsoft Purview"
+#customer intent: As a technology decision maker, I want to have a governance and security baseline checklist that I can use to ensure all my data sources are visible, compliant, governed, secured, and monitored.
+author: stephen-sumner
+ms.author: ssumner
+ms.reviewer: ssumner
+ms.date: 03/09/2026
+ms.topic: concept-article
+ms.collection: ce-skilling-ai-copilot
+---
 
 # Data governance and security baselines
 
@@ -20,11 +30,11 @@ The cornerstone of governance is a comprehensive inventory (catalog) of data ass
 
 Once the catalog and glossary are established, all relevant data sources must be visible in Purview. Registering and scanning systems across the estate populates the [Data Map](/purview/data-map-scan-ingestion) with metadata from your scanned data sources. It does not bring the actual into Purview. It does not replace the security controls of each data source. **Best practices:**
 
-1.  **Create Purview architecture.** Use Purview collections and [Data Map domains](/purview/data-map-domains) to align permissions and governance with the needs of your data domains. These constructs define boundaries for access control, policy management, and operational responsibility. Follow Purview [domain and collection architecture best practices](/purview/data-gov-best-practices-domains-collections#domains-and-collections-archetypes).
+1. **Create Purview architecture.** Use Purview collections and [Data Map domains](/purview/data-map-domains) to align permissions and governance with the needs of your data domains. These constructs define boundaries for access control, policy management, and operational responsibility. Follow Purview [domain and collection architecture best practices](/purview/data-gov-best-practices-domains-collections#domains-and-collections-archetypes).
 
-2.  **Set up Purview for Microsoft 365 data.** Purview has native integration with Microsoft 365 data (such as SharePoint, OneDrive, Exchange, Teams). Ensure that content in Microsoft 365 is also being governed. When Microsoft 365 documents and messages are brought into OneLake or otherwise used in analytics, any labels or classifications from Microsoft 365 will carry over. In Purview, you’ll be able to see things like sensitivity labels and retention labels that were applied in the M365 environment. See [Microsoft Purview setup guides](/purview/purview-fast-track-setup-guides).
+2. **Set up Purview for Microsoft 365 data.** Purview has native integration with Microsoft 365 data (such as SharePoint, OneDrive, Exchange, Teams). Ensure that content in Microsoft 365 is also being governed. When Microsoft 365 documents and messages are brought into OneLake or otherwise used in analytics, any labels or classifications from Microsoft 365 will carry over. In Purview, you’ll be able to see things like sensitivity labels and retention labels that were applied in the M365 environment. See [Microsoft Purview setup guides](/purview/purview-fast-track-setup-guides).
 
-3.  **Scan Microsoft Fabric OneLake.** Fabric OneLake is not automatically included in the Purview Data Map and must be explicitly registered and scanned. Scanning OneLake enables metadata discovery, lineage tracking, and cataloging of Fabric assets in Purview. See [Register and scan Microsoft Fabric](/purview/register-scan-fabric-tenant?tabs=Scenario1).
+3. **Scan Microsoft Fabric OneLake.** Fabric OneLake is not automatically included in the Purview Data Map and must be explicitly registered and scanned. Scanning OneLake enables metadata discovery, lineage tracking, and cataloging of Fabric assets in Purview. See [Register and scan Microsoft Fabric](/purview/register-scan-fabric-tenant?tabs=Scenario1).
 
 ### 1.3. Scan cloud, SaaS and on-premises data
 

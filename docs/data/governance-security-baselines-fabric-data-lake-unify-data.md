@@ -1,4 +1,16 @@
-# 3.2 Data lake governance and security baselines
+---
+title: Fabric Governance and Security Baselines
+description: "Fabric governance and security baselines: Learn how to secure and govern your Microsoft Fabric OneLake environment with best practices for workspaces, cost, and data protection."
+#customer intent: As a technology decision maker, I want to have a governance and security baseline checklist that I can use to ensure the Fabric platform is minimizing risk, governing and securing all data uniformly, and cost optimized.
+author: stephen-sumner
+ms.author: ssumner
+ms.reviewer: ssumner
+ms.date: 03/09/2026
+ms.topic: concept-article
+ms.collection: ce-skilling-ai-copilot
+---
+
+# Fabric governance and security baselines
 
 This section focuses on governance and security inside the Microsoft Fabric OneLake environment. OneLake accumulates data from across your enterprise, so it's the hub of your analytics and AI data. Apply the same principles you established for the broader data estate, but tailor them to the Fabric context, to keep this unified data lake secure and well-governed. 
 
