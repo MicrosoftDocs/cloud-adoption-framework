@@ -1,12 +1,24 @@
 items:
   - name: Unify your data platform
+  
   - name: Executive strategy
     href: executive-strategy-unify-data.md
+  
   - name: 1. Organizational readiness
     href: organizational-readiness-unify-data.md
+  
   - name: 2. Architecture
-    href: technology-architecture-unify-data.md
+    items:
+    - name: Fabric architecture
+      href: architecture-fabric-data-lake-unify-data-platform.md
+    - name: Azure architecture
+      href: architecture-azure-unify-data-platform.md
+
   - name: 3. Governance and security baselines
-    href: governance-security-baselines-unify-data.md
+    items:
+    - name: Data estate (Purview)
+      href: purview-data-estate-governance-security-baselines-unify-data.md
+    - name: Data lake (Fabric)
+      href: fabric-data-lake-governance-security-baselines-unify-data.md
   - name: 4. Operational standards
     href: operational-standards-unify-data.md

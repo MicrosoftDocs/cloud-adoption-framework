@@ -119,4 +119,4 @@ Many teams are expected to build data skills while maintaining full delivery com
 By planning your organizational readiness in these ways, you create a solid foundation. This planning ensures that your technology investments in a unified data platform have clear purpose, strong ownership, and the necessary human capabilities to be successful.
 
 > [!div class="nextstepaction"]
-> [Architecture](./technology-architecture-unify-data.md)
+> [Architecture](./architecture-fabric-data-lake-unify-data-platform.md)
