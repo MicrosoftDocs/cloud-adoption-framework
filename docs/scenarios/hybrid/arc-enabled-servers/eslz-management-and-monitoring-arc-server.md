@@ -9,65 +9,65 @@ ms.topic: concept-article
 
 # Management and monitoring for Azure Arc-enabled servers
 
-Azure Arc-enabled servers let you manage Windows and Linux servers and virtual machines hosted outside Azure, on your corporate network, or on a third-party cloud provider.
+Azure Arc-enabled servers let you manage Windows and Linux servers and VMs hosted outside Azure. These can be on your corporate network or a third-party cloud provider.
 
-This article will help you operate Azure Arc-enabled servers on Azure enterprise estate, with centralized management and monitoring at the [platform level](../../../ready/landing-zone/design-area/management.md). This article presents key recommendations for your operations team to maintain Azure Arc-enabled servers.
+This article helps you run Azure Arc-enabled servers on your Azure estate. It covers central management and monitoring at the [platform level](../../../ready/landing-zone/design-area/management.md) and gives key tips for your ops team.
 
 ## Architecture
 
-The following diagram shows conceptual reference architecture that demonstrates how the Azure [connected machine agent](/azure/azure-arc/servers/agent-overview) communicates with the different management and monitoring capabilities in Azure.
+This diagram shows how the Azure [connected machine agent](/azure/azure-arc/servers/agent-overview) connects to management and monitoring features in Azure.
 
 [![Diagram that shows Azure connected machine agent architecture.](./media/arc-enabled-servers-connected-agent.png)](./media/arc-enabled-servers-connected-agent.png#lightbox)
 
 ## Design considerations
 
-Here are some general design considerations for Azure Arc-enabled servers monitoring and management:
+Here are some design factors for monitoring and managing Azure Arc-enabled servers:
 
-- **Azure Monitor requirements:** Azure Monitor can [enable VM insights](/azure/azure-arc/servers/learn/tutorial-enable-vm-insights) for your Azure Arc-enabled servers into a Log Analytics workspace for detailed analysis and correlation. This will involve installing monitoring agents like the Azure Monitor and dependency agents.
-- **Azure Monitor agents deployment:** Review the [deployment options](/azure/azure-arc/servers/concept-log-analytics-extension-deployment) for the Azure Monitor agents.
-- **Azure Monitor configuration:** Plan your Azure Arc-enabled servers [data collection requirements](/azure/azure-monitor/vm/data-collection#add-data-sources), including metrics and log collection.
-- **Azure connected machine agent management:** The Azure connected machine agent plays a critical role in your hybrid operations. It enables you to manage your Windows and Linux machines hosted outside of Azure, and enforce governance policies. Implement solutions that keep track of unresponsive agents, monitor for new versions, and automate upgrades.
-- **Patch management for your hybrid resources:** Automate and install updates to ensure your Azure Arc-enabled servers have the latest operating system and security updates.
+- **Azure Monitor requirements:** Azure Monitor can [enable VM insights](/azure/azure-arc/servers/learn/tutorial-enable-vm-insights) for your Azure Arc-enabled servers in a Log Analytics workspace. This helps with deep analysis and data linking. You need to install agents like the Azure Monitor agent and the dependency agent.
+- **Azure Monitor agents deployment:** Check the [install options](/azure/azure-arc/servers/concept-log-analytics-extension-deployment) for the Azure Monitor agents.
+- **Azure Monitor configuration:** Plan your [data collection needs](/azure/azure-monitor/vm/data-collection#add-data-sources) for Azure Arc-enabled servers, such as metrics and logs.
+- **Azure connected machine agent management:** The Azure connected machine agent is key to your hybrid tasks. It lets you manage your Windows and Linux machines hosted outside Azure and enforce policies. Set up tools to track idle agents, check for new versions, and automate upgrades.
+- **Patch management for your hybrid resources:** Automate updates so your Azure Arc-enabled servers have the latest OS and security patches.
 
 ## Design recommendations
 
 ### Azure Monitor requirements
 
-- Review and understand how the Azure Monitor agent [operates and collects data](/azure/azure-monitor/agents/azure-monitor-agent-overview) before deployment.
-- Review the [Network connectivity for Azure Arc-enabled servers](./eslz-arc-servers-connectivity.md) section of this guide, for network-specific design considerations and recommendations.
-- Before onboarding any machine to Azure Monitor, review the [supported operating systems](/azure/azure-monitor/agents/azure-monitor-agent-supported-operating-systems) and the [network requirements](/azure/azure-monitor/agents/azure-monitor-agent-network-configuration) of the monitoring agent.
+- Learn how the Azure Monitor agent [works and collects data](/azure/azure-monitor/agents/azure-monitor-agent-overview) before you deploy it.
+- See the [Network connectivity for Azure Arc-enabled servers](./eslz-arc-servers-connectivity.md) section for network design tips.
+- Before you add a machine to Azure Monitor, check the [supported operating systems](/azure/azure-monitor/agents/azure-monitor-agent-supported-operating-systems) and [network needs](/azure/azure-monitor/agents/azure-monitor-agent-network-configuration) for the agent.
 
 ### Azure Monitor agents deployment
 
-- The Azure Monitor agents should be automatically deployed to Azure Arc-enabled Windows and Linux servers, through [Azure Policy](/azure/governance/policy/overview), as part of the [enterprise-scale landing zone](../../../ready/landing-zone/design-area/management.md).
-- Logs should be stored centrally on the Log Analytics workspace, a dedicated platform, and control log access with Azure [role-based access control (RBAC)](/azure/azure-monitor/platform/design-logs-deployment#access-control-overview). A separate workspace for management, data sovereignty, or compliance can limit single pane of glass and event correlation across Azure Arc-enabled servers.
+- Auto-deploy the Azure Monitor agents to Azure Arc-enabled Windows and Linux servers through [Azure Policy](/azure/governance/policy/overview). Do this as part of the [enterprise-scale landing zone](../../../ready/landing-zone/design-area/management.md).
+- Store logs in a central Log Analytics workspace. Control log access with Azure [role-based access control (RBAC)](/azure/azure-monitor/platform/design-logs-deployment#access-control-overview). A separate workspace for management, data sovereignty, or compliance can limit shared views. It can also reduce event linking across Azure Arc-enabled servers.
 
 ### Azure Monitor configuration
 
-- Use [VM insights](/azure/azure-arc/servers/learn/tutorial-enable-vm-insights) to analyze the performance of your Azure Arc-enabled Windows and Linux servers. Monitor their processes and dependencies on other resources and external processes.
-- Create [dashboards](/azure/azure-portal/azure-portal-dashboards) or [Azure Monitor workbooks](/azure/azure-monitor/visualize/workbooks-overview), to track the relevant metrics and events across your Azure Arc-enabled servers. Samples of Log Analytics queries and VM insights can be found in this [article](/azure/azure-monitor/vm/vminsights-log-query).
-- Configure the needed [performance counters](/azure/azure-monitor/agents/data-sources-performance-counters) for the Azure Arc-enabled Windows and Linux servers, on the dedicated Log Analytics workspace.
-- Configure the needed [logs](/azure/azure-monitor/vm/data-collection#add-data-sources) for the Azure Arc-enabled Windows and Linux servers, on the dedicated Log Analytics workspace.
+- Use [VM insights](/azure/azure-arc/servers/learn/tutorial-enable-vm-insights) to track the performance of your Azure Arc-enabled Windows and Linux servers. Track their processes and links to other resources and outside processes.
+- Create [dashboards](/azure/azure-portal/azure-portal-dashboards) or [Azure Monitor workbooks](/azure/azure-monitor/visualize/workbooks-overview) to track key metrics and events across your Azure Arc-enabled servers. Find sample Log Analytics queries and VM insights in this [article](/azure/azure-monitor/vm/vminsights-log-query).
+- Set up the needed [performance counters](/azure/azure-monitor/agents/data-sources-performance-counters) for Azure Arc-enabled Windows and Linux servers in your Log Analytics workspace.
+- Set up the needed [logs](/azure/azure-monitor/vm/data-collection#add-data-sources) for Azure Arc-enabled Windows and Linux servers in your Log Analytics workspace.
 
 ### Azure connected machine agent management
 
-- Monitor the health of the Azure connected machine agent, by creating a [resource health alert](/azure/azure-arc/servers/plan-at-scale-deployment#phase-3-manage-and-operate), to keep track of Azure Arc-enabled servers not sending heartbeats.
-- Create an [Azure Advisor alert](/azure/azure-arc/servers/plan-at-scale-deployment#phase-3-manage-and-operate), to identify Azure Arc-enabled servers that aren't using the latest version of the Azure connected machine agent.
-- Review the Azure connected machine agent [upgrade methods](/azure/azure-arc/servers/manage-agent#upgrading-agent). Automate the upgrade process of the agent, to have the latest fixes and features.
-- Understand how to upgrade [virtual machine extensions](/azure/azure-arc/servers/manage-vm-extensions), to keep other agents installed and managed by Azure Arc up to date.
-- Monitor [this article](/azure/azure-arc/servers/agent-release-notes) for the latest releases, known issues, and bug fixes of the Azure connected machine agent.
+- Create a [resource health alert](/azure/azure-arc/servers/plan-at-scale-deployment#phase-3-manage-and-operate) to monitor the Azure connected machine agent. This helps track Azure Arc-enabled servers that stop sending heartbeats.
+- Create an [Azure Advisor alert](/azure/azure-arc/servers/plan-at-scale-deployment#phase-3-manage-and-operate) to find Azure Arc-enabled servers that don't run the latest Azure connected machine agent.
+- Check the Azure connected machine agent [upgrade methods](/azure/azure-arc/servers/manage-agent#upgrading-agent). Automate agent upgrades to get the latest fixes and features.
+- Learn how to update [VM extensions](/azure/azure-arc/servers/manage-vm-extensions) to keep other Azure Arc-managed agents up to date.
+- Check [this article](/azure/azure-arc/servers/agent-release-notes) for the latest releases, known issues, and bug fixes for the Azure connected machine agent.
 
 ### Patch management for your hybrid resources
 
-- Use [Azure Update Manager](/azure/update-manager/overview) as a long-term patching mechanism for both Azure Arc-enabled Windows and Linux servers. This allows you to view and schedule operating system updates and patches for your Azure Arc-enabled servers at scale.
-- Azure Update Manager will also allow you to automate the Azure connected machine agent upgrades, via Windows updates on Azure Arc-enabled Windows servers.
-- If you have Azure Arc-enabled Windows Servers that have reached [End of Support](/lifecycle/faq/windows#when-a-windows-operating-system--os--reaches-the-end-of-its-lifecycle-or-is-no-longer-supported--does-that-mean-new-programs-will-not-run-on-that-os-) and cannot be migrated to Azure or upgraded, enable [Extended Security Updates](/azure/azure-arc/servers/prepare-extended-security-updates) (ESUs) on those servers to keep getting critical and important security patches.
+- Use [Azure Update Manager](/azure/update-manager/overview) to patch both Azure Arc-enabled Windows and Linux servers long term. You can view and schedule OS updates and patches for your Azure Arc-enabled servers at scale.
+- On Azure Arc-enabled Windows servers, Azure Update Manager can also automate agent upgrades through Windows updates.
+- Some Azure Arc-enabled Windows servers may have reached [End of Support](/lifecycle/faq/windows#when-a-windows-operating-system--os--reaches-the-end-of-its-lifecycle-or-is-no-longer-supported--does-that-mean-new-programs-will-not-run-on-that-os-). These servers can't move to Azure or upgrade. Enable [Extended Security Updates](/azure/azure-arc/servers/prepare-extended-security-updates) (ESUs) on those servers to keep getting critical security patches.
 
 ## Next steps
 
-For more guidance for your hybrid cloud adoption journey, review the following resources:
+For more help with hybrid cloud setup, see these resources:
 
-- Review [Azure Arc Jumpstart](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/day2/) scenarios.
-- Review the [prerequisites](/azure/azure-arc/servers/agent-overview#prerequisites) for Azure Arc-enabled servers.
-- Plan an [at-scale deployment](/azure/azure-arc/servers/plan-at-scale-deployment) of Azure Arc-enabled servers.
-- Learn more about Azure Arc via the [Azure Arc learning path](/training/paths/manage-hybrid-infrastructure-with-azure-arc/).
+- See [Azure Arc Jumpstart](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/day2/) scenarios.
+- Check the [prerequisites](/azure/azure-arc/servers/agent-overview#prerequisites) for Azure Arc-enabled servers.
+- Plan a [large-scale rollout](/azure/azure-arc/servers/plan-at-scale-deployment) of Azure Arc-enabled servers.
+- Learn about Azure Arc through the [Azure Arc learning path](/training/paths/manage-hybrid-infrastructure-with-azure-arc/).
