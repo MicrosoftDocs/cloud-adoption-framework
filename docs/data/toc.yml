@@ -14,9 +14,9 @@ items:
 
   - name: 3. Governance and security baselines
     items:
-    - name: Data estate (Purview)
+    - name: Purview baselines
       href: governance-security-baselines-purview-data-estate-unify-data.md
-    - name: Data lake (Fabric)
+    - name: Fabric baselines
       href: governance-security-baselines-fabric-data-lake-unify-data.md
       
   - name: 4. Operational standards
