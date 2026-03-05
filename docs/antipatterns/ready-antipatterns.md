@@ -23,13 +23,13 @@ Because cloud computing is evolving rapidly, organizations often release preview
 
 ### Example: Use a preview service in production
 
-A research institute uses a preview cloud service in production. The service seems to be a good fit for its use case. But, the institute doesn't perform due diligence on the service. The institute also doesn't follow its reference architecture's requirements and guidelines.
+A research institute uses a preview cloud service in production. The service seems to be a good fit for its use case. But, the institute doesn't thoroughly evaluate the service. The institute also doesn't follow its reference architecture's requirements and guidelines.
 
-Problems come up with the preview service that lead to unexpected downtime. The institute begins to think that cloud services in general aren't as mature or resilient as promised.
+Problems occur with the preview service that lead to unexpected downtime. The institute begins to think that cloud services in general aren't as mature or resilient as promised.
 
 ### Preferred outcome: Use pre-approved cloud services in production
 
-When evaluating new services that are in preview, only use these services in proof of concept (POC) scenarios. Don't use these services in production environments, because they don't have SLAs. Find the right balance between functionality and maturity when approving cloud services. See [Cloud services due diligence checklist](https://www.microsoft.com/trust-center/compliance/due-diligence-checklist) for an established framework that you can use to quickly evaluate cloud services.
+When evaluating new services that are in preview, only use these services in proof-of-concept (POC) scenarios. Don't use these services in production environments, because they don't have SLAs. Determine the appropriate balance between functionality and maturity when approving cloud services. See [Cloud services due diligence checklist](https://www.microsoft.com/trust-center/compliance/due-diligence-checklist) for an established framework that you can use to quickly evaluate cloud services.
 
 ## Antipattern: Assume increased resiliency and availability
 
@@ -42,7 +42,7 @@ Because most cloud services offer these advantages, many organizations assume th
 
 ### Example: Assume high availability
 
-A start-up implements a mission-critical application on infrastructure as a service (IaaS) services. Developers at the start-up have looked into a virtual machine (VM) with an uptime SLA of 99.9%. Since they'd like to cut costs, they use a single VM and premium storage.
+A start-up implements a mission-critical application on infrastructure as a service (IaaS) services. Developers at the start-up have looked into a virtual machine (VM) with an uptime SLA of 99.9%. Since they'd like to reduce costs, they use a single VM and premium storage.
 
 When the VM fails, their application can't recover. Unexpected downtime results. They'd assumed that the cloud offers high availability by default. They weren't aware that performance guarantees can differ between:
 
@@ -56,7 +56,7 @@ See trusted, mature resources for information on architectural best practices th
 - [Reference architectures](/azure/architecture/browse/)
 - [Microsoft Azure Well-Architected Framework](/azure/well-architected)
 
-Identify the right balance between costs and features such as [high resiliency and availability](/azure/well-architected/reliability/metrics). Higher resiliency typically increases cost. For instance:
+Determine the appropriate balance between costs and features, such as [high resiliency and availability](/azure/well-architected/reliability/metrics). Higher resiliency typically increases cost. For instance:
 
 - A single VM might have an SLA with a guaranteed uptime of 99.9%.
 - Two VMs running the same workload would provide an SLA with an uptime between 99.95 and 99.99 percent.
@@ -69,7 +69,7 @@ Some organizations try to make their internal IT department a cloud provider. IT
 
 ### Example: Provide monolithic managed cloud services
 
-A corporation's IT department establishes a cloud center of excellence (CCoE) that serves as a broker between IT and business units. To ensure the corporation is cloud-compliant, the managing board assigns the CCoE the task of providing monolithic end-to-end services. The CCoE sets up an internal cloud procurement portal that business units can use to order a fully managed cloud VM as a service. But, IT controls who can access and use the entire platform. As a result, IT actively prevents business units from taking advantage of the full range of services that Azure provides. Business units can't access the cloud portal. They only get access through Secure Shell (SSH) and Remote Desktop Protocol (RDP) to the server that they order.
+A corporation's IT department establishes a cloud center of excellence (CCoE) that serves as a broker between IT and business units. To ensure the corporation is cloud-compliant, the managing board assigns the CCoE the task of providing monolithic end-to-end services. The CCoE sets up an internal cloud procurement portal that business units can use to order a fully managed cloud VM as a service. But, IT controls who can access and use the entire platform. As a result, IT actively prevents business units from using the full range of services that Azure provides. Business units can't access the cloud portal. They only get access through Secure Shell (SSH) and Remote Desktop Protocol (RDP) to the server that they order.
 
 For several reasons, the CCoE then has trouble providing a monolithic managed service to wrap each service that's available in the cloud:
 
@@ -79,7 +79,7 @@ For several reasons, the CCoE then has trouble providing a monolithic managed se
 
 ### Preferred outcome: Provide guardrails
 
-When adopting cloud technologies, have the IT department gain firsthand experience with the cloud by starting with IT workloads. Use the [Microsoft Cloud Adoption Framework for Azure](../index.yml) to identify your [first adoption project](../strategy/motivations.md).
+When adopting cloud technologies, have the IT department gain direct experience with the cloud by starting with IT workloads. Use the [Microsoft Cloud Adoption Framework for Azure](../index.yml) to identify your [first adoption project](../strategy/motivations.md).
 
 Choose the right [cloud operating model](../plan/prepare-organization-for-cloud.md#choose-a-cloud-operating-model). Consider adopting only one major public cloud provider at the start, because all major platforms differ significantly in setup, management, and usage.
 
