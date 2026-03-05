@@ -12,7 +12,7 @@ ms.collection: ce-skilling-ai-copilot
 
 # Fabric governance and security baselines
 
-This section focuses on governance and security inside the Microsoft Fabric OneLake environment. OneLake accumulates data from across your enterprise, so it's the hub of your analytics and AI data. Apply the same principles you established for the broader data estate, but tailor them to the Fabric context, to keep this unified data lake secure and well-governed. 
+This section focuses on governance and security inside the Microsoft Fabric OneLake environment. OneLake accumulates data from across your enterprise, so it's the hub of your analytics and AI data. Apply the same principles you established for the broader [data estate](./governance-security-baselines-purview-data-estate-unify-data.md), but tailor them to the Fabric context, to keep this unified data lake secure and well-governed.
 
 ## 1. Set Fabric environment governance baseline
 
@@ -40,7 +40,7 @@ A core governance decision is how you define and structure environments in Micro
 
 **Standard to enforce:** Whichever workspace approach you choose, tie it back to your data domains. Make sure it mirrors how you want to delegate control and ensure clear data ownership. Also, document your workspace strategy and educate teams on how to use workspaces properly. For example, use one workspace per product as the default unless a specific reason warrants otherwise.
 
-### 2. Set cost governance baselines
+## 2. Set cost governance baselines
 
 A cost governance baseline defines how each data domain configures and operates Microsoft Fabric capacities so all workloads stay within the approved budget over time.
 
@@ -50,13 +50,13 @@ A cost governance baseline defines how each data domain configures and operates 
 
 3. **Standardize permissions that influence capacity consumption**. Certain Fabric permissions allow actions that significantly increase capacity usage. **Best practice:** Restrict advanced creation and scaling permissions on high‑cost Fabric capacities. Assign elevated permissions only to trusted operational roles within the data domain. **Decision guidance:** Choose central role assignment when strong guardrails matter. Choose delegated assignment when teams show cost discipline. Central control reduces risk. Delegation improves speed but needs audit discipline.
 
-### 3. Set data security baseline
+## 3. Set data security baseline
 
 Define workspace boundaries, ownership, labeling, and sharing rules *before* you publish any data products so leaders can make consistent access and governance decisions across teams. This baseline prevents “ad-hoc” sharing patterns from becoming your default operating model. **Checklist of best practices:**
 
 1. **Establish workspace security baselines.** In Fabric, as mentioned, the workspace is a primary security boundary. Before teams start creating and publishing data products, define how you'll manage workspace access.
 
-    - *Who can create new workspaces?* Consider a process or approval for creating Fabric workspaces so they align with your governance. Uncontrolled workspace creation could lead to sprawl and data governance gaps. 
+    - *Who can create new workspaces?* Consider a process or approval for creating Fabric workspaces so they align with your governance. Uncontrolled workspace creation could lead to sprawl and data governance gaps. 
 
     - *Who can access what?* Ensure each workspace has assigned administrators and owners who control membership. Enforce the principle of **least privilege**: give each user or group the minimum permissions they need (viewer, contributor, admin). Avoid overly broad access or ad-hoc sharing of workspaces and items, because that can inadvertently expose data to the wrong people. 
 
@@ -82,7 +82,7 @@ Define workspace boundaries, ownership, labeling, and sharing rules *before* you
 
     See [Microsoft Purview Information Protection in Fabric](/fabric/governance/microsoft-purview-fabric#microsoft-purview-and-microsoft-fabric-together).
 
-### 4. Set a network security baseline
+## 4. Set a network security baseline
 
 Fabric runs as a SaaS service in the Microsoft cloud. By default, it uses secure communication over the Microsoft global network. Any connection to on-premises systems or external services should follow defined and approved network paths. **Best practices:** Set up standards for when to use public connectivity or private connectivity. **Decision guidance:**
 
@@ -90,7 +90,7 @@ Fabric runs as a SaaS service in the Microsoft cloud. By default, it uses secure
 
 2. **Private network connectivity:** **When to choose:** For more sensitive data or stricter compliance needs, use private connectivity options. For Azure sources, prefer **Azure** Private Link or managed virtual network integration for Fabric connectors. For on-premises data, use a private data gateway or VPN/ExpressRoute connections to avoid exposing endpoints to the internet. **Benefit:** Traffic stays on controlled networks, reducing exposure. **Tradeoff:** More complex to set up and manage. It requires networking configuration and possible impact on performance or cost due to routing through private links. See [Network security in Fabric](/fabric/security/security-overview#understand-network-security).
 
-### 5. Use the monitoring baseline
+## 5. Use the monitoring baseline
 
 Use the [Microsoft Purview Hub](/fabric/governance/use-microsoft-purview-hub?tabs=overview) to monitor your Fabric environment. The Purview Hub provides a single pane where you can see all Fabric assets, like tables, datasets, and reports. You can also see their metadata, like sensitivity labels, ownership, and lineage. This helps your governance team ensure that everything in OneLake is classified and that data flows are understood. It’s a great tool for data stewards to catch issues, like a dataset missing a description or a sensitive data store without a label, and to maintain the quality of the catalog. Regularly reviewing the Purview Hub can become part of your data governance routine. It’s an actionable way to enforce the standards you’ve set.
 

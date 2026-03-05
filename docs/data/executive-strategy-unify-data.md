@@ -47,7 +47,7 @@ Unifying the data platform is an investment in capability, not a wholesale repla
 
   - **Power BI**: Requires sufficient Fabric capacity or separate Power BI licensing. See [Common licensing scenarios](/fabric/enterprise/licenses#licensing-scenario-summary).
 
-:::image type="content" source="media/unify your data/image2.png" alt-text="High‑level diagram of Microsoft Fabric showing OneLake at the center as a unified data lake. At the bottom, multiple data sources feed into OneLake, including cloud storage and SaaS systems through shortcuts and virtualization, databases through mirroring, and other external sources. Above OneLake, Microsoft Fabric provides built‑in data tools for the full data lifecycle, including ingestion, engineering, warehousing, real‑time analytics, data science, and visualization with Power BI. The diagram emphasizes that data is stored once in OneLake and reused across analytics, data science, and reporting, with governance applied through Microsoft Purview.":::
+:::image type="content" source="images/fabric-overview.svg" alt-text="High‑level diagram of Microsoft Fabric showing OneLake at the center as a unified data lake. At the bottom, multiple data sources feed into OneLake, including cloud storage and SaaS systems through shortcuts and virtualization, databases through mirroring, and other external sources. Above OneLake, Microsoft Fabric provides built‑in data tools for the full data lifecycle, including ingestion, engineering, warehousing, real‑time analytics, data science, and visualization with Power BI. The diagram emphasizes that data is stored once in OneLake and reused across analytics, data science, and reporting, with governance applied through Microsoft Purview.":::
 
 *Figure 2. Microsoft Fabric capabilities to create business value from data.*
 
@@ -71,9 +71,9 @@ Microsoft’s Cloud Adoption Framework outlines a four-step framework for unifyi
 
 1. **Organizational readiness.** Define your data strategy and establish data ownership and domains. Clarify how data creates business value and who is accountable for which data. See [Organizational readiness](./organizational-readiness-unify-data.md).
 
-2. **Architecture:** Provide the technology needed to unify your data platform. Set up Microsoft Fabric and required environments in Azure. See [Architecture](./technology-architecture-unify-data.md).
+2. **Architecture:** Provide the technology needed to unify your data platform. Set up Microsoft Fabric and required environments in Azure. See [Architecture](./architecture-fabric-data-lake-unify-data-platform.md).
 
-3. **Governance and security baselines:** Use Microsoft Purview to gain central visibility and governance across your data estate. Build security and compliance baselines into your Fabric architecture from the start. See [Governance and security baselines](./governance-security-baselines-unify-data.md).
+3. **Governance and security baselines:** Use Microsoft Purview to gain central visibility and governance across your data estate. Build security and compliance baselines into your Fabric architecture from the start. See [Governance and security baselines](./governance-security-baselines-purview-data-estate-unify-data.md).
 
 4. **Operational standards.** Define consistent processes for ingesting raw data, creating data products, and managing their lifecycle. Establish how data products will be published, secured, and consumed across the organization. See [Operational standards](./operational-standards-unify-data.md).
 

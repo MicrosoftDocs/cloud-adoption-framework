@@ -14,17 +14,14 @@ ms.collection: ce-skilling-ai-copilot
 
 After aligning on why and what data products you need (organizational readiness), the next step is to decide how the technology fits together. This step involves creating an architecture that connects and integrates Microsoft Fabric with Azure. You integrate all the pieces into one coherent ecosystem: data storage, data tools, governance tools, and integration with existing systems (see Figure 1). Key aspects of the architecture include:
 
-1. **[Fabric architecture](#1-fabric-architecture)**: Designing the Microsoft Fabric OneLake data lake architecture for your domains and data products.
+1. **[Fabric architecture](#1-plan-for-fabric-compute)**: Designing the Microsoft Fabric OneLake data lake architecture for your domains and data products.
 
-2. **[Azure architecture](./architecture-azure-unify-data-platform.md)**: Setting up the necessary **Azure environments** for supporting services, such as Microsoft Fabric capacities and integrating existing platforms, like Azure Databricks or other data lakes, with the new Fabric environment.
+2. **[Azure architecture](./architecture-azure-unify-data-platform.md)**: Create and organize your **Azure environments** (data management landing zones, application landing zones, data landing zones) to support a unified data platform.
 
 This article helps you make the right architecture decisions for designing **Microsoft Fabric** as the foundation of your unified data platform. Microsoft Fabric provides a data platform with a built‑in SaaS data lake called [OneLake](/fabric/onelake/onelake-overview) that centralizes data for analytics and AI across the organization. **Recommendation:** Adopt Microsoft Fabric with OneLake as the default analytics data platform and define clear leadership decisions for compute, regions, recovery, and workspace ownership. This setup enables all workload teams to operate within consistent standards. **Here’s a checklist of best practices:**
 
-:::image type="content" source="./images/unified-data-platform-architecture-ai-analytics.svg" alt-text="Diagram showing a unified data platform architecture across Microsoft systems. Data from multiple sources is organized into data domains. They are governed in Microsoft Purview. They are ingested into Fabric OneLake and produced as data products using Fabric and Databricks. Then they are consumed by Microsoft Copilot, Foundry agents, Power BI, and data science tools.":::
+:::image type="content" source="./images/unified-data-platform-architecture-ai-analytics.svg" alt-text="Diagram showing a unified data platform architecture across Microsoft systems. Data from multiple sources is organized into data domains. They're governed in Microsoft Purview. They're ingested into Fabric OneLake and produced as data products using Fabric and Databricks. Microsoft Copilot, Foundry agents, Power BI, and data science tools consume them.":::
 *Figure 1. Architecture: Unified data platform for AI and analytics.*
-
-:::image type="content" source="./images/fabric-architecture-data-domains-workspaces.svg" alt-text="Diagram showing the high‑level Microsoft Fabric architecture. Microsoft Fabric provides shared intelligence, analytics services, and a single data lake for the organization. Fabric includes Data Factory, Real‑Time Intelligence, Databases, Data Engineering, and Data Warehouse. Power BI and data science are used for reporting and AI model training. All data is stored in OneLake, which includes the OneLake catalog and published data products. Each data domain works in its own Fabric workspace, such as Data Domain 1, Data Domain 2, Data Domain 3, and others. All domains share OneLake while managing their data independently through their workspaces.":::
-*Figure 2. Microsoft Fabric architecture.*
 
 ## 1. Plan for Fabric compute
 
@@ -40,11 +37,14 @@ A region is the physical location where Microsoft Fabric stores and processes da
 
 ## 3. Plan for Fabric disaster recovery
 
-In Fabric, the disaster recovery (DR) feature copies data to a paired region so workloads can resume after a regional failure. Decide whether to enable DR for your Fabric capacities. When you enable it, Fabric’s DR capability asynchronously copies OneLake data to a paired region. If one region suffers an outage, Fabric workloads can fail over to the backup region. **Best practice:** Enable disaster recovery for capacities that support critical business reporting or regulated data. Treat this decision as a business continuity decision owned by leadership. To learn more, see [OneLake Disaster Recovery and Data Protection](/fabric/onelake/onelake-disaster-recovery).
+In Fabric, the disaster recovery (DR) features copy data to a paired region so workloads can resume after a regional failure. Decide whether to enable DR for your Fabric capacities. When you enable it, Fabric’s DR capability asynchronously copies OneLake data to a paired region. If one region suffers an outage, Fabric workloads can fail over to the backup region. **Best practice:** Enable disaster recovery for capacities that support critical business reporting or regulated data. Treat this decision as a business continuity decision owned by leadership. To learn more, see [OneLake Disaster Recovery and Data Protection](/fabric/onelake/onelake-disaster-recovery).
 
 ## 4. Plan your Fabric workspaces
 
 In Microsoft Fabric, the primary unit of organization is the [Fabric workspace](/fabric/fundamentals/workspaces). A Fabric workspace is a container that groups datasets, dataflows, lakehouses, reports, and other related assets. It's also the main unit for security administration, access control, and cost management in Fabric. In designing your OneLake environment, plan how to allocate workspaces across data domains and products (see [Fabric environments governance baseline](./governance-security-baselines-fabric-data-lake-unify-data.md#1-set-fabric-environment-governance-baseline)). This choice affects governance and resource isolation.
+
+:::image type="content" source="./images/fabric-architecture-data-domains-workspaces.svg" alt-text="Diagram showing the high‑level Microsoft Fabric architecture. Microsoft Fabric provides shared intelligence, analytics services, and a single data lake for the organization. Fabric includes Data Factory, Real‑Time Intelligence, Databases, Data Engineering, and Data Warehouse. Power BI and data science are used for reporting and AI model training. All data is stored in OneLake, which includes the OneLake catalog and published data products. Each data domain works in its own Fabric workspace, such as Data Domain 1, Data Domain 2, Data Domain 3, and others. All domains share OneLake while managing their data independently through their workspaces.":::
+*Figure 2. Microsoft Fabric architecture.*
 
 **Best practices:** Plan to give each data domain one or more dedicated Fabric workspaces. This approach aligns with your organizational structure and ensures that each domain can control access and management of its own data products. Fabric also offers a concept of [Fabric domains](/fabric/governance/domains) (governance groups of workspaces) to help manage policies across multiple workspaces owned by a domain or department.
 
