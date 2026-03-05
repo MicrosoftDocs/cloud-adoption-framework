@@ -9,29 +9,29 @@ ms.custom: internal, UpdateFrequency2
 ---
 # Monitor cloud compliance
 
-Monitoring is about continuously measuring how well the cloud environment complies with your governance policies and detecting when it drifts out of compliance. Effective monitoring lets you verify the impact of your governance efforts, provides visibility into risk levels, and triggers remediation processes promptly when needed. This stage involves configuring the right telemetry, alerts, and review processes to keep governance on track.
+Monitoring is about continuously measuring how well the cloud environment complies with your governance policies and detecting when it deviates from compliance. Effective monitoring lets you verify the impact of your governance efforts, provides visibility into risk levels, and triggers remediation processes promptly when needed. This stage involves configuring the right telemetry, alerts, and review processes to maintain governance alignment.
 
 :::image type="content" source="./images/monitor.png" alt-text="Diagram showing the process to set up and maintain cloud governance. The diagram shows five sequential steps: build a cloud governance team, document your cloud governance policies, enforce cloud governance policies, and monitor cloud governance. The first step you perform once. The last four steps you perform once to set up and to continuously maintain cloud governance." lightbox="./images/monitor.png" border="false":::
 
-After you enforce cloud governance, perform an initial baseline assessment of compliance. See which policies are being met and where there are gaps. Then track these metrics over time. The ultimate goal is to drive non-compliance to zero or as close as practical by iteratively improving policies and enforcement where monitoring shows issues.
+After you enforce cloud governance, perform an initial baseline assessment of compliance. See which policies are being met and where there are gaps. Then track these metrics over time. The ultimate goal is to reduce noncompliance to zero or as close as practical by iteratively improving policies and enforcement where monitoring shows issues.
 
 ## 1. Configure cloud governance monitoring
 
-Implement monitoring solutions to track compliance with your cloud governance policies. The goal is to have visibility on the teams responsible for enforcing compliance so you can remediate noncompliance quickly. To configure governance monitoring, follow these recommendations:
+Implement monitoring solutions to track compliance with your cloud governance policies. The goal is to have visibility into the teams responsible for enforcing compliance so you can remediate noncompliance quickly. To configure governance monitoring, follow these recommendations:
 
 1. **Use monitoring tools.** Choose compliance monitoring tools that offer real-time monitoring capabilities. Ensure they can monitor compliance with your specific governance policies. Collect the metrics and logs as required for governance monitoring. Review the [visibility](/azure/cloud-adoption-framework/ready/landing-zone/design-area/management-platform) and [monitoring](/azure/cloud-adoption-framework/ready/landing-zone/design-area/management-monitor) recommendations in the Azure landing zone management design area.
 
-2. **Manually monitor where necessary.** Review compliance manually where automated monitoring mechanisms aren’t available.
+2. **Manually monitor where necessary.** Review compliance manually where automated monitoring mechanisms aren't available.
 
 3. **Document monitoring solution.** Track how you're monitoring each cloud governance policy so you know where to gather compliance data. In the cloud governance policy, list the monitoring tool, such as Azure Policy or Microsoft Purview. If there's a manual approach, list the audit frequency.
 
 4. **Centralize governance monitoring.** Use or build a solution that allows you to view the status of cloud governance compliance in one place. For example, the [Azure governance workbook](https://github.com/Azure/azure-quickstart-templates/tree/master/quickstarts/microsoft.costmanagement/governance-workbook) centralizes many Azure governance monitoring services.
 
-5. **Establish a compliance baseline.** Evaluate how compliant your cloud environment is to your cloud governance policies. Make that your baseline. Track progress against the baseline over time.
+5. **Establish a compliance baseline.** Evaluate how compliant your cloud environment is with your cloud governance policies. Make that your baseline. Track progress against the baseline over time.
 
 6. **Provide access to governance monitoring.** Configure the appropriate level of access to governance monitoring results so the teams responsible for governance can evaluate the effectiveness of enforcement controls.
 
-7. **Audit monitoring effectiveness.** Manually review compliance reports and resources to validate monitoring effectiveness. For example, ensure tags are receiving the right values and not an undesired value, such as *NA*.
+7. **Audit monitoring effectiveness.** Manually review compliance reports and resources to validate monitoring effectiveness. For example, ensure tags are receiving the right values and not an undesired value, such as *NA.*
 
 ### Azure facilitation: Configuring cloud governance monitoring
 
@@ -45,7 +45,7 @@ The following guidance is meant to help you configure cloud governance monitorin
 
 #### Configure monitoring for security governance
 
-- **Use security governance monitoring.** [Review security recommendations](/azure/defender-for-cloud/review-security-recommendations) and monitor security governance over time with your [secure score.](/azure/defender-for-cloud/secure-score-security-controls) The feature provides a dashboard to monitor [regulatory compliance](/azure/defender-for-cloud/regulatory-compliance-dashboard) against common security frameworks.
+- **Use security governance monitoring.** [Review security recommendations](/azure/defender-for-cloud/review-security-recommendations) and monitor security governance over time with your [secure score](/azure/defender-for-cloud/secure-score-security-controls) The feature provides a dashboard to monitor [regulatory compliance](/azure/defender-for-cloud/regulatory-compliance-dashboard) against common security frameworks.
 
 - **Configure identity governance monitoring.** [Configure identity monitoring](/entra/identity/monitoring-health/overview-monitoring-health) to collect audit, sign-in, and provisioning logs. Also review your [identity secure score](/entra/identity/monitoring-health/concept-identity-secure-score), and use [the identity governance dashboard](/entra/id-governance/governance-dashboard) to get a single view of identities across your tenant.
 
@@ -81,7 +81,7 @@ The following guidance is meant to help you configure cloud governance monitorin
 
 - **Monitor AI system outputs.** Use Azure for [abuse monitoring](/azure/ai-foundry/openai/concepts/abuse-monitoring) and [content filtering](/azure/ai-foundry/foundry-models/concepts/content-filter) of AI systems.
 
-- **Red team AI systems.** Regularly [red team language models](/azure/ai-foundry/openai/concepts/red-teaming) to find harmful outputs. Use both manual tests and automated tools to review the risk baseline.
+- **Perform adversarial testing on AI systems.** Regularly [perform adversarial testing on language models](/azure/ai-foundry/openai/concepts/red-teaming) to find harmful outputs. Use both manual tests and automated tools to review the risk baseline.
 
 ## 2. Configure cloud governance alerts
 
@@ -109,7 +109,7 @@ The following guidance helps you start configuring cloud governance alerts in Az
 
 - **Data governance alerts.** [Configure data governance alerts](/defender-xdr/alert-policies) to report data governance violations.
 
-- **Resource management governance alerts.** Configure alerts for when a noncompliance resource deploys. For example, use build warnings in your deployment pipeline or monitor noncompliance states.
+- **Resource management governance alerts.** Configure alerts for when a noncompliant resource deploys. For example, use build warnings in your deployment pipeline or monitor noncompliance states.
 
 - **AI governance alerts.** Configure alerts when there are harmful inputs and outputs in your AI systems. For example, monitor emails from Azure OpenAI that notify you of [abusive behavior](/azure/ai-foundry/openai/concepts/abuse-monitoring).
 
@@ -121,9 +121,9 @@ Develop a targeted action plan to address any noncompliance events. When you det
 
 2. **Remediate high-risk violations quickly.** For noncompliance alerts that are high risk, such as an exposed data endpoint, have a plan to escalate and fix those noncompliance problems. Update the policy enforcement mechanism to avoid a repeat of this high-risk violation. Use Azure to [react to compliance-state changes](/azure/governance/policy/concepts/event-overview), [remediate resources noncompliant with policies](/azure/governance/policy/how-to/remediate-resources), and [remediate security recommendations](/azure/defender-for-cloud/implement-security-recommendations).
 
-3. **Follow up on low-risk violations.** Have an audit-first stance on low-risk policies so that you can have a discussion with the team that violated the cloud governance policy, such as deploying a service on a blocklist. Maybe there’s a new feature available, better service tier (SKU), or a better price in a specific region. The cloud governance team should discuss the needs of the team and adjust policies and enforcement mechanisms in accordance with the conversation.
+3. **Follow up on low-risk violations.** Use an audit-first approach for low-risk policies so that you can have a discussion with the team that violated the cloud governance policy, such as deploying a service that is on a blocklist. Maybe there's a new feature available, better service tier (SKU), or a better price in a specific region. The cloud governance team should discuss the needs of the team and adjust policies and enforcement mechanisms in accordance with the conversation.
 
-4. **Automate remediation where possible.** Set up automated workflows that not only notify the relevant teams but also initiate predefined remediation processes where appropriate. This solution is primarily for known high-risk solutions that you can’t prevent with automation.
+4. **Automate remediation where possible.** Set up automated workflows that not only notify the relevant teams but also initiate predefined remediation processes where appropriate. This solution is primarily for known high-risk solutions that you can't prevent with automation.
 
 5. **Update governance policies and enforcement mechanisms.** Based on the insights gained from the noncompliance event, update your governance policies and enforcement mechanisms. Updates might involve tightening policy definitions, enhancing monitoring capabilities, or refining alert thresholds to improve detection and response times.
 

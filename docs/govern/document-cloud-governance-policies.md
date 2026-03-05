@@ -16,7 +16,7 @@ Using the insights from the risk assessment, the team now formulates policies to
 
 ## 1. Establish a standard policy format and language
 
-Create a consistent template or format for all policies. Each policy document (or section) should include key elements, like ID, statement, scope. Use clear, unambiguous language. Policies are meant to be authoritative references, so they should be easy for stakeholders to understand with no room for misinterpretation. For example, decide on standard wording like “must” or “must not” for requirements, and avoid vague terms. A standardized format, such as a policy with ID, category, purpose, makes policies easier to navigate and maintain.
+Create a consistent template or format for all policies. Each policy document (or section) should include key elements, like ID, statement, and scope. Use clear, unambiguous language. Policies are meant to be authoritative references, so they should be easy for stakeholders to understand with no room for misinterpretation. For example, decide on standard wording like "must" or "must not" for requirements, and avoid vague terms. A standardized format, such as a policy with ID, category, and purpose, makes policies easier to navigate and maintain.
 
 ## 2. Define cloud governance policies
 
@@ -24,11 +24,11 @@ Create cloud governance policies that outline how to use and manage the cloud to
 
 1. **Use a policy ID.** Use the policy category and a number to uniquely identify each policy, such as *SC01* for the first security governance policy. Increment the identifier sequentially as you add new risks. If you remove risks, you can leave gaps in the sequence or use the lowest available number.
 
-2. **Include the policy statement.** Craft specific policy statements that address identified risks. Use definitive language such as *must*, *should*, *must not*, and *shouldn't*. Use the enforcement controls from the risk list as a starting point. Focus on outcomes rather than configuration steps. Name the tool required for enforcement so you know where to monitor compliance.
+2. **Include the policy statement.** Craft specific policy statements that address identified risks. Use definitive language, such as *must*, *should*, *must not*, and *shouldn't*. Use the enforcement controls from the risk list as a starting point. Focus on outcomes rather than configuration steps. Name the tool required for enforcement so you know where to monitor compliance.
 
 3. **Include a risk ID.** List the risk in the policy. Associate every cloud governance policy to a risk.
 
-4. **Include the policy category.** Include governance categories, such as security, compliance, or cost management, into the policy categorization. Categories help with sorting, filtering, and finding cloud governance policies.
+4. **Include the policy category.** Include governance categories, such as security, compliance, or cost management, in the policy categorization. Categories help with sorting, filtering, and finding cloud governance policies.
 
 5. **Include the policy purpose.** State the purpose of each policy. Use the risk or the regulatory compliance requirement the policy satisfies as a starting point.
 
@@ -80,7 +80,7 @@ The following cloud governance policies are examples for reference. These polici
 | DG02 | Data | [R06](assess-cloud-risks.md#example-risk-list) | Data lifecycle policies must be enabled in Microsoft Purview for all sensitive data. | Manage the data lifecycle | Workload teams | Implementation within 60 days, quarterly audits | Microsoft Purview |
 | RM01 | Resource management | [R07](assess-cloud-risks.md#example-risk-list) | Bicep must be used to deploy resources. | Standardize resource provisioning | Workload teams, platform team | Immediate Bicep transition plan | Continuous integration and continuous delivery (CI/CD) pipeline |
 | RM02 | Resource management | [R07](assess-cloud-risks.md#example-risk-list) | Tags must be enforced on all cloud resources using Azure Policy. | Facilitate resource tracking | All cloud resources | Correct tagging within 30 days | Azure Policy |
-| AI01 | AI | [R08](assess-cloud-risks.md#example-risk-list) | AI content filtering configuration must be set to medium or higher. | Mitigate AI harmful outputs | Workload teams | Immediate corrective measures | Azure OpenAI Service |
+| AI01 | AI | [R08](assess-cloud-risks.md#example-risk-list) | AI content-filtering configuration must be set to medium or higher. | Mitigate AI harmful outputs | Workload teams | Immediate corrective measures | Azure OpenAI Service |
 | AI02 | AI | [R08](assess-cloud-risks.md#example-risk-list) | Customer-facing AI systems must be red-teamed monthly. | Identify AI biases | AI model teams | Immediate review, corrective actions for misses | Manual audit (monthly) |
 
 ## Next step

@@ -10,11 +10,11 @@ ms.custom: internal, UpdateFrequency2
 
 # Build a cloud governance team
 
-Cloud governance is how an organization controls its use of cloud services by establishing guardrails. These guardrails are a set of policies, procedures, and tools that define acceptable and unacceptable cloud activities. Effective cloud governance aligns cloud usage with business objectives, mitigates risks, ensures regulatory compliance, and prevents unmanaged or unauthorized cloud actions. In practice, cloud governance covers key domains such as security, regulatory compliance, operations, cost management, data management, resource provisioning, and even emerging areas like AI.
+Cloud governance is how an organization controls its use of cloud services by establishing guardrails. These guardrails are a set of policies, procedures, and tools that define acceptable and unacceptable cloud activities. Effective cloud governance aligns cloud usage with business objectives, mitigates risks, ensures regulatory compliance, and prevents unmanaged or unauthorized cloud actions. In practice, cloud governance covers key domains, such as security, regulatory compliance, operations, cost management, data management, resource provisioning, and even emerging areas like AI.
 
 **Quick links:** [Azure governance tools](./enforce-cloud-governance-policies.md#azure-facilitation-enforcing-cloud-governance-policies-automatically) and [Example governance RACI matrix](#example-cloud-governance-raci-matrix)
 
-**Governance process:** Cloud governance is not a one-time project, but a continuous process. After initial setup, it requires ongoing monitoring, evaluation, and updates to adapt to new technologies, evolving risks, and changing requirements. After establishing the governance foundation in Step 1, Steps 2–5 repeat in a cycle to sustain and improve governance over time.
+**Governance process:** Cloud governance is not a one-time project, but a continuous process. After initial setup, it requires ongoing monitoring, evaluation, and updates to adapt to new technologies, evolving risks, and changing requirements. After establishing the governance foundation in Step 1, Steps 2-5 repeat in a cycle to sustain and improve governance over time.
 
 :::image type="content" source="./images/build.png" alt-text="Diagram showing the process to set up and maintain cloud governance. The diagram shows five sequential steps: build a cloud governance team, document cloud governance policies, enforce cloud governance policies, and monitor cloud governance. The first step you perform once. The last four steps you perform once to set up cloud governance and continuously to maintain cloud governance." lightbox="./images/build.png" border="false":::
 
@@ -30,7 +30,7 @@ Clearly outline what the cloud governance team is responsible for and what activ
 
 3. **Develop and update governance policies**. The cloud governance team should document the cloud governance policies that address identified risks. The team resolves any challenges these policies create for various groups and periodically reviews policies to keep them up to date with technological changes and new requirements. The policies must be comprehensive, enforceable, and aligned with current business needs.
 
-4. **Monitor and review compliance**. The cloud governance team needs to establish metrics and reporting methods to measure how effective the governance policies are. Track compliance levels, policy violations, incident response times, and even user satisfaction. Regularly review these metrics to identify areas for improvement and report on the organization’s cloud governance posture.
+4. **Monitor and review compliance**. The cloud governance team needs to establish metrics and reporting methods to measure how effective the governance policies are. Track compliance levels, policy violations, incident response times, and even user satisfaction. Regularly review these metrics to identify areas for improvement and report on the organization's cloud governance posture.
 
 ## 2. Select team members
 
@@ -38,7 +38,7 @@ Choose individuals for the cloud governance team who have the right skills and e
 
 1. **Keep a small team**. Pick a small team to encourage agility and quicker decision-making.
 
-2. **Ensure diverse representation.** Include team members from different departments or domains. For example, IT operations, cloud architecture, security, compliance, finance, and perhaps application development. Cross-functional representation ensures the governance policies consider multiple perspectives.
+2. **Ensure diverse representation.** Include team members from different departments or domains. For example, IT operations, cloud architecture, security, compliance, finance, and perhaps application development. Cross-functional representation ensures that the governance policies consider multiple perspectives.
 
 3. **Define team members' responsibilities**. Define the roles and responsibilities within your cloud governance team. Tailor them to your organization's size, complexity, and cloud maturity. Key responsibility areas typically include overall cloud governance program success, cloud architecture oversight, cloud security, regulatory compliance, and cloud financial management (cost optimization).
 
@@ -76,7 +76,7 @@ The following table is an example of a RACI matrix for cloud governance. The mat
 
 Having such a matrix helps clarify who does what. For example, the Cloud Governance Team is accountable (A) for assessing cloud risks, but the Cloud Platform and Workload teams are responsible (R) for performing risk assessments in their areas. The Cloud Governance team is consulted (C) or accountable for enforcement, but the platform and workload teams carry it out.
 
-With the team’s functions, membership, authority, and scope established, you have created a foundation for cloud governance. This team will now drive the next steps: defining policies, enforcing them, and monitoring compliance.
+With the team's functions, membership, authority, and scope established, you have created a foundation for cloud governance. This team will now drive the next steps: defining policies, enforcing them, and monitoring compliance.
 
 ## Next step
 
