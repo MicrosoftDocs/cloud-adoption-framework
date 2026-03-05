@@ -1,0 +1,20 @@
+# Data product lifecylce standards
+
+Data product consumption standards define how approved data products may be accessed and used across the organization, including use by analytics, applications, and AI systems, so leaders can reduce risk while enabling reuse at scale.
+Recommendation: Establish clear and enforceable consumption standards for all shared data products so every team uses data intentionally, securely, and in line with organizational expectations. **Here’s a checklist:**
+
+## 1. Set data product consumption standards
+
+Finally, with data products available and secured, guide how the organization consumes and uses these data products responsibly. This step is about establishing policies and practices that ensure data is used intentionally and ethically, especially as more teams and AI agents start leveraging the data. **Best practices checklist:**
+
+1. **Set usage approval processes**: If someone wants to use enterprise data in a new product or service (especially a customer-facing one), ensure there’s a vetting step. For example, using an internal dataset in a marketing app for clients might require data owner approval and possibly anonymization. This prevents mistakes like exposing customer data inappropriately. It also fosters a partnership between data producers and consumers, where both confirm the data is suitable for the intended purpose.
+
+2. **Enforce least-privilege access**: Reinforce that teams consuming data should only get the minimum access required. If a particular AI agent only needs summary data, don’t give it full detail-level access. Data domain leads, when granting permissions, should think carefully about the scope and context. This prevents oversharing and limits potential misuse.
+
+3. **Test data access.** Before any new report, application, or AI agent goes live using a data product, require a testing phase. In this phase, the team should simulate how the data is used and confirm security is working correctly (for example, use a test user account with limited permissions to see if they can only retrieve what they should). Use Purview’s DLP simulation mode or similar tools to identify if any sensitive data would leak under the planned usage. Catching misconfigurations early is much easier than cleaning up an incident later.
+
+4. **Review for responsible AI.** If the data product will feed into an AI system, incorporate a Responsible AI review. This means checking the data for biases (does it over-represent or under-represent certain groups?), ensuring it has appropriate labels (so the AI knows what’s sensitive), and documenting limitations. For example, if you have an AI agent answering questions about HR data, verify that the data it’s using is up-to-date and doesn’t include anything that should not be shared even internally. If you train a model on the data, document what time period or population the data covers so the AI’s results are interpreted correctly. **Standards to enforce:** Decision makers should ensure an AI ethics or responsible AI team is involved when deploying AI that uses enterprise data. 
+
+## 2. Change management standards
+
+Just as your operational systems have change management, treat your data products similarly. Every Gold dataset should have an owner who is accountable for maintaining it. Consumers of the data (like an application team) should subscribe to notifications or check-in regularly for any updates to the data schema or refresh schedule. Encourage a culture where producers and consumers of data talk to each other. For instance, if the Finance domain plans to change how it calculates “Net Profit” in its Gold dataset, it should inform downstream report owners or AI teams that use that data. Conversely, if an AI team finds an issue with the data, they should know who to contact to get it resolved. This two-way street ensures that data remains reliable and that any issues are quickly addressed. 
