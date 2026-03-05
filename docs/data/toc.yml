@@ -14,18 +14,18 @@ items:
 
   - name: 3. Governance and security baselines
     items:
-    - name: 1. Data estate baselines with Purview
+    - name: 1. Baselines with Purview
       href: governance-security-baselines-purview-data-estate-unify-data.md
-    - name: 2. Data lake baselines with Fabric
+    - name: 2. Baselines with Fabric
       href: governance-security-baselines-fabric-data-lake-unify-data.md
       
   - name: 4. Operational standards
     items: 
     - name: 1. Cost and management
       href: operational-standards-cost-management-fabric-unify-data.md
-    - name: 2. Data product creation
+    - name: 2. Data processing
       href: operational-standards-data-processing-data-products.md
-    - name: 3. Data product security
+    - name: 3. Data security
       href: operational-standards-data-product-security-unify-data.md
-    - name: 4. Data product consumption
+    - name: 4. Data consumption
       href: operational-standards-data-product-consumption.md
