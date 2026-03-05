@@ -31,7 +31,7 @@ Implement monitoring solutions to track compliance with your cloud governance po
 
 6. **Provide access to governance monitoring.** Configure the appropriate level of access to governance monitoring results so the teams responsible for governance can evaluate the effectiveness of enforcement controls.
 
-7. **Audit monitoring effectiveness.** Manually review compliance reports and resources to validate monitoring effectiveness. For example, ensure tags are receiving the right values and not an undesired value, such as *NA.*
+7. **Audit monitoring effectiveness.** Manually review compliance reports and resources to validate monitoring effectiveness. For example, ensure tags are receiving the right values and not an undesired value, such as *NA*.
 
 ### Azure facilitation: Configuring cloud governance monitoring
 
@@ -45,7 +45,7 @@ The following guidance is meant to help you configure cloud governance monitorin
 
 #### Configure monitoring for security governance
 
-- **Use security governance monitoring.** [Review security recommendations](/azure/defender-for-cloud/review-security-recommendations) and monitor security governance over time with your [secure score](/azure/defender-for-cloud/secure-score-security-controls) The feature provides a dashboard to monitor [regulatory compliance](/azure/defender-for-cloud/regulatory-compliance-dashboard) against common security frameworks.
+- **Use security governance monitoring.** [Review security recommendations](/azure/defender-for-cloud/review-security-recommendations) and monitor security governance over time with your [secure score](/azure/defender-for-cloud/secure-score-security-controls). The feature provides a dashboard to monitor [regulatory compliance](/azure/defender-for-cloud/regulatory-compliance-dashboard) against common security frameworks.
 
 - **Configure identity governance monitoring.** [Configure identity monitoring](/entra/identity/monitoring-health/overview-monitoring-health) to collect audit, sign-in, and provisioning logs. Also review your [identity secure score](/entra/identity/monitoring-health/concept-identity-secure-score), and use [the identity governance dashboard](/entra/id-governance/governance-dashboard) to get a single view of identities across your tenant.
 
