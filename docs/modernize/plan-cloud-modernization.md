@@ -61,7 +61,7 @@ Modernization often introduces significant changes to critical workloads, so str
 
 2. **Freeze changes when necessary.** Right before and during major deployment events, freeze other changes on those workloads. A change freeze means no other unrelated changes are done to those workloads in the lead-up and during the deployment. It stabilizes the environment so you're not deploying into an unstable environment. Communicate the freeze window to all relevant teams.
 
-3. **Avoid scope creep.** Scope creep is a major challenge in modernizations. Require any proposed change to the agreed modernization scope to go through an evaluation and approval step. Most requests should be deferred unless they're crucial. Formalize the "no, not now" to extra work with a process.  Maintain a backlog of nice-to-have ideas that come up, which can feed into a future innovation project once the current modernization is done. Stakeholders should know their idea isn't lost.
+3. **Avoid scope creep.** Scope creep is a major challenge in modernizations. Require any proposed change to the agreed modernization scope to go through an evaluation and approval step. Most requests should be deferred unless they're crucial. Formalize the "no, not now" to extra work with a process. Maintain a backlog of nice-to-have ideas that come up, which can feed into a future innovation project once the current modernization is done. Stakeholders should know their idea isn't lost.
 
 ## Define your deployment strategy
 

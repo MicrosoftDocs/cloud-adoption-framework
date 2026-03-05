@@ -9,13 +9,13 @@ ms.topic: concept-article
 
 # Execute modernizations in the cloud
 
-Execution is where plans become implemented changes. This step involves preparing everyone for the change, doing the development work in nonproduction environments. You test thoroughly and deploy to production in a controlled manner. The emphasis is on rigorous testing and safe deployment practices to minimize business disruption, given the changes can be significant.
+Execution is the phase where you implement your modernization plan. This step involves preparing everyone for the change, doing the development work in nonproduction environments. You test thoroughly and deploy to production in a controlled manner. The emphasis is on rigorous testing and safe deployment practices to minimize business disruption, given the changes can be significant.
 
 ## Prepare stakeholders for modernization
 
 Before you begin the deployment, it's critical to prepare all stakeholders and users for what's coming. Surprises can lead to confusion or even operational issues. Key preparation steps include communication, change freezes (mentioned earlier), and support plans:
 
-1. **Announce the deployment schedule to all stakeholders.** Well in advance, communicate to all affected parties when the modernization deployment should happen and what to expect. Include key dates, such as change freeze start and go-live window to help stakeholders prepare appropriately. By setting expectations, users can plan around the downtime, and internal teams can be ready.
+1. **Announce the deployment schedule to all stakeholders.** Well in advance, communicate to all affected parties when the modernization deployment should happen and what to expect. Include key dates, such as change freeze start and go-live window, to help stakeholders prepare appropriately. By setting expectations, users can plan around the downtime, and internal teams can be ready.
 
 2. **Implement a change freeze on source and dependent workloads.** As planned earlier in governance, now is the time to actually enforce the freeze. Ensure no code changes, config tweaks, or other deployments occur on the workload (and dependent workloads) for some period before and during the deployment. This keeps the environment stable. Make sure all team members and any integrated third parties are aware. Clearly define the freeze window with specific start and end times to avoid confusion.
 
@@ -67,7 +67,7 @@ Production deployment is the final phase of the modernization effort. Depending 
 
 1. **Schedule a maintenance window.** If the changes require any downtime or running scripts that lock resources, like a database schema migration, do it in a preannounced maintenance window. Ensure all users are off the workload at that time. Having a clear window also gives you a target to finish the deployment or to decide on rollback if you run out of time.
 
-2. **Use your CI/CD pipeline for deployment.** A production deployment should use the same automated pipeline you used for test but pointed at the production environment. This setup ensures consistency, so infrastructure and code deploy the same way. Before running it, take final backups of any critical data (databases). Even if you can rollback, having a backup is an extra safeguard in case something fails. Run the pipeline to deploy the new code and infrastructure changes. Have logs and monitoring visible in real time. If any step fails, pause and evaluate whether you can apply a corrective change or need to roll back.
+2. **Use your CI/CD pipeline for deployment.** A production deployment should use the same automated pipeline you used for test but pointed at the production environment. This setup ensures consistency, so infrastructure and code deploy the same way. Before running it, take final backups of any critical data (databases). Even if you can roll back, having a backup is an extra safeguard in case something fails. Run the pipeline to deploy the new code and infrastructure changes. Have logs and monitoring visible in real time. If any step fails, pause and evaluate whether you can apply a corrective change or need to roll back.
 
 3. **Implement progressive traffic routing (canary) if possible.** Many Azure services allow slot swaps or gradual traffic shift, even in an in-place scenario. Azure supports canary deployments through [Azure App Service deployment slots](/azure/app-service/deploy-staging-slots), [Azure Container Apps traffic splitting](/azure/container-apps/traffic-splitting), and [Azure Kubernetes Service with Azure Pipelines](/azure/devops/pipelines/ecosystems/kubernetes/canary-demo). If you have multiple virtual machines behind a load balancer, update one instance at a time (a rolling upgrade) so that others carry traffic, then rotate.
 
