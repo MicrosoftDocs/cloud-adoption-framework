@@ -64,7 +64,7 @@ Modernization isn't a one-time project; it can be an ongoing part of IT strategy
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Govern Azure](/azure/cloud-adoption-framework/govern/overview)
+> [Govern Azure](/azure/cloud-adoption-framework/govern/)
 
 > [!div class="nextstepaction"]
 > [Secure Azure](/azure/cloud-adoption-framework/secure/overview)
