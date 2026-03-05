@@ -1,7 +1,7 @@
 
 # Data product consumption standards
 
-Finally, with data products available and secured, guide how the organization consumes and uses these data products responsibly. This step is about establishing policies and practices that ensure data is used intentionally and ethically, especially as more teams and AI agents start leveraging the data. Here's a checklist:
+Finally, with data products available and secured, guide how the organization consumes and uses these data products responsibly. This step is about establishing policies and practices that ensure data is used intentionally and ethically, especially as more teams and AI agents start using the data. Here's a checklist:
 
 1. **Set usage approval processes**: If someone wants to use enterprise data in a new product or service (especially a customer-facing one), ensure there’s a vetting step. For example, using an internal dataset in a marketing app for clients might require data owner approval and possibly anonymization. This prevents mistakes like exposing customer data inappropriately. It also fosters a partnership between data producers and consumers, where both confirm the data is suitable for the intended purpose.
 
