@@ -12,9 +12,7 @@ ms.collection: ce-skilling-ai-copilot
 
 # Executive strategy for unifying your data
 
-**Data goal:** Every organization wants to use data to create business value while controlling costs. This goal means using data for better insights, decisions, and automation, but doing so in a cost-effective way.
-
-**Data challenge:** However, many organizations struggle to achieve this goal. Data is often scattered across many systems and teams, and its quality varies by source, leading to silos and inconsistencies. These gaps limit the success of analytics and AI initiatives.
+**Data goal:** Every organization wants to use data to create business value while controlling costs. This goal means using data for better insights, decisions, and automation, but doing so in a cost-effective way. **Data challenge:** However, many organizations struggle to achieve this goal. Data is often scattered across many systems and teams, and its quality varies by source, leading to silos and inconsistencies. These gaps limit the success of analytics and AI initiatives.
 
 **Data solution:** To overcome these challenges, leading organizations are unifying their data platform. A unified data platform brings together data access and governance across the business without disrupting current operations. This guide explains how to build a unified data platform using Microsoft Fabric. It provides a common foundation for analytics and AI. It also allows you to keep your existing investments while enforcing business-wide governance and security (see Figure 1).
 

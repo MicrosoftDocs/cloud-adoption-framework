@@ -12,13 +12,11 @@ ms.collection: ce-skilling-ai-copilot
 
 # Fabric architecture for a unified data platform
 
-After aligning on why and what data products you need (organizational readiness), the next step is to decide how the technology fits together. This step involves creating an architecture that connects and integrates Microsoft Fabric with Azure. You integrate all the pieces into one coherent ecosystem: data storage, data tools, governance tools, and integration with existing systems (see Figure 1). Key aspects of the architecture include:
+After aligning on why and what data products you need (organizational readiness), the next step is to decide how the technology fits together. This step involves creating an architecture that connects and integrates Microsoft Fabric with Azure (see Figure 1).
 
-1. **[Fabric architecture](#1-plan-for-fabric-compute)**: Designing the Microsoft Fabric OneLake data lake architecture for your domains and data products.
+This article helps you make the right architecture decisions for designing **Microsoft Fabric** as the foundation of your unified data platform. Microsoft Fabric provides a data platform with a built‑in SaaS data lake called [OneLake](/fabric/onelake/onelake-overview) that centralizes data for analytics and AI across the organization.
 
-2. **[Azure architecture](./architecture-azure-landing-zones-unify-data-platform.md)**: Create and organize your **Azure environments** (data management landing zones, application landing zones, data landing zones) to support a unified data platform.
-
-This article helps you make the right architecture decisions for designing **Microsoft Fabric** as the foundation of your unified data platform. Microsoft Fabric provides a data platform with a built‑in SaaS data lake called [OneLake](/fabric/onelake/onelake-overview) that centralizes data for analytics and AI across the organization. **Recommendation:** Adopt Microsoft Fabric with OneLake as the default analytics data platform and define clear leadership decisions for compute, regions, recovery, and workspace ownership. This setup enables all workload teams to operate within consistent standards. **Here’s a checklist of best practices:**
+**Recommendation:** Adopt Microsoft Fabric with OneLake as the default analytics data platform and define clear leadership decisions for compute, regions, recovery, and workspace ownership. This setup enables all workload teams to operate within consistent standards. To apply this recommendation, use this article as a checklist:
 
 :::image type="content" source="./images/unified-data-platform-architecture-ai-analytics.svg" alt-text="Diagram showing a unified data platform architecture across Microsoft systems. Data from multiple sources is organized into data domains. They're governed in Microsoft Purview. They're ingested into Fabric OneLake and produced as data products using Fabric and Databricks. Microsoft Copilot, Foundry agents, Power BI, and data science tools consume them." lightbox="./images/unified-data-platform-architecture-ai-analytics.svg" border="false":::
 *Figure 1. Architecture: Unified data platform for AI and analytics.*
