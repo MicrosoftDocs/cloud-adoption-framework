@@ -83,7 +83,7 @@ By following these steps, you can unify your data platform in a structured way. 
 ## Key terms
 
 | Key term | Definition |
-|----|----|
+| ----  |---- |
 | Analytics | The practice of generating insights from data to support decision-making. It includes dashboards, reports, and visualizations, for example, in [Power BI](/power-bi/fundamentals/service-basic-concepts#power-bi-service-concepts). |
 | AI | Systems that use data as input into models that automate business functionality. This category includes traditional machine learning models (predictive) and generative AI models. |
 | Data product | Data that’s in a form that’s valuable for your business, like datasets, tables, feature sets, or AI training data. |
