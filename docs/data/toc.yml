@@ -7,6 +7,7 @@ items:
       href: executive-strategy-unify-data-platform.md
     
     - name: 1. Organizational readiness
+      href: organizational-readiness-unify-data-unify-data-platform.md
       items:
       - name: 1. Identify data domains
         href: /azure/cloud-adoption-framework/data/organizational-readiness-unify-data-unify-data-platform#1-identify-data-domains
@@ -43,11 +44,11 @@ items:
       - name: 4. Data consumption
         href: operational-standards-data-product-consumption-unify-data-platform.md
     
-    - name: 5. Workload design (WAF, AAC, Product docs)
+    - name: 5. Workload design
       items:
         - name: Well-Architected Framework pillars
           href: /azure/well-architected/pillars
         - name: Fabric architectures (Azure Architecture Center)
           href: /azure/architecture/browse/?terms=fabric&products=fabric
-        - name: Medallion Lakehouse Architecture in Fabric (Fabric docs)
+        - name: Medallion Lakehouse Architecture in Fabric
           href: /fabric/onelake/onelake-medallion-lakehouse-architecture 
