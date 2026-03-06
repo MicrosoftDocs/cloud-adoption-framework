@@ -12,7 +12,7 @@ ms.custom: internal, UpdateFrequency2
 
 Once the governance team is in place, the next step is to identify and evaluate all significant risks associated with your organization's use of the cloud. A "risk" in this context is any potential unwanted outcome, such as a security breach, compliance violation, service outage, or cost overrun, that could result from how the cloud is used. By assessing risks, the governance team gains the information needed to craft relevant policies in the next step. This risk assessment should be conducted initially during governance setup, and then revisited regularly and whenever major changes occur, like new projects, new threats, audits, and incidents.
 
-:::image type="content" source="./images/assess.png" alt-text="Diagram showing the process to set up and maintain cloud governance. The diagram shows five sequential steps: build a cloud governance team, assess cloud risks, document cloud governance policies, enforce cloud governance policies, and monitor cloud governance. The first step you perform once. The last four steps you perform once to set up cloud governance and continuously to maintain cloud governance." lightbox="./images/assess.png" border="false":::
+:::image type="content" source="./images/assess.png" alt-text="Diagram showing the process to set up and maintain cloud governance. The diagram shows five sequential steps: build a governance team, assess risks, document policies, enforce policies, and monitor compliance. The first step you perform once. The last four steps you perform once to set up cloud governance and continuously to maintain cloud governance." lightbox="./images/assess.png" border="false":::
 
 ## 1. Identify cloud risks
 

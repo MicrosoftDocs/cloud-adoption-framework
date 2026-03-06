@@ -12,7 +12,7 @@ ms.custom: internal, UpdateFrequency2
 
 Using the insights from the risk assessment, the team now formulates policies to handle those risks. For each significant risk or group of risks, there should be one or more corresponding governance policies. When documenting cloud governance policies, consider the following best practices:
 
-:::image type="content" source="./images/document.png" alt-text="Diagram showing the process to set up and maintain cloud governance. The diagram shows five sequential steps: build a cloud governance team, document cloud governance policies, enforce cloud governance policies, and monitor cloud governance. The first step you perform once. The last four steps you perform once to set up cloud governance and continuously to maintain cloud governance." lightbox="./images/document.png" border="false":::
+:::image type="content" source="./images/document.png" alt-text="Diagram showing the process to set up and maintain cloud governance. The diagram shows five sequential steps: build a governance team, assess risks, document policies, enforce policies, and monitor compliance. The first step you perform once. The last four steps you perform once to set up cloud governance and continuously to maintain cloud governance." lightbox="./images/document.png" border="false":::
 
 ## 1. Establish a standard policy format and language
 
