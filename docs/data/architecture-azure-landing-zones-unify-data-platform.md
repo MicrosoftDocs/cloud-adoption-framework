@@ -126,4 +126,4 @@ If your data platform includes Azure Databricks, integrate it with your Microsof
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Data governance and security baselines](./governance-security-baselines-purview-data-estate-unify-data.md)
+> [Data governance and security baselines with Purview](./governance-security-baselines-purview-data-estate-unify-data-platform.md)

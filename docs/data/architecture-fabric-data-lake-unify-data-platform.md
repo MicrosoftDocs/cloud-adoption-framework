@@ -16,7 +16,7 @@ After aligning on why and what data products you need (organizational readiness)
 
 1. **[Fabric architecture](#1-plan-for-fabric-compute)**: Designing the Microsoft Fabric OneLake data lake architecture for your domains and data products.
 
-2. **[Azure architecture](./architecture-azure-unify-data-platform.md)**: Create and organize your **Azure environments** (data management landing zones, application landing zones, data landing zones) to support a unified data platform.
+2. **[Azure architecture](./architecture-azure-landing-zones-unify-data-platform.md)**: Create and organize your **Azure environments** (data management landing zones, application landing zones, data landing zones) to support a unified data platform.
 
 This article helps you make the right architecture decisions for designing **Microsoft Fabric** as the foundation of your unified data platform. Microsoft Fabric provides a data platform with a built‑in SaaS data lake called [OneLake](/fabric/onelake/onelake-overview) that centralizes data for analytics and AI across the organization. **Recommendation:** Adopt Microsoft Fabric with OneLake as the default analytics data platform and define clear leadership decisions for compute, regions, recovery, and workspace ownership. This setup enables all workload teams to operate within consistent standards. **Here’s a checklist of best practices:**
 
@@ -41,7 +41,7 @@ In Fabric, the disaster recovery (DR) features copy data to a paired region so w
 
 ## 4. Plan your Fabric workspaces
 
-In Microsoft Fabric, the primary unit of organization is the [Fabric workspace](/fabric/fundamentals/workspaces). A Fabric workspace is a container that groups datasets, dataflows, lakehouses, reports, and other related assets. It's also the main unit for security administration, access control, and cost management in Fabric. In designing your OneLake environment, plan how to allocate workspaces across data domains and products (see [Fabric environments governance baseline](./governance-security-baselines-fabric-data-lake-unify-data.md#1-set-fabric-environment-governance-baseline)). This choice affects governance and resource isolation.
+In Microsoft Fabric, the primary unit of organization is the [Fabric workspace](/fabric/fundamentals/workspaces). A Fabric workspace is a container that groups datasets, dataflows, lakehouses, reports, and other related assets. It's also the main unit for security administration, access control, and cost management in Fabric. In designing your OneLake environment, plan how to allocate workspaces across data domains and products (see [Fabric environments governance baseline](./governance-security-baselines-fabric-data-lake-unify-data-platform.md#1-set-fabric-environment-governance-baseline)). This choice affects governance and resource isolation.
 
 :::image type="content" source="./images/fabric-architecture-data-domains-workspaces.svg" alt-text="Diagram showing the high‑level Microsoft Fabric architecture. Microsoft Fabric provides shared intelligence, analytics services, and a single data lake for the organization. Fabric includes Data Factory, Real‑Time Intelligence, Databases, Data Engineering, and Data Warehouse. Power BI and data science are used for reporting and AI model training. All data is stored in OneLake, which includes the OneLake catalog and published data products. Each data domain works in its own Fabric workspace, such as Data Domain 1, Data Domain 2, Data Domain 3, and others. All domains share OneLake while managing their data independently through their workspaces." lightbox="./images/fabric-architecture-data-domains-workspaces.svg" border="false":::
 *Figure 2. Microsoft Fabric architecture.*
@@ -51,4 +51,4 @@ In Microsoft Fabric, the primary unit of organization is the [Fabric workspace](
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Azure architecture](./architecture-azure-unify-data-platform.md)
+> [Azure architecture for a unified data platform](./architecture-azure-landing-zones-unify-data-platform.md)

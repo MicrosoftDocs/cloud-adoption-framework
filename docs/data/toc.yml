@@ -29,3 +29,12 @@ items:
       href: operational-standards-data-product-security-unify-data.md
     - name: 4. Data consumption
       href: operational-standards-data-product-consumption.md
+  
+  - name: 5. Workload design (WAF, AAC, Product docs)
+    items:
+      - name: Well-Architected Framework pillars
+        href: /azure/well-architected/pillars
+      - name: Fabric architectures (Azure Architecture Center)
+        href: /azure/architecture/browse/?terms=fabric&products=fabric
+      - name: Medallion Lakehouse Architecture in Fabric (Fabric docs)
+        href: /fabric/onelake/onelake-medallion-lakehouse-architecture 
