@@ -23,7 +23,7 @@ Because cloud computing is evolving rapidly, organizations often release preview
 
 ### Example: Use a preview service in production
 
-A research institute uses a preview cloud service in production. The service seems to be a good fit for its use case. But the institute doesn't thoroughly evaluate the service. The institute also doesn't follow its reference architecture's requirements and guidelines.
+A research institute uses a preview cloud service in production. The service seems to be a good fit for its use case, but the institute doesn't thoroughly evaluate the service. The institute also doesn't follow its reference architecture's requirements and guidelines.
 
 Problems occur with the preview service that lead to unexpected downtime. The institute begins to think that cloud services in general aren't as mature or resilient as promised.
 
