@@ -2,13 +2,13 @@
 
 Once data products are in place, it’s critical to enforce a **consistent security model** whenever and wherever those products are accessed. In a unified data platform, data may be consumed through various tools: Power BI reports, custom applications, AI agents like Microsoft 365 Copilot, Microsoft Fabric data agents, Azure OpenAI in Foundry Models, etc. Each of these must respect the permissions and sensitivity labels you’ve applied. As a decision maker, you should ensure that your security and compliance requirements carry through to every consumption layer. Best practices for security data consumption:
 
-**Standard to set:** As a decision maker, set policies for your AI development teams on which data access methods are preferred. For example, you might say: “Any agent that needs structured data from our internal systems must use a Fabric Data Agent unless a specific exception is approved,” or “If using Azure AI Search, the index must have sensitivity label enforcement enabled.” These policies will ensure that even as new AI solutions are developed, they remain within your governance guardrails. 
+**Standard to set:** As a decision maker, set policies for your AI development teams on which data access methods are preferred. For example, you might say: “Any agent that needs structured data from our internal systems must use a Fabric Data Agent unless a specific exception is approved,” or “If using Azure AI Search, the index must have sensitivity label enforcement enabled.” These policies will ensure that even as new AI solutions are developed, they remain within your governance guardrails.
 
-### Microsoft’s AI data boundary
+## Microsoft’s AI data boundary
 
 The Microsoft AI data boundary means prompts and responses stay inside Microsoft managed enterprise services and Microsoft does not use that data to train foundation models. Treat the Microsoft boundary as a required security baseline for business data. **Best practice:** Successful organizations publish a policy that limits business data use to enterprise AI services that honor tenant controls and do not reuse prompts for training. They also set an approval gate for any tool that can capture prompts or outputs. They train leaders to treat prompts as business records.
 
-### Microsoft 365 Copilot data access security
+## Understand Microsoft 365 Copilot data access security
 
 **Microsoft 365 Copilot consuming data in Microsoft 365 apps:** Microsoft 365 Copilot can access only the data already available to a user within Microsoft 365. This data includes files, emails, chats, calendars, and other information exposed through Microsoft Graph and the [Semantic Index](/microsoftsearch/semantic-index-for-copilot#privacy-compliance-and-security). Microsoft 365 Copilot uses the user’s existing identity and respects all current access permissions. Copilot operates entirely within Microsoft’s enterprise boundary, and prompt data is not used for model training. See [How does Microsoft 365 Copilot protect organizational data?](/copilot/microsoft-365/microsoft-365-copilot-privacy#how-does-microsoft-365-copilot-protect-organizational-data)
 
