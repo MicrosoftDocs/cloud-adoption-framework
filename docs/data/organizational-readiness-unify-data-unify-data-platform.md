@@ -1,7 +1,7 @@
 ---
 title: Organizational Readiness for Unifying your Data Platform
 description: Organizational readiness helps align data initiatives with business priorities. Learn how to define data domains, prioritize data, and gain data skills.
-#customer intent: As a decision maker (business leader, data domain lead, CTO), I want to define clear data domain boundaries so that ownership and accountability for data products are well established.
+#customer intent: As a decision maker (business leader, data domain lead, CTO), I want to a checklist of best practices and decision guidance to help me make the right decisions on how to define clear data domain boundaries so that ownership and accountability for data products are well established.
 author: stephen-sumner
 ms.author: ssumner
 ms.reviewer: ssumner
