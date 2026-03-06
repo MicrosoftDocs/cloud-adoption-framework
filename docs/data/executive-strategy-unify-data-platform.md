@@ -75,7 +75,7 @@ Microsoft’s Cloud Adoption Framework outlines a four-step framework for unifyi
 
 3. **Governance and security baselines:** Use Microsoft Purview to gain central visibility and governance across your data estate. Build security and compliance baselines into your Fabric architecture from the start. See [Governance and security baselines](./governance-security-baselines-purview-data-estate-unify-data-platform.md).
 
-4. **Operational standards.** Define consistent processes for ingesting raw data, creating data products, and managing their lifecycle. Establish how data products are published, secured, and consumed across the organization. See [Operational standards](./operational-standards-cost-management-fabric-unify-data-platform.mdd).
+4. **Operational standards.** Define consistent processes for ingesting raw data, creating data products, and managing their lifecycle. Establish how data products are published, secured, and consumed across the organization. See [Operational standards](./operational-standards-cost-management-fabric-unify-data-platform.md).
 
 By following these steps, you can unify your data platform in a structured way. In the following sections, you find detailed guidance, best practices, decision points, and trade-offs at each step. The guidance is tailored for decision makers who oversee data strategy and governance.
 
