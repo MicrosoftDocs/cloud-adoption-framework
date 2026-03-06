@@ -26,9 +26,9 @@ items:
     - name: 2. Data processing
       href: operational-standards-data-processing-standards-unify-data-platform.md
     - name: 3. Data security
-      href: operational-standards-data-product-security-unify-data.md
+      href: operational-standards-data-product-security-standards-unify-data-platform.md
     - name: 4. Data consumption
-      href: operational-standards-data-product-consumption.md
+      href: operational-standards-data-product-consumption-unify-data-platform.md
   
   - name: 5. Workload design (WAF, AAC, Product docs)
     items:

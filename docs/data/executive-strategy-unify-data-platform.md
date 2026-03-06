@@ -69,20 +69,20 @@ In short, the unified data platform is designed for quick wins. Teams can start 
 
 Microsoft’s Cloud Adoption Framework outlines a four-step framework for unifying your data platform. The process spans planning and organizing your data strategy. It covers architecture decisions. It also helps you set governance and security baselines and define operational standards.
 
-1. **Organizational readiness.** Define your data strategy and establish data ownership and domains. Clarify how data creates business value and who is accountable for which data. See [Organizational readiness](./organizational-readiness-unify-data.md).
+1. **Organizational readiness.** Define your data strategy and establish data ownership and domains. Clarify how data creates business value and who is accountable for which data. See [Organizational readiness](./organizational-readiness-unify-data-unify-data-platform.md).
 
 2. **Architecture:** Provide the technology needed to unify your data platform. Set up Microsoft Fabric and required environments in Azure. See [Architecture](./architecture-fabric-data-lake-unify-data-platform.md).
 
-3. **Governance and security baselines:** Use Microsoft Purview to gain central visibility and governance across your data estate. Build security and compliance baselines into your Fabric architecture from the start. See [Governance and security baselines](./governance-security-baselines-purview-data-estate-unify-data.md).
+3. **Governance and security baselines:** Use Microsoft Purview to gain central visibility and governance across your data estate. Build security and compliance baselines into your Fabric architecture from the start. See [Governance and security baselines](./governance-security-baselines-purview-data-estate-unify-data-platform.md).
 
-4. **Operational standards.** Define consistent processes for ingesting raw data, creating data products, and managing their lifecycle. Establish how data products are published, secured, and consumed across the organization. See [Operational standards](./operational-standards-unify-data.md).
+4. **Operational standards.** Define consistent processes for ingesting raw data, creating data products, and managing their lifecycle. Establish how data products are published, secured, and consumed across the organization. See [Operational standards](./operational-standards-cost-management-fabric-unify-data-platform.mdd).
 
 By following these steps, you can unify your data platform in a structured way. In the following sections, you find detailed guidance, best practices, decision points, and trade-offs at each step. The guidance is tailored for decision makers who oversee data strategy and governance.
 
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Organizational readiness](./organizational-readiness-unify-data.md)
+> [Organizational readiness](./organizational-readiness-unify-data-unify-data-platform.md)
 
 ## Key terms
 

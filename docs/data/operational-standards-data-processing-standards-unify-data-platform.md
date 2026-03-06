@@ -36,7 +36,7 @@ Here’s a checklist.
 
 Getting data into OneLake is only the first step. The real value comes from transforming raw data into high-quality, ready-to-use data products. Leaders don't design pipelines, but they define platforms and architectural standards that prevent fragmentation. **Recommendation:** Standardize transformation platforms and enforce a consistent refinement architecture. To apply this recommendation, use the following checklist:
 
-### 1. Use the right data platform
+### 2.1. Use the right data platform
 
 Platform choice sets the foundation for governance, cost control, and operational consistency across all analytics and data products in Microsoft and Azure environments.**Recommendation:** For each data product, balance simplicity and  integration with the need for specialized engineering capabilities. To apply this recommendation, use the following checklist:
 
@@ -46,7 +46,7 @@ Platform choice sets the foundation for governance, cost control, and operationa
 
 3. **Enforce platform ownership boundaries.** Clear platform boundaries prevent duplicated cost and inconsistent logic across systems. **Best practices:** Assign responsibility for each class of workload to one platform. Require architectural review before approving cross-platform processing. **Decision guidance:** Decide which platform owns ingestion, transformation, and analytics outcomes. Prevent duplicate transformations and overlapping pipelines that deliver the same business result.
 
-### 2. Apply medallion architecture
+### 2.2. Apply medallion architecture
 
 The medallion architecture establishes trust, consistency, and governance across all data products by defining a clear progression from raw data to business-ready outputs. **Recommendation:** Require all data products in OneLake to follow a bronze, silver, and gold structure and prohibit shortcuts that bypass these layers. To apply this recommendation, use the following checklist:
 
@@ -62,19 +62,20 @@ The medallion architecture establishes trust, consistency, and governance across
 Fabric supports this model through [materialized lake views](/fabric/data-engineering/materialized-lake-views/overview-materialized-lake-view) that can automatically manage the transformations. See [Medallion Lakehouse Architecture in Fabric](/fabric/onelake/onelake-medallion-lakehouse-architecture). For an analytics architecture, see [Analytics End-to-End with Microsoft Fabric](/azure/architecture/example-scenario/dataplate2e/data-platform-end-to-end).
 
 *Table. Example medallion architecture. Gold layer combines data from two datasets.*
+
 | Dataset | Layer | Example Data | What happened |
-|----|----|----|----|
+| ---- | ---- | ---- | ---- |
 | *Sales transactions* | *Bronze* | *OrderID=984321 · StoreID=17 · Amount="1,200" · TxnDate="2026-01-05T14:32:09Z"* | *This record arrived from the sales system exactly as sent. Amount is text. Timestamp follows system format. No meaning is applied.* |
-|  | *Silver* | *OrderID=984321 · StoreID=17 · Amount=1200.00 · TxnDate=2026-01-05* | *The transaction is standardized and validated. Amount is numeric. Date follows enterprise rules. Data is now trustworthy.* |
+| | *Silver* | *OrderID=984321 · StoreID=17 · Amount=1200.00 · TxnDate=2026-01-05* | *The transaction is standardized and validated. Amount is numeric. Date follows enterprise rules. Data is now trustworthy.* |
 | *Store reference* | *Bronze* | *StoreID="17" · RegionName="EAST "* | *This record arrived from a location system. Formatting reflects the source.* |
-|  | *Silver* | *StoreID=17 · Region=East* | *Store identifiers align with sales data. Region values are cleaned and consistent.* |
+| | *Silver* | *StoreID=17 · Region=East* | *Store identifiers align with sales data. Region values are cleaned and consistent.* |
 | *Daily revenue by region* | *Gold* | *Region=East · Date=2026-01-05 · TotalRevenue=425000* | *This value combines Silver sales transactions with Silver store reference data. Individual records are summarized to answer a business question.* |
 
-### 3. Consider an Adaptive gold layer
+### 2.3. Consider an Adaptive gold layer
 
 Adaptive Gold is included here as a forward‑looking consideration. The idea is that you use AI agents to create gold layers. Agents can observe patterns that you might not be able to. If users frequently ask for "top customer issues by region per month," AI agents can materialize that dataset. This capability isn't provided out of the box in Microsoft Fabric today. It would require building a custom AI agent that operates on Fabric and Power BI telemetry.
 
-## 5. Set data product publishing standards
+## 3. Set data product publishing standards
 
 Publishing standards define how your organization exposes trusted data products through Microsoft Fabric OneLake and Microsoft Purview. The goal is to scale reuse, enforce governance, and reduce risk across analytics and AI workloads.
 **Recommendation:** Establish a single publishing standard that makes every approved data product discoverable, governed, and clearly intended for a defined audience before broad use. To apply this recommendation, use the following checklist:
@@ -95,3 +96,6 @@ Decide whether Purview data products are required for all published assets or on
 6. **Declare intended audience and usage.** Clear intent prevents misuse and supports compliance across analytics and AI scenarios. **Best practices:** Require each data product to state its intended audience and supported workload type. Specify internal, partner, or public use. Identify analytics, BI, agentic, or public web scenarios. Use Purview [metadata](/purview/unified-catalog-custom-metadata), [glossary terms](/purview/unified-catalog-glossary-terms), and [sensitivity labels](/purview/data-map-sensitivity-labels) together to express this intent consistently. **Decision guidance:** Decide whether external or agent use requires extra approval. Choose stricter approval when data leaves organizational boundaries. Accept slower publication as the tradeoff for reduced risk.
 
 ## Next step
+
+> [!div class="nextstepaction"]
+> [Data product security standards](./operational-standards-data-product-security-standards-unify-data-platform.md)

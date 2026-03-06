@@ -6,7 +6,7 @@ author: stephen-sumner
 ms.author: ssumner
 ms.reviewer: ssumner
 ms.date: 03/09/2026
-ms.topic: 
+ms.topic: concept-article
 ms.collection: ce-skilling-ai-copilot
 ---
 
@@ -45,4 +45,4 @@ Deployment standards define how data assets move into production. Consistency pr
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Data processing standards](./operational-standards-data-processing-standards.md)
+> [Data processing standards](./operational-standards-data-processing-standards-unify-data-platform.md)
