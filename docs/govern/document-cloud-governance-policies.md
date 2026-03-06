@@ -80,7 +80,7 @@ The following cloud governance policies are examples for reference. These polici
 | DG02 | Data | [R06](assess-cloud-risks.md#example-risk-list) | Data lifecycle policies must be enabled in Microsoft Purview for all sensitive data. | Manage the data lifecycle | Workload teams | Implementation within 60 days, quarterly audits | Microsoft Purview |
 | RM01 | Resource management | [R07](assess-cloud-risks.md#example-risk-list) | Bicep must be used to deploy resources. | Standardize resource provisioning | Workload teams, platform team | Immediate Bicep transition plan | Continuous integration and continuous delivery (CI/CD) pipeline |
 | RM02 | Resource management | [R07](assess-cloud-risks.md#example-risk-list) | Tags must be enforced on all cloud resources using Azure Policy. | Facilitate resource tracking | All cloud resources | Correct tagging within 30 days | Azure Policy |
-| AI01 | AI | [R08](assess-cloud-risks.md#example-risk-list) | AI content-filtering configuration must be set to medium or higher. | Mitigate AI harmful outputs | Workload teams | Immediate corrective measures | Azure OpenAI Service |
+| AI01 | AI | [R08](assess-cloud-risks.md#example-risk-list) | AI content filtering configuration must be set to medium or higher. | Mitigate AI harmful outputs | Workload teams | Immediate corrective measures | Azure OpenAI Service |
 | AI02 | AI | [R08](assess-cloud-risks.md#example-risk-list) | Customer-facing AI systems must be red-teamed monthly. | Identify AI biases | AI model teams | Immediate review, corrective actions for misses | Manual audit (monthly) |
 
 ## Next step
