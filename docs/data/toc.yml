@@ -3,7 +3,16 @@ items:
     href: executive-strategy-unify-data-platform.md
   
   - name: 1. Organizational readiness
-    href: organizational-readiness-unify-data-unify-data-platform.md
+    items:
+    - name: 1. Identify data domains
+      href: /azure/cloud-adoption-framework/data/organizational-readiness-unify-data-unify-data-platform#1-identify-data-domains
+    - name: 2. Define data products
+      href: /azure/cloud-adoption-framework/data/organizational-readiness-unify-data-unify-data-platform#2-define-data-products
+    - name: 3. Organize data domains
+      href: /azure/cloud-adoption-framework/data/organizational-readiness-unify-data-unify-data-platform#3-organize-data-domains
+  -   name: 4. Training resources
+      href: /azure/cloud-adoption-framework/data/organizational-readiness-unify-data-unify-data-platform#training-resources
+
   
   - name: 2. Architecture
     items:
