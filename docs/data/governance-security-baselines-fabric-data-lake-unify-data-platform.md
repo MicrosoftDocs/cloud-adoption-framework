@@ -93,7 +93,7 @@ Control how Microsoft Fabric connects to on-premises systems and external servic
 
 ## 5. Use the monitoring baseline
 
-A monitoring baseline defines how leaders maintain platform health, reliability, and trust. Proactive oversight prevents outages and cost surprises. **Recommendation:** Define core metrics and centralized dashboards that provide continuous visibility into Fabric health, reliability, and spend. To apply this recommendation, review this checklist of best practices:
+A monitoring baseline defines how leaders maintain platform health, reliability, and trust. Proactive oversight prevents outages and cost surprises. **Recommendation:** Define core metrics and centralized dashboards that provide continuous visibility into Fabric health, reliability, and spend. To apply this recommendation, use this checklist:
 
 1. **Monitor health metrics.** Health metrics show whether Fabric meets performance and reliability expectations. **Best practices:** Define a standard set of metrics such as capacity utilization, query performance, and pipeline failure rates. Use a single view such as the [Fabric Capacity Metrics app](/fabric/enterprise/metrics-app) to observe all domains together. Review metrics on a regular schedule to identify negative trends early. **Decision guidance:** Decide who owns metric oversight. A central operations team provides consistency and broad visibility but requires dedicated staffing. Data domain‑led monitoring supports autonomy but risks missed cross‑platform patterns. Many organizations centralize dashboards and standards while data domains act on local issues.
 
@@ -101,7 +101,7 @@ A monitoring baseline defines how leaders maintain platform health, reliability,
 
 ## 6. Deployment governance
 
-Deployment governance defines how data assets move into production. Consistency protects platform stability and security.**Recommendation:** Treat all data artifacts as code and enforce automated deployment through controlled pipelines. To apply this recommendation, review this checklist of best practices:
+Deployment governance defines how data assets move into production. Consistency protects platform stability and security.**Recommendation:** Treat all data artifacts as code and enforce automated deployment through controlled pipelines. To apply this recommendation, use this checklist:
 
 1. **Put all data artifacts under version control.** Version control ensures traceability and repeatability across environments. **Best practices:** Require all pipelines, queries, configurations, and reports to live in a source repository. Enforce change history and rollback capability through that repository. **Decision guidance:** Decide whether to mandate this policy organization‑wide at once or phase it by domain. Immediate enforcement improves control but might require training. Phased adoption reduces disruption but extends risk exposure.
 

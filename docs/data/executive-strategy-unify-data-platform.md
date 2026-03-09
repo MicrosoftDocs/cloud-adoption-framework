@@ -73,6 +73,10 @@ Microsoft’s Cloud Adoption Framework outlines a four-step framework for unifyi
 
 By following these steps, you can unify your data platform in a structured way. In the following sections, you find detailed guidance, best practices, decision points, and trade-offs at each step. The guidance is tailored for decision makers who oversee data strategy and governance.
 
+## Decision tree for unifying your data platform
+
+:::image type="content" source="images/fabric-overview.svg" alt-text="High‑level diagram of Microsoft Fabric showing OneLake at the center as a unified data lake. At the bottom, multiple data sources feed into OneLake, including cloud storage and SaaS systems through shortcuts and virtualization, databases through mirroring, and other external sources. OneLake provides built‑in data tools for the full data lifecycle. It includes ingestion, engineering, warehousing, real‑time analytics, data science, and visualization with Power BI. The diagram emphasizes that data is stored once in OneLake and reused across analytics, data science, and reporting, with governance applied through Microsoft Purview." lightbox="images/fabric-overview.svg" border="false":::
+
 ## Next step
 
 > [!div class="nextstepaction"]

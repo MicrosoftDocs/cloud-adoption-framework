@@ -14,6 +14,9 @@ ms.collection: ce-skilling-ai-copilot
 
 AI and analytics consume data products in a unified data platform through multiple Microsoft services. Each service enforces security in a specific way. **Recommendation:** For every Microsoft product that can access data products, first understand its native access and security model. Then, decide whether to inherit it as‑is or define standards where your requirements aren't met. Use this article as a checklist:
 
+:::image type="content" source="images/operational-standards-unify-data-platform.svg" alt-text="Diagram showing the three major steps in setting operational standards. First, set data processing standards like how to move data through the bronze, silver, and gold layers. Second, set security standards for how to secure data products in different Microsoft services. Third, set consumption and lifecycle standards for data products." lightbox="images/operational-standards-unify-data-platform.svg" border="false":::
+*Figure 1. Three steps to setting operational standards for data.*
+
 ## Business data in AI standard
 
 Successful organizations publish a policy that limits business data use to services that honor tenant controls and don't reuse prompts for training. They also set an approval gate for any tool that can capture prompts or outputs. They train leaders to treat prompts as business records. **Best practices:** Microsoft doesn't use that data to train foundation models. Treat the Microsoft boundary as a required security baseline for business data.
