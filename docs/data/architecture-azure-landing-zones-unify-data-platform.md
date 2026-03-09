@@ -14,9 +14,13 @@ ms.collection: ce-skilling-ai-copilot
 
 After you align on why and what data products you need (organizational readiness), the next step is to decide how the technology fits together. Create an architecture that connects and integrates Microsoft Fabric with Azure and your existing systems. As a decision maker, you must design Azure environments that support a unified data platform so that your organization can standardize how data flows from operational systems into analytics and AI consumption.
 
-**Recommendation:** Establish architecture patterns for your Azure environments. Include data management landing zones, application landing zones, and data landing zones (see Figure 1). To apply this recommendation, use this article as a checklist:
+**Recommendation:** Establish architecture patterns for your Azure environments. Include data management landing zones, application landing zones, and data landing zones. To apply this recommendation, use this article as a checklist:
 
-:::image type="content" source="./images/unified-data-platform-architecture-ai-analytics.svg" alt-text="Diagram showing a unified data platform architecture across Microsoft systems. Data from multiple sources is organized into data domains. They're governed in Microsoft Purview. They're ingested into Fabric OneLake and produced as data products using Fabric and Databricks. Microsoft Copilot, Foundry agents, Power BI, and data science tools consume them.":::
+## Unified data platform architecture for AI and analytics
+
+Figure 1 shows an integrated Fabric‑in‑Azure architecture aligned to data domains, with enough operational structure to make the design concrete. It serves as a reference model to help organizations design and standardize their architecture.
+
+:::image type="content" source="./images/unified-data-platform-architecture-ai-analytics.svg" alt-text="Diagram showing a unified data platform architecture across Microsoft systems. Data from multiple sources is organized into data domains. They're governed in Microsoft Purview. They're ingested into Fabric OneLake and produced as data products using Fabric and Databricks. Microsoft Copilot, Foundry agents, Power BI, and data science tools consume them." lightbox="./images/unified-data-platform-architecture-ai-analytics.svg" border="false":::
 *Figure 1. Architecture: Unified data platform for AI and analytics.*
 
 ## 1. Plan your data management landing zones
