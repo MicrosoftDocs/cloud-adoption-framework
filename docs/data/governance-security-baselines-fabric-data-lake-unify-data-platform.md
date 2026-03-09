@@ -12,7 +12,7 @@ ms.collection: ce-skilling-ai-copilot
 
 # Fabric governance and security baselines
 
-Microsoft Fabric centralizes enterprise analytics data in OneLake, which makes governance and security essential for risk control, regulatory compliance, and operational trust at scale. Decision makers must apply the same principles established for the broader [data estate](./governance-security-baselines-purview-data-estate-unify-data-platform.md) and tailor those principles to the Fabric context.
+Microsoft Fabric centralizes data in OneLake, so governance and security are essential for risk control, regulatory compliance, and operational trust. Decision makers should tailor the principles established for the broader [data estate](./governance-security-baselines-purview-data-estate-unify-data-platform.md) to the Fabric context.
 
 **Recommendation:** Establish consistent governance and security baselines for all Microsoft Fabric environments to protect OneLake and ensure alignment with data standards. To apply this recommendation, use this article as a checklist:
 
