@@ -14,11 +14,11 @@ ms.collection: ce-skilling-ai-copilot
 
 Microsoft Fabric centralizes enterprise analytics data in OneLake, which makes governance and security essential for risk control, regulatory compliance, and operational trust at scale. Decision makers must apply the same principles established for the broader [data estate](./governance-security-baselines-purview-data-estate-unify-data-platform.md) and tailor those principles to the Fabric context.
 
-**Recommendation:** Establish consistent governance and security baselines for all Microsoft Fabric environments to protect OneLake and ensure alignment with data standards. To apply this recommendation, use this article as checklist:
+**Recommendation:** Establish consistent governance and security baselines for all Microsoft Fabric environments to protect OneLake and ensure alignment with data standards. To apply this recommendation, use this article as a checklist:
 
 ## 1. Set Fabric environment governance baseline
 
-A core governance decision is how you define and structure environments in Microsoft Fabric. In Fabric, you use Fabric workspaces to control access, allocate capacity, and apply governance. Most organizations converge on one of the following patterns. The right choice depends on how teams are organized, how strictly environments must be isolated, and which governance principles are most important for your organization. **Decision guidance:**
+A core governance decision is how you define and structure environments in Microsoft Fabric. Fabric workspaces define security boundaries, capacity allocation, and operational ownership in Microsoft Fabric, so environment structure directly affects governance, risk, and cost control for the organization. **Recommendation:** Establish a default workspace pattern that aligns to data domains and ownership. A allow exceptions when isolation or constraints require them. To apply this recommendation, review the following options:
 
 **Option 1: One workspace per data product.** In this model, each data product gets one Fabric workspace. **Decision guidance:** Choose this option when one team owns the full pipeline and when moderate isolation meets governance needs. Avoid this option when regulatory or organizational separation requires stricter boundaries. If you don't understand medallion architecture, see [Apply medallion architecture](./operational-standards-data-processing-standards-unify-data-platform.md#22-apply-medallion-architecture). Within the workspace, there are two ways to implement the medallion architecture:
 
@@ -43,7 +43,7 @@ A core governance decision is how you define and structure environments in Micro
 
 ## 2. Set cost governance baselines
 
-A cost governance baseline defines how your organization controls spending and optimizes capacity after Microsoft Fabric goes live. Leaders must manage these costs because uncontrolled compute usage reduces business value and erodes trust in the platform. **Recommendation:** Define clear cost governance processes that connect Fabric capacity decisions to business priorities and financial accountability. To apply this recommendation, review this checklist:
+A cost governance baseline defines how your organization controls spending and optimizes capacity after Microsoft Fabric goes live. Leaders must manage these costs because uncontrolled compute usage reduces business value and erodes trust in the platform. **Recommendation:** Define clear cost governance processes that connect Fabric capacity decisions to business priorities and financial accountability. To apply this recommendation, use the following checklist:
 
 1. **Define a Fabric budget.** A Fabric budget is the financial limit that applies to all workloads running on a data domain’s Fabric capacities. **Best practice:** Each data domain receives and sets a budget for its Fabric usage before onboarding any workloads. Treat this budget as a hard governance boundary, not a planning estimate. Align spending decisions to it from day one.
 
@@ -93,7 +93,7 @@ Control how Microsoft Fabric connects to on-premises systems and external servic
 
 ## 5. Use the monitoring baseline
 
-A monitoring baseline defines how leaders maintain platform health, reliability, and trust. Proactive oversight prevents outages and cost surprises. **Recommendation:** Define core metrics and centralized dashboards that provide continuous visibility into Fabric health, reliability, and spend. To apply this recommendation, use this checklist:
+A monitoring baseline defines how leaders maintain platform health, reliability, and trust. Proactive oversight prevents outages and cost surprises. **Recommendation:** Define core metrics and centralized dashboards that provide continuous visibility into Fabric health, reliability, and spend. To apply this recommendation, use the following checklist:
 
 1. **Monitor health metrics.** Health metrics show whether Fabric meets performance and reliability expectations. **Best practices:** Define a standard set of metrics such as capacity utilization, query performance, and pipeline failure rates. Use a single view such as the [Fabric Capacity Metrics app](/fabric/enterprise/metrics-app) to observe all domains together. Review metrics on a regular schedule to identify negative trends early. **Decision guidance:** Decide who owns metric oversight. A central operations team provides consistency and broad visibility but requires dedicated staffing. Data domain‑led monitoring supports autonomy but risks missed cross‑platform patterns. Many organizations centralize dashboards and standards while data domains act on local issues.
 
@@ -101,7 +101,7 @@ A monitoring baseline defines how leaders maintain platform health, reliability,
 
 ## 6. Deployment governance
 
-Deployment governance defines how data assets move into production. Consistency protects platform stability and security.**Recommendation:** Treat all data artifacts as code and enforce automated deployment through controlled pipelines. To apply this recommendation, use this checklist:
+Deployment governance defines how data assets move into production. Consistency protects platform stability and security.**Recommendation:** Treat all data artifacts as code and enforce automated deployment through controlled pipelines. To apply this recommendation, use the following checklist:
 
 1. **Put all data artifacts under version control.** Version control ensures traceability and repeatability across environments. **Best practices:** Require all pipelines, queries, configurations, and reports to live in a source repository. Enforce change history and rollback capability through that repository. **Decision guidance:** Decide whether to mandate this policy organization‑wide at once or phase it by domain. Immediate enforcement improves control but might require training. Phased adoption reduces disruption but extends risk exposure.
 

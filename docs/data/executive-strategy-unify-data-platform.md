@@ -35,7 +35,7 @@ In summary, **Microsoft Fabric** enables a unified data platform that overlays y
 
 Unifying the data platform is an investment in capability, not a wholesale replacement of every system. The goal is to keep using your existing data systems and build a shared foundation that can grow over time. Key cost factors to consider include:
 
-- **Microsoft Fabric cost factors**: Primary [cost factors](https://azure.microsoft.com/pricing/details/microsoft-fabric/?msockid=387b522e88e769ba0c90444a89ed68d0) include:
+- **Microsoft Fabric cost factors**: Primary [cost factors](https://azure.microsoft.com/pricing/details/microsoft-fabric/?msockid=387b522e88e769ba0c90444a89ed68d0) include (see Figure 2):
 
   - **Compute:** The compute capacity you create (Fabric capacities).
   - **Storage:** The storage you use in OneLake.

@@ -14,14 +14,14 @@ ms.collection: ce-skilling-ai-copilot
 
 After you align on why and what data products you need (organizational readiness), the next step is to decide how the technology fits together. Create an architecture that connects and integrates Microsoft Fabric with Azure and your existing systems. As a decision maker, you must design Azure environments that support a unified data platform so that your organization can standardize how data flows from operational systems into analytics and AI consumption.
 
-**Recommendation:** Establish architecture patterns for your Azure environments. Include data management landing zones, application landing zones, and data landing zones. To apply this recommendation, use this article as a checklist:
+**Recommendation:** Establish architecture patterns for your Azure environments. Include data management landing zones, application landing zones, and data landing zones (see Figure 1). To apply this recommendation, use this article as a checklist:
 
 :::image type="content" source="./images/unified-data-platform-architecture-ai-analytics.svg" alt-text="Diagram showing a unified data platform architecture across Microsoft systems. Data from multiple sources is organized into data domains. They're governed in Microsoft Purview. They're ingested into Fabric OneLake and produced as data products using Fabric and Databricks. Microsoft Copilot, Foundry agents, Power BI, and data science tools consume them.":::
 *Figure 1. Architecture: Unified data platform for AI and analytics.*
 
 ## 1. Plan your data management landing zones
 
-A data management landing zone (DMLZ) is one or more Azure subscriptions for data management resources. **Recommendation:** Use DMLZs to host your Microsoft Purview account and Microsoft Fabric capacity. To do so, use the following checklist of best practices:
+A data management landing zone (DMLZ) is one or more Azure subscriptions for data management resources. **Recommendation:** Use DMLZs to host your Microsoft Purview account and Microsoft Fabric capacity. To apply this recommendation, use the following checklist:
 
 :::image type="content" source="./images/azure-architecture-unified-data-platform.svg" alt-text="Diagram showing an Azure architecture for unifying a data platform with Microsoft Fabric. At the top, Microsoft Entra, Microsoft Defender, and Microsoft Purview provide organization‑wide governance and security. Azure management groups define a platform landing zone with centralized policy, monitoring, identity, security, and connectivity. Application landing zones sit under the platform. Data management landing zones host Microsoft Purview accounts that run in Microsoft Fabric capacity and govern data stored in OneLake. Separate data landing zones host Azure Databricks for data processing. Microsoft Foundry agents run in their own application landing zones and securely access governed data in OneLake through Purview. The diagram shows clear separation between platform services, data domains, and application workloads while sharing centralized governance." lightbox="./images/azure-architecture-unified-data-platform.svg" border="false":::
 
@@ -46,7 +46,7 @@ For more information, see [Deployment Patterns for Microsoft Fabric](/azure/arch
 
 Application landing zones host operational workloads such as business applications, services, and AI solutions that produce or consume enterprise data. These landing zones sit outside data management landing zones and usually have different owners. As a decision maker, you define how these environments interact with the unified data platform to protect governance, reduce duplication, and maintain operational independence.
 
-**Recommendation:** Set clear integration standards that require application landing zones to access enterprise data through governed Fabric and OneLake mechanisms rather than direct or ad hoc data paths. To do so, use this checklist of best practices:
+**Recommendation:** Set clear integration standards that require application landing zones to access enterprise data through governed Fabric and OneLake mechanisms rather than direct or ad hoc data paths. To apply this recommendation, use the following checklist:
 
 1. **Standardize Microsoft Foundry data access.** Data access defines how applications and AI solutions retrieve governed data from OneLake. Inconsistent access patterns create shadow data copies and weaken governance controls. **Best practices:** Require application teams to use approved Fabric and Foundry integration mechanisms to access enterprise data stored in OneLake. These mechanisms include the Fabric Data Agent and Azure AI Search with Foundry IQ indexes. This approach enforces consistent governance, security, and audit controls across all consuming applications. **Decision guidance:** Choose mandatory standardized access when data sensitivity or regulatory requirements are high. This choice limits flexibility but preserves governance integrity. Avoid allowing direct database access when long-term data consistency and trust matter more than short-term convenience.
 
@@ -57,7 +57,7 @@ Choose Fabric mirroring when the organization needs a single convergence layer f
 
 ## 3. Plan your data landing zones (as needed)
 
-A data landing zone is an environment (consisting of one or more Azure subscriptions) for data and AI/ML resources that operate alongside Microsoft Fabric. These platforms include Azure Databricks, Azure Data Lake Storage (ADLS), and Azure Machine Learning. These platforms often serve specialized use cases that Fabric doesn't replace. As a decision maker, you define when to introduce these environments and how they integrate with the unified data platform. **Recommendation:** Use data landing zones when the organization requires data or AI platforms beyond Fabric. Integrate those environments with OneLake through governed patterns. To apply this recommendation, use this checklist of best practices:
+A data landing zone is an environment (consisting of one or more Azure subscriptions) for data and AI/ML resources that operate alongside Microsoft Fabric. These platforms include Azure Databricks, Azure Data Lake Storage (ADLS), and Azure Machine Learning. These platforms often serve specialized use cases that Fabric doesn't replace. As a decision maker, you define when to introduce these environments and how they integrate with the unified data platform. **Recommendation:** Use data landing zones when the organization requires data or AI platforms beyond Fabric. Integrate those environments with OneLake through governed patterns. To apply this recommendation, use the following checklist:
 
 ### 3.1 Choose how data products map to data landing zones
 

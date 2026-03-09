@@ -12,7 +12,7 @@ ms.collection: ce-skilling-ai-copilot
 
 # Organizational readiness
 
-Organizational readiness focuses on aligning data initiatives with business priorities. Rather than starting with technology, start by defining *who* owns the data and *why* it matters to the business. **Recommendation:** Ensure business value drives data product choices instead of ad-hoc technical decisions. To apply this recommendation, use the following checklist:
+Organizational readiness focuses on aligning data initiatives with business priorities. Rather than starting with technology, start by defining *who* owns the data and *why* it matters to the business. **Recommendation:** Ensure business value drives data product choices instead of ad-hoc technical decisions (see Figure 1). To apply this recommendation, use this article as a checklist:
 
 ## 1. Identify data domains
 
@@ -115,7 +115,7 @@ Support your teams with relevant training materials and certifications. Microsof
 
 ## Next step
 
-By planning your organizational readiness in these ways, you create a solid foundation. This planning ensures that your technology investments in a unified data platform have clear purpose, strong ownership, and the necessary human capabilities to be successful.
+By planning your organizational readiness in these ways, you create a solid foundation. This planning ensures that your technology investments in a unified data platform have clear purpose.
 
 > [!div class="nextstepaction"]
 > [Architecture](./architecture-fabric-data-lake-unify-data-platform.md)

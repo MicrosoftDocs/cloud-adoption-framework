@@ -12,12 +12,14 @@ ms.collection: ce-skilling-ai-copilot
 
 # Data consumption and lifecycle standards
 
-Data product consumption defines how data products in Microsoft Fabric used across the organization. This process affects trust, security, and long-term platform success. **Recommendation:** Establish organization-wide standards for how teams consume and manage all published data products in Fabric over time. This approach helps teams safely reuse data without creating risk or instability. Use this article as checklist:
+Data product consumption defines how data products in Microsoft Fabric used across the organization. This process affects trust, security, and long-term platform success. **Recommendation:** Establish organization-wide standards for how teams consume and manage all published data products in Fabric over time. This approach helps teams safely reuse data without creating risk or instability (see Figure 1). To apply this recommendation, use this article as a checklist:
 
 :::image type="content" source="images/operational-standards-unify-data-platform.svg" alt-text="Diagram showing the three major steps in setting operational standards. First, set data processing standards like how to move data through the bronze, silver, and gold layers. Second, set security standards for how to secure data products in different Microsoft services. Third, set consumption and lifecycle standards for data products." lightbox="images/operational-standards-unify-data-platform.svg" border="false":::
 *Figure 1. Three steps to setting operational standards for data.*
 
 ## Data consumption standards
+
+Data consumption standards define when and how teams might rely on shared data products for business decisions, reporting, and automated systems. Leaders who set these standards reduce risk, improve trust, and create predictable reuse across Microsoft Fabric and connected services. **Recommendation:** Establish clear rules that control which data products teams might consume, how teams approve new uses, how access is granted, and how consumption paths are validated before production use. To apply this recommendation, use the following checklist:
 
 1. **Require official status before broad consumption.** Official status means a data product is approved for reuse beyond the owning team and is recognized as trusted at the organization level. **Best practices:** Require all shared data products to have an explicit official status before broad consumption. Use consistent signals to show which products are approved for reuse. Ensure each official product has a clear purpose and accountable ownership. Treat official status as the entry point for lifecycle governance.
 **Decision guidance:** Decide which endorsement level applies to each product category, such as [Fabric endorsement levels](/fabric/fundamentals/endorsement-promote-certify). Use lighter endorsement for internal reuse. Use certification for cross‑domain or regulated use. Higher endorsement increases confidence but requires more reviews.
@@ -46,7 +48,7 @@ Retire data products in a controlled manner.** Retirement removes a data product
 
 ## Next step
 
-When you govern data products across their full lifecycle in Fabric OneLake and make them discoverable through Microsoft Purview, your organization gains a unified and trusted data platform. The next step is to establish standards for how AI systems and agents consume these data products so automated access follows the same trust, security, and accountability principles. This approach ensures AI usage scales safely, respects data product boundaries, and reinforces confidence in AI‑driven outcomes across the organization.
+The next step is to establish standards for how AI app and agents consume your data products.
 
 > [!div class="nextstepaction"]
 > [General AI adoption](/azure/cloud-adoption-framework/scenarios/ai/)

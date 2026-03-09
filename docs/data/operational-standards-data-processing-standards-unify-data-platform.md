@@ -12,7 +12,7 @@ ms.collection: ce-skilling-ai-copilot
 
 # Data processing standards for a unified data platform
 
-A unified data platform depends on consistent ingestion, transformation, and publishing standards so leaders can trust data for analytics and AI. **Recommendation:** Establish organization‑wide standards that control what data enters OneLake, how teams refine that data, and how governed data products reach consumers. Here’s a checklist.
+A unified data platform depends on consistent ingestion, transformation, and publishing standards so leaders can trust data for analytics and AI. **Recommendation:** Establish organization‑wide standards that control what data enters OneLake, how teams refine that data, and how governed data products reach consumers (see Figure 1). To apply this recommendation, use this article as a checklist:
 
 :::image type="content" source="images/operational-standards-unify-data-platform.svg" alt-text="Diagram showing the three major steps in setting operational standards. First, set data processing standards like how to move data through the bronze, silver, and gold layers. Second, set security standards for how to secure data products in different Microsoft services. Third, set consumption and lifecycle standards for data products." lightbox="images/operational-standards-unify-data-platform.svg" border="false":::
 *Figure 1. Three steps to setting operational standards for data.*
@@ -20,8 +20,7 @@ A unified data platform depends on consistent ingestion, transformation, and pub
 ## 1. Set data ingestion standards
 
 Data ingestion defines cost exposure, security risk, and long‑term trust in analytics and AI. OneLake serves as the central data lake for analytics and AI in Microsoft Fabric, so leaders must control what enters that lake.
-**Recommendation:** Set clear boundaries so teams ingest only data that supports defined business outcomes.
-Here’s a checklist.
+**Recommendation:** Set clear boundaries so teams ingest only data that supports defined business outcomes. To apply this recommendation, use the following checklist.
 
 1. **Ingest data with defined business value.** Defined business value means data explains or measures a business process or outcome that leaders care about. **Best practices:** Require a clear business question or decision for every dataset proposed for OneLake. Treat ingestion as a product decision, not a technical default. **Decision guidance:** Decide to ingest data when it supports a known outcome or metric. Choose to leave data in operational systems or departmental storage when no use case exists. This choice reduces storage cost and governance overhead.
 
