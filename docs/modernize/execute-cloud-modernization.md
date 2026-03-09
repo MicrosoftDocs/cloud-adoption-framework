@@ -77,7 +77,7 @@ Production deployment is the final phase of the modernization effort. Depending 
 
 ### Deploy the modernization to a parallel environment
 
-1. **Create the parallel production environment.** Using the IaC templates, create the new production environment in Azure that mirrors what you tested. This environment includes all compute, networking, and storage. It should be up and running but currently with no user traffic. Ensure things like network security groups, firewalls, identity (managed identities or service principals), and monitoring are all configured as needed (repeat the test env setup in prod subscription).
+1. **Create the parallel production environment.** Using the IaC templates, create the new production environment in Azure that mirrors what you tested. This environment includes all compute, networking, and storage. It should be up and running but currently with no user traffic. Ensure things like network security groups, firewalls, identity (managed identities or service principals), and monitoring are all configured as needed (repeat the test environment setup in the production subscription).
 
 2. **Establish database replication.** Configure your database platform's native replication feature to establish continuous data replication between your source and Azure target workload. Verify that initial data synchronization completes successfully and that replication is healthy. You might do an initial bulk copy of the database from backup or snapshot, then enable replication for new transactions. Monitor the lag in replication using your database platform's monitoring tools. Higher latency increases cutover risk and duration. Don't proceed to the next step until replication lag is zero.
 
