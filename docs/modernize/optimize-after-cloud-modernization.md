@@ -15,11 +15,11 @@ After you complete a modernization phase or the entire project, it's time to ens
 
 Modernizing an app isn't a one-time event. You often can further optimize once it's running in Azure:
 
-- **Apply Azure Advisor recommendations systematically.** [Azure Advisor](/azure/advisor/advisor-overview) analyzes workload monitoring data and provides actionable recommendations across cost, performance, reliability, and security. Review the recommendations weekly and implement critical changes first. Access Azure Advisor from the Azure portal and filter recommendations by workload or resource group.
+1. **Apply Azure Advisor recommendations systematically.** [Azure Advisor](/azure/advisor/advisor-overview) analyzes workload monitoring data and provides actionable recommendations across cost, performance, reliability, and security. Review the recommendations weekly and implement critical changes first. Access Azure Advisor from the Azure portal and filter recommendations by workload or resource group.
 
-- **Adjust service-specific settings.** Each Azure service has its own configuration settings and best practices. Use the Azure Well-Architected Framework's [Azure service guides](/azure/well-architected/service-guides/?product=popular) to align configurations with best practices.
+2. **Adjust service-specific settings.** Each Azure service has its own configuration settings and best practices. Use the Azure Well-Architected Framework's [Azure service guides](/azure/well-architected/service-guides/?product=popular) to align configurations with best practices.
 
-- **Address security configuration gaps immediately.** Now that the system is in a steady state, run Azure security assessment tools. Use [Microsoft Defender for Cloud](/azure/defender-for-cloud/review-security-recommendations) to see if there are any high or medium security recommendations for your resources. Resolve critical and high-severity findings within 48 hours to maintain security posture. Configure continuous assessment to detect new issues as workloads evolve.
+3. **Address security configuration gaps immediately.** Now that the system is in a steady state, run Azure security assessment tools. Use [Microsoft Defender for Cloud](/azure/defender-for-cloud/review-security-recommendations) to see if there are any high or medium security recommendations for your resources. Resolve critical and high-severity findings within 48 hours to maintain security posture. Configure continuous assessment to detect new issues as workloads evolve.
 
 ## Validate operational readiness
 

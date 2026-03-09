@@ -25,7 +25,7 @@ Modernization success begins with organizational preparation. This stage ensures
 
 ## Assess modernization readiness and skills
 
-- **Evaluate your modernization skills.** Before you start modernization, assess whether your team has the necessary skills and tools to modernize successfully. Key areas to evaluate include:
+1. **Evaluate your modernization skills.** Before you start modernization, assess whether your team has the necessary skills and tools to modernize successfully. Key areas to evaluate include:
 
     | Skill area | Assessment questions |
     |------------|---------------------|
@@ -34,9 +34,9 @@ Modernization success begins with organizational preparation. This stage ensures
     | Modern architecture patterns | Does the team understand microservices, containerization, and other modern cloud-native concepts that could be part of refactoring or rearchitecting? |
     | Monitoring and automation | Are your monitoring, logging, and automation tools sufficient to support more advanced cloud operations post-modernization? |
 
-- **Identify any skills gaps and create a plan to fill them.** You could train existing staff (Azure certifications, cloud architecture workshops) or bring in new hires/contractors with specific expertise. Skills often matter more than the specific technologies. A well-trained team executes a modernization more smoothly than a team learning during execution.
+2. **Identify any skills gaps and create a plan to fill them.** You could train existing staff (Azure certifications, cloud architecture workshops) or bring in new hires/contractors with specific expertise. Skills often matter more than the specific technologies. A well-trained team executes a modernization more smoothly than a team learning during execution.
 
-- **Engage external expertise if needed.** If your team lacks experience in critical areas, bring in Microsoft or a Microsoft partner. External experts can validate your modernization strategy, recommend appropriate tools, and help establish realistic timelines.
+3. **Engage external expertise if needed.** If your team lacks experience in critical areas, bring in Microsoft or a Microsoft partner. External experts can validate your modernization strategy, recommend appropriate tools, and help establish realistic timelines.
 
 ## Prioritize what workloads to modernize
 
