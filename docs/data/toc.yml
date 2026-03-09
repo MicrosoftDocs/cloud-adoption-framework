@@ -14,19 +14,17 @@ items:
         href: architecture-azure-landing-zones-unify-data-platform.md
     - name: 3. Governance and security baselines
       items:
-      - name: 1. Baselines for all data with Purview
+      - name: 1. Baselines with Purview (all data)
         href: governance-security-baselines-purview-data-estate-unify-data-platform.md
-      - name: 2. Baselines for data in Fabric
+      - name: 2. Baselines for Fabric (data lake)
         href: governance-security-baselines-fabric-data-lake-unify-data-platform.md
     - name: 4. Operational standards
       items: 
-      - name: 1. Cost and management
-        href: operational-standards-cost-management-fabric-unify-data-platform.md
-      - name: 2. Data processing
+      - name: 1. Data processing
         href: operational-standards-data-processing-standards-unify-data-platform.md
-      - name: 3. Data security
+      - name: 2. Data security
         href: operational-standards-data-product-security-standards-unify-data-platform.md
-      - name: 4. Data consumption
+      - name: 3. Data consumption
         href: operational-standards-data-product-consumption-unify-data-platform.md
     - name: 5. Fabric workload design
       items:
