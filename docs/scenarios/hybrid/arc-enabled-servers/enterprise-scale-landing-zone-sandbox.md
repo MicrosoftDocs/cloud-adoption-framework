@@ -44,8 +44,8 @@ Deploy the ArcBox solution using one of four methods:
 
 - Azure Bicep using the Azure CLI.
 - Terraform using the Terraform CLI.
-- Azure Resource Manager (ARM) template using the Azure CLI.
-- Azure Resource Manager (ARM) template using the Azure portal.
+- ARM template using the Azure CLI.
+- ARM template using the Azure portal.
 
 Based on your deployment method, install either [Azure CLI](/cli/azure/install-azure-cli) or [Terraform CLI](https://learn.hashicorp.com/tutorials/terraform/install-cli).
 

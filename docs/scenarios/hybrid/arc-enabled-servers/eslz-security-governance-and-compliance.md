@@ -33,7 +33,7 @@ Your hybrid and multicloud resources become part of Azure Resource Manager. Then
 
 - **Agent security permissions:** Secure access to the Azure connected machine agent by reviewing users with local admin rights on the server.
 - **Managed identity:** Use [managed identities with Azure Arc-enabled servers](/azure/azure-arc/servers/managed-identity-authentication). Decide which apps running on Azure Arc-enabled servers can use a Microsoft Entra token.
-- **Azure role-based access control (RBAC):** Define admin, ops, and engineering roles within your org. This helps assign day-to-day tasks in the hybrid setup. Map each team to actions and duties to set Azure RBAC roles and config. Consider using a [RACI](../../../organize/raci-alignment.md) matrix to support this effort. Build controls into the management scope levels you define. Follow the resource consistency and inventory management guidance. For more info, review [identity and access management for Azure Arc-enabled servers](./eslz-identity-and-access-management.md).
+- **Azure role-based access control (RBAC):** Define admin, operations, and engineering roles within your organization. This helps assign day-to-day tasks in the hybrid setup. Map each team to actions and duties to set Azure RBAC roles and configurations. Consider using a [RACI](../../../organize/raci-alignment.md) matrix to support this effort. Build controls into the management scope levels you define. Follow the resource consistency and inventory management guidance. For more info, review [identity and access management for Azure Arc-enabled servers](./eslz-identity-and-access-management.md).
 
 ### Resource organization
 
@@ -41,7 +41,7 @@ Your hybrid and multicloud resources become part of Azure Resource Manager. Then
 
 ### Governance disciplines
 
-- **Threat protection and cloud security posture management:** Add controls to detect security misconfigs and track compliance. Also, use [Azure's intelligence](/azure/sentinel/overview) to protect your hybrid workloads against threats. [Enable Microsoft Defender for servers](/azure/security-center/security-center-get-started) for all subscriptions that contain Azure Arc-enabled servers. This provides security baseline monitoring, posture management, and threat protection.
+- **Threat protection and cloud security posture management:** Add controls to detect security misconfigurations and track compliance. Also, use [Azure's intelligence](/azure/sentinel/overview) to protect your hybrid workloads against threats. [Enable Microsoft Defender for servers](/azure/security-center/security-center-get-started) for all subscriptions that contain Azure Arc-enabled servers. This provides security baseline monitoring, posture management, and threat protection.
 - **Secret and certificate management:** Enable [Azure Key Vault](/azure/key-vault/general/basic-concepts) to protect service principal credentials. Consider using [Azure Key Vault](/azure/key-vault/general/basic-concepts) for certificate management on your Azure Arc-enabled servers.
 - **Policy management and reporting:** Define a governance plan for your hybrid servers and machines. Translate it into Azure policies and remediation tasks.
 - **Data residency:** Choose which Azure region to use for your Azure Arc-enabled servers. Also review the [metadata collected](/azure/azure-arc/servers/data-residency) from these machines.
@@ -123,7 +123,7 @@ The following image shows the reference architecture for policy and compliance r
 
 ### Log management strategy
 
-Design and plan your Log Analytics workspace setup. This container collects, combines, and checks your data. A Log Analytics workspace defines the geographic location of your data, data isolation, and scope for configs like data retention. Decide how many workspaces you need and how they map to your org structure. We recommend a single Azure Monitor Log Analytics workspace to manage RBAC centrally for insight and reporting. See the [management and monitoring best practices of Cloud Adoption Framework](../../../ready/landing-zone/design-area/management.md).
+Design and plan your Log Analytics workspace setup. This container collects, combines, and checks your data. A Log Analytics workspace defines the geographic location of your data, data isolation, and scope for configurations like data retention. Decide how many workspaces you need and how they map to your organizational structure. We recommend a single Azure Monitor Log Analytics workspace to manage RBAC centrally for insight and reporting. See the [management and monitoring best practices of Cloud Adoption Framework](../../../ready/landing-zone/design-area/management.md).
 
 Review the best practices in [Designing your Azure Monitor Logs deployment](/azure/azure-monitor/logs/design-logs-deployment).
 
