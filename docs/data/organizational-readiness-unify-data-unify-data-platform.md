@@ -31,7 +31,7 @@ The first step is to define how your organization assigns responsibility for dat
 
 ## 2. Define data products
 
-After you establish domains and their leadership, shift your focus from organizational structure to business outcomes. Now, determine *what data products each domain should create*. Data products translate business priorities into durable data assets that domains own and publish for reuse. Clear definition ensures investment decisions focus on outcomes that support analytics and AI across Microsoft data platforms.**Recommendation:** Define and prioritize data products only when leaders can trace each product to a business goal and an accountable data domain. To apply this recommendation, use the following checklist:
+After you establish domains and their leadership, shift your focus from organizational structure to business outcomes. Now, determine *what data products each domain should create*. Data products translate business priorities into durable data assets that domains own and publish for reuse. Clear definition ensures investment decisions focus on outcomes that support analytics and AI across Microsoft data platforms. **Recommendation:** Define and prioritize data products only when leaders can trace each product to a business goal and an accountable data domain. To apply this recommendation, use the following checklist:
 
 *Table 1: Example template for defining data product*
 
