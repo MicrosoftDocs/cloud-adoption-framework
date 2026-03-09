@@ -17,11 +17,11 @@ Cloud modernization is the practice of improving existing cloud-based workloads 
 
 Modernization success begins with organizational preparation. This stage ensures everyone understands what modernization means for your company. You also need to evaluate if your teams have the needed skills and identify which applications to modernize first.
 
-- **Establish a common definition of modernization.** Cloud modernization improves how existing workloads work without building new features. Typical modernization activities include replatforming (moving components to a new hosting environment), refactoring (optimizing or restructuring code), and rearchitecting (redesigning the system's structure) within the cloud. Modernization excludes net-new features or complete rewrites for new capabilities.
+1. **Establish a common definition of modernization.** Cloud modernization improves how existing workloads work without building new features. Typical modernization activities include replatforming (moving components to a new hosting environment), refactoring (optimizing or restructuring code), and rearchitecting (redesigning the system's structure) within the cloud. Modernization excludes net-new features or complete rewrites for new capabilities.
 
-- **Communicate the definition of modernization.** Share this definition with all relevant teams and stakeholders. Ensure that project managers, engineers, product owners, and executives understand and agree. A unified understanding prevents misalignment.
+2. **Communicate the definition of modernization.** Share this definition with all relevant teams and stakeholders. Ensure that project managers, engineers, product owners, and executives understand and agree. A unified understanding prevents misalignment.
 
-- **Create shared responsibility across teams.** Modernization requires collaboration between development, operations, security, and architecture teams. Each team contributes different expertise to modernization success. Establish regular communication and joint decision-making processes. Avoid siloed work that creates integration problems or missed requirements. Assign clear roles while maintaining cross-team coordination.
+3. **Create shared responsibility across teams.** Modernization requires collaboration between development, operations, security, and architecture teams. Each team contributes different expertise to modernization success. Establish regular communication and joint decision-making processes. Avoid siloed work that creates integration problems or missed requirements. Assign clear roles while maintaining cross-team coordination.
 
 ## Assess modernization readiness and skills
 
