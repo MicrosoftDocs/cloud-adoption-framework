@@ -13,7 +13,7 @@ After you complete a modernization phase or the entire project, it's time to ens
 
 ## Optimize configurations for the cloud
 
-Modernizing an app isn't a one-time event. You often can further optimize once it's running in Azure:
+Modernizing an app isn't a one-time event. You can often further optimize once it's running in Azure:
 
 1. **Apply Azure Advisor recommendations systematically.** [Azure Advisor](/azure/advisor/advisor-overview) analyzes workload monitoring data and provides actionable recommendations across cost, performance, reliability, and security. Review the recommendations weekly and implement critical changes first. Access Azure Advisor from the Azure portal and filter recommendations by workload or resource group.
 

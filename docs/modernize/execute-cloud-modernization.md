@@ -33,7 +33,7 @@ All development and integration of the modernization changes should happen outsi
 
 - **Create nonproduction environments that mirror production.** Spin up dev/test environments in Azure that are as close as possible to the production setup. If production uses certain Azure services, use the same in test, smaller scale or lower-performance tier (SKU) to save cost. The closer your testing environment is to production, the more confident you can be that test results should carry over to production behavior.
 
-- **Implement changes incrementally with source control and CI/CD.** Treat the modernization effort like any other software project. Use Git or other source control for all code changes and infrastructure-as-code scripts. It provides history and ability to roll back code if needed. Break the work into small increments (perhaps per feature or fix) and use feature branches. Merge changes frequently after code review. Set up continuous integration builds to run your test suites on each commit, so you catch issues early.
+- **Implement changes incrementally with source control and CI/CD.** Treat the modernization effort like any other software project. Use Git or other source control for all code changes and infrastructure-as-code scripts. It provides history and the ability to roll back code if needed. Break the work into small increments (perhaps per feature or fix) and use feature branches. Merge changes frequently after code review. Set up continuous integration builds to run your test suites on each commit, so you catch issues early.
 
 ## Validate modernization changes with testing
 
