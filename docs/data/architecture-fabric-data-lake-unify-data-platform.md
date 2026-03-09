@@ -27,7 +27,7 @@ You get compute in Microsoft Fabric through *capacity*. Each Fabric environment 
 
 ## 2. Plan Fabric deployment
 
-A region is the physical location where Microsoft Fabric stores and processes data. It affects performance and legal compliance. **Best practice:** Establish region selection as a central governance decision rather than a local team decision. Leading organizations define approved regions based on data residency rules and user location patterns. **Decision guidance:**
+A region is the physical location where Microsoft Fabric stores and processes data. It affects performance and legal compliance. **Best practices:** Establish region selection as a central governance decision rather than a local team decision. Leading organizations define approved regions based on data residency rules and user location patterns. **Decision guidance:**
 
 - **Single region:** Choose a single region when data laws allow it and most users are nearby. The tradeoff is higher latency for distant users.
 
@@ -35,7 +35,7 @@ A region is the physical location where Microsoft Fabric stores and processes da
 
 ## 3. Plan for Fabric disaster recovery
 
-In Fabric, the disaster recovery (DR) features copy data to a paired region so workloads can resume after a regional failure. Decide whether to enable DR for your Fabric capacities. When you enable it, Fabric’s DR capability asynchronously copies OneLake data to a paired region. If one region suffers an outage, Fabric workloads can fail over to the backup region. **Best practice:** Enable disaster recovery for capacities that support critical business reporting or regulated data. Treat this decision as a business continuity decision owned by leadership. To learn more, see [OneLake Disaster Recovery and Data Protection](/fabric/onelake/onelake-disaster-recovery).
+In Fabric, the disaster recovery (DR) features copy data to a paired region so workloads can resume after a regional failure. Decide whether to enable DR for your Fabric capacities. When you enable it, Fabric’s DR capability asynchronously copies OneLake data to a paired region. If one region suffers an outage, Fabric workloads can fail over to the backup region. **Best practices:** Enable disaster recovery for capacities that support critical business reporting or regulated data. Treat this decision as a business continuity decision owned by leadership. To learn more, see [OneLake Disaster Recovery and Data Protection](/fabric/onelake/onelake-disaster-recovery).
 
 ## 4. Plan your Fabric workspaces
 
