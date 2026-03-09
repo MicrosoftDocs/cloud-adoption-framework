@@ -109,7 +109,7 @@ The following guidance helps you start configuring cloud governance alerts in Az
 
 - **Data governance alerts.** [Configure data governance alerts](/defender-xdr/alert-policies) to report data governance violations.
 
-- **Resource management governance alerts.** Configure alerts for when a noncompliant resource deploys. For example, use build warnings in your deployment pipeline or monitor noncompliance states.
+- **Resource management governance alerts.** Configure alerts for when a noncompliant resource is deployed. For example, use build warnings in your deployment pipeline or monitor noncompliance states.
 
 - **AI governance alerts.** Configure alerts when there are harmful inputs and outputs in your AI systems. For example, monitor emails from Azure OpenAI that notify you of [abusive behavior](/azure/ai-foundry/openai/concepts/abuse-monitoring).
 
