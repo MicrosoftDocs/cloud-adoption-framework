@@ -91,4 +91,6 @@ Copilot Studio can retrieve data products through Azure AI Search and Fabric dat
 
 ### Next step
 
-By paying attention to each of these areas, you ensure that once data products are published every consumption channel is governed. The core principle is that security and compliance should be pervasive. Users and systems should only access what they're allowed to, and sensitive data should remain protected at every step.
+> [!div class="nextstepaction"]
+> [Data consumption standards](./operational-standards-data-product-consumption-unify-data-platform.md)
+

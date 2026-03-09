@@ -54,4 +54,4 @@ The next step is to establish standards for how AI app and agents consume your d
 > [General AI adoption](/azure/cloud-adoption-framework/scenarios/ai/)
 
 > [!div class="nextstepaction"]
-> [Agent adoption](/azure/cloud-adoption-framework//ai-agents/)
+> [AI Agent adoption](/azure/cloud-adoption-framework//ai-agents/)
