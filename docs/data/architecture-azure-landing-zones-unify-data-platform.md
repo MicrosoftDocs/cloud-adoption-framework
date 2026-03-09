@@ -16,7 +16,7 @@ After you align on why and what data products you need (organizational readiness
 
 **Recommendation:** Establish architecture patterns for your Azure environments. Include data management landing zones, application landing zones, and data landing zones. To apply this recommendation, use this article as a checklist:
 
-## Unified data platform architecture for AI and analytics
+## Unified data platform architecture
 
 Figure 1 shows an integrated Fabric‑in‑Azure architecture aligned to data domains, with enough operational structure to make the design concrete. It serves as a reference model to help organizations design and standardize their architecture.
 
