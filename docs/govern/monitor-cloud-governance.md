@@ -9,9 +9,9 @@ ms.custom: internal, UpdateFrequency2
 ---
 # Monitor cloud compliance
 
-Monitoring is about continuously measuring how well the cloud environment complies with your governance policies and detecting when it deviates from compliance. Effective monitoring lets you verify the impact of your governance efforts, provides visibility into risk levels, and triggers remediation processes promptly when needed. This stage involves configuring the right telemetry, alerts, and review processes to maintain governance alignment.
+Monitoring is about continuously measuring how well the cloud environment complies with your governance policies and detecting when it becomes noncompliant with those policies. Effective monitoring lets you verify the impact of your governance efforts, provides visibility into risk levels, and triggers remediation processes promptly when needed. This stage involves configuring the right telemetry, alerts, and review processes to maintain governance alignment.
 
-:::image type="content" source="./images/monitor.png" alt-text="Diagram showing the process to set up and maintain cloud governance. The diagram shows five sequential steps: build a cloud governance team, assess cloud risks, document your cloud governance policies, enforce cloud governance policies, and monitor cloud governance. The first step you perform once. The last four steps you perform once to set up and to continuously maintain cloud governance." lightbox="./images/monitor.png" border="false":::
+:::image type="content" source="./images/monitor.png" alt-text="Diagram showing the process to set up and maintain cloud governance. The diagram shows five sequential steps: build a cloud governance team, assess cloud risks, document your cloud governance policies, enforce cloud governance policies, and monitor cloud compliance. The first step you perform once. The last four steps you perform once to set up and to continuously maintain cloud governance." lightbox="./images/monitor.png" border="false":::
 
 After you enforce cloud governance, perform an initial baseline assessment of compliance. See which policies are being met and where there are gaps. Then track these metrics over time. The ultimate goal is to reduce noncompliance to zero or as close as practical by iteratively improving policies and enforcement where monitoring shows issues.
 
@@ -81,7 +81,7 @@ The following guidance is meant to help you configure cloud governance monitorin
 
 - **Monitor AI system outputs.** Use Azure for [abuse monitoring](/azure/ai-foundry/openai/concepts/abuse-monitoring) and [content filtering](/azure/ai-foundry/foundry-models/concepts/content-filter) of AI systems.
 
-- **Perform adversarial testing on AI systems.** Regularly [perform adversarial testing on language models](/azure/ai-foundry/openai/concepts/red-teaming) to find harmful outputs. Use both manual tests and automated tools to review the risk baseline.
+- **Perform red teaming on AI systems.** Regularly [red team language models](/azure/ai-foundry/openai/concepts/red-teaming) to find harmful outputs. Use both manual tests and automated tools to review the risk baseline.
 
 ## 2. Configure cloud governance alerts
 
