@@ -57,19 +57,19 @@ Trying to modernize an entire complex workload (or multiple) in one go is risky.
 
 Modernization often introduces significant changes to critical workloads, so strong governance is needed to manage risks. Modernization governance involves change management processes, freezes, and controlling scope:
 
-1. **Establish a formal change approval workflow.** Define a structured approval process for all modernization-related changes. Integrate with existing Change Advisory Boards (CAB) or create a dedicated modernization review board. Assign approval authority based on change category and document the full workflow in your project plan. For more information, see [Manage change](/azure/cloud-adoption-framework/manage/administer#manage-change).
+- **Establish a formal change approval workflow.** Define a structured approval process for all modernization-related changes. Integrate with existing Change Advisory Boards (CAB) or create a dedicated modernization review board. Assign approval authority based on change category and document the full workflow in your project plan. For more information, see [Manage change](/azure/cloud-adoption-framework/manage/administer#manage-change).
 
-2. **Freeze changes when necessary.** Right before and during major deployment events, freeze other changes on those workloads. A change freeze means no other unrelated changes are done to those workloads in the lead-up and during the deployment. It stabilizes the environment so you're not deploying into an unstable environment. Communicate the freeze window to all relevant teams.
+- **Freeze changes when necessary.** Right before and during major deployment events, freeze other changes on those workloads. A change freeze means no other unrelated changes are done to those workloads in the lead-up and during the deployment. It stabilizes the environment so you're not deploying into an unstable environment. Communicate the freeze window to all relevant teams.
 
-3. **Avoid scope creep.** Scope creep is a major challenge in modernizations. Require any proposed change to the agreed modernization scope to go through an evaluation and approval step. Most requests should be deferred unless they're crucial. Formalize the "no, not now" to extra work with a process. Maintain a backlog of nice-to-have ideas that come up, which can feed into a future innovation project once the current modernization is done. Stakeholders should know their idea isn't lost.
+- **Avoid scope creep.** Scope creep is a major challenge in modernizations. Require any proposed change to the agreed modernization scope to go through an evaluation and approval step. Most requests should be deferred unless they're crucial. Formalize the "no, not now" to extra work with a process. Maintain a backlog of nice-to-have ideas that come up, which can feed into a future innovation project once the current modernization is done. Stakeholders should know their idea isn't lost.
 
 ## Define your deployment strategy
 
 A crucial execution decision is how to roll out the modernized components into production. There are two main strategies. In an in-place deployment, you upgrade the existing setup (updating the existing environment directly). In a parallel deployment, you build a new setup alongside (building a new environment, then switching over). Choose the strategy that fits the level of change and risk tolerance for each phase or workload. Often, each phase of modernization might use a different strategy. For instance, you might choose in-place for Phase 1 (if it's a minor change) and parallel for Phase 2 (if that one involves a major database overhaul).
 
-1. **Use in-place deployment for low-risk, reversible changes.** In-place deployment introduces changes directly into the current production environment, perhaps during a maintenance window. This strategy minimizes infrastructure overhead but increases the risk of downtime. Use in-place deployment only when changes are small, isolated, and easily reversible. Examples include minor code updates or schema changes that can be rolled back quickly using source control or backups.
+- **Use in-place deployment for low-risk, reversible changes.** In-place deployment introduces changes directly into the current production environment, perhaps during a maintenance window. This strategy minimizes infrastructure overhead but increases the risk of downtime. Use in-place deployment only when changes are small, isolated, and easily reversible. Examples include minor code updates or schema changes that can be rolled back quickly using source control or backups.
 
-2. **Use parallel deployment for complex or high-risk changes.** In this model, you set up a new environment for the modernized workload while the old workload still runs. Data is kept in sync (through replication or migration processes) so that when ready, you can cut over from the old to the new environment. Use for complex or high-risk changes where downtime must be minimal. If you're doing a major database migration or a rearchitecting that involves new infrastructure, parallel deployment is usually the better choice. Also, if the workload is mission-critical and can't have more than a few minutes of downtime, parallel (with replication and quick cutover) is necessary.
+- **Use parallel deployment for complex or high-risk changes.** In this model, you set up a new environment for the modernized workload while the old workload still runs. Data is kept in sync (through replication or migration processes) so that when ready, you can cut over from the old to the new environment. Use for complex or high-risk changes where downtime must be minimal. If you're doing a major database migration or a rearchitecting that involves new infrastructure, parallel deployment is usually the better choice. Also, if the workload is mission-critical and can't have more than a few minutes of downtime, parallel (with replication and quick cutover) is necessary.
 
     | Strategy | Description | When to use | Pros | Cons |
     |----------|-------------|-------------|------|------|
@@ -92,14 +92,14 @@ Even with the best planning and testing, not every change goes perfectly. Modern
 
 Up to this point, we focused on technical planning. Equally important is getting approval from stakeholders, both business and technical leadership. Modernization often requires significant investment, so you need to present a compelling case and keep stakeholders engaged throughout.
 
-1. **Tailor the value proposition to each audience.** Different stakeholders care about different outcomes. Customize your messaging:
+- **Tailor the value proposition to each audience.** Different stakeholders care about different outcomes. Customize your messaging:
 
     - **Technical teams** prioritize operational efficiency: reduced maintenance, improved uptime, and fewer escalations.
     - **Business leaders** focus on outcomes: faster time-to-market, improved customer experience, and cost savings.
 
-2. **Document a structured plan with milestones.** Stakeholders are more comfortable if they see a clear roadmap. Present the phases you planned, as decided earlier, and what each should achieve, with a rough timeline. Emphasize early wins, such as "Within 6 weeks, we aim to modernize X component and improve its performance by 20%."
+- **Document a structured plan with milestones.** Stakeholders are more comfortable if they see a clear roadmap. Present the phases you planned, as decided earlier, and what each should achieve, with a rough timeline. Emphasize early wins, such as "Within 6 weeks, we aim to modernize X component and improve its performance by 20%."
 
-3. **Quantify modernization value.** Prepare some before-and-after metrics and target improvements. Examples of metrics and typical improvement ranges (based on industry benchmarks) are:
+- **Quantify modernization value.** Prepare some before-and-after metrics and target improvements. Examples of metrics and typical improvement ranges (based on industry benchmarks) are:
 
     | Category | Example metrics | Typical value range |
     |----------|-----------------|-------------------|
@@ -108,9 +108,9 @@ Up to this point, we focused on technical planning. Equally important is getting
     | Risk mitigation | Avoided downtime, security incidents | $100K-$1M+ cost avoidance |
     | Revenue | Faster time-to-market, customer retention | 10-25% revenue acceleration |
 
-4. **Address project risks.** Identify potential challenges and demonstrate preparedness through specific mitigation strategies. Common risks include data replication, performance degradation, and integration issues. Present solutions such as automated rollback procedures, comprehensive testing protocols, and expert consultation availability. Transparent risk discussion builds stakeholder confidence in project leadership and planning thoroughness.
+- **Address project risks.** Identify potential challenges and demonstrate preparedness through specific mitigation strategies. Common risks include data replication, performance degradation, and integration issues. Present solutions such as automated rollback procedures, comprehensive testing protocols, and expert consultation availability. Transparent risk discussion builds stakeholder confidence in project leadership and planning thoroughness.
 
-5. **Maintain regular communication cadence.** Report progress against defined success criteria, highlight completed deliverables, and communicate upcoming milestones. Request feedback actively and address concerns to maintain support throughout the modernization process.
+- **Maintain regular communication cadence.** Report progress against defined success criteria, highlight completed deliverables, and communicate upcoming milestones. Request feedback actively and address concerns to maintain support throughout the modernization process.
 
 ## Next step
 
