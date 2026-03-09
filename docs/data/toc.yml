@@ -11,7 +11,7 @@ items:
     - name: 2. Architecture
       items:
       - name: Unified data platform
-        href: architecture-fabric-data-lake-unify-data-platform#unified-data-platform-architecture
+        href: architecture-fabric-data-lake-unify-data-platform#unified-data-platform-architecture.md
       - name: 1. Fabric architecture
         href: architecture-fabric-data-lake-unify-data-platform.md
       - name: 2. Azure architecture
