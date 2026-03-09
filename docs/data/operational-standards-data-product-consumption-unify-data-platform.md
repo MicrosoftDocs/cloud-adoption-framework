@@ -1,6 +1,6 @@
 ---
-title: Data Consumption and Lifecycle Standards
-description: "Data consumption standards in Microsoft Fabric and Purview: learn how to govern access, manage lifecycle, and retire data products safely across your organization."
+title: Data Consumption Standards for AI and Analytics
+description: "Data consumption standards in Microsoft Fabric and Purview for AI and analytics: learn how to govern access, manage lifecycle, and retire data products safely across your organization."
 #customer intent: As a decision, I want to a checklist of best practices to help me make the best decision to establish organization-wide standards for consuming and managing published data products in Microsoft Fabric, so that teams can reuse data safely without creating security risks or platform instability.
 author: stephen-sumner
 ms.author: ssumner
@@ -10,7 +10,7 @@ ms.topic: concept-article
 ms.collection: ce-skilling-ai-copilot
 ---
 
-# Data consumption and lifecycle standards
+# Data consumption standards for AI and analytics
 
 Data product consumption defines how data products in Microsoft Fabric used across the organization. This process affects trust, security, and long-term platform success. **Recommendation:** Establish organization-wide standards for how teams consume and manage all published data products in Fabric over time. This approach helps teams safely reuse data without creating risk or instability (see Figure 1). To apply this recommendation, use this article as a checklist:
 

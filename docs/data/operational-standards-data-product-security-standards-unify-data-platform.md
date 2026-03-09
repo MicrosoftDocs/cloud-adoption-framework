@@ -10,7 +10,7 @@ ms.topic: concept-article
 ms.collection: ce-skilling-ai-copilot
 ---
 
-# Data product security standards
+# Data product security standards for Microsoft AI and analytic
 
 AI and analytics consume data products in a unified data platform through multiple Microsoft services. Each service enforces security in a specific way. **Recommendation:** For every Microsoft product that can access data products, first understand its native access and security model. Then, decide whether to inherit it as‑is or define standards where your requirements aren't met (see Figure 1). To apply this recommendation, use this article as a checklist:
 

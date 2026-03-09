@@ -1,6 +1,6 @@
 ---
-title: Data Processing Standards for a Unified Data Platform
-description: "Data processing standards: Discover best practices for ingesting, transforming, and publishing data in Microsoft Fabric. Ensure consistent, high-quality data."
+title: Data Processing Standards for for AI and Analytics
+description: "Data processing standards for AI and analytics: Discover best practices for ingesting, transforming, and publishing data in Microsoft Fabric. Ensure consistent, high-quality data."
 #customer intent: As a decision maker, I want help making the right decisions and checklists of best practices to set data processing standards for my entire organization.
 author: stephen-sumner
 ms.author: ssumner
@@ -10,7 +10,7 @@ ms.topic: concept-article
 ms.collection: ce-skilling-ai-copilot
 ---
 
-# Data processing standards for a unified data platform
+# Data processing standards for AI and analytics
 
 A unified data platform depends on consistent ingestion, transformation, and publishing standards so leaders can trust data for analytics and AI. **Recommendation:** Establish organization‑wide standards that control what data enters OneLake, how teams refine that data, and how governed data products reach consumers (see Figure 1). To apply this recommendation, use this article as a checklist:
 
