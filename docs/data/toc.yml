@@ -14,8 +14,8 @@ items:
         href: architecture-fabric-data-lake-unify-data-platform.md
       - name: 2. Azure architecture
         href: architecture-azure-landing-zones-unify-data-platform.md
-      - name: Unified data platform
-        href: architecture-fabric-data-lake-unify-data-platform#unified-data-platform-architecture.md
+      - name: Unified data platform architecture
+        href: architecture-fabric-data-lake-unify-data-platform.md#unified-data-platform-architecture
     - name: 3. Governance and security baselines
       items:
       - name: 1. Baselines with Purview (all data)
