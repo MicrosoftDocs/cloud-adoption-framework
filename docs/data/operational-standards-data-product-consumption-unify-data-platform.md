@@ -44,7 +44,7 @@ Monitoring and change standards protect trust in data products at scale and redu
 
 ## Data product retirement standards
 
-Retire data products in a controlled manner.** Retirement removes a data product from active use without breaking dependent workloads. **Best practices:** Require a documented retirement plan for all official data products. Remove endorsement before retirement. Preserve Purview metadata and lineage for audit and investigation. **Decision guidance:** Decide retirement timelines based on dependency depth. Short timelines reduce cost. Longer timelines reduce disruption. Choose based on business needs.
+Retire data products in a controlled manner. Retirement removes a data product from active use without breaking dependent workloads. **Best practices:** Require a documented retirement plan for all official data products. Remove endorsement before retirement. Preserve Purview metadata and lineage for audit and investigation. **Decision guidance:** Decide retirement timelines based on dependency depth. Short timelines reduce cost. Longer timelines reduce disruption. Choose based on business needs.
 
 ## Next step
 
