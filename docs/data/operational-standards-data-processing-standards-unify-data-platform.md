@@ -100,4 +100,4 @@ Decide whether Purview data products are required for all published assets or on
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Data product security standards](./operational-standards-data-product-security-standards-unify-data-platform.md)
+> [Data security standards](./operational-standards-data-product-security-standards-unify-data-platform.md)
