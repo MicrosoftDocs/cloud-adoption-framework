@@ -12,11 +12,11 @@ ms.custom: internal, UpdateFrequency2
 
 Using the insights from the risk assessment, the team now formulates policies to handle those risks. For each significant risk or group of risks, there should be one or more corresponding governance policies. When documenting cloud governance policies, consider the following best practices:
 
-:::image type="content" source="./images/document.png" alt-text="Diagram showing the process to set up and maintain cloud governance. The diagram shows five sequential steps: build a cloud governance team, document cloud governance policies, enforce cloud governance policies, and monitor cloud governance. The first step you perform once. The last four steps you perform once to set up cloud governance and continuously to maintain cloud governance." lightbox="./images/document.png" border="false":::
+:::image type="content" source="./images/document.png" alt-text="Diagram showing the process to set up and maintain cloud governance. The diagram shows five sequential steps: build a cloud governance team, assess cloud risks, document cloud governance policies, enforce cloud governance policies, and monitor cloud compliance. The first step you perform once. The last four steps you perform once to set up cloud governance and continuously to maintain cloud governance." lightbox="./images/document.png" border="false":::
 
 ## 1. Establish a standard policy format and language
 
-Create a consistent template or format for all policies. Each policy document (or section) should include key elements, like ID, statement, scope. Use clear, unambiguous language. Policies are meant to be authoritative references, so they should be easy for stakeholders to understand with no room for misinterpretation. For example, decide on standard wording like “must” or “must not” for requirements, and avoid vague terms. A standardized format, such as a policy with ID, category, purpose, makes policies easier to navigate and maintain.
+Create a consistent template or format for all policies. Each policy document (or section) should include key elements, like ID, statement, and scope. Use clear, unambiguous language. Policies are meant to be authoritative references, so they should be easy for stakeholders to understand with no room for misinterpretation. For example, decide on standard wording like "must" or "must not" for requirements, and avoid vague terms. A standardized format, such as a policy with ID, category, and purpose, makes policies easier to navigate and maintain.
 
 ## 2. Define cloud governance policies
 
@@ -24,11 +24,11 @@ Create cloud governance policies that outline how to use and manage the cloud to
 
 1. **Use a policy ID.** Use the policy category and a number to uniquely identify each policy, such as *SC01* for the first security governance policy. Increment the identifier sequentially as you add new risks. If you remove risks, you can leave gaps in the sequence or use the lowest available number.
 
-2. **Include the policy statement.** Craft specific policy statements that address identified risks. Use definitive language such as *must*, *should*, *must not*, and *shouldn't*. Use the enforcement controls from the risk list as a starting point. Focus on outcomes rather than configuration steps. Name the tool required for enforcement so you know where to monitor compliance.
+2. **Include the policy statement.** Craft specific policy statements that address identified risks. Use definitive language, such as *must*, *should*, *must not*, and *shouldn't*. Use the enforcement controls from the risk list as a starting point. Focus on outcomes rather than configuration steps. Name the tool required for enforcement so you know where to monitor compliance.
 
 3. **Include a risk ID.** List the risk in the policy. Associate every cloud governance policy to a risk.
 
-4. **Include the policy category.** Include governance categories, such as security, compliance, or cost management, into the policy categorization. Categories help with sorting, filtering, and finding cloud governance policies.
+4. **Include the policy category.** Include governance categories, such as security, compliance, or cost management, in the policy categorization. Categories help with sorting, filtering, and finding cloud governance policies.
 
 5. **Include the policy purpose.** State the purpose of each policy. Use the risk or the regulatory compliance requirement the policy satisfies as a starting point.
 
