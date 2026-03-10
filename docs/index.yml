@@ -11,7 +11,7 @@ metadata:
   services: cloud-adoption-framework
   author: stephen-sumner
   ms.author: pnp
-  ms.date: 12/01/2025
+  ms.date: 03/10/2026
   ms.topic: hub-page
   ms.subservice: caf-general
 # Maximum of 8 items
@@ -26,11 +26,14 @@ highlightedContent:
     - title: Introduction
       itemType: overview
       url: ./overview.md
+    - title: Unified data platform
+      itemType: how-to-guide
+      url: ./data/executive-strategy-unify-data-platform.md
     - title: AI adoption
       itemType: how-to-guide
       url: ./scenarios/ai/index.md
-    - title: Agents
-      itemType: concept
+    - title: AI agents
+      itemType: how-to-guide
       url: ./ai-agents/index.md
     - title: Azure landing zone
       itemType: architecture
