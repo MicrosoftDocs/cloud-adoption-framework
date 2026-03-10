@@ -27,32 +27,26 @@ Figure 1 shows an integrated Fabric‑in‑Azure architecture aligned to data 
 
 ## 1. Plan for Fabric compute
 
-You get compute in Microsoft Fabric through *capacity*. Each Fabric environment runs on a Fabric capacity, which determines available compute resources, concurrency, and performance characteristics for all workloads within that environment. Allocate budgets to data domain teams and allow them to create their own Fabric capacities sized to their requirements. They should have their own dedicated Azure subscription for capacity deployment. In the early stages or for simpler environments, you can share a single Fabric capacity across multiple data domains. To learn more, see [Deployment Patterns for Microsoft Fabric](/azure/architecture/analytics/architecture/fabric-deployment-patterns).
+Fabric compute runs on capacity, which defines available resources, performance, and concurrency for all workloads that share that capacity. Capacity choices directly affect cost control and service reliability. **Best practices:** Allocate budgets to data domain teams and allow those teams to own Fabric capacities that match their business criticality. Create each Fabric capacity in a data management landing zone. To learn more, see [Data management landing zones](./architecture-azure-landing-zones-unify-data-platform.md#1-plan-your-data-management-landing-zones).
 
-## 2. Plan Fabric deployment
+## 2. Plan your Fabric regions
 
-A region is the physical location where Microsoft Fabric stores and processes data. It affects performance and legal compliance. **Best practices:** Establish region selection as a central governance decision rather than a local team decision. Leading organizations define approved regions based on data residency rules and user location patterns. **Decision guidance:**
+Each Fabric capacity runs in a single Azure region. That region determines where compute and OneLake data for workspaces on that capacity reside. Region decisions affect data residency, latency, and service availability. **Best practices:** treat region selection as a governance decision. Publish a short list of supported regions and enforce that list through policy. **Decision guidance:** Decide whether to use [Multi‑Geo](/fabric/admin/service-admin-premium-multi-geo). Choose Multi‑Geo when the organization needs formal governance across regions and clear rules for why regions exist. Multi‑Geo is unnecessary when operations remain confined to a single geography.
 
-- **Single region:** Choose a single region when data laws allow it and most users are nearby. The tradeoff is higher latency for distant users.
+## 3. Plan your Fabric workspaces
 
-- **Multiple regions:** Choose multiple regions when laws require local storage or large user groups need local performance. This choice improves compliance and experience but increases operational complexity.
-
-## 3. Plan for Fabric disaster recovery
-
-In Fabric, the disaster recovery (DR) features copy data to a paired region so workloads can resume after a regional failure. Decide whether to enable DR for your Fabric capacities. When you enable it, Fabric's DR capability asynchronously copies OneLake data to a paired region. If one region suffers an outage, Fabric workloads can fail over to the backup region. **Best practices:** Enable disaster recovery for capacities that support critical business reporting or regulated data. Treat this decision as a business continuity decision owned by leadership. To learn more, see [OneLake Disaster Recovery and Data Protection](/fabric/onelake/onelake-disaster-recovery).
-
-## 4. Plan your Fabric workspaces
-
-In Microsoft Fabric, the primary unit of organization is the [Fabric workspace](/fabric/fundamentals/workspaces). A Fabric workspace is a container that groups datasets, dataflows, lakehouses, reports, and other related assets. It's also the main unit for security administration, access control, and cost management in Fabric. When designing your OneLake environment, plan how to allocate workspaces across data domains and products (see [Fabric environments governance baseline](./governance-security-baselines-fabric-data-lake-unify-data-platform.md#1-set-fabric-environment-governance-baseline)). This choice affects governance and resource isolation.
-
-**Best practices:** Plan to give each data domain one or more dedicated Fabric workspaces. This approach aligns with your organizational structure and makes sure that each domain can control access and management of its own data products. Fabric also offers a concept of [Fabric domains](/fabric/governance/domains) (governance groups of workspaces) to help manage policies across multiple workspaces owned by a domain or department (see Figure 2).
+A [Fabric workspace](/fabric/fundamentals/workspaces) groups data assets and acts as the primary boundary for security, administration, and cost visibility. Workspace design shapes how domains operate inside OneLake. **Best practices:** Give each data domain one or more dedicated workspaces to manage its data products. Apply access control, cost tracking, and operational policies at the workspace level. Use [Fabric domains](/fabric/governance/domains) to apply shared governance across related workspaces (see Figure 2).
 
 :::image type="content" source="./images/fabric-architecture-data-domains-workspaces.svg" alt-text="Diagram showing the high‑level Microsoft Fabric architecture. Microsoft Fabric provides shared intelligence, analytics services, and a single data lake for the organization. Fabric includes Data Factory, Real‑Time Intelligence, Databases, Data Engineering, and Data Warehouse. Power BI and data science are used for reporting and AI model training. All data is stored in OneLake, which includes the OneLake catalog and published data products. Each data domain works in its own Fabric workspace, such as Data Domain 1, Data Domain 2, Data Domain 3, and others. All domains share OneLake while managing their data independently through their workspaces." lightbox="./images/fabric-architecture-data-domains-workspaces.svg" border="false":::
 *Figure 2. Microsoft Fabric architecture.*
 
-## Plan for Fabric IQ
+## 4. Plan for Fabric IQ
 
-Fabric IQ adds a semantic intelligence layer on top of OneLake. It defines shared business concepts that analytics tools and AI agents can reason over consistently. It builds on existing Fabric data products and Power BI semantic models.
+[Fabric IQ](/fabric/iq/overview) provides a semantic intelligence layer over OneLake. This layer defines shared business concepts that analytics tools and AI agents can interpret consistently. **Best practices:** Use Fabric IQ to provide shared meaning across data domains. Focus on scenarios where shared definitions reduce reporting risk or improve AI outcomes. **Decision guidance:** See the following guidance to [choose the right Fabric IQ capability](/fabric/iq/overview#choose-the-right-item).
+
+## 5. Plan for Fabric disaster recovery
+
+Fabric disaster recovery copies OneLake data to a paired Azure region. This capability supports workload recovery after a regional outage. **Best practices:** Treat Fabric disaster recovery as a business continuity decision. Enable disaster recovery where business impact justifies. **Decision guidance:** Decide to enable disaster recovery when downtime creates material risk. Choose not to enable it for exploratory or noncritical workloads. To learn more, see [OneLake Disaster Recovery and Data Protection](/fabric/onelake/onelake-disaster-recovery).
 
 ## Next step
 
