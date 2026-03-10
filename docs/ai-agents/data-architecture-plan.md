@@ -53,13 +53,7 @@ Built‑in retrieval options in Microsoft Foundry and Copilot Studio provide gov
 
 ### Plan for agentic retrieval
 
-Agentic retrieval plans and executes how it finds information, instead of running a single static search. Traditional retrieval runs one query and returns results. Agentic retrieval works as a loop. **Recommendation:** Establish criteria for which agentic retrieval options to use. To apply this recommendation, use the following checklist:
-
-**Option 1. Foundry IQ.** [Foundry IQ](/azure/ai-foundry/agents/how-to/tools/knowledge-retrieval?view=foundry&preserve-view=true&tabs=foundry%2Cpython) is unified knowledge layer centralizes approved knowledge sources behind a common endpoint so agents and applications share the same grounding and citation behavior. It supports knowledge bases that connect to one or more knowledge sources and uses an agentic retrieval engine for query processing. **Best practices:** Use Foundry IQ as the preferred retrieval method for Foundry. [Add data security best practices] **Decision guidance:** Choose Foundry IQ  when ...
-
-**Option 2. Azure AI Search indexes.** Azure AI Search provides index-based retrieval that can support RAG workloads and now also supports agentic retrieval through knowledge sources and knowledge bases. **Best practices:** Use indexes to complement Foundry IQ. **Decision guidance:** Choose Azure AI Search index with agentic retrieval when ...
-
-**Retrieval from Fabric OneLake**: Create Azure AI Search OneLake Search [search indexers](/azure/search/search-how-to-index-onelake-files) over Silver‑layer data. Silver is the correct layer for agent grounding because Silver retains the raw relationships, structure, and patterns. Gold datasets introduce aggregations and transformations that improve analytics but remove the detail agents need for reasoning, inference, and multi‑source synthesis. Agents use Silver datasets to identify relationships and patterns, and might generate a curated dataset as a result. You can register the curated dataset as a data product in Purview, or you can store it as an instruction/specification file in Git so the agent can regenerate the curated set on demand. For architectural guidance, see [Fabric enterprise architecture](/azure/architecture/example-scenario/analytics/enterprise-bi-microsoft-fabric).
+Agentic retrieval plans and executes how it finds information, instead of running a single static search. Traditional retrieval runs a fixed retrieval pipeline. Agentic retrieval works as a loop. **Best practices:** Use [Foundry IQ](/azure/ai-foundry/agents/how-to/tools/knowledge-retrieval) as the default retrieval approach for Foundry‑based agents. Treat it as the control plane for governed knowledge access. Foundry IQ provides a unified knowledge base endpoint over one or more knowledge sources. It supports shared governance and consistent citation behavior across agent workloads.
 
 ### Plan for building MCP servers
 
