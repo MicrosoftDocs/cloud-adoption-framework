@@ -26,11 +26,14 @@ highlightedContent:
     - title: Introduction
       itemType: overview
       url: ./overview.md
+    - title: Unified data platform
+      itemType: how-to-guide
+      url: ./data/executive-strategy-unify-data-platform.md
     - title: AI adoption
       itemType: how-to-guide
       url: ./scenarios/ai/index.md
-    - title: Agents
-      itemType: concept
+    - title: AI agents
+      itemType: how-to-guide
       url: ./ai-agents/index.md
     - title: Azure landing zone
       itemType: architecture
