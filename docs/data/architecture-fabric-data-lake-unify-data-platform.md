@@ -5,7 +5,7 @@ description: "Fabric architecture: Discover how to design your Fabric architectu
 author: stephen-sumner
 ms.author: ssumner
 ms.reviewer: ssumner
-ms.date: 03/09/2026
+ms.date: 03/10/2026
 ms.topic: concept-article
 ms.collection: ce-skilling-ai-copilot
 ---
@@ -49,6 +49,10 @@ In Microsoft Fabric, the primary unit of organization is the [Fabric workspace](
 
 :::image type="content" source="./images/fabric-architecture-data-domains-workspaces.svg" alt-text="Diagram showing the high‑level Microsoft Fabric architecture. Microsoft Fabric provides shared intelligence, analytics services, and a single data lake for the organization. Fabric includes Data Factory, Real‑Time Intelligence, Databases, Data Engineering, and Data Warehouse. Power BI and data science are used for reporting and AI model training. All data is stored in OneLake, which includes the OneLake catalog and published data products. Each data domain works in its own Fabric workspace, such as Data Domain 1, Data Domain 2, Data Domain 3, and others. All domains share OneLake while managing their data independently through their workspaces." lightbox="./images/fabric-architecture-data-domains-workspaces.svg" border="false":::
 *Figure 2. Microsoft Fabric architecture.*
+
+## Plan for Fabric IQ
+
+Fabric IQ adds a semantic intelligence layer on top of OneLake. It defines shared business concepts that analytics tools and AI agents can reason over consistently. It builds on existing Fabric data products and Power BI semantic models.
 
 ## Next step
 

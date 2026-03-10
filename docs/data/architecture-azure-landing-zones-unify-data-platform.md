@@ -5,7 +5,7 @@ description: "Azure Architecture: Discover how to design your Azure environments
 author: stephen-sumner
 ms.author: ssumner
 ms.reviewer: ssumner
-ms.date: 03/09/2026
+ms.date: 03/10/2026
 ms.topic: concept-article
 ms.collection: ce-skilling-ai-copilot
 ---
@@ -52,7 +52,7 @@ Application landing zones host operational workloads, such as business applicati
 
 **Recommendation:** Set clear integration standards that require application landing zones to access enterprise data through governed Fabric and OneLake mechanisms rather than direct or unplanned data paths. To apply this recommendation, use the following checklist:
 
-1. **Standardize Microsoft Foundry data access.** Data access defines how applications and AI solutions retrieve governed data from OneLake. Inconsistent access patterns create shadow data copies and weaken governance controls. **Best practices:** Require application teams to use approved Fabric and Foundry integration mechanisms to access enterprise data stored in OneLake. These mechanisms include the Fabric Data Agent and Azure AI Search with Foundry IQ indexes. This approach enforces consistent governance, security, and audit controls across all consuming applications. **Decision guidance:** Choose mandatory standardized access when data sensitivity or regulatory requirements are high. This choice limits flexibility but preserves governance integrity. Avoid allowing direct database access when long-term data consistency and trust matter more than short-term convenience.
+1. **Standardize Microsoft Foundry data access.** Data access defines how applications and AI solutions retrieve governed data from OneLake. Inconsistent access patterns create shadow data copies and weaken governance controls. **Best practices:** Require application teams to use approved Fabric and Foundry integration mechanisms to access data stored in OneLake. These mechanisms include the Fabric Data Agent and Azure AI Search with Foundry IQ indexes. This approach enforces consistent governance, security, and audit controls across all consuming applications. **Decision guidance:** Choose mandatory standardized access when data sensitivity or regulatory requirements are high. This choice limits flexibility but preserves governance integrity. Avoid allowing direct database access when long-term data consistency and trust matter more than short-term convenience.
 
 2. **Integrate Azure operational databases through Fabric mirroring.** Many application landing zones host online transaction processing (OLTP) databases that support core business operations, such as sales, finance, and customer records. These systems generate critical data but can't absorb analytical workloads without risk. **Best practices:** Use Fabric [mirroring](/fabric/mirroring/overview) to replicate selected operational data into OneLake in near real time. This approach keeps operational systems independent while providing current data for analytics and AI across the organization.
 

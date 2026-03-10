@@ -5,7 +5,7 @@ description: "Unified data platform: Discover how Microsoft Fabric, Microsoft Pu
 author: stephen-sumner
 ms.author: ssumner
 ms.reviewer: ssumner
-ms.date: 03/09/2026
+ms.date: 03/10/2026
 ms.topic: concept-article
 ms.collection: ce-skilling-ai-copilot
 ---
@@ -23,11 +23,11 @@ ms.collection: ce-skilling-ai-copilot
 
 Most business and technology leaders recognize the data fragmentation problem but worry that fixing it could require costly, disruptive migrations. A Fabric-powered unified data platform offers an alternative approach that emphasizes incremental value and operational stability. Key benefits include:
 
-- **Minimal business disruption.** Fabric allows organizations to unify data without replacing existing systems. Fabric provides virtual connectors (*shortcuts*) and selective replication (*mirroring*). Organizations can connect existing data sources and deliver early value without risking current operations.
+- **Minimal business disruption**. Unify data without replacing existing systems. Fabric provides virtual connectors (*shortcuts*) and selective replication (*mirroring*) so teams can connect existing data sources gradually and deliver early value without risking current operations.
 
 - **Less time, more governance:** Fabric provides a suite of data tools in one platform. Teams spend less time maintaining parallel systems and more time improving the quality and usability of data. Governance and security become more consistent because policies are applied across the platform instead of being re‑implemented in each system.
 
-- **Foundation for AI and analytics.** A unified platform also improves how data supports AI and analytics. When data is standardized and published as data products, data initiatives move faster and with fewer assumptions. [Fabric IQ](/fabric/iq/overview) adds business meaning to data in Microsoft Fabric. It connects related data and uses shared definitions, so reports and AI use the same understanding. [Foundry IQ](/azure/foundry/agents/concepts/what-is-foundry-iq?view=foundry&tabs=portal) builds on it to create governed knowledge layers that AI can reason over using trusted data. Together, they turn datasets into a shared foundation for decision‑making.
+- **Foundation for AI and analytics**. A unified data platform with Microsoft Fabric provides a strong foundation for analytics and AI by producing high‑quality, reusable data products. These trusted data products allow teams to build analytics and AI faster and with greater confidence. [Fabric IQ](/fabric/iq/overview) helps unify your data and feeds [Foundry IQ](/azure/foundry/agents/concepts/what-is-foundry-iq?view=foundry&tabs=portal), which creates knowledge layers that help AI systems in Microsoft Foundry reason over trusted data.
 
 ## What level of investment is required?
 
@@ -40,7 +40,7 @@ Unifying the data platform is an investment in capability, not a wholesale repla
   - **Replication:** The data replication you perform (Mirroring).
   - **Power BI:** Requires sufficient Fabric capacity or separate Power BI licensing. See [Common licensing scenarios](/fabric/enterprise/licenses#licensing-scenario-summary).
 
-    :::image type="content" source="images/fabric-overview.png" alt-text="Diagram shoring Microsoft Fabric with OneLake at the center as a unified data lake. At the bottom, multiple data sources feed into OneLake, including cloud storage and SaaS systems through shortcuts and virtualization, databases through mirroring, and other external sources. OneLake provides built‑in data tools for the full data lifecycle. It includes ingestion, engineering, warehousing, real‑time analytics, data science, and visualization with Power BI. The diagram emphasizes that data is stored once in OneLake and reused across analytics, data science, and reporting, with governance applied through Microsoft Purview." lightbox="images/fabric-overview.png" border="false":::
+    :::image type="content" source="images/fabric-overview.svg" alt-text="Diagram shoring Microsoft Fabric with OneLake at the center as a unified data lake. At the bottom, multiple data sources feed into OneLake, including cloud storage and SaaS systems through shortcuts and virtualization, databases through mirroring, and other external sources. OneLake provides built‑in data tools for the full data lifecycle. It includes ingestion, engineering, warehousing, real‑time analytics, data science, and visualization with Power BI. The diagram emphasizes that data is stored once in OneLake and reused across analytics, data science, and reporting, with governance applied through Microsoft Purview." lightbox="images/fabric-overview.svg" border="false":::
     *Figure 2. Microsoft Fabric capabilities to create business value from data.*
 
 - **Microsoft Purview cost factors:** Use Microsoft Purview for unified data governance and compliance. Purview provides a centralized data catalog, data classification, and policy enforcement across your entire data estate. The data can be in OneLake, Azure, on-premises, third-party SaaS, or other cloud platforms. Key [Purview cost factors](https://azure.microsoft.com/pricing/details/purview/) include [subscription-based licensing](https://www.microsoft.com/security/business/purview-suite-pricing?activetab=pivot:overviewtab) and [consumption-based capabilities](https://azure.microsoft.com/pricing/details/purview/#overview). Budget for both ongoing licensing and the volume of data and services you govern with Purview.
