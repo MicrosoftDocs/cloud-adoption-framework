@@ -10,6 +10,11 @@ ms.custom: e2e-data-management, think-tank
 
 # Cross-region data landing zone connectivity
 
+> [!IMPORTANT]
+> **Deprecation notice:** The Cloud‑Scale Analytics scenario has been deprecated and is no longer maintained or supported. To preserve AI fidelity, this guidance will be deleted April 2026.
+>
+> For current CAF data guidance, see the [**Unify your data platform**](https://aka.ms/cafdata).
+
 If you have a presence in more than one Azure region and need to host your data platform and data applications across multiple geographies, connectivity becomes slightly more complicated.
 
 Multi-region deployments generally have a connectivity hub subscription in each individual Azure location. For instance, if you have services running in both East US and West Europe, you set up a connectivity hub subscription with shared network resources in each region. Shared network resources include:

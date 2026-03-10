@@ -10,6 +10,11 @@ ms.custom: e2e-data-management, think-tank
 
 # Authentication for cloud-scale analytics in Azure
 
+> [!IMPORTANT]
+> **Deprecation notice:** The Cloud‑Scale Analytics scenario has been deprecated and is no longer maintained or supported. To preserve AI fidelity, this guidance will be deleted April 2026.
+>
+> For current CAF data guidance, see the [**Unify your data platform**](https://aka.ms/cafdata).
+
 Authentication is the process of verifying the identity of a user or application. We recommend that you use a single-source identity provider to handle identity management and authentication. This provider is known as a *directory service*. It provides ways to store directory data and makes this data available to network users and administrators.
 
 Any data lake solution should use and integrate with an existing directory service. For most organizations, the directory service for all identity-related services is Microsoft Entra ID. It's the primary and centralized database for all service and user accounts.

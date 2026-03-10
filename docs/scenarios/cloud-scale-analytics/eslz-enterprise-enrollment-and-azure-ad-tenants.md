@@ -10,6 +10,11 @@ ms.custom: e2e-data-management, think-tank
 
 # Enterprise enrollment
 
+> [!IMPORTANT]
+> **Deprecation notice:** The Cloud‑Scale Analytics scenario has been deprecated and is no longer maintained or supported. To preserve AI fidelity, this guidance will be deleted April 2026.
+>
+> For current CAF data guidance, see the [**Unify your data platform**](https://aka.ms/cafdata).
+
 Azure landing zones for cloud-scale analytics don't have any considerations or recommendations that affect enterprise enrollment or Microsoft Entra tenant decisions.
 
 However, it's important to understand the decisions made by the cloud platform team, and to be aware of existing [enterprise enrollment or Microsoft Entra tenant decisions](../../ready/landing-zone/design-area/azure-billing-microsoft-entra-tenant.md).

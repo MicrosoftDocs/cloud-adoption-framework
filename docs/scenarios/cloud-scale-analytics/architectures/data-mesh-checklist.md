@@ -10,6 +10,11 @@ ms.custom: e2e-data-management, think-tank
 
 # Getting started with data mesh checklist
 
+> [!IMPORTANT]
+> **Deprecation notice:** The Cloud‑Scale Analytics scenario has been deprecated and is no longer maintained or supported. To preserve AI fidelity, this guidance will be deleted April 2026.
+>
+> For current CAF data guidance, see the [**Unify your data platform**](https://aka.ms/cafdata).
+
 During your data journey with cloud-scale analytics, you'll find there are multiple stages in your adoption lifecycle. This section provides a quick getting started checklist to help you adopt your scenario in stages. These stages are:
 
 - Stage 1: First landing zone
