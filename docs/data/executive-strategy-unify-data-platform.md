@@ -61,7 +61,7 @@ In short, the unified data platform is designed for quick wins. Teams can start 
 
 Microsoft's Cloud Adoption Framework outlines a four-step framework for unifying your data platform. The process spans planning and organizing your data strategy. It covers architecture decisions. It also helps you set governance and security baselines and define operational standards.
 
-1. **Organizational readiness.** Define your data strategy and establish data ownership and domains. Clarify how data creates business value and who is accountable for which data. See [Organizational readiness](./organizational-readiness-unify-data-unify-data-platform.md).
+1. **Organizational readiness.** Define your data strategy and establish data ownership and domains. Clarify how data creates business value and who is accountable for which data. See [Organizational readiness](./organizational-readiness-unify-data-platform.md).
 
 2. **Architecture:** Provide the technology needed to unify your data platform. Set up Microsoft Fabric and required environments in Azure. See [Architecture](./architecture-fabric-data-lake-unify-data-platform.md).
 
@@ -83,7 +83,7 @@ By following these steps, you can unify your data platform in a structured way. 
 In the following sections, you'll find guidance, checklists, best practices, decision guidance, and trade-offs at each step. The guidance is for leaders and decision makers who oversee organizational strategy and governance.
 
 > [!div class="nextstepaction"]
-> [Organizational readiness](./organizational-readiness-unify-data-unify-data-platform.md)
+> [Organizational readiness](./organizational-readiness-unify-data-platform.md)
 
 ## Key terms
 
