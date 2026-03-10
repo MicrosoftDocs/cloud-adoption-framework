@@ -1,7 +1,7 @@
 ---
 title: Organizational Readiness for Unifying your Data Platform
 description: Organizational readiness helps align data initiatives with business priorities. Learn how to define data domains, prioritize data, and gain data skills.
-#customer intent: As a decision maker (business leader, data domain lead, CTO), I want to a checklist of best practices and decision guidance to help me make the right decisions on how to define clear data domain boundaries so that ownership and accountability for data products are well established.
+#customer intent: As a decision maker (business leader, data domain lead, CTO), I want a checklist of best practices and decision guidance to help me make the right decisions on how to define clear data domain boundaries so that ownership and accountability for data products are well established.
 author: stephen-sumner
 ms.author: ssumner
 ms.reviewer: ssumner
@@ -12,28 +12,28 @@ ms.collection: ce-skilling-ai-copilot
 
 # Organizational readiness for unifying your data platform
 
-Organizational readiness focuses on aligning data initiatives with business priorities. Rather than starting with technology, start by defining *who* owns the data and *why* it matters to the business. **Recommendation:** Ensure business value drives data product choices instead of unplanned technical decisions. To apply this recommendation, use this article as a checklist:
+Organizational readiness focuses on aligning data initiatives with business priorities. Rather than starting with technology, start by defining *who* owns the data and *why* it matters to the business. **Recommendation:** Make sure business value drives data product choices instead of unplanned technical decisions. To apply this recommendation, use this article as a checklist:
 
 ## 1. Identify data domains
 
-The first step is to define how your organization assigns responsibility for data. Many successful organizations use data domains. Data domains are a boundary of data responsibility. They determine who owns data and why that data exists from a business perspective. Common data domains are business units (HR, Sales, Marketing, Finance, Operations) or product lines (Product 1, Product 2).**Recommendation:** Define data domains that reflect how the organization makes decisions so accountable leaders own data products end to end (see Figure 1). To apply this recommendation, use the following checklist:
+The first step is to define how your organization assigns responsibility for data. Many successful organizations use data domains. Data domains are boundaries of data responsibility. They determine who owns data and why that data exists from a business perspective. Common data domains are business units (HR, Sales, Marketing, Finance, Operations) or product lines (Product 1, Product 2). **Recommendation:** Define data domains that reflect how the organization makes decisions so accountable leaders own data products end to end (see Figure 1). To apply this recommendation, use the following checklist:
 
 :::image type="content" source="images/data-sources-data-domains.svg" alt-text="Diagram of a data platform where multiple data domains sit above shared data sources. The top section shows several data domains labeled Data domain 1, Data domain 2, Data domain 3, and Data domain n. These labels represent business units or product lines. Below them is a data sources layer. Arrows indicate that each data domain pulls data from the same common sources. The data sources include on‑premises systems, Dataverse, Microsoft 365, Azure, Google Cloud, and Amazon S3. The diagram emphasizes that data domains organize and use data from many different platforms." lightbox="images/data-sources-data-domains.svg" border="false":::
 *Figure 1. Overview of data domains.*
 
-1. **Align data domains to the organizational structure.** Data domains represent boundaries where business decisions occur and where authority already exists. A well-defined domain matches how leaders allocate budget, set priorities, and accept risk. **Best practices:** Map domains to business units or product lines that already own outcomes. Ensure each domain can define data meaning and quality without external approval. Publish domain-owned data products through the OneLake catalog for enterprise reuse.** Decision guidance:** Align domains to existing business structures when authority already exists. Redefine domains only when no leader can make end-to-end decisions for the data.
+1. **Align data domains to the organizational structure.** Data domains represent boundaries where business decisions occur and where authority already exists. A well-defined domain matches how leaders allocate budget, set priorities, and accept risk. **Best practices:** Map domains to business units or product lines that already own outcomes. Make sure each domain can define data meaning and quality without external approval. Publish domain-owned data products through the OneLake catalog for enterprise reuse. **Decision guidance:** Align domains to existing business structures when authority already exists. Redefine domains only when no leader can make end-to-end decisions for the data.
 
 2. **Appoint data domain leadership.** Each data domain requires a senior leader who represents business intent for that data. This leader owns definitions, quality expectations, and sharing decisions. **Best practices:** Assign a leader who understands both business outcomes and data impact. Grant authority to approve what the domain shares through the OneLake catalog. Make this accountability visible in governance forums. **Decision guidance:** Choose a leader with decision authority over outcomes, not a technical owner. Revisit domain boundaries if no leader can accept accountability.
 
-3. **Define data domain responsibilities.** After establishing who owns each data domain, document what each domain is responsible for. Data domain ownership covers planning, delivery, operations, cost control, and policy compliance for data products. Clear responsibility prevents escalation and delays. **Best practices:** Empower domains to manage their own resources within enterprise guardrails. Allow domains to control Fabric capacity usage and prioritization within approved limits. **Decision guidance:** Grant autonomy when domains demonstrate ownership maturity. Choose tighter guardrails when regulatory or cost risk requires centralized oversight.
+3. **Define data domain responsibilities.** After establishing who owns each data domain, document what each domain is responsible for. Data domain ownership covers planning, delivery, operations, cost control, and policy compliance for data products. Clear responsibility prevents escalation and delays. **Best practices:** Enable domains to manage their own resources within enterprise guardrails. Allow domains to control Fabric capacity usage and prioritization within approved limits. **Decision guidance:** Grant autonomy when domains demonstrate ownership maturity. Choose tighter guardrails when regulatory or cost risk requires centralized oversight.
 
 4. **Adjust data domains over time.** Stable domains reduce friction, but misaligned domains create constant negotiation. Domain changes restore decision clarity when ownership no longer reflects reality. **Best practices:** Monitor where data decisions require repeated cross-domain arbitration. Treat that signal as a need to revisit boundaries. Adjust early to avoid governance bottlenecks. **Decision guidance:** Keep domains stable when decisions stay local. Realign domains when authority fragments or accountability becomes unclear.
 
 ## 2. Define data products
 
-After you establish domains and their leadership, shift your focus from organizational structure to business outcomes. Now, determine *what data products each domain should create*. Data products translate business priorities into durable data assets that domains own and publish for reuse. Clear definition ensures investment decisions focus on outcomes that support analytics and AI across Microsoft data platforms. **Recommendation:** Define and prioritize data products only when leaders can trace each product to a business goal and an accountable data domain. To apply this recommendation, use the following checklist:
+After you establish domains and their leadership, shift your focus from organizational structure to business outcomes. Now, determine *what data products each domain should create.* Data products translate business priorities into durable data assets that domains own and publish for reuse. A clear definition ensures investment decisions focus on outcomes that support analytics and AI across Microsoft data platforms. **Recommendation:** Define and prioritize data products only when leaders can trace each product to a business goal and an accountable data domain. To apply this recommendation, use the following checklist:
 
-*Table 1: Example template for defining data product*
+*Table 1: Example template for defining a data product.*
 
 | Business goal | Data domain: data domain goals | Data domain goal priority | Data products required (consumer) | Required data assets for data product |
 |---|---|---|---|---|
@@ -85,7 +85,7 @@ Data domains differ in size, risk, and business impact. Leaders must set staffin
 3. **Apply a hybrid model across the portfolio.** Different data domains require different staffing models at the same time. **Best practices:** Assign dedicated teams to large or high‑priority data domains and shared services to smaller or emerging data domains. Governance bodies review these assignments on a regular cadence. **Decision guidance:** Decide which domains qualify for dedicated capacity and define clear entry and exit criteria. Revisit decisions as domain maturity and demand change.
 
 4. **Define a clear request path for dedicated resources.** Domains need a transparent way to request staffing changes.
-**Best practices:** Require a lightweight business case that explains value, urgency, and risk. Central governance reviews requests against budget and strategic alignment. **Decision guidance:** Choose strict approval when resources are constrained. Choose lighter review when speed and innovation take priority.
+**Best practices:** Require a lightweight business case that explains value, urgency, and risk. Central governance reviews requests against budget and strategic alignment. **Decision guidance:** Choose strict approval when resources are constrained. Choose a lighter review when speed and innovation take priority.
 
 ### 2. Build data skills
 
@@ -96,7 +96,7 @@ Data capability doesn't grow without deliberate investment, and leaders set prio
 2. **Limit ad hoc learning to exceptional cases.** Unplanned learning depends on individual effort and available time.
 **Best practices:** Avoid this model except during short‑term delivery spikes. Leaders recognize that skills stagnate under constant pressure. **Decision guidance:** Choose this option only when immediate delivery outweighs long‑term value. Expect fragile solutions and limited reuse.
 
-3. **Centralized training.** Use centralized training to set a baseline. Central programs establish shared understanding across domains. **Best practices:** Use centralized training to support consistency and onboarding. Leaders don't rely on courses alone to change behavior. **Decision guidance:** Choose this option when standard knowledge matters more than applied change. Pair it with domain‑led learning to affect outcomes.
+3. **Centralized training.** Use centralized training to set a baseline. Central programs establish a shared understanding across domains. **Best practices:** Use centralized training to support consistency and onboarding. Leaders don't rely on courses alone to change behavior. **Decision guidance:** Choose this option when standard knowledge matters more than applied change. Pair it with domain‑led learning to affect outcomes.
 
 ### Use training resources
 
@@ -104,7 +104,7 @@ Support your teams with relevant training materials and certifications. Microsof
 
 | Category | Focus area | Intended audience | When to use |
 | ---- | ---- | ---- | ---- |
-| **Training paths** | [Microsoft Fabric.](/training/fabric/) | Data engineers, analysts, platform teams | When teams are adopting or expanding Fabric workloads |
+| **Training paths** | [Microsoft Fabric.](/training/fabric/) | Data engineers, analysts, and platform teams | When teams are adopting or expanding Fabric workloads |
 | | [Azure Databricks](https://aka.ms/AzureDatabricks_UYDforAI) | Data engineers, data scientists | When building or scaling advanced analytics and engineering pipelines |
 | | [Power BI](/training/powerplatform/power-bi) | Analysts, business users | When improving reporting, self‑service analytics, and adoption |
 | | [Training for Data Analysts](/training/career-paths/data-analyst) | Data analysts | When strengthening analytical skills and business insight |
@@ -116,7 +116,7 @@ Support your teams with relevant training materials and certifications. Microsof
 
 ## Next step
 
-By planning your organizational readiness in these ways, you create a solid foundation. This planning ensures that your technology investments in a unified data platform have a clear purpose.
+By planning your organizational readiness in these ways, you create a solid foundation. This planning makes sure that your technology investments in a unified data platform have a clear purpose.
 
 > [!div class="nextstepaction"]
 > [Architecture](./architecture-fabric-data-lake-unify-data-platform.md)
