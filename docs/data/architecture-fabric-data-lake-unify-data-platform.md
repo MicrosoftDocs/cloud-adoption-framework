@@ -1,5 +1,5 @@
 ---
-title: Fabric architecture for a Unified Data Platform
+title: Fabric Architecture for a Unified Data Platform
 description: "Fabric architecture: Discover how to design your Fabric architecture to create a unified data platform with Microsoft Purview and Azure."
 #customer intent: As a technical decision maker (enterprise architect, CTO, VP, director), I want to make the right technology adoption decisions and design them to integrate into my existing systems, creating a unified data platform with Microsoft Fabric, Microsoft Purview, and Azure so that my organization can standardize data value for analytics and AI consumption.
 author: stephen-sumner
