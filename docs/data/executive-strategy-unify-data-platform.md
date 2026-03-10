@@ -27,7 +27,7 @@ Most business and technology leaders recognize the data fragmentation problem bu
 
 - **Less time, more governance:** Fabric provides a suite of data tools in one platform. Teams spend less time maintaining parallel systems and more time improving the quality and usability of data. Governance and security become more consistent because policies are applied across the platform instead of being re‑implemented in each system.
 
-- **Foundation for AI and analytics**. A unified data platform with Microsoft Fabric provides a strong foundation for analytics and AI by producing high‑quality, reusable data products. These trusted data products allow teams to build analytics and AI faster and with greater confidence. [Fabric IQ](/fabric/iq/overview) helps unify your data and feeds [Foundry IQ](/azure/foundry/agents/concepts/what-is-foundry-iq?view=foundry&tabs=portal), which creates knowledge layers that help AI systems in Microsoft Foundry reason over trusted data.
+- **Foundation for AI and analytics**. A unified data platform with Microsoft Fabric provides a strong foundation for analytics and AI by producing high‑quality, reusable data products. These trusted data products allow teams to build analytics and AI faster and with greater confidence. [Fabric IQ](/fabric/iq/overview) helps unify your data and feeds [Foundry IQ](/azure/foundry/agents/concepts/what-is-foundry-iq), which creates knowledge layers that help AI systems in Microsoft Foundry reason over trusted data.
 
 ## What level of investment is required?
 
