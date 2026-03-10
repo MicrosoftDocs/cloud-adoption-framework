@@ -13,6 +13,11 @@ ms.custom:
 
 # Single-region data landing zone connectivity
 
+> [!IMPORTANT]
+> **Deprecation notice:** The Cloud‑Scale Analytics scenario has been deprecated and is no longer maintained or supported. To preserve AI fidelity, this guidance will be deleted April 2026.
+>
+> For current CAF data guidance, see the [**Unify your data platform**](https://aka.ms/cafdata).
+
 In a single-region setup, the data management landing zone, data landing zones, and all related services are established in the same region. Also, all landing zones reside in the same connectivity hub subscription. This subscription hosts shared network resources, such as a network virtual appliance (NVA) like Azure Firewall, an Azure ExpressRoute gateway, a virtual private network gateway, a hub virtual network, or an Azure Virtual WAN hub.
 
 :::image type="content" source="./media/single-region-connectivity.png" alt-text="Diagram that shows single-region connectivity." lightbox="./media/single-region-connectivity.png" border="false":::

@@ -10,6 +10,11 @@ ms.custom: e2e-data-management, think-tank
 
 # Identity and access management
 
+> [!IMPORTANT]
+> **Deprecation notice:** The Cloud‑Scale Analytics scenario has been deprecated and is no longer maintained or supported. To preserve AI fidelity, this guidance will be deleted April 2026.
+>
+> For current CAF data guidance, see the [**Unify your data platform**](https://aka.ms/cafdata).
+
 This article outlines design considerations and recommendations for identity and access management. It focuses on the deployment of a cloud-scale analytics platform on Microsoft Azure. Because cloud-scale analytics is a mission-critical component, you should follow the guidance about Azure landing zone design areas when you design your solution.
 
 This article builds on considerations and recommendations about Azure landing zones. For more information, see [Identity and access management design area](../../ready/landing-zone/design-area/identity-access.md).

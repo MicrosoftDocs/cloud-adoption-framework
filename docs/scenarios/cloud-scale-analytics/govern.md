@@ -10,6 +10,11 @@ ms.custom: e2e-data-management, think-tank
 
 # Data governance overview
 
+> [!IMPORTANT]
+> **Deprecation notice:** The Cloud‑Scale Analytics scenario has been deprecated and is no longer maintained or supported. To preserve AI fidelity, this guidance will be deleted April 2026.
+>
+> For current CAF data guidance, see the [**Unify your data platform**](https://aka.ms/cafdata).
+
 The key to successful data governance is to break down structured data into data entities and data subject areas. You can then use a data governance solution to surround your specific data entities and data subject areas with people, processes, policies, and technology. The solution helps you govern your data entities' lifecycles. Establishing a common business vocabulary in a glossary within your data catalog also helps you govern your data.
 
 Your data catalog technology is critical. You can't govern your data if you don't know where the data is or what it means. Data catalog software provides automatic data discovery, automatic profiling that determines data quality, and automatic sensitive data detection. Data catalog technology also helps you map disparate data to the common vocabulary data names and definitions in your catalog's business glossary to understand what the data means.

@@ -10,6 +10,11 @@ ms.custom: e2e-data-management, think-tank
 
 # Frequently asked questions about cloud-scale analytics
 
+> [!IMPORTANT]
+> **Deprecation notice:** The Cloud‑Scale Analytics scenario has been deprecated and is no longer maintained or supported. To preserve AI fidelity, this guidance will be deleted April 2026.
+>
+> For current CAF data guidance, see the [**Unify your data platform**](https://aka.ms/cafdata).
+
 The following are common questions asked about cloud-scale analytics.
 
 ## Storage accounts

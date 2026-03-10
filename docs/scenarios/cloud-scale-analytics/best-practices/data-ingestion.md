@@ -10,6 +10,11 @@ ms.custom: e2e-data-management, think-tank
 
 # The ingest process with cloud-scale analytics in Azure
 
+> [!IMPORTANT]
+> **Deprecation notice:** The Cloud‑Scale Analytics scenario has been deprecated and is no longer maintained or supported. To preserve AI fidelity, this guidance will be deleted April 2026.
+>
+> For current CAF data guidance, see the [**Unify your data platform**](https://aka.ms/cafdata).
+
 Azure provides several services to ingest and release data to native and third-party platforms. Different services can be used, depending on volume, velocity, variety, and direction. Some of these services are:
 
 - [Azure Data Factory](/azure/data-factory/introduction) is a service built for all data application (source-aligned) needs and skill levels. Write your own code or construct, extract, load, and transform processes within the intuitive visual environment and without code. With more than 90+ natively built and maintenance-free connectors, visually integrate data sources at no added cost. Engineers can use private endpoints and link services to securely connect to Azure platform as a service (PaaS) resources without using the PaaS resource's public endpoints. Engineers can use integration runtimes to extend pipelines to third-party environments like on-premises data sources and other clouds.
