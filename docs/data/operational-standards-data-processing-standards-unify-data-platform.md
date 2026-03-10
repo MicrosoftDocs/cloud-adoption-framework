@@ -1,5 +1,5 @@
 ---
-title: Data Processing Standards for for AI and Analytics
+title: Data Processing Standards for AI and Analytics
 description: "Data processing standards for AI and analytics: Discover best practices for ingesting, transforming, and publishing data in Microsoft Fabric. Ensure consistent, high-quality data."
 #customer intent: As a decision maker, I want help making the right decisions and checklists of best practices to set data processing standards for my entire organization.
 author: stephen-sumner
@@ -24,8 +24,7 @@ Data ingestion defines cost exposure, security risk, and long‑term trust in an
 
 1. **Ingest data with defined business value.** Defined business value means data explains or measures a business process or outcome that leaders care about. **Best practices:** Require a clear business question or decision for every dataset proposed for OneLake. Treat ingestion as a product decision, not a technical default. **Decision guidance:** Decide to ingest data when it supports a known outcome or metric. Choose to leave data in operational systems or departmental storage when no use case exists. This choice reduces storage cost and governance overhead.
 
-2. **Integrate operational databases through supported patterns.** Operational databases often supply analytics and AI scenarios, but direct access creates risk and instability. **Best practices:** Use Microsoft Fabric supported patterns such as [shortcuts](/fabric/onelake/onelake-shortcuts) for virtual access and [mirroring](/fabric/mirroring/overview) for replicated access. Azure databases often require mirroring for reliable integration.
-**Decision guidance:** Choose shortcuts when virtual access meets performance needs. Choose mirroring when analytics performance, isolation, or downstream reuse requires a physical copy in OneLake.
+2. **Integrate operational databases through supported patterns.** Operational databases often supply analytics and AI scenarios, but direct access creates risk and instability. **Best practices:** Use Microsoft Fabric supported patterns such as [shortcuts](/fabric/onelake/onelake-shortcuts) for virtual access and [mirroring](/fabric/mirroring/overview) for replicated access. Azure databases often require mirroring for reliable integration. **Decision guidance:** Choose shortcuts when virtual access meets performance needs. Choose mirroring when analytics performance, isolation, or downstream reuse requires a physical copy in OneLake.
 
 3. **Integrate existing data lakes.** Many organizations already operate data lakes such as Azure Data Lake Storage (ADLS), Google Cloud Storage, or Amazon S3. **Best practices:** Treat existing lakes as part of the unified data estate rather than forcing immediate migration. Use [shortcuts](/fabric/onelake/onelake-shortcuts) or [mirroring](/fabric/mirroring/overview). **Decision guidance:** Decide based on readiness and risk. To avoid duplication, choose shortcuts. Choose mirroring when consistency, performance, or compliance outweighs duplication cost.
 
