@@ -7,7 +7,7 @@ items:
     - name: Decision tree
       href: executive-strategy-unify-data-platform.md#decision-tree-for-unifying-your-data-platform
     - name: 1. Organizational readiness
-      href: organizational-readiness-unify-data-unify-data-platform.md
+      href: organizational-readiness-unify-data-platform.md
     - name: 2. Architecture
       items:
       - name: 1. Fabric architecture
