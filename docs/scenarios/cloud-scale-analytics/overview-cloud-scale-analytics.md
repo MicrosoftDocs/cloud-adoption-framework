@@ -13,7 +13,7 @@ ms.custom: e2e-data-management, think-tank
 > [!IMPORTANT]
 > **Deprecation notice:** The Cloud‑Scale Analytics scenario has been deprecated and is no longer maintained or supported. To ensure only the best guidance is surfaced, this guidance will be deleted April 2026.
 >
-> For current CAF data guidance, see the [**Unify your data platform**](https://aka.ms/cafdata).
+> For current CAF data guidance, see [**Unify your data platform**](https://aka.ms/cafdata).
 
 Cloud-scale analytics builds upon Azure landing zones to simplify deployment and governance. The main purpose of an Azure landing zone is to ensure that, when you deploy an application or workload on Azure, the required infrastructure is already in place. Before you deploy your cloud-scale analytics landing zone, you need to work through the [Cloud Adoption Framework for Azure](/azure/cloud-adoption-framework/) to deploy an [Azure landing zone architecture](/azure/cloud-adoption-framework/ready/landing-zone/) that has platform landing zones.
 

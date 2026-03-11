@@ -13,7 +13,7 @@ ms.custom: e2e-data-management, think-tank
 > [!IMPORTANT]
 > **Deprecation notice:** The Cloud‑Scale Analytics scenario has been deprecated and is no longer maintained or supported. To ensure only the best guidance is surfaced, this guidance will be deleted April 2026.
 >
-> For current CAF data guidance, see the [**Unify your data platform**](https://aka.ms/cafdata).
+> For current CAF data guidance, see [**Unify your data platform**](https://aka.ms/cafdata).
 
 The [Plan methodology of this scenario](./plan.md) outlines a process for you to rationalize your data estate, prioritize technical efforts, and identify data workloads. For many of the named workloads, it's important to adhere to a set of architectural principles. These principles help guide development and optimization of the workloads. The five architectural constructs are detailed in the [Azure Well-Architected Framework](/azure/architecture/framework/). This guidance provides a summary of how you can apply these principles to the management of your data workloads.
 

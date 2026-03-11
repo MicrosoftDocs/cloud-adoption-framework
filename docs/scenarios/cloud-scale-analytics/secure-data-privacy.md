@@ -12,7 +12,7 @@ ms.custom: e2e-data-management, think-tank
 > [!IMPORTANT]
 > **Deprecation notice:** The Cloud‑Scale Analytics scenario has been deprecated and is no longer maintained or supported. To ensure only the best guidance is surfaced, this guidance will be deleted April 2026.
 >
-> For current CAF data guidance, see the [**Unify your data platform**](https://aka.ms/cafdata).
+> For current CAF data guidance, see [**Unify your data platform**](https://aka.ms/cafdata).
 
 Cloud-scale analytics help you determine the optimal data-access patterns that suit your requirements while safeguarding personal data at multiple levels. Personal data includes any information that can uniquely identify individuals, for example driver's license numbers, social security numbers, bank account details, passport numbers, and email addresses. Many regulations exist to protect user privacy.
 

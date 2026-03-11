@@ -17,7 +17,7 @@ ms.custom: e2e-data-management, think-tank
 > [!IMPORTANT]
 > **Deprecation notice:** The Cloud‑Scale Analytics scenario has been deprecated and is no longer maintained or supported. To ensure only the best guidance is surfaced, this guidance will be deleted April 2026.
 >
-> For current CAF data guidance, see the [**Unify your data platform**](https://aka.ms/cafdata).
+> For current CAF data guidance, see [**Unify your data platform**](https://aka.ms/cafdata).
 
 Data discovery reflects the state of all the data that the enterprise owns. This data is known as the data estate. During data discovery, the data estate is scanned and classified. The data scanning process connects directly to the data source according to a set schedule.
 

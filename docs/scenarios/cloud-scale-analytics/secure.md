@@ -13,7 +13,7 @@ ms.custom: e2e-data-management, think-tank
 > [!IMPORTANT]
 > **Deprecation notice:** The Cloud‑Scale Analytics scenario has been deprecated and is no longer maintained or supported. To ensure only the best guidance is surfaced, this guidance will be deleted April 2026.
 >
-> For current CAF data guidance, see the [**Unify your data platform**](https://aka.ms/cafdata).
+> For current CAF data guidance, see [**Unify your data platform**](https://aka.ms/cafdata).
 
 To limit security risk as much as possible while also providing access to do data analytics, use data governance. Data governance provides balance among operations, maintenance, and control. It follows the underlying principle of data lake solution architecture design, which uses infrastructure as code and security as code.
 

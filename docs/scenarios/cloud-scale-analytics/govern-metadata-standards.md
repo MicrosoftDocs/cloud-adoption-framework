@@ -13,7 +13,7 @@ ms.custom: e2e-data-management, think-tank
 > [!IMPORTANT]
 > **Deprecation notice:** The Cloud‑Scale Analytics scenario has been deprecated and is no longer maintained or supported. To ensure only the best guidance is surfaced, this guidance will be deleted April 2026.
 >
-> For current CAF data guidance, see the [**Unify your data platform**](https://aka.ms/cafdata).
+> For current CAF data guidance, see [**Unify your data platform**](https://aka.ms/cafdata).
 
 Metadata Management plays a crucial role in data architecture. Metadata is data about other data. It describes data, providing a reference that helps you to find, secure, and control data. Metadata also binds data together. It can be used to validate data's integrity and quality, route or replicate data to a new location, transform data, and understand data meanings. Metadata is also essential in democratizing data through self-service portals.
 

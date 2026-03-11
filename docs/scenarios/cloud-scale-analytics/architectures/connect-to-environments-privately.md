@@ -16,7 +16,7 @@ ms.custom:
 > [!IMPORTANT]
 > **Deprecation notice:** The Cloud‑Scale Analytics scenario has been deprecated and is no longer maintained or supported. To ensure only the best guidance is surfaced, this guidance will be deleted April 2026.
 >
-> For current CAF data guidance, see the [**Unify your data platform**](https://aka.ms/cafdata).
+> For current CAF data guidance, see [**Unify your data platform**](https://aka.ms/cafdata).
 
 The reference architecture is secure by design. It uses a multilayered security approach to mitigate common data exfiltration risks raised by customers. You can use certain features on a network, identity, data, and service layer to define specific access controls and expose only required data to your users. Even if some of these security mechanisms fail, the features help keep data within the enterprise-scale platform secure.
 

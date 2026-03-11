@@ -13,7 +13,7 @@ ms.custom: think-tank, e2e-data-management
 > [!IMPORTANT]
 > **Deprecation notice:** The Cloud‑Scale Analytics scenario has been deprecated and is no longer maintained or supported. To ensure only the best guidance is surfaced, this guidance will be deleted April 2026.
 >
-> For current CAF data guidance, see the [**Unify your data platform**](https://aka.ms/cafdata).
+> For current CAF data guidance, see [**Unify your data platform**](https://aka.ms/cafdata).
 
 [Data products](../../cloud-scale-analytics/architectures/what-is-data-product.md) are data served as products and computed, saved, and served by polyglot persistence services, which may be required by certain use cases. The process of creating and serving a data product can require services and technologies that aren't included in the [data landing zone](./data-landing-zone.md) core services. An example of this would be reporting with niche requirements, such as compliance and tax reporting.
 

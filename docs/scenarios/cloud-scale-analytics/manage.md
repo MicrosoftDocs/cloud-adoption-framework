@@ -13,7 +13,7 @@ ms.custom: e2e-data-management, think-tank
 > [!IMPORTANT]
 > **Deprecation notice:** The Cloud‑Scale Analytics scenario has been deprecated and is no longer maintained or supported. To ensure only the best guidance is surfaced, this guidance will be deleted April 2026.
 >
-> For current CAF data guidance, see the [**Unify your data platform**](https://aka.ms/cafdata).
+> For current CAF data guidance, see [**Unify your data platform**](https://aka.ms/cafdata).
 
 Today, DevOps has shifted the culture of how people think and work, accelerating the rate at which businesses realize value by helping individuals and organizations to develop and maintain sustainable work practices. DevOps combines development and operations, and is often associated with software engineering tools that support continuous integration (CI) and continuous delivery (CD) practices. These tools and practices include source code managers (such as Git, Apache Subversion, or Team Foundation Version Control) and automatic build and delivery managers (such Azure Pipelines or GitHub Actions).
 
