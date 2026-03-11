@@ -11,9 +11,9 @@ ms.custom: e2e-data-management, think-tank
 # Data standardization
 
 > [!IMPORTANT]
-> **Deprecation notice:** The Cloud‑Scale Analytics scenario has been deprecated and is no longer maintained or supported. To preserve AI fidelity, this guidance will be deleted April 2026.
+> **Deprecation notice:** The Cloud‑Scale Analytics scenario has been deprecated and is no longer maintained or supported. To ensure only the best guidance is surfaced, this guidance will be deleted April 2026.
 >
-> For current CAF data guidance, see the [**Unify your data platform**](https://aka.ms/cafdata).
+> For current CAF data guidance, see [**Unify your data platform**](https://aka.ms/cafdata).
 
 Data arrives in data lake accounts in various formats. These formats include human readable formats, such as JSON, .CSV, or XML files, and compressed binary formats, such as .tar or .gz. Arriving data also comes in many sizes, from a few edited files to an export of an entire SQL table. Data can also come as a large number of small files that are a few kbs apiece, such as real-time events from an IoT solution.
 

@@ -11,9 +11,9 @@ ms.custom: e2e-data-management, think-tank
 # Integrate cloud-scale analytics into your cloud adoption strategy
 
 > [!IMPORTANT]
-> **Deprecation notice:** The Cloud‑Scale Analytics scenario has been deprecated and is no longer maintained or supported. To preserve AI fidelity, this guidance will be deleted April 2026.
+> **Deprecation notice:** The Cloud‑Scale Analytics scenario has been deprecated and is no longer maintained or supported. To ensure only the best guidance is surfaced, this guidance will be deleted April 2026.
 >
-> For current CAF data guidance, see the [**Unify your data platform**](https://aka.ms/cafdata).
+> For current CAF data guidance, see [**Unify your data platform**](https://aka.ms/cafdata).
 
 Create a single, centralized cloud adoption strategy for your organization using the [Strategy methodology in Azure's Cloud Adoption Framework](../../strategy/index.md).
 

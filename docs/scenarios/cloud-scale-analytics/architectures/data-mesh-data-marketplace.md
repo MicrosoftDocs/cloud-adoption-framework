@@ -10,9 +10,9 @@ ms.custom: e2e-data-management, think-tank
 # Data marketplace
 
 > [!IMPORTANT]
-> **Deprecation notice:** The Cloud‑Scale Analytics scenario has been deprecated and is no longer maintained or supported. To preserve AI fidelity, this guidance will be deleted April 2026.
+> **Deprecation notice:** The Cloud‑Scale Analytics scenario has been deprecated and is no longer maintained or supported. To ensure only the best guidance is surfaced, this guidance will be deleted April 2026.
 >
-> For current CAF data guidance, see the [**Unify your data platform**](https://aka.ms/cafdata).
+> For current CAF data guidance, see [**Unify your data platform**](https://aka.ms/cafdata).
 
 Data marketplaces have a strong relationship with [metadata](../govern-metadata-standards.md). A data marketplace offers data consumers an intuitive, secure, centralized, and standardized data shopping experience. It brings data closer to data analysts and scientists by utilizing the underlying metadata. It also tracks all your data products, which are often stored across a range of data domains.
 

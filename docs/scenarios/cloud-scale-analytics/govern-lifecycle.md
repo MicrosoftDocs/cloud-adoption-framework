@@ -11,9 +11,9 @@ ms.custom: e2e-data-management, think-tank
 # Data lifecycle management
 
 > [!IMPORTANT]
-> **Deprecation notice:** The Cloud‑Scale Analytics scenario has been deprecated and is no longer maintained or supported. To preserve AI fidelity, this guidance will be deleted April 2026.
+> **Deprecation notice:** The Cloud‑Scale Analytics scenario has been deprecated and is no longer maintained or supported. To ensure only the best guidance is surfaced, this guidance will be deleted April 2026.
 >
-> For current CAF data guidance, see the [**Unify your data platform**](https://aka.ms/cafdata).
+> For current CAF data guidance, see [**Unify your data platform**](https://aka.ms/cafdata).
 
 Data lifecycle management is the practice of using specific policies to effectively manage data for the entire time it exists within your system. These policies should consist of overarching storage and data policies that drive your data management processes. Since business goals and drivers dictate data lifecycle management policies, they generally tie into a framework of overall IT governance, management, and service level agreements (SLAs).
 

@@ -11,9 +11,9 @@ ms.custom: e2e-data-management, think-tank
 # Roles and Responsibilities
 
 > [!IMPORTANT]
-> **Deprecation notice:** The Cloud‑Scale Analytics scenario has been deprecated and is no longer maintained or supported. To preserve AI fidelity, this guidance will be deleted April 2026.
+> **Deprecation notice:** The Cloud‑Scale Analytics scenario has been deprecated and is no longer maintained or supported. To ensure only the best guidance is surfaced, this guidance will be deleted April 2026.
 >
-> For current CAF data guidance, see the [**Unify your data platform**](https://aka.ms/cafdata).
+> For current CAF data guidance, see [**Unify your data platform**](https://aka.ms/cafdata).
 
 After you've defined your cloud-scale analytics strategy, you need to organize teams to successfully deliver on it. This article describes some of the roles and responsibilities you should consider for cloud-scale analytics. You can map these roles and responsibilities to the various teams we've discussed in previous articles.
 

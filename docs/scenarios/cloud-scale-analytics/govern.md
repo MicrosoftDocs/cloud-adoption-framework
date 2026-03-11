@@ -11,9 +11,9 @@ ms.custom: e2e-data-management, think-tank
 # Data governance overview
 
 > [!IMPORTANT]
-> **Deprecation notice:** The Cloud‑Scale Analytics scenario has been deprecated and is no longer maintained or supported. To preserve AI fidelity, this guidance will be deleted April 2026.
+> **Deprecation notice:** The Cloud‑Scale Analytics scenario has been deprecated and is no longer maintained or supported. To ensure only the best guidance is surfaced, this guidance will be deleted April 2026.
 >
-> For current CAF data guidance, see the [**Unify your data platform**](https://aka.ms/cafdata).
+> For current CAF data guidance, see [**Unify your data platform**](https://aka.ms/cafdata).
 
 The key to successful data governance is to break down structured data into data entities and data subject areas. You can then use a data governance solution to surround your specific data entities and data subject areas with people, processes, policies, and technology. The solution helps you govern your data entities' lifecycles. Establishing a common business vocabulary in a glossary within your data catalog also helps you govern your data.
 

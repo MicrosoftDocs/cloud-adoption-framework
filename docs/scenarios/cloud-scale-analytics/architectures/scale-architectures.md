@@ -11,9 +11,9 @@ ms.custom: e2e-data-management, think-tank
 # Scale cloud-scale analytics in Azure
 
 > [!IMPORTANT]
-> **Deprecation notice:** The Cloud‑Scale Analytics scenario has been deprecated and is no longer maintained or supported. To preserve AI fidelity, this guidance will be deleted April 2026.
+> **Deprecation notice:** The Cloud‑Scale Analytics scenario has been deprecated and is no longer maintained or supported. To ensure only the best guidance is surfaced, this guidance will be deleted April 2026.
 >
-> For current CAF data guidance, see the [**Unify your data platform**](https://aka.ms/cafdata).
+> For current CAF data guidance, see [**Unify your data platform**](https://aka.ms/cafdata).
 
 A scalable data platform is critical for accommodating the rapid growth of data. Vast amounts of data are generated every second around the world. The amount of available data is expected to continue growing exponentially over the next few years. As the rate of data generation increases, the speed of data movement also increases.
 
