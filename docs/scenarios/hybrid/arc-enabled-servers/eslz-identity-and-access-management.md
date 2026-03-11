@@ -46,7 +46,7 @@ Role-based access control limits user privileges and reduces security risks. Use
 
 3. **Secure access to monitoring data.** Read access to Azure Arc-enabled servers can expose log data collected by the Log Analytics agent. Apply RBAC controls to Log Analytics workspaces to limit who can view sensitive operational data.
 
-Also consider the sensitive data that might be sent to the Azure Monitor Log Analytics workspace; apply the same RBAC principle to the data itself. Read access to Azure Arc-enabled servers can provide access to log data collected by the Log Analytics agent and stored in the associated Log Analytics workspace.
+Also consider sensitive data sent to the workspace; apply the same RBAC principle to the data itself. Read access to Azure Arc-enabled servers can provide access to log data collected by the Log Analytics agent and stored in the Log Analytics workspace.
 
 > [!TIP]
 > Learn how to implement granular workspace access controls in the [Azure Monitor Logs deployment guide](/azure/azure-monitor/logs/design-logs-deployment#access-control-overview) to secure your monitoring data.
@@ -66,7 +66,7 @@ Organizational clarity prevents security gaps and operational conflicts. Clear r
 
 2. **Assign ongoing management responsibilities.** Determine who manages Azure Arc-enabled servers after onboarding and who can view operational data from Azure services. Separate these responsibilities based on operational needs and security requirements.
 
-3. **Plan service principal distribution.** Create multiple Arc onboarding service principals when different business teams own and operate server groups. Scope each principal to the minimum required resource groups to limit potential security exposure.
+3. **Plan service principal distribution.** Create multiple Arc onboarding service principals when different business teams own and operate server groups. Scope each principal to the minimum resource groups to limit security exposure.
 
 4. **Assess enterprise-scale impact.** Review the [identity and access management design area](../../../ready/landing-zone/design-area/identity-access.md) to understand how Azure Arc-enabled servers integrate with your overall Azure landing zone identity strategy.
 
@@ -103,7 +103,7 @@ Security controls protect Azure Arc-enabled servers and the resources they can a
 
 ## Azure tools and resources
 
-This comprehensive reference helps you implement identity and access management for Azure Arc-enabled servers. Use these tools to configure secure authentication, role-based access control, and monitoring.
+This reference helps you implement identity and access management for Azure Arc-enabled servers. Use these tools to configure secure authentication, role-based access control, and monitoring.
 
 | Category | Tool | Description | Quick Start |
 |----------|------|-------------|-------------|

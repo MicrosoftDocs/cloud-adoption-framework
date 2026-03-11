@@ -10,9 +10,9 @@ ms.custom: e2e-hybrid
 
 # Governance, security, and compliance baseline for Azure Arc-enabled Kubernetes
 
-This article provides key design considerations and best practices for security, governance, and compliance that you should use when building your Azure Arc-enabled Kubernetes deployment. While the enterprise-scale landing zone documentation covers [Governance](../../../ready/landing-zone/design-area/governance.md) and [Security](../../../ready/landing-zone/design-area/security.md) as separate topics, these critical design areas are consolidated into a single topic for Azure Arc-enabled Kubernetes.
+This article provides key design considerations and best practices for security, governance, and compliance for building your Azure Arc-enabled Kubernetes deployment. While the enterprise-scale landing zone documentation covers [Governance](../../../ready/landing-zone/design-area/governance.md) and [Security](../../../ready/landing-zone/design-area/security.md) as separate topics, these critical design areas are consolidated into a single topic for Azure Arc-enabled Kubernetes.
 
-[Azure Policy](/azure/governance/policy/overview) and [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) are cloud-native tools that allow you to implement guardrails, controls, reports, alerts and remediation tasks in an automated fashion at scale. By combining them with Azure Arc-enabled Kubernetes, you can extend governance policies and security checks to any Kubernetes cluster in your on-premises and/or multicloud environment.
+[Azure Policy](/azure/governance/policy/overview) and [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) are cloud-native tools that allow you to implement guardrails, controls, reports, alerts and remediation tasks automatically at scale. By combining them with Azure Arc-enabled Kubernetes, you can extend governance policies and security checks to any Kubernetes cluster in your on-premises and/or multicloud environment.
 
 ## Architecture
 
@@ -72,7 +72,7 @@ Plan to secure access to your Kubernetes API. The Azure Arc-enabled Kubernetes [
 
 ### Improve microservices observability and security
 
-The implementation of a service mesh can help with authentication, authorization, security, and visibility of microservice-based applications. Azure Arc-enabled Kubernetes simplifies the deployment of [Open Service Mesh (OSM) as an extension](./eslz-arc-kubernetes-services-observability.md).
+Implementing a service mesh can help with authentication, authorization, security, and visibility of microservice-based applications. Azure Arc-enabled Kubernetes simplifies the deployment of [Open Service Mesh (OSM) as an extension](./eslz-arc-kubernetes-services-observability.md).
 
 ## Design recommendations
 
@@ -80,9 +80,9 @@ This section contains design recommendations you should follow while planning th
 
 ### Agent provisioning
 
-- Define a strategy for onboarding your clusters into Azure Arc, including a method of automation for bulk enrollment. Establish a formal plan that takes into account the scope of your deployment and includes objectives, selection criteria, success criteria, training plans, rollback, and risks.
+- Define a strategy for onboarding your clusters into Azure Arc, including automation for bulk enrollment. Establish a formal plan that considers the scope of your deployment and includes objectives, selection criteria, success criteria, training plans, rollback, and risks.
 
-- You can [use a service principal](/azure/azure-arc/servers/onboard-service-principal#create-a-service-principal-for-onboarding-at-scale) to integrate agent provisioning as part of your continuous integration and continuous deployment (CI/CD) pipelines. You should limit the privileges of this service principal and only assign the roles required to onboard Kubernetes to Azure (the "Kubernetes Cluster - Azure Arc Onboarding" role), since it can only be used to onboard Kubernetes, not undoing the process or deleting the resource.
+- You can [use a service principal](/azure/azure-arc/servers/onboard-service-principal#create-a-service-principal-for-onboarding-at-scale) to integrate agent provisioning as part of your continuous integration and continuous deployment (CI/CD) pipelines. Limit the privileges of this service principal and only assign the roles required to onboard Kubernetes to Azure (the "Kubernetes Cluster - Azure Arc Onboarding" role), since it can only onboard Kubernetes, not undo the process or delete the resource.
 
 ### Agent management
 
@@ -109,7 +109,7 @@ You should apply the same RBAC principle to the sensitive data that is sent to t
 
 Integrating with Microsoft Entra ID also lets you access advanced security capabilities, which you should use to configure:
 
-- [Conditional Access with Microsoft Entra ID](/azure/azure-arc/kubernetes/azure-rbac#use-conditional-access-with-azure-ad). You can find more information on Conditional Access can be found in the [Conditional Access overview](/entra/identity/conditional-access/overview).
+- [Conditional Access with Microsoft Entra ID](/azure/azure-arc/kubernetes/azure-rbac#use-conditional-access-with-azure-ad). You can find more information on Conditional Access in the [Conditional Access overview](/entra/identity/conditional-access/overview).
 - [Just-In-Time (JIT)](/azure/azure-arc/kubernetes/azure-rbac#configure-just-in-time-cluster-access-with-azure-ad) access rules for tasks that need elevated permissions. Having standing access for some users to sensitive information or critical network configuration settings in Kubernetes creates a potential pathway to compromised accounts or internal threat activities. Privileged access management can help you protect your organization from breaches and helps you meet compliance best practices by limiting standing access to sensitive data or access to critical configuration settings.
 
 ### Secret and certificate management
@@ -124,7 +124,7 @@ Consider using the [Azure Key Vault extension](/azure/azure-arc/kubernetes/tutor
 
 GitOps is an essential component of any IT strategy that takes a fully automated approach to operations. GitOps provides scale, consistency, tracking, and auditing capabilities for any deployment.
 
-Using GitOps can simplify the deployment of multiple applications across clusters and environments while tracking and enforcing the desired state of the system declaratively with Git. When you use Git as your single source of truth and as the central tool for all deployments, it becomes the best way to track cluster states, account for changes and approvals over time, facilitate fault investigation, and enable automation across distributed environments.
+Using GitOps can simplify the deployment of multiple applications across clusters and environments while tracking and enforcing the desired state of the system declaratively with Git. When you use Git as your single source of truth and central deployment tool, it becomes the best way to track cluster states, account for changes and approvals, facilitate fault investigation, and enable automation across distributed environments.
 
 When you add GitOps configurations, make sure you secure access to the repository and its keys and set branch permissions. For more information, review [the critical design area for GitOps](./eslz-arc-kubernetes-cicd-gitops-disciplines.md).
 
