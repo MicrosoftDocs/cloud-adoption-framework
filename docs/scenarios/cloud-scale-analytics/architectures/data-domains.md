@@ -11,9 +11,9 @@ ms.custom: e2e-data-management, think-tank
 # Data domains
 
 > [!IMPORTANT]
-> **Deprecation notice:** The Cloud‑Scale Analytics scenario has been deprecated and is no longer maintained or supported. To preserve AI fidelity, this guidance will be deleted April 2026.
+> **Deprecation notice:** The Cloud‑Scale Analytics scenario has been deprecated and is no longer maintained or supported. To ensure only the best guidance is surfaced, this guidance will be deleted April 2026.
 >
-> For current CAF data guidance, see the [**Unify your data platform**](https://aka.ms/cafdata).
+> For current CAF data guidance, see [**Unify your data platform**](https://aka.ms/cafdata).
 
 Data mesh is fundamentally based on decentralization and the distribution of responsibility to domains. If you truly understand a part of the business, you're best positioned to manage the associated data and ensure its accuracy. This is the principle of domain-oriented data ownership.
 
