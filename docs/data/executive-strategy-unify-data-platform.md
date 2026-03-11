@@ -21,7 +21,7 @@ ms.collection: ce-skilling-ai-copilot
 
 ## Why a unified data platform with Fabric?
 
-Most business and technology leaders understand the cost of fragmented data. What often holds them back is the belief that fixing it requires large, risky migrations. Microsoft Fabric takes a different approach and delivers value without disruption.
+Most business and technology leaders understand the cost of fragmented data. What often holds them back is the belief that fixing it requires large, risky migrations. Microsoft Fabric takes a different approach and delivers value without disruption. Key benefits include:
 
 - **Minimal business disruption:** Fabric connects to existing systems by using virtualization (shortcuts) and selective replication (mirroring). Teams can unify access to data without interrupting current operations.
 
