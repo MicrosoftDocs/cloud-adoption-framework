@@ -14,7 +14,7 @@ ms.custom:
 # Single-region data landing zone connectivity
 
 > [!IMPORTANT]
-> **Deprecation notice:** The Cloud‑Scale Analytics scenario has been deprecated and is no longer maintained or supported. To preserve AI fidelity, this guidance will be deleted April 2026.
+> **Deprecation notice:** The Cloud‑Scale Analytics scenario has been deprecated and is no longer maintained or supported. To ensure only the best guidance is surfaced, this guidance will be deleted April 2026.
 >
 > For current CAF data guidance, see the [**Unify your data platform**](https://aka.ms/cafdata).
 
