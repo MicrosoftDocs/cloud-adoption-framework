@@ -12,33 +12,33 @@ ms.collection: ce-skilling-ai-copilot
 
 # Executive strategy for unifying your data
 
-**Data goal:** Every organization wants to use data to create business value while controlling costs. This goal means using data for better insights, decisions, and automation, but doing so in a cost-effective way. **Data challenge:** However, many organizations struggle to achieve this goal. Data is often scattered across many systems and teams, and its quality varies by source, leading to silos and inconsistencies. These gaps limit the success of analytics and AI initiatives.
+**Data goal:** Every organization wants its data to drive confident business decisions. Data must be trusted, easy to reuse for analytics and AI, and secure by default. **Data challenge:** For most organizations, this goal is hard to achieve. Data is spread across systems and teams. Standards differ, governance is inconsistent, and leaders struggle to rely on a single version of the truth.
 
-**Data solution:** To overcome these challenges, leading organizations are unifying their data platform. A unified data platform brings together data access and governance across the business without disrupting current operations. This guide explains how to build a unified data platform by using Microsoft Fabric. It provides a common foundation for analytics and AI. You can also keep your existing investments while enforcing business-wide governance and security (see Figure 1).
+**Data solution:** Organizations started addressing this challenge by unifying their data platform with Microsoft Fabric. Fabric allows organizations to create trusted data products that can be governed and securely used for AI and analytics across the organization (see Figure 1). This guidance provides the framework decision makers need to make that shift and establish a unified data foundation.
 
-:::image type="content" source="./images/executive-architecture-unified-data-platform-ai-analytics.svg" alt-text="High‑level diagram showing Microsoft Fabric at the center of a unified data platform. Data from enterprise sources, such as on‑premises systems, Microsoft services, and public cloud platforms, flows into Fabric, where it is organized as shared data products. These data products are then used across the organization to support analytics, AI systems, and reporting, including Power BI and data science workloads. Fabric connects with Azure for governance, security, and monitoring, while Azure workloads run alongside it as needed. The overall flow shows data coming into Fabric, being governed and standardized, and then powering AI, analytics, and business insights across the organization." lightbox="./images/executive-architecture-unified-data-platform-ai-analytics.svg" border="false":::
-*Figure 1. Conceptual architecture for AI and analytics.*
+:::image type="content" source="./images/executive-architecture-unified-data-platform-ai-analytics.svg" alt-text="High‑level diagram showing Microsoft Fabric at the center of a unified data platform. Data from enterprise sources, such as on‑premises systems, Microsoft services, and public cloud platforms, flows into Fabric, where you organize it as shared data products. These data products are then used across the organization to support analytics, AI systems, and reporting, including Power BI and data science workloads. Fabric connects with Azure for governance, security, and monitoring, while Azure workloads run alongside it as needed. The overall flow shows data coming into Fabric, being governed and standardized, and then powering AI, analytics, and business insights across the organization." lightbox="./images/executive-architecture-unified-data-platform-ai-analytics.svg" border="false":::
+*Figure 1. Unified data platform for AI and analytics.*
 
 ## Why a unified data platform with Fabric?
 
-Most business and technology leaders recognize the data fragmentation problem but worry that fixing it could require costly, disruptive migrations. A Fabric-powered unified data platform offers an alternative approach that emphasizes incremental value and operational stability. Key benefits include:
+Most business and technology leaders understand the cost of fragmented data. What often holds them back is the belief that fixing it requires large, risky migrations. Microsoft Fabric takes a different approach and delivers value without disruption.
 
-- **Minimal business disruption**. Unify data without replacing existing systems. Fabric provides virtual connectors (*shortcuts*) and selective replication (*mirroring*) so teams can connect existing data sources gradually and deliver early value without risking current operations.
+- **Minimal business disruption:** Fabric connects to existing systems by using virtualization (shortcuts) and selective replication (mirroring). Teams can unify access to data without interrupting current operations.
 
-- **Less time, more governance:** Fabric provides a suite of data tools in one platform. Teams spend less time maintaining parallel systems and more time improving the quality and usability of data. Governance and security become more consistent because policies are applied across the platform instead of being re‑implemented in each system.
+- **Built‑in governance:** Fabric brings data engineering, analytics, and BI into a single platform. Security and governance policies are defined once and applied consistently, instead of being recreated and enforced differently across multiple tools.
 
-- **Foundation for AI and analytics**. A unified data platform with Microsoft Fabric provides a strong foundation for analytics and AI by producing high‑quality, reusable data products. These trusted data products allow teams to build analytics and AI faster and with greater confidence. [Fabric IQ](/fabric/iq/overview) helps unify your data and feeds [Foundry IQ](/azure/foundry/agents/concepts/what-is-foundry-iq), which creates knowledge layers that help AI systems in Microsoft Foundry reason over trusted data.
+- **Foundation for AI and analytics:** Fabric enables organizations to produce reusable, high‑quality data products. These trusted products speed up analytics and AI initiatives. [Fabric IQ](/fabric/iq/overview) helps unify and contextualize data. [Foundry IQ](/azure/foundry/agents/concepts/what-is-foundry-iq) allows Microsoft Foundry agents to reason over governed, trusted data.
 
 ## What level of investment is required?
 
-Unifying the data platform is an investment in capability, not a wholesale replacement of every system. The goal is to keep using your existing data systems and build a shared foundation that can grow over time. Key cost factors to consider include:
+Unifying the data platform is an investment in capability, not a wholesale replacement of every system. The goal is to keep using your existing data systems and build a shared foundation that can grow over time. Key cost factors include:
 
 - **Microsoft Fabric cost factors:** Primary [cost factors](https://azure.microsoft.com/pricing/details/microsoft-fabric/) include (see Figure 2):
 
   - **Compute:** The compute capacity you create (Fabric capacities).
   - **Storage:** The storage you use in OneLake.
   - **Replication:** The data replication you perform (Mirroring).
-  - **Power BI:** Requires sufficient Fabric capacity or separate Power BI licensing. See [Common licensing scenarios](/fabric/enterprise/licenses#licensing-scenario-summary).
+  - **Power BI:** A sufficient Fabric capacity to access Power BI or separate Power BI [license](/fabric/enterprise/licenses#licensing-scenario-summary).
 
     :::image type="content" source="images/fabric-overview.svg" alt-text="Diagram shoring Microsoft Fabric with OneLake at the center as a unified data lake. At the bottom, multiple data sources feed into OneLake, including cloud storage and SaaS systems through shortcuts and virtualization, databases through mirroring, and other external sources. OneLake provides built‑in data tools for the full data lifecycle. It includes ingestion, engineering, warehousing, real‑time analytics, data science, and visualization with Power BI. The diagram emphasizes that data is stored once in OneLake and reused across analytics, data science, and reporting, with governance applied through Microsoft Purview." lightbox="images/fabric-overview.svg" border="false":::
     *Figure 2. Microsoft Fabric capabilities to create business value from data.*
@@ -49,13 +49,7 @@ Unifying the data platform is an investment in capability, not a wholesale repla
 
 ## How long until you see value?
 
-The key question is how quickly you can start deriving value from a unified data platform. Fortunately, with a Fabric-based approach, you can see value faster than with a full data migration:
-
-- **Faster than migration:** You can unify your data with Fabric and Purview faster than traditional full data migrations. With Fabric, you don't need to move all your data and pipelines before you see value. Early on, Fabric's virtualization and replication features mean you can connect to data in place and begin building analytics or AI solutions on top of it.
-
-- **Incremental improvements:** Because Fabric supports virtual data ingestion and on-demand replication, you can begin by virtually connecting to existing data sources and delivering incremental improvements. This approach lets you maintain existing operational systems and business processes while layering the new unified platform on top of them. Over time, you can modernize or consolidate underlying systems at your own pace. This phased approach significantly reduces upfront effort and risk compared to an all-at-once migration.
-
-In short, the unified data platform is designed for quick wins. Teams can start using unified data for analytics and AI in weeks rather than years, because there's no requirement to rebuild everything from scratch before you see value. Early successes build momentum and confidence in the new approach.
+Microsoft Fabric is designed to deliver value quickly. Time to value is short because unification doesn't depend on full migration. Teams can start with a small set of high‑value data products. Each step adds value while limiting risk. In practice, many organizations see value within weeks for initial analytics or AI scenarios. As Fabric becomes the standard foundation for data products, analytics, and AI, value grows through reuse and consistent standards across the organization.
 
 ## How do you unify your data platform?
 
@@ -93,5 +87,5 @@ In the following sections, you'll find guidance, checklists, best practices, dec
 | AI | Systems that use data as input into models that automate business functionality. This category includes traditional machine learning models (predictive) and generative AI models. |
 | Data product | Data that's in a form that's valuable for your business, such as datasets, tables, feature sets, or AI training data. |
 | Data domain | A boundary of responsibility and ownership for data products, such as business units (HR, Marketing, Finance, Sales, Operations) and product lines (Product 1, Product 2). |
-| Data management landing zone | An environment (consisting of one or more Azure subscriptions) for data management resources, such as Purview accounts and Fabric capacities. |
+| Data management landing zone | An environment (consisting of one or more Azure subscriptions) for data management resources, such as Microsoft Purview accounts and Fabric capacities. |
 | Data landing zone | An environment (consisting of one or more Azure subscriptions) for data and AI/ML resources, such as Azure Databricks, Azure Data Lake Storage, and Azure Machine Learning. |
