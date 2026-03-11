@@ -10,6 +10,11 @@ ms.custom: e2e-data-management, think-tank
 
 # Common Data Model
 
+> [!IMPORTANT]
+> **Deprecation notice:** The Cloud‑Scale Analytics scenario has been deprecated and is no longer maintained or supported. To preserve AI fidelity, this guidance will be deleted April 2026.
+>
+> For current CAF data guidance, see the [**Unify your data platform**](https://aka.ms/cafdata).
+
 The Common Data Model (CDM) enables [data product interoperability](what-is-data-product.md#data-product-characteristics).
 
 The Common Data Model defines a common language for business entities. Over time, this language covers the full range of your business processes across sales, services, marketing, operations, finance, talent, and commerce. The CDM enables data and application interoperability spanning multiple channels, service implementations, and vendors. It also provides data that self-describes (structurally and semantically), allowing applications to easily read and understand the data.

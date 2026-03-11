@@ -10,6 +10,11 @@ ms.custom: e2e-data-management, think-tank
 
 # Data application reference patterns
 
+> [!IMPORTANT]
+> **Deprecation notice:** The Cloud‑Scale Analytics scenario has been deprecated and is no longer maintained or supported. To preserve AI fidelity, this guidance will be deleted April 2026.
+>
+> For current CAF data guidance, see the [**Unify your data platform**](https://aka.ms/cafdata).
+
 When onboarding a data application onto a Data Landing Zone, the team will be granted access to their dedicated resource group, subnet, and shared resources. From this point, the ownership of the environment is handed over to the data application team. These teams have to take responsibility from an end-to-end implementation and cost ownership perspective.
 
 To simplify the process of getting started and reduce the lead time to create an environment for a specific use case, organizations can provide internal reference patterns. These reference implementations consist of the Infrastructure as Code (IaC) definitions to successfully create a set of services for a specific use case, such as batch data processing, streaming data processing, or data science, and demonstrate a path to success. Potentially, these patterns also include generic application code that can be used as a baseline when implementing data solutions. Data application reference patterns could vary between organizations and highly depend on the utilized tools and commonly and repeatedly used data implementation patterns across Data Landing Zones.

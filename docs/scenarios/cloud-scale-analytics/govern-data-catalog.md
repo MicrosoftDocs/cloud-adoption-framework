@@ -14,6 +14,11 @@ ms.custom: e2e-data-management, think-tank
 
 ## Data discovery
 
+> [!IMPORTANT]
+> **Deprecation notice:** The Cloud‑Scale Analytics scenario has been deprecated and is no longer maintained or supported. To preserve AI fidelity, this guidance will be deleted April 2026.
+>
+> For current CAF data guidance, see the [**Unify your data platform**](https://aka.ms/cafdata).
+
 Data discovery reflects the state of all the data that the enterprise owns. This data is known as the data estate. During data discovery, the data estate is scanned and classified. The data scanning process connects directly to the data source according to a set schedule.
 
 As you add a new data landing zone to the environment, the associated data lakes and polyglot persistence sources must be registered as sources for the data catalog crawlers to scan.

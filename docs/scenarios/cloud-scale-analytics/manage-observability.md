@@ -10,6 +10,11 @@ ms.custom: e2e-data-management, think-tank
 
 # Data observability
 
+> [!IMPORTANT]
+> **Deprecation notice:** The Cloud‑Scale Analytics scenario has been deprecated and is no longer maintained or supported. To preserve AI fidelity, this guidance will be deleted April 2026.
+>
+> For current CAF data guidance, see the [**Unify your data platform**](https://aka.ms/cafdata).
+
 Data observability is your ability to understand the health of your data and data systems by collecting and correlating events across areas like data, storage, compute and processing pipelines.  
 
 Building and operating a resilient, scalable, and performant data platform requires adopting proven DevOps-inspired processes across teams that represent functional domains. Data observability enables business owners, DevOps engineers, data architects, data engineers, and site reliability engineers to automate issue detection, prediction, and prevention, and to avoid downtime that can break production analytics and AI.

@@ -10,6 +10,11 @@ ms.custom: e2e-data-management, think-tank
 
 # Data domains
 
+> [!IMPORTANT]
+> **Deprecation notice:** The Cloud‑Scale Analytics scenario has been deprecated and is no longer maintained or supported. To preserve AI fidelity, this guidance will be deleted April 2026.
+>
+> For current CAF data guidance, see the [**Unify your data platform**](https://aka.ms/cafdata).
+
 Data mesh is fundamentally based on decentralization and the distribution of responsibility to domains. If you truly understand a part of the business, you're best positioned to manage the associated data and ensure its accuracy. This is the principle of domain-oriented data ownership.
 
 To promote domain-oriented data ownership, you need to first decompose your data architecture. The data mesh founder, Zhamak Dehghani, promotes the Domain-Driven Design (DDD) approach to software development as a useful method to help you identify your data domains.

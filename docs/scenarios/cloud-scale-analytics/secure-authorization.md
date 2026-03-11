@@ -10,6 +10,11 @@ ms.custom: e2e-data-management, think-tank
 
 # Authorization for cloud-scale analytics in Azure
 
+> [!IMPORTANT]
+> **Deprecation notice:** The Cloud‑Scale Analytics scenario has been deprecated and is no longer maintained or supported. To preserve AI fidelity, this guidance will be deleted April 2026.
+>
+> For current CAF data guidance, see the [**Unify your data platform**](https://aka.ms/cafdata).
+
 Authorization is the act of granting an authenticated party permission to perform an action. The key principle of *access control* is to give users only the amount of access that they need to do their jobs and to only allow certain actions at a particular scope. Role-based security corresponds to access control. Many organizations use role-based security to control access based on defined roles or job functions instead of individual users. Users are assigned one or more security roles, and each role is given authorized permissions to perform specific tasks.
 
 Microsoft Entra ID is a centralized identity provider that grants authorization to access data services and storage for each user or for each application based on a Microsoft Entra identity.

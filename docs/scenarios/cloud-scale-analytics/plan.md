@@ -10,6 +10,11 @@ ms.custom: e2e-data-management, think-tank
 
 # Develop a plan for cloud-scale analytics
 
+> [!IMPORTANT]
+> **Deprecation notice:** The Cloud‑Scale Analytics scenario has been deprecated and is no longer maintained or supported. To preserve AI fidelity, this guidance will be deleted April 2026.
+>
+> For current CAF data guidance, see the [**Unify your data platform**](https://aka.ms/cafdata).
+
 The Cloud Adoption Framework's [Plan methodology](../../plan/index.md) helps you create an overall cloud adoption plan to guide all programs and teams involved in your cloud-based digital transformation. The Plan methodology also provides templates to help you create your backlog and plans to help your teams build necessary skills. The backlog and plans you create should be based on what you plan to do in the cloud.
 
 This article provides further guidance for data estate rationalization and skilling plans that are specific to cloud-scale analytics.

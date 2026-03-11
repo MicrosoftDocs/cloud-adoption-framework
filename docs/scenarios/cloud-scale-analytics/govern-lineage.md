@@ -10,6 +10,11 @@ ms.custom: e2e-data-management, think-tank
 
 # Data lineage
 
+> [!IMPORTANT]
+> **Deprecation notice:** The Cloud‑Scale Analytics scenario has been deprecated and is no longer maintained or supported. To preserve AI fidelity, this guidance will be deleted April 2026.
+>
+> For current CAF data guidance, see the [**Unify your data platform**](https://aka.ms/cafdata).
+
 Data lineage plays an important role in cloud-scale analytics. Lineage shows dependencies between raw data and finished products, describing the transformations and manipulations that turn raw data into final data products. Data lineage spans the lifecycle of data, from its origin to its movement across the data estate. It’s used for troubleshooting, root cause analysis, data quality analysis, compliance, and impact analysis. It also adds context to datasets and products that enable data products to be discoverable and self-serviceable.
 
 A primary feature of any data catalog is its ability to show the lineage between data products.

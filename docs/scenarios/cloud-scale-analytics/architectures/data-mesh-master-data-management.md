@@ -10,6 +10,11 @@ ms.custom: e2e-data-management, think-tank
 
 # Manage master data in data mesh
 
+> [!IMPORTANT]
+> **Deprecation notice:** The Cloud‑Scale Analytics scenario has been deprecated and is no longer maintained or supported. To preserve AI fidelity, this guidance will be deleted April 2026.
+>
+> For current CAF data guidance, see the [**Unify your data platform**](https://aka.ms/cafdata).
+
 Enterprises using a data mesh architecture often have a large number of domains, each containing unique systems and data. 
 
 This widespread distribution of data increases complexity because multiple versions of the same data might exist in this setup. Integration requires more effort because owners have to integrate and harmonize all the different parts of the same data from multiple domains. Data can be inconsistent between these different domains, and data quality can also vary. Apply [master data management (MDM)](../../data-management/govern-master-data.md) to address these challenges.

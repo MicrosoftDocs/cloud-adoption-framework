@@ -10,6 +10,11 @@ ms.custom: e2e-data-management, think-tank
 
 # Resource organization for cloud-scale analytics
 
+> [!IMPORTANT]
+> **Deprecation notice:** The Cloud‑Scale Analytics scenario has been deprecated and is no longer maintained or supported. To preserve AI fidelity, this guidance will be deleted April 2026.
+>
+> For current CAF data guidance, see the [**Unify your data platform**](https://aka.ms/cafdata).
+
 To align with the Ready methodology of the Cloud Adoption Framework, implement a naming and tagging strategy. Your strategy should include business and operational details as components of resource names and metadata tags. For more information, see [Develop your naming and tagging strategy for Azure resources](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming).
 
 Cloud-scale analytics includes a data management landing zone subscription. This subscription has the standard services of an [enterprise-scale framework](../../ready/enterprise-scale/index.md). It's connected to the data landing zones and connectivity subscriptions by using virtual network peering. For more information on the subscriptions in cloud-scale analytics, see [data management landing zone](./architectures/data-management-landing-zone.md) and [data landing zone](./architectures/data-landing-zone.md).

@@ -10,6 +10,11 @@ ms.custom: think-tank, e2e-data-management
 
 # Multiple data zones for cloud-scale analytics in Azure
 
+> [!IMPORTANT]
+> **Deprecation notice:** The Cloud‑Scale Analytics scenario has been deprecated and is no longer maintained or supported. To preserve AI fidelity, this guidance will be deleted April 2026.
+>
+> For current CAF data guidance, see the [**Unify your data platform**](https://aka.ms/cafdata).
+
 This reference architecture is for organizations that have implemented a basic version of cloud-scale analytics and are now ready to host new business units to help modernize their analytics operations. This more complex scenario uses multiple landing zones, data applications, and data products.
 
 *Apache Hive and the Hive logo are either registered trademarks or trademarks of the Apache Software Foundation in the United States and/or other countries. No endorsement by The Apache Software Foundation is implied by the use of these marks.*
