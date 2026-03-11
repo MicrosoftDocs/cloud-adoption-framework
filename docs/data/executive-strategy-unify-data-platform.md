@@ -38,7 +38,7 @@ Unifying the data platform is an investment in capability, not a wholesale repla
   - **Compute:** The compute capacity you create (Fabric capacities).
   - **Storage:** The storage you use in OneLake.
   - **Replication:** The data replication you perform (Mirroring).
-  - **Power BI:** A sufficient Fabric capacity to access Power BI or a separate Power BI [license](/fabric/enterprise/licenses#licensing-scenario-summary).
+  - **Power BI:** Ensure that users have either sufficient Microsoft Fabric capacity that includes Power BI access or separate Power BI [licenses](/fabric/enterprise/licenses#licensing-scenario-summary), as summarized in the licensing guidance.
 
     :::image type="content" source="images/fabric-overview.svg" alt-text="Diagram shoring Microsoft Fabric with OneLake at the center as a unified data lake. At the bottom, multiple data sources feed into OneLake, including cloud storage and SaaS systems through shortcuts and virtualization, databases through mirroring, and other external sources. OneLake provides built‑in data tools for the full data lifecycle. It includes ingestion, engineering, warehousing, real‑time analytics, data science, and visualization with Power BI. The diagram emphasizes that data is stored once in OneLake and reused across analytics, data science, and reporting, with governance applied through Microsoft Purview." lightbox="images/fabric-overview.svg" border="false":::
     *Figure 2. Microsoft Fabric capabilities to create business value from data.*
