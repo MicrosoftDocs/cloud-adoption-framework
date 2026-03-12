@@ -16,9 +16,8 @@ tools:
   - microsoft-learn/microsoft_code_sample_search
 mcp-servers:
   microsoft-learn:
-    type: http
-    url: https://learn.microsoft.com/api/mcp
-    tools:
+    url: "https://learn.microsoft.com/api/mcp"
+    allowed:
       - microsoft_docs_search
       - microsoft_docs_fetch
       - microsoft_code_sample_search

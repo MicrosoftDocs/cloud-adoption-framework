@@ -10,8 +10,13 @@ on:
 
 engine: copilot
 
+permissions:
+  contents: read
+  issues: read
+  pull-requests: read
+
 imports:
-  - .github/agents/docs-reviewer.agent.md
+  - ../agents/docs-reviewer.md
 
 safe-outputs:
   create-pull-request:
@@ -33,9 +38,11 @@ network:
 steps:
   - name: Determine folder
     id: folder
+    env:
+      INPUT_FOLDER: ${{ inputs.folder }}
     run: |
       FOLDERS=(ai-agents antipatterns cloud-native context data get-started govern manage migrate modernize organize plan ready resources scenarios secure strategy)
-      INPUT="${{ inputs.folder }}"
+      INPUT="$INPUT_FOLDER"
       if [ -n "$INPUT" ]; then
         FOLDER="$INPUT"
       else
