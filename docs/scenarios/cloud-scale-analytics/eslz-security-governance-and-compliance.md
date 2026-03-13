@@ -10,6 +10,11 @@ ms.custom: e2e-data-management, think-tank
 
 # Security, governance, and compliance for cloud-scale analytics
 
+> [!IMPORTANT]
+> **Deprecation notice:** The Cloud‑Scale Analytics scenario has been deprecated and is no longer maintained or supported. To ensure only the best guidance is surfaced, this guidance will be deleted April 2026.
+>
+> For current CAF data guidance, see [**Unify your data platform**](https://aka.ms/cafdata).
+
 When planning cloud-scale analytics architecture, pay special attention to ensure that the architecture is robust and secure. This article addresses security, compliance, and governance design criteria for enterprise-scale cloud-scale analytics. This article also discusses design recommendations and best practices for deployment of a cloud-scale analytics on Azure. Review [enterprise-scale security governance and compliance](../../ready/landing-zone/design-area/governance.md) to fully prepare for governance of an enterprise solution.
 
 Cloud solutions initially hosted single, relatively isolated applications. As the benefits of cloud solutions became clear, larger-scale workloads were hosted in the cloud, such as SAP on Azure. So it became vital to address the security, reliability, performance, and cost of regional deployments throughout the lifecycle of cloud services.

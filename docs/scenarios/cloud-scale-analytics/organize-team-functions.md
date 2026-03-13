@@ -10,6 +10,11 @@ ms.custom: e2e-data-management, think-tank
 
 # Understand teams and functions for cloud-scale analytics in Azure
 
+> [!IMPORTANT]
+> **Deprecation notice:** The Cloud‑Scale Analytics scenario has been deprecated and is no longer maintained or supported. To ensure only the best guidance is surfaced, this guidance will be deleted April 2026.
+>
+> For current CAF data guidance, see [**Unify your data platform**](https://aka.ms/cafdata).
+
 For cloud-scale analytics, we recommend moving teams such as ingest, processing, analysis, consumption, and visualization from working in horizontally siloed teams to agile vertical cross-domain teams in each tier. Platform teams like data platform operations and platform operations are grouped together in a common platform group.
 
 ![Diagram of cloud-scale analytics teams.](./images/enterprise-scale-analytics-ai-teams.png)

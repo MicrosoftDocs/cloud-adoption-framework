@@ -10,13 +10,13 @@ ms.custom: e2e-hybrid, think-tank
 
 # Automation disciplines for Azure Arc-enabled servers
 
-Azure Arc-enabled servers allow you to manage your Windows and Linux servers and virtual machines that are hosted outside of Azure, on your corporate network, or on another cloud provider. This document is written to help plan for the automation of onboarding, patch management, and expansion of the capabilities of Azure Arc-enabled servers through VM extensions. The article presents key recommendations for operations teams to onboard and automate Azure Arc-enabled servers throughout their lifecycle.
+Azure Arc-enabled servers allow you to manage your Windows and Linux servers and virtual machines that are hosted outside of Azure, on your corporate network, or on another cloud provider. This document helps you plan automation for onboarding, patch management, and expanding Azure Arc-enabled server capabilities through VM extensions. The article presents key recommendations for operations teams to onboard and automate Azure Arc-enabled servers throughout their lifecycle.
 
 ## Architecture
 
 The following image shows a conceptual reference architecture that highlights the onboarding and automation design areas for Azure Arc-enabled servers:
 
-[![Diagram that shows Azure Arc-enabled data services, including Onboarding and V M extension integration.](./media/arc-enabled-servers-onboarding.png)](./media/arc-enabled-servers-onboarding.png#lightbox)
+[![Diagram that shows Azure Arc-enabled data services, including Onboarding and VM extension integration.](./media/arc-enabled-servers-onboarding.png)](./media/arc-enabled-servers-onboarding.png#lightbox)
 
 ## Design considerations
 
@@ -56,12 +56,12 @@ The following are general design recommendations for Azure Arc-enabled servers:
 ### Environment preparation
 
 - Create a [dedicated resource group](/azure/azure-resource-manager/management/manage-resource-groups-portal#create-resource-groups) to include only Azure Arc-enabled servers and centralize management and monitoring of these resources.
-- Evaluate and develop an IT-aligned [tagging strategy](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-tagging) that can help reduce the complexity of managing your Azure Arc-enabled servers and simplifies the process of making management decisions.
+- Evaluate and develop an IT-aligned [tagging strategy](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-tagging) that reduces the complexity of managing your Azure Arc-enabled servers and simplifies management decisions.
 - Create a [service principal](/azure/azure-arc/servers/onboard-service-principal#create-a-service-principal-for-onboarding-at-scale) to connect machines non-interactively using Azure PowerShell or from the Azure portal.
 
 ### Onboard Azure Arc-enabled servers
 
-One of your first tasks will be to onboard your fleet of servers and virtual machines to Azure. After [generating an installation script](/azure/azure-arc/servers/onboard-portal#generate-the-installation-script-from-the-azure-portal), if you only have a few servers, you can opt to run the script directly from your [Windows](/azure/azure-arc/servers/onboard-portal#install-and-validate-the-agent-on-windows) or [Linux](/azure/azure-arc/servers/onboard-portal#install-and-validate-the-agent-on-linux) machines. For larger fleets of servers, there are several options available in Azure to automate the onboarding process. We recommended creating a [service principal](/azure/azure-arc/servers/onboard-service-principal#create-a-service-principal-for-onboarding-at-scale) and apply one of the following methods:
+One of your first tasks will be to onboard your fleet of servers and virtual machines to Azure. After [generating an installation script](/azure/azure-arc/servers/onboard-portal#generate-the-installation-script-from-the-azure-portal), if you have only a few servers, run the script directly on your [Windows](/azure/azure-arc/servers/onboard-portal#install-and-validate-the-agent-on-windows) or [Linux](/azure/azure-arc/servers/onboard-portal#install-and-validate-the-agent-on-linux) machines. For larger fleets of servers, Azure offers several options to automate onboarding. We recommend creating a [service principal](/azure/azure-arc/servers/onboard-service-principal#create-a-service-principal-for-onboarding-at-scale) and apply one of the following methods:
 
 - Review and customize the [predefined installation script](/azure/azure-arc/servers/onboard-service-principal) for at-scale deployment of the connected machine agent to support your automated deployment requirements.
 - Generate a [PowerShell script](/azure/azure-arc/servers/onboard-service-principal) using a service principal, and deploy via your organization's existing automation platform
@@ -72,21 +72,21 @@ Afterwards, be sure to [verify your connection](/azure/azure-arc/servers/onboard
 
 ### Virtual machine extensions
 
-To simplify the management of hybrid servers throughout their lifecycle, [VM extensions](/azure/azure-arc/servers/manage-vm-extensions) can be deployed to Azure Arc-enabled servers from the Azure portal. Virtual machine (VM) extensions are small applications that provide post-deployment configuration and automation tasks on Azure VMs. For example, if a virtual machine requires software installation, anti-virus protection, or to run a script in it, a VM extension can be used. Many VM extensions are supported for both [Windows](/azure/azure-arc/servers/manage-vm-extensions#windows-extensions) and [Linux](/azure/azure-arc/servers/manage-vm-extensions#linux-extensions) Azure Arc-enabled servers.
+To simplify managing hybrid servers throughout their lifecycle, [VM extensions](/azure/azure-arc/servers/manage-vm-extensions) can be deployed to Azure Arc-enabled servers from the Azure portal. Virtual machine (VM) extensions are small applications that provide post-deployment configuration and automation tasks on Azure VMs. For example, if a virtual machine requires software installation, anti-virus protection, or to run a script in it, a VM extension can be used. Many VM extensions are supported for both [Windows](/azure/azure-arc/servers/manage-vm-extensions#windows-extensions) and [Linux](/azure/azure-arc/servers/manage-vm-extensions#linux-extensions) Azure Arc-enabled servers.
 
-We recommended automating the deployment of VM extensions at scale via [Azure Policy](/azure/governance/policy/overview) to automatically deploy extensions to your Azure Arc-enabled servers and regularly check the policy compliance data to identify and remediate servers that don't have the agent installed.
+We recommend automating VM extension deployment at scale via [Azure Policy](/azure/governance/policy/overview) to deploy extensions to your Azure Arc-enabled servers and regularly check policy compliance data to identify and remediate servers that don't have the agent installed.
 
 Overview of steps:
 
 - Create an [initiative](/azure/governance/policy/tutorials/create-and-manage#create-and-assign-an-initiative-definition) to deploy VM extensions at scale.
 - Use a "[DeployIfNotExists](/azure/governance/policy/concepts/effects#deployifnotexists)" policy effect to ensure the VM extensions get deployed automatically, as more servers are onboarded, and remediate any servers where the VM extensions have been removed.
-- More details on using policy with Azure Arc-enabled servers can be found in the [Security, governance and compliance for Azure Arc-enabled servers](./eslz-security-governance-and-compliance.md) section of this guide.
+- See the [Security, governance and compliance for Azure Arc-enabled servers](./eslz-security-governance-and-compliance.md) section for more details.
 
 ### Lifecycle automation
 
-After your servers are onboarded to Azure, we recommend that you enable patch management to simplify OS lifecycle management on your Azure Arc-enabled servers. Azure Update Manager allows you to view and schedule operating system updates and patches for your Azure Arc-enabled servers at scale. More information about Azure Update Manager can be found in [Azure Update Manager overview](/azure/update-manager/overview).
+After your servers are onboarded to Azure, we recommend that you enable patch management to simplify OS lifecycle management on your Azure Arc-enabled servers. Azure Update Manager allows you to view and schedule operating system updates and patches for your Azure Arc-enabled servers at scale. See [Azure Update Manager overview](/azure/update-manager/overview) for more information.
 
-You can use the [User Hybrid Runbook Worker](/azure/automation/extension-based-hybrid-runbook-worker-install?tabs=windows) feature of Azure Automation to run runbooks directly on Azure Arc-enabled servers.
+You can use the [extension-based Hybrid Runbook Worker](/azure/automation/extension-based-hybrid-runbook-worker-install?tabs=windows) feature of Azure Automation to run runbooks directly on Azure Arc-enabled servers.
 
 ## Next steps
 

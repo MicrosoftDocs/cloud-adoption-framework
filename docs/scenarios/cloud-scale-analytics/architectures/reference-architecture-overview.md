@@ -10,6 +10,11 @@ ms.custom: think-tank, e2e-data-management
 
 # Overview of reference architectures for cloud-scale analytics in Azure
 
+> [!IMPORTANT]
+> **Deprecation notice:** The Cloud‑Scale Analytics scenario has been deprecated and is no longer maintained or supported. To ensure only the best guidance is surfaced, this guidance will be deleted April 2026.
+>
+> For current CAF data guidance, see [**Unify your data platform**](https://aka.ms/cafdata).
+
 Cloud-scale analytics is designed to be modular. It allows customers to start with a small footprint and grow over time. Customers should decide ahead how to organize data domains across data landing zones. The building blocks can be deployed through the Azure portal, GitHub Actions workflows, and Azure Pipelines. The template repositories for the data management landing zone, data landing zone, and data integrations/products contain sample YAML pipelines to help you get started faster with setting up your environments.
 
 > [!NOTE]

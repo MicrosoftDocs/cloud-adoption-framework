@@ -10,6 +10,11 @@ ms.custom: e2e-data-management, think-tank
 
 # Platform automation
 
+> [!IMPORTANT]
+> **Deprecation notice:** The Cloud‑Scale Analytics scenario has been deprecated and is no longer maintained or supported. To ensure only the best guidance is surfaced, this guidance will be deleted April 2026.
+>
+> For current CAF data guidance, see [**Unify your data platform**](https://aka.ms/cafdata).
+
 Cloud-scale analytics is focused on separating the runtime, automation, and user layers.
 
 Automation to runtime interaction is done using Azure Pipelines and scripted Azure Resource Manager templates.

@@ -497,8 +497,6 @@ items:
       href: ai-agents/index.md
     - name: Azure Virtual Desktop
       href: scenarios/azure-virtual-desktop/index.md
-    - name: Cloud-scale analytics
-      href: scenarios/data-management/index.md
     - name: Hybrid and multicloud
       href: scenarios/hybrid/index.md
     - name: Modern application platform
@@ -509,6 +507,8 @@ items:
       href: scenarios/sap/index.md
     - name: Azure VMware Solution
       href: scenarios/azure-vmware/index.md
+    - name: Cloud-scale analytics (deprecated)
+      href: scenarios/data-management/index.md
 
 
   - name: Resources
