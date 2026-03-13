@@ -3,7 +3,8 @@ title: Connectivity to Azure
 description: Examine key design considerations and recommendations surrounding network topologies for connecting on-premises to Azure.
 author: stephen-sumner
 ms.author: pnp
-ms.date: 10/28/2021
+ms.reviewer: satishbal
+ms.date: 03/13/2026
 ms.topic: concept-article
 ms.custom:
   - think-tank
@@ -33,6 +34,11 @@ This section expands on the network topology to consider recommended models for 
 - [ExpressRoute Direct](/azure/expressroute/expressroute-erdirect-about) allows creation of multiple ExpressRoute circuits at no additional cost, up to the ExpressRoute Direct port capacity (10 Gbps or 100 Gbps). It also allows you to connect directly to Microsoft's ExpressRoute routers. For the 100-Gbps SKU, the minimum circuit bandwidth is 5 Gbps. For the 10-Gbps SKU, the minimum circuit bandwidth is 1 Gbps.
 
 - When enabled on an ExpressRoute circuit, [FastPath](/azure/expressroute/about-fastpath) sends network traffic directly to virtual machines in the virtual network, bypassing the gateway. FastPath is designed to improve the data path performance between your on-premises network and your virtual network without having a bottleneck on the gateway.
+
+- Consider [Azure Virtual WAN](/azure/virtual-wan/virtual-wan-about) as an alternative connectivity architecture when connecting multiple sites or branch locations to Azure.
+
+- Assess application latency sensitivity and select Azure regions that minimize network latency from the on-premises location.
+
 
 **Design recommendations:**
 
