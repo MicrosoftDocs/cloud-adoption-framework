@@ -35,7 +35,7 @@ This section expands on the network topology to consider recommended models for 
 
 - When enabled on an ExpressRoute circuit, [FastPath](/azure/expressroute/about-fastpath) sends network traffic directly to virtual machines in the virtual network, bypassing the gateway. FastPath is designed to improve the data path performance between your on-premises network and your virtual network without having a bottleneck on the gateway.
 
-- Consider [Azure Virtual WAN](azure/virtual-wan/virtual-wan-about) as an alternative connectivity architecture when connecting multiple sites or branch locations to Azure.
+- Consider [Azure Virtual WAN](/azure/virtual-wan/virtual-wan-about) as an alternative connectivity architecture when connecting multiple sites or branch locations to Azure.
 
 - Assess application latency sensitivity and select Azure regions that minimize network latency from the on-premises location.
 
