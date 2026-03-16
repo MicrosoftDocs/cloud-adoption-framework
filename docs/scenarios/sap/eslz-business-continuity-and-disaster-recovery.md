@@ -222,7 +222,7 @@ Some organizations use a combination of high availability and disaster recovery 
 
 - Data sovereignty is a factor.
 - Geopolitical factors are involved.
-- It's a low-cost option that supports zonal failures, sometimes combined with backup transfer to the secondary region for natural catastrophes that affect a large radius.
+- It's a low-cost option that supports zone failures, sometimes combined with backup transfer to the secondary region for natural catastrophes that affect a large radius.
 
 Another factor to consider when you choose your disaster recovery region is the RPO and RTO for failing over to the disaster recovery site. The greater the distance between the production region and disaster recovery regions, the higher the network latency. You replicate asynchronously between Azure regions, but network latency can affect the throughput that you can replicate and the RPO target. To minimize your RPO, you can use a combined high availability and disaster recovery architecture. But this configuration poses a potentially higher risk from large-scale natural disasters.
 

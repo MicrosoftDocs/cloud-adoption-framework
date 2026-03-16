@@ -87,7 +87,7 @@ This solution includes a secondary Oracle Exadata Database@Azure deployment in a
 
 :::image type="content" source="./media/gold-cross-region.svg" alt-text="A diagram of multiregional BCDR architecture for Oracle Exadata Database@Azure landing zone accelerator." lightbox="./media/gold-cross-region.svg" border="false":::
 
-- Multiple-zone and multiregional BCDR recommendations primarily address recoverability (meeting RTO/RPO) while also improving resiliency through geographic and zonal isolation. To enhance overall workload reliability, combine these recovery architectures with Azure services such as Azure Virtual Machine Scale Sets, Azure Site Recovery, and Azure Front Door across availability zones or regions.
+- Multiple-zone and multiregional BCDR recommendations primarily address recoverability (meeting RTO/RPO) while also improving resiliency through geographic and availability zone isolation. To enhance overall workload reliability, combine these recovery architectures with Azure services such as Azure Virtual Machine Scale Sets, Azure Site Recovery, and Azure Front Door across availability zones or regions.
 
 ### Extended BCDR scenarios
 
