@@ -62,7 +62,7 @@ Consider the following factors:
   - Increase reliability with reduced costs because of better use of hardware.
 - Spread nodes across all the available zones for higher availability.
   - Choose a region that supports Availability Zones.
-  - For complete zonal benefit, all service dependencies must also support zones. If a dependent service doesn't support zones, it's possible that a zone failure could cause that service to fail. Review the disk types used when spreading the workload across zones.
+  - To achieve the complete benefit of using multiple zones, all service dependencies must also support zones. If a dependent service doesn't support zones, it's possible that a zone failure could cause that service to fail. Review the disk types used when spreading the workload across zones.
   - For higher availability beyond what Availability Zones can achieve, run multiple clusters in different paired regions. If an Azure resource supports geo-redundancy, provide the location where the redundant service will have its secondary region.
 - Consistently create backups for applications and data.
   - A non-stateful service can be replicated efficiently.
