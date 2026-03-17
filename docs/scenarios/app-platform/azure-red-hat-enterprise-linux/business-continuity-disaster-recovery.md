@@ -95,7 +95,7 @@ For more information, see:
 
 ### Azure Compute Gallery replicas
 
-You can use Compute Gallery to store golden images for deployments. Use these images for the disaster recovery of applications and tools. Compute Gallery can use highly available [resources with zone-redundant storage (ZRS) accounts](/azure/virtual-machines/azure-compute-gallery) in regions that support availability zones. ZRS offers resiliency against zonal failures. You can also replicate gallery images to other regions or geographies.
+You can use Compute Gallery to store golden images for deployments. Use these images for the disaster recovery of applications and tools. Compute Gallery can use highly available [resources with zone-redundant storage (ZRS) accounts](/azure/virtual-machines/azure-compute-gallery) in regions that support availability zones. ZRS offers resiliency against zone failures. You can also replicate gallery images to other regions or geographies.
 
 > [!NOTE]
 > We recommend that you have at least two galleries in different regions.
