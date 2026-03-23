@@ -4,7 +4,7 @@ A rollback plan enables teams to quickly reverse changes when a deployment fails
 
 2. **Automate rollback steps in CI/CD pipelines.** Use tools like [Azure Pipelines](/azure/devops/pipelines/process/stages) or [GitHub Actions](https://docs.github.com/actions/deployment/targeting-different-environments/using-environments-for-deployment) to automate rollback processes. For example, configure pipelines to redeploy a previous version if health checks fail.
 
-3. **Create workload-specific rollback instructions.** Write rollback steps that match your workload type, environment, and deployment method. For example, infrastructure-as-code deployments need you to reapply previous templates. App rollbacks mean redeploying a prior container image. Attach rollback scripts, config snapshots, and infrastructure-as-code templates to your rollback plan. These assets speed up the process and reduce the need for manual steps.
+3. **Create workload-specific rollback instructions.** Write rollback steps that match your workload type, environment, and deployment method. For example, infrastructure-as-code deployments need you to reapply previous templates. App rollbacks mean redeploying a prior container image. Attach rollback scripts, configuration snapshots, and infrastructure-as-code templates to your rollback plan. These assets speed up the process and reduce the need for manual steps.
 
 4. **Test rollback procedures.** Simulate deployment failures in a preproduction environment to confirm your rollback works. Find and fix gaps in automation, permissions, or dependencies. Confirm that the rollback restores the system to a stable, known-good state.
 
