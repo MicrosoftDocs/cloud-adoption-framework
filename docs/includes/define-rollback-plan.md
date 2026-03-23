@@ -6,6 +6,6 @@ A rollback plan enables teams to quickly reverse changes when a deployment fails
 
 3. **Create workload-specific rollback instructions.** Write rollback steps that match your workload type, environment, and deployment method. For example, IaC deployments require reapplying past templates. App rollbacks involve redeploying a prior container image. Attach rollback scripts, configuration snapshots, and IaC templates to your rollback plan. These assets speed up the process. They also reduce the need for manual steps.
 
-4. **Test rollback procedures.** Simulate deployment failures in a staging environment to confirm your rollback works. Find and fix gaps in automation, permissions, or dependencies. Check that the rollback restores the system to a stable, known-good state.
+4. **Test rollback procedures.** Simulate deployment failures in a staging environment to confirm your rollback works. Find and fix gaps in automation, permissions, or dependencies. Verify that the rollback procedure restores the system to a stable, known-good state.
 
 5. **Improve rollback strategies.** After each deployment or rollback, review what worked and what didn't. Update rollback rules, steps, and scripts based on lessons learned. Factor in design changes or new tools. Keep your guides updated so rollback plans stay current and useful.
