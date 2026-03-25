@@ -10,7 +10,7 @@ ms.custom: internal, UpdateFrequency2
 
 # Plan for a secure cloud adoption
 
-Developing a cloud adoption plan can be difficult and often have many technical challenges. You must carefully plan each step of your cloud adoption process, specifically when you update legacy workloads for cloud infrastructure. To build a secure cloud estate from the ground up, you need to integrate security considerations into every phase of your adoption plan. This approach helps ensure that your new cloud environment is secure from the start.
+Developing a cloud adoption plan can be difficult and often has many technical challenges. You must carefully plan each step of your cloud adoption process, specifically when you update legacy workloads for cloud infrastructure. To build a secure cloud estate from the ground up, you need to integrate security considerations into every phase of your adoption plan. This approach helps ensure that your new cloud environment is secure from the start.
 
 When you make decisions about your migration or implementation, design for the highest security strategy stance that's feasible for your business. Prioritize security over performance and cost efficiency when you start your designs. This approach ensures that you don't introduce risks that could require you to redesign workloads later. The guidance provided in this article can help you develop a cloud adoption plan that has security as a fundamental principle.
 

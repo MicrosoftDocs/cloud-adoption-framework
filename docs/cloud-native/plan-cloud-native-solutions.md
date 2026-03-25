@@ -19,7 +19,7 @@ A cloud-native solution creates business value by building new workloads or enha
 
 ## Define business objectives for cloud-native solutions
 
-1. **Start with clear business goals.**  Define the specific outcomes your solution should achieve, such as enabling a new digital product, entering a new market, improving customer experience, or reducing operational costs. Use measurable indicators like revenue growth, time-to-market reduction, or support ticket volume to quantify success. For new features, define goals such as improving customer experience, reducing operational costs, or increasing system scalability.
+1. **Start with clear business goals.** Define the specific outcomes your solution should achieve, such as enabling a new digital product, entering a new market, improving customer experience, or reducing operational costs. Use measurable indicators like revenue growth, time-to-market reduction, or support ticket volume to quantify success. For new features, define goals such as improving customer experience, reducing operational costs, or increasing system scalability.
 
 2. **Identify constraints and success criteria.** Document any business constraints such as budget, compliance, or delivery timelines. Define what success looks like for each goal. For example, "launch a new customer portal by Q4" or "reduce checkout latency by 40%." These criteria guide prioritization and help evaluate trade-offs during planning.
 
