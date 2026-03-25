@@ -172,7 +172,7 @@ Nearly all organizations must comply with various government or industry regulat
   - Defender for Cloud Apps
   - Microsoft Teams
 
-- Review [Microsoft Defender for Cloud Secure Score](/azure/defender-for-cloud/secure-score-security-controls) to improve the overall security compliance of your Azure Virtual Desktop Landing Zones.
+- Review [Microsoft Defender for Cloud Secure Score](/azure/defender-for-cloud/secure-score-security-controls) to improve the overall security compliance of your Azure Virtual Desktop landing zones.
 
 ## Recommended security best practices and baselines
 

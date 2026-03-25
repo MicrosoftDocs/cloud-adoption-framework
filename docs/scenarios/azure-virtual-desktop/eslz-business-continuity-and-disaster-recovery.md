@@ -52,7 +52,7 @@ For host pool VM resiliency, consider these factors:
 
 - When you create a new Azure Virtual Desktop host pool, you can choose from different [availability options](/azure/virtual-machines/availability).
 - It's important to select the right option for your requirements when you create the VM. You can't later change availability options for the VM.
-- If you plan to deploy a Single VM Instance, the SLA would depend on the type of the Storage Disk it uses:
+- If you plan to deploy a single VM instance, the SLA would depend on the type of the storage disk it uses:
    - Premium SSD, Ultra Disk or Premium SSD v2 - 99.9%
    - Standard SSD Managed Disks - 99.5%
    - Standard HDD Managed Disks - 95%
