@@ -76,7 +76,7 @@ The following section describes the migration process in more detail. The steps 
 
   - Use RMAN to back up and then restore the entire database in Azure. Perform an endian conversion through XTTS if necessary. The result is a database that's a point-in-time copy of the on-premises source database. For more information, see [Transporting data across platforms](https://docs.oracle.com/en/database/oracle/oracle-database/23/admin/transporting-data.html#GUID-FE3003B9-605A-4269-B167-005AC778C870).
   
-  -  If both sources are little-endian format, use Oracle Data Guard to synchronize the newly restored database in Azure with the source database. You can't use Data Guard if the migration includes big-endian to little-endian conversion. Instead, use a SQL-based data replication utility such as Oracle GoldenGate, Quest SharePlex, or Striim to synchronize the newly restored database in Azure with the source database.
+  - If both sources are little-endian format, use Oracle Data Guard to synchronize the newly restored database in Azure with the source database. You can't use Data Guard if the migration includes big-endian to little-endian conversion. Instead, use a SQL-based data replication utility such as Oracle GoldenGate, Quest SharePlex, or Striim to synchronize the newly restored database in Azure with the source database.
   
   - After you synchronize the target database in Azure with the source on-premises database, you can schedule a *cutover*. A cutover shuts down the source on-premises database and flushes the last few transactions to the target database in Azure. Then you can open the target database in Azure as the new source database. A cutover can take as little as a few minutes, depending on the synchronization method that you use.
   
