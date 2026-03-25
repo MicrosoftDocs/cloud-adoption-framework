@@ -87,7 +87,7 @@ See more ways of structuring your repository in the [Flux Guide](https://fluxcd.
 Platform Operators and Application Operators have several options for managing Kubernetes configuration:
 
 - Raw Kubernetes YAML files that represent YAML specs for each Kubernetes API object you're deploying can work well for single environments. The drawback is that customization becomes difficult when you incorporate multiple environments, since you then need to duplicate YAML files and there isn't a good reuse method.
-- [Helm](https://helm.sh/) is a package management tool for Kubernetes objects. It’s a valid option Cluster Operators can use for installing third-party off-the-shelf applications. Make sure you don't use templating too heavily as a configuration management tool for internal applications, because it can become complex to manage as your templates grow.
+- [Helm](https://helm.sh/) is a package management tool for Kubernetes objects. It's a valid option Cluster Operators can use for installing third-party off-the-shelf applications. Make sure you don't use templating too heavily as a configuration management tool for internal applications, because it can become complex to manage as your templates grow.
   - If using Helm, Flux includes a Helm Controller that lets you declaratively manage Helm Chart releases with Kubernetes manifests. You can create a *HelmRelease* object to manage that process.
 - Kustomize is a Kubernetes native configuration management tool that introduces a template-free way to customize application configuration.
   - If using Kustomize, Flux includes a Kustomize controller that specializes in running continuous delivery pipelines for infrastructure and workloads defined with Kubernetes manifests and assembled with Kustomize. You can create a Kustomization object to manage that process.
@@ -100,7 +100,7 @@ The following sections provide considerations for your application pipeline and 
 #### Application pipeline
 
 - Consider the application build, testing, and validations that you need to include in your CI process. These can include linting and testing related to security, integration, and performance, which you need to create a release candidate (RC) for environment deployments.
-- You can use a traditional push deployment method to bridge the gap between a build container image in your CI pipeline and its deployment in a cluster by calling the Kubernetes API directly from your deployment pipeline.
+- You can use a traditional push deployment method to bridge the gap between a built container image in your CI pipeline and its deployment in a cluster by calling the Kubernetes API directly from your deployment pipeline.
 
 To avoid manual configuration modifications to your GitOps repository, run your CD pipeline as a service account that has permission to open pull requests (PRs) or commit a new container image change directly to a configuration repository. These changes can also provision all the YAML objects your application requires.
 
