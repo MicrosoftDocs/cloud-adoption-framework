@@ -90,7 +90,7 @@ For a detailed list of best practices for Azure VM security, see [Azure security
 
 ## Data protection
 
-- Microsoft Azure encrypts data-at-rest to protect it from 'out of band' attacks, such as attempts to access [underlying storage](/azure/security/fundamentals/encryption-atrest#encryption-at-rest-in-microsoft-cloud-services). This encryption helps ensure that attackers can't easily read or modify your data. Microsoft's approach to enabling two layers of encryption for data at rest involves:
+- Microsoft Azure encrypts data-at-rest to protect it from out-of-band attacks, such as attempts to access [underlying storage](/azure/security/fundamentals/encryption-atrest#encryption-at-rest-in-microsoft-cloud-services). This encryption helps ensure that attackers can't easily read or modify your data. Microsoft's approach to enabling two layers of encryption for data at rest involves:
   - Disk encryption using customer-managed keys. Users provide their own key for disk encryption. They can bring their own keys to their Key Vault (a practice known as BYOK – Bring Your Own Key), or generate new keys in Azure Key Vault to encrypt the desired resources (including session host disks).
   - Infrastructure encryption using platform-managed keys. By default, disks are automatically encrypted at rest through platform-managed encryption keys.
   - [Encryption at the VM host](/azure/virtual-machines/disk-encryption#encryption-at-host---end-to-end-encryption-for-your-vm-data) (Azure server that your VM is allocated to). Each virtual machine's temporary disk and OS/data disk cache data are stored on the VM host. When encryption at the VM host is enabled, that data is encrypted at rest and flows encrypted to the Storage service to be persisted.  
