@@ -52,13 +52,13 @@ The following guidance can help you find the right tools to automate compliance 
 
 #### Automate regulatory compliance governance
 
-- **Apply regulatory compliance policies.** Use [built-in regulatory compliance policies](/azure/governance/policy/samples/#regulatory-compliance) that align with compliance standards, such as HITRUST/HIPAA, ISO 27001, CMMC, FedRamp, and PCI DSSv4.
+- **Apply regulatory compliance policies.** Use [built-in regulatory compliance policies](/azure/governance/policy/samples/#regulatory-compliance) that align with compliance standards, such as HITRUST/HIPAA, ISO 27001, CMMC, FedRAMP, and PCI DSSv4.
 
 - **Automate custom restrictions.** [Create custom policies](/azure/governance/policy/tutorials/create-custom-policy-definition) to define your own rules for working with Azure.
 
 #### Automate security governance
 
-- **Apply security policies.** Use the [built-in security policies](/azure/governance/policy/samples/) and [automated security compliance](/azure/defender-for-cloud/security-policy-concept) to align with common security standards. There are built-in policies for NIST 800 SP series, Center for Internet Security benchmarks, and the Microsoft cloud security benchmark. Use built-in policies to [automate the security configuration](/azure/governance/policy/samples/built-in-policies) of specific Azure services. [Create custom policies](/azure/governance/policy/tutorials/create-custom-policy-definition) to define your own rules for working with Azure.
+- **Apply security policies.** Use the [built-in security policies](/azure/governance/policy/samples/) and [automated security compliance](/azure/defender-for-cloud/security-policy-concept) to align with common security standards. There are built-in policies for NIST SP 800 series, Center for Internet Security benchmarks, and the Microsoft cloud security benchmark. Use built-in policies to [automate the security configuration](/azure/governance/policy/samples/built-in-policies) of specific Azure services. [Create custom policies](/azure/governance/policy/tutorials/create-custom-policy-definition) to define your own rules for working with Azure.
 
 - **Apply identity governance.** Enable [Microsoft Entra multifactor authentication (MFA)](/entra/identity/authentication/concept-mfa-howitworks) and [self-service password reset](/entra/identity/authentication/concept-sspr-howitworks). [Eliminate weak passwords](/entra/identity/authentication/concept-password-ban-bad-combined-policy). Automate other aspects of [identity governance](/entra/id-governance/identity-governance-overview), such as access request workflows, access reviews, and identity lifecycle management. [Enable just-in-time access](/entra/id-governance/privileged-identity-management/pim-configure) to limit access to important resources. Use [Conditional Access](/entra/identity/conditional-access/concept-conditional-access-policy-common) policies to [grant or block](/entra/identity/conditional-access/concept-conditional-access-grant) user and [device identities](/entra/identity/devices/overview) access to cloud services.
 
