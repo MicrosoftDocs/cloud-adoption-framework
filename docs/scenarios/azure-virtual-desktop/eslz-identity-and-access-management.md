@@ -89,7 +89,7 @@ Follow these design recommendations to optimize identity and access management f
 
 - **Implement conditional access.** Create Conditional Access policies for Azure Virtual Desktop to enforce multifactor authentication based on conditions like risky sign-ins. For more information, see [Enable Microsoft Entra multifactor authentication for Azure Virtual Desktop](/azure/virtual-desktop/set-up-mfa).
 
-- **Enable single sign-on with AD FS.** Configure Active Directory Federation Service (AD FS) to enable single sign-on for users on the corporate network.
+- **Enable single sign-on with AD FS.** Configure Active Directory Federation Services (AD FS) to enable single sign-on for users on the corporate network.
 
 ## Next steps
 

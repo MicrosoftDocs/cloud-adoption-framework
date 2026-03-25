@@ -80,7 +80,7 @@ If you run a multitenant deployment, such as a [Citrix Service Provider architec
 
 If you segment business units beyond workload-specific networks, the complexity of the overall environment increases. Determine whether this method is worth the increased complexity. Use this method as an exception rather than the rule, and apply it with the right justification and projected scale. For example, you might create a network for 1,000 contractors that support finance to accommodate security needs beyond the standard single-session VDI network.
 
-You can use [application security groups](/azure/virtual-network/application-security-groups) to allow only specific VMs to access business unit application back ends on a shared virtual network. For example, you might limit customer relations management (CRM) back-end access to the CRM machine catalog VMs that the marketing team uses in the multisession VDA network.
+You can use [application security groups](/azure/virtual-network/application-security-groups) to allow only specific VMs to access business unit application back ends on a shared virtual network. For example, you might limit customer relationship management (CRM) back-end access to the CRM machine catalog VMs that the marketing team uses in the multisession VDA network.
 
 ## Multiregion deployment
 
@@ -104,7 +104,7 @@ Consider the following recommendations for your large-scale deployments.
 
 For large-scale deployments, create dedicated shared service and management spokes, and directly peer them with your VDA spokes. This configuration minimizes latency and prevents you from reaching networking limits in your hub networks. The following points illustrate this approach, and they correspond to the preceding diagram.
 
-*  *(A) Hub virtual network configuration*: Use the hub virtual network as the central point for firewalls and connectivity for cross-premises networks and external networks.
+* *(A) Hub virtual network configuration*: Use the hub virtual network as the central point for firewalls and connectivity for cross-premises networks and external networks.
 
 * *(B) Shared resource spoke peering*: Ensure that you peer your hub virtual network with the shared resource spoke to provide the [Citrix Cloud Connectors](https://docs.citrix.com/en-us/citrix-cloud/citrix-cloud-resource-locations/citrix-cloud-connector/technical-details.html) with 443 outbound connectivity. 
 * *(C) Shared resource spoke virtual networks*: Host all required and optional Citrix components, and host shared services, such as profile storage accounts and Azure compute galleries, in the shared resource spoke virtual networks. To minimize latency and improve performance, peer these networks directly with the VDA spokes.
@@ -113,7 +113,7 @@ For large-scale deployments, create dedicated shared service and management spok
 
 #### Understand resource limitations
 
-When you design a deployment for a large-scale Citrix managed database service on Azure, understand [Citrix limitations](https://docs.citrix.com/en-us/citrix-daas/limits.html) and [Azure limitations](/azure/azure-resource-manager/management/azure-subscription-service-limits#networking-limits). These limitations affect your design, configuration, and management of Citrix and Azure environments. They also affect the performance, scalability, and availability of virtual desktops and applications. The limits are dynamic, so check for updates frequently. If current limits don't meet your needs, promptly contact your Microsoft and Citrix representatives.
+When you design a deployment for a large-scale Citrix managed desktop service on Azure, understand [Citrix limitations](https://docs.citrix.com/en-us/citrix-daas/limits.html) and [Azure limitations](/azure/azure-resource-manager/management/azure-subscription-service-limits#networking-limits). These limitations affect your design, configuration, and management of Citrix and Azure environments. They also affect the performance, scalability, and availability of virtual desktops and applications. The limits are dynamic, so check for updates frequently. If current limits don't meet your needs, promptly contact your Microsoft and Citrix representatives.
 
 ## Contributors
 
