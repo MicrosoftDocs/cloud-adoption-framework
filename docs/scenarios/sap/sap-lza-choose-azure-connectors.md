@@ -83,7 +83,7 @@ The following table shows a summary of all SAP connectors available in Azure Dat
 > [!TIP]
 > The supported connectors and capabilities usually depend on the SAP product instance, for example BW on HANA vs. BW/4HANA, and its release. For more information, see the product documentation for each connector.
 >
->For information about overall support for the SAP data integration scenario, see [SAP data integration](https://github.com/Azure/Azure-DataFactory/blob/main/whitepaper/SAP%20Data%20Integration%20using%20Azure%20Data%20Factory.pdf).
+> For information about overall support for the SAP data integration scenario, see [SAP data integration](https://github.com/Azure/Azure-DataFactory/blob/main/whitepaper/SAP%20Data%20Integration%20using%20Azure%20Data%20Factory.pdf).
 
 | SAP&#xa0;source&#xa0;application | Data&#xa0;type | Azure connector | Supported&#xa0;objects&#xa0;and&#xa0;mode | Protocol&#xa0;and&#xa0;connection | Authentication | More information | Parallelization and&#xa0;performance| Data&#xa0;volume |
 |---|---|---|---|---|---|---|---|---|

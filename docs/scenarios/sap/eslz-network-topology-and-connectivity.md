@@ -155,8 +155,6 @@ We don't recommend that you host the database management system (DBMS) and appli
 
 - For migration projects, consider tuning the network parameters. For example, you can improve performance by disabling the acknowledgments during the migration period.
 
-- Explore the [SAP support portal](https://support.sap.com/en/index.html) and [SAP Note 2931465](https://launchpad.support.sap.com/#/notes/2931465) to learn more about implementing SAP.
-
 ## Design considerations for RISE implementations
 
 When you run SAP RISE deployments in Azure, the integration of the SAP-managed environment with your own Azure ecosystem is paramount. To learn more about the best practices and guidance, see [Integrating Azure with SAP RISE managed workloads](/azure/virtual-machines/workloads/sap/sap-rise-integration).
