@@ -13,13 +13,13 @@ A successful migration doesn't end at cutover. Post-migration optimization ensur
 
 ## Fine-tune workload configurations
 
-A workload’s behavior often changes after migration due to differences in infrastructure, scaling, and service architecture. Immediate configuration adjustments help stabilize performance and reduce unnecessary costs.
+A workload's behavior often changes after migration due to differences in infrastructure, scaling, and service architecture. Immediate configuration adjustments help stabilize performance and reduce unnecessary costs.
 
 1. **Use Azure Advisor to identify optimization opportunities.** [Azure Advisor](/azure/advisor/advisor-overview) provides tailored recommendations across cost, performance, reliability, and security. These insights help you prioritize actions based on value and feasibility. Access Azure Advisor from the Azure portal and review recommendations by category.
 
 2. **Apply service-specific configuration guidance.** Each Azure service has unique tuning parameters. Use the Azure Well-Architected Framework [Azure services guides](/azure/well-architected/service-guides/?product=popular) to align configurations with best practices. This guidance helps ensure workloads are optimized for Azure.
 
-3. **Review Microsoft Defender for Cloud recommendations.** [Microsoft Defender for Cloud](/azure/defender-for-cloud/review-security-recommendations) identifies security misconfigurations and vulnerabilities. Address these issues early to reduce risk exposure and align with your organization’s security posture.
+3. **Review Microsoft Defender for Cloud recommendations.** [Microsoft Defender for Cloud](/azure/defender-for-cloud/review-security-recommendations) identifies security misconfigurations and vulnerabilities. Address these issues early to reduce risk exposure and align with your organization's security posture.
 
 ## Validate critical configurations
 
@@ -59,7 +59,7 @@ User feedback provides real-world validation of workload performance and usabili
 
 1. **Gather structured feedback from end users.** Use surveys, interviews, or support tickets to collect feedback on performance, reliability, and usability. Use tools like Microsoft Forms or other platforms to streamline collection.
 
-2. **Document and prioritize issues.**  Centralize all feedback in a backlog using Azure DevOps or GitHub Issues. Categorize issues by severity and business value. Prioritize high-severity issues that affect business continuity, user experience, or compliance. This approach ensures transparency and alignment across teams.
+2. **Document and prioritize issues.** Centralize all feedback in a backlog using Azure DevOps or GitHub Issues. Categorize issues by severity and business value. Prioritize high-severity issues that affect business continuity, user experience, or compliance. This approach ensures transparency and alignment across teams.
 
 3. **Assign ownership for follow-up actions.** Assign each issue or improvement opportunity to a specific individual or team. Ownership ensures accountability and timely resolution. Use tagging, assignment, and notification features in your backlog management tool to track progress and maintain visibility.
 
