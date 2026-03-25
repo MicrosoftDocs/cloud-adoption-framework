@@ -68,7 +68,7 @@ The following considerations help you get started with your approach based on wh
 
 > [!TIP]
 >
-> If there isn’t a connector available for your application or scenario, consider moving the data to a supported application or scenario.
+> If there isn't a connector available for your application or scenario, consider moving the data to a supported application or scenario.
 
 The following table shows the broader choices available depending on which SAP application you want to fetch data from.
 
@@ -78,10 +78,10 @@ The following table shows the broader choices available depending on which SAP a
 | SAP BW  | [SAP Table](/azure/data-factory/connector-sap-table?tabs=data-factory), [SAP BW OpenHub](/azure/data-factory/connector-sap-business-warehouse-open-hub), [SAP BW via MDX](/azure/data-factory/connector-sap-business-warehouse?tabs=data-factory) | [SAP CDC](/azure/data-factory/connector-sap-change-data-capture)                                    |
 | SAP ECC, SAP S/4 HANA  | [SAP Table](/azure/data-factory/connector-sap-table?tabs=data-factory), [SAP ECC](/azure/data-factory/connector-sap-ecc?tabs=data-factory)   | [SAP CDC](/azure/data-factory/connector-sap-change-data-capture)                                   |
 
-The following table shows a summary of all SAP connectors available in Azure Data Factory for different SAP sources, scenarios, and the connector’s capabilities.
+The following table shows a summary of all SAP connectors available in Azure Data Factory for different SAP sources, scenarios, and the connector's capabilities.
 
 > [!TIP]
-> The supported connectors and capabilities usually depend on the SAP product instance, for example BW on HANA vs. BW/4HANA, and its release. For more information, see the production documentation for each connector.
+> The supported connectors and capabilities usually depend on the SAP product instance, for example BW on HANA vs. BW/4HANA, and its release. For more information, see the product documentation for each connector.
 >
 >For information about overall support for the SAP data integration scenario, see [SAP data integration](https://github.com/Azure/Azure-DataFactory/blob/main/whitepaper/SAP%20Data%20Integration%20using%20Azure%20Data%20Factory.pdf).
 

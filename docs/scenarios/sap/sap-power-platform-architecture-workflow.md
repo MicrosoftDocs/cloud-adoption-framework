@@ -116,7 +116,7 @@ There are several considerations to take into account when you integrate SAP wit
 
 **Future-proofing**
 
--  _Flexibility_: Design the integration to be adaptable to changes in business requirements and technology updates.
+- _Flexibility_: Design the integration to be adaptable to changes in business requirements and technology updates.
 - _Vendor roadmaps_: Stay informed about updates and roadmap changes from SAP and Microsoft that could affect your integration.
 
 By thoroughly evaluating these factors when you start your integration project, you can mitigate risks, help ensure compliance, and set a strong foundation for a successful integration between SAP and Microsoft Power Platform.

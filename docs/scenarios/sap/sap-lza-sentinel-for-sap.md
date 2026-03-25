@@ -51,11 +51,11 @@ See the following design considerations for each component.
 - When multiple connectors are hosted on a single machine:
   - The container's naming pattern is `sapcon-<SID>`, so you can't connect to multiple systems with the same SID.
   - If you connect to multiple systems that have different client IDs, use the `--multi-clients` undocumented switch when you run the kickstart script. The container that's created has the naming pattern `sapcon-<SID>-<client>`.
-  - When you connect to multiple systems that have the same SID and the same client ID, the connector must be deployed on different hosts. The systems might have different system numbers.  The connector must also be deployed on different hosts for multiple system environments, like production, development, or test, that use the same SID, client ID, or system number. Log Analytics data from these systems are indistinguishable. When you work with systems that have identical SIDs, client IDs, or system numbers, use different Log Analytics workspaces to distinguish the data.
+  - When you connect to multiple systems that have the same SID and the same client ID, the connector must be deployed on different hosts. The systems might have different system numbers. The connector must also be deployed on different hosts for multiple system environments, like production, development, or test, that use the same SID, client ID, or system number. Log Analytics data from these systems are indistinguishable. When you work with systems that have identical SIDs, client IDs, or system numbers, use different Log Analytics workspaces to distinguish the data.
 
 ### SAP application servers
 
-- Use an SAP connector to connect to ABAP servers to Microsoft Sentinel.
+- Use an SAP connector to connect ABAP servers to Microsoft Sentinel.
 - Install the SAP connector on a separate virtual machine.
 - Each SAP system with a unique system ID requires a separate SAP connector.
 - Store the credentials in Azure Key Vault.

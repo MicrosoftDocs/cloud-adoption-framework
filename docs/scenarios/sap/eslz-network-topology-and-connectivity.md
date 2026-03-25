@@ -155,7 +155,7 @@ We don't recommend that you host the database management system (DBMS) and appli
 
 - For migration projects, consider tuning the network parameters. For example, you can improve performance by disabling the acknowledgments during the migration period.
 
-- Explore the [SAP support portal](https://support.sap.com/en/index.html) and [SAP Note 2391465](https://launchpad.support.sap.com/#/notes/2931465) to learn more about implementing SAP.
+- Explore the [SAP support portal](https://support.sap.com/en/index.html) and [SAP Note 2931465](https://launchpad.support.sap.com/#/notes/2931465) to learn more about implementing SAP.
 
 ## Design considerations for RISE implementations
 
