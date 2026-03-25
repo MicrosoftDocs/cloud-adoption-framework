@@ -80,7 +80,7 @@ There are two ways you can update the gold image your VMs in a particular host p
 Method one:
 
 - Deploy a second host pool, then cut users over to the new host pool when you're ready.
-- Make the old host pool available for if a rollback is needed.
+- Make the old host pool available if a rollback is needed.
 - You can remove the old host pool once your organization is satisfied that the new host pool is working correctly.
 
 Method two:
@@ -128,7 +128,7 @@ Use the [Azure Image Builder](/azure/virtual-machines/image-builder-overview) (A
 > [!NOTE]
 > Azure Image Builder is currently available within [select regions](/azure/virtual-machines/image-builder-overview), but you can distribute images outside of these regions.
 
-As part of your gold image build process, consider all the applications you need to install and determine if they can be installed via scripts. Make sure you have application installation commands scripted in PowerShell and committed to your Git repo. If you can't download application installers over public internet, consider placing the applications in Azure Blob Storage. If your application installation processes need secrets, consider placing them in Azure Key Vault.
+As part of your gold image build process, consider all the applications you need to install and determine if they can be installed via scripts. Make sure you have application installation commands scripted in PowerShell and committed to your Git repo. If you can't download application installers over the public internet, consider placing the applications in Azure Blob Storage. If your application installation processes need secrets, consider placing them in Azure Key Vault.
 
 To get started with Azure Image Builder, see [Create an Azure Virtual Desktop image using Azure VM Image Builder and PowerShell](/azure/virtual-machines/windows/image-builder-virtual-desktop)
 

@@ -42,7 +42,7 @@ Azure Arc-enabled Kubernetes provides two types of services:
 
 - **Azure Monitor Container Insights:** [Azure Monitor Container Insights](/azure/azure-monitor/containers/container-insights-overview) provides telemetry visibility by collecting performance metrics from controllers, nodes, and containers available in Kubernetes through the Metrics API. Container logs are also collected. This is billed by data ingestion, retention, and exports.
 
-- **Microsoft Defender for Cloud:**  Microsoft Defender for Cloud is offered in [two modes](/azure/defender-for-cloud/enhanced-security-features-overview#what-are-the-benefits-of-enabling-enhanced-security-features):
+- **Microsoft Defender for Cloud:** Microsoft Defender for Cloud is offered in [two modes](/azure/defender-for-cloud/enhanced-security-features-overview#what-are-the-benefits-of-enabling-enhanced-security-features):
 
    **Without enhanced security features (Free)** - [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) is enabled for free on all your Azure subscriptions when you visit the workload protection dashboard in the Azure portal for the first time, or if you enable it programmatically via API. This free mode provides the secure score and its related features: security policy, continuous security assessment, and actionable security recommendations for your Azure resources.
 
@@ -51,9 +51,9 @@ Azure Arc-enabled Kubernetes provides two types of services:
 - **Kubernetes GitOps configuration:** [Kubernetes GitOps configuration](/azure/azure-arc/kubernetes/conceptual-configurations) delivers configuration management and application deployment using GitOps. Admins can declare their cluster configuration and applications in Git. Development teams can then use pull requests and other tools they're familiar with (existing Azure Pipelines, Git, Kubernetes manifests, Helm charts) to easily deploy applications into Azure Arc-enabled Kubernetes clusters and make updates in production. You're charged monthly based on the total vCPU-hours used by your cluster. Clusters incur a single charge for configuration management, no matter how many repositories are connected.
 
   > [!Note]
-  > Clusters can function without a constant connection to Azure. When disconnected, each cluster’s charge depends on the last known number of vCPUs that were registered with Azure Arc. The vCPU count is updated every 5 minutes while your cluster is connected to Azure. Each cluster's first 6 vCPUs are included at no cost.
+  > Clusters can function without a constant connection to Azure. When disconnected, each cluster's charge depends on the last known number of vCPUs that were registered with Azure Arc. The vCPU count is updated every 5 minutes while your cluster is connected to Azure. Each cluster's first 6 vCPUs are included at no cost.
   >
-  > If your cluster will be disconnected from Azure and you don’t want to be charged for Kubernetes configurations, you can delete the configurations.
+  > If your cluster will be disconnected from Azure and you don't want to be charged for Kubernetes configurations, you can delete the configurations.
 
 - **Azure Policy for Kubernetes:** [Azure Policy for Kubernetes](/azure/governance/policy/concepts/policy-for-kubernetes) extends Gatekeeper v3, an admission controller webhook for Open Policy Agent (OPA), to apply at-scale enforcements and safeguards on your clusters in a centralized, consistent manner. Azure Policy lets you manage and report on the compliance state of your Kubernetes clusters from one place. There's currently no cost for Azure Policy for Kubernetes while in public preview.
 
@@ -137,7 +137,7 @@ The following sections contain design recommendations for Azure Arc-enabled Kube
 - Review [Microsoft Sentinel pricing](https://azure.microsoft.com/pricing/details/azure-sentinel/).
 - Use the Azure Pricing Calculator to estimate [Microsoft Sentinel costs](/azure/sentinel/azure-sentinel-billing) for your organization.
 
-<!--   :::image type="content" source="./media/arc-enabled-kubernetes-cost-sentinel-costs.png" alt-text="A screenshot showing Microsoft Sentinel costs." lightbox="./media/arc-enabled-kubernetes-cost-sentinel-costs.png" border="true"::: -->
+<!-- :::image type="content" source="./media/arc-enabled-kubernetes-cost-sentinel-costs.png" alt-text="A screenshot showing Microsoft Sentinel costs." lightbox="./media/arc-enabled-kubernetes-cost-sentinel-costs.png" border="true"::: -->
 
 - Use [Microsoft Sentinel Cost Management and Billing](/azure/sentinel/azure-sentinel-billing#manage-and-monitor-azure-sentinel-costs) to understand Microsoft Sentinel analysis costs.
 
@@ -154,7 +154,7 @@ The following sections contain design recommendations for Azure Arc-enabled Kube
 ### Azure Key Vault
 
 - Review [Azure Key Vault pricing](https://azure.microsoft.com/pricing/details/key-vault/).
-- Review [recommendations for security and governance](./eslz-arc-kubernetes-management-disciplines.md) to understand how you can use Azure Key vault to manage secrets and certificates on your Azure Arc-enabled Kubernetes clusters.
+- Review [recommendations for security and governance](./eslz-arc-kubernetes-management-disciplines.md) to understand how you can use Azure Key Vault to manage secrets and certificates on your Azure Arc-enabled Kubernetes clusters.
 - Use [Azure Key Vault insights](/azure/azure-monitor/insights/key-vault-insights-overview) to monitor secrets operations.
 
     :::image type="content" source="./media/arc-enabled-kubernetes-cost-key-vault-insights.png" alt-text="A screenshot showing Azure Key Vault insights" lightbox="./media/arc-enabled-kubernetes-cost-key-vault-insights.png" border="true":::

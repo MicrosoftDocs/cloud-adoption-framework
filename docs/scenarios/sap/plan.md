@@ -20,7 +20,7 @@ Like most complex platforms, your SAP digital estate will include three asset ca
 
 - **Foundational assets:** Your SAP platform and the supporting environment are also upheld by a collection of necessary assets like identity providers, networking, operational management tools, and more. Azure refers to these assets as foundational utilities, and this article series will later describe how to deploy an Azure landing zone to provide them.
 
-- **Workload assets:** Most organizations extend or integrate SAP into various business processes that are supported by a range of workloads across the portfolio. Those workloads are supported by their collections of applications, data, and virtual machines that aren't part of the core platform deployment. Each workload with a dependency on the SAP platform should be named, inventoried, rationalized, and tracked individually to allow for granular financial and technical planning decisions.Several considerations should be included in those processes when planning for SAP adoption:
+- **Workload assets:** Most organizations extend or integrate SAP into various business processes that are supported by a range of workloads across the portfolio. Those workloads are supported by their collections of applications, data, and virtual machines that aren't part of the core platform deployment. Each workload with a dependency on the SAP platform should be named, inventoried, rationalized, and tracked individually to allow for granular financial and technical planning decisions. Several considerations should be included in those processes when planning for SAP adoption:
 
 - **Evaluate dependencies:** Dependencies on a core platform like SAP are often undocumented. Be sure to include a dependency analysis for all assets in the portfolio.
 
@@ -42,7 +42,7 @@ Like most complex platforms, your SAP digital estate will include three asset ca
 
 - **Hybrid considerations:** During the execution of the plan, will you release in migration waves? Will you need hybrid connectivity for production traffic during migration waves? Using a hybrid cloud allows companies to scale computing resources. Hybrid implementations also eliminate the need to make massive capital expenditures to handle short-term spikes in demand. When the business needs to free up local resources for more sensitive data or applications, a hybrid implementation accelerates resource reduction efforts.
 
-- **Environment planning:** Are you moving production and nonproduction SAP platforms at the same time or separately? Customers sometimes move their nonproduction SAP platform to Azure, creating an environment for learning and reducing risk. Once the team is comfortable with the SAP platform's operations and Azure workloads, they will migrate the production platform and workloads weeks or months later?
+- **Environment planning:** Are you moving production and nonproduction SAP platforms at the same time or separately? Customers sometimes move their nonproduction SAP platform to Azure, creating an environment for learning and reducing risk. Once the team is comfortable with the SAP platform's operations and Azure workloads, they will migrate the production platform and workloads weeks or months later.
 
 - **Platform rationalization:** The most important consideration is how to rationalize an SAP platform's assets; consider how you'll migrate the platform. The migration approach will shape the inventory of assets that will persist in the cloud and the work to get there. The following options can be considered:
 

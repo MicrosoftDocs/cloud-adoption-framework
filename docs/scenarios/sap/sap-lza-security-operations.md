@@ -26,7 +26,7 @@ SAP systems are business-critical in an enterprise landscape. To ensure that onl
 
 - Use **role-based access control (RBAC)** to manage access to SAP workload resources that deploy in Azure. Every Azure subscription has a trust relationship with a Microsoft Entra tenant. Create a Microsoft Entra group for SAP administrators, and use RBAC to grant permissions to the SAP group.
 
-- **Single sign-on (SSO)** between SAP and Microsoft Entra ID or Azure Directory Federation Services (AD FS) allows SAP users to access SAP applications with SAP front-end software, like SAP GUI, or a browser with HTTP or HTTPS, for example SAP Fiori.
+- **Single sign-on (SSO)** between SAP and Microsoft Entra ID or Active Directory Federation Services (AD FS) allows SAP users to access SAP applications with SAP front-end software, like SAP GUI, or a browser with HTTP or HTTPS, for example SAP Fiori.
 
 - Use **Microsoft Entra Privileged Identity Management (PIM)** to manage and assign roles to users and groups to allow them to perform privileged actions. These users only have access to the resources when they need to perform their job, such as stopping or starting a virtual machine (VM).
 

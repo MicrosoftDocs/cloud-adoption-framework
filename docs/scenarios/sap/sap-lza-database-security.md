@@ -47,9 +47,9 @@ Real-time replication between a TDE-enabled database on SQL Server and SAP HANA 
 
 Backup encryption is when you encrypt the backup file while the backup is taken. It encrypts all the data pages in the backup file and creates a certificate or asymmetric key requirement to restore the backup file, which prevents an unauthorized restore.
 
-If the database isn’t encrypted with TDE before the encrypted backup is taken, it still isn’t encrypted after the restore. Only the backup files get encrypted. The database file and its content aren’t altered.
+If the database isn't encrypted with TDE before the encrypted backup is taken, it still isn't encrypted after the restore. Only the backup files get encrypted. The database file and its content aren't altered.
 
-You can use backup encryption with TDE, but it’s not beneficial because the data is already encrypted in the database files and in the backup files. When you use backup encryption and TDE together, the encrypted database with the TDE certificate or key-encrypted data pages are encrypted again with the backup certificate or key. This method prolongs the backup process and adds extra CPU load to the system while the backup process runs.
+You can use backup encryption with TDE, but it's not beneficial because the data is already encrypted in the database files and in the backup files. When you use backup encryption and TDE together, the encrypted database with the TDE certificate or key-encrypted data pages are encrypted again with the backup certificate or key. This method prolongs the backup process and adds extra CPU load to the system while the backup process runs.
 
 ## Secure SQL Server and SAP system
 

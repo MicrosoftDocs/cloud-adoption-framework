@@ -203,7 +203,7 @@ SLT Replication Server provides real-time data replication from SAP sources and/
 There are three types of toolsets to monitor the extraction from SLT to Azure.
 
 - **ODQMON** is the overall monitoring tool for data extraction. Start the analysis with ODQMON to track data inconsistencies, initial performance analysis, and open subscription and extraction requests.
-- **LTRC** is the transaction to use to check performance analysis. It’s useful if you have data replication issues from the source system to ODP because you can monitor the dataflow and find inconsistencies.
+- **LTRC** is the transaction to use to check performance analysis. It's useful if you have data replication issues from the source system to ODP because you can monitor the dataflow and find inconsistencies.
 - **SM37** provides detailed monitoring of each SLT extraction step.
 
 The normal housekeeping should be done using ODQMON where you can manage the subscription directly and you should not use LTRC for the same.
@@ -228,7 +228,7 @@ In the initial load mode (ODPSLT), there are three steps to extract data from SL
 1. Access the plan calculation that splits the source table into smaller chunks. This step depends on the initial load mode that you select during the SLT configuration and the size of the table. The resource-optimized option is recommended.
 1. The data load transfers the data from the source system to ODP.
 
-- Each step is controlled by the background jobs. You can use the SM37 and LTRC transactions to monitor the duration. If your system is overused, the background jobs might start later because there aren’t enough free batch work processes. When tasks are idle, performance suffers.
+- Each step is controlled by the background jobs. You can use the SM37 and LTRC transactions to monitor the duration. If your system is overused, the background jobs might start later because there aren't enough free batch work processes. When tasks are idle, performance suffers.
 
 - If the access plan calculation takes a long time and your initial load mode is set to "performance optimized", change it to "resource optimized" and rerun the extraction. If the data load takes a long time, increase the number of parallel threads in the configuration.
 
@@ -236,7 +236,7 @@ In the initial load mode (ODPSLT), there are three steps to extract data from SL
 
 - For replication:
   - Ensure that you have enough data transfer jobs that aren't reserved for the initial load.
-  - Check that you don’t have an unprocessed logging table record in the load statistics.
+  - Check that you don't have an unprocessed logging table record in the load statistics.
   - Ensure that the replication option is set to real-time.
 
 - Advanced replication settings are available in LTRS. For more information, see the [SLT troubleshooting guide](https://help.sap.com/doc/bc5f2d71bca841bab3cf601c746cf902/16.0.4.0/en-US/Replication_Server_Troubleshooting_Guide_en.pdf).

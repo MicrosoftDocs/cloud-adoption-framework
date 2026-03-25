@@ -77,7 +77,7 @@ The 2021 Forrester study "The total economic impact of Microsoft Azure Virtual D
 - Time to market benefits exceed $3 million USD
 - Cost avoidance exceeds $7 million USD
 - 102 percent return on investment
-- Pay back in nine months
+- Payback in nine months
 
 Actual returns are likely to vary for individual customers. However, the tables in the Forrester study can capture your organization's financial data for validation and business justification.
 

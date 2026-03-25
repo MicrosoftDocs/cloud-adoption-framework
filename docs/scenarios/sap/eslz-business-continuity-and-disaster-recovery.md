@@ -78,7 +78,7 @@ Before you deploy your high availability infrastructure, determine whether to de
 
 - The VMs aren't spread across different availability zones.
 
-- The type of VMs that you can deploy through a single availability set are restricted because the first VM that you deploy in the set defines the host. For example, you can't combine M-series VMs and E-series VMs into one availability set.
+- The type of VMs that you can deploy through a single availability set is restricted because the first VM that you deploy in the set defines the host. For example, you can't combine M-series VMs and E-series VMs into one availability set.
 
 When you deploy your high availability architecture across different availability zones, you can have a higher SLA for the VMs. For more information, see [Azure VM SLAs](https://azure.microsoft.com/support/legal/sla/virtual-machines). Depending on the Azure region, you might discover different network latency conditions in network traffic between VMs. For more information, see [SAP workload configurations with Azure availability zones](/azure/virtual-machines/workloads/sap/sap-ha-availability-zones).
 
@@ -201,7 +201,7 @@ The main challenges of pairing Azure regions for SAP workloads are:
 - The pairs aren't always consistent with M-series or Mv2-series VM services. Many organizations that deploy their SAP systems don't use Azure paired regions. Instead, they choose regions based on the availability of required VM types.
 - You can replicate standard storage between paired regions, but you can't use standard storage to store your databases or virtual hard disks. You can replicate backups only between paired regions that you use. For all other data, run your replication by using native DBMS features like SQL Server Always On or SAP HANA system replication. Use a combination of Site Recovery, tools like `rsync` or `robocopy`, and other non-Microsoft software for the SAP application layer.
 
-- If a disaster occurs, multiple affected customers in an Azure region fail over to the corresponding paired disaster recovery region. This situation leads to competition of resources to bring up dormant VMs in the disaster recovery region. The workaround is to run nonproduction systems in the disaster recovery region and use the same resources to host disaster recovery replicas of production systems. This dual-purpose use of Azure infrastructures in the disaster recovery region helps you avoid resource capacity constraints.
+- If a disaster occurs, multiple affected customers in an Azure region fail over to the corresponding paired disaster recovery region. This situation leads to competition for resources to bring up dormant VMs in the disaster recovery region. The workaround is to run nonproduction systems in the disaster recovery region and use the same resources to host disaster recovery replicas of production systems. This dual-purpose use of Azure infrastructures in the disaster recovery region helps you avoid resource capacity constraints.
 
 Another important consideration is to secure the required operating capacity in the disaster region. If a disaster occurs, you might need to run the SAP application for a minimal window of time with minimal IT capacity and by critical human resources only while you work to recover normal operation in the primary region. This strategy requires that you have minimal IT infrastructure available in the disaster recovery region.  
 
@@ -224,7 +224,7 @@ Some organizations use a combination of high availability and disaster recovery 
 - Geopolitical factors are involved.
 - It's a low-cost option that supports zone failures, sometimes combined with backup transfer to the secondary region for natural catastrophes that affect a large radius.
 
-Another factor to consider when you choose your disaster recovery region is the RPO and RTO for failing over to the disaster recovery site. The greater the distance between the production region and disaster recovery regions, the higher the network latency. You replicate asynchronously between Azure regions, but network latency can affect the throughput that you can replicate and the RPO target. To minimize your RPO, you can use a combined high availability and disaster recovery architecture. But this configuration poses a potentially higher risk from large-scale natural disasters.
+Another factor to consider when you choose your disaster recovery region is the RPO and RTO for failing over to the disaster recovery site. The greater the distance between the production region and disaster recovery region, the higher the network latency. You replicate asynchronously between Azure regions, but network latency can affect the throughput that you can replicate and the RPO target. To minimize your RPO, you can use a combined high availability and disaster recovery architecture. But this configuration poses a potentially higher risk from large-scale natural disasters.
 
 ### Design recommendations for disaster recovery
 

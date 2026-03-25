@@ -46,7 +46,7 @@ Review the [identity and access management design area](../../../ready/landing-z
 
 **For Kubernetes cluster onboarding:**
 
-- Decide between Microsoft Entra user (for manual onboarding of a single cluster) vs service principal (for scripted and headless onboarding of multiple clusters) to onboard Kubernetes clusters to Azure Arc individually or at scale. For more implementation details, refer to the [Automation disciplines critical design area](./eslz-arc-kubernetes-automation-disciplines.md).
+- Decide between a Microsoft Entra user (for manual onboarding of a single cluster) vs a service principal (for scripted and headless onboarding of multiple clusters) to onboard Kubernetes clusters to Azure Arc individually or at scale. For more implementation details, refer to the [Automation disciplines critical design area](./eslz-arc-kubernetes-automation-disciplines.md).
 - The identity of the onboarding entity needs to have cluster-admin ClusterRoleBinding on the cluster. Decide between using a user from your on-premises or other cloud identity provider or using a Kubernetes service account with cluster-admin role.
 
 **For Kubernetes cluster management:**
@@ -85,7 +85,7 @@ Azure Arc-enabled Kubernetes manages Kubernetes clusters using Azure RBAC and su
 |Azure Arc Kubernetes Cluster Admin|Lets you manage all resources in the cluster.|
 |Azure Arc Kubernetes Viewer|Lets you view all resources in cluster/namespace, except secrets.|
 |Azure Arc Kubernetes Writer|Lets you update everything in cluster/namespace, except (cluster) roles and (cluster) role bindings.|
-|Kubernetes Cluster - Azure Arc Onboarding|Role definition lets you authorize any user/service to create connected clusters resources|
+|Kubernetes Cluster - Azure Arc Onboarding|Role definition lets you authorize any user/service to create connected cluster resources|
 
 ## Next steps
 
@@ -93,7 +93,7 @@ For more information on your hybrid and multicloud journey, see the following ar
 
 - Review the [prerequisites](/azure/azure-arc/kubernetes/quickstart-connect-cluster?tabs=azure-cli#prerequisites) for Azure Arc-enabled Kubernetes.
 - Review the [validated Kubernetes distributions](/azure/azure-arc/kubernetes/validation-program#validated-distributions) for Azure Arc-enabled Kubernetes.
-- Review [common Conditional Access policies](/entra/identity/conditional-access/concept-conditional-access-policy-common?tabs=secure-foundation#template-categories) to apply when using Azure RBAC for Azure Arc-enabled Kubernetes cluster.
+- Review [common Conditional Access policies](/entra/identity/conditional-access/concept-conditional-access-policy-common?tabs=secure-foundation#template-categories) to apply when using Azure RBAC for Azure Arc-enabled Kubernetes clusters.
 - [Resource organization](./eslz-arc-kubernetes-resource-organization.md) can help you plan and apply governance and security using Azure RBAC.
 - Learn how to [Integrate Microsoft Entra ID with Azure Arc-enabled Kubernetes clusters](/azure/azure-arc/kubernetes/azure-rbac).
 - Learn how to [Access your cluster securely](/azure/azure-arc/kubernetes/conceptual-cluster-connect) from anywhere using Cluster connect.
