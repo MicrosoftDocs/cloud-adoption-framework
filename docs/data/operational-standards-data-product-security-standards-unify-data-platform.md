@@ -73,7 +73,7 @@ Successful organizations publish a policy that limits business data use to servi
 
 Copilot Studio agents access organizational data by using the current user's Microsoft Entra identity. The agent can only retrieve content that the user already has permission to view in systems, such as SharePoint or OneDrive.
 
-**Best practices:** To help govern outputs, use Purview [sensitivity labels](/microsoft-copilot-studio/sensitivity-label-copilot-studio#microsoft-purview-strengthens-information-protection-for-copilot-studio) flow through responses. To block knowledge sources, administrators can apply [data policies](/microsoft-copilot-studio/admin-data-loss-prevention) to limit which knowledge sources are available.
+**Best practices:** To help govern outputs, use Purview [sensitivity labels](/microsoft-copilot-studio/sensitivity-label-copilot-studio#microsoft-purview-strengthens-information-protection-for-copilot-studio) that flow through responses. To block knowledge sources, administrators can apply [data policies](/microsoft-copilot-studio/admin-data-loss-prevention) to limit which knowledge sources are available.
 
 Copilot Studio can retrieve data products through Azure AI Search and Fabric data agents. Each option enforces security differently and must align with organizational standards. **Decision guidance:**
 
