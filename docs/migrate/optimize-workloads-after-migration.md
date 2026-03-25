@@ -17,7 +17,7 @@ A workload's behavior often changes after migration due to differences in infras
 
 1. **Use Azure Advisor to identify optimization opportunities.** [Azure Advisor](/azure/advisor/advisor-overview) provides tailored recommendations across cost, performance, reliability, and security. These insights help you prioritize actions based on value and feasibility. Access Azure Advisor from the Azure portal and review recommendations by category.
 
-2. **Apply service-specific configuration guidance.** Each Azure service has unique tuning parameters. Use the Azure Well-Architected Framework [Azure services guides](/azure/well-architected/service-guides/?product=popular) to align configurations with best practices. This guidance helps ensure workloads are optimized for Azure.
+2. **Apply service-specific configuration guidance.** Each Azure service has unique tuning parameters. Use the Azure Well-Architected Framework [Azure service guides](/azure/well-architected/service-guides/?product=popular) to align configurations with best practices. This guidance helps ensure workloads are optimized for Azure.
 
 3. **Review Microsoft Defender for Cloud recommendations.** [Microsoft Defender for Cloud](/azure/defender-for-cloud/review-security-recommendations) identifies security misconfigurations and vulnerabilities. Address these issues early to reduce risk exposure and align with your organization's security posture.
 
