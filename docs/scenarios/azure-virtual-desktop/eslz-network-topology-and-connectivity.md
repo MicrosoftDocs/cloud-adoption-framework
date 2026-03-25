@@ -45,9 +45,9 @@ Use Virtual WAN when you require [transit connectivity between VPN and ExpressRo
 
 ### Configure AVD identity services
 
-- **Microsoft Entra Domain Services–joined VMs**: Ensure Azure Virtual Desktop networks have connectivity to the network hosting the identity service.
+- **Microsoft Entra Domain Services-joined VMs**: Ensure Azure Virtual Desktop networks have connectivity to the network hosting the identity service.
 
-- **[Microsoft Entra ID–joined VMs](/azure/virtual-desktop/azure-ad-joined-session-hosts)**: Azure Virtual Desktop session hosts create outbound connections to Microsoft Entra ID public endpoints. No private connectivity configurations are required.
+- **[Microsoft Entra ID-joined VMs](/azure/virtual-desktop/azure-ad-joined-session-hosts)**: Azure Virtual Desktop session hosts create outbound connections to Microsoft Entra ID public endpoints. No private connectivity configurations are required.
 
 ### Configure AVD DNS
 
@@ -251,7 +251,7 @@ You can implement this scenario with:
 
 - Allow the following types of connections:
   - Outbound UDP connections from Azure Virtual Desktop session hosts to the Azure Virtual Desktop Session Traversal Utilities for NAT (STUN) and Traversal Using Relay NAT (TURN) services on port 3478
-  - UDP connections from RDP clients in the port range 49152–65535
+  - UDP connections from RDP clients in the port range 49152-65535
 
   The setting that configures these connections is turned on by default and maintains the same level of encryption as Transmission Control Protocol (TCP) reverse connect. For information about limiting RDP client port ranges, see [Limit the port range when using RDP Shortpath for public networks](/azure/virtual-desktop/configure-rdp-shortpath).
 - The Azure Virtual Desktop control plane gateway, which uses a public endpoint, manages client connections. As a result, Azure Virtual Desktop clients can create outbound connections to required Azure Virtual Desktop URLs. For more information about required URLs, see the Internet section of this article and [Required URLs for Azure Virtual Desktop](/azure/virtual-desktop/required-fqdn-endpoint?tabs=azure).
