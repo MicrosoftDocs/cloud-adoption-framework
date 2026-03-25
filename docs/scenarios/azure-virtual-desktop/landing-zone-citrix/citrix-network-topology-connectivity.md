@@ -80,7 +80,7 @@ If you run a multitenant deployment, such as a [Citrix Service Provider architec
 
 If you segment business units beyond workload-specific networks, the complexity of the overall environment increases. Determine whether this method is worth the increased complexity. Use this method as an exception rather than the rule, and apply it with the right justification and projected scale. For example, you might create a network for 1,000 contractors that support finance to accommodate security needs beyond the standard single-session VDI network.
 
-You can use [application security groups](/azure/virtual-network/application-security-groups) to allow only specific VMs to access business unit application back ends on a shared virtual network. For example, you might limit customer relationship management (CRM) back-end access to the CRM machine catalog VMs that the marketing team uses in the multisession VDA network.
+You can use [application security groups](/azure/virtual-network/application-security-groups) to allow only specific VMs to access business unit application back ends on a shared virtual network. For example, you might limit customer relationship management (CRM) back-end access to the CRM machine catalog VMs that the marketing team uses in the multi-session VDA network.
 
 ## Multiregion deployment
 
