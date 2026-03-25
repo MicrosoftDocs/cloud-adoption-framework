@@ -8,7 +8,7 @@ ms.topic: concept-article
 ---
 # Well-architected considerations for AI workloads on Azure infrastructure (IaaS)
 
-Well-architected considerations for AI on Azure infrastructure involve best practices that optimize the reliability, security, operational efficiency, cost management, and performance of AI solutions. These principles ensure robust deployment, secure data handling, efficient model operation, and scalable infrastructure on Azure’s IaaS platform. Applying these principles allows organizations to build resilient, secure, and cost-effective AI models that meet business needs.
+Well-architected considerations for AI on Azure infrastructure involve best practices that optimize the reliability, security, operational efficiency, cost management, and performance of AI solutions. These principles ensure robust deployment, secure data handling, efficient model operation, and scalable infrastructure on Azure's IaaS platform. Applying these principles allows organizations to build resilient, secure, and cost-effective AI models that meet business needs.
 
 ## Reliability
 
@@ -32,7 +32,7 @@ Security covers protective measures to safeguard AI models, data, and infrastruc
 
 - *Patch virtual machines and container images regularly.* Enable [automatic guest patching](/azure/virtual-machines/automatic-vm-guest-patching) for VMs and scale sets to maintain security against new threats. For more information, see [Guest updates and host maintenance overview](/azure/virtual-machines/updates-maintenance-overview).
 
-- *Monitor for model drift and ensure integrity.* Ensure model integrity by implementing security mechanisms such as digital signatures or hash verifications for model files to prevent unauthorized modifications. Use Azure Monitor to track key performance metrics and identify model drift, which could indicate potential security vulnerabilities or data shifts. You can define custom metrics (accuracy, F1-score, and data distribution on your models) in your code by using the [Azure Monitor Metrics SDK](/azure/azure-monitor/essentials/metrics-custom-overview). Azure Monitor Metrics SDK allows you to send your model’s performance statistics and data drift measurements to Azure Monitor. Monitoring for performance changes over time can help detect when a model's behavior deviates, potentially signaling an attack or a need for retraining. This proactive approach helps safeguard model integrity and maintain security compliance.
+- *Monitor for model drift and ensure integrity.* Ensure model integrity by implementing security mechanisms such as digital signatures or hash verifications for model files to prevent unauthorized modifications. Use Azure Monitor to track key performance metrics and identify model drift, which could indicate potential security vulnerabilities or data shifts. You can define custom metrics (accuracy, F1-score, and data distribution on your models) in your code by using the [Azure Monitor Metrics SDK](/azure/azure-monitor/essentials/metrics-custom-overview). Azure Monitor Metrics SDK allows you to send your model's performance statistics and data drift measurements to Azure Monitor. Monitoring for performance changes over time can help detect when a model's behavior deviates, potentially signaling an attack or a need for retraining. This proactive approach helps safeguard model integrity and maintain security compliance.
 
 - *Implement auditing and access logs.* Use Azure Monitor and Log Analytics to log access to models and VMs, helping to identify unauthorized access or unusual usage patterns. For more information, see [Activity logs in Azure Monitor](/azure/azure-monitor/essentials/activity-log).
 
@@ -56,7 +56,7 @@ Cost optimization involves aligning resource usage with workload requirements to
 
 - *Commit to [Reserved Instances](https://azure.microsoft.com/pricing/reserved-vm-instances).* Save on virtual machine (VM) costs by committing to a one- or three-year term, which offers discounted rates.
 
-- *Use Azure Virtual Machine Scale Sets for automatic scaling.* [Automatically scale](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-autoscale-overview)  VM instances based on metrics like CPU usage, paying only for what you need and preventing over-provisioning.
+- *Use Azure Virtual Machine Scale Sets for automatic scaling.* [Automatically scale](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-autoscale-overview) VM instances based on metrics like CPU usage, paying only for what you need and preventing over-provisioning.
 
 - *Set automatic shutdowns for idle instances.* Avoid costs from unused resources by enabling automatic shutdown, especially for development and test environments.
 
@@ -116,13 +116,13 @@ NVIDIA Megatron-LM is an open-source framework for training large language model
 - *Flexibility*: Allows configuration of model architecture, data loading, and training strategies.
 - *Optimizations*: Uses NVIDIA GPU optimizations for performance gains.
 
-Megatron-LM deploys on Azure HPC infrastructure, and it uses Azure’s scalability for large language models without requiring on-premises hardware.
+Megatron-LM deploys on Azure HPC infrastructure, and it uses Azure's scalability for large language models without requiring on-premises hardware.
 
 #### Megatron-LM test setup
 
 Deploying Megatron-LM requires specific software and hardware.
 
-- *Pick the right deployment options.* Use the [CycleCloud Workspace for Slurm](./cycle-cloud.md) to simplify deployment. Choose NC-series or ND-series SKUs for the GPU partition. For multi-node training, ND-series SKUs are recommended for RDMA support. Azure’s HPC marketplace images generally include these drivers and libraries. If customization is needed, the azhpc-images repository can ensure compatibility.
+- *Pick the right deployment options.* Use the [CycleCloud Workspace for Slurm](./cycle-cloud.md) to simplify deployment. Choose NC-series or ND-series SKUs for the GPU partition. For multi-node training, ND-series SKUs are recommended for RDMA support. Azure's HPC marketplace images generally include these drivers and libraries. If customization is needed, the azhpc-images repository can ensure compatibility.
 
 - *Use the right image.* The software requirements for the project include a Linux-based operating system, typically Ubuntu. For multi-GPU and multi-node communication, it's essential to have communication libraries such as NCCL and MPI. Additionally, appropriate NVIDIA drivers must be installed to ensure GPU acceleration. [Azure's HPC marketplace images](/azure/virtual-machines/azure-hpc-vm-images) come with these drivers and libraries preinstalled. However, if customization is necessary, the [azhpc-images](https://github.com/Azure/azhpc-images?tab=readme-ov-file#azure-hpcai-vm-images) repository can be used to ensure compatibility.
 
@@ -140,7 +140,7 @@ Both of these components are included in [CycleCloud Workspace for Slurm](./cycl
 - *Preprocessing your data*: Use the [preprocess\_data.py](https://github.com/NVIDIA/Megatron-LM/tree/main) script within the Megatron-LM repository to convert your data to a format that is compatible with Megatron-LM.
 - *Training with Megatron-LM*: Use the [examples](https://github.com/NVIDIA/Megatron-LM/tree/main/examples) within Megatron-LM as a reference to configure Megatron for training.
 
-This setup ensures efficient deployment and training of large language models on Azure’s infrastructure.
+This setup ensures efficient deployment and training of large language models on Azure's infrastructure.
 
 ### NCCL bandwidth test
 
@@ -152,7 +152,7 @@ Use the NCCL bandwidth test to assess key metrics, including time and bandwidth.
 
 #### NCCL test initiation
 
-To initiate these tests within a CycleCloud deployment, connect to the scheduler node via SSH and access a GPU-equipped compute node. Clone the Git repository for NCCL tests, navigate to the `nccl-tests` directory, and create a host file listing the nodes for testing. Obtain the scheduler node’s IP address from CycleCloud’s web app.
+To initiate these tests within a CycleCloud deployment, connect to the scheduler node via SSH and access a GPU-equipped compute node. Clone the Git repository for NCCL tests, navigate to the `nccl-tests` directory, and create a host file listing the nodes for testing. Obtain the scheduler node's IP address from CycleCloud's web app.
 
 ### NCCL test arguments
 
