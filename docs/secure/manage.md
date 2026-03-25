@@ -14,7 +14,7 @@ The Manage phase of a cloud adoption journey focuses on the ongoing operation of
 
 :::image type="content" source="./media/caf-secure-manage.png" alt-text="Diagram showing the methodologies involved in cloud adoption. The diagram has boxes for each phase: teams and roles, strategy, plan, ready, adopt, govern, and manage. The box for this article is highlighted." lightbox="./media/caf-secure-manage.png" border="false":::
 
-This article is a supporting guide to the [Manage](../manage/index.md) methodology. It describes areas of security optimization that you should  consider as you move through that phase in your journey.
+This article is a supporting guide to the [Manage](../manage/index.md) methodology. It describes areas of security optimization that you should consider as you move through that phase in your journey.
 
 ## Security posture modernization
 
