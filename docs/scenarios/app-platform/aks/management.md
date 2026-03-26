@@ -11,6 +11,12 @@ products: azure-monitor
 
 # Operations management considerations for Azure Kubernetes Service
 
+> [!IMPORTANT]
+> **Deprecation notice:** This article is deprecated and will no longer be updated.  
+> In an effort to consolidate architecture guidance in the Azure Architecture Center, this content will be removed in a future update, no sooner than May 2026.
+>
+> For alternative guidance, see **Azure Kubernetes Service** architecture guidance in the [Azure Architecture Center](/azure/architecture/reference-architectures/containers/aks-start-here).
+
 Kubernetes is a relatively new technology, rapidly evolving with an impressive ecosystem. As such, it can be challenging to manage and protect it.
 
 ## Operations baseline for AKS

@@ -9,6 +9,12 @@ ms.topic: concept-article
 
 # Azure Kubernetes Services (AKS) landing zone accelerator
 
+> [!IMPORTANT]
+> **Deprecation notice:** This article is deprecated and will no longer be updated.  
+> In an effort to consolidate architecture guidance in the Azure Architecture Center, this content will be removed in a future update, no sooner than May 2026.
+>
+> For alternative guidance, see **Azure Kubernetes Service** architecture guidance in the [Azure Architecture Center](/azure/architecture/reference-architectures/containers/aks-start-here).
+
 The Azure Kubernetes Services (AKS) landing zone accelerator provides a reference implementation to help you deploy AKS in an Azure landing zone. The following architecture shows how AKS integrates with shared services and aligns with the design areas.
 
 :::image type="complex" source="./media/aks-enterprise-scale-landing-zone-architecture.svg" alt-text="Diagram that shows the AKS landing zone accelerator architecture." lightbox="./media/aks-enterprise-scale-landing-zone-architecture.svg" border="false":::

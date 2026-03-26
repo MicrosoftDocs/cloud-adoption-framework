@@ -11,7 +11,11 @@ ms.custom: think-tank, e2e-aks
 
 # Network topology and connectivity considerations for AKS
 
-<!-- docutune:casing "Basic and Standard" -->
+> [!IMPORTANT]
+> **Deprecation notice:** This article is deprecated and will no longer be updated.  
+> In an effort to consolidate architecture guidance in the Azure Architecture Center, this content will be removed in a future update, no sooner than May 2026.
+>
+> For alternative guidance, see **Azure Kubernetes Service** architecture guidance in the [Azure Architecture Center](/azure/architecture/reference-architectures/containers/aks-start-here).
 
 ## Design considerations
 
