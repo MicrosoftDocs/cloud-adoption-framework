@@ -12,9 +12,9 @@ ms.custom: think-tank, e2e-aks
 
 > [!IMPORTANT]
 > **Deprecation notice:** This article is deprecated and will no longer be updated.  
-> In an effort to consolidate architecture guidance in the Azure Architecture Center, this content will be removed in a future update, no sooner than May 2026.
+> In an effort to consolidate architecture guidance in the Azure Architecture Center, this content will be removed in a future update.
 >
-> For alternative guidance, see **Azure Kubernetes Service** architecture guidance in the [Azure Architecture Center](/azure/architecture/reference-architectures/containers/aks-start-here).
+> For alternative guidance, see [**Azure Kubernetes Service**](/azure/architecture/reference-architectures/containers/aks-start-here) architecture guidance in the Azure Architecture Center.
 
 Azure Kubernetes Service (AKS) can be scaled-in and out depending upon infrastructure needs (requiring more or less capacity), adding node pools with special capabilities like GPU, or application needs, in this case you have several factors like number and rate of concurrent connections, number of requests, back-end latencies on AKS applications.
 

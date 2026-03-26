@@ -12,9 +12,9 @@ ms.custom: think-tank, e2e-aks
 
 > [!IMPORTANT]
 > **Deprecation notice:** This article is deprecated and will no longer be updated.  
-> In an effort to consolidate architecture guidance in the Azure Architecture Center, this content will be removed in a future update, no sooner than May 2026.
+> In an effort to consolidate architecture guidance in the Azure Architecture Center, this content will be removed in a future update.
 >
-> For alternative guidance, see **Azure Kubernetes Service** architecture guidance in the [Azure Architecture Center](/azure/architecture/reference-architectures/containers/aks-start-here).
+> For alternative guidance, see [**Azure Kubernetes Service**](/azure/architecture/reference-architectures/containers/aks-start-here) architecture guidance in the Azure Architecture Center.
 
 As a cloud-native construct, Kubernetes requires a cloud-native approach to deployment and operations. Azure and Kubernetes are open and extensible platforms with rich and well-architected APIs, providing opportunity and ability to automate to the full extent. Plan for a DevOps and highly automated approach by relying on automation and general DevOps best practices.
 

@@ -12,9 +12,9 @@ ms.custom: think-tank, e2e-aks
 
 > [!IMPORTANT]
 > **Deprecation notice:** This article is deprecated and will no longer be updated.  
-> In an effort to consolidate architecture guidance in the Azure Architecture Center, this content will be removed in a future update, no sooner than May 2026.
+> In an effort to consolidate architecture guidance in the Azure Architecture Center, this content will be removed in a future update.
 >
-> For alternative guidance, see **Azure Kubernetes Service** architecture guidance in the [Azure Architecture Center](/azure/architecture/reference-architectures/containers/aks-start-here).
+> For alternative guidance, see [**Azure Kubernetes Service**](/azure/architecture/reference-architectures/containers/aks-start-here) architecture guidance in the Azure Architecture Center.
 
 This article explains how to choose and implement the most effective storage options for your Azure Kubernetes Service (AKS) workloads. Selecting the right storage solution is critical for achieving optimal application performance, reliability, and cost efficiency in your Kubernetes environment.
 

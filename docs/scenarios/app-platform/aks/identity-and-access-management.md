@@ -12,9 +12,9 @@ ms.custom: think-tank, e2e-aks
 
 > [!IMPORTANT]
 > **Deprecation notice:** This article is deprecated and will no longer be updated.  
-> In an effort to consolidate architecture guidance in the Azure Architecture Center, this content will be removed in a future update, no sooner than May 2026.
+> In an effort to consolidate architecture guidance in the Azure Architecture Center, this content will be removed in a future update.
 >
-> For alternative guidance, see **Azure Kubernetes Service** architecture guidance in the [Azure Architecture Center](/azure/architecture/reference-architectures/containers/aks-start-here).
+> For alternative guidance, see [**Azure Kubernetes Service**](/azure/architecture/reference-architectures/containers/aks-start-here) architecture guidance in the Azure Architecture Center.
 
 This article provides design considerations and recommendations for identity and access management when you use Azure Kubernetes Service (AKS). There are multiple aspects of identity and access management, including cluster identities, workload identities, and operator access.
 
