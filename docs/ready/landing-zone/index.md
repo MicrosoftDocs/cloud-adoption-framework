@@ -18,8 +18,31 @@ An Azure landing zone architecture is scalable and modular to meet various deplo
 
 The Azure landing zone reference architecture (*see figure 1*) represents an opinionated target architecture for your Azure landing zone. You should use this reference architecture as a starting point and [tailor the architecture to meet your needs](./tailoring-alz.md).
 
-:::image type="content" source="../enterprise-scale/media/azure-landing-zone-architecture-diagram-hub-spoke.svg" alt-text="A reference architecture diagram of an Azure landing zone." lightbox="../enterprise-scale/media/azure-landing-zone-architecture-diagram-hub-spoke.svg":::
-*Figure 1: Azure landing zone reference architecture. Download a [Visio file](https://github.com/MicrosoftDocs/cloud-adoption-framework/raw/main/docs/ready/enterprise-scale/media/enterprise-scale-architecture.vsdx) or [PDF file](https://github.com/MicrosoftDocs/cloud-adoption-framework/raw/main/docs/ready/enterprise-scale/media/enterprise-scale-architecture.pdf) of this architecture.*
+# [Hub & Spoke](#tab/hubspoke)
+
+:::image type="content" source="../enterprise-scale/media/azure-landing-zone-architecture-diagram-hub-spoke.svg" alt-text="Diagram that shows an Azure landing zone using a hub and spoke networking topology." lightbox="../enterprise-scale/media/azure-landing-zone-architecture-diagram-hub-spoke.svg":::
+
+*Azure landing zone conceptual architecture using a hub & spoke networking topology. Download a [Visio file](https://github.com/MicrosoftDocs/cloud-adoption-framework/raw/main/docs/ready/enterprise-scale/media/enterprise-scale-architecture.vsdx) or [PDF file](https://github.com/MicrosoftDocs/cloud-adoption-framework/raw/main/docs/ready/enterprise-scale/media/enterprise-scale-architecture.pdf) of this architecture.*
+
+# [Virtual WAN](#tab/vwan)
+
+:::image type="content" source="../enterprise-scale/media/alz-vwan.svg" alt-text="Diagram that shows an Azure landing zone using the Virtual WAN networking topology." lightbox="../enterprise-scale/media/alz-vwan.svg":::
+
+*Azure landing zone conceptual architecture using a Virtual WAN networking topology. Download a [Visio file](https://github.com/MicrosoftDocs/cloud-adoption-framework/raw/main/docs/ready/enterprise-scale/media/enterprise-scale-architecture.vsdx) or [PDF file](https://github.com/MicrosoftDocs/cloud-adoption-framework/raw/main/docs/ready/enterprise-scale/media/enterprise-scale-architecture.pdf) of this architecture.*
+
+# [Management Group Hierarchy Only](#tab/mgonly)
+
+:::image type="content" source="./media/alz-hierarchy.svg" alt-text="Diagram that shows an Azure landing zone management group hierarchy." lightbox="media/alz-hierarchy.svg":::
+
+*Azure landing zone conceptual architecture's Management Group hierarchy only. Download a [Visio file](https://github.com/MicrosoftDocs/cloud-adoption-framework/raw/main/docs/ready/enterprise-scale/media/enterprise-scale-architecture.vsdx) or [PDF file](https://github.com/MicrosoftDocs/cloud-adoption-framework/raw/main/docs/ready/enterprise-scale/media/enterprise-scale-architecture.pdf) of this architecture.*
+
+# [Platform vs Application landing zones](#tab/platvsapp)
+
+:::image type="content" source="./media/alz-application-platform.svg" alt-text="Diagram that shows an Azure landing zone management group hierarchy." lightbox="media/alz-application-platform.svg":::
+
+*Azure landing zone conceptual architecture's Management Group hierarchy only. Download a [Visio file](https://github.com/MicrosoftDocs/cloud-adoption-framework/raw/main/docs/ready/enterprise-scale/media/enterprise-scale-architecture.vsdx) or [PDF file](https://github.com/MicrosoftDocs/cloud-adoption-framework/raw/main/docs/ready/enterprise-scale/media/enterprise-scale-architecture.pdf) of this architecture.*
+
+---
 
 **Design areas:** The reference architecture illustrates the relationships between its eight design areas. These design areas are Azure billing and Microsoft Entra tenant, identity and access management, management group and subscription organization, network topology and connectivity, security, management, governance, and platform automation and DevOps. For more information on the design areas, see [the Azure Landing Zone environment design areas](./design-areas.md#environment-design-areas).
 
