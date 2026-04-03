@@ -18,7 +18,7 @@ Learn more about the [Azure governance](../../../ready/landing-zone/design-area/
 
 - Research the available [built-in RBAC roles](/azure/api-management/api-management-role-based-access-control) available for the API Management service.
 - Review the [Azure Policy built-in policy definitions](/azure/api-management/policy-reference) and the [Azure Policy Regulatory Compliance controls](/azure/api-management/security-controls-policy) for API Management. Azure Policy can help enforce vital management and security conventions across Azure platform services.
-- Consider what level of logging is necessary to meet your organization’s compliance requirements.
+- Consider what level of logging is necessary to meet your organization's compliance requirements.
 - Consider how non-compliance should be detected.
 - Consider how to standardize error responses returned by APIs.
 

@@ -58,7 +58,7 @@ Deploy [Red Hat AAP on Microsoft Azure](https://www.redhat.com/en/technologies/m
 
 - **Architecture and scale**: Determine your ideal architecture to support the automation platform. You can base the architecture on RHEL infrastructure or an OpenShift operator deployment. Based on your fleet size and requirements, choose the number and the instance sizing of controllers, execution nodes, and private automation hub instances. For more information about architecture, design, configuration, and scale, see the [Red Hat AAP planning guide](https://access.redhat.com/documentation/red_hat_ansible_automation_platform/2.4/html/red_hat_ansible_automation_platform_planning_guide/index). 
 
-- **Azure configuration**:  Optimize the automation architecture for your organization's Azure design and configuration.
+- **Azure configuration**: Optimize the automation architecture for your organization's Azure design and configuration.
 - **Automation mesh support**: Use the AAP automation mesh feature to distribute automation workloads across hybrid cloud nodes that establish peer-to-peer connections by using existing networks. Place hop nodes in a location based on your security design criteria and network topology.
 - **Automation hub architecture**: Optimize an automation hub architecture for scale and placement of private automation hub instances. Optimize configurations to enhance secure automation content delivery and access to execution environment sources that are in close proximity to automation execution resources. You can choose which Ansible content collections and versions that automation consumers can access.
 
@@ -197,7 +197,7 @@ After core platform infrastructure is in place, you can implement automation for
 1. Promote CVs and CCVs to quality assurance (QA).
 1. Destroy RHEL development test systems.
 
-Subsequent stages in the lifecycle pipeline are slightly different from the development lifecycle stage. Only the development stage uses the initial content publishing and initial CV and CCV promotion to development. The following example describes an automation workflow for nondevelopment lifecycle pipelines, for example QA, preproduction, and  production pipelines.
+Subsequent stages in the lifecycle pipeline are slightly different from the development lifecycle stage. Only the development stage uses the initial content publishing and initial CV and CCV promotion to development. The following example describes an automation workflow for nondevelopment lifecycle pipelines, for example QA, preproduction, and production pipelines.
 
 1. Deploy RHEL QA test systems from Satellite host groups. RHEL 8.x and 9.x golden images for Azure via automated Red Hat Image Builder are defined as Azure compute resources in Satellite.
        

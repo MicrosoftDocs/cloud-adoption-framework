@@ -27,7 +27,7 @@ Review features and services of Azure Container Apps available to help you desig
 
 - Define a [scaling strategy](/azure/container-apps/scale-app?pivots=azure-cli) to ensure enough capacity available to handle traffic to your application, while minimizing unused capacity. Scaling triggers include CPU or memory usage, along with any KEDA-supported scaler.
 
-- Be familiar with Envoy as Azure Container Apps uses it as a [network proxy](/azure/container-apps/network-proxy).
+- Be familiar with Envoy as Azure Container Apps uses it as a [network proxy](/azure/container-apps/ingress-overview).
 
 - Be aware of recovery time objective (RTO) and recovery point objective (RPO) requirements around Business Continuity and Disaster Recovery. Define a service-level agreement (SLA) for your infrastructure and application. Learn about the [SLA for Azure Container Apps](https://azure.microsoft.com/support/legal/sla/container-apps/v1_0/). See the *SLA details* section for information about monthly uptime calculations.
 
@@ -35,7 +35,7 @@ Review features and services of Azure Container Apps available to help you desig
 
   - [Availability Zones](/azure/reliability/reliability-container-apps#resilience-to-availability-zone-failures) are fault isolation constructs in Azure datacenter design. Each zone has its own power, network and cooling to minimize the chance of outages spreading across zones. To use Availability Zones, each Azure resource can be deployed either to a specific zone ("zonal") or to all zones ("zone redundant").
 
-  - Multi-region solutions provide the highest level of fault isolation and the highest reliability, but are often more difficult to implement because of the higher latency between the geographic regions. This latency can cause data-replication delays. For more information on multi-region design, see the [Azure Mission Critical documentation](/azure/architecture/framework/mission-critical/mission-critical-application-design).
+  - Multi-region solutions provide the highest level of fault isolation and the highest reliability, but are often more difficult to implement because of the higher latency between the geographic regions. This latency can cause data-replication delays. For more information on multi-region design, see the [Azure Mission Critical documentation](/azure/well-architected/mission-critical/mission-critical-application-design).
 
 - Consider using Azure DevOps and GitHub to provide automated ways of managing development, build, and deployment processes.
 
@@ -67,4 +67,4 @@ Review features and services of Azure Container Apps available to help you desig
 
 - **Use a container registry**: Store your container images in [Azure Container Registry](/azure/container-registry/container-registry-geo-replication) and geo-replicate the registry to each ACA region.
 
-- **Test your disaster recovery plan**: Create and test a disaster recovery plan regularly using key failure scenarios. For more information, see [Testing backup and disaster recovery](/azure/architecture/framework/resiliency/backup-and-recovery).
+- **Test your disaster recovery plan**: Create and test a disaster recovery plan regularly using key failure scenarios. For more information, see [Testing backup and disaster recovery](/azure/well-architected/reliability/disaster-recovery).

@@ -29,13 +29,13 @@ Minimizing latency involves reducing delays in data transfer between networked r
 
 High-performance networking utilizes advanced networking features to support large-scale, intensive AI computations, particularly for GPU-accelerated tasks. High-performance networks ensure rapid, efficient data exchanges between GPUs, which optimizes model training and accelerates AI development cycles.
 
-- *Utilize InfiniBand for GPU workloads.* For workloads dependent on GPU acceleration and distributed training across multiple GPUs, use Azure's InfiniBand network. InfiniBand’s GPUDirect remote direct memory access (RDMA) capability supports direct GPU-to-GPU communication. It improves data transfer speed and model training efficiency. Orchestration solutions like Azure CycleCloud and Azure Batch handle InfiniBand network configuration when you use the appropriate VM SKUs.
+- *Utilize InfiniBand for GPU workloads.* For workloads dependent on GPU acceleration and distributed training across multiple GPUs, use Azure's InfiniBand network. InfiniBand's GPUDirect remote direct memory access (RDMA) capability supports direct GPU-to-GPU communication. It improves data transfer speed and model training efficiency. Orchestration solutions like Azure CycleCloud and Azure Batch handle InfiniBand network configuration when you use the appropriate VM SKUs.
   
-- *Choose Azure’s GPU-optimized VMs.* Select VMs that use InfiniBand, such as ND-series VMs, which are designed for high-bandwidth, low-latency inter-GPU communication. This configuration is essential for scalable distributed training and inference, allowing faster data exchange between GPUs.
+- *Choose Azure's GPU-optimized VMs.* Select VMs that use InfiniBand, such as ND-series VMs, which are designed for high-bandwidth, low-latency inter-GPU communication. This configuration is essential for scalable distributed training and inference, allowing faster data exchange between GPUs.
 
 ## Optimize for large-scale data processing
 
-Optimizing for large-scale data processing involves strategies to manage extensive data transfers and high computational loads. By using data and model parallelism, you can scale your AI workloads and enhance processing speed. Use Azure’s GPU-optimized virtual machines to handle complex, data-intensive AI workloads.
+Optimizing for large-scale data processing involves strategies to manage extensive data transfers and high computational loads. By using data and model parallelism, you can scale your AI workloads and enhance processing speed. Use Azure's GPU-optimized virtual machines to handle complex, data-intensive AI workloads.
 
 - *Apply data or model parallelism techniques.* To manage extensive data transfers across multiple GPUs, implement data parallelism or model parallelism depending on your AI workload needs. Ensure the use of High Bandwidth Memory (HBM), which is ideal for high-performance workloads due to its high bandwidth, low power consumption, and compact design. HBM supports fast data processing, essential for AI workloads that require processing large datasets.
 
