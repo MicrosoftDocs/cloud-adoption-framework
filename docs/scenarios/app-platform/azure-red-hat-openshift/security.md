@@ -47,7 +47,7 @@ Here are some design considerations for security governance and compliance:
 
 - Connect [Azure Red Hat OpenShift clusters to Azure Arc-enabled Kubernetes](/azure/azure-arc/kubernetes/quickstart-connect-cluster).
 
-- Use [Microsoft Defender for Containers](/azure/defender-for-cloud/defender-for-containers-introduction) supported via [Arc enabled Kubernetes](/azure/defender-for-cloud/supported-machines-endpoint-solutions-clouds-containers?tabs=iaas-arc) to secure clusters, containers, and applications. Also scan your images for vulnerabilities with Microsoft Defender or any other image scanning solution.
+- Use [Microsoft Defender for Containers](/azure/defender-for-cloud/defender-for-containers-introduction) supported via [Azure Arc-enabled Kubernetes](/azure/defender-for-cloud/support-matrix-defender-for-containers?tabs=iaas-arc) to secure clusters, containers, and applications. Also scan your images for vulnerabilities with Microsoft Defender or any other image scanning solution.
 
 - Deploy a dedicated and private instance of [Azure Container Registry](/azure/container-registry/) to each landing zone subscription.
 
