@@ -33,7 +33,7 @@ Learn more about the [management](../../../ready/landing-zone/design-area/manage
 - Be aware of the number of inbound and outbound policies applied and their impact on performance.
 - API Management policies are code and should be under version control
 - API Management's [built-in cache](/azure/api-management/api-management-howto-cache) is shared by all units in the same region in the same API Management service.
-- Use [availability zones](/azure/api-management/zone-redundancy). The number of scale units selected must distribute evenly across the zones.
+- Use [availability zones](/azure/api-management/enable-availability-zone-support). The number of scale units selected must distribute evenly across the zones.
 - If using a [self-hosted gateway](/azure/api-management/self-hosted-gateway-overview), be aware that credentials expire every 30 days and must be rotated.
 - The URI `/status-0123456789abcdef` can be used as a common health endpoint for the API Management service.
 - The API Management service is not a WAF. Deploy a WAF such as Azure Application Gateway in front for additional layers of protection.
@@ -67,13 +67,13 @@ Learn more about the [management](../../../ready/landing-zone/design-area/manage
 ### Design considerations for business continuity and disaster recovery
 
 - Determine the Recovery Time Objective (RTO) and Recovery Point Objective (RPO) for the API Management instances that you want to protect and the value chains they support (consumers and providers). Consider deploying fresh instances or having a hot/cold standby.
-- API Management supports [multizone](/azure/api-management/zone-redundancy) and [multiregion](/azure/api-management/api-management-howto-deploy-multi-region) deployments. Based on the requirements, you could enable just one or both.
+- API Management supports [multizone](/azure/api-management/enable-availability-zone-support) and [multiregion](/azure/api-management/api-management-howto-deploy-multi-region) deployments. Based on the requirements, you could enable just one or both.
 - Failover can be automated:
   - A multizone deployment automatically fails over.
   - A multiregion deployment requires a DNS-based load balancer such as Traffic Manager to fail over.
 - API Management can be [backed up](/azure/api-management/api-management-howto-disaster-recovery-backup-restore#calling-the-backup-and-restore-operations) using its Management REST API.
-  * Backups expire after 30 days.
-  * Be aware of [what APIM doesn't back up](/azure/api-management/api-management-howto-disaster-recovery-backup-restore#what-is-not-backed-up)
+  - Backups expire after 30 days.
+  - Be aware of [what APIM doesn't back up](/azure/api-management/api-management-howto-disaster-recovery-backup-restore#what-is-not-backed-up)
 
 ### Design recommendations for business continuity and disaster recovery
 
