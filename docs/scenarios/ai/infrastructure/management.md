@@ -39,7 +39,7 @@ Managing business continuity and disaster recovery for AI applications on Azure 
 
 - *Use Azure Site Recovery.* Site Recovery uses real-time replication and recovery automation to replicate workloads across regions. Built-in platform capabilities for VM workloads meet low RPO and RTO requirements. You can use Site Recovery to run recovery drills without affecting production workloads. You can also use Azure Policy to enable replication and to audit VM protection.
 
-- *Use orchestrator capabilities (if applicable)*. Use your orchestrator to recover failed compute nodes. For example, configure Azure Batch to automatically [retry tasks](/azure/batch/best-practices#pool-allocation-failures) if there's a failure.
+- *Use orchestrator capabilities (if applicable)*. Use your orchestrator to recover failed compute nodes. For example, configure Azure Batch to automatically [retry tasks](/azure/batch/best-practices#pool-allocation-failures) if there's a failure.
 
 - *Schedule backups.* Determine if you need to back up incremental changes to datasets and models daily or weekly. Backups could also include databases or entire datasets.
 
