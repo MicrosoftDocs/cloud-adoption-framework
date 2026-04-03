@@ -90,7 +90,7 @@ You can use the [extension-based Hybrid Runbook Worker](/azure/automation/extens
 
 ## Next steps
 
-For more guidance for your hybrid cloud adoption journey,  review the following resources:
+For more guidance for your hybrid cloud adoption journey, review the following resources:
 
 - Review [Azure Arc Jumpstart](https://azurearcjumpstart.io/azure_arc_jumpstart/azure_arc_servers/day2/) scenarios.
 - Review the [prerequisites](/azure/azure-arc/servers/agent-overview#prerequisites) for Azure Arc-enabled servers.

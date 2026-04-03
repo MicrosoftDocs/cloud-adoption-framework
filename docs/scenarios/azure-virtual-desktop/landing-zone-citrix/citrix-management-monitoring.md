@@ -84,7 +84,7 @@ Here is the list of perfmon counters to monitor for all Citrix servers in the de
   - If all activity looks normal, look for a way to increase the network bandwidth or increase the capacity to the delivery group.
 - User Input Delay per Session\Max Input Delay
   - This metric provides the maximum input delay for the session in milliseconds. The metric measures the time from when the user provides mouse or keyboard input until the input is processed by the system.
-  - Alert when a session’s input delay is greater than 1000ms for 2 minutes.
+  - Alert when a session's input delay is greater than 1000ms for 2 minutes.
   - Use Task Manager or Citrix Monitor to look for applications that are causing high CPU, disk, or network usage.
   - If activity looks normal, the best approach is to increase the capacity to the delivery group.
 
@@ -98,7 +98,7 @@ Here are some general recommendations and practices to consider as you use these
 - Set your monitoring data retention to as short a period as possible for your business requirements. Most monitoring data is only useful for a short period of time. Save costs by not storing monitoring data long-term. Create an automation job to clean up stale data in your storage accounts.
 - Azure includes alerts for metrics, logs, service outages, planned maintenance, monthly cost, and security. Using alerts can be a lifesaver. This article provides many recommendations about alerts to create for your Citrix deployment. Implement the ones that make the most sense in your environment. Send critical alerts via SMS and email to ensure that they're acted upon quickly. Set a reminder on your calendar each quarter to update the alert notification lists.
 - Monitoring and alerting on a metric comes with a monthly cost. Choose wisely which metrics to track. If you don't plan on taking action when an alert fires, then consider whether the metric has value.
-- Set up a custom dashboard for your Citrix resource groups and enable links to key services such as Microsoft Sentinel, Service Health, Network Insights (Azure Monitor), and Advisor. On the dashboard, include  charts from Azure Monitor Network Insights that show the performance of your ExpressRoute or VPN connections, your Cloud Connectors, and Citrix VDA hosts. To protect sensitive information, restrict dashboard access to only those individuals who need it.
+- Set up a custom dashboard for your Citrix resource groups and enable links to key services such as Microsoft Sentinel, Service Health, Network Insights (Azure Monitor), and Advisor. On the dashboard, include charts from Azure Monitor Network Insights that show the performance of your ExpressRoute or VPN connections, your Cloud Connectors, and Citrix VDA hosts. To protect sensitive information, restrict dashboard access to only those individuals who need it.
 - When troubleshooting an issue, look at multiple data sources to help correlate the symptoms to the root cause. For instance, if the average logon duration is high, you can view the metrics in Azure to determine where resource constraints exist.
 - Enabling virtual network flow logs and analyzing them with Azure Monitor Network Insights is the best way to see if traffic is originating from unexpected locations. You can use this information to streamline your network communications. Use the information to create Azure policies that block inbound traffic from those unexpected locations.
 

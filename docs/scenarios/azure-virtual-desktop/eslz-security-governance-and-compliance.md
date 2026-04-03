@@ -34,7 +34,7 @@ Review the following sections to find recommended security controls and governan
 
 - Provision or reuse a dedicated virtual network for your Azure Virtual Desktop landing zone(s). Plan IP address space to accommodate the scale of your session hosts. Establish your baseline subnet size based on the minimum and maximum number of session hosts per host pool. Map your business unit requirements to your host pools.
 
-- Use Network Security Groups (NSGs) and/or [Azure Firewall](/azure/firewall/protect-azure-virtual-desktop) (or non-Microsoft firewall appliance) to establish micro-segmentation. Use Azure Virtual Network service tags and application service groups (ASGs) to define network access controls on network security groups or an Azure Firewall configured for your Azure Virtual Desktop resources. Verify that the session host's outgoing access to [required URLs](/azure/virtual-desktop/required-fqdn-endpoint) is bypassed by proxy (if used within session hosts) and Azure Firewall (or non-Microsoft firewall appliance).
+- Use Network Security Groups (NSGs) and/or [Azure Firewall](/azure/firewall/protect-azure-virtual-desktop) (or non-Microsoft firewall appliance) to establish micro-segmentation. Use Azure Virtual Network service tags and application security groups (ASGs) to define network access controls on network security groups or an Azure Firewall configured for your Azure Virtual Desktop resources. Verify that the session host's outgoing access to [required URLs](/azure/virtual-desktop/required-fqdn-endpoint) is bypassed by proxy (if used within session hosts) and Azure Firewall (or non-Microsoft firewall appliance).
 
 - Based on your applications and enterprise segmentation strategy, restrict traffic between your session hosts and internal resources through security group rules or Azure Firewall (or a non-Microsoft firewall appliance) at scale.
 
@@ -90,7 +90,7 @@ For a detailed list of best practices for Azure VM security, see [Azure security
 
 ## Data protection
 
-- Microsoft Azure encrypts data-at-rest to protect it from ‘out of band’ attacks, such as attempts to access [underlying storage](/azure/security/fundamentals/encryption-atrest#encryption-at-rest-in-microsoft-cloud-services).  This encryption helps ensure that attackers can't easily read or modify your data. Microsoft’s approach to enabling two layers of encryption for data at rest involves:
+- Microsoft Azure encrypts data-at-rest to protect it from out-of-band attacks, such as attempts to access [underlying storage](/azure/security/fundamentals/encryption-atrest#encryption-at-rest-in-microsoft-cloud-services). This encryption helps ensure that attackers can't easily read or modify your data. Microsoft's approach to enabling two layers of encryption for data at rest involves:
   - Disk encryption using customer-managed keys. Users provide their own key for disk encryption. They can bring their own keys to their Key Vault (a practice known as BYOK – Bring Your Own Key), or generate new keys in Azure Key Vault to encrypt the desired resources (including session host disks).
   - Infrastructure encryption using platform-managed keys. By default, disks are automatically encrypted at rest through platform-managed encryption keys.
   - [Encryption at the VM host](/azure/virtual-machines/disk-encryption#encryption-at-host---end-to-end-encryption-for-your-vm-data) (Azure server that your VM is allocated to). Each virtual machine's temporary disk and OS/data disk cache data are stored on the VM host. When encryption at the VM host is enabled, that data is encrypted at rest and flows encrypted to the Storage service to be persisted.  
@@ -119,7 +119,7 @@ For a detailed list of best practices for Azure VM security, see [Azure security
 
 - [Use Intune for Azure Virtual Desktop personal session hosts](/intune/intune-service/fundamentals/azure-virtual-desktop) to apply existing or create new configurations and secure your VMs with compliance policy and Conditional Access. Intune management doesn't depend on or interfere with Azure Virtual Desktop management of the same virtual machine.
 
-- [Multi-session session hosts management with Intune](/intune/intune-service/fundamentals/azure-virtual-desktop-multi-session) allows you to manage Windows 10 or Windows 11 Enterprise multi-session remote desktops in the Intune admin center, just as you can manage a shared Windows 10 or Windows 11 client device. When managing such virtual machines (VMs), you can use both device-based configuration targeted to devices or user-based configuration targeted to users.
+- [Multi-session hosts management with Intune](/intune/intune-service/fundamentals/azure-virtual-desktop-multi-session) allows you to manage Windows 10 or Windows 11 Enterprise multi-session remote desktops in the Intune admin center, just as you can manage a shared Windows 10 or Windows 11 client device. When managing such virtual machines (VMs), you can use both device-based configuration targeted to devices or user-based configuration targeted to users.
 
 - Audit and configure the hardening of your session hosts' operating system by using [Azure Policy machine configuration](/azure/governance/machine-configuration/overview). Use the [Windows security baselines](/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines) as a starting point for securing your Windows operating system.
 
@@ -172,7 +172,7 @@ Nearly all organizations must comply with various government or industry regulat
   - Defender for Cloud Apps
   - Microsoft Teams
 
-- Review [Microsoft Defender for Cloud Secure Score](/azure/defender-for-cloud/secure-score-security-controls) to improve the overall security compliance of your Azure Virtual Landing Zones.
+- Review [Microsoft Defender for Cloud Secure Score](/azure/defender-for-cloud/secure-score-security-controls) to improve the overall security compliance of your Azure Virtual Desktop landing zones.
 
 ## Recommended security best practices and baselines
 

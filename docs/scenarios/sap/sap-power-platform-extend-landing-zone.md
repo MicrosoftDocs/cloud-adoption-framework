@@ -35,11 +35,11 @@ Before you begin, ensure that you have:
 
 ## Integration options
 
-### SAP GUI–based RPA in Power Automate for desktop
+### SAP GUI-based RPA in Power Automate for desktop
 
 When you're looking for ways to automate frequent, mundane, and rule-based tasks, follow the SAP GUI automation patterns and best practices described here and in subsequent articles:
 
-- [Introduction to SAP GUI–based RPA in Power Automate desktop](/power-automate/guidance/rpa-sap-playbook/introduction)
+- [Introduction to SAP GUI-based RPA in Power Automate desktop](/power-automate/guidance/rpa-sap-playbook/introduction)
 
 ### Reporting and analytics with Power BI on SAP HANA Business Warehouse
 

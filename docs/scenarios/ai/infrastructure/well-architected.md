@@ -16,7 +16,7 @@ Reliability involves minimizing downtime and ensuring consistent performance for
 
 - *Distribute VMs across Availability Zones.* Minimize downtime from hardware failures or maintenance events by using [Availability Zones](/azure/reliability/availability-zones-overview). They distribute VMs across fault and update domains to ensure continued application operation.
 
-- *Set up health monitoring with Azure Monitor.* Track CPU, memory, and network performance on your VMs using Azure Monitor and configure alerts to notify you of performance degradation or failures in the infrastructure supporting your models. For more information, see [Azure Monitor VM Insights](/azure/azure-monitor/vm/vminsights-health-overview).
+- *Set up health monitoring with Azure Monitor.* Track CPU, memory, and network performance on your VMs using Azure Monitor and configure alerts to notify you of performance degradation or failures in the infrastructure supporting your models. For more information, see [Azure Monitor VM Insights](/azure/azure-monitor/vm/monitor-vm).
 
 - *Automate patching and updates with rolling instances.* Use Azure Update Manager to apply patches in a rolling manner across VMs, allowing one instance to be updated while others continue to serve traffic, preventing downtime during maintenance.
 
@@ -32,9 +32,9 @@ Security covers protective measures to safeguard AI models, data, and infrastruc
 
 - *Patch virtual machines and container images regularly.* Enable [automatic guest patching](/azure/virtual-machines/automatic-vm-guest-patching) for VMs and scale sets to maintain security against new threats. For more information, see [Guest updates and host maintenance overview](/azure/virtual-machines/updates-maintenance-overview).
 
-- *Monitor for model drift and ensure integrity.* Ensure model integrity by implementing security mechanisms such as digital signatures or hash verifications for model files to prevent unauthorized modifications. Use Azure Monitor to track key performance metrics and identify model drift, which could indicate potential security vulnerabilities or data shifts. You can define custom metrics (accuracy, F1-score, and data distribution on your models) in your code by using the [Azure Monitor Metrics SDK](/azure/azure-monitor/essentials/metrics-custom-overview). Azure Monitor Metrics SDK allows you to send your model's performance statistics and data drift measurements to Azure Monitor. Monitoring for performance changes over time can help detect when a model's behavior deviates, potentially signaling an attack or a need for retraining. This proactive approach helps safeguard model integrity and maintain security compliance.
+- *Monitor for model drift and ensure integrity.* Ensure model integrity by implementing security mechanisms such as digital signatures or hash verifications for model files to prevent unauthorized modifications. Use Azure Monitor to track key performance metrics and identify model drift, which could indicate potential security vulnerabilities or data shifts. You can define custom metrics (accuracy, F1-score, and data distribution on your models) in your code by using the [Azure Monitor Metrics SDK](/azure/azure-monitor/metrics/metrics-custom-overview). Azure Monitor Metrics SDK allows you to send your model's performance statistics and data drift measurements to Azure Monitor. Monitoring for performance changes over time can help detect when a model's behavior deviates, potentially signaling an attack or a need for retraining. This proactive approach helps safeguard model integrity and maintain security compliance.
 
-- *Implement auditing and access logs.* Use Azure Monitor and Log Analytics to log access to models and VMs, helping to identify unauthorized access or unusual usage patterns. For more information, see [Activity logs in Azure Monitor](/azure/azure-monitor/essentials/activity-log).
+- *Implement auditing and access logs.* Use Azure Monitor and Log Analytics to log access to models and VMs, helping to identify unauthorized access or unusual usage patterns. For more information, see [Activity logs in Azure Monitor](/azure/azure-monitor/platform/activity-log).
 
 - *Use version control for model files.* Store model files in Azure Storage (Blob, File, or Disk) with versioning to track changes, ensuring a clear audit trail for identifying and rolling back harmful modifications. Using Azure DevOps for version control enhances security by managing access to code changes and enforcing best practices in code reviews. This layered approach mitigates risks of unauthorized changes and provides accountability. For more information, see [Blob Versioning in Azure Storage](/azure/storage/blobs/versioning-overview).
 
@@ -54,13 +54,13 @@ Security covers protective measures to safeguard AI models, data, and infrastruc
 
 Cost optimization involves aligning resource usage with workload requirements to avoid unnecessary expenses. Right-sizing VMs, committing to reserved instances, and setting up autoscaling help manage costs without compromising performance. Controlling costs on Azure infrastructure is vital for long-term sustainability and scalability of AI deployments.
 
-- *Commit to [Reserved Instances](https://azure.microsoft.com/pricing/reserved-vm-instances).* Save on virtual machine (VM) costs by committing to a one- or three-year term, which offers discounted rates.
+- *Commit to [Reserved Instances](https://azure.microsoft.com/pricing/offers/reservations/vm-instances).* Save on virtual machine (VM) costs by committing to a one- or three-year term, which offers discounted rates.
 
 - *Use Azure Virtual Machine Scale Sets for automatic scaling.* [Automatically scale](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-autoscale-overview) VM instances based on metrics like CPU usage, paying only for what you need and preventing over-provisioning.
 
 - *Set automatic shutdowns for idle instances.* Avoid costs from unused resources by enabling automatic shutdown, especially for development and test environments.
 
-- *Use [Azure Savings Plans](/azure/cost-management-billing/savings-plan/savings-plan-compute-overview) for predictable usage.* Reduce costs compared to pay-as-you-go pricing by committing to consistent usage across VM sizes and regions.
+- *Use [Azure Savings Plans](/azure/cost-management-billing/savings-plan/savings-plan-overview) for predictable usage.* Reduce costs compared to pay-as-you-go pricing by committing to consistent usage across VM sizes and regions.
 
 - *Use [Azure Spot instances](/azure/virtual-machines/spot-vms) for fault-tolerant workloads.* Get substantial discounts on spare capacity for workloads that can tolerate interruptions.
 
@@ -74,7 +74,7 @@ Operational excellence involves optimizing the configuration and management of A
 
 - *Configure autoscaling for efficiency.* Set up autoscaling for VMs or containers to handle workload demands without over-provisioning. Use Azure Virtual Machine Scale Sets to adjust resources dynamically based on demand. For more information, see [Azure Virtual Machine Scale Sets](/azure/virtual-machine-scale-sets/overview).
 
-- *Conduct regular performance tuning.* Continuously profile the application to identify and resolve performance bottlenecks. Use [Application Insights Profiler](/azure/azure-monitor/profiler/profiler-overview) to analyze model code and resource usage.
+- *Conduct regular performance tuning.* Continuously profile the application to identify and resolve performance bottlenecks. Use [Application Insights Profiler](/azure/azure-monitor/optimization-insights/code-optimizations-profiler-overview) to analyze model code and resource usage.
 
 - *Implement distributed training for efficiency.* Use distributed training techniques, if applicable, to reduce training time by using multiple VMs. Frameworks like Horovod and PyTorch support distributed training on Azure.
 
@@ -94,7 +94,7 @@ Increase the clock rate of a graphics processing unit (GPU) to improve performan
 
 ### I/O tuning
 
-- *Optimize scratch storage.* Scratch needs to have high throughput and low latency. The training job requires reading data, processing it, and using this storage location as scratch space while the job runs. Ideally, you would use the local SSD directly on each VM. If you need a shared filesystem for scratch, combining all NVMe SSDs to create a Parallel File System (PFS) might be a great option in terms of cost and performance, assuming it has sufficient capacity. One method is to use [Azure Managed Lustre](/azure/azure-managed-lustre/amlfs-overview). If Azure Managed Lustre isn't suitable, you can explore storage options like [Azure NetApp Files](/azure/azure-netapp-files/azure-netapp-files-introduction) or [Azure Native Qumulo](/azure/partner-solutions/qumulo/qumulo-overview).
+- *Optimize scratch storage.* Scratch needs to have high throughput and low latency. The training job requires reading data, processing it, and using this storage location as scratch space while the job runs. Ideally, you would use the local SSD directly on each VM. If you need a shared filesystem for scratch, combining all NVMe SSDs to create a Parallel File System (PFS) might be a great option in terms of cost and performance, assuming it has sufficient capacity. One method is to use [Azure Managed Lustre](/azure/azure-managed-lustre/amlfs-overview). If Azure Managed Lustre isn't suitable, you can explore storage options like [Azure NetApp Files](/azure/azure-netapp-files/azure-netapp-files-introduction) or [Azure Native Qumulo](/azure/partner-solutions/qumulo/overview).
 
 - *Implement checkpoint storage.* Large deep learning training jobs can run for weeks, depending on the number of VMs used. Just like any HPC cluster, you can encounter failures, such as InfiniBand issues, dual in-line memory module (DIMM) failures, error-correcting code (ECC) errors in GPU memory. It's critical to have a checkpointing strategy. Know the checkpoint interval (when data is saved). Understand how much data is transferred each time. Have a storage solution that meets capacity and performance requirements. Use Blob Storage, if it meets the performance needs.
 

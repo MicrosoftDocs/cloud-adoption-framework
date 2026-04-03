@@ -52,10 +52,10 @@ For host pool VM resiliency, consider these factors:
 
 - When you create a new Azure Virtual Desktop host pool, you can choose from different [availability options](/azure/virtual-machines/availability).
 - It's important to select the right option for your requirements when you create the VM. You can't later change availability options for the VM.
--  If you plan to deploy a Single VM Instance, the SLA would depend on the type of the Storage Disk it uses: 
-   -  Premium SSD, Ultra Disk or Premium SSD v2 - 99.9%
-   -  Standard SSD Managed Disks - 99.5%
-   -  Standard HDD Managed Disks - 95%   
+- If you plan to deploy a single VM instance, the SLA would depend on the type of the storage disk it uses:
+   - Premium SSD, Ultra Disk or Premium SSD v2 - 99.9%
+   - Standard SSD Managed Disks - 99.5%
+   - Standard HDD Managed Disks - 95%
 - The default resiliency option for Azure Virtual Desktop host pool deployment is to use availability zones. 
 
 - Through [availability zones](/azure/reliability/availability-zones-overview), VMs in the host pool are distributed across different datacenters. VMs are still in the same region, and they have higher resiliency and a higher formal 99.99 percent high-availability [SLA](https://azure.microsoft.com/support/legal/sla/virtual-machines). Your capacity planning should include sufficient extra compute capacity to ensure that Azure Virtual Desktop continues to operate, even if a single availability zone is lost.

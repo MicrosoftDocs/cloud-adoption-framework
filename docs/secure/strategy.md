@@ -14,11 +14,11 @@ Moving your organization to the cloud adds significant complexity to security. T
 
 :::image type="content" source="./media/caf-secure-strategy.png" alt-text="Diagram showing the methodologies involved in cloud adoption. The diagram has boxes for each phase: teams and roles, strategy, plan, ready, adopt, govern, and manage. The box for this article is highlighted." lightbox="./media/caf-secure-strategy.png" border="false":::
 
-This article is a supporting guide to the [Strategy](../strategy/index.md) methodology. It describes areas of security optimization that you should  consider as you move through that phase in your journey.
+This article is a supporting guide to the [Strategy](../strategy/index.md) methodology. It describes areas of security optimization that you should consider as you move through that phase in your journey.
 
 ## Security posture modernization
 
-The strategy of security posture modernization doesn't just involve the adoption of new technologies and new operational practices. It typically also  involves a mindset shift across the organization. New [teams and roles](./teams-roles.md) might need to be filled, and existing teams and roles might need to be involved in security in ways that they're unaccustomed to. These changes, which can sometimes be monumental for organizations, can be the source of stress and internal conflicts, so it's important to promote healthy, honest, and blame-free communications across the organization throughout the adoption process.
+The strategy of security posture modernization doesn't just involve the adoption of new technologies and new operational practices. It typically also involves a mindset shift across the organization. New [teams and roles](./teams-roles.md) might need to be filled, and existing teams and roles might need to be involved in security in ways that they're unaccustomed to. These changes, which can sometimes be monumental for organizations, can be the source of stress and internal conflicts, so it's important to promote healthy, honest, and blame-free communications across the organization throughout the adoption process.
 
 See the [Define a security strategy](../strategy/define-security-strategy.md) guide for a comprehensive overview of these considerations.
 

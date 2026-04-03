@@ -22,7 +22,7 @@ Azure Arc-enabled servers provide two types of services:
   - Access control through Azure role-based access control (RBAC) at subscription or resource group level.
   - Environments and automation through templates and extensions.
 
-- **Azure services used in conjunction with Azure Arc-enabled servers** (but not limited to), which incur costs according to their usage includes:
+- **Azure services used in conjunction with Azure Arc-enabled servers** (but not limited to), which incur costs according to their usage include:
   - Azure Monitor
   - Microsoft Defender for servers
   - Microsoft Sentinel
@@ -120,7 +120,7 @@ Review the [recommendations for security and compliance](./eslz-security-governa
 
 - Review the [recommendations for governance and compliance](./eslz-security-governance-and-compliance.md) and [Azure Policy machine configuration pricing](https://azure.microsoft.com/pricing/details/azure-policy/).
 - Use Cost Management to understand the Azure Policy machine configuration costs by filtering the **Microsoft.HybridCompute/machines** resource type.
-- All built-in machine configuration policies include a parameter that controls whether the policy will be assigned to Azure Arc-enabled servers machines. Review your policy assignments and set this parameter to "false" for policies that don't need to be evaluated on your hybrid servers.
+- All built-in machine configuration policies include a parameter that controls whether the policy will be assigned to Azure Arc-enabled server machines. Review your policy assignments and set this parameter to "false" for policies that don't need to be evaluated on your hybrid servers.
 
 :::image type="content" source="./media/cost-management-policy-azure.png" alt-text="Screenshot that shows an example of Azure Policy costs." lightbox="./media/cost-management-policy-azure.png":::
 
