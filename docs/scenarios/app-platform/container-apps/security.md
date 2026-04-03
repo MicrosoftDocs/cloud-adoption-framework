@@ -20,7 +20,7 @@ Cloud applications often feature different layers of security to fully protect a
 
 ## Recommendations
 
-You can configure your Container Apps environment to accept [external](/azure/container-apps/vnet-custom) requests, or to lock down to only [internal](/azure/container-apps/vnet-custom-internal) requests.
+You can configure your Container Apps environment to accept [external](/azure/container-apps/vnet-custom) requests, or to lock down to only [internal](/azure/container-apps/vnet-custom) requests.
 
 The Landing Zone Accelerator recommendations include:
 
