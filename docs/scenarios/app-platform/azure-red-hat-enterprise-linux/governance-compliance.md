@@ -92,7 +92,7 @@ Azure provides tooling that you can use to implement several regulatory standard
 
 In the context of cloud computing, particularly Microsoft Azure, cost governance refers to the practice of managing and optimizing the costs that are associated with Azure services. Azure provides a suite of tools to help you monitor, control, and optimize your expenditure. Use these tools to ensure that you can scale and adapt your resources efficiently without unnecessary financial overhead.
 
-Use Microsoft Cost Management to manage and [track costs](/azure/cloud-adoption-framework/ready/azure-best-practices/track-costs) in Azure. Get visibility into your Azure spend to optimize costs. To help control costs for compute resources, use [Azure reservations](/azure/cost-management-billing/reservations/save-compute-costs-reservations) and [Azure savings plans](/azure/cost-management-billing/savings-plan/savings-plan-compute-overview). Use these tools to implement effective cost governance strategies and help your business maximize your cloud investment while keeping expenses under control.
+Use Microsoft Cost Management to manage and [track costs](/azure/cloud-adoption-framework/ready/azure-best-practices/track-costs) in Azure. Get visibility into your Azure spend to optimize costs. To help control costs for compute resources, use [Azure reservations](/azure/cost-management-billing/reservations/save-compute-costs-reservations) and [Azure savings plans](/azure/cost-management-billing/savings-plan/savings-plan-overview). Use these tools to implement effective cost governance strategies and help your business maximize your cloud investment while keeping expenses under control.
 
 ### Resource governance
 
