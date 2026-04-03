@@ -73,7 +73,7 @@ Learn more about the [management](../../../ready/landing-zone/design-area/manage
   - A multiregion deployment requires a DNS-based load balancer such as Traffic Manager to fail over.
 - API Management can be [backed up](/azure/api-management/api-management-howto-disaster-recovery-backup-restore#calling-the-backup-and-restore-operations) using its Management REST API.
   - Backups expire after 30 days.
-  - Be aware of [what APIM doesn't back up](/azure/api-management/api-management-howto-disaster-recovery-backup-restore#what-is-not-backed-up)
+  - Be aware of [what APIM doesn't back up](/azure/api-management/api-management-howto-disaster-recovery-backup-restore#what-is-not-backed-up).
 
 ### Design recommendations for business continuity and disaster recovery
 
