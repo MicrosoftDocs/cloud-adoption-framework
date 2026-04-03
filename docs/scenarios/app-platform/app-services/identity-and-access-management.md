@@ -23,7 +23,7 @@ When you use the landing zone accelerator to deploy an App Service solution, the
 - Determine whether to use system-assigned or user-assigned [managed identities](/azure/app-service/overview-managed-identity) when your App Service solution connects to back-end resources that are protected by Microsoft Entra ID.
 - Consider creating [custom roles](/entra/identity/role-based-access-control/custom-create), following the principle of least privilege when out-of-box roles require modifications to existing permissions.
 - Choose enhanced-security storage for keys, secrets, certificates, and application configuration.
-    - Use [app configuration](/azure/azure-app-configuration/overview) to share common configuration values that aren't passwords, secrets, or keys between applications, microservices, and serverless applications.
+    - Use [Azure App Configuration](/azure/azure-app-configuration/overview) to share common configuration values that aren't passwords, secrets, or keys between applications, microservices, and serverless applications.
     - Use [Azure Key Vault](/azure/key-vault/general/overview). It provides enhanced-security storage of passwords, connection strings, keys, secrets, and certificates. You can use Key Vault to store your secrets and then access them from your App Service application via App Service managed identity. By doing so, you can help keep your secrets secure while still providing access to them from your application as needed.
 
 ## Design recommendations
