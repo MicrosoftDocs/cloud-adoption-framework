@@ -14,6 +14,8 @@ ms.custom: internal
 > **Deprecation notice:** This is deprecated and is no longer being updated. To ensure only the best guidance is surfaced, this article will be deleted in May 2026.
 >
 > For alternative guidance, see [**Baseline highly available zone-redundant web application**](/azure/architecture/web-apps/app-service/architectures/baseline-zone-redundant) guidance in the Azure Architecture Center.
+>
+> If you would like to save this guidance, you can select **Download a PDF** at the bottom left of this page or download the files from [GitHub](https://github.com/MicrosoftDocs/cloud-adoption-framework/tree/main/docs/scenarios/app-platform/app-services).
 
 This article provides design considerations and recommendations for governance that you can apply when you use the Azure App Service landing zone accelerator. Azure governance is the process of implementing support for cloud governance, compliance auditing, and automated guardrails.
 
