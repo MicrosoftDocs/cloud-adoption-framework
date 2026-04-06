@@ -13,6 +13,8 @@ ms.topic: concept-article
 > **Deprecation notice:** This article is deprecated and is no longer being updated. To ensure only the best guidance is surfaced, this article will be deleted in May 2026.
 >
 > For alternative guidance, see [**Azure Container Apps**](/azure/architecture/example-scenario/serverless/microservices-with-container-apps) architecture guidance in the Azure Architecture Center.
+>
+> If you would like to save this guidance, you can select **Download a PDF** at the bottom left of this page or download the files from [GitHub](https://github.com/MicrosoftDocs/cloud-adoption-framework/tree/main/docs/scenarios/app-platform/container-apps).
 
 Container Apps is responsible for taking care of OS updates, scaling, failover processes, and resource allocation in what's known as a Container Apps environment. Environments encapsulate one or more container apps or jobs, by creating a secure boundary through a virtual network (VNet).
 

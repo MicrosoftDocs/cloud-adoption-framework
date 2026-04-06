@@ -9,6 +9,13 @@ ms.topic: concept-article
 
 # Azure App Service application landing zone accelerator
 
+> [!IMPORTANT]
+> **Deprecation notice:** This is deprecated and is no longer being updated. To ensure only the best guidance is surfaced, this article will be deleted in May 2026.
+>
+> For alternative guidance, see [**Baseline highly available zone-redundant web application**](/azure/architecture/web-apps/app-service/architectures/baseline-zone-redundant) guidance in the Azure Architecture Center.
+>
+> If you would like to save this guidance, you can select **Download a PDF** at the bottom left of this page or download the files from [GitHub](https://github.com/MicrosoftDocs/cloud-adoption-framework/tree/main/docs/scenarios/app-platform/app-services).
+
 This article helps you accelerate Azure App Service deployments in an Azure landing zone. An application landing zone accelerator provides infrastructure as code templates that prepare a scalable and secure environment for your app workloads.
 
 ## Use a modular approach for flexible implementation

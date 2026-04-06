@@ -14,6 +14,8 @@ ms.custom: think-tank, e2e-aks
 > **Deprecation notice:** This article is deprecated and is no longer being updated. To ensure only the best guidance is surfaced, this article will be deleted in May 2026.
 >
 > For alternative guidance, see [**Azure Kubernetes Service**](/azure/architecture/reference-architectures/containers/aks-start-here) architecture guidance in the Azure Architecture Center.
+>
+> If you would like to save this guidance, you can select **Download a PDF** at the bottom left of this page or download the files from [GitHub](https://github.com/MicrosoftDocs/cloud-adoption-framework/tree/main/docs/scenarios/app-platform/aks).
 
 Enterprise enrollment is not a requirement for the AKS landing zone accelerator. For most customer implementations, standard best practices around enterprise enrollment and Entra tenants are unchanged when deploying Azure landing zones for AKS. There are seldom specific considerations or recommendations that would impact enterprise enrollment or Entra tenant decisions. See the following considerations to determine whether AKS requirements would impact existing tenant decisions.
 

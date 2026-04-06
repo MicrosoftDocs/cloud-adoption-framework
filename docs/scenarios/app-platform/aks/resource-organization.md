@@ -11,9 +11,11 @@ ms.custom: think-tank, e2e-aks
 # Resource organization considerations for AKS (optional)
 
 > [!IMPORTANT]
-> **Deprecation notice:** This is deprecated and is no longer being updated. To ensure only the best guidance is surfaced, this article will be deleted in May 2026.
+> **Deprecation notice:** This article is deprecated and is no longer being updated. To ensure only the best guidance is surfaced, this article will be deleted in May 2026.
 >
 > For alternative guidance, see [**Azure Kubernetes Service**](/azure/architecture/reference-architectures/containers/aks-start-here) architecture guidance in the Azure Architecture Center.
+>
+> If you would like to save this guidance, you can select **Download a PDF** at the bottom left of this page or download the files from [GitHub](https://github.com/MicrosoftDocs/cloud-adoption-framework/tree/main/docs/scenarios/app-platform/aks).
 
 Resource organization consideration is mostly managed by the platform foundation, however here are some of the ways the platform foundation might affect the AKS landing zone accelerator.
 
