@@ -3,7 +3,7 @@ title: Secure AI
 description: Learn the process to secure AI with best practices and recommendations.
 ms.author: ssumner
 author: stephen-sumner
-ms.date: 07/01/2025
+ms.date: 04/06/2026
 ms.topic: concept-article
 ---
 
