@@ -9,6 +9,11 @@ ms.topic: concept-article
 
 # Networking for the Azure Container Apps - Landing Zone Accelerator
 
+> [!IMPORTANT]
+> **Deprecation notice:** This article is deprecated and is no longer being updated. To ensure only the best guidance is surfaced, this article will be deleted in May 2026.
+>
+> For alternative guidance, see [**Azure Container Apps**](/azure/architecture/example-scenario/serverless/microservices-with-container-apps) architecture guidance in the Azure Architecture Center.
+
 Container Apps is responsible for taking care of OS updates, scaling, failover processes, and resource allocation in what's known as a Container Apps environment. Environments encapsulate one or more container apps or jobs, by creating a secure boundary through a virtual network (VNet).
 
 By default, a VNet is automatically created for your Container App environment. However, if you want more detailed control over your network, you can use a pre-existing VNet as you create your container app environment.

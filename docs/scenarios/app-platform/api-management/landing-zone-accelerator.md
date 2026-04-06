@@ -15,6 +15,11 @@ ms.custom:
 
 # Azure API Management landing zone accelerator
 
+> [!IMPORTANT]
+> **Deprecation notice:** This is deprecated and is no longer being updated. To ensure only the best guidance is surfaced, this article will be deleted in May 2026.
+>
+> For alternative guidance, see [**Azure API Management landing zone architecture**](/azure/architecture/example-scenario/integration/app-gateway-internal-api-management-function) guidance in the Azure Architecture Center.
+
 The Azure API Management landing zone accelerator provides an architectural approach and reference implementation to prepare landing zone subscriptions for a scalable API Management infrastructure. The implementation adheres to the architecture and best practices of the Cloud Adoption Framework for Azure landing zones with a focus on the design principles of enterprise-scale landing zones.
 
 Customers adopt API Management in various ways. You can use this architecture as design guidance for greenfield implementations and as an assessment for brownfield implementations that already use API Management. You can adapt the reference implementation to produce an architecture that fits your workload and puts your organization on a path to sustainable scale.

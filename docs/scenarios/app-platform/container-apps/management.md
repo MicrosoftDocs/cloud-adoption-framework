@@ -9,6 +9,11 @@ ms.topic: concept-article
 
 # Management and operations for the Azure Container Apps - Landing Zone Accelerator
 
+> [!IMPORTANT]
+> **Deprecation notice:** This article is deprecated and is no longer being updated. To ensure only the best guidance is surfaced, this article will be deleted in May 2026.
+>
+> For alternative guidance, see [**Azure Container Apps**](/azure/architecture/example-scenario/serverless/microservices-with-container-apps) architecture guidance in the Azure Architecture Center.
+
 Review features and services of Azure Container Apps available to help you design and maintain your app for long-term health and stability.
 
 - Understand the Container Apps [limits](/azure/container-apps/quotas).

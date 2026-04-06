@@ -10,6 +10,11 @@ ms.custom: internal
 
 # Security considerations for the API Management landing zone accelerator
 
+> [!IMPORTANT]
+> **Deprecation notice:** This is deprecated and is no longer being updated. To ensure only the best guidance is surfaced, this article will be deleted in May 2026.
+>
+> For alternative guidance, see [**Azure API Management landing zone architecture**](/azure/architecture/example-scenario/integration/app-gateway-internal-api-management-function) guidance in the Azure Architecture Center.
+
 This article provides design considerations and recommendations for security when using the API Management landing zone accelerator. Security covers multiple aspects including securing the frontend APIs, securing backends, and securing the developer portal.
 
 Learn more about the [security](../../../ready/landing-zone/design-area/security.md) design area.
