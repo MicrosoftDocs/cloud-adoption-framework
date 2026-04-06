@@ -9,6 +9,13 @@ ms.topic: concept-article
 
 # Operations management considerations for the AIS Services landing zone accelerator
 
+> [!IMPORTANT]
+> **Deprecation notice:** This article is deprecated and is no longer being updated. To ensure only the best guidance is surfaced, this article will be deleted in May 2026.
+>
+> For alternative guidance, see [**Integration architecture**](/azure/architecture/browse/?filter-products=service&azure_categories=integration) guidance in the Azure Architecture Center.
+>
+> If you would like to save this guidance, you can select **Download a PDF** at the bottom left of this page or download the files from [GitHub](https://github.com/MicrosoftDocs/cloud-adoption-framework/tree/main/docs/scenarios/app-platform/integration-services).
+
 This article provides considerations and recommendations for operations management and monitoring when using the AIS offerings.
 
 Most of the recommendations in this section apply to the Standard (single-tenant) version of Logic Apps, which itself is part of the Azure App Service offering and shares many of the same management capabilities.
