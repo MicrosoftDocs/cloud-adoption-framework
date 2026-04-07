@@ -133,7 +133,7 @@ The following role assignments are required to deploy a data product within a da
         Deploy all data integration streaming services into a single resource group within the data landing zone subscription. The service principal requires a `Contributor` role assignment on that resource group.
     :::column-end:::
     :::column span="2":::
-        (Resource group scope)  `/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}`
+        (Resource group scope) `/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}`
     :::column-end:::
 :::row-end:::
 :::row:::

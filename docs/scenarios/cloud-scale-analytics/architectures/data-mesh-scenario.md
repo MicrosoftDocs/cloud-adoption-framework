@@ -24,11 +24,11 @@ A fictitious enterprise, Woodgrove Bank, is a large financial services company w
 
 ## The Current Situation
 
-It’s challenging for Woodgrove Bank to distribute data to different locations because of the complexity of data warehousing. Integrating new data is time-consuming, and it's tempting to duplicate data. Woodgrove Bank finds it difficult to oversee the end-to-end data landscape because of point-to-point connectivity. The bank underestimated the demand for intensive data consumption. New use cases are introduced quickly, one after another. Data governance, such as data ownership and quality, and costs are hard to control. Keeping current with regulations is difficult because Woodgrove Bank doesn't know exactly where its data resides.
+It's challenging for Woodgrove Bank to distribute data to different locations because of the complexity of data warehousing. Integrating new data is time-consuming, and it's tempting to duplicate data. Woodgrove Bank finds it difficult to oversee the end-to-end data landscape because of point-to-point connectivity. The bank underestimated the demand for intensive data consumption. New use cases are introduced quickly, one after another. Data governance, such as data ownership and quality, and costs are hard to control. Keeping current with regulations is difficult because Woodgrove Bank doesn't know exactly where its data resides.
 
 ## Architecture Solution: Data Mesh
 
-Over the past several years, organizations recognize that data is at the heart of everything. Data opens new efficiencies, drives innovation, unlocks new business models, and increases customer satisfaction. It’s a top priority for companies to use data-driven methods, like data at scale.
+Over the past several years, organizations recognize that data is at the heart of everything. Data opens new efficiencies, drives innovation, unlocks new business models, and increases customer satisfaction. It's a top priority for companies to use data-driven methods, like data at scale.
 
 Reaching a stage where the deeper value of data is accessible to all organization members is challenging. Legacy and tightly interconnected systems, centralized monolithic platforms, and complex governance can be significant barriers to generating value out of data.
 

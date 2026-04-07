@@ -79,7 +79,7 @@ General security considerations include:
 
 - Use IP Filtering to lock down your endpoints so they are only accessed by known network addresses (this is applicable for Platform-as-a-Service (PaaS) services (such as Logic Apps, Function Apps, Service Bus) not integrated into VNets).
 
-- If you have resources available publicly, use DNS obfuscation to deter any attackers; obfuscation means either custom domain names, or specific Azure resource names that don’t reveal the purpose or owner of a resource.
+- If you have resources available publicly, use DNS obfuscation to deter any attackers; obfuscation means either custom domain names, or specific Azure resource names that don't reveal the purpose or owner of a resource.
 
 ### Encryption design recommendations
 
@@ -97,7 +97,7 @@ General security considerations include:
 
 ### Authentication and access design recommendations
 
-- Always follow the principle of least privilege when assigning access: give an identity the minimum permissions it needs. If there isn’t a built-in role with the minimal permissions you need, consider creating a [custom role](/azure/role-based-access-control/custom-roles) with just these permissions.
+- Always follow the principle of least privilege when assigning access: give an identity the minimum permissions it needs. If there isn't a built-in role with the minimal permissions you need, consider creating a [custom role](/azure/role-based-access-control/custom-roles) with just these permissions.
 
 - Whenever possible, always use **Managed Identities** when a resource needs to access a service. For example, if your Logic App workflow needs to access Key Vault to retrieve a secret, use the [Managed Identity](/azure/logic-apps/create-managed-service-identity) of your Logic Apps; Managed Identities provide a more secure, easier to manage mechanism to access resources, as Azure manages the identity on your behalf.
 
@@ -140,7 +140,7 @@ Review the critical design areas to make complete considerations and recommendat
 
 - [Trigger workflows in Standard logic apps with Easy Auth](https://techcommunity.microsoft.com/t5/integrations-on-azure-blog/trigger-workflows-in-standard-logic-apps-with-easy-auth/ba-p/3207378)
 
-- [Protect an API in Azure API Management using OAuth 2.0 authorization with Azure Active  Directory](/azure/api-management/api-management-howto-protect-backend-with-aad)
+- [Protect an API in Azure API Management using OAuth 2.0 authorization with Azure Active Directory](/azure/api-management/api-management-howto-protect-backend-with-aad)
 
 - [Azure Key Vault security](/azure/key-vault/general/security-features)
 

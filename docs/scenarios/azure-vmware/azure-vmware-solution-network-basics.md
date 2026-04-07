@@ -39,7 +39,7 @@ Global Reach is an ExpressRoute feature that enables you to connect two ExpressR
 
 An Azure VMware Solution private cloud infrastructure includes several network segments. The segments are implemented by VMware's network virtualization stack (distributed virtual switches) and connected to the underlying physical infrastructure through the ESXi hosts' physical NICs.
 
-- **Management networks** support  basic vSphere cluster functions, like vCenter Server and NSX-T management virtual machines, vMotion, replication, and vSAN. The management networks' address space is allocated from the /22 address block that's assigned to each Azure VMware Solution private cloud during provisioning. See [Routing and subnet considerations](/azure/azure-vmware/tutorial-network-checklist#routing-and-subnet-considerations) for details on how IP address ranges from the /22 block are assigned to management networks.
+- **Management networks** support basic vSphere cluster functions, like vCenter Server and NSX-T management virtual machines, vMotion, replication, and vSAN. The management networks' address space is allocated from the /22 address block that's assigned to each Azure VMware Solution private cloud during provisioning. See [Routing and subnet considerations](/azure/azure-vmware/tutorial-network-checklist#routing-and-subnet-considerations) for details on how IP address ranges from the /22 block are assigned to management networks.
 - **Workload segments** are customer-defined NSX-T segments to which Azure VMware Solution virtual machines attach. The address range for a workload segment is customer-defined. It can't overlap with:
   - The Azure VMware Solution private cloud's /22 management block. 
   - Address ranges used in peered Azure virtual networks. 
