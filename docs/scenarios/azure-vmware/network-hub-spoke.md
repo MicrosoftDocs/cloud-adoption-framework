@@ -17,7 +17,7 @@ In this design pattern, traffic has a dedicated path over the Microsoft backbone
 [![Azure VMware Solution with Global Reach to On-premises and separate breakout for the internet with AVS Public IP](./media/public-ip.png)](./media/public-ip.png#lightbox)
 
 >[!IMPORTANT]
->If you're in a region today where Global Reach isn't supported, transit from on-premises to the AVS private cloud is possible by deploying an Expressroute Gateway in Azure. To supply the transitivity end-to-end, a virtual appliance in the Hub Virtual Network (VNET) is needed. See the section [Traffic Inspection & Default Route Advertisement](network-hub-spoke.md#traffic-inspection).
+>If you're in a region today where Global Reach isn't supported, transit from on-premises to the AVS private cloud is possible by deploying an ExpressRoute Gateway in Azure. To supply the transitivity end-to-end, a virtual appliance in the Hub Virtual Network (VNET) is needed. See the section [Traffic Inspection & Default Route Advertisement](network-hub-spoke.md#traffic-inspection).
 
 ### Customer profile
 
@@ -94,7 +94,7 @@ Dynamic route propagation:
 - Third Party NVA integration
    - Peer ARS with NVAs so that you don't need UDRs for each AVS segment to filter traffic.
    - Return traffic from peered VNETs needs a UDR (User Defined Routes) back to the local interface of the firewall
-- Transit mechanism from Expressroute to VPN Gateways
+- Transit mechanism from ExpressRoute to VPN Gateways
 -	VPN Gateway must be of type Site-to-Site and configured in Active-Active
 
 To use Azure Route Server, you must:
@@ -114,7 +114,7 @@ By using NFS datastores backed by Azure NetApp Files, you can expand your storag
 - Deploy ANF in a delegated subnet
 - 	Hub & Spoke deployment supports ER GW SKU of up 10 Gbps
 - Ultra & ErGw3AZ SKU is required for bypassing the gateway port speed limits
-- Read traffic ingresses and write traffic is egresses over the Expressroute. Egress traffic over Expressroute circuits bypasses the gateway and go directly to the edge router
+- Read traffic ingresses and write traffic is egresses over the ExpressRoute. Egress traffic over ExpressRoute circuits bypasses the gateway and go directly to the edge router
 - Ingress/Egress charges are suppressed from AVS, however there's an egress charge if data is going across peered VNETs.
 - Use a dedicated ExpressRoute Gateway for Azure NetApp Files, do not use a shared/centralized ExpressRoute Gateway.
 - Don't place a firewall or NVA in the data path between Azure NetApp Files and Azure VMware Solution.
