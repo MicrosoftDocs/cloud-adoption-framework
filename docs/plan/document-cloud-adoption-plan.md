@@ -19,11 +19,11 @@ A cloud adoption plan must align with organizational standards and governance fr
 
 1. **Choose a cloud adoption plan template that matches your scenario.** Use the [Cloud-native adoption plan](./cloud-native-adoption-plan.md) if you're building new solutions in Azure. Use the [Migration adoption plan](./migration-adoption-plan.md) if you're migrating existing workloads.
 
-2. **Customize the selected template to reflect your organization’s priorities.** Modify the template to include your business objectives, technical constraints, and stakeholder expectations. This customization ensures that the plan is relevant and actionable across teams.
+2. **Customize the selected template to reflect your organization's priorities.** Modify the template to include your business objectives, technical constraints, and stakeholder expectations. This customization ensures that the plan is relevant and actionable across teams.
 
 ### Ensure alignment with organizational standards
 
-1. **Map the cloud adoption plan to your organization’s project management methodology.** Identify required artifacts, approval gates, and delivery checkpoints. This mapping ensures that cloud adoption activities follow established governance and delivery practices.
+1. **Map the cloud adoption plan to your organization's project management methodology.** Identify required artifacts, approval gates, and delivery checkpoints. This mapping ensures that cloud adoption activities follow established governance and delivery practices.
 
 2. **Incorporate compliance and security requirements into the plan.** Include controls, policies, and regulatory requirements that apply to cloud workloads. This incorporation ensures that cloud adoption remains compliant with internal and external standards.
 
@@ -69,7 +69,7 @@ Timelines provide a shared understanding of when workloads are ready and help ma
 
 ## Next step
 
-By the end of the Plan phase, you have a cloud adoption roadmap that all stakeholders understand. Now it’s time to build your Azure environment.
+By the end of the Plan phase, you have a cloud adoption roadmap that all stakeholders understand. Now it's time to build your Azure environment.
 
 > [!div class="nextstepaction"]
 > [CAF Ready](../ready/index.md)
