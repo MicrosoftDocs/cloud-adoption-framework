@@ -102,7 +102,7 @@ To use Azure Route Server, you must:
 -	Enable Branch to Branch
 -	Use route summarization for > 1000 routes or use `NO_ADVERTISE BGP communities` flag referenced in the [Azure Route Server frequently asked questions (FAQs)](/azure/route-server/route-server-faq#can-azure-route-server-filter-out-routes-from-nvas)
 
--	Peer NVA with specific, non-Azure ASNs. For example, since ARS uses 65515, no other appliance in the VNET can use that ASN (Autonomous System Number).
+- Peer NVA with specific, non-Azure ASNs. For example, since ARS uses 65515, no other appliance in the VNET can use that ASN (Autonomous System Number).
 -	No support for IPV6
 
 ## Integration with Azure NetApp Files
@@ -158,7 +158,7 @@ Default route advertisement from Azure is possible with a third-party NVA in eit
 
 ## Additional Information
 
--	 Access vCenter using Bastion + Jumpbox VM - If accessing vCenter from on-premises, make sure to have a route from your on-premises networks to the /22 AVS management network. Validate that the route in CLI by typing `Test-NetConnection  x.x.x.2 -port 443`
+-	 Access vCenter using Bastion + Jumpbox VM - If accessing vCenter from on-premises, make sure to have a route from your on-premises networks to the /22 AVS management network. Validate that the route in CLI by typing `Test-NetConnection x.x.x.2 -port 443`
 - DNS considerations - If using private endpoints follow the guidance detailed here: Azure Private Endpoint DNS configuration | Microsoft Learn
 
 [![Azure VMware Solution subscription and resource group organization](./media/azure-vmware-resource-groups.png)](./media/azure-vmware-resource-groups.png)
