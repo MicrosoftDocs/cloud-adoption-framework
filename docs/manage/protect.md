@@ -59,7 +59,7 @@ Clearly defined reliability requirements are critical for uptime targets, recove
 
 1. ***Define recovery point objectives (RPO) for all workloads.*** Your RPO influences how frequently you replicate and back up your data. Determine how much data loss your business can tolerate.
 
-1. ***Define workload reliability targets.*** For workload reliability targets, see the Well-Architected Framework’s [Recommendations for defining reliability targets.](/azure/well-architected/reliability/metrics)
+1. ***Define workload reliability targets.*** For workload reliability targets, see the Well-Architected Framework's [Recommendations for defining reliability targets.](/azure/well-architected/reliability/metrics)
 
 ### Manage data reliability
 
@@ -75,7 +75,7 @@ Data reliability involves data replication (replicas) and backups (point in time
 
 You must align data reliability configurations with the RTO and RPO requirements of your workloads. To make that alignment, follow these steps:
 
-1. ***Manage data replication.*** Replicate your data synchronously or asynchronously according to your workload’s RTO and RPO requirements.
+1. ***Manage data replication.*** Replicate your data synchronously or asynchronously according to your workload's RTO and RPO requirements.
 
     | Data distribution                  | Data replication                  | Load balancing configuration                        |
     |------------------------------------------|-----------------------|--------------------------------------|
@@ -92,7 +92,7 @@ You must align data reliability configurations with the RTO and RPO requirements
 
 ### Manage code and runtime reliability
 
-Code and runtime reliability is a workload responsibility. Follow the Well-Architected Framework’s [self-healing and self-preservation guide](/azure/well-architected/reliability/self-preservation).
+Code and runtime reliability is a workload responsibility. Follow the Well-Architected Framework's [self-healing and self-preservation guide](/azure/well-architected/reliability/self-preservation).
 
 ### Manage cloud resources reliability
 
@@ -110,7 +110,7 @@ Your approach must implement architecture redundancy to meet the reliability req
 
 1. ***Estimate the uptime of your architectures.*** For each workload, calculate the composite SLA. Only include services that could cause the workload to fail (critical path).
 
-    1. List every service in the workload’s critical path. Collect each service’s [Microsoft uptime SLAs](https://www.microsoft.com/licensing/docs/view/Service-Level-Agreements-SLA-for-Online-Services) from the official document.
+    1. List every service in the workload's critical path. Collect each service's [Microsoft uptime SLAs](https://www.microsoft.com/licensing/docs/view/Service-Level-Agreements-SLA-for-Online-Services) from the official document.
     
     1. Decide whether the workload includes independent critical paths. An independent path can fail and the workload remains available.
 
@@ -132,7 +132,7 @@ Your approach must implement architecture redundancy to meet the reliability req
 
 1. ***Adjust service tiers.*** Before modifying architectures, evaluate whether different Azure service tiers (SKUs) can meet your reliability requirements. Some Azure service tiers can have different uptime SLAs, such as Azure Managed Disks.
 
-1. ***Add architecture redundancy.***  If your current uptime estimate falls short of your SLO, increase redundancy:
+1. ***Add architecture redundancy.*** If your current uptime estimate falls short of your SLO, increase redundancy:
 
 	1. ***Use multiple availability zones.*** Configure your workloads to use multiple availability zones. How availability zones improve your uptime can be difficult to estimate. Only a select number of services have uptime SLAs that account for availability zones. Where SLAs account for availability zones, use them in your uptime estimates. See the following table for some examples.
 
@@ -144,7 +144,7 @@ Your approach must implement architecture redundancy to meet the reliability req
         | Load Balancer | Application Gateway |
         | Security | Azure Firewall |
 
-	1. ***Use multiple regions.***  Multiple regions are often necessary to meet uptime SLOs. Use global load balancers (Azure Front Door or Traffic Manager) for traffic distribution. Multi-region architectures require careful data consistency management.
+	1. ***Use multiple regions.*** Multiple regions are often necessary to meet uptime SLOs. Use global load balancers (Azure Front Door or Traffic Manager) for traffic distribution. Multi-region architectures require careful data consistency management.
 
 1. ***Manage architecture redundancy.*** Decide how to use redundancy: You can use architecture redundancy as part of daily operations (active). Or you can use architecture redundancy in disaster recovery scenarios (passive). For examples, see *Table 3.*
 
@@ -179,7 +179,7 @@ Recovering from a failure requires a clear strategy to restore services quickly 
 
 1. ***Respond to failures.*** Align your recovery response to the workload priority. Implement failover procedures to reroute requests to redundant infrastructure and data replicas immediately. Once systems stabilize, resolve the root cause, synchronize data, and execute failback procedures. For more information, see [Failover and failback](/azure/reliability/concept-failover-failback).
 
-1. ***Analyze failures.***  Identify the root causes of the issues and then address the problem. Document any lessons and make the necessary changes.
+1. ***Analyze failures.*** Identify the root causes of the issues and then address the problem. Document any lessons and make the necessary changes.
 
 1. ***Manage workload failures.*** For workload disaster recovery, see the Well-Architected Framework's [disaster recovery guide](/azure/well-architected/reliability/disaster-recovery) and [Azure service guides](/azure/well-architected/service-guides/?product=popular) (*start with the Reliability section*).
 
@@ -217,7 +217,7 @@ Adopt a process and tools to recover from security incidents, such as ransomware
 
 1. ***Prepare for incidents.*** Develop an incident response plan that clearly defines roles for investigation, mitigation, and communication. Regularly test the effectiveness of your plan. Evaluate and implement vulnerability management tools, threat detection systems, and infrastructure monitoring solutions. Reduce your attack surface through infrastructure hardening and create workload-specific recovery strategies. See [Incident response overview](/security/operations/incident-response-overview) and [Incident response playbooks](/security/operations/incident-response-playbooks).
 
-1. ***Detect incidents.*** Use security information and event management (SIEM) tool, like [Microsoft Sentinel](/azure/sentinel/overview?tabs=azure-portal), to centralize your security data. Use Microsoft Sentinel’s [security orchestration, automation, and response capabilities (SOAR)](/azure/sentinel/automation/automation) to automate routine security tasks. Integrate [threat intelligence feeds](/azure/sentinel/understand-threat-intelligence) into your SIEM to gain insights into adversary tactics relevant to your cloud environment. Use [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) to regularly scan Azure for vulnerabilities. Microsoft Defender [integrates](/azure/sentinel/best-practices) with Microsoft Sentinel to provide a unified view of security events.
+1. ***Detect incidents.*** Use security information and event management (SIEM) tool, like [Microsoft Sentinel](/azure/sentinel/overview?tabs=azure-portal), to centralize your security data. Use Microsoft Sentinel's [security orchestration, automation, and response capabilities (SOAR)](/azure/sentinel/automation/automation) to automate routine security tasks. Integrate [threat intelligence feeds](/azure/sentinel/understand-threat-intelligence) into your SIEM to gain insights into adversary tactics relevant to your cloud environment. Use [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) to regularly scan Azure for vulnerabilities. Microsoft Defender [integrates](/azure/sentinel/best-practices) with Microsoft Sentinel to provide a unified view of security events.
 
 1. ***Respond to incidents.*** Immediately activate your incident response plan upon detecting an incident. Quickly start investigation and mitigation procedures. Activate your disaster recovery plan to restore affected systems, and clearly communicate incident details to your team.
 
