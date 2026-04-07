@@ -10,6 +10,13 @@ ms.custom: internal
 
 # Platform automation and DevOps for the App Service landing zone accelerator
 
+> [!IMPORTANT]
+> **Deprecation notice:** This is deprecated and is no longer being updated. To ensure only the best guidance is surfaced, this article will be deleted in May 2026.
+>
+> For alternative guidance, see [**Baseline highly available zone-redundant web application**](/azure/architecture/web-apps/app-service/architectures/baseline-zone-redundant) guidance in the Azure Architecture Center.
+>
+> If you would like to save this guidance, you can select **Download a PDF** at the bottom left of this page or download the files from [GitHub](https://github.com/MicrosoftDocs/cloud-adoption-framework/tree/main/docs/scenarios/app-platform/app-services).
+
 This article provides design considerations and recommendations for platform automation and DevOps that you can apply when you use the Azure App Service landing zone accelerator. Platform automation and DevOps provide opportunities to modernize your approach to deployment by using infrastructure-as-code.
 
 Learn more about the [platform automation and DevOps](../../../ready/landing-zone/design-area/platform-automation-devops.md) design area.

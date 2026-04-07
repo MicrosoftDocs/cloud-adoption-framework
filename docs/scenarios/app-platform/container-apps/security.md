@@ -9,6 +9,13 @@ ms.topic: concept-article
 
 # Security considerations for the Azure Container Apps - Landing Zone Accelerator
 
+> [!IMPORTANT]
+> **Deprecation notice:** This article is deprecated and is no longer being updated. To ensure only the best guidance is surfaced, this article will be deleted in May 2026.
+>
+> For alternative guidance, see [**Azure Container Apps**](/azure/architecture/example-scenario/serverless/microservices-with-container-apps) architecture guidance in the Azure Architecture Center.
+>
+> If you would like to save this guidance, you can select **Download a PDF** at the bottom left of this page or download the files from [GitHub](https://github.com/MicrosoftDocs/cloud-adoption-framework/tree/main/docs/scenarios/app-platform/container-apps).
+
 Cloud applications often feature different layers of security to fully protect an application from attack. To decide which layers are best for your applications, review the following resources:
 
 | Resource | Description |

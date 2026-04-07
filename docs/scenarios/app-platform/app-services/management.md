@@ -10,6 +10,13 @@ ms.custom: internal
 
 # Operations management considerations for the App Service landing zone accelerator
 
+> [!IMPORTANT]
+> **Deprecation notice:** This is deprecated and is no longer being updated. To ensure only the best guidance is surfaced, this article will be deleted in May 2026.
+>
+> For alternative guidance, see [**Baseline highly available zone-redundant web application**](/azure/architecture/web-apps/app-service/architectures/baseline-zone-redundant) guidance in the Azure Architecture Center.
+>
+> If you would like to save this guidance, you can select **Download a PDF** at the bottom left of this page or download the files from [GitHub](https://github.com/MicrosoftDocs/cloud-adoption-framework/tree/main/docs/scenarios/app-platform/app-services).
+
 This article provides design considerations and recommendations for operations management that you can apply when you use the Azure App Service landing zone accelerator. Operations management is a critical aspect of any cloud-based application, and the App Service landing zone accelerator is no exception. This accelerator provides a set of pre-configured Azure resources and guidance for setting up a scalable environment for hosting web, mobile, and API applications on Azure.
 
 Learn more about the [management](../../../ready/landing-zone/design-area/management.md) design area.
