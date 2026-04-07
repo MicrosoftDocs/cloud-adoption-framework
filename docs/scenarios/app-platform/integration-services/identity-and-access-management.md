@@ -31,7 +31,7 @@ IAM is a separate consideration from [endpoint security](/security/benchmark/azu
 
 - Consider the level of access needed by roles within your organization and apply the principle of least privilege by role. These roles can include platform owners, workload owners, DevOps engineers and system administrators, for example.
 
-- Using the principle of least privilege, consider what roles you'll need to manage and maintain your AIS applications.  Questions to ask in this regard:
+- Using the principle of least privilege, consider what roles you'll need to manage and maintain your AIS applications. Questions to ask in this regard:
 
   - Who will need to view log files from sources like Application Insights, Log Analytics, and Storage Accounts?
 

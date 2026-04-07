@@ -42,7 +42,7 @@ When you use [ExpressRoute Global Reach](on-premises-connectivity.md#expressrout
 
 ## IPSec VPNs are used for on-premises traffic
 
-When you use [IPSec VPNs](on-premises-connectivity.md#ipsec-vpns) for connectivity with on-premises sites, you need to configure additional routing  to route connections between a private cloud and resources in Azure virtual networks via firewall NVAs:
+When you use [IPSec VPNs](on-premises-connectivity.md#ipsec-vpns) for connectivity with on-premises sites, you need to configure additional routing to route connections between a private cloud and resources in Azure virtual networks via firewall NVAs:
 
 - In traditional hub-spoke networks, you need to add UDRs to the hub network's GatewaySubnet for all destinations (IP prefixes) on Azure that need to be reached via the NVAs. The next hop IP address for the UDRs is the firewall's VIP (the firewall's private IP address when you use Azure Firewall).
 - In hub-spoke networks that are based on Virtual WAN with hub-integrated NVAs (Azure Firewall or third-party security solutions), you need to add custom static routes to the Virtual WAN hub's default route table for each set of destinations (IP prefixes) that need to be reached via the NVAs from Azure VMware Solution. For each UDR, the next hop must be the firewall or NVA's VIP. Alternatively, you can activate and configure [Virtual WAN routing intent and routing policies](/azure/virtual-wan/how-to-routing-policies) on secured Virtual WAN hubs.

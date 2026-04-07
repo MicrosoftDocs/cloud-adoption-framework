@@ -17,7 +17,7 @@ In this design pattern, traffic has a dedicated path over the Microsoft backbone
 [![Azure VMware Solution with Global Reach to On-premises and separate breakout for the internet with AVS Public IP](./media/public-ip.png)](./media/public-ip.png#lightbox)
 
 >[!IMPORTANT]
->If you’re in a region today where Global Reach isn't supported, transit from on-premises to the AVS private cloud is possible by deploying an Expressroute Gateway in Azure. To supply the transitivity end-to-end, a virtual appliance in the Hub Virtual Network (VNET) is needed. See the section [Traffic Inspection & Default Route Advertisement](network-hub-spoke.md#traffic-inspection).
+>If you're in a region today where Global Reach isn't supported, transit from on-premises to the AVS private cloud is possible by deploying an ExpressRoute Gateway in Azure. To supply the transitivity end-to-end, a virtual appliance in the Hub Virtual Network (VNET) is needed. See the section [Traffic Inspection & Default Route Advertisement](network-hub-spoke.md#traffic-inspection).
 
 ### Customer profile
 
@@ -92,9 +92,9 @@ Dynamic route propagation:
 
 - Learn specific routes from AVS to local VNETs via BGP (Border Gateway Protocol). The peered VNETs can then learn the routes also.
 - Third Party NVA integration
-   - Peer ARS with NVAs so that you don’t need UDRs for each AVS segment to filter traffic.
+   - Peer ARS with NVAs so that you don't need UDRs for each AVS segment to filter traffic.
    - Return traffic from peered VNETs needs a UDR (User Defined Routes) back to the local interface of the firewall
-- Transit mechanism from Expressroute to VPN Gateways
+- Transit mechanism from ExpressRoute to VPN Gateways
 -	VPN Gateway must be of type Site-to-Site and configured in Active-Active
 
 To use Azure Route Server, you must:
@@ -102,8 +102,8 @@ To use Azure Route Server, you must:
 -	Enable Branch to Branch
 -	Use route summarization for > 1000 routes or use `NO_ADVERTISE BGP communities` flag referenced in the [Azure Route Server frequently asked questions (FAQs)](/azure/route-server/route-server-faq#can-azure-route-server-filter-out-routes-from-nvas)
 
--	Peer  NVA with specific, non-Azure ASNs. For example, since ARS uses 65515, no other appliance in the VNET can use that ASN (Autonomous System Number).
--	No support for IPV6
+- Peer NVA with specific, non-Azure ASNs. For example, since ARS uses 65515, no other appliance in the VNET can use that ASN (Autonomous System Number).
+-	No support for IPv6
 
 ## Integration with Azure NetApp Files
 
@@ -111,16 +111,16 @@ To use Azure Route Server, you must:
 Azure NetApp Files (ANF) provides you with a Network Attached datastore via the NFS protocol. ANF lives in an Azure VNET and connects to workloads in AVS.
 By using NFS datastores backed by Azure NetApp Files, you can expand your storage instead of scaling the clusters.
 - 	Create Azure NetApp Files volumes using Standard network features to enable optimized connectivity from your AVS private cloud via ExpressRoute FastPath
--  Deploy ANF in a delegated subnet
+- Deploy ANF in a delegated subnet
 - 	Hub & Spoke deployment supports ER GW SKU of up 10 Gbps
--  Ultra & ErGw3AZ SKU is required for bypassing the gateway port speed limits
--  Read traffic ingresses and write traffic is egresses over the Expressroute. Egress traffic over Expressroute circuits bypasses the gateway and go directly to the edge router
--  Ingress/Egress charges are suppressed from AVS, however there's an egress charge if data is going across peered VNETs.
--  Use a dedicated ExpressRoute Gateway for Azure NetApp Files, do not use a shared/centralized ExpressRoute Gateway.
--  Don't place a firewall or NVA in the data path between Azure NetApp Files and Azure VMware Solution.
+- Ultra & ErGw3AZ SKU is required for bypassing the gateway port speed limits
+- Read traffic is ingress traffic, and write traffic is egress traffic over ExpressRoute. Egress traffic over ExpressRoute circuits bypasses the gateway and goes directly to the edge router.
+- Ingress/Egress charges are suppressed from AVS, however there's an egress charge if data is going across peered VNETs.
+- Use a dedicated ExpressRoute Gateway for Azure NetApp Files, do not use a shared/centralized ExpressRoute Gateway.
+- Don't place a firewall or NVA in the data path between Azure NetApp Files and Azure VMware Solution.
 - Only NFS v3 is supported today.
 
-If you’re seeing unexpected latency, make sure your AVS Private cloud, and ANF deployment are pinned to the same AZ (Azure Availability Zones). For high availability, create ANF volumes in separate AZs and enable `Cross Zone Replication`
+If you're seeing unexpected latency, make sure your AVS Private cloud, and ANF deployment are pinned to the same AZ (Azure Availability Zones). For high availability, create ANF volumes in separate AZs and enable `Cross Zone Replication`
 
 > [!IMPORTANT]
 > Microsoft does not support Fastpath for Secured Azure VWAN hub where the maximum port speed possible is 20Gbps. Consider using hub & spoke VNET's if larger throughput is required.
@@ -158,8 +158,8 @@ Default route advertisement from Azure is possible with a third-party NVA in eit
 
 ## Additional Information
 
--	 Access vCenter using Bastion + Jumpbox VM -   If accessing vCenter from on-premises, make sure to have a route from your on-premises networks to the /22 AVS management network.  Validate that the route in CLI by typing `Test-NetConnection  x.x.x.2 -port 443`
-- DNS considerations -  If using private endpoints follow the guidance detailed here: Azure Private Endpoint DNS configuration | Microsoft Learn
+- Access vCenter using Bastion + Jumpbox VM - If accessing vCenter from on-premises, make sure to have a route from your on-premises networks to the /22 AVS management network. Validate that the route in CLI by typing `Test-NetConnection x.x.x.2 -port 443`
+- DNS considerations - If using private endpoints follow the guidance detailed here: Azure Private Endpoint DNS configuration | Microsoft Learn
 
 [![Azure VMware Solution subscription and resource group organization](./media/azure-vmware-resource-groups.png)](./media/azure-vmware-resource-groups.png)
 
