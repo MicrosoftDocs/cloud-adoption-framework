@@ -62,7 +62,7 @@ These architecture domains follow all principles of data mesh. Domains take owne
 
 The next deployment option is another iteration of the previous design. This deployment follows a governed mesh topology: data is distributed via a central hub, in which data is partitioned per domain, logically isolated, and not integrated. This model's hub uses its own (domain-agnostic) data landing zone, and can be owned by a central data governance team overseeing which data is distributed to which other domains. The hub also carries services that facilitate data onboarding.
 
-:::image type="content" source="../media/domain-agnostic-infra-03.png" alt-text="Diagram that shows the hub-, generic-, and special data landing zones." lightbox="../media/domain-agnostic-infra-03.png":::
+:::image type="content" source="../media/domain-agnostic-infra-03.png" alt-text="Diagram that shows the hub-, generic-, and special data landing zones." lightbox="../media/domain-agnostic-infra-03.png":::
 
 For domains that require standard services for consuming, using, analyzing and creating new data, use generic data landing zone. This single subscription holds a standard set of services. Also apply data virtualization, as most of your data products are already persisted in the hub and you don't need more data duplication.
 

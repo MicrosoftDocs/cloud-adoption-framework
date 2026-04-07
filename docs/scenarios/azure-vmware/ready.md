@@ -33,7 +33,7 @@ As part of the identity and access management enterprise-scale landing zone, an 
 - Connectivity to standard hub virtual network or an Azure Virtual WAN hub
 - Private connectivity
 
-**Management and monitoring​:** Create alerts and dashboards on metrics that are most important to your operations teams.
+**Management and monitoring:** Create alerts and dashboards on metrics that are most important to your operations teams.
 
 License VMware ecosystem solutions like vRealize Operations, vRealize Log Insight and vRealize Network Insight. These solutions provide a detailed understanding of the Azure VMware Solution platform.
 
@@ -55,7 +55,7 @@ When working with Azure VMware Solution in both primary (protected) and secondar
 - Environment and network security
 - Guest application and VM security
 
-**Platform automation and DevOps​:** Use guidance for automation and DevOps to assist with the deployment of an Azure VMware Solution private cloud, such as:
+**Platform automation and DevOps:** Use guidance for automation and DevOps to assist with the deployment of an Azure VMware Solution private cloud, such as:
 
 - Deployment options for Azure VMware Solution, including manual and automated
 - Automated scale considerations and implementation details

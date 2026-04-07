@@ -47,7 +47,7 @@ We can utilize this information to visualize the overall health of our resources
 
 - What management tasks will you need to perform? Will you need to resubmit messages or files?
 
-- Logic App run history is stored in Azure Storage by default, but you can choose to also export metrics and log files to other sources  (for example, Log Analytics, or an external Storage Account). Consider how you use your logging information, and if you use a centralized log store.
+- Logic App run history is stored in Azure Storage by default, but you can choose to also export metrics and log files to other sources (for example, Log Analytics, or an external Storage Account). Consider how you use your logging information, and if you use a centralized log store.
 
 - Application Insights is used to provide application performance monitoring. It does so by collecting metrics from the resources that make up your solution.
 
@@ -82,7 +82,7 @@ The main query tables are:
   This table logs all requests made by the Logic App runtime to another resource OR to specific actions within your workflow.
 
 - *traces*  
-  This table contains the bulk of the Logic Apps runtime logs, logging details on trigger execution, workflow starting and stopping, and action execution. If you've logged any tracked properties from your actions, you'll find this data in the *customDimensions* section.  You can then use the extend clause in a query to add the data as columns in your query response.
+  This table contains the bulk of the Logic Apps runtime logs, logging details on trigger execution, workflow starting and stopping, and action execution. If you've logged any tracked properties from your actions, you'll find this data in the *customDimensions* section. You can then use the extend clause in a query to add the data as columns in your query response.
 
 **Workflows with Errors:**
 
@@ -146,6 +146,6 @@ Review the critical design areas to make complete considerations and recommendat
 
 - [Kusto Query Language (KQL) overview](/azure/data-explorer/kusto/query/)
 
-- [Azure Logic Apps Running Anywhere – Monitor with Application Insights – part  1](https://techcommunity.microsoft.com/t5/integrations-on-azure-blog/azure-logic-apps-running-anywhere-monitor-with-application/ba-p/1877849)
+- [Azure Logic Apps Running Anywhere – Monitor with Application Insights – part 1](https://techcommunity.microsoft.com/t5/integrations-on-azure-blog/azure-logic-apps-running-anywhere-monitor-with-application/ba-p/1877849)
 
 - [Azure Logic Apps Running Anywhere – Monitor with Application Insights – part 2](https://techcommunity.microsoft.com/t5/integrations-on-azure-blog/azure-logic-apps-running-anywhere-monitor-with-application/ba-p/2003332)

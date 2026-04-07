@@ -1,8 +1,8 @@
 ---
 title: DevOps automation for cloud-scale analytics in Azure
 description: Learn about DevOps automation for cloud-scale analytics in Azure.
-author: abdale
-ms.author: hamoodaleem
+author: stephen-sumner
+ms.author: pnp
 ms.date: 02/17/2022
 ms.topic: concept-article
 ms.custom: e2e-data-management, think-tank
@@ -17,7 +17,7 @@ ms.custom: e2e-data-management, think-tank
 
 Today, DevOps has shifted the culture of how people think and work, accelerating the rate at which businesses realize value by helping individuals and organizations to develop and maintain sustainable work practices. DevOps combines development and operations, and is often associated with software engineering tools that support continuous integration (CI) and continuous delivery (CD) practices. These tools and practices include source code managers (such as Git, Apache Subversion, or Team Foundation Version Control) and automatic build and delivery managers (such Azure Pipelines or GitHub Actions).
 
-DevOps combined with observability is key to providing an agile and scalable platform. DevOps give teams the ability to implement source control, CI/CD pipelines,  infrastructure as code, Workflows and automation. Whilst observability enables business owners, DevOps engineers, data architects, data engineers, and site reliability engineers to detect, predict, prevent, and resolve issues in an automated fashion and avoid eliminating downtime that would otherwise break production analytics and AI.
+DevOps combined with observability is key to providing an agile and scalable platform. DevOps gives teams the ability to implement source control, CI/CD pipelines, infrastructure as code, Workflows and automation. Whilst observability enables business owners, DevOps engineers, data architects, data engineers, and site reliability engineers to detect, predict, prevent, and resolve issues in an automated fashion and avoid eliminating downtime that would otherwise break production analytics and AI.
 
 ## Source control
 
