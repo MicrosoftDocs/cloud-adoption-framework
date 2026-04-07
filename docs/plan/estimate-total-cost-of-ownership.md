@@ -53,7 +53,7 @@ An architecture plan provides the context required to estimate the total cost of
 
 4. **Select high-availability SKUs for critical workloads.** Mission-critical and business-critical workloads require high availability and fault tolerance. You must select service tiers that support Availability Zones or zone-redundant configurations.
 
-    - Review the service’s availability options and SLAs.
+    - Review the service's availability options and SLAs.
     - Select SKUs that support zone redundancy or regional failover.
     - Validate that the selected tier meets your recovery time objectives (RTOs) and recovery point objectives (RPOs).
 
@@ -85,7 +85,7 @@ A cost estimate provides the financial foundation for cloud adoption planning. A
 
 ### Reevaluate cost estimates when projections deviate
 
-1. **Compare cost estimates to budget expectations.** Review the output from the Azure Pricing Calculator and compare these cost estimates to your organization’s budget. This comparison identifies discrepancies between projected costs and financial targets. If the estimate is too high or too low, investigate the underlying causes to determine whether architectural changes are necessary.
+1. **Compare cost estimates to budget expectations.** Review the output from the Azure Pricing Calculator and compare these cost estimates to your organization's budget. This comparison identifies discrepancies between projected costs and financial targets. If the estimate is too high or too low, investigate the underlying causes to determine whether architectural changes are necessary.
 
 2. **Identify high-cost architectural elements.** Focus your analysis on services with premium SKUs, multi-region deployments, or high consumption rates. These architectural elements often drive significant costs. Determine whether these choices are essential to meet business, performance, or compliance requirements, and document the rationale for each high-cost component.
 
