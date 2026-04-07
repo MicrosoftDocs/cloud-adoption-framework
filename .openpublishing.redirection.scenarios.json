@@ -1189,6 +1189,46 @@
       "source_path": "docs/scenarios/cloud-scale-analytics/architectures/what-is-data-product.md",
       "redirect_url": "/azure/cloud-adoption-framework/data/executive-strategy-unify-data-platform",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/cloud-scale-analytics/best-practices/automated-ingestion-pattern.md",
+      "redirect_url": "/azure/cloud-adoption-framework/data/executive-strategy-unify-data-platform",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/cloud-scale-analytics/best-practices/azure-machine-learning.md",
+      "redirect_url": "/azure/cloud-adoption-framework/data/executive-strategy-unify-data-platform",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/cloud-scale-analytics/best-practices/azure-synapse-analytics-implementation.md",
+      "redirect_url": "/azure/cloud-adoption-framework/data/executive-strategy-unify-data-platform",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/cloud-scale-analytics/best-practices/data-ingestion.md",
+      "redirect_url": "/azure/cloud-adoption-framework/data/executive-strategy-unify-data-platform",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/cloud-scale-analytics/best-practices/data-lake-key-considerations.md",
+      "redirect_url": "/azure/cloud-adoption-framework/data/executive-strategy-unify-data-platform",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/cloud-scale-analytics/best-practices/data-lake-overview.md",
+      "redirect_url": "/azure/cloud-adoption-framework/data/executive-strategy-unify-data-platform",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/cloud-scale-analytics/best-practices/data-lake-zones.md",
+      "redirect_url": "/azure/cloud-adoption-framework/data/executive-strategy-unify-data-platform",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/cloud-scale-analytics/best-practices/data-science-best-practices.md",
+      "redirect_url": "/azure/cloud-adoption-framework/data/executive-strategy-unify-data-platform",
+      "redirect_document_id": false
     }
    ]   
 }
