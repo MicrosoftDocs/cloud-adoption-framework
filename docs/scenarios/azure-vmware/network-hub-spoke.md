@@ -158,7 +158,7 @@ Default route advertisement from Azure is possible with a third-party NVA in eit
 
 ## Additional Information
 
--	 Access vCenter using Bastion + Jumpbox VM - If accessing vCenter from on-premises, make sure to have a route from your on-premises networks to the /22 AVS management network. Validate that the route in CLI by typing `Test-NetConnection x.x.x.2 -port 443`
+- Access vCenter using Bastion + Jumpbox VM - If accessing vCenter from on-premises, make sure to have a route from your on-premises networks to the /22 AVS management network. Validate that the route in CLI by typing `Test-NetConnection x.x.x.2 -port 443`
 - DNS considerations - If using private endpoints follow the guidance detailed here: Azure Private Endpoint DNS configuration | Microsoft Learn
 
 [![Azure VMware Solution subscription and resource group organization](./media/azure-vmware-resource-groups.png)](./media/azure-vmware-resource-groups.png)
