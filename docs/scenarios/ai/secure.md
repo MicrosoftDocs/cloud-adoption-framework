@@ -3,7 +3,7 @@ title: Secure AI
 description: Learn the process to secure AI with best practices and recommendations.
 ms.author: ssumner
 author: stephen-sumner
-ms.date: 04/06/2026
+ms.date: 04/07/2026
 ms.topic: concept-article
 ---
 
@@ -25,24 +25,24 @@ AI workloads create new attack surfaces that traditional security measures can't
 
 4. **Conduct periodic risk assessments.** New threats emerge as AI models, usage patterns, and threat actors evolve over time. Regular assessments ensure your security posture adapts to changing risk landscapes. Run recurring assessments to identify vulnerabilities in models, data pipelines, and deployment environments, and use assessment findings to guide your risk mitigation priorities across all of your environments.
 
->>>>BEGIN HERE<<<<
-
 ## Protect AI resources and data
 
-AI systems contain valuable assets that require strong protection against unauthorized access and attacks. You must implement specific security controls to safeguard these critical resources.
+AI systems contain valuable resources and data that require strong protection against unauthorized access and attacks. You must implement specific security controls to safeguard these critical assets.
 
 ### Secure AI resources
 
 Comprehensive security measures protect your AI investments and maintain stakeholder trust in your AI solutions. You must apply targeted controls to secure all components of your AI infrastructure. Here's how:
 
-1. **Create a complete AI asset inventory.** Unknown AI assets create security unguarded sides that attackers exploit to gain unauthorized access. A comprehensive inventory enables effective monitoring and rapid incident response for all AI components. Use [Azure Resource Graph Explorer](/azure/governance/resource-graph/) to discover AI resources across subscriptions, implement [Microsoft Defender for Cloud](/azure/defender-for-cloud/identify-ai-workload-model) to identify generative AI workloads, and maintain this inventory through automated scanning and regular validation.
+1. **Create a complete AI asset inventory.** Unknown AI assets, or AI assets that are not tracked for compliance with your organizational AI policy, create security risks that attackers can exploit to gain unauthorized access. A comprehensive inventory enables effective monitoring and rapid incident response for all AI components. Use [Azure Resource Graph](/azure/governance/resource-graph/) to discover AI resources across subscriptions and leverage [Microsoft Defender for Cloud to identify generative AI workloads](/azure/defender-for-cloud/identify-ai-workload-model). The results then becomes your AI inventory and should be maintained through automated scanning and regular validation.
 
-2. **Secure all AI communication channels.** Exposed communication paths between AI components allow data interception and system compromise. Properly secured channels prevent unauthorized access and protect sensitive information in transit. Implement [managed identities](/entra/identity/managed-identities-azure-resources/overview) for secure authentication without stored credentials, use [virtual networks](/azure/ai-foundry/agents/how-to/virtual-networks) to isolate AI communications, and deploy [Azure API Management](/azure/api-management/export-rest-mcp-server) to secure Model Context Protocol server endpoints.
+2. **Secure all AI communication channels.** Exposed communication paths between AI components allow data interception and system compromise. Properly secured channels prevent unauthorized access and protect sensitive information in transit. Implement [managed identities](/entra/identity/managed-identities-azure-resources/overview) for secure device and workload (i.e., non-human) identity authentication without stored credentials, use [virtual networks](/azure/ai-foundry/agents/how-to/virtual-networks) to isolate AI communications, and deploy [Azure Application Programming Interface (API) Management](/azure/api-management/export-rest-mcp-server) to secure Model Context Protocol (MCP) server endpoints using either the built-in API Gateway, or by integrating existing MCP servers to API Management through the Azure Portal.
 
 3. **Apply platform-specific security controls.** Different AI deployment models face distinct security threats based on their architecture and exposure points. Platform-tailored controls address the specific vulnerabilities present in each deployment type. Follow dedicated security guidance based on your deployment model:
 
-    - [Azure PaaS security](./platform/security.md)
-    - [Azure IaaS security](./infrastructure/security.md)
+    - [AI Security on Azure PaaS](./platform/security.md)
+    - [AI Security on Azure IaaS](./infrastructure/security.md)
+
+>>>>>BEGIN HERE<<<<<
 
 ### Secure AI data
 
