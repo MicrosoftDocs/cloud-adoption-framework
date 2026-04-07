@@ -1061,11 +1061,6 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "docs/scenarios/cloud-scale-analytics/toc.yml",
-      "redirect_url": "/azure/cloud-adoption-framework/data/executive-strategy-unify-data-platform",
-      "redirect_document_id": false
-    },
-    {
       "source_path": "docs/scenarios/cloud-scale-analytics/well-architected-framework.md",
       "redirect_url": "/azure/cloud-adoption-framework/data/executive-strategy-unify-data-platform",
       "redirect_document_id": false
