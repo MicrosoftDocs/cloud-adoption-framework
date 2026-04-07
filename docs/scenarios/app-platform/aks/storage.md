@@ -10,6 +10,13 @@ ms.custom: think-tank, e2e-aks
 
 # Storage considerations for Azure Kubernetes Service (AKS)
 
+> [!IMPORTANT]
+> **Deprecation notice:** This article is deprecated and is no longer being updated. To ensure only the best guidance is surfaced, this article will be deleted in May 2026.
+>
+> For alternative guidance, see [**Azure Kubernetes Service**](/azure/architecture/reference-architectures/containers/aks-start-here) architecture guidance in the Azure Architecture Center.
+>
+> If you would like to save this guidance, you can select **Download a PDF** at the bottom left of this page or download the files from [GitHub](https://github.com/MicrosoftDocs/cloud-adoption-framework/tree/main/docs/scenarios/app-platform/aks).
+
 This article explains how to choose and implement the most effective storage options for your Azure Kubernetes Service (AKS) workloads. Selecting the right storage solution is critical for achieving optimal application performance, reliability, and cost efficiency in your Kubernetes environment.
 
 Azure Kubernetes Service supports both stateless and stateful workloads. When deploying stateful applications, you need appropriate storage solutions to maintain application state. AKS integrates with multiple native storage options, including managed databases, disks (block storage), files, and blob (object) storage. Each option provides different performance characteristics, availability guarantees, and cost structures to address various workload requirements.
