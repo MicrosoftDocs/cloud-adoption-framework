@@ -320,7 +320,7 @@ When there is a need to connect from an App Service to on-premises, private, or 
 
 - Public network access should be disabled.
 
-- Create a private endpoint for [restricting access](/azure/key-vault/general/private-link-service?tabs=portal) via VNet's only.
+- Create a private endpoint for [restricting access](/azure/key-vault/general/private-link-service?tabs=portal) via VNets only.
 
 - Place your private endpoint in its own dedicated subnet reserved for Key Vault.
 

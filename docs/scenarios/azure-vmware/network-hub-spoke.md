@@ -103,7 +103,7 @@ To use Azure Route Server, you must:
 -	Use route summarization for > 1000 routes or use `NO_ADVERTISE BGP communities` flag referenced in the [Azure Route Server frequently asked questions (FAQs)](/azure/route-server/route-server-faq#can-azure-route-server-filter-out-routes-from-nvas)
 
 - Peer NVA with specific, non-Azure ASNs. For example, since ARS uses 65515, no other appliance in the VNET can use that ASN (Autonomous System Number).
--	No support for IPV6
+-	No support for IPv6
 
 ## Integration with Azure NetApp Files
 
@@ -114,7 +114,7 @@ By using NFS datastores backed by Azure NetApp Files, you can expand your storag
 - Deploy ANF in a delegated subnet
 - 	Hub & Spoke deployment supports ER GW SKU of up 10 Gbps
 - Ultra & ErGw3AZ SKU is required for bypassing the gateway port speed limits
-- Read traffic ingresses and write traffic is egresses over the ExpressRoute. Egress traffic over ExpressRoute circuits bypasses the gateway and go directly to the edge router
+- Read traffic is ingress traffic, and write traffic is egress traffic over ExpressRoute. Egress traffic over ExpressRoute circuits bypasses the gateway and goes directly to the edge router.
 - Ingress/Egress charges are suppressed from AVS, however there's an egress charge if data is going across peered VNETs.
 - Use a dedicated ExpressRoute Gateway for Azure NetApp Files, do not use a shared/centralized ExpressRoute Gateway.
 - Don't place a firewall or NVA in the data path between Azure NetApp Files and Azure VMware Solution.
