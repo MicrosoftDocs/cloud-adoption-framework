@@ -13,6 +13,8 @@ This article helps you establish a security process for AI workloads in Azure. A
 
 :::image type="content" source="./images/ai-secure.svg" alt-text="Diagram that shows the 6 phases of AI adoption: Strategy, Plan, Ready, Govern, Secure, Manage." lightbox="./images/ai-secure.svg" border="false":::
 
+Govern AI, Manage AI, and Secure AI are continuous processes you must iterate through regularly. Revisit each AI Strategy, AI Plan, and AI Ready as needed.
+
 ## Discover AI security risks
 
 AI workloads create new attack surfaces that traditional security measures can't address. You must systematically evaluate AI-specific vulnerabilities to build effective defenses. Here's how:
@@ -42,15 +44,13 @@ Comprehensive security measures protect your AI investments and maintain stakeho
     - [AI Security on Azure PaaS](./platform/security.md)
     - [AI Security on Azure IaaS](./infrastructure/security.md)
 
->>>>>BEGIN HERE<<<<<
-
 ### Secure AI data
 
 AI workloads rely on data and artifacts that require robust protection to prevent unauthorized access, data leaks, and compliance violations. You must implement comprehensive data security measures to protect AI data and artifacts. Here's how:
 
-1. **Define and maintain data boundaries.** Clear data boundaries ensure AI workloads access only data appropriate for their intended audience and use case. Use [Microsoft Purview](/purview/purview-security) to classify data sensitivity and define access policies. Implement [Azure role-based access control (RBAC)](/azure/role-based-access-control/) to restrict data access by workload and user group. Use [Azure Private Link](/azure/private-link/) to create network-level data isolation between AI applications.
+1. **Define and maintain data boundaries.** Clear data boundaries ensure AI workloads access only the data that is appropriate for their intended audience and use case. Use [Microsoft Purview](/purview/purview-security) to classify data sensitivity, using senstive information types, trainable classieifers and data classification to define access policies. Implement [Azure role-based access control (RBAC)](/azure/role-based-access-control/) to restrict data access by workload and user group. Use [Azure Private Link](/azure/private-link/) to enable access to Azure PaaS Services (for example, Azure Storage and SQL Database) and Azure hosted customer-owned/partner services over a private endpoint in your virtual network.create network-level data isolation between AI applications.
 
-2. **Implement comprehensive data loss prevention.** Unauthorized data exposure through AI responses can compromise sensitive information and violate regulatory requirements. Data loss prevention controls prevent AI models from inadvertently revealing protected data in their outputs. Use [Microsoft Purview Data Loss Prevention](/purview/dlp-learn-about-dlp) to scan and block sensitive data in AI workflows. Configure [content filtering](/azure/ai-foundry/concepts/content-filtering) to prevent sensitive information leakage, and implement custom filters to detect and redact organization-specific sensitive data patterns. For Microsoft Copilot Studio, [Configure data loss prevention policies for agents](/microsoft-copilot-studio/admin-data-loss-prevention).
+2. **Implement comprehensive data loss prevention.** Unauthorized data exposure through AI responses can compromise sensitive information and violate regulatory requirements. Data loss prevention controls prevent AI models from inadvertently revealing protected data in their outputs. Use [Microsoft Purview Data Loss Prevention](/purview/dlp-learn-about-dlp) to access Azure PaaS Services (for example, Azure Storage and SQL Database) and Azure hosted customer-owned/partner services over a private endpoint in your virtual networkto scan and block sensitive data in AI workflows. Configure [content filtering](/azure/ai-foundry/concepts/content-filtering) to prevent sensitive information leakage, and implement custom filters to detect and redact organization-specific sensitive data patterns. For Microsoft Copilot Studio, [Configure data loss prevention policies for agents](/microsoft-copilot-studio/admin-data-loss-prevention). Data policies let you govern how agents connect and interact with data and services, both within and outside your organization.
 
 3. **Protect AI artifacts from compromise.** Unsecured AI models and datasets become targets for theft, poisoning, or reverse engineering attacks. Protected artifacts maintain intellectual property value and prevent malicious manipulation of AI systems. Store models and datasets in [Azure Blob Storage](/azure/storage/blobs/) with private endpoints, apply encryption at rest and in transit, and implement strict access policies with monitoring to detect unauthorized access attempts.
 
@@ -62,7 +62,7 @@ AI systems face evolving threats that require continuous monitoring to prevent s
 
 2. **Establish AI-focused incident response procedures.** Undetected security incidents can lead to data loss, model compromise, or service disruption that damages business operations. Specialized incident response procedures address the unique characteristics of AI security events. Build and test incident response plans that address AI-specific threats and continuously monitor for indicators of compromise in AI systems. Establish clear escalation procedures for different types of AI security incidents.
 
-3. **Implement platform-specific monitoring strategies.** AI workloads deployed on different platforms face distinct security challenges that require tailored monitoring approaches. Platform-specific monitoring ensures comprehensive coverage of all potential attack vectors. Apply monitoring guidance based on your deployment architecture:
+3. **Implement platform-specific monitoring strategies.** AI workloads deployed on different platforms face distinct security challenges that require tailored monitoring approaches. Platform-specific monitoring ensures comprehensive coverage of all potential attack vectors. Apply monitoring guidance based on your deployment architecture as follows:
 
     - [AI monitoring on Azure platforms (PaaS)](./platform/management.md)
     - [AI monitoring on Azure infrastructure (IaaS)](./infrastructure/management.md)
@@ -81,7 +81,7 @@ AI systems face evolving threats that require continuous monitoring to prevent s
 
 ## Next steps
 
-Govern AI, Manage AI, and Secure AI are continuous processes you must iterate through regularly. Revisit each AI Strategy, AI Plan, and AI Ready as needed. Use the AI adoption checklists to determine what your next step should be.
+As stated above, Govern AI, Manage AI, and Secure AI are continuous processes you must iterate through regularly. Revisit each AI Strategy, AI Plan, and AI Ready as needed. Use the AI adoption checklists to determine what your next step should be.
 
 > [!div class="nextstepaction"]
 > [AI checklists](index.md#ai-checklists)
