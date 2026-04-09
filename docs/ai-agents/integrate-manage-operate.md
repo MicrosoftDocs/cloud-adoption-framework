@@ -18,7 +18,7 @@ This article provides guidance on integrating AI agents into business workflows 
 :::image type="content" source="./images/ai-agent-adoption.svg" alt-text="Diagram showing a horizontal workflow with four connected phases: plan for agents (sub-steps are business plan, technology plan, organizational readiness, and data architecture). Govern and secure agents (Sub-steps are Responsible AI, Governance and Security, and Prepare environment). Build agents (Sub-steps are single and multi-agent systems and process to build agents). Manage agents integrate (sub-processes Integrate agents and operate agents)." lightbox="./images/ai-agent-adoption.svg" border="false":::
 *Figure 1. Microsoft's AI agent adoption process.*
 
-Integrating agents into daily operations requires an approach that balances adoption with standardization. You must establish standardized patterns for rollout, monitoring, and maintenance to prevent technical debt and operational fragmentation. Without these controls, organizations face shadow AI proliferation, unpredictable budget overruns, and the accumulation of unused agents that expand the attack surface. This guidance helps you transition agents from development pilots into reliable, managed enterprise assets.
+Integrating agents into daily operations requires an approach that balances adoption with standardization. Establish standardized patterns for rollout, monitoring, and maintenance to prevent technical debt and operational fragmentation. Without these controls, organizations face shadow AI proliferation, unpredictable budget overruns, and the accumulation of unused agents that expand the attack surface. This guidance helps you transition agents from development pilots into reliable, managed enterprise assets.
 
 ## Integrate AI agents
 
@@ -35,7 +35,7 @@ Integrating AI agents requires embedding these tools into daily business operati
 3. **Validate value through phased expansion.** Introduce agents to specific business units or high-impact use cases before a broad organizational rollout. This targeted approach allows you to measure actual business impact, gather qualitative feedback, and refine agent behaviors based on real-world interactions. Expanding based on proven value rather than technical readiness ensures that the agent evolves in alignment with business priorities.
 
 **Microsoft facilitation:**<br>
-:::image type="icon" source="./images/foundry-icon.png"::: **Foundry**: Use the agent [deployment](/azure/ai-foundry/agents/how-to/publish-agent?view=foundry&preserve-view=true) and [rollout guidance](/azure/ai-foundry/concepts/planning?view=foundry&preserve-view=true).
+:::image type="icon" source="./images/foundry-icon.png"::: **Microsoft Foundry**: Use the agent [deployment](/azure/ai-foundry/agents/how-to/publish-agent?view=foundry&preserve-view=true) and [rollout guidance](/azure/ai-foundry/concepts/planning?view=foundry&preserve-view=true).
 
 :::image type="icon" source="./images/copilot-studio-icon.png"::: **Copilot Studio:** Use [analytics](/microsoft-copilot-studio/analytics-summary) to track engagement and [conversation metrics](/microsoft-copilot-studio/analytics-improve-agent-effectiveness).
 
@@ -43,7 +43,7 @@ Integrating AI agents requires embedding these tools into daily business operati
 
 Standardization accelerates adoption and ensures consistent governance, while continuous feedback mechanisms prevent agent capabilities from drifting away from user needs. Without these patterns, organizations face fragmented development efforts and agents that fail to evolve with business requirements.
 
-1. **Develop reusable architectural templates.** Convert proven architectures, prompts, and integration patterns into standardized assets that accelerate development. This approach reduces development time and prevents teams from reinventing solutions for common problems like retrieval-augmented generation (RAG). Templates ensure every deployment inherits required security controls, logging standards, and performance monitoring configurations automatically.
+1. **Develop reusable architectural templates.** Convert proven architectures, prompts, and integration patterns into standardized assets that accelerate development. This approach reduces development time and prevents teams from reinventing solutions for common problems like retrieval-augmented generation (RAG). Templates ensure every deployment automatically inherits required security controls, logging standards, and performance monitoring configurations.
 
 2. **Implement continuous improvement cycles.** Agents require ongoing refinement to remain effective as business needs and data sources evolve. Capture user feedback and operational data to drive iterative improvements rather than treating deployment as a one-time event. Maintain a prioritized backlog of unresolved queries and feature requests to guide development efforts toward high-impact issues that block value delivery.
 
