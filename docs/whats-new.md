@@ -14,7 +14,7 @@ ms.custom: UpdateFrequency.5, historical
 
 Microsoft's Cloud Adoption Framework is continuously updated with new guidance, enhanced content, and refined recommendations based on customer experiences and evolving cloud practices. This page helps you stay informed about the latest updates, new resources, deprecated content, and where to find specific information as the framework evolves.
 
-## April 2025
+## April 2026
 
 ### Deprecation notice
 
@@ -25,7 +25,7 @@ These articles will remain available on Microsoft Learn until May 30, 2026. Afte
 
 The Cloud Adoption Framework provides organization‑level decision guidance. Architecture and workload design guidance is provided through the Azure Architecture Center and the Microsoft Well‑Architected Framework, which remain the primary sources for alternative architecture guidance.
 
-## March 2025
+## March 2026
 
 ### New guidance
 
@@ -33,7 +33,7 @@ The Cloud Adoption Framework provides organization‑level decision guidance. Ar
 
 ### Deprecation notice
 
-**Cloud-scale analytics guidance is deprecated.** We replaced this guidance with [Unify your data platform for AI and analytics](./data/executive-strategy-unify-data-platform.md). The deprecation and deletion date is April 30, 2026. To keep a copy of the retired content, [download a PDF](https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fazure%2Fcloud-adoption-framework%2Fscenarios%2Fcloud-scale-analytics%2Ftoc.json) or download the source files from [GitHub](https://github.com/MicrosoftDocs/cloud-adoption-framework/tree/main/docs/scenarios/cloud-scale-analytics).
+**Cloud-scale analytics guidance is deprecated.** We replaced this guidance with [Unify your data platform for AI and analytics](./data/executive-strategy-unify-data-platform.md). The deprecation and deletion date is April 30, 2026. To keep a copy of the retired content, [download a PDF](/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fazure%2Fcloud-adoption-framework%2Fscenarios%2Fcloud-scale-analytics%2Ftoc.json) or download the source files from [GitHub](https://github.com/MicrosoftDocs/cloud-adoption-framework/tree/main/docs/scenarios/cloud-scale-analytics).
 
 ## December 2025
 
