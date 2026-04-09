@@ -29,7 +29,7 @@ The Cloud Adoption Framework provides organization‑level decision guidance. Ar
 
 ### New guidance
 
-[Unify your data platform for AI and analytics](./data/executive-strategy-unify-data-platform.md): CAF has new guidance on how to unify your data platform with Microsoft Fabric. This guidance helps decision makers organize operating models around data domains, define clear data ownership and accountability, and establish standards for secure and governed data products. It also explains how high-quality data products support AI and analytics across the organization.
+[**Unify your data platform for AI and analytics**](./data/executive-strategy-unify-data-platform.md): CAF has new guidance on how to unify your data platform with Microsoft Fabric. This guidance helps decision makers organize operating models around data domains, define clear data ownership and accountability, and establish standards for secure and governed data products. It also explains how high-quality data products support AI and analytics across the organization.
 
 ### Deprecation notice
 
