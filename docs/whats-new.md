@@ -1,6 +1,6 @@
 ---
-title: What's New in the Microsoft Cloud Adoption Framework
-description: Learn about recent updates to the Microsoft Cloud Adoption Framework for Azure.
+title: What's New in Microsoft's Cloud Adoption Framework
+description: Learn about recent updates to Microsoft's Cloud Adoption Framework.
 author: stephen-sumner
 ms.author: pnp
 ms.date: 01/14/2026
@@ -10,18 +10,36 @@ ms.topic: concept-article
 ms.custom: UpdateFrequency.5, historical
 ---
 
-# What's new in the Microsoft Cloud Adoption Framework for Azure
+# What's new in Microsoft's Cloud Adoption Framework
 
-We build the Microsoft Cloud Adoption Framework collaboratively with our customers, partners, and internal Microsoft Teams. We release new and updated content for the framework as it becomes available. These new releases pose an opportunity for you to test, validate, and refine the Cloud Adoption Framework guidance along with us.
+Microsoft's Cloud Adoption Framework is continuously updated with new guidance, enhanced content, and refined recommendations based on customer experiences and evolving cloud practices. This page helps you stay informed about the latest updates, new resources, deprecated content, and where to find specific information as the framework evolves.
 
-Partner with us in our ongoing effort to develop the Cloud Adoption Framework.
+## April 2025
+
+### Deprecation notice
+
+**Select application landing zone accelerator articles in the Cloud Adoption Framework are deprecated.**
+This deprecation applies only to the Cloud Adoption Framework guidance articles for the following application landing zone accelerators:[Azure Integration Services](/azure/cloud-adoption-framework/scenarios/app-platform/integration-services/landing-zone-accelerator), [Azure Kubernetes Services](/azure/cloud-adoption-framework/scenarios/app-platform/aks/landing-zone-accelerator), [Azure API Management](/azure/cloud-adoption-framework/scenarios/app-platform/api-management/landing-zone-accelerator), [Azure App Service](/azure/cloud-adoption-framework/scenarios/app-platform/app-services/landing-zone-accelerator), and [Azure Container Apps](/azure/cloud-adoption-framework/scenarios/app-platform/app-services/landing-zone-accelerator).
+
+These articles will remain available on Microsoft Learn until May 30, 2026. After this date, the Cloud Adoption Framework versions of these articles will be removed. This change applies solely to thw guidance in the Cloud Adoption Framework. If your organization currently references this Cloud Adoption Framework content, take any necessary steps to retain information for your own records prior to the removal date. There are directions provided in the previous links.
+
+The Cloud Adoption Framework provides organization‑level decision guidance. Architecture and workload design guidance is provided through the Azure Architecture Center and the Microsoft Well‑Architected Framework, which remain the primary sources for alternative architecture guidance.
+
+## March 2025
+
+### New guidance
+
+[Unify your data platform for AI and analytics](./data/executive-strategy-unify-data-platform.md): CAF has new guidance on how to unify your data platform with Microsoft Fabric. This guidance helps decision makers organize operating models around data domains, define clear data ownership and accountability, and establish standards for secure and governed data products. It also explains how high-quality data products support AI and analytics across the organization.
+
+### Deprecation notice
+
+**Cloud-scale analytics guidance is deprecated.** We replaced this guidance with [Unify your data platform for AI and analytics](./data/executive-strategy-unify-data-platform.md). The deprecation and deletion date is April 30, 2026. To keep a copy of the retired content, [download a PDF](https://learn.microsoft.com/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fazure%2Fcloud-adoption-framework%2Fscenarios%2Fcloud-scale-analytics%2Ftoc.json) or download the source files from [GitHub](https://github.com/MicrosoftDocs/cloud-adoption-framework/tree/main/docs/scenarios/cloud-scale-analytics).
 
 ## December 2025
 
 ### New guidance
 
 [AI agent adoption guidance for organizations](ai-agents/index.md): Discover how to adopt AI agents effectively by using a step-by-step framework for planning, governance, integration, and measurement that maximizes business impact.
-
 
 ### Updated articles
 
