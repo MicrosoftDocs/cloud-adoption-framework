@@ -18,8 +18,6 @@ This article explains how to establish governance and security practices for AI 
 :::image type="content" source="./images/ai-agent-adoption.svg" alt-text="Diagram showing a horizontal workflow with four connected phases: plan for agents (sub-steps are business plan, technology plan, organizational readiness, and data architecture). Govern and secure agents (Sub-steps are Responsible AI, Governance and Security, and Prepare environment). Build agents (Sub-steps are single and multi-agent systems and process to build agents). Manage agents integrate (sub-processes Integrate agents and operate agents)." lightbox="./images/ai-agent-adoption.svg" border="false":::
 *Figure 1. Microsoft's AI agent adoption process.*
 
-Without proper governance, AI agents can introduce risks related to sensitive data exposure, compliance boundaries, and security vulnerabilities. This guidance shows how to implement controls that help protect data, support regulatory compliance, maintain visibility into agent behavior, and secure agent infrastructure throughout its lifecycle. Organizations that establish these controls are better positioned to avoid regulatory issues, data breaches, and operational disruptions associated with ungoverned agent behaviors.
-
 :::image type="complex" source="./images/governance-security.svg" alt-text="Diagram showing governance and security framework for AI agents across the organization with four horizontal layers." lightbox="./images/governance-security.svg" border="false":::
     The diagram illustrates a comprehensive governance and security framework organized into four layers. The top layer, "Data governance and compliance," includes Microsoft Purview Compliance Manager, Microsoft Purview APIs, Copilot Studio governance features, and data location controls. The second layer, "Agent observability," contains Agent 365, Microsoft Defender for Cloud, Azure Log Analytics, Application Insights, and Microsoft Cost Management. The third layer, "Agent security," shows Microsoft Defender for Cloud AI threat protection, Azure AI Content Safety, AI Red Teaming Agent, Azure role-based access control (RBAC), and Microsoft Sentinel. The bottom layer, "Agent development," lists Microsoft Agent Framework, Foundry SDK, Model Context Protocol (MCP), and Agent-to-Agent Protocol (A2A). Each layer connects to specific Microsoft services that support governance objectives at that level.
 :::image-end:::
@@ -125,7 +123,7 @@ Organizations require concrete mechanisms to control how agents access, process,
 
 :::image type="icon" source="./images/copilot-studio-icon.png"::: **Copilot Studio**: Review [security and governance guidance](/microsoft-copilot-studio/security-and-governance), enable [automatic security scans](/microsoft-copilot-studio/security-scan), and verify [agent runtime protection status](/microsoft-copilot-studio/security-agent-runtime-view) to ensure continuous validation.
 
-## Agent development
+## Agent development standards
 
 **Every agent must only use approved frameworks and protocols.** Organizations standardize how agents interact with tools, data, and each other to ensure consistency, safety, and interoperability. Business leaders define which protocols and frameworks are acceptable and mandate their use across all agent development efforts.
 
@@ -147,7 +145,7 @@ An environment is the controlled space where workloads and AI agents are develop
 2. **Govern the environments.** Governing environments means applying consistent organizational policies and controls across all platforms, whether PaaS, IaaS, or SaaS. Organizations are responsible for ensuring every environment aligns with corporate standards and regulatory requirements.
 
     - **PaaS and IaaS platforms**: Establish consistently governed application landing zones for building agents. These application landing zones provide a foundation for identity, networking, and security controls. AI agents do not require a specialized application landing zone architecture, but governance policies should reflect the services in use. For detailed guidance, see [Ready your AI environment](../scenarios/ai/ready.md).
-   
+
     - **SaaS platforms**: A landing zone foundation is not required because the platform is fully managed. Instead, focus on configuring identity, access, and data governance settings in line with organizational policies and best practices. Apply compliance controls wherever possible to maintain security and regulatory alignment.
 
 **Microsoft facilitation:**<br>
