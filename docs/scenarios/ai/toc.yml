@@ -12,9 +12,9 @@ items:
     - name: AI on Azure platforms (PaaS)
       items:
       - name: AI architectures
-        href: platform/architectures.md
+        href: ../../ai/platform/architectures.md
       - name: Resource selection
-        href: platform/resource-selection.md
+        href: ../../ai/platform/resource-selection.md
       - name: Networking
         href: platform/networking.md
       - name: Governance
@@ -26,7 +26,7 @@ items:
     - name: AI on Azure infrastructure (IaaS)
       items:
       - name: Implementation options
-        href: infrastructure/cycle-cloud.md
+        href: ../../ai/infrastructure/cycle-cloud.md
       - name: AI design areas
         items:
           - name: Compute
@@ -42,7 +42,7 @@ items:
           - name: Security
             href: infrastructure/security.md
       - name: Well-architected
-        href: infrastructure/well-architected.md
+        href: ../../ai/infrastructure/well-architected.md
   - name: Govern AI
     href: govern.md
   - name: Secure AI
