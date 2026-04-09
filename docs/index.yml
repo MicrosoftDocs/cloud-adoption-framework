@@ -1,17 +1,17 @@
 ### YamlMime:Hub
 
-title: Microsoft Cloud Adoption Framework
-summary: Proven guidance to be successful in the cloud.
+title: Cloud Adoption Framework for Microsoft
+summary: Proven guidance to help decision makers ensure their organization is successful in Azure.
 brand: azure
 
 metadata:
 
-  title: Microsoft Cloud Adoption Framework
-  description: Proven guidance to be successful in the cloud.
+  title: Cloud Adoption Framework for Microsoft
+  description: Proven guidance to help decision makers ensure their organization is successful in Azure.
   services: cloud-adoption-framework
   author: stephen-sumner
   ms.author: pnp
-  ms.date: 03/10/2026
+  ms.date: 04/09/2026
   ms.topic: hub-page
   ms.subservice: caf-general
 # Maximum of 8 items
@@ -23,25 +23,12 @@ highlightedContent:
   items:
 
     # Card
-    - title: Introduction
+    - title: What is the Cloud Adoption Framework?
       itemType: overview
       url: ./overview.md
-    - title: Unified data platform
-      itemType: how-to-guide
-      url: ./data/executive-strategy-unify-data-platform.md
-    - title: AI adoption
-      itemType: how-to-guide
-      url: ./scenarios/ai/index.md
-    - title: AI agents
-      itemType: how-to-guide
-      url: ./ai-agents/index.md
-    - title: Azure landing zone
-      itemType: architecture
-      url: ./ready/landing-zone/index.md    
-    - title: Scenarios
-      itemType: get-started
-      url: ./overview.md#cloud-adoption-framework-scenarios
-
+    - title: What's new
+      itemType: whats-new
+      url: ./whats-new.md
 
 # Card with summary style
 
@@ -49,7 +36,7 @@ additionalContent:
 
   # Supports up to 3 sections
   sections:
-    - title: Guidance  # < 60 chars (optional)
+    - title: Azure adoption steps  # < 60 chars (optional)
      # < 160 chars (optional)
       items:
 
@@ -96,6 +83,22 @@ additionalContent:
         - title: ⚙️ Manage
           summary: Manage your entire Azure environment.
           url: ./manage/index.md
+
+    - title: Solutions for specific scenarios # < 160 chars (optional)
+      items: 
+
+      - title: Unified data platform
+        summary: Unify your data for analytics and AI. 
+        url: ./data/executive-strategy-unify-data-platform.md
+      - title: General AI adoption
+        summary: How to adopt generative and non-generative AI across your organization.
+        url: ./scenarios/ai/index.md
+      - title: AI agents
+        summary: How to adopt and govern AI agents.
+        url: ./ai-agents/index.md
+      - title: Azure landing zone
+        summary: Deployable implementation to set up your Azure environment.
+        url: ./ready/landing-zone/index.md    
 
     - title: Workload design guidance # < 160 chars (optional)
       items: 

@@ -278,6 +278,7 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 
 | Resource | Resource provider namespace | Abbreviation |
 |--|--|--|
+| Azure Backup Resource Guard | `Microsoft.DataProtection/resourceGuards` | `rgd` |
 | Backup Vault name | `Microsoft.DataProtection/backupVaults` | `bvault` |
 | Backup Vault policy | `Microsoft.DataProtection/backupVaults/backupPolicies` | `bkpol` |
 | File share | `Microsoft.Storage/storageAccounts/fileServices/shares` | `share` |
