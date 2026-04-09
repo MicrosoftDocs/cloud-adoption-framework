@@ -48,7 +48,7 @@ As AI adoption matures, the AI CoE should evolve from a centralized control to a
 
 1. **Recognize organizational inflection points.** Monitor key indicators that signal when centralized control is hindering rather than helping AI adoption. Early recognition prevents organizational friction and ensures continuous delivery momentum. Watch for approval delays and knowledge bottlenecks where AI experts in the CoE can't support all teams. You might see growing friction where product teams and the CoE frequently debate priorities instead of focusing on value delivery.
 
-1. **Embed AI delivery into platform operations.** Transfer AI delivery to the [platform teams](../../strategy/prepare-organizational-alignment.md#understand-your-operating-models-readiness-for-cloud). Platform teams enforce consistent governance, manage reliable deployments, and help ensure secure delivery across all workloads. Embedding these functions scales standards to every team and maintains agility.
+1. **Embed AI delivery into platform operations.** Transfer AI delivery to the platform teams. Platform teams enforce consistent governance, manage reliable deployments, and help ensure secure delivery across all workloads. Embedding these functions scales standards to every team and maintains agility.
 
 1. **Transition to an advisory model.** Replace the CoE gatekeeper model that blocks work with an advisory group that sets guardrails. Distribute AI expertise into product teams, platform teams, and enabling teams. Let frontline teams own delivery and implementation while forums provide policy and oversight. The CoE focuses on guidance and policy rather than direct control.
 
