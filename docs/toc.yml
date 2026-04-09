@@ -1,13 +1,11 @@
 items:
-  - name: Cloud Adoption Framework for Azure
+  - name: Cloud Adoption Framework for Microsoft
     href: index.yml
-    pdf_name: Microsoft Cloud Adoption Framework for Azure
-  - name: About
-    items:
-    - name: What is the Cloud Adoption Framework?
-      href: overview.md
-    - name: What's new
-      href: get-started/whats-new.md
+    pdf_name: Cloud Adoption Framework for Microsoft
+  - name: What is the Cloud Adoption Framework?
+    href: overview.md
+  - name: What's new
+    href: whats-new.md
   - name: Methodologies (phases)
     items:
     - name: Strategy

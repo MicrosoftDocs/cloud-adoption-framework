@@ -3929,6 +3929,11 @@
          "source_path": "docs/strategy/mission-objectives.md",
          "redirect_url": "/azure/cloud-adoption-framework/strategy/motivations",
          "redirect_document_id": false
-      }
+      },
+    {
+      "source_path": "docs/get-started/whats-new.md",
+      "redirect_url": "../whats-new",
+      "redirect_document_id": false
+    }
    ]
 }
