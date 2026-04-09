@@ -45,7 +45,7 @@ Consider the following factors:
 - Define `ClusterAutoscaler` and `MachineAutoscaler` resource definitions to describe how to adjust your cluster when it runs low on resources so that you can support continued operations. [`ClusterAutoscaler`](https://docs.redhat.com/en/documentation/openshift_container_platform/latest/html/machine_management/applying-autoscaling#cluster-autoscaler-about_applying-autoscaling) considers resources of all nodes on the cluster, including control plane nodes. As you scale up the cluster's control plane nodes, you reduce the remaining capacity for auto scaling worker nodes.
 - Deploy machine health checks to automatically repair damaged machines in a machine pool.
 - Scale pods to meet demand using [horizontal pod autoscaler](https://docs.openshift.com/container-platform/4.10/nodes/pods/nodes-pods-autoscaling.html).
-- Use an alerting system to provide notifications when things need direct action: Container Insights [metric alerts](/azure/azure-monitor/containers/container-insights-metric-alerts) or in-built [Alerting UI](https://docs.openshift.com/container-platform/4.10/monitoring/managing-alerts.html).
+- Use an alerting system to provide notifications when things need direct action: Container Insights [metric alerts](/azure/azure-monitor/containers/kubernetes-metric-alerts) or built-in [Alerting UI](https://docs.openshift.com/container-platform/4.10/monitoring/managing-alerts.html).
 
 ## Business continuity and disaster recovery (BCDR)
 
@@ -62,7 +62,7 @@ Consider the following factors:
   - Increase reliability with reduced costs because of better use of hardware.
 - Spread nodes across all the available zones for higher availability.
   - Choose a region that supports Availability Zones.
-  - For complete zonal benefit, all service dependencies must also support zones. If a dependent service doesn't support zones, it's possible that a zone failure could cause that service to fail. Review the disk types used when spreading the workload across zones.
+  - To achieve the complete benefit of using multiple zones, all service dependencies must also support zones. If a dependent service doesn't support zones, it's possible that a zone failure could cause that service to fail. Review the disk types used when spreading the workload across zones.
   - For higher availability beyond what Availability Zones can achieve, run multiple clusters in different paired regions. If an Azure resource supports geo-redundancy, provide the location where the redundant service will have its secondary region.
 - Consistently create backups for applications and data.
   - A non-stateful service can be replicated efficiently.

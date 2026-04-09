@@ -14,7 +14,7 @@ ms.custom: think-tank, e2e-azure-vmware
 
 The choices you make during this design phase are determined by the requirements of the applications running on Azure VMware Solution that must be reachable over public IP addresses. Almost invariably, internet-facing applications are published via network devices that provide security (next-generation firewalls, web application firewalls) and load balancing (Layer 3 or Layer 4 load balancers, application delivery controllers). You can deploy these devices in the private cloud itself or in an Azure virtual network that's connected to the private cloud. Your choice is based on these considerations:
 
--  For cost optimization and consistency, you can use pre-existing NVAs that are deployed in Azure virtual networks (like firewalls and application delivery controllers) to publish applications running on your private clouds.
+- For cost optimization and consistency, you can use pre-existing NVAs that are deployed in Azure virtual networks (like firewalls and application delivery controllers) to publish applications running on your private clouds.
 - Azure PaaS services that can be used for publishing internet-facing applications, like [Azure Firewall](/azure/firewall/tutorial-firewall-dnat) (both when deployed in a customer-managed virtual network and when deployed in an Azure Virtual WAN hub) and [Azure Application Gateway](/azure/application-gateway/overview), might help reduce management overhead.
 - You can deploy firewalls and application delivery controllers as virtual appliances on Azure VMware Solution, if that's supported by the vendor.
 

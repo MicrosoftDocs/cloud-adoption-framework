@@ -1,6 +1,6 @@
 ---
 title: Modernization guidance to replatform, refactor, rearchitect
-description: Comprehensive modernization guidance for cloud workloads using three core strategies - replatform to Azure PaaS services, refactor application code for cloud optimization, and rearchitect for scalability and cloud-native capabilities
+description: Comprehensive modernization guidance for cloud workloads using three core strategies—replatform to Azure PaaS services, refactor application code for cloud optimization, and rearchitect for scalability and cloud-native capabilities
 author: stephen-sumner
 ms.author: ssumner
 ms.date: 08/01/2025
@@ -9,11 +9,11 @@ ms.topic: concept-article
 
 # Modernization guides
 
-Modernizing cloud workloads typically involves one or more of three core strategies: replatform, refactor, and rearchitect. This guide provides categorized links to relevant guidance for each strategy. While not exhaustive, it offers a solid starting point for planning your modernization journey.
+Modernizing cloud workloads typically involves one or more of three core strategies: replatform, refactor, and rearchitect. This guide provides categorized links to relevant guidance for each strategy. While not exhaustive, it provides a useful starting point for planning your modernization effort.
 
 ## Replatform
 
-Replatforming involves moving workload components to platform-as-a-service (PaaS) offerings with minimal code changes. It's perfect when you need to reduce operational overhead or improve reliability without a full redevelopment.
+Replatforming involves moving workload components to platform-as-a-service (PaaS) offerings with minimal code changes. Use this approach when you need to reduce operational overhead or improve reliability without a full redevelopment.
 
 | Replatform category | Replatform guidance | Guidance type |
 |---------------------|---------------------|---------------|
@@ -22,7 +22,7 @@ Replatforming involves moving workload components to platform-as-a-service (PaaS
 
 ## Refactor
 
-Refactoring focuses on modifying application code to improve maintainability, performance, or alignment with cloud best practices. Use this approach when technical debt is slowing progress or when the code isn’t optimized for the cloud.
+Refactoring focuses on modifying application code to improve maintainability, performance, or alignment with cloud best practices. Use this approach when technical debt is reducing development velocity or when the code is not optimized for cloud environments.
 
 | Refactor category | Refactor guidance | Guidance type |
 |-------------------|-------------------|---------------|
@@ -34,7 +34,7 @@ Refactoring focuses on modifying application code to improve maintainability, pe
 
 ## Rearchitect
 
-Rearchitecting involves redesigning the application architecture to unlock scalability, agility, or innovation. Use this approach when the current design limits growth or cloud-native capabilities.
+Rearchitecting involves redesigning the application architecture to enable scalability, agility, or innovation. Use this approach when the current design restricts scalability or cloud-native capabilities.
 
 | Rearchitect category | Rearchitect guidance | Guidance type |
 |------------------------|----------|---------------|

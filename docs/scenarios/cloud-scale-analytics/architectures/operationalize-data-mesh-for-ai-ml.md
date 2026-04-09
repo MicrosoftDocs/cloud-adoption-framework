@@ -10,6 +10,11 @@ ms.custom: e2e-data-management, think-tank
 
 # Operationalize data mesh for AI/ML domain driven feature engineering
 
+> [!IMPORTANT]
+> **Deprecation notice:** The Cloud‑Scale Analytics scenario has been deprecated and is no longer maintained or supported. To ensure only the best guidance is surfaced, this guidance will be deleted April 2026.
+>
+> For current CAF data guidance, see [**Unify your data platform**](https://aka.ms/cafdata).
+
 Data mesh helps organizations move from a centralized data lake or data warehouse to a domain-driven decentralization of analytics data underlined by four principles: Domain Ownership, Data as a Product, Self-serve Data Platform, and Federated Computational Governance. [Data mesh](what-is-data-mesh.md) provides the benefits of distributed data ownership and improved data quality and governance that accelerates business and time to value for organizations.
 
 ## Data mesh implementation
@@ -24,7 +29,7 @@ The following section outlines a couple of strategies that organizations can use
 
 ## AI/ML strategies for data mesh
 
-One common strategy is for the organization to adopt data science teams as data consumers. These teams access various domain data products in data mesh as per the use case. They perform data exploration and feature engineering to develop and build AI/ML models. In some cases, domain teams also develop their own AI/ML models by using their data and other teams’ data products to extend and derive new features.
+One common strategy is for the organization to adopt data science teams as data consumers. These teams access various domain data products in data mesh as per the use case. They perform data exploration and feature engineering to develop and build AI/ML models. In some cases, domain teams also develop their own AI/ML models by using their data and other teams' data products to extend and derive new features.
 
 [Feature engineering](https://en.wikipedia.org/wiki/Feature_engineering) is the core of model building and is typically complex and requires domain expertise. This strategy can be time-consuming since data science teams need to analyze various data products. They might not have complete domain knowledge to build high-quality features. Lack of domain knowledge can lead to duplicate feature engineering efforts between domain teams. Also, issues like AI/ML model reproducibility due to inconsistent feature sets across teams. Data science or domain teams need to continuously refresh features as new versions of data products are released.
 

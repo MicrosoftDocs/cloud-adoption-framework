@@ -62,7 +62,7 @@ A platform capability is a shared service that supports workload teams by accele
 
 A right-sized platform team enables consistent delivery of platform capabilities while maintaining agility and operational efficiency. This structure is essential for building and supporting internal platform products that accelerate workload team success. You must balance team size with the breadth of skills required to support cloud adoption at scale.
 
-1. **Start with “two-pizza” teams to maintain agility and focus.** A “two-pizza” team typically includes 6–10 members, which is a widely accepted benchmark for effective team size. This size allows for strong collaboration and fast feedback loops. Avoid larger teams that introduce coordination complexity and reduce delivery velocity.
+1. **Start with "two-pizza" teams to maintain agility and focus.** A "two-pizza" team typically includes 6-10 members, which is a widely accepted benchmark for effective team size. This size allows for strong collaboration and fast feedback loops. Avoid larger teams that introduce coordination complexity and reduce delivery velocity.
 
 2. **Ensure skill coverage across key platform domains.** Comprehensive skill coverage ensures that platform teams can design, build, and operate secure and scalable services. You must include specialists in key technical areas to support the full lifecycle of platform capabilities. Staff platform teams with specialists across core domains. A typical enterprise platform team should include:
 

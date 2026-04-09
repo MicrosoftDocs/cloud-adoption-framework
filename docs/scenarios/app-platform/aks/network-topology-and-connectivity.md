@@ -11,7 +11,12 @@ ms.custom: think-tank, e2e-aks
 
 # Network topology and connectivity considerations for AKS
 
-<!-- docutune:casing "Basic and Standard" -->
+> [!IMPORTANT]
+> **Deprecation notice:** This article is deprecated and is no longer being updated. To ensure only the best guidance is surfaced, this article will be deleted in May 2026.
+>
+> For alternative guidance, see [**Azure Kubernetes Service**](/azure/architecture/reference-architectures/containers/aks-start-here) architecture guidance in the Azure Architecture Center.
+>
+> If you would like to save this guidance, you can select **Download a PDF** at the bottom left of this page or download the files from [GitHub](https://github.com/MicrosoftDocs/cloud-adoption-framework/tree/main/docs/scenarios/app-platform/aks).
 
 ## Design considerations
 
@@ -137,6 +142,6 @@ Traffic between the AKS pods and the private endpoints by default won't go throu
 - If your security policy mandates inspecting all outbound internet traffic generated in the AKS cluster, secure egress network traffic using Azure Firewall or a third-party network virtual appliance (NVA) deployed in the managed hub virtual network. For more information, see [Limit egress traffic](/azure/aks/limit-egress-traffic). The AKS [outbound type UDR](/azure/aks/egress-outboundtype#deploy-a-cluster-with-outbound-type-of-udr-and-azure-firewall) requires associating a route table to the AKS node subnet, so it can't be used today with the dynamic route injection supported by Azure Virtual WAN or Azure Route Server.
 - For non-private clusters, use authorized IP ranges.
 - Use the Standard tier rather than the Basic tier of Azure Load Balancer.
-- When designing a Kubernetes cluster in Azure, one of the key considerations is selecting the appropriate network model for your specific requirements. Azure     Kubernetes Service (AKS) offers three different networking models: Kubenet, Azure CNI, and Azure CNI Overlay. To make an informed decision, it's essential to understand the capabilities and characteristics of each model.
+- When designing a Kubernetes cluster in Azure, one of the key considerations is selecting the appropriate network model for your specific requirements. Azure Kubernetes Service (AKS) offers three different networking models: Kubenet, Azure CNI, and Azure CNI Overlay. To make an informed decision, it's essential to understand the capabilities and characteristics of each model.
 
 For a feature comparison between the three network models in AKS, Kubenet, Azure CNI, and Azure CNI Overlay, see [Compare network models in AKS](/azure/aks/concepts-network#compare-network-models).

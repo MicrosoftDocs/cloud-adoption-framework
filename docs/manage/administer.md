@@ -92,7 +92,7 @@ Managing data in cloud operations involves actively classifying, segmenting, sec
 
 1. ***Control data residency.*** Select regions within your [geography](/azure/reliability/regions-overview#understand-azure-regions-and-geographies), such as the United States or Europe, to meet data residency requirements. Verify any exceptions because [certain Azure services](https://azure.microsoft.com/explore/global-infrastructure/data-residency#select-your-geography) might store data outside your selected region. Regularly review Azure data residency settings and compliance requirements to maintain full control over your customer data.
 
-1. ***Isolate internal (“Corp”) and internet-facing (“Online”) workloads.*** Use management groups to separate internal and external workloads. Internal workloads typically require connectivity or hybrid connectivity to your corporate network. External workloads usually don't require corporate network connectivity and might need direct inbound or outbound internet access. For an example, review the "Corp" (internal) and "Online" (internet-facing) management groups in [Azure landing zone](/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org-management-groups#management-groups-in-the-azure-landing-zone-accelerator-and-alz-bicep-repository).
+1. ***Isolate internal ("Corp") and internet-facing ("Online") workloads.*** Use management groups to separate internal and external workloads. Internal workloads typically require connectivity or hybrid connectivity to your corporate network. External workloads usually don't require corporate network connectivity and might need direct inbound or outbound internet access. For an example, review the "Corp" (internal) and "Online" (internet-facing) management groups in [Azure landing zone](/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org-management-groups#management-groups-in-the-azure-landing-zone-accelerator-and-alz-bicep-repository).
 
 1. ***Enforce access control.*** Implement robust access controls, such as [Azure RBAC](/azure/role-based-access-control/overview) and [Azure ABAC](/azure/role-based-access-control/conditions-overview), to ensure only authorized personnel access sensitive data based on defined classifications.
 
@@ -133,7 +133,7 @@ Define protocols and limits for portal deployments to minimize the potential for
 
 1. ***Restrict portal permissions.*** Limit deployment capabilities from the portal using role-based access control (RBAC). Assign read-only permissions by default, and escalate privileges only when necessary.
 
-    - ***Grant just-in-time access.*** Use [Privileged Identity Management (PIM)](/entra/id-governance/privileged-identity-management/pim-getting-started) for accessing Azure and Microsoft Entra resources. Require sequential approvals from multiple individuals or groups for activating PIM. Reserve privileged roles (“A0” super admin roles) exclusively for emergency scenarios.
+    - ***Grant just-in-time access.*** Use [Privileged Identity Management (PIM)](/entra/id-governance/privileged-identity-management/pim-getting-started) for accessing Azure and Microsoft Entra resources. Require sequential approvals from multiple individuals or groups for activating PIM. Reserve privileged roles ("A0" super admin roles) exclusively for emergency scenarios.
 
     - ***Structure RBAC based on the operating model.*** Design RBAC policies tailored to operational teams, including support levels, security operations, platforms, networking, and workloads.
 

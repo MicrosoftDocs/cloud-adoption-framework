@@ -10,6 +10,13 @@ ms.custom: internal
 
 # Security considerations for the App Service landing zone accelerator
 
+> [!IMPORTANT]
+> **Deprecation notice:** This is deprecated and is no longer being updated. To ensure only the best guidance is surfaced, this article will be deleted in May 2026.
+>
+> For alternative guidance, see [**Baseline highly available zone-redundant web application**](/azure/architecture/web-apps/app-service/architectures/baseline-zone-redundant) guidance in the Azure Architecture Center.
+>
+> If you would like to save this guidance, you can select **Download a PDF** at the bottom left of this page or download the files from [GitHub](https://github.com/MicrosoftDocs/cloud-adoption-framework/tree/main/docs/scenarios/app-platform/app-services).
+
 This article provides design considerations and recommendations for security that you can apply when you use the Azure App Service landing zone accelerator. Security for application secrets, network isolation, and vulnerability scanning are some of the considerations covered in this article.
 
 Learn more about the [security](../../../ready/landing-zone/design-area/security.md) design area.
@@ -33,8 +40,8 @@ As you prepare for your App Service deployment, take these recommendations into 
 
 - Store application secrets (database credentials, API tokens, and private keys) in Key Vault, and configure your App Service app to access them via a managed identity. To determine when to use Key Vault and when to use Azure App Configuration, see [Centralized app configuration and security](/azure/architecture/solution-ideas/articles/appconfig-key-vault).
 - [Enable cross-origin resource sharing (CORS)](/azure/app-service/app-service-web-tutorial-rest-api#enable-cors) in App Services or by using your own CORS utilities. CORS specifies origins from which user browsers should permit the loading of resources.
-- When you deploy containerized web applications to App Services, [enable Azure Defender for container registries](/azure/security-center/defender-for-container-registries-introduction) to automatically scan images for vulnerabilities.
-- Enable [Azure Defender for App Service](/azure/security-center/defender-for-app-service-introduction) to assess the security of your web applications, detect threats, and get alerts when potential threats are detected so that you can take action to protect your resources.
+- When you deploy containerized web applications to App Services, [enable Azure Defender for container registries](/azure/defender-for-cloud/defender-for-container-registries-introduction) to automatically scan images for vulnerabilities.
+- Enable [Microsoft Defender for App Service](/azure/defender-for-cloud/defender-for-app-service-introduction) to assess the security of your web applications, detect threats, and get alerts when potential threats are detected so that you can take action to protect your resources.
 - Use [private endpoints](/azure/private-link/private-endpoint-overview) to privately access [Azure services](/azure/private-link/availability) through your virtual network.
 - If you work with sensitive data, ensure that the data is transferred securely between the app and its clients. App Service supports secure HTTPS connections, which encrypt data in transit and help prevent third parties from intercepting it.
 - App Service offers managed SSL certificates, a convenient way to use trusted SSL certificates. SSL certificates allow an app to use HTTPS to encrypt data in transit and helps ensure that data is transferred securely.

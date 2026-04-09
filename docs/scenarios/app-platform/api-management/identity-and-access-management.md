@@ -10,6 +10,13 @@ ms.custom: internal
 
 # Identity and access management considerations for the API Management landing zone accelerator
 
+> [!IMPORTANT]
+> **Deprecation notice:** This is deprecated and is no longer being updated. To ensure only the best guidance is surfaced, this article will be deleted in May 2026.
+>
+> For alternative guidance, see [**Azure API Management landing zone architecture**](/azure/architecture/example-scenario/integration/app-gateway-internal-api-management-function) guidance in the Azure Architecture Center.
+>
+> If you would like to save this guidance, you can select **Download a PDF** at the bottom left of this page or download the files from [GitHub](https://github.com/MicrosoftDocs/cloud-adoption-framework/tree/main/docs/scenarios/app-platform/api-management).
+
 This article provides design considerations and recommendations for identity and access management when using the API Management landing zone accelerator. Identity and access management covers multiple aspects including access to manage the API Management instance, API developer access, and client access to APIs.
 
 Learn more about the [identity and access management](../../../ready/landing-zone/design-area/identity-access.md) design area.
@@ -30,7 +37,7 @@ Learn more about the [identity and access management](../../../ready/landing-zon
 - Use custom roles based on API Management [RBAC operations](/azure/role-based-access-control/resource-provider-operations#microsoftapimanagement) to set fine-grained access to API Management entities. Examples: API developers, backup operators, DevOps automation, etc.
 - Associate subscriptions at the appropriate scope, such as products.
 - Create appropriate [groups](/azure/api-management/api-management-howto-create-groups) to control the visibility of the products.
-- Manage access to the developer portal using [Microsoft Entra External ID](/azure/api-management/api-management-howto-entra-external-id).
+- Manage access to the developer portal using [Microsoft Entra External ID](/azure/api-management/api-management-howto-aad).
 - Reporting:
   - Make use of built-in [analytics](/azure/api-management/monitor-api-management).
   - Integrate API Management with [Application Insights](/azure/api-management/api-management-howto-app-insights).

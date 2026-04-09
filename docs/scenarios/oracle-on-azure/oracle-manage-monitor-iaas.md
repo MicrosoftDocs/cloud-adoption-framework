@@ -67,9 +67,9 @@ The following table lists the performance metrics that the Oracle administrator 
 | Data disk read bytes > 95                       | 95 (1)                |
 | Data disk read bytes > 85                       | 85 (2)                |
 | Data disk read bytes > 75                       | 75 (2)                |
-| Data disk writes bytes > 95                     | 95 (1)                |
-| Data disk writes bytes > 85                     | 85 (2)                |
-| Data disk writes bytes > 75                     | 75 (2)                |
+| Data disk write bytes > 95                     | 95 (1)                |
+| Data disk write bytes > 85                     | 85 (2)                |
+| Data disk write bytes > 75                     | 75 (2)                |
 
 > [!NOTE]
 > In the **Severity** category, **0** has the highest severity and **2** has the lowest severity.
@@ -96,10 +96,10 @@ You should monitor managed disk-related metrics. If thresholds are exceeded, you
 
  The following table lists other typical solution components that should be monitored in some capacity.
 
-|Azure service |Description |More information |
+|Azure service |Description |More information |
 |:---|:---|:---|
 |Azure Virtual Network|Oracle database on Virtual Machines landing zone accelerator uses Virtual Network for availability set, availability zone, high availability, and business continuity and disaster recovery (BCDR) by using Oracle Data Guard and GoldenGate.| - [Virtual Network overview](/azure/virtual-network/virtual-networks-overview) <br><br> - [Monitoring Azure virtual network data reference](/azure/virtual-network/monitor-virtual-network-reference)
-|Azure Backup|Monitor Backup and set an alert. Monitor the Oracle database alert log file on the database VM for lines that start with the following format: <br><br> `status – AzBackup – script – version: message` <br> Where: <br> - status = "INFO," "WARN," or "FAIL" <br> - AzBackup (boilerplate text) <br> - script = "pre-script" or "post-script"<br> - version = version number in decimal format <br> - message = free-format text <br><br> Example: `INFO - AzBackup pre-script v1.02: BEGIN BACKUP` | [Monitor at scale by using Azure Monitor Logs](/azure/backup/backup-azure-monitoring-use-azuremonitor) |
+|Azure Backup|Monitor Backup and set an alert. Monitor the Oracle database alert log file on the database VM for lines that start with the following format: <br><br> `status – AzBackup – script – version: message` <br> Where: <br> - status = "INFO," "WARN," or "FAIL" <br> - AzBackup (boilerplate text) <br> - script = "pre-script" or "post-script"<br> - version = version number in decimal format <br> - message = free-format text <br><br> Example: `INFO - AzBackup pre-script v1.02: BEGIN BACKUP` | [Monitor at scale by using Azure Monitor Logs](/azure/backup/backup-azure-monitoring-use-azuremonitor) |
 |Oracle database on a VM|Database alert log file and the OS console messages file. <br><br> - The database alert log file is typically located in the subdirectory `$ORACLE_BASE/diag/rdbms/$ORA_DBNAME/$ORACLE_SID/trace` on the database VM. <br><br> - OS console logs are located at `/var/log/messages`.| [Create an Oracle Database in an Azure VM](/azure/virtual-machines/workloads/oracle/oracle-database-quick-create) |
 
 ### Oracle workload monitoring by Oracle Enterprise Manager Cloud Control

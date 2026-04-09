@@ -10,6 +10,13 @@ ms.custom: internal
 
 # Platform automation and DevOps for the App Service landing zone accelerator
 
+> [!IMPORTANT]
+> **Deprecation notice:** This is deprecated and is no longer being updated. To ensure only the best guidance is surfaced, this article will be deleted in May 2026.
+>
+> For alternative guidance, see [**Baseline highly available zone-redundant web application**](/azure/architecture/web-apps/app-service/architectures/baseline-zone-redundant) guidance in the Azure Architecture Center.
+>
+> If you would like to save this guidance, you can select **Download a PDF** at the bottom left of this page or download the files from [GitHub](https://github.com/MicrosoftDocs/cloud-adoption-framework/tree/main/docs/scenarios/app-platform/app-services).
+
 This article provides design considerations and recommendations for platform automation and DevOps that you can apply when you use the Azure App Service landing zone accelerator. Platform automation and DevOps provide opportunities to modernize your approach to deployment by using infrastructure-as-code.
 
 Learn more about the [platform automation and DevOps](../../../ready/landing-zone/design-area/platform-automation-devops.md) design area.
@@ -47,10 +54,10 @@ Keep the following best practices in mind when you deploy App Service.
 - Use infrastructure as code tools like ARM or Bicep templates to automate the provisioning and management of your Azure resources. You can use ARM and Bicep templates to define your infrastructure as code, making it easy to version control, collaborate on, and automate the deployment of your resources.
 
 - Store secrets and other sensitive artifacts in the relevant secret store (like Azure Key Vault or GitHub secrets). Allow actions and other workflow parts to read them as needed.
--  Strive for maximized deployment concurrency by avoiding hardcoded configuration and settings.
--  Implement [shift-left](/azure/devops/learn/devops-at-microsoft/shift-left-make-testing-fast-reliable) security by including vulnerability and secret scanning tools, like container scanners, early in the pipeline.
--  Set up a deployment strategy that implements the principles of blue/green or canary deployments to minimize downtime and reduce the risk of deployment failures. Doing so enables you to gradually roll out new versions of your application to a small subset of users before rolling it out to the entire user base.
--  Use App Service deployment slots to implement a blue/green deployment strategy. Doing so enables you to validate and test your deployments in a staging environment before you deploy them to production. This strategy helps you ensure a smooth and successful deployment, validate application changes, and minimize downtime.
+- Strive for maximized deployment concurrency by avoiding hardcoded configuration and settings.
+- Implement [shift-left](/devops/develop/shift-left-make-testing-fast-reliable) security by including vulnerability and secret scanning tools, like container scanners, early in the pipeline.
+- Set up a deployment strategy that implements the principles of blue/green or canary deployments to minimize downtime and reduce the risk of deployment failures. Doing so enables you to gradually roll out new versions of your application to a small subset of users before rolling it out to the entire user base.
+- Use App Service deployment slots to implement a blue/green deployment strategy. Doing so enables you to validate and test your deployments in a staging environment before you deploy them to production. This strategy helps you ensure a smooth and successful deployment, validate application changes, and minimize downtime.
 - Monitor and track the performance and availability of your applications by using Application Insights. Application Insights provides real-time insights into the health and usage of your applications. It can also help you quickly diagnose and resolve problems that arise.
 
 - Implement tools and processes that facilitate communication and collaboration, like Agile development methodologies and tools for tracking and managing tasks and dependencies. Successful platform automation, DevOps, and CI/CD processes rely on effective collaboration and communication among team members.

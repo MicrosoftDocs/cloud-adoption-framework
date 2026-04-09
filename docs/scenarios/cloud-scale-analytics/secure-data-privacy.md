@@ -9,6 +9,11 @@ ms.custom: e2e-data-management, think-tank
 ---
 # Data privacy for cloud-scale analytics in Azure
 
+> [!IMPORTANT]
+> **Deprecation notice:** The Cloud‑Scale Analytics scenario has been deprecated and is no longer maintained or supported. To ensure only the best guidance is surfaced, this guidance will be deleted April 2026.
+>
+> For current CAF data guidance, see [**Unify your data platform**](https://aka.ms/cafdata).
+
 Cloud-scale analytics help you determine the optimal data-access patterns that suit your requirements while safeguarding personal data at multiple levels. Personal data includes any information that can uniquely identify individuals, for example driver's license numbers, social security numbers, bank account details, passport numbers, and email addresses. Many regulations exist to protect user privacy.
 
 To protect data privacy within a cloud environment such as Azure, you can create a data-confidentiality scheme that specifies data-access policies. These policies can define the underlying architecture that the data application resides on, define how to authorize data access, and specify what rows or columns users can access.

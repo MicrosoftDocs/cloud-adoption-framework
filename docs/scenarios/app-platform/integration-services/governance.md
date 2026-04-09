@@ -8,6 +8,13 @@ ms.topic: concept-article
 ---
 # Governance considerations for the Azure Integration Services landing zone accelerator
 
+> [!IMPORTANT]
+> **Deprecation notice:** This article is deprecated and is no longer being updated. To ensure only the best guidance is surfaced, this article will be deleted in May 2026.
+>
+> For alternative guidance, see [**Integration architecture**](/azure/architecture/browse/?filter-products=service&azure_categories=integration) guidance in the Azure Architecture Center.
+>
+> If you would like to save this guidance, you can select **Download a PDF** at the bottom left of this page or download the files from [GitHub](https://github.com/MicrosoftDocs/cloud-adoption-framework/tree/main/docs/scenarios/app-platform/integration-services).
+
 Governance involves making sure any policies you have in place are followed, and that you can show your applications are compliant with any legal, financial, regulatory, or internal requirements they are subject to. For smaller applications, governance may be a manual process; for larger applications, automation is essential. Azure contains several offerings designed to make the compliance and governance process easier.
 
 This article deals with the [Control Plane](/azure/azure-resource-manager/management/control-plane-and-data-plane) only - meaning how we create, manage, and configure the resources in Azure (generally via the **Azure Resource Manager**). This article does not deal with governance of the Data Plane - meaning how the endpoints for your resources are governed or secured or monitored.

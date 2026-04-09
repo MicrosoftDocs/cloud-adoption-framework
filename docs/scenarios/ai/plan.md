@@ -50,7 +50,7 @@ Clear access requirements and licensing strategies prevent deployment delays and
 | Microsoft Copilot Studio      | Requires a standalone license or an add-on license. See [Microsoft Copilot Studio](/microsoft-copilot-studio/requirements-licensing-subscriptions). |
 | In-product Copilots           | Requires access to the primary product. See [GitHub](https://azure.microsoft.com//products/github/copilot), [Power Apps](https://www.microsoft.com//power-platform/products/power-apps), [Power BI](https://www.microsoft.com//power-platform/products/power-bi), [Dynamics 365](https://www.microsoft.com//dynamics-365/solutions/ai), [Power Automate](https://www.microsoft.com//power-platform/products/power-automate), [Microsoft Fabric](/fabric/fundamentals/copilot-enable-fabric), and [Azure](https://azure.microsoft.com//products/copilot/). |
 | Role-based Copilots           | Requires specific access requirements. See [Role-based agents for Microsoft 365 Copilot](https://www.microsoft.com/microsoft-365/copilot/copilot-for-work#role-based-agents) and [Microsoft Copilot for Security](https://www.microsoft.com/security/business/ai-machine-learning/microsoft-copilot-security). |
-| Azure services                | Requires an [Azure account](https://azure.microsoft.com/pricing/purchase-options/azure-account/search). Includes Foundry and Azure OpenAI. |
+| Azure services                | Requires an [Azure account](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn). Includes Foundry and Azure OpenAI. |
 
 ## Prioritize AI use cases
 

@@ -9,6 +9,13 @@ ms.topic: concept-article
 
 # Identity and access management considerations for the Azure Integration Services landing zone accelerator
 
+> [!IMPORTANT]
+> **Deprecation notice:** This article is deprecated and is no longer being updated. To ensure only the best guidance is surfaced, this article will be deleted in May 2026.
+>
+> For alternative guidance, see [**Integration architecture**](/azure/architecture/browse/?filter-products=service&azure_categories=integration) guidance in the Azure Architecture Center.
+>
+> If you would like to save this guidance, you can select **Download a PDF** at the bottom left of this page or download the files from [GitHub](https://github.com/MicrosoftDocs/cloud-adoption-framework/tree/main/docs/scenarios/app-platform/integration-services).
+
 This article builds on the guidance provided in the [Azure landing zone design area for identity and access management](/azure/cloud-adoption-framework/ready/landing-zone/design-area/identity-access) article. The guidance provided in this article helps identify design considerations and recommendations that relate to identity and access management that are specific to the deployment of Azure Integration Services (AIS). If AIS is deployed to support mission-critical platforms, the guidance on the Azure landing zone design areas should also be included in your design.
 
 ## Identity and access management (IAM) overview
@@ -31,7 +38,7 @@ IAM is a separate consideration from [endpoint security](/security/benchmark/azu
 
 - Consider the level of access needed by roles within your organization and apply the principle of least privilege by role. These roles can include platform owners, workload owners, DevOps engineers and system administrators, for example.
 
-- Using the principle of least privilege, consider what roles you'll need to manage and maintain your AIS applications.  Questions to ask in this regard:
+- Using the principle of least privilege, consider what roles you'll need to manage and maintain your AIS applications. Questions to ask in this regard:
 
   - Who will need to view log files from sources like Application Insights, Log Analytics, and Storage Accounts?
 

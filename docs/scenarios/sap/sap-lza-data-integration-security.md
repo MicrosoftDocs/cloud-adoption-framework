@@ -158,7 +158,7 @@ This diagram shows how to move data by using IPSec VPN:
 
 :::image type="content" source="./media/sap-extend-security-ipsec.svg" border="false" alt-text="Diagram that shows IPSec VPN on Azure." lightbox="./media/sap-extend-security-ipsec.svg":::
 
-In the firewall, ensure that the IP address of the SHIR machine is allowed and configured appropriately. The following cloud data stores require that you allow the IP address of the SHIR machine. By default, some of these data stores might not require allowlist.
+In the firewall, ensure that the IP address of the SHIR machine is allowed and configured appropriately. The following cloud data stores require that you allow the IP address of the SHIR machine. By default, some of these data stores might not require an allowlist.
 
 - SQL Database
 - Azure Synapse Analytics

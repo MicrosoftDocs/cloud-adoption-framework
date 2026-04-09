@@ -27,7 +27,7 @@ A complete architectural assessment gives you visibility into all workload compo
 
 For each workload, collect detailed baseline performance and usage metrics from the current environment. This data is critical for right-sizing Azure resources and for comparing performance after migration.
 
-1. **Gather workload metrics.**  Track CPU utilization, memory usage, disk I/O (reads/writes, IOPS), network throughput, and peak concurrency or user load. Identify daily or weekly peaks to understand capacity needs. Measure average response times for user transactions, throughput of jobs processed per hour, and any SLA-related metrics. This information helps ensure the migrated workloads meet the same business performance requirements.
+1. **Gather workload metrics.** Track CPU utilization, memory usage, disk I/O (reads/writes, IOPS), network throughput, and peak concurrency or user load. Identify daily or weekly peaks to understand capacity needs. Measure average response times for user transactions, throughput of jobs processed per hour, and any SLA-related metrics. This information helps ensure the migrated workloads meet the same business performance requirements.
 
 1. **Capture configuration details.** Note scaling configurations, current virtual machine (VM) sizes, physical server specs (CPU cores, RAM), OS type and version, storage type (SSD/HDD) and capacity, and any special hardware like GPUs. These details inform the choice of Azure VM sizes or PaaS services. Also record software licensing info. This info might enable use of Azure Hybrid Benefit or require license migration.
 

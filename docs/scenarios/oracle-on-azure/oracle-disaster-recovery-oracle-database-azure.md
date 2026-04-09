@@ -65,7 +65,7 @@ This solution includes a secondary Oracle Exadata Database@Azure deployment in a
 
 - **Maintain a symmetric standby instance:** You should maintain a symmetric standby instance with resources equivalent to the primary database to ensure consistent performance during switchover and failover operations. Alternatively, you can configure the standby database with minimal resources and scale up the VM cluster dynamically as needed after switchover or failover. However, this approach might add extra time for scaling operations and their reflection at the database level.
 
-- **Automate failover operations:** Use [Oracle Data Guard Fast-Start Failover](https://www.oracle.com/technical-resources/articles/smiley-fsfo.html) to automate failover operation to minimize RTO and reduce errors.
+- **Automate failover operations:** Use [Oracle Data Guard Fast-Start Failover](https://www.oracle.com/technical-resources/articles/smiley-fsfo.html) to automate failover operations to minimize RTO and reduce errors.
 
   > [!NOTE]
   > Fast-Start Failover isn't a managed service and requires manual configuration.
@@ -80,14 +80,14 @@ This solution includes a secondary Oracle Exadata Database@Azure deployment in a
 
 - For a multiregional BCDR strategy, implement a secondary Oracle Exadata Database@Azure deployment with a standby database located in a different region where the service is available. This setup provides protection against full regional outages.
 
-- Configure Data Guard to replicate asynchronously for regional DR that's based on your application requirements and network latency between your primary and secondary region. For more information, see [Azure network round-trip latency statistics](/azure/networking/azure-network-latency).
+- Configure Data Guard to replicate asynchronously for regional DR that's based on your application requirements and network latency between your primary and secondary regions. For more information, see [Azure network round-trip latency statistics](/azure/networking/azure-network-latency).
 
   > [!NOTE]
   > Automated Data Guard only allows the Maximum Performance Mode (ASYNC) configuration for cross-region deployments.
 
 :::image type="content" source="./media/gold-cross-region.svg" alt-text="A diagram of multiregional BCDR architecture for Oracle Exadata Database@Azure landing zone accelerator." lightbox="./media/gold-cross-region.svg" border="false":::
 
-- Multiple-zone and multiregional BCDR recommendations primarily address recoverability (meeting RTO/RPO) while also improving resiliency through geographic and zonal isolation. To enhance overall workload reliability, combine these recovery architectures with Azure services such as Azure Virtual Machine Scale Sets, Azure Site Recovery, and Azure Front Door across availability zones or regions.
+- Multiple-zone and multiregional BCDR recommendations primarily address recoverability (meeting RTO/RPO) while also improving resiliency through geographic and availability zone isolation. To enhance overall workload reliability, combine these recovery architectures with Azure services such as Azure Virtual Machine Scale Sets, Azure Site Recovery, and Azure Front Door across availability zones or regions.
 
 ### Extended BCDR scenarios
 
@@ -120,7 +120,7 @@ If you need a symmetrical DR architecture when there's a failover, place a far s
 
 ### Backup recommendations
 
-If you plan to use backups as your only BCDR solution, note that RTO is higher than replication scenarios due to database size and backup methods.
+If you plan to use backups as your only BCDR solution, note that RTO is higher than in replication scenarios due to database size and backup methods.
 
 - **Back up data within Azure:** To meet organizational requirements that mandate data and backups remain in Azure, consider the following solutions:
 

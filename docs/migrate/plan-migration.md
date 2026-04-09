@@ -37,7 +37,7 @@ A data migration path is how you move data from your current location to Azure. 
 
 | Data Migration Path | When to use | Pros | Cons |
 |----------------------|-------------|------|------|
-| ExpressRoute | Any workload when available | Secure and fast | Set up required, costs money |
+| ExpressRoute | Any workload when available | Secure and fast | Setup required, costs money |
 | VPN | Secure transfers when no ExpressRoute | More secure than public internet | Requires setup, slower than ExpressRoute |
 | Azure Data Box | Offline migration with large amounts of data | Moves data without using your network | Slowest method due to shipping |
 | Public internet | Nonsensitive data and can't use Data Box | Works everywhere | Least secure, uses your bandwidth |
@@ -85,7 +85,7 @@ Migration methods fall into two categories: migration with downtime and migratio
 
 ## Engage stakeholders on migration plan
 
-Stakeholder approval validates your migration plan meets business requirements and risk tolerance. You should secure formal approval before executing migrations.
+Stakeholder approval validates that your migration plan meets business requirements and risk tolerance. You should secure formal approval before executing migrations.
 
 1. **Document the migration plan with business justification.** Create a structured plan showing workload name, owner, criticality, migration method, downtime window, and business effects. Include rationale for each approach and explain how it minimizes risk.
 

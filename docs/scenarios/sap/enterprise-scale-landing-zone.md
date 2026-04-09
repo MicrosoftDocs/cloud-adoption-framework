@@ -123,7 +123,7 @@ When you set up your availability zones, use zone-redundant services for your in
 
 For more information about the availability zone architecture for SAP on Azure, see [SAP HA availability zones](/azure/virtual-machines/workloads/sap/sap-ha-availability-zones).
 
-Ensure Azure resources in the workload use zone-redundant configurations or span availability zones for zonal components. Assign the [Azure Policy Initiative for Zone Resilience](/azure/governance/policy/samples/built-in-initiatives#resilience) to the intermediate management group to enforce a "start resilient & stay resilient" approach. The Zone Resilient built-in policies aim to:
+Ensure Azure resources in the workload use zone-resilient configurations by using zone-redundant deployment options where available and deploying zonal (single-zone) components across multiple zones. Assign the [Azure Policy Initiative for Zone Resilience](/azure/governance/policy/samples/built-in-initiatives#resilience) to the intermediate management group to enforce a "start resilient & stay resilient" approach. The Zone Resilient built-in policies aim to:
 
 - Deliver clear and actionable information that assists in the design, planning, and automation of AZ-resilient deployments.
 - Detect: Audit subscriptions for non-compliance of these policies.
@@ -157,7 +157,7 @@ The example SAP systems architecture uses [private endpoints](/azure/private-lin
 
 Azure Private Link is now generally available. SAP Private Link Service currently supports connections from SAP BTP, the Cloud Foundry runtime, and other services on top of [Private Link resources](https://help.sap.com/docs/PRIVATE_LINK/42acd88cb4134ba2a7d3e0e62c9fe6cf/e8bc0c6440834a47a0ff57cb4efc0dc2.html?locale=en-US) for the most common load balancer plus virtual machine scenarios. Example scenarios include SAP S/4HANA or SAP ERP running on the virtual machine and connecting to Azure native services like [Azure Database for MySQL](https://help.sap.com/docs/PRIVATE_LINK/42acd88cb4134ba2a7d3e0e62c9fe6cf/5c70499ee70b415d954145a795e43355.html?locale=en-US).
 
-The example architecture shows an SAP Private Link Service connection to BTP environments. SAP Private Link Service establishes a private connection between specific SAP BTP services and specific services in your infrastructure as a service provider accounts. If you reuse the private link functionality, BTP services can access your S/4 HANA environment through private network connections, which avoids data transfer over the public internet.
+The example architecture shows an SAP Private Link Service connection to BTP environments. SAP Private Link Service establishes a private connection between specific SAP BTP services and specific services in your infrastructure-as-a-service (IaaS) provider accounts. If you reuse the private link functionality, BTP services can access your S/4HANA environment through private network connections, which avoids data transfer over the public internet.
 
 For more information about scenarios for connecting to BTP services, see the SAP Community blog post about the [architecture effect of Private Link Service](https://blogs.sap.com/2021/07/27/btp-private-linky-swear-with-azure-how-many-pinkies-do-i-need/).
 

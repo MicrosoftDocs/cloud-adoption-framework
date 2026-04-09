@@ -9,6 +9,13 @@ ms.topic: concept-article
 
 # Network topology and connectivity considerations for the Integration Services landing zone accelerator
 
+> [!IMPORTANT]
+> **Deprecation notice:** This article is deprecated and is no longer being updated. To ensure only the best guidance is surfaced, this article will be deleted in May 2026.
+>
+> For alternative guidance, see [**Integration architecture**](/azure/architecture/browse/?filter-products=service&azure_categories=integration) guidance in the Azure Architecture Center.
+>
+> If you would like to save this guidance, you can select **Download a PDF** at the bottom left of this page or download the files from [GitHub](https://github.com/MicrosoftDocs/cloud-adoption-framework/tree/main/docs/scenarios/app-platform/integration-services).
+
 This article provides design considerations and recommendations for network topology and connectivity that you can apply when you use the Azure Integration Services (AIS) landing zone accelerator. Networking is central to almost everything in a landing zone.
 
 The network topology and connectivity considerations for this architecture depend on the requirements of the workloads and on the security and compliance requirements of your organization.
@@ -131,7 +138,7 @@ Many enterprise integration scenarios require connecting your on-premises system
 
 - Use Azure **VPN Gateway** to connect branches or remote locations to Azure.
 
-- Use **OPDG** and/or **Hybrid Connections** where ExpressRoute or VPN Gateway can’t be used, where the throughput limits will not be an issue, and where you are using a support Azure Resource (e.g. Logic Apps, Function Apps).
+- Use **OPDG** and/or **Hybrid Connections** where ExpressRoute or VPN Gateway can't be used, where the throughput limits will not be an issue, and where you are using a support Azure Resource (e.g. Logic Apps, Function Apps).
 
 ## Connectivity to AIS PaaS services
 
@@ -220,7 +227,7 @@ An [App Service Environment](/azure/app-service/environment/overview) (ASE) is a
 
 - Applications within an ASE have access to all other resources within the Virtual Network, depending on network access rules. Access to resources in other VNets can be achieved using Virtual Network peering.
 
-- Applications within an ASE don’t need to be configured to belong to a VNet – they are automatically within the VNet by virtue of being deployed to the ASE. This means that instead of having to configure network access on a per-resource basis, you can configure it once at the ASE level.
+- Applications within an ASE don't need to be configured to belong to a VNet – they are automatically within the VNet by virtue of being deployed to the ASE. This means that instead of having to configure network access on a per-resource basis, you can configure it once at the ASE level.
 
 ### Design recommendations
 
@@ -254,7 +261,7 @@ When there is a need to connect from an App Service to on-premises, private, or 
 
 - SSIS runtimes with a VNet-integrated runtime will take up to 30 minutes to start.
 
-- Self-hosted integration runtimes can only execute the copy activity, which copies data from one source to another as-is. If you want to perform any transformations to the data, you can’t do those using Data Factory’s data flows.
+- Self-hosted integration runtimes can only execute the copy activity, which copies data from one source to another as-is. If you want to perform any transformations to the data, you can't do those using Data Factory's data flows.
 
 - [Managed Private Endpoints](/azure/data-factory/managed-virtual-network-private-endpoint#managed-private-endpoints) are private endpoints created in the Azure Data Factory Managed Virtual Network establishing a private link to Azure resources (generally data sources for ADF). Azure Data Factory manages these private endpoints on your behalf.
 
@@ -282,7 +289,7 @@ When there is a need to connect from an App Service to on-premises, private, or 
 
 - Are you using [Private DNS zones](/azure/private-link/private-endpoint-dns) or your own DNS server (with DNS forwarding) to resolve to a private link resource?
 
-- IP Filtering and VNets are only supported in the Premium SKU tier for Service Bus. If the Premium Tier isn’t practical, look at using [SAS Tokens](/azure/service-bus-messaging/service-bus-authentication-and-authorization#shared-access-signature) as your primary way of locking down access to your namespace.
+- IP Filtering and VNets are only supported in the Premium SKU tier for Service Bus. If the Premium Tier isn't practical, look at using [SAS Tokens](/azure/service-bus-messaging/service-bus-authentication-and-authorization#shared-access-signature) as your primary way of locking down access to your namespace.
 
 ### Design recommendations
 
@@ -308,7 +315,7 @@ When there is a need to connect from an App Service to on-premises, private, or 
 
 - Place your private endpoint in its own dedicated subnet reserved for private endpoints.
 
-- Outbound traffic from your logic apps flows through the VNet.  Refer to the [considerations for outbound traffic through virtual network integration](/azure/logic-apps/secure-single-tenant-workflow-virtual-network-private-endpoint#considerations-for-outbound-traffic-through-virtual-network-integration) documentation when planning your Function Apps networking design.
+- Outbound traffic from your logic apps flows through the VNet. Refer to the [considerations for outbound traffic through virtual network integration](/azure/logic-apps/secure-single-tenant-workflow-virtual-network-private-endpoint#considerations-for-outbound-traffic-through-virtual-network-integration) documentation when planning your Function Apps networking design.
 
 - Add a DNS record using private DNS zone for the private endpoint.
 
@@ -320,7 +327,7 @@ When there is a need to connect from an App Service to on-premises, private, or 
 
 - Public network access should be disabled.
 
-- Create a private endpoint for [restricting access](/azure/key-vault/general/private-link-service?tabs=portal) via VNet’s only.
+- Create a private endpoint for [restricting access](/azure/key-vault/general/private-link-service?tabs=portal) via VNets only.
 
 - Place your private endpoint in its own dedicated subnet reserved for Key Vault.
 

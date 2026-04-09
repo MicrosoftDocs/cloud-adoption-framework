@@ -89,7 +89,7 @@ Set up the tools and parameters for collecting insights across your Azure enviro
 
 Monitoring service availability focuses on detecting service outages, disruptions, and resource issues in your cloud environment. You want real-time visibility into potential problems to maintain consistent operations. Monitoring service health is the bare minimum for monitoring your cloud estate. Here's how:
 
-1. ***Monitor underlying service health.*** You need to be aware of any underlying outages to the cloud services and regions you’re using. Use [Azure Service Health](/azure/service-health/service-health-portal-update) to receive free alerts about service issues, planned maintenance, and other changes affecting your Azure services and regions.
+1. ***Monitor underlying service health.*** You need to be aware of any underlying outages to the cloud services and regions you're using. Use [Azure Service Health](/azure/service-health/service-health-portal-update) to receive free alerts about service issues, planned maintenance, and other changes affecting your Azure services and regions.
 
 1. ***Monitor underlying resource health.*** You need a way to diagnose and resolve underlying issues in your cloud resources. You also need a history of these outages so you can report any service level agreement (SLA) breaches. Use [Azure Resource Health](/azure/service-health/resource-health-overview) to monitor the health of your individual cloud resources.
 
@@ -103,7 +103,7 @@ Monitoring security involves tracking identity interactions, vulnerabilities, an
 
 1. ***Monitor network activity.*** You need to monitor network traffic within your cloud and networks outside of your cloud. Network monitoring helps you troubleshoot performance issues and maintain network security. Use Network Watcher to monitor Azure virtual networks (using [flow logs](/azure/network-watcher/network-watcher-overview#flow-logs') and [traffic analytics](/azure/network-watcher/network-watcher-overview#traffic-analytics)). Use [Connection monitor](/azure/network-watcher/network-watcher-overview#connection-monitor) for multicloud and on-premises network monitoring.
 
-1. ***Monitor workload security.*** For workload security monitoring, see the Well-Architected Framework’s [Recommendations for monitoring and threat detection](/azure/well-architected/security/monitor-threats).
+1. ***Monitor workload security.*** For workload security monitoring, see the Well-Architected Framework's [Recommendations for monitoring and threat detection](/azure/well-architected/security/monitor-threats).
 
 ### Monitor compliance
 
@@ -113,13 +113,13 @@ Monitoring compliance verifies alignment with governance requirements and indust
 
 1. ***Monitor data compliance.*** You need to automatically assess and manage compliance across your multicloud environment, simplifying compliance and reducing risk. Use [Microsoft Purview Compliance Manager](/purview/compliance-manager) to assess and manage compliance across multicloud environments.
 
-1. ***Monitor workload compliance.*** For workload compliance monitoring, see the Well-Architected Framework’s [recommendations for establishing a security baseline](/azure/well-architected/security/establish-baseline).
+1. ***Monitor workload compliance.*** For workload compliance monitoring, see the Well-Architected Framework's [recommendations for establishing a security baseline](/azure/well-architected/security/establish-baseline).
 
 ### Monitor costs
 
 Monitoring costs refers to tracking and controlling your cloud spending across Azure and other environments. You want cost transparency to optimize resource usage and follow prescriptive guidance for financial governance. Here's how:
 
-1. ***Understand service pricing.*** Make sure you understand the pricing of the services and features you’re using. You want to avoid surprises at the billing period. Use the [Azure pricing](https://azure.microsoft.com/pricing/) information.
+1. ***Understand service pricing.*** Make sure you understand the pricing of the services and features you're using. You want to avoid surprises at the billing period. Use the [Azure pricing](https://azure.microsoft.com/pricing/) information.
 
 1. ***Monitor cloud spend.*** You should use the available tools to monitor costs across your environments. For Azure spend, use Microsoft Cost Management to [set budgets](/azure/cost-management-billing/costs/tutorial-acm-create-budgets?tabs=psbudget), get [cost optimization recommendations](/azure/cost-management-billing/costs/tutorial-acm-opt-recommendations), trigger [alerts](/azure/cost-management-billing/costs/cost-mgt-alerts-monitor-usage-spending) for cost anomalies, and [analyze costs](/azure/cost-management-billing/costs/quick-acm-cost-analysis).
 
@@ -247,7 +247,6 @@ The table provides a near complete list of the monitoring articles for every Azu
 | Azure Backup | [Monitoring and reporting solutions for Azure Backup](/azure/backup/monitoring-and-alerts-overview) | |
 | Azure Batch | [Monitor Azure Batch](/azure/batch/monitor-batch)<br><br>[Monitoring data reference for Azure Batch](/azure/batch/monitor-batch-reference) | |
 | Azure Blob Storage | [Monitor Azure Blob Storage](/azure/storage/blobs/monitor-blob-storage)<br><br>[Monitoring data reference for Azure Blob Storage](/azure/storage/blobs/monitor-blob-storage-reference) | [Best practices for monitoring Azure Blob Storage](/azure/storage/blobs/blob-storage-monitoring-scenarios)<br><br>[Monitoring your storage service with Azure Monitor Storage insights](/azure/storage/common/storage-insights-overview) |
-| Azure Cache for Redis | [Monitor Azure Cache for Redis](/azure/azure-cache-for-redis/monitor-cache)<br><br>[Monitoring data reference for Azure Cache for Redis](/azure/azure-cache-for-redis/monitor-cache-reference) | [Azure Monitor insights for Azure Cache for Redis](/azure/azure-cache-for-redis/cache-insights-overview) |
 | Azure Chaos Studio | [Set up Azure monitor for a Chaos Studio experiment](/azure/chaos-studio/chaos-studio-set-up-azure-monitor) | |
 | Azure Communication Services | [Monitor SMS](/azure/communication-services/concepts/analytics/enable-logging)<br> [Monitor Voice and video](/azure/communication-services/concepts/analytics/enable-logging)<br> [Monitor Chat](/azure/communication-services/concepts/analytics/enable-logging)<br>[Monitor Phone calling](/azure/communication-services/concepts/analytics/enable-logging)<br> [Monitor Email](/azure/communication-services/concepts/analytics/enable-logging) | |
 | Azure confidential ledger | [Verify Azure Confidential Ledger write transaction receipts](/azure/confidential-ledger/verify-write-transaction-receipts) | |

@@ -9,11 +9,18 @@ ms.topic: concept-article
 
 # Networking for the Azure Container Apps - Landing Zone Accelerator
 
+> [!IMPORTANT]
+> **Deprecation notice:** This article is deprecated and is no longer being updated. To ensure only the best guidance is surfaced, this article will be deleted in May 2026.
+>
+> For alternative guidance, see [**Azure Container Apps**](/azure/architecture/example-scenario/serverless/microservices-with-container-apps) architecture guidance in the Azure Architecture Center.
+>
+> If you would like to save this guidance, you can select **Download a PDF** at the bottom left of this page or download the files from [GitHub](https://github.com/MicrosoftDocs/cloud-adoption-framework/tree/main/docs/scenarios/app-platform/container-apps).
+
 Container Apps is responsible for taking care of OS updates, scaling, failover processes, and resource allocation in what's known as a Container Apps environment. Environments encapsulate one or more container apps or jobs, by creating a secure boundary through a virtual network (VNet).
 
 By default, a VNet is automatically created for your Container App environment. However, if you want more detailed control over your network, you can use a pre-existing VNet as you create your container app environment.
 
-Environments can accept [external](/azure/container-apps/vnet-custom) requests, or can be locked down to only [internal](/azure/container-apps/vnet-custom-internal) requests.
+Environments can accept [external](/azure/container-apps/vnet-custom) requests, or can be locked down to only [internal](/azure/container-apps/vnet-custom) requests.
 
 External environments expose container apps by using a virtual IP address that is accessible over the public internet. Alternatively, internal environments expose its container apps on an IP address inside your virtual network. You can restrict traffic either within the container app environment or via the virtual network. For more information, see [Security considerations for the Azure Container Apps Landing Zone Accelerator](./security.md).
 
@@ -81,7 +88,7 @@ External environments expose container apps by using a virtual IP address that i
 
 * [Networking architecture in Azure Container Apps](/azure/container-apps/networking)
 * [Securing a custom VNET in Azure Container Apps](/azure/container-apps/custom-virtual-networks)
-* [Network proxying in Azure Container Apps](/azure/container-apps/network-proxy)
+* [Network proxying in Azure Container Apps](/azure/container-apps/ingress-overview)
 * [IP ingress restrictions in Azure Container Apps](/azure/container-apps/ip-restrictions)
 * [Support for User Defined Routes](/azure/container-apps/user-defined-routes)
 * [Configure UDR with Azure Firewall](/azure/container-apps/networking?tabs=azure-cli#configuring-udr-with-azure-firewall)

@@ -9,6 +9,13 @@ ms.topic: concept-article
 
 # Operations management considerations for the AIS Services landing zone accelerator
 
+> [!IMPORTANT]
+> **Deprecation notice:** This article is deprecated and is no longer being updated. To ensure only the best guidance is surfaced, this article will be deleted in May 2026.
+>
+> For alternative guidance, see [**Integration architecture**](/azure/architecture/browse/?filter-products=service&azure_categories=integration) guidance in the Azure Architecture Center.
+>
+> If you would like to save this guidance, you can select **Download a PDF** at the bottom left of this page or download the files from [GitHub](https://github.com/MicrosoftDocs/cloud-adoption-framework/tree/main/docs/scenarios/app-platform/integration-services).
+
 This article provides considerations and recommendations for operations management and monitoring when using the AIS offerings.
 
 Most of the recommendations in this section apply to the Standard (single-tenant) version of Logic Apps, which itself is part of the Azure App Service offering and shares many of the same management capabilities.
@@ -47,7 +54,7 @@ We can utilize this information to visualize the overall health of our resources
 
 - What management tasks will you need to perform? Will you need to resubmit messages or files?
 
-- Logic App run history is stored in Azure Storage by default, but you can choose to also export metrics and log files to other sources  (for example, Log Analytics, or an external Storage Account). Consider how you use your logging information, and if you use a centralized log store.
+- Logic App run history is stored in Azure Storage by default, but you can choose to also export metrics and log files to other sources (for example, Log Analytics, or an external Storage Account). Consider how you use your logging information, and if you use a centralized log store.
 
 - Application Insights is used to provide application performance monitoring. It does so by collecting metrics from the resources that make up your solution.
 
@@ -82,7 +89,7 @@ The main query tables are:
   This table logs all requests made by the Logic App runtime to another resource OR to specific actions within your workflow.
 
 - *traces*  
-  This table contains the bulk of the Logic Apps runtime logs, logging details on trigger execution, workflow starting and stopping, and action execution. If you've logged any tracked properties from your actions, you'll find this data in the *customDimensions* section.  You can then use the extend clause in a query to add the data as columns in your query response.
+  This table contains the bulk of the Logic Apps runtime logs, logging details on trigger execution, workflow starting and stopping, and action execution. If you've logged any tracked properties from your actions, you'll find this data in the *customDimensions* section. You can then use the extend clause in a query to add the data as columns in your query response.
 
 **Workflows with Errors:**
 
@@ -146,6 +153,6 @@ Review the critical design areas to make complete considerations and recommendat
 
 - [Kusto Query Language (KQL) overview](/azure/data-explorer/kusto/query/)
 
-- [Azure Logic Apps Running Anywhere – Monitor with Application Insights – part  1](https://techcommunity.microsoft.com/t5/integrations-on-azure-blog/azure-logic-apps-running-anywhere-monitor-with-application/ba-p/1877849)
+- [Azure Logic Apps Running Anywhere – Monitor with Application Insights – part 1](https://techcommunity.microsoft.com/t5/integrations-on-azure-blog/azure-logic-apps-running-anywhere-monitor-with-application/ba-p/1877849)
 
 - [Azure Logic Apps Running Anywhere – Monitor with Application Insights – part 2](https://techcommunity.microsoft.com/t5/integrations-on-azure-blog/azure-logic-apps-running-anywhere-monitor-with-application/ba-p/2003332)

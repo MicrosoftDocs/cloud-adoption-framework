@@ -33,12 +33,12 @@ Consider the following before you onboard Azure Arc-enabled Kubernetes clusters 
 
 ### Onboard Azure Arc-enabled Kubernetes
 
-- Decide on a plan to install and configure the Azure Arc-enabled Kubernetes agent on your cluster. You should usually deploy this agent using your organization's standard automation tool(s).
+- Plan to install and configure the Azure Arc-enabled Kubernetes agent on your cluster. You should usually deploy this agent using your organization's standard automation tool(s).
 
 ### Cluster Extensions
 
-- Determine which Azure capabilities you want to have on your Azure Arc-enabled Kubernetes cluster. Some services require a cluster extension to be deployed.
-  - For more information specific to extensions, see the [Extensions management critical design area](./eslz-arc-kubernetes-extensions-management.md).
+- Determine which Azure capabilities you want on your Azure Arc-enabled Kubernetes cluster. Some services require a cluster extension to be deployed.
+  - For more information about extensions, see the [Extensions management critical design area](./eslz-arc-kubernetes-extensions-management.md).
 
 ### Network Connectivity
 
@@ -47,7 +47,7 @@ Consider the following before you onboard Azure Arc-enabled Kubernetes clusters 
 
 ### Agent lifecycle automation
 
-- Create an Azure Arc agent and Azure Arc-enabled Kubernetes extensions update management strategy.
+- Create a strategy to update Azure Arc agents and Azure Arc-enabled Kubernetes extensions.
 
 ## Design recommendations
 
@@ -56,11 +56,11 @@ The following sections contain design recommendations for Azure Arc-enabled Kube
 ### Environment preparation
 
 - Review the [requirements](/azure/azure-arc/kubernetes/quickstart-connect-cluster?tabs=azure-cli#prerequisites) for onboarding Kubernetes clusters onto Azure Arc.
-- Review the [Identity and access management critical design area](./eslz-arc-kubernetes-identity-access-management.md) for more information surrounding required permissions.
+- Review the [Identity and access management critical design area](./eslz-arc-kubernetes-identity-access-management.md) for required permissions.
 
 ### Onboard Azure Arc-enabled Kubernetes clusters
 
-- When onboarding multiple clusters, create a service principal and onboard your clusters using a tooling like Azure DevOps, GitHub Actions, or another automation tool you use to manage Kubernetes clusters.
+- When onboarding multiple clusters, create a service principal and onboard your clusters using tooling like Azure DevOps or GitHub Actions to manage Kubernetes clusters.
 
 ### Arc-enabled Kubernetes extensions
 
@@ -73,12 +73,12 @@ The following sections contain design recommendations for Azure Arc-enabled Kube
 
 ### Agent and extensions lifecycle automation
 
-During the onboarding process, Azure Arc-enabled Kubernetes provisions agents into your Kubernetes cluster. Agent versions change as Azure Arc technologies evolve, so it's important for your agents to be frequently updated.
+During the onboarding process, Azure Arc-enabled Kubernetes provisions agents into your Kubernetes cluster. Agent versions change as Azure Arc technologies evolve, so update your agents frequently.
 
 - Enable the auto-upgrade feature for Azure Arc agents running inside your cluster, which is the default behavior when onboarding a cluster to Azure Arc. 
   - For more information on the auto-upgrade feature and version support policy, review the [Upgrade Agents guidance](/azure/azure-arc/kubernetes/agent-upgrade) and the [extensions management design area](./eslz-arc-kubernetes-extensions-management.md).
 
-- Extensions also require updates in your cluster. For any extension installed on your cluster, we recommend that you leave the default behavior to automatically upgrade the extension minor version enabled during provisioning. For major version upgrades, a migration path is documented to move to the extension major release.
+- Extensions also require updates in your cluster. For any extension installed on your cluster, we recommend leaving automatic minor version upgrades enabled during provisioning (the default). For major version upgrades, documentation provides a migration path to the extension major release.
   - For more information, review the [Extensions management critical design area](./eslz-arc-kubernetes-extensions-management.md).
 
 ## Next steps

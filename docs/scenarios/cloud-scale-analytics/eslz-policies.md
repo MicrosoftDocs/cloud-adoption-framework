@@ -13,6 +13,11 @@ ms.custom:
 
 # Policies in cloud-scale analytics
 
+> [!IMPORTANT]
+> **Deprecation notice:** The Cloud‑Scale Analytics scenario has been deprecated and is no longer maintained or supported. To ensure only the best guidance is surfaced, this guidance will be deleted April 2026.
+>
+> For current CAF data guidance, see [**Unify your data platform**](https://aka.ms/cafdata).
+
 Before considering a deployment, it's important for your organization to put guardrails in place. By using [Azure policies](/azure/governance/policy/overview), you can implement governance for resource consistency, regulatory compliance, security, cost, and management.
 
 ## Background
@@ -66,7 +71,6 @@ Cloud-scale analytics contains custom policies related to **resource and cost ma
 - [Azure DNS](#azure-dns)
 - [Network security group](#network-security-group)
 - [Batch](#batch)
-- [Azure Cache for Redis](#azure-cache-for-redis)
 - [Container instances](#container-instances)
 - [Azure Firewall](#azure-firewall)
 - [HDInsight](#hdinsight)
@@ -316,18 +320,6 @@ Other policies that are applied in the Databricks workspace through cluster poli
 |Deny-Batch-PublicNetworkAccess|Network Isolation|Denies public network access for batch accounts.|
 |Deny-Batch-Scale|Resource Management|Denies certain scale configurations for batch account VM pools.|
 |Deny-Batch-VmSize|Resource Management|Denies certain VM sizes for batch account VM pools.|
-
-## Azure Cache for Redis
-
-|Policy name  |Policy area  |Description  |
-|---------|---------|---------|
-|Deny-Cache-Enterprise|Resource Management|Denies Redis Cache Enterprise.|
-|Deny-Cache-FirewallRules|Network Isolation|Denies firewall rules for Redis Cache.|
-|Deny-Cache-MinimumTlsVersion|Encryption|Enforces minimum TLS version for Redis Cache.|
-|Deny-Cache-NonSslPort|Network Isolation|Enforces turning off the non-SSL port for Redis Cache.|
-|Deny-Cache-PublicNetworkAccess|Network Isolation|Enforces no public network access for Redis Cache.|
-|Deny-Cache-Sku|Resource Management|Enforces certain SKUs for Redis Cache.|
-|Deny-Cache-VnetInjection|Network Isolation|Enforces use of private endpoints and denies virtual network injection for Redis Cache.|
 
 ## Container instances
 

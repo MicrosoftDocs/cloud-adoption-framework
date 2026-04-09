@@ -9,7 +9,7 @@ ms.topic: concept-article
 
 # Discover your existing workload inventory
 
-*This section applies to organizations with existing IT workloads outside Azure (on-premises or other clouds) that need migration to Azure.* A comprehensive workload inventory is the foundation of a solid cloud adoption plan for such organizations. You can’t make decisions about how or whether to migrate a system if you don’t know it exists or understand its characteristics. Your cloud adoption plan must include steps to discover all workloads, gather key data about each, and prioritize them for migration.
+*This section applies to organizations with existing IT workloads outside Azure (on-premises or other clouds) that need migration to Azure.* A comprehensive workload inventory is the foundation of a solid cloud adoption plan for such organizations. You can't make decisions about how or whether to migrate a system if you don't know it exists or understand its characteristics. Your cloud adoption plan must include steps to discover all workloads, gather key data about each, and prioritize them for migration.
 
 [!INCLUDE [discovery and assessment table](./includes/discovery-assessment-table.md)]
 
@@ -37,7 +37,7 @@ A long inventory list can be overwhelming. The plan should include a method to p
 
 1. **Consider strategic alignment.** If certain workloads are key to strategic initiatives, you might prioritize them to move sooner. On the other hand, workloads slated to be retired or replaced soon should be deprioritized for migration.
 
-1. **Create a prioritized backlog.**  This backlog can be a list or table with categories like "Wave 1: Workloads A, B, C. Wave 2: Workloads D, E." Ensure you validate this order with stakeholders. Business and IT owners should review and agree that the sequence makes sense. You want to get their buy-in and avoid pushback later. For example, if you schedule a department’s critical app last without their input, they might object. Adjust the plan based on feedback to balance technical logic with business needs.
+1. **Create a prioritized backlog.** This backlog can be a list or table with categories like "Wave 1: Workloads A, B, C. Wave 2: Workloads D, E." Ensure you validate this order with stakeholders. Business and IT owners should review and agree that the sequence makes sense. You want to get their buy-in and avoid pushback later. For example, if you schedule a department's critical app last without their input, they might object. Adjust the plan based on feedback to balance technical logic with business needs.
 
 ## Gather business details per workload
 
@@ -51,7 +51,7 @@ For each workload identified, the plan should capture key business context and r
 
 1. **Operational constraints**: Document specific maintenance windows, blackout periods (high-traffic periods), and uptime requirements. Document any such constraints because they affect migration scheduling and target architecture (high-availability needs).
 
-1. **Projected timeline or deadlines**: If there’s a desired timeline for migrating this workload, note that as well. For example, maybe you have contract renewals or data center leases ending. These factors feed into the overall roadmap scheduling.
+1. **Projected timeline or deadlines**: If there's a desired timeline for migrating this workload, note that as well. For example, maybe you have contract renewals or data center leases ending. These factors feed into the overall roadmap scheduling.
 
 For an example, see [Migration adoption plan](./migration-adoption-plan.md#workload-business-details-for-migration).
 

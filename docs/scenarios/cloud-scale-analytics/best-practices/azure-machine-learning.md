@@ -10,6 +10,11 @@ ms.custom: e2e-data-management, think-tank
 
 # Azure Machine Learning as a data product for cloud-scale analytics
 
+> [!IMPORTANT]
+> **Deprecation notice:** The Cloud‑Scale Analytics scenario has been deprecated and is no longer maintained or supported. To ensure only the best guidance is surfaced, this guidance will be deleted April 2026.
+>
+> For current CAF data guidance, see [**Unify your data platform**](https://aka.ms/cafdata).
+
 Azure Machine Learning is an integrated platform for managing the machine learning lifecycle from beginning to end, including help with the creation, operation, and consumption of machine learning models and workflows. A few benefits of the service include:
 
 - Capabilities support creators to increase their productivity by helping them to manage experiments, access data, track jobs, tune hyperparameters, and automate workflows.

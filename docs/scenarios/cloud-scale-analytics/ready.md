@@ -10,6 +10,11 @@ ms.custom: e2e-data-management, think-tank
 
 # Azure landing zones for cloud-scale analytics
 
+> [!IMPORTANT]
+> **Deprecation notice:** The Cloud‑Scale Analytics scenario has been deprecated and is no longer maintained or supported. To ensure only the best guidance is surfaced, this guidance will be deleted April 2026.
+>
+> For current CAF data guidance, see [**Unify your data platform**](https://aka.ms/cafdata).
+
 In response to the need for frictionless governance and a platform for actionable insights to the business, cloud-scale analytics represents a strategic design path and targets the technical state for an Azure analytics and AI environment.
 
 The pattern relies upon the distribution of the data and its pipelines across domains. This pattern enables ownership of accessibility, usability, and development. Largely based on these patterns, cloud-scale analytics includes the following capabilities:

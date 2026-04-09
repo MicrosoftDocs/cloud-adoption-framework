@@ -9,6 +9,13 @@ ms.topic: concept-article
 
 # Azure Integration Services application landing zone accelerator in an Azure landing zone
 
+> [!IMPORTANT]
+> **Deprecation notice:** This article is deprecated and is no longer being updated. To ensure only the best guidance is surfaced, this article will be deleted in May 2026.
+>
+> For alternative guidance, see [**Integration architecture**](/azure/architecture/browse/?filter-products=service&azure_categories=integration) guidance in the Azure Architecture Center.
+>
+> If you would like to save this guidance, you can select **Download a PDF** at the bottom left of this page or download the files from [GitHub](https://github.com/MicrosoftDocs/cloud-adoption-framework/tree/main/docs/scenarios/app-platform/integration-services).
+
 This article provides strategic guidance for deploying Azure Integration Services (AIS) within an Azure landing zone. Azure Integration Services includes Logic Apps, API Management, Service Bus, and Event Grid. These services enable scalable integration across applications, data, and business processes. The AIS application landing zone accelerator automates the deployment of these services, which promotes consistency and scalability while aligning with Azure landing zone standards.
 
 [![Diagram that shows Azure Integration Services landing zone accelerator architecture.](./media/integration-services-enterprise-deployment_highres.png)](./media/integration-services-enterprise-deployment_highres.png#lightbox)

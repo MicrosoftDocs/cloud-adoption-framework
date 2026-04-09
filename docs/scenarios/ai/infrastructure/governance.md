@@ -51,7 +51,7 @@ Security governance addresses the need for robust protection measures across AI 
 
 - *Integrate with Microsoft Entra ID.* Use Microsoft Entra ID for centralized identity management and single sign-on (SSO) capabilities across AI workloads.
 
-- *Implement distinct access controls for each environment.* Limit each deployment pipeline’s identity to its designated environment, reducing the risk of accidental deployments.
+- *Implement distinct access controls for each environment.* Limit each deployment pipeline's identity to its designated environment, reducing the risk of accidental deployments.
 
 - *Enable Microsoft Defender for Cloud.* Activate Microsoft Defender for Cloud for advanced threat protection. It enhances security for workloads, including virtual machines, storage accounts, and databases, promoting a robust security posture for AI workloads.
 

@@ -39,11 +39,11 @@ This scenario also has these components:
 - An on-premises site connects to both regions.
 
 > [!NOTE]
->  If you use non-RFC 1918 prefixes in your connected on-premises resources, virtual networks, or Azure VMware Solution, specify those prefixes in the *Private traffic prefixes* field of the routing intent feature. Enter summarized routes in the *Private traffic prefixes* field to cover your range. Don't enter the exact range that advertises to Virtual WAN because this specification can lead to routing problems. For example, if the Azure ExpressRoute circuit advertises 192.0.2.0/24 from on-premises, enter a /23 Classless Inter-Domain Routing (CIDR) range or larger, for example 192.0.2.0/23. For more information, see [Configure routing intent and policies through the Virtual WAN portal](/azure/virtual-wan/how-to-routing-policies#nva).
+> If you use non-RFC 1918 prefixes in your connected on-premises resources, virtual networks, or Azure VMware Solution, specify those prefixes in the *Private traffic prefixes* field of the routing intent feature. Enter summarized routes in the *Private traffic prefixes* field to cover your range. Don't enter the exact range that advertises to Virtual WAN because this specification can lead to routing problems. For example, if the Azure ExpressRoute circuit advertises 192.0.2.0/24 from on-premises, enter a /23 Classless Inter-Domain Routing (CIDR) range or larger, for example 192.0.2.0/23. For more information, see [Configure routing intent and policies through the Virtual WAN portal](/azure/virtual-wan/how-to-routing-policies#nva).
 
 
 > [!NOTE]
->  When you configure Azure VMware Solution with secure Virtual WAN hubs, set the hub routing preference option to **AS Path** to ensure optimal routing results on the hub. For more information, see [Virtual hub routing preferences](/azure/virtual-wan/about-virtual-hub-routing-preference).
+> When you configure Azure VMware Solution with secure Virtual WAN hubs, set the hub routing preference option to **AS Path** to ensure optimal routing results on the hub. For more information, see [Virtual hub routing preferences](/azure/virtual-wan/about-virtual-hub-routing-preference).
 
 The following diagram shows an example of this scenario.
 
@@ -107,7 +107,7 @@ When you enable ExpressRoute-to-ExpressRoute transitivity on both secure hubs an
 On-premises doesn't learn the specific routes for Azure VMware Solution private clouds. On-premises learns the default RFC 1918 addresses from both hubs via connection **E**. On-premises routes to both Azure VMware Solution private clouds via the default RFC 1918 addresses that it learns over connection **E**. 
 
 > [!NOTE]
->  You must add specific routes on both hubs. If you don't add specific routes on the hubs, you can introduce suboptimal routing because on-premises uses equal-cost multi-path (ECMP) routing between the **E** connections for traffic that goes to an Azure VMware Solution private cloud. As a result, traffic between on-premises and an Azure VMware Solution private cloud might experience latency, performance problems, or packet drops.
+> You must add specific routes on both hubs. If you don't add specific routes on the hubs, you can introduce suboptimal routing because on-premises uses equal-cost multi-path (ECMP) routing between the **E** connections for traffic that goes to an Azure VMware Solution private cloud. As a result, traffic between on-premises and an Azure VMware Solution private cloud might experience latency, performance problems, or packet drops.
 
 To advertise a more specific route down to on-premises, specify those prefixes in the *Private traffic prefixes* field of the routing intent feature. For more information, see [Configure routing intent and policies through the Virtual WAN portal](/azure/virtual-wan/how-to-routing-policies#nva). You need to add a summarized route that encompasses both your Azure VMware Solution /22 block and your Azure VMware Solution subnets. If you add the same exact prefix or a more specific prefix instead of a summary route, you introduce routing problems within the Azure environment. Only include summarized routes in the *Private traffic prefixes* field.
 
@@ -120,7 +120,7 @@ You can add the entire Azure VMware Solution management /22 block in the *Privat
 When you enable ExpressRoute-to-ExpressRoute transitivity on the hub, it sends the default RFC 1918 addresses to your on-premises network. Don't advertise the exact RFC 1918 prefixes back to Azure. The same exact routes can create routing problems within Azure. Instead, you should advertise more specific routes back to Azure for your on-premises networks.
 
 > [!NOTE]
->  If you advertise the default RFC 1918 addresses from on-premises to Azure and want to continue this practice, you need to split each RFC 1918 range into two equal subranges and advertise these subranges back to Azure. The subranges are 10.0.0.0/9, 10.128.0.0/9, 172.16.0.0/13, 172.24.0.0/13, 192.168.0.0/17, and 192.168.128.0/17.
+> If you advertise the default RFC 1918 addresses from on-premises to Azure and want to continue this practice, you need to split each RFC 1918 range into two equal subranges and advertise these subranges back to Azure. The subranges are 10.0.0.0/9, 10.128.0.0/9, 172.16.0.0/13, 172.24.0.0/13, 192.168.0.0/17, and 192.168.128.0/17.
 
 ## Azure virtual network connectivity and traffic flow
 

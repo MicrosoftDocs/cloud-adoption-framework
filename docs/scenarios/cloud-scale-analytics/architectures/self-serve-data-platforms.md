@@ -10,6 +10,11 @@ ms.custom: e2e-data-management, think-tank
 
 # Design considerations for self-serve data platforms
 
+> [!IMPORTANT]
+> **Deprecation notice:** The Cloud‑Scale Analytics scenario has been deprecated and is no longer maintained or supported. To ensure only the best guidance is surfaced, this guidance will be deleted April 2026.
+>
+> For current CAF data guidance, see [**Unify your data platform**](https://aka.ms/cafdata).
+
 Data mesh is an exciting new approach to data architecture design and development. Unlike traditional data architecture, data mesh separates responsibility between functional [data domains](./data-domains.md) that focus on creating [data products](./what-is-data-product.md) and a platform team that focuses on technical capabilities. This separation of responsibilities must be reflected in your platform. You must strike a balance between providing domain-agnostic capabilities and enabling your domain teams to model, process, and distribute their data across your organization.
 
 Choosing the right level of domain granularity and rules for decoupling using platforms isn't easy. This article contains several scenarios that provide you with detailed guidance.
@@ -57,7 +62,7 @@ These architecture domains follow all principles of data mesh. Domains take owne
 
 The next deployment option is another iteration of the previous design. This deployment follows a governed mesh topology: data is distributed via a central hub, in which data is partitioned per domain, logically isolated, and not integrated. This model's hub uses its own (domain-agnostic) data landing zone, and can be owned by a central data governance team overseeing which data is distributed to which other domains. The hub also carries services that facilitate data onboarding.
 
-:::image type="content" source="../media/domain-agnostic-infra-03.png" alt-text="Diagram that shows the hub-, generic-, and special data landing zones." lightbox="../media/domain-agnostic-infra-03.png":::
+:::image type="content" source="../media/domain-agnostic-infra-03.png" alt-text="Diagram that shows the hub-, generic-, and special data landing zones." lightbox="../media/domain-agnostic-infra-03.png":::
 
 For domains that require standard services for consuming, using, analyzing and creating new data, use generic data landing zone. This single subscription holds a standard set of services. Also apply data virtualization, as most of your data products are already persisted in the hub and you don't need more data duplication.
 
