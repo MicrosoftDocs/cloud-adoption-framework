@@ -33,7 +33,7 @@ The Cloud Adoption Framework provides organization‑level decision guidance. Ar
 
 ### Deprecation notice
 
-**Cloud-scale analytics guidance is deprecated.** We replaced this guidance with [Unify your data platform for AI and analytics](./data/executive-strategy-unify-data-platform.md). The deprecation and deletion date is April 30, 2026. To keep a copy of the retired content, [download a PDF](/pdf?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fazure%2Fcloud-adoption-framework%2Fscenarios%2Fcloud-scale-analytics%2Ftoc.json) or download the source files from [GitHub](https://github.com/MicrosoftDocs/cloud-adoption-framework/tree/main/docs/scenarios/cloud-scale-analytics).
+**Cloud-scale analytics guidance is deprecated.** We replaced this guidance with [Unify your data platform for AI and analytics](./data/executive-strategy-unify-data-platform.md). The deprecation and deletion date is April 30, 2026. To keep a copy of the retired content, download a PDF or download the source files from [GitHub](https://github.com/MicrosoftDocs/cloud-adoption-framework/tree/main/docs/scenarios/cloud-scale-analytics).
 
 ## December 2025
 
