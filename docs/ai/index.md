@@ -1,9 +1,9 @@
 ---
-title: AI adoption
-description: Discover how startups and enterprises can effectively adopt generative and nongenerative AI.
+title: AI adoption for Microsoft and Azure
+description: Discover how startups and enterprises can adopt generative and nongenerative AI with Microsoft and Azure platform and infrastructure services.
 author: stephen-sumner
 ms.author: ssumner
-ms.date: 07/01/2025
+ms.date: 04/10/2026
 ms.topic: concept-article
 ---
 
