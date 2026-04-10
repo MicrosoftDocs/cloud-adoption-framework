@@ -48,31 +48,31 @@ Your cloud operations team must consistently deliver specific outcomes that supp
 
 | Deliverable | Description |
 |------------|-------------|
-| Asset and workload inventory | Maintain an accurate, up-to-date catalog of all cloud resources and their dependencies |
-| Performance monitoring | Track workload performance metrics against established baselines and SLAs |
-| Operational compliance | Ensure all workloads meet regulatory and organizational compliance requirements |
-| Workload protection | Implement and maintain security controls for workloads and associated assets |
-| Incident recovery | Restore normal operations when performance degrades or business interruptions occur |
-| Platform maturation | Continuously improve core platform capabilities and features |
-| Performance optimization | Enhance workload performance through ongoing analysis and improvements |
-| Cost optimization | Refine budgets and architectures to meet business commitments while controlling costs |
+| Asset and workload inventory | Maintain an accurate, up-to-date catalog of all cloud resources and their dependencies. |
+| Performance monitoring | Track workload performance metrics against established baselines and SLAs. |
+| Operational compliance | Ensure all workloads meet regulatory and organizational compliance requirements. |
+| Workload protection | Implement and maintain security controls for workloads and associated assets. |
+| Incident recovery | Restore normal operations when performance degrades or business interruptions occur. |
+| Platform maturation | Continuously improve core platform capabilities and features. |
+| Performance optimization | Enhance workload performance through ongoing analysis and improvements. |
+| Cost optimization | Refine budgets and architectures to meet business commitments while controlling costs. |
 
 ### Establish regular team meetings
 
 Your cloud operations team needs regular touchpoints with other teams to ensure smooth operations:
 
-- **Release planning sessions**: Participate in planning to understand upcoming changes and prepare operational support
-- **Cloud center of excellence meetings**: Collaborate on standards and best practices that affect operations
-- **Incident reviews**: Conduct post-incident reviews to identify improvement opportunities
+- **Release planning sessions**: Participate in planning to understand upcoming changes and prepare operational support.
+- **Cloud center of excellence meetings**: Collaborate on standards and best practices that affect operations.
+- **Incident reviews**: Conduct post-incident reviews to identify improvement opportunities.
 
 ## Understand what cloud operations excludes
 
 Cloud providers handle many traditional IT operations tasks, which changes your team's focus. These activities now fall outside your cloud operations scope:
 
-- **Physical infrastructure maintenance**: Cloud providers manage storage, CPU, memory, and network equipment
-- **Server and host management**: Virtual machine hosts and physical servers become the provider's responsibility
-- **Hardware monitoring and repair**: The provider handles hardware failures and replacements
-- **Low-level technical operations**: Many routine maintenance tasks transfer to the cloud provider
+- **Physical infrastructure maintenance**: Cloud providers manage storage, CPU, memory, and network equipment.
+- **Server and host management**: Virtual machine hosts and physical servers become the provider's responsibility.
+- **Hardware monitoring and repair**: The provider handles hardware failures and replacements.
+- **Low-level technical operations**: Many routine maintenance tasks transfer to the cloud provider.
 
 This shift allows your team to focus on optimizing workload performance and business value rather than maintaining infrastructure.
 

@@ -70,4 +70,4 @@ Securing operating systems requires keeping virtual machines and container image
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Govern AI](../govern.md)
+> [Govern AI](../../scenarios/ai/govern.md)

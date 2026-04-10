@@ -15,13 +15,13 @@ Cloud adoption can't happen without well-organized people. Successful cloud adop
 
 ## Structure type
 
-The following organizational structures don't necessarily have to map to an organizational chart, or org chart. Org charts generally reflect command and control management structures. Conversely, the following organizational structures are designed to capture alignment of roles and responsibilities. In an agile, matrix organization, these structures might be best represented as virtual teams. There's no limitation suggesting that these organizational structures can't be represented in an org chart. However, it's not necessary to produce an effective operating model.
+The following organizational structures don't necessarily have to map to an organizational chart, or org chart. Org charts generally reflect command-and-control management structures. Conversely, the following organizational structures are designed to capture the alignment of roles and responsibilities. In an agile, matrix organization, these structures might be best represented as virtual teams. There's no limitation suggesting that these organizational structures can't be represented in an org chart. However, it's not necessary to produce an effective operating model.
 
 The first step of managing organizational alignment is to determine how the following organizational structures will be fulfilled:
 
-- **Org chart alignment:** Management hierarchies, manager responsibilities, and staff alignment will align to organizational structures.
+- **Org-chart alignment:** Management hierarchies, manager responsibilities, and staff alignment will align with organizational structures.
 - **Virtual teams:** Management structures and org charts remain unchanged. Instead, virtual teams will be created and tasked with the required functions.
-- **Mixed model:** More commonly, a mixture of org chart and virtual team alignment will be required to deliver on transformation goals.
+- **Mixed model:** More commonly, a mixture of org-chart and virtual-team alignment will be required to deliver on transformation goals.
 
 ## Understand required cloud functions
 

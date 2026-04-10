@@ -50,4 +50,4 @@ Managing business continuity and disaster recovery for AI applications on Azure 
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Secure IaaS AI](./security.md)
+> [Secure IaaS AI](../../scenarios/ai/infrastructure/security.md)

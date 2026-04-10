@@ -34,4 +34,4 @@ AI workloads require high throughput and low latency for efficient data retrieva
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Networking IaaS AI](./networking.md)
+> [Networking IaaS AI](../../scenarios/ai/infrastructure/networking.md)

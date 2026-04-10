@@ -39,7 +39,7 @@ Your technology strategy determines the balance of speed, customization, and con
 
 1. **Adopt standard mechanisms for AI interoperability.** Standard protocols enable AI systems to communicate across different platforms and reduce custom implementations. These protocols support data sharing and system integration while maintaining flexibility for future technology changes. Understand protocols like Model Context Protocol for cross-system data ingestion to ensure your AI systems support interoperability requirements. Evaluate tools like [NLWeb](https://github.com/microsoft/NLWeb?tab=readme-ov-file#what-is-nlweb) to prepare your content for the AI web. For example, see [Model Context Protocol in Microsoft Copilot Studio](/microsoft-copilot-studio/agent-extend-action-mcp#create-an-mcp-server) and [Exposing REST APIs as MCP servers](/azure/api-management/export-rest-mcp-server).
 
-2. **Understand AI agents as decision-making systems.** An AI agent is a microservice that uses a generative AI model to reason, act, and learn. These systems represent a shift from retrieval-augmented generation (RAG) applications to decision-making systems that adapt to changing conditions. Given the distinct nature of agents within an organization, review [AI Agent adoption](../../ai-agents/index.md) for specialized guidance on implementing agents across your environment.
+2. **Understand AI agents as decision-making systems.** An AI agent is a microservice that uses a generative AI model to reason, act, and learn. These systems represent a shift from retrieval-augmented generation (RAG) applications to decision-making systems that adapt to changing conditions. Given the distinct nature of agents within an organization, review [AI Agent adoption](../ai-agents/index.md) for specialized guidance on implementing agents across your environment.
 
 3. **Select the appropriate AI service model.** Microsoft offers three service models with varying levels of customization and [shared responsibility](/azure/security/fundamentals/shared-responsibility-ai): Software as a Service (SaaS), Platform as a Service (PaaS), and Infrastructure as a Service (IaaS). Each model requires different technical skills and provides different degrees of control over AI implementation. Match your team's capabilities, data requirements, and customization needs with the appropriate service model. Use the AI decision tree to guide your selection process.
 
@@ -88,7 +88,7 @@ Azure infrastructure services provide granular control for AI performance, isola
 
 | AI goal | Microsoft solution | Data needed | Skills required | Main cost factors |
 | --------------|----|-------------| ---------| ---- |
-| Train and inference your own AI models. Bring your own models to Azure. | [Azure Virtual Machines with CycleCloud for HPC workloads](./infrastructure/cycle-cloud.md) <br>or<br>[Azure Kubernetes Service](/azure/aks/gpu-cluster) | Yes | Infrastructure management, IT, program installation, model training, model benchmarking, orchestration, deploying endpoints, securing endpoints, and consuming endpoints in apps | Compute, compute node orchestrator, managed disks (optional), storage services, Azure Bastion, and other Azure services used |
+| Train and inference your own AI models. Bring your own models to Azure. | [Azure Virtual Machines with CycleCloud for HPC workloads](../scenarios/ai/infrastructure/cycle-cloud.md) <br>or<br>[Azure Kubernetes Service](/azure/aks/gpu-cluster) | Yes | Infrastructure management, IT, program installation, model training, model benchmarking, orchestration, deploying endpoints, securing endpoints, and consuming endpoints in apps | Compute, compute node orchestrator, managed disks (optional), storage services, Azure Bastion, and other Azure services used |
 
 ## Define a data strategy
 
@@ -106,7 +106,7 @@ Your data strategy defines how data is sourced, classified, secured, enriched, m
 
 Responsible AI converts trust, safety, and regulatory alignment into operational controls across the AI lifecycle. A responsible AI strategy translates principles into enforceable controls, measurable checkpoints, and clear accountability. Maintain an auditable chain across design reviews, risk assessments, policy enforcement, model and agent monitoring, and incident response.
 
-1. **Assign clear ownership for AI governance.** Designate specific people or teams to own AI governance decisions and manage regulatory requirements. Governance roles define decision-making authority for AI projects. Assign someone to monitor AI technology changes and new regulations. [Create an AI cloud center of excellence](./center-of-excellence.md) to centralize responsibilities and establish procedures for AI governance issues.
+1. **Assign clear ownership for AI governance.** Designate specific people or teams to own AI governance decisions and manage regulatory requirements. Governance roles define decision-making authority for AI projects. Assign someone to monitor AI technology changes and new regulations. [Create an AI cloud center of excellence](../scenarios/ai/center-of-excellence.md) to centralize responsibilities and establish procedures for AI governance issues.
 
 2. **Adopt responsible AI principles as business goals.** Use Microsoft's [responsible AI principles](https://www.microsoft.com/ai/responsible-ai) as the framework for ethical AI development. These six AI principles align with the [NIST AI Risk Management Framework](https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf) and become measurable business objectives that guide project selection and development. Integrate these principles into project planning, development processes, and success metrics.
 
@@ -129,4 +129,4 @@ This example AI strategy uses a fictional company, Contoso. Contoso operates a c
 ## Next step
 
 > [!div class="nextstepaction"]
-> [AI Plan](plan.md)
+> [AI Plan](../scenarios/ai/plan.md)
