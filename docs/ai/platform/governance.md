@@ -126,4 +126,4 @@ AI data governance protects sensitive information and intellectual property, and
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Go to Management PaaS AI](../platform/management.md)
+> [Go to Management PaaS AI](../../scenarios/ai/platform/management.md)

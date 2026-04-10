@@ -9,7 +9,7 @@ ms.topic: concept-article
 
 # Compute recommendations for AI workloads on Azure infrastructure (IaaS)
 
-This article provides compute recommendations for organizations running AI workloads on Azure infrastructure (IaaS). The preferred approach is to start your AI adoption with [Azure AI platform-as-a-service (PaaS) solutions](../platform/architectures.md). However, if you have access to Azure GPUs, follow this guidance to run AI workloads on Azure IaaS.
+This article provides compute recommendations for organizations running AI workloads on Azure infrastructure (IaaS). The preferred approach is to start your AI adoption with [Azure AI platform-as-a-service (PaaS) solutions](../../scenarios/ai/platform/architectures.md). However, if you have access to Azure GPUs, follow this guidance to run AI workloads on Azure IaaS.
 
 AI workloads require specialized virtual machines (VMs) to handle high computational demands and large-scale data processing. Choosing the right VMs optimizes resource use and accelerates AI model development and deployment. The following table provides an overview of recommended compute options.
 
@@ -40,7 +40,7 @@ Selecting an appropriate virtual machine size aligns with your AI model complexi
 
 Compute orchestration solutions facilitate the management of AI tasks across virtual machine clusters. Even for simple deployments, an orchestrator can help reduce costs and ensure an environment is reproducible. Orchestrators help ensure you only use the compute that you need for a specific amount of time. Select an orchestration tool based on your scheduling, containerization, and scaling needs to improve operations and scalability.
 
-- *Use Azure CycleCloud for open-source schedulers.* Azure CycleCloud is ideal for open-source schedulers like Slurm, Grid Engine, or Torque/PBS. It provides flexible cluster management, customizable configurations, and advanced scheduling capabilities. Virtual machines within the cluster need configuration for AI workload execution. Virtual machines for CycleCloud and Batch are non-persistent. The orchestrator creates and removes VMs when needed to help with cost savings. For more information, see [Azure CycleCloud Workspace for Slurm](./cycle-cloud.md).
+- *Use Azure CycleCloud for open-source schedulers.* Azure CycleCloud is ideal for open-source schedulers like Slurm, Grid Engine, or Torque/PBS. It provides flexible cluster management, customizable configurations, and advanced scheduling capabilities. Virtual machines within the cluster need configuration for AI workload execution. Virtual machines for CycleCloud and Batch are non-persistent. The orchestrator creates and removes VMs when needed to help with cost savings. For more information, see [Azure CycleCloud Workspace for Slurm](../../scenarios/ai/infrastructure/cycle-cloud.md).
 
 - *Use Azure Batch for built-in scheduling.* Azure Batch offers built-in scheduling features with no need for extra software installation or management. It has a consumption pricing model and no licensing fees. It also supports containerized tasks natively. For deployment best practices, see [Azure Batch Accelerator](https://github.com/Azure/bacc).
 
@@ -64,4 +64,4 @@ Containers provide a consistent, reproducible environment that scales efficientl
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Storage IaaS AI](./storage.md)
+> [Storage IaaS AI](../../scenarios/ai/infrastructure/storage.md)

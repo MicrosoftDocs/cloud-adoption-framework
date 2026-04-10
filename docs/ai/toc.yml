@@ -1,3 +1,4 @@
+
 items:
   - name: Overview AI adoption
     href: index.md
@@ -55,5 +56,5 @@ items:
       - name: AI Center of Excellence
         href: center-of-excellence.md
       - name: Agent adoption
-        href: ../../ai-agents/index.md
+        href: ../ai-agents/index.md
 

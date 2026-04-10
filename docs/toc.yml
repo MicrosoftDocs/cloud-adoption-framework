@@ -459,7 +459,7 @@ items:
     - name: Data 
       href: data/executive-strategy-unify-data-platform.md
     - name: General AI
-      href: scenarios/ai/index.md
+      href: ai/index.md
     - name: AI agents
       href: ai-agents/index.md
     - name: Azure Virtual Desktop

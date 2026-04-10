@@ -17,7 +17,7 @@ This article provides guidance to manage AI workloads throughout their lifecycle
 
 Operational frameworks provide structure for managing complex AI projects. These frameworks ensure consistency across development teams and reduce errors that slow delivery cycles. You must establish clear operational processes to achieve reliable AI workload management. Here's how:
 
-1. **Establish an AI center of excellence for strategic guidance.** An AI center of excellence provides strategic oversight and technical guidance for AI deployments across the organization. This group ensures that AI approaches align with business objectives and technical requirements. Use your [AI center of excellence](./center-of-excellence.md) to evaluate which management approach fits your organization's needs and create deployment standards that support governance and innovation.
+1. **Establish an AI center of excellence for strategic guidance.** An AI center of excellence provides strategic oversight and technical guidance for AI deployments across the organization. This group ensures that AI approaches align with business objectives and technical requirements. Use your [AI center of excellence](../scenarios/ai/center-of-excellence.md) to evaluate which management approach fits your organization's needs and create deployment standards that support governance and innovation.
 
 1. **Select the right operational framework for your workload type.** Different AI workloads require different operational approaches that affect team processes and tooling decisions. This choice determines your development methodology and technology stack integration. Use [MLOps](/azure/architecture/ai-ml/guide/machine-learning-operations-v2) frameworks for traditional machine learning workflows and [GenAIOps](/azure/architecture/ai-ml/guide/genaiops-for-mlops) for generative AI workloads.
 
@@ -90,4 +90,4 @@ Business continuity management protects AI systems from disruptions and ensures 
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Secure AI](./secure.md)
+> [Secure AI](../scenarios/ai/secure.md)

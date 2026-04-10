@@ -65,8 +65,8 @@ The enforcement of your AI governance policies maintains consistent and ethical 
 
 3. **Use workload-specific governance guidance for targeted enforcement.** Workload-specific guidance addresses unique security and compliance requirements for different AI deployment patterns. This approach ensures policies align with the technical architecture and risk profile of each AI workload type. Use detailed security guidance available for AI workloads on Azure platform services (PaaS) and Azure infrastructure (IaaS) to govern AI models, resources, and data within these workload types.
 
-    - [Govern PaaS AI](./platform/governance.md)
-    - [Govern IaaS AI](./infrastructure/governance.md)
+    - [Govern PaaS AI](../scenarios/ai/platform/governance.md)
+    - [Govern IaaS AI](../scenarios/ai/infrastructure/governance.md)
 
 ## Monitor AI organizational risks
 
@@ -85,7 +85,7 @@ Risk monitoring identifies emerging threats and ensures AI workloads operate as 
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Manage AI](manage.md)
+> [Manage AI](../scenarios/ai/manage.md)
 
 ## Example AI risk mitigations
 

@@ -58,4 +58,4 @@ Business continuity ensures AI services remain available during regional outages
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Govern AI](../govern.md)
+> [Govern AI](../../scenarios/ai/govern.md)

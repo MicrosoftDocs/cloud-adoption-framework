@@ -122,7 +122,7 @@ Megatron-LM deploys on Azure HPC infrastructure, and it uses Azure's scalability
 
 Deploying Megatron-LM requires specific software and hardware.
 
-- *Pick the right deployment options.* Use the [CycleCloud Workspace for Slurm](./cycle-cloud.md) to simplify deployment. Choose NC-series or ND-series SKUs for the GPU partition. For multi-node training, ND-series SKUs are recommended for RDMA support. Azure's HPC marketplace images generally include these drivers and libraries. If customization is needed, the azhpc-images repository can ensure compatibility.
+- *Pick the right deployment options.* Use the [CycleCloud Workspace for Slurm](../../scenarios/ai/infrastructure/cycle-cloud.md) to simplify deployment. Choose NC-series or ND-series SKUs for the GPU partition. For multi-node training, ND-series SKUs are recommended for RDMA support. Azure's HPC marketplace images generally include these drivers and libraries. If customization is needed, the azhpc-images repository can ensure compatibility.
 
 - *Use the right image.* The software requirements for the project include a Linux-based operating system, typically Ubuntu. For multi-GPU and multi-node communication, it's essential to have communication libraries such as NCCL and MPI. Additionally, appropriate NVIDIA drivers must be installed to ensure GPU acceleration. [Azure's HPC marketplace images](/azure/virtual-machines/azure-hpc-vm-images) come with these drivers and libraries preinstalled. However, if customization is necessary, the [azhpc-images](https://github.com/Azure/azhpc-images?tab=readme-ov-file#azure-hpcai-vm-images) repository can be used to ensure compatibility.
 
@@ -133,7 +133,7 @@ You should run Megatron-LM using the latest release of [NGC's PyTorch container]
 - [enroot](https://github.com/NVIDIA/enroot): A tool that allows users to run containerized applications on HPC clusters without requiring root privileges or modifying the host system.
 - [pyxis](https://github.com/NVIDIA/pyxis): A plugin for Slurm that enables seamless integration of enroot with Slurm, allowing users to submit containerized jobs to Slurm queues and run them on HPC nodes.
 
-Both of these components are included in [CycleCloud Workspace for Slurm](./cycle-cloud.md) but are currently not included in Slurm clusters that are built via CycleCloud. You can introduce these extra components via [cluster-init with CycleCloud projects](/azure/cyclecloud/how-to/projects). With these requirements met, you can use Megatron-LM for LLM training by:
+Both of these components are included in [CycleCloud Workspace for Slurm](../../scenarios/ai/infrastructure/cycle-cloud.md) but are currently not included in Slurm clusters that are built via CycleCloud. You can introduce these extra components via [cluster-init with CycleCloud projects](/azure/cyclecloud/how-to/projects). With these requirements met, you can use Megatron-LM for LLM training by:
 
 - *Verifying the performance of your cluster*: Identify any potential hardware issues before running your workload with [Node Health Checks](https://github.com/Azure/azurehpc-health-checks). Use NCCL tests to verify the distributed all-reduce performance of the cluster.
 - *Selecting your training data*: Use the [codeParrot](https://huggingface.co/codeparrot/codeparrot-small) model as a starting point to validate your workflow.
@@ -170,4 +170,4 @@ ROCm Communication Collectives Library (RCCL) is a specialized library designed 
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Govern AI](../govern.md)
+> [Govern AI](../../scenarios/ai/govern.md)
