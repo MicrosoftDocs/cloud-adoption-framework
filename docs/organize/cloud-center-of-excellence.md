@@ -27,7 +27,7 @@ A CCoE model requires collaboration between each of the following resources:
 
 When this function is properly structured and supported, the participants can accelerate innovation and migration efforts while reducing the overall cost of change and increasing business agility. When successfully implemented, this function can produce noticeable reductions in time to market. As team practices mature, quality indicators improve, including reliability, performance efficiency, security, maintainability, and customer satisfaction. These gains in efficiency, agility, and quality are especially vital if the company plans to implement large-scale cloud migration efforts or wants to use the cloud to drive innovations that are associated with market differentiation.
 
-When successful, a CCoE model creates a significant shift in IT. In a CCoE approach, IT serves as a broker, partner, or representative to the business. This model is a paradigm shift away from the traditional view of IT as an operations unit or abstraction layer between the business and IT assets.
+When successful, a CCoE model creates a significant shift in IT. In a CCoE approach, IT serves as a broker, partner, or representative to the business. This model is a paradigm shift away from the traditional view of IT as an operations unit or an abstraction layer between the business and IT assets.
 
 The following image provides an analogy for this change. Without a CCoE approach, IT tends to focus on providing control and central responsibility, acting like the stoplights at an intersection. When the CCoE is successful, IT's role resembles a roundabout at an intersection where the focus is on freedom and delegated responsibility.
 
@@ -59,8 +59,8 @@ The following table describes some examples of this transition.
 
 | Scenario | Pre-CCoE solution | Post-CCoE solution |
 |---------|---------|---------|
-| Provision a SQL Server instance in production | Network, IT, and data platform teams provision components over the course of days or weeks. | The team that requires the server deploys a platform as a service (PaaS) instance of Azure SQL Database. Alternatively, deployment can use a preapproved template for all of the infrastructure as a service (IaaS) assets to the cloud in hours. |
-| Provision a development environment | Network, IT, development, and DevOps teams agree on specifications and deploy an environment. | The development team defines their own specifications and deploys an environment based on allocated budget. |
+| Provision a SQL Server instance in production | Network, IT, and data platform teams provision components over the course of days or weeks. | The team that requires the server deploys a platform-as-a-service (PaaS) instance of Azure SQL Database. Alternatively, deployment can use a preapproved template for all of the infrastructure-as-a-service (IaaS) assets to the cloud in hours. |
+| Provision a development environment | Network, IT, development, and DevOps teams agree on specifications and deploy an environment. | The development team defines their own specifications and deploys an environment based on the allocated budget. |
 | Update security requirements to improve data protection | Networking, IT, and security teams update networking devices and virtual machines (VMs) across several environments to add protections. | Cloud governance tools are used to update policies that can be applied immediately to all assets in all cloud environments. |
 
 ## Negotiations
@@ -95,11 +95,11 @@ This type of change takes time, experimentation, and negotiation. There will be 
 
 IT leadership is the first and most obvious stakeholder. IT managers play an important part, but implementing this model requires the support of the CIO and other executive-level IT leaders.
 
-Less obvious is the need for business stakeholders. Business agility and time to market are primary motivations for forming a CCoE. As such, the key stakeholders have a vested interest in these areas. Examples of business stakeholders include line-of-business leaders, finance executives, operations executives, and business product owners.
+Less obvious is the need for business stakeholders. Business agility and time to market are the primary motivations for forming a CCoE. As such, the key stakeholders have a vested interest in these areas. Examples of business stakeholders include line-of-business leaders, finance executives, operations executives, and business product owners.
 
 ### Support from business stakeholders
 
-Support from the business stakeholders can accelerate CCoE efforts. Much of the focus of CCoE efforts is centered around making long-term improvements to business agility and speed. Defining the effects of current operating models and the value of improvements is valuable as a guide and negotiation tool for the CCoE. We suggest establishing or clearly defining in documentation the following items for raising support for a CCoE:
+Support from the business stakeholders can accelerate CCoE efforts. Much of the focus of CCoE efforts is centered on making long-term improvements to business agility and speed. Defining the effects of current operating models and the value of improvements is valuable as a guide and negotiation tool for the CCoE. We suggest establishing or clearly defining in documentation the following items for raising support for a CCoE:
 
 - Expected business outcomes and goals.
 
@@ -117,7 +117,7 @@ These data points aren't an attack on IT. Instead, they help the CCoE team to le
 
 CCoE teams can demonstrate quick returns in some areas, but the higher-level goals, like business agility and time to market, can take much longer. During maturation, there's a high risk of the CCoE team becoming discouraged or for members to be pulled to focus on other IT efforts.
 
-During the first six to nine months of CCoE efforts, we recommend that business stakeholders meet monthly with IT leadership and the CCoE. There's little need for formal ceremony to these meetings. Simply reminding the CCoE members and their leadership of the importance of this program can go a long way toward CCoE success.
+During the first six to nine months of CCoE efforts, we recommend that business stakeholders meet monthly with IT leadership and the CCoE. There's little need for formal ceremony for these meetings. Simply reminding the CCoE members and their leadership of the importance of this program can go a long way toward CCoE success.
 
 We also recommend that the business stakeholders stay informed of the progress and the blocking issues that the CCoE team experiences. Their efforts might seem like technical minutiae, but business stakeholders need to understand the progress of the plan so that they can engage when the team loses steam or becomes distracted by other priorities.
 
@@ -135,4 +135,4 @@ Support from IT stakeholders should include the following activities:
 
 - **Create a buffer:** The CCoE team experiments with new approaches.
 
-  Some new approaches won't align well with existing operations or technical constraints. The CCoE team might experience pressure or recourse from other teams when experiments fail. It's important to encourage and buffer the CCoE team from the consequences of "fast fail" learning opportunities. It's equally important to hold the team accountable to a growth mindset to ensure that they learn from those experiments and find better solutions.
+  Some new approaches won't align well with existing operations or technical constraints. The CCoE team might experience pressure or recourse from other teams when experiments fail. It's important to encourage and buffer the CCoE team from the consequences of "fast-fail" learning opportunities. It's equally important to hold the team accountable to a growth mindset to ensure that they learn from those experiments and find better solutions.
