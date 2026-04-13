@@ -71,7 +71,7 @@ Consider these Azure-specific recommendations to help you drive sustainability e
 
 - _Azure carbon optimization:_ Measure and minimize the carbon impact of your Azure resources by using [Azure carbon optimization](/azure/carbon-optimization/overview).
 
-- _Emissions savings estimator for Microsoft Cloud:_ Use this tool to define your on-premises infrastructure workloads. Then, use that information to report your current on-premises footprint and comparable Azure footprint. For more information, see the [emissions savings estimator for Microsoft Cloud](https://gw.us-il301.gateway.prod.island.powerapps.com/customerenrollmentservice/estimator/index.html).
+- _Emissions savings estimator for Microsoft Cloud:_ Use this tool to define your on-premises infrastructure workloads. Then, use that information to report your current on-premises footprint and comparable Azure footprint.
 
 - _Emissions impact dashboard:_ Evaluate your carbon emissions and emissions saved from using Microsoft Azure and Microsoft 365 cloud services. The [emissions impact dashboard](https://www.microsoft.com/sustainability/emissions-impact-dashboard) can help you make targeted decisions.
 
