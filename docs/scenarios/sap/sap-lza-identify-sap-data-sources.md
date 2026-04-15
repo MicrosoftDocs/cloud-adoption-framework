@@ -32,7 +32,7 @@ SAP systems contain data from across the organization that's used to derive insi
 
 - [SAP S/4HANA](https://www.sap.com/uk/products/erp/s4hana-private-edition.html) is the next generation of business applications. SAP S/4HANA comes with more data and business models and an HTML5-based user interface. As the name implies, SAP S/4HANA runs only on SAP HANA and provides OLAP and OLTP capabilities in real time.
 
-- SAP BW and [SAP BW/4HANA](https://www.sap.com/products/technology-platform/bw4hana-data-warehousing.html) are SAP's data warehousing solutions. They present the most common source of SAP business data. Most SAP customers use these solutions as an enterprise data warehouse, departmental data mart, or big data platform to load data from operational SAP source systems. SAP BW/4HANA runs only on SAP HANA. It has a simplified data architecture and open analytics features. Both solutions deliver an integrated data warehousing experience with data modeling, acquisition, integration, and tiering.
+- SAP BW and SAP BW/4HANA are SAP's data warehousing solutions. They present the most common source of SAP business data. Most SAP customers use these solutions as an enterprise data warehouse, departmental data mart, or big data platform to load data from operational SAP source systems. SAP BW/4HANA runs only on SAP HANA. It has a simplified data architecture and open analytics features. Both solutions deliver an integrated data warehousing experience with data modeling, acquisition, integration, and tiering.
 
 Customers might also deploy the following cloud-based analytics and planning solutions in their landscape:
 
