@@ -140,7 +140,7 @@ To ensure the consistent implementation of encryption and access controls, it's 
 
 - **Azure encryption:** Azure provides encryption for services like Azure SQL Database, Azure Cosmos DB, and Azure Data Lake. The supported encryption models include server-side encryption with service-managed keys, customer-managed keys in Azure Key Vault, and customer-managed keys on customer-controlled hardware. Client-side encryption models support data encryption by an application before it's sent to Azure. For more information, see [Azure encryption overview](/azure/security/fundamentals/encryption-overview).
 
-- **Access control management:** Formerly known as Azure Active Directory, [Microsoft Entra ID](/entra/fundamentals/whatis) provides comprehensive identity and access management capabilities. It supports multifactor authentication, Conditional Access policies, and single sign-on to ensure that only authorized users can access sensitive data.
+- **Access control management:** [Microsoft Entra ID](/entra/fundamentals/whatis) provides comprehensive identity and access management capabilities. It supports multifactor authentication, Conditional Access policies, and single sign-on to ensure that only authorized users can access sensitive data.
 
   - [Microsoft Entra ID Protection](/entra/id-protection/overview-identity-protection) uses advanced machine learning to identify sign-in risks and unusual user behavior to block, challenge, limit, or grant access. It helps prevent identity compromise, protects against credential theft, and provides insights into your identity security posture.
 

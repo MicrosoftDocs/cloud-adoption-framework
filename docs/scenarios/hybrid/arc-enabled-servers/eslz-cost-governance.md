@@ -86,7 +86,7 @@ Here are some general design recommendations for Azure Arc-enabled servers cost 
 - To retain data longer than 730 days, consider using [Log Analytics workspace data export](/azure/azure-monitor/logs/logs-data-export).
 - Consider using [commitment tier](/azure/azure-monitor/logs/manage-cost-storage#pricing-model) pricing based on your data ingestion volume.
 
-### Microsoft Defender for Cloud (formerly Azure Security Center)
+### Microsoft Defender for Cloud
 
 Review the [recommendations for security and compliance](./eslz-security-governance-and-compliance.md) and [Microsoft Defender for servers pricing](https://azure.microsoft.com/pricing/details/azure-defender/).
 
