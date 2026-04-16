@@ -97,7 +97,12 @@ A consistent security baseline makes sure that sensitive data remains protected 
 
 3. **Protect data in Azure services.** Microsoft Purview catalogs and labels data in Azure services but doesn't replace native security controls for those services. **Best practices:** Apply service‑level security controls, such as network isolation and Microsoft Defender coverage for [Azure SQL Database](/azure/azure-sql/database/threat-detection-configure), [Azure Cosmos DB](/azure/cosmos-db/defender-for-cosmos-db), and [Azure Storage](/azure/defender-for-cloud/defender-for-storage-introduction). Align these controls with Purview classifications so that monitoring and alerting reflect data sensitivity and business risk.
 
-4. **Protect data used by AI apps.** AI applications introduce new data exposure paths that require explicit alignment with enterprise data governance and security policies. Microsoft Purview integrates with Microsoft Foundry and other AI platforms to provide this control. **Best practices:** Use Purview APIs and AI‑specific security features to pass sensitivity context into AI workflows so applications can apply masking or response restrictions when required. Establish review checkpoints for high‑impact AI scenarios to confirm that data access aligns with enterprise standards. To learn more, see [Microsoft Purview and AI](/purview/ai-microsoft-purview) and [Purview with Foundry](/purview/developer/secure-ai-with-purview).
+4. **Protect data used by AI apps.** AI applications introduce new data exposure paths that require explicit alignment with enterprise data governance and security policies. Microsoft Purview integrates with Microsoft Foundry and other AI platforms to provide this control.
+
+    **Best practices:**
+    - Use [Microsoft Purview Data Security Posture Management](/purview/data-security-posture-management-learn-about) (DSPM). It provides centralized visibility and protection for AI‑related data risk. For onboarding and governance automation of DSPM for AI, see [Data Agent Governance and Security Accelerator](https://github.com/microsoft/Data-and-Agent-Governance-and-Security-Accelerator).
+    - Use Purview APIs and AI‑specific security features to pass sensitivity context into AI workflows so applications can apply masking or response restrictions when required. See [Microsoft Purview and AI](/purview/ai-microsoft-purview) and [Purview with Foundry](/purview/developer/secure-ai-with-purview).
+    - Establish review checkpoints for high‑impact AI scenarios to confirm that data access aligns with governance standards.
 
 ## Next step
 
