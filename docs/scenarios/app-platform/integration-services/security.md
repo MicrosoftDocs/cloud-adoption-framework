@@ -147,7 +147,7 @@ Review the critical design areas to make complete considerations and recommendat
 
 - [Trigger workflows in Standard logic apps with Easy Auth](https://techcommunity.microsoft.com/t5/integrations-on-azure-blog/trigger-workflows-in-standard-logic-apps-with-easy-auth/ba-p/3207378)
 
-- [Protect an API in Azure API Management using OAuth 2.0 authorization with Azure Active Directory](/azure/api-management/api-management-howto-protect-backend-with-aad)
+- [Protect an API in Azure API Management using OAuth 2.0 authorization with Microsoft Entra ID](/azure/api-management/api-management-howto-protect-backend-with-aad)
 
 - [Azure Key Vault security](/azure/key-vault/general/security-features)
 
