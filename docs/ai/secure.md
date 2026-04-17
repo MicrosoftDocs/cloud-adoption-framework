@@ -73,7 +73,7 @@ AI systems face evolving threats that require continuous monitoring to prevent s
 |----------|------|-------------|
 | Asset Discovery | [Azure Resource Graph Explorer](/azure/governance/resource-graph/) | Discovers and inventories AI resources across Azure subscriptions |
 | Security Monitoring | [Microsoft Defender for Cloud](/azure/defender-for-cloud/identify-ai-workload-model) | Identifies generative AI workloads and security risks |
-| Identity Management | [Managed Identities](/azure/active-directory/managed-identities-azure-resources/) | Secures AI service authentication without storing credentials |
+| Identity Management | [Microsoft Entra managed identities](/azure/active-directory/managed-identities-azure-resources/) | Secures AI service authentication without storing credentials |
 | Network Security | [Virtual Networks](/azure/ai-foundry/agents/how-to/virtual-networks) | Isolates AI communications and restricts network access |
 | API Security | [Azure API Management](/azure/api-management/export-rest-mcp-server) | Secures Model Context Protocol server endpoints |
 | Data Protection | [Azure Blob Storage](/azure/storage/blobs/) | Provides encrypted storage for AI artifacts with access controls |
