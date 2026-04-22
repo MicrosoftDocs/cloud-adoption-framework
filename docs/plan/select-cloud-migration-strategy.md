@@ -9,7 +9,7 @@ ms.topic: concept-article
 
 # Select your cloud migration strategies
 
-With a clear inventory and understanding of your workloads, your cloud adoption plan must determine what to do with each workload in the cloud. There are multiple migration strategies, sometimes known as the “Rs” of cloud migration. Each workload can be Retired, Retained, Rehosted, Replatformed, Refactored, Rearchitected, Rebuilt, or Replaced. This section guides how to pick the right approach for each workload, presenting the options, when to choose each, and the pros/cons trade-offs.
+With a clear inventory and understanding of your workloads, your cloud adoption plan must determine what to do with each workload in the cloud. There are multiple migration strategies, sometimes known as the "Rs" of cloud migration. Each workload can be Retired, Retained, Rehosted, Replatformed, Refactored, Rearchitected, Rebuilt, or Replaced. This section guides how to pick the right approach for each workload, presenting the options, when to choose each, and the pros/cons trade-offs.
 
 ## Migration strategy overview
 
@@ -34,7 +34,7 @@ A business driver defines why a workload needs to change in order to support a s
 
 2. **Identify gaps.** Perform a high-level gap analysis to understand what each workload must change to better support the defined business goals. This analysis should consider current performance, scalability, compliance, user experience, and architectural limitations. Document any shortfalls that prevent the workload from fully enabling the desired outcomes.
 
-3. **Determine the business driver.** A business driver emerges from the gap between a workload’s current state and its desired future state. It represents a specific, actionable reason for change. These drivers guide the selection of an appropriate migration strategy.
+3. **Determine the business driver.** A business driver emerges from the gap between a workload's current state and its desired future state. It represents a specific, actionable reason for change. These drivers guide the selection of an appropriate migration strategy.
 
     | Business driver | Migration strategy |
     |------------------|--------------------|
@@ -105,7 +105,7 @@ Refactoring improves the internal structure of code without adding new features.
 
 ### 5. Rearchitect (modernize architecture and code)
 
-A rearchitect strategy redesigns the workload’s architecture to improve scalability, agility, and service orientation. This strategy is important when you need to break down monolithic applications, adopt microservices, or enable targeted scaling. You should rearchitect when your current architecture limits your ability to meet business goals or scale effectively. For an example, see [Modern Web App Pattern](/azure/architecture/web-apps/guides/enterprise-app-patterns/modern-web-app/dotnet/guidance).
+A rearchitect strategy redesigns the workload's architecture to improve scalability, agility, and service orientation. This strategy is important when you need to break down monolithic applications, adopt microservices, or enable targeted scaling. You should rearchitect when your current architecture limits your ability to meet business goals or scale effectively. For an example, see [Modern Web App Pattern](/azure/architecture/web-apps/guides/enterprise-app-patterns/modern-web-app/dotnet/guidance).
 
 | Business driver | Key indicators for this strategy |
 |----------------------|------------------------------|

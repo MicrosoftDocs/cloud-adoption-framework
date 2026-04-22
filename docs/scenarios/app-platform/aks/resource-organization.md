@@ -10,11 +10,18 @@ ms.custom: think-tank, e2e-aks
 
 # Resource organization considerations for AKS (optional)
 
+> [!IMPORTANT]
+> **Deprecation notice:** This article is deprecated and is no longer being updated. To ensure only the best guidance is surfaced, this article will be deleted in May 2026.
+>
+> For alternative guidance, see [**Azure Kubernetes Service**](/azure/architecture/reference-architectures/containers/aks-start-here) architecture guidance in the Azure Architecture Center.
+>
+> If you would like to save this guidance, you can select **Download a PDF** at the bottom left of this page or download the files from [GitHub](https://github.com/MicrosoftDocs/cloud-adoption-framework/tree/main/docs/scenarios/app-platform/aks).
+
 Resource organization consideration is mostly managed by the platform foundation, however here are some of the ways the platform foundation might affect the AKS landing zone accelerator.
 
 The overall subscription and resource group design determined by generic enterprise-scale landing zone recommendations, will play a fundamental role in how the AKS resource organization is managed. As described in [Management group and subscription organization](../../../ready/landing-zone/design-area/resource-org.md), management groups and subscriptions are used to assign policies to the resources underneath them, and subscriptions are the management boundary for governance and isolation of resources.
 
-For example, if you have public and private applications, separate them into different subscriptions, named `Corp` and `Online`, and assign different policies to each subscription. The `Corp` subscriptions have policies that prevent the creation of public IP addresses. The `Online` subscriptions allow internet connectivity. For more information about which policies are applied at which level in an enterprise-scale landing zone design, including AKS-specific policies, see [Policies included in enterprise-scale landing zones reference implementations](https://github.com/Azure/Enterprise-Scale/blob/main/docs/ESLZ-Policies.md).
+For example, if you have public and private applications, separate them into different subscriptions, named `Corp` and `Online`, and assign different policies to each subscription. The `Corp` subscriptions have policies that prevent the creation of public IP addresses. The `Online` subscriptions allow internet connectivity. For more information about which policies are applied at which level in an enterprise-scale landing zone design, including AKS-specific policies, see [Policies included in enterprise-scale landing zones reference implementations](https://azure.github.io/Azure-Landing-Zones/policy/).
 
 ## Design considerations
 

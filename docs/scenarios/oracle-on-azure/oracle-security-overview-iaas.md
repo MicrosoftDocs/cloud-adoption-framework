@@ -83,7 +83,7 @@ Network security is the fundamental component of a layered security approach for
 
 - **Decide how to connect to your VM**: The VM on which the Oracle database workload resides must be secured against unauthorized access. Management access is sensitive due to the higher permissions required for management users. In Azure, authorized users have several mechanisms available to securely manage the VM.
 
-  - [Microsoft Defender for Cloud's just-in-time (JIT) access](/azure/defender-for-cloud/just-in-time-access-overview) makes intelligent use of Azure’s network security mechanisms to provide time-limited opportunities to access the management ports on your VM.
+  - [Microsoft Defender for Cloud's just-in-time (JIT) access](/azure/defender-for-cloud/just-in-time-access-overview) makes intelligent use of Azure's network security mechanisms to provide time-limited opportunities to access the management ports on your VM.
   - [Azure Bastion](/azure/bastion/bastion-overview) is a platform as a service (PaaS) solution that you deploy in Azure. Azure Bastion hosts a jump box.
 
 You can use either solution to secure management of your Oracle database VM. If desired, you can combine both solutions for an advanced [multi-layered approach](/azure/architecture/solution-ideas/articles/multilayered-protection-azure-vm).
@@ -115,7 +115,7 @@ The Storage infrastructure has up to three possible layers of data at rest encry
 
 The Oracle Advanced Security option also offers a feature called [data redaction](https://docs.oracle.com/en/database/oracle/oracle-database/19/asoag/introduction-to-oracle-advanced-security.html#GUID-5D7343A0-4934-444F-97A1-5F189385A5DE), which is a form of dynamic data masking. When the database retrieves data, it masks the data value without altering the stored data value.
 
-These multiple layers of encryption at rest represent the very definition of defense in-depth. If for some reason one of the forms of encryption at rest are compromised, there are still other layers of encryption to protect the data.
+These multiple layers of encryption at rest represent the very definition of defense in-depth. If for some reason one of the forms of encryption at rest is compromised, there are still other layers of encryption to protect the data.
 
 - **Manage keys**: If you implement Oracle TDE as another encryption layer, it's important to note that Oracle doesn't support the native key management solutions, such as Key Vault, provided by Azure or other cloud providers. Instead, the default location for the Oracle wallet is within the filesystem of the Oracle database VM.
   

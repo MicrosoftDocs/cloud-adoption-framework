@@ -99,7 +99,7 @@ The following sections contain design recommendations for Azure Arc-enabled Kube
 - Consider using [Log Analytics workspace data export](/azure/azure-monitor/logs/logs-data-export) to retain data for longer than 730 days.
 - Consider using [Commitment Tier](/azure/azure-monitor/logs/manage-cost-storage#pricing-model) pricing based on your data ingestion volume.
 
-### Microsoft Defender for Cloud (formerly known as Azure Security Center)
+### Microsoft Defender for Cloud
 
 - Review the [Security, governance, and compliance critical design area](./eslz-arc-kubernetes-management-disciplines.md) to understand how to use Microsoft Defender for Cloud to protect and secure your Azure Arc-enabled Kubernetes clusters.
 - Review [Microsoft Defender for Containers pricing information](https://azure.microsoft.com/pricing/details/azure-defender/).

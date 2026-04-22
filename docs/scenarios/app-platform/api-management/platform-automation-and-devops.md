@@ -10,6 +10,13 @@ ms.custom: internal
 
 # Platform automation and DevOps for the API Management landing zone accelerator
 
+> [!IMPORTANT]
+> **Deprecation notice:** This is deprecated and is no longer being updated. To ensure only the best guidance is surfaced, this article will be deleted in May 2026.
+>
+> For alternative guidance, see [**Azure API Management landing zone architecture**](/azure/architecture/example-scenario/integration/app-gateway-internal-api-management-function) guidance in the Azure Architecture Center.
+>
+> If you would like to save this guidance, you can select **Download a PDF** at the bottom left of this page or download the files from [GitHub](https://github.com/MicrosoftDocs/cloud-adoption-framework/tree/main/docs/scenarios/app-platform/api-management).
+
 This article provides design considerations and recommendations for platform automation and DevOps when using the API Management landing zone accelerator. Platform automation and DevOps provide opportunities to modernize your approach to environmental deployment with infrastructure-as-code options.
 
 Learn more about the [platform automation and DevOps](../../../ready/landing-zone/design-area/platform-automation-devops.md) design area.
@@ -28,7 +35,7 @@ Learn more about the [platform automation and DevOps](../../../ready/landing-zon
 - API Management configurations are represented as Resource Manager templates or equivalent Bicep or Terraform templates, and an infrastructure-as-code mindset should be embraced.
 - The API Management admin team will publish configuration changes to the production API Management environment from a Git repository (publisher repo) owned by the API Management admin team.
 - Each individual API team may fork the publisher repo to have their own developer repo to work from.
-- Each team can use the API Management [APIOps](https://github.com/azure/apiops) or the [API Management extension](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-apimanagement) for Visual Studio Code to extract the relevant artifacts from their development API Management instance. These artifacts are based on Azure Resource Manager and should be committed to the API team’s Git repo.
+- Each team can use the API Management [APIOps](https://github.com/azure/apiops) or the [API Management extension](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-apimanagement) for Visual Studio Code to extract the relevant artifacts from their development API Management instance. These artifacts are based on Azure Resource Manager and should be committed to the API team's Git repo.
 - Service templates and shared templates should be in separate repos.
 - Changes to artifacts should be done to the extracted artifacts and then committed to Git. These should be deployed to a dev environment.
 - To promote to the centralized environments (staging, production, and so on), API teams can submit a pull request (PR) to merge their changes to the publisher repo.

@@ -9,6 +9,13 @@ ms.topic: concept-article
 
 # Azure Kubernetes Services (AKS) landing zone accelerator
 
+> [!IMPORTANT]
+> **Deprecation notice:** This article is deprecated and is no longer being updated. To ensure only the best guidance is surfaced, this article will be deleted in May 2026.
+>
+> For alternative guidance, see [**Azure Kubernetes Service**](/azure/architecture/reference-architectures/containers/aks-start-here) architecture guidance in the Azure Architecture Center.
+>
+> If you would like to save this guidance, you can select **Download a PDF** at the bottom left of this page or download the files from [GitHub](https://github.com/MicrosoftDocs/cloud-adoption-framework/tree/main/docs/scenarios/app-platform/aks).
+
 The Azure Kubernetes Services (AKS) landing zone accelerator provides a reference implementation to help you deploy AKS in an Azure landing zone. The following architecture shows how AKS integrates with shared services and aligns with the design areas.
 
 :::image type="complex" source="./media/aks-enterprise-scale-landing-zone-architecture.svg" alt-text="Diagram that shows the AKS landing zone accelerator architecture." lightbox="./media/aks-enterprise-scale-landing-zone-architecture.svg" border="false":::
@@ -27,7 +34,7 @@ A platform foundation provides shared services such as networking, identity, sec
 
 This AKS landing zone accelerator includes a reference architecture that supports AKS deployments in an Azure landing zone.
 
-1. **Use the templates from the official GitHub repository.** Use the [AKS landing zone accelerator](https://aka.ms/aks-reference-implementation) repo to access ARM templates, Bicep templates, and Terraform templates for deploying AKS infrastructure components to fit your environment. Modify environment variables and parameters to align with your organization’s naming conventions, policies, and operational requirements.
+1. **Use the templates from the official GitHub repository.** Use the [AKS landing zone accelerator](https://aka.ms/aks-reference-implementation) repo to access ARM templates, Bicep templates, and Terraform templates for deploying AKS infrastructure components to fit your environment. Modify environment variables and parameters to align with your organization's naming conventions, policies, and operational requirements.
 
 2. **Deploy the accelerator in the landing zones management group.** Place the AKS workload in the appropriate subscription and management group to ensure alignment with platform governance and policy enforcement.
 

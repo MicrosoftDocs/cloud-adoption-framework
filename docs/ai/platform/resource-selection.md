@@ -82,4 +82,4 @@ Follow these steps to build nongenerative AI workloads:
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Learn about Azure networking options](../platform/networking.md)
+> [Learn about Azure networking options](../../scenarios/ai/platform/networking.md)

@@ -94,4 +94,4 @@ For more information, see the following resources:
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Go to Management guidance](./management.md)
+> [Go to Management guidance](../../scenarios/ai/platform/management.md)

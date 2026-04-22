@@ -97,7 +97,7 @@ AI operations governance sets controls for AI service management and maintenance
 1. **Establish model lifecycle management policies.** Model versioning policies ensure compatibility and smooth transitions between updates. Version control helps prevent disruptions when models are upgraded or retired. It also maintains system stability across deployments. Create policies that define model versioning standards, compatibility testing requirements, and rollback procedures for all AI platforms in your organization. For example, use Azure Policy to restrict which models are available for deployment. Apply content safety filters to prevent harmful outputs. If you upgrade a model and encounter issues, use rollback procedures to restore the previous version.
 
 2. **Implement business continuity and disaster recovery plans.** Disaster recovery plans protect AI operations against service interruptions and data loss. For example, configure backup and failover for Azure AI model endpoints to maintain service availability during outages. These plans help ensure business operations continue during outages and maintain service availability for critical AI workloads. Configure baseline disaster recovery for resources that host AI model endpoints, including:
-- [Foundry](/azure/ai-studio/how-to/disaster-recovery)
+- [Foundry](/azure/ai-foundry/how-to/disaster-recovery)
 - [Azure OpenAI](/azure/ai-services/openai/how-to/business-continuity-disaster-recovery)
 - Foundry Tools
 
@@ -126,4 +126,4 @@ AI data governance protects sensitive information and intellectual property, and
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Go to Management PaaS AI](../platform/management.md)
+> [Go to Management PaaS AI](../../scenarios/ai/platform/management.md)

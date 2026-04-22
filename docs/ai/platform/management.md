@@ -31,7 +31,7 @@ Model monitoring ensures outputs align with Responsible AI principles and mainta
 
 1. **Monitor model outputs for quality and alignment.** Monitoring processes ensure workloads remain aligned with responsible AI targets and deliver expected results. Use Foundry's [observability features](/azure/ai-foundry/concepts/observability) and [monitor applications](/azure/ai-foundry/how-to/monitor-applications). For Foundry Agent Service, [monitor agent deployments](/azure/ai-foundry/agents/how-to/metrics).
 
-2. **Track model performance metrics continuously.** Performance monitoring helps pinpoint issues when accuracy or response quality drops below acceptable thresholds. Monitor latency in response times and accuracy of vector search results through [tracing](/azure/ai-studio/how-to/develop/trace-local-sdk) in Foundry.
+2. **Track model performance metrics continuously.** Performance monitoring helps pinpoint issues when accuracy or response quality drops below acceptable thresholds. Monitor latency in response times and accuracy of vector search results through [tracing](/azure/ai-foundry/how-to/develop/trace-local-sdk) in Foundry.
 
 3. **Consider implementing a generative AI gateway for enhanced monitoring.** Azure API Management enables logging and monitoring capabilities that platforms don't provide natively, including source IP collection, input text tracking, and output text analysis. This approach provides comprehensive audit trails and monitoring data. For more information, see [Implement logging and monitoring for Azure OpenAI Service language models](/azure/architecture/ai-ml/openai/architecture/log-monitor-azure-openai).
 
@@ -41,7 +41,7 @@ Model monitoring ensures outputs align with Responsible AI principles and mainta
 
 Data quality determines the accuracy and reliability of AI model outputs. Organizations that maintain high-quality data standards achieve better model performance and reduce the risk of biased or inaccurate results. You must implement systematic data management practices to ensure consistent model quality. Here's how:
 
-1. **Monitor data drift continuously.** Data drift detection identifies when input data patterns change from training baselines, which can degrade model performance over time. Track accuracy and data drift in both generative and nongenerative AI workloads to ensure models remain relevant and responsive to current conditions. Use [evaluations in Foundry](/azure/ai-studio/concepts/evaluation-approach-gen-ai) to establish monitoring baselines and detection thresholds.
+1. **Monitor data drift continuously.** Data drift detection identifies when input data patterns change from training baselines, which can degrade model performance over time. Track accuracy and data drift in both generative and nongenerative AI workloads to ensure models remain relevant and responsive to current conditions. Use [evaluations in Foundry](/azure/ai-foundry/concepts/evaluation-approach-gen-ai) to establish monitoring baselines and detection thresholds.
 
 2. **Set up automated alerts for performance degradation.** Alert systems provide early warning when model performance drops below acceptable thresholds, enabling proactive intervention before issues affect users. Configure custom alerts to detect performance deviations and trigger remediation workflows when models require retraining or adjustment.
 
@@ -51,11 +51,11 @@ Data quality determines the accuracy and reliability of AI model outputs. Organi
 
 Business continuity ensures AI services remain available during regional outages or service disruptions. Service interruptions can affect critical business operations that depend on AI capabilities, making continuity planning essential for organizational resilience. You must implement multi-region deployment strategies to maintain service availability. Here's how:
 
-1. **Deploy AI services across multiple regions.** Multi-region deployments provide redundancy that maintains service availability when individual regions experience outages or capacity constraints. Implement multi-region deployment strategies for [Foundry](/azure/ai-studio/how-to/disaster-recovery#plan-for-multi-regional-deployment) and [Azure OpenAI](/azure/ai-services/openai/how-to/business-continuity-disaster-recovery) to ensure consistent service delivery.
+1. **Deploy AI services across multiple regions.** Multi-region deployments provide redundancy that maintains service availability when individual regions experience outages or capacity constraints. Implement multi-region deployment strategies for [Foundry](/azure/ai-foundry/how-to/disaster-recovery#plan-for-multi-regional-deployment) and [Azure OpenAI](/azure/ai-services/openai/how-to/business-continuity-disaster-recovery) to ensure consistent service delivery.
 
 2. **Configure automated failover mechanisms.** Automated failover reduces recovery time and ensures continuous service delivery when primary regions become unavailable. Set up traffic routing and load balancing between regions to enable seamless transitions during service disruptions.
 
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Govern AI](../govern.md)
+> [Govern AI](../../scenarios/ai/govern.md)

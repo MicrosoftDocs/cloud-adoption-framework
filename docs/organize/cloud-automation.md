@@ -19,7 +19,7 @@ The skills needed to provide cloud automation functions can be provided by:
 - Developers with DevOps and infrastructure expertise
 - IT engineers with DevOps and automation expertise
 
-These subject matter experts might be providing functions in other areas such as cloud adoption, cloud governance, or cloud platform. After they demonstrate proficiency at automating complex workloads, you can recruit these experts to deliver automation value.
+These subject matter experts might be providing functions in other areas, such as cloud adoption, cloud governance, or cloud platform. After they demonstrate proficiency in automating complex workloads, you can recruit these experts to deliver automation value.
 
 ## Preparation
 
@@ -60,7 +60,7 @@ The cloud automation team should align activities with other areas of capability
 ## Deliverables
 
 - Curate or develop solutions based on the prioritized backlog.
-- Ensure solutions align to platform requirements.
+- Ensure solutions align with platform requirements.
 - Ensure solutions are consistently applied and meet existing governance and compliance requirements.
 - Create and validate solutions in the catalog.
 

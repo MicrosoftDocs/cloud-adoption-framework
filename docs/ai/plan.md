@@ -15,14 +15,14 @@ This article helps you create an AI adoption plan that transforms your organizat
 
 ## Assess AI skills
 
-Current capability assessment prevents resource misallocation and ensures realistic project planning aligned with organizational readiness. AI projects fail when organizations attempt implementations beyond their technical maturity or data availability. You must evaluate your skills, data assets, and infrastructure to establish a foundation for successful AI adoption. Here's how:
+Assessing current capabilities prevents resource misallocation and ensures realistic project planning aligned with organizational readiness. AI projects fail when organizations attempt implementations beyond their technical maturity or data availability. Evaluate your skills, data assets, and infrastructure to establish a foundation for successful AI adoption. Here's how:
 
 1. **Measure your AI maturity level using the skills and data readiness framework.** The framework provides objective criteria to assess your organization's current AI capabilities. This measurement prevents overcommitting to projects beyond your current capabilities. Use the following table to assess your maturity:
 
    | AI maturity level | Skills required | Data readiness | Feasible AI use cases |
    |-------------------|-----------------|----------------|----------------------|
    | Level 1 | ▪ Basic understanding of AI concepts <br> ▪ Ability to integrate data sources and map out prompts | ▪ Minimal to zero data available <br> ▪ Enterprise data available | ▪ Azure quickstart projects <br> ▪ Any Copilot solution |
-   | Level 2 | ▪ Experience with AI model selection <br> ▪ Familiarity with AI deployment and endpoint management <br> ▪ Experience with data cleaning and processing | ▪ Minimal to zero data available <br> ▪ Small, structured dataset <br> ▪ Small amount of domain-specific data available | ▪ Any Level 1 projects <br> ▪ Custom analytical AI workload using Foundry Tools <br> ▪ Custom generative AI chat app without Retrieval Augmented Generation (RAG) in Foundry <br> ▪ Custom machine learning app with automated model training <br> ▪ Fine-tuning a generative AI model |
+   | Level 2 | ▪ Experience with AI model selection <br> ▪ Familiarity with AI deployment and endpoint management <br> ▪ Experience with data cleaning and processing | ▪ Minimal to zero data available <br> ▪ Small, structured dataset <br> ▪ Small amount of domain-specific data available | ▪ Any Level 1 projects <br> ▪ Custom analytical AI workload using Foundry Tools <br> ▪ Custom generative AI chat app without Retrieval Augmented Generation (RAG) in Foundry <br> ▪ Custom Azure Machine Learning app with automated model training <br> ▪ Fine-tuning a generative AI model |
    | Level 3 | ▪ Proficiency in prompt engineering <br> ▪ Proficiency in AI model selection, data chunking, and query processing <br> ▪ Proficiency in data preprocessing, cleaning, splitting, and validating <br> ▪ Grounding data for indexing | ▪ Large amounts of historical business data available for machine learning <br> ▪ Small amount of domain-specific data available | ▪ Any Level 1-2 projects <br> ▪ Generative AI app with RAG in Foundry <br> ▪ Training and deploying a machine learning model <br> ▪ Training and running a small AI model on Azure Virtual Machines |
    | Level 4 | ▪ Advanced AI/machine learning expertise, including infrastructure management <br> ▪ Proficiency in handling complex AI model training workflows <br> ▪ Experience with orchestration, model benchmarking, and performance optimization <br> ▪ Strong skills in securing and managing AI endpoints | ▪ Large amounts of data available for training | ▪ Any Level 1-3 projects <br> ▪ Training and running large generative or non-generative AI apps on Virtual Machines, Azure Kubernetes Service, or Azure Container Apps |
 
@@ -32,7 +32,7 @@ Current capability assessment prevents resource misallocation and ensures realis
 
 ## Acquire AI skills
 
-A comprehensive capability-building strategy ensures your organization has the skills needed to implement and maintain AI systems successfully. Skills gaps create project delays and increase the risk of implementation failures. You must develop a multi-faceted approach that combines training, hiring, and partnerships to build sustainable AI capabilities. Here's how:
+A comprehensive capability-building strategy ensures your organization has the skills needed to implement and maintain AI systems successfully. Skills gaps create project delays and increase the risk of implementation failures. Develop a multifaceted approach that combines training, hiring, and partnerships to build sustainable AI capabilities. Here's how:
 
 1. **Develop internal AI skills through structured learning programs.** Internal skill development provides long-term capability building and ensures knowledge retention within your organization. This approach builds organizational confidence and reduces dependency on external resources. Use the [AI learning hub](/ai/) platform for free AI training, certifications, and product guidance. Set certification goals such as [Azure AI Fundamentals](/credentials/certifications/azure-ai-fundamentals/), [Azure AI Engineer Associate](/credentials/certifications/azure-ai-engineer/), and [Azure Data Scientist Associate](/credentials/certifications/azure-data-scientist/) certifications.
 
@@ -42,7 +42,7 @@ A comprehensive capability-building strategy ensures your organization has the s
 
 ## Access AI resources
 
-Clear access requirements and licensing strategies prevent deployment delays and ensure compliance with organizational policies. Different AI solutions have distinct access patterns that affect cost, security, and governance. You must understand the specific access requirements for each AI solution in your portfolio to plan budgets and security controls effectively. Here's how:
+Clear access requirements and licensing strategies prevent deployment delays and ensure compliance with organizational policies. Different AI solutions have distinct access patterns that affect cost, security, and governance. Understand the specific access requirements for each AI solution in your portfolio to plan budgets and security controls effectively. Here's how:
 
 | Microsoft AI solution         | How to gain access                                                                                       |
 |-------------------------------|----------------------------------------------------------------------------------------------------------|
@@ -54,9 +54,9 @@ Clear access requirements and licensing strategies prevent deployment delays and
 
 ## Prioritize AI use cases
 
-Strategic prioritization ensures you focus resources on projects that deliver maximum value while matching your organizational capabilities. Use case prioritization reduces implementation risk and accelerates time to value. You must evaluate each use case against feasibility, strategic value, and resource requirements to create an achievable implementation roadmap. Here's how:
+Strategic prioritization ensures you focus resources on projects that deliver maximum value while matching your organizational capabilities. Use case prioritization reduces implementation risk and accelerates time to value. Evaluate each use case against feasibility, strategic value, and resource requirements to create an achievable implementation roadmap. Here's how:
 
-1. **Evaluate use cases against your current AI maturity and available resources.** Realistic evaluation prevents overcommitting to projects beyond your current capabilities and ensures successful implementation. This assessment helps you focus on achievable goals that build momentum for future projects. Review your AI maturity level, data availability, technical infrastructure, and staffing capacity for each use case defined in your [AI Strategy](./strategy.md#identify-ai-use-cases).
+1. **Evaluate use cases against your current AI maturity and available resources.** A realistic evaluation prevents overcommitting to projects beyond your current capabilities and ensures successful implementation. This assessment helps you focus on achievable goals that build momentum for future projects. Review your AI maturity level, data availability, technical infrastructure, and staffing capacity for each use case defined in your [AI Strategy](./strategy.md#identify-ai-use-cases).
 
 2. **Rank use cases by strategic value and implementation feasibility.** Strategic ranking helps you allocate limited resources to projects with the highest potential impact and success probability. This approach maximizes return on AI investments while building organizational confidence. Score each use case on business impact, technical complexity, resource requirements, and alignment with organizational goals.
 
@@ -64,7 +64,7 @@ Strategic prioritization ensures you focus resources on projects that deliver ma
 
 ## Create AI proof of concepts
 
-Proof of concepts reduce implementation risk by validating technical feasibility and business value before full-scale development. PoCs help identify potential challenges and refine requirements in a controlled environment. You must create focused validation projects that test core assumptions and gather data for informed decision-making. Here's how:
+A proof of concept helps reduce implementation risk by validating technical feasibility and business value before full-scale development. PoCs help you identify potential challenges and refine requirements in a controlled environment. Create focused validation projects that test core assumptions and gather data for informed decision-making. Here's how:
 
 1. **Select an appropriate use case for proof of concept validation.** The right PoC selection balances learning opportunities with manageable risk and complexity. This selection ensures you gather meaningful insights without overwhelming your team or organization. Choose a high-value project from your prioritized list that matches your AI maturity level. Start with internal, non-customer-facing projects to limit risk and test your approach.
 
@@ -80,26 +80,26 @@ Proof of concepts reduce implementation risk by validating technical feasibility
 
 4. **Use proof of concept results to estimate implementation timelines for each use case.** PoC data provides realistic baseline estimates that account for your organization's specific capabilities and constraints. This approach produces more accurate timelines than theoretical estimates. Document development time, testing cycles, and deployment complexity observed during PoC implementation.
 
-5. **Account for organizational maturity and complexity factors in timeline planning.** Different AI solutions have characteristic implementation timelines that vary based on organizational readiness and project scope. This understanding helps set appropriate expectations with stakeholders. Microsoft Copilots typically provide the shortest timelines for return on investment (days to weeks), while custom Azure AI workloads require several weeks to months to reach production readiness.
+5. **Account for organizational maturity and complexity factors in timeline planning.** Different AI solutions have characteristic implementation timelines that vary based on organizational readiness and project scope. This understanding helps set appropriate expectations with stakeholders. Microsoft Copilots typically provide the shortest timelines for return on investment (days to weeks), while custom Azure AI + machine learning workloads require several weeks to months to reach production readiness.
 
 6. **Build in buffer time for learning, iteration, and unexpected challenges.** AI projects often encounter unforeseen technical challenges and require multiple iterations to achieve desired outcomes. Buffer time prevents schedule pressure that could compromise quality or ethical considerations. Add 20-30% contingency time to initial estimates and plan for multiple development cycles.
 
 ## Implement responsible AI
 
-Responsible AI practices protect your organization from ethical, legal, and reputational risks while ensuring AI systems align with organizational values. Early integration of responsible AI principles prevents costly redesigns and builds stakeholder trust. You must embed ethical considerations, governance frameworks, and security measures into your implementation plan from the beginning. Here's how:
+Responsible AI practices protect your organization from ethical, legal, and reputational risks while ensuring AI systems align with organizational values. Early integration of responsible AI principles prevents costly redesigns and builds stakeholder trust. Embed ethical considerations, governance frameworks, and security measures into your implementation plan from the beginning. Here's how:
 
 1. **Use responsible AI planning tools to evaluate potential impacts and design ethical systems.** Systematic evaluation tools help identify potential risks and ensure AI systems meet ethical standards and regulatory requirements. These tools provide structured approaches to complex ethical considerations. Use the [AI impact assessment template](https://www.microsoft.com/ai/tools-practices), [Human-AI eXperience Toolkit](https://www.microsoft.com/research/project/hax-toolkit/), and [Responsible AI Maturity Model](https://www.microsoft.com/research/publication/responsible-ai-maturity-model/) to guide your planning process.
 
-2. **Implement AI governance frameworks to guide project decisions and monitor system behavior.** Governance frameworks provide consistent decision-making criteria and ensure accountability across AI projects. These frameworks help organizations maintain control over AI development and deployment. Establish policies covering roles, responsibilities, compliance requirements, and ethical standards. See [Govern AI](./govern.md) for detailed guidance on governance implementation.
+2. **Implement AI governance frameworks to guide project decisions and monitor system behavior.** Governance frameworks provide consistent decision-making criteria and ensure accountability across AI projects. These frameworks help organizations maintain control over AI development and deployment. Establish policies covering roles, responsibilities, compliance requirements, and ethical standards. See [Govern AI](../scenarios/ai/govern.md) for detailed guidance on governance implementation.
 
-3. **Apply AI security and operations best practices throughout the implementation lifecycle.** Security and operational excellence ensure AI systems remain reliable, secure, and cost-effective throughout their lifecycle. These practices prevent security incidents and operational failures. Implement AI operations frameworks like GenAIOps or MLOps for deployment tracking and performance monitoring. See [Manage AI](./manage.md) and [Secure AI](./secure.md) for detailed implementation guidance.
+3. **Apply AI security and operations best practices throughout the implementation lifecycle.** Security and operational excellence ensure AI systems remain reliable, secure, and cost-effective throughout their lifecycle. These practices prevent security incidents and operational failures. Implement AI operations frameworks like GenAIOps or MLOps for deployment tracking and performance monitoring. See [Manage AI](../scenarios/ai/manage.md) and [Secure AI](../scenarios/ai/secure.md) for detailed implementation guidance.
 
 ## Next step
 
 Complete your AI adoption planning by establishing the technical foundation for implementation. For custom AI workloads with Azure, proceed to AI Ready to configure your technical environment. For Microsoft Copilot adoption, advance to AI Governance to establish organizational oversight.
 
 > [!div class="nextstepaction"]
-> [AI Ready (Azure only)](ready.md)
+> [AI Ready (Azure only)](../scenarios/ai/ready.md)
 
 > [!div class="nextstepaction"]
-> [Govern AI (Copilots and Azure)](ready.md)
+> [Govern AI (Copilots and Azure)](../scenarios/ai/govern.md)

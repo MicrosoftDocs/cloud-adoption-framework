@@ -13,9 +13,9 @@ Successful cloud adoption, whether startup or larger organization, requires more
 
 ## Map your cloud adoption journey
 
-Every organization’s cloud journey is different. Startups often begin cloud-native, while enterprises must assess and migrate existing workloads. Knowing your starting point helps you navigate the Cloud Adoption Framework (CAF) effectively.
+Every organization's cloud journey is different. Startups often begin cloud-native, while enterprises must assess and migrate existing workloads. Knowing your starting point helps you navigate the Cloud Adoption Framework (CAF) effectively.
 
-1. **Build cloud-native.** If you’re a startup with no existing workloads, you build your business cloud-native from the ground up. This approach fosters rapid development using cloud-native design. You follow a portion of CAF Plan: prepare, plan, estimate, document. Then you use [CAF Ready](/azure/cloud-adoption-framework/ready/azure-setup-guide/organize-resources) to quickly establish your Azure environment and [CAF Cloud-native](/azure/cloud-adoption-framework/cloud-native/plan-cloud-native-solutions) to create cloud-native apps.
+1. **Build cloud-native.** If you're a startup with no existing workloads, you build your business cloud-native from the ground up. This approach fosters rapid development using cloud-native design. You follow a portion of CAF Plan: prepare, plan, estimate, document. Then you use [CAF Ready](/azure/cloud-adoption-framework/ready/azure-setup-guide/organize-resources) to quickly establish your Azure environment and [CAF Cloud-native](/azure/cloud-adoption-framework/cloud-native/plan-cloud-native-solutions) to create cloud-native apps.
 
 2. **Migrate existing workloads.** Enterprises must evaluate their existing IT estate and determine the best migration strategy for each workload based on business drivers. You follow all of CAF Plan: prepare, plan, discovery, select, assess, estimate, document. Then, you prepare your enterprise environment using an Azure landing zone in [CAF Ready](/azure/cloud-adoption-framework/ready/landing-zone/). Then, you execute migration using [CAF Migrate](/azure/cloud-adoption-framework/migrate/plan-migration) and modernize using [CAF Modernize](/azure/cloud-adoption-framework/modernize/prepare-organization-cloud-modernization).
 

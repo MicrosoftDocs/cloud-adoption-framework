@@ -1,13 +1,8 @@
 items:
-  - name: Cloud Adoption Framework for Azure
-    href: index.yml
-    pdf_name: Microsoft Cloud Adoption Framework for Azure
-  - name: About
-    items:
-    - name: What is the Cloud Adoption Framework?
-      href: overview.md
-    - name: What's new
-      href: get-started/whats-new.md
+  - name: What is the Cloud Adoption Framework?
+    href: overview.md
+  - name: What's new
+    href: whats-new.md
   - name: Methodologies (phases)
     items:
     - name: Strategy
@@ -464,7 +459,7 @@ items:
     - name: Data 
       href: data/executive-strategy-unify-data-platform.md
     - name: General AI
-      href: scenarios/ai/index.md
+      href: ai/index.md
     - name: AI agents
       href: ai-agents/index.md
     - name: Azure Virtual Desktop

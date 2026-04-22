@@ -10,6 +10,13 @@ ms.custom: think-tank, e2e-aks
 
 # Azure billing and Microsoft Entra tenant considerations for AKS (optional)
 
+> [!IMPORTANT]
+> **Deprecation notice:** This article is deprecated and is no longer being updated. To ensure only the best guidance is surfaced, this article will be deleted in May 2026.
+>
+> For alternative guidance, see [**Azure Kubernetes Service**](/azure/architecture/reference-architectures/containers/aks-start-here) architecture guidance in the Azure Architecture Center.
+>
+> If you would like to save this guidance, you can select **Download a PDF** at the bottom left of this page or download the files from [GitHub](https://github.com/MicrosoftDocs/cloud-adoption-framework/tree/main/docs/scenarios/app-platform/aks).
+
 Enterprise enrollment is not a requirement for the AKS landing zone accelerator. For most customer implementations, standard best practices around enterprise enrollment and Entra tenants are unchanged when deploying Azure landing zones for AKS. There are seldom specific considerations or recommendations that would impact enterprise enrollment or Entra tenant decisions. See the following considerations to determine whether AKS requirements would impact existing tenant decisions.
 
 However, it could be important to understand any decisions previously made by the cloud platform team to be aware of existing [enterprise enrollment or Microsoft Entra tenant decisions](../../../ready/landing-zone/design-area/azure-billing-microsoft-entra-tenant.md).

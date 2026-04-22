@@ -25,7 +25,7 @@ Monitoring AI infrastructure involves tracking and evaluating the performance, h
 
 - *Monitor storage.* Monitor the performance of storage, such as local SSDs, [attached disks](/azure/virtual-machines/disks-metrics), file shares, and [Azure storage accounts](/azure/azure-monitor/insights/storage-insights-overview).
 
-- *Use orchestrator monitoring capabilities (if applicable).* Consider using the built-in monitoring capabilities of orchestrators like Azure CycleCloud, Azure Batch, and Azure Kubernetes Service (AKS). Follow the guidance for the orchestrator you chose:
+- *Use orchestrator monitoring capabilities (if applicable).* Consider using the built-in monitoring capabilities of orchestrators like Azure CycleCloud, Azure Batch, and Azure Kubernetes Service (AKS). Follow the guidance for the orchestrator you choose:
 
     - *Azure CycleCloud or Azure CycleCloud Workspace for Slurm:* Track CPU, disk, and network metrics. Store data from Azure CycleCloud clusters to Log Analytics and create custom metrics dashboards. For more information, see [Monitoring Azure CycleCloud](/azure/cyclecloud/concepts/monitoring). [Node Health Checks](https://github.com/Azure/azurehpc-health-checks#Configuration) are a set of automated tests to ensure that your HPC/AI hardware is healthy. You can run this check in Azure CycleCloud as part of cluster deployment or separately using the GitHub repo instructions. Ensure that you pay attention to the compatibility matrix in the documentation. Run where appropriate to ensure that you identify any unhealthy nodes before running your AI workloads.
 
@@ -39,9 +39,9 @@ Managing business continuity and disaster recovery for AI applications on Azure 
 
 - *Use Azure Site Recovery.* Site Recovery uses real-time replication and recovery automation to replicate workloads across regions. Built-in platform capabilities for VM workloads meet low RPO and RTO requirements. You can use Site Recovery to run recovery drills without affecting production workloads. You can also use Azure Policy to enable replication and to audit VM protection.
 
-- *Use orchestrator capabilities (if applicable)*. Use your orchestrator to recover failed compute nodes. For example, configure Azure Batch to automatically [retry tasks](/azure/batch/best-practices#pool-allocation-failures) if there's failure.
+- *Use orchestrator capabilities (if applicable)*. Use your orchestrator to recover failed compute nodes. For example, configure Azure Batch to automatically [retry tasks](/azure/batch/best-practices#pool-allocation-failures) if there's a failure.
 
-- *Schedule backups.* Determine if you need to backup incremental changes to datasets and models daily or weekly. Backups could also include databases or entire datasets.
+- *Schedule backups.* Determine if you need to back up incremental changes to datasets and models daily or weekly. Backups could also include databases or entire datasets.
 
 - *Ensure data compliance.* Make sure your backup strategy complies with data protection regulations. Comply with data residency requirements and store backups in appropriate geographic locations.
 
@@ -50,4 +50,4 @@ Managing business continuity and disaster recovery for AI applications on Azure 
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Secure IaaS AI](./security.md)
+> [Secure IaaS AI](../../scenarios/ai/infrastructure/security.md)

@@ -72,11 +72,11 @@ Here's how:
 
 The following articles provide best practices for adopting AI workloads using Azure PaaS solutions. These practices ensure your AI workloads meet requirements for security, governance, and operational excellence across key categories.
 
-- **[Resource selection](./resource-selection.md)** - Use best practices to choose appropriate AI services and compute resources.
-- **[Networking](./networking.md)** - Apply best practices to design secure and performant network connectivity.
-- **[Governance](./governance.md)** - Follow best practices to establish policies and controls for AI resource management.
-- **[Management](./management.md)** - Implement best practices for monitoring and operational practices.
-- **[Security](./security.md)** - Enforce best practices for applying security controls and compliance requirements.
+- **[Resource selection](../../scenarios/ai/platform/resource-selection.md)** - Use best practices to choose appropriate AI services and compute resources.
+- **[Networking](../../scenarios/ai/platform/networking.md)** - Apply best practices to design secure and performant network connectivity.
+- **[Governance](../../scenarios/ai/platform/governance.md)** - Follow best practices to establish policies and controls for AI resource management.
+- **[Management](../../scenarios/ai/platform/management.md)** - Implement best practices for monitoring and operational practices.
+- **[Security](../../scenarios/ai/platform/security.md)** - Enforce best practices for applying security controls and compliance requirements.
 
 ## Azure resources
 
@@ -92,4 +92,4 @@ The following articles provide best practices for adopting AI workloads using Az
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Resource selection](./resource-selection.md)
+> [Resource selection](../../scenarios/ai/platform/resource-selection.md)

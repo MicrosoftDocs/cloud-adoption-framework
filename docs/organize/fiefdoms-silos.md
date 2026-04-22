@@ -45,7 +45,7 @@ The guidance on [defining corporate policy](../govern/corporate-policy.md) facil
 
 ## Antipatterns
 
-The organic and responsive growth within IT that creates healthy IT teams can also result in antipatterns that block transformation and cloud adoption. IT silos and fiefdoms are different from the natural microcultures within healthy IT teams. In either pattern, the team focus tends to be directed toward protecting their "turf". When team members are confronted with an opportunity to change and improve operations, they'll invest more time and energy into blocking the change than finding a positive solution.
+The organic and responsive growth within IT that creates healthy IT teams can also result in antipatterns that block transformation and cloud adoption. IT silos and fiefdoms are different from the natural microcultures within healthy IT teams. In either pattern, the team focus tends to be directed toward protecting their "turf." When team members are confronted with an opportunity to change and improve operations, they'll invest more time and energy in blocking the change than finding a positive solution.
 
 As mentioned earlier, healthy IT teams can create natural resistance and positive friction. Silos and fiefdoms are a different challenge. There's no documented leading indicator for either antipattern. These antipatterns tend to be identified after months of [cloud center of excellence](./cloud-center-of-excellence.md) and [cloud governance team](./cloud-governance.md) efforts. They're discovered as the result of ongoing resistance.
 
@@ -53,7 +53,7 @@ Even in toxic cultures, the efforts of the CCoE and the cloud governance team sh
 
 ## IT silos
 
-Team members in an IT silo are likely to define themselves through their alignment to a few IT vendors or an area of technical specialization. But don't confuse silos with IT fiefdoms. Silos tend to be driven by comfort and passion, and silos are sometimes easier to overcome than the fear-driven motives behind fiefdoms.
+Team members in an IT silo are likely to define themselves through their alignment with a few IT vendors or an area of technical specialization. But don't confuse silos with IT fiefdoms. Silos tend to be driven by comfort and passion, and silos are sometimes easier to overcome than the fear-driven motives behind fiefdoms.
 
 This antipattern often emerges from a common passion for a specific solution. IT silos are then reinforced by the team's advanced skills as a result of the investment in that specific solution. This superior skill is an accelerator to cloud adoption efforts if you can overcome the resistance to change. It can also become a major blocker if the silos are broken down or if the team members can't accurately evaluate options. Fortunately, you can usually overcome IT silos without making any significant changes to the organizational chart.
 
@@ -63,15 +63,15 @@ You can address IT silos through the following approaches. The best approach dep
 
 **Create virtual teams:** The [Organizational readiness](./index.md) section of the Cloud Adoption Framework describes a multilayered structure for integrating and defining four virtual teams. One benefit of this structure is cross-organization visibility and inclusion. Introducing a [cloud center of excellence](./cloud-center-of-excellence.md) creates a high-profile aspirational team that top engineers want to participate in. This change helps you create new cross-solution alignments that aren't bound by organizational-chart constraints. It also drives inclusion of top engineers who have been sheltered by IT silos.
 
-Introducing a cloud strategy team creates immediate visibility on IT contributions regarding cloud adoption efforts. When IT silos fight for separation, this visibility can help motivate IT and business leaders to properly support those resistant team members. This process is a quick path to stakeholder engagement and support.
+Introducing a cloud strategy team creates immediate visibility into IT contributions regarding cloud adoption efforts. When IT silos fight for separation, this visibility can help motivate IT and business leaders to properly support those resistant team members. This process is a quick path to stakeholder engagement and support.
 
 **Consider experimentation and exposure:** Team members in an IT silo have likely been constrained to think a certain way for some time. Breaking the one-track mind is a first step to addressing resistance.
 
 Experimentation and exposure are powerful tools for breaking down barriers in silos. The team members might be resistant to competing solutions, so it's not wise to put them in charge of an experiment that competes with their existing solution. But as part of a first workload test of the cloud, the organization should implement competing solutions. The siloed team should be invited to participate as an input and review source, but not as a decision maker. Clearly communicate this approach to the team with a commitment to engage them more deeply as decision makers before moving into production solutions.
 
-During review of the competing solution, use the practices outlined in [Define corporate policy](../govern/corporate-policy.md) to document the experiment's tangible risks and establish policies that help the siloed team become more comfortable with the future state. This approach exposes the team to new solutions and hardens the future solution.
+During the review of the competing solution, use the practices outlined in [Define corporate policy](../govern/corporate-policy.md) to document the experiment's tangible risks and establish policies that help the siloed team become more comfortable with the future state. This approach exposes the team to new solutions and hardens the future solution.
 
-**Be "boundary-less":** The teams that drive cloud adoption find it easy to push boundaries by exploring exciting, new cloud-native solutions. It's one half of the approach to removing boundaries. But that thinking can further reinforce IT silos. Pushing for change too quickly and without respect to existing cultures can create unhealthy friction and lead to natural resistance.
+**Be "boundary-less":** The teams that drive cloud adoption find it easy to push boundaries by exploring exciting, new cloud-native solutions. It's one half of the approach to removing boundaries. But that thinking can further reinforce IT silos. Pushing for change too quickly and without respect for existing cultures can create unhealthy friction and lead to natural resistance.
 
 When IT silos start to resist, it's important to be "boundary-less" in your own solutions. Be mindful of one simple truth: cloud-native isn't always the best solution. Consider hybrid solutions that might provide an opportunity to extend the existing investments of the IT silo into the future.
 
@@ -87,7 +87,7 @@ For instance, if IT security is the roadblock because its security solution can'
 
 If the network team operates as a silo, identify workloads that are self-contained and don't have network dependencies. In parallel, you can experiment, expose, and educate the network team while working on hybrid or alternative solutions.
 
-**Be patient and be inclusive:** It's tempting to move on without support of an IT silo. But this decision causes disruptions and roadblocks down the road. Changing minds about the IT silo can take time. Be patient with their natural resistance. Convert it into value. Be inclusive and invite healthy friction to improve the future solution.
+**Be patient and be inclusive:** It's tempting to move on without the support of an IT silo. But this decision causes disruptions and roadblocks down the road. Changing minds about the IT silo can take time. Be patient with their natural resistance. Convert it into value. Be inclusive and invite healthy friction to improve the future solution.
 
 **Never compete:** The IT silo exists for a reason. It persists for a reason. There's an investment in maintaining the solution that the team members are passionate about. Directly competing with the solution or the IT silo distracts from the real goal of achieving business outcomes. This trap has blocked many transformation projects.
 
@@ -95,15 +95,15 @@ Stay focused on the goal, as opposed to a single component of the goal. Help acc
 
 **Partner with the business:** If the IT silo isn't blocking business outcomes, why do you care? There's no perfect solution or perfect IT vendor. Competition exists for a reason; each has its own benefits.
 
-Embrace diversity and include the business by supporting and aligning to a strong cloud strategy team. When an IT silo supports a solution that blocks business outcomes, it's easier to communicate that roadblock without the noise of technical squabbles. Supporting nonblocking IT silos shows how to partner for the desired business outcomes. These efforts earn more respect and greater support from the business when an IT silo presents a legitimate blocker.
+Embrace diversity and include the business by supporting and aligning with a strong cloud strategy team. When an IT silo supports a solution that blocks business outcomes, it's easier to communicate that roadblock without the noise of technical squabbles. Supporting nonblocking IT silos shows how to partner for the desired business outcomes. These efforts earn more respect and greater support from the business when an IT silo presents a legitimate blocker.
 
 ## IT fiefdoms
 
-Team members in an IT fiefdom are likely to define themselves through their alignment to a specific process or area of responsibility. The team operates under an assumption that external influence on its area of responsibility leads to problems. Fiefdoms tend to be a fear-driven antipattern, which requires significant leadership support to overcome.
+Team members in an IT fiefdom are likely to define themselves through their alignment with a specific process or area of responsibility. The team operates under an assumption that external influence on its area of responsibility leads to problems. Fiefdoms tend to be a fear-driven antipattern, which requires significant leadership support to overcome.
 
 Fiefdoms are especially common in organizations that have had IT downsizing, frequent turbulence in IT staff, or poor IT leadership. When the business sees IT purely as a cost center, fiefdoms are much more likely to arise.
 
-Generally, fiefdoms are the result of a line manager who fears loss of the team and the associated power base. These leaders often have a sense of duty to their teams and feel a need to protect their subordinates from negative consequences. Phrases like "shelter the team from change" and "protect the team from process disruption" are indicators of an overly guarded manager who might need more support from leadership.
+Generally, fiefdoms are the result of a line manager who fears the loss of the team and the associated power base. These leaders often have a sense of duty to their teams and feel a need to protect their subordinates from negative consequences. Phrases like "shelter the team from change" and "protect the team from process disruption" are indicators of an overly guarded manager who might need more support from leadership.
 
 ### Address resistance from IT fiefdoms
 

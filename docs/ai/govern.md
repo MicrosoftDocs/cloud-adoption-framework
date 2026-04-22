@@ -50,7 +50,7 @@ AI governance policies provide a structured framework for responsible AI use wit
 |-----------|----------------------|
 | Define policies for selecting and onboarding models | ▪ *Establish policies for selecting AI models.* Policies should outline criteria for choosing models that meet organizational values, capabilities, and cost constraints. Review potential models for alignment with risk tolerance and intended task requirements.<br><br> ▪ *Onboard new models with structured policies.* A formal process for model onboarding maintains consistency in model justification, validation, and approval. Use sandbox environments for initial experiments, then validate and review models in the production catalog to avoid duplication. |
 | Define policies for using third-party tools and data | ▪ *Set controls for third-party tools.* A vetting process for third-party tools safeguards against security, compliance, and alignment risks. Policies should include guidelines for data privacy, security, and ethical standards when using external datasets.<br><br> ▪ *Define data sensitivity standards.* Keeping sensitive and public data separate is essential for mitigating AI risks. Create policies around data handling and separation.<br><br> ▪ *Define data quality standards.* A "golden dataset" provides a reliable benchmark for AI model testing and evaluation. Establish clear policies for data consistency and quality to ensure high performance and trustworthy outputs. |
-| Define policies for maintaining and monitoring models | ▪ *Specify retraining frequency by use case.* Frequent retraining supports accuracy for high-risk AI workloads. Define guidelines that consider the use case and risk level of each model, especially for sectors like healthcare and finance.<br><br> ▪ *Monitor for performance degradation.* Monitoring model performance over time helps detect issues before they affect outcomes. Document benchmarks, and if a model’s performance declines, initiate a retraining or review process. |
+| Define policies for maintaining and monitoring models | ▪ *Specify retraining frequency by use case.* Frequent retraining supports accuracy for high-risk AI workloads. Define guidelines that consider the use case and risk level of each model, especially for sectors like healthcare and finance.<br><br> ▪ *Monitor for performance degradation.* Monitoring model performance over time helps detect issues before they affect outcomes. Document benchmarks, and if a model's performance declines, initiate a retraining or review process. |
 | Define policies for regulatory compliance     | ▪ *Comply with regional legal requirements.* Understanding regional laws ensures AI operations remain compliant across locations. Research applicable regulations for each deployment area, such as data privacy laws, ethical standards, and industry regulations.<br><br> ▪ *Develop region-specific policies.* Tailoring AI policies to regional considerations supports compliance with local standards. Policies might include language support, data storage protocols, and cultural adaptations.<br><br> ▪ *Adapt AI for regional variability.* Flexibility in AI workloads allows for location-specific functionality adjustments. For global operations, document region-specific adaptations like localized training data and feature restrictions. |
 | Define policies for user conduct              | ▪ *Define risk mitigation strategies for misuse.* Misuse prevention policies help protect against intentional or unintentional harms. Outline possible misuse scenarios and incorporate controls, such as restricted functionalities or misuse detection features.<br><br> ▪ *Set user conduct guidelines.* User agreements clarify acceptable behaviors when interacting with the AI workload, reducing the risk of misuse. Draft clear terms of use to communicate standards and support responsible AI interaction. |
 | Define policies for AI integration and replacement | ▪ *Outline integration policies.* Integration guidelines ensure AI workloads maintain data integrity and security during workload interfacing. Specify technical requirements, data-sharing protocols, and security measures.<br><br> ▪ *Plan for transition and replacement.* Transition policies provide structure when replacing old processes with AI workloads. Outline steps for phasing out legacy processes, training staff, and monitoring performance throughout the change. |
@@ -65,8 +65,8 @@ The enforcement of your AI governance policies maintains consistent and ethical 
 
 3. **Use workload-specific governance guidance for targeted enforcement.** Workload-specific guidance addresses unique security and compliance requirements for different AI deployment patterns. This approach ensures policies align with the technical architecture and risk profile of each AI workload type. Use detailed security guidance available for AI workloads on Azure platform services (PaaS) and Azure infrastructure (IaaS) to govern AI models, resources, and data within these workload types.
 
-    - [Govern PaaS AI](./platform/governance.md)
-    - [Govern IaaS AI](./infrastructure/governance.md)
+    - [Govern PaaS AI](../scenarios/ai/platform/governance.md)
+    - [Govern IaaS AI](../scenarios/ai/infrastructure/governance.md)
 
 ## Monitor AI organizational risks
 
@@ -85,7 +85,7 @@ Risk monitoring identifies emerging threats and ensures AI workloads operate as 
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Manage AI](manage.md)
+> [Manage AI](../scenarios/ai/manage.md)
 
 ## Example AI risk mitigations
 

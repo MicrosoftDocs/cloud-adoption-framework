@@ -3929,6 +3929,121 @@
          "source_path": "docs/strategy/mission-objectives.md",
          "redirect_url": "/azure/cloud-adoption-framework/strategy/motivations",
          "redirect_document_id": false
-      }
+      },
+    {
+      "source_path": "docs/get-started/whats-new.md",
+      "redirect_url": "../whats-new",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/ai/center-of-excellence.md",
+      "redirect_url": "../../ai/center-of-excellence",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/ai/govern.md",
+      "redirect_url": "../../ai/govern",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/ai/index.md",
+      "redirect_url": "../../ai/index",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/ai/manage.md",
+      "redirect_url": "../../ai/manage",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/ai/plan.md",
+      "redirect_url": "../../ai/plan",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/ai/ready.md",
+      "redirect_url": "../../ai/ready",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/ai/secure.md",
+      "redirect_url": "../../ai/secure",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/ai/strategy.md",
+      "redirect_url": "../../ai/strategy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/ai/infrastructure/compute.md",
+      "redirect_url": "../../../ai/infrastructure/compute",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/ai/infrastructure/cycle-cloud.md",
+      "redirect_url": "../../../ai/infrastructure/cycle-cloud",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/ai/infrastructure/governance.md",
+      "redirect_url": "../../../ai/infrastructure/governance",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/ai/infrastructure/management.md",
+      "redirect_url": "../../../ai/infrastructure/management",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/ai/infrastructure/networking.md",
+      "redirect_url": "../../../ai/infrastructure/networking",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/ai/infrastructure/security.md",
+      "redirect_url": "../../../ai/infrastructure/security",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/ai/infrastructure/storage.md",
+      "redirect_url": "../../../ai/infrastructure/storage",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/ai/infrastructure/well-architected.md",
+      "redirect_url": "../../../ai/infrastructure/well-architected",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/ai/platform/architectures.md",
+      "redirect_url": "../../../ai/platform/architectures",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/ai/platform/governance.md",
+      "redirect_url": "../../../ai/platform/governance",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/ai/platform/management.md",
+      "redirect_url": "../../../ai/platform/management",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/ai/platform/networking.md",
+      "redirect_url": "../../../ai/platform/networking",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/ai/platform/resource-selection.md",
+      "redirect_url": "../../../ai/platform/resource-selection",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/ai/platform/security.md",
+      "redirect_url": "../../../ai/platform/security",
+      "redirect_document_id": false
+    }
    ]
 }

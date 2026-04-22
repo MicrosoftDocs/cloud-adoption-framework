@@ -21,12 +21,12 @@ This article provides implementation recommendations for organizations running A
 
 The following articles provide guidelines for AI workloads on Azure infrastructure (IaaS):
 
-- [Compute](./compute.md)
-- [Storage](./storage.md)
-- [Networking](./networking.md)
-- [Governance](./governance.md)
-- [Management](./management.md)
-- [Security](./security.md)
+- [Compute](../../scenarios/ai/infrastructure/compute.md)
+- [Storage](../../scenarios/ai/infrastructure/storage.md)
+- [Networking](../../scenarios/ai/infrastructure/networking.md)
+- [Governance](../../scenarios/ai/infrastructure/governance.md)
+- [Management](../../scenarios/ai/infrastructure/management.md)
+- [Security](../../scenarios/ai/infrastructure/security.md)
 
 ## Architecture
 
@@ -40,4 +40,4 @@ The [CycleCloud Workspace for Slurm](/azure/cyclecloud/qs-deploy-ccws) can be us
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Compute IaaS AI](./compute.md)
+> [Compute IaaS AI](../../scenarios/ai/infrastructure/compute.md)

@@ -10,6 +10,13 @@ ms.custom: internal
 
 # Network topology and connectivity considerations for the App Service landing zone accelerator
 
+> [!IMPORTANT]
+> **Deprecation notice:** This is deprecated and is no longer being updated. To ensure only the best guidance is surfaced, this article will be deleted in May 2026.
+>
+> For alternative guidance, see [**Baseline highly available zone-redundant web application**](/azure/architecture/web-apps/app-service/architectures/baseline-zone-redundant) guidance in the Azure Architecture Center.
+>
+> If you would like to save this guidance, you can select **Download a PDF** at the bottom left of this page or download the files from [GitHub](https://github.com/MicrosoftDocs/cloud-adoption-framework/tree/main/docs/scenarios/app-platform/app-services).
+
 This article provides design considerations and recommendations for network topology and connectivity that you can apply when you use the Azure App Service landing zone accelerator. Networking is central to almost everything in a landing zone.
 
 The network topology and connectivity considerations for this architecture depend on the requirements of the workloads being hosted and on the security and compliance requirements of your organization.
@@ -29,17 +36,17 @@ When you deploy an App Service solution on Azure, you need to carefully consider
 
 ### App Service multi-tenant service
 
-- An App Service multi-tenant solution shares a single inbound IP address and multiple outbound IP addresses with other App Service resources in a single deployment unit.  These IP addresses can change for a [variety of reasons](/azure/app-service/overview-inbound-outbound-ips#how-ip-addresses-work-in-app-service). If you need consistent outbound IP addresses for a multi-tenant App Service solution, you can configure a [NAT gateway](/azure/app-service/networking/nat-gateway-integration) or use [virtual network integration](/azure/app-service/overview-vnet-integration).
-- If you need a dedicated IP address for your App Service solution, you can use an [app-assigned address](/azure/app-service/networking-features#app-assigned-address), front your App Service instance with an [application gateway](/azure/app-service/networking/app-gateway-with-service-endpoints) (which is assigned a static IP address), or use an IP-based SSL certificate to assign a dedicated IP address to your app via the App Service platform.
+- An App Service multi-tenant solution shares a single inbound IP address and multiple outbound IP addresses with other App Service resources in a single deployment unit. These IP addresses can change for a [variety of reasons](/azure/app-service/overview-inbound-outbound-ips#how-ip-addresses-work-in-app-service). If you need consistent outbound IP addresses for a multi-tenant App Service solution, you can configure a [NAT gateway](/azure/app-service/overview-nat-gateway-integration) or use [virtual network integration](/azure/app-service/overview-vnet-integration).
+- If you need a dedicated IP address for your App Service solution, you can use an [app-assigned address](/azure/app-service/networking-features#app-assigned-address), front your App Service instance with an [Application Gateway](/azure/app-service/overview-app-gateway-integration) (which is assigned a static IP address), or use an IP-based SSL certificate to assign a dedicated IP address to your app via the App Service platform.
 
 - When you need to connect from an App Service solution to on-premises, private, or IP-restricted services, consider that:
   - In a multi-tenant App Service deployment, an App Service call can originate from a wide range of IP addresses. You might need [virtual network integration](/azure/app-service/overview-vnet-integration).
   - You can use services like [API Management](/azure/api-management/api-management-key-concepts) and Application Gateway to proxy calls between networking boundaries. These services can provide a static IP address if you need one.
-- You can use a private or a public endpoint for a multi-tenant App Service deployment. When you use a [private endpoint](/azure/app-service/networking/private-endpoint), public exposure to the App Service solution is eliminated. If you need the private endpoint of the App Service solution to be accessible via the internet, consider using Application Gateway to expose the App Service solution.
+- You can use a private or a public endpoint for a multi-tenant App Service deployment. When you use a [private endpoint](/azure/app-service/overview-private-endpoint), public exposure to the App Service solution is eliminated. If you need the private endpoint of the App Service solution to be accessible via the internet, consider using Application Gateway to expose the App Service solution.
 - A multi-tenant App Service deployment exposes [a set of ports](/azure/app-service/networking-features#app-service-ports). There's no way to block or control access to these ports in a multi-tenant App Service deployment.
 - Plan your subnets correctly for outbound virtual network integration and consider the number of IP addresses that are required. Virtual network integration depends on a dedicated subnet. When you provision an Azure subnet, Azure reserves five IPs. One IP address is used from the integration subnet for each App Service plan instance. When you scale your app to four instances, for example, four IP addresses are used. When you scale up or down, the required address space is doubled for a short time. This affects the available supported instances for a given subnet size.
 - Because you can't change the size of a subnet after assignment, you need to use a subnet that's large enough to accommodate the scale that your app might reach. To avoid any issues with subnet capacity, use a /26 with 64 addresses for virtual network integration.
-- If you're connecting to a multi-tenant App Service solution and you need a dedicated outbound address, use a [NAT gateway](/azure/app-service/networking/nat-gateway-integration).
+- If you're connecting to a multi-tenant App Service solution and you need a dedicated outbound address, use a [NAT gateway](/azure/app-service/overview-nat-gateway-integration).
 
 ### App Service Environment (single-tenant)
 
