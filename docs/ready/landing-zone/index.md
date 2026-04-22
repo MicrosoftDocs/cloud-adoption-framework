@@ -26,13 +26,13 @@ The Azure landing zone reference architecture (*see figure 1*) represents an opi
 
 # [Virtual WAN](#tab/vwan)
 
-:::image type="content" source="../enterprise-scale/media/alz-vwan.svg" alt-text="Diagram that shows an Azure landing zone using the Virtual WAN networking topology." lightbox="../enterprise-scale/media/alz-vwan.svg":::
+:::image type="content" source="../enterprise-scale/media/azure-landing-zone-virtual-wan.svg" alt-text="Diagram that shows an Azure landing zone using the Virtual WAN networking topology." lightbox="../enterprise-scale/media/azure-landing-zone-virtual-wan.svg":::
 
 *Azure landing zone conceptual architecture using a Virtual WAN networking topology. Download a [Visio file](https://github.com/MicrosoftDocs/cloud-adoption-framework/raw/main/docs/ready/enterprise-scale/media/enterprise-scale-architecture.vsdx) or [PDF file](https://github.com/MicrosoftDocs/cloud-adoption-framework/raw/main/docs/ready/enterprise-scale/media/enterprise-scale-architecture.pdf) of this architecture.*
 
 # [Management Group Hierarchy Only](#tab/mgonly)
 
-:::image type="content" source="./media/alz-hierarchy.svg" alt-text="Diagram that shows an Azure landing zone management group hierarchy." lightbox="media/alz-hierarchy.svg":::
+:::image type="content" source="./media/azure-landing-zone-hierarchy.svg" alt-text="Diagram that shows an Azure landing zone management group hierarchy." lightbox="media/azure-landing-zone-hierarchy.svg":::
 
 *Azure landing zone conceptual architecture's Management Group hierarchy only. Download a [Visio file](https://github.com/MicrosoftDocs/cloud-adoption-framework/raw/main/docs/ready/enterprise-scale/media/enterprise-scale-architecture.vsdx) or [PDF file](https://github.com/MicrosoftDocs/cloud-adoption-framework/raw/main/docs/ready/enterprise-scale/media/enterprise-scale-architecture.pdf) of this architecture.*
 
