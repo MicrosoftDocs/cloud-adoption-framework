@@ -51,7 +51,7 @@ For more information, see [Management groups](/azure/governance/management-group
 
 - Create management groups under your landing zone management group to represent the types of workloads that you host. These groups are based on the security, compliance, connectivity, and feature needs of the workloads. With this grouping structure, you can have a set of Azure policies applied at the management group level. Use this grouping structure for all workloads that require the same security, compliance, connectivity, and feature settings. 
 
-  - Use management groups to organize subscriptions by workload type, such as `online`, `corporate`, or `sandbox`. This organization helps you apply policies and RBAC roles that are specific to the workload type. For more information, see [Tailor the Azure landing zone architecture to meet requirements](../tailoring-alz.md).
+  - Use management groups to organize subscriptions by workload type, such as `online`, `corp`, `local`, or `sandbox`. This organization helps you apply policies and RBAC roles that are specific to the workload type. For more information, see [Tailor the Azure landing zone architecture to meet requirements](../tailoring-alz.md).
 
 - Limit the number of Azure Policy assignments at the root management group scope. This limitation minimizes debugging inherited policies in lower-level management groups.
 
@@ -89,11 +89,12 @@ The following shows the Azure landing zones architecture management group hierar
 |**Landing zones**| The parent management group that contains all the landing zone child management groups. It has workload-agnostic Azure policies assigned to ensure that workloads are secure and compliant. |
 |**Online**| The dedicated management group for online landing zones. This group is for workloads that might require direct internet inbound or outbound connectivity or for workloads that might not require a virtual network. |
 |**Corp**| The dedicated management group for corporate landing zones. This group is for workloads that require connectivity or hybrid connectivity with the corporate network via the hub in the connectivity subscription. |
+|**Local**| The dedicated management group for local (hybrid) landing zones. This group is for workloads that are running on Azure Local clusters and also for the Azure Local clusters themselves. These have differing Azure Policy requirements compared to other landing zone Management Groups. |
 |**Sandboxes**| The dedicated management group for subscriptions. An organization uses sandboxes for testing and exploration. These subscriptions are securely isolated from the corporate and online landing zones. Sandboxes also have a less restrictive set of policies assigned to enable testing, exploration, and configuration of Azure services. |
 |**Decommissioned**| The dedicated management group for canceled landing zones. You move canceled landing zones to this management group, and then Azure deletes them after 30-60 days. |
 
 > [!NOTE]
-> For many organizations, the default `Corp` and `Online` management groups provide an ideal starting point.
+> For many organizations, the default `Corp`, `Online`, and `Local` management groups provide an ideal starting point.
 > Some organizations need to add more management groups.
 >
 > If you want to change the management group hierarchy, see [Tailor the Azure landing zone architecture to meet requirements](../tailoring-alz.md).
