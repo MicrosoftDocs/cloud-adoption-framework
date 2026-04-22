@@ -73,6 +73,9 @@ The following diagram shows the state of this scenario during the migration.
 
 :::image type="content" source="./media/align-regional.svg" alt-text="Diagram that shows a single subscription environment in a transition state." border="false" lightbox="./media/align-regional.svg":::
 
+> [!NOTE]
+> The diagram above does not show the complete Azure landing zone reference architecture or all it's Management Groups. This is intentional to focus on the transition being described. For the full architecture, see [What is an Azure landing zone?](index.md).
+
 ## Summary
 
 In this scenario, the customer established the necessary foundation to support their growth and scale plans for their workloads in Azure by deploying the [Azure landing zone reference architecture](./index.md#azure-landing-zone-architecture) in parallel to their existing environment.
