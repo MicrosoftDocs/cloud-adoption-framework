@@ -74,7 +74,7 @@ The following diagram shows the state of this scenario during the migration.
 :::image type="content" source="./media/align-regional.svg" alt-text="Diagram that shows a single subscription environment in a transition state." border="false" lightbox="./media/align-regional.svg":::
 
 > [!NOTE]
-> The diagram above does not show the complete Azure landing zone reference architecture or all it's Management Groups. This is intentional to focus on the transition being described. For the full architecture, see [What is an Azure landing zone?](index.md).
+> The diagram above does not show the complete Azure landing zone reference architecture or all its Management Groups. This is intentional to focus on the transition being described. For the full architecture, see [What is an Azure landing zone?](index.md).
 
 ## Summary
 
