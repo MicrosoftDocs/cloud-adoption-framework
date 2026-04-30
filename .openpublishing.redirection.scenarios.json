@@ -879,6 +879,351 @@
         "source_path": "docs/scenarios/sap/manage.md",
         "redirect_url": "/azure/cloud-adoption-framework/scenarios/sap/strategy",
         "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/cloud-scale-analytics/eslz-business-continuity-and-disaster-recovery.md",
+      "redirect_url": "/azure/cloud-adoption-framework/data/executive-strategy-unify-data-platform",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/cloud-scale-analytics/eslz-enterprise-enrollment-and-azure-ad-tenants.md",
+      "redirect_url": "/azure/cloud-adoption-framework/data/executive-strategy-unify-data-platform",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/cloud-scale-analytics/eslz-identity-and-access-management.md",
+      "redirect_url": "/azure/cloud-adoption-framework/data/executive-strategy-unify-data-platform",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/cloud-scale-analytics/eslz-management-and-monitoring.md",
+      "redirect_url": "/azure/cloud-adoption-framework/data/executive-strategy-unify-data-platform",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/cloud-scale-analytics/eslz-network-considerations-cross-region.md",
+      "redirect_url": "/azure/cloud-adoption-framework/data/executive-strategy-unify-data-platform",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/cloud-scale-analytics/eslz-network-considerations-single-region.md",
+      "redirect_url": "/azure/cloud-adoption-framework/data/executive-strategy-unify-data-platform",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/cloud-scale-analytics/eslz-network-topology-and-connectivity.md",
+      "redirect_url": "/azure/cloud-adoption-framework/data/executive-strategy-unify-data-platform",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/cloud-scale-analytics/eslz-policies.md",
+      "redirect_url": "/azure/cloud-adoption-framework/data/executive-strategy-unify-data-platform",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/cloud-scale-analytics/eslz-resource-organization.md",
+      "redirect_url": "/azure/cloud-adoption-framework/data/executive-strategy-unify-data-platform",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/cloud-scale-analytics/eslz-security-governance-and-compliance.md",
+      "redirect_url": "/azure/cloud-adoption-framework/data/executive-strategy-unify-data-platform",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/cloud-scale-analytics/govern.md",
+      "redirect_url": "/azure/cloud-adoption-framework/data/executive-strategy-unify-data-platform",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/cloud-scale-analytics/govern-components.md",
+      "redirect_url": "/azure/cloud-adoption-framework/data/executive-strategy-unify-data-platform",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/cloud-scale-analytics/govern-data-catalog.md",
+      "redirect_url": "/azure/cloud-adoption-framework/data/executive-strategy-unify-data-platform",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/cloud-scale-analytics/govern-data-quality.md",
+      "redirect_url": "/azure/cloud-adoption-framework/data/executive-strategy-unify-data-platform",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/cloud-scale-analytics/govern-lifecycle.md",
+      "redirect_url": "/azure/cloud-adoption-framework/data/executive-strategy-unify-data-platform",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/cloud-scale-analytics/govern-lineage.md",
+      "redirect_url": "/azure/cloud-adoption-framework/data/executive-strategy-unify-data-platform",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/cloud-scale-analytics/govern-master-data.md",
+      "redirect_url": "/azure/cloud-adoption-framework/data/executive-strategy-unify-data-platform",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/cloud-scale-analytics/govern-metadata-standards.md",
+      "redirect_url": "/azure/cloud-adoption-framework/data/executive-strategy-unify-data-platform",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/cloud-scale-analytics/govern-requirements.md",
+      "redirect_url": "/azure/cloud-adoption-framework/data/executive-strategy-unify-data-platform",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/cloud-scale-analytics/index.md",
+      "redirect_url": "/azure/cloud-adoption-framework/data/executive-strategy-unify-data-platform",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/cloud-scale-analytics/manage.md",
+      "redirect_url": "/azure/cloud-adoption-framework/data/executive-strategy-unify-data-platform",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/cloud-scale-analytics/manage-observability.md",
+      "redirect_url": "/azure/cloud-adoption-framework/data/executive-strategy-unify-data-platform",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/cloud-scale-analytics/manage-platform-automation-devops.md",
+      "redirect_url": "/azure/cloud-adoption-framework/data/executive-strategy-unify-data-platform",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/cloud-scale-analytics/manage-provision-platform.md",
+      "redirect_url": "/azure/cloud-adoption-framework/data/executive-strategy-unify-data-platform",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/cloud-scale-analytics/organize.md",
+      "redirect_url": "/azure/cloud-adoption-framework/data/executive-strategy-unify-data-platform",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/cloud-scale-analytics/organize-roles-responsibilities.md",
+      "redirect_url": "/azure/cloud-adoption-framework/data/executive-strategy-unify-data-platform",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/cloud-scale-analytics/organize-roles-teams.md",
+      "redirect_url": "/azure/cloud-adoption-framework/data/executive-strategy-unify-data-platform",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/cloud-scale-analytics/organize-team-functions.md",
+      "redirect_url": "/azure/cloud-adoption-framework/data/executive-strategy-unify-data-platform",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/cloud-scale-analytics/overview-cloud-scale-analytics.md",
+      "redirect_url": "/azure/cloud-adoption-framework/data/executive-strategy-unify-data-platform",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/cloud-scale-analytics/plan.md",
+      "redirect_url": "/azure/cloud-adoption-framework/data/executive-strategy-unify-data-platform",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/cloud-scale-analytics/ready.md",
+      "redirect_url": "/azure/cloud-adoption-framework/data/executive-strategy-unify-data-platform",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/cloud-scale-analytics/secure.md",
+      "redirect_url": "/azure/cloud-adoption-framework/data/executive-strategy-unify-data-platform",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/cloud-scale-analytics/secure-authentication.md",
+      "redirect_url": "/azure/cloud-adoption-framework/data/executive-strategy-unify-data-platform",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/cloud-scale-analytics/secure-authorization.md",
+      "redirect_url": "/azure/cloud-adoption-framework/data/executive-strategy-unify-data-platform",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/cloud-scale-analytics/secure-data-privacy.md",
+      "redirect_url": "/azure/cloud-adoption-framework/data/executive-strategy-unify-data-platform",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/cloud-scale-analytics/strategy.md",
+      "redirect_url": "/azure/cloud-adoption-framework/data/executive-strategy-unify-data-platform",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/cloud-scale-analytics/well-architected-framework.md",
+      "redirect_url": "/azure/cloud-adoption-framework/data/executive-strategy-unify-data-platform",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/cloud-scale-analytics/architectures/common-industry-data-models.md",
+      "redirect_url": "/azure/cloud-adoption-framework/data/executive-strategy-unify-data-platform",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/cloud-scale-analytics/architectures/connect-to-environments-privately.md",
+      "redirect_url": "/azure/cloud-adoption-framework/data/executive-strategy-unify-data-platform",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/cloud-scale-analytics/architectures/data-application-source-aligned.md",
+      "redirect_url": "/azure/cloud-adoption-framework/data/executive-strategy-unify-data-platform",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/cloud-scale-analytics/architectures/data-domains.md",
+      "redirect_url": "/azure/cloud-adoption-framework/data/executive-strategy-unify-data-platform",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/cloud-scale-analytics/architectures/data-landing-zone.md",
+      "redirect_url": "/azure/cloud-adoption-framework/data/executive-strategy-unify-data-platform",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/cloud-scale-analytics/architectures/data-landing-zone-data-products.md",
+      "redirect_url": "/azure/cloud-adoption-framework/data/executive-strategy-unify-data-platform",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/cloud-scale-analytics/architectures/data-management-landing-zone.md",
+      "redirect_url": "/azure/cloud-adoption-framework/data/executive-strategy-unify-data-platform",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/cloud-scale-analytics/architectures/data-mesh-checklist.md",
+      "redirect_url": "/azure/cloud-adoption-framework/data/executive-strategy-unify-data-platform",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/cloud-scale-analytics/architectures/data-mesh-data-marketplace.md",
+      "redirect_url": "/azure/cloud-adoption-framework/data/executive-strategy-unify-data-platform",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/cloud-scale-analytics/architectures/data-mesh-master-data-management.md",
+      "redirect_url": "/azure/cloud-adoption-framework/data/executive-strategy-unify-data-platform",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/cloud-scale-analytics/architectures/data-mesh-scenario.md",
+      "redirect_url": "/azure/cloud-adoption-framework/data/executive-strategy-unify-data-platform",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/cloud-scale-analytics/architectures/data-reference-patterns.md",
+      "redirect_url": "/azure/cloud-adoption-framework/data/executive-strategy-unify-data-platform",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/cloud-scale-analytics/architectures/data-standardization.md",
+      "redirect_url": "/azure/cloud-adoption-framework/data/executive-strategy-unify-data-platform",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/cloud-scale-analytics/architectures/frequently-asked-questions.md",
+      "redirect_url": "/azure/cloud-adoption-framework/data/executive-strategy-unify-data-platform",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/cloud-scale-analytics/architectures/operationalize-data-mesh-for-ai-ml.md",
+      "redirect_url": "/azure/cloud-adoption-framework/data/executive-strategy-unify-data-platform",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/cloud-scale-analytics/architectures/overview-architectures.md",
+      "redirect_url": "/azure/cloud-adoption-framework/data/executive-strategy-unify-data-platform",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/cloud-scale-analytics/architectures/reference-architecture-adatum.md",
+      "redirect_url": "/azure/cloud-adoption-framework/data/executive-strategy-unify-data-platform",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/cloud-scale-analytics/architectures/reference-architecture-lamna.md",
+      "redirect_url": "/azure/cloud-adoption-framework/data/executive-strategy-unify-data-platform",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/cloud-scale-analytics/architectures/reference-architecture-multizone.md",
+      "redirect_url": "/azure/cloud-adoption-framework/data/executive-strategy-unify-data-platform",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/cloud-scale-analytics/architectures/reference-architecture-overview.md",
+      "redirect_url": "/azure/cloud-adoption-framework/data/executive-strategy-unify-data-platform",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/cloud-scale-analytics/architectures/scale-architectures.md",
+      "redirect_url": "/azure/cloud-adoption-framework/data/executive-strategy-unify-data-platform",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/cloud-scale-analytics/architectures/self-serve-data-platforms.md",
+      "redirect_url": "/azure/cloud-adoption-framework/data/executive-strategy-unify-data-platform",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/cloud-scale-analytics/architectures/what-is-data-mesh.md",
+      "redirect_url": "/azure/cloud-adoption-framework/data/executive-strategy-unify-data-platform",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/cloud-scale-analytics/architectures/what-is-data-product.md",
+      "redirect_url": "/azure/cloud-adoption-framework/data/executive-strategy-unify-data-platform",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/cloud-scale-analytics/best-practices/automated-ingestion-pattern.md",
+      "redirect_url": "/azure/cloud-adoption-framework/data/executive-strategy-unify-data-platform",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/cloud-scale-analytics/best-practices/azure-machine-learning.md",
+      "redirect_url": "/azure/cloud-adoption-framework/data/executive-strategy-unify-data-platform",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/cloud-scale-analytics/best-practices/azure-synapse-analytics-implementation.md",
+      "redirect_url": "/azure/cloud-adoption-framework/data/executive-strategy-unify-data-platform",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/cloud-scale-analytics/best-practices/data-ingestion.md",
+      "redirect_url": "/azure/cloud-adoption-framework/data/executive-strategy-unify-data-platform",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/cloud-scale-analytics/best-practices/data-lake-key-considerations.md",
+      "redirect_url": "/azure/cloud-adoption-framework/data/executive-strategy-unify-data-platform",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/cloud-scale-analytics/best-practices/data-lake-overview.md",
+      "redirect_url": "/azure/cloud-adoption-framework/data/executive-strategy-unify-data-platform",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/cloud-scale-analytics/best-practices/data-lake-zones.md",
+      "redirect_url": "/azure/cloud-adoption-framework/data/executive-strategy-unify-data-platform",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/cloud-scale-analytics/best-practices/data-science-best-practices.md",
+      "redirect_url": "/azure/cloud-adoption-framework/data/executive-strategy-unify-data-platform",
+      "redirect_document_id": false
     }
    ]   
 }
