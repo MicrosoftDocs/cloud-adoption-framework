@@ -129,7 +129,7 @@ For information about deployment objectives for securing data, see [Secure data 
 
 For information about logging and managing data resources, see [Azure landing zone implementation options](../implementation-options.md).
 
-A Zero Trust approach involves extensive controls for data. From an implementation standpoint, [Microsoft Purview](/purview/purview) provides tools for data governance, protection, and risk management. You can use Microsoft Purview as part of a [cloud-scale analytics](../../../scenarios/cloud-scale-analytics/index.md) deployment to provide a solution that you can implement at scale.
+A Zero Trust approach involves extensive controls for data. From an implementation standpoint, [Microsoft Purview](/purview/purview) provides tools for data governance, protection, and risk management. 
 
 #### Data considerations
 
@@ -142,8 +142,6 @@ A Zero Trust approach involves extensive controls for data. From an implementati
 #### Data recommendations
 
 - [Microsoft Purview](/purview/purview) provides tools for data governance, protection, and risk management.
-
-- Implement Microsoft Purview as part of a [cloud-scale analytics](../../../scenarios/cloud-scale-analytics/index.md) deployment to implement your workload at scale.
 
 ## Secure infrastructure
 
