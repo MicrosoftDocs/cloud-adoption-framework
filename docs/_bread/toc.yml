@@ -13,9 +13,6 @@
       - name: Azure VMware Solution
         tocHref: /azure/cloud-adoption-framework/scenarios/azure-vmware/
         topicHref: /azure/cloud-adoption-framework/scenarios/azure-vmware
-      - name: Cloud-scale analytics
-        tocHref: /azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/
-        topicHref: /azure/cloud-adoption-framework/scenarios/cloud-scale-analytics
       - name: Hybrid and multicloud
         tocHref: /azure/cloud-adoption-framework/scenarios/hybrid/
         topicHref: /azure/cloud-adoption-framework/scenarios/hybrid

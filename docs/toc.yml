@@ -456,7 +456,7 @@ items:
   
   - name: Scenarios
     items:
-    - name: Data 
+    - name: Data for AI and analytics
       href: data/executive-strategy-unify-data-platform.md
     - name: General AI
       href: ai/index.md
@@ -474,8 +474,6 @@ items:
       href: scenarios/sap/index.md
     - name: Azure VMware Solution
       href: scenarios/azure-vmware/index.md
-    - name: Cloud-scale analytics (deprecated)
-      href: scenarios/data-management/index.md
 
 
   - name: Resources
