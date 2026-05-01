@@ -67,7 +67,6 @@ For more information, see the following resources:
 
 - [SAP knowledge center overview](/azure/data-factory/industry-sap-overview)
 - [SAP connectors](/azure/data-factory/industry-sap-connectors)
-- [SAP ingestion with cloud-scale analytics in Azure](/azure/cloud-adoption-framework/scenarios/cloud-scale-analytics/best-practices/sap-data-ingestion)
 
 #### Data storage
 
