@@ -35,7 +35,7 @@ items:
           href: /azure/architecture/browse/?terms=fabric&products=fabric
         - name: Medallion Lakehouse Architecture (Fabric docs)
           href: /fabric/onelake/onelake-medallion-lakehouse-architecture 
-    - name: 
+    - name: Azure Databricks workloads
       items: 
       - name: Azure Databricks architectures (Azure Architecture Center)
         href: /azure/architecture/browse/?expanded=azure&products=azure-databricks
