@@ -35,5 +35,9 @@ items:
           href: /azure/architecture/browse/?terms=fabric&products=fabric
         - name: Medallion Lakehouse Architecture (Fabric docs)
           href: /fabric/onelake/onelake-medallion-lakehouse-architecture 
-    - name: Azure Databricks architectures (Azure Architecture Center)
-      href: /azure/architecture/browse/?expanded=azure&products=azure-databricks
+    - name: 
+      items: 
+      - name: Azure Databricks architectures (Azure Architecture Center)
+        href: /azure/architecture/browse/?expanded=azure&products=azure-databricks
+      - name: Architecture best practices for Azure Databricks (Well-Architected Framework)
+        href: /azure/well-architected/service-guides/azure-databricks
