@@ -36,7 +36,6 @@ Over time, Azure landing zone custom policies and policy initiatives might be up
 
 - [Migrate landing zone custom policies to Azure built-in policies](./migrate-azure-landing-zone-policies.md)
 - [Update Azure landing zone custom policies](./update-custom-policies.md)
-- Advanced policy management using [Enterprise Policy as Code (EPAC)](../../policy-management/enterprise-policy-as-code.md)
 
 ## Use infrastructure as code (IaC) to keep ALZ updated
 
