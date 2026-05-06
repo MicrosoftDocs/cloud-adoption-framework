@@ -4044,6 +4044,11 @@
       "source_path": "docs/scenarios/ai/platform/security.md",
       "redirect_url": "../../../ai/platform/security",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ready/policy-management/enterprise-policy-as-code.md",
+      "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/",
+      "redirect_document_id": false
     }
    ]
 }
