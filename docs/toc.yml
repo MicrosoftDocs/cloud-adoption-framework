@@ -316,10 +316,6 @@ items:
             href: ready/considerations/regions.md
           - name: Use infrastructure as code to update Azure landing zones
             href: ready/considerations/infrastructure-as-code-updates.md
-          - name: Policy management
-            items:
-            - name: Advanced Azure Policy management
-              href: ready/policy-management/enterprise-policy-as-code.md
           - name: Improve landing zone governance
             items:
             - name: Overview
