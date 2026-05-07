@@ -27,9 +27,17 @@ items:
       href: operational-standards-data-product-security-standards-unify-data-platform.md
     - name: 3. Data consumption
       href: operational-standards-data-product-consumption-unify-data-platform.md
-  - name: 5. Fabric workload design
+  - name: 5. Workload design
     items:
-      - name: Fabric architectures (Azure Architecture Center)
-        href: /azure/architecture/browse/?terms=fabric&products=fabric
-      - name: Medallion Lakehouse Architecture (Fabric docs)
-        href: /fabric/onelake/onelake-medallion-lakehouse-architecture 
+    - name: Fabric workloads
+      items:
+        - name: Fabric architectures (Azure Architecture Center)
+          href: /azure/architecture/browse/?terms=fabric&products=fabric
+        - name: Medallion Lakehouse Architecture (Fabric docs)
+          href: /fabric/onelake/onelake-medallion-lakehouse-architecture 
+    - name: Azure Databricks workloads
+      items: 
+      - name: Azure Databricks architectures (Azure Architecture Center)
+        href: /azure/architecture/browse/?expanded=azure&products=azure-databricks
+      - name: Architecture best practices for Azure Databricks (Well-Architected Framework)
+        href: /azure/well-architected/service-guides/azure-databricks
