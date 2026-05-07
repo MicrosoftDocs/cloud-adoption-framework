@@ -6,10 +6,19 @@
     tocHref: /azure/cloud-adoption-framework/
     topicHref: /azure/cloud-adoption-framework
     items:
-    - name: Scenarios
+    - name: Adoption scenarios
       tocHref: /azure/cloud-adoption-framework/scenarios/
-      topicHref: /azure/cloud-adoption-framework/scenarios/overview
+      topicHref: /azure/cloud-adoption-framework/overview#cloud-adoption-framework-scenarios
       items:
+      - name: AI adoption
+        tocHref: /azure/cloud-adoption-framework/ai/
+        topicHref: /azure/cloud-adoption-framework/ai
+      - name: AI Agents
+        tocHref: /azure/cloud-adoption-framework/ai-agents/
+        topicHref: /azure/cloud-adoption-framework/ai-agents
+      - name: Data
+        tocHref: /azure/cloud-adoption-framework/data/
+        topicHref: /azure/cloud-adoption-framework/data
       - name: Azure VMware Solution
         tocHref: /azure/cloud-adoption-framework/scenarios/azure-vmware/
         topicHref: /azure/cloud-adoption-framework/scenarios/azure-vmware
@@ -28,9 +37,6 @@
       - name: AVD
         tocHref: /azure/cloud-adoption-framework/scenarios/azure-virtual-desktop/
         topicHref: /azure/cloud-adoption-framework/scenarios/azure-virtual-desktop
-    - name: Get started
-      tocHref: /azure/cloud-adoption-framework/get-started/
-      topicHref: /azure/cloud-adoption-framework/get-started
     - name: Strategy
       tocHref: /azure/cloud-adoption-framework/strategy/
       topicHref: /azure/cloud-adoption-framework/strategy
@@ -55,6 +61,3 @@
     - name: Organize
       tocHref: /azure/cloud-adoption-framework/organize/
       topicHref: /azure/cloud-adoption-framework/organize
-    - name: AI Agents
-      tocHref: /azure/cloud-adoption-framework/ai-agents/
-      topicHref: /azure/cloud-adoption-framework/ai-agents
