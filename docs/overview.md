@@ -52,6 +52,6 @@ The Cloud Adoption Framework has specific guidance aligned to common scenarios a
 | [AI agents](./ai-agents/index.md) | How and when to adopt AI agents |
 | [Azure Virtual Desktop](./scenarios/azure-virtual-desktop/index.md) | How to adopt Azure Virtual Desktop workloads |
 | [Azure VMware Solution](./scenarios/azure-vmware/index.md) | How to adopt Azure VMware Solution workloads |
-| [Hybrid and multicloud](./scenarios/hybrid/) | How to adopt Azure for hybrid and multicloud |
+| [Hybrid and multicloud](./scenarios/hybrid/strategy.md) | How to adopt Azure for hybrid and multicloud |
 | [Oracle on Azure](./scenarios/oracle-on-azure/index.md) | How to adopt Oracle workloads on Azure. |
 | [SAP on Azure](./scenarios/sap/strategy.md) | How to adopt SAP workloads on Azure |
