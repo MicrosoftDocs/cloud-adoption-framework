@@ -69,11 +69,14 @@
         "scenarios/ai/**/*.md": "180-days"
       },
       "ms.subservice": {
+        "ai/**/*.md": "caf-scenario-ai",
+        "ai-agents/**/*.md": "caf-ai-agents",
         "digital-estate/**/*.md": "caf-methodology-plan",
         "get-started/**/*.md": "caf-get-started",
         "govern/**/*.md": "caf-methodology-govern",
         "infrastructure/mainframe-migration/**/*.md": "caf-methodology-adopt",
         "cloud-native/**/*.md": "caf-methodology-adopt-cloud-native",
+        "data/**/*.md": "caf-data",
         "manage/**/*.md": "caf-methodology-manage",
         "migrate/**/*.md": "caf-methodology-adopt-migrate",
         "modernize/**/*.md": "caf-methodology-adopt-modernize",
@@ -85,7 +88,6 @@
         "ready/enterprise-scale/**/*.md": "caf-alz",
         "ready/landing-zone/**/*.md": "caf-alz",
         "relocate/**/*.md": "caf-methodology-adopt-relocate",
-        "scenarios/ai/**/*.md": "caf-scenario-ai",
         "scenarios/app-platform/**/*.md": "caf-scenario-app-plat",
         "scenarios/azure-hpc/**/*.md": "caf-scenario-hpc",
         "scenarios/azure-vmware/**/*.md": "caf-scenario-vmware",
