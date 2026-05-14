@@ -18,7 +18,7 @@ The Cloud Adoption Framework Strategy methodology guides you through this work i
 
 :::image type="content" source="./media/caf-strategy-overview.svg" alt-text="Diagram that shows how to best consume the Cloud Adoption Framework Strategy guidance." border="false":::
 
-Strategy is not a one-time exercise. Organizations mature through iteration, so treat this guidance as a recurring input to your strategy rather than a one-pass document. Revisit it as business conditions, regulatory requirements, and your cloud footprint evolve.
+Strategy isn't a one-time exercise. Organizations mature through iteration, so treat this guidance as a recurring input to your strategy rather than a one-pass document. Revisit it as business conditions, regulatory requirements, and your cloud footprint evolve.
 
 Whether you're establishing a cloud presence or expanding an existing one, this guidance helps you set a clear mission, define measurable goals, and make informed investment decisions across your portfolio.
 
@@ -41,7 +41,7 @@ A cloud adoption strategy helps you:
 This guidance is organized into five steps that apply to enterprises and growth-stage organizations alike:
 
 1. **Assess your current state.** Evaluate organizational readiness, existing cloud maturity, and the gaps between today's posture and your strategic ambitions.
-2. **Define motivations, mission, and objectives.** Establish the business reasons for adopting cloud and the outcomes by which success will be measured.
+2. **Define motivations, mission, and objectives.** Establish the business reasons for adopting cloud and the outcomes by which success is measured.
 3. **Form your strategy team.** Identify the leaders and stakeholders accountable for setting direction and ensuring execution across the organization.
 4. **Prepare the organization.** Secure executive sponsorship, align organizational strategies, evaluate your operating model's fit for cloud, and decide whether to shift toward a product-oriented model.
 5. **Inform your strategy.** Apply strategic considerations across the dimensions that shape cloud outcomes: financial efficiency, AI, resiliency, security, and sustainability.
