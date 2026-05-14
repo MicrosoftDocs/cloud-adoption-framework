@@ -4,49 +4,47 @@ description: Learn how to develop a cloud adoption strategy to migrate or innova
 ms.author: pnp
 author: stephen-sumner
 ms.topic: concept-article
-ms.date: 02/03/2025
+ms.date: 05/14/2026
 ms.update-cycle: 1095-days
 ---
 
 # Develop a cloud adoption strategy
 
-A cloud adoption strategy is a comprehensive plan that outlines your organization's approach when you adopt and integrate cloud technologies.
+A cloud adoption strategy directs how your business adopts cloud technology. It connects executive intent to measurable outcomes and sets the standards that every workload team operates within.
 
-To establish a cloud adoption strategy, understand your business needs and objectives to align cloud initiatives with business goals.
+A sound strategy starts with a clear understanding of your business objectives. From there, it defines the priorities, guardrails, and investment decisions that align cloud initiatives to those objectives.
 
-The journey to successfully maturing in the cloud, or to expanding your footprint, starts with the Cloud Adoption Framework Strategy methodology, which consists of the following five steps.
+The Cloud Adoption Framework Strategy methodology guides you through this work in five steps.
 
 :::image type="content" source="./media/caf-strategy-overview.svg" alt-text="Diagram that shows how to best consume the Cloud Adoption Framework Strategy guidance." border="false":::
 
-Organizations typically mature in iterations. Consider the Cloud Adoption Framework Strategy guide an iterative supplement to your cloud adoption strategy. Revisit the guide to reassess and iterate regularly.
+Strategy isn't a one-time exercise. Organizations mature through iteration, so treat this guidance as a recurring input to your strategy rather than a one-pass document. Revisit it as business conditions, regulatory requirements, and your cloud footprint evolve.
 
-Whether you're an existing cloud customer who wants to mature your cloud environment or you're new to the cloud, this guidance helps you establish a clear mission, goals, and measurable results. It also provides insights to inform your cloud investment decisions.
+Whether you're establishing a cloud presence or expanding an existing one, this guidance helps you set a clear mission, define measurable goals, and make informed investment decisions across your portfolio.
 
 ## Why build a cloud adoption strategy?
 
-Use a cloud adoption strategy to:
+A cloud adoption strategy helps you:
 
-- **Realize value.** A well-defined cloud adoption strategy helps you realize the full value of your cloud investments. Optimize cloud investments to provide financial efficiency, cost optimization, and business agility.
+- **Maximize the value of cloud investments.** Direct spend toward initiatives that deliver financial efficiency and business agility, and reduce waste from uncoordinated adoption.
 
-- **Ensure business-driven decisions.** Align cloud adoption with business goals to maximize value and support measurable outcomes.
+- **Align technology decisions to business outcomes.** Tie every cloud initiative to a measurable business objective so investment trade-offs are explicit and defensible.
 
-- **Drive alignment among cross-functional teams.** Foster collaboration among business, IT, and finance teams to achieve unified goals.
+- **Unify cross-functional leadership.** Establish shared goals across business, IT, finance, and security so teams move in the same direction under a common operating model.
 
-- **Mitigate modernization risks.** Create a roadmap to safely rearchitect legacy systems and integrate cloud technologies.
+- **Manage portfolio-level risk.** Set a deliberate path for modernizing legacy estates, meeting compliance obligations, and avoiding the security and operational risks of ad-hoc adoption.
 
-- **Enable continuous strategy improvement.** Use a well-defined and continuously evolving cloud adoption strategy to better address challenges, like unexpected costs, siloed work environments, and unrealized cloud investment value.
+- **Sustain improvement over time.** Build a strategy that adapts as conditions change, so the organization continues to address emerging issues such as cost overruns, siloed operations, and unrealized value.
 
-## How to build a cloud adoption strategy?
+## How to build a cloud adoption strategy
 
-This guidance helps you develop a cloud adoption strategy that aligns with your business goals. The guidance is organized into five steps, suitable for both enterprises and startups:
+This guidance is organized into five steps that apply to enterprises and growth-stage organizations alike:
 
-1. **Assess your cloud adoption strategy.** Evaluate your organization's readiness for cloud adoption.
-2. **Define your motivations, mission, and objectives.** Identify the reasons for adopting cloud technologies.
-3. **Define your strategy team.** Identify the individuals and teams who will build and execute your strategy.
-4. **Prepare your organization.** Get leadership and executive buy-in, align your organizational strategies, understand your operating model's readiness for cloud, and consider a shift to a product model.
-5. **Inform your strategy.** Discover strategic considerations for key cloud areas, such as financial efficiency, AI, resiliency, security, and sustainability.
-
-Use the following checklist to guide you through the cloud adoption strategy steps.
+1. **Assess your current state.** Evaluate organizational readiness, existing cloud maturity, and the gaps between today's posture and your strategic ambitions.
+2. **Define motivations, mission, and objectives.** Establish the business reasons for adopting cloud and the outcomes by which success is measured.
+3. **Form your strategy team.** Identify the leaders and stakeholders accountable for setting direction and ensuring execution across the organization.
+4. **Prepare the organization.** Secure executive sponsorship, align organizational strategies, evaluate your operating model's fit for cloud, and decide whether to shift toward a product-oriented model.
+5. **Inform your strategy.** Apply strategic considerations across the dimensions that shape cloud outcomes: financial efficiency, AI, resiliency, security, and sustainability.
 
 ## Cloud adoption strategy checklist
 
