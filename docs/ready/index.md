@@ -11,17 +11,17 @@ ms.update-cycle: 1095-days
 
 # Ready your Azure environment for workloads
 
-Before you can deploy workloads in Azure, it's important to prepare the underlying environment that supports them. This foundational setup is known as an [Azure landing zone](/azure/cloud-adoption-framework/ready/landing-zone/) is the recommended starting point to build your Azure environment. An Azure landing zone is a structured approach that helps you build a scalable, secure, and governed cloud environment from the start.
+Before you can deploy workloads in Azure, it's important to prepare the underlying environment that supports them. CAF Ready provides a structured approach that helps you build a scalable, secure, and governed cloud environment from the start. This foundational setup is known as a platform landing zone. An [Azure landing zone](/azure/cloud-adoption-framework/ready/landing-zone/) is the recommended implementation of a platform landing zone.
 
 :::image type="content" source="../_images/ready/azure-landing-zone-conceptual-diagram.png" alt-text="Diagram showing the conceptual components of your cloud environment as it aligns with Azure landing zones." lightbox="../_images/ready/azure-landing-zone-conceptual-diagram.png" border="false":::
-
-An Azure landing zone helps you address key considerations such as identity and access management, customer agreements, and the configuration of core platform services. It provides a consistent framework for organizing both shared infrastructure and application-specific resources. At the heart of this model are two types of landing zones:
 
 ## Platform landing zone
 
 The platform landing zone serves as the backbone of your Azure environment. It establishes governance and central services that apply across your organization. Its functionality includes a management group hierarchy with Azure Policy enforcement across subscriptions. There are also dedicated subscriptions for connectivity, identity, management, and security shared services.
 
 Depending on your organization's size and cloud maturity, you might choose to implement all, some, or none of these centralized services. For smaller or cloud-native teams, a lightweight approach might be sufficient.
+
+Part of your platform landing zone should include the capability to receive requests for application landing zones and distribute those requests to workload teams for implementation.
 
 ## Application landing zone
 
