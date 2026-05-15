@@ -33,7 +33,7 @@ Whether a subscription belongs to the platform or an application landing zone, c
 
 ## Azure landing zone implementation
 
-n [Azure landing zone](/azure/cloud-adoption-framework/ready/landing-zone/) is the recommended implementation of a platform landing zone. The implementation unfolds in major phases, each with supporting processes and tools:
+An [Azure landing zone](/azure/cloud-adoption-framework/ready/landing-zone/) is the recommended implementation of a platform landing zone. The implementation unfolds in major phases, each with supporting processes and tools:
 
 :::image type="content" source="./landing-zone/media/customer-landing-zone-journey.png" alt-text="Diagram showing the Azure landing zone customer journey." border="false" lightbox="./landing-zone/media/customer-landing-zone-journey.png" :::
 
