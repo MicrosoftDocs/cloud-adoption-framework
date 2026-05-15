@@ -31,9 +31,9 @@ An application landing zone is for workload resources. A workload should have an
 
 Whether a subscription belongs to the platform or an application landing zone, certain configurations should be enabled universally. These configurations include: Azure Role-Based Access Control (RBAC), Cost Management, Network Watcher, and Microsoft Defender for Cloud. These services help maintain visibility, security, and operational control across your entire Azure environment.
 
-## Azure landing zone journey
+## Azure landing zone implementation
 
-As you work through the Ready guide, think of your progress as a journey toward creating a fully operational Azure landing zone. This journey unfolds in four major phases, each with supporting processes and tools:
+n [Azure landing zone](/azure/cloud-adoption-framework/ready/landing-zone/) is the recommended implementation of a platform landing zone. The implementation unfolds in major phases, each with supporting processes and tools:
 
 :::image type="content" source="./landing-zone/media/customer-landing-zone-journey.png" alt-text="Diagram showing the Azure landing zone customer journey." border="false" lightbox="./landing-zone/media/customer-landing-zone-journey.png" :::
 
@@ -54,16 +54,12 @@ Next, accelerate the deployment of your platform resources based on the Azure la
   - [Bicep modules](https://aka.ms/alz/bicep)
   - [Terraform module](https://aka.ms/alz/tf)
 
-### 3. Subscription vending process
+### 3. Subscription vending process (optional)
 
 Once your platform is in place, you’ll need to create individual application landing zones within your Azure tenant. A subscription vending solution is recommended to automate this process. Vending helps deploy subscriptions along with core resources such as networking. Both Bicep and Terraform modules are available:
 
 - [Vending module (Terraform)](https://aka.ms/lz-vending/tf)
 - [Vending module (Bicep)](https://aka.ms/lz-vending/bicep)
-
-### 4. Deploy application landing zone components
-
-Finally, deploy the components that support your workloads. Multiple application landing zone accelerators are available to provide reference architectures and implementation guidance for scenarios such as Azure Virtual Desktop, SAP, and Azure Kubernetes. These accelerators help prepare application landing zones in an Azure landing. See the [CAF cloud adoption scenarios](../overview.md#cloud-adoption-framework-scenarios).
 
 ## Next step
 
