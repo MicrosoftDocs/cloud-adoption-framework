@@ -11,7 +11,7 @@ ms.update-cycle: 1095-days
 
 # Ready your Azure environment for workloads
 
-Before you can deploy workloads in Azure, it's important to prepare the underlying environment that supports them. CAF Ready provides a structured approach that helps you build a scalable, secure, and governed cloud environment from the start. This foundational setup is known as a platform landing zone. An [Azure landing zone](/azure/cloud-adoption-framework/ready/landing-zone/) is the recommended implementation of a platform landing zone.
+Before you can deploy workloads in Azure, prepare the underlying environment that supports them. CAF Ready provides a structured approach that helps you build a scalable, secure, and governed cloud environment from the start. This foundational setup is known as a platform landing zone. An [Azure landing zone](/azure/cloud-adoption-framework/ready/landing-zone/) is the recommended implementation of a platform landing zone.
 
 :::image type="content" source="../_images/ready/azure-landing-zone-conceptual-diagram.png" alt-text="Diagram showing the conceptual components of your cloud environment as it aligns with Azure landing zones." lightbox="../_images/ready/azure-landing-zone-conceptual-diagram.png" border="false":::
 
