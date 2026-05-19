@@ -16,7 +16,6 @@ The Cloud Adoption Framework for Azure has tools, templates, and assessments tha
 
 | Resource | Description |
 |----------|-------------|
-| [Cloud Adoption Strategy Evaluator assessment](/assessments/8fefc6d5-97ac-42b3-8e97-d82701e55bab/) | Assess your cloud adoption strategy and get recommendations on building and advancing your cloud business case. |
 | [Cloud Journey Tracker assessment](/assessments/cloud-journey-tracker/) | Identify your cloud adoption path based on the needs of your business. |
 
 ## Plan

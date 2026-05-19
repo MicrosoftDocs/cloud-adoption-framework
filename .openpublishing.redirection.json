@@ -4049,6 +4049,11 @@
       "source_path": "docs/ready/policy-management/enterprise-policy-as-code.md",
       "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/strategy/assessment.md",
+      "redirect_url": "/azure/cloud-adoption-framework/strategy/motivations",
+      "redirect_document_id": false
     }
    ]
 }
