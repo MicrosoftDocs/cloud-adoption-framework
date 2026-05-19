@@ -14,7 +14,7 @@ A cloud adoption strategy directs how your business adopts cloud technology. It 
 
 A sound strategy starts with a clear understanding of your business objectives. From there, it defines the priorities, guardrails, and investment decisions that align cloud initiatives to those objectives.
 
-The Cloud Adoption Framework Strategy methodology guides you through this work in five steps.
+The Cloud Adoption Framework Strategy methodology guides you through this work in four steps.
 
 :::image type="content" source="./media/caf-strategy-overview.svg" alt-text="Diagram that shows how to best consume the Cloud Adoption Framework Strategy guidance." border="false":::
 
@@ -38,13 +38,12 @@ A cloud adoption strategy helps you:
 
 ## How to build a cloud adoption strategy
 
-This guidance is organized into five steps that apply to enterprises and growth-stage organizations alike:
+This guidance is organized into four steps that apply to enterprises and growth-stage organizations alike:
 
-1. **Assess your current state.** Evaluate organizational readiness, existing cloud maturity, and the gaps between today's posture and your strategic ambitions.
-2. **Define motivations, mission, and objectives.** Establish the business reasons for adopting cloud and the outcomes by which success is measured.
-3. **Form your strategy team.** Identify the leaders and stakeholders accountable for setting direction and ensuring execution across the organization.
-4. **Prepare the organization.** Secure executive sponsorship, align organizational strategies, evaluate your operating model's fit for cloud, and decide whether to shift toward a product-oriented model.
-5. **Inform your strategy.** Apply strategic considerations across the dimensions that shape cloud outcomes: financial efficiency, AI, resiliency, security, and sustainability.
+1. **Define motivations, mission, and objectives.** Establish the business reasons for adopting cloud and the outcomes by which success is measured.
+2. **Form your strategy team.** Identify the leaders and stakeholders accountable for setting direction and ensuring execution across the organization.
+3. **Prepare the organization.** Secure executive sponsorship, align organizational strategies, evaluate your operating model's fit for cloud, and decide whether to shift toward a product-oriented model.
+4. **Inform your strategy.** Apply strategic considerations across the dimensions that shape cloud outcomes: cost efficiency, resiliency, security, and sustainability.
 
 ## Cloud adoption strategy checklist
 
@@ -52,13 +51,12 @@ The following checklist provides an overview of the tasks for each cloud adoptio
 
 | Cloud adoption strategy step | Startup tasks | Enterprise tasks |
 |---------------------|-------------------|----------------------|
-| Assess your cloud adoption strategy | &#9744; [Assess your strategy](./assessment.md) |  &#9744; [Assess your strategy](./assessment.md) |
 | Define your motivations, mission, and objectives | &#9744; [Define your motivations](./motivations.md#define-your-motivations) <br> &#9744; [Define your mission and objectives](./motivations.md#define-your-mission-and-objectives) <br>&#9744; [Measure success](./motivations.md#measure-success)  | &#9744; [Define your motivations](./motivations.md#define-your-motivations) <br>&#9744; [Classify your motivations](./motivations.md#classify-motivations) <br>&#9744; [Define your mission and objectives](./motivations.md#define-your-mission-and-objectives) <br>&#9744; [Measure success](./motivations.md#measure-success) |
 | Define your strategy team | &#9744; [Define your team](./define-your-team.md) | &#9744; [Define your team](./define-your-team.md) |
 | Prepare your organization | &#9744; [Ensure leadership and executive buy-in](./prepare-organizational-alignment.md#leadership-and-executive-buy-in)  | &#9744; [Ensure leadership and executive buy-in](./prepare-organizational-alignment.md#leadership-and-executive-buy-in) <br>&#9744; [Align organizational strategies](./prepare-organizational-alignment.md#align-organizational-strategies) <br>&#9744; [Understand your operating model's readiness](./prepare-organizational-alignment.md#understand-your-operating-models-readiness-for-cloud) <br>&#9744; [Shift from a project model to a product model](./prepare-organizational-alignment.md#shift-from-a-project-model-to-product-model) <br>&#9744; [Identify and define partner relationships](./prepare-organizational-alignment.md#identify-and-define-partner-relationships) |
-| Inform your strategy | &#9744; [Integrate AI](./inform/ai.md) <br>&#9744; [Address security](./inform/security.md) | &#9744; [Ensure cost efficiency](./inform/cost-efficiency.md) <br>&#9744; [Integrate AI](./inform/ai.md) <br>&#9744; [Create resiliency](./inform/resiliency.md) <br>&#9744; [Address security](./inform/security.md) <br>&#9744; [Adopt sustainability](./inform/sustainability.md) |
+| Inform your strategy | <br>&#9744; [Address security](./inform/security.md) | &#9744; [Ensure cost efficiency](./inform/cost-efficiency.md) <br>&#9744; [Create resiliency](./inform/resiliency.md) <br>&#9744; [Address security](./inform/security.md) <br>&#9744; [Adopt sustainability](./inform/sustainability.md) |
 
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Assess your cloud adoption strategy](assessment.md)
+> [Determine your motivations to move to or expand in the cloud](motivations.md)
