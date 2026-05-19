@@ -41,7 +41,7 @@ A cloud adoption strategy helps you:
 This guidance is organized into four steps that apply to enterprises and growth-stage organizations alike:
 
 1. **Define motivations, mission, and objectives.** Establish the business reasons for adopting cloud and the outcomes by which success is measured.
-2. **Form your strategy team.** Identify the leaders and stakeholders accountable for setting direction and ensuring execution across the organization.
+2. **Define your strategy team.** Identify the leaders and stakeholders accountable for setting direction and ensuring execution across the organization.
 3. **Prepare the organization.** Secure executive sponsorship, align organizational strategies, evaluate your operating model's fit for cloud, and decide whether to shift toward a product-oriented model.
 4. **Inform your strategy.** Apply strategic considerations across the dimensions that shape cloud outcomes: cost efficiency, resiliency, security, and sustainability.
 
