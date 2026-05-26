@@ -16,15 +16,19 @@ This article describes governance practices for organizations that use Azure AI 
 AI platform governance uses policy controls to keep Foundry Tools operating consistently. Platform-level governance enforces security, compliance, and operational standards across your AI environment. Implement comprehensive policies to maintain oversight and improve AI management. To govern Azure AI platforms, follow these steps:
 
 1. **Apply built-in governance policies for each AI platform.** Azure Policy offers predefined policy definitions for common governance needs in AI services. These policies enforce security settings, cost controls, and compliance requirements without custom development. Use Azure Policy to apply built-in policy definitions for:
-- [Microsoft Foundry](/azure/ai-foundry/how-to/azure-policy)
-- [Foundry Tools](/azure/ai-services/policy-reference)
-- [Azure AI Search](/azure/search/policy-reference)
-
+    - [Microsoft Foundry](/azure/ai-foundry/how-to/azure-policy)
+    - [Foundry Tools](/azure/ai-services/policy-reference)
+    - [Azure AI Search](/azure/search/policy-reference)
+    
 2. **Enable Azure landing zone AI policies for comprehensive coverage.** Azure landing zones provide curated policy sets for workload-specific governance. These policies use tested configurations that follow Microsoft recommendations for AI workloads. When you deploy an Azure landing zone, select the policy initiative under the *Workload Specific Compliance* category. Available options include:
-- [Azure OpenAI](https://www.azadvertizer.net/azpolicyinitiativesadvertizer/Enforce-Guardrails-OpenAI.html)
-- [Azure Machine Learning](https://www.azadvertizer.net/azpolicyinitiativesadvertizer/Enforce-Guardrails-MachineLearning.html)
-- [Azure AI Search](https://www.azadvertizer.net/azpolicyinitiativesadvertizer/Enforce-Guardrails-CognitiveServices.html)
-- [Azure AI Bot Service](https://www.azadvertizer.net/azpolicyinitiativesadvertizer/Enforce-Guardrails-BotService.html)
+    - [Azure OpenAI](https://www.azadvertizer.net/azpolicyinitiativesadvertizer/Enforce-Guardrails-OpenAI.html)
+    - [Azure Machine Learning](https://www.azadvertizer.net/azpolicyinitiativesadvertizer/Enforce-Guardrails-MachineLearning.html)
+    - [Azure AI Search](https://www.azadvertizer.net/azpolicyinitiativesadvertizer/Enforce-Guardrails-CognitiveServices.html)
+    - [Azure AI Bot Service](https://www.azadvertizer.net/azpolicyinitiativesadvertizer/Enforce-Guardrails-BotService.html)
+
+Define your AI platform instance topology
+
+organization must adopt an instance topology policy covering production isolation, non-production colocation, and in-product boundaries. See [Define your AI platform instance topology]
 
 ## Govern AI models
 
@@ -60,16 +64,16 @@ Cost management controls help prevent unnecessary AI spending and maximize opera
 4. **Select cost-effective deployment options.** Foundry models provide different [deployment options](/azure/ai-foundry/concepts/deployments-overview). Choose the most cost-effective and compliant option for your use case.
 
 5. **Control client usage patterns.** Client behavior directly affects consumption costs in pay-per-use services. Limit client access using security protocols, such as:
-- Network controls
-- Keys
-- Role-based access control (RBAC)
+    - Network controls
+    - Keys
+    - Role-based access control (RBAC)
+    
+    Enforce API constraints, including:
+    - Maximum tokens
+    - Maximum completions
 
-Enforce API constraints, including:
-- Maximum tokens
-- Maximum completions
-
-Batch requests when possible to optimize efficiency. Keep prompts concise and provide only the necessary context to reduce token consumption.
-
+    Batch requests when possible to optimize efficiency. Keep prompts concise and provide only the necessary context to reduce token consumption.
+    
 6. **Automate resource shutdown for non-production workloads.** Automatic shutdown helps prevent unnecessary compute costs during idle periods. Define and enforce policies that require AI resources to use automatic shutdown features on virtual machines and compute instances in Foundry and Azure Machine Learning. Apply automatic shutdown to non-production environments. Also, apply it to production workloads that can go offline during specific periods.
 
 7. **Implement gateway controls for cost management.** A [generative AI gateway](/azure/api-management/genai-gateway-capabilities) provides centralized cost controls for AI endpoints. The gateway tracks token usage, throttles consumption, applies circuit breakers, and routes traffic to different endpoints to optimize costs. For example, you can use a generative AI gateway to limit token usage during peak hours and route requests to less expensive endpoints.
@@ -97,9 +101,9 @@ AI operations governance sets controls for AI service management and maintenance
 1. **Establish model lifecycle management policies.** Model versioning policies ensure compatibility and smooth transitions between updates. Version control helps prevent disruptions when models are upgraded or retired. It also maintains system stability across deployments. Create policies that define model versioning standards, compatibility testing requirements, and rollback procedures for all AI platforms in your organization. For example, use Azure Policy to restrict which models are available for deployment. Apply content safety filters to prevent harmful outputs. If you upgrade a model and encounter issues, use rollback procedures to restore the previous version.
 
 2. **Implement business continuity and disaster recovery plans.** Disaster recovery plans protect AI operations against service interruptions and data loss. For example, configure backup and failover for Azure AI model endpoints to maintain service availability during outages. These plans help ensure business operations continue during outages and maintain service availability for critical AI workloads. Configure baseline disaster recovery for resources that host AI model endpoints, including:
-- [Foundry](/azure/ai-foundry/how-to/disaster-recovery)
-- [Azure OpenAI](/azure/ai-services/openai/how-to/business-continuity-disaster-recovery)
-- Foundry Tools
+    - [Foundry](/azure/ai-foundry/how-to/disaster-recovery)
+    - [Azure OpenAI](/azure/ai-services/openai/how-to/business-continuity-disaster-recovery)
+    - Foundry Tools
 
 3. **Configure monitoring and alerting for AI workloads.** Baseline metrics provide early warning of performance degradation and operational issues before they affect users. Alert rules enable proactive responses to prevent service disruptions. Enable recommended alert rules for [Azure AI Search](/azure/search/monitor-azure-cognitive-search#azure-ai-search-alert-rules), [Foundry Agent Service deployments](/azure/ai-foundry/agents/how-to/metrics), and individual Foundry Tools.
 
