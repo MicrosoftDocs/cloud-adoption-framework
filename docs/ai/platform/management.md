@@ -13,9 +13,9 @@ This article offers management recommendations for organizations running AI work
 
 ## AI resource sharing policy
 
-Every deployment of Foundry and Azure Machine Learning creates a separate instance of those resources. Each  instance provides its own networking perimeter, identity model, and data plane.
+Every deployment of Foundry and Azure Machine Learning creates a separate instance of those resources. Each instance provides its own networking perimeter, identity model, and data plane.
 
-Co locating means when two separate workloads Share a single instance of a service.
+Colocating means when two separate workloads share a single instance of a service.
 
 Decision makers must set the organization's policy on instance isolation and colocation.
 

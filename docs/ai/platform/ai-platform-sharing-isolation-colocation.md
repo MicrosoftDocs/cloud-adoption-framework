@@ -42,9 +42,9 @@ Every organization needs boundaries across which workloads must never share an A
 
 AI platform sharing in production is the practice of running more than one production AI workload environment on the same Microsoft Foundry resource or Azure Machine Learning workspace. In Azure, the AI platform instance defines the network boundary, identity boundary, and quota boundary for the workload environments that use it. For that reason, organizations should define a specific policy for production AI platform sharing.
 
-**1. Default to a single AI platform instance per production environment.** Production AI environments should default to production environment isolation. Do not colocate multiple production workload environments on the same Microsoft Foundry resource or Azure Machine Learning workspace unless a documented exception exists. A dedicated AI platform instance for each production workload environment should be the standard approach. Teams should treat AI platform sharing as an exception, not a default practice.
+**1. Default to a single AI platform instance per production environment.** Production AI environments should default to production environment isolation. Don't colocate multiple production workload environments on the same Microsoft Foundry resource or Azure Machine Learning workspace unless a documented exception exists. A dedicated AI platform instance for each production workload environment should be the standard approach. Treat AI platform sharing as an exception, not a default practice.
 
-- **Why default to isolation?** hared AI platforms also create shared operational risk. A security issue, misconfiguration, service outage, or quota exhaustion event can affect every colocated workload environment. Isolation also reduces the risk of accidental cross-workload access exposure and prevents one workload from consuming GPU capacity or quota needed by another workload. Production environments usually have the highest business impact and regulatory exposure. Most organizations require clear ownership boundaries and strong operational isolation for these environments.
+- **Why default to isolation?** Shared AI platforms also create shared operational risk. A security issue, misconfiguration, service outage, or quota exhaustion event can affect every colocated workload environment. Isolation also reduces the risk of accidental cross-workload access exposure and prevents one workload from consuming GPU capacity or quota needed by another workload. Production environments usually have the highest business impact and regulatory exposure. Most organizations require clear ownership boundaries and strong operational isolation for these environments.
 
 - **Tradeoff:** Isolation increases cost and management overhead. Each platform instance carries its own operational overhead for networking, identity, monitoring, and operations. Organizations must balance these costs against the operational and security benefits of stronger containment.
 
@@ -52,19 +52,19 @@ AI platform sharing in production is the practice of running more than one produ
 
 - Only permit production workloads to share instances of Microsoft Foundry or Azure Machine Learning when each of the following conditions holds:
 
-  1. All colocated workloads must share the same regulatory scope, data classification, residency requirements, and data handling standards.
+  1. All colocated workloads share the same regulatory scope, data classification, residency requirements, and data handling standards.
 
-  2. All workloads must operate inside the same network boundary, same DNS namespace, and the same identity boundary.
+  2. All workloads operate inside the same network boundary, same DNS namespace, and the same identity boundary.
 
-  3. The organization must accept the shared outage risk and the shared quota exhaustion risk that colocation introduces.
+  3. The organization accepts the shared outage risk and the shared quota exhaustion risk that colocation introduces.
 
-  4. The cost or operational overhead of separate instances must materially outweigh the isolation benefit. Cost pressure alone is not sufficient justification.
+  4. The cost or operational overhead of separate instances materially outweighs the isolation benefit. Cost pressure alone isn't sufficient justification.
 
-  5. The team accepts that splitting workloads apart later is costly. AI platform state does not transfer cleanly between instances and often requires recreation or reconfiguration.
+  5. The team accepts that splitting workloads apart later is costly. AI platform state doesn't transfer cleanly between instances and often requires recreation or reconfiguration.
 
 - **Tradeoff:** Every shared platform instance requires a clearly identified platform owner responsible for quota management, network configuration, access reviews, lifecycle operations, and incident coordination.
 
-**3. Segment use cases within the AI platform instance.**  Whether a platform instance is isolated or colocated, use in-product segementation features to isolate use cases. Treat each distinct use case as its own logical workload inside the platform instance. For example:
+**3. Segment use cases within the AI platform instance.**  Whether a platform instance is isolated or colocated, use in-product segmentation features to isolate use cases. Treat each distinct use case as its own logical workload inside the platform instance. For example:
 
 - In Microsoft Foundry, provision one [project](/azure/ai-foundry/how-to/create-projects) per use case inside the Foundry resource.
 
