@@ -48,7 +48,7 @@ You can predict these costs when you model them early.
 
 - Use the [Azure pricing calculator](https://azure.microsoft.com/pricing/calculator/) to build a per-workload estimate.
 - Use the [Azure Total Cost of Ownership (TCO) calculator](https://azure.microsoft.com/pricing/tco/calculator/) to compare against on-premises alternatives.
-- Use the [Azure Reservations](https://learn.microsoft.com/azure/cost-management-billing/reservations/save-compute-costs-reservations) and [savings plans](https://learn.microsoft.com/azure/cost-management-billing/savings-plan/savings-plan-compute-overview) only after usage patterns stabilize.
+- Use the [Azure Reservations](/azure/cost-management-billing/reservations/save-compute-costs-reservations) and [savings plans](/azure/cost-management-billing/savings-plan/savings-plan-compute-overview) only after usage patterns stabilize.
 
 ## How long until you see value?
 
