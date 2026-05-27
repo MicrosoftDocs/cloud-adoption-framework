@@ -27,7 +27,7 @@ items:
     - name: AI on Azure infrastructure (IaaS)
       items:
       - name: AI infrastructure overview
-        href: infrastructure/ai-azure-infrastructure-overview.md
+        href: infrastructure/ai-azure-infrastructure.md
       - name: Architecture decisions
         items:
           - name: Compute
@@ -45,7 +45,7 @@ items:
           - name: Well-architected
             href: infrastructure/well-architected.md
       - name: Implementation options
-        href: ai-azure-infrastructure-implementation.md
+        href: infrastructure/ai-azure-infrastructure-implementation.md
   - name: Govern AI
     href: govern.md
   - name: Secure AI
