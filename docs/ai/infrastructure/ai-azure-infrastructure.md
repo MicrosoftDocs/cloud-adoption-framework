@@ -1,6 +1,6 @@
 ---
 title: AI on Azure Infrastructure - Executive Strategy
-description: Learn when to use AI on Azure infrastructure and find decision guidance to help make the right achitecture decisions for across your organization. 
+description: Learn when to use AI on Azure infrastructure and find decision guidance to help make the right architecture decisions for across your organization. 
 #customer intent: As a decision maker, I want help making the right decisions about AI on Azure Infrastructure across key architecture categories, so that I can define governance and operational standards for my organizations as we adopt AI on GPUs. 
 author: stephen-sumner
 ms.author: ssumner
@@ -12,7 +12,7 @@ ms.collection: ce-skilling-ai-copilot
 
 # AI on Azure infrastructure (IaaS) - Executive strategy
 
-**Organizational goal:** Every organization wants AI to deliver measurable business value at the scale the business demands. **Challenge:** Most organizations can meet that goal through managed AI platforms, but some organizations require more control than managed services provide.They need to choose specific models, tune performance, or meet strict compliance requirements that managed services can't fully address.
+**Organizational goal:** Every organization wants AI to deliver measurable business value at the scale the business demands. **Challenge:** Most organizations can meet that goal through managed AI platforms, but some organizations require more control than managed services provide. They need to choose specific models, tune performance, or meet strict compliance requirements that managed services can't fully address.
 
 **Solution:** Azure infrastructure as a service (IaaS) supports AI strategies that require full control over models, infrastructure, and compliance boundaries. Azure IaaS isn't the default starting point. It's a deliberate choice for organizations with advanced requirements. Use Azure IaaS for AI when your business requires:
 
