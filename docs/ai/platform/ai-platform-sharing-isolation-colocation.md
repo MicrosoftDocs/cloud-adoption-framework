@@ -1,5 +1,5 @@
 ---
-title: AI Resource Sharing Decision Guidance
+title: AI Platform Sharing Decision Guidance
 description: Azure AI resource sharing guidance to define colocation boundaries, isolation policies, and exception criteria for Microsoft Foundry and Azure Machine Learning
 #customer intent: As a decision maker defining AI adoption policy for my organization, I want guidance on how to decide when to isolate workload environments by using dedicated instances of AI platform resources, and when it is acceptable to colocate multiple workload environments on shared AI platform resources, so that I can establish a clear operational standard for AI workload teams to follow. Examples of AI platform resources include Microsoft AI Foundry instances and Azure Machine Learning workspaces.
 author: stephen-sumner
@@ -10,11 +10,11 @@ ms.topic: concept-article
 ms.collection: ce-skilling-ai-copilot
 ---
 
-# AI resource sharing decision guidance
+# AI platform sharing decision guidance
 
-An AI platform is the hosted environment where your organization runs and operates AI models. It provides the networking perimeter, identity model, data plane, and quota allocation that surround your models, deployments, indexes, evaluations, and related assets. Microsoft Foundry and Azure Machine Learning are the two Azure services that provide this platform. Every deployment of either service creates a new instance of that platform.
+An AI platform is the hosted environment where your organization runs and operates AI models. It provides the networking perimeter, identity model, data plane, and quota allocation that surround your models, deployments, indexes, evaluations, and related assets. Microsoft Foundry and Azure Machine Learning are two Azure AI platforms. Every deployment of either service creates a new instance.
 
-Your organization must decide whether to put an environment (dev, test, prod) from a single workload on its own AI platform instance or allow environments from two or more workloads to share one instance of an AI platform. That choice, often called colocation, shapes the blast radius across your AI estate. It also shapes compliance posture and cost.
+Your organization must decide how to place AI workload environments across AI platform instances. You can isolate each environment such as dev, test, or prod in its own platform instance. You can also allow multiple workloads or environments to share the same instance. This decision, often called colocation, affects the blast radius of operational or security issues. It also affects compliance boundaries and platform cost.
 
 **Recommendation:** Establish an organization-wide policy that defines default isolation requirements, approved sharing boundaries, exception criteria, and separate expectations for production and pre-production AI platform environments.
 
@@ -38,7 +38,7 @@ Every organization needs boundaries across which workloads must never share an A
 
 - **Find what works best.** No single model is universally correct. Consistency matters more than which model you select, because a clearly enforced boundary model keeps governance understandable as the AI platform grows.
 
-## 2. Avoid AI platform sharing in production
+## 2. Define a production AI platform sharing policy
 
 AI platform sharing in production is the practice of running more than one production AI workload environment on the same Microsoft Foundry resource or Azure Machine Learning workspace. In Azure, the AI platform instance defines the network boundary, identity boundary, and quota boundary for the workload environments that use it. For that reason, organizations should define a specific policy for production AI platform sharing.
 
@@ -78,7 +78,7 @@ These constructs give each use case its own assets and role assignments without 
 
 For background on the constructs that anchor these decisions, see [Microsoft Foundry resources](/azure/ai-foundry/concepts/ai-resources) and [Azure Machine Learning workspaces](/azure/machine-learning/concept-workspace).
 
-## 3. AI preproduction resource sharing
+## 3. Define a preproduction AI platform sharing policy
 
 Preproduction environments invert the production default. These environments support experimentation and prerelease validation across development, test, and stage tiers. Dedicated instances of AI platform resources rarely justify their cost in those tiers. Default to a shared instance per environment tier.
 
