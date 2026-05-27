@@ -12,39 +12,35 @@ ms.collection: ce-skilling-ai-copilot
 
 # AI on Azure infrastructure (IaaS) - Executive strategy
 
-**Organizational goal:** Every organization wants AI to deliver measurable business value at the scale the business demands. The platform choice should support that goal without adding unnecessary complexity.
+**Organizational goal:** Every organization wants AI to deliver measurable business value at the scale the business demands. **Challenge:** Most organizations can meet that goal through managed AI platforms, but some organizations require more control than managed services provide.They need to choose specific models, tune performance, or meet strict compliance requirements that managed services can't fully address.
 
-**Challenge:** Most organizations can use managed AI platforms. Those platforms reduce operational burden and accelerate time to value. Some organizations need greater control. They need to choose specific models, tune performance, or meet strict compliance requirements that managed services can't fully address.
+**Solution:** Azure infrastructure as a service (IaaS) supports AI strategies that require full control over models, infrastructure, and compliance boundaries. Azure IaaS isn't the default starting point. It's a deliberate choice for organizations with advanced requirements. Use Azure IaaS for AI when your business requires:
 
-**Solution:** Azure infrastructure as a service (IaaS) supports AI strategies that require full control over models, infrastructure, and compliance boundaries. Azure infrastructure as a service isn't the default starting point. It's a deliberate choice for organizations with advanced requirements. Use Azure IaaS for AI when your business requires:
-
-- Direct control of models and runtime environments for proprietary or highly customized workloads
-- Explicit control of data location and processing to meet regulatory obligations
+- Control of models and runtime environments for proprietary or highly customized workloads
+- Management of data location and processing to meet regulatory obligations
 - Integration with high-performance computing for simulation or scientific analysis
 - Fine-tuned performance at scale through specialized GPU and network design
 
-## What AI on Azure Infrastructure enables?
+## Why AI on Azure infrastructure?
 
-Azure IaaS gives your teams full control of the environment that runs AI workloads. Use IaaS only when these tradeoffs are justified by business requirements. This control supports three outcomes that matter:
+Azure IaaS lets your teams define and operate the environment that runs AI workloads. This approach supports three business outcomes:
 
-- **Complete control of the AI environment**. Your teams control operating systems, frameworks, and dependencies. This control supports custom models and specialized workloads that managed services can't support.
+- **Customized AI environments**. Teams can select operating systems, frameworks, runtime configurations, and supporting tooling. This flexibility supports proprietary models and specialized AI workloads.
 
-- **Compliance and data sovereignty**. You define the network boundary and control how data is processed and stored. This level of control supports regulated industries and sensitive workloads.
+- **Regulatory alignment and data sovereignty**. Organizations define network boundaries, data handling policies, and deployment locations. This approach supports regulated and sensitive workloads.
 
-- **Performance at enterprise scale**. Azure provides access to large-scale GPU infrastructure and high-performance networking. This capability supports distributed training, large model inference, and integrated HPC workloads.
+- **High-performance AI infrastructure**. Azure provides GPU clusters and high-performance networking for large-scale training, distributed inference, and HPC-integrated AI workloads.
 
 ## What's the level of investment?
 
-Azure IaaS increases flexibility. It also increases responsibility. Leaders need to approve this model with a clear understanding of cost drivers and operational impact. The key tradeoff is simple. IaaS gives control and flexibility. It requires higher investment in skills and ongoing operations.
-
-The cost model shifts from service consumption to infrastructure ownership. Plan for four primary cost areas:
+Azure IaaS increases flexibility. It also increases responsibility. Leaders need to approve this model with a clear understanding of cost drivers and operational impact. The key tradeoff is simple. IaaS gives control and flexibility. It requires higher investment in skills and ongoing operations. The cost model shifts from service consumption to infrastructure ownership. Plan for four primary cost areas:
 
 - **GPU cost:** GPU compute drives the largest portion of spend. GPU infrastructure is expensive and can be underutilized without strong planning.
-- **Storage cost:** Storage supports training data and model checkpoints.
-- **Networking cost:** Networking costs increase with data movement and hybrid connectivity.
-- **Operational costs:** Operations require skilled teams to manage infrastructure and reliability. Your teams must manage infrastructure, scaling, and reliability. You need advanced engineering capability across AI and cloud platforms.
+- **Storage cost:** Storage supports datasets, model checkpoints, and long-term retention requirements.
+- **Networking cost:** Networking costs increase with distributed workloads, data movement, and hybrid connectivity requirements.
+- **Operational costs:** Organizations need skilled teams to manage infrastructure, scaling, reliability, and platform operations.
 
-You can predict these costs when you model them early.
+Organizations can forecast these costs more accurately when they model workloads early in the planning process.
 
 - Use the [Azure pricing calculator](https://azure.microsoft.com/pricing/calculator/) to build a per-workload estimate.
 - Use the [Azure Total Cost of Ownership (TCO) calculator](https://azure.microsoft.com/pricing/tco/calculator/) to compare against on-premises alternatives.
@@ -52,7 +48,7 @@ You can predict these costs when you model them early.
 
 ## How long until you see value?
 
-Time to value depends on your existing maturity, not platform deployment time. Organizations reach value faster when they already have:
+Time to value depends more on organizational maturity than infrastructure deployment speed. Organizations reach value faster when they already have:
 
 - Curated data pipelines
 - Established AI or data engineering teams
@@ -62,9 +58,9 @@ If these capabilities don't exist, the timeline extends. Infrastructure alone do
 
 ## How to adopt AI on Azure infrastructure
 
-You need an Azure landing zone before you deploy AI on IaaS. It provides the governance, identity, and network foundation needed to operate at scale.  
-  
-Organize adoption around six **architecture decisions**: compute, storage, networking, governance, management, and security. Each decision affects performance, cost, and risk. Treat these decisions as architecture policies, not workload design. The following articles provide guidelines for AI workloads on Azure infrastructure (IaaS):
+Successful AI adoption on Azure IaaS depends on early architecture decisions. These decisions affect scalability, operational complexity, compliance posture, and long-term cost.
+
+Organize adoption around six architecture areas: compute, storage, networking, governance, management, and security. Treat these decisions as architecture policies, not workload design. The following articles provide guidelines for AI workloads on Azure infrastructure (IaaS):
 
 - [Compute](../../scenarios/ai/infrastructure/compute.md)
 - [Storage](../../scenarios/ai/infrastructure/storage.md)
