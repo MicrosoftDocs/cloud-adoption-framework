@@ -22,17 +22,19 @@ Your organization must decide whether to isolate each workload on its own instan
 
 ## 1. AI resource sharing boundaries
 
-Every organization needs boundaries across which workloads must never share an AI resource. This boundary applies in every environment, production and pre-production alike. Without it, workload teams default to whatever pattern is convenient in the moment, and the platform accumulates conflicting requirements over time.
+Every organization needs boundaries across which workloads must never share an AI resource. This boundary applies in every environment, production and pre-production alike. Workloads inside the same boundary can potentially share a resource. Workloads in different boundaries cannot.
 
-Choose a boundary model that reflects how your organization already governs technology and assigns operational accountability. Three models are common in the field.
+- Without it, workload teams default to whatever pattern is convenient in the moment, and the platform accumulates conflicting requirements over time. Over time, that creates inconsistent ownership models, conflicting compliance requirements, unclear cost allocation, and shared operational risk across unrelated workloads. For example, might share quota across unrelated business areas to reduce cost. The result is an AI platform with inconsistent governance boundaries that become difficult to understand and audit.
 
-- A **business unit** boundary optimizes for common operational ownership and funding
+- Choose a boundary model that aligns to how your organization already assigns responsibility and governs technology decisions. Common models include:
 
-- A **data domain** boundary optimizes for common compliance and data handling requirements
+    - A **business unit** boundary optimizes for common operational ownership and funding
 
-- A **product owner** boundary optimizes for a common engineering lifecycle and platform operations
+    - A **data domain** boundary optimizes for common compliance and data handling requirements
 
-No single model is universally correct. Consistency matters more than which model you select, because a clearly enforced boundary model keeps governance understandable as the platform grows.
+    - A **product owner** boundary optimizes for a common engineering lifecycle and platform operations
+
+- Inside the boundary, teams can still choose dedicated instances when isolation makes sense. Outside the boundary, sharing is not permitted. No single model is universally correct. Consistency matters more than which model you select, because a clearly enforced boundary model keeps governance understandable as the platform grows.
 
 ## 2. AI production resource sharing
 

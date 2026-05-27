@@ -11,17 +11,42 @@ ms.topic: concept-article
 
 This article offers management recommendations for organizations running AI workloads on Azure. It focuses on Azure platform-as-a-service (PaaS) solutions for AI.
 
+## AI resource sharing policy
+
+Every deployment of Foundry and Azure Machine Learning creates a separate instance of those resources. Each  instance provides its own networking perimeter, identity model, and data plane.
+
+Co locating means when two separate workloads Share a single instance of a service.
+
+Decision makers must set the organization's policy on instance isolation and colocation.
+
+- **Isolate production instances of your AI platform sharing.** Production workloads carry the strongest expectations for security and accountability, so the recommended policy default is to give each discrete production workload its own instance of the AI platform.
+
+    - Provision a dedicated instance per production workload when the workload has an independent owner or a distinct compliance scope. Isolation preserves a clean blast radius, lets each workload team manage its own quota, and keeps audit trails attributable to one accountable team. This is the safer choice and should be the organization's standing default.
+
+- **Understand the only conditions it's okay to colocate in production.** Colocate production workloads on a shared instance only when every colocated workload sits behind the same network perimeter and shares one control plane for identity and access. This pattern fits when several workloads belong to one product family under one accountable owner. The tradeoff is that a security incident or quota exhaustion event on the shared instance affects every colocated workload at the same time.
+    
+    - **Understand the colocation long-term consequences.** Treat any colocation choice as a one-way door. Separating workloads onto their own instances later requires migrating model deployments and connection state, and that state does not move cleanly between instances. Choosing isolation up front avoids this migration cost. For background on the instance constructs in each service, see Azure AI Foundry resources(opens in new window) and Azure Machine Learning workspaces(opens in new window).
+    - **Enforce Boundaries Inside Any Shared Instance.** Colocation does not remove the need for separation. Decision makers must define boundaries that hold inside every shared instance so that ownership stays clear and accidental data exposure is prevented.
+
+Define an organizational boundary that scopes which workloads may share an instance. Most successful organizations pick one model and apply it consistently across the company. Common models scope by data domain, by business unit, or by accountable product owner. Choose one and require it everywhere so platform teams and auditors can reason about every shared instance the same way.
+Require product-native isolation inside every shared instance. In Azure AI Foundry, this means one project(opens in new window) per workload. In Azure Machine Learning, this means one workspace per workload. These constructs give each workload its own assets and role assignments without the overhead of a separate instance.
+Make the in-product boundary a policy requirement, not a recommendation. If a workload cannot fit cleanly inside a project or workspace, treat that as a signal the workload needs its own instance.
+
+- **Colocate non-production instances of your AI platform.** Default to colocation in non-production. Non-production environments exist to support experimentation and pre-release validation, and dedicated instances rarely justify their cost in those environments.
+
+    - A shared instance per environment tier lowers idle capacity cost and keeps the platform inventory small enough to govern efficiently. 
+    - The tradeoff is shared noisy-neighbor and shared outage risk, both of which the organization can accept outside production.
+    - Provision a dedicated non-production instance only when a workload processes regulated data in test or must mirror its production topology for performance validation. Treat this as the exception and require explicit approval.
+
 ## Manage AI deployments
 
 Consistent deployment configurations enhance security, compliance, and operational efficiency across all AI environments. Organizations that standardize their deployment approach reduce configuration drift and ensure reliable performance. You must implement systematic deployment practices that align with your business requirements. Here's how:
 
-1. **Select the appropriate operating model for your organization.** Deployment models create logical boundaries such as data domains or business functions to ensure autonomy, governance, and cost tracking. Deploy an instance of Microsoft Foundry for each business unit because sharing a single instance across multiple business units limits cost tracking and creates resource constraints. Define a project per use case and use hub-based projects only when teams require shared resources. For more information, see [What type of Foundry project do I need?](/azure/ai-foundry/what-is-azure-ai-foundry#project-types) and [Microsoft Foundry resource types](/azure/ai-foundry/concepts/resource-types).
-
 2. **Deploy to regions that meet your requirements.** Model placement depends on specific latency, throughput, and compliance requirements that determine optimal performance. Check the Azure region [product availability](https://azure.microsoft.com/explore/global-infrastructure/products-by-region/table) table to confirm support for required hardware, features, and data-residency rules before deployment to ensure performance and regulatory alignment.
 
-3. **Monitor AI deployment resources continuously.** Resource monitoring captures performance data and identifies issues before they affect users. Diagnostic settings capture logs and metrics for all key services including [Foundry and Foundry Tools](/azure/ai-services/diagnostic-logging). This monitoring provides visibility into system health and enables proactive issue resolution. See also [Azure Monitor Baseline Alerts](https://azure.github.io/azure-monitor-baseline-alerts/patterns/artificial-intelligence/).
+3. **Monitor AI deployment resources continuously.** Resource monitoring captures performance data and identifies issues before they affect users. Diagnostic settings capture logs and metrics for all key services including [Foundry and Foundry Tools](/azure/ai-services/diagnostic-logging). This monitoring provides visibility into system health and enables proactive issue resolution.
 
-4. **Manage deployment resources centrally.** Centralized resource management provides consistent oversight and control across all AI deployments. Use the [Management center](/azure/ai-foundry/concepts/management-center) in Foundry to configure Foundry projects, track resource utilization, and govern access. This approach ensures standardized resource allocation and cost control. Also [monitor costs in Foundry](/azure/ai-foundry/concepts/management-center).
+4. **Manage deployment resources centrally.** Centralized resource management provides consistent oversight and control across all AI deployments. For example, use the [Management center](/azure/ai-foundry/concepts/management-center) in Foundry to configure Foundry projects, track resource utilization, and govern access. This approach ensures standardized resource allocation and cost control. Also [monitor costs in Foundry](/azure/ai-foundry/concepts/management-center).
 
 5. **Use Azure API Management as a unified gateway for multiple deployments.** API Management provides consistent security, scalability, rate limiting, token quotas, and centralized monitoring when onboarding multiple applications or teams. This approach standardizes access patterns and reduces management overhead across your AI services. For more information, see [Access Azure OpenAI and other language models through a gateway](/azure/architecture/ai-ml/guide/azure-openai-gateway-guide).
 

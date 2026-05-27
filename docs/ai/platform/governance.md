@@ -26,10 +26,6 @@ AI platform governance uses policy controls to keep Foundry Tools operating cons
     - [Azure AI Search](https://www.azadvertizer.net/azpolicyinitiativesadvertizer/Enforce-Guardrails-CognitiveServices.html)
     - [Azure AI Bot Service](https://www.azadvertizer.net/azpolicyinitiativesadvertizer/Enforce-Guardrails-BotService.html)
 
-Define your AI platform instance topology
-
-organization must adopt an instance topology policy covering production isolation, non-production colocation, and in-product boundaries. See [Define your AI platform instance topology]
-
 ## Govern AI models
 
 Model governance sets controls to keep AI models safe, reliable, and ethical. It uses Azure Policy to restrict which models can be deployed. Content safety filters block harmful or inappropriate outputs. Clear rules for inputs and outputs prevent misuse and protect against harmful content. These measures maintain compliance and support responsible AI principles. Continuous oversight through monitoring, audits, and policy reviews protects users and builds trust. To govern AI models, follow these steps:
