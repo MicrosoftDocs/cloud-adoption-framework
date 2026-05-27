@@ -13,8 +13,8 @@ items:
         items:
           - name: Resource selection
             href: platform/resource-selection.md
-          - name: Resource sharing
-            href: platform/resource-sharing.md
+          - name: AI platform sharing
+            href: platform/ai-platform-sharing-isolation-colocation.md
           - name: Networking
             href: platform/networking.md
           - name: Governance
