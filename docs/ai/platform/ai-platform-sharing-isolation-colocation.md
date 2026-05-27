@@ -1,85 +1,87 @@
 ---
-title: Select Azure Platform as a Service (PaaS) Solutions for AI
-description: Learn how to select the right Foundry Tools, compute, and tools to build effective generative and nongenerative AI workloads.
+title: AI Resource Sharing Decision Guidance
+description: Azure AI resource sharing guidance to define colocation boundaries, isolation policies, and exception criteria for Microsoft Foundry and Azure Machine Learning
+#customer intent: As a decision maker defining AI adoption policy for my organization, I want guidance on how to decide when to isolate workload environments by using dedicated instances of AI platform resources, and when it is acceptable to colocate multiple workload environments on shared AI platform resources, so that I can establish a clear operational standard for AI workload teams to follow. Examples of AI platform resources include Microsoft AI Foundry instances and Azure Machine Learning workspaces.
 author: stephen-sumner
 ms.author: ssumner
-ms.date: 11/17/2025
+ms.reviewer: ssumner
+ms.date: 05/26/2026
 ms.topic: concept-article
+ms.collection: ce-skilling-ai-copilot
 ---
 
-# Select Azure PaaS solutions for AI
+# AI resource sharing decision guidance
 
-This article explains how to select resources for Azure AI platform as a service (PaaS) solutions. The following table summarizes the main Azure AI PaaS solutions and key decision criteria.
+An AI platform is the hosted environment where your organization runs and operates AI models. It provides the networking perimeter, identity model, data plane, and quota allocation that surround your models, deployments, indexes, evaluations, and related assets. Microsoft Foundry and Azure Machine Learning are the two Azure services that provide this platform. Every deployment of either service creates a new instance of that platform.
 
-| AI services | AI type | Description | Skills required |
-|---------|------------|---------| --- |
-| [Microsoft Foundry](/azure/ai-foundry/what-is-azure-ai-foundry) | Generative AI and nongenerative AI | A platform for building and deploying generative and nongenerative AI applications | Developer and data science skills |
-| [Foundry Tools](/azure/ai-services/what-are-ai-services) | Generative AI and nongenerative AI | Various services that provide prebuilt generative and nongenerative AI models | Developer skills |
-| [Azure OpenAI](/azure/ai-foundry/openai/concepts/models) | Generative AI | A service for accessing OpenAI models | Developer and data science skills |
-| [Azure Machine Learning](/azure/machine-learning/overview-what-is-azure-machine-learning) | Machine learning | A service for training and deploying machine learning models | Developer skills and advanced data science skills |
+Your organization must decide whether to put an environment (dev, test, prod) from a single workload on its own AI platform instance or allow environments from two or more workloads to share one instance of an AI platform. That choice, often called colocation, shapes the blast radius across your AI estate. It also shapes compliance posture and cost.
 
-## Select resources for generative AI workloads
+**Recommendation:** Establish an organization-wide policy that defines default isolation requirements, approved sharing boundaries, exception criteria, and separate expectations for production and pre-production AI platform environments.
 
-Generative AI uses multiple resources to process input data and produce meaningful outputs. To build effective applications, such as those that use [retrieval-augmented generation (RAG)](/azure/architecture/ai-ml/guide/rag/rag-solution-design-and-evaluation-guide), select resources that ground AI models and deliver accurate results.
+**Decision guidance:**
 
-:::image type="content" source="../images/generative-ai-app.svg" alt-text="Diagram that shows the basic components of a generative AI workload." lightbox="../images/generative-ai-app.svg" border="false":::
+## 1. Define AI platform sharing boundaries
 
-### Generative AI workflow
+Every organization needs boundaries across which workloads must never share an AI platform instance. This boundary applies in every environment, production and pre-production alike. Workloads inside the same boundary can potentially share a platform instance. Workloads in different boundaries cannot.
 
-The following workflow matches the diagram above:
+- **Why draw sharing boundaries?** Without sharing boundaries, workload teams default to whatever pattern is convenient in the moment, and the AI platform accumulates conflicting requirements over time. Over time, that creates inconsistent ownership models, conflicting compliance requirements, unclear cost allocation, and shared operational risk across unrelated workloads. For example, unrelated business areas might share quota on the same platform instance to reduce cost. The result is an AI platform with inconsistent governance boundaries that become difficult to understand and audit.
 
-1. The AI app receives a user query.
-2. An orchestrator, such as Foundry Agent Service or the [Microsoft Agent Framework](https://devblogs.microsoft.com/foundry/introducing-microsoft-agent-framework-the-open-source-engine-for-agentic-ai-apps/), manages data flow.
-3. A search and retrieval mechanism finds the grounding data.
-4. The mechanism sends the grounding data to a generative AI platform.
-5. The generative AI platform creates a response using the user query and grounding data.
+- **Common boundaries.** Choose a boundary model that aligns to how your organization already assigns responsibility and governs technology decisions. Common models include:
 
-### Generative AI resource selection
+    - A **business unit** boundary optimizes for common operational ownership and funding
 
-Follow these steps to build generative RAG workloads:
+    - A **data domain** boundary optimizes for common compliance and data handling requirements
 
-1. **Select a generative AI platform.** Use Foundry or Azure OpenAI to deploy and manage generative AI models. Foundry offers a code-first platform with built-in tools for development, deployment, and orchestration. Choose Azure OpenAI if you only need access to [OpenAI models](/azure/ai-services/openai/concepts/models).
+    - A **product owner** boundary optimizes for a common engineering lifecycle and platform operations
 
-2. **Select an AI compute type.** Foundry requires [compute instances](/azure/ai-studio/how-to/create-manage-compute) for specific features. Pick a compute type that fits your performance and budget needs.
+    Inside the boundary, teams can still choose dedicated platform instances when isolation makes sense. Outside the boundary, sharing is not permitted.
 
-3. **Select an orchestrator.** Use orchestrators like [Foundry Agent Service](/azure/ai-foundry/agents/overview) or [Microsoft Agent Framework](https://devblogs.microsoft.com/foundry/introducing-microsoft-agent-framework-the-open-source-engine-for-agentic-ai-apps/) to manage data flow and interactions. If your workload uses multiple agents, make sure your orchestrator supports the [AI agent orchestration patterns](/azure/architecture/ai-ml/guide/ai-agent-design-patterns) you need.
+- **Find what works best.** No single model is universally correct. Consistency matters more than which model you select, because a clearly enforced boundary model keeps governance understandable as the AI platform grows.
 
-4. **Select a search and knowledge retrieval mechanism.** To ground generative AI models, create an index or vector database for relevant data. Use Azure AI Search to build traditional and vector indexes from various [data sources](/azure/search/search-indexer-overview#supported-data-sources), apply [data chunking](/azure/search/vector-search-integrated-vectorization), and use [multiple query types](/azure/search/search-query-overview#types-of-queries). For structured databases, consider [Azure Cosmos DB](/azure/cosmos-db/vector-database), [Azure Database for PostgreSQL](/azure/postgresql/flexible-server/how-to-use-pgvector), or [Azure Managed Redis](/azure/redis/overview-vector-similarity).
+## 2. Avoid AI platform sharing in production
 
-5. **Select a data source for grounding data.** Store grounding data in Azure Blob Storage for images, audio, video, or large datasets. You can also use databases supported by [AI Search](/azure/search/search-indexer-overview#supported-data-sources) or [vector databases](/dotnet/ai/conceptual/vector-databases#available-vector-database-solutions).
+AI platform sharing in production is the practice of running more than one production AI workload environment on the same Microsoft Foundry resource or Azure Machine Learning workspace. In Azure, the AI platform instance defines the network boundary, identity boundary, and quota boundary for the workload environments that use it. For that reason, organizations should define a specific policy for production AI platform sharing.
 
-6. **Select a compute platform.** Use the Azure [compute decision tree](/azure/architecture/guide/technology-choices/compute-decision-tree) to choose the right platform for your workload.
+**1. Default to a single AI platform instance per production environment.** Production AI environments should default to production environment isolation. Do not colocate multiple production workload environments on the same Microsoft Foundry resource or Azure Machine Learning workspace unless a documented exception exists. A dedicated AI platform instance for each production workload environment should be the standard approach. Teams should treat AI platform sharing as an exception, not a default practice.
 
-## Select resources for nongenerative AI workloads
+- **Why default to isolation?** hared AI platforms also create shared operational risk. A security issue, misconfiguration, service outage, or quota exhaustion event can affect every colocated workload environment. Isolation also reduces the risk of accidental cross-workload access exposure and prevents one workload from consuming GPU capacity or quota needed by another workload. Production environments usually have the highest business impact and regulatory exposure. Most organizations require clear ownership boundaries and strong operational isolation for these environments.
 
-Nongenerative AI workloads use platforms, compute resources, data sources, and data processing tools to support machine learning tasks. Select resources that help you build AI workloads with prebuilt or custom solutions.
+- **Tradeoff:** Isolation increases cost and management overhead. Each platform instance carries its own operational overhead for networking, identity, monitoring, and operations. Organizations must balance these costs against the operational and security benefits of stronger containment.
 
-:::image type="content" source="../images/non-generative-ai-app.svg" alt-text="Diagram that shows the basic components of a nongenerative AI workload." lightbox="../images/non-generative-ai-app.svg" border="false":::
+**2. Permit colocation only through a documented exception.** Colocation reduces overhead and consolidates platform operations. It also merges the blast radius, identity boundary, and quota pool of every workload that shares the instance.
 
-### Nongenerative AI workflow
+- Only permit production workloads to share instances of Microsoft Foundry or Azure Machine Learning when each of the following conditions holds:
 
-The following workflow matches the diagram above:
+  1. All colocated workloads must share the same regulatory scope, data classification, residency requirements, and data handling standards.
 
-1. The AI app ingests incoming data.
-2. An optional data processing mechanism extracts or transforms the data.
-3. An AI model endpoint analyzes the data.
-4. You can use the data for training or fine-tuning AI models.
+  2. All workloads must operate inside the same network boundary, same DNS namespace, and the same identity boundary.
 
-### Nongenerative AI resource selection
+  3. The organization must accept the shared outage risk and the shared quota exhaustion risk that colocation introduces.
 
-Follow these steps to build nongenerative AI workloads:
+  4. The cost or operational overhead of separate instances must materially outweigh the isolation benefit. Cost pressure alone is not sufficient justification.
 
-1. **Select a nongenerative AI platform.** Use Foundry Tools or Machine Learning based on your needs. Foundry Tools offer prebuilt models that simplify deployment and reduce the need for advanced data science skills. Machine Learning lets you develop custom models with your data and integrate them into your workloads.
+  5. The team accepts that splitting workloads apart later is costly. AI platform state does not transfer cleanly between instances and often requires recreation or reconfiguration.
 
-2. **Select an AI compute type.** Machine Learning requires [compute resources](/azure/machine-learning/concept-azure-machine-learning-v2) to run jobs or host endpoints. Pick a compute type that fits your performance and budget needs. Foundry Tools do not require compute resources.
+- **Tradeoff:** Every shared platform instance requires a clearly identified platform owner responsible for quota management, network configuration, access reviews, lifecycle operations, and incident coordination.
 
-3. **Select a data source.** Use supported [data sources](/azure/machine-learning/how-to-datastore) to host training data for Machine Learning. Many Foundry Tools do not require fine-tuning data. Some Foundry Tools, such as Azure AI Custom Vision, let you upload local files to managed storage.
+**3. Segment use cases within the AI platform instance.**  Whether a platform instance is isolated or colocated, use in-product segementation features to isolate use cases. Treat each distinct use case as its own logical workload inside the platform instance. For example:
 
-4. **Select a compute platform.** Use the Azure [compute decision tree](/azure/architecture/guide/technology-choices/compute-decision-tree) to choose the right platform for your workload.
+- In Microsoft Foundry, provision one [project](/azure/ai-foundry/how-to/create-projects) per use case inside the Foundry resource.
 
-5. **Select a data processing service (optional).** Use Azure Functions to process serverless data. Use Azure Event Grid to trigger data processing pipelines.
+- In Azure Machine Learning, use a [hub workspace](/azure/machine-learning/concept-hub-workspace) with project workspaces to segment use cases.
 
-## Next steps
+These constructs give each use case its own assets and role assignments without provisioning a new instance for every team.
 
-> [!div class="nextstepaction"]
-> [Learn about Azure networking options](../../scenarios/ai/platform/networking.md)
+- When colocation is permitted under the exception process, elevate this in-product separation from a recommendation to an enforced policy requirement.
+
+- If a workload requires complex segmentation across multiple Foundry projects or Azure Machine Learning workspaces, reassess whether the current sharing model still provides acceptable operational simplicity and isolation.
+
+For background on the constructs that anchor these decisions, see [Microsoft Foundry resources](/azure/ai-foundry/concepts/ai-resources) and [Azure Machine Learning workspaces](/azure/machine-learning/concept-workspace).
+
+## 3. AI preproduction resource sharing
+
+Preproduction environments invert the production default. These environments support experimentation and prerelease validation across development, test, and stage tiers. Dedicated instances of AI platform resources rarely justify their cost in those tiers. Default to a shared instance per environment tier.
+
+- **When to isolate in preproduction environments.** Use a dedicated preproduction instance per workload only when a workload processes regulated data in test or must mirror its production topology for performance validation. Treat that requirement as an exception and require explicit approval before provisioning.
+
+- **Tradeoff:** This approach lowers idle capacity cost and keeps the platform inventory small enough to govern efficiently. Shared preproduction instances expose every workload to interference from another team's experiments. A misconfigured fine-tuning job or a runaway evaluation run can consume shared quota and slow other teams. Test results captured on a shared instance also don't always predict production behavior. Workloads with strict performance or compliance validation needs require a dedicated environment despite the higher cost.
