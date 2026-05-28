@@ -90,10 +90,10 @@ additionalContent:
       - title: Unified data platform
         summary: Unify your data for analytics and AI. 
         url: ./data/executive-strategy-unify-data-platform.md
-      - title: General AI adoption
+      - title: AI adoption
         summary: How to adopt generative and non-generative AI across your organization.
         url: ./scenarios/ai/index.md
-      - title: AI agents
+      - title: Agents
         summary: How to adopt and govern AI agents.
         url: ./ai-agents/index.md
       - title: Azure landing zone

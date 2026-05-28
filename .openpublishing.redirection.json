@@ -4054,6 +4054,11 @@
       "source_path": "docs/strategy/assessment.md",
       "redirect_url": "/azure/cloud-adoption-framework/strategy/motivations",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ai/infrastructure/cycle-cloud.md",
+      "redirect_url": "/azure/cloud-adoption-framework/ai/infrastructure/ai-azure-infrastructure-implementation.md",
+      "redirect_document_id": true
     }
    ]
 }
