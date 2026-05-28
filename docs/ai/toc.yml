@@ -1,4 +1,3 @@
-
 items:
   - name: Overview AI adoption
     href: index.md
@@ -30,16 +29,14 @@ items:
         href: infrastructure/ai-azure-infrastructure.md
       - name: Architecture decisions
         items:
-          - name: Compute
-            href: infrastructure/compute.md
-          - name: Storage
-            href: infrastructure/storage.md
+          - name: Resource selection
+            href: platform/resource-selection.md
+          - name: AI platform sharing
+            href: platform/ai-platform-sharing-isolation-colocation.md
           - name: Networking
-            href: infrastructure/networking.md
+            href: platform/networking.md
           - name: Governance
-            href: infrastructure/governance.md
-          - name: Management
-            href: infrastructure/management.md
+            href: platform/governance.md
           - name: Security
             href: infrastructure/security.md
           - name: Well-architected
@@ -50,13 +47,11 @@ items:
     href: govern.md
   - name: Secure AI
     href: secure.md
-  - name: Manage AI 
-    href: manage.md  
+  - name: Manage AI
+    href: manage.md
   - name: Resources
-    expanded: true
     items:
       - name: AI Center of Excellence
         href: center-of-excellence.md
       - name: Agent adoption
         href: ../ai-agents/index.md
-

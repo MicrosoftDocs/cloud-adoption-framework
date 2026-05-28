@@ -13,17 +13,21 @@ This article outlines the organizational process for building AI workloads in Az
 
 :::image type="content" source="./images/ai-ready.svg" alt-text="Diagram that shows the 6 phases of AI adoption: Strategy, Plan, Ready, Govern, Secure, Manage." lightbox="./images/ai-ready.svg" border="false":::
 
-## Establish AI governance
+<a name='Establish-AI-governance'></a>
+
+## AI governance
 
 AI governance requires proper resource organization and policy management to ensure secure, compliant, and cost-effective operations. You must create clear governance boundaries to protect sensitive data and control AI resource access effectively. Here's how:
 
 1. **Create separate management groups for internet-facing and internal AI workloads.** Management group separation establishes critical data governance boundaries between external ("online") and internal-only ("corporate") AI applications. This separation prevents external users from accessing sensitive internal business data while you maintain appropriate access controls. The approach aligns with [Azure landing zone management group](/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org-management-groups) architecture principles and supports policy inheritance across workload types.
 
-2. **Apply AI-specific policies to each management group.** Start with baseline policies from [Azure landing zones](https://aka.ms/alz/policies) and add Azure Policy definitions for [Foundry](/azure/ai-foundry/how-to/built-in-policy-model-deployment), [Foundry Tools](/azure/ai-services/policy-reference), [Azure AI Search](/azure/governance/policy/samples/built-in-policies#search), and [Azure Virtual Machines](/azure/virtual-machines/policy-reference). Policy enforcement ensures uniform AI governance across your platform and reduces manual compliance oversight.
+2. **Apply AI-specific policies to each management group.** Start with baseline policies from [Azure landing zones](https://aka.ms/alz/policies) and add Azure Policy definitions as needed for [Foundry](/azure/ai-foundry/how-to/built-in-policy-model-deployment), [Foundry Tools](/azure/ai-services/policy-reference), [Azure AI Search](/azure/governance/policy/samples/built-in-policies#search), and [Azure Virtual Machines](/azure/virtual-machines/policy-reference). Policy enforcement ensures uniform AI governance across your platform and reduces manual compliance oversight.
 
 3. **Deploy AI resources within workload-specific subscriptions.** AI resources must inherit governance policies from their workload management group rather than platform subscriptions. This separation prevents development bottlenecks that platform team controls create and enables workload teams to operate with appropriate autonomy. Deploy AI workloads to application landing zone subscriptions in Azure landing zone environments.
 
-## Establish AI networking
+<a name='Establish-AI-networking'></a>
+
+## AI networking
 
 AI networking encompasses network infrastructure design, security measures, and efficient data transfer patterns for AI workloads. You must implement proper security controls and connectivity options to prevent network-based disruptions and maintain consistent performance. Here's how:
 
@@ -37,7 +41,9 @@ AI networking encompasses network infrastructure design, security measures, and 
 
    - **Use Azure VPN Gateway for moderate data transfer.** [Azure VPN Gateway](/azure/vpn-gateway/vpn-gateway-about-vpngateways) works well for moderate data volumes, infrequent data transfer, or when public internet access is required. VPN Gateway offers simpler setup and cost-effective operation for smaller datasets compared to ExpressRoute. Use the appropriate [topology and design](/azure/vpn-gateway/design) for your AI workloads, including site-to-site VPN for cross-premises connectivity and point-to-site VPN for secure device access.
 
-## Establish AI reliability
+<a name='Establish-AI-reliability'></a>
+
+## AI reliability
 
 AI reliability requires strategic region placement and redundancy planning to ensure consistent performance and high availability. Organizations must address model hosting, data locality, and disaster recovery to maintain reliable AI services. You need to plan your regional deployment strategy to avoid service interruptions and optimize performance. Here's how:
 
@@ -51,7 +57,9 @@ AI reliability requires strategic region placement and redundancy planning to en
 
 5. **Replicate critical AI assets to secondary regions for business continuity.** Business continuity requires replicating fine-tuned models, RAG datasets, trained models, and training data to secondary regions. Asset replication enables faster recovery during outages and maintains service availability across different failure scenarios.
 
-## Establish an AI foundation
+<a name='Establish-an-AI-foundation'></a>
+
+## AI foundation
 
 An AI foundation provides the core infrastructure and resource hierarchy that support AI workloads in Azure. It includes setting up scalable, secure environments that align with governance and operational needs. A strong AI foundation enables efficient deployment and management of AI workloads. It also ensures security and flexibility for future growth.
 
