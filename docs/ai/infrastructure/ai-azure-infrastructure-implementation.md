@@ -2,7 +2,7 @@
 title: Implementation option for AI on Azure infrastructure
 description: Discover how to build AI workloads on Azure IaaS with detailed recommendations, architecture guides, and best practices.
 author: stephen-sumner
-ms.author: rajanaki
+ms.author: ssumner
 ms.date: 04/09/2025
 ms.topic: concept-article
 ---
@@ -17,17 +17,6 @@ This article provides implementation recommendations for organizations running A
 
 - *Full control of the infrastructure.* Users have full control over the deployed infrastructure, allowing them to bring their own code, libraries, and packages, and to use resources on demand.
 
-## Design guidelines
-
-The following articles provide guidelines for AI workloads on Azure infrastructure (IaaS):
-
-- [Compute](../../scenarios/ai/infrastructure/compute.md)
-- [Storage](../../scenarios/ai/infrastructure/storage.md)
-- [Networking](../../scenarios/ai/infrastructure/networking.md)
-- [Governance](../../scenarios/ai/infrastructure/governance.md)
-- [Management](../../scenarios/ai/infrastructure/management.md)
-- [Security](../../scenarios/ai/infrastructure/security.md)
-
 ## Architecture
 
 :::image type="content" source="../images/ai-infrastructure-landing-zone.svg" alt-text="Diagram showing AI application on Azure infrastructure in Azure landing zone." lightbox="../images/ai-infrastructure-landing-zone.svg" border="false":::
@@ -36,8 +25,3 @@ The following articles provide guidelines for AI workloads on Azure infrastructu
 ## Deploy CycleCloud Workspace for Slurm
 
 The [CycleCloud Workspace for Slurm](/azure/cyclecloud/qs-deploy-ccws) can be used as the initial deployment in the enterprise environment. You can develop and customize the code to expand its functionality and/or adapt it to your Azure landing zone environment. Then, follow the guidance to [fine-tune a diffusion model from Hugging Face using Azure CycleCloud Workspace for Slurm](https://techcommunity.microsoft.com/t5/azure-compute-blog/fine-tuning-a-hugging-face-diffusion-model-on-cyclecloud/ba-p/4262431).
-
-## Next step
-
-> [!div class="nextstepaction"]
-> [Compute IaaS AI](../../scenarios/ai/infrastructure/compute.md)
