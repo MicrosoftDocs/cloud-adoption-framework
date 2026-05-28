@@ -15,6 +15,8 @@ items:
         href: platform/architectures.md
       - name: Resource selection
         href: platform/resource-selection.md
+      - name: Platform sharing
+        href: platform/ai-platform-sharing-isolation-colocation.md
       - name: Networking
         href: platform/networking.md
       - name: Governance
@@ -29,16 +31,18 @@ items:
         href: infrastructure/ai-azure-infrastructure.md
       - name: Architecture decisions
         items:
-          - name: Resource selection
-            href: platform/resource-selection.md
-          - name: AI platform sharing
-            href: platform/ai-platform-sharing-isolation-colocation.md
+          - name: Compute
+            href: infrastructure/compute.md
           - name: Networking
-            href: platform/networking.md
+            href: infrastructure/networking.md
+          - name: Storage
+            href: infrastructure/storage.md
           - name: Governance
-            href: platform/governance.md
+            href: infrastructure/governance.md
           - name: Security
             href: infrastructure/security.md
+          - name: Management
+            href: infrastructure/management.md
           - name: Well-architected
             href: infrastructure/well-architected.md
       - name: Implementation options
