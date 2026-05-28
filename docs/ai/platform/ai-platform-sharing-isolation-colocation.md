@@ -12,7 +12,7 @@ ms.collection: ce-skilling-ai-copilot
 
 # AI platform sharing decision guidance
 
-An AI platform is the hosted environment where your organization runs and operates AI models. It provides the networking perimeter, identity model, data plane, and quota allocation that surround your models, deployments, indexes, evaluations, and related assets. Microsoft Foundry and Azure Machine Learning are two Azure AI platforms. Every deployment of either service creates a new instance.
+An AI platform is where your organization runs and operates AI models. It provides the networking perimeter, identity model, data plane, and quota allocation that surround your models, deployments, indexes, evaluations, and related assets. Microsoft Foundry and Azure Machine Learning are two Azure AI platforms. Every deployment of either service creates a new instance.
 
 Your organization must decide how to place AI workload environments across AI platform instances. You can isolate each environment such as dev, test, or prod in its own platform instance. You can also allow multiple workloads or environments to share the same instance. This decision, often called colocation, affects the blast radius of operational or security issues. It also affects compliance boundaries and platform cost.
 
@@ -42,7 +42,7 @@ Every organization needs boundaries across which workloads must never share an A
 
 AI platform sharing in production is the practice of running more than one production AI workload environment on the same Microsoft Foundry resource or Azure Machine Learning workspace. In Azure, the AI platform instance defines the network boundary, identity boundary, and quota boundary for the workload environments that use it. For that reason, organizations should define a specific policy for production AI platform sharing.
 
-**1. Default to a single AI platform instance per production environment.** Production AI environments should default to production environment isolation. Don't colocate multiple production workload environments on the same Microsoft Foundry resource or Azure Machine Learning workspace unless a documented exception exists. A dedicated AI platform instance for each production workload environment should be the standard approach. Treat AI platform sharing as an exception, not a default practice.
+**1. Default to a single AI platform instance per production workload.** Production AI environments should default to production environment isolation. Don't colocate multiple production workloads on the same Microsoft Foundry resource or Azure Machine Learning workspace unless a documented exception exists. A dedicated AI platform instance for each production workload environment should be the standard approach. Treat AI platform sharing as an exception, not a default practice.
 
 - **Why default to isolation?** Shared AI platforms also create shared operational risk. A security issue, misconfiguration, service outage, or quota exhaustion event can affect every colocated workload environment. Isolation also reduces the risk of accidental cross-workload access exposure and prevents one workload from consuming GPU capacity or quota needed by another workload. Production environments usually have the highest business impact and regulatory exposure. Most organizations require clear ownership boundaries and strong operational isolation for these environments.
 
@@ -62,21 +62,21 @@ AI platform sharing in production is the practice of running more than one produ
 
   5. The team accepts that splitting workloads apart later is costly. AI platform state doesn't transfer cleanly between instances and often requires recreation or reconfiguration.
 
-- **Tradeoff:** Every shared platform instance requires a clearly identified platform owner responsible for quota management, network configuration, access reviews, lifecycle operations, and incident coordination.
+- **Tradeoff:** Every shared AI platform instance requires a clearly identified platform owner responsible for quota management, network configuration, access reviews, lifecycle operations, and incident coordination.
 
-**3. Segment use cases within the AI platform instance.**  Whether a platform instance is isolated or colocated, use in-product segmentation features to isolate use cases. Treat each distinct use case as its own logical workload inside the platform instance. For example:
+**3. Segment use cases within the AI platform instance.**  Whether a platform instance is isolated or colocated, use in-product segmentation features to isolate use cases. Treat each distinct use case, such as wholly distinct user experiences within a single workload, as its own logical deployment inside the platform instance. For example:
 
-- In Microsoft Foundry, provision one [project](/azure/ai-foundry/how-to/create-projects) per use case inside the Foundry resource.
+- In Microsoft Foundry, provision one [project](/azure/foundry/how-to/create-projects) per use case inside the Foundry resource.
 
 - In Azure Machine Learning, use a [hub workspace](/azure/machine-learning/concept-hub-workspace) with project workspaces to segment use cases.
 
-These constructs give each use case its own assets and role assignments without provisioning a new instance for every team.
+These constructs give each use case its own assets and role assignments without provisioning a new instance for every scenario.
 
 - When colocation is permitted under the exception process, elevate this in-product separation from a recommendation to an enforced policy requirement.
 
 - If a workload requires complex segmentation across multiple Foundry projects or Azure Machine Learning workspaces, reassess whether the current sharing model still provides acceptable operational simplicity and isolation.
 
-For background on the constructs that anchor these decisions, see [Microsoft Foundry resources](/azure/ai-foundry/concepts/ai-resources) and [Azure Machine Learning workspaces](/azure/machine-learning/concept-workspace).
+For background on the constructs that anchor these decisions, see [Microsoft Foundry resources](/azure/foundry/how-to/create-projects) and [Azure Machine Learning workspaces](/azure/machine-learning/concept-hub-workspace).
 
 ## 3. Define a preproduction AI platform sharing policy
 
@@ -84,4 +84,4 @@ Preproduction environments invert the production default. These environments sup
 
 - **When to isolate in preproduction environments.** Use a dedicated preproduction instance per workload only when a workload processes regulated data in test or must mirror its production topology for performance validation. Treat that requirement as an exception and require explicit approval before provisioning.
 
-- **Tradeoff:** This approach lowers idle capacity cost and keeps the platform inventory small enough to govern efficiently. Shared preproduction instances expose every workload to interference from another team's experiments. A misconfigured fine-tuning job or a runaway evaluation run can consume shared quota and slow other teams. Test results captured on a shared instance also don't always predict production behavior. Workloads with strict performance or compliance validation needs require a dedicated environment despite the higher cost.
+- **Tradeoff:** Preproduction colocation lowers idle capacity cost and keeps the platform inventory smaller. However, it exposes every workload to interference from another team's experiments. A misconfigured fine-tuning job or a runaway evaluation run can consume shared quota and slow other teams. Test results captured on a shared instance also don't always predict production behavior. Workloads with strict performance or compliance validation needs require a dedicated environment despite the higher cost.
