@@ -22,18 +22,20 @@ Articles for the [Azure Kubernetes Services](/azure/cloud-adoption-framework/sce
 
 ## Articles deleted
 
- Articles for the following landing zone accelerators were deleted: [Azure Integration Services](/azure/cloud-adoption-framework/scenarios/app-platform/integration-services/landing-zone-accelerator), [Azure API Management](/azure/cloud-adoption-framework/scenarios/app-platform/api-management/landing-zone-accelerator), [Azure App Service](/azure/cloud-adoption-framework/scenarios/app-platform/app-services/landing-zone-accelerator), and [Azure Container Apps](/azure/cloud-adoption-framework/scenarios/app-platform/app-services/landing-zone-accelerator).
+ Articles for the following landing zone accelerators were deleted. Only the articles in the Cloud Adoption Framework were removed. The repositories in GitHub with the deployable assets are still available. Use the links to access the GitHub:
+
+- [Azure Integration Services GitHub repo](https://github.com/Azure/Integration-Services-Landing-Zone-Accelerator)
+- [Azure API Management](https://github.com/Azure/apim-landing-zone-accelerator)
+- [Azure App Service](https://github.com/Azure/appservice-landing-zone-accelerator)
+- [Azure Container Apps](https://github.com/Azure/aca-landing-zone-accelerator).
+
+**Rationale:** The Cloud Adoption Framework is a roadmap for decision makers. It helps them make the best architecture, investment, and policy decisions for their organization. Workload design guidance is provided through the Azure Architecture Center and the Microsoft Well‑Architected Framework, which remain the primary sources for alternative architecture guidance.
 
 ## April 2026
 
 ### Deprecation notice
 
-**Articles for select application landing zone accelerator articles in the Cloud Adoption Framework are deprecated.**
-This deprecation applies only to the Cloud Adoption Framework guidance articles for the following application landing zone accelerators: [Azure Integration Services](/azure/cloud-adoption-framework/scenarios/app-platform/integration-services/landing-zone-accelerator), [Azure Kubernetes Services](/azure/cloud-adoption-framework/scenarios/app-platform/aks/landing-zone-accelerator), [Azure API Management](/azure/cloud-adoption-framework/scenarios/app-platform/api-management/landing-zone-accelerator), [Azure App Service](/azure/cloud-adoption-framework/scenarios/app-platform/app-services/landing-zone-accelerator), and [Azure Container Apps](/azure/cloud-adoption-framework/scenarios/app-platform/app-services/landing-zone-accelerator).
-
-These articles will remain available on Microsoft Learn until May 29, 2026. After this date, the Cloud Adoption Framework versions of these articles will be removed. This change applies solely to the guidance in the Cloud Adoption Framework. If your organization currently references this Cloud Adoption Framework content, take any necessary steps to retain information for your own records prior to the removal date. There are directions provided in the existing guidance. Use the links above to navigate there.
-
-The Cloud Adoption Framework provides organization‑level decision guidance. Architecture and workload design guidance is provided through the Azure Architecture Center and the Microsoft Well‑Architected Framework, which remain the primary sources for alternative architecture guidance.
+**Articles for select application landing zone accelerator are deprecated.**Azure Integration Services, Azure Kubernetes Services, Azure API Management, Azure App Service, and Azure Container Apps.
 
 ## March 2026
 
