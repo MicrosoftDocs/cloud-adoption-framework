@@ -14,11 +14,21 @@ ms.custom: UpdateFrequency.5, historical
 
 Microsoft's Cloud Adoption Framework is continuously updated with new guidance, enhanced content, and refined recommendations based on customer experiences and evolving cloud practices. This page helps you stay informed about the latest updates, new resources, deprecated content, and where to find specific information as the framework evolves.
 
+## May 2029
+
+### Deletion postponement
+
+Articles for the [Azure Kubernetes Services](/azure/cloud-adoption-framework/scenarios/app-platform/aks/landing-zone-accelerator) landing zone accelerator have been postponed until a forthcoming article in the Azure Architecture Center is released. Deprecation status remains the same. Date of deletion is to be determined.
+
+## Articles deleted
+
+ Articles for the following landing zone accelerators were deleted: [Azure Integration Services](/azure/cloud-adoption-framework/scenarios/app-platform/integration-services/landing-zone-accelerator), [Azure API Management](/azure/cloud-adoption-framework/scenarios/app-platform/api-management/landing-zone-accelerator), [Azure App Service](/azure/cloud-adoption-framework/scenarios/app-platform/app-services/landing-zone-accelerator), and [Azure Container Apps](/azure/cloud-adoption-framework/scenarios/app-platform/app-services/landing-zone-accelerator).
+
 ## April 2026
 
 ### Deprecation notice
 
-**Select application landing zone accelerator articles in the Cloud Adoption Framework are deprecated.**
+**Articles for select application landing zone accelerator articles in the Cloud Adoption Framework are deprecated.**
 This deprecation applies only to the Cloud Adoption Framework guidance articles for the following application landing zone accelerators: [Azure Integration Services](/azure/cloud-adoption-framework/scenarios/app-platform/integration-services/landing-zone-accelerator), [Azure Kubernetes Services](/azure/cloud-adoption-framework/scenarios/app-platform/aks/landing-zone-accelerator), [Azure API Management](/azure/cloud-adoption-framework/scenarios/app-platform/api-management/landing-zone-accelerator), [Azure App Service](/azure/cloud-adoption-framework/scenarios/app-platform/app-services/landing-zone-accelerator), and [Azure Container Apps](/azure/cloud-adoption-framework/scenarios/app-platform/app-services/landing-zone-accelerator).
 
 These articles will remain available on Microsoft Learn until May 29, 2026. After this date, the Cloud Adoption Framework versions of these articles will be removed. This change applies solely to the guidance in the Cloud Adoption Framework. If your organization currently references this Cloud Adoption Framework content, take any necessary steps to retain information for your own records prior to the removal date. There are directions provided in the existing guidance. Use the links above to navigate there.
