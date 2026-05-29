@@ -1224,6 +1224,136 @@
       "source_path": "docs/scenarios/cloud-scale-analytics/best-practices/data-science-best-practices.md",
       "redirect_url": "/azure/cloud-adoption-framework/data/executive-strategy-unify-data-platform",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/app-platform/api-management/governance.md",
+      "redirect_url": "/azure/architecture/example-scenario/integration/app-gateway-internal-api-management-function",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/app-platform/api-management/identity-and-access-management.md",
+      "redirect_url": "/azure/architecture/example-scenario/integration/app-gateway-internal-api-management-function",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/app-platform/api-management/landing-zone-accelerator.md",
+      "redirect_url": "/azure/architecture/example-scenario/integration/app-gateway-internal-api-management-function",
+        "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/app-platform/api-management/management.md",
+      "redirect_url": "/azure/architecture/example-scenario/integration/app-gateway-internal-api-management-function",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/app-platform/api-management/network-topology-and-connectivity.md",
+      "redirect_url": "/azure/architecture/example-scenario/integration/app-gateway-internal-api-management-function",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/app-platform/api-management/platform-automation-and-devops.md",
+      "redirect_url": "/azure/architecture/example-scenario/integration/app-gateway-internal-api-management-function",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/app-platform/api-management/security.md",
+      "redirect_url": "/azure/architecture/example-scenario/integration/app-gateway-internal-api-management-function",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/app-platform/api-management/security.md",
+      "redirect_url": "/azure/architecture/example-scenario/integration/app-gateway-internal-api-management-function",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/app-platform/app-services/governance.md",
+      "redirect_url": "/azure/architecture/web-apps/app-service/architectures/baseline-zone-redundant",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/app-platform/app-services/identity-and-access-management.md",
+      "redirect_url": "/azure/architecture/web-apps/app-service/architectures/baseline-zone-redundant",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/app-platform/app-services/landing-zone-accelerator.md",
+      "redirect_url": "/azure/architecture/web-apps/app-service/architectures/baseline-zone-redundant",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/app-platform/app-services/management.md",
+      "redirect_url": "/azure/architecture/web-apps/app-service/architectures/baseline-zone-redundant",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/app-platform/app-services/network-topology-and-connectivity.md",
+      "redirect_url": "/azure/architecture/web-apps/app-service/architectures/baseline-zone-redundant",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/app-platform/app-services/platform-automation-and-devops.md",
+      "redirect_url": "/azure/architecture/web-apps/app-service/architectures/baseline-zone-redundant",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/app-platform/app-services/security.md",
+      "redirect_url": "/azure/architecture/web-apps/app-service/architectures/baseline-zone-redundant",
+      "redirect_document_id": false
+    }, 
+    {
+      "source_path": "docs/scenarios/app-platform/container-apps/identity.md",
+      "redirect_url": "/azure/architecture/example-scenario/serverless/microservices-with-container-apps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/app-platform/container-apps/landing-zone-accelerator.md",
+      "redirect_url": "/azure/architecture/example-scenario/serverless/microservices-with-container-apps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/app-platform/container-apps/management.md",
+      "redirect_url": "/azure/architecture/example-scenario/serverless/microservices-with-container-apps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/app-platform/container-apps/networking.md",
+      "redirect_url": "/azure/architecture/example-scenario/serverless/microservices-with-container-apps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/app-platform/container-apps/security.md",
+      "redirect_url": "/azure/architecture/example-scenario/serverless/microservices-with-container-apps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/app-platform/integration-services/governance.md",
+      "redirect_url": "/azure/architecture/browse/?azure_categories=integration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/app-platform/integration-services/identity-and-access-management.md",
+      "redirect_url": "/azure/architecture/browse/?azure_categories=integration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/app-platform/integration-services/landing-zone-accelerator.md",
+      "redirect_url": "/azure/architecture/browse/?azure_categories=integration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/app-platform/integration-services/management.md",
+      "redirect_url": "/azure/architecture/browse/?azure_categories=integration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/app-platform/integration-services/network-topology-and-connectivity.md",
+      "redirect_url": "/azure/architecture/browse/?azure_categories=integration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/app-platform/integration-services/security.md",
+      "redirect_url": "/azure/architecture/browse/?azure_categories=integration",
+      "redirect_document_id": false
     }
    ]   
 }
