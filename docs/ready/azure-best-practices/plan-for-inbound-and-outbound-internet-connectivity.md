@@ -2,7 +2,7 @@
 title: Plan for inbound and outbound internet connectivity
 description: Explore recommended connectivity models for inbound and outbound connectivity to and from the public internet.
 author: sebassem
-ms.author: sebassem
+ms.author: ssumner
 ms.date: 11/25/2025
 ms.reviewer: ssumner
 ms.topic: concept-article
@@ -92,7 +92,7 @@ This article lists considerations and recommendations for inbound and outbound c
 
 - If you use partner NVAs for east-west or north-south traffic protection and filtering:
 
-  - For Virtual WAN network topologies, deploy the NVAs to a separate NVA virtual network. Connect the virtual network to the regional Virtual WAN hub and to the landing zones that need access to the NVAs. For more information, see [Scenario: Route traffic through an NVA](/azure/virtual-wan/scenario-route-through-nva).
+  - For Virtual WAN network topologies, deploy the NVAs to a separate NVA virtual network. Connect the virtual network to the regional Virtual WAN hub and to the landing zones that need access to the NVAs. For more information, see [Scenario: Route traffic through an NVA](/azure/virtual-wan/indirect-spoke-architecture).
   - For non-Virtual WAN network topologies, deploy the partner NVAs in the central hub virtual network.
 
 - Don't expose VM management ports to the internet. For management tasks:
