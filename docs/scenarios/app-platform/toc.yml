@@ -5,23 +5,9 @@ items:
   - name: Application landing zone accelerators
     expanded: true
     items:
-      - name: Azure Integration Services (AIS)
-        items:
-          - name: Azure Integration Services application landing zone accelerator
-            href: integration-services/landing-zone-accelerator.md
-          - name: Identity and access management
-            href: integration-services/identity-and-access-management.md
-          - name: Network topology and connectivity
-            href: integration-services/network-topology-and-connectivity.md
-          - name: Security
-            href: integration-services/security.md
-          - name: Management
-            href: integration-services/management.md
-          - name: Governance
-            href: integration-services/governance.md
       - name: Azure Kubernetes Service (AKS)
         items:
-          - name: AKS application landing zone accelerator
+          - name: Azure Kubernetes Service application landing zone accelerator
             href: aks/landing-zone-accelerator.md
           - name: Identity and access management
             href: aks/identity-and-access-management.md
@@ -41,38 +27,7 @@ items:
             href: aks/storage.md
           - name: Cost governance with Kubecost
             href: aks/cost-governance-with-kubecost.md
-      - name: Azure API Management (APIM)
-        items:
-          - name: API Management application landing zone accelerator
-            href: api-management/landing-zone-accelerator.md
-          - name: Identity and access management
-            href: api-management/identity-and-access-management.md
-          - name: Network topology and connectivity
-            href: api-management/network-topology-and-connectivity.md
-          - name: Security
-            href: api-management/security.md
-          - name: Management
-            href: api-management/management.md
-          - name: Governance
-            href: api-management/governance.md
-          - name: Platform automation and DevOps
-            href: api-management/platform-automation-and-devops.md
-      - name: Azure App Service
-        items:
-          - name: Azure App Service application landing zone accelerator
-            href: app-services/landing-zone-accelerator.md
-          - name: Identity and access management
-            href: app-services/identity-and-access-management.md
-          - name: Network topology and connectivity
-            href: app-services/network-topology-and-connectivity.md
-          - name: Governance
-            href: app-services/governance.md
-          - name: Security
-            href: app-services/security.md
-          - name: Management
-            href: app-services/management.md
-          - name: Platform automation and DevOps
-            href: app-services/platform-automation-and-devops.md
+
       - name: Azure Red Hat Enterprise Linux (RHEL)
         items:
           - name: Azure Red Hat Enterprise Linux application landing zone accelerator
@@ -93,6 +48,7 @@ items:
             href: azure-red-hat-enterprise-linux/governance-compliance.md
           - name: Platform automation
             href: azure-red-hat-enterprise-linux/platform-automation-devops.md
+      
       - name: Azure Red Hat OpenShift (ARO)
         items:
           - name: Azure Red Hat OpenShift application landing zone accelerator
@@ -109,15 +65,4 @@ items:
             href: azure-red-hat-openshift/operations.md
           - name: Platform automation
             href: azure-red-hat-openshift/platform-automation-devops.md
-      - name: Azure Container Apps
-        items:
-          - name: Azure Container Apps application landing zone accelerator
-            href: container-apps/landing-zone-accelerator.md
-          - name: Identity
-            href: container-apps/identity.md
-          - name: Networking
-            href: container-apps/networking.md
-          - name: Security
-            href: container-apps/security.md
-          - name: Management and operations
-            href: container-apps/management.md
+  

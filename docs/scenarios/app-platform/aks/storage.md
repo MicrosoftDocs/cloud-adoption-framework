@@ -11,7 +11,7 @@ ms.custom: think-tank, e2e-aks
 # Storage considerations for Azure Kubernetes Service (AKS)
 
 > [!IMPORTANT]
-> **Deprecation notice:** This article is deprecated and is no longer being updated. To ensure only the best guidance is surfaced, this article will be deleted in May 2026.
+> **Deprecation notice:** This article is deprecated and is no longer being updated. To ensure only the best guidance is surfaced, this article will be deleted. We have postponed the deletion of the AKS ALZ until a forthcoming article in the Azure Architecture Center is released. The date is to be determined.
 >
 > For alternative guidance, see [**Azure Kubernetes Service**](/azure/architecture/reference-architectures/containers/aks-start-here) architecture guidance in the Azure Architecture Center.
 >
