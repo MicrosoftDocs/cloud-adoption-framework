@@ -1261,11 +1261,6 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "docs/scenarios/app-platform/api-management/security.md",
-      "redirect_url": "/azure/architecture/example-scenario/integration/app-gateway-internal-api-management-function",
-      "redirect_document_id": false
-    },
-    {
       "source_path": "docs/scenarios/app-platform/app-services/governance.md",
       "redirect_url": "/azure/architecture/web-apps/app-service/architectures/baseline-zone-redundant",
       "redirect_document_id": false
