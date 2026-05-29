@@ -14,7 +14,7 @@ ms.collection: ce-skilling-ai-copilot
 
 An AI platform is where your organization runs and operates AI models. It provides the networking perimeter, identity model, data plane, and quota allocation that surround your models, deployments, indexes, evaluations, and related assets. Microsoft Foundry and Azure Machine Learning are two Azure AI platforms. Every deployment of either service creates a new instance.
 
-Your organization must decide how to place AI workload environments across AI platform instances. You can isolate each environment such as dev, test, or prod in its own platform instance. You can also allow multiple workloads or environments to share the same instance. This decision, often called colocation, affects the blast radius of operational or security issues. It also affects compliance boundaries and platform cost.
+Your organization must decide how to place AI workload environments across AI platform instances. You can isolate each environment such as dev, test, or prod in its own platform instance. You can also allow multiple workloads or environments to share the same instance. This decision, often called colocation, affects the blast radius of operational or security issues. It also affects compliance boundaries and platform cost. Advantages are the re-use of Azure infrastructure, including model deployments, connected data and tools, and security configurations, avoiding repeated IT setup, when business teams are exploring the feasibility of new AI use cases on their own.
 
 **Recommendation:** Establish an organization-wide policy that defines default isolation requirements, approved sharing boundaries, exception criteria, and separate expectations for production and pre-production AI platform environments.
 
@@ -48,7 +48,7 @@ AI platform sharing in production is the practice of running more than one produ
 
 - **Tradeoff:** Isolation increases cost and management overhead. Each platform instance carries its own operational overhead for networking, identity, monitoring, and operations. Organizations must balance these costs against the operational and security benefits of stronger containment.
 
-**2. Permit colocation only through a documented exception.** Colocation reduces overhead and consolidates platform operations. It also merges the blast radius, identity boundary, and quota pool of every workload that shares the instance.
+**2. Permit colocation only through a documented exception.** Colocation reduces overhead and consolidates platform operations. It also merges the blast radius, identity boundary, and quota pool of every workload that shares the instance. For example, if use cases share the same data sources as input, co-location solves for having to repeatedly set up connectivity and authentication from the AI Platform to those resources.
 
 - Only permit production workloads to share instances of Microsoft Foundry or Azure Machine Learning when each of the following conditions holds:
 
@@ -70,7 +70,7 @@ AI platform sharing in production is the practice of running more than one produ
 
 - In Azure Machine Learning, use a [hub workspace](/azure/machine-learning/concept-hub-workspace) with project workspaces to segment use cases.
 
-These constructs give each use case its own assets and role assignments without provisioning a new instance for every scenario.
+These constructs give each use case its own assets and role assignments, while sharing a common set of infrastructure components for security and connectivity, without provisioning a new instance for every scenario.
 
 - When colocation is permitted under the exception process, elevate this in-product separation from a recommendation to an enforced policy requirement.
 
@@ -85,3 +85,43 @@ Preproduction environments invert the production default. These environments sup
 - **When to isolate in preproduction environments.** Use a dedicated preproduction instance per workload only when a workload processes regulated data in test or must mirror its production topology for performance validation. Treat that requirement as an exception and require explicit approval before provisioning.
 
 - **Tradeoff:** Preproduction colocation lowers idle capacity cost and keeps the platform inventory smaller. However, it exposes every workload to interference from another team's experiments. A misconfigured fine-tuning job or a runaway evaluation run can consume shared quota and slow other teams. Test results captured on a shared instance also don't always predict production behavior. Workloads with strict performance or compliance validation needs require a dedicated environment despite the higher cost.
+
+```mermaid
+flowchart LR
+
+    %% Pre-Production
+    subgraph PreProd["Pre-Production (Shared)"]
+        P1[SmartRetail Recommender]
+        P2[Contoso Support Copilot]
+        P3[Vision QA Inspector]
+        P4[LegalDoc Analyzer ❌]
+        P5[HR Sentiment Bot ❌]
+        P6[Marketing Content Gen ❌]
+    end
+
+    %% Dev/Test - Shared
+    subgraph DevTestShared["Dev/Test Environment (Shared)"]
+        D1[SmartRetail Recommender]
+        D2[Contoso Support Copilot]
+    end
+
+    %% Dev/Test - Isolated
+    subgraph DevTestIso["Dev/Test Environment (Isolated)"]
+        D3[Vision QA Inspector ⚠️]
+    end
+
+    %% Production - Isolated Workload A
+    subgraph ProdA["Production Environment A (Isolated)"]
+        PR1[SmartRetail Recommender ✅]
+    end
+
+    %% Production - Isolated Workload B
+    subgraph ProdB["Production Environment B (Isolated)"]
+        PR2[Contoso Support Copilot ✅]
+    end
+
+    %% Promotion paths
+    P1 --> D1 --> PR1
+    P2 --> D2 --> PR2
+    P3 --> D3
+```
