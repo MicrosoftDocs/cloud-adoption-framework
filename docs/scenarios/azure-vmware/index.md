@@ -2,7 +2,7 @@
 title: Introduction to the Azure VMware Solution adoption scenario
 description: Learn about the Azure VMware Solution adoption scenario
 author: michielvanschaik
-ms.author: mivansch
+ms.author: ssumner
 ms.date: 01/20/2025
 ms.topic: concept-article
 ms.custom: e2e-azure-vmware, think-tank

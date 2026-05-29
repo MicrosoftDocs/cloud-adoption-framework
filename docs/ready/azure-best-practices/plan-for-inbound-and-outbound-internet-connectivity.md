@@ -2,7 +2,7 @@
 title: Plan for inbound and outbound internet connectivity
 description: Explore recommended connectivity models for inbound and outbound connectivity to and from the public internet.
 author: sebassem
-ms.author: sebassem
+ms.author: ssumner
 ms.date: 11/25/2025
 ms.reviewer: ssumner
 ms.topic: concept-article

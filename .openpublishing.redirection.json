@@ -4059,6 +4059,40 @@
       "source_path": "docs/ai/infrastructure/cycle-cloud.md",
       "redirect_url": "/azure/cloud-adoption-framework/ai/infrastructure/ai-azure-infrastructure-implementation.md",
       "redirect_document_id": true
-    }
-   ]
-}
+    },
+   `{
+      "source_path": "docs/scenarios/app-platform/api-management/governance.md",
+      "redirect_url": "/azure/architecture/example-scenario/integration/app-gateway-internal-api-management-function",
+      "redirect_document_id": false
+   },
+   {
+      "source_path": "docs/scenarios/app-platform/api-management/identity-and-access-management.md",
+      "redirect_url": "/azure/architecture/example-scenario/integration/app-gateway-internal-api-management-function",
+      "redirect_document_id": false
+   },
+   {
+      "source_path": "docs/scenarios/app-platform/api-management/landing-zone-accelerator.md",
+      "redirect_url": "/azure/architecture/example-scenario/integration/app-gateway-internal-api-management-function",
+      "redirect_document_id": false
+   },
+   {
+      "source_path": "docs/scenarios/app-platform/api-management/management.md",
+      "redirect_url": "/azure/architecture/example-scenario/integration/app-gateway-internal-api-management-function",
+      "redirect_document_id": false
+   },
+   {
+      "source_path": "docs/scenarios/app-platform/api-management/network-topology-and-connectivity.md",
+      "redirect_url": "/azure/architecture/example-scenario/integration/app-gateway-internal-api-management-function",
+      "redirect_document_id": false
+   },
+   {
+      "source_path": "docs/scenarios/app-platform/api-management/platform-automation-and-devops.md",
+      "redirect_url": "/azure/architecture/example-scenario/integration/app-gateway-internal-api-management-function",
+      "redirect_document_id": false
+   },
+   {
+      "source_path": "docs/scenarios/app-platform/api-management/security.md",
+      "redirect_url": "/azure/architecture/example-scenario/integration/app-gateway-internal-api-management-function",
+      "redirect_document_id": false
+   },
+
