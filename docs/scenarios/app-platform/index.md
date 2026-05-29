@@ -23,19 +23,11 @@ All subscriptions must be configured with Azure Role-Based Access Control, Cost 
 
 Here's a list of application landing zone accelerators to help you deploy application landing zones quickly and reliably. Where there's infrastructure-as-code templates hosted in GitHub deploy the templates to your application landing zone, then add your application code and configurations on top of the infrastructure.
 
-- **[Azure Integration Services](./integration-services/landing-zone-accelerator.md):** Deploy integration workloads using Logic Apps, Service Bus, Event Grid, and API Management.
-
 - **[Azure Kubernetes Service (AKS)](./aks/landing-zone-accelerator.md):** Run containerized applications at scale with built-in support for DevOps, monitoring, and security.
-
-- **[Azure API Management](./api-management/landing-zone-accelerator.md):** Manage, secure, and scale your APIs with a fully managed API gateway.
-
-- **[Azure App Service](./app-services/landing-zone-accelerator.md):** Host web apps and APIs with built-in scaling, patching, and CI/CD integration.
 
 - **[Azure Red Hat Enterprise Linux (RHEL)](./azure-red-hat-enterprise-linux/landing-zone-accelerator.md):** Deploy enterprise-grade Linux workloads with Microsoft and Red Hat joint support.
 
 - **[Azure Red Hat OpenShift (ARO)](./azure-red-hat-openshift/landing-zone-accelerator.md):** Run OpenShift clusters with integrated Azure services and enterprise support.
-
-- **[Azure Container Apps](./container-apps/landing-zone-accelerator.md):** Build and deploy microservices and event-driven apps without managing Kubernetes.
 
 ## Next step
 
