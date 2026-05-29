@@ -98,7 +98,7 @@ The diagram below shows how Contoso co-locates a shared pre-production AI platfo
 flowchart LR
 
     %% Pre-Production
-    subgraph PreProd["Pre-Production (Shared)"]
+    subgraph PreProd["Pre-Production (Co-located)"]
         P1[SmartRetail Recommender]
         P2[Contoso Support Copilot]
         P3[Vision QA Inspector]
