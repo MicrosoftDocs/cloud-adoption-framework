@@ -16,15 +16,15 @@ An AI platform is where your organization runs and operates AI models. It provid
 
 Your organization must decide how to place AI workload environments across AI platform instances. You can isolate each environment such as dev, test, or prod in its own platform instance. You can also allow multiple workloads or environments to share the same instance. This decision, often called colocation, affects the blast radius of operational or security issues. It also affects compliance boundaries and platform cost. 
 
-**Recommendation:** Establish an organization-wide policy that defines default isolation requirements, approved sharing boundaries, exception criteria, and separate expectations for production and pre-production AI platform environments.
+**Recommendation:** Establish an organization-wide policy that defines default isolation requirements, approved sharing boundaries, exception criteria, and separate expectations for production and preproduction AI platform environments.
 
 **Decision guidance:**
 
 ## 1. Define AI platform sharing boundaries
 
-Every organization needs boundaries across which workloads must never share an AI platform instance. This boundary applies in every environment, production and pre-production alike. Workloads inside the same boundary can potentially share a platform instance. Workloads in different boundaries cannot.
+Every organization needs boundaries across which workloads must never share an AI platform instance. This boundary applies in every environment, including production and preproduction environments. Workloads inside the same boundary can potentially share a platform instance. Workloads in different boundaries can't.
 
-- **Why draw sharing boundaries?** Without sharing boundaries, workload teams default to whatever pattern is convenient in the moment, and the AI platform accumulates conflicting requirements over time. Over time, that creates inconsistent ownership models, conflicting compliance requirements, unclear cost allocation, and shared operational risk across unrelated workloads. For example, unrelated business areas might share quota on the same platform instance to reduce cost. The result is an AI platform with inconsistent governance boundaries that become difficult to understand and audit.
+- **Why draw sharing boundaries?** Without sharing boundaries, workload teams default to whatever pattern is convenient in the moment, and the AI platform accumulates conflicting requirements over time. Over time, it creates inconsistent ownership models, conflicting compliance requirements, unclear cost allocation, and shared operational risk across unrelated workloads. For example, unrelated business areas might share quota on the same platform instance to reduce cost. The result is an AI platform with inconsistent governance boundaries that become difficult to understand and audit.
 
 - **Common boundaries.** Choose a boundary model that aligns to how your organization already assigns responsibility and governs technology decisions. Common models include:
 
@@ -34,7 +34,7 @@ Every organization needs boundaries across which workloads must never share an A
 
     - A **product owner** boundary optimizes for a common engineering lifecycle and platform operations
 
-    Inside the boundary, teams can still choose dedicated platform instances when isolation makes sense. Outside the boundary, sharing is not permitted.
+    Inside the boundary, teams can still choose dedicated platform instances when isolation makes sense. Outside the boundary, sharing isn't permitted.
 
 - **Find what works best.** No single model is universally correct. Consistency matters more than which model you select, because a clearly enforced boundary model keeps governance understandable as the AI platform grows.
 
