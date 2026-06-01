@@ -107,13 +107,17 @@ flowchart LR
         P6[Marketing Content Gen ❌]
     end
 
-    %% Dev/Test - Co-located
-    subgraph DevTestShared["Dev/Test Environment (Co-located)"]
+    %% Dev/Test - Isolated workload A
+    subgraph DevTestA["Dev/Test Environment A (Isolated)"]
         D1[SmartRetail Recommender]
-        D2[Contoso Support Copilot]
     end
 
     %% Dev/Test - Isolated workload B
+    subgraph DevTestB["Dev/Test Environment B (Isolated)"]
+        D2[Contoso Support Copilot]
+    end
+
+    %% Dev/Test - Isolated workload C
     subgraph DevTestIso["Dev/Test Environment (Isolated)"]
         D3[Vision QA Inspector ⚠️]
     end
