@@ -86,58 +86,6 @@ Preproduction environments invert the production default. These environments sup
 
 - **Tradeoff:** Preproduction colocation lowers idle capacity cost and keeps the platform inventory smaller. However, it exposes every workload to interference from another team's experiments. A misconfigured fine-tuning job or a runaway evaluation run can consume shared quota and slow other teams. Test results captured on a shared instance also don't always predict production behavior. Workloads with strict performance or compliance validation needs require a dedicated environment despite the higher cost.
 
-## 4. Sample platform deployment
-
-The IT organization at Contoso needs to support multiple teams while balancing two priorities:
-1. Rapid innovation, where developers can rigorously test the latest AI technologies using non-production data.
-1. Fully isolated dev, test, and production environments for proven use cases that receive funding for operationalization.
-
-The diagram below shows how Contoso co-locates a shared pre-production AI platform for innovation, available to all teams, with limited capacity and pre-connected data and tools. Historically, only a handful of use cases progress to proven feasibility or secure funding for a dev/test rollout. From those, an even smaller subset advances to production. As use cases mature, teams are assigned environments with progressively stronger isolation, culminating in full production-grade separation.
-
-```mermaid
-flowchart LR
-
-    %% Pre-Production
-    subgraph PreProd["Pre-Production (Co-located)"]
-        P1[SmartRetail Recommender]
-        P2[Contoso Support Copilot]
-        P3[Vision QA Inspector]
-        P4[LegalDoc Analyzer ❌]
-        P5[HR Sentiment Bot ❌]
-        P6[Marketing Content Gen ❌]
-    end
-
-    %% Dev/Test - Isolated workload A
-    subgraph DevTestA["Dev/Test Environment A (Isolated)"]
-        D1[SmartRetail Recommender]
-    end
-
-    %% Dev/Test - Isolated workload B
-    subgraph DevTestB["Dev/Test Environment B (Isolated)"]
-        D2[Contoso Support Copilot]
-    end
-
-    %% Dev/Test - Isolated workload C
-    subgraph DevTestIso["Dev/Test Environment (Isolated)"]
-        D3[Vision QA Inspector ⚠️]
-    end
-
-    %% Production - Isolated Workload A
-    subgraph ProdA["Production Environment A (Isolated)"]
-        PR1[SmartRetail Recommender ✅]
-    end
-
-    %% Production - Isolated Workload B
-    subgraph ProdB["Production Environment B (Isolated)"]
-        PR2[Contoso Support Copilot ✅]
-    end
-
-    %% Promotion paths
-    P1 --> D1 --> PR1
-    P2 --> D2 --> PR2
-    P3 --> D3
-```
-
 ## References 
 
 * [Microsoft Foundry documentation](https://learn.microsoft.com/en-us/azure/foundry/what-is-foundry?tabs=python)
