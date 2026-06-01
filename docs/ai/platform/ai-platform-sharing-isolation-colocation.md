@@ -88,5 +88,5 @@ Preproduction environments invert the production default. These environments sup
 
 ## References 
 
-* [Microsoft Foundry documentation](https://learn.microsoft.com/en-us/azure/foundry/what-is-foundry?tabs=python)
+* [Microsoft Foundry documentation](https://learn.microsoft.com/azure/foundry/what-is-foundry?tabs=python)
 * [Microsoft Foundry rollout across my organization](/azure/foundry/concepts/planning)
