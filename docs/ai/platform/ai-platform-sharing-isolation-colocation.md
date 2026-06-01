@@ -137,3 +137,8 @@ flowchart LR
     P2 --> D2 --> PR2
     P3 --> D3
 ```
+
+## References 
+
+* [Microsoft Foundry documentation](https://learn.microsoft.com/en-us/azure/foundry/what-is-foundry?tabs=python)
+* [Microsoft Foundry rollout across my organization](/azure/foundry/concepts/planning)
