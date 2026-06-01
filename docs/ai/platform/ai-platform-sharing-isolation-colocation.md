@@ -81,10 +81,109 @@ For background on the constructs that anchor these decisions, see [Microsoft Fo
 ## 3. Define a preproduction AI platform sharing policy
 
 Preproduction environments invert the production default. These environments support experimentation and prerelease validation across development, test, and stage tiers. Dedicated instances of AI platform resources rarely justify their cost in those tiers. Default to a shared instance per environment tier.
+
 - **Preproduction sharing benefits:** Advantages are the re-use of Azure infrastructure, including model deployments, connected data and tools, and security configurations, avoiding repeated IT setup, when business teams are exploring the feasibility of new AI use cases on their own.
+
 - **When to isolate in preproduction environments.** Use a dedicated preproduction instance per workload only when a workload processes regulated data in test or must mirror its production topology for performance validation. Treat that requirement as an exception and require explicit approval before provisioning.
 
 - **Tradeoff:** Preproduction colocation lowers idle capacity cost and keeps the platform inventory smaller. However, it exposes every workload to interference from another team's experiments. A misconfigured fine-tuning job or a runaway evaluation run can consume shared quota and slow other teams. Test results captured on a shared instance also don't always predict production behavior. Workloads with strict performance or compliance validation needs require a dedicated environment despite the higher cost.
+
+## 4. Sample platform deployment
+
+The following example shows how Contoso applies the earlier AI platform sharing guidance within a single organizational workload boundary. In this example, the boundary could represent a single business unit, data domain, or product owner. Workloads inside this boundary are permitted to share AI platform instances when the organization's policy allows it. Workloads outside this boundary would require separate AI platform instances and separate governance ownership.
+
+```mermaid
+flowchart LR
+
+    subgraph OrgBoundary["Organizational workload Boundary"]
+        direction LR
+
+    %% Sandbox
+    subgraph LZSandbox["SANDBOX - App landing zone (Azure subscription)"]
+        direction TB
+        subgraph Sandbox["🤖 AI platform (single instance)"]
+
+                P1["AI workload 1 <br> (Sandbox: COLOCATED)"]
+                P2["AI workload 2 <br> (Sandbox: COLOCATED)"]
+                P3["AI workload 3 <br> (Sandbox: COLOCATED)"]
+                P4["AI workload 4 <br> (Sandbox: COLOCATED)"]
+                P5["AI workload 5 <br> (Sandbox: COLOCATED)"]
+                P6["AI workload 6 <br> (Sandbox: COLOCATED)"]
+
+        end
+    end
+
+    %% Dev/Test - Co-located
+    subgraph LZDevTestShared["DEV/TEST - App landing zone (Azure subscription)"]
+            direction TB
+            subgraph DevTestShared["🤖 AI platform (single instance)"]
+                D1["AI workload 1 <br> (Dev/Test: COLOCATED)"]
+                D2["AI workload 2 <br> (Dev/Test: COLOCATED)"]
+        end
+    end
+
+    %% Dev/Test - Isolated workload B
+    subgraph LZDevTestIso["DEV/TEST - App landing zone (Azure subscription)"]
+        direction TB
+        subgraph DevTestIso["🤖 AI platform (single instance)"]
+            D3["AI workload 3 <br> (Dev/Test: ISOLATED)"]
+        end
+    end
+
+    %% Production - Isolated Workload A
+    subgraph LZProdA["PRODUCTION A - App landing zone (Azure subscription)"]
+        direction TB
+        subgraph ProdA["🤖 AI platform (single instance)"]
+            PR1["AI workload 1 ✅ <br> (Production: ISOLATED)"]
+        end
+    end
+
+    %% Production - Isolated Workload B
+    subgraph LZProdB["PRODUCTION B - App landing zone (Azure subscription)"]
+        direction TB
+        subgraph ProdB["🤖 AI platform (single instance)"]
+            PR2["AI workload 2 ✅ <br> (Production: ISOLATED)" ]
+        end
+    end
+
+    %% Promotion paths
+    P1 --> D1 --> PR1
+    P2 --> D2 --> PR2
+
+    %% Isolated workload path
+    P3 --> D3
+    D3 -.-> NP1[❌ Not promoted to Production]
+
+    %% Projects still in development
+    P4 -.-> NP2[❌ Not promoted to Dev/Test]
+    P5 -.-> NP3[❌ Not promoted to Dev/Test]
+    P6 -.-> NP4[❌ Not promoted to Dev/Test]
+
+    end
+```
+
+Contoso uses a progression model for AI workloads that aligns to the recommended production and preproduction sharing policies:
+
+1. Early-stage experimentation occurs in a shared sandbox AI platform instance.
+1. Proven use cases move into dev/test environments where isolation requirements increase based on workload risk, operational needs, and compliance requirements.
+1. Production workloads default to isolated AI platform instances unless a documented exception allows colocation.
+
+This model helps Contoso balance rapid innovation against operational isolation and cost control.
+
+The diagram shows several important concepts from the guidance:
+
+- Sandbox environments default to colocation. Multiple AI workloads share a single AI platform instance with shared tooling, connectivity, and limited capacity. Most workloads never progress beyond this stage.
+
+- Preproduction environments can remain colocated when workloads have compatible operational and compliance requirements. This approach reduces infrastructure overhead and accelerates onboarding.
+
+- Some workloads receive isolated dev/test environments before production because they require stronger validation boundaries, dedicated quota, or closer alignment with production architecture.
+
+- Production workloads default to isolated AI platform instances. Each production workload receives its own network boundary, identity boundary, and quota allocation.
+
+- Workloads advance through progressively stronger isolation boundaries as business value, funding, operational ownership, and risk increase.
+
+This example demonstrates how organizations can apply consistent AI platform sharing boundaries and lifecycle policies without requiring every workload to start with a fully isolated platform deployment.
+
 
 ## References 
 
