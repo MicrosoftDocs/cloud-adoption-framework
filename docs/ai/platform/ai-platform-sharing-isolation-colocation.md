@@ -48,7 +48,7 @@ AI platform sharing in production is the practice of running more than one produ
 
 - **Tradeoff:** Isolation increases cost and management overhead. Each platform instance carries its own operational overhead for networking, identity, monitoring, and operations. Organizations must balance these costs against the operational and security benefits of stronger containment.
 
-**2. Permit colocation only through a documented exception.** Colocation reduces overhead and consolidates platform operations. It also merges the blast radius, identity boundary, and quota pool of every workload that shares the instance. For example, if use cases share the same data sources as input, co-location solves for having to repeatedly set up connectivity and authentication from the AI Platform to those resources.
+**2. Permit colocation only through a documented exception.** Colocation reduces overhead and consolidates platform operations. For example, if use cases share the same data sources as input, colocation avoids needing to set up connectivity and authentication from the AI platform to those resources for each use case. Tradeoff: Sharing AI platform instances in production also merges the blast radius, identity boundary, and quota pool of every workload that shares the instance. 
 
 - Only permit production workloads to share instances of Microsoft Foundry or Azure Machine Learning when each of the following conditions holds:
 
@@ -70,7 +70,7 @@ AI platform sharing in production is the practice of running more than one produ
 
 - In Azure Machine Learning, use a [hub workspace](/azure/machine-learning/concept-hub-workspace) with project workspaces to segment use cases.
 
-These constructs give each use case its own assets and role assignments, while sharing a common set of infrastructure components for security and connectivity, without provisioning a new instance for every scenario.
+These constructs give each use case its own assets and role assignments. They share a common set of infrastructure components for security and connectivity. You don't have to provision a new instance for every scenario.
 
 - When colocation is permitted under the exception process, elevate this in-product separation from a recommendation to an enforced policy requirement.
 
@@ -81,7 +81,7 @@ For background on the constructs that anchor these decisions, see [Microsoft Fo
 ## 3. Define a preproduction AI platform sharing policy
 
 Preproduction environments invert the production default. These environments support experimentation and prerelease validation across development, test, and stage tiers. Dedicated instances of AI platform resources rarely justify their cost in those tiers. Default to a shared instance per environment tier.
-
+- **Preproduction sharing benefits:** Advantages are the re-use of Azure infrastructure, including model deployments, connected data and tools, and security configurations, avoiding repeated IT setup, when business teams are exploring the feasibility of new AI use cases on their own.
 - **When to isolate in preproduction environments.** Use a dedicated preproduction instance per workload only when a workload processes regulated data in test or must mirror its production topology for performance validation. Treat that requirement as an exception and require explicit approval before provisioning.
 
 - **Tradeoff:** Preproduction colocation lowers idle capacity cost and keeps the platform inventory smaller. However, it exposes every workload to interference from another team's experiments. A misconfigured fine-tuning job or a runaway evaluation run can consume shared quota and slow other teams. Test results captured on a shared instance also don't always predict production behavior. Workloads with strict performance or compliance validation needs require a dedicated environment despite the higher cost.
