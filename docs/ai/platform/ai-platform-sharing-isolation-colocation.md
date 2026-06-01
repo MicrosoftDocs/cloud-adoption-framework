@@ -189,3 +189,46 @@ This example demonstrates how organizations can apply consistent AI platform sha
 
 * [Microsoft Foundry documentation](/azure/foundry/what-is-foundry?tabs=python)
 * [Microsoft Foundry rollout across my organization](/azure/foundry/concepts/planning)
+
+
+## Original image
+
+```mermaid
+flowchart LR
+
+    %% Pre-Production
+    subgraph PreProd["Pre-Production (Co-located)"]
+        P1[SmartRetail Recommender]
+        P2[Contoso Support Copilot]
+        P3[Vision QA Inspector]
+        P4[LegalDoc Analyzer ❌]
+        P5[HR Sentiment Bot ❌]
+        P6[Marketing Content Gen ❌]
+    end
+
+    %% Dev/Test - Co-located
+    subgraph DevTestShared["Dev/Test Environment (Co-located)"]
+        D1[SmartRetail Recommender]
+        D2[Contoso Support Copilot]
+    end
+
+    %% Dev/Test - Isolated workload B
+    subgraph DevTestIso["Dev/Test Environment (Isolated)"]
+        D3[Vision QA Inspector ⚠️]
+    end
+
+    %% Production - Isolated Workload A
+    subgraph ProdA["Production Environment A (Isolated)"]
+        PR1[SmartRetail Recommender ✅]
+    end
+
+    %% Production - Isolated Workload B
+    subgraph ProdB["Production Environment B (Isolated)"]
+        PR2[Contoso Support Copilot ✅]
+    end
+
+    %% Promotion paths
+    P1 --> D1 --> PR1
+    P2 --> D2 --> PR2
+    P3 --> D3
+```
