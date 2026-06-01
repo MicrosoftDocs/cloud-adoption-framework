@@ -50,7 +50,7 @@ Production AI environments should default to production environment isolation. D
 
 - **Tradeoff:** Isolation increases cost and management overhead. Each platform instance carries its own operational overhead for networking, identity, monitoring, and operations. Organizations must balance these costs against the operational and security benefits of stronger containment.
 
-### 2.2 Permit colocation only through a documented exception
+### 2.2 Permit production colocation through a documented exception
 
 Colocation reduces overhead and consolidates platform operations. For example, if use cases share the same data sources as input, colocation avoids needing to set up connectivity and authentication from the AI platform to those resources for each use case. Tradeoff: Sharing AI platform instances in production also merges the blast radius, identity boundary, and quota pool of every workload that shares the instance.
 
@@ -68,7 +68,7 @@ Colocation reduces overhead and consolidates platform operations. For example, i
 
 - **Tradeoff:** Every shared AI platform instance requires a clearly identified platform owner responsible for quota management, network configuration, access reviews, lifecycle operations, and incident coordination.
 
-### 2.3 Segment use cases within the AI platform instance  
+### 2.3 Segment production use cases within the AI platform instance  
 
 Whether a platform instance is isolated or colocated, use in-product segmentation features to isolate use cases. Treat each distinct use case, such as wholly distinct user experiences within a single workload, as its own logical deployment inside the platform instance. For example:
 
@@ -86,11 +86,11 @@ For background on the constructs that anchor these decisions, see [Microsoft Fou
 
 ## 3. Define a preproduction AI platform sharing policy
 
-Preproduction environments invert the production default. These environments support experimentation and prerelease validation across development, test, and stage tiers. Dedicated instances of AI platform resources rarely justify their cost in those tiers. Default to a shared instance per environment tier.
+Preproduction environments invert the production default. Preproduction environments include development, test, and stage. These environments support experimentation and prerelease validation. Dedicated instances of AI platform resources rarely justify their cost in those tiers. Default to a shared instance per environment tier.
 
-- **Why colocate in preproduction?** A shared preproduction AI platform instance allows teams to reuse Azure AI infrastructure instead of provisioning separate instances for every new use case. Workload teams can reuse deployed models, approved network connectivity, existing data integrations, and established security configurations. This approach accelerates experimentation and reduces repeated setup work. It's most valuable when business teams are evaluating the feasibility of new AI scenarios or validating early-stage solutions.
+- **Why colocate in preproduction environments?** A shared preproduction AI platform instance allows teams to reuse Azure AI infrastructure instead of provisioning separate instances for every new use case. Workload teams can reuse deployed models, approved network connectivity, existing data integrations, and established security configurations. This approach accelerates experimentation and reduces repeated setup work. It's most valuable when business teams are evaluating the feasibility of new AI scenarios or validating early-stage solutions.
 
-- **When not to colocate in preproduction.** Use a dedicated preproduction instance per workload only when a workload processes regulated data in test or must mirror its production topology for performance validation. Treat that requirement as an exception and require explicit approval before provisioning.
+- **When not to colocate in preproduction.** Use a dedicated preproduction instance per workload when a workload processes regulated data in test or must mirror its production topology for performance validation. Treat that requirement as an exception and require explicit approval before provisioning.
 
 - **Tradeoff:** Preproduction colocation lowers idle capacity cost and keeps the platform inventory smaller. However, it exposes every workload to interference from another team's experiments. A misconfigured fine-tuning job or a runaway evaluation run can consume shared quota and slow other teams. Test results captured on a shared instance also don't always predict production behavior. Workloads with strict performance or compliance validation needs require a dedicated environment despite the higher cost.
 
