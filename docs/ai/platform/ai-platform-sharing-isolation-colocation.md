@@ -14,7 +14,7 @@ ms.collection: ce-skilling-ai-copilot
 
 An AI platform is where your organization runs and operates AI models. It provides the networking perimeter, identity model, data plane, and quota allocation that surround your models, deployments, indexes, evaluations, and related assets. Microsoft Foundry and Azure Machine Learning are two Azure AI platforms. Every deployment of either service creates a new instance.
 
-Your organization must decide how to place AI workload environments across AI platform instances. You can isolate each environment such as dev, test, or prod in its own platform instance. You can also allow multiple workloads or environments to share the same instance. This decision, often called colocation, affects the blast radius of operational or security issues. It also affects compliance boundaries and platform cost. Advantages are the re-use of Azure infrastructure, including model deployments, connected data and tools, and security configurations, avoiding repeated IT setup, when business teams are exploring the feasibility of new AI use cases on their own.
+Your organization must decide how to place AI workload environments across AI platform instances. You can isolate each environment such as dev, test, or prod in its own platform instance. You can also allow multiple workloads or environments to share the same instance. This decision, often called colocation, affects the blast radius of operational or security issues. It also affects compliance boundaries and platform cost. 
 
 **Recommendation:** Establish an organization-wide policy that defines default isolation requirements, approved sharing boundaries, exception criteria, and separate expectations for production and pre-production AI platform environments.
 
