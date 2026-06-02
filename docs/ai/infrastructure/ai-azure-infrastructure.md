@@ -10,11 +10,11 @@ ms.topic: concept-article
 ms.collection: ce-skilling-ai-copilot
 ---
 
-# AI on Azure infrastructure (IaaS) - Executive overview
+# AI on Azure infrastructure - Executive overview
 
 **Organizational goal:** Every organization wants AI to deliver measurable business value at the scale the business demands. **Challenge:** Most organizations can meet that goal through managed AI platforms, but some organizations require more control than managed services provide. They need to choose specific models, tune performance, or meet strict compliance requirements that managed services can't fully address.
 
-**Solution:** Azure infrastructure as a service (IaaS) supports AI strategies that require full control over models, infrastructure, and compliance boundaries. Azure IaaS isn't the default starting point. It's a deliberate choice for organizations with advanced requirements. Use Azure IaaS for AI when your business requires:
+**Solution:** Azure infrastructure supports AI strategies that require full control over models, infrastructure, and compliance boundaries. Azure infrastructure isn't the default starting point. It's a deliberate choice for organizations with advanced requirements. Use Azure infrastructure for AI when your business requires:
 
 - Control of models and runtime environments for proprietary or highly customized workloads
 - Management of data location and processing to meet regulatory obligations
@@ -23,7 +23,7 @@ ms.collection: ce-skilling-ai-copilot
 
 ## Why AI on Azure infrastructure?
 
-Azure IaaS lets your teams define and operate the environment that runs AI workloads. This approach supports three business outcomes:
+Azure infrastructure lets your teams define and operate the environment that runs AI workloads. This approach supports three business outcomes:
 
 - **Customized AI environments**. Teams can select operating systems, frameworks, runtime configurations, and supporting tooling. This flexibility supports proprietary models and specialized AI workloads.
 
@@ -33,7 +33,7 @@ Azure IaaS lets your teams define and operate the environment that runs AI workl
 
 ## What's the level of investment?
 
-Azure IaaS increases flexibility. It also increases responsibility. Leaders need to approve this model with a clear understanding of cost drivers and operational impact. The key tradeoff is simple. IaaS gives control and flexibility. It requires higher investment in skills and ongoing operations. The cost model shifts from service consumption to infrastructure ownership. Plan for four primary cost areas:
+Azure infrastructure increases flexibility. It also increases responsibility. Leaders need to approve this model with a clear understanding of cost drivers and operational impact. The key tradeoff is simple. Azure infrastructure gives control and flexibility. It requires higher investment in skills and ongoing operations. The cost model shifts from service consumption to infrastructure ownership. Plan for four primary cost areas:
 
 - **GPU cost:** GPU compute drives the largest portion of spend. GPU infrastructure is expensive and can be underutilized without strong planning.
 - **Storage cost:** Storage supports datasets, model checkpoints, and long-term retention requirements.
@@ -58,9 +58,9 @@ If these capabilities don't exist, the timeline extends. Infrastructure alone do
 
 ## How to adopt AI on Azure infrastructure
 
-Successful AI adoption on Azure IaaS depends on early architecture decisions. These decisions affect scalability, operational complexity, compliance posture, and long-term cost.
+Successful AI adoption on Azure infrastructure depends on early architecture decisions. These decisions affect scalability, operational complexity, compliance posture, and long-term cost.
 
-Organize adoption around six architecture areas: compute, storage, networking, governance, management, and security. Treat these decisions as architecture policies, not workload design. The following articles provide guidelines for AI workloads on Azure infrastructure (IaaS):
+Organize adoption around six architecture areas: compute, storage, networking, governance, management, and security. Treat these decisions as architecture policies, not workload design. The following articles provide guidelines for AI workloads on Azure infrastructure:
 
 - [Compute](../../scenarios/ai/infrastructure/compute.md)
 - [Storage](../../scenarios/ai/infrastructure/storage.md)

@@ -1,15 +1,15 @@
 ---
-title: Governance recommendations for AI workloads on Azure infrastructure (IaaS)
-description: Learn how to govern AI workloads on Azure infrastructure (IaaS).
+title: Governance recommendations for AI workloads on Azure infrastructure
+description: Learn how to govern AI workloads on Azure infrastructure.
 author: stephen-sumner
 ms.author: rajanaki
 ms.date: 04/30/2025
 ms.topic: concept-article
 ---
 
-# Governance recommendations for AI workloads on Azure infrastructure (IaaS)
+# Governance for AI on Azure infrastructure
 
-This article provides governance recommendations for organizations running AI workloads on Azure infrastructure (IaaS). These recommendations help organizations establish a structured framework for resource management, cost control, security, and operational efficiency. By following these practices, you can scale your AI workloads responsibly and ensure they meet compliance, security, and financial goals.
+This article provides governance recommendations for organizations running AI workloads on Azure infrastructure. These recommendations help organizations establish a structured framework for resource management, cost control, security, and operational efficiency. By following these practices, you can scale your AI workloads responsibly and ensure they meet compliance, security, and financial goals.
 
 ## Resource governance
 
@@ -68,4 +68,4 @@ Operational governance ensures consistent monitoring and management of AI worklo
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Management IaaS AI](../../scenarios/ai/infrastructure/management.md)
+> [AI Management on Azure infrastructure](../../scenarios/ai/infrastructure/management.md)

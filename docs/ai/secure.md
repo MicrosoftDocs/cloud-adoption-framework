@@ -41,8 +41,8 @@ Comprehensive security measures protect your AI investments and maintain stakeho
 
 3. **Apply platform-specific security controls.** Different AI deployment models face distinct security threats based on their architecture and exposure points. Platform-tailored controls address the specific vulnerabilities present in each deployment type. Follow dedicated security guidance based on your deployment model:
 
-    - [AI Security for Azure PaaS workloads](../scenarios/ai/platform/security.md)
-    - [AI Security for Azure IaaS workloads](../scenarios/ai/infrastructure/security.md)
+    - [AI Security on Azure platforms](../scenarios/ai/platform/security.md)
+    - [AI Security on Azure infrastructure](../scenarios/ai/infrastructure/security.md)
 
 ### Secure AI data
 
@@ -64,8 +64,8 @@ AI systems face evolving threats that require continuous monitoring to prevent s
 
 3. **Implement platform-specific monitoring strategies.** AI workloads deployed on different platforms face distinct security challenges that require tailored monitoring approaches. Platform-specific monitoring ensures comprehensive coverage of all potential attack vectors. Apply monitoring guidance based on your deployment architecture as follows:
 
-    - [AI monitoring on Azure platforms (PaaS)](../scenarios/ai/platform/management.md)
-    - [AI monitoring on Azure infrastructure (IaaS)](../scenarios/ai/infrastructure/management.md)
+    - [AI monitoring on Azure platforms](../scenarios/ai/platform/management.md)
+    - [AI monitoring on Azure infrastructure](../scenarios/ai/infrastructure/management.md)
 
 ## Azure resources
 

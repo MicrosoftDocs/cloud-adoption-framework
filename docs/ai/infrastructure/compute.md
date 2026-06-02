@@ -1,15 +1,15 @@
 ---
-title: Compute recommendations for AI workloads on Azure infrastructure (IaaS)
-description: Learn how to select compute for AI workloads on Azure infrastructure (IaaS).
+title: Compute recommendations for AI on Azure infrastructure
+description: Learn how to select compute for AI on Azure infrastructure.
 author: stephen-sumner
 ms.author: rajanaki
 ms.date: 04/09/2025
 ms.topic: concept-article
 ---
 
-# Compute recommendations for AI workloads on Azure infrastructure (IaaS)
+# Compute recommendations for AI on Azure infrastructure
 
-This article provides compute recommendations for organizations running AI workloads on Azure infrastructure (IaaS). The preferred approach is to start your AI adoption with [Azure AI platform-as-a-service (PaaS) solutions](../../scenarios/ai/platform/architectures.md). However, if you have access to Azure GPUs, follow this guidance to run AI workloads on Azure IaaS.
+This article provides compute recommendations for organizations running AI workloads on Azure infrastructure. The preferred approach is to start your AI adoption with [Azure AI platform-as-a-service (PaaS) solutions](../../scenarios/ai/platform/architectures.md). However, if you have access to Azure GPUs, follow this guidance to run AI workloads on Azure infrastructure.
 
 AI workloads require specialized virtual machines (VMs) to handle high computational demands and large-scale data processing. Choosing the right VMs optimizes resource use and accelerates AI model development and deployment. The following table provides an overview of recommended compute options.
 
@@ -64,4 +64,4 @@ Containers provide a consistent, reproducible environment that scales efficientl
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Storage IaaS AI](../../scenarios/ai/infrastructure/storage.md)
+> [AI Storage on Azure infrastructure](../../scenarios/ai/infrastructure/storage.md)

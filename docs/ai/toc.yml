@@ -25,9 +25,9 @@ items:
         href: platform/security.md
       - name: Management
         href: platform/management.md
-    - name: AI on Azure infrastructure (IaaS)
+    - name: AI on Azure infrastructure
       items:
-      - name: AI on IaaS overview
+      - name: AI on infrastructure overview
         href: infrastructure/ai-azure-infrastructure.md
       - name: Architecture decisions
         items:
