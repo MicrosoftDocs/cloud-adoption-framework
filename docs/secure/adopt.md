@@ -204,7 +204,7 @@ To maintain a highly available cloud estate, teams that operate the cloud system
 
 - **Service-level agreements:** Service-level agreements (SLAs) that your cloud platform provides for their services help you understand the guaranteed uptime for the components of your workloads. Use those SLAs as your basis to then develop your own target metrics for the SLAs that you provide to your customers. Microsoft publishes the SLAs for all cloud services at [SLAs for online services](https://www.microsoft.com/licensing/docs/view/Service-Level-Agreements-SLA-for-Online-Services).
 
-- **Compliance requirements:** Adhere to regulations such as the General Data Protection Regulation (GDPR) and HIPAA to ensure that systems are designed and maintained to high standards, including standards that are related to availability. Noncompliance can result in legal actions and fines that might disrupt business operations. Compliance often isn't limited to system configuration. Most compliance frameworks also require risk management and incident response standards. Ensure that your operational standards meet the framework requirements and that staff is trained regularly.
+- **Compliance requirements:** Adhere to regulations to ensure that systems are designed and maintained to high standards, including standards that are related to availability. Noncompliance can result in legal actions and fines that might disrupt business operations. Compliance often isn't limited to system configuration. Most compliance frameworks also require risk management and incident response standards. Ensure that your operational standards meet the framework requirements and that staff is trained regularly.
 
 ### Azure facilitation
 
