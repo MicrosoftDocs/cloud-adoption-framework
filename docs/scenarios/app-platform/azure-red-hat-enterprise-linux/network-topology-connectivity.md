@@ -79,8 +79,6 @@ The following diagram shows Management and Workload subnets in a zone-resilient 
 
 - Use NSGs and [application security groups](/azure/virtual-network/application-security-groups) to micro-segment traffic within the landing zone and avoid using a central NVA to filter traffic flows.
 
-- Enable NSG flow logs and feed them into [traffic analytics](/azure/network-watcher/traffic-analytics). To optimize audit-ability and security, enable flow logs on all critical virtual networks and subnets in your subscription.
-
 - Use NSGs to selectively allow connectivity between landing zones.
 
 - The application team should use application security groups at the subnet-level NSGs to help protect multi-tier VMs within the landing zone.

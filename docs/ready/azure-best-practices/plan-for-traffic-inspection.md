@@ -36,12 +36,9 @@ Effective network traffic inspection is critical for maintaining security and co
 
   - Simplify the scope of traffic monitoring. You can enable logging at the virtual network level so that you don't need to enable multiple-level flow logging to cover both subnet and NIC levels.
 
-  - Add visibility for scenarios where you can't use NSG flow logs because of platform restrictions on NSG deployments.
   - Provide extra details about the [Virtual Network encryption](/azure/virtual-network/virtual-network-encryption-overview) status and the presence of [Azure Virtual Network Manager security admin rules](/azure/virtual-network-manager/concept-virtual-network-flow-logs).
 
   For a comparison, see [Virtual network flow logs compared to network security group flow logs](/azure/network-watcher/vnet-flow-logs-overview#virtual-network-flow-logs-compared-to-network-security-group-flow-logs).
-
-- Don't enable virtual network flow logs and NSG flow logs simultaneously on the same target scope. If you enable NSG flow logs on the NSG of a subnet, and then you enable virtual network flow logs on the same subnet or parent virtual network, you duplicate logging and add extra costs.
 
 - Enable traffic analytics. The tool lets you easily capture and analyze network traffic with out-of-the-box dashboard visualization and security analysis.
 
