@@ -8,7 +8,7 @@ ms.topic: concept-article
 ---
 # Well-architected considerations for AI on Azure infrastructure
 
-Well-architected considerations for AI on Azure infrastructure involve best practices that optimize the reliability, security, operational efficiency, cost management, and performance of AI solutions. These principles ensure robust deployment, secure data handling, efficient model operation, and scalable infrastructure on Azure. Applying these principles allows organizations to build resilient, secure, and cost-effective AI models that meet business needs.
+Well-architected considerations for AI on Azure infrastructure involve best practices that optimize the reliability, security, operational efficiency, cost management, and performance of AI solutions. These principles ensure robust deployment, secure data handling, efficient model operation, and scalable infrastructure on Azure. By applying these principles, you can build resilient, secure, and cost-effective AI models that meet business needs.
 
 ## Reliability
 
