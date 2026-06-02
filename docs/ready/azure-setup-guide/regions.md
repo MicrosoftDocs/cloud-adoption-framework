@@ -17,7 +17,7 @@ The right Azure region is critical for workload compliance, performance, and res
 
 Many countries/regions and industries require data to stay within specific geographic boundaries. Violating these rules can lead to fines or service restrictions.
 
-1. **Identify regulations.** List the laws that apply to your customers and industry, such as GDPR, HIPAA.
+1. **Identify regulations.** List the laws that apply to your customers and industry.
 
 1. **Map data to regions.** Document where customer data comes from and identify Azure regions that satisfy legal requirements for that data. Use this mapping to guide your regional deployment strategy.
 

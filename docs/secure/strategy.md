@@ -44,7 +44,7 @@ Establish a clear vision and well-defined, specific objectives for cloud securit
 
 When you define a strategy for adopting confidentiality in an enterprise cloud environment, you need to consider several key points:
 
-- **Prioritize data privacy and protection.** Establish clear business objectives that emphasize the importance of data privacy and protection. These objectives include compliance with relevant regulations like GDPR, HIPAA, and industry standards.
+- **Prioritize data privacy and protection.** Establish clear business objectives that emphasize the importance of data privacy and protection. These objectives include compliance with relevant regulations and industry standards.
 
 - **Plan for a risk management strategy.** Identify and assess potential risks to data confidentiality and develop strategies to mitigate these risks.
 
