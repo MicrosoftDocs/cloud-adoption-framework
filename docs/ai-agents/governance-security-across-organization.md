@@ -78,7 +78,7 @@ Organizations require concrete mechanisms to control how agents access, process,
 
 ### Regulatory compliance
 
-**All agents must comply with regulations and standards.** Regulatory compliance encompasses data protection laws (such as GDPR and HIPAA), industry certifications, and internal governance requirements. Translate these regulations into foundational controls to ensure agents process data responsibly, securely, and transparently.
+**All agents must comply with regulations and standards.** Regulatory compliance encompasses data protection laws, industry certifications, and internal governance requirements. Translate these regulations into foundational controls to ensure agents process data responsibly, securely, and transparently.
 
 1. **Enforce data privacy.** Require agents to follow data privacy principles and use only the data necessary for intended functionality. Review datasets fed into AI models for RAG, fine-tuning, or training to identify privacy risks. Audit memory stores and logs regularly. Anonymize or pseudonymize personal data where feasible. Support user rights, such as deletion requests, to align with organizational privacy policies.
 
