@@ -31,6 +31,8 @@ items:
     items:
     - name: Fabric workloads
       items:
+        - name: Fabric workload (Well-Architected Framework)
+          href: /azure/well-architected/microsoft-fabric/
         - name: Fabric architectures (Azure Architecture Center)
           href: /azure/architecture/browse/?terms=fabric&products=fabric
         - name: Medallion Lakehouse Architecture (Fabric docs)
