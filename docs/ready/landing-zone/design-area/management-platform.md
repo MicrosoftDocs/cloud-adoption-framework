@@ -48,18 +48,7 @@ Consider the following items related to logging data to inform what types of dat
 
 - Use Azure Policy for access control and compliance reporting. Azure Policy lets you enforce organization-wide settings to ensure consistent policy adherence and fast violation detection. For more information, see [Understand Azure Policy effects](/azure/governance/policy/concepts/effects).
 
-- Use Network Watcher to proactively monitor traffic flows through [Network Watcher NSG flow logs v2](/azure/network-watcher/network-watcher-nsg-flow-logging-overview). [Traffic Analytics](/azure/network-watcher/traffic-analytics) analyzes NSG flow logs to gather deep insights about IP traffic within virtual networks. It also provides critical information you need for effective management and monitoring, such as:
-
-  - Most communicating hosts and application protocols
-  - Most conversing host pairs
-  - Allowed or blocked traffic
-  - Inbound and outbound traffic
-  - Open internet ports
-  - Most blocking rules
-  - Traffic distribution per an Azure datacenter
-  - Virtual network
-  - Subnets
-  - Rogue networks
+- Use [Traffic Analytics](/azure/network-watcher/traffic-analytics) to gather deep insights about IP traffic within virtual networks. It also provides critical information you need for effective management and monitoring.
   
 - Use [resource locks](/azure/azure-resource-manager/management/lock-resources) to prevent accidental deletion of critical shared services.
 
