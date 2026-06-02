@@ -63,10 +63,10 @@ The enforcement of your AI governance policies maintains consistent and ethical 
 
 2. **Manually enforce AI policies where automation is insufficient.** Manual enforcement addresses complex scenarios that require human judgment and provides essential training for policy awareness. Human oversight ensures policies adapt to unique situations and maintains organizational understanding of AI governance principles. Provide AI risk and compliance training for employees to ensure they understand their role in AI governance, conduct regular workshops to keep staff updated on AI policies, and perform periodic audits to monitor adherence and identify areas for improvement.
 
-3. **Use workload-specific governance guidance for targeted enforcement.** Workload-specific guidance addresses unique security and compliance requirements for different AI deployment patterns. This approach ensures policies align with the technical architecture and risk profile of each AI workload type. Use detailed security guidance available for AI workloads on Azure platform services (PaaS) and Azure infrastructure (IaaS) to govern AI models, resources, and data within these workload types.
+3. **Use workload-specific governance guidance for targeted enforcement.** Workload-specific guidance addresses unique security and compliance requirements for different AI deployment patterns. This approach ensures policies align with the technical architecture and risk profile of each AI workload type. Use detailed security guidance available for AI workloads on Azure platform services (PaaS) and Azure infrastructure to govern AI models, resources, and data within these workload types.
 
-    - [Govern PaaS AI](../scenarios/ai/platform/governance.md)
-    - [Govern IaaS AI](../scenarios/ai/infrastructure/governance.md)
+    - [Govern AI on Azure platforms](../scenarios/ai/platform/governance.md)
+    - [Govern AI on Azure infrastructure](../scenarios/ai/infrastructure/governance.md)
 
 ## Monitor AI organizational risks
 

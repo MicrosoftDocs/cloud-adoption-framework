@@ -1,15 +1,15 @@
 ---
-title: Storage recommendations for AI workloads on Azure infrastructure (IaaS)
-description: Learn how to select storage for AI workloads on Azure infrastructure (IaaS).
+title: Storage recommendations for AI on Azure infrastructure
+description: Learn how to select storage for AI on Azure infrastructure.
 author: stephen-sumner
 ms.author: rajanaki
 ms.date: 04/29/2025
 ms.topic: concept-article
 ---
 
-# Storage recommendations for AI workloads on Azure infrastructure (IaaS)
+# Storage for AI on Azure infrastructure
 
-This article provides storage recommendations for organizations running AI workloads on Azure infrastructure (IaaS). A storage solution for AI workloads on Azure infrastructure must be capable of managing the demands of data storage, access, and transfer that are inherent to AI model training and inferencing.
+This article provides storage recommendations for organizations running AI workloads on Azure infrastructure. A storage solution for AI workloads on Azure infrastructure must manage the demands of data storage, access, and transfer that are inherent to AI model training and inferencing.
 
 AI workloads require high throughput and low latency for efficient data retrieval and processing. They also need mechanisms for data versioning and consistency to guarantee accurate and reproducible outcomes across distributed environments. When selecting the appropriate storage solution, consider factors such as data transfer times, latency, performance requirements, and compatibility with existing systems.
 
@@ -34,4 +34,4 @@ AI workloads require high throughput and low latency for efficient data retrieva
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Networking IaaS AI](../../scenarios/ai/infrastructure/networking.md)
+> [AI Networking on Azure infrastructure](../../scenarios/ai/infrastructure/networking.md)

@@ -1,19 +1,19 @@
 ---
-title: Management recommendations for AI workloads on Azure infrastructure (IaaS)
-description: Learn how to manage AI workloads on Azure infrastructure (IaaS).
+title: Management recommendations for AI on Azure infrastructure
+description: Learn how to manage AI on Azure infrastructure.
 author: stephen-sumner
 ms.author: rajanaki
 ms.date: 04/30/2025
 ms.topic: concept-article
 ---
 
-# Management recommendations for AI workloads on Azure infrastructure (IaaS)
+# Management for AI on Azure infrastructure
 
-This article provides management recommendations for organizations running AI workloads on Azure infrastructure (IaaS). Effective management of AI workloads on Azure requires continuous monitoring, optimization practices, and a strong backup and recovery strategy. These efforts minimize downtime and ensure reliability in AI operations.
+This article provides management recommendations for organizations running AI workloads on Azure infrastructure. Effective management of AI workloads on Azure requires continuous monitoring, optimization practices, and a strong backup and recovery strategy. These efforts minimize downtime and ensure reliability in AI operations.
 
 ## Monitor AI infrastructure
 
-Monitoring AI infrastructure involves tracking and evaluating the performance, health, and availability of all components in an AI deployment on Azure IaaS. Proactive monitoring allows organizations to detect and resolve potential issues before they affect operations.
+Monitoring AI infrastructure involves tracking and evaluating the performance, health, and availability of all components in an AI deployment on Azure infrastructure. Proactive monitoring allows organizations to detect and resolve potential issues before they affect operations.
 
 - *Ensure monitoring by default.* Deploy the required Azure Monitor Agents for virtual machines and Azure Virtual Machine Scale Sets, including Azure Arc connected servers. Connect them to the central Log Analytics workspace in the management subscription. Consider using [Azure Monitor Baseline Alerts](https://azure.github.io/azure-monitor-baseline-alerts/welcome/) (AMBA).
 
@@ -50,4 +50,4 @@ Managing business continuity and disaster recovery for AI applications on Azure 
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Secure IaaS AI](../../scenarios/ai/infrastructure/security.md)
+> [AI Security on Azure infrastructure](../../scenarios/ai/infrastructure/security.md)
