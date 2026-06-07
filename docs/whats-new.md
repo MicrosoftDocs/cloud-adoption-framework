@@ -20,7 +20,7 @@ Microsoft's Cloud Adoption Framework is continuously updated with new guidance, 
 
 The deletion of articles for the [Azure Kubernetes Services](/azure/cloud-adoption-framework/scenarios/app-platform/aks/landing-zone-accelerator) landing zone accelerator is postponed until a forthcoming article in the Azure Architecture Center is released. Deprecation status remains the same. Date of deletion is to be determined.
 
-## Articles deleted
+### Articles deleted
 
 Deleted articles for the following landing zone accelerators. The process removed only the articles in the Cloud Adoption Framework. The repositories in GitHub with the deployable assets are still available. Use the following links to access GitHub:
 
