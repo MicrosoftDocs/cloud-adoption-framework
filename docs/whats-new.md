@@ -14,7 +14,7 @@ ms.custom: UpdateFrequency.5, historical
 
 Microsoft's Cloud Adoption Framework is continuously updated with new guidance, enhanced content, and refined recommendations based on customer experiences and evolving cloud practices. This page helps you stay informed about the latest updates, new resources, deprecated content, and where to find specific information as the framework evolves.
 
-## May 2029
+## May 2026
 
 ### Deletion postponement
 
