@@ -148,7 +148,7 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | Azure SQL Elastic Job agent | `Microsoft.Sql/servers/jobAgents` | `sqlja` |
 | Azure SQL Elastic Pool | `Microsoft.Sql/servers/elasticpool` | `sqlep` |
 | MySQL database | `Microsoft.DBforMySQL/servers` | `mysql` |
-| PostgreSQL database | `Microsoft.DBforPostgreSQL/servers` | `psql` |
+| PostgreSQL flexible server | `Microsoft.DBforPostgreSQL/flexibleServers` | `pgsql` |
 | SQL Managed Instance | `Microsoft.Sql/managedInstances` | `sqlmi` |
 
 ## Developer tools
