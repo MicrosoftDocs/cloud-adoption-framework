@@ -12,6 +12,8 @@ ms.update-cycle: 1095-days
 
 Organizational alignment is important to ensure a collective buy-in to the strategies you're planning to execute on. To ensure you have the required support throughout your cloud adoption journey, consider getting a few key stakeholders involved early on, and expand your leadership buy-in as you iterate on your strategy execution.
 
+:::image type="content" source="./media/caf-strategy-overview.svg" alt-text="Diagram that shows how to best consume the Cloud Adoption Framework Strategy guidance." border="false":::
+
 ## Leadership and executive buy-in
 
 You identified the motivations and business objectives to support your organization's mission. Now you need to ensure that your leadership is aligned to that vision and strategy.

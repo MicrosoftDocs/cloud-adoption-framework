@@ -12,7 +12,7 @@ ms.update-cycle: 1095-days
 
 This article outlines the process for defining your cloud strategy team. A cloud strategy team or function defines the motivations and business objectives for cloud adoption and transformation projects. These functions validate and maintain alignment between business priorities and cloud adoption efforts.
 
-:::image type="content" source="./media/caf-strategy-team.svg" alt-text="Diagram that shows where defining your cloud adoption strategy team fits in among the cloud strategy phases.":::
+:::image type="content" source="./media/caf-strategy-overview.svg" alt-text="Diagram that shows how to best consume the Cloud Adoption Framework Strategy guidance." border="false":::
 
 Establishing a _motivation-driven strategy_ helps align initiatives with business objectives. The cloud strategy team facilitates alignment between the business and the adoption initiatives.
 

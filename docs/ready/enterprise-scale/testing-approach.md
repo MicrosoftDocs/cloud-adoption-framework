@@ -63,10 +63,7 @@ A similar scenario might be a change to the Azure RBAC role assignments and Micr
 
 *Figure 1: Canary management group hierarchy.*
 
-As the diagram shows, the entire Azure landing zones production management group hierarchy is duplicated under the `Tenant Root Group`. The *canary* name is appended to the management group display names and IDs. The IDs must be unique within a single Microsoft Entra tenant.
-
-> [!NOTE]
- > The canary management group display names can be the same as the production management group display names. This might cause confusion for users. Because of this, we recommend appending the name "canary" to the display names and to their IDs.
+As the diagram shows, the entire Azure landing zones production management group hierarchy is duplicated under the `Tenant Root Group`. The *canary* name is appended to the management group display names and IDs. The management group IDs must be unique within a single Microsoft Entra tenant. The tenant treats management group IDs as the authoritative identifiers, so they must be distinct across the tenant. You can keep the management group **display names** aligned with the production management group hierarchy. Add a naming distinction to the display names as well, so users can visually distinguish the canary hierarchy from production when navigating the management group tree.
 
 The canary management group hierarchy is then used to simplify testing of the following resource types:
 
