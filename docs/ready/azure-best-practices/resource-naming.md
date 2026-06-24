@@ -55,7 +55,7 @@ To construct your Azure naming convention, identify the key pieces of informatio
 
 1. **Use abbreviations.** Use [Azure resource abbreviations](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-abbreviations) to keep resource names within length limits.
 
-1. **Use the Azure Naming Tool.** The Azure Naming Tool is a tool that helps you generate names for Azure resources. You configure the tool to use your preferred naming convention, and it generates names for your Azure resources. For more information, see [Azure Naming Tool](https://github.com/mspnp/AzureNamingTool).
+1. **Use the Azure Naming Tool.** The Azure Naming Tool is a tool that helps you generate names for Azure resources. You configure the tool to use your preferred naming convention, and it generates names for your Azure resources. For more information, see [Azure Naming Tool](https://github.com/Azure/AzureNamingTool).
 
 ## Example Azure resource names
 
