@@ -29,7 +29,7 @@ The Cloud Adoption Framework for Azure has tools, templates, and assessments tha
 
 | Resource | Description |
 |----------|-------------|
-| [Azure naming tool](https://github.com/Azure/AzureNamingTool) | Develop your comprehensive Azure naming convention using this open-source application. |
+| [Azure naming tool](https://github.com/Azure/AzureNamingTool) | Develop your comprehensive Azure naming convention by using this open-source application. |
 | [Terraform modules](../ready/landing-zone/deploy-landing-zones-with-terraform.md) | Use the Terraform open-source code base to build your Cloud Adoption Framework Azure landing zone. |
 | [Azure landing zone](https://github.com/Azure/Enterprise-Scale) | Deploy your open-source code base for the enterprise-scale implementation of the Cloud Adoption Framework Azure landing zone. |
 
