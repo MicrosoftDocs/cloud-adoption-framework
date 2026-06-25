@@ -104,7 +104,7 @@ The following guidance can help you find the right tools to automate compliance 
 
 #### Automate AI governance
 
-- **Use the retrieval-augmented generation (RAG) pattern.** RAG adds an information retrieval system to control the grounding data that a language model uses to generate a response. For example, you can use [the Azure OpenAI Service on your own data feature](/azure/ai-foundry/openai/concepts/use-your-data) or set up RAG with [Azure AI Search](/azure/search/retrieval-augmented-generation-overview) to constrain generative AI to your content.
+- **Use the retrieval-augmented generation (RAG) pattern.** RAG adds an information retrieval system to control the grounding data that a generative AI model uses to generate a response and constrain generative AI to your content. See [Retrieval augmented generation (RAG) and indexes](/azure/foundry/concepts/retrieval-augmented-generation).
 
 - **Use AI development tools.** Use AI tools, like [Microsoft Agent Framework](https://devblogs.microsoft.com/foundry/introducing-microsoft-agent-framework-the-open-source-engine-for-agentic-ai-apps/), that facilitate and standardize AI orchestration when developing applications that use AI.
 

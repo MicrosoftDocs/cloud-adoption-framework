@@ -1,8 +1,8 @@
 ---
 title: Establish an AI Center of Excellence
 description: Learn how to establish an AI Center of Excellence (AI CoE), an internal team of experts who drive AI adoption on Azure in your organization.
-author: stephen-sumner
 ms.author: pnp
+author: stephen-sumner
 ms.date: 06/09/2025
 ms.update-cycle: 180-days
 ms.topic: concept-article

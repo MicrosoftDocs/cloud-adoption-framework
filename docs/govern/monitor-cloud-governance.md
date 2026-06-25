@@ -111,7 +111,7 @@ The following guidance helps you start configuring cloud governance alerts in Az
 
 - **Resource management governance alerts.** Configure alerts for when a noncompliant resource is deployed. For example, use build warnings in your deployment pipeline or monitor noncompliance states.
 
-- **AI governance alerts.** Configure alerts when there are harmful inputs and outputs in your AI systems. For example, monitor emails from Azure OpenAI that notify you of [abusive behavior](/azure/ai-foundry/openai/concepts/abuse-monitoring).
+- **AI governance alerts.** Configure Defender for Cloud security alerts for Foundry to improve your security posture. See [Alerts for AI services](/azure/defender-for-cloud/alerts-ai-workloads) and [View and respond to security alerts](/azure/foundry/responsible-use-of-ai-overview#view-and-respond-to-security-alerts).
 
 ## 3. Develop a remediation plan
 

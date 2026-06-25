@@ -35,7 +35,7 @@ AI model security protects against threats such as prompt injection attacks and 
 
 AI access controls restrict resource usage to authorized users through authentication and authorization. Access management prevents unauthorized interactions with AI models and protects sensitive data. Implement comprehensive access controls to maintain security compliance and reduce breach risks. Here's how:
 
-1. **Use Microsoft Entra ID for authentication instead of API keys.** Microsoft Entra ID provides centralized identity management and advanced security features that static API keys lack. Using Entra ID eliminates credential management overhead and reduces vulnerabilities from compromised keys. Replace API keys with Microsoft Entra ID authentication for [Foundry](/azure/ai-services/authentication#authenticate-with-microsoft-entra-id), [Azure OpenAI](/azure/ai-services/openai/how-to/managed-identity), and [Foundry Tools](/azure/ai-services/authentication#authenticate-with-microsoft-entra-id). If keys are required, regularly [rotate keys](/azure/ai-services/rotate-keys) and audit access.
+1. **Use Microsoft Entra ID for authentication instead of API keys.** Microsoft Entra ID provides centralized identity management and advanced security features that static API keys lack. Using Entra ID eliminates credential management overhead and reduces vulnerabilities from compromised keys. Replace API keys with Microsoft Entra ID authentication for [Foundry](/azure/ai-services/authentication#authenticate-with-microsoft-entra-id), and [Foundry Tools](/azure/ai-services/authentication#authenticate-with-microsoft-entra-id). If keys are required, regularly [rotate keys](/azure/ai-services/rotate-keys) and audit access.
 
 2. **Maintain an inventory of AI agents.** Maintain an accurate inventory of AI agent identities to support access management and policy enforcement. This inventory prevents shadow AI deployments and ensures all agents follow security standards. Use [Microsoft Entra Agent ID](/entra/identity/monitoring-health/concept-sign-ins#microsoft-entra-agent-id) to view all AI agents created through Foundry and Copilot Studio.
 
@@ -43,7 +43,7 @@ AI access controls restrict resource usage to authorized users through authentic
 
 4. **Implement Conditional Access policies.** Conditional Access policies provide adaptive security that responds to risk indicators and context. These policies prevent unauthorized access and maintain user productivity through intelligent access decisions. Configure [risk-based Conditional Access policies](/entra/id-protection/howto-identity-protection-configure-risk-policies) to require additional verification for unusual sign-in activity, restrict access by geographic location, and ensure only compliant devices access AI resources.
 
-5. **Apply least privilege access principles.** Apply least privilege access to minimize security exposure by granting only necessary permissions for each role. This approach reduces the impact of breaches and prevents unauthorized resource access. Use [Azure role-based access control](/azure/ai-studio/concepts/rbac-ai-studio) to assign permissions based on job responsibilities and review access regularly to prevent privilege escalation.
+5. **Apply least privilege access principles.** Apply least privilege access to minimize security exposure by granting only necessary permissions for each role. This approach reduces the impact of breaches and prevents unauthorized resource access. Use [Azure role-based access control](/azure/foundry/concepts/rbac-foundry?tabs=owner) to assign permissions based on job responsibilities and review access regularly to prevent privilege escalation.
 
 6. **Secure service-to-service communication.** Use service-to-service authentication to eliminate credential management complexity and provide secure communication channels. This method reduces security risks from stored credentials and simplifies access management. Use [managed identity](/entra/identity/managed-identities-azure-resources/overview) to authenticate Azure services without managing credentials.
 
@@ -74,22 +74,6 @@ AI execution security protects against malicious code execution when AI agents r
 3. **Configure resource limits and timeouts.** Set resource limits to prevent individual executions from consuming excessive system resources and disrupting other services. These controls maintain system stability and prevent denial-of-service conditions. Set CPU, memory, and disk usage limits for execution environments. Configure automatic timeouts to terminate long-running or stuck processes.
 
 4. **Monitor execution activity.** Monitor execution activity to gain visibility into AI agent behavior and detect malicious or unusual patterns. This monitoring enables rapid response to security incidents and maintains operational awareness. Log all execution activities, monitor resource usage patterns, and configure alerts for suspicious behavior or resource consumption anomalies.
-
-For more information, see the following resources:
-- [Foundry Agent Service](/azure/ai-foundry/agents/overview)
-- [How to create Assistants with Azure OpenAI Service](/azure/ai-services/openai/how-to/assistant)
-- [How to use Azure OpenAI Assistants function calling](/azure/ai-services/openai/how-to/assistant-functions)
-- [Agent implementation](/azure/cosmos-db/ai-agents#implementation-of-ai-agents)
-
-## Azure security and architecture resources
-
-| Category | Tool | Description |
-|----------|------|-------------|
-| Security baselines | [Azure Machine Learning security baseline](/security/benchmark/azure/baselines/machine-learning-service-security-baseline) | Standardized security controls for Azure Machine Learning deployments |
-| Security baselines | [Foundry security baseline](/security/benchmark/azure/baselines/azure-ai-studio-security-baseline) | Security controls for Foundry environments |
-| Security baselines | [Azure OpenAI security baseline](/security/benchmark/azure/baselines/azure-openai-security-baseline) | Security controls for Azure OpenAI services |
-| Architecture guidance | [Azure Machine Learning service guide](/azure/well-architected/service-guides/azure-machine-learning) | Security recommendations for Azure Machine Learning |
-| Architecture guidance | [Azure OpenAI service guide](/azure/well-architected/service-guides/azure-openai) | Security best practices for Azure OpenAI implementations |
 
 ## Next steps
 
