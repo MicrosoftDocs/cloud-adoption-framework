@@ -47,9 +47,9 @@ AI networking encompasses network infrastructure design, security measures, and 
 
 AI reliability requires strategic region placement and redundancy planning to ensure consistent performance and high availability. Organizations must address model hosting, data locality, and disaster recovery to maintain reliable AI services. You need to plan your regional deployment strategy to avoid service interruptions and optimize performance. Here's how:
 
-1. **Deploy AI endpoints across multiple regions for production workloads.** Production AI workloads require hosting in at least two regions to provide redundancy and ensure high availability. Multi-region deployments enable faster failover and recovery during regional failures. For Azure OpenAI in Foundry, use [global deployments](/azure/ai-foundry/foundry-models/concepts/deployment-types#deployment-types) that automatically route requests to regions with available capacity. For regional deployments, implement [Azure API Management](/azure/api-management/genai-gateway-capabilities#backend-load-balancer-and-circuit-breaker) to load balance API requests across AI endpoints.
+1. **AI endpoints and multiple regions.** Production AI workloads typically use at least two regions where availability and criticality requirements justify the added cost and complexity. Multi-region deployments enable faster failover and recovery during regional failures. For regional deployments, implement [Azure API Management](/azure/api-management/genai-gateway-capabilities#backend-load-balancer-and-circuit-breaker) to load balance API requests across AI endpoints.
 
-2. **Verify AI service availability in target regions before deployment.** Different regions provide varying levels of AI service availability and feature support. Check [Azure service availability by region](https://azure.microsoft.com/explore/global-infrastructure/products-by-region/#products-by-region_tab5) to confirm your required AI services are available. Azure OpenAI deployment models include global standard, global provisioned, regional standard, and regional provisioned options with different regional availability patterns.
+2. **Verify AI service availability in target regions before deployment.** Different regions provide varying levels of AI service availability and feature support. Check [Azure service availability by region](https://azure.microsoft.com/explore/global-infrastructure/products-by-region/table) to confirm your required AI services are available.
 
 3. **Evaluate regional quota limits and capacity requirements.** Foundry Tools have regional subscription limits that affect large-scale model deployments and inference workloads. Contact Azure support proactively when you anticipate capacity needs that exceed standard quotas to prevent service disruptions during scaling.
 
@@ -87,4 +87,4 @@ The next step is to build and deploy AI workloads to your AI environment. Use th
 > [AI on Azure platforms](../scenarios/ai/platform/architectures.md)
 
 > [!div class="nextstepaction"]
-> [AI on Azure infrastructure](../scenarios/ai/infrastructure/cycle-cloud.md)
+> [AI on Azure infrastructure](/azure/cloud-adoption-framework/ai/infrastructure/ai-azure-infrastructure)

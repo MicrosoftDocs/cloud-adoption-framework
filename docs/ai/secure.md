@@ -67,18 +67,6 @@ AI systems face evolving threats that require continuous monitoring to prevent s
     - [AI monitoring on Azure platforms](../scenarios/ai/platform/management.md)
     - [AI monitoring on Azure infrastructure](../scenarios/ai/infrastructure/management.md)
 
-## Azure resources
-
-| Category | Tool | Description |
-|----------|------|-------------|
-| Asset Discovery | [Azure Resource Graph Explorer](/azure/governance/resource-graph/) | Discovers and inventories AI resources across Azure subscriptions |
-| Security Monitoring | [Microsoft Defender for Cloud](/azure/defender-for-cloud/identify-ai-workload-model) | Identifies generative AI workloads and security risks |
-| Identity Management | [Microsoft Entra managed identities](/azure/active-directory/managed-identities-azure-resources/) | Secures AI service authentication without storing credentials |
-| Network Security | [Virtual Networks](/azure/ai-foundry/agents/how-to/virtual-networks) | Isolates AI communications and restricts network access |
-| API Security | [Azure API Management](/azure/api-management/export-rest-mcp-server) | Secures Model Context Protocol server endpoints |
-| Data Protection | [Azure Blob Storage](/azure/storage/blobs/) | Provides encrypted storage for AI artifacts with access controls |
-| Data Governance | [Microsoft Purview](/purview/purview-security) | Catalogs and classifies AI data with sensitivity labels |
-
 ## Next steps
 
 As stated earlier, the processes of Govern AI, Manage AI, and Secure AI are continuous processes that you must regularly iterate through. Revisit each AI Strategy, AI Plan, and AI Ready as needed. Use the AI adoption checklists to determine what your next step should be.

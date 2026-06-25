@@ -15,7 +15,6 @@ This article explains how to select resources for Azure AI platform as a service
 |---------|------------|---------| --- |
 | [Microsoft Foundry](/azure/ai-foundry/what-is-azure-ai-foundry) | Generative AI and nongenerative AI | A platform for building and deploying generative and nongenerative AI applications | Developer and data science skills |
 | [Foundry Tools](/azure/ai-services/what-are-ai-services) | Generative AI and nongenerative AI | Various services that provide prebuilt generative and nongenerative AI models | Developer skills |
-| [Azure OpenAI](/azure/ai-foundry/openai/concepts/models) | Generative AI | A service for accessing OpenAI models | Developer and data science skills |
 | [Azure Machine Learning](/azure/machine-learning/overview-what-is-azure-machine-learning) | Machine learning | A service for training and deploying machine learning models | Developer skills and advanced data science skills |
 
 ## Select resources for generative AI workloads
@@ -38,9 +37,9 @@ The following workflow matches the diagram above:
 
 Follow these steps to build generative RAG workloads:
 
-1. **Select a generative AI platform.** Use Foundry or Azure OpenAI to deploy and manage generative AI models. Foundry offers a code-first platform with built-in tools for development, deployment, and orchestration. Choose Azure OpenAI if you only need access to [OpenAI models](/azure/ai-services/openai/concepts/models).
+1. **Select a generative AI platform.** Use Foundry to deploy and manage generative AI models. Foundry offers a code-first platform with built-in tools for development, deployment, and orchestration.
 
-2. **Select an AI compute type.** Foundry requires [compute instances](/azure/ai-studio/how-to/create-manage-compute) for specific features. Pick a compute type that fits your performance and budget needs.
+2. **Select an AI compute type (optional).** You might need to create a [managed compute deployment](/azure/foundry-classic/how-to/deploy-models-managed?pivots=ai-foundry-portal) for your workloads. Pick a compute type that fits your performance and budget needs. See also [Create compute instances](/azure/foundry-classic/how-to/create-manage-compute).
 
 3. **Select an orchestrator.** Use orchestrators like [Foundry Agent Service](/azure/ai-foundry/agents/overview) or [Microsoft Agent Framework](https://devblogs.microsoft.com/foundry/introducing-microsoft-agent-framework-the-open-source-engine-for-agentic-ai-apps/) to manage data flow and interactions. If your workload uses multiple agents, make sure your orchestrator supports the [AI agent orchestration patterns](/azure/architecture/ai-ml/guide/ai-agent-design-patterns) you need.
 
