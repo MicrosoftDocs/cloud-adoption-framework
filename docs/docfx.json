@@ -63,36 +63,34 @@
     },
     "fileMetadata": {
       "ms.collection": {
-        "scenarios/ai/**/*.md": "ce-skilling-ai-copilot"
+        "ai/**/*.md": "ce-skilling-ai-copilot",
+        "ai-agents/**/*.md": "ce-skilling-ai-copilot",
+        "data/**/*.md": "ce-skilling-ai-copilot"
       },
       "ms.update-cycle": {
-        "scenarios/ai/**/*.md": "180-days"
+        "ai/**/*.md": "180-days",
+        "ai-agents/**/*.md": "180-days",
+        "data/**/*.md": "180-days"
       },
       "ms.subservice": {
         "ai/**/*.md": "caf-scenario-ai",
         "ai-agents/**/*.md": "caf-ai-agents",
-        "digital-estate/**/*.md": "caf-methodology-plan",
         "get-started/**/*.md": "caf-get-started",
         "govern/**/*.md": "caf-methodology-govern",
-        "infrastructure/mainframe-migration/**/*.md": "caf-methodology-adopt",
         "cloud-native/**/*.md": "caf-methodology-adopt-cloud-native",
         "data/**/*.md": "caf-data",
         "manage/**/*.md": "caf-methodology-manage",
         "migrate/**/*.md": "caf-methodology-adopt-migrate",
         "modernize/**/*.md": "caf-methodology-adopt-modernize",
-        "operating-model/**/*.md": "caf-methodology-ready",
         "organize/**/*.md": "caf-methodology-organize",
         "plan/**/*.md": "caf-methodology-plan",
         "ready/**/*.md": "caf-methodology-ready",
         "ready/control-mapping/**/*.md": "caf-alz",
         "ready/enterprise-scale/**/*.md": "caf-alz",
         "ready/landing-zone/**/*.md": "caf-alz",
-        "relocate/**/*.md": "caf-methodology-adopt-relocate",
         "scenarios/app-platform/**/*.md": "caf-scenario-app-plat",
-        "scenarios/azure-hpc/**/*.md": "caf-scenario-hpc",
         "scenarios/azure-vmware/**/*.md": "caf-scenario-vmware",
         "scenarios/cloud-scale-analytics/**/*.md": "caf-scenario-analytics",
-        "scenarios/defense/**/*.md": "caf-scenario-defense",
         "scenarios/hybrid/**/*.md": "caf-scenario-hybrid",
         "scenarios/oracle-on-azure/**/*.md": "caf-scenario-oracle",
         "scenarios/sap/**/*.md": "caf-scenario-sap",
