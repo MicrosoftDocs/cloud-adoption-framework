@@ -1,19 +1,19 @@
 ---
-title: Govern AI
-description: Learn the process to govern AI with best practices and recommendations.
+title: Govern AI - Guidance to set up your organization's AI governance process
+description: Guidance to set up your organization's AI governance process
 author: stephen-sumner
 ms.author: ssumner
 ms.date: 07/01/2025
 ms.topic: concept-article
 ---
 
-# Govern AI
+# Guidance to set up your organization's AI governance process
 
 This article helps you establish an organizational process for governing AI. You use this guidance to integrate AI risk management into your broader risk management strategies, creating a unified approach to AI, cybersecurity, and privacy governance. The process follows the [NIST Artificial Intelligence Risk Management Framework (AI RMF)](https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf) and [NIST AI RMF Playbook](https://airc.nist.gov/AI_RMF_Knowledge_Base/Playbook). The guidance aligns with the framework in [CAF Govern](/azure/cloud-adoption-framework/govern/).
 
 :::image type="content" source="./images/ai-govern.svg" alt-text="Diagram that shows the 6 phases of AI adoption: Strategy, Plan, Ready, Govern, Secure, Manage." lightbox="./images/ai-govern.svg" border="false":::
 
-## Assess AI organizational risks
+## 1. Assess AI organizational risks
 
 AI risk assessment identifies potential risks that AI technologies introduce into your organization. This assessment builds trust in AI systems and reduces unintended consequences. You must conduct thorough risk assessments to ensure AI deployments align with your organization's values, risk tolerance, and operational goals. Here's how:
 
@@ -42,7 +42,7 @@ AI risk assessment identifies potential risks that AI technologies introduce int
     - Performance bottlenecks
     - Security gaps at integration points
 
-## Document AI governance policies
+## 2. Document AI governance policies
 
 AI governance policies provide a structured framework for responsible AI use within your organization. These policies align AI activities with ethical standards, regulatory requirements, and business objectives. You must document policies that address identified AI risks based on your organization's risk tolerance. Here are AI governance policy examples:
 
@@ -55,7 +55,7 @@ AI governance policies provide a structured framework for responsible AI use wit
 | Define policies for user conduct              | ▪ *Define risk mitigation strategies for misuse.* Misuse prevention policies help protect against intentional or unintentional harms. Outline possible misuse scenarios and incorporate controls, such as restricted functionalities or misuse detection features.<br><br> ▪ *Set user conduct guidelines.* User agreements clarify acceptable behaviors when interacting with the AI workload, reducing the risk of misuse. Draft clear terms of use to communicate standards and support responsible AI interaction. |
 | Define policies for AI integration and replacement | ▪ *Outline integration policies.* Integration guidelines ensure AI workloads maintain data integrity and security during workload interfacing. Specify technical requirements, data-sharing protocols, and security measures.<br><br> ▪ *Plan for transition and replacement.* Transition policies provide structure when replacing old processes with AI workloads. Outline steps for phasing out legacy processes, training staff, and monitoring performance throughout the change. |
 
-## Enforce AI governance policies
+## 3. Enforce AI governance policies
 
 The enforcement of your AI governance policies maintains consistent and ethical AI practices across your organization. You should use automated tools and manual interventions to ensure policy adherence across all AI deployments. Here's how:
 
@@ -68,7 +68,7 @@ The enforcement of your AI governance policies maintains consistent and ethical 
     - [Govern AI on Azure platforms](../scenarios/ai/platform/governance.md)
     - [Govern AI on Azure infrastructure](../scenarios/ai/infrastructure/governance.md)
 
-## Monitor AI organizational risks
+## 4. Monitor AI organizational risks
 
 Risk monitoring identifies emerging threats and ensures AI workloads operate as intended. Continuous evaluation maintains system reliability and prevents negative impacts. You must establish systematic monitoring to adapt to evolving conditions and address risks before they affect operations. Here's how:
 

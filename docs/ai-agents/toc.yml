@@ -12,11 +12,7 @@ items:
       - name: Data architecture
         href: data-architecture-plan.md 
   - name: 2. Govern & secure agents
-    items:
-      - name: Responsible AI
-        href: responsible-ai-across-organization.md
-      - name: Governance and security
-        href: governance-security-across-organization.md
+    href: governance-security-across-organization.md
   - name: 3. Build agents
     items:
       - name: Single or multiple agents?

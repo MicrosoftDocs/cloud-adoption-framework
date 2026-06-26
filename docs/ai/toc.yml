@@ -1,6 +1,4 @@
 items:
-  - name: Overview AI adoption
-    href: index.md
   - name: AI Strategy
     href: strategy.md
   - name: AI Plan
@@ -9,7 +7,7 @@ items:
     items:
     - name: Prepare AI environment
       href: ready.md
-    - name: AI on Azure platforms (PaaS)
+    - name: AI on Azure platforms
       items:
       - name: AI architectures
         href: platform/architectures.md
@@ -48,7 +46,11 @@ items:
       - name: Implementation options
         href: infrastructure/ai-azure-infrastructure-implementation.md
   - name: Govern AI
-    href: govern.md
+    items:
+      - name: Responsible AI
+        href: responsible-ai-policies.md
+      - name: Govern AI process
+        href: govern.md
   - name: Secure AI
     href: secure.md
   - name: Manage AI

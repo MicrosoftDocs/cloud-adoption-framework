@@ -1,13 +1,13 @@
 ---
-title: Manage AI
-description: Learn the process to manage AI with best practices and recommendations.
+title: Manage AI - Guidance to set up your organization's AI management process
+description: Guidance to set up your organization's AI management process
 author: stephen-sumner
 ms.author: ssumner
 ms.date: 07/01/2025
 ms.topic: concept-article
 ---
 
-# Manage AI
+# Guidance to set up your organization's AI management process
 
 This article provides guidance to manage AI workloads throughout their lifecycle. Organizations achieve consistent AI performance when they establish structured operational processes, implement proper deployment governance, and maintain comprehensive monitoring practices.
 
@@ -21,7 +21,7 @@ Operational frameworks provide structure for managing complex AI projects. These
 
 1. **Select the right operational framework for your workload type.** Different AI workloads require different operational approaches that affect team processes and tooling decisions. This choice determines your development methodology and technology stack integration. Use [MLOps](/azure/architecture/ai-ml/guide/machine-learning-operations-v2) frameworks for traditional machine learning workflows and [GenAIOps](/azure/architecture/ai-ml/guide/genaiops-for-mlops) for generative AI workloads.
 
-1. **Standardize development tools across all teams.** Consistent tooling eliminates compatibility problems between team environments and reduces learning curves for developers. This approach prevents integration issues and accelerates development cycles. Define and standardize the use of SDKs and APIs for consistency across development teams. For more information, see [Choose the right SDK to support your use case](/microsoft-365/agents-sdk/choose-agent-solution)
+1. **Standardize development tools across all teams.** Consistent tooling eliminates compatibility problems between team environments and reduces learning curves for developers. This approach prevents integration issues and accelerates development cycles. Define and standardize the use of SDKs and APIs for consistency across development teams. For more information, see [Choose the right SDK to support your use case](/microsoft-365/agents-sdk/choose-agent-solution).
 
 1. **Create dedicated sandbox environments for experimentation.** Sandbox environments allow safe testing without affecting production systems and provide teams freedom to test new approaches. These environments prevent experimental code from affecting stable workloads. Use a sandbox environment that remains distinct from dev, test, and production environments in the AI development lifecycle. Maintain consistency across dev, test, and prod environments to prevent breaking changes during promotion between environments.
 

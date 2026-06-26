@@ -80,4 +80,4 @@ Include governance details in the same record. Specify which data sources are ce
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Responsible AI](./responsible-ai-across-organization.md)
+> [Govern and secure agents](./governance-security-across-organization.md)

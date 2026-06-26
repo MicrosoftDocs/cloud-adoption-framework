@@ -87,12 +87,12 @@ additionalContent:
     - title: Solutions for specific scenarios # < 160 chars (optional)
       items: 
 
-      - title: Unified data platform
-        summary: Unify your data for analytics and AI. 
+      - title: Data for AI and analytics
+        summary: Unify your data platform for analytics and AI. 
         url: ./data/executive-strategy-unify-data-platform.md
       - title: AI adoption
-        summary: How to adopt generative and non-generative AI across your organization.
-        url: ./scenarios/ai/index.md
+        summary: How to adopt generative and non-generative AI.
+        url: ./ai/strategy.md
       - title: Agents
         summary: How to adopt and govern AI agents.
         url: ./ai-agents/index.md
