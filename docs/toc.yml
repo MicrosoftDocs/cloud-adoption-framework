@@ -453,7 +453,7 @@ items:
     - name: Data for AI and analytics
       href: data/executive-strategy-unify-data-platform.md
     - name: AI adoption
-      href: ai/index.md
+      href: ai/strategy.md
     - name: Agents
       href: ai-agents/index.md
     - name: Azure Virtual Desktop

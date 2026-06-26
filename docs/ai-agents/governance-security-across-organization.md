@@ -1,5 +1,5 @@
 ---
-title: Governance and security for AI agents across the organization
+title: Govern and secure AI agents AI agents across the organization
 ms.reviewer: ssumner
 description: Explore best practices for governing AI agents, from data residency laws to corporate compliance, to ensure secure and responsible AI deployment.
 #customer intent: As a CTO or enterprise architect, I want to understand how to implement governance across the organization. I need to develop policies that apply universally and can be enforced by the compliance team. Additionally, I want to learn about the controls and solutions Microsoft provides to help facilitate this governance.
@@ -11,38 +11,41 @@ ms.topic: concept-article
 ms.collection: ce-skilling-ai-copilot
 ---
 
-# Governance and security for AI agents across the organization
+# Govern and secure AI agents
 
-This article explains how to establish governance and security practices for AI agents across your organization. The formation of AI agent governance policies is critical to the **Govern agents** step in the AI agent adoption process (*see figure 1*).
+AI agents are software systems that can access data, make decisions, and take actions across business systems. They operate with delegated authority and can affect multiple systems at once. This capability creates organizational risk that differs from traditional applications. Decision makers must define baseline policies that apply to every agent so that risk remains controlled as adoption grows. A governance and security baseline sets the minimum requirements that every agent must meet before it is allowed to operate.
+
+**Recommendation:** Establish a centralized and enforceable governance and security baseline for all AI agents that aligns with existing identity, data governance, and security practices.
 
 :::image type="content" source="./images/ai-agent-adoption.svg" alt-text="Diagram showing a horizontal workflow with four connected phases: plan for agents (sub-steps are business plan, technology plan, organizational readiness, and data architecture). Govern and secure agents (Sub-steps are Responsible AI, Governance and Security, and Prepare environment). Build agents (Sub-steps are single and multi-agent systems and process to build agents). Manage agents integrate (sub-processes Integrate agents and operate agents)." lightbox="./images/ai-agent-adoption.svg" border="false":::
 *Figure 1. Microsoft's AI agent adoption process.*
+
+## 1. Responsible AI policies
+
+Responsible AI policies define acceptable use of AI across the organization and establish expectations for fairness, transparency, and accountability. Decision makers must ensure that governance and security policies build on these foundations rather than duplicate or conflict with them. See [Responsible AI policies](../ai/responsible-ai-policies.md) to put a consistent framework in place before adoption spreads.
+
+## 2. Agent governance and security
+
+AI agent governance and security requires coordinated decisions across multiple areas of the organization. These decisions define the standards that control how agents are created, what data they can access, how they're secured, and how compliance is enforced. Leaders must establish policies across the following domains:
+
+- **Control plane** governance to define ownership, identity, lifecycle management, and observability for all agents.
+- **Data governance and compliance** to control how agents access, process, store, and retain data in alignment with regulatory and corporate requirements.
+- **Security** to protect agents from threats, enforce access controls, and integrate agent workloads into existing security operations.
+- **Development standards** to ensure consistent use of approved frameworks, protocols, and integration patterns across the organization.
+
+Together, these policy areas form a unified governance model. Decision makers should align these standards with existing Azure governance structures to ensure they're enforceable, auditable, and scalable across the enterprise.
 
 :::image type="complex" source="./images/governance-security.svg" alt-text="Diagram showing governance and security framework for AI agents across the organization with four horizontal layers." lightbox="./images/governance-security.svg" border="false":::
     The diagram illustrates a comprehensive governance and security framework organized into four layers. The top layer, "Data governance and compliance," includes Microsoft Purview Compliance Manager, Microsoft Purview APIs, Copilot Studio governance features, and data location controls. The second layer, "Agent observability," contains Microsoft Agent 365, Microsoft Defender for Cloud, Azure Log Analytics, Application Insights, and Cost Management. The third layer, "Agent security," shows Defender for Cloud AI threat protection, Content Safety in Foundry Control Plane, AI Red Teaming Agent, Azure role-based access control (RBAC), and Microsoft Sentinel. The bottom layer, "Agent development," lists Microsoft Agent Framework, Foundry SDK, Model Context Protocol (MCP), and Agent-to-Agent Protocol (A2A). Each layer connects to specific Microsoft services that support governance objectives at that level.
 :::image-end:::
 
-## Establish a single control plane for AI agents across the organization
+### 2.1 AI agent control plane
 
-**Every agent must be observable, governed, and secure.** Every AI agent introduces organizational risk. Agents access data. Agents take actions. Agents operate with delegated authority. Organizational leaders must be able to:
+**Every agent must be observable, governed, and secure.** Agents introduce organizational risk because they access data and take actions with delegated authority. Leaders must know which agents exist, who owns them, what they can access, and how to intervene when behavior falls outside policy.
 
-- identify what agents exist
-- determine who owns them
-- limit what they can access
-- observe what they do
-- stop what they should not do
+Adopt a centralized agent governance layer to enforce consistent identity, ownership, access control, and continuous monitoring for all agents. This approach replaces fragmented oversight with a single, organization-wide standard that is enforceable and auditable.
 
-A centralized agent control plane enables consistent governance across all AI agents regardless of platform or deployment model.
-
-**Recommendation:** Use an agent control plane that provides:
-
-- centralized agent identity
-- consistent policy enforcement
-- unified inventory and ownership
-- continuous behavioral visibility
-- cross‑platform governance oversight
-
-Apply this recommendation using the following governance practices:
+This governance layer becomes the foundation for applying governance practices, where policies are defined, applied, and continuously enforced across all agents. Here's how:
 
 1. **Assign organizational accountability for agent governance.** AI agents introduce organizational risk similar to applications and identities. Governance requires clear accountability. **Best practices:** Assign ownership for agent governance to the same leaders responsible for cloud governance, security, and compliance. Align agent oversight with existing Azure governance structures. Avoid creating parallel governance models.
 
@@ -72,11 +75,11 @@ Apply this recommendation using the following governance practices:
 
 :::image type="icon" source="./images/copilot-studio-icon.png"::: **Copilot Studio**: Have teams review articles on [Monitor logging and auditing](/microsoft-copilot-studio/admin-logging-copilot-studio), centralize data with [Azure Application Insights in Azure Monitor](/microsoft-copilot-studio/advanced-bot-framework-composer-capture-telemetry), and [review usage and message allocation](/microsoft-copilot-studio/requirements-messages-management) to manage consumption.
 
-## Data governance and compliance
+### 2.2. Data governance and compliance
 
 Organizations require concrete mechanisms to control how agents access, process, and store data. These mechanisms translate regulatory requirements and corporate policies into technical controls that enforce boundaries around agent behavior. Data governance establishes the foundation for responsible AI deployment by defining what data agents can use, where they can operate, and how long they can retain information.
 
-### Regulatory compliance
+#### 2.2.1 Regulatory compliance
 
 **All agents must comply with regulations and standards.** Regulatory compliance encompasses data protection laws, industry certifications, and internal governance requirements. Translate these regulations into foundational controls to ensure agents process data responsibly, securely, and transparently.
 
@@ -91,7 +94,7 @@ Organizations require concrete mechanisms to control how agents access, process,
 
 :::image type="icon" source="./images/copilot-studio-icon.png"::: **Copilot Studio**: Follow [governance and security best practices](/microsoft-copilot-studio/guidance/sec-gov-intro). Use [data locations](/microsoft-copilot-studio/data-location) to respect data sovereignty. See the platform's [compliance (ISO, SOC, HIPAA) certifications](/microsoft-copilot-studio/admin-certification).
 
-### Corporate compliance
+#### 2.2.2 Corporate compliance
 
 **All agents must comply with Responsible AI policies.** Corporate compliance ensures agents align with internal governance policies grounded in Responsible AI principles: fairness, reliability and safety, privacy and security, inclusiveness, transparency, and accountability. Organizations translate these principles into concrete controls that govern how agents handle data, make decisions, and interact with users. These controls protect the organization from reputational harm, regulatory penalties, and loss of user trust while ensuring agents operate within defined ethical and operational boundaries.
 
@@ -110,7 +113,7 @@ Organizations require concrete mechanisms to control how agents access, process,
 
 :::image type="icon" source="./images/copilot-studio-icon.png"::: **Copilot Studio**: [Create and manage solution pipelines](/microsoft-copilot-studio/authoring-solutions-overview#create-and-manage-solution-pipelines) and use [reusable component collections](/microsoft-copilot-studio/authoring-export-import-copilot-components) and enforce version governance.
 
-## Agent security
+### 2.3 Agent security
 
 **All agents must meet all baseline security requirements.** AI agents process natural language, interact with external sources, and often make autonomous decisions. These capabilities introduce security risks that organizations must address, including data leakage, data poisoning, jailbreak attempts, and credential theft. Organizations integrate agent security into existing enterprise security frameworks to ensure consistency, reduce exposure, and support regulatory compliance.
 
@@ -139,7 +142,7 @@ Organizations require concrete mechanisms to control how agents access, process,
 
 :::image type="icon" source="./images/copilot-studio-icon.png"::: **Copilot Studio**: Review [security and governance guidance](/microsoft-copilot-studio/security-and-governance), enable [automatic security scans](/microsoft-copilot-studio/security-scan), and verify [agent runtime protection status](/microsoft-copilot-studio/security-agent-runtime-view) to ensure continuous validation.
 
-## Agent development standards
+### 2.4 Agent development standards
 
 **Every agent must use only approved frameworks and protocols.** Organizations standardize how agents interact with tools, data, and each other to ensure consistency, safety, and interoperability. Business leaders define which protocols and frameworks are acceptable and mandate their use across all agent development efforts.
 
@@ -152,7 +155,7 @@ Organizations require concrete mechanisms to control how agents access, process,
 
 :::image type="icon" source="./images/copilot-studio-icon.png"::: **Copilot Studio**: Use the [authoring canvas](/microsoft-copilot-studio/authoring-fundamentals) for low-code development and [knowledge sources](/microsoft-copilot-studio/knowledge-copilot-studio) to integrate with external data and services.
 
-## Prepare environment
+## 3. Prepare environment
 
 An environment is the controlled space where workloads and AI agents are developed, deployed, and operated. The goal is to ensure that every AI environment enforces governance policies that act as guardrails, delivering consistency, security, and compliance across all workloads and agents. These guardrails protect teams while enabling rapid, safe development.
 

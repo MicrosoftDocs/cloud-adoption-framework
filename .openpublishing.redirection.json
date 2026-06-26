@@ -4059,6 +4059,16 @@
       "source_path": "docs/ai/infrastructure/cycle-cloud.md",
       "redirect_url": "/azure/cloud-adoption-framework/ai/infrastructure/ai-azure-infrastructure-implementation.md",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/ai-agents/responsible-ai-across-organization.md",
+      "redirect_url": "/azure/cloud-adoption-framework/ai/responsible-ai-policies",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/ai/index.md",
+      "redirect_url": "/azure/cloud-adoption-framework/ai/strategy",
+      "redirect_document_id": true
     }
-   ]
+   ]  
 }

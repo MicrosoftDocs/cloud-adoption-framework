@@ -48,7 +48,7 @@ The Cloud Adoption Framework has specific guidance aligned to common scenarios a
 | CAF Scenario | Purpose |
 |--------------|-----------------|----------------------------------|
 | [Data](data/executive-strategy-unify-data-platform.md) | How to prepare your data for AI and analytics |
-| [AI adoption](./scenarios/ai/index.md) | How to adopt AI (generative and nongenerative) workloads |
+| [AI adoption](./ai/strategy.md) | How to adopt AI (generative and nongenerative) workloads |
 | [AI agents](./ai-agents/index.md) | How and when to adopt AI agents |
 | [Azure Virtual Desktop](./scenarios/azure-virtual-desktop/index.md) | How to adopt Azure Virtual Desktop workloads |
 | [Azure VMware Solution](./scenarios/azure-vmware/index.md) | How to adopt Azure VMware Solution workloads |

@@ -27,7 +27,7 @@ Successful AI agent adoption relies on integrating agent responsibilities into y
 :::image type="content" source="./images/agent-teams.png" alt-text="Diagram that shows how workload teams, platform teams, and AI CoE work together." lightbox="./images/agent-teams.png" border="false":::
 *Figure 2. Typical AI agent responsibilities across an organization.*
 
-- **Platform responsibilities.** The platform team manages the technical foundation and governance guardrails. They must audit and enforce the [responsible AI policies](./responsible-ai-across-organization.md) and [governance standards](./governance-security-across-organization.md) the organization adopts. This centralization ensures observability, compliance, and consistent risk management across the enterprise. For implementation guidance, see [prepare an agent environment](./governance-security-across-organization.md#prepare-environment).
+- **Platform responsibilities.** The platform team manages the technical foundation and governance guardrails. They must audit and enforce the [responsible AI policies and governance standards](./governance-security-across-organization.md) the organization adopts. This centralization ensures observability, compliance, and consistent risk management across the enterprise. For implementation guidance, see [prepare an agent environment](./governance-security-across-organization.md#3-prepare-environment).
 
 - **Workload responsibilities.** Workload teams operate within business units and own the end-to-end lifecycle of specific agents. They define business requirements, curate domain-specific data, design conversation flows, and integrate agents into business processes. These teams inherit the security controls of the platform and must follow the approved [process to build agents](./build-secure-process.md).
 
@@ -41,7 +41,7 @@ Organizations must identify the skills required to support AI agents and address
 | :--- | :--- |
 | **[Prompt engineering](/azure/ai-foundry/openai/concepts/prompt-engineering)** | Techniques for designing inputs, system instructions, and orchestration logic that guide model behavior effectively. |
 | **Agent optimization** | Processes for [fine-tuning models](/azure/ai-foundry/concepts/fine-tuning-overview), evaluating response quality against ground truth, and monitoring performance metrics. |
-| **AI ethics and governance** | Application of [responsible AI principles](./responsible-ai-across-organization.md) to ensure agents adhere to safety, fairness, and compliance standards. |
+| **AI ethics and governance** | Application of [responsible AI principles](./governance-security-across-organization.md#1-responsible-ai-policies) to ensure agents adhere to safety, fairness, and compliance standards. |
 | **Data engineering for AI** | Strategies for structuring unstructured data, managing vector indexes, and implementing [Retrieval-Augmented Generation (RAG)](/azure/ai-foundry/concepts/retrieval-augmented-generation) patterns. |
 | **AI security** | Methods for detecting and mitigating AI-specific threats, such as prompt injection and jailbreaks. |
 

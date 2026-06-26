@@ -1,13 +1,13 @@
 ---
-title: Secure AI
-description: Learn the process to secure AI with best practices and recommendations.
+title: Secure AI - Guidance to set up your organization's AI security process
+description: Guidance to set up your organization's AI security process
 ms.author: ssumner
 author: stephen-sumner
 ms.date: 04/07/2026
 ms.topic: concept-article
 ---
 
-# Secure AI
+# Guidance to set up your organization's AI security process
 
 This article helps you establish a security process for AI workloads in Azure. A secure AI environment supports business objectives and builds stakeholder confidence in AI solutions.
 
@@ -69,7 +69,7 @@ AI systems face evolving threats that require continuous monitoring to prevent s
 
 ## Next steps
 
-As stated earlier, the processes of Govern AI, Manage AI, and Secure AI are continuous processes that you must regularly iterate through. Revisit each AI Strategy, AI Plan, and AI Ready as needed. Use the AI adoption checklists to determine what your next step should be.
+Use the AI adoption checklists to determine your next step.
 
 > [!div class="nextstepaction"]
-> [AI checklists](index.md#ai-checklists)
+> [AI checklists](./strategy.md#5-how-to-adopt-ai)

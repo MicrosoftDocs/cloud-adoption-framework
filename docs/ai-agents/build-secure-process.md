@@ -84,7 +84,7 @@ Model selection directly affects cost, performance, and compliance across your a
 
 ## 3. Agent knowledge and tools
 
-Data access and tool permissions determine agent reliability, compliance posture, and operational risk. These policies establish boundaries that prevent unauthorized actions while enabling agents to deliver value. Follow all [data governance and compliance policies](./governance-security-across-organization.md#data-governance-and-compliance).
+Data access and tool permissions determine agent reliability, compliance posture, and operational risk. These policies establish boundaries that prevent unauthorized actions while enabling agents to deliver value. Follow all [data governance and compliance policies](./governance-security-across-organization.md#22-data-governance-and-compliance).
 
 ### Agent knowledge
 

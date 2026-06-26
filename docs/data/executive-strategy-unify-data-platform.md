@@ -1,5 +1,5 @@
 ---
-title: Data Platform for AI and Analytics - Executive strategy for unifying your data for AI and analytics
+title: Data for AI and Analytics - Guidance to set your organization's data strategy for Ai and analytics
 description: "Unified data platform: Discover how Microsoft Fabric, Microsoft Purview, and Azure help organizations get more business value out of their data and prepare their data and unify their data platform for AI and analytics."
 #customer intent: As a business decision maker (CEO, CTO, CFO, C-suite), I want to understand how a unified data platform with Microsoft Fabric can deliver value quickly so that I can justify investment and plan for incremental adoption for improved AI and analytics.
 author: stephen-sumner
@@ -10,7 +10,7 @@ ms.topic: concept-article
 ms.collection: ce-skilling-ai-copilot
 ---
 
-# Executive strategy for unifying your data
+# Data for AI and analytics - Guidance to set your organization's data strategy
 
 **Data goal:** Every organization wants its data to drive confident business decisions. Data must be trusted, easy to reuse for analytics and AI, and secure by default. **Data challenge:** For most organizations, this goal is hard to achieve. Data is spread across systems and teams. Standards vary. Governance is inconsistent. These issues make analytics and AI difficult to use with confidence.
 
