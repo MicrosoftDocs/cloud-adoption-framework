@@ -17,7 +17,7 @@ Replatforming involves moving workload components to platform-as-a-service (PaaS
 
 | Replatform category | Replatform guidance | Guidance type |
 |---------------------|---------------------|---------------|
-| VM-based components to Azure PaaS | • [Technology choices for Azure](/azure/architecture/guide/technology-choices/technology-choices-overview)<br>• [Reliable web app pattern](/azure/architecture/web-apps/guides/enterprise-app-patterns/reliable-web-app/dotnet/guidance) | Architecture guide<br>Architecture |
+| VM-based components to Azure PaaS | • [Technology choices for Azure](/azure/architecture/guide/technology-choices/technology-choices-overview) | Architecture guide<br>Architecture |
 | Other cloud to Azure PaaS | • [AWS to Azure PaaS](/azure/migration/migrate-from-aws)<br>• [Google cloud to Azure PaaS](/azure/migration/migrate-from-google-cloud) | Migration guide<br>Migration guide |
 
 ## Refactor
@@ -38,12 +38,12 @@ Rearchitecting involves redesigning the application architecture to enable scala
 
 | Rearchitect category | Rearchitect guidance | Guidance type |
 |------------------------|----------|---------------|
-| Decouple components | • [Microservices architecture style](/azure/architecture/guide/architecture-styles/microservices)<br>• [Modern web app pattern](/azure/architecture/web-apps/guides/enterprise-app-patterns/modern-web-app/dotnet/guidance) | Architecture<br>Architecture |
+| Decouple components | • [Microservices architecture style](/azure/architecture/guide/architecture-styles/microservices)<br>| Architecture<br>Architecture |
 | Use multiple regions | • [Highly available zone-redundant web application](/azure/architecture/web-apps/app-service/architectures/baseline-zone-redundant)<br>• [Multi-region load balancing with Traffic Manager](/azure/architecture/high-availability/reference-architecture-traffic-manager-application-gateway) | Design guide<br>Architecture |
 | Consolidate services | • [Consolidation](/azure/well-architected/cost-optimization/consolidation) | Design guide |
-| Use asynchronous messaging | • [Asynchronous messaging options](/azure/architecture/guide/technology-choices/messaging)<br>• [Modern web app pattern](/azure/architecture/web-apps/guides/enterprise-app-patterns/modern-web-app/dotnet/guidance) | Architecture guide<br>Architecture |
-| Use microservices | • [Design infrastructure to scale](/azure/well-architected/performance-efficiency/scale-partition#design-infrastructure-to-scale)<br>• [Microservices architecture](/azure/architecture/guide/architecture-styles/microservices)<br>• [Modern web app pattern](/azure/architecture/web-apps/guides/enterprise-app-patterns/modern-web-app/dotnet/guidance) | Design guide<br>Architecture guide<br>Architecture |
-| Add caching | • [Reliable web app pattern](/azure/architecture/web-apps/guides/enterprise-app-patterns/reliable-web-app/dotnet/guidance)<br>• [Use caching](/azure/well-architected/performance-efficiency/optimize-data-performance#use-caching) | Architecture<br>Design guide |
+| Use asynchronous messaging | • [Asynchronous messaging options](/azure/architecture/guide/technology-choices/messaging)<br> | Architecture guide<br>Architecture |
+| Use microservices | • [Design infrastructure to scale](/azure/well-architected/performance-efficiency/scale-partition#design-infrastructure-to-scale)<br>• [Microservices architecture](/azure/architecture/guide/architecture-styles/microservices)| Design guide<br>Architecture guide<br>Architecture |
+| Add caching | • [Use caching](/azure/well-architected/performance-efficiency/optimize-data-performance#use-caching) | Architecture<br>Design guide |
 | Change data architecture | • [Big data architecture style](/azure/architecture/guide/architecture-styles/big-data)<br>• [Event-driven architecture style](/azure/architecture/guide/architecture-styles/event-driven)<br>• [Use polyglot persistence](/azure/well-architected/performance-efficiency/optimize-data-performance#use-polyglot-persistence) | Architecture guide<br>Design guide |
 
 ## Next steps
