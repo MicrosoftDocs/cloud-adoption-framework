@@ -91,9 +91,9 @@ Choose workloads where PaaS options reduce operational overhead, improve reliabi
 
 | Source environment | Azure target | Replatforming examples | Guidance |
 |---------------|--------------|--------------------------| ---------|
-| On-premises | Azure PaaS | VMs → Azure App Service<br><br>SQL Server on a VM → Azure SQL Database | [Reliable web app pattern](/azure/architecture/web-apps/guides/enterprise-app-patterns/reliable-web-app/dotnet/guidance) <br> [Database migration guides](/data-migration/) |
+| On-premises | Azure PaaS | VMs → Azure App Service<br><br>SQL Server on a VM → Azure SQL Database | [Database migration guides](/data-migration/) |
 | Other cloud IaaS | Azure PaaS | AWS EC2 → Azure App Service<br><br>MySQL on AWS EC2 → Azure SQL Database | [Other cloud to Azure migration](/azure/migration/migrate-to-azure) <br> [Database migration guides](/data-migration/) |
-| Azure IaaS | Azure PaaS | Azure Virtual Machines → Azure App Service<br><br>SQL Server on Azure Virtual Machines → Azure SQL Database | [Reliable web app pattern](/azure/architecture/web-apps/guides/enterprise-app-patterns/reliable-web-app/dotnet/guidance) <br> [Database migration guides](/data-migration/) |
+| Azure IaaS | Azure PaaS | Azure Virtual Machines → Azure App Service<br><br>SQL Server on Azure Virtual Machines → Azure SQL Database | [Database migration guides](/data-migration/) |
 
 ### 4. Refactor (modernize code)
 
@@ -105,7 +105,7 @@ Refactoring improves the internal structure of code without adding new features.
 
 ### 5. Rearchitect (modernize architecture and code)
 
-A rearchitect strategy redesigns the workload's architecture to improve scalability, agility, and service orientation. This strategy is important when you need to break down monolithic applications, adopt microservices, or enable targeted scaling. You should rearchitect when your current architecture limits your ability to meet business goals or scale effectively. For an example, see [Modern Web App Pattern](/azure/architecture/web-apps/guides/enterprise-app-patterns/modern-web-app/dotnet/guidance).
+A rearchitect strategy redesigns the workload's architecture to improve scalability, agility, and service orientation. This strategy is important when you need to break down monolithic applications, adopt microservices, or enable targeted scaling. Rearchitect when your current architecture limits your ability to meet business goals or scale effectively.
 
 | Business driver | Key indicators for this strategy |
 |----------------------|------------------------------|
