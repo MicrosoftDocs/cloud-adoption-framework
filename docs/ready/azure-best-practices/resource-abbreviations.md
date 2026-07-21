@@ -216,6 +216,14 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 |--|--|--|
 | Application gateway | `Microsoft.Network/applicationGateways` | `agw` |
 | Application security group (ASG) | `Microsoft.Network/applicationSecurityGroups` | `asg` |
+| Azure Enclave community | `Microsoft.Mission/communities` | `cmt` |
+| Azure Enclave community endpoint | `Microsoft.Mission/communities/communityEndpoints` | `ce` |
+| Azure Enclave dedicated hub | `Microsoft.Mission/communities/dedicatedHubs` | `dh` |
+| Azure Enclave transit hubs | `Microsoft.Mission/communities/transitHubs` | `th` |
+| Azure Enclave enclave | `Microsoft.Mission/virtualEnclaves` | `ve` |
+| Azure Enclave enclave endpoints | `Microsoft.Mission/virtualEnclaves/enclaveEndpoints` | `ee` |
+| Azure Enclave enclave connections | `Microsoft.Mission/enclaveConnections` | `ec` |
+| Azure Enclave workloads | `Microsoft.Mission/virtualEnclaves/workloads` | `wl` |
 | CDN profile | `Microsoft.Cdn/profiles` | `cdnp` |
 | CDN endpoint | `Microsoft.Cdn/profiles/endpoints` | `cdne` |
 | Connections | `Microsoft.Network/connections`| `con` |
@@ -255,14 +263,6 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | Service endpoint policy | `Microsoft.Network/serviceEndPointPolicies` | `se` |
 | Traffic Manager profile | `Microsoft.Network/trafficManagerProfiles` | `traf` |
 | User defined route (UDR) | `Microsoft.Network/routeTables/routes` | `udr` |
-| Azure Enclave community | `Microsoft.Mission/communities` | `cmt` |
-| Azure Enclave community endpoint | `Microsoft.Mission/communities/communityEndpoints` | `ce` |
-| Azure Enclave dedicated hub | `Microsoft.Mission/communities/dedicatedHubs` | `dh` |
-| Azure Enclave transit hubs | `Microsoft.Mission/communities/transitHubs` | `th` |
-| Azure Enclave enclave | `Microsoft.Mission/virtualenclaves` | `ve` |
-| Azure Enclave enclave endpoints | `Microsoft.Mission/virtualEnclaves/enclaveEndpoints` | `ee` |
-| Azure Enclave enclave connections | `Microsoft.Mission/enclaveconnections` | `ec` |
-| Azure Enclave workloads | `Microsoft.Mission/virtualEnclaves/workloads` | `wl` |
 | Virtual network | `Microsoft.Network/virtualNetworks` | `vnet`|
 | Virtual network gateway | `Microsoft.Network/virtualNetworkGateways` | `vgw` |
 | Virtual network manager | `Microsoft.Network/networkManagers` | `vnm`|
