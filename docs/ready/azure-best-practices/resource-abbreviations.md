@@ -212,6 +212,14 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 |--|--|--|
 | Application gateway | `Microsoft.Network/applicationGateways` | `agw` |
 | Application security group (ASG) | `Microsoft.Network/applicationSecurityGroups` | `asg` |
+| Azure Enclave community | `Microsoft.Mission/communities` | `cmt` |
+| Azure Enclave community endpoint | `Microsoft.Mission/communities/communityEndpoints` | `ce` |
+| Azure Enclave dedicated hub | `Microsoft.Mission/communities/dedicatedHubs` | `dh` |
+| Azure Enclave transit hubs | `Microsoft.Mission/communities/transitHubs` | `th` |
+| Azure Enclave enclave | `Microsoft.Mission/virtualEnclaves` | `ve` |
+| Azure Enclave enclave endpoints | `Microsoft.Mission/virtualEnclaves/enclaveEndpoints` | `ee` |
+| Azure Enclave enclave connections | `Microsoft.Mission/enclaveConnections` | `ec` |
+| Azure Enclave workloads | `Microsoft.Mission/virtualEnclaves/workloads` | `wl` |
 | CDN profile | `Microsoft.Cdn/profiles` | `cdnp` |
 | CDN endpoint | `Microsoft.Cdn/profiles/endpoints` | `cdne` |
 | Connections | `Microsoft.Network/connections`| `con` |
