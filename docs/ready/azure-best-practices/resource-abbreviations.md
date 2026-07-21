@@ -257,7 +257,7 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | User defined route (UDR) | `Microsoft.Network/routeTables/routes` | `udr` |
 | Azure Enclave community | `Microsoft.Mission/communities` | `cmt` |
 | Azure Enclave community endpoint | `Microsoft.Mission/communities/communityEndpoints` | `ce` |
-| Azure Enclave community dedicated hub | `Microsoft.Mission/communities/dedicatedHubs` | `dh` |
+| Azure Enclave dedicated hub | `Microsoft.Mission/communities/dedicatedHubs` | `dh` |
 | Azure Enclave transit hubs | `Microsoft.Mission/communities/transitHubs` | `th` |
 | Azure Enclave enclave | `Microsoft.Mission/virtualenclaves` | `ve` |
 | Azure Enclave enclave endpoints | `Microsoft.Mission/virtualEnclaves/enclaveEndpoints` | `ee` |
