@@ -20,7 +20,7 @@ Microsoft continuously updates the Cloud Adoption Framework with new guidance, e
 
 An *Azure landing zone* is the proven architecture for governing and scaling a multi-subscription Azure environment. An *Azure landing zone* consists of two components:
 
-- **Platform landing zone** (typically one per Microsoft Entra)
+- **Platform landing zone** (typically one per Microsoft Entra tenant)
 - **Application (workload) landing zones** (multiple per workload)
 
 To implement a platform landing zone, decision makers use the Cloud Adoption Framework to help make the right architecture decisions for their organization. The decisions serve as an input to their platform landing zone design.
