@@ -75,7 +75,7 @@ For in-depth recommendations and best practices regarding your cloud architectur
 
   The native end-to-end approach is most useful for direct server-to-server or client-to-server communication. It's not useful for most web services and applications, which are typically protected by firewalls, web application firewalls, or reverse proxies.
 
-- Some complex deployments and applications that use a combination of third-party services, platform as a service (PaaS) services, and back-end solutions might not support native IPv6. In these cases, you need to use NAT/NAT64 or an IPv6 proxy solution to enable communication between IPv6 and IPv4.
+- Some complex deployments and applications that use a combination of third-party services, platform as a service (PaaS) services, and back-end solutions might not support native IPv6. In these cases, you need to use NAT/NAT64 or an IPv6 proxy solution to enable communication between IPv6 and IPv4. [Azure NAT Gateway](/azure/nat-gateway/nat-overview) provides NAT64 translation, which lets IPv6 workloads reach IPv4-only internet destinations.
 - When the complexity of the application architecture or other factors like training costs are considered significant, you might want to keep using IPv4-only infrastructure on the back end and deploy a third-party network virtual appliance (NVA) dual-stack IPv4/IPv6 gateway for service delivery.
 
   A typical deployment that uses an NVA might look like this:

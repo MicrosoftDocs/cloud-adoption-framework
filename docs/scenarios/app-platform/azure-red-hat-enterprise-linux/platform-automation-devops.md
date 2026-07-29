@@ -227,9 +227,9 @@ The following table describes the supported runbook types.
 
 | Runbook type | Description |
 |---|---|
-| [PowerShell](/azure/automation/automation-runbook-types#powershell-runbooks) | A textual runbook that's based on Windows PowerShell scripting. The versions that are supported are PowerShell 7.2 (GA) and PowerShell 5.1 (GA). The PowerShell parent product no longer supports PowerShell 7.1. We recommend that you create runbooks in the long-term supported version PowerShell 7.2. |
+| [PowerShell](/azure/automation/automation-runbook-types#powershell-runbooks) | A textual runbook that's based on Windows PowerShell scripting. Azure Automation follows the PowerShell support lifecycle and retires runtime versions after the parent product ends support for them. Create runbooks in a [supported PowerShell version](/azure/automation/automation-runbook-types#powershell-runbooks). |
 [PowerShell Workflow](/azure/automation/automation-runbook-types#powershell-workflow-runbooks) | A textual runbook that's based on Windows PowerShell Workflow scripting. |
-[Python](/azure/automation/automation-runbook-types#python-runbooks) | A textual runbook that's based on Python scripting. The versions that are supported are Python 3.8 (GA) and Python 3.10 (preview). The Python parent product no longer supports Python 2.7. We recommend that you create runbooks in long-term supported versions. |
+| [Python](/azure/automation/automation-runbook-types#python-runbooks) | A textual runbook that's based on Python scripting. Azure Automation follows the Python support lifecycle and retires runtime versions after the parent product ends support for them. Create runbooks in a [supported Python version](/azure/automation/automation-runbook-types#python-runbooks). |
 [Graphical](/azure/automation/automation-runbook-types#graphical-runbooks) | A graphical runbook that's based on Windows PowerShell and created and edited completely in the graphical editor in the Azure portal. |
 [Graphical PowerShell Workflow](/azure/automation/automation-runbook-types#graphical-runbooks) | A graphical runbook that's based on Windows PowerShell Workflow and created and edited completely in the graphical editor in the Azure portal. |
 

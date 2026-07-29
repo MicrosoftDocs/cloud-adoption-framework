@@ -83,7 +83,7 @@ Here are some general design recommendations for Azure Arc-enabled servers cost 
 
 - Evaluate reducing data ingestion volume. Refer to [Tips for reducing data volume](/azure/azure-monitor/logs/manage-cost-storage#tips-for-reducing-data-volume) documentation, to help configure data ingestion properly.
 - Consider how long you want to retain data on Log Analytics. Data ingested into Log Analytics workspace can be retained at no additional charge, up to the first 31 days. Consider general aspects to configure the [Log Analytics workspace level default retention](/azure/azure-monitor/logs/manage-cost-storage#workspace-level-default-retention), and specific needs to configure data [retention by data type](/azure/azure-monitor/logs/manage-cost-storage#retention-by-data-type), that can be as minimal as four days. Example: performance data doesn't usually need long retention, but security logs might need extended retention.
-- To retain data longer than 730 days, consider using [Log Analytics workspace data export](/azure/azure-monitor/logs/logs-data-export).
+- To retain data beyond the [total retention period](/azure/azure-monitor/logs/data-retention-configure) of the workspace, consider using [Log Analytics workspace data export](/azure/azure-monitor/logs/logs-data-export).
 - Consider using [commitment tier](/azure/azure-monitor/logs/manage-cost-storage#pricing-model) pricing based on your data ingestion volume.
 
 ### Microsoft Defender for Cloud

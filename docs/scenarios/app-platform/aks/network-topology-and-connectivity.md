@@ -20,11 +20,11 @@ ms.custom: think-tank, e2e-aks
 
 ## Design considerations
 
-Azure Kubernetes Service (AKS) provides three different networking models for container networking: Kubenet, CNI Overlay, and CNI. Each of these models has its unique set of features and advantages, offering flexibility and scalability options for container networking in AKS.
+Azure Kubernetes Service (AKS) provides several networking models for container networking: Azure CNI Overlay, Azure CNI, and the legacy kubenet model. Each of these models has its unique set of features and advantages, offering flexibility and scalability options for container networking in AKS.
 
 ### Kubenet
 
-Kubenet is a basic networking solution that conserves IP address space and offers simple configuration. It's ideal for small AKS clusters with fewer than 400 nodes, where manually managing and maintaining user-defined routes is acceptable. It's suitable for scenarios where internal or external load balancers are sufficient for reaching pods from outside the cluster.
+Kubenet is a legacy AKS networking model. Use Azure CNI Overlay for new and existing AKS deployments. Kubenet networking for AKS is deprecated and retires on March 31, 2028, so organizations should plan to migrate existing clusters before that date. For more information, see [Legacy CNI networking in AKS](/azure/aks/concepts-network-legacy-cni).
 
 ### Azure CNI
 
@@ -32,9 +32,9 @@ Azure CNI is a network model designed for advanced networking. It provides full 
 
 ### Azure CNI Overlay
 
-Azure CNI Overlay is designed to address IP address shortages and simplify network configuration. It's suitable for scenarios where scaling up to 1000 nodes and 250 pods per node is sufficient, and an additional hop for pod connectivity is acceptable. AKS egress requirements can also be met with Azure CNI Overlay.
+Azure CNI Overlay addresses IP address shortages and simplifies network configuration. It's suitable for scenarios where an extra hop for pod connectivity is acceptable, and it supports the maximum node count that the API server allows. Azure CNI Overlay also meets AKS egress requirements.
 
-For a summary of recommended use cases per network model, see [Compare network models in AKS](/azure/aks/concepts-network#compare-network-models).
+For a summary of recommended use cases per network model, see [CNI networking in AKS](/azure/aks/concepts-network-cni-overview#use-case-comparison).
 
 In addition, when designing your AKS cluster, it's important to carefully plan the IP addressing and size of the virtual network subnet to support scaling. Virtual nodes can be used for quick cluster scaling, but there are some known limitations.
 
@@ -75,7 +75,7 @@ Incoming (ingress) controllers can be used to expose applications running in the
 - Ingress controllers can run off-cluster and in-cluster:
   - An off-cluster ingress controller offloads compute (such as HTTP traffic routing or TLS termination) to another service outside of AKS, like the [Azure Application Gateway Ingress Controller (AGIC) add-on](/azure/application-gateway/ingress-controller-overview).
   - An in-cluster solution consumes AKS cluster resources for compute (such as HTTP traffic routing or TLS termination). In-cluster ingress controllers can offer lower cost, but they require careful resource planning and maintenance.
-- The basic HTTP application routing add-on is easy to use, but has some restrictions as documented in [HTTP application routing](/azure/aks/http-application-routing).
+- The managed [application routing add-on](/azure/aks/app-routing) is easy to use but has some restrictions. It supports managed NGINX ingress and the [Kubernetes Gateway API](/azure/aks/app-routing-gateway-api) for ingress and Layer 7 traffic management.
 
 Ingress controllers can expose applications and APIs with a public or a private IP address.
 
@@ -142,6 +142,6 @@ Traffic between the AKS pods and the private endpoints by default won't go throu
 - If your security policy mandates inspecting all outbound internet traffic generated in the AKS cluster, secure egress network traffic using Azure Firewall or a third-party network virtual appliance (NVA) deployed in the managed hub virtual network. For more information, see [Limit egress traffic](/azure/aks/limit-egress-traffic). The AKS [outbound type UDR](/azure/aks/egress-outboundtype#deploy-a-cluster-with-outbound-type-of-udr-and-azure-firewall) requires associating a route table to the AKS node subnet, so it can't be used today with the dynamic route injection supported by Azure Virtual WAN or Azure Route Server.
 - For non-private clusters, use authorized IP ranges.
 - Use the Standard tier rather than the Basic tier of Azure Load Balancer.
-- When designing a Kubernetes cluster in Azure, one of the key considerations is selecting the appropriate network model for your specific requirements. Azure Kubernetes Service (AKS) offers three different networking models: Kubenet, Azure CNI, and Azure CNI Overlay. To make an informed decision, it's essential to understand the capabilities and characteristics of each model.
+- When designing a Kubernetes cluster in Azure, one of the key considerations is selecting the appropriate network model for your specific requirements. Azure Kubernetes Service (AKS) offers several networking models: Azure CNI Overlay, Azure CNI, and the legacy kubenet model. To make an informed decision, it's essential to understand the capabilities and characteristics of each model.
 
-For a feature comparison between the three network models in AKS, Kubenet, Azure CNI, and Azure CNI Overlay, see [Compare network models in AKS](/azure/aks/concepts-network#compare-network-models).
+For a feature comparison between the network models in AKS, see [CNI networking in AKS](/azure/aks/concepts-network-cni-overview#feature-comparison).
