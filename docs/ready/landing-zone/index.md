@@ -1,121 +1,122 @@
 ---
 title: What is an Azure landing zone?
-description: Learn how a landing zone provides the basic building block of any cloud adoption environment.
-author: jtracey93
-ms.author: jatracey
-ms.date: 12/11/2025
+description: Azure landing zones deliver a proven architecture for governing, securing, and scaling multi-subscription environments. Understand platform landing zone and application landing zones.
+#customer intent: As a decision maker, I want to understand how my platform team should design our Azure environment to govern, secure, and scale our Azure workloads within our governance and security baselines without hindering their ability to deploy workloads.
+author: stephen-sumner
+ms.author: ssumner
+ms.reviewer: ssumner
+ms.date: 07/24/2025
 ms.topic: concept-article
-ms.custom: internal
 ---
 
 # What is an Azure landing zone?
 
-An Azure landing zone is the standardized and recommended approach for all organizations utilizing Azure. It provides a consistent way to set up and manage your Azure environment at scale. It ensures consistency across your organization by aligning with key requirements for security, compliance, and operational efficiency through [platform and application landing zones](#platform-landing-zone-vs-application-landing-zones). They provide a well-architected foundation aligned with core [design principles](design-principles.md) across eight [design areas](design-areas.md).
+The Ready phase of the Cloud Adoption Framework helps you design your Azure landing zone to meet your organization's requirements. An Azure landing zone is a proven and flexible architecture for governing, securing, and scaling a multi-subscription Azure environment. An Azure landing zone consists of two components:
+
+- **Platform landing zone:** The centralized foundation that establishes governance, security, and shared resources for all your Azure workloads.
+
+- **Application landing zones:** Azure environments where you deploy and operate workload resources within the standards established by the platform landing zone.
+
+You can implement Azure landing zones using one of two approaches:
+
+- **Accelerators**: Microsoft-provided accelerators for both platform landing zone and application landing zone scenarios use infrastructure as code to deploy Azure environments based on recommended practices.
+
+- **Custom build**: You design and build the solution internally or with support from Microsoft or Microsoft partners.
+
+For most organizations, accelerators provide the fastest path to a deployment that aligns with Microsoft's recommended practices.
 
 ## Azure landing zone architecture
 
-An Azure landing zone architecture is scalable and modular to meet various deployment needs. The repeatable infrastructure allows you to apply configurations and controls to every subscription consistently. Modules make it easy to deploy and modify specific Azure landing zone architecture components as your requirements evolve.
+Every Azure landing zone starts with the platform landing zone. Before you build a platform landing zone, define organizational requirements across the Azure landing zone [design areas](design-areas.md). These decisions determine how you design your Azure landing zone.
 
-The Azure landing zone reference architecture (*see figure 1*) represents an opinionated target architecture for your Azure landing zone. You should use this reference architecture as a starting point and [tailor the architecture to meet your needs](./tailoring-alz.md).
+The Azure landing zone reference architecture represents a recommended target architecture. Use it as a starting point and adapt it to meet your organization's requirements.
+
+# [Conceptual](#tab/conceptual)
+
+:::image type="complex" border="false" source="./media/conceptual-azure-landing-zone.svg" alt-text="Diagram that shows a conceptual view of an Azure landing zone and how it integrates with key services across your organization." lightbox="./media/conceptual-azure-landing-zone.svg":::
+    A top section labeled "Unified identity, security, and governance across Azure, Microsoft, multicloud, and on-premises environments" holds four components: Microsoft Agent 365, Microsoft Defender, Microsoft Entra, and Microsoft Purview. Below it, a large box labeled Azure reads "Azure landing zone consists of one platform landing zone and many application landing zones." Inside, the Platform landing zone, managed by platform teams, contains Management groups, Azure Policy, Azure RBAC, and centralized resources, with a callout for centralized distribution of application landing zones through subscription vending.
+
+    Beneath that, the application landing zones section, managed by workload teams, shows Microsoft Fabric compute and Data and AI/ML workloads (Azure Databricks, Azure Machine Learning) to the left, and Workload 1 and Workload n boxes each containing Azure resources. A Microsoft Foundry (Foundry IQ) box connects upward to the workloads to integrate AI. Dashed lines below link the Azure box to Microsoft Copilot Studio, Microsoft Fabric (Fabric IQ), and Microsoft 365 (Microsoft 365 Copilot, Work IQ). A bottom row labeled "All data sources" lists On-premises, Dataverse, Microsoft 365, Azure workloads, and Other clouds.
+:::image-end:::
 
 # [Hub & Spoke](#tab/hubspoke)
 
-:::image type="content" source="../enterprise-scale/media/azure-landing-zone-architecture-diagram-hub-spoke.svg" alt-text="Diagram that shows an Azure landing zone using a hub and spoke networking topology." lightbox="../enterprise-scale/media/azure-landing-zone-architecture-diagram-hub-spoke.svg":::
+:::image type="complex" border="false" source="../enterprise-scale/media/azure-landing-zone-architecture-diagram-hub-spoke.svg" alt-text="Diagram that shows an Azure landing zone using a hub and spoke networking topology." lightbox="../enterprise-scale/media/azure-landing-zone-architecture-diagram-hub-spoke.svg":::
+   At the top, an Enterprise Agreement/Microsoft Customer Agreement (A) shows a billing hierarchy leading to a subscription, alongside Identity and access management (B) and Microsoft Entra ID, which connects to on-premises Active Directory Domain Services. The center holds the Management group and subscription organization (C): under a tenant root group and Contoso sit Platform (Security, Management, Identity, Connectivity), Application landing zones (Corp, Online, Local), Decommissioned, and Sandbox, each mapping to subscriptions below. A DevOps section (I) with a Git repository, boards, and pipelines sits to the right.
 
-*Azure landing zone conceptual architecture using a hub & spoke networking topology. Download a [Visio file](https://github.com/MicrosoftDocs/cloud-adoption-framework/raw/main/docs/ready/enterprise-scale/media/enterprise-scale-architecture.vsdx) or [PDF file](https://github.com/MicrosoftDocs/cloud-adoption-framework/raw/main/docs/ready/enterprise-scale/media/enterprise-scale-architecture.pdf) of this architecture.*
+   Around the middle are individual subscriptions as boxes. Security and Management subscriptions (D, upper left) contain Log Analytics workspaces, Microsoft Sentinel, and dashboards. The Identity subscription holds virtual networks with domain services and Recovery Services vaults. The Connectivity subscription (E) contains Azure DDoS Protection, Azure DNS, VPN/ExpressRoute gateways, Azure Firewall, and peered hub virtual networks across two regions. Application landing zone A2 and P1 subscriptions (F) hold application virtual networks, resource groups, and workload resources (G) and a Sandbox subscription (H) at right. Each subscription repeats a common toolset row: Action Groups, Alerts, Cost Management, Role assignment, Policy assignment, Network Watcher, Defender for Cloud, and Azure Update Manager.
+:::image-end:::
+
+*Azure landing zone architecture using a hub & spoke networking topology. Download a [Visio file](https://github.com/MicrosoftDocs/cloud-adoption-framework/raw/main/docs/ready/enterprise-scale/media/enterprise-scale-architecture.vsdx) or [PDF file](https://github.com/MicrosoftDocs/cloud-adoption-framework/raw/main/docs/ready/enterprise-scale/media/enterprise-scale-architecture.pdf) of this architecture.*
 
 # [Virtual WAN](#tab/vwan)
 
-:::image type="content" source="../enterprise-scale/media/azure-landing-zone-virtual-wan.svg" alt-text="Diagram that shows an Azure landing zone using the Virtual WAN networking topology." lightbox="../enterprise-scale/media/azure-landing-zone-virtual-wan.svg":::
+:::image type="complex" border="false" source="../enterprise-scale/media/azure-landing-zone-virtual-wan.svg" alt-text="Diagram that shows an Azure landing zone using the Virtual WAN networking topology." lightbox="../enterprise-scale/media/azure-landing-zone-virtual-wan.svg":::
+    At the top, an Enterprise Agreement/Microsoft Customer Agreement (A) shows a billing hierarchy leading to a subscription, alongside Identity and access management (B) and Microsoft Entra ID, which connects to on-premises Active Directory Domain Services. The center holds the Management group and subscription organization (C): under a tenant root group and Contoso sit Platform (Security, Management, Identity, Connectivity), application landing zones (Corp, Online, Local), Decommissioned, and Sandbox, each mapping to subscriptions below. A DevOps section (I) with a Git repository, boards, and pipelines sits to the right.
 
-*Azure landing zone conceptual architecture using a Virtual WAN networking topology. Download a [Visio file](https://github.com/MicrosoftDocs/cloud-adoption-framework/raw/main/docs/ready/enterprise-scale/media/enterprise-scale-architecture.vsdx) or [PDF file](https://github.com/MicrosoftDocs/cloud-adoption-framework/raw/main/docs/ready/enterprise-scale/media/enterprise-scale-architecture.pdf) of this architecture.*
+    Around the middle are individual subscriptions as boxes. Security and Management subscriptions (D, upper left) contain Log Analytics workspaces, Microsoft Sentinel, and dashboards. The Identity subscription holds virtual networks with domain services and Recovery Services vaults. The Connectivity subscription (E) contains Azure DDoS Protection, Azure DNS, Azure Firewall, and two Azure Virtual WAN hubs (Region 1 and Region N) with VPN/ExpressRoute gateways. VWAN Hub Connection lines link these hubs to the application landing zone virtual networks. Application landing zone A2 and P1 subscriptions (F) hold application virtual networks, resource groups, and workload resources (G) and a Sandbox subscription (H) at right. Each subscription repeats a common toolset row: Action Groups, Alerts, Cost Management, Role assignment, Policy assignment, Network Watcher, Defender for Cloud, and Azure Update Manager.
+:::image-end:::
+
+*Azure landing zone architecture using an Azure Virtual WAN networking topology. Download a [Visio file](https://github.com/MicrosoftDocs/cloud-adoption-framework/raw/main/docs/ready/enterprise-scale/media/enterprise-scale-architecture.vsdx) or [PDF file](https://github.com/MicrosoftDocs/cloud-adoption-framework/raw/main/docs/ready/enterprise-scale/media/enterprise-scale-architecture.pdf) of this architecture.*
 
 # [Management Group Hierarchy Only](#tab/mgonly)
 
-:::image type="content" source="./media/azure-landing-zone-hierarchy.svg" alt-text="Diagram that shows an Azure landing zone management group hierarchy." lightbox="media/azure-landing-zone-hierarchy.svg":::
+:::image type="complex" border="false" source="./media/azure-landing-zone-hierarchy.svg" alt-text="Diagram that shows an Azure landing zone management group hierarchy." lightbox="media/azure-landing-zone-hierarchy.svg":::
+   This diagram is organized as a tree across two horizontal bands: Management groups on top and Subscriptions on the bottom. At the top of the Management groups band, a Tenant root group connects down to Contoso, which branches into four management groups: Platform, (Application) landing zones, Decommissioned, and Sandbox. Platform further branches into Security, Management, Identity, and Connectivity, while application landing zones branches into Corp, Online, and Local.
 
-*Azure landing zone conceptual architecture's Management Group hierarchy only. Download a [Visio file](https://github.com/MicrosoftDocs/cloud-adoption-framework/raw/main/docs/ready/enterprise-scale/media/enterprise-scale-architecture.vsdx) or [PDF file](https://github.com/MicrosoftDocs/cloud-adoption-framework/raw/main/docs/ready/enterprise-scale/media/enterprise-scale-architecture.pdf) of this architecture.*
+   In the Subscriptions band below, each management group links to its subscriptions. Security, Management, Identity, and Connectivity management groups each map to a matching subscription of the same name. Corp connects to the application landing zone A1, Application landing zone P1, and application landing zone A2 subscriptions. Local connects to application landing zone C1 subscription (Azure Local Clusters) and application landing zone A1 subscription (Applications). Decommissioned maps to a Decommissioned subscription, and Sandbox maps to Sandbox subscription 1 and Sandbox subscription 2. The Online management group has no subscription shown beneath it.
+:::image-end:::
 
-# [Platform vs Application landing zones](#tab/platvsapp)
+*Azure landing zone architecture's Management Group hierarchy only. Download a [Visio file](https://github.com/MicrosoftDocs/cloud-adoption-framework/raw/main/docs/ready/enterprise-scale/media/enterprise-scale-architecture.vsdx) or [PDF file](https://github.com/MicrosoftDocs/cloud-adoption-framework/raw/main/docs/ready/enterprise-scale/media/enterprise-scale-architeacture.pdf) of this architecture.*
 
-:::image type="content" source="./media/alz-application-platform.svg" alt-text="Diagram that shows an Azure landing zone management group hierarchy." lightbox="media/alz-application-platform.svg":::
+# [Platform vs. application landing zones](#tab/platvsapp)
 
-*Azure landing zone conceptual architecture's Management Group hierarchy only. Download a [Visio file](https://github.com/MicrosoftDocs/cloud-adoption-framework/raw/main/docs/ready/enterprise-scale/media/enterprise-scale-architecture.vsdx) or [PDF file](https://github.com/MicrosoftDocs/cloud-adoption-framework/raw/main/docs/ready/enterprise-scale/media/enterprise-scale-architecture.pdf) of this architecture.*
+:::image type="complex" border="false" source="./media/alz-application-platform.svg" alt-text="Diagram that shows an Azure landing zone management group hierarchy." lightbox="media/alz-application-platform.svg":::
+    Diagram titled "Azure landing zone (ALZ) – Terminology." A legend at the top right defines two color overlays: a purple shade for platform landing zone and a green shade for application landing zones. The purple overlay wraps the left portion of the diagram, grouping the Security subscription, Management subscription (D), Identity subscription, and Connectivity subscription (E), the last containing Azure DDoS Protection, Azure DNS, VPN/ExpressRoute gateways, Azure Firewall, and peered hub virtual networks. The green overlay wraps the lower-right portion, grouping the application landing zone A2 subscription (F), application landing zone P1 subscription, and Sandbox subscription (H), each holding application virtual networks and workload resources.
+
+    The central and upper structures remain unshaded, above is the the Enterprise Agreement/Microsoft Customer Agreement billing hierarchy (A), Identity and access management (B), Microsoft Entra ID with on-premises Active Directory Domain Services, and Git repository, boards, and pipelines.
+:::image-end:::
+
+*Azure landing zone architecture's management group hierarchy only. Download a [Visio file](https://github.com/MicrosoftDocs/cloud-adoption-framework/raw/main/docs/ready/enterprise-scale/media/enterprise-scale-architecture.vsdx) or [PDF file](https://github.com/MicrosoftDocs/cloud-adoption-framework/raw/main/docs/ready/enterprise-scale/media/enterprise-scale-architecture.pdf) of this architecture.*
 
 ---
 
-**Design areas:** The reference architecture illustrates the relationships between its eight design areas. These design areas are Azure billing and Microsoft Entra tenant, identity and access management, management group and subscription organization, network topology and connectivity, security, management, governance, and platform automation and DevOps. For more information on the design areas, see [the Azure Landing Zone environment design areas](./design-areas.md#environment-design-areas).
-
-**Resource organization:** The reference architecture shows a sample management group hierarchy. It organizes subscriptions (yellow boxes) by management group. The subscriptions under the "Platform" management group host shared services that comprise the platform landing zone. The subscriptions under the "Landing zone" management group represent the application landing zones. The reference architecture shows five subscriptions in detail. You can see the resources in each subscription and the policies applied.
-
 <a name='platform-landing-zones-vs-application-landing-zones'></a>
+<a name='platform-landing-zone-vs-application-landing-zones'></a>
 
-## Platform landing zone vs. application landing zones
+## Platform landing zone
 
-An Azure landing zone consists of one platform landing zone and one or more application landing zones. It's worth explaining the function of both in more detail.
+The platform landing zone establishes your organization's Azure foundation. It defines how you organize your Azure resources, enforce governance, and provide shared capabilities centrally. Most organizations should have only one platform landing zone per Microsoft Entra tenant.
 
-**Platform landing zone:** A platform landing zone provides shared services (identity, connectivity, management) to applications in application landing zones. Consolidating these shared services often improves operational efficiency. One or more central teams manage the services in the platform landing zone. In the reference architecture (*see figure 1*), the "Identity subscription," "Management subscription," and "Connectivity subscription" are components of the platform landing zone. The reference architecture depicts representative resources and policies applied to the subscriptions that host the platform landing zone shared services.
+A platform landing zone consists of a management group hierarchy and centralized resources (as needed). An important function of the platform is to have a way to distribute application landing zones to workload teams.
 
-**Application landing zone:** An application landing zone contains the resources for hosting a single workload/application. A workload should have an application landing zone for each environment (development, testing, or production). Each application landing zone consists of one or more subscriptions, as needed to accommodate scaling and service limits. You pre-provision application landing zone subscriptions through code, via a [Subscription vending process](/azure/cloud-adoption-framework/ready/landing-zone/design-area/subscription-vending), while a workload team is responsible for deploying workload components into their application landing zone. 
+- **Management group hierarchy:** The management group hierarchy provides the governance structure for the Azure environment. It organizes all of your Azure subscriptions and applies governance standards to those subscriptions. The hierarchy separates platform resources and workload resources. A well-designed hierarchy allows you to apply governance standards consistently without creating unnecessary administrative complexity.
 
-Application landing zones are nested under appropriate management groups, such as `Online`, `Corp`, or `Local`, to inherit Azure Policy definitions from the parent management group(s). This structure ensures that workload subscriptions are deployed in a controlled and consistent manner, while still allowing flexibility for individual workload needs. 
+- **Centralized resources:** Many organizations provide certain capabilities centrally so every workload can use the same approved services and standards. Common examples include connectivity and networking, security monitoring, Active Directory identity services, and management services. What you centralize depends on your requirements. Only centralize capabilities that provide clear governance, operational, or economic benefits across multiple workloads.
 
-In the Azure landing zone architecture (*see figure 1*), the "Landing zone A2 subscription", for example, is an application landing zone. The architecture depicts representative resources and policies applied to the "Landing zone A2 subscription". The "Landing zone P1 subscription" is used by platform teams to build and deploy services that support multiple application landing zones and teams, such as VM image repositories and container registries. These services are not application-specific, and the subscription remains subject to governance policies applied at the application landing zone level.
+- **Key platform responsibility:** You need a repeatable process for requesting, creating, and distributing application landing zones to workload teams. A standardized approach ensures every new application landing zone follows your organization's governance and security baselines. You can do this process manually or automate it. As the number of application landing zone requests grows, automation becomes increasingly important. See [Subscription vending](/azure/cloud-adoption-framework/ready/landing-zone/design-area/subscription-vending).
 
-:::image type="content" source="./media/alz-application-platform.svg" alt-text="A reference architecture diagram of an Azure landing zone with Application Landing Zones & Platform Landing Zone overlaid." lightbox="./media/alz-application-platform.svg":::
-*Figure 2: Azure landing zone reference architecture with Application Landing Zones & Platform Landing Zone overlaid. Download a [Visio file](https://github.com/MicrosoftDocs/cloud-adoption-framework/raw/main/docs/ready/enterprise-scale/media/enterprise-scale-architecture.vsdx) or [PDF file](https://github.com/MicrosoftDocs/cloud-adoption-framework/raw/main/docs/ready/enterprise-scale/media/enterprise-scale-architecture.pdf) of this architecture.*
+<a name='deploying-and-managing-azure-landing-zone'></a>
 
-There are three main approaches to managing application landing zones. You should use one of the following management approaches depending on your needs:
+**Implementation options:** Microsoft provides several platform landing zone accelerators that implement recommended architecture patterns and organizational guardrails. See [Platform landing zone implementation options](./implementation-options.md). You can also develop your own implementation or work with Microsoft or Microsoft partners to build a customized platform landing zone.
 
-- Central team approach
-- Application team approach
-- Shared team approach
+## Application landing zones
 
-| Application landing zone management approach | Description |
-| --- | --- |
-| Central team management | A central IT team fully operates the landing zone. The team applies controls and platform tools to the platform and application landing zones.
-| Application team management | A platform administration team delegates the entire application landing zone to an application team. The application team manages and supports the environment. The management group policies ensure that the platform team still governs the application landing zone. You can add other policies at the subscription scope and use alternative tooling for deploying, securing, or monitoring application landing zones.|
-| Shared management | With technology platforms such as AKS or AVS, a central IT team manages the underlying service. The application teams are responsible for the applications running on top of the technology platforms. You need to use different controls or access permissions for this model. These controls and permissions differ from the ones you use to manage application landing zones centrally.
+Application landing zones host Azure workload resources. Most workloads use multiple application landing zones, with separate application landing zones for each environment such as development, testing, and production. An application landing zone can be one or more Azure subscriptions. You only need multiple Azure subscriptions when required to accommodate workload requirements, organizational boundaries, or Azure subscription limits.
 
-> [!TIP]
-> You can see more guidance on different types of application landing zones in [Establish common subscription vending product lines](/azure/cloud-adoption-framework/ready/landing-zone/design-area/subscription-vending-product-lines)
+The platform team places application landing zones in either the Online, Internal ("Corp"), or Local management group under the (application) "Landing zones" management group. The application landing zones inherit the governance and security policies from the Azure Policies applied to the management group hierarchy. This model provides consistent guardrails and allows flexibility to meet workload-specific requirements.
 
-## Application landing zone accelerators
+**Implementation options:** Microsoft provides several accelerators to establish application landing zones. You can also implement their own approach or engage Microsoft or Microsoft partners for assistance. See the [Azure Architecture Center](/azure/architecture/landing-zones/landing-zone-deploy#application) for a list of application landing zone accelerators.
 
-Application landing zone accelerators help you deploy common workloads in your application landing zone subscriptions. Use the list of available application landing zone accelerators in the [Azure Architecture Center](/azure/architecture/landing-zones/landing-zone-deploy#application) and deploy the accelerator that matches your scenario.
+<a name='ai-in-azure-landing-zones'></a>
 
-### AI in Azure landing zones
+## Technology adoption in an Azure landing zone
 
-A common question is whether you need a dedicated AI landing zone alongside your Azure landing zone. The answer is that you don't need a separate AI landing zone. Instead, you use the existing Azure landing zone architecture to deploy AI workloads into application landing zones. The Azure landing zone design areas and principles are sufficient to support AI workloads, as they provide the necessary foundation for governance, security, and management for applications and workloads that both include AI and non-AI components and services.
+Azure landing zones support new and emerging technologies without requiring changes to the overall architecture. You deploy workload resources into application landing zones regardless of workload type, such as AI. As new requirements emerge, you update the governance and security policies in the platform landing zone. Those policies are then applied consistently across application landing zones, which helps you adopt new technologies faster and maintain consistency across all workloads of that type.
 
-You can integrate AI services into your application landing zones without needing a separate AI landing zone. The Azure landing zone architecture, design principles, and design areas, such as identity and access management, network topology and connectivity, security, and governance, are already designed to accommodate all workloads, including those that involve AI.
-
-From the perspective of Azure landing zones, AI is just another workload or service that can be deployed, governed, and secured within one or more application landing zone subscriptions, just like any other application, workload, or service, by the platform team by utilizing the existing Azure landing zone architecture, principles, and design areas.
-
-For more information on AI adoption in Azure, see the [AI adoption scenario](/azure/cloud-adoption-framework/scenarios/ai/). For specific focus on AI workloads and landing zones, see [Establish an AI foundation](/azure/cloud-adoption-framework/scenarios/ai/ready#establish-an-ai-foundation).
-
-## Deploying and managing Azure landing zone
-
-There are multiple ways to deploy and manage your Platform landing zone, which is part of the Azure landing zone (see above), as detailed further in [Landing zone implementation options](./implementation-options.md). You can choose the method that best fits your organization's needs and expertise. There are multiple options available:
-
-- [Azure landing zone Infrastructure-as-Code (IaC) Accelerator](https://aka.ms/alz/accelerator) ***(recommended approach)***
-  - [Azure Verified Modules (AVM) for Platform landing zone (ALZ) - Terraform](https://aka.ms/alz/acc/tf) *(Can also be used outside of the accelerator, if desired)*
-  - [Azure Verified Modules (AVM) for Platform landing zone (ALZ) - Bicep](https://aka.ms/alz/acc/bicep) *(Can also be used outside of the accelerator, if desired)*
-- [Azure platform landing zone portal accelerator](https://aka.ms/alz/portal)
-
-We highly recommend using Infrastructure-as-Code (IaC) options, such as Bicep or Terraform, via the Azure landing zone Infrastructure-as-Code (IaC) Accelerator for deploying and managing Azure landing zones. These options provide greater flexibility, repeatability, and scalability compared to the portal accelerator. 
-
-But if your organization does not have the necessary expertise in IaC or prefers a more visual approach, the portal accelerator can be a suitable alternative. See [Use infrastructure as code to update Azure landing zones](/azure/cloud-adoption-framework/ready/considerations/infrastructure-as-code-updates) for more information to help you understand why IaC is the preferred approach.
+The Cloud Adoption Framework provides guidance for common adoption scenarios to help you prepare your people, processes, and platform for successful adoption. See [Scenarios](/azure/cloud-adoption-framework/overview#cloud-adoption-framework-scenarios).
 
 ## Next steps
 
-Review the design principles behind Azure landing zones to understand how they guide a secure and scalable environment. If you're ready to deploy, explore the available implementation options for creating and managing landing zones. For quick answers to common questions, such as whether you need an AI landing zone or how enterprise-scale differs, check out the FAQs.
-
 > [!div class="nextstepaction"]
 > [Design principles](./design-principles.md)
-
-> [!div class="nextstepaction"]
-> [Implementation options](./implementation-options.md)
-
-> [!div class="nextstepaction"]
-> [Frequently Asked Questions (FAQ)](/azure/cloud-adoption-framework/ready/enterprise-scale/faq)

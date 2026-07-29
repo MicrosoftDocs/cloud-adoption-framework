@@ -4069,6 +4069,11 @@
       "source_path": "docs/ai/index.md",
       "redirect_url": "/azure/cloud-adoption-framework/ai/strategy",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/ready/index.md",
+      "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone",
+      "redirect_document_id": false
     }
    ]  
 }

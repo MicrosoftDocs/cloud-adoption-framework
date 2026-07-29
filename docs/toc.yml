@@ -57,20 +57,16 @@ items:
           href: plan/migration-adoption-plan.md
 
 
-    - name: Ready
+    - name: Ready (Azure landing zone)
       items:
-      - name: Overview
-        href: ready/index.md
+      - name: What is an Azure landing zone?
+        href: ready/landing-zone/index.md
       - name: Azure landing zone
         items:
-        - name: What is an Azure landing zone?
-          href: ready/landing-zone/index.md
         - name: Design principles
           href: ready/landing-zone/design-principles.md
         - name: Journey to the target architecture
           href: ready/landing-zone/landing-zone-journey.md
-        - name: Prepare your landing zone for migration
-          href: ready/landing-zone/ready-azure-landing-zone.md
         - name: Design areas
           href: ready/landing-zone/design-areas.md
           items:
@@ -286,7 +282,6 @@ items:
             href: ready/landing-zone/isv-landing-zone.md
           - name: Get landing zone help
             href: ready/landing-zone/partner-landing-zone.md
-
         - name: Align
           items:
           - name: Transition to the Azure landing zone reference architecture
@@ -345,16 +340,19 @@ items:
             - name: Azure operational security best practices
               href: /azure/security/fundamentals/operational-best-practices?bc=/azure/cloud-adoption-framework/_bread/toc.json&toc=/azure/cloud-adoption-framework/toc.json
 
+        - name: Prepare your landing zone for migration
+          href: ready/landing-zone/ready-azure-landing-zone.md
+        
         - name: Azure landing zones FAQ
           href: ready/enterprise-scale/faq.md
 
       - name: Resources
         items:
-        - name: 1. Define your naming convention
+        - name: Naming convention
           href: ready/azure-best-practices/resource-naming.md
-        - name: 2. Define your tagging strategy
+        - name: Tagging strategy
           href: ready/azure-best-practices/resource-tagging.md
-        - name: Abbreviations for Azure resources
+        - name: Abbreviations
           href: ready/azure-best-practices/resource-abbreviations.md
 
     - name: Adopt
