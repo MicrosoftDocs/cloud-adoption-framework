@@ -16,6 +16,21 @@ This article describes how cloud platform teams can implement guardrails to mana
 
 ## Set the foundation
 
+You can manage application landing zones in three main ways. Choose the management approach that best fits your needs per workload:
+
+- Central team approach
+- Application team approach
+- Shared team approach
+
+| Application landing zone management approach | Description |
+| --- | --- |
+| Central team management | A central IT team fully operates the landing zone. The team applies controls and platform tools to the platform and application landing zones.
+| Application team management | A platform administration team delegates the entire application landing zone to an application team. The application team manages and supports the environment. The management group policies ensure that the platform team still governs the application landing zone. You can add other policies at the subscription scope and use alternative tooling for deploying, securing, or monitoring application landing zones.|
+| Shared management | With technology platforms such as AKS or AVS, a central IT team manages the underlying service. The application teams are responsible for the applications running on top of the technology platforms. You need to use different controls or access permissions for this model. These controls and permissions differ from the ones you use to manage application landing zones centrally.
+
+> [!TIP]
+> For more guidance on different types of application landing zones, see [Establish common subscription vending product lines](/azure/cloud-adoption-framework/ready/landing-zone/design-area/subscription-vending-product-lines).
+
 Development teams require the ability to iterate quickly, and cloud governance and platform teams need to manage organizational risk, compliance, and security at scale. You can properly manage application environments by focusing on two key [Azure landing zone design principles](../design-principles.md): policy-driven governance and subscription democratization. These principles provide foundational guardrails and describe how to delegate controls to application teams. The application teams use [Azure Well-Architected Framework guidance](/azure/well-architected) to design their workload. They deploy and manage their own landing zone resources, and the platform team controls the resources by assigning Azure policies.
 
 It's important to provide sandbox resources for *semi-governed* resources, so application teams can experiment with technologies and capabilities.
