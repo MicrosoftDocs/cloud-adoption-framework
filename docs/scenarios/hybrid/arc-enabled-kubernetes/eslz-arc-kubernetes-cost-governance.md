@@ -96,7 +96,7 @@ The following sections contain design recommendations for Azure Arc-enabled Kube
 
 - Review [tips for reducing Log Analytics ingestion data volume](/azure/azure-monitor/logs/manage-cost-storage#tips-for-reducing-data-volume) to help you properly configure data ingestion.
 - Consider how long you should retain data in Log Analytics. Data ingested into the Log Analytics workspace can be retained for no extra charge up through the first 31 days. Consider general needs when configuring the [Log Analytics workspace level default retention](/azure/azure-monitor/logs/manage-cost-storage#workspace-level-default-retention) and specific needs when configuring data [retention by data type](/azure/azure-monitor/logs/manage-cost-storage#retention-by-data-type), which can be as low as four days. For example, while performance data might only need to be retained for a short time, security logs often need to be retained longer.
-- Consider using [Log Analytics workspace data export](/azure/azure-monitor/logs/logs-data-export) to retain data for longer than 730 days.
+- Consider using [Log Analytics workspace data export](/azure/azure-monitor/logs/logs-data-export) to retain data beyond the [total retention period](/azure/azure-monitor/logs/data-retention-configure) of the workspace.
 - Consider using [Commitment Tier](/azure/azure-monitor/logs/manage-cost-storage#pricing-model) pricing based on your data ingestion volume.
 
 ### Microsoft Defender for Cloud
