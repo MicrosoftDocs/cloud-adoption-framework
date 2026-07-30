@@ -17,7 +17,7 @@ The Ready phase of the Cloud Adoption Framework helps you design your Azure land
 
 - **Application landing zones:** Azure environments where you deploy and operate workload resources within the standards established by the platform landing zone.
 
-You can implement Azure landing zones using one of two approaches:
+You can implement each component of your Azure landing zone in one of two ways:
 
 - **Accelerators**: Microsoft-provided accelerators for both platform landing zone and application landing zone scenarios use infrastructure as code to deploy Azure environments based on recommended practices.
 
@@ -112,7 +112,7 @@ The platform team places application landing zones in either the Online, Interna
 
 ## Technology adoption in an Azure landing zone
 
-Azure landing zones support new and emerging technologies without requiring changes to the overall architecture. You deploy workload resources into application landing zones regardless of workload type, such as AI. As new requirements emerge, you update the governance and security policies in the platform landing zone. Those policies are then applied consistently across application landing zones, which helps you adopt new technologies faster and maintain consistency across all workloads of that type.
+An Azure landing zone supports new and emerging technologies without requiring changes to the overall architecture. You deploy workload resources into application landing zones regardless of workload type, such as AI. As new requirements emerge, you update the governance and security policies in the platform landing zone. Those policies are then applied consistently across application landing zones, which helps you adopt new technologies faster and maintain consistency across all workloads of that type.
 
 The Cloud Adoption Framework provides guidance for common adoption scenarios to help you prepare your people, processes, and platform for successful adoption. See [Scenarios](/azure/cloud-adoption-framework/overview#cloud-adoption-framework-scenarios).
 
