@@ -15,7 +15,7 @@ The Ready phase of the Cloud Adoption Framework helps you design your Azure land
 
 - **Platform landing zone:** The centralized foundation that establishes governance, security, and shared resources for all your Azure workloads.
 
-- **Application landing zones:** Azure environments where you deploy and operate workload resources within the standards established by the platform landing zone.
+- **Application (workload) landing zones:** Azure environments where you deploy and operate workload resources within the standards established by the platform landing zone.
 
 You can implement each component of your Azure landing zone in one of two ways:
 
