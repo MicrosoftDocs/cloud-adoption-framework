@@ -72,7 +72,7 @@ A proof of concept helps reduce implementation risk by validating technical feas
 
    | AI type | Implementation guide |
    |---------|---------------------|
-   | Generative AI | Azure PaaS: [Foundry](/azure/foundry/tutorials/quickstart-create-foundry-resources)<br><br>Microsoft Copilots: [Copilot Studio](/microsoft-copilot-studio/fundamentals-get-started) and [Microsoft 365 Copilot extensibility](/microsoft-365-copilot/extensibility/decision-guide) |
+   | Generative AI | Azure PaaS: [Foundry](/azure/foundry/tutorials/quickstart-create-foundry-resources)<br><br>Microsoft Copilots: [Copilot Studio](/microsoft-copilot-studio/fundamentals-get-started) and [Microsoft 365 Copilot extensibility](/microsoft-365/copilot/extensibility/agents-overview) |
    | Machine learning | [Azure Machine Learning](/azure/machine-learning/tutorial-azure-ml-in-a-day) |
    | Analytical AI | Foundry Tools with specific guides for [Content Safety](/azure/ai-services/content-safety/quickstart-jailbreak), [Custom Vision](/azure/ai-services/custom-vision-service/getting-started-build-a-classifier), [Document Intelligence](/azure/ai-services/document-intelligence/quickstarts/try-document-intelligence-studio), and other services |
 
