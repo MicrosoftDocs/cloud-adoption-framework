@@ -13,12 +13,6 @@ To deploy workloads in Azure successfully, you need to establish a solid foundat
 
 After you set up your Azure environment, your **application landing zones** build on top of it. To help you deploy application landing zones faster, Microsoft offers **application landing zone accelerators**. Application landing zone accelerators provide design guidance and sometimes reference implementations that show you how to integrate workloads *in your Azure landing zone.*
 
-:::image type="content" source="../../_images/ready/application-landing-zone-accelerators-conceptual-diagram.png" alt-text="Diagram showing the conceptual components of your cloud environment as it aligns with Azure landing zones." lightbox="../../_images/ready/application-landing-zone-accelerators-conceptual-diagram.png" border="false":::
-
-An **application landing zone** is one or more subscriptions for each environment in your workload. You might need more than one subscription due to subscription limitations. You place these subscriptions under the appropriate management group. This setup ensures the application landing zone inherits Azure Policy assignments. You create one application landing zone for each workload environment, such as development, testing, and production.
-
-All subscriptions must be configured with Azure Role-Based Access Control, Cost Management, Network Watcher, and Microsoft Defender for Cloud. These services should be consistently enabled across all subscriptions, including both application and platform landing zones. For more information, see [Azure landing zones](../../ready/landing-zone/index.md).
-
 ## Find application landing zone accelerators
 
 Here's a list of application landing zone accelerators to help you deploy application landing zones quickly and reliably. Where there's infrastructure-as-code templates hosted in GitHub deploy the templates to your application landing zone, then add your application code and configurations on top of the infrastructure.
