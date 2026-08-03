@@ -15,7 +15,7 @@ The Ready phase of the Cloud Adoption Framework helps you design your Azure land
 
 - **Platform landing zone:** The centralized foundation that establishes governance, security, and shared resources for all your Azure workloads.
 
-- **Application (workload) landing zones:** Azure environments where you deploy and operate workload resources within the standards established by the platform landing zone.
+- **Application (workload) landing zones:** The environments where workload teams deploy and operate workload resources within the guardrails of the platform landing zone. *A workload is a collection of Azure resources, code, AI models, data, and infrastructure that work together to achieve a defined business outcome*.
 
 You can implement each component of your Azure landing zone in one of two ways:
 
@@ -30,6 +30,19 @@ For most organizations, accelerators provide the fastest path to a deployment th
 Every Azure landing zone starts with the platform landing zone. Before you build a platform landing zone, define organizational requirements across the Azure landing zone [design areas](design-areas.md). These decisions determine how you design your Azure landing zone.
 
 The Azure landing zone reference architecture represents a recommended target architecture. Use it as a starting point and adapt it to meet your organization's requirements.
+
+# [Conceptual](#tab/conceptual)
+
+:::image type="complex" border="false" source="./media/conceptual-azure-landing-zone.svg" alt-text="Diagram that shows a conceptual view of an Azure landing zone and how it integrates with key services across your organization." lightbox="./media/conceptual-azure-landing-zone.svg":::
+    A top section labeled "Unified identity, security, and governance across Azure, Microsoft, multicloud, and on-premises environments" contains Microsoft Agent 365, Microsoft Defender, Microsoft Entra, and Microsoft Purview.
+    
+    Below, a large Azure landing zone box states that an Azure landing zone consists of one platform landing zone and many application landing zones. The platform landing zone, managed by platform teams, contains management groups, Azure Policy, Azure RBAC, and centralized resources for networking, security, management, and identity. A callout indicates the platform team's responsibility for centralized distribution of application landing zones to workload teams.
+    
+    Beneath the platform landing zone, the application landing zones section, managed by workload teams, shows examples of application landing zones. Application landing zone 1 provides a detailed view of an individual application landing zone. It shows that a single application landing zone can contain multiple workload environments, including production, test, and development environments. Each workload environment can consist of one or more Azure subscriptions. Application landing zone 2 represents a Microsoft Fabric compute workload and contains a Fabric capacity boundary. Application landing zone 3 represents a Data and AI/ML workload and references Azure Machine Learning, Azure Databricks, and Azure Data Lake Storage workloads. Application landing zones 4 through n represent additional application landing zones that follow the same pattern. Notes indicate that application landing zones are deployed under the appropriate management group based on workload requirements. A Microsoft Foundry box containing Foundry IQ appears below the application landing zones and is connected to workloads to provide AI capabilities. A callout instructs workload teams to add Foundry resources to workloads that require AI capabilities.
+    
+    Dashed lines below link the Azure box to Microsoft Copilot Studio, Microsoft Fabric (Fabric IQ), and Microsoft 365 (Microsoft 365 Copilot, Work IQ). A bottom row labeled "All data sources" lists on-premises, Dataverse, Microsoft 365, Azure workloads, and other clouds.
+
+:::image-end:::
 
 # [Hub & Spoke](#tab/hubspoke)
 
@@ -92,13 +105,16 @@ A platform landing zone consists of a management group hierarchy and centralized
 
 **Implementation options:** Microsoft provides several platform landing zone accelerators that implement recommended architecture patterns and organizational guardrails. See [Platform landing zone implementation options](./implementation-options.md). You can also develop your own implementation or work with Microsoft or Microsoft partners to build a customized platform landing zone.
 
-## Application landing zones
+<a name='application-landing-zones'></a>
 
-Application landing zones host Azure workload resources. An application landing zone can be one or more Azure subscriptions. You only need multiple Azure subscriptions when required to accommodate workload requirements, organizational boundaries, or Azure subscription limits.
+## Application landing zone
 
-The platform team places application landing zones in either the Online, Internal ("Corp"), or Local management group under the (application) "Landing zones" management group. The application landing zones inherit the governance and security policies from the Azure Policies applied to the management group hierarchy. This model provides consistent guardrails and allows flexibility to meet workload-specific requirements.
+Each workload has a single application landing zone. An application landing zone contains all the environments required to support that workload, such as development, test, and production. Each environment consists of one or more Azure subscriptions based on workload requirements, team ownership boundaries, or Azure subscription limits. The application landing zone includes all Azure resources that the workload team owns and operates across every environment.
 
-**Implementation options:** Microsoft provides several accelerators to establish application landing zones. You can also implement their own approach or engage Microsoft or Microsoft partners for assistance. See the [Azure Architecture Center](/azure/architecture/landing-zones/landing-zone-deploy#application) for a list of application landing zone accelerators.
+Based on the requirements of the workload, the platform team places each application landing zone subscription in either the Online, Internal ("Corp"), or Local management group under the "(Application) Landing zones" management group. Each subscription and its Azure resources inherit the governance and security policies from the Azure Policies applied to the management group hierarchy. This model provides consistent guardrails and allows flexibility to meet workload-specific requirements.
+
+**Implementation options:** Microsoft provides several accelerators to deploy different types of application landing zones. You can also implement your own approach or engage Microsoft or Microsoft partners for assistance. See the [Azure Architecture Center](/azure/architecture/landing-zones/landing-zone-deploy#application) for a list of application landing zone accelerators.
+
 
 <a name='ai-in-azure-landing-zones'></a>
 
