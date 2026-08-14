@@ -75,7 +75,7 @@ Microsoft Fabric also connects to Microsoft Foundry, which provides AI services 
    In the Subscriptions band below, each management group links to its subscriptions. Security, Management, Identity, and Connectivity management groups each map to a matching subscription of the same name. Corp connects to the application landing zone A1, Application landing zone P1, and application landing zone A2 subscriptions. Local connects to application landing zone C1 subscription (Azure Local Clusters) and application landing zone A1 subscription (Applications). Decommissioned maps to a Decommissioned subscription, and Sandbox maps to Sandbox subscription 1 and Sandbox subscription 2. The Online management group has no subscription shown beneath it.
 :::image-end:::
 
-*Azure landing zone architecture's Management Group hierarchy only. Download a [Visio file](https://github.com/MicrosoftDocs/cloud-adoption-framework/raw/main/docs/ready/enterprise-scale/media/enterprise-scale-architecture.vsdx) or [PDF file](https://github.com/MicrosoftDocs/cloud-adoption-framework/raw/main/docs/ready/enterprise-scale/media/enterprise-scale-architeacture.pdf) of this architecture.*
+*Azure landing zone architecture's Management Group hierarchy only. Download a [Visio file](https://github.com/MicrosoftDocs/cloud-adoption-framework/raw/main/docs/ready/enterprise-scale/media/enterprise-scale-architecture.vsdx) of this architecture.*
 
 # [Platform vs. application landing zones](#tab/platvsapp)
 

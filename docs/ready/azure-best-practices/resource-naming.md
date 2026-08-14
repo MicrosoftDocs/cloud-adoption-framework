@@ -28,7 +28,7 @@ An Azure resource name is the identifier assigned to a specific instance of an A
 1. **Understand Azure name scope.** Azure resource names must be unique within their defined scope. Each resource type has a specific scope level that determines where the name must be unique. Understanding these scope levels ensures proper naming conventions and avoids conflicts.
 
     | Scope | Description | Example |
-    |-------|-------------|---------|
+    |-------|-------------|----------|
     | **Global** | Unique across all of Azure. This scope applies to PaaS resources with public IP endpoints, as their names serve as the initial default public DNS name. | For example, a web app named `app-workload1-prod-001.azurewebsites.net` must be globally unique. |
     | **Resource group** | Unique within the resource group. Resources in the same group can't share the same name, but identical names can exist in different resource groups. | For example, a virtual network named `vnet-prod-westus-001` can exist in multiple resource groups, but only once within a single resource group. |
     | **Resource** | Unique within the parent resource. Resources nested within another resource must have unique names to avoid conflicts. | For example, subnets within a virtual network must have unique names to prevent segment overlap. |
@@ -56,6 +56,8 @@ To construct your Azure naming convention, identify the key pieces of informatio
 1. **Use abbreviations.** Use [Azure resource abbreviations](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-abbreviations) to keep resource names within length limits.
 
 1. **Use the Azure Naming Tool.** The Azure Naming Tool helps you generate names for Azure resources. You configure the tool to use your preferred naming convention, and it generates names for your Azure resources. For more information, see [Azure Naming Tool](https://github.com/Azure/AzureNamingTool).
+
+[!INCLUDE [resource-naming-customer-data-note](~/../reusable-content/ce-skilling/azure/includes/databases/resource-naming-customer-data-note.md)]
 
 ## Example Azure resource names
 
