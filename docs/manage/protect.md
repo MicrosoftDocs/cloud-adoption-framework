@@ -20,10 +20,10 @@ Reliability management involves using redundancy, replication, and defined recov
 
 *Table 1. Example of workload priority and reliability requirements.*
 
-| Priority   | Business impact  | Minimum uptime SLO | Max downtime per month | Architecture redundancy  | Load balancing  | Data replication and backups  | Example scenario     |
+| Priority   | Business impact  | Minimum uptime SLO | Max downtime per month | Architecture redundancy  | Load balancing  | Data replication and backups  | Example guidance |
 |---|---|---|---|----|---|---|---|
-| High (mission-critical)  | Immediate and severe effects on company reputation or revenue.   | 99.99%       | 4.32 minutes     | Multi-region & Multiple availability zones in each region | Active-active | Synchronous, cross-region data replication & backups for recovery | [Mission-critical baseline](/azure/architecture/reference-architectures/containers/aks-mission-critical/mission-critical-intro)  |
-| Medium       | Measurable effects on company reputation or revenue.   | 99.9%  | 43.20 minutes | Multiple regions & Multiple availability zones in each region | Active-passive     | Asynchronous, cross-region data replication & backups for recovery | [Mission-critical baseline](/azure/architecture/reference-architectures/containers/aks-mission-critical/mission-critical-intro) |
+| High (mission-critical)  | Immediate and severe effects on company reputation or revenue.   | 99.99%       | 4.32 minutes     | Multi-region & Multiple availability zones in each region | Active-active | Synchronous, cross-region data replication & backups for recovery | [Mission-critical workload](/azure/well-architected/mission-critical/mission-critical-overview)  |
+| Medium       | Measurable effects on company reputation or revenue.   | 99.9%  | 43.20 minutes | Multiple regions & Multiple availability zones in each region | Active-passive     | Asynchronous, cross-region data replication & backups for recovery | [Mission-critical workload](/azure/well-architected/mission-critical/mission-critical-overview) |
 | Low       | No effect on company reputation, processes, or profits.    | 99%       | 7.20 hours    | Single region & Multiple availability zones   | Availability zone redundancy   | Synchronous data replication across availability zones & backups for recovery | [App Service baseline](/azure/architecture/web-apps/app-service/architectures/baseline-zone-redundant)<br>[Virtual machine baseline](/azure/architecture/virtual-machines/baseline) |
 
 ### Identify reliability responsibilities
@@ -67,10 +67,10 @@ Data reliability involves data replication (replicas) and backups (point in time
 
 *Table 2. Workload priority with example data reliability configurations.*
 
-| Workload priority | Uptime SLO | Data replication | Data backups | Example scenario |
+| Workload priority | Uptime SLO | Data replication | Data backups | Example guidance |
 |-------------------|------------|------------------|--------------|------------------|
-| High              | 99.99%     | Synchronous data replication across regions<br><br>Synchronous data replication across availability zones | High frequency, cross-region backups. Frequency should support RTO and RPO. | [Mission-critical data platform](/azure/architecture/reference-architectures/containers/aks-mission-critical/mission-critical-data-platform) |
-| Medium            | 99.9%      | Synchronous data replication across regions<br><br>Synchronous data replication across availability zones | Cross-region backups. Frequency should support RTO and RPO. | [Mission-critical data platform](/azure/architecture/reference-architectures/containers/aks-mission-critical/mission-critical-data-platform) |
+| High              | 99.99%     | Synchronous data replication across regions<br><br>Synchronous data replication across availability zones | High frequency, cross-region backups. Frequency should support RTO and RPO. | [Mission-critical data platform](/azure/well-architected/mission-critical/mission-critical-data-platform) |
+| Medium            | 99.9%      | Synchronous data replication across regions<br><br>Synchronous data replication across availability zones | Cross-region backups. Frequency should support RTO and RPO. | [Mission-critical data platform](/azure/well-architected/mission-critical/mission-critical-data-platform) |
 | Low               | 99%        | Synchronous data replication across availability zones | Cross-region backups. Frequency should support RTO and RPO. | [Data resiliency in baseline web app with zone redundancy](/azure/architecture/web-apps/app-service/architectures/baseline-zone-redundant#blob-storage) |
 
 You must align data reliability configurations with the RTO and RPO requirements of your workloads. To make that alignment, follow these steps:
@@ -100,10 +100,10 @@ Managing the reliability of your cloud resources often requires architecture red
 
 *Table 3. Workload priority and architecture redundancy examples.*
 
-| Workload priority | Architecture redundancy         | Load balancing approach | Azure load balancing solution     | Example scenario      |
+| Workload priority | Architecture redundancy         | Load balancing approach | Azure load balancing solution     | Example guidance |
 |-------------------|---------------------------------|-------------------------|-----------------------------------|-----------------------|
-| High              | Two regions & availability zones | Active-active           | Azure Front Door (HTTP)<br><br>Azure Traffic Manager (non-HTTP) | [Mission-critical baseline application platform](/azure/architecture/reference-architectures/containers/aks-mission-critical/mission-critical-app-platform#global-load-balancer)     |
-| Medium            | Two regions & availability zones | Active-passive          | Azure Front Door (HTTP)<br><br>Azure Traffic Manager (non-HTTP) | [Mission-critical baseline application platform](/azure/architecture/reference-architectures/containers/aks-mission-critical/mission-critical-app-platform#global-load-balancer)  |
+| High              | Two regions & availability zones | Active-active           | Azure Front Door (HTTP)<br><br>Azure Traffic Manager (non-HTTP) | [Mission-critical global traffic routing](/azure/well-architected/mission-critical/mission-critical-networking-connectivity#global-traffic-routing)     |
+| Medium            | Two regions & availability zones | Active-passive          | Azure Front Door (HTTP)<br><br>Azure Traffic Manager (non-HTTP) | [Global routing redundancy for highly available web applications](/azure/architecture/guide/networking/global-web-applications/overview)  |
 | Low               | Single region & availability zones | Across availability zones | Azure Application Gateway<br><br>Add Azure Load Balancer for virtual machines  |[App Service baseline](/azure/architecture/web-apps/app-service/architectures/baseline-zone-redundant)<br>[Virtual machine baseline](/azure/architecture/virtual-machines/baseline) |
 
 Your approach must implement architecture redundancy to meet the reliability requirements of your workloads. Follow these steps:
