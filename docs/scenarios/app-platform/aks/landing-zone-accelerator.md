@@ -10,7 +10,7 @@ ms.topic: concept-article
 # Azure Kubernetes Services (AKS) landing zone accelerator
 
 > [!IMPORTANT]
-> **Deprecation notice:** This article is deprecated and is no longer being updated. To ensure only the best guidance is available, this article will be deleted. The deletion of the AKS ALZ is postponed until a forthcoming article in the Azure Architecture Center is released. The date is to be determined.
+> **Deprecation notice:** This article is deprecated and is no longer being updated. To ensure only the best guidance is available, this article will be removed on September 30th, 2026. This removal doesn't affect the deployment assets in GitHub: [AKS Landing Zone Accelerator](https://github.com/Azure/AKS-Landing-Zone-Accelerator).
 >
 > For alternative guidance, see [**Azure Kubernetes Service**](/azure/architecture/reference-architectures/containers/aks-start-here) architecture guidance in the Azure Architecture Center.
 >
