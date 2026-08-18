@@ -11,7 +11,7 @@ ms.custom: think-tank, e2e-aks
 # Azure billing and Microsoft Entra tenant considerations for AKS (optional)
 
 > [!IMPORTANT]
-> **Deprecation notice:** This article is deprecated and is no longer being updated. To ensure only the best guidance is available, this article will be deleted. The deletion of the AKS ALZ is postponed until a forthcoming article in the Azure Architecture Center is released. The date is to be determined.
+> **Deprecation notice:** This article is deprecated and is no longer being updated. To ensure only the best guidance is available, this article will be removed on September 30th, 2026. This removal doesn't affect the deployment assets in GitHub: [AKS Landing Zone Accelerator](https://github.com/Azure/AKS-Landing-Zone-Accelerator).
 >
 > For alternative guidance, see [**Azure Kubernetes Service**](/azure/architecture/reference-architectures/containers/aks-start-here) architecture guidance in the Azure Architecture Center.
 >
@@ -31,4 +31,4 @@ Most customers will identify their primary Microsoft Entra tenant as their Kuber
 - Are there heightened compliance requirements, which specify separation of duties between the people operating the host and the accounts that operate the landing zone environment?
 - In a centrally managed environment with multiple hosts in a single landing zone, is there a need for extended blast radius control for compromised identities?
 
-Managing multiple Microsoft Entra tenants comes at a management cost that must be weighed against the benefits gained from such a topology. There are seldom cases where multiple tenants would be part of any Microsoft recommendation. But the above questions could indicate a need to consider this option.
+Managing multiple Microsoft Entra tenants comes at a management cost that you must weigh against the benefits gained from such a topology. There are seldom cases where multiple tenants would be part of any Microsoft recommendation. But the preceding questions could indicate a need to consider this option.
