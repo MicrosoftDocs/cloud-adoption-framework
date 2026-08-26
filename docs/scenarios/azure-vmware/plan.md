@@ -10,6 +10,8 @@ ms.custom: e2e-azure-vmware, think-tank
 
 # Plan for Azure VMware Solution
 
+[!INCLUDE [AVS deprecation notice](./includes/azure-vmware-deprecation-notice.md)]
+
 The [Plan methodology](../../plan/index.md) of the Cloud Adoption Framework helps create an overall cloud adoption plan to guide the programs and teams involved in your cloud-based digital transformation. This guidance provides templates for creating your backlog and plans for building necessary skills across your teams, all based on your cloud objectives. This article outlines how to include Azure VMware Solution in your overall cloud adoption plan.
 
 ## Azure VMware Solution estate

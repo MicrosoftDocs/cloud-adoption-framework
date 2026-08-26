@@ -12,6 +12,8 @@ ms.custom: think-tank, e2e-azure-vmware
 
 # Azure VMware Solution landing zone accelerator network design guide
 
+[!INCLUDE [AVS deprecation notice](./includes/azure-vmware-deprecation-notice.md)]
+
 This guide covers network design for the Azure VMware Solution landing zone accelerator. It encompasses four design areas:
 
 - **Connectivity with on-premises datacenters**. Connectivity between Azure VMware Solution private clouds and on-premises sites supports a broad set of use cases: HCX migrations, hybrid applications, and remote vCenter or NSX-T Data Center administration. Azure VMware Solution supports multiple options for hybrid connectivity, including Azure ExpressRoute circuits and internet-based IPSec virtual private networks.

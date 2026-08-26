@@ -15,6 +15,8 @@ ms.custom:
 
 # Use a dual-region Azure VMware Solution design that doesn't have Global Reach
 
+[!INCLUDE [AVS deprecation notice](./includes/azure-vmware-deprecation-notice.md)]
+
 This article describes the best practices for connectivity, traffic flows, and high availability when you deploy Azure VMware Solution in two regions and use secure Azure Virtual WAN with routing intent. It provides guidance about using this design without Global Reach. This article describes the Virtual WAN with routing intent topology for Azure VMware Solution private clouds, on-premises sites, and Azure-native resources. The implementation and configuration of secure Virtual WAN with routing intent are beyond the scope of this article.  
 
 If you use a region that doesn't support Global Reach or if you have a security requirement to inspect traffic between Azure VMware Solution and on-premises at the hub firewall, you must open a support ticket to enable ExpressRoute-to-ExpressRoute transitivity. Virtual WAN doesn't support ExpressRoute-to-ExpressRoute transitivity by default. For more information, see [Transit connectivity between ExpressRoute circuits with routing intent](/azure/virtual-wan/how-to-routing-policies#expressroute).

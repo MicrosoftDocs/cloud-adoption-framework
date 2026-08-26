@@ -9,6 +9,8 @@ ms.custom: e2e-azure-vmware, think-tank
 ---
 # Prepare for connectivity for Azure VMware Solution
 
+[!INCLUDE [AVS deprecation notice](./includes/azure-vmware-deprecation-notice.md)]
+
 Before adoption can begin, create a landing zone to host the workloads that you plan to build in or migrate to the cloud. This section of the framework guides you through how to establish connectivity within your landing zone.
 
 The following exercises help guide you through the process of creating a landing zone to support cloud adoption.

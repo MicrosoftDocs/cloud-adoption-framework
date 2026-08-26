@@ -10,6 +10,8 @@ ms.custom: think-tank, e2e-azure-vmware
 
 # Security, governance, and compliance for Azure VMware Solution
 
+[!INCLUDE [AVS deprecation notice](./includes/azure-vmware-deprecation-notice.md)]
+
 This article describes how to securely implement and holistically govern Azure VMware Solution throughout its lifecycle. The article explores specific design elements and provides targeted recommendations for Azure VMware Solution security, governance, and compliance.
 
 ## Security

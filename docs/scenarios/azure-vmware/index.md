@@ -10,6 +10,8 @@ ms.custom: e2e-azure-vmware, think-tank
 
 # Migrate to Azure with Azure VMware Solution
 
+[!INCLUDE [AVS deprecation notice](./includes/azure-vmware-deprecation-notice.md)]
+
 Azure VMware Solution provides your organization with options when migrating to Azure. Migrating VMware resources from on-premises datacenters to a dedicated cloud environment on Azure can lower complexity, help you to minimize negative impacts to business continuity, and reduce the time required for your migration. Azure VMware Solution enables you to adopt cloud technology at a pace that matches your organization's requirements, adding cloud services incrementally as your business evolves.
 
 ## Microsoft Azure VMware Solution

@@ -12,6 +12,8 @@ ms.custom: think-tank, e2e-azure-VMware
 
 # Secure Virtual WAN for Azure VMware Solution in a single region or in dual regions
 
+[!INCLUDE [AVS deprecation notice](./includes/azure-vmware-deprecation-notice.md)]
+
 This article explores the Azure VMware Solution network design topologies and considerations for single-region and dual-region scenarios that use secure Azure Virtual WAN with routing intent. It describes how routing intent directs traffic through a centralized security solution. This method enhances security and streamlines network management. This article provides design considerations for deployments with and without Azure ExpressRoute Global Reach. It highlights the benefits and challenges of each scenario.
 
 You can implement a security solution in the Virtual WAN hub to convert the hub to a secure Virtual WAN hub. To configure routing intent, you must have a secure Virtual WAN hub. Routing intent drives all private traffic and internet traffic to the hub security solution, which streamlines your secure hub routing and security design. Routing intent improves the security breadth and conducts a traffic inspection for all traffic that goes through the secure hub, including Azure VMware Solution traffic. 

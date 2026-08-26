@@ -12,6 +12,8 @@ ms.custom: think-tank, e2e-azure-vmware
 
 # Azure VMware Solution networking basics
 
+[!INCLUDE [AVS deprecation notice](./includes/azure-vmware-deprecation-notice.md)]
+
 This article summarizes some fundamental concepts about Azure VMware Solution networking. Understanding these concepts is a prerequisite to understanding the network architectures in the other articles in this guide.
 
 ## Azure ExpressRoute circuits and Azure VMware Solution private clouds

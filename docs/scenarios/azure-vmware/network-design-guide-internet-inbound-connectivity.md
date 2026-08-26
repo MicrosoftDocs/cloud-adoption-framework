@@ -12,6 +12,8 @@ ms.custom: think-tank, e2e-azure-vmware
 
 # Design phase 3: Inbound internet connectivity
 
+[!INCLUDE [AVS deprecation notice](./includes/azure-vmware-deprecation-notice.md)]
+
 The choices you make during this design phase are determined by the requirements of the applications running on Azure VMware Solution that must be reachable over public IP addresses. Almost invariably, internet-facing applications are published via network devices that provide security (next-generation firewalls, web application firewalls) and load balancing (Layer 3 or Layer 4 load balancers, application delivery controllers). You can deploy these devices in the private cloud itself or in an Azure virtual network that's connected to the private cloud. Your choice is based on these considerations:
 
 - For cost optimization and consistency, you can use pre-existing NVAs that are deployed in Azure virtual networks (like firewalls and application delivery controllers) to publish applications running on your private clouds.

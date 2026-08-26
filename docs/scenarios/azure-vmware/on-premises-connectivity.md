@@ -12,6 +12,8 @@ ms.custom: think-tank, e2e-azure-vmware
 
 # Design phase 1: Connectivity with on-premises sites
 
+[!INCLUDE [AVS deprecation notice](./includes/azure-vmware-deprecation-notice.md)]
+
 Connectivity with on-premises datacenters is the most critical design area for Azure VMware Solution networking. The key requirements that must be addressed include:
 
 - High throughput: Migrations from on-premises vSphere environments and disaster recovery solutions require moving large volumes of data between on-premises sites and Azure VMware Solution private clouds quickly.

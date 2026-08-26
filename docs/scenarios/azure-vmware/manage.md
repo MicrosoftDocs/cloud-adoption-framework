@@ -10,6 +10,8 @@ ms.custom: think-tank, e2e-azure-vmware
 
 # Manage Azure VMware Solution
 
+[!INCLUDE [AVS deprecation notice](./includes/azure-vmware-deprecation-notice.md)]
+
 The [Manage methodology](../../manage/index.md) in the Microsoft Cloud Adoption Framework for Azure outlines a path for implementing an operations baseline, and maturing that baseline throughout your cloud adoption lifecycle.
 
 Azure VMware Solution is a VMware validated solution with ongoing verification and testing related to VMware product enhancements and upgrades. Microsoft manages and maintains the private cloud infrastructure and software on behalf of a customer. Transitioning that responsibility to Microsoft allows you to focus on developing and running workloads within your private cloud and running within Azure native resources. Regular upgrades of the Azure VMware Solution private cloud and VMware software ensure you have the latest security, stability, and feature sets running in your deployed private cloud.

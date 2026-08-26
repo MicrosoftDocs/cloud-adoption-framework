@@ -12,6 +12,8 @@ ms.custom: think-tank, e2e-azure-VMware
 
 # Use a dual-region Azure VMware Solution design that has Virtual WAN and Global Reach
 
+[!INCLUDE [AVS deprecation notice](./includes/azure-vmware-deprecation-notice.md)]
+
 This article outlines best practices for connectivity, traffic flows, and high availability when you deploy Azure VMware Solution in two regions. It provides guidance for secure Azure Virtual WAN with routing intent and Azure ExpressRoute Global Reach. This article describes the Virtual WAN with routing intent topology for Azure VMware Solution private clouds, on-premises sites, and Azure-native resources.
 
 The implementation and configuration of secure Virtual WAN with routing intent are beyond the scope of this article. This article assumes that you have a basic understanding of Virtual WAN and secure Virtual WAN with routing intent.

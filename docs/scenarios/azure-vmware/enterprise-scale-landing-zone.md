@@ -11,6 +11,8 @@ ms.custom: e2e-azure-vmware, think-tank, engagement-fy23
 
 # Azure VMware Solution landing zone accelerator
 
+[!INCLUDE [AVS deprecation notice](./includes/azure-vmware-deprecation-notice.md)]
+
 The Microsoft Azure VMware Solution landing zone accelerator is an open-source collection of Azure Resource Manager, Bicep and Terraform templates. It represents the strategic design path and target technical state for an Azure VMware Solution deployment. This open-source solution provides an architectural approach and reference implementation to prepare Azure landing zone subscriptions for a scalable Azure VMware Solution. The implementation adheres to the architecture and best practices of the Cloud Adoption Framework's Azure landing zones, focusing on enterprise-scale design principles.
 
 The Azure VMware Solution accelerator provides a reference implementation for a scalable Azure VMware Solution in your landing zone. The design decisions your organization makes, based on the guidance provided by the accelerator, lay the groundwork for scalability.

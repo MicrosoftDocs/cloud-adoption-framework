@@ -13,6 +13,8 @@ ms.custom:
 
 # Business continuity and disaster recovery for Azure VMware Solution
 
+[!INCLUDE [AVS deprecation notice](./includes/azure-vmware-deprecation-notice.md)]
+
 This enterprise-scale scenario helps improve business continuity and disaster recovery (BCDR). [Azure VMware Solution](/azure/azure-vmware) provides [private clouds](/azure/azure-vmware/concepts-private-clouds-clusters) that contain VMware vSphere clusters built from dedicated bare-metal Azure infrastructure. The solution provides a minimum of three ESXi hosts, up to a maximum of 16 hosts per cluster. All provisioned private clouds have VMware vCenter Server, VMware vSAN, VMware vSphere, and VMware NSX-T Data Center. To learn about the service level agreement (SLA) for Azure VMware Solution, see [SLA for Azure VMware Solution](https://azure.microsoft.com/support/legal/sla/azure-vmware/v1_1/).
 
 Whether you have an on-premises or Azure VMware Solution, you should consider various BCDR factors to prepare for a disaster. A robust BCDR plan aims to protect a company from data loss, financial loss, and downtime if there's a disruptive event. The following decision tree shows various BCDR options available for Azure VMware Solution.
