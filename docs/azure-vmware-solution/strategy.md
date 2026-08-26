@@ -1,5 +1,5 @@
 ---
-title: Azure VMware Solution adoption strategy - Executive decision guide
+title: Azure VMware Solution adoption
 description: Learn when Azure VMware Solution is right for your organization and how it accelerates VMware migration to Azure while protecting your existing investment.
 #customer intent: As a business decision maker, I want to understand the scenarios where Azure VMware Solution makes sense, so that I can justify the investment to stakeholders.
 author: stephen-sumner
@@ -10,7 +10,7 @@ ms.topic: concept-article
 ai-usage: ai-assisted
 ---
 
-# Azure VMware Solution adoption strategy - Executive decision guide
+# Azure VMware Solution adoption
 
 *This article helps business and technology decision makers determine whether Azure VMware Solution is the right strategy for their organization.*
 
