@@ -10,6 +10,8 @@ ms.custom: think-tank, e2e-azure-vmware
 
 # Platform automation for Azure VMware Solution enterprise-scale scenario
 
+[!INCLUDE [AVS deprecation notice](./includes/azure-vmware-deprecation-notice.md)]
+
 The enterprise-scale landing zone uses a series of best practices for automation and DevOps. These best practices can assist with the deployment of an Azure VMware Solution private cloud. This guide provides an overview of deployment considerations for the initial deployment of Azure VMware Solution. It also provides guidance for operational automation. This implementation follows the architecture and best practices of the [Cloud Adoption Framework](../../index.yml), focused on designing for scale.
 
 This solution is made up of two key parts. The first part is guidance around deployment and automation practices for Azure VMware Solution. The second part is a set of open-source artifacts that can be adapted to help with the deployment of your private cloud. While this solution aims to start an end-to-end automation journey, your organization can decide what components to deploy manually based on the considerations in this article.

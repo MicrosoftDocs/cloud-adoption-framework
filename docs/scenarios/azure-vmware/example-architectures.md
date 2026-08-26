@@ -13,6 +13,8 @@ ms.custom:
 
 # Example architectures for Azure VMware Solution
 
+[!INCLUDE [AVS deprecation notice](./includes/azure-vmware-deprecation-notice.md)]
+
 When you establish an Azure VMware Solution landing zone, you must first design and implement networking capabilities. Azure networking products and services support several networking scenarios. This article describes the four most common networking scenarios.
 
 - **Scenario 1:** A secured Virtual WAN hub that has routing intent

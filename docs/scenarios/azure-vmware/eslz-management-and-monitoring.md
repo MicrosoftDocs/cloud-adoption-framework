@@ -10,6 +10,8 @@ ms.custom: e2e-azure-vmware, think-tank
 
 # Management and monitoring for Azure VMware Solution enterprise-scale scenario
 
+[!INCLUDE [AVS deprecation notice](./includes/azure-vmware-deprecation-notice.md)]
+
 Proper management and monitoring are critical to the success of [Azure VMware Solution](https://azure.microsoft.com/services/azure-vmware/). This enterprise-scale scenario outlines important recommendations for the design of your environment. More guidance is available in the Azure enterprise-scale [landing zone for management and monitoring](../../ready/landing-zone/design-area/management.md).
 
 > [!IMPORTANT]

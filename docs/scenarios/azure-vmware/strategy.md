@@ -10,6 +10,8 @@ ms.custom: e2e-azure-vmware, think-tank
 
 # Strategy for Azure VMware Solution adoption
 
+[!INCLUDE [AVS deprecation notice](./includes/azure-vmware-deprecation-notice.md)]
+
 Cloud adoption best practices encourage customers to create a single, centralized cloud adoption strategy using the [Strategy methodology](../../strategy/index.md) of the Cloud Adoption Framework. This article outlines technical considerations of Azure VMware Solution that might affect your strategy.
 
 ## Azure VMware Solution motivations

@@ -1,0 +1,22 @@
+items:
+  - name: Azure VMware Solution adoption strategy
+    href: strategy.md
+  - name: 1. Planning and readiness
+    href: plan-readiness.md
+  - name: 2. Azure landing zone architecture
+    href: architecture-landing-zone.md
+  - name: 3. Governance and security baselines
+    href: governance-security.md
+  - name: 4. Operational standards
+    href: operations-health-management.md
+  - name: 5. Migration to AVS
+    href: migration.md
+  - name: AVS workload design
+    items:
+      - name: AVS appplication landing zone accelerator
+        href: https://github.com/Azure/Enterprise-Scale-for-AVS
+      - name: AVS design considerations
+        href: /azure/azure-vmware/native-network-design-consideration
+
+
+

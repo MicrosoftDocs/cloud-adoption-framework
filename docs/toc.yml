@@ -456,18 +456,23 @@ items:
       href: ai/strategy.md
     - name: Agents
       href: ai-agents/index.md
-    - name: Azure Virtual Desktop
-      href: scenarios/azure-virtual-desktop/index.md
-    - name: Hybrid and multicloud
-      href: scenarios/hybrid/index.md
-    - name: Modern application platform
-      href: scenarios/app-platform/index.md
-    - name: Oracle
-      href: scenarios/oracle-on-azure/index.md
-    - name: SAP
-      href: scenarios/sap/index.md
-    - name: Azure VMware Solution
-      href: scenarios/azure-vmware/index.md
+    - name: Azure VMware Solution (NEW)
+      displayName: AVS
+      href: azure-vmware-solution/strategy.md
+    - name: Deprecated
+      items:
+      - name: Azure Virtual Desktop
+        href: scenarios/azure-virtual-desktop/index.md
+      - name: Hybrid and multicloud
+        href: scenarios/hybrid/index.md
+      - name: Modern application platform
+        href: scenarios/app-platform/index.md
+      - name: Oracle
+        href: scenarios/oracle-on-azure/index.md
+      - name: SAP
+        href: scenarios/sap/index.md
+      - name: Azure VMware Solution
+        href: scenarios/azure-vmware/index.md
 
 
   - name: Resources

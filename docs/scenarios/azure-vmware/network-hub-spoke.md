@@ -10,6 +10,8 @@ ms.custom: e2e-azure-vmware, think-tank
 
 # Enable connectivity from Azure VMware Solution
 
+[!INCLUDE [AVS deprecation notice](./includes/azure-vmware-deprecation-notice.md)]
+
 ## Introduction
 
 In this design pattern, traffic has a dedicated path over the Microsoft backbone from the on-premises datacenter to the Azure VMware Solution (AVS) private cloud. This connection occurs through the Expressroute Global Reach, a mechanism that supplies a direct path between the customer managed which can then connect to the AVS-dedicated Expressroute circuits. The private cloud also has a separate, isolated breakout from the NSX Edge to the internet so that this traffic doesn't traverse over the Expressroute.

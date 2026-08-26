@@ -10,6 +10,8 @@ ms.custom: e2e-azure-vmware, think-tank
 
 # Migrate workloads for Azure VMware Solution
 
+[!INCLUDE [AVS deprecation notice](./includes/azure-vmware-deprecation-notice.md)]
+
 Azure VMware Solution lets you seamlessly migrate VMware workloads from your data center to Azure and integrate more Azure services with ease. You can manage your IT environments with the same VMware solution tools you already know at the same time. You have the choice and flexibility to determine what workloads to migrate, and you decide the right time to migrate them. With platform symmetry, you have complete control to transform based on how your organization defines its unique cloud journey.
 
 Migrating VMware workloads to Azure can accelerate the standard methodology outlined in the Cloud Adoption Framework.

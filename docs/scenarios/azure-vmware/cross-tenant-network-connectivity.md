@@ -10,6 +10,8 @@ ms.custom: think-tank, e2e-azure-vmware
 
 # Establish cross-tenant network connectivity for Azure VMware Solution SDDCs
 
+[!INCLUDE [AVS deprecation notice](./includes/azure-vmware-deprecation-notice.md)]
+
 This article describes how to set up Azure VMware Solution software-defined datacenters (SDDCs) in a cross-tenant environment. It provides guidance about how to establish network connectivity by using Azure Virtual WAN and network virtual appliances (NVAs) that run in a spoke virtual network. The spoke virtual network connects to Virtual WAN.
 
 ## Architecture

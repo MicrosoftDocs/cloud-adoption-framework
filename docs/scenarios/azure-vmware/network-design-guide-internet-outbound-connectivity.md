@@ -12,6 +12,8 @@ ms.custom: think-tank, e2e-azure-vmware
 
 # Design phase 4: Outbound internet connectivity
 
+[!INCLUDE [AVS deprecation notice](./includes/azure-vmware-deprecation-notice.md)]
+
 The choices you make during this design phase are determined by the outbound internet connectivity requirements of the applications that are deployed on Azure VMware Solution. Basic internet access might be sufficient to enable virtual machines that are hosted on the private cloud to download software updates. B2B collaboration scenarios in which access to a third-party API is allowed only from authorized IP addresses might require granular control over the NAT pool. In Virtual Desktop Infrastructure (VDI) scenarios, the volume of internet browsing sessions that need to be supported might necessitate control over the size of the NAT pool.
 
 Almost invariably, you need to enhance the security of outbound internet access by routing connections through a firewall or proxy device. Azure VMware Solution supports deploying such devices in the private cloud itself or in an Azure virtual network that's connected to the private cloud. Choosing between these two options is the main goal of this design phase. Your choice is determined by these considerations:

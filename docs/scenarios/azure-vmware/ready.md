@@ -10,6 +10,8 @@ ms.custom: e2e-azure-vmware, think-tank
 
 # Azure landing zone review for Microsoft Azure VMware Solution
 
+[!INCLUDE [AVS deprecation notice](./includes/azure-vmware-deprecation-notice.md)]
+
 The [Ready methodology](../../ready/index.md) of the Cloud Adoption Framework guides customers through environment readiness to prepare for cloud adoption. This readiness section includes technical accelerators (Azure landing zones), which are the basic building block in any cloud adoption environment. Azure landing zones automate the configuration of your Azure environment and align it with best practices guidance in the Cloud Adoption Framework guides. As you prepare for an Azure VMware Solution, consider that your environment configurations might need to be slightly different.
 
 This article outlines key considerations and changes that are necessary to prepare your environments.
