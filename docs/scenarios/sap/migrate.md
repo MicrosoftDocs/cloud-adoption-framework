@@ -10,6 +10,8 @@ ms.custom: think-tank, e2e-sap
 
 # Migrate an SAP platform to Azure
 
+[!INCLUDE [SAP deprecation notice](./includes/sap-deprecation.md)]
+
 SAP is a powerful platform with specific, complex, and strict technical, security, and compliance requirements; this platform is unlikely to move in a standard migration factory. Azure Migrate features tools that can migrate most platforms and workloads, but SAP workloads require different tools and processes to replicate and deploy their assets. Once the core platform is deployed, standard processes and tools help dependent workloads to resume and finish migrating.
 
 ## SAP process flow

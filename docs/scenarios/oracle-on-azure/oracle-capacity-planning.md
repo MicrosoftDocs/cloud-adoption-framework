@@ -10,6 +10,8 @@ ms.custom: UpdateFrequency2, e2e-oracle
 
 # Capacity planning for migrating Oracle workloads to Azure Virtual Machines
 
+[!INCLUDE [Oracle deprecation notice](./includes/oracle-deprecation.md)]
+
 This article builds on Cloud Adoption Framework for Azure guidance and covers infrastructure capacity planning for Oracle workloads on Microsoft Azure. This guidance includes recommendations and tools to support this planning process.
 
 Capacity planning helps ensure efficient performance and cost management when you run Oracle database workloads on Azure. This article describes guidelines, methods, and tools to allocate resources efficiently, balance performance needs, and optimize costs. Your specific capacity requirements depend on the performance characteristics of the database workload. These characteristics are transactional, analytical, or mixed. Processing power, memory, and throughput typically constrain Oracle database workloads.

@@ -14,6 +14,8 @@ ms.custom:
 
 # Azure Red Hat OpenShift (ARO) landing zone accelerator
 
+[!INCLUDE [Red Hat OpenShift deprecation](./includes/red-hat-openshift-deprecation.md)]
+
 The Azure Red Hat OpenShift landing zone accelerator is a collection of design guidance and implementation references to accelerate deployment of Azure Red Hat OpenShift clusters in your landing zone.
 
 This solution is open source. You can adapt the templates to create an architecture that meets your needs. The landing zone accelerator is both a strategic design path and a target technical state, and it adheres to the architecture and best practices of the Cloud Adoption Framework's Azure landing zones. The design decisions your organization makes, based on this guidance, can lay the groundwork for scalability.

@@ -12,6 +12,8 @@ ms.custom: think-tank, e2e-sap
 
 # Business continuity and disaster recovery for an SAP migration
 
+[!INCLUDE [SAP deprecation notice](./includes/sap-deprecation.md)]
+
 This article builds on the considerations and recommendations in the [Azure landing zone design area for BCDR](../../ready/landing-zone/design-area/management-business-continuity-disaster-recovery.md). That article describes unique constraints on landing zones that support an SAP platform. SAP is a mission-critical platform, so you should also incorporate other [mission-critical guidance](/azure/well-architected/mission-critical/mission-critical-overview) into your design.
 
 ## Scenario and scope

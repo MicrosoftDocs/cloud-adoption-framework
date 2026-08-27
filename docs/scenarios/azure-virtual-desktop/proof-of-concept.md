@@ -10,6 +10,8 @@ ms.custom: think-tank, e2e-avd
 
 # Azure Virtual Desktop proof of concept
 
+[!INCLUDE [Azure Virtual Desktop deprecation notice](./includes/virtual-desktop-deprecation.md)]
+
 Before deploying end-user desktops, validate the configuration of the Azure landing zone and end-user network capacity by completing and testing a proof of concept.
 
 The following approach to the migration process is simplified to outline a proof-of-concept implementation.

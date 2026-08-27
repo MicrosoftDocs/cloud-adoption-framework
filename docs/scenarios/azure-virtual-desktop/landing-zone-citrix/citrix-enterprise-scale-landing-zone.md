@@ -10,6 +10,8 @@ ms.custom: think-tank, e2e-avd
 
 # Enterprise-scale support for Citrix on Azure
 
+[!INCLUDE [Citrix deprecation notice](../includes/citrix-deprecation.md)]
+
 Employees need a consistent experience and seamless access to vital applications and insights whether they work in the office, on the road, or at home. In this reference implementation, Citrix and Microsoft partner to accelerate the future of work.
 
 This implementation follows the Cloud Adoption Framework Azure landing zone architecture and best practices, with a focus on enterprise-scale design principles. While this implementation can be deployed in any Azure environment that meets the [prerequisites](https://github.com/Azure/avdaccelerator#getting-started), it's recommended to use this solution after deploying an [enterprise-scale landing zone](../../../ready/landing-zone/index.md). For more information, see [Landing zone implementation options](../../../ready/landing-zone/implementation-options.md).

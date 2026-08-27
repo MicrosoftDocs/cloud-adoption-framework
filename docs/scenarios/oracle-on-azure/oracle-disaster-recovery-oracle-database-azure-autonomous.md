@@ -11,6 +11,8 @@ ms.custom: e2e-oracle
 
 # Oracle Autonomous Database@Azure business continuity and disaster recovery guide
 
+[!INCLUDE [Oracle deprecation notice](./includes/oracle-deprecation.md)]
+
 This article describes business continuity and disaster recovery (BCDR) strategies for Oracle Autonomous Database@Azure. Organizations that use Oracle Autonomous Database@Azure achieve enterprise-grade high availability through automated management capabilities and proven disaster recovery solutions.
 
 In this article, you learn how to do the following tasks:

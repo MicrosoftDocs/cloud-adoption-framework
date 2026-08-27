@@ -10,6 +10,8 @@ ms.custom: think-tank, e2e-avd
 
 # Configure hybrid networking for Citrix Cloud and Azure
 
+[!INCLUDE [Citrix deprecation notice](../includes/citrix-deprecation.md)]
+
 This article describes architectures for single-region and multiregion Azure and Citrix Cloud environments. It provides design considerations, design recommendations, and components that you can implement for a successful deployment.
 
 ## Single-region deployment

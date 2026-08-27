@@ -10,6 +10,8 @@ ms.custom: e2e-hybrid
 
 # Automation for Azure Arc-enabled Kubernetes
 
+[!INCLUDE [Hybrid deprecation notice](../includes/hybrid-deprecation.md)]
+
 Azure Arc-enabled Kubernetes clusters allow you to manage Kubernetes clusters that are hosted outside Azure, on your corporate network, or on another cloud provider. This article provides an overview of automation for cluster onboarding and adding extra capabilities through cluster extensions. The following sections contain considerations and recommendations for your operations team(s) to use when onboarding and automating Azure Arc-enabled clusters throughout their lifecycles.
 
 ## Architecture

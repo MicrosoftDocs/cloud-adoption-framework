@@ -13,6 +13,8 @@ ms.custom: think-tank, e2e-sap, UpdateFrequency2
 
 # Identity and access management for SAP
 
+[!INCLUDE [SAP deprecation notice](./includes/sap-deprecation.md)]
+
 This article builds on several considerations and recommendations defined in the article [Azure landing zone design area for identity and access management](../../ready/landing-zone/design-area/identity-access.md). This article describes the identity and access-management recommendations for deploying an SAP platform on Microsoft Azure. SAP is a mission-critical platform, so you should include the Azure landing zone design area guidance in your design.
 
 > [!IMPORTANT]

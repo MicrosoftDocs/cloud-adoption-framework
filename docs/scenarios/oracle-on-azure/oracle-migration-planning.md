@@ -11,6 +11,8 @@ ms.custom: e2e-oracle
 
 # Migrate Oracle workloads to Azure
 
+[!INCLUDE [Oracle deprecation notice](./includes/oracle-deprecation.md)]
+
 As part of your cloud adoption journey, you must migrate your existing workloads to the cloud. Oracle workloads are similar to other workloads and require a methodical approach to help ensure a successful migration. For more information about migration methodology, see [Cloud migration in the Cloud Adoption Framework for Azure](../../migrate/index.md). This article describes constraints and considerations that are specific to Oracle workloads.
 
 ## Oracle migration scenarios

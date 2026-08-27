@@ -10,6 +10,8 @@ ms.custom: e2e-hybrid
 
 # Governance, security, and compliance baseline for Azure Arc-enabled Kubernetes
 
+[!INCLUDE [Hybrid deprecation notice](../includes/hybrid-deprecation.md)]
+
 This article provides key design considerations and best practices for security, governance, and compliance for building your Azure Arc-enabled Kubernetes deployment. While the enterprise-scale landing zone documentation covers [Governance](../../../ready/landing-zone/design-area/governance.md) and [Security](../../../ready/landing-zone/design-area/security.md) as separate topics, these critical design areas are consolidated into a single topic for Azure Arc-enabled Kubernetes.
 
 [Azure Policy](/azure/governance/policy/overview) and [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) are cloud-native tools that allow you to implement guardrails, controls, reports, alerts and remediation tasks automatically at scale. By combining them with Azure Arc-enabled Kubernetes, you can extend governance policies and security checks to any Kubernetes cluster in your on-premises and/or multicloud environment.

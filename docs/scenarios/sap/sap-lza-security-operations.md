@@ -12,6 +12,8 @@ ms.custom: think-tank, e2e-sap, UpdateFrequency2
 
 # Security operations for SAP on Azure
 
+[!INCLUDE [SAP deprecation notice](./includes/sap-deprecation.md)]
+
 This article is part of the "SAP extend and innovate security: Best practices" article series.
 
 - [SQL Server database security for SAP on Azure](./sap-lza-database-security.md)

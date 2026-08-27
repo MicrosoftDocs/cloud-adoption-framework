@@ -13,6 +13,8 @@ ms.custom:
 
 # Governance, security, and compliance baseline for Azure Arc-enabled servers
 
+[!INCLUDE [Hybrid deprecation notice](../includes/hybrid-deprecation.md)]
+
 This article covers key design factors and best practices for setting up security, governance, and compliance for Azure Arc-enabled servers. The enterprise-scale landing zone docs cover "[Governance](../../../ready/landing-zone/design-area/governance.md)" and "[Security](../../../ready/landing-zone/design-area/security.md)" as separate topics. This article combines them for Azure Arc-enabled servers.
 
 Setting up the right controls is key in any cloud deployment. Strong controls help you stay secure and compliant. In a traditional setup, these controls usually involve review steps and manual checks. But the cloud brought a new approach to IT governance with automated guardrails and checks. [Azure Policy](/azure/governance/policy/overview) and [Microsoft Defender for Cloud](/azure/defender-for-cloud/defender-for-cloud-introduction) are cloud-native tools. They automate these controls, reports, and fixes. With Azure Arc, you can extend your governance policies and security to any resource in any cloud.

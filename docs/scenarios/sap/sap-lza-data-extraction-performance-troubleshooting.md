@@ -13,6 +13,8 @@ ms.custom:
 
 # Performance and troubleshooting for SAP data extraction
 
+[!INCLUDE [SAP deprecation notice](./includes/sap-deprecation.md)]
+
 This article is part of the "SAP extend and innovate data: Best practices" article series.
 
 - [Identify SAP data sources](./sap-lza-identify-sap-data-sources.md)

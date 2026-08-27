@@ -9,6 +9,13 @@ ms.topic: concept-article
 
 # Azure application landing zone accelerators
 
+> [!IMPORTANT]
+> **Deprecation notice:** The articles in this scenario are deprecated and is no longer being updated. To ensure only the best guidance is available, these articles will be removed on September 30th, 2026.
+>
+> This does **not** affect the application landing zone accelerator in GitHub. See 
+>
+> If you would like to save this guidance, you can select **Download a PDF** at the bottom left of this page or download the files from [GitHub](https://github.com/MicrosoftDocs/cloud-adoption-framework/blob/main/docs/scenarios/app-platform/index.md).
+
 To deploy workloads in Azure successfully, you need to establish a solid foundation. When you follow Azure landing zone guidance, you create an Azure environment that supports scalability, security, and operational consistency. The foundation of your Azure environment is your customer agreement, identity and access management, resource hierarchy, governance, and platform landing zone that host shared services.
 
 After you set up your Azure environment, your **application landing zones** build on top of it. To help you deploy application landing zones faster, Microsoft offers **application landing zone accelerators**. Application landing zone accelerators provide design guidance and sometimes reference implementations that show you how to integrate workloads *in your Azure landing zone.*

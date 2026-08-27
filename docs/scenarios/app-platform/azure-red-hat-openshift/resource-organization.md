@@ -9,6 +9,8 @@ ms.topic: concept-article
 
 # Resource organization considerations for Azure Red Hat OpenShift (optional)
 
+[!INCLUDE [Red Hat OpenShift deprecation](./includes/red-hat-openshift-deprecation.md)]
+
 Resource organization is mostly managed by the platform foundation. Here are some ways the platform foundation might affect your Azure Red Hat OpenShift landing zone accelerator.
 
 Subscription and resource group design are key considerations in generic Azure landing zone recommendations. They play a fundamental role in how you manage your Azure Red Hat OpenShift resource organization. Subscriptions are the management boundary for resource governance and isolation. As described in [Management group and subscription organization](../../../ready/landing-zone/design-area/resource-org.md), use subscriptions and management groups to assign policies to the resources within the boundaries.

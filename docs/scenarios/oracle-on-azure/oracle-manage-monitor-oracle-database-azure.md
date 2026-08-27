@@ -11,6 +11,8 @@ ms.custom: e2e-oracle
 
 # Manage and monitor Oracle Database@Azure
 
+[!INCLUDE [Oracle deprecation notice](./includes/oracle-deprecation.md)]
+
 This article provides management and monitoring guidance for Oracle Database@Azure deployments. These recommendations provide comprehensive monitoring and optimal performance for Oracle Database@Azure with Azure-native integration.
 
 Oracle Database@Azure requires coordinated monitoring across database, infrastructure, and security layers. Implement these recommendations to establish robust monitoring practices that support operational excellence and business continuity for your Oracle Autonomous Database@Azure and Oracle Exadata Database@Azure services.

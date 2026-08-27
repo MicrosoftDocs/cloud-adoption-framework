@@ -10,6 +10,8 @@ ms.custom: think-tank, e2e-hybrid
 
 # Network connectivity for Azure Arc-enabled Kubernetes
 
+[!INCLUDE [Hybrid deprecation notice](../includes/hybrid-deprecation.md)]
+
 Arc-enabled Kubernetes supports [fully connected and semi-connected modes](/azure/azure-arc/kubernetes/conceptual-connectivity-modes#understand-connectivity-modes) to onboard and manage Kubernetes clusters with Azure Arc's control plane. Azure Arc-enabled Kubernetes agents connect to Azure Arc endpoints to [exchange metadata](/azure/azure-arc/kubernetes/conceptual-data-exchange). They use pull and push methods from Kubernetes clusters.
 
 This article covers tips to connect Arc-enabled Kubernetes clusters to the Azure control plane. It applies to on-premises and other cloud setups.

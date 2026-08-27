@@ -13,6 +13,8 @@ ms.custom:
 
 # Identity and access management for Azure Arc-enabled servers
 
+[!INCLUDE [Hybrid deprecation notice](../includes/hybrid-deprecation.md)]
+
 This article provides actionable guidance to secure Azure Arc-enabled servers through proper identity and access management. You learn to configure managed identities, implement role-based access controls, and deploy service principals securely to protect your hybrid infrastructure. Identity management systems are critical for securing Azure Arc-enabled servers. The following reference architecture shows how identities, roles, and permissions work together:
 
 [![Reference architecture diagram for Azure Arc-enabled servers showing identities, roles, permissions, and action flows.](./media/arc-enabled-servers-iam.png)](./media/arc-enabled-servers-iam.png#lightbox)

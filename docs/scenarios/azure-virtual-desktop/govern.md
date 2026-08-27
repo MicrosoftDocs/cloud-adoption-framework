@@ -10,6 +10,8 @@ ms.custom: think-tank, e2e-avd
 
 # Governing an Azure Virtual Desktop environment
 
+[!INCLUDE [Azure Virtual Desktop deprecation notice](./includes/virtual-desktop-deprecation.md)]
+
 The [Cloud Adoption Framework provides a methodology](../../govern/index.md) to systematically and incrementally improve governance of your cloud portfolio. This article demonstrates how you can extend your governance approach to Azure Virtual Desktop environments deployed to Azure.
 
 ## Initial governance foundation

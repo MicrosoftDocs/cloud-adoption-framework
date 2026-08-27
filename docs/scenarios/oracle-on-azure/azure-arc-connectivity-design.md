@@ -11,6 +11,8 @@ ms.custom: e2e-oracle
 
 # Azure Arc connectivity design for Oracle Exadata Database@Azure
 
+[!INCLUDE [Oracle deprecation notice](./includes/oracle-deprecation.md)]
+
 This article provides network connectivity guidance for enabling Azure Arc on Oracle Exadata Database@Azure infrastructure. These recommendations enable unified governance and security monitoring while preserving existing Oracle Cloud Infrastructure (OCI) management capabilities and database operations.
 
 Azure Arc extends Azure management capabilities to Oracle Exadata Database@Azure without requiring changes to existing network security controls or subnet delegation. Implement these connectivity patterns to gain comprehensive security monitoring through Microsoft Defender for Cloud and governance through Azure Policy while maintaining full compatibility with existing Oracle operations.

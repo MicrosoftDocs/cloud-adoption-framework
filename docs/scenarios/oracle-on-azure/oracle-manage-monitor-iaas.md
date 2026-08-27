@@ -11,6 +11,8 @@ ms.custom: e2e-oracle
 
 # Manage and monitor Oracle workloads on Azure Virtual Machines landing zone accelerator
 
+[!INCLUDE [Oracle deprecation notice](./includes/oracle-deprecation.md)]
+
 This article describes how to manage and monitor Oracle on Azure Virtual Machines landing zone accelerator. This enterprise-scale scenario outlines important recommendations for the design of your environment. For more information, see [Management for Azure environments](../../ready/landing-zone/design-area/management.md).
 
 This article describes key design considerations and best practices for managing Oracle workload deployments on Virtual Machines landing zone accelerator. Because Oracle is a mission-critical and high-performance workload, you should include the guidance on the Azure landing zone design areas in your planning. To ensure the health of your mission-critical workloads, monitor Oracle workloads on Virtual Machines for failures and abnormalities.

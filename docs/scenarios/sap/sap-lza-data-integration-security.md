@@ -12,6 +12,8 @@ ms.custom: think-tank, e2e-sap, UpdateFrequency2
 
 # Data integration security for SAP on Azure
 
+[!INCLUDE [SAP deprecation notice](./includes/sap-deprecation.md)]
+
 This article is part of the "SAP extend and innovate data: Best practices" article series.
 
 - [Identify SAP data sources](./sap-lza-identify-sap-data-sources.md)

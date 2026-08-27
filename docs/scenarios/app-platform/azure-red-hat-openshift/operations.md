@@ -10,6 +10,8 @@ ms.custom: think-tank, e2e-aro, linux-related-content
 
 # Operations baseline guidance for Azure Red Hat OpenShift
 
+[!INCLUDE [Red Hat OpenShift deprecation](./includes/red-hat-openshift-deprecation.md)]
+
 Azure Red Hat OpenShift provides highly scalable, fully managed OpenShift clusters on demand. By properly designing your solution with management and monitoring in mind, you can work toward operational excellence and customer success.
 
 ## Design considerations

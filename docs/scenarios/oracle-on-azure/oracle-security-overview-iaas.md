@@ -10,6 +10,8 @@ ms.custom: e2e-oracle
 
 # Security guidelines for Oracle workloads on Azure Virtual Machines landing zone accelerator
 
+[!INCLUDE [Oracle deprecation notice](./includes/oracle-deprecation.md)]
+
 This article describes how to safely run Oracle workloads on Azure Virtual Machines landing zone accelerator at every stage of their lifecycle. The article discusses specific design components and provides focused suggestions about Azure infrastructure as a service (IaaS) security for Oracle workloads.
 
 ## Overview

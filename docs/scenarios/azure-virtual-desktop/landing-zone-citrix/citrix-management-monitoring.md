@@ -10,6 +10,8 @@ ms.custom: think-tank, e2e-avd
 
 # Management baseline considerations for Citrix on Azure
 
+[!INCLUDE [Citrix deprecation notice](../includes/citrix-deprecation.md)]
+
 Management and monitoring are critical to any deployment of Citrix DaaS (desktop as a service) on Azure. To achieve operational excellence and success you should properly design your Citrix DaaS environment with management and monitoring in mind.
 
 ## Citrix design considerations
