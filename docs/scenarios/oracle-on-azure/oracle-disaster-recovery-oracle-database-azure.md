@@ -11,6 +11,8 @@ ai-usage: ai-assisted
 
 # Business continuity and disaster recovery considerations for Oracle Exadata Database@Azure
 
+[!INCLUDE [Oracle deprecation notice](./includes/oracle-deprecation.md)]
+
 Oracle Database@Azure provides business continuity and disaster recovery (BCDR) options that support recoverability. Resiliency is addressed through redundancy and high availability features. This article covers key BCDR considerations, design strategies, and best practices for deploying Oracle Exadata Database@Azure to build a secure, reliable architecture that meets your requirements.
 
 ## Design considerations

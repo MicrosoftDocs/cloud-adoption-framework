@@ -11,6 +11,8 @@ ms.custom: e2e-oracle
 
 # Security for Oracle Database@Azure
 
+[!INCLUDE [Oracle deprecation notice](./includes/oracle-deprecation.md)]
+
 Databases contain sensitive data that requires defense-in-depth security architecture beyond database-level protections. A comprehensive security strategy protects Oracle Database@Azure workloads through multiple defense mechanisms including strong authentication, network security, data encryption, and threat monitoring.
 
 This article provides security recommendations for Oracle Database@Azure deployments. Defense mechanisms include authentication and authorization frameworks, network security controls, encryption of data at rest and in transit, and integrated threat protection through Azure Arc and Microsoft Defender for Cloud.

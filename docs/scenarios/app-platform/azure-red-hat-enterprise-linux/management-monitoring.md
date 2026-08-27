@@ -10,6 +10,8 @@ ms.custom: sfi-image-nochange
 
 # Management and monitoring considerations for Red Hat Enterprise Linux on Azure
 
+[!INCLUDE [Red Hat Enterprise Linux deprecation notice](./includes/red-hat-enterprise-linux-deprecation.md)]
+
 This article describes how to use various services and tools to manage and monitor Red Hat Enterprise Linux (RHEL) on Azure.
 
 If you do a greenfield deployment, you can use the Azure [change tracking](/azure/azure-change-tracking-inventory/overview-monitoring-agent) feature to easily identify changes. You can also use [Update Manager](/azure/update-manager/overview) to manage operating system updates for your RHEL virtual machines (VMs).

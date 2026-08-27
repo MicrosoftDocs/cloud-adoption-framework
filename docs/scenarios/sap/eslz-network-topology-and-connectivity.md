@@ -10,6 +10,8 @@ ms.custom: think-tank, e2e-sap
 
 # Network topology and connectivity for an SAP migration
 
+[!INCLUDE [SAP deprecation notice](./includes/sap-deprecation.md)]
+
 This article builds on the considerations and recommendations that are defined in [Azure landing zone design area for network topology and connectivity](../../ready/landing-zone/design-area/network-topology-and-connectivity.md). The guidance in this article examines key design considerations and best practices for networking and connectivity to, from, and within Microsoft Azure and SAP deployments. Because SAP is a mission-critical platform, your design should also follow the guidance on Azure landing zone design areas.
 
 ## Plan for IP addressing

@@ -9,6 +9,8 @@ ms.topic: concept-article
 
 # Platform automation considerations for Red Hat Enterprise Linux on Azure
 
+[!INCLUDE [Red Hat Enterprise Linux deprecation notice](./includes/red-hat-enterprise-linux-deprecation.md)]
+
 This article describes how to manage automation for Red Hat Enterprise Linux (RHEL) on Azure. It describes design considerations, design recommendations, and options for various tooling within the Azure ecosystem that you can use to achieve a consistent and stable environment. This article provides guidance that aligns with various customer scenarios, business requirements, operational practices, and technical maturity.     
 
 ## Overview

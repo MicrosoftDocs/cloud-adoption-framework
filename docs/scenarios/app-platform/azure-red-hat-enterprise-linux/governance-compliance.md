@@ -9,6 +9,8 @@ ms.topic: concept-article
 
 # Governance and compliance considerations for Red Hat Enterprise Linux on Azure
 
+[!INCLUDE [Red Hat Enterprise Linux deprecation notice](./includes/red-hat-enterprise-linux-deprecation.md)]
+
 This article describes considerations and recommendations for Red Hat Enterprise Linux (RHEL) operating system images and instances. Efficient and effective governance and compliance in a cloud environment requires diligent effort. 
 
 Compliance for RHEL deployments in Azure refers to the methods that you use to define, measure, and report on how systems conform to a rule, such as a specification, policy, or standard. Your organization likely has usage requirements for your system. Governance refers to the structures and processes that you use to define the specifications that you need to meet. Governance also includes how you enforce those specifications and how you remediate misalignment.

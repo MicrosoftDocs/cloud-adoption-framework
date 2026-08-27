@@ -10,6 +10,8 @@ ms.custom: e2e-oracle
 
 # Network topology and connectivity for Oracle Exadata Database@Azure - BCDR connectivity design
 
+[!INCLUDE [Oracle deprecation notice](./includes/oracle-deprecation.md)]
+
 This article focuses on high availability (HA) and disaster recovery (DR) connectivity considerations for Oracle Exadata Database@Azure deployments. It begins with single-region redundancy and then expands to cross-region architectures. The goal is to sustain operation during localized faults while separately meeting low recovery point objective (RPO) and recovery time objective (RTO) targets through properly engineered failover and replication paths.
 
 You must address the following key requirements:

@@ -10,6 +10,8 @@ ms.custom: e2e-hybrid, think-tank
 
 # Automation disciplines for Azure Arc-enabled servers
 
+[!INCLUDE [Hybrid deprecation notice](../includes/hybrid-deprecation.md)]
+
 Azure Arc-enabled servers allow you to manage your Windows and Linux servers and virtual machines that are hosted outside of Azure, on your corporate network, or on another cloud provider. This document helps you plan automation for onboarding, patch management, and expanding Azure Arc-enabled server capabilities through VM extensions. The article presents key recommendations for operations teams to onboard and automate Azure Arc-enabled servers throughout their lifecycle.
 
 ## Architecture

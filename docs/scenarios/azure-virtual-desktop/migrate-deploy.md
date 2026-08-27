@@ -10,6 +10,8 @@ ms.custom: think-tank, e2e-avd
 
 # Azure Virtual Desktop deployment or migration
 
+[!INCLUDE [Azure Virtual Desktop deprecation notice](./includes/virtual-desktop-deprecation.md)]
+
 The guidance in this article assumes that you've [established a plan for Azure Virtual Desktop](./plan.md), [assessed the desktop deployment requirements](./migrate-assess.md), [completed a proof of concept](./proof-of-concept.md), and are now ready to migrate or deploy your Azure Virtual Desktop instances.
 
 ## Initial scope

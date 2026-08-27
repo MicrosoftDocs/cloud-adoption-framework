@@ -10,6 +10,8 @@ ms.custom: e2e-oracle
 
 # Oracle on Azure IaaS landing zone accelerator
 
+[!INCLUDE [Oracle deprecation notice](./includes/oracle-deprecation.md)]
+
 The Oracle on Azure infrastructure as a service (IaaS) landing zone accelerator is an open-source collection of Terraform, Bicep, and Ansible templates. You can use these templates to automate the deployment of an environment that can host Oracle on Azure virtual machines. The landing zone accelerator provides a specific architectural approach and reference implementation that you can use to prepare your landing zones. These landing zones adhere to the architecture and best practices of the Cloud Adoption Framework for Azure.
 
 You can adopt Oracle on Azure IaaS in various ways. You can adapt the landing zone accelerator to produce an architecture that fits your scenario and enables sustainable scaling.

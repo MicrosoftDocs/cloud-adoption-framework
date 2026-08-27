@@ -10,6 +10,8 @@ ms.custom: e2e-oracle
 
 # The strategic impact of Oracle on Azure
 
+[!INCLUDE [Oracle deprecation notice](./includes/oracle-deprecation.md)]
+
 This article describes technical considerations that might affect your strategy when you migrate Oracle workloads to Azure. You can use the [Strategy methodology](/azure/cloud-adoption-framework/strategy) of the Azure Cloud Adoption Framework to create a centralized cloud adoption strategy.
 
 ## Oracle on Azure adoption motivations

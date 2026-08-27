@@ -10,6 +10,8 @@ ms.topic: concept-article
 
 # Plan for SAP cloud adoption in Azure
 
+[!INCLUDE [SAP deprecation notice](./includes/sap-deprecation.md)]
+
 This article guides you through creating a comprehensive plan for SAP cloud adoption that aligns technical decisions with business objectives.
 
 ## SAP digital estate planning

@@ -10,6 +10,8 @@ ms.custom: e2e-oracle
 
 # Capacity planning for Oracle Database@Azure by using Exadata Database service
 
+[!INCLUDE [Oracle deprecation notice](./includes/oracle-deprecation.md)]
+
 Effective capacity planning determines the right infrastructure configuration for Oracle workloads on Oracle Exadata Database@Azure. Proper capacity planning prevents performance bottlenecks, reduces costs, and ensures scalability as your Oracle workloads grow.
 
 ## Plan virtual network and subnet capacity

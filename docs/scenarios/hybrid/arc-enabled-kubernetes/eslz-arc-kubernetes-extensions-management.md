@@ -10,6 +10,8 @@ ms.custom: e2e-hybrid, think-tank, e2e-arc-enabled-kubernetes
 
 # Extensions management for Azure Arc-enabled Kubernetes
 
+[!INCLUDE [Hybrid deprecation notice](../includes/hybrid-deprecation.md)]
+
 This article contains key design considerations and best practices for managing extensions of Azure Arc-enabled Kubernetes deployments.
 
 Before you read this article, be sure you understand governance principles and review [Enterprise-scale for AKS](/azure/cloud-adoption-framework/scenarios/app-platform/aks/landing-zone-accelerator) to understand Azure landing zones in a container environment.

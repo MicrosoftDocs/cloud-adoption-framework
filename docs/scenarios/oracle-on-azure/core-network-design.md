@@ -11,6 +11,8 @@ ms.custom: e2e-oracle
 
 # Core networking for Oracle Database@Azure
 
+[!INCLUDE [Oracle deprecation notice](./includes/oracle-deprecation.md)]
+
 This article covers network connectivity design for Oracle Database@Azure workloads. Oracle Database@Azure has a unique architecture compared to most Azure services—it runs within an Azure datacenter while maintaining default connectivity to the Oracle Cloud Infrastructure (OCI) control plane. Understanding this architecture is essential for successful adoption.
 
 The following diagram illustrates the core networking architecture and relationship between Azure virtual networks and OCI virtual cloud networks (VCNs) for Oracle Exadata Database@Azure.

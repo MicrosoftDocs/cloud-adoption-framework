@@ -10,6 +10,8 @@ ms.custom: e2e-oracle
 
 # Capacity planning for Oracle Autonomous Database@Azure
 
+[!INCLUDE [Oracle deprecation notice](./includes/oracle-deprecation.md)]
+
 Effective capacity planning ensures optimal performance, cost efficiency, and scalability for Oracle workloads in Oracle Autonomous Database@Azure. Follow these recommendations to deploy an Oracle Autonomous Database@Azure deployment that scales with your business needs.
 
 ## Configure compute resources to meet performance goals

@@ -10,6 +10,8 @@ ms.custom: think-tank, e2e-avd
 
 # Platform automation and DevOps considerations for Azure Virtual Desktop
 
+[!INCLUDE [Azure Virtual Desktop deprecation notice](./includes/virtual-desktop-deprecation.md)]
+
 Azure Virtual Desktop is a managed service that provides a Microsoft control plane for your desktop virtualization environment.
 
 This article focuses on the operational tasks you need to run an Azure Virtual Desktop environment. You can apply each recommendation in this article individually. You don't need to implement every recommendation for automation to be worthwhile.

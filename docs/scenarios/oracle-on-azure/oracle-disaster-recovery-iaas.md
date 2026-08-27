@@ -12,6 +12,8 @@ ms.custom: e2e-oracle
 
 # Business continuity and disaster recovery for Oracle on Azure Virtual Machines landing zone accelerator
 
+[!INCLUDE [Oracle deprecation notice](./includes/oracle-deprecation.md)]
+
 This article builds on the considerations and recommendations in the [Azure landing zone design area for business continuity and disaster recovery (BCDR)](../../ready/landing-zone/design-area/management-business-continuity-disaster-recovery.md). This article follows that guidance and describes design considerations and best practices about BCDR options for Oracle workload deployments on Azure infrastructure virtual machines (VMs).
 
 Azure provides services that you can use to design architectures that continue operating during localized faults and that can be restored quickly after broader incidents. This guide outlines options and best practices for resiliency and disaster recovery for Oracle databases on the Azure Virtual Machines landing zone accelerator. It also describes how to configure accompanying Azure services to achieve end-to-end workload reliability.

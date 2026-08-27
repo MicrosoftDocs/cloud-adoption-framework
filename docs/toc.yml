@@ -5,7 +5,7 @@ items:
     href: whats-new.md
   - name: Why Azure?
     href: why-azure.md
-  - name: Methodologies (phases)
+  - name: Azure adoption
     items:
     - name: Strategy
       items:
@@ -448,15 +448,15 @@ items:
       - name: 4. Protect Azure
         href: manage/protect.md
   
-  - name: Scenarios
+  - name: Common scenarios
     items:
     - name: Data for AI and analytics
       href: data/executive-strategy-unify-data-platform.md
     - name: AI adoption
       href: ai/strategy.md
-    - name: Agents
+    - name: Agent adoption
       href: ai-agents/index.md
-    - name: Azure VMware Solution (NEW)
+    - name: Azure VMware Solution adoption
       displayName: AVS
       href: azure-vmware-solution/strategy.md
     - name: Deprecated

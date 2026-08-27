@@ -10,6 +10,8 @@ ms.custom: e2e-hybrid
 
 # Resource organization for Azure Arc-enabled Kubernetes
 
+[!INCLUDE [Hybrid deprecation notice](../includes/hybrid-deprecation.md)]
+
 Resource organization means preparing your environment so you can efficiently find, consume, and manage resources. The Cloud Adoption Framework's [Ready methodology](../../../ready/index.md) provides resource organization guidance you can review before deploying and implementing your workloads.
 
 This article explains how to use consistent resource grouping, defined naming standards, relevant tagging, and fine-grained access control to optimize resource organization for Azure Arc-enabled Kubernetes.

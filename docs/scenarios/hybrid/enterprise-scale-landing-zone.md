@@ -9,6 +9,8 @@ ms.topic: concept-article
 
 # Implement hybrid and multicloud adoption with Azure Arc and Azure landing zones
 
+[!INCLUDE [Hybrid deprecation notice](./includes/hybrid-deprecation.md)]
+
 Azure Arc landing zone accelerator enables organizations to implement scalable hybrid and multicloud architectures. Azure Arc projects and manages resources that exist outside Azure, such as on-premises servers, Kubernetes clusters, and multicloud services, into the Azure control plane. This hybrid and multicloud approach provides unified governance, security, and operations across distributed environments.
 
 This article helps you integrate Azure Arc resources into your Azure landing zones. This integration defines how to treat external resources as first-class citizens in Azure and ensures consistent management and compliance across all environments.

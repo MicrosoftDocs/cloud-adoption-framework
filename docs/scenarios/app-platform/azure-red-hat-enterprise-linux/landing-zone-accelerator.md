@@ -9,6 +9,8 @@ ms.topic: concept-article
 
 # Azure Red Hat Enterprise Linux landing zone accelerator
 
+[!INCLUDE [Red Hat Enterprise Linux deprecation notice](./includes/red-hat-enterprise-linux-deprecation.md)]
+
 The Red Hat Enterprise Linux (RHEL) landing zone accelerator is an open-source collection of architectural guidance and reference implementation recommendations. You can use this guidance to accelerate the migration and deployment of RHEL-based workloads to Microsoft Azure. This article provides a recommended architectural approach and reference implementation via infrastructure as code (IaC) templates that you can use to prepare your landing zones. The landing zones adhere to the architectural best practices of the [Cloud Adoption Framework for Azure](/azure/cloud-adoption-framework/) and Red Hat Infrastructure Standard.
 
 This article is the first article in a series that describes the RHEL landing zone and covers key design areas and scenarios that you can use to deploy workloads. The RHEL landing zone is an infrastructure as a service (IaaS) solution. The goal of this series is to promote consistent, repeatable, and secure environment deployments and operations that follow best practices.

@@ -12,6 +12,8 @@ products: azure-monitor
 
 # Management baseline considerations for an Azure Virtual Desktop
 
+[!INCLUDE [Azure Virtual Desktop deprecation notice](./includes/virtual-desktop-deprecation.md)]
+
 Achieve operational excellence and customer success by correctly designing your Azure Virtual Desktop environment with management and monitoring in mind.
 
 ## Platform management and monitoring

@@ -10,6 +10,8 @@ ms.custom: e2e-oracle
 
 # Network topology and connectivity for Oracle Database@Azure - Application connectivity design
 
+[!INCLUDE [Oracle deprecation notice](./includes/oracle-deprecation.md)]
+
 This article builds on the core network concepts for Oracle Exadata Database@Azure. It describes best practices for how to configure and manage Azure networking to connect your application tier to Oracle Exadata Database@Azure.
 
 ## Locate application tiers

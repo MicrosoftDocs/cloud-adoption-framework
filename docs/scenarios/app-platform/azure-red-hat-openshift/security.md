@@ -10,6 +10,8 @@ ms.custom: think-tank, e2e-aro, linux-related-content
 
 # Security for the Azure Red Hat OpenShift landing zone accelerator
 
+[!INCLUDE [Red Hat OpenShift deprecation](./includes/red-hat-openshift-deprecation.md)]
+
 Security is a critical concern for all online systems. This article provides design considerations and recommendations to protect and secure your Azure Red Hat OpenShift deployments.
 
 ## Design considerations

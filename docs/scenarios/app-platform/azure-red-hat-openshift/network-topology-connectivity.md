@@ -10,6 +10,8 @@ ms.custom: think-tank, e2e-aro, linux-related-content
 
 # Network topology and connectivity considerations for Azure Red Hat OpenShift
 
+[!INCLUDE [Red Hat OpenShift deprecation](./includes/red-hat-openshift-deprecation.md)]
+
 Review design considerations and recommendations for network topology and connectivity when you use the Azure Red Hat OpenShift landing zone accelerator.
 
 ## Design considerations

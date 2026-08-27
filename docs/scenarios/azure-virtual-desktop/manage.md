@@ -10,6 +10,8 @@ ms.custom: think-tank, e2e-avd
 
 # Manage an Azure Virtual Desktop environment
 
+[!INCLUDE [Azure Virtual Desktop deprecation notice](./includes/virtual-desktop-deprecation.md)]
+
 The [Cloud Adoption Framework provides a core methodology to define operations management processes](../../manage/index.md) for the cloud in an agnostic sense. Its guidance helps establish an operations management baseline and other specialized layers of operations. This article outlines what you need to integrate into your existing operations to prepare for virtual desktop management.
 
 ## Business alignment for operations management needs
