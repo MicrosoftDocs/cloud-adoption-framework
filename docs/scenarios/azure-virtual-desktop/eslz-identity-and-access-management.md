@@ -10,6 +10,8 @@ ms.custom: think-tank, e2e-avd
 
 # Identity and access management recommendations for Azure Virtual Desktop
 
+[!INCLUDE [Azure Virtual Desktop deprecation notice](./includes/virtual-desktop-deprecation.md)]
+
 This article explains how to use Azure role-based access control (RBAC) for identity and access management in your virtual desktop infrastructure. Effective identity and access management ensures secure and efficient operations for Azure Virtual Desktop.
 
 ## Role-based access control (RBAC) design

@@ -10,6 +10,8 @@ ms.custom: e2e-alz
 
 # Network topology and connectivity considerations for Red Hat Enterprise Linux on Azure
 
+[!INCLUDE [Red Hat Enterprise Linux deprecation notice](./includes/red-hat-enterprise-linux-deprecation.md)]
+
 This article describes Red Hat Enterprise Linux (RHEL) network considerations and recommendations that are based on the guidance in [Azure landing zone design area for network topology and connectivity](/azure/cloud-adoption-framework/ready/landing-zone/design-area/network-topology-and-connectivity).
 
 ## Architecture

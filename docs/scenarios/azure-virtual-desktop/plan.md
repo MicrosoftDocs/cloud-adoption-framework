@@ -10,6 +10,8 @@ ms.custom: think-tank, e2e-avd
 
 # Virtual desktop planning
 
+[!INCLUDE [Azure Virtual Desktop deprecation notice](./includes/virtual-desktop-deprecation.md)]
+
 Virtual desktop deployment scenarios follow the same Migrate methodology as other migration efforts.
 
 This consistent approach allows migration factories or existing migration teams to adopt the process with little change to non-technical requirements.

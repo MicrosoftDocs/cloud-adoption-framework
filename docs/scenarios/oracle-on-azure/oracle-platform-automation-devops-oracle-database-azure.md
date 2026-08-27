@@ -11,6 +11,8 @@ ms.custom: e2e-oracle
 
 # Platform automation and DevOps for Oracle Exadata Database@Azure
 
+[!INCLUDE [Oracle deprecation notice](./includes/oracle-deprecation.md)]
+
 This article describes how to deploy Oracle Exadata Database@Azure infrastructure that uses consistent automation and DevOps practices. You need standardized deployment patterns to reduce errors and accelerate provisioning. The recommendations in this article help ensure that your Oracle Database@Azure deployments follow Azure best practices for reliability, security, and operational excellence.
 
 Oracle Exadata Database@Azure combines Oracle database services with Azure infrastructure capabilities. This service runs on Oracle Cloud Infrastructure (OCI) hardware colocated in Azure datacenters. Oracle Database@Azure provides enterprise-grade database performance with Azure's native integration and management tools.

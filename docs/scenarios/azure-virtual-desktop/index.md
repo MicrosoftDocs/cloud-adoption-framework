@@ -10,6 +10,8 @@ ms.custom: think-tank, e2e-avd
 
 # Migrate end-user desktops to Azure Virtual Desktop
 
+[!INCLUDE [Azure Virtual Desktop deprecation notice](./includes/virtual-desktop-deprecation.md)]
+
 Migrating an organization's end-user desktops to the cloud is a common scenario in cloud migrations. This migration helps improve employee productivity and accelerate the migration of various workloads to support the organization's user experience. This guidance follows the Cloud Adoption Framework's [Adopt methodology](/azure/cloud-adoption-framework/migrate/plan-migration), specifically the Migrate approach, to help organizations successfully transition to Azure Virtual Desktop.
 
 ## Components of the scenario

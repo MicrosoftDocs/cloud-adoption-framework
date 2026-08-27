@@ -10,6 +10,8 @@ ms.custom: e2e-oracle
 
 # Plan for Oracle on Azure
 
+[!INCLUDE [Oracle deprecation notice](./includes/oracle-deprecation.md)]
+
 This article describes how to plan for an Oracle on Azure adoption and builds on the [Oracle on Azure strategy](oracle-landing-zone-strategy.md) article. Consider the various factors that affect your decision to move to Azure to get the most out of your migration.
 
 Resources in the Cloud Adoption Framework for Azure help your organization create a suitable plan for adopting Oracle on Azure. Use the [Plan methodology](/azure/cloud-adoption-framework/plan/) of the Cloud Adoption Framework to create an overall cloud adoption plan and help guide your team. This guidance provides templates for creating your backlog and plans for building necessary skills across your teams based on what you want to do in the cloud. This article describes how to include Oracle on Azure adoption into the overall cloud adoption plan.

@@ -10,6 +10,8 @@ ms.custom: think-tank, e2e-avd
 
 # Security governance and compliance for Citrix on Azure
 
+[!INCLUDE [Citrix deprecation notice](../includes/citrix-deprecation.md)]
+
 Citrix DaaS deployments on Azure require proper security governance and compliance. To achieve operational excellence and success, design your Citrix DaaS environment with appropriate policies.
 
 ## Design considerations and recommendations

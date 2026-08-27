@@ -10,6 +10,8 @@ ms.custom: think-tank, e2e-avd
 
 # Resource organization considerations for Azure Virtual Desktop
 
+[!INCLUDE [Azure Virtual Desktop deprecation notice](./includes/virtual-desktop-deprecation.md)]
+
 Resource organization affects how you manage and govern your Azure Virtual Desktop resources. This article provides key considerations and recommendations for designing an organization's structure.
 
 Use this guidance to ensure resource organization and segmentation across:

@@ -10,6 +10,8 @@ ms.custom: think-tank, e2e-avd
 
 # Business continuity and disaster recovery considerations for Citrix on Azure
 
+[!INCLUDE [Citrix deprecation notice](../includes/citrix-deprecation.md)]
+
 This article describes how you can improve business continuity and disaster recovery (BCDR) for a Citrix on Azure environment. 
 
 ## Citrix design considerations

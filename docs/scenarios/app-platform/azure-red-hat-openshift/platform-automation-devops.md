@@ -10,6 +10,8 @@ ms.custom: think-tank, e2e-aks, linux-related-content
 
 # Plan platform automation and DevOps for Azure Red Hat OpenShift
 
+[!INCLUDE [Red Hat OpenShift deprecation](./includes/red-hat-openshift-deprecation.md)]
+
 Get design considerations and recommendations for platform automation and DevOps for the Azure Red Hat OpenShift landing zone accelerator. Rely on automation and general DevOps best practices to plan your highly automated, DevOps platform for Azure Red Hat OpenShift.
 
 ## Design considerations

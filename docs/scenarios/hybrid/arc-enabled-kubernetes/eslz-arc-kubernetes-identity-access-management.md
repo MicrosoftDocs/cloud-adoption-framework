@@ -10,6 +10,8 @@ ms.custom: e2e-hybrid, think-tank
 
 # Identity and access management for Azure Arc-enabled Kubernetes
 
+[!INCLUDE [Hybrid deprecation notice](../includes/hybrid-deprecation.md)]
+
 Azure Arc-enabled Kubernetes supports on-premises and other cloud environments that are integrated with different identity and access management systems. In addition to existing Kubernetes cluster role-based access control (RBAC), Azure Arc-enabled Kubernetes supports Azure RBAC to unify access management across Kubernetes clusters and minimize operational overhead.
 
 The combination of RBAC models your organization should use depends on your usage needs. Some examples are:

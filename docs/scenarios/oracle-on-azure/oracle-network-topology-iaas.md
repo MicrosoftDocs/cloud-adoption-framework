@@ -11,6 +11,8 @@ ms.custom: e2e-oracle
 
 # Network topology and connectivity for Oracle on the Azure Virtual Machines landing zone accelerator
 
+[!INCLUDE [Oracle deprecation notice](./includes/oracle-deprecation.md)]
+
 This article builds on several considerations and recommendations defined in [Azure landing zone design area for network topology and connectivity](../../ready/landing-zone/design-area/network-topology-and-connectivity.md). It offers key design considerations and best practices for networking and connectivity of your Oracle instance that runs on Azure Virtual Machines. Because Oracle supports mission-critical workloads, you should include the guidance for the Azure landing zone design areas in your design.
 
 ## Prioritize security for Oracle workloads

@@ -10,6 +10,8 @@ ms.custom: think-tank, e2e-avd
 
 # Security and governance
 
+[!INCLUDE [Azure Virtual Desktop deprecation notice](./includes/virtual-desktop-deprecation.md)]
+
 This article provides key design considerations and recommendations for **security, governance, and compliance** in [Azure Virtual Desktop](/azure/virtual-desktop/overview) landing zones in accordance with Microsoft's [Cloud Adoption Framework](../../overview.md).
 
 Review the following sections to find recommended security controls and governance for your Azure Virtual Desktop landing zone.

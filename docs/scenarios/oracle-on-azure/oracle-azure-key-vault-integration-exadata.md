@@ -11,6 +11,8 @@ ms.custom: e2e-oracle
 
 # Azure Key Vault integration for Oracle Exadata Database@Azure
 
+[!INCLUDE [Oracle deprecation notice](./includes/oracle-deprecation.md)]
+
 Integrate Azure Key Vault with Oracle Exadata Database@Azure to centralize Transparent Data Encryption (TDE) master encryption key management within Azure security boundaries. This integration enables enterprise security requirements, regulatory compliance, and standardized key management practices across Azure resources while maintaining Oracle Exadata's performance capabilities.
 
 Azure Key Vault integration provides centralized key management, Azure-native governance, unified monitoring, and simplified compliance through consolidated security controls. Choose between Azure Key Vault Standard, Premium (HSM-backed), or Managed HSM tiers based on security requirements and compliance mandates such as FIPS 140-3 Level 3 validation.

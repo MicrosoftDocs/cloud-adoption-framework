@@ -11,6 +11,8 @@ ms.custom: think-tank, e2e-hybrid, engagement-fy23
 
 # Azure Arc-enabled Kubernetes Azure landing zone sandbox
 
+[!INCLUDE [Hybrid deprecation notice](../includes/hybrid-deprecation.md)]
+
 Azure Arc helps you onboard infrastructure assets outside of Azure and deploy Azure services to your infrastructure, whether on-premises or in a multicloud environment.
 
 With Azure Arc-enabled Kubernetes, you can attach and configure Kubernetes clusters from any location.

@@ -36,7 +36,8 @@ additionalContent:
 
   # Supports up to 3 sections
   sections:
-    - title: Azure adoption steps  # < 60 chars (optional)
+    - title: Azure adoption # < 60 chars (optional)
+      summary: Roadmap to help decision makers adopt Azure successfully.
      # < 160 chars (optional)
       items:
 
@@ -84,10 +85,11 @@ additionalContent:
           summary: Manage your entire Azure environment.
           url: ./manage/index.md
 
-    - title: Solutions for specific scenarios # < 160 chars (optional)
+    - title: Additional scenarios # < 160 chars (optional)
+      summary: These scenarios plug into your Azure landing zone and operational processes.
       items: 
 
-      - title: Data for AI and analytics
+      - title: Data platform for AI and analytics
         summary: Unify your data platform for analytics and AI. 
         url: ./data/executive-strategy-unify-data-platform.md
       - title: AI adoption
@@ -99,31 +101,3 @@ additionalContent:
       - title: Azure landing zone
         summary: Deployable implementation to set up your Azure environment.
         url: ./ready/landing-zone/index.md    
-
-    - title: Workload design guidance # < 160 chars (optional)
-      items: 
-
-        # Card
-        - title: Well-Architected Framework
-          summary: Design workloads the right way.
-          url: https://learn.microsoft.com/azure/architecture/framework/
-
-        # Card
-        - title: Azure Architecture Center
-          summary: Build using a catalog of Azure architectures.
-          url: https://learn.microsoft.com/azure/architecture/
-
-
-    - title: Find help  # < 60 chars (optional)
- # < 160 chars (optional)
-      items:
-
-        # Card
-        - title: Azure Accelerate
-          summary: Accelerate your cloud and AI adoption with experts from Microsoft.
-          url: https://azure.microsoft.com/en-us/solutions/migration/migrate-modernize-innovate/
-
-
-  # footer (optional)
-  footer: "Why the Microsoft Cloud Adoption Framework for Azure is right for your business. [https://aka.ms/adopt](https://azure.microsoft.com/cloud-adoption-framework)"
-

@@ -9,6 +9,8 @@ ms.topic: concept-article
 
 # Network topology and connectivity for Azure Arc-enabled servers
 
+[!INCLUDE [Hybrid deprecation notice](../includes/hybrid-deprecation.md)]
+
 Azure Arc-enabled servers let you manage Windows and Linux physical servers and virtual machines through the Azure control plane. This article describes key design considerations and best practices for Azure Arc-enabled servers connectivity as part of the Cloud Adoption Framework for Azure enterprise-scale landing zone guidance. This guidance applies to physical servers and virtual machines hosted in on-premises environments or through a partner cloud provider.
 
 This article assumes an [Azure landing zone](/azure/cloud-adoption-framework/ready/landing-zone/) and established hybrid network connections are in place. The guidance focuses on the connectivity of the connected machine agent for Azure Arc-enabled servers.

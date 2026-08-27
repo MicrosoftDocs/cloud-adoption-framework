@@ -9,6 +9,8 @@ ms.topic: concept-article
 
 # Resource organization considerations for Red Hat Enterprise Linux on Azure
 
+[!INCLUDE [Red Hat Enterprise Linux deprecation notice](./includes/red-hat-enterprise-linux-deprecation.md)]
+
 When you organize a Red Hat Enterprise Linux (RHEL) deployment on Azure, carefully consider management groups and subscriptions to ensure that you effectively govern and manage resources.
 
 ## Subscription structure

@@ -9,6 +9,8 @@ ms.topic: concept-article
 
 # Management and monitoring for Azure Arc-enabled servers
 
+[!INCLUDE [Hybrid deprecation notice](../includes/hybrid-deprecation.md)]
+
 Azure Arc-enabled servers let you manage Windows and Linux servers and VMs hosted outside Azure. These can be on your corporate network or a third-party cloud provider.
 
 This article helps you run Azure Arc-enabled servers on your Azure estate. It covers central management and monitoring at the [platform level](../../../ready/landing-zone/design-area/management.md) and gives key tips for your ops team.

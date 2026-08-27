@@ -10,6 +10,8 @@ ms.custom: think-tank, e2e-avd
 
 # Identity and access considerations for Citrix on Azure
 
+[!INCLUDE [Citrix deprecation notice](../includes/citrix-deprecation.md)]
+
 This article discusses the various ways of providing identity and access control services for Citrix.
 
 ## Design considerations

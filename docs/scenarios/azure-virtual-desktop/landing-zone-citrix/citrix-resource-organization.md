@@ -10,6 +10,8 @@ ms.custom: think-tank, e2e-avd
 
 # Resource organization considerations for Citrix on Azure
 
+[!INCLUDE [Citrix deprecation notice](../includes/citrix-deprecation.md)]
+
 This article provides considerations that you should take into account when you plan your organization's Citrix landing zone structure.
 
 ## Citrix design recommendations

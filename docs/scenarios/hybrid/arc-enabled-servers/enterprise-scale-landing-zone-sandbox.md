@@ -11,6 +11,8 @@ ms.custom: think-tank, e2e-hybrid, engagement-fy23
 
 # Azure Arc-enabled servers Azure landing zone sandbox
 
+[!INCLUDE [Hybrid deprecation notice](../includes/hybrid-deprecation.md)]
+
 With Azure Arc, you can onboard infrastructure assets outside of Azure or deploy Azure services to any infrastructure, on-premises or multicloud.
 
 Azure Arc-enabled servers allow you to manage the following:

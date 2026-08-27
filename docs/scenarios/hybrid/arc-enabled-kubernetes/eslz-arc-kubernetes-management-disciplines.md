@@ -10,6 +10,8 @@ ms.custom: e2e-hybrid, think-tank
 
 # Management and monitoring for Azure Arc-enabled Kubernetes
 
+[!INCLUDE [Hybrid deprecation notice](../includes/hybrid-deprecation.md)]
+
 This article provides key design considerations and recommendations for managing and monitoring Azure Arc-enabled Kubernetes clusters that help you understand and design solutions for operational excellence. Use the guidance provided in this document and in other critical design areas referenced throughout it to better understand related design considerations and recommendations.
 
 ## Architecture

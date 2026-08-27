@@ -10,6 +10,8 @@ ms.custom: think-tank, e2e-aro, linux-related-content
 
 # Identity and access management considerations for Azure Red Hat OpenShift
 
+[!INCLUDE [Red Hat OpenShift deprecation](./includes/red-hat-openshift-deprecation.md)]
+
 Identity and access management is a key part of an organization's security settings when it deploys the Azure Red Hat OpenShift landing zone accelerator. Identity and access management includes areas like cluster identities, workload identities, and operator access.
 
 Use these design considerations and recommendations to create an identity and access management plan that meets your organization's requirements in your Azure Red Hat OpenShift deployment.

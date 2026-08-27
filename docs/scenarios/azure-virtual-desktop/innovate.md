@@ -10,6 +10,8 @@ ms.custom: think-tank, e2e-avd
 
 # Innovation and Azure Virtual Desktop environment
 
+[!INCLUDE [Azure Virtual Desktop deprecation notice](./includes/virtual-desktop-deprecation.md)]
+
 Technologies such as virtual desktops offer new ways to deliver a productivity environment to organizations. Virtual desktops provide a central, scalable, and secure desktop experience. The result is users can work in ways that traditionally weren't possible, and with a more performant experience.
 
 The following guidance provides information on how Azure Virtual Desktop can help organizations drive innovative new ways for their teams to work.

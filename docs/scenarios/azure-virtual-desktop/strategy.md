@@ -10,6 +10,8 @@ ms.custom: think-tank, e2e-avd
 
 # Strategic benefits of a virtual desktop
 
+[!INCLUDE [Azure Virtual Desktop deprecation notice](./includes/virtual-desktop-deprecation.md)]
+
 When you plan your organization's move to the cloud, a best practice is to create a single, centralized strategy by using the [Strategy methodology](../../strategy/index.md) of the Cloud Adoption Framework.
 
 The guidance in this article can help to expose several considerations about virtual desktops that could affect your strategy.

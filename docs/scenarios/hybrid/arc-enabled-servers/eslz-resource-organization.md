@@ -10,6 +10,8 @@ ms.custom: e2e-hybrid, think-tank
 
 # Resource organization for Azure Arc-enabled servers
 
+[!INCLUDE [Hybrid deprecation notice](../includes/hybrid-deprecation.md)]
+
 To align with the [Ready methodology](../../../ready/index.md) of the Cloud Adoption Framework, implement a resource consistency and tagging strategy. This strategy should include your hybrid and multicloud resources and add business and operational details to inventory management and metadata tags.
 
 ## Resource consistency and organization

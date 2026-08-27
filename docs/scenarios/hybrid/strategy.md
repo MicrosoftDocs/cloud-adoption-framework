@@ -9,6 +9,8 @@ ms.topic: concept-article
 
 # Unified hybrid and multicloud operations
 
+[!INCLUDE [Hybrid deprecation notice](./includes/hybrid-deprecation.md)]
+
 Hybrid cloud refers to a mix of on-premises/private infrastructure and public cloud services working together, while multicloud means using multiple cloud providers concurrently. Many enterprises today have siloed teams, distributed sites, and systems spread across on-premises datacenters and various clouds. The challenge is to unify these environments in a secure, well-managed way that enables modernization from cloud to edge. This guidance provides a prescriptive end-to-end framework for unifying and managing hybrid and multicloud environments with Azure as the central control plane.
 
 **Quickstart: [Azure hybrid and multicloud services](#6-map-azure-hybrid-and-multicloud-services-to-objectives)**

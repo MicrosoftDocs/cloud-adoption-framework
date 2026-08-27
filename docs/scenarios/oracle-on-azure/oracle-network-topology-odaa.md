@@ -11,6 +11,8 @@ ms.custom: e2e-oracle
 
 # Network topology and connectivity for Oracle Database@Azure
 
+[!INCLUDE [Oracle deprecation notice](./includes/oracle-deprecation.md)]
+
 This article provides network topology and connectivity guidance for Oracle Database@Azure deployments within your Azure landing zone. These recommendations enable successful network design that supports Oracle Exadata Database@Azure workloads while maintaining security and operational efficiency.
 
 Oracle Database@Azure requires specialized network configuration within Azure landing zones to support Oracle Cloud Infrastructure (OCI) integration. Implement these recommendations to establish proper connectivity patterns that support your Oracle workloads while maintaining consistency with [Cloud Adoption Framework for Azure network design principles](/azure/cloud-adoption-framework/ready/landing-zone/design-area/network-topology-and-connectivity).

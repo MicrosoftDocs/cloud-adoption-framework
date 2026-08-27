@@ -11,6 +11,8 @@ ms.custom: e2e-oracle, references_regions
 
 # Organize Oracle Database@Azure resources for consistent deployments
 
+[!INCLUDE [Oracle deprecation notice](./includes/oracle-deprecation.md)]
+
 This article describes how to organize Oracle Database@Azure resources across Azure subscriptions and establish consistent deployment patterns. Proper resource organization reduces operational complexity and improves security posture for Oracle database workloads.
 
 Oracle Database@Azure is an Oracle database service that runs on Oracle Cloud Infrastructure (OCI) hardware colocated in Microsoft datacenters. You can deploy two types of Oracle Database@Azure services:

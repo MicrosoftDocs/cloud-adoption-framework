@@ -10,6 +10,8 @@ ms.custom: think-tank, e2e-avd
 
 # Azure Virtual Desktop enterprise enrollment considerations
 
+[!INCLUDE [Azure Virtual Desktop deprecation notice](./includes/virtual-desktop-deprecation.md)]
+
 Standard best practices for deploying Azure landing zones rarely differ between customers for enterprise enrollment and Active Directory tenants. It's unusual for organizations to have any specific consideration or recommendation that impacts those decisions.
 
 Make sure you understand any decisions your cloud platform team previously made, since that can help you identify existing [enterprise enrollment or Microsoft Entra tenant decisions](../../ready/landing-zone/design-area/azure-billing-microsoft-entra-tenant.md).

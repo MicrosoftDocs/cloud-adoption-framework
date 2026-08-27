@@ -10,6 +10,8 @@ ms.custom: think-tank, e2e-avd
 
 # Azure Virtual Desktop post-deployment
 
+[!INCLUDE [Azure Virtual Desktop deprecation notice](./includes/virtual-desktop-deprecation.md)]
+
 The release process for the migration or deployment of Azure Virtual Desktop instances is straightforward. This process mirrors the one used during the [Azure Virtual Desktop proof of concept](./proof-of-concept.md):
 
 - Test the performance and latency of application groups and deployed desktops for a sampling of users.
