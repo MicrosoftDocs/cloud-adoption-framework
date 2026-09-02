@@ -149,7 +149,7 @@ Azure VMware Solution enables organizations to adopt AI services and modern data
 
 - **Azure database services:** Azure VMware Solution workloads can connect to Azure SQL Database, Azure Database for PostgreSQL, Cosmos DB, and other managed database services for incremental data tier modernization.
 
-- **Azure Storage:** Workloads in Azure VMware Solution can use Azure Files and Azure Blob Storage, in addition to the storage provisioned in vSAN and as external Azure VMware Solution data stores. Connecting to Azure storage accounts can reduce the demand for storage within the Azure VMware Solution private cloud, and help minimize costs.
+- **Azure Storage:** Workloads in Azure VMware Solution can connect directly to Azure Files, Azure NetApp Files, and Azure Blob Storage to store application data. Azure NetApp Files and Elastic SAN can extend the private cloud's datastore capacity in addition to the storage provisioned in vSAN. Connecting to Azure storage accounts can reduce the demand for storage within the Azure VMware Solution private cloud, and help minimize costs.
 
 Azure VMware Solution workloads access Azure services through ExpressRoute (Gen 1) or the virtual network directly (Gen 2). Ensure your network design provides adequate bandwidth and low latency for these connections. For high performance access to Azure services, Gen 1 Azure VMware Solution private clouds may require more than one ExpressRoute circuit.
 
