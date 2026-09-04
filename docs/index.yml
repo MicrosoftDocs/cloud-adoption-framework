@@ -42,54 +42,54 @@ additionalContent:
       items:
 
         # Card
-        - title: 📋 Strategy
+        - title: Strategy
           summary: Define business justification and Azure adoption outcomes.
           url: ./strategy/index.md
 
         # Card
-        - title: 📅 Plan
+        - title: Plan
           summary: Prepare people, processes, and technology for Azure adoption.
           url: ./plan/prepare-organization-for-cloud.md
         # Card
-        - title: 🛠️ Ready
-          summary: Prepare your Azure environment and landing zone for workloads.
+        - title: Ready
+          summary: Prepare your Azure landing zone.
           url: ./ready/index.md
 
         # Card
-        - title: ⬆️ Migrate
+        - title: Migrate
           summary: Migrate your workloads to Azure from on-premises and other clouds.
           url: ./migrate/plan-migration.md
 
         # Card
-        - title: 🔄 Modernize
+        - title: Modernize
           summary: Improve your existing workloads to better meet business needs.
           url: ./modernize/prepare-organization-cloud-modernization.md
         
         # Card
-        - title: 🌐 Cloud-native
+        - title: Cloud-native
           summary: Build new cloud-native workloads and features in Azure.
           url: ./cloud-native/plan-cloud-native-solutions.md
 
         # Card
-        - title: 🔐 Govern
+        - title: Govern
           summary: Govern your entire Azure environment.
           url: ./govern/index.md
 
         # Card
-        - title: 🛡️ Secure
+        - title: Secure
           summary: Secure your entire Azure environment.
           url: ./secure/overview.md
 
         # Card
-        - title: ⚙️ Manage
+        - title: Manage
           summary: Manage your entire Azure environment.
           url: ./manage/index.md
 
-    - title: Additional scenarios # < 160 chars (optional)
+    - title: Key adoption scenarios # < 160 chars (optional)
       summary: These scenarios plug into your Azure landing zone and operational processes.
       items: 
 
-      - title: Data platform for AI and analytics
+      - title: Data platform
         summary: Unify your data platform for analytics and AI. 
         url: ./data/executive-strategy-unify-data-platform.md
       - title: AI adoption
@@ -98,6 +98,9 @@ additionalContent:
       - title: Agents
         summary: How to adopt and govern AI agents.
         url: ./ai-agents/index.md
-      - title: Azure landing zone
-        summary: Deployable implementation to set up your Azure environment.
-        url: ./ready/landing-zone/index.md    
+      - title: Sovereignty
+        summary: How to meet sovereignty requirements. 
+        url: ./sovereignty/executive-strategy.md
+      - title: Azure VMware Solution
+        summary: How to adopt Azure VMware Solution.
+        url: ./azure-vmware-solution/strategy.md    

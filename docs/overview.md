@@ -23,13 +23,13 @@ Azure adoption is the foundation of the Cloud Adoption Framework. It helps decis
 
 | Azure adoption phases | Key decision |
 |-------------|---------|-------|
-| 🚀 [**1. Strategy**](/azure/cloud-adoption-framework/strategy/) | What should our Azure adoption look like? | 
-| 📝 [**2. Plan**](/azure/cloud-adoption-framework/plan/) | How will we prepare for Azure adoption? |
-| 🛠️ [**3. Ready**](/azure/cloud-adoption-framework/ready/) | How will we build our Azure landing zone? |
-| 🌐 [**4. Adopt**](/azure/cloud-adoption-framework/adopt/) | How will we migrate, modernize, and build workloads? |
-| 🛡️ [**5. Govern**](/azure/cloud-adoption-framework/govern/) | How will we control our Azure environment? |
-| 🔒 [**6. Secure**](/azure/cloud-adoption-framework/secure/) | How will we protect our Azure environment? |
-| ⚙️ [**7. Manage**](/azure/cloud-adoption-framework/manage/) | How will we operate and optimize Azure over time? | 
+|[**1. Strategy**](/azure/cloud-adoption-framework/strategy/) | What should our Azure adoption look like? | 
+| [**2. Plan**](/azure/cloud-adoption-framework/plan/) | How will we prepare for Azure adoption? |
+| [**3. Ready**](/azure/cloud-adoption-framework/ready/) | How will we build our Azure landing zone? |
+| [**4. Adopt**](/azure/cloud-adoption-framework/adopt/) | How will we migrate, modernize, and build workloads? |
+| [**5. Govern**](/azure/cloud-adoption-framework/govern/) | How will we control our Azure environment? |
+| [**6. Secure**](/azure/cloud-adoption-framework/secure/) | How will we protect our Azure environment? |
+| [**7. Manage**](/azure/cloud-adoption-framework/manage/) | How will we operate and optimize Azure over time? | 
 
 Other Cloud Adoption Framework scenarios build on this foundation. They plug into Azure adoption and provide guidance for specific business needs and technologies. See available [scenarios](#cloud-adoption-framework-scenarios).
 
@@ -54,5 +54,6 @@ Azure adoption is the primary Cloud Adoption Framework scenario. It provides the
 | [Data platform](data/executive-strategy-unify-data-platform.md) | How to prepare your data for AI and analytics |
 | [AI adoption](./ai/strategy.md) | How to adopt AI (generative and nongenerative) workloads |
 | [AI agents](./ai-agents/index.md) | How and when to adopt AI agents |
-| [Azure VMware Solution](/azure/cloud-adoption-framework/azure-vmware-solution/strategy) | How to adopt Azure VMware Solution |
+| [Sovereignty](./sovereignty/executive-strategy.md) | How to meet sovereignty requirements | 
+| [Azure VMware Solution](./azure-vmware-solution/strategy.md) | How to adopt Azure VMware Solution |
 
