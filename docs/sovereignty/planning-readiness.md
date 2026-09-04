@@ -76,7 +76,7 @@ This section helps decision makers establish sovereignty requirements before sel
 | Cloud governance, security, and management | Governance: Automated and manual means of policy enforcement. Security: Prevent and detect security threats and risks. Management: Workloads are resilient and provide business continuity. |
 | Data residency | Data stays inside approved boundaries, regions and/or locally, to meet availability mitigation requirements. |
 | Data confidentiality at rest | Data is encrypted when it's stored. |
-| Data confidentiality in transit | Data is encrypted when it moves across a network. |
+| Data confidentiality in transit | Data is encrypted when it moves across a network and uses private networks. |
 | Data confidentiality in use | Data stays protected in memory during processing. |
 | Data confidentiality with key control | Hold and control the encryption keys that protect data. |
 | Operator access control | Cloud operators can't perform privileged actions in your environment without your approval. |
