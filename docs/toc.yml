@@ -448,15 +448,17 @@ items:
       - name: 4. Protect Azure
         href: manage/protect.md
   
-  - name: Common scenarios
+  - name: Key adoption scenarios
     items:
-    - name: Data for AI and analytics
+    - name: Data platform
       href: data/executive-strategy-unify-data-platform.md
-    - name: AI adoption
+    - name: AI
       href: ai/strategy.md
-    - name: Agent adoption
+    - name: Agents
       href: ai-agents/index.md
-    - name: Azure VMware Solution adoption
+    - name: Sovereignty
+      href: sovereignty/executive-strategy.md
+    - name: Azure VMware Solution
       displayName: AVS
       href: azure-vmware-solution/strategy.md
     - name: Deprecated
