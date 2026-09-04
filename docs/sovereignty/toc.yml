@@ -1,0 +1,26 @@
+items:
+  - name: Sovereignty adoption strategy
+    href: executive-strategy.md
+  - name: 1. Planning and readiness
+    href: planning-readiness.md
+  - name: 2. Architecture and governance
+    href: azure-landing-zone-architecture-governance.md
+  - name: 3. Operational standards
+    href: operational-standards.md
+  - name: Sovereignty workload design
+    items:
+      - name: Well-Architected Framework
+        href: /azure/well-architected/pillars
+      - name: Azure Architecture Center
+        href: /azure/architecture/solution-ideas/articles/adaptive-apps
+      - name: Microsoft Sovereign Cloud
+        items:
+          - name: Public Cloud  
+            href: /azure/azure-sovereign-clouds/public/overview-implement-workloads
+          - name: Private Cloud
+            href: /azure/azure-sovereign-clouds/private/overview/sovereign-private-cloud
+          - name: National Partner Cloud
+            href: /azure/azure-sovereign-clouds/partner/overview-national-partner-clouds
+
+
+
