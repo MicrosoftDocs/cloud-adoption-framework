@@ -120,7 +120,7 @@ Azure VMware Solution uses VMware vSAN for storage, VMware NSX for networking, a
 
 ## 5. Broadcom licenses
 
-You must purchase portable VMware Cloud Foundation (VCF) subscription licenses from Broadcom, in a *bring your own license* (BYOL) model. You need the correct number of VCF licenses to cover all the physical cores in the Azure VMware Solution private cloud. When you create an Azure VMware Solution private cloud, enter the license information as part of the deployment process. If you have an active reserved instance for license-included hosts, you might need to convert your licensing to VCF BYOL. Optional add-ons such as the VMware vDefend Firewall need their own Broadcom license. See [Use Portable VMware Cloud Foundation (VCF) on Azure VMware Solution](/azure/azure-vmware/vmware-cloud-foundations-license-portability).
+You must purchase portable VMware Cloud Foundation (VCF) subscription licenses from Broadcom, in a *bring your own license* (BYOL) model. You need the correct number of VCF licenses to cover all the physical cores in the Azure VMware Solution private cloud. When you create an Azure VMware Solution private cloud, enter the license information as part of the deployment process. If you have an active reserved instance for license-included hosts, you will need to convert your licensing to [VCF BYOL](/azure/azure-vmware/license-included-service-retirement). Optional add-ons such as the VMware vDefend Firewall need their own Broadcom license. See [Use Portable VMware Cloud Foundation (VCF) on Azure VMware Solution](/azure/azure-vmware/vmware-cloud-foundations-license-portability).
 
 ## 6. Azure VMware Solution quota
 
