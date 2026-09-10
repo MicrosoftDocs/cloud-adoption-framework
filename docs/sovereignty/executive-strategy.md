@@ -17,7 +17,7 @@ ai-usage: ai-assisted
 
 Sovereignty has become an increasingly important business priority for organizations. The challenge with sovereignty is meeting the requirements without creating unnecessary barriers to innovation, agility, and scale. Organizations that use a patchwork of products and manual controls often see higher costs and slower delivery without increased confidence that they can demonstrate compliance.
 
-The [Microsoft Sovereign Cloud](/azure/azure-sovereign-clouds/) helps solve those challenges. It provides sovereign capabilities across sovereign public, private, and partner clouds. This continuum of deployment options reduces the need for isolated solutions and helps organizations maintain a consistent approach to governance, security, and operations as requirements evolve.
+The [Microsoft Sovereign Cloud](/azure/azure-sovereign-clouds/) helps solve these challenges. It provides sovereign capabilities across sovereign public, private, and partner clouds. This continuum of deployment options reduces the need for isolated solutions and helps organizations maintain a consistent approach to governance, security, and operations as requirements evolve.
 
 **Outcome**: This guidance helps decision makers understand how to meet sovereignty requirements for Azure workloads in Microsoft Sovereign Cloud and establish the policies and standards needed to sustain them over time.
 
@@ -64,24 +64,22 @@ Digital sovereignty is the ability for organizations to exercise control over th
 
 Sovereignty is a subset of your broader compliance obligations. Compliance encompasses all legal, regulatory, contractual, and organizational requirements. Sovereignty focuses on the specific requirements that govern control, jurisdiction, data residency, administrative access, and operational governance.
 
-Digital sovereignty is not achieved through isolation or concentration alone. The goal is to apply proportionate controls while maximizing the availability and resilience of systems and data. Designs should mitigate jurisdictional and operational risk without creating unnecessary dependencies, single points of failure, or concentrations of data and infrastructure that increase risk.
+Digital sovereignty isn't achieved through isolation or concentration alone. The goal is to apply proportionate controls and maximize the availability and resilience of systems and data. Designs should mitigate jurisdictional and operational risk without creating unnecessary dependencies, single points of failure, or concentrations of data and infrastructure that increase risk.
 
 ## 2. Do you need sovereignty?
 
-Sovereignty is a risk decision, not an on-off switch. You choose which risks to mitigate and which risks to accept, and you decide how much control is worth its cost. Sovereign controls can't compensate for weak security. Reducing security to increase sovereignty can introduce greater operational and regulatory risk.
-
-Most organizations don't need a sovereign solution for every workload. Many workloads run well on standard Azure with regional data residency and strong security controls. Sovereignty requirements usually arise when a workload needs stronger control because of:
+Most organizations have some sovereignty requirements. The question is usually not whether you need sovereignty, but which workloads require extra sovereignty controls and how much control those workloads need. Common drivers include:
 
 - National or regional regulations
 - Industry regulations, such as finance or healthcare rules
-- Government, defense, or critical-infrastructure obligations
+- Government, defense, or critical infrastructure obligations
 - Contracts that require local control or operation
 
-Start by identifying the combination of data, operator, and infrastructure controls needed to reduce sovereignty risk while preserving the highest practical levels of availability, resilience, and innovation. The objective is to apply only the controls each workload requires, avoiding unnecessary restrictions that increase cost, complexity, or operational risk.
+If your existing Azure security, compliance, and regional deployment capabilities satisfy your requirements, standard Azure deployments might be sufficient. If you require greater control over where data is stored, who can access systems, how infrastructure is operated, or which jurisdiction governs those operations, evaluate Microsoft Sovereign Cloud capabilities.
 
 ## 3. Why Microsoft Sovereign Cloud?
 
-Most sovereignty strategies fail when organizations are forced to choose between control and innovation. Microsoft Sovereign Cloud provides sovereign controls across a continuum of deployment options. You can apply the level of control required for each workload while continuing to use a common Microsoft platform. Key benefits include:
+Most sovereignty strategies fail when organizations are forced to choose between control and innovation. Microsoft Sovereign Cloud provides sovereign controls across a continuum of deployment options. Key benefits include:
 
 - **Consistent platform**: Use consistent management, services, APIs, governance, and developer tooling across sovereign deployment models. This approach reduces operational complexity and allows teams to reuse skills, processes, and investments.
 
@@ -93,9 +91,9 @@ Most sovereignty strategies fail when organizations are forced to choose between
 
 ## 4. Which Microsoft sovereign solution do I choose?
 
-Microsoft Sovereign Cloud offers three deployment models with increasing levels of sovereignty. More control usually means higher cost, more operational responsibility, and innovation tradeoffs. For that reason, most organizations use more than one model across their Azure estate. Here are the current options:
+Microsoft Sovereign Cloud provides three deployment models with different levels of sovereignty. Choose the model that meets your requirements with the fewest restrictions and the highest practical levels of innovation, availability, and resilience. Most organizations use Sovereign Public Cloud as the default and adopt other models only for workloads that require additional controls. Here are the current options:
 
-- **Sovereign Public Cloud**: Sovereign controls layered on the Azure public cloud as you know it. It's best when you need data residency, data confidentiality, and operational oversight but want the innovation capabilities of the Azure public cloud. See [Sovereign Public Cloud](/azure/azure-sovereign-clouds/public/overview-sovereign-public-cloud)
+- **Sovereign Public Cloud**: Sovereign controls are available in the Azure public cloud. This option is best when you need data residency, data confidentiality, and operational oversight but want the innovation capabilities of the Azure public cloud. See [Sovereign Public Cloud](/azure/azure-sovereign-clouds/public/overview-sovereign-public-cloud)
 
 - **Sovereign Private Cloud**: Runs on Azure Local in facilities you control or designate. Best when workloads must stay on your premises with connectivity to Azure or run fully disconnected from Microsoft. You can run Microsoft 365, Foundry, and GitHub locally. See [Sovereign Private Cloud](/azure/azure-sovereign-clouds/private/overview/sovereign-private-cloud#ai-suite-foundry-local-on-azure-local).
 
@@ -105,23 +103,23 @@ For help choosing between the different solutions, see the [**Sovereignty decisi
 
 ## 5. What does sovereignty cost?
 
-Cost rises as requirements rise, because more isolation and operational control call for more dedicated infrastructure. Two things drive cost: the offering you choose, and the sovereignty controls you turn on. Here's an overview of the main cost factors:
+Sovereignty involves tradeoffs between risk, flexibility, and cost. As organizations adopt more restrictive sovereignty controls, costs increase because greater isolation and operational responsibility require additional infrastructure and supporting capabilities. The goal is to apply only the controls each workload requires. Here's an overview of the main cost factors:
 
 - **Sovereign Public Cloud cost factors**: You pay standard Azure prices. Added cost comes from the specific services, SKUs, or regions you select to get the controls you need, such as [confidential computing](/azure/confidential-computing/overview) or customer-managed keys in [Azure Key Vault](/azure/key-vault/). For standard pricing, see [Azure pricing](https://azure.microsoft.com/pricing/).
 
 - **Sovereign Private Cloud cost factors**: This model adds both infrastructure and operational cost. You buy validated [Azure Local](/azure/azure-local/) hardware and software licenses and take responsibility for operating and securing the environment. Greater infrastructure control means higher upfront investment and operating expense. Depending on your deployment type (hyperconverged only), you might be eligible for a [Hybrid Benefit](/azure/azure-local/concepts/azure-hybrid-benefit).
 
-- **National Partners Cloud cost factors**: The partner sets pricing, service availability, and support, and these differ from global Azure. Evaluate both price and available services before you choose.
+- **National Partner Clouds cost factors**: The partner sets pricing, service availability, and support, and these differ from global Azure. Evaluate both price and available services before you choose.
 
-For workload specific estimates, use the [Azure pricing calculator](https://azure.microsoft.com//pricing/calculator/), though the sovereignty controls available in the calculator might be incomplete.
+For workload-specific estimates, use the [Azure pricing calculator](https://azure.microsoft.com//pricing/calculator/), though the sovereignty controls available in the calculator might be incomplete.
 
 ## 6. How are sovereignty responsibilities shared? 
 
-Sovereignty is a shared responsibility. The split depends on the model you choose for each workload. As requirements rise, you take on more. Here's an overview of the main responsibilities:
+Sovereignty is a shared responsibility. The balance of responsibilities depends on the deployment model you choose. Greater infrastructure control and operational ownership come with greater operational responsibility. Here's an overview of the main responsibilities:
 
 - **Sovereign Public Cloud**: Microsoft operates the infrastructure and provides sovereignty capabilities. You decide which controls apply, configure them, and keep the evidence that proves compliance and sovereignty. You also manage encryption keys when required.
 
-- **Sovereign Private Cloud**: You control and operate the infrastructure. Microsoft provides the software. The specific division of responsibilities between you and Microsoft differs between connected and disconnected Azure Local deployments.
+- **Sovereign Private Cloud**: You operate the infrastructure and local environment. Microsoft provides the software platform. The exact division of responsibilities depends on whether the deployment remains connected to Azure services or operates independently after deployment.
 
     - **Azure Local Connected**: Microsoft is responsible for operating and maintaining the Azure public cloud services that support Azure Local connected capabilities.
 
@@ -133,7 +131,7 @@ Sovereignty is a shared responsibility. The split depends on the model you choos
 
 How fast you reach production depends on how much infrastructure you must deploy and operate yourself. The more you control, the longer the path.
 
-- **Sovereign Public Cloud**: Fastest to value, because it runs on Azure infrastructure with no hardware to procure or facilities to prepare. You have no hardware to procure or facilities to prepare. A [Sovereign Landing Zone](/azure/azure-sovereign-clouds/public/overview-sovereign-landing-zone) helps you stand up a compliant environment quickly and deploy with standard Azure patterns.
+- **Sovereign Public Cloud**: This option provides the fastest path to value. You have no hardware to procure or facilities to prepare. A [Sovereign Landing Zone](/azure/azure-sovereign-clouds/public/overview-sovereign-landing-zone) helps you stand up a compliant environment quickly and deploy with standard Azure patterns.
 
 - **Sovereign Private Cloud**: Plan for a longer cycle. Azure Local requires validated hardware, facility readiness, and local operational capabilities. Timelines depend on hardware availability and deployment readiness.
 
@@ -147,7 +145,7 @@ Microsoft's [Cloud Adoption Framework](/azure/cloud-adoption-framework/) gives y
     Diagram showing the phases of the Microsoft Sovereign Cloud adoption process: Planning and readiness, Azure landing zone architecture and governance, and operational standards. An Azure landing zone is the prerequisite to start and each phase builds on the previous.
 :::image-end:::
 
-1. **[Sovereignty planning and organizational readiness](./planning-readiness.md)**: Learn how to identify sovereignty requirements and apply controls the Microsoft Sovereign Cloud. Learn how to define your deployment model, operating model, skilling, and cost management and FinOps.
+1. **[Sovereignty planning and organizational readiness](./planning-readiness.md)**: Learn how to identify sovereignty requirements and apply controls in the Microsoft Sovereign Cloud. Learn how to define your deployment model, operating model, skilling, and cost management and FinOps.
 
 2. **[Sovereignty architecture and governance](./azure-landing-zone-architecture-governance.md)**: Learn how to select and standardize the target architecture, governance model, and platform controls for each Microsoft Sovereign Cloud deployment model.
 
