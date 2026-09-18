@@ -53,17 +53,17 @@ Sovereignty affects governance, operating models, deployment decisions, skills, 
 
 ## 1. Requirements
 
-This section helps decision makers establish sovereignty requirements before selecting controls. Base sovereignty decisions on risk. The objective is to understand which requirements apply, determine the consequences of noncompliance, and define the controls needed to reduce risk to an acceptable level.
+*Should we pursue digital sovereignty, and if so, what requirements must our sovereignty strategy address?* This section helps decision makers establish sovereignty requirements before selecting controls. Base sovereignty decisions on risk. The objective is to understand which requirements apply, determine the consequences of noncompliance, and define the controls needed to reduce risk to an acceptable level.
 
 ### 1.1 Requirements gathering
 
 *What must we do?* Identify the sovereignty requirements that apply to your organization before evaluating technology solutions. Get requirements from laws, regulations, government policy, contractual obligations, and internal risk policies. 
 
-**Outcome**: You should have an approved sovereignty requirements catalog that identifies sovereignty requirements, their sources, accountable owners, consequences of noncompliance, and risk significance.
+**Outcome**: You have an approved sovereignty requirements catalog.
 
-1.  **Collect the sovereignty drivers.** Review the sources that create sovereignty obligations. Record each source and identify the accountable owner. These drivers establish the criteria for future sovereignty decisions.
+1.  **Collect the sovereignty drivers.** Identify the sources that create sovereignty obligations. Drivers include laws and regulations such as HIPAA, PCI DSS, or government directives, contractual obligations, and internal risk policies. These drivers establish the source of sovereignty requirements.
 
-2.  **Collect requirements.** Translate each driver into clear requirements that you can assess and govern. Record the source of each requirement and the consequence of noncompliance. Sovereignty requirements typically align to data residency, data confidentiality, operator control, infrastructure control, sovereign AI, and resilience requirements.
+2.  **Extract requirements.** Translate each driver into specific requirements that apply to your organization and workloads. For example, a regulation might require data residency, encryption, customer-controlled keys, or operator access controls. Record the source of each requirement, the consequence of noncompliance, and the owner responsible for the requirement.
 
 3.  **Assess the risk.** Determine the impact of failing to meet each requirement. Consider regulatory exposure, contractual penalties, operational disruption, and reputational damage. The level of risk influences the controls that you need to implement. 
 
@@ -87,21 +87,19 @@ This section helps decision makers establish sovereignty requirements before sel
 
 *How can we scale sovereignty?* Most organizations can't evaluate and apply sovereignty requirements individually for every workload. Instead, create a small number of sovereignty classifications that group requirements commonly needed together. 
 
-A sovereignty classification is a reusable grouping of sovereignty requirements. ***Classifications aren't maturity levels. Each classification represents a different combination of sovereignty requirements.*** Workloads assigned to the same classification have the same sovereignty requirements and inherit the same controls. Classifications improve consistency, simplify governance, and help ensure similar workloads receive the same level of protection.
+A sovereignty classification is a reusable grouping of sovereignty requirements. Sovereignty classifications aren't maturity levels. Workloads assigned to the same classification have the same sovereignty requirements and inherit the same controls. Classifications improve consistency, simplify governance, and help ensure similar workloads receive the same level of protection.
 
-**Outcome**: You should have a small set of approved sovereignty classifications that group common requirements and provide a consistent governance model for affected workloads.
+**Outcome**: You have a small set of approved sovereignty classifications that group common requirements and provide a consistent way to categorize workloads.
 
-1.  **Group common requirements into classifications.** Review your approved requirement catalog and identify common combinations of requirements. Create classifications that represent those combinations. Don't create new requirements at the classification level. 
+1.  **Group common requirements into classifications.** Review your approved requirement catalog and identify common combinations of requirements. Create sovereignty classifications that represent those combinations. Don't create new requirements at the classification level. 
 
-2. **Map controls to each classification.** Define the governance, security, operational, and infrastructure controls required to meet the requirements of each classification.
+2. **Assign workloads to classifications.** Evaluate workload requirements and assign each workload to the classification that best matches its sovereignty needs. Workloads in the same classification should inherit the same controls and governance policies.
 
-3. **Assign workloads to classifications.** Evaluate workload requirements and assign each workload to the classification that best matches its sovereignty needs. Workloads in the same classification should inherit the same controls and governance policies.
-
-4. **Keep classifications manageable.** Most organizations can operate effectively with three to five classifications. Additional classifications increase complexity and make governance harder to maintain consistently. 
+3. **Keep classifications manageable.** Most organizations can operate effectively with three to five classifications. Additional classifications increase complexity and make governance harder to maintain consistently. 
 
 *See the following table for example sovereignty classifications.*
 
-| Example sovereignty classification | Example requirements |
+| Example sovereignty classification | Example classification requirements |
 |---|---|
 | Classification A | Data residency |
 | Classification B | Data residency, data confidentiality at rest and in transit |
@@ -119,7 +117,7 @@ For an implementation example, see [Design sovereign policy initiatives in Azure
 
 1.  **Assign classifications.** Map each workload to the sovereignty classification that reflects its requirements. Workloads inherit the requirements of that classification.
 
-2.  **Identify gaps.** Compare the current state of each workload against the requirements of its assigned classification. Record unmet requirements and exceptions.
+2.  **Identify gaps.** Compare the current state of each workload against the requirements of its assigned sovereignty classification. Record unmet requirements and identify areas that require future remediation.
 
 3.  **Assess risk exposure and determine treatment.** Evaluate the regulatory, contractual, operational, and business impact of each identified gap. Determine whether to remediate the gap, implement compensating controls, accept the risk, or approve an exception according to organizational policy.
 
@@ -133,7 +131,7 @@ The inventory should identify affected workloads, assigned classifications, met 
 
 ## 2. Controls
 
-*How do you meet the sovereignty requirements?* Translate sovereignty requirements into a control baseline for each sovereignty classification. The controls should address the risks you identified during classification and inventory. Workload teams inherit the control baseline for their assigned classification.
+*How will we meet and enforce our sovereignty requirements?* Translate sovereignty requirements into a control baseline for each sovereignty classification. The controls should address the risks you identified during classification and inventory. Workload teams inherit the control baseline for their assigned classification. 
 
 **Outcome**: You should have an approved control baseline for each sovereignty classification, including enforcement methods and evidence needed to demonstrate compliance.
 
@@ -160,7 +158,7 @@ The inventory should identify affected workloads, assigned classifications, met 
 
 ## 3. Deployment model
 
-Select the deployment model that satisfies the sovereignty requirements and risk tolerance for the workload classification. Most organizations use a combination of deployment models across their workload portfolio. For workloads with documented sovereignty requirements, start with Sovereign Public Cloud, which is Azure Public Cloud with sovereignty controls and operational assurances configured. Move to Sovereign Private Cloud or National Partner Cloud only when those requirements can't be met through Microsoft's hyperscale cloud services.
+*Which Microsoft Sovereign Cloud deployment model should we use?* Select the deployment model that satisfies the sovereignty requirements and risk tolerance for the workload classification. Most organizations use a combination of deployment models across their workload portfolio. For workloads with documented sovereignty requirements, start with Sovereign Public Cloud, which is Azure Public Cloud with sovereignty controls and operational assurances configured. Move to Sovereign Private Cloud or National Partner Cloud only when those requirements can't be met through Microsoft's hyperscale cloud services.
 
 - **Sovereign Public Cloud**: Use when sovereignty requirements can be met through controls available in Azure Public Cloud, including data residency, data confidentiality (encryption at rest, encryption in transit, and protection in use), key control, operator access oversight, and auditing. Sovereign Public Cloud is Azure Public Cloud with sovereignty controls and operational assurances applied.
 
@@ -190,7 +188,7 @@ Select the deployment model that satisfies the sovereignty requirements and risk
 
 ## 5. Roles and responsibilities
 
-Sovereignty decisions affect legal obligations, risk management, security, architecture, operations, and cost. Different stakeholders often have competing priorities. Clear accountability helps organizations make consistent risk-based decisions, manage exceptions, and integrate sovereignty into existing governance, risk, compliance, and architecture processes.
+*Who is accountable for sovereignty strategy, risk decisions, implementation, and operations?* Sovereignty decisions affect legal obligations, risk management, security, architecture, operations, and cost. Different stakeholders often have competing priorities. Clear accountability helps organizations make consistent risk-based decisions, manage exceptions, and integrate sovereignty into existing governance, risk, compliance, and architecture processes.
 
 1.  **Executive sovereignty sponsor**: Assign an executive sponsor with authority over sovereignty strategy, funding, and risk acceptance. The sponsor owns the organization's sovereignty objectives and approves tradeoffs that affect business risk.
 
@@ -200,7 +198,7 @@ Sovereignty decisions affect legal obligations, risk management, security, archi
 
 ## 6. Skilling
 
-Identify the skills required for each selected deployment model and assign an accountable team to every operational duty. Include platform engineering, security operations, identity, networking, hardware lifecycle, compliance evidence, cost management, and incident response.
+*How will we prepare our organization with the skills required for the selected deployment model?* Identify the skills required for each selected deployment model and assign an accountable team to every operational duty. Include platform engineering, security operations, identity, networking, hardware lifecycle, compliance evidence, cost management, and incident response.
 
 *See the following table for skills to build by sovereign deployment model.*
 
@@ -212,7 +210,7 @@ Identify the skills required for each selected deployment model and assign an ac
 
 ## 7. Cost management and FinOps
 
-*How do you optimize spending?* Plan for the full lifecycle cost of the selected deployment model before adoption. Sovereignty can introduce new infrastructure, operational, staffing, and contractual commitments. The objective is to understand these commitments early and align them with budget, procurement, and long-term operating plans.
+*How will we fund and financially govern sovereignty?* Plan for the full lifecycle cost of the selected deployment model before adoption. Sovereignty can introduce new infrastructure, operational, staffing, and contractual commitments. The objective is to understand these commitments early and align them with budget, procurement, and long-term operating plans.
 
 - **Sovereign Public Cloud**: Extend existing Cost Management and FinOps practices. Identify any sovereignty capabilities that affect cost, such as customer-controlled keys, confidential workloads, or deployment restrictions. Incorporate these requirements into workload planning and budgeting.
 
@@ -222,7 +220,7 @@ Identify the skills required for each selected deployment model and assign an ac
 
 ## 8. Workload prioritization
 
-*What workloads do you fix first?* Prioritization is a risk decision. The objective is to address the sovereignty risks that create the greatest exposure for the organization.
+*What workloads do we address first?* Prioritization is a risk decision. The objective is to address the sovereignty risks that create the greatest exposure for the organization.
 
 Business criticality is an important consideration, but sovereignty risk should drive prioritization. A workload with limited business impact might still require immediate attention if noncompliance creates significant consequences.
 
