@@ -110,7 +110,7 @@ Sovereign workloads in the public cloud integrate with Microsoft and Azure servi
 
 ## 2. Sovereign Private Cloud architecture
 
-Sovereign Private Cloud runs on [Azure Local](/azure/azure-local/), the infrastructure you own and operate in your own facilities. Your architecture must provide the applications, data, identity, management, security, networking, communications, and operational capabilities required for that decision. Size and distribute the environment based on workload demand, recovery objectives, permitted geographic boundaries, and failure domains. Avoid creating new concentration risks. Your architecture changes mainly by connectivity mode.Sovereign Private Cloud runs on , the infrastructure you own and operate in your own facilities. Your architecture changes mainly by connectivity mode.
+Sovereign Private Cloud runs on [Azure Local](/azure/azure-local/), the infrastructure you own and operate in your own facilities. Your architecture must provide the applications, data, identity, management, security, networking, communications, and operational capabilities required for that decision. Size and distribute the environment based on workload demand, recovery objectives, permitted geographic boundaries, and failure domains. Avoid creating new concentration risks. Your architecture changes mainly by connectivity mode.
 
 ### 2.1 Platform landing zone
 
