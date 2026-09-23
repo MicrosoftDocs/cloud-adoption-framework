@@ -3,36 +3,36 @@ name: Mark stale issues and pull requests
 permissions:
   issues: write
   pull-requests: write
-  
+
 on:
   schedule:
   - cron: "0 */6 * * *"
 
 jobs:
   stale:
-
-    runs-on: ubuntu-latest
-  
+    runs-on: ubuntu-slim
     steps:
-    - uses: actions/stale@98ed4cb500039dbcccf4bd9bedada4d0187f2757 # v3.0.19
+    - uses: actions/stale@4391f3da665fdf50b6810c1a66712fb9ba21aa93 # v11.0.0
       with:
-        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        operations-per-run: 20
         days-before-pr-stale: 14
         days-before-pr-close: 365
+        exempt-draft-pr: false
+        remove-stale-when-updated: true
         stale-pr-label: inactive
         close-pr-label: auto-close
         exempt-pr-labels: keep-open
         stale-pr-message: >
           This pull request has been inactive for 14 days.
-          If you are finished with your changes, don't forget to sign off. For instructions, see the [contributor guide](https://review.docs.microsoft.com/help/contribute/contribute-how-to-write-pull-request-automation?branch=main).
-          
+          If you are finished with your changes, don't forget to sign off. For instructions, see the [contributor guide](https://learn.microsoft.com/help/platform/prmerger-hashtag-commands).
+
           Cloud Adoption Framework team
-          
+
           [Contact Us](mailto:caf-content@microsoft.com)
         close-pr-message: >
-          This pull request has been inactive for 14 days. At this time, we are closing the PR. 
+          This pull request has been inactive for 365 days. At this time, we are closing the PR. 
           If you decide to continue working on your change, you can reopen the PR and continue working. Thank you!
 
           Cloud Adoption Framework team
-          
+
           [Contact Us](mailto:caf-content@microsoft.com)
