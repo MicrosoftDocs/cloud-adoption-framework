@@ -60,7 +60,7 @@ Red Hat IdM provides a centralized way to manage identity stores, authentication
 
 The IAM components for your Red Hat deployment in Azure use the [subscription scaling model](/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org-subscriptions) to provide extra control and isolation to the management tooling. The Red Hat IdM primary systems and replica systems and Red Hat SSO instances reside in a Red Hat Management subscription with other tools. The subscription provides resource groups that you can use throughout your implementation to provide localized services and high availability.
 
-The following diagram shows a Red Hat IdM zonal deployment architecture.
+The following diagram shows a Red Hat IdM zonal deployment architecture in an example region with three availability zones.
 
 :::image type="content" source="images/identity-access-management/landing-zone-high-availability.png" alt-text="Diagram that shows the Red Hat IdM zonal deployment architecture." border="false":::
 
