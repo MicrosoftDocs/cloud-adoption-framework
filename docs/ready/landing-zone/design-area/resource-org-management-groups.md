@@ -39,7 +39,7 @@ For more information, see [Management groups](/azure/governance/management-group
 
 - Don't duplicate your organizational structure into a deeply nested management group hierarchy. Use management groups for policy assignment versus billing and RBAC purposes. For this approach, use management groups for their intended purpose in the Azure landing zone reference architecture. This architecture provides Azure policies for workloads that require the same type of security and compliance under the same management group level.
 
-- Don't assign application teams permissions via RBAC at management group scopes. Instead, assign permissions at the individual subscription or resource group scopes that they require access to. This is normally handled during the [subscription vending process](/azure/cloud-adoption-framework/ready/landing-zone/design-area/subscription-vending). This is not recommended because of over-permissioning and security risks, and added risk from inheritance. Instead, use management groups to assign Azure policies and initiatives that apply to all subscriptions in the management group that require the same security, governance, and compliance settings.
+- Don't assign workload teams permissions via RBAC at management group scopes. Instead, assign permissions at the individual subscription or resource group scopes that they require access to. This is normally handled during the [subscription vending process](/azure/cloud-adoption-framework/ready/landing-zone/design-area/subscription-vending). This is not recommended because of over-permissioning and security risks, and added risk from inheritance. Instead, use management groups to assign Azure policies and initiatives that apply to all subscriptions in the management group that require the same security, governance, and compliance settings.
 
   - You might assign permissions via RBAC at management group scopes for platform teams to grant them access to all subscriptions easily to perform daily tasks and troubleshooting. However, this should be controlled via privileged identity management (PIM) to ensure that the permissions are only granted when needed.
 
@@ -76,7 +76,7 @@ For more information, see [Management groups](/azure/governance/management-group
 
 The following shows the Azure landing zones architecture management group hierarchy.
 
-:::image type="content" source="./media/sub-organization.png" alt-text="Diagram that shows the Azure landing zone management group hierarchy." lightbox="./media/sub-organization.png":::
+:::image type="content" source="./media/azure-landing-zone-hierarchy.svg" alt-text="Diagram that shows the Azure landing zone management group hierarchy." lightbox="./media/azure-landing-zone-hierarchy.svg":::
 
 | Management group| Description |
 |---|---|

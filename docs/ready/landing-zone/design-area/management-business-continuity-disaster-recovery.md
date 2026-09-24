@@ -11,11 +11,11 @@ ms.custom: internal, UpdateFrequency.5
 
 # Business continuity and disaster recovery
 
-Organization and enterprise application workloads have recovery time objective (RTO) and recovery point objective (RPO) requirements. Effective business continuity and disaster recovery (BCDR) design provides platform-level capabilities that meet these requirements. To design BCDR capabilities, capture platform disaster recovery (DR) requirements.
+Enterprise workloads have recovery time objective (RTO) and recovery point objective (RPO) requirements. Effective business continuity and disaster recovery (BCDR) design provides platform-level capabilities that meet these requirements. To design BCDR capabilities, capture platform disaster recovery (DR) requirements.
 
 ## Design considerations
 
-Consider the following factors when designing BCDR for application workloads:
+Consider the following factors when designing BCDR for workloads:
 
 - Application and data availability requirements:
   - RTO and RPO requirements for each workload.
@@ -56,7 +56,7 @@ Consider the following factors when designing BCDR for application workloads:
 
 ## Design recommendations
 
-The following design practices support BCDR for application workloads:
+The following design practices support BCDR for workloads:
 
 - Employ Azure Site Recovery for Azure-to-Azure VM DR scenarios.
 

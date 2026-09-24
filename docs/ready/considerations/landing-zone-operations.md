@@ -10,7 +10,7 @@ ms.custom: internal
 
 # Improve landing zone operations
 
-When you've achieved the [Ready](../index.md) state and implemented [Azure landing zones](../landing-zone/index.md), you still have an ongoing responsibility to manage your cloud environment in the most efficient way possible. This article provides guidance on improving landing zone operations as you scale, helping you meet growing operational excellence, reliability, and performance requirements.
+When you've achieved the [Ready](../index.md) state and implemented an [Azure landing zone](../landing-zone/index.md), you still have an ongoing responsibility to manage your cloud environment in the most efficient way possible. This article provides guidance on improving landing zone operations as you scale, helping you meet growing operational excellence, reliability, and performance requirements.
 
 ## The Manage methodology
 

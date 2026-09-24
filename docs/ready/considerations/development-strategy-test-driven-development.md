@@ -8,11 +8,11 @@ ms.topic: concept-article
 ms.custom: internal
 ---
 
-# Test-driven development for Azure landing zones
+# Test-driven development for an Azure landing zone
 
 Test-driven development (TDD) is a software development and DevOps process that improves the quality of new features and improvements in code-based solutions. TDD creates unit test cases before developing the actual code, and tests the code against the test cases. This approach is opposed to developing code first and creating test cases later.
 
-A [landing zone](../landing-zone/index.md) is an environment for hosting workloads that is preprovisioned through code. Landing zones include foundational capabilities that use a defined set of cloud services and best practices. This article describes an approach that uses TDD to deploy successful landing zones while meeting quality, security, operations, and governance requirements.
+A [workload landing zone](../landing-zone/index.md) is an environment for hosting workloads that is preprovisioned through code. Landing zones include foundational capabilities that use a defined set of cloud services and best practices. This article describes an approach that uses TDD to deploy successful landing zones while meeting quality, security, operations, and governance requirements.
 
 Cloud infrastructure is the output of code execution. Well-structured, tested, and verified code produces a viable landing zone. Cloud-based infrastructure and its underlying source code can use this approach to ensure that landing zones are high quality and meet core requirements.
 
@@ -20,9 +20,9 @@ Use this approach to meet simple feature requests during early development. Late
 
 ## Test-driven development cycle
 
-The following diagram shows the test-driven development cycle for Azure landing zones:
+The following diagram shows the test-driven development cycle for an Azure landing zone:
 
-![Diagram of the test-driven development process for Azure landing zones.](../../_images/ready/test-driven-development-process.png)
+![Diagram of the test-driven development process for an Azure landing zone.](../../_images/ready/test-driven-development-process.png)
 
 1. **Create a test.** Define a test to validate that acceptance criteria for a feature has been met. Automate the test as you develop, to reduce the amount of manual test effort, especially for enterprise-scale deployments.
 

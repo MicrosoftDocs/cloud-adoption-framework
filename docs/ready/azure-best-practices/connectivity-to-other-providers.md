@@ -1,6 +1,6 @@
 ---
 title: Connectivity to other cloud providers
-description: Integrate an Azure enterprise-scale landing zone architecture to other cloud providers such as Amazon Web Services (AWS) and Google Cloud.
+description: Integrate an Azure landing zone architecture to other cloud providers such as Amazon Web Services (AWS) and Google Cloud.
 author: stephen-sumner
 ms.author: sitarant
 ms.date: 09/05/2025

@@ -557,12 +557,12 @@
 						</g>
 						<g id="shape57-101" v:mID="57" v:groupContext="shape" transform="translate(752.074,-135.005)">
 							<title>Sheet.57</title>
-							<desc>Landing Zones</desc>
+							<desc>Workload landing zones</desc>
 							<v:userDefs/>
 							<v:textBlock v:margins="rect(4,4,4,4)"/>
 							<v:textRect cx="50.2031" cy="864.771" width="100.42" height="21.375"/>
 							<rect x="0" y="854.081" width="100.406" height="21.375" class="st7"/>
-							<text x="8.72" y="868.97" class="st8" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Landing Zones</text>						</g>
+							<text x="8.72" y="868.97" class="st8" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Workload landing zones</text>						</g>
 						<g id="shape58-104" v:mID="58" v:groupContext="shape" v:layerMember="0"
 								transform="translate(289.898,-225.164)">
 							<title>Dynamic connector</title>
@@ -18987,22 +18987,22 @@
 				</g>
 				<g id="shape2477-4882" v:mID="2477" v:groupContext="shape" transform="translate(1826.62,-326.18)">
 					<title>Sheet.2477</title>
-					<desc>Application environments (Dev/Tes/Prod) with same governance ...</desc>
+					<desc>Workload environments (Dev/Tes/Prod) with same governance ...</desc>
 					<v:userDefs/>
 					<v:textBlock v:margins="rect(4,4,4,4)"/>
 					<v:textRect cx="154.688" cy="852.956" width="309.39" height="45"/>
 					<rect x="0" y="830.456" width="309.375" height="45" class="st7"/>
-					<text x="17.93" y="840.36" class="st104" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Application environments (Dev/Tes/Prod) with <tspan
+					<text x="17.93" y="840.36" class="st104" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Workload environments (Dev/Tes/Prod) with <tspan
 								x="19.49" dy="1.2em" class="st48">same governance model are deployed into the </tspan><tspan
 								x="51.35" dy="1.2em" class="st48">same management group hierarchy</tspan></text>				</g>
 				<g id="shape2478-4887" v:mID="2478" v:groupContext="shape" transform="translate(2129.81,-417.78)">
 					<title>Sheet.2478</title>
-					<desc>Application environments (Dev/Test) that require different go...</desc>
+					<desc>Workload environments (Dev/Test) that require different go...</desc>
 					<v:userDefs/>
 					<v:textBlock v:margins="rect(4,4,4,4)"/>
 					<v:textRect cx="154.688" cy="852.956" width="309.39" height="45"/>
 					<rect x="0" y="830.456" width="309.375" height="45" class="st7"/>
-					<text x="10.45" y="840.36" class="st104" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Application environments (Dev/Test) that require <tspan
+					<text x="10.45" y="840.36" class="st104" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Workload environments (Dev/Test) that require <tspan
 								x="9.33" dy="1.2em" class="st48">different governance model are deployed into the </tspan><tspan
 								x="71.34" dy="1.2em" class="st48">sandbox management group</tspan></text>				</g>
 				<g id="group2479-4892" transform="translate(1322.2,-1.614)" v:mID="2479" v:groupContext="group">

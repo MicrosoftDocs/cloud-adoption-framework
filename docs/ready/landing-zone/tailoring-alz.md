@@ -39,7 +39,7 @@ More processes and tooling might be required to ensure a landing zone has the re
 
 - Diagnostic settings to send activity log data to a Log Analytics workspace.
 - Continuous export settings for Microsoft Defender for Cloud.
-- Virtual network with managed IP address spaces for application workloads.
+- Virtual network with managed IP address spaces for workloads.
 - Linking of virtual networks to a distributed denial of service (DDoS) Network Protection.
 
 > [!NOTE]
@@ -49,7 +49,7 @@ More processes and tooling might be required to ensure a landing zone has the re
 
 ## Built-in archetypes for the Azure landing zone reference architecture
 
-The conceptual architecture includes example landing zone archetypes for application workloads such as *corp* and *online*. These archetypes might apply to your organization and meet your requirements. You might want to make changes to these archetypes or create new ones. Your decision depends on your organization's needs and requirements.
+The conceptual architecture includes example landing zone archetypes for workloads such as *corp* and *online*. These archetypes might apply to your organization and meet your requirements. You might want to make changes to these archetypes or create new ones. Your decision depends on your organization's needs and requirements.
 
 > [!TIP]
 > To review the landing zone archetypes in the Azure landing zone reference architecture, see [Management groups in the Azure landing zone reference architecture](./design-area/resource-org-management-groups.md#management-groups-in-the-azure-landing-zone-architecture).
@@ -66,19 +66,19 @@ The following landing zone archetype examples from the conceptual architecture h
 
 ## Scenarios where tailoring might be required
 
-As mentioned, we provide common landing zone archetypes in [Azure landing zone reference architecture](./index.md#azure-landing-zone-architecture). They are *corp* and *online*. These archetypes aren't fixed and aren't the only permitted landing zone archetypes for application workloads. You might need to tailor landing zone archetypes to suit your needs and requirements.
+As mentioned, we provide common landing zone archetypes in [Azure landing zone reference architecture](./index.md#azure-landing-zone-architecture). They are *corp* and *online*. These archetypes aren't fixed and aren't the only permitted landing zone archetypes for workloads. You might need to tailor landing zone archetypes to suit your needs and requirements.
 
 Before you tailor landing zone archetypes, it's important to understand the concepts and also visualize the area of the hierarchy that we suggest you customize. The following diagram shows the default hierarchy of the Azure landing zone reference architecture.
 
-:::image type="content" source="./media/alz-tailor-hierarchy-default.png" alt-text="Diagram that shows Azure landing zone default hierarchy with tailoring areas highlighted." lightbox="./media/alz-tailor-hierarchy-default.png":::
+:::image type="content" source="./media/tailor-hierarchy-default.svg" alt-text="Diagram that shows Azure landing zone default hierarchy with tailoring areas highlighted." lightbox="./media/tailor-hierarchy-default.svg":::
 
 Two areas of the hierarchy are highlighted. One is underneath **Landing Zones**, and the other is underneath **Platform**.
 
-### Tailor application landing zone archetypes
+### Tailor workload landing zone archetypes
 
 Notice the area highlighted in green underneath the **Landing Zones** management group. It's the *most common and safest place* in the hierarchy to add more archetypes to meet new or more requirements that can't be added as more policy assignments to an existing archetype by using the existing hierarchy.
 
-For example, you might have a new requirement to host a set of application workloads that need to meet payment card industry (PCI) compliance requirements. But this new requirement doesn't need to apply to all workloads across your entire estate.
+For example, you might have a new requirement to host a set of workloads that need to meet payment card industry (PCI) compliance requirements. But this new requirement doesn't need to apply to all workloads across your entire estate.
 
 There's a simple and safe way to meet this new requirement. Create a new management group called **PCI** underneath the **Landing Zones** management group in the hierarchy. You can assign more policies like the [Microsoft Defender for Cloud regulatory compliance](/azure/defender-for-cloud/update-regulatory-compliance-packages) policy initiative for [PCI v3.2.1:2018](/azure/governance/policy/samples/built-in-initiatives#regulatory-compliance) to the new **PCI** management group. This action forms a new archetype.
 
@@ -94,7 +94,7 @@ Another example is [Microsoft Sovereign Cloud](/industry/sovereignty/cloud-for-s
 > [!NOTE]
 > The scenario detailed in this section is now part of the Azure landing zone architecture by default. You can still tailor the platform landing zone archetypes to meet your requirements by following the example scenario.
 
-You might also want to tailor the area highlighted in orange underneath the **Platform** management group. The zones in this area are known as *platform landing zones*.
+You might also want to tailor the area highlighted in orange underneath the **Platform** management group. 
 
 For example, you might have a dedicated SOC team that requires its own archetype to host its workloads. These workloads need to meet Azure Policy and RBAC assignment requirements different from those of the **Management** management group. 
 
@@ -106,7 +106,7 @@ Now you can place new or move existing Azure subscriptions into the new **Securi
 
 The following diagram shows a tailored Azure landing zone hierarchy. It uses examples from the preceding diagram.
 
-:::image type="content" source="./media/alz-tailor-hierarchy-2-additional.png" alt-text="Diagram that shows a tailored Azure landing zone hierarchy." lightbox="./media/alz-tailor-hierarchy-2-additional.png":::
+:::image type="content" source="./media/tailor-hierarchy-2-additional.svg" alt-text="Diagram that shows a tailored Azure landing zone hierarchy." lightbox="./media/tailor-hierarchy-2-additional.svg":::
 
 ## Points to consider
 
@@ -117,7 +117,7 @@ Consider the following points when you think about tailoring your implementation
 - Always try to build on the existing archetypes and hierarchy to meet new requirements.
 - Only create new archetypes when they're truly needed.
   
-  For example, a new compliance requirement like PCI is required for only a subset of application workloads and doesn't need to apply to all workloads.
+  For example, a new compliance requirement like PCI is required for only a subset of workloads and doesn't need to apply to all workloads.
 - Only create new archetypes in the highlighted areas shown in the preceding diagrams.
 - Avoid going beyond a hierarchy depth of **four** layers to avoid complexity and unnecessary exclusions. Expand archetypes horizontally instead of vertically in the hierarchy.
 - Don't create archetypes for environments like development, test, and production.

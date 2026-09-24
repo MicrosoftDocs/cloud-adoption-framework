@@ -20,13 +20,13 @@ For FAQs about **implementing Azure landing zone architecture**, see [Enterprise
 
 The Azure landing zone portal accelerator is an Azure portal-based deployment experience. It deploys an opinionated implementation based on the [Azure landing zone reference architecture](../landing-zone/index.md#azure-landing-zone-architecture).
 
-## Which are the recommended accelerators and implementations for Azure landing zones?
+## Which are the recommended accelerators and implementations for an Azure landing zone?
 
 Microsoft actively develops and maintains the platform and application accelerators and implementations in alignment with the Azure landing zone [design principles](/azure/cloud-adoption-framework/ready/landing-zone/design-principles) and [design area](/azure/cloud-adoption-framework/ready/landing-zone/design-areas) guidance.
 
-Review the [Deploy Azure landing zones](/azure/architecture/landing-zones/landing-zone-deploy) guidance to learn more about the recommended platform and application landing zones.
+Review the [Deploy an Azure landing zone](/azure/architecture/landing-zones/landing-zone-deploy) guidance to learn more about the recommended platform and workload landing zones.
 
-To learn how to tailor your Azure landing zones deployment to meet your needs, see [Tailor the Azure landing zone architecture to meet requirements](/azure/cloud-adoption-framework/ready/landing-zone/tailoring-alz)
+To learn how to tailor your Azure landing zone deployment to meet your needs, see [Tailor the Azure landing zone architecture to meet requirements](/azure/cloud-adoption-framework/ready/landing-zone/tailoring-alz).
 
 >[!TIP]
 > To request an addition to the accelerator and implementation list, raise a GitHub issue on the [ALZ repository](https://github.com/Azure/Enterprise-Scale/issues/new/choose).
@@ -76,13 +76,13 @@ Review the following documentation sections:
 
 ## Do I need a dedicated or separate AI landing zone?
 
-No, you do not need a separate AI landing zone. Instead, you can use the existing Azure landing zone architecture to deploy AI workloads into. See the guidance and explanation in [AI in Azure landing zones](/azure/cloud-adoption-framework/ready/landing-zone/#ai-in-azure-landing-zones).
+No, you do not need a separate AI landing zone. Instead, you can use the existing Azure landing zone architecture to deploy AI workloads into. See the guidance and explanation in [AI in an Azure landing zone](/azure/cloud-adoption-framework/ready/landing-zone/#ai-in-azure-landing-zones).
 
 <!-- IMPLEMENTATION -->
 
 ## How do we handle "dev/test/production" workload landing zones in Azure landing zone architecture?
 
-For more information, see [Manage application development environments in Azure landing zones](../landing-zone/design-area/management-application-environments.md).
+For more information, see [Manage application development environments in an Azure landing zone](../landing-zone/design-area/management-application-environments.md).
 
 ## Why are we asked to specify Azure regions during the Azure landing zone reference architecture deployment and what are they used for?
 

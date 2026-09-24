@@ -42,7 +42,7 @@ Consider the following items related to logging data to inform what types of dat
 
 - Use a single [monitor logs workspace](/azure/azure-monitor/platform/design-logs-deployment) to manage platforms centrally, except where Azure role-based access control (Azure RBAC), data sovereignty requirements, and data retention policies mandate separate workspaces. Centralized logging is critical to the visibility required by operations management teams and drives reports about change management, service health, configuration, and most other aspects of IT operations. Focusing on a centralized workspace model reduces administrative effort and the chances for gaps in observability.
 
-  - Application teams can deploy their own Log Analytics Workspaces in their own subscriptions, alongside the central platform team workspace that they may have limited access to, to store logs and metrics that are specific to their workload requirements.
+  - Workload teams can deploy their own Log Analytics Workspaces in their own subscriptions, alongside the central platform team workspace that they may have limited access to, to store logs and metrics that are specific to their workload requirements.
 
 - Export logs to Azure Storage if your log retention requirements exceed seven years. Use immutable storage with a write-once, read-many policy to make data non-erasable and non-modifiable for a user-specified interval.
 
@@ -72,13 +72,13 @@ The Azure landing zone reference architecture deployment includes key management
 
 In the context of the Azure landing zone reference architecture, centralized logging is primarily concerned with platform operations.
 
-This emphasis doesn't prevent use of the same workspace for VM-based application logging. Within a workspace configured in resource-centric access control mode, granular Azure RBAC is enforced, which ensures that your application teams only have access to the logs from their resources.
+This emphasis doesn't prevent use of the same workspace for VM-based application logging. Within a workspace configured in resource-centric access control mode, granular Azure RBAC is enforced, which ensures that your workload teams only have access to the logs from their resources.
 
-In this model, application teams benefit from the use of existing platform infrastructure as it reduces their management overhead.
+In this model, workload teams benefit from the use of existing platform infrastructure as it reduces their management overhead.
 
-For non-compute resources, like web apps or Azure Cosmos DB databases, your application teams can use their own Log Analytics workspaces. They can then route diagnostics and metrics to those workspaces.
+For non-compute resources, like web apps or Azure Cosmos DB databases, your workload teams can use their own Log Analytics workspaces. They can then route diagnostics and metrics to those workspaces.
 
-Application teams should also decide to duplicate some of the logs that are available in the central platform team Log Analytics Workspace for operational efficiencies within their team. This is also a supported approach within the Azure landing zone architecture and guidance.
+Workload teams should also decide to duplicate some of the logs that are available in the central platform team Log Analytics Workspace for operational efficiencies within their team. This is also a supported approach within the Azure landing zone architecture and guidance.
 
 ## Next step
 

@@ -13,7 +13,7 @@ ms.service: caf
 
 # Scenario: Transition an environment by duplicating a landing zone management group
 
-This article describes an example approach that transitions an environment to the Azure landing zone reference architecture by duplicating the landing zone management group with policies in *audit only* mode. With this approach, you can quickly access the new desired target architecture and then assess the application or workload subscriptions for compliance. This approach eliminates the risk of affecting the application teams because the policies are in *audit only* mode.
+This article describes an example approach that transitions an environment to the Azure landing zone reference architecture by duplicating the landing zone management group with policies in *audit only* mode. With this approach, you can quickly access the new desired target architecture and then assess the application or workload subscriptions for compliance. This approach eliminates the risk of affecting the workload teams because the policies are in *audit only* mode.
 
 ## Transition to the Azure landing zone reference architecture
 
@@ -45,7 +45,7 @@ Use this approach to transition to the Azure landing zone reference architecture
    > [!NOTE]
    > You don't necessarily have to migrate the existing applications or services into new landing zones, or Azure subscriptions.
 
-1. After the application teams work with the platform teams to get their policy compliance into the required state, their subscriptions are moved to the proper management group, such as *corporate* or *online* in the following diagram. They're covered by the assigned policies and your team can efficiently and compliantly operate their workload.
+1. After the workload teams work with the platform teams to get their policy compliance into the required state, their subscriptions are moved to the proper management group, such as *corporate* or *online* in the following diagram. They're covered by the assigned policies and your team can efficiently and compliantly operate their workload.
 
    For more information, see [Readying your landing zone for migration guidance](../.././migrate/azure-migration-guide/ready-alz.md).
 

@@ -9,7 +9,7 @@ ms.topic: concept-article
 
 # Define an Azure network topology
 
-Network topology is a critical element of a landing zone architecture because it defines how applications can communicate with one another. This section explores technologies and topology approaches for Azure deployments. It focuses on two core approaches: topologies that are based on Azure Virtual WAN and traditional topologies.
+Network topology is a critical element of an Azure landing zone architecture because it defines how workloads communicate with one another. This section explores technologies and topology approaches for Azure deployments. It focuses on two core approaches: topologies that are based on Azure Virtual WAN and traditional topologies.
 
 ## Virtual WAN network topology
 
@@ -23,7 +23,7 @@ You can use [Virtual WAN to meet large-scale interconnectivity requirements](../
 
 The following diagram shows a Microsoft-managed Virtual WAN network topology:
 
-:::image type="content" source="./media/virtual-wan-topology.png" alt-text="Diagram that illustrates a Virtual WAN network topology." lightbox="./media/virtual-wan-topology.png" border="false":::
+:::image type="content" source="./media/virtual-wan-topology.svg" alt-text="Diagram that illustrates a Virtual WAN network topology." lightbox="./media/virtual-wan-topology.svg" border="false":::
 
 ## Traditional Azure networking topology
 
@@ -37,9 +37,9 @@ The following diagram shows a Microsoft-managed Virtual WAN network topology:
 
 The following diagram shows a traditional Azure networking topology:
 
-:::image type="content" source="./media/customer-managed-topology.png" alt-text="Diagram that illustrates a traditional Azure network topology." lightbox="./media/customer-managed-topology.png" border="false":::
+:::image type="content" source="./media/customer-managed-topology.svg" alt-text="Diagram that illustrates a traditional Azure network topology." lightbox="./media/customer-managed-topology.svg" border="false":::
 
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Virtual Network Manager in Azure landing zones](./azure-virtual-network-manager.md)
+> [Virtual Network Manager in an Azure landing zone](./azure-virtual-network-manager.md)

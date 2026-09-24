@@ -18,7 +18,7 @@ The article, [Azure landing zones and multiple Microsoft Entra tenants](overview
 
 ## Azure landing zones with multiple Microsoft Entra tenants
 
-[![Diagram of multiple Microsoft Entra tenants with Azure landing zones deployed.](media/contoso-multi-tenant.png)](media/contoso-multi-tenant.png#lightbox)
+[![Diagram of multiple Microsoft Entra tenants with Azure landing zones deployed.](media/contoso-multi-tenant.svg)](media/contoso-multi-tenant.svg#lightbox)
 
 The previous diagram shows an example of the Contoso Corporation, which has four Microsoft Entra tenants due to mergers and acquisitions as the corporation has grown over time.
 
@@ -53,8 +53,8 @@ This section explains key considerations and recommendations about Azure landing
   - The single tenant is typically the organization's corporate Microsoft Entra tenant where the user's identities exist and a service, like Microsoft 365, is running.
   - Only create more Microsoft Entra tenants when there are requirements that can't be met by using the corporate Microsoft Entra tenant.
 - Consider using Microsoft Entra ID [administrative units](/entra/identity/role-based-access-control/administrative-units) to manage the segregation and isolation of users, groups, and devices (for example, different teams) within a single Microsoft Entra tenant. Use this resource instead of creating multiple Microsoft Entra tenants.
-- Consider using sandbox subscriptions for the initial application workload development and investigation. For more information, see [How to handle "dev/test/production" workload landing zones in Azure landing zone architecture](https://aka.ms/alz/dtp).
-- Migrating Azure subscriptions between Microsoft Entra tenants is complex and requires pre and post migration activities to be completed to enable a migration. For more information, see [Transfer an Azure subscription to a different Microsoft Entra directory](/azure/role-based-access-control/transfer-subscription). It's easier to rebuild the application workload in a new Azure subscription in the destination tenant. It gives you more control over the migration.
+- Consider using sandbox subscriptions for the initial workload development and investigation. For more information, see [How to handle "dev/test/production" workload landing zones in Azure landing zone architecture](https://aka.ms/alz/dtp).
+- Migrating Azure subscriptions between Microsoft Entra tenants is complex and requires pre and post migration activities to be completed to enable a migration. For more information, see [Transfer an Azure subscription to a different Microsoft Entra directory](/azure/role-based-access-control/transfer-subscription). It's easier to rebuild the workload in a new Azure subscription in the destination tenant. It gives you more control over the migration.
 - Consider the [complexities](overview.md#complexities-with-multiple-azure-active-directory-tenants) of managing, governing, configuring, monitoring, and securing multiple Microsoft Entra tenants. A single Microsoft Entra tenant is easier to manage, govern, and secure.
 - Consider your JML (joiners, movers, and leavers) process, workflows, and tooling. Ensure that these resources can support and handle multiple Microsoft Entra tenants.
 - Consider the effect on end users when they manage, govern, and secure multiple identities for themselves.
@@ -63,7 +63,7 @@ This section explains key considerations and recommendations about Azure landing
 - Consider the increase in licensing costs when multiple Microsoft Entra tenants are used. Licenses for products like Microsoft Entra ID P1 or P2 or Microsoft 365 services don't span across Microsoft Entra tenants.
 - A single Enterprise Agreement enrollment can support and provide subscriptions to multiple Microsoft Entra tenants by setting the authentication level on the enrollment to work and school account cross-tenant. For more information, see [Azure EA portal administration](/azure/cost-management-billing/manage/ea-portal-administration#add-an-account-from-another-azure-ad-tenant).
 - A single Microsoft Customer Agreement can support and provide subscriptions to multiple Microsoft Entra tenants. For more information, see [Manage tenants in your Microsoft Customer Agreement billing account](/azure/cost-management-billing/microsoft-customer-agreement/manage-tenants).
-- When opting for a Microsoft Entra multitenant architecture, consider the limitations that might occur for application teams and developers. Be aware of limitations in Microsoft Entra integration for Azure products and services, such as Azure Virtual Desktop, Azure Files, and Azure SQL. For more information, see the [Azure products and services Microsoft Entra integration](#azure-products-and-services-azure-active-directory-integration) section in this article.
+- When opting for a Microsoft Entra multitenant architecture, consider the limitations that might occur for workload teams and developers. Be aware of limitations in Microsoft Entra integration for Azure products and services, such as Azure Virtual Desktop, Azure Files, and Azure SQL. For more information, see the [Azure products and services Microsoft Entra integration](#azure-products-and-services-azure-active-directory-integration) section in this article.
 - Consider using [Microsoft Entra B2B](/entra/external-id/what-is-b2b) to simplify and enhance user experience and administration when your organization has multiple Microsoft Entra tenants.
 - Consider using the Microsoft identity platform, with Microsoft Entra ID with B2B and External ID capabilities, so developers can create applications in a single Azure subscription and within a single tenant. This method supports users from many identity sources. For more information, see [Architect multitenant solutions on Azure](/azure/architecture/guide/multitenant/overview).
 - Consider using the features available for multitenant organizations. For more information, see [What is a multitenant organization in Microsoft Entra ID](/entra/identity/multi-tenant-organizations/overview).
@@ -81,16 +81,16 @@ Services that provide a native integration with Microsoft Entra ID, such as Azur
 
 It's important to carefully consider which Microsoft Entra tenant your Azure subscriptions are associated with. This relationship dictates which products and services, and their features, the application or workload teams use that need to support the identities and from which tenant the identities are from. Typically, identities are in the corporate Microsoft Entra tenant.
 
-If multiple Microsoft Entra tenants are used to host all Azure subscriptions, application workload teams can't take advantage of some Azure products and services Microsoft Entra integrations. If the application workload teams have to develop their applications around these imposed limitations, the authentication and authorization process becomes more complex and less secure.
+If multiple Microsoft Entra tenants are used to host all Azure subscriptions, workload teams can't take advantage of some Azure products and services Microsoft Entra integrations. If the workload teams have to develop their applications around these imposed limitations, the authentication and authorization process becomes more complex and less secure.
 
-Avoid this problem by using a single Microsoft Entra tenant as the home for all your Azure subscriptions. A single tenant is the best approach for authentication and authorization for your application or service. This simple architecture gives the application workload team less to manage, govern, and control, and it removes potential constraints.
+Avoid this problem by using a single Microsoft Entra tenant as the home for all your Azure subscriptions. A single tenant is the best approach for authentication and authorization for your application or service. This simple architecture gives the workload team less to manage, govern, and control, and it removes potential constraints.
 
 For more information, see [Resource isolation in a single tenant](/entra/architecture/secure-single-tenant).
 
 ### Recommendations
 
 - Use a single Microsoft Entra tenant, which is usually the corporate Microsoft Entra tenant. Only create more Microsoft Entra tenants when there are requirements that can't be met by using the corporate Microsoft Entra tenant.
-- Use sandbox subscriptions to provide application teams safe, controlled, and isolated development environments within the same single Microsoft Entra tenant. For more information, see [How to handle "dev/test/production" workload landing zones in Azure landing zone architecture](https://aka.ms/alz/dtp).
+- Use sandbox subscriptions to provide workload teams safe, controlled, and isolated development environments within the same single Microsoft Entra tenant. For more information, see [How to handle "dev/test/production" workload landing zones in Azure landing zone architecture](https://aka.ms/alz/dtp).
 - Use Microsoft Entra multitenant applications when you create integrations from operational tooling, such as ServiceNow, and connect them to multiple Microsoft Entra tenants. For more information, see [Best practices for all isolation architectures](/entra/identity-platform/application-model#multitenant-apps).
 - If you're an ISV, see [Independent software vendor (ISV) considerations for Azure landing zones](../../isv-landing-zone.md).
 - Use Azure Lighthouse to simplify cross-tenant management experiences. For more information, see [Azure Lighthouse usage in Azure landing zones multitenant scenarios](lighthouse.md).
@@ -109,7 +109,7 @@ For more information, see [Resource isolation in a single tenant](/entra/archite
   - [Cross-tenant synchronization](/entra/identity/multi-tenant-organizations/cross-tenant-synchronization-overview)
   - [Multitenant Organization](/entra/identity/multi-tenant-organizations/multi-tenant-organization-overview)
 - For organizations with a Microsoft Entra tenant in multiple Microsoft clouds, like Microsoft Azure Commercial cloud, Microsoft Azure China 21Vianet, Microsoft Azure Government, configure [Microsoft cloud settings for B2B collaboration](/entra/external-id/cross-cloud-settings) to simplify user's experiences when collaborating across tenants.
-- Application teams and developers should review the following resources when constructing applications and services for multi-tenancy:
+- Workload teams and developers should review the following resources when constructing applications and services for multi-tenancy:
   - [Architect multitenant solutions on Azure](/azure/architecture/guide/multitenant/overview)
 
 ## Next steps

@@ -15,7 +15,7 @@ ms.custom: think-tank
 
 This article describes key design considerations and recommendations for network topologies in Microsoft Azure. The following diagram shows a traditional Azure network topology:
 
-:::image type="content" source="./media/customer-managed-topology.png" alt-text="Diagram that illustrates a traditional Azure network topology." lightbox="./media/customer-managed-topology.png" border="false":::
+:::image type="content" source="./media/customer-managed-topology.svg" alt-text="Diagram that illustrates a traditional Azure network topology." lightbox="./media/customer-managed-topology.svg" border="false":::
 
 ## Design considerations
 
@@ -73,7 +73,7 @@ If you use BGP metrics to influence ExpressRoute routing, you need to change the
 
   - There's a dependency on centralized NVAs and granular routing.
 
-- For regional deployments, primarily use the hub-and-spoke topology with a regional hub for each spoke Azure region. Use application landing zone virtual networks that use virtual network peering to connect to a regional central hub virtual network for the following scenarios:
+- For regional deployments, primarily use the hub-spoke topology with a regional hub for each spoke Azure region. Use virtual networks that use virtual network peering to connect to a regional central hub virtual network for the following scenarios:
 
   - Cross-premises connectivity through ExpressRoute that's enabled in two different peering locations. For more information, see [Design and architect ExpressRoute for resiliency](/azure/expressroute/design-architecture-for-resiliency).
 
