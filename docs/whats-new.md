@@ -14,6 +14,29 @@ ms.custom: UpdateFrequency.5, historical
 
 Microsoft continuously updates the Cloud Adoption Framework with new guidance, enhanced content, and refined recommendations based on customer experiences and evolving cloud practices. This article lists announcements and information as the framework evolves.
 
+## October 2026
+
+**"Application landing zones" are now called "Workload landing zones"**: We've updated Cloud Adoption Framework guidance to use the term workload landing zone instead of application landing zone. This update applies across the framework, including articles, diagrams, and supporting content.
+
+The new terminology more accurately reflects the purpose of these environments. A workload landing zone hosts and operates a workload that supports a business outcome. Workloads can include applications, data platforms, AI and machine learning solutions, infrastructure automation, and other Azure resources. Custom applications remain an important workload type, but they represent only one category of workload.
+
+As part of this update, we also removed the distinction between application landing zones, data landing zones, and data management landing zones. These categories often created unnecessary complexity because the resources deployed to them are all workload resources. Azure landing zone now use a simpler model that distinguishes between platform resources, which reside in the platform landing zone, and workload resources, which reside in one or more workload landing zones.
+
+This change does not affect the architecture, scope, or intent of the guidance. It aligns Cloud Adoption Framework terminology more closely with the Azure Well-Architected Framework, which is organized around workload design principles.
+
+**Deleted articles**: We removed Cloud Adoption Framework architecture articles covering the following services:
+
+- Azure Kubernetes Service (AKS)
+- Azure Red Hat OpenShift (ARO)
+- Azure Red Hat Enterprise Linux (RHEL)
+
+Only the Cloud Adoption Framework articles were removed. Associated workload landing zone accelerator repositories remain available:
+
+- [Azure Kubernetes Service workload landing zone accelerator](https://github.com/Azure/AKS-Landing-Zone-Accelerator)
+- [Azure Red Hat Openshift workload landing zone accelerator](https://github.com/Azure/ARO-Landing-Zone-Accelerator)
+
+Cloud Adoption Framework focuses on helping decision makers define cloud strategy, establish governance, plan investments, and design operating models. Detailed workload architecture guidance is available through the [Azure Architecture Center](/azure/architecture/) and the [Well-Architected Framework](/azure/well-architected/), which remain the primary sources for architecture guidance.
+
 ## September 2026
 
 This update highlights recent additions to Azure landing zone and Azure VMware Solution guidance, scenario deprecations, and roadmap items across the Cloud Adoption Framework.
@@ -76,7 +99,7 @@ We are working on updates to improve the Cloud Adoption Framework guidance. Stay
 
 ## May 2026
 
-**Deleted articles**: We deleted articles for the following application landing zone accelerators. The process removed only the articles in the Cloud Adoption Framework. The repositories in GitHub with the deployable assets are still available. Use the following links to access GitHub:
+**Deleted articles**: We deleted articles for the following workload landing zone accelerators. The process removed only the articles in the Cloud Adoption Framework. The repositories in GitHub with the deployable assets are still available. Use the following links to access GitHub:
 
 - [Azure Integration Services GitHub repo](https://github.com/Azure/Integration-Services-Landing-Zone-Accelerator)
 - [Azure API Management](https://github.com/Azure/apim-landing-zone-accelerator)
@@ -89,7 +112,7 @@ We are working on updates to improve the Cloud Adoption Framework guidance. Stay
 
 ### Deprecation notice
 
-**Articles for select application landing zone accelerator are deprecated.** Azure Integration Services, Azure Kubernetes Services, Azure API Management, Azure App Service, and Azure Container Apps guidance was deprecated.
+**Articles for select workload landing zone accelerator are deprecated.** Azure Integration Services, Azure Kubernetes Services, Azure API Management, Azure App Service, and Azure Container Apps guidance was deprecated.
 
 ## March 2026
 
@@ -125,11 +148,11 @@ We are working on updates to improve the Cloud Adoption Framework guidance. Stay
 
 - [Update Azure landing zone custom policies](ready/landing-zone/design-area/update-custom-policies.md): Simplified policy update guidance by consolidating Bicep update instructions and updating references to Azure Verified Modules for Terraform and Bicep.
 
-- [Independent software vendor (ISV) considerations for Azure landing zones](ready/landing-zone/isv-landing-zone.md): Added a recommendation for ISVs to include a separate Security management group under the Platform management group. Noted that the Security management group is planned for future updates.
+- [Independent software vendor (ISV) considerations for Azure landing zone](ready/landing-zone/isv-landing-zone.md): Added a recommendation for ISVs to include a separate Security management group under the Platform management group. Noted that the Security management group is planned for future updates.
 
 - [Platform landing zone implementation options](ready/landing-zone/implementation-options.md): Restructured the article to focus specifically on platform landing zone implementation and simplified guidance to two main approaches. It includes the recommended infrastructure as code (IaC) accelerator with a detailed four-phase approach, and the portal-based accelerator. Replaced multiple implementation variants with improved options and enhanced Azure Verified Modules guidance for both Bicep and Terraform.
 
-- [What is an Azure landing zone?](ready/landing-zone/index.md): Restructured deployment guidance to emphasize the IaC accelerator as the recommended approach. Enhanced application landing zone descriptions with subscription vending details and clarified the *landing zone P1 subscription* purpose.
+- [What is an Azure landing zone?](ready/landing-zone/index.md): Restructured deployment guidance to emphasize the IaC accelerator as the recommended approach. Enhanced workload landing zone descriptions with subscription vending details and clarified the *landing zone P1 subscription* purpose.
 
 - [Manage your cloud estate with enhanced security](secure/manage.md): Added guidance to review Microsoft Secure Future Initiative requirements and integrate them into security assessments.
 
@@ -148,27 +171,3 @@ We are working on updates to improve the Cloud Adoption Framework guidance. Stay
 - [Manage your cloud estate with enhanced security](secure/manage.md): Improved formatting consistency and clarity. Enhanced the business continuity and disaster recovery recommendation by clarifying the distinction between disaster recovery planning and resilient architecture design with more precise, actionable language.
 
 - [Prepare your secure cloud estate](secure/ready.md): Improved terminology and formatting. Changed *resiliency* to *reliability* throughout the availability section to align with Well-Architected Framework terminology. Clarified the distinction between resilience patterns and recoverability mechanisms in the design recommendation. Standardized spacing between bullet points for better readability.
-
-## October 2025
-
-### Updated articles
-
-- [Microsoft Cloud Adoption Framework for Azure](overview.md): Improved readability and logical flow. Moved the methodology explanation to appear earlier in the article, reorganized the foundational and operational methodology sections for better clarity, and simplified the organization type table. Removed promotional language throughout to focus on practical guidance for Azure adoption.
-
-- [Azure Arc connectivity design for Oracle Exadata Database@Azure](scenarios/oracle-on-azure/azure-arc-connectivity-design.md): Added guidance for using Microsoft Entra ID to manage Secure Shell (SSH) authentication and privileged access monitoring on Azure Arc-enabled Oracle Exadata cluster nodes. Updated the article to include detailed steps to enable centralized identity verification, configure role-based access control (RBAC) policies, deploy Azure Monitor agents, and implement security auditing for SSH access and privileged actions.
-
-- [Hybrid identity with Active Directory and Microsoft Entra ID in Azure landing zones](ready/landing-zone/design-area/identity-access-active-directory-hybrid-identity.md): Updated this guidance to emphasize modern authentication practices and added security warnings about legacy authentication mechanisms. Reorganized content sections for improved clarity, enhanced recommendations about protecting domain controllers, and added guidance for Azure Arc integration with identity services.
-
-- [Application identity and access management](ready/landing-zone/design-area/identity-access-application-access.md): Expanded the introduction to clarify coverage of both component-to-component authentication and user identity management, reorganized content sections for better logical flow, and enhanced design considerations with questions about user types and authentication service compatibility.
-
-- [Landing zone identity and access management](ready/landing-zone/design-area/identity-access-landing-zones.md): Enhanced security recommendations by adding guidance about phishing-resistant multifactor authentication (MFA) to protect against credential-based attacks. Also clarified the principle of just-enough access with just-in-time (JIT) enforcement and expanded role assignment examples to show separate production and dev/test environments. Updated terminology to reflect the retirement of classic Azure administrators.
-
-- [Identity and access management design area](ready/landing-zone/design-area/identity-access.md): Enhanced the introduction to emphasize the foundational role of identity in cloud security and added warnings about the risks of poorly secured identity. Clarified team responsibilities by distinguishing between platform identity teams and application administrators. Improved terminology to better reflect current best practices for Zero Trust and identity architecture.
-
-- [What is an Azure landing zone?](ready/landing-zone/index.md): Clarified terminology and improved conceptual understanding. Enhanced the introduction to better explain Azure landing zones as the standardized approach for all organizations that use Azure. Also clarified the distinction between platform landing zones (shared services) and application landing zones (workload hosting), and improved descriptions throughout the article for better consistency and accuracy.
-
-- [Network topology and connectivity for Azure Arc-enabled servers](scenarios/hybrid/arc-enabled-servers/eslz-arc-servers-connectivity.md): Updated this guidance to reflect current service capabilities and best practices. Clarified that Azure Arc gateway is now generally available, noted that indirectly connected mode is retired as of September 2025, and enhanced recommendations for Azure Private Link implementation, including Domain Name System (DNS) considerations and Azure ExpressRoute resiliency practices.
-
-- [Azure Virtual Desktop network topology and connectivity design guidance](scenarios/azure-virtual-desktop/eslz-network-topology-and-connectivity.md): Clarified technical guidance for implementing Virtual Desktop within Azure landing zones. Reorganized the content into distinct sections that cover networking components, recommendations, and detailed scenarios. Also enhanced architectural guidance for different deployment patterns and improved clarity for Remote Desktop Protocol (RDP) Shortpath implementation and DNS configuration requirements.
-
-- [Virtual WAN network topology in an Azure landing zone](ready/azure-best-practices/virtual-wan-network-topology.md): Clarified implementation steps for Azure landing zones. Reorganized the content into distinct sections that cover hub-and-spoke architecture creation, deployment planning, connectivity options, routing configuration, security controls, and monitoring practices. Enhanced the article with updated diagrams, improved accessibility descriptions, and simplified the migration guidance to focus on essential steps for implementing Virtual WAN within enterprise environments.

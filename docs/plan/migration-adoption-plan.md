@@ -38,7 +38,7 @@ For more information, see [Prepare your people](./prepare-people-for-cloud.md).
 
 | Category                  | Documentation to add                                                                 |
 |---------------------------|-------------------------------------------------------------------------------------|
-| Platform components needed | Specify the required components, such as on-premises connectivity, hybrid identity, management tools, and application landing zone types (online, corporate, sandbox). |
+| Platform components needed | Specify the required components, such as on-premises connectivity, hybrid identity, management tools, and workload landing zone types (online, corporate, sandbox). |
 | Resource hierarchy         | Define the hierarchy, including management groups, subscriptions, and resource groups. |
 | Platform architecture       | Document shared resources, SKUs, and regions to ensure scalability and compliance. |
 | Estimated platform cost     | Provide cost estimates for the platform architecture, including Azure services and operational expenses. |

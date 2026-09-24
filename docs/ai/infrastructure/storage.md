@@ -17,7 +17,7 @@ AI workloads require high throughput and low latency for efficient data retrieva
 
     - *Use Azure Managed Lustre for lowest data transfer times and minimized latency.* Azure Managed Lustre provides high performance with parallel file system capabilities and simplifies management with Azure integration. It's cost-effective, with usage-based storage costs, and allows selective data import from Blob Storage, optimizing data handling.
     
-    - *Use Azure NetApp Files when you need enterprise-grade features and performance for AI workloads.* Azure NetApp Files offers high reliability and performance, ideal for mission-critical applications. Azure NetApp Files is beneficial if you have existing investments in NetApp infrastructure. It's beneficial for hybrid cloud capabilities and when you need to customize and fine-tune storage configurations.
+    - *Use Azure NetApp Files when you need enterprise-grade features and performance for AI workloads.* Azure NetApp Files offers high reliability and performance, ideal for mission-critical workloads. Azure NetApp Files is beneficial if you have existing investments in NetApp infrastructure. It's beneficial for hybrid cloud capabilities and when you need to customize and fine-tune storage configurations.
     
     - *Use local NVMe/SSD file systems when performance is the top priority.* They aggregate the local NVMe of compute (worker nodes) using a job-dedicated parallel file system like BeeGFS On Demand (BeeOND). They operate directly on the compute nodes to create a temporary, high-performance file system during the job. These systems offer ultra-low latency and high throughput, making them ideal for I/O-intensive applications like deep learning training or real-time inferencing.
 

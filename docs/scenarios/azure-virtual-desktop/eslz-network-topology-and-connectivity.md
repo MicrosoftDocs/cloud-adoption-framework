@@ -11,7 +11,7 @@ ms.topic: concept-article
 
 [!INCLUDE [Azure Virtual Desktop deprecation notice](./includes/virtual-desktop-deprecation.md)]
 
-This article outlines how to design network topology and connectivity for Azure Virtual Desktop (AVD) within an Azure landing zone. It helps technical decision-makers understand the networking requirements their teams must follow to ensure secure and scalable connectivity across Azure, private networks, and the public internet. Before your organization deploys AVD, you should have an Azure landing zone in place. Then you deploy AVD resources into an application landing zone.
+This article outlines how to design network topology and connectivity for Azure Virtual Desktop (AVD) within an Azure landing zone. It helps technical decision-makers understand the networking requirements their teams must follow to ensure secure and scalable connectivity across Azure, private networks, and the public internet. Before your organization deploys AVD, you should have an Azure landing zone in place. Then you deploy AVD resources into a workload landing zone.
 
 ## AVD networking components
 

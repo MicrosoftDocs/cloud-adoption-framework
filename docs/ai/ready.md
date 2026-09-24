@@ -19,11 +19,11 @@ This article outlines the organizational process for building AI workloads in Az
 
 AI governance requires proper resource organization and policy management to ensure secure, compliant, and cost-effective operations. You must create clear governance boundaries to protect sensitive data and control AI resource access effectively. Here's how:
 
-1. **Create separate management groups for internet-facing and internal AI workloads.** Management group separation establishes critical data governance boundaries between external ("online") and internal-only ("corporate") AI applications. This separation prevents external users from accessing sensitive internal business data while you maintain appropriate access controls. The approach aligns with [Azure landing zone management group](/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org-management-groups) architecture principles and supports policy inheritance across workload types.
+1. **Create separate management groups for internet-facing and internal AI workloads.** Management group separation establishes critical data governance boundaries between external ("online") and internal-only ("corporate") AI workloads. This separation prevents external users from accessing sensitive internal business data while you maintain appropriate access controls. The approach aligns with [Azure landing zone management group](/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org-management-groups) architecture principles and supports policy inheritance across workload types.
 
-2. **Apply AI-specific policies to each management group.** Start with baseline policies from [Azure landing zones](https://aka.ms/alz/policies) and add Azure Policy definitions as needed for [Foundry](/azure/ai-foundry/how-to/built-in-policy-model-deployment), [Foundry Tools](/azure/ai-services/policy-reference), [Azure AI Search](/azure/governance/policy/samples/built-in-policies#search), and [Azure Virtual Machines](/azure/virtual-machines/policy-reference). Policy enforcement ensures uniform AI governance across your platform and reduces manual compliance oversight.
+2. **Apply AI-specific policies to each management group.** Start with baseline policies from the [platform landing zone accelerator](https://aka.ms/alz/policies) and add Azure Policy definitions as needed for [Foundry](/azure/ai-foundry/how-to/built-in-policy-model-deployment), [Foundry Tools](/azure/ai-services/policy-reference), [Azure AI Search](/azure/governance/policy/samples/built-in-policies#search), and [Azure Virtual Machines](/azure/virtual-machines/policy-reference). Policy enforcement ensures uniform AI governance across your platform and reduces manual compliance oversight.
 
-3. **Deploy AI resources within workload-specific subscriptions.** AI resources must inherit governance policies from their workload management group rather than platform subscriptions. This separation prevents development bottlenecks that platform team controls create and enables workload teams to operate with appropriate autonomy. Deploy AI workloads to application landing zone subscriptions in Azure landing zone environments.
+3. **Deploy AI resources within workload-specific subscriptions.** AI resources must inherit governance policies from their workload management group rather than platform subscriptions. This separation prevents development bottlenecks that platform team controls create and enables workload teams to operate with appropriate autonomy. Deploy AI workloads to workload landing zone subscriptions in Azure landing zone environments.
 
 <a name='Establish-AI-networking'></a>
 
@@ -31,7 +31,7 @@ AI governance requires proper resource organization and policy management to ens
 
 AI networking encompasses network infrastructure design, security measures, and efficient data transfer patterns for AI workloads. You must implement proper security controls and connectivity options to prevent network-based disruptions and maintain consistent performance. Here's how:
 
-1. **Activate Azure DDoS Protection for internet-facing AI workloads.** [Azure DDoS Protection](/azure/ddos-protection/ddos-protection-overview) safeguards your AI services from potential disruptions and downtime that distributed denial of service attacks cause. DDoS protection at the virtual network level defends against traffic floods that target internet-facing applications and maintains service availability during attacks.
+1. **Activate Azure DDoS Protection for internet-facing AI workloads.** [Azure DDoS Protection](/azure/ddos-protection/ddos-protection-overview) safeguards your AI services from potential disruptions and downtime that distributed denial of service attacks cause. DDoS protection at the virtual network level defends against traffic floods that target internet-facing workloads and maintains service availability during attacks.
 
 2. **Secure operational access to AI workloads with Azure Bastion.** Use a jumpbox and Azure Bastion to secure operational access to AI workloads and prevent direct internet exposure of management interfaces. This approach creates a secure gateway for administrative tasks while maintaining network isolation for AI resources.
 
@@ -53,28 +53,23 @@ AI reliability requires strategic region placement and redundancy planning to en
 
 3. **Evaluate regional quota limits and capacity requirements.** Foundry Tools have regional subscription limits that affect large-scale model deployments and inference workloads. Contact Azure support proactively when you anticipate capacity needs that exceed standard quotas to prevent service disruptions during scaling.
 
-4. **Optimize data placement for retrieval-augmented generation applications.** Data storage location significantly affects application performance in RAG scenarios. Co-locating data with AI models in the same region reduces latency and improves data retrieval efficiency, though cross-region configurations remain viable for specific business requirements.
+4. **Optimize data placement for retrieval-augmented generation workloads.** Data storage location significantly affects application performance in RAG scenarios. Co-locating data with AI models in the same region reduces latency and improves data retrieval efficiency, though cross-region configurations remain viable for specific business requirements.
 
 5. **Replicate critical AI assets to secondary regions for business continuity.** Business continuity requires replicating fine-tuned models, RAG datasets, trained models, and training data to secondary regions. Asset replication enables faster recovery during outages and maintains service availability across different failure scenarios.
 
 <a name='Establish-an-AI-foundation'></a>
+<a name='AI-foundation'></a>
 
-## AI foundation
+## AI in an Azure landing zone
 
-An AI foundation provides the core infrastructure and resource hierarchy that support AI workloads in Azure. It includes setting up scalable, secure environments that align with governance and operational needs. A strong AI foundation enables efficient deployment and management of AI workloads. It also ensures security and flexibility for future growth.
+An [Azure landing zone](/azure/cloud-adoption-framework/ready/landing-zone/) is the recommended starting point that prepares your Azure environment. It provides a predefined setup for platform and application resources. Once the platform is in place, you can deploy AI workloads to dedicated workload landing zones.
 
-### Use an Azure landing zone
-
-An [Azure landing zone](/azure/cloud-adoption-framework/ready/landing-zone/) is the recommended starting point that prepares your Azure environment. It provides a predefined setup for platform and application resources. Once the platform is in place, you can deploy AI workloads to dedicated application landing zones.
-
-If your organization uses Azure landing zones for workloads, then continue to use them for workloads that use AI. You deploy your AI workloads to regular application landing zones, as you would any other workload. See [AI in Azure landing zones](/azure/cloud-adoption-framework/ready/landing-zone/#ai-in-azure-landing-zones). Figure 2 below illustrates how AI workloads integrate within an Azure landing zone.
+If your organization uses a platform landing zone accelerator, deploy your AI workloads to regular workload landing zones, as you would any other workload. See [AI in Azure landing zone](/azure/cloud-adoption-framework/ready/landing-zone/#ai-in-azure-landing-zones). Figure 2 below illustrates how AI workloads integrate within an Azure landing zone.
 
 :::image type="content" source="./images/azure-landing-zone-ai.svg" alt-text="Diagram showing AI workloads within an Azure landing zone." lightbox="./images/azure-landing-zone-ai.svg" border="false":::
 *Figure 2. AI workload in an Azure landing zone.*
 
-### Build an AI environment
-
-If you don't use an Azure landing zone, follow the recommendations in this article to build your AI environment. The following diagram shows a baseline resource hierarchy. It segments internal AI workloads and internet-facing AI workloads. Internal workloads use policy to deny online access from customers. This separation safeguards internal data from exposure to external users. AI development should use a jumpbox to manage AI resources and data.
+The following diagram shows a baseline, conceptual resource hierarchy. It uses management groups to segment internal AI workloads and internet-facing AI workloads. Internal workloads use policy to deny online access from customers. This separation safeguards internal data from exposure to external users. AI development should use a jumpbox to manage AI resources and data.
 
 :::image type="content" source="./images/baseline-resource-hierarchy.svg" alt-text="Diagram showing the resource organization for internal and internet-facing AI workloads." lightbox="./images/baseline-resource-hierarchy.svg" border="false":::
 *Figure 3. Baseline resource hierarchy for AI workloads.*

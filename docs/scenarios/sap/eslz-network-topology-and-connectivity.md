@@ -73,7 +73,7 @@ Use a traditional Azure network topology based on a hub-and-spoke architecture i
 
 - Consider deploying network virtual appliances (NVAs) between regions only if you use partner NVAs. NVAs between regions or virtual networks aren't required if native NVAs are present. When you're deploying partner networking technologies and NVAs, follow the vendor's guidance to identify conflicting configurations with Azure networking.
 
-- Virtual WAN manages connectivity between spoke virtual networks for Virtual WAN-based topologies, so you don't need to set up user-defined routes (UDRs) or NVAs. Maximum network throughput for network-to-network traffic in the same virtual hub is 50 Gbps. To overcome this bandwidth limitation, SAP landing zones can use virtual network peering to connect to other landing zones.
+- Virtual WAN manages connectivity between spoke virtual networks for Virtual WAN-based topologies, so you don't need to set up user-defined routes (UDRs) or NVAs. Maximum network throughput for network-to-network traffic in the same virtual hub is 50 Gbps. To overcome this bandwidth limitation, workload landing zones can use virtual network peering to connect to other landing zones.
 
 - Neither topology supports NVA deployments between an SAP application and a database server.
 

@@ -8,16 +8,32 @@ ms.reviewer: ssumner
 ms.date: 03/10/2026
 ms.topic: concept-article
 ms.collection: ce-skilling-ai-copilot
+ai-usage: ai-assisted
 ---
 
 # Data for AI and analytics - Guidance to set your organization's data strategy
 
-**Data goal:** Every organization wants its data to drive confident business decisions. Data must be trusted, easy to reuse for analytics and AI, and secure by default. **Data challenge:** For most organizations, this goal is hard to achieve. Data is spread across systems and teams. Standards vary. Governance is inconsistent. These issues make analytics and AI difficult to use with confidence.
+Every organization wants its data to drive confident business decisions. Data must be trusted, easy to reuse for analytics and AI, and secure by default. **Data challenge:** For most organizations, this goal is hard to achieve. Data is spread across systems and teams. Standards vary. Governance is inconsistent. These issues make analytics and AI difficult to use with confidence.
 
-**Data solution:** Many organizations are addressing this challenge by unifying their data platform with Microsoft Fabric. Fabric enables teams to create trusted data products that can be governed and securely used for analytics and AI across the organization (see Figure 1). This guidance provides decision makers with the framework they need to make that shift and establish a unified data foundation.
+Many organizations are addressing this challenge by unifying their data platform with Microsoft Fabric. Fabric enables teams to create trusted data products that can be governed and securely used for analytics and AI across the organization (see Figure 1). This guidance provides decision makers with the framework they need to make that shift and establish a unified data foundation.
+
+## Overview and decision tree
+
+# [Conceptual](#tab/conceptual)
 
 :::image type="content" source="./images/executive-architecture-unified-data-platform-ai-analytics.svg" alt-text="High‑level diagram showing Microsoft Fabric at the center of a unified data platform. Data from enterprise sources, such as on‑premises systems, Microsoft services, and public cloud platforms, flows into Fabric, where you organize it as shared data products. These data products are then used across the organization to support analytics, AI systems, and reporting, including Power BI and data science workloads. Fabric connects with Azure for governance, security, and monitoring, while Azure workloads run alongside it as needed. The overall flow shows data coming into Fabric, being governed and standardized, and then powering AI, analytics, and business insights across the organization." lightbox="./images/executive-architecture-unified-data-platform-ai-analytics.svg" border="false":::
-*Figure 1. Unified data platform for AI and analytics.*
+
+*Conceptual architecture of a unified data platform for AI and analytics.*
+
+# [Decision tree](#tab/decision-tree)
+
+:::image type="complex" source="images/decision-tree-unify-data-platform.svg" alt-text="Diagram showing a decision tree for unifying your data platform for leaders and decision makers." lightbox="images/decision-tree-unify-data-platform.svg" border="false":::
+    The flow asks a series of yes-or-no questions. Each "Yes" leads to specific guidance. The first question asks whether the organization needs help with understanding data priorities or building skills to get more value from data. If yes, the guidance is to prepare people through roles, training, and readiness activities. The second question asks whether the organization needs a unified way to access data across clouds and workloads to support analytics and AI. If yes, the guidance is to use Microsoft Fabric as the unified data platform. The third question asks whether the organization needs help with turning operational data into business value or securely feeding data into AI systems, such as Microsoft Foundry. If yes, the guidance is to integrate Azure services with Fabric. Fourth question asks whether the organization needs help with controlling access to data or with securing data consistently. If yes, the guidance is to set governance and security baselines using Microsoft Purview and related controls. Fifth question asks whether the organization needs help with setting consistent organizational standards to process, secure, and consume data products for analytics and AI. If yes, the guidance is to set operational standards for data products, security, and lifecycle management. The flow ends by pointing to adopting AI and adopting AI agents once the unified data platform and standards are in place.
+:::image-end:::
+
+*Microsoft's decision tree to guide your unified data platform.*
+
+--- 
 
 ## Why a unified data platform with Fabric?
 
@@ -65,27 +81,9 @@ Microsoft's Cloud Adoption Framework outlines a four-step framework for unifying
 
 By following these steps, you can unify your data platform in a structured way. If you don't know where to start, use the following decision tree for guidance.
 
-## Decision tree for unifying your data platform
-
-:::image type="complex" source="images/decision-tree-unify-data-platform.svg" alt-text="Diagram showing a decision tree for unifying your data platform for leaders and decision makers." lightbox="images/decision-tree-unify-data-platform.svg" border="false":::
-    The flow asks a series of yes-or-no questions. Each "Yes" leads to specific guidance. The first question asks whether the organization needs help with understanding data priorities or building skills to get more value from data. If yes, the guidance is to prepare people through roles, training, and readiness activities. The second question asks whether the organization needs a unified way to access data across clouds and workloads to support analytics and AI. If yes, the guidance is to use Microsoft Fabric as the unified data platform. The third question asks whether the organization needs help with turning operational data into business value or securely feeding data into AI systems, such as Microsoft Foundry. If yes, the guidance is to integrate Azure services with Fabric. Fourth question asks whether the organization needs help with controlling access to data or with securing data consistently. If yes, the guidance is to set governance and security baselines using Microsoft Purview and related controls. Fifth question asks whether the organization needs help with setting consistent organizational standards to process, secure, and consume data products for analytics and AI. If yes, the guidance is to set operational standards for data products, security, and lifecycle management. The flow ends by pointing to adopting AI and adopting AI agents once the unified data platform and standards are in place.
-:::image-end:::
-*Figure 3. Microsoft's decision tree for unifying your data platform.*
-
 ## Next step
 
 In the following sections, you'll find guidance, checklists, best practices, decision guidance, and trade-offs at each step. The guidance is for leaders and decision makers who oversee organizational strategy and governance.
 
 > [!div class="nextstepaction"]
 > [Organizational readiness](./organizational-readiness-unify-data-platform.md)
-
-## Key terms
-
-| Key term | Definition |
-| ----  |---- |
-| Analytics | The practice of generating insights from data to support decision-making. It includes dashboards, reports, and visualizations, for example, in [Power BI](/power-bi/fundamentals/service-basic-concepts#power-bi-service-concepts). |
-| AI | Systems that use data as input into models that automate business functionality. This category includes traditional machine learning models (predictive) and generative AI models. |
-| Data product | Data that's in a form that's valuable for your business, such as datasets, tables, feature sets, or AI training data. |
-| Data domain | A boundary of responsibility and ownership for data products, such as business units (HR, Marketing, Finance, Sales, Operations) and product lines (Product 1, Product 2). |
-| Data management landing zone | An environment (consisting of one or more Azure subscriptions) for data management resources, such as Microsoft Purview accounts and Fabric capacities. |
-| Data landing zone | An environment (consisting of one or more Azure subscriptions) for data and AI/ML resources, such as Azure Databricks, Azure Data Lake Storage, and Azure Machine Learning. |

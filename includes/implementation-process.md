@@ -53,6 +53,6 @@ The following decisions represent the patterns to be enforced through the policy
 
 **Identity Baseline.** Azure Blueprints will set RBAC requirements at a subscription level to ensure that consistent identity is configured for all subscriptions.
 
-**Security Baseline: Networking.** The cloud governance team maintains a Resource Manager template for establishing a VPN gateway between Azure and the on-premises VPN device. When an application team requires a VPN connection, the cloud governance team will apply the gateway Resource Manager template via Azure Blueprints.
+**Security Baseline: Networking.** The cloud governance team maintains a Resource Manager template for establishing a VPN gateway between Azure and the on-premises VPN device. When a workload team requires a VPN connection, the cloud governance team will apply the gateway Resource Manager template via Azure Blueprints.
 
 **Security Baseline: Encryption.** At this point, no policy enforcement is required in this area. This will be revisited during later iterations.

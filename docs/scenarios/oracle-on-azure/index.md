@@ -33,13 +33,13 @@ Use the multi-region reference architectures as a starting point. Modify them to
 
 ### Landing zone architecture for Oracle on Azure virtual machines
 
-The following diagram shows Oracle on Azure virtual machines deployed to an application landing zone in a multi-region design. The approach shown distributes your Oracle databases across multiple Azure regions to enhance availability, scalability, and disaster recovery capabilities. The diagram also highlights the critical design areas that support this multi-region deployment. The Oracle databases run on VMs in each region. You can change the number and size of VMs to accommodate your needs.
+The following diagram shows Oracle on Azure virtual machines deployed to a workload landing zone in a multi-region design. The approach shown distributes your Oracle databases across multiple Azure regions to enhance availability, scalability, and disaster recovery capabilities. The diagram also highlights the critical design areas that support this multi-region deployment. The Oracle databases run on VMs in each region. You can change the number and size of VMs to accommodate your needs.
 
 :::image type="content" source="./media/index/reference-architecture-oracle-infrastructure-landing-zone.svg" alt-text="Diagram that shows a reference architecture of Oracle on Azure Virtual Machines." border="false" lightbox="./media/index/reference-architecture-oracle-infrastructure-landing-zone.svg":::
 
 ### Landing zone architecture for Oracle Database@Azure
 
-The following diagram shows Oracle Database@Azure deployed to an application landing zone in a multi-region design. It also shows the critical design areas that support this multi-region deployment. The Oracle databases run on Oracle Exadata VM clusters across multiple regions on Azure. You can change the number and size of VM clusters in each region to accommodate your needs.
+The following diagram shows Oracle Database@Azure deployed to a workload landing zone in a multi-region design. It also shows the critical design areas that support this multi-region deployment. The Oracle databases run on Oracle Exadata VM clusters across multiple regions on Azure. You can change the number and size of VM clusters in each region to accommodate your needs.
 
 :::image type="content" source="./media/index/reference-architecture-oracle-odaa-landing-zone.svg" alt-text="Diagram that shows a reference architecture of Oracle Database@Azure." border="false" lightbox="./media/index/reference-architecture-oracle-odaa-landing-zone.svg":::
 

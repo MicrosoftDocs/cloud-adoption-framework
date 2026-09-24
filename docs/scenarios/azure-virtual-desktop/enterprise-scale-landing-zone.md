@@ -11,7 +11,7 @@ ms.topic: concept-article
 
 [!INCLUDE [Azure Virtual Desktop deprecation notice](./includes/virtual-desktop-deprecation.md)]
 
-This document provides technical stakeholders responsible for platform and workload landing zones with guidance on Azure Virtual Desktop using enterprise-scale methodologies. It describes how to both prepare and use the application landing zone accelerator for Azure Virtual Desktop which will shorten deployment time and apply enterprise governance, security, networking, and automation patterns. Follow this guidance to standardize deployments, enforce compliance controls, and scale AVD across regions with predictable operations.
+This document provides technical stakeholders responsible for platform and workload landing zones with guidance on Azure Virtual Desktop using enterprise-scale methodologies. It describes how to both prepare and use the workload landing zone accelerator for Azure Virtual Desktop which will shorten deployment time and apply enterprise governance, security, networking, and automation patterns. Follow this guidance to standardize deployments, enforce compliance controls, and scale AVD across regions with predictable operations.
 
 **This documentation enables your team(s) to:**
 
@@ -34,14 +34,14 @@ An enterprise-scale Azure landing zone ensures consistent governance, security, 
 
 2. **Review implementation guidance to align with enterprise-scale Azure landing zone architecture.** This step ensures that your deployment follows best practices for modularity, scalability, and compliance. See the [enterprise-scale implementation best practices](/azure/cloud-adoption-framework/ready/enterprise-scale/implementation).
 
-## Deploy the application landing zone accelerator for Azure Virtual Desktop
+## Deploy the workload landing zone accelerator for Azure Virtual Desktop
 
-The application landing zone accelerator for Azure Virtual Desktop provides Infrastructure as Code templates that implement enterprise-scale best practices, reducing deployment time, and ensuring consistency across environments.
+The workload landing zone accelerator for Azure Virtual Desktop provides Infrastructure as Code templates that implement enterprise-scale best practices, reducing deployment time, and ensuring consistency across environments.
 
 > [!div class="nextstepaction"]
-> [Deploy Azure Virtual Desktop to an application landing zone](https://github.com/Azure/avdaccelerator)
+> [Deploy Azure Virtual Desktop to a workload landing zone](https://github.com/Azure/avdaccelerator)
 
-1. **Use the application landing zone accelerator to deploy baseline Azure Virtual Desktop resources.** The accelerator includes proven Bicep and ARM templates for virtual networks, storage, and virtual machines. Access the [Azure Virtual Desktop accelerator on GitHub](https://github.com/Azure/avdaccelerator) and review the [deployment prerequisites](https://github.com/Azure/avdaccelerator/blob/main/workload/docs/getting-started-baseline.md#prerequisites) before starting.
+1. **Use the workload landing zone accelerator to deploy baseline Azure Virtual Desktop resources.** The accelerator includes proven Bicep and ARM templates for virtual networks, storage, and virtual machines. Access the [Azure Virtual Desktop accelerator on GitHub](https://github.com/Azure/avdaccelerator) and review the [deployment prerequisites](https://github.com/Azure/avdaccelerator/blob/main/workload/docs/getting-started-baseline.md#prerequisites) before starting.
 
 2. **Customize the accelerator to meet organizational requirements.** Modify environmental variables and deployment parameters to reflect your identity, network, and compliance needs. This flexibility supports diverse enterprise scenarios while maintaining security standards.
 
@@ -70,7 +70,7 @@ A secondary region helps organizations scale Azure Virtual Desktop when the prim
 
 5. **Configure outbound internet connectivity in the new region.** Use [Network Security Groups (NSGs)](/azure/virtual-network/network-security-groups-overview), Network Virtual Appliances (NVAs), or [Azure Firewall](/azure/firewall/overview) to enforce security policies and control traffic flow. Use a private subnet with a NAT Gateway to explicitly define outbound internet connectivity.
 
-6. **Deploy Azure Virtual Desktop virtual machines in the new region.** Use the application landing zone accelerator for Azure Virtual Desktop to deploy session hosts and supporting infrastructure. Validate that all dependencies are available in the new region.
+6. **Deploy Azure Virtual Desktop virtual machines in the new region.** Use the workload landing zone accelerator for Azure Virtual Desktop to deploy session hosts and supporting infrastructure. Validate that all dependencies are available in the new region.
 
 7. **Assign users to desktops in only one region.** This single assignment ensures consistent access to their profile data and avoids conflicts caused by multiple profile instances across regions.
 
@@ -88,7 +88,7 @@ Deploying Azure Virtual Desktop closer to users and on-premises systems improves
 
 5. **Configure outbound internet connectivity in the new region.** Use [NSGs](/azure/virtual-network/network-security-groups-overview), NVAs, or [Azure Firewall](/azure/firewall/overview) to enforce consistent security policies and manage internet-bound traffic. Use a private subnet with a NAT Gateway to explicitly define outbound internet connectivity.
 
-6. **Deploy Azure Virtual Desktop virtual machines in the new region.** Use the application landing zone accelerator for Azure Virtual Desktop to deploy session hosts and supporting infrastructure. Validate that regional dependencies are available.
+6. **Deploy Azure Virtual Desktop virtual machines in the new region.** Use the workload landing zone accelerator for Azure Virtual Desktop to deploy session hosts and supporting infrastructure. Validate that regional dependencies are available.
 
 7. **Assign users to desktops in only one region.** This setup prevents profile duplication and ensures consistent user experience. Profiles are region-specific and must not be shared across regions.
 
