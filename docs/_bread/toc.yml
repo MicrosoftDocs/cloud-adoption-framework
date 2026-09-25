@@ -19,9 +19,6 @@
       - name: Data
         tocHref: /azure/cloud-adoption-framework/data/
         topicHref: /azure/cloud-adoption-framework/data
-      - name: Azure VMware Solution
-        tocHref: /azure/cloud-adoption-framework/scenarios/azure-vmware/
-        topicHref: /azure/cloud-adoption-framework/scenarios/azure-vmware
       - name: Hybrid and multicloud
         tocHref: /azure/cloud-adoption-framework/scenarios/hybrid/
         topicHref: /azure/cloud-adoption-framework/scenarios/hybrid
