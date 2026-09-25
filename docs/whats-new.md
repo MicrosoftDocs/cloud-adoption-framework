@@ -59,7 +59,7 @@ We deprecated several scenarios that will be removed from the Cloud Adoption Fra
 
 | Last available date | Scenarios to be removed |
 | --- | --- |
-| September 30, 2026 | [Modern app platform](/azure/cloud-adoption-framework/scenarios/app-platform/) |
+| September 30, 2026 | Modern app platform |
 | October 30, 2026 | [Azure Virtual Desktop](/azure/cloud-adoption-framework/scenarios/azure-virtual-desktop/)<br>[SAP on Azure](/azure/cloud-adoption-framework/scenarios/sap/strategy)<br>[Hybrid and multicloud](/azure/cloud-adoption-framework/scenarios/hybrid/strategy)<br>[Oracle on Azure](/azure/cloud-adoption-framework/scenarios/oracle-on-azure/) |
 
 The Cloud Adoption Framework remains focused on helping decision makers make better and faster cloud adoption decisions for their organization. For workload architecture, implementation guidance, and product-specific recommendations, use the Azure Architecture Center, Microsoft Well-Architected Framework, and product documentation.

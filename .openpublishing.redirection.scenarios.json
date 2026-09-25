@@ -1499,6 +1499,146 @@
       "source_path": "docs/scenarios/azure-vmware/virtual-network-connectivity.md",
       "redirect_url": "/azure/cloud-adoption-framework/azure-vmware-solution/strategy",
       "redirect_document_id": false
+    },
+        {
+      "source_path": "docs/scenarios/app-platform/index.md",
+      "redirect_url": "/azure/architecture/browse/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/app-platform/aks/azure-billing-ad-tenant.md",
+      "redirect_url": "/azure/architecture/reference-architectures/containers/aks-start-here",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/app-platform/aks/cost-governance-with-kubecost.md",
+      "redirect_url": "/azure/architecture/reference-architectures/containers/aks-start-here",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/app-platform/aks/identity-and-access-management.md",
+      "redirect_url": "/azure/architecture/reference-architectures/containers/aks-start-here",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/app-platform/aks/landing-zone-accelerator.md",
+      "redirect_url": "/azure/architecture/reference-architectures/containers/aks-start-here",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/app-platform/aks/management.md",
+      "redirect_url": "/azure/architecture/reference-architectures/containers/aks-start-here",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/app-platform/aks/network-topology-and-connectivity.md",
+      "redirect_url": "/azure/architecture/reference-architectures/containers/aks-start-here",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/app-platform/aks/platform-automation-and-devops.md",
+      "redirect_url": "/azure/architecture/reference-architectures/containers/aks-start-here",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/app-platform/aks/resource-organization.md",
+      "redirect_url": "/azure/architecture/reference-architectures/containers/aks-start-here",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/app-platform/aks/scalability.md",
+      "redirect_url": "/azure/architecture/reference-architectures/containers/aks-start-here",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/app-platform/aks/security.md",
+      "redirect_url": "/azure/architecture/reference-architectures/containers/aks-start-here",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/app-platform/aks/storage.md",
+      "redirect_url": "/azure/architecture/reference-architectures/containers/aks-start-here",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/app-platform/azure-red-hat-enterprise-linux/business-continuity-disaster-recovery.md",
+      "redirect_url": "/azure/virtual-machines/workloads/redhat/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/app-platform/azure-red-hat-enterprise-linux/governance-compliance.md",
+      "redirect_url": "/azure/virtual-machines/workloads/redhat/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/app-platform/azure-red-hat-enterprise-linux/identity-access-management.md",
+      "redirect_url": "/azure/virtual-machines/workloads/redhat/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/app-platform/azure-red-hat-enterprise-linux/landing-zone-accelerator.md",
+      "redirect_url": "/azure/virtual-machines/workloads/redhat/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/app-platform/azure-red-hat-enterprise-linux/management-monitoring.md",
+      "redirect_url": "/azure/virtual-machines/workloads/redhat/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/app-platform/azure-red-hat-enterprise-linux/network-topology-connectivity.md",
+      "redirect_url": "/azure/virtual-machines/workloads/redhat/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/app-platform/azure-red-hat-enterprise-linux/platform-automation-devops.md",
+      "redirect_url": "/azure/virtual-machines/workloads/redhat/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/app-platform/azure-red-hat-enterprise-linux/resource-organization.md",
+      "redirect_url": "/azure/virtual-machines/workloads/redhat/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/app-platform/azure-red-hat-enterprise-linux/security.md",
+      "redirect_url": "/azure/virtual-machines/workloads/redhat/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/app-platform/azure-red-hat-openshift/identity-access-management.md",
+      "redirect_url": "/azure/architecture/reference-architectures/containers/aro/azure-redhat-openshift-financial-services-workloads",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/app-platform/azure-red-hat-openshift/landing-zone-accelerator.md",
+      "redirect_url": "/azure/architecture/reference-architectures/containers/aro/azure-redhat-openshift-financial-services-workloads",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/app-platform/azure-red-hat-openshift/network-topology-connectivity.md",
+      "redirect_url": "/azure/architecture/reference-architectures/containers/aro/azure-redhat-openshift-financial-services-workloads",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/app-platform/azure-red-hat-openshift/operations.md",
+      "redirect_url": "/azure/architecture/reference-architectures/containers/aro/azure-redhat-openshift-financial-services-workloads",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/app-platform/azure-red-hat-openshift/platform-automation-devops.md",
+      "redirect_url": "/azure/architecture/reference-architectures/containers/aro/azure-redhat-openshift-financial-services-workloads",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/app-platform/azure-red-hat-openshift/resource-organization.md",
+      "redirect_url": "/azure/architecture/reference-architectures/containers/aro/azure-redhat-openshift-financial-services-workloads",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/app-platform/azure-red-hat-openshift/security.md",
+      "redirect_url": "/azure/architecture/reference-architectures/containers/aro/azure-redhat-openshift-financial-services-workloads",
+      "redirect_document_id": false
     }
    ]   
 }

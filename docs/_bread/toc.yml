@@ -22,9 +22,6 @@
       - name: Hybrid and multicloud
         tocHref: /azure/cloud-adoption-framework/scenarios/hybrid/
         topicHref: /azure/cloud-adoption-framework/scenarios/hybrid
-      - name: Modern app platform
-        tocHref: /azure/cloud-adoption-framework/scenarios/app-platform/
-        topicHref: /azure/cloud-adoption-framework/scenarios/app-platform
       - name: Oracle IaaS
         tocHref: /azure/cloud-adoption-framework/scenarios/overview/
         topicHref: /azure/cloud-adoption-framework/scenarios/overview
