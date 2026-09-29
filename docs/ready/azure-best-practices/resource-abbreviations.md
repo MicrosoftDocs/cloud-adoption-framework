@@ -191,6 +191,7 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | Azure Monitor action group | `Microsoft.Insights/actionGroups` | `ag` |
 | Azure Monitor data collection rule | `Microsoft.Insights/dataCollectionRules` | `dcr` |
 | Azure Monitor alert processing rule | `Microsoft.AlertsManagement/actionRules` | `apr` |
+| Azure Monitor Private Link Scope | `Microsoft.Insights/privateLinkScopes` | `ampls` |
 | Data collection endpoint | `Microsoft.Insights/dataCollectionEndpoints` | `dce` |
 | Deployment scripts | `Microsoft.Resources/deploymentScripts` | `script` |
 | Log Analytics workspace | `Microsoft.OperationalInsights/workspaces` | `log` |
