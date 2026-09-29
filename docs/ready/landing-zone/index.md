@@ -92,7 +92,7 @@ Reference architecture diagrams show recommended Azure landing zone implementati
    Around the middle are individual subscriptions as boxes. Security and Management subscriptions (D, upper left) contain Log Analytics workspaces, Microsoft Sentinel, and dashboards. The Identity subscription holds virtual networks with domain services and Recovery Services vaults. The Connectivity subscription (E) contains Azure DDoS Protection, Azure DNS, VPN/ExpressRoute gateways, Azure Firewall, and peered hub virtual networks across two regions. Workload landing zone A2 and P1 subscriptions (F) hold application virtual networks, resource groups, and workload resources (G) and a Sandbox subscription (H) at right. Each subscription repeats a common toolset row: Action Groups, Alerts, Cost Management, Role assignment, Policy assignment, Network Watcher, Defender for Cloud, and Azure Update Manager.
 :::image-end:::
 
-*Azure landing zone reference architecture showing a hub & spoke networking topology. Download a [Visio file](https://github.com/MicrosoftDocs/cloud-adoption-framework/raw/main/docs/ready/enterprise-scale/media/enterprise-scale-architecture.vsdx) or [PDF file](https://github.com/MicrosoftDocs/cloud-adoption-framework/raw/main/docs/ready/enterprise-scale/media/enterprise-scale-architecture.pdf) of this architecture.*
+*Azure landing zone reference architecture showing a hub & spoke networking topology. Download a [Visio file](https://arch-center.azureedge.net/azure-landing-zone-reference-architecture.vsdx) or [PDF file](https://arch-center.azureedge.net/azure-landing-zone-reference-architecture.pdf) of this architecture.*
 
 # [Virtual WAN](#tab/vwan)
 
@@ -102,7 +102,7 @@ Reference architecture diagrams show recommended Azure landing zone implementati
     Around the middle are individual subscriptions as boxes. Security and Management subscriptions (D, upper left) contain Log Analytics workspaces, Microsoft Sentinel, and dashboards. The Identity subscription holds virtual networks with domain services and Recovery Services vaults. The Connectivity subscription (E) contains Azure DDoS Protection, Azure DNS, Azure Firewall, and two Azure Virtual WAN hubs (Region 1 and Region N) with VPN/ExpressRoute gateways. VWAN Hub Connection lines link these hubs to the workload landing zone virtual networks. Workload landing zone A2 and P1 subscriptions (F) hold application virtual networks, resource groups, and workload resources (G) and a Sandbox subscription (H) at right. Each subscription repeats a common toolset row: Action Groups, Alerts, Cost Management, Role assignment, Policy assignment, Network Watcher, Defender for Cloud, and Azure Update Manager.
 :::image-end:::
 
-*Azure landing zone reference architecture showing an Azure Virtual WAN networking topology. Download a [Visio file](https://github.com/MicrosoftDocs/cloud-adoption-framework/raw/main/docs/ready/enterprise-scale/media/enterprise-scale-architecture.vsdx) or [PDF file](https://github.com/MicrosoftDocs/cloud-adoption-framework/raw/main/docs/ready/enterprise-scale/media/enterprise-scale-architecture.pdf) of this architecture.*
+*Azure landing zone reference architecture showing an Azure Virtual WAN networking topology. Download a [Visio file](https://arch-center.azureedge.net/azure-landing-zone-reference-architecture.vsdx) or [PDF file](https://arch-center.azureedge.net/azure-landing-zone-reference-architecture.pdf) of this architecture.*
 
 # [Management group hierarchy](#tab/mgonly)
 
@@ -112,7 +112,7 @@ Reference architecture diagrams show recommended Azure landing zone implementati
    In the Subscriptions band below, each management group links to its subscriptions. Security, Management, Identity, and Connectivity management groups each map to a matching subscription of the same name. Corp connects to the workload landing zone A1, Workload landing zone P1, and workload landing zone A2 subscriptions. Local connects to workload landing zone C1 subscription (Azure Local Clusters) and workload landing zone A1 subscription (Applications). Decommissioned maps to a Decommissioned subscription, and Sandbox maps to Sandbox subscription 1 and Sandbox subscription 2. The Online management group has no subscription shown beneath it.
 :::image-end:::
 
-*Baseline Azure landing zone management group hierarchy. Download a [Visio file](https://github.com/MicrosoftDocs/cloud-adoption-framework/raw/main/docs/ready/enterprise-scale/media/enterprise-scale-architecture.vsdx) of this architecture.*
+*Baseline Azure landing zone management group hierarchy. Download a [Visio file](https://arch-center.azureedge.net/azure-landing-zone-reference-architecture.vsdx) of this architecture.*
 
 # [Platform vs. workload landing zones](#tab/platvsapp)
 
@@ -122,7 +122,7 @@ Reference architecture diagrams show recommended Azure landing zone implementati
     The central and upper structures remain unshaded, above is the the Enterprise Agreement/Microsoft Customer Agreement billing hierarchy (A), Identity and access management (B), Microsoft Entra ID with on-premises Active Directory Domain Services, and Git repository, boards, and pipelines.
 :::image-end:::
 
-*Platform landing zone vs. workload landing zones in the Azure landing zone reference architecture. Download a [Visio file](https://github.com/MicrosoftDocs/cloud-adoption-framework/raw/main/docs/ready/enterprise-scale/media/enterprise-scale-architecture.vsdx) or [PDF file](https://github.com/MicrosoftDocs/cloud-adoption-framework/raw/main/docs/ready/enterprise-scale/media/enterprise-scale-architecture.pdf) of this architecture.*
+*Platform landing zone vs. workload landing zones in the Azure landing zone reference architecture. Download a [Visio file](https://arch-center.azureedge.net/azure-landing-zone-reference-architecture.vsdx) or [PDF file](https://arch-center.azureedge.net/azure-landing-zone-reference-architecture.pdf) of this architecture.*
 
 ---
 

@@ -15,7 +15,7 @@ This article explains how to design and implement an Azure Virtual WAN network t
     Diagram showing Azure landing zone architecture with two main sections: Connectivity subscription and Landing zone subscription on the right. The connectivity subscription includes Azure Firewall, DNS, DDoS protection, VPN/ExpressRoute gateways, and two VWAN hubs labeled Region 1 and Region N. Lines labeled ‘VWAN Hub Connection’ link these hubs to corresponding virtual network regions in the landing zone subscription. Each virtual network region contains resource groups, NSGs/ASGs, UDRs, and shared services like dashboards and managed identities. The diagram emphasizes secure connectivity between VWAN hubs and landing zone networks.
 :::image-end:::
 
-*Figure 1: Virtual WAN network topology. Download a [Visio file](https://github.com/MicrosoftDocs/cloud-adoption-framework/raw/main/docs/ready/enterprise-scale/media/enterprise-scale-architecture.vsdx) or [PDF file](https://github.com/MicrosoftDocs/cloud-adoption-framework/raw/main/docs/ready/enterprise-scale/media/enterprise-scale-architecture.pdf) of this architecture.*
+*Figure 1: Virtual WAN network topology. Download a [Visio file](https://arch-center.azureedge.net/azure-landing-zone-reference-architecture.vsdx) or [PDF file](https://arch-center.azureedge.net/azure-landing-zone-reference-architecture.pdf) of this architecture.*
 
 ## Create hub-and-spoke network architecture
 
