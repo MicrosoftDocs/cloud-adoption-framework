@@ -1,5 +1,5 @@
 ---
-title: Azure Virtual Network Manager in Azure landing zones
+title: Azure Virtual Network Manager in an Azure landing zone
 description: Learn about key considerations for designing network topologies in Azure with Azure Virtual Network Manager. Learn how to implement Azure landing zone design principles to accommodate application migrations, modernization, and innovation at scale.
 author: sitarant
 ms.author: sitarant
@@ -8,9 +8,9 @@ ms.date: 05/21/2024
 ms.topic: concept-article
 ---
 
-# Azure Virtual Network Manager in Azure landing zones
+# Azure Virtual Network Manager in an Azure landing zone
 
-This article describes how to use Virtual Network Manager to implement Azure landing zone design principles to accommodate application migrations, modernization, and innovation at scale. The Azure landing zones conceptual architecture recommends one of two networking topologies: a network topology that's based on Azure Virtual WAN or a network topology that's based on a traditional hub-and-spoke architecture.
+This article describes how to use Virtual Network Manager to implement Azure landing zone design principles to accommodate application migrations, modernization, and innovation at scale. The Azure landing zone conceptual architecture recommends one of two networking topologies: a network topology that's based on Azure Virtual WAN or a network topology that's based on a traditional hub-and-spoke architecture.
 
 You can use Virtual Network Manager to expand and implement networking changes as your business requirements change over time, such as if you require hybrid connectivity to migrate on-premises applications to Azure. In many cases, you can expand and implement networking changes without disrupting your deployed resources in Azure.  
 
@@ -46,15 +46,15 @@ You can segment networks by environments, teams, locations, lines of business, o
 
 - When multiple virtual networks across your organization's subscriptions share the same security attributes, you can use Virtual Network Manager to apply them efficiently. You should, for example, place all systems that a business unit like HR or finance uses in a separate network group because you need to apply different admin rules to them.
 
-- Virtual Network Manager can centrally apply security administrator rules, which have higher priority than NSG rules that are applied at the subnet level. (This feature is in preview.) This feature enables network and security teams to effectively enforce company policies and create security guardrails at scale. It also enables product teams to simultaneously maintain control of NSGs within their landing zone subscriptions.
+- Virtual Network Manager can centrally apply security administrator rules, which have higher priority than NSG rules that are applied at the subnet level. (This feature is in preview.) This feature enables network and security teams to effectively enforce company policies and create security guardrails at scale. It also enables product teams to simultaneously maintain control of NSGs within their workload landing zone subscriptions.
 
-- You can use the Virtual Network Manager [security administrator rules](/azure/virtual-network-manager/concept-security-admins) feature to explicitly allow or deny specific network flows regardless of NSG configurations at the subnet or network interface levels. You can use this capability, for example, to always permit management services network flows. NSGs that application teams control can't override these rules.
+- You can use the Virtual Network Manager [security administrator rules](/azure/virtual-network-manager/concept-security-admins) feature to explicitly allow or deny specific network flows regardless of NSG configurations at the subnet or network interface levels. You can use this capability, for example, to always permit management services network flows. NSGs that workload teams control can't override these rules.
 
 ## Design recommendations
 
 - Define the [scope of Virtual Network Manager](/azure/virtual-network-manager/concept-network-manager-scope). Apply security administrator rules that enforce organization-level rules at the root management group or the tenant. This strategy hierarchically applies rules automatically to existing resources, new resources, and to all associated management groups.
 
-- Create a Virtual Network Manager instance in the Connectivity subscription with a [scope](/azure/virtual-network-manager/concept-network-manager-scope) of the intermediate root management group, such as Contoso. Enable the security administrator feature on this instance. This configuration allows you to define security administrator rules that apply across all virtual networks and subnets in your Azure landing zone hierarchy and helps you democratize NSGs to application landing zone owners and teams.
+- Create a Virtual Network Manager instance in the Connectivity subscription with a [scope](/azure/virtual-network-manager/concept-network-manager-scope) of the intermediate root management group, such as Contoso. Enable the security administrator feature on this instance. This configuration allows you to define security administrator rules that apply across all virtual networks and subnets in your Azure landing zone hierarchy and helps you democratize NSGs to workload landing zone owners and teams.
 
 - Segment networks by grouping virtual networks either statically, which is a manual process, or dynamically, which is a policy-based process.
 
@@ -64,7 +64,7 @@ You can segment networks by environments, teams, locations, lines of business, o
 
 - Assign a priority value to each security administrator rule in your rule collections. The lower the value, the higher the priority of the rule.
 
-- Use [security administrator rules](/azure/virtual-network-manager/concept-security-admins) to explicitly allow or deny network flows, regardless of NSG configurations that application teams control. Use security administrator rules to fully delegate the control of NSGs and their rules to application teams.
+- Use [security administrator rules](/azure/virtual-network-manager/concept-security-admins) to explicitly allow or deny network flows, regardless of NSG configurations that workload teams control. Use security administrator rules to fully delegate the control of NSGs and their rules to workload teams.
 
 ## Next step
 

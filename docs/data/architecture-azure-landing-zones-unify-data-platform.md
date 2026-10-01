@@ -5,83 +5,157 @@ description: "Azure Architecture: Discover how to design your Azure environments
 author: stephen-sumner
 ms.author: ssumner
 ms.reviewer: ssumner
-ms.date: 03/10/2026
+ms.date: 09/16/2026
 ms.topic: concept-article
 ms.collection: ce-skilling-ai-copilot
+ai-usage: ai-assisted
 ---
 
 # Azure architecture for a unified data platform
 
-After you align on why and what data products you need (organizational readiness), the next step is to decide how the technology fits together. Create an architecture that connects and integrates Microsoft Fabric with Azure and your existing systems. As a decision maker, you must design Azure environments that support a unified data platform so that your organization can standardize how data flows from operational systems into analytics and AI consumption.
+*This article helps decision makers determine how Microsoft Fabric, Microsoft Purview, and Azure workloads should integrate within their Azure landing zone to create a unified data platform for analytics and AI.*
 
-**Recommendation:** Establish architecture patterns for your Azure environments. Include data management landing zones, application landing zones, and data landing zones. To apply this recommendation, use this article as a checklist:
+A unified data platform connects the systems that produce data with the services that govern and consume it. This article focuses on the architectural decisions required to integrate Azure workloads, Microsoft Fabric, and Microsoft Purview into a unified data platform.
 
-## Unified data platform architecture
+**Outcome**: You have decided how Azure workloads, Microsoft Fabric, and Microsoft Purview integrate to create a unified data platform.
 
-Figure 1 shows an integrated Fabric and Azure architecture aligned to data domains, with enough operational structure to make the design concrete. It serves as a reference model to help organizations design and standardize their architecture.
+## Architectures and decision tree
+
+# [Conceptual](#tab/conceptual)
+
+:::image type="content" source="./images/executive-architecture-unified-data-platform-ai-analytics.svg" alt-text="High‑level diagram showing Microsoft Fabric at the center of a unified data platform. Data from enterprise sources, such as on‑premises systems, Microsoft services, and public cloud platforms, flows into Fabric, where you organize it as shared data products. These data products are then used across the organization to support analytics, AI systems, and reporting, including Power BI and data science workloads. Fabric connects with Azure for governance, security, and monitoring, while Azure workloads run alongside it as needed. The overall flow shows data coming into Fabric, being governed and standardized, and then powering AI, analytics, and business insights across the organization." lightbox="./images/executive-architecture-unified-data-platform-ai-analytics.svg" border="false":::
+
+*Conceptual architecture of a unified data platform for AI and analytics.*
+
+# [Detailed](#tab/unified)
 
 :::image type="content" source="./images/unified-data-platform-architecture-ai-analytics.svg" alt-text="Diagram showing a unified data platform architecture across Microsoft systems. Data from multiple sources is organized into data domains. They're governed in Microsoft Purview. They're ingested into Fabric OneLake and produced as data products using Fabric and Databricks. Microsoft Copilot, Foundry agents, Power BI, and data science tools consume them." lightbox="./images/unified-data-platform-architecture-ai-analytics.svg" border="false":::
-*Figure 1. Architecture: Unified data platform for AI and analytics.*
 
-## 1. Plan your data management landing zones
+*Detailed conceptual architecture of a unified data platform for AI and analytics.*
 
-A data management landing zone (DMLZ) is one or more Azure subscriptions for data management resources. **Recommendation:** Use DMLZs to host your Microsoft Purview account and Microsoft Fabric capacity. To apply this recommendation, use the following checklist:
+# [Decision tree](#tab/decision-tree)
 
-:::image type="content" source="./images/azure-architecture-unified-data-platform.svg" alt-text="Diagram showing an Azure architecture for unifying a data platform with Microsoft Fabric. At the top, Microsoft Entra, Microsoft Defender, and Microsoft Purview provide organization‑wide governance and security. Azure management groups define a platform landing zone with centralized policy, monitoring, identity, security, and connectivity. Application landing zones sit under the platform. Data management landing zones host Microsoft Purview accounts that run in Microsoft Fabric capacity and govern data stored in OneLake. Separate data landing zones host Azure Databricks for data processing. Microsoft Foundry agents run in their own application landing zones and securely access governed data in OneLake through Purview. The diagram shows clear separation between platform services, data domains, and application workloads while sharing centralized governance." lightbox="./images/azure-architecture-unified-data-platform.svg" border="false":::
+:::image type="complex" source="images/decision-tree-unify-data-platform.svg" alt-text="Diagram showing a decision tree for unifying your data platform for leaders and decision makers." lightbox="images/decision-tree-unify-data-platform.svg" border="false":::
+    The flow asks a series of yes-or-no questions. Each "Yes" leads to specific guidance. The first question asks whether the organization needs help with understanding data priorities or building skills to get more value from data. If yes, the guidance is to prepare people through roles, training, and readiness activities. The second question asks whether the organization needs a unified way to access data across clouds and workloads to support analytics and AI. If yes, the guidance is to use Microsoft Fabric as the unified data platform. The third question asks whether the organization needs help with turning operational data into business value or securely feeding data into AI systems, such as Microsoft Foundry. If yes, the guidance is to integrate Azure services with Fabric. Fourth question asks whether the organization needs help with controlling access to data or with securing data consistently. If yes, the guidance is to set governance and security baselines using Microsoft Purview and related controls. Fifth question asks whether the organization needs help with setting consistent organizational standards to process, secure, and consume data products for analytics and AI. If yes, the guidance is to set operational standards for data products, security, and lifecycle management. The flow ends by pointing to adopting AI and adopting AI agents once the unified data platform and standards are in place.
+:::image-end:::
 
-### 1.1 Place Microsoft Purview account in a data management landing zone
+*Microsoft's decision tree to guide your unified data platform.*
 
-A Microsoft Purview account provides organization-wide data governance and catalog capabilities. Its placement defines ownership boundaries and governance scope across the tenant. **Best practices:** If you use Microsoft Purview for governance, deploy your Purview account into its own data management landing zone. Use one data management landing zone per Microsoft Entra ID tenant for Purview. This model matches Purview's tenant-wide governance role and avoids fragmented control.
+---
 
-### 1.2 Host Microsoft Fabric capacity in data management landing zones
+## 1. Platform landing zone updates
 
-Compute in Microsoft Fabric is called [Fabric capacity](/fabric/enterprise/licenses#capacity). Microsoft Fabric capacity provides pooled compute for Fabric workloads, similar to Power BI capacity. **Recommendation:** Decide whether to assign Fabric capacity per data domain, share capacity across domains, or combine both approaches based on data domain maturity and usage predictability. To apply this recommendation, review the following options:
+A unified data platform usually requires governance updates, not changes to your Azure landing zone architecture. Review the Azure Policy definitions for each service and apply the policies that align with your governance requirements. Assign policies at the appropriate management group or subscription under the Workload Landing Zone management group.
 
-**Option 1: Choose decentralized Fabric capacities for mature data domains.** In this model, each data domain has its own DMLZs. They create and manage their own Microsoft Fabric capacity in their DMLZs. **Best practices:** Use this model when a data domain demonstrates operational maturity and stable demand. Allow the domain to control scaling decisions and budget accountability. **Decision guidance:** Decide on decentralized capacity when workloads require predictable performance and clear cost ownership. Accept higher operational overhead and possible idle capacity as tradeoffs. Smaller capacities might also limit access to some Power BI features.
+- [Azure Databricks](/azure/governance/policy/samples/built-in-policies?context=/azure/governance/policy/context/policy-context#azure-databricks)
+- [Azure Machine Learning](/azure/governance/policy/samples/built-in-policies?context=/azure/governance/policy/context/policy-context#machine-learning)
+- [Azure Data Lake Storage](/azure/governance/policy/samples/built-in-policies?context=/azure/governance/policy/context/policy-context#data-lake)
+- [Virtual machines (Compute)](/azure/virtual-machines/policy-reference)
+- [Allowed locations](/azure/governance/policy/samples/built-in-policies?context=/azure/governance/policy/context/policy-context#general)
 
-**Option 2: Choose centralized Fabric capacity for early or variable usage.** In this model, you manage capacity through a central team. A centralized model places multiple data domains on one or a few shared Fabric capacities. **Best practices:** Use this model to simplify operations and improve overall capacity utilization. Central teams handle monitoring, scaling, and governance standards. **Decision guidance:** Choose centralized capacity when data domains show low maturity or fluctuating demand. Accept the risk of resource contention and reduced cost transparency without strong governance controls.
+## 2. Workload landing zones
 
-**Option 3: Use a hybrid capacity model to support growth.** A hybrid approach keeps smaller or new data domains on shared capacity while assigning dedicated capacity to domains with sustained demand or higher criticality. You combine shared and dedicated capacity models. **Best practices:** Define clear thresholds for capacity graduation. Base thresholds on sustained usage, uptime requirements, or isolation needs. Apply consistent governance across both models.
-**Decision guidance:** Choose a hybrid model when the organization expects uneven data domain growth. Accept added governance complexity as the tradeoff for flexibility and long-term scalability.
+Workload landing zones host the services that support your unified data platform. These services inherit the governance, security, networking, and operational controls established through your platform landing zone design.
+
+Most resources used to create, govern, and manage data products should be deployed in workload landing zones under the Internal management group. This placement typically includes Microsoft Fabric capacity, Microsoft Purview, Azure Databricks, Azure Machine Learning, Azure Data Lake Storage, and shared AI infrastructure.
+
+Workloads that consume governed data products can be deployed in Internal, Online, or Local workload landing zones. These workloads should use approved access patterns and apply appropriate controls to protect source data and maintain governance requirements.
+
+This section provides guidance on where to place key Microsoft and Azure services and how they integrate with Microsoft Fabric as part of a unified data platform.
+
+| Service                                       | Typical management group placement                                |
+| --------------------------------------------- | ------------------------------------------------ |
+| Microsoft Purview                             | Internal workload landing zone                   |
+| Microsoft Fabric capacity                     | Internal workload landing zone                   |
+| Azure workload (consuming data product or AI) | Internal, Online, or Local workload landing zone |
+| Azure databases                               | Internal, Online, or Local workload landing zone |
+| Azure Databricks                              | Internal workload landing zone                   |
+| Azure Machine Learning                        | Internal workload landing zone                   |
+| Azure Data Lake Storage                       | Internal workload landing zone                   |
+| AI infrastructure (training/GPUs)             | Internal workload landing zone                   |
+
+
+### 2.1 Microsoft Fabric capacity
+
+*Management group placement: Internal.* [Microsoft Fabric capacity](/fabric/enterprise/licenses#capacity) provides the shared compute that powers analytics, reporting, data engineering, and AI workloads in Microsoft Fabric. Deploy Fabric capacity within workload landing zones under the Internal management group so capacity inherits organizational governance, security, and operational controls.
+
+The primary decision is how to allocate Fabric capacity across data domains. Capacity ownership should align with organizational maturity, operational accountability, and demand predictability.
+
+- **Option 1: Isolated Fabric capacities.** You assign dedicated Fabric capacity to individual data domains. Each domain manages its own capacity, scaling decisions, and budget accountability. Use this model when data domains have mature operating practices, predictable demand, and clear ownership. **Trade-off:** Dedicated capacities provide greater control and isolation but can increase cost and operational overhead. Smaller capacities might also limit access to some Power BI features.
+
+- **Option 2: Shared Fabric capacities.** You can manage one or more shared Fabric capacities through a central platform team. Multiple data domains use the same capacity, with the central team responsible for monitoring, scaling, and governance. Use this model when data domains are still developing operational maturity or when demand varies significantly across domains. **Trade-off:** Shared capacities improve utilization and simplify operations but can reduce cost transparency and increase the risk of resource contention.
+
+- **Option 3: Hybrid model.** A hybrid approach keeps smaller or new data domains on shared capacity while assigning dedicated capacity to domains with sustained demand or higher criticality. You combine shared and dedicated capacity models. Define clear thresholds for capacity graduation. Base thresholds on sustained usage, uptime requirements, or isolation needs. Apply consistent governance across both models.
+**Trade-off:** Accept added governance complexity as the tradeoff for flexibility and long-term scalability.
 
 For more information, see [Deployment Patterns for Microsoft Fabric](/azure/architecture/analytics/architecture/fabric-deployment-patterns).
 
-## 2. Integrate your application landing zones
+### 2.2 Microsoft Purview account
 
-Application landing zones host operational workloads, such as business applications, services, and AI solutions that produce or consume enterprise data. These landing zones sit outside data management landing zones and usually have different owners. As a decision maker, you define how these environments interact with the unified data platform to protect governance, reduce duplication, and maintain operational independence.
+*Management group placement: Internal.* Microsoft Purview provides organization-wide data governance, catalog, lineage, and data discovery capabilities. Deploy a single Microsoft Purview account for each Microsoft Entra ID tenant. The modern Microsoft Purview experience is designed as a single organization-wide governance service that provides a unified catalog and consistent governance across Microsoft Fabric, Azure resources, Microsoft 365, and connected data sources. 
 
-**Recommendation:** Set clear integration standards that require application landing zones to access enterprise data through governed Fabric and OneLake mechanisms rather than direct or unplanned data paths. To apply this recommendation, use the following checklist:
+Deploy the Microsoft Purview resource in a workload landing zone under the Internal management group. During deployment, validate the account region and any related regulatory requirements. Microsoft Purview governance remains organization-wide even when data resides in multiple regions because Microsoft Purview processes data locally to connected sources and doesn't move source data into the Microsoft Purview account region. See [Microsoft Purview FAQs](/purview/data-governance-purview-portal-faq).
 
-1. **Standardize Microsoft Foundry data access.** Data access defines how applications and AI solutions retrieve governed data from OneLake. Inconsistent access patterns create shadow data copies and weaken governance controls. **Best practices:** Require application teams to use approved Fabric and Foundry integration mechanisms to access data stored in OneLake. These mechanisms include the Fabric Data Agent and Azure AI Search with Foundry IQ indexes. This approach enforces consistent governance, security, and audit controls across all consuming applications. **Decision guidance:** Choose mandatory standardized access when data sensitivity or regulatory requirements are high. This choice limits flexibility but preserves governance integrity. Avoid allowing direct database access when long-term data consistency and trust matter more than short-term convenience.
+### 2.3 Azure workloads and Fabric
 
-2. **Integrate Azure operational databases through Fabric mirroring.** Many application landing zones host online transaction processing (OLTP) databases that support core business operations, such as sales, finance, and customer records. These systems generate critical data but can't absorb analytical workloads without risk. **Best practices:** Use Fabric [mirroring](/fabric/mirroring/overview) to replicate selected operational data into OneLake in near real time. This approach keeps operational systems independent while providing current data for analytics and AI across the organization.
+**Management group placement: Internal, Online, Local.* Azure workloads can integrate with a unified data platform by either producing data for Microsoft Fabric or consuming governed data products from Fabric. The workload landing zone placement depends on the workload's purpose and business requirements, not on its integration with Fabric.
 
-3. **Integrate major external systems (SAP, Oracle) in OneLake.** Large enterprise systems, such as SAP and Oracle, often operate outside Azure or have strict uptime and change-control requirements. These systems still represent authoritative sources of business data. **Best practices:** Integrate SAP and Oracle data into Fabric by using mirroring for [SAP](/fabric/mirroring/sap) and [Oracle](/fabric/mirroring/oracle). This model creates a consistent and governed ingestion path into OneLake while preserving the operational independence of these platforms. **Decision guidance:**
-Choose Fabric mirroring when the organization needs a single convergence layer for enterprise data without disrupting core systems. This choice simplifies governance and analytics but requires clear ownership for data freshness and availability expectations.
+- Workloads that create, transform, or manage shared data products typically reside in workload landing zones under the Internal management group.
+- Workloads that consume governed data products can reside in Internal, Online, or Local workload landing zones.
 
-## 3. Plan your data landing zones (as needed)
+Regardless of placement, all workloads should use approved interfaces that protect source data, maintain governance requirements, and provide consistent access to business information. The primary decision is how workloads exchange data and knowledge with Fabric.
 
-A data landing zone is an environment (consisting of one or more Azure subscriptions) for data and AI/ML resources that operate alongside Microsoft Fabric. These platforms include Azure Databricks, Azure Data Lake Storage (ADLS), and Azure Machine Learning. These platforms often serve specialized use cases that Fabric doesn't replace. As a decision maker, you define when to introduce these environments and how they integrate with the unified data platform. **Recommendation:** Use data landing zones when the organization requires data or AI platforms beyond Fabric. Integrate those environments with OneLake through governed patterns. To apply this recommendation, use the following checklist:
+#### 2.3.1 Consuming data from Fabric
 
-### 3.1 Choose how data products map to data landing zones
+*How Azure workloads consume data products from Fabric?* Azure workloads consume Fabric data through interfaces that support their architecture requirements. The primary decision is whether the consumer is an agent or AI model in Microsoft Foundry, or another Azure workload that needs direct access to Fabric data.
 
-A data domain can group multiple data products in one data landing zone or assign each data product its own landing zone. This choice affects isolation, governance scope, and operational effort. **Recommendation:**
-Align landing zone structure to the independence and sensitivity of data products within the domain. Keep the structure simple unless regulatory or operational requirements require stronger separation. To apply this recommendation, review the following options:
+- **Microsoft Foundry**: Agents and AI models in Microsoft Foundry can use Fabric data for grounding and reasoning. Select an integration option based on the type of context and retrieval capability that the solution requires.
 
-**Option 1: Multiple data products in one DLZ.** Choose one data landing zone for multiple data products when the products share security requirements and infrastructure standards. This option simplifies governance and reduces management overhead. Accept reduced cost separation and shared risk if one product encounters problems.
+    - [Foundry IQ](/azure/foundry/agents/concepts/what-is-foundry-iq): Use Foundry IQ when you want a managed knowledge-base experience that multiple agents can share. Foundry IQ configures Azure AI Search indexing and retrieval for supported knowledge sources such as OneLake.
 
-**Option 2: One DLZ per data product.** Choose one data landing zone per data product when the product is critical or requires distinct security or compliance controls. This option provides strong isolation and clear cost attribution. Accept higher operational overhead and some duplication of platform services.
+    - Azure AI Search:  Use Azure AI Search directly when the solution requires control of the search index, enrichment pipeline, ranking strategy, retrieval configuration, or application-specific search experiences. Populate the index from Fabric by using a [knowledge source](/fabric/onelake/onelake-foundry-knowledge) or a [Fabric data pipeline](/fabric/data-factory/connector-azure-search-copy-activity), then use the index to ground the agent. 
 
-**Option 3: Apply hybrid models intentionally.** Some data domains require both shared and dedicated data landing zones based on product maturity or risk. Choose a hybrid approach when some data products require isolation and others don't. Avoid inconsistent or unplanned decisions, because inconsistent structure increases governance complexity and operational risk.
+- **Other Azure workloads**: Azure workloads can consume Fabric data products through interfaces and services that align with workload requirements. Common consumers include: 
 
-### 3.2 Use Fabric and Databricks integration patterns
+    - Custom applications that use data products to support business processes.
+    - Analytics solutions that consume curated business data.
+    - Azure Databricks workloads that process governed datasets.
+    - Machine learning workloads that use data products for training or inference.
+    - Reporting solutions that consume certified business data.
 
-If your data platform includes Azure Databricks, you need to integrate it with your Microsoft Fabric OneLake environment. Two supported integration patterns exist between Azure Databricks and Microsoft Fabric. **Recommendation:** Establish decision criteria to help data domains determine where the system of record should be. To apply this recommendation, review the following options:
+Azure workloads can access Fabric data products through capabilities such as [SQL analytics endpoint](/fabric/database/sql/sql-analytics-endpoint), OneLake access, [OneLake APIs](/fabric/onelake/onelake-access-api), and other integration mechanisms that align to workload requirements.
 
-**Option 1: OneLake as the system of record.** In this pattern, you configure Databricks workspaces to read from and write to OneLake, not Azure Data Lake Storage Gen2. **Best practices:** Use this pattern when the organization prioritizes a single authoritative lake under Fabric governance. Centralize security and policy controls in Fabric. Reduce infrastructure management by avoiding separate Azure Data Lake Storage accounts. **Decision guidance:**
-Choose this option for new data platforms or strategic rebuilds. Accept initial integration setup as a tradeoff for long-term simplicity and centralized ownership. Recognize that teams accustomed to Databricks-managed storage must align to Fabric governance and operating standards. See [Azure Databricks integration with OneLake](/fabric/onelake/onelake-azure-databricks).
+#### 2.3.2 Producing data for Fabric
 
-**Option 2: ADLS as the system of record.** In this pattern, Azure Databricks continues to write to Azure Data Lake Storage Gen2 while Microsoft Fabric accesses the same data through OneLake shortcuts that reference ADLS locations. **Best practices:** Apply this pattern to existing Databricks estates with mature pipelines. Avoid data movement or pipeline refactoring. Expose curated datasets to Fabric through managed shortcuts. Register ADLS sources in Microsoft Purview to maintain catalog visibility and governance consistency. **Decision guidance:** Choose this option when speed and continuity matter more than consolidation. Accept split ownership between ADLS operations and Fabric governance. Plan for added coordination across teams that manage storage, security, and metadata. See [Azure Data Lake Storage (ADLS) Gen2 shortcut](/fabric/onelake/create-adls-shortcut).
+*How should Azure workloads produce data for Fabric?* Many workload landing zones contain operational systems that generate valuable business data. These systems should remain optimized for transactional processing and operational requirements. Rather than running analytics directly against operational systems, publish selected data into Fabric and OneLake.
+
+- **Azure databases.** Operational databases often contain the most current business information but aren't designed to support large-scale analytics or AI workloads. Use Fabric [mirroring](/fabric/mirroring/overview) to replicate selected operational data into OneLake in near real time. This approach preserves application performance and operational independence while making current data available for enterprise analytics and AI.
+
+- **SAP and Oracle.** SAP and Oracle systems often serve as authoritative business systems with strict uptime, governance, or change-control requirements. Integrate SAP and Oracle data into Fabric by using mirroring for [SAP](/fabric/mirroring/sap) and [Oracle](/fabric/mirroring/oracle). This approach creates a consistent ingestion path into OneLake without requiring significant changes to existing enterprise workloads.
+
+### 2.4 Azure data and AI/ML workloads
+
+*What if I develop data producs in Azure, not Fabric?* Azure data and AI/ML workloads are workloads designed to create data products in Azure. These workloads typically run Azure Databricks, Azure Machine Learning, and Azure infrastructure. Deploy these Azure services to workload landing zones under the Internal management group.
+
+#### 2.4.1 Workload landing zone boundaries
+
+*How many workload landing zones should a data domain have?* A workload landing zone should align to ownership, governance, and permission boundaries. A single workload landing zone can support one or more data products and one or more subscriptions. Create additional workload landing zones only when ownership, security, compliance, or operational requirements require a separate boundary.
+
+#### 2.4.2 Data product placement
+
+*When should a data product have its own workload landing zone?* Most data products don't require a dedicated workload landing zone. Multiple data products can share the same workload landing zone when they operate under the same ownership, governance, and operational model. Create a separate workload landing zone only when business or regulatory requirements justify a distinct boundary.
+ 
+#### 2.4.3 Azure services placement
+
+*Do we need to isolate different Azure platforms?* Place Azure services according to ownership and governance boundaries, not technology boundaries. Azure Databricks, Azure Machine Learning, Azure Data Lake Storage, AI infrastructure, networking, monitoring, and security services can coexist in the same workload landing zone when they support the same data products and operating model. Separate services only when governance, compliance, or operational requirements justify additional boundaries.
+
+#### 2.4.4 Fabric and Databricks integration
+
+*Where does the authoritative copy of data reside?* Organizations that use both Microsoft Fabric and Azure Databricks should define a single authoritative copy for each dataset. This decision establishes ownership, governance responsibilities, and integration patterns. Select either OneLake or Azure Data Lake Storage as the authoritative store for a dataset and expose data through approved integration patterns rather than maintaining multiple authoritative copies.
+
+**Option 1: OneLake as the system of record.** Azure Databricks reads and writes data directly in OneLake, not Azure Data Lake Storage Gen2. Choose this option for new data platforms or consolidation onto Fabric. **Trade-off**: Requires teams to align to Fabric operating and governance standards. See [Azure Databricks integration with OneLake](/fabric/onelake/onelake-azure-databricks).
+
+**Option 2: Azure Data Lake Storage as the system of record.** Azure Databricks continues to use Azure Data Lake Storage Gen2. Microsoft Fabric accesses the data through OneLake shortcuts. Apply this pattern to existing Databricks estates with mature pipelines. Choose this option when speed and continuity matter more than consolidation. **Trade-off**: Requires coordination between ADLS operations and Fabric governance.Accept split ownership between ADLS operations and Fabric governance. Plan for added coordination across teams that manage storage, security, and metadata. See [Azure Data Lake Storage (ADLS) Gen2 shortcut](/fabric/onelake/create-adls-shortcut).
 
 ## Next step
 

@@ -8,14 +8,36 @@ ms.reviewer: ssumner
 ms.date: 03/10/2026
 ms.topic: concept-article
 ms.collection: ce-skilling-ai-copilot
+ai-usage: ai-assisted
 ---
 
 # Data processing standards for AI and analytics
 
-A unified data platform depends on consistent ingestion, transformation, and publishing standards so leaders can trust data for analytics and AI. **Recommendation:** Establish organization‑wide standards that control what data enters OneLake, how teams refine that data, and how governed data products reach consumers (see Figure 1). To apply this recommendation, use this article as a checklist:
+A unified data platform depends on consistent ingestion, transformation, and publishing standards so leaders can trust data for analytics and AI. 
 
-:::image type="content" source="images/operational-standards-unify-data-platform.svg" alt-text="Diagram showing the three major steps in setting operational standards. First, set data processing standards like how to move data through the bronze, silver, and gold layers. Second, set security standards for how to secure data products in different Microsoft services. Third, set consumption and lifecycle standards for data products." lightbox="images/operational-standards-unify-data-platform.svg" border="false":::
-*Figure 1. Three steps to setting operational standards for data.*
+**Recommendation:** Establish organization‑wide standards that control what data enters OneLake, how teams refine that data, and how governed data products reach consumers.
+
+## Operational standards
+
+# [Data processing](#tab/processing)
+
+:::image type="content" source="images/data-processing-standard.svg" alt-text="Diagram showing how to set data processing standards. Data moves through the bronze, silver, and gold layers." lightbox="images/data-processing-standard.svg" border="false":::
+
+*Data processing guidance to create data products.*
+
+# [Data security](#tab/security)
+
+:::image type="content" source="images/data-security-standard.svg" alt-text="Diagram showing the three major steps in setting operational standards. First, set data-processing standards like how to move data through the bronze, silver, and gold layers. Second, set security standards for how to secure data products in different Microsoft services. Third, set consumption and lifecycle standards for data products." lightbox="images/data-security-standard.svg" border="false":::
+
+*Data security guidance for data products in services shown.*
+
+# [Data consumption](#tab/consumption)
+
+:::image type="content" source="images/data-consumption-standard.svg" alt-text="Diagram showing how to set consumption and lifecycle standards for data products." lightbox="images/data-consumption-standard.svg" border="false":::
+
+*Data consumption guidance for data products.*
+
+--- 
 
 ## 1. Set data ingestion standards
 

@@ -118,7 +118,7 @@ You can deploy a full landing zone architecture for each set of regulations that
 
 #### Share the platform management group
 
-If regulation allows, the platform management group can be shared. You can create separate management groups under the landing zone management group for each set of regulations that needs to be separated. You can assign the appropriate policies to each of the application management groups. The application landing zones share the management groups that are under the platform management group. The resources in the application management groups can also be separated by subscription or resource group.
+If regulation allows, the platform management group can be shared. You can create separate management groups under the landing zone management group for each set of regulations that needs to be separated. You can assign the appropriate policies to each of the application management groups. The workload landing zones share the management groups that are under the platform management group. The resources in the application management groups can also be separated by subscription or resource group.
 
 This management group hierarchy is a simple and cost-effective design for isolating applications with conflicting regulations. However, in this design, the platform management groups for connectivity, identity/security, and management must share the same policy set. You might need different policy sets for each platform management group if regulation imposes restrictions on sharing connectivity infrastructure, identity services, key management services, or the infrastructure from which the whole environment is managed.
 

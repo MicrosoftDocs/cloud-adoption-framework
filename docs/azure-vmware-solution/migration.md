@@ -174,6 +174,6 @@ Decommissioning formally releases source capacity, licenses, and operational cov
 ## Next steps
 
 Workload design:
-- [Azure VMware Solution application landing zone accelerator](https://github.com/Azure/Enterprise-Scale-for-AVS)
+- [Azure VMware Solution workload landing zone accelerator](https://github.com/Azure/Enterprise-Scale-for-AVS)
 - [Azure VMware Solution design considerations](/azure/azure-vmware/native-network-design-consideration)
 

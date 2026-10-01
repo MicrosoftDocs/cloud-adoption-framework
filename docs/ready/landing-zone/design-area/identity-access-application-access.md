@@ -13,7 +13,7 @@ This article describes considerations and recommendations that application owner
 
 If your team migrates or creates cloud-native applications, you must consider the authentication and access requirements for the applications. These requirements determine how users authenticate to applications and how application resources authenticate to each other, for example when a web application accesses a SQL database. 
 
-In the [platform automation and DevOps design area](/azure/cloud-adoption-framework/ready/landing-zone/design-area/platform-automation-devops), we recommend that your application team transitions workloads to [subscription vending](/azure/cloud-adoption-framework/ready/landing-zone/design-area/subscription-vending). As part of the subscription-vending process, your application team needs to provide identity and access requirements to the platform team so they can create the appropriate subscriptions. Application owners are responsible for the identity and access management of individual applications. They should manage their application by using the centralized services that the platform team provides.
+In the [platform automation and DevOps design area](/azure/cloud-adoption-framework/ready/landing-zone/design-area/platform-automation-devops), we recommend that your workload team transitions workloads to [subscription vending](/azure/cloud-adoption-framework/ready/landing-zone/design-area/subscription-vending). As part of the subscription-vending process, your workload team needs to provide identity and access requirements to the platform team so they can create the appropriate subscriptions. Application owners are responsible for the identity and access management of individual applications. They should manage their application by using the centralized services that the platform team provides.
 
 ## Design considerations
 
@@ -21,7 +21,7 @@ To help reduce the risk of unauthorized access to your applications, incorporate
 
 - There are several authentication and authorization standards, like OAuth 2.0, OpenID Connect, JSON web tokens (JWTs), and SAML (Security Assertion Markup Language). Determine which [authentication and authorization standards](/entra/fundamentals/introduction-identity-access-management#authentication-and-authorization-standards) to use for your application.
 
-- When you request an application landing zone from the platform team, you can help ensure that they create the appropriate subscriptions by asking them the following questions:
+- When you request a workload landing zone from the platform team, you can help ensure that they create the appropriate subscriptions by asking them the following questions:
 
   - Who are the end users? Are they internal users with an existing directory service; external partner organizations; or public users who sign up for your application?
   - How will end users authenticate to and access the application?
@@ -44,7 +44,7 @@ Security breaches of public cloud resources often originate from leaked credenti
   - You can use [system-assigned or user-assigned managed identities](/entra/identity/managed-identities-azure-resources/managed-identity-best-practice-recommendations#choosing-system-or-user-assigned-managed-identities). System-assigned managed identities have their lifecycle tied to the resource that created them. This identity is restricted to only one resource, and you can grant permissions to the managed identity by using Azure role-based access control (RBAC). User-assigned managed identities can be used on multiple resources.
   
   - It's easy to confuse how service principals and managed identities access Azure resources. To understand the difference between the two, see [Demystifying service principals—Managed identities](https://devblogs.microsoft.com/devops/demystifying-service-principals-managed-identities).
-  - Where possible, use managed identities to support authentication rather than using service principals and Microsoft Entra ID app registrations. You must have the Application Administrator or Application Developer RBAC roles to create service principals and app registrations. These privileged roles are typically assigned to the platform team or identity team. Use managed identities to eliminate the need for the platform team to create service principals and app registrations for your application team.
+  - Where possible, use managed identities to support authentication rather than using service principals and Microsoft Entra ID app registrations. You must have the Application Administrator or Application Developer RBAC roles to create service principals and app registrations. These privileged roles are typically assigned to the platform team or identity team. Use managed identities to eliminate the need for the platform team to create service principals and app registrations for your workload team.
   - You can use managed identities to authenticate to any service that supports Microsoft Entra authentication. However, not all services support managed identities to access other services. For some services, it might be necessary to store credentials. You should securely store credentials, avoid sharing credentials with other services, and follow the principle of least privilege. For more information, see [Azure services that can use managed identities to access other services](/entra/identity/managed-identities-azure-resources/managed-identities-status).
   - You can use managed identities with Azure virtual machines (VMs) to authenticate to any service that [supports Microsoft Entra ID authentication](/entra/identity/managed-identities-azure-resources/managed-identities-status). For more information, see [Use managed identities for Azure resources on a VM to acquire an access token](/entra/identity/managed-identities-azure-resources/how-to-use-vm-token).
   - There are restrictions on moving resources with managed identities between subscriptions and regions. For example, you might move resources between subscriptions or regions for a merger, acquisition, or repatriation of resources for data sovereignty reasons.
@@ -64,7 +64,7 @@ Consider the following recommendations when designing the identity and access ma
 
 #### OpenID Connect
 
-If your application team uses continuous integration and continuous delivery (CI/CD) pipelines to deploy applications programmatically, configure OpenID Connect authentication from your development platform (such as GitHub or Azure DevOps) to your Azure services. OpenID Connect uses a temporary, credential-free token to authenticate to Azure services. For more information, see [Workload identity federation](/entra/workload-id/workload-identity-federation).
+If your workload team uses continuous integration and continuous delivery (CI/CD) pipelines to deploy applications programmatically, configure OpenID Connect authentication from your development platform (such as GitHub or Azure DevOps) to your Azure services. OpenID Connect uses a temporary, credential-free token to authenticate to Azure services. For more information, see [Workload identity federation](/entra/workload-id/workload-identity-federation).
 
 If OpenID Connect isn't supported, create a service principal and assign the necessary permissions to allow infrastructure or application code to be deployed. For more information, see the training module, [Authenticate your Azure deployment pipeline by using service principals](/training/modules/authenticate-azure-deployment-pipeline-service-principals).
 
@@ -92,7 +92,7 @@ Where possible, use Microsoft Entra ID identities to control access to Azure vir
 
   - To [control application access to Key Vault](/azure/key-vault/general/authentication), use managed identities.
 
-- You should use separate key vaults for each application environment (development, preproduction, production) in each region. Use RBAC to manage access to secrets, keys, and certificates (data plane operations) and access to Key Vault (control plane). Deploy key vaults that have application secrets into the application landing zones.
+- You should use separate key vaults for each application environment (development, preproduction, production) in each region. Use RBAC to manage access to secrets, keys, and certificates (data plane operations) and access to Key Vault (control plane). Deploy key vaults that have application secrets into the workload landing zones.
 
 #### Microsoft Entra application proxy
 
@@ -101,7 +101,7 @@ Where possible, use Microsoft Entra ID identities to control access to Azure vir
   
   - If you use CI/CD deployment pipelines with sufficient permissions, application owners can [configure Microsoft Entra application proxy by using the Microsoft Graph API](/graph/application-proxy-configure-api).
 
-- If the application uses legacy protocols, such as Kerberos, ensure that the application landing zone has network connectivity to domain controllers in the Microsoft identity platform subscription.
+- If the application uses legacy protocols, such as Kerberos, ensure that the workload landing zone has network connectivity to domain controllers in the Microsoft identity platform subscription.
 
 #### Microsoft identity platform
 

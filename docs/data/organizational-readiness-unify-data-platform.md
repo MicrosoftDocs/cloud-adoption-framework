@@ -8,15 +8,38 @@ ms.reviewer: ssumner
 ms.date: 03/10/2026
 ms.topic: concept-article
 ms.collection: ce-skilling-ai-copilot
+ai-usage: ai-assisted
 ---
 
 # Organizational readiness for unifying your data platform
 
-Organizational readiness focuses on aligning data initiatives with business priorities. Rather than starting with technology, start by defining *who* owns the data and *why* it matters to the business. **Recommendation:** Make sure business value drives data product choices instead of unplanned technical decisions. To apply this recommendation, use this article as a checklist:
+Organizational readiness focuses on aligning data initiatives with business priorities. Rather than starting with technology, start by defining *who* owns the data and *why* it matters to the business. 
 
-## 1. Identify data domains
+**Recommendation:** Make sure business value drives data product choices instead of unplanned technical decisions.
 
-The first step is to define how your organization assigns responsibility for data. Many successful organizations use data domains. Data domains are boundaries of data responsibility. They determine who owns data and why that data exists from a business perspective. Common data domains are business units (HR, Sales, Marketing, Finance, Operations) or product lines (Product 1, Product 2). **Recommendation:** Define data domains that reflect how the organization makes decisions so accountable leaders own data products end to end (see Figure 1). To apply this recommendation, use the following checklist:
+## Solution and decision tree
+
+# [Conceptual](#tab/conceptual)
+
+:::image type="content" source="./images/executive-architecture-unified-data-platform-ai-analytics.svg" alt-text="High‑level diagram showing Microsoft Fabric at the center of a unified data platform. Data from enterprise sources, such as on‑premises systems, Microsoft services, and public cloud platforms, flows into Fabric, where you organize it as shared data products. These data products are then used across the organization to support analytics, AI systems, and reporting, including Power BI and data science workloads. Fabric connects with Azure for governance, security, and monitoring, while Azure workloads run alongside it as needed. The overall flow shows data coming into Fabric, being governed and standardized, and then powering AI, analytics, and business insights across the organization." lightbox="./images/executive-architecture-unified-data-platform-ai-analytics.svg" border="false":::
+
+*Conceptual architecture of a unified data platform for AI and analytics.*
+
+# [Decision tree](#tab/decision-tree)
+
+:::image type="complex" source="images/decision-tree-unify-data-platform.svg" alt-text="Diagram showing a decision tree for unifying your data platform for leaders and decision makers." lightbox="images/decision-tree-unify-data-platform.svg" border="false":::
+    The flow asks a series of yes-or-no questions. Each "Yes" leads to specific guidance. The first question asks whether the organization needs help with understanding data priorities or building skills to get more value from data. If yes, the guidance is to prepare people through roles, training, and readiness activities. The second question asks whether the organization needs a unified way to access data across clouds and workloads to support analytics and AI. If yes, the guidance is to use Microsoft Fabric as the unified data platform. The third question asks whether the organization needs help with turning operational data into business value or securely feeding data into AI systems, such as Microsoft Foundry. If yes, the guidance is to integrate Azure services with Fabric. Fourth question asks whether the organization needs help with controlling access to data or with securing data consistently. If yes, the guidance is to set governance and security baselines using Microsoft Purview and related controls. Fifth question asks whether the organization needs help with setting consistent organizational standards to process, secure, and consume data products for analytics and AI. If yes, the guidance is to set operational standards for data products, security, and lifecycle management. The flow ends by pointing to adopting AI and adopting AI agents once the unified data platform and standards are in place.
+:::image-end:::
+
+*Microsoft's decision tree to guide your unified data platform.*
+
+--- 
+
+## 1. Data domain identification
+
+The first step is to define how your organization assigns responsibility for data. Many successful organizations use data domains. Data domains are boundaries of data responsibility. They determine who owns data and why that data exists from a business perspective. Common data domains are business units (HR, Sales, Marketing, Finance, Operations) or product lines (Product 1, Product 2). 
+
+**Recommendation:** Define data domains that reflect how the organization makes decisions so accountable leaders own data products end to end (see Figure 1). To apply this recommendation, use the following checklist:
 
 :::image type="content" source="images/data-sources-data-domains.svg" alt-text="Diagram of a data platform where multiple data domains sit above shared data sources. The top section shows several data domains labeled Data domain 1, Data domain 2, Data domain 3, and Data domain n. These labels represent business units or product lines. Below them is a data sources layer. Arrows indicate that each data domain pulls data from the same common sources. The data sources include on‑premises systems, Dataverse, Microsoft 365, Azure, Google Cloud, and Amazon S3. The diagram emphasizes that data domains organize and use data from many different platforms." lightbox="images/data-sources-data-domains.svg" border="false":::
 *Figure 1. Overview of data domains.*
@@ -29,9 +52,11 @@ The first step is to define how your organization assigns responsibility for dat
 
 4. **Adjust data domains over time.** Stable domains reduce friction, but misaligned domains create constant negotiation. Domain changes restore decision clarity when ownership no longer reflects reality. **Best practices:** Monitor where data decisions require repeated cross-domain arbitration. Treat that signal as a need to revisit boundaries. Adjust early to avoid governance bottlenecks. **Decision guidance:** Keep domains stable when decisions stay local. Realign domains when authority fragments or accountability becomes unclear.
 
-## 2. Define data products
+## 2. Data product prioritization
 
-After you establish domains and their leadership, shift your focus from organizational structure to business outcomes. Now, determine *what data products each domain should create.* Data products translate business priorities into durable data assets that domains own and publish for reuse. A clear definition ensures investment decisions focus on outcomes that support analytics and AI across Microsoft data platforms. **Recommendation:** Define and prioritize data products only when leaders can trace each product to a business goal and an accountable data domain. To apply this recommendation, use the following checklist:
+After you establish domains and their leadership, shift your focus from organizational structure to business outcomes. Now, determine *what data products each domain should create.* Data products translate business priorities into durable data assets that domains own and publish for reuse. A clear definition ensures investment decisions focus on outcomes that support analytics and AI across Microsoft data platforms. 
+
+**Recommendation:** Define and prioritize data products only when leaders can trace each product to a business goal and an accountable data domain. To apply this recommendation, use the following checklist:
 
 *Table 1: Example template for defining a data product.*
 
@@ -70,11 +95,7 @@ After you establish domains and their leadership, shift your focus from organiza
 
 **Outcome:** As a result of this step, you should have a roadmap of data products. Each data product is tied to business goals with clear requirements and a sense of priority. Each data product should either be approved to move forward now or marked as deferred. Document reasons, such as waiting on data quality improvements or dependent systems.
 
-## 3. Organize data domains
-
-Clear domain boundaries and a prioritized set of data products help leaders resource domains with intent and accountability. This guidance helps decision makers align team structure and skills with domain goals so that Microsoft and Azure data investments deliver sustained value. **Recommendation:** Resource each data domain based on its mission and maturity, and embed skill development into domain delivery plans. To apply this recommendation, use the following checklist:
-
-### 1. Staff the data domain
+## 3. Data domain staffing
 
 Data domains differ in size, risk, and business impact. Leaders must set staffing models that fit each domain's mission while staying within budget and governance constraints. **Recommendation:** Assign accountability for domain staffing to the data domain lead and require an explicit staffing decision for every domain. To apply this recommendation, use the following checklist:
 
@@ -87,9 +108,9 @@ Data domains differ in size, risk, and business impact. Leaders must set staffin
 4. **Define a clear request path for dedicated resources.** Domains need a transparent way to request staffing changes.
 **Best practices:** Require a lightweight business case that explains value, urgency, and risk. Central governance reviews requests against budget and strategic alignment. **Decision guidance:** Choose strict approval when resources are constrained. Choose a lighter review when speed and innovation take priority.
 
-### 2. Build data skills
+## Skilling for data
 
-Data capability doesn't grow without deliberate investment, and leaders set priorities that either enable or block skill development. **Recommendation:** Make data skill development part of normal delivery expectations and hold data domains accountable for outcomes. To apply this recommendation, use the following checklist:
+Data capability doesn't grow without deliberate investment, and leaders set priorities that either enable or block skill development. Make data skill development part of normal delivery expectations and hold data domains accountable for outcomes.
 
 1. **Adopt planned, domain‑led learning as the default.** Data domains own the skills needed to build and operate their data products. **Best practices:** High‑performing organizations tie learning goals to active domain work. Central teams provide standards, learning paths, and communities without taking ownership away from domains. **Decision guidance:** Choose this option when adoption, quality, and decision confidence matter. Accept slower initial delivery in exchange for better outcomes over time.
 
@@ -97,8 +118,6 @@ Data capability doesn't grow without deliberate investment, and leaders set prio
 **Best practices:** Avoid this model except during short‑term delivery spikes. Leaders recognize that skills stagnate under constant pressure. **Decision guidance:** Choose this option only when immediate delivery outweighs long‑term value. Expect fragile solutions and limited reuse.
 
 3. **Centralized training.** Use centralized training to set a baseline. Central programs establish a shared understanding across domains. **Best practices:** Use centralized training to support consistency and onboarding. Leaders don't rely on courses alone to change behavior. **Decision guidance:** Choose this option when standard knowledge matters more than applied change. Pair it with domain‑led learning to affect outcomes.
-
-### Use training resources
 
 Support your teams with relevant training materials and certifications. Microsoft offers a range of learning resources tailored to different roles and technologies. Some examples include:
 
@@ -111,8 +130,8 @@ Support your teams with relevant training materials and certifications. Microsof
 | | [Data Scientists](/training/career-paths/data-scientist) | Data scientists | When developing advanced modeling and AI capabilities |
 | **Role‑based certifications** | [Fabric Analytics Engineer Associate](/credentials/certifications/fabric-analytics-engineer-associate/?practice-assessment-type=certification) and [study guide](/credentials/certifications/resources/study-guides/dp-600) | Analytics engineers | When validating analytics engineering skills and platform usage |
 | | [Fabric Data Engineer Associate](/credentials/certifications/fabric-data-engineer-associate/?practice-assessment-type=certification) and [study guide](/credentials/certifications/resources/study-guides/dp-700) | Data engineers | When standardizing data engineering skills on Fabric |
-| | [Azure AI Engineer](/credentials/certifications/azure-ai-engineer/?practice-assessment-type=certification) and [study guide](/credentials/certifications/resources/study-guides/ai-102) | AI and ML engineers | When building or operationalizing AI solutions |
-| | [Power Platform Solution Architect](/credentials/certifications/exams/pl-600/) and [study guide](/credentials/certifications/resources/study-guides/pl-600) | Solution architects | When designing end‑to‑end data and Microsoft Power Platform solutions |
+| | [Azure AI Cloud Developer](/credentials/certifications/azure-ai-cloud-developer-associate) and [study guide](/credentials/certifications/resources/study-guides/ai-200) | Developer | When building AI solutions |
+| | [Power Platform Developer](/credentials/certifications/power-platform-developer-associate) | Developer | When designing end‑to‑end data and Microsoft Power Platform solutions |
 
 ## Next step
 

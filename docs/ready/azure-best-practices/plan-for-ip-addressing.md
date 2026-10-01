@@ -90,7 +90,7 @@ Here's a closer look at what a typical architecture might look like:
 
 - Deploy the NVA in [Virtual Machine Scale Sets with Flexible orchestration](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-orchestration-modes#scale-sets-with-flexible-orchestration) (VMSS Flex) for resiliency and expose them to the internet through [Azure Standard Load Balancer](/azure/load-balancer/load-balancer-overview), which has a public IP address front end.
 
-   The NVAs accept IPv4 and IPv6 traffic and translate it into IPv4-only traffic to access the application in the application subnet. The approach reduces complexity for the application team and reduces the attack surface.
+   The NVAs accept IPv4 and IPv6 traffic and translate it into IPv4-only traffic to access the application in the application subnet. The approach reduces complexity for the workload team and reduces the attack surface.
 - Deploy [Azure Front Door](/azure/frontdoor/front-door-overview) to provide global routing for web traffic.
 
   Azure Front Door capabilities include proxying IPv6 client requests and traffic to an IPv4-only back end, as shown here:
@@ -137,14 +137,14 @@ Numerous IPAM tools are available for your consideration, depending on your requ
 
 - Consider evaluating an open-source IPAM tool like [Azure IPAM](https://azure.github.io/ipam). Azure IPAM is a lightweight solution built on the Azure platform. It automatically discovers IP address utilization within your Azure tenant and enables you to manage it all from a centralized UI or via a RESTful API.
 
-- Consider your organization's operating model and the ownership of the IPAM tool. The goal of implementing an IPAM tool is to streamline the process of requesting new IP address spaces for application teams without dependencies and bottlenecks.
+- Consider your organization's operating model and the ownership of the IPAM tool. The goal of implementing an IPAM tool is to streamline the process of requesting new IP address spaces for workload teams without dependencies and bottlenecks.
 
 - An important part of the IPAM tool functionality is to inventory IP address space usage and logically organize it.
 
 **Design recommendations:**
 
-- The process of reserving non-overlapping IP address spaces should support requesting different sizes based on the needs of the individual application landing zones.
-  - For example, you could adopt T-shirt sizing to make it easy for application teams to describe their needs:
+- The process of reserving non-overlapping IP address spaces should support requesting different sizes based on the needs of the individual workload landing zones.
+  - For example, you could adopt T-shirt sizing to make it easy for workload teams to describe their needs:
     - Small - `/24` - 256 IP addresses
     - Medium - `/22` - 1,024 IP addresses
     - Large - `/20` - 4,096 IP addresses

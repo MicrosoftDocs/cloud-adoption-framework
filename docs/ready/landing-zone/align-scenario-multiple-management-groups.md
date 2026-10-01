@@ -13,13 +13,13 @@ ms.service: caf
 
 # Scenario: Transition management groups to the Azure landing zone reference architecture
 
-This article describes considerations and instructions to migrate and transition your existing environment into the conceptual architecture of Azure landing zones. This scenario covers single or multiple management groups.
+This article describes considerations and instructions to migrate and transition your existing environment to align with Azure landing zone best practices. This scenario covers single or multiple management groups.
 
 In this scenario, it's assumed that the customer already uses Azure. They have a management group hierarchy with multiple subscriptions that host a few applications or services within the platform. But their current implementation limits their scalability and growth related to their *cloud first* strategy.
 
 As part of this expansion, they plan to migrate away from their on-premises datacenters and into Azure. During the migration, they lead with modernizing and transforming their applications or services to use cloud-native technologies where possible. For example, they might use Azure SQL Database and Azure Kubernetes Service (AKS). They know that it takes considerable time and effort, so they plan to *lift and shift* to start. Initially, this plan requires hybrid connectivity via services such as Azure VPN Gateway or Azure ExpressRoute.
 
-The customer wants to move their existing environment to the Azure landing zones conceptual architecture. This architecture supports their *cloud first* strategy and has a robust platform that scales as the customer retires their on-premises datacenters.
+The customer wants to align their existing environment with Azure landing zone. This architecture supports their *cloud first* strategy and has a robust platform that scales as the customer retires their on-premises datacenters.
 
 ## Current state
 
@@ -48,7 +48,7 @@ To transition from this scenario's current state to an Azure landing zone refere
 
 1. Deploy the [Azure landing zone](../landing-zone/index.md#deploying-and-managing-azure-landing-zone) into the same Microsoft Entra ID tenant in parallel with the current environment. This method provides a smooth and phased transition to the new landing zone architecture with minimal disruption to active workloads.
 
-   This deployment creates a new management group structure. This structure aligns with Azure landing zones design principles and recommendations. It also ensures that these changes don't affect the existing environment.
+   This deployment creates a new management group structure. This structure aligns with Azure landing zone design principles and recommendations. It also ensures that these changes don't affect the existing environment.
 
    For more information, see [How to handle a dev/test/prod workload landing zone](./../enterprise-scale/faq.md#how-do-we-handle-devtestproduction-workload-landing-zones-in-azure-landing-zone-architecture).
 

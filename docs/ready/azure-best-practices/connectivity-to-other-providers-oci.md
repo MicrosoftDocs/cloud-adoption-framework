@@ -10,7 +10,7 @@ ms.custom: think-tank
 
 # Connectivity to Oracle Cloud Infrastructure
 
-This article shows you how to establish secure, high-performance connectivity between Azure and Oracle Cloud Infrastructure (OCI) with ExpressRoute and FastConnect. You learn proven approaches to integrate Azure landing zones with OCI, and you enable hybrid cloud scenarios that maximize both platforms' capabilities.
+This article shows you how to establish secure, high-performance connectivity between Azure and Oracle Cloud Infrastructure (OCI) with ExpressRoute and FastConnect. You learn proven approaches to integrate Azure landing zone with OCI, and you enable hybrid cloud scenarios that maximize both platforms' capabilities.
 
 > [!TIP]
 > **New to Azure-OCI connectivity?** [Start your first connection](/azure/virtual-machines/workloads/oracle/configure-azure-oci-networking)

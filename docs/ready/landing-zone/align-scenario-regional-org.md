@@ -17,7 +17,7 @@ This article describes considerations and instructions to migrate and transition
 
 In this scenario, the customer has a large footprint on Azure. They have a management group hierarchy that's organized by dev/test/prod environments and then by region. Their current implementation limits their scalability and growth. They have applications deployed across the globe. A central IT team manages each region. In this scenario the regions are America; Europe, the Middle East, and Africa (EMEA); and Asia-Pacific (APAC).
 
-The customer wants to move from their existing environment to the Azure landing zones conceptual architecture. This approach supports their *cloud first* strategy and has a robust platform that scales as the customer retires their on-premises datacenters.
+The customer wants to align their existing environment with Azure landing zone. This approach supports their *cloud first* strategy and has a robust platform that scales as the customer retires their on-premises datacenters.
 
 ## Current state
 
@@ -48,7 +48,7 @@ To transition from this scenario's current state to an Azure landing zone refere
 
 1. Deploy the [Azure landing zone](../landing-zone/index.md#deploying-and-managing-azure-landing-zone) into the same Microsoft Entra ID tenant in parallel with the current environment. This method provides a smooth and phased transition to the new landing zone architecture with minimal disruption to active workloads.
 
-   This deployment creates a new management group structure. This structure aligns with Azure landing zones design principles and recommendations. It also ensures that these changes don't affect the existing environment.
+   This deployment creates a new management group structure. This structure aligns with Azure landing zone design principles and recommendations. It also ensures that these changes don't affect the existing environment.
 
    For more information, see [How to handle a dev/test/prod workload landing zone](./../enterprise-scale/faq.md#how-do-we-handle-devtestproduction-workload-landing-zones-in-azure-landing-zone-architecture).
 

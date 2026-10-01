@@ -1,6 +1,6 @@
 ---
 title: Landing zone regions
-description: Overview of how Azure landing zones use regions and how to add or move regions.
+description: Overview of how an Azure landing zone uses regions and how to add or move regions.
 author: johndowns
 ms.author: jodowns
 ms.date: 05/21/2024
@@ -12,13 +12,13 @@ ms.custom: internal
 
 This article explains how landing zones use Azure regions. The Azure landing zone architecture is region-agnostic, but you need to specify Azure regions to deploy your Azure landing zone architecture. The following guidance describes how to add a region to an existing landing zone and also provides considerations for when you migrate your Azure estate to a different region.
 
-In some situations, you should deploy applications into multiple Azure regions to support your high availability and disaster recovery business requirements. You might not have an immediate need for multi-region applications, but you should design your Azure landing zone platform to support multiple regions, especially for connectivity, identity, and management services. Ensure that you can quickly enable and support multi-region application landing zones.
+In some situations, you should deploy applications into multiple Azure regions to support your high availability and disaster recovery business requirements. You might not have an immediate need for multi-region applications, but you should design your Azure landing zone platform to support multiple regions, especially for connectivity, identity, and management services. Ensure that you can quickly enable and support multi-region workload landing zones.
 
 For more information, see [Select Azure regions](../azure-setup-guide/regions.md).
 
 ## Landing zones and Azure regions
 
-Azure landing zones consist of a set of resources and configuration. Some of these items, like management groups, policies, and role assignments, are stored at either a tenant or management group level within the Azure landing zone architecture. These resources aren't *deployed* to a particular region and instead are deployed globally. However, you still need to specify a deployment region because Azure tracks some of the resource metadata in a regional metadata store.
+An Azure landing zone consists of a set of resources and configuration. Some of these items, like management groups, policies, and role assignments, are stored at either a tenant or management group level within the Azure landing zone architecture. These resources aren't *deployed* to a particular region and instead are deployed globally. However, you still need to specify a deployment region because Azure tracks some of the resource metadata in a regional metadata store.
 
 Other resources are deployed regionally. Depending on your own landing zone configuration, you might have some or all of the following regionally deployed resources:
 
@@ -88,7 +88,7 @@ When you expand an Azure landing zone into a new region, consider following the 
 
    - Some customers might configure name resolution on their Windows Server Active Directory domain controllers within the *Identity* platform landing zone subscription.
 
-To host your workloads, you can then use virtual network peering to connect application landing zone spokes to the new hub virtual network in the new region.
+To host your workloads, you can then use virtual network peering to connect workload landing zone spokes to the new hub virtual network in the new region.
 
 > [!TIP]
 > [Virtual Network Manager](../azure-best-practices/azure-virtual-network-manager.md) can make it easier to expand and manage virtual networks at scale in multiple regions.
@@ -112,7 +112,7 @@ To host your workloads, you can then use virtual network peering to connect appl
 
    - In Virtual WAN deployments, this must be in a spoke virtual network that is connected to the virtual hub through a virtual network connection, following the [Virtual hub extension pattern](/azure/architecture/guide/networking/private-link-virtual-wan-dns-virtual-hub-extension-pattern).
 
-To host your workloads, you can then use virtual network peering to connect application landing zone spokes to the new hub virtual network in the new region.
+To host your workloads, you can then use virtual network peering to connect workload landing zone spokes to the new hub virtual network in the new region.
 
 #### Identity
 

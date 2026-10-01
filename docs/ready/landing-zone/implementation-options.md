@@ -9,15 +9,13 @@ ms.custom: internal
 ---
 # Platform landing zone implementation options
 
-This article describes options to deploy and manage the platform landing zone, which is part of Azure landing zone. Selecting the appropriate implementation method ensures your environment aligns with organizational requirements and technical capabilities. For context on platform landing zone scope, see [Platform landing zone vs. application landing zones](./index.md#platform-landing-zone-vs-application-landing-zones).  
+This article describes options to deploy and manage the platform landing zone, which is part of Azure landing zone. Selecting the appropriate implementation method ensures your environment aligns with organizational requirements and technical capabilities. For context on platform landing zone scope, see [Platform landing zone](./index.md#platform-landing-zone).  
 
 ## Implementation options at a glance
 
-- **Infrastructure-as-Code (IaC) approach (recommended)**: Use the [Azure landing zone infrastructure-as-code (IaC) accelerator](https://aka.ms/alz/accelerator) with Azure Verified Modules (AVMs) for [Terraform](https://aka.ms/alz/acc/tf) or [Bicep](https://aka.ms/alz/acc/bicep). You can use AVMs independently or as part of the accelerator.
+- **Infrastructure-as-Code (IaC) approach (recommended)**: Use the [Platform landing zone accelerator](https://aka.ms/alz/accelerator) with Azure Verified Modules (AVMs) for [Terraform](https://aka.ms/alz/acc/tf) or [Bicep](https://aka.ms/alz/acc/bicep). You can use AVMs independently or as part of the accelerator.
 
-- **Portal-based approach**: The [Azure platform landing zone portal accelerator](https://aka.ms/alz/portal) works best for organizations without IaC expertise or those who prefer a visual approach. See [Use infrastructure as code to update Azure landing zones](/azure/cloud-adoption-framework/ready/considerations/infrastructure-as-code-updates) to understand why IaC is the preferred approach.
-
-For detailed guidance on each option, see the following sections.
+- **Portal-based approach**: The [Platform landing zone accelerator in the Azure Portal](https://aka.ms/alz/portal) works best for organizations without IaC expertise or those who prefer a visual approach. See [Use infrastructure as code](/azure/cloud-adoption-framework/ready/considerations/infrastructure-as-code-updates) to understand why IaC is the preferred approach. For detailed guidance on each option, see the following sections.
 
 ## Azure landing zone Infrastructure-as-Code (IaC) accelerator
 
@@ -26,14 +24,14 @@ For detailed guidance on each option, see the following sections.
 
 The [Azure Landing Zones IaC Accelerator](https://aka.ms/alz/accelerator) provides an automated approach to deploy and manage the platform landing zone. It uses Bicep or Terraform based on Azure Verified Modules (AVM). This tool streamlines the setup of a continuous delivery environment and supports Azure DevOps and GitHub for version control systems (VCS), deployment pipelines, and runners.
 
-Define the platform landing zone architecture as code to version control, automate deployments, and replicate environments. This approach standardizes platform landing zones with recommended best practices. The accelerator uses a four-phase approach to prepare the environment for continuous delivery:
+Define the platform landing zone architecture as code to version control, automate deployments, and replicate environments. This approach standardizes a platform landing zone with recommended best practices. The accelerator uses a four-phase approach to prepare the environment for continuous delivery:
 
 1. **Phase 0 (Planning).** Select the preferred IaC language and VCS.
 2. **Phase 1 (Prerequisites).** Configure credentials and subscriptions for the deployment.
 3. **Phase 2 (Bootstrap).** Run the PowerShell module to bootstrap the Azure environment and VCS. This step prepares the assets to deploy and manage the platform landing zone.
 4. **Phase 3 (Run).** Customize the IaC code to meet organizational requirements. Trigger the continuous integration and delivery (CI/CD) pipelines to deploy the platform landing zone.
 
-## Azure Verified Modules for platform landing zones
+## Azure Verified Modules for platform landing zone
 
 [Azure Verified Modules (AVM)](https://aka.ms/avm) provide reusable, customizable, and extensible building blocks to build a platform landing zone with [Bicep](https://aka.ms/alz/acc/bicep) or [Terraform](https://aka.ms/alz/acc/tf). These modules help deploy a platform landing zone that aligns with best practices. Using verified modules ensures architectural consistency and reduces the maintenance burden of custom code.
 
@@ -47,7 +45,7 @@ The [Azure platform landing zone portal accelerator](https://aka.ms/alz/portal) 
 
 This approach offers less flexibility and scalability than IaC options. Updates and version control are difficult to manage without IaC. Transition to an IaC-based approach when possible to improve manageability.  
 
-See [Use infrastructure as code to update Azure landing zones](/azure/cloud-adoption-framework/ready/considerations/infrastructure-as-code-updates) to understand why IaC is the preferred approach.
+See [Use infrastructure as code](/azure/cloud-adoption-framework/ready/considerations/infrastructure-as-code-updates) to understand why IaC is the preferred approach.
 
 ## Next steps
 

@@ -23,21 +23,21 @@ In hub-and-spoke network architectures, application owners typically have an Azu
 
 A central NVA, like Azure Firewall, provides internet-outbound connectivity. Additionally, that device, combined with another service, like an [Azure Firewall DNS proxy](/azure/firewall/dns-details), that's in or near the hub is typically used to customize DNS forwarding.
 
-Many application teams build their solutions by using a combination of Azure IaaS and PaaS resources. Some Azure PaaS services, such as Azure SQL Managed Instance, can be deployed in customer virtual networks. As a result, traffic stays private within the Azure network and is fully routable from on-premises.
+Many workload teams build their solutions by using a combination of Azure IaaS and PaaS resources. Some Azure PaaS services, such as Azure SQL Managed Instance, can be deployed in customer virtual networks. As a result, traffic stays private within the Azure network and is fully routable from on-premises.
 
 But some Azure PaaS services, such as Azure Storage or Azure Cosmos DB, can't be deployed in a customer's virtual networks and are accessible over their public endpoint. In some cases, this configuration causes a contention with a customer's security policies. Corporate traffic might not allow the deployment or access of corporate resources, such as a SQL database, over public endpoints.
 
 [Private Link][link-1] supports access to a [list of Azure services][link-2] over private endpoints, but it requires that you register those private endpoint records in a corresponding [private DNS zone][link-3].
 
-This article describes how application teams can deploy Azure PaaS services in their subscriptions that are only accessible over private endpoints.
+This article describes how workload teams can deploy Azure PaaS services in their subscriptions that are only accessible over private endpoints.
 
-This article also describes how application teams can ensure that services automatically integrate with private DNS zones. They do the automation through Azure Private DNS, which removes the need to manually create or delete records in DNS.
+This article also describes how workload teams can ensure that services automatically integrate with private DNS zones. They do the automation through Azure Private DNS, which removes the need to manually create or delete records in DNS.
 
 ## Private Link and DNS integration in hub-and-spoke network architectures
 
 Private DNS zones are typically hosted centrally in the same Azure subscription where the hub virtual network deploys. This central hosting practice is driven by [cross-premises DNS name resolution][link-4] and other needs for central DNS resolution such as Windows Server Active Directory. In most cases, only networking and identity administrators have permissions to manage DNS records in the zones.
 
-Application teams have permissions to create Azure resources in their own subscription. They don't have any permissions in the central networking connectivity subscription, which includes managing DNS records in the private DNS zones. This access limitation means that they don't have the ability to [create the DNS records required][link-4] when deploying Azure PaaS services with private endpoints.
+Workload teams have permissions to create Azure resources in their own subscription. They don't have any permissions in the central networking connectivity subscription, which includes managing DNS records in the private DNS zones. This access limitation means that they don't have the ability to [create the DNS records required][link-4] when deploying Azure PaaS services with private endpoints.
 
 The following diagram shows a typical high-level architecture for enterprise environments with central DNS resolution and name resolution for Private Link resources via Azure Private DNS:
 
@@ -69,9 +69,9 @@ For other use cases, a single global private endpoint can be deployed, making it
 
 To enable resolution, and therefore connectivity, from on-premises networks to the `privatelink` private DNS zone and private endpoints, provision the appropriate DNS configuration, such as conditional forwarders, in the DNS infrastructure.
 
-Two conditions that must be true for application teams to create any required Azure PaaS resources in their subscription:
+Two conditions that must be true for workload teams to create any required Azure PaaS resources in their subscription:
 
-- Central networking or central platform teams must ensure that application teams can only deploy and access Azure PaaS services via private endpoints.
+- Central networking or central platform teams must ensure that workload teams can only deploy and access Azure PaaS services via private endpoints.
 
 - Central networking or central platform teams must ensure that when they create private endpoints, they set up how to handle the corresponding records. Set up the corresponding records so that they're automatically created in the centralized private DNS zone that matches the service being created.
 - DNS records must follow the lifecycle of the private endpoint so that the records are automatically removed when the private endpoint is deleted.
@@ -79,7 +79,7 @@ Two conditions that must be true for application teams to create any required Az
 > [!NOTE]
 > Based on DNS resolution, if you need [FQDNs in network rules](/azure/firewall/fqdn-filtering-network-rules) for Azure Firewall and Azure Firewall policy, enable the Azure Firewall DNS proxy to use FQDNs in your network rules. Then the spoke virtual networks must change their DNS setting from the custom DNS server to the Azure Firewall DNS proxy. FQDNs in network rules allow you to filter outbound traffic with any TCP or UDP protocol, including NTP, SSH, and RDP. When you change the DNS settings of a spoke virtual network, you must reboot all VMs inside that virtual network.
 
-The following sections describe how application teams enable these conditions by using [Azure Policy][link-10]. The example uses Azure Storage as the Azure service that application teams need to deploy. But the same principle applies to most [Azure services that support Private Link][link-2].
+The following sections describe how workload teams enable these conditions by using [Azure Policy][link-10]. The example uses Azure Storage as the Azure service that workload teams need to deploy. But the same principle applies to most [Azure services that support Private Link][link-2].
 
 ## Platform team configuration requirements
 
@@ -136,9 +136,9 @@ In addition to the private DNS zones, you also need to [create a set of custom A
 
 2. `Deny` the ability to create a private DNS zone with the `privatelink` prefix policy.
 
-   Use a centralized DNS architecture with a conditional forwarder and private DNS zones hosted in the subscriptions managed by the platform team. It's necessary to prevent the application team owners from creating their own Private Link private DNS zones and linking services into their subscriptions.
+   Use a centralized DNS architecture with a conditional forwarder and private DNS zones hosted in the subscriptions managed by the platform team. It's necessary to prevent the workload team owners from creating their own Private Link private DNS zones and linking services into their subscriptions.
 
-   Ensure that when your application team creates a private endpoint, the option to `Integrate with private DNS zone` is set to `No` in the Azure portal.
+   Ensure that when your workload team creates a private endpoint, the option to `Integrate with private DNS zone` is set to `No` in the Azure portal.
 
    ![A screenshot that shows the Integrate with private DNS zone option set to no in the Azure portal.][image-6]
 
@@ -415,14 +415,14 @@ In the example, the `groupId` for Azure Cosmos DB (SQL) is `SQL` and the `privat
 
 ### Policy assignments
 
-After policy definitions are deployed, [assign the policies][link-7] at the desired scope in your management group hierarchy. Ensure that the policy assignments target the Azure subscriptions the application teams use to deploy PaaS services with private endpoint access exclusively.
+After policy definitions are deployed, [assign the policies][link-7] at the desired scope in your management group hierarchy. Ensure that the policy assignments target the Azure subscriptions the workload teams use to deploy PaaS services with private endpoint access exclusively.
 
 > [!IMPORTANT]
 > In addition to [assigning the roleDefinition][link-11] defined in the policy, assign the [Private DNS Zone Contributor role][link-8] to the [managed identity created by the `DeployIfNotExists` policy assignment][link-9]. This role should be assigned in the subscription and resource group where the private DNS zones are hosted. The managed identity creates and manages the private endpoint DNS record in the private DNS zone. This configuration is necessary because the private endpoint is located in the application owner Azure subscription, while the private DNS zone is located in a different subscription, such as a central connectivity subscription.
 
 After the platform team finishes the configuration:
 
-* The application teams' Azure subscriptions are ready for the team to create Azure PaaS services that have exclusive private endpoint access.
+* The workload teams' Azure subscriptions are ready for the team to create Azure PaaS services that have exclusive private endpoint access.
 
 * The team must ensure that the DNS records for private endpoints are automatically registered to the corresponding private DNS zones, and that the DNS records are removed after a private endpoint is deleted.
 
@@ -468,7 +468,7 @@ After the platform team deploys the platform infrastructure components (private 
 
     ![A screenshot that shows the private DNS zone and where to confirm that the DNS record exists.][image-14]
 
-At this point, application teams can use the storage account through a private endpoint from any virtual network in the hub-and-spoke network environment and from on-premises. The DNS record has been automatically recorded in the private DNS zone.
+At this point, workload teams can use the storage account through a private endpoint from any virtual network in the hub-and-spoke network environment and from on-premises. The DNS record has been automatically recorded in the private DNS zone.
 
 If an application owner deletes the private endpoint, the corresponding records in the private DNS zone are automatically removed.
 

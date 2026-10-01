@@ -8,14 +8,36 @@ ms.reviewer: ssumner
 ms.date: 03/10/2026
 ms.topic: concept-article
 ms.collection: ce-skilling-ai-copilot
+ai-usage: ai-assisted
 ---
 
 # Data consumption standards for AI and analytics
 
-Data product consumption defines how data products in Microsoft Fabric are used across the organization. This process affects trust, security, and long-term platform success. **Recommendation:** Establish organization-wide standards for how teams consume and manage all published data products in Fabric over time. This approach helps teams safely reuse data without creating risk or instability (see Figure 1). To apply this recommendation, use this article as a checklist:
+Data product consumption defines how data products in Microsoft Fabric are used across the organization. This process affects trust, security, and long-term platform success. 
 
-:::image type="content" source="images/operational-standards-unify-data-platform.svg" alt-text="Diagram showing the three major steps in setting operational standards. First, set data processing standards like how to move data through the bronze, silver, and gold layers. Second, set security standards for how to secure data products in different Microsoft services. Third, set consumption and lifecycle standards for data products." lightbox="images/operational-standards-unify-data-platform.svg" border="false":::
-*Figure 1. Three steps to setting operational standards for data.*
+**Recommendation:** Establish organization-wide standards for how teams consume and manage all published data products in Fabric over time. This approach helps teams safely reuse data without creating risk or instability.
+
+## Operational standards
+
+# [Data consumption](#tab/consumption)
+
+:::image type="content" source="images/data-consumption-standard.svg" alt-text="Diagram showing how to set consumption and lifecycle standards for data products." lightbox="images/data-consumption-standard.svg" border="false":::
+
+*Data consumption guidance for data products.*
+
+# [Data processing](#tab/processing)
+
+:::image type="content" source="images/data-processing-standard.svg" alt-text="Diagram showing how to set data processing standards. Data moves through the bronze, silver, and gold layers." lightbox="images/data-processing-standard.svg" border="false":::
+
+*Data processing guidance to create data products.*
+
+# [Data security](#tab/security)
+
+:::image type="content" source="images/data-security-standard.svg" alt-text="Diagram showing the three major steps in setting operational standards. First, set data-processing standards like how to move data through the bronze, silver, and gold layers. Second, set security standards for how to secure data products in different Microsoft services. Third, set consumption and lifecycle standards for data products." lightbox="images/data-security-standard.svg" border="false":::
+
+*Data security guidance for data products in services shown.*
+
+--- 
 
 ## Data consumption standards
 

@@ -34,9 +34,9 @@ The following diagram is an Azure landing zone scenario where Azure Lighthouse i
 
 When you use Azure Lighthouse, Azure Policy for Private Endpoints Private DNS Zone is automatically linked in **spoke** Microsoft Entra tenants to the centralized Private DNS Zones in the **hub** Microsoft Entra tenant. For more information, see [Private Link and DNS integration at scale](../../../azure-best-practices/private-link-and-dns-integration-at-scale.md).
 
-[![Diagram of multiple Microsoft Entra tenants with Azure landing zones deployed using Azure Lighthouse in the Private DNS at scale scenario.](media/lighthouse-dns.png)](media/lighthouse-dns.png#lightbox)
+[![Diagram of multiple Microsoft Entra tenants with Azure landing zones deployed using Azure Lighthouse in the Private DNS at scale scenario.](media/lighthouse-dns.svg)](media/lighthouse-dns.svg#lightbox)
 
-When you use this architecture, application landing zone owners have access to make changes to Private DNS Zone via Azure Lighthouse delegation authorizations. This access is useful if a different approach is used to manage the Private Endpoints DNS configuration, rather than Azure Policy. For more information, see [Private Link and DNS integration at scale](../../../azure-best-practices/private-link-and-dns-integration-at-scale.md).
+When you use this architecture, workload landing zone owners have access to make changes to Private DNS Zone via Azure Lighthouse delegation authorizations. This access is useful if a different approach is used to manage the Private Endpoints DNS configuration, rather than Azure Policy. For more information, see [Private Link and DNS integration at scale](../../../azure-best-practices/private-link-and-dns-integration-at-scale.md).
 
 ## Next steps
 

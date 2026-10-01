@@ -19,13 +19,13 @@ Azure offers a comprehensive set of services, tools, and reference architectures
 
 ## Identity and access management in Azure landing zones
 
-Identity and access management is a core consideration in both platform and application landing zones. Under the design principle of [subscription democratization](../design-principles.md#subscription-democratization), application owners should have the autonomy to manage their own applications and resources with minimal intervention from the platform team. Landing zones are a security boundary, and identity and access management provides a way to control the separation of one landing zone from another, along with components such as networking and Azure Policy. Apply a robust identity and access management design to help achieve application landing zone isolation.
+Identity and access management is a core consideration in both platform and workload landing zones. Under the design principle of [subscription democratization](../design-principles.md#subscription-democratization), application owners should have the autonomy to manage their own applications and resources with minimal intervention from the platform team. Landing zones are a security boundary, and identity and access management provides a way to control the separation of one landing zone from another, along with components such as networking and Azure Policy. Apply a robust identity and access management design to help achieve workload landing zone isolation.
 
 In Azure Landing Zones, identity infrastructure is a core platform responsibility because it underpins the security of all dependent services. The identity team is accountable for deploying and managing centralized directory services, including Microsoft Entra ID, Microsoft Entra Domain Services, and Active Directory Domain Services (AD DS). The platform identity services are consumed by other teams, including application administrators and owners, as well as other downstream platform administrators. 
 
 The application administrator is responsible for the identity and access management of their applications, including securing user access to applications and between application components, such as Azure SQL Database, virtual machines, and Azure Storage. In a well-implemented landing zone architecture, the application administrator can effortlessly consume services that the platform provides.
 
-Many of the fundamental concepts of identity and access management are the same in both platform and application landing zones, such as role-based access control (RBAC) and the principle of least privilege. 
+Many of the fundamental concepts of identity and access management are the same in both platform and workload landing zones, such as role-based access control (RBAC) and the principle of least privilege. 
 
 ## Design area review
 

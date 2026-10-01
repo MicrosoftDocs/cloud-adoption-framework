@@ -12,7 +12,7 @@ ms.topic: overview
 A sandbox is an isolated environment where you can test and experiment without affecting other environments, like production, development, or user acceptance testing (UAT) environments. Conduct proof of concepts (POCs) with Azure resources in a controlled environment. Each sandbox has its own Azure subscription, and Azure policies control the subscription. The policies are applied at the sandbox management group level, and the management group inherits policies from the hierarchy above it. Depending on its purpose, an individual or a team can use a sandbox.
 
 >[!TIP]
-> For information about the default Azure landing zones policy assignments, see [Policies included in Azure landing zones reference implementations](https://aka.ms/alz/policies#sandbox).
+> For information about the default platform landing zone accelerator policy assignments, see [Policies included in the platform landing zone accelerator](https://aka.ms/alz/policies#sandbox).
 
 Sandbox environments are the best place for hands-on Azure learning. Some common use cases include:
 
@@ -23,10 +23,6 @@ Sandbox environments are the best place for hands-on Azure learning. Some common
 - A developer wants to experiment with Azure services or resources while building an application.
 
 ## Sandbox architecture
-
-The following image shows the management group and subscription layout.
-
-:::image type="content" source="./media/single-use-case-sandbox.png" alt-text="Flowchart that shows a single-use case sandbox architecture." lightbox="./media/single-use-case-sandbox.png#lightbox":::
 
 Place the sandbox subscription in the sandbox management group. For more information about management groups and subscription organization, see [Landing zone design areas and conceptual architecture](/azure/cloud-adoption-framework/ready/landing-zone/design-areas). Azure policies that are created for sandboxes are placed at the management group level of the sandbox. Sandbox environments then inherit Azure policies from the management group hierarchy that's above them.
 

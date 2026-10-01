@@ -1,6 +1,6 @@
 ---
 title: Plan for landing zone network segmentation
-description: Examine key design considerations and recommendations surrounding network segmentation with Azure landing zones.
+description: Examine key design considerations and recommendations surrounding network segmentation in an Azure landing zone.
 author: sebassem
 ms.author: ssumner
 ms.date: 07/31/2024
@@ -24,16 +24,13 @@ This section explores key recommendations to deliver highly secure internal netw
 
 - Use [virtual network flow logs](/azure/network-watcher/vnet-flow-logs-overview) to inspect traffic that flows through virtual networks. Virtual network flow logs provide capabilities that are similar to NSG flow logs but cover a wider range of use cases. They also simplify the scope of traffic monitoring because you can enable logging at the virtual network level.
 
-> [!NOTE]
-> On September 30, 2027, network security group (NSG) flow logs will be retired. As part of this retirement, you'll no longer be able to create new NSG flow logs starting June 30, 2025. We recommend [migrating to virtual network flow logs](/azure/network-watcher/nsg-flow-logs-migrate), which overcome the limitations of NSG flow logs. After the retirement date, traffic analytics enabled with NSG flow logs will no longer be supported, and existing NSG flow logs resources in your subscriptions will be deleted. However, NSG flow logs records won't be deleted and will continue to follow their respective retention policies. For more information, see the [retirement notice](https://azure.microsoft.com/updates?id=Azure-NSG-flow-logs-Retirement).
-
 ## Design recommendations
 
 - Delegate subnet creation to the landing zone owner. This will enable them to define how to segment workloads across subnets (for example, a single large subnet, multitier application, or network-injected application). The platform team can use Azure Policy to ensure that an NSG with specific rules (such as deny inbound SSH or RDP from the internet, or allow/block traffic across landing zones) is always associated with subnets that have deny-only policies.
 
 - Use NSGs to help protect traffic across subnets and east/west traffic across the platform (traffic between landing zones).
 
-- The application team should use application security groups at the subnet-level NSGs to help protect multitier VMs within the landing zone.
+- The workload team should use application security groups at the subnet-level NSGs to help protect multitier VMs within the landing zone.
 
     [![Diagram that shows how application security group works.](./media/azure-asg.png)](./media/azure-asg.png#lightbox)
 

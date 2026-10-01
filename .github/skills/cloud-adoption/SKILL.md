@@ -29,7 +29,7 @@ description: How to adopt and integrate the Microsoft Azure cloud into your orga
     - Identity and access management: Microsoft Entra ID
     - Resource organization: How to structure your management groups
     - Platform subscriptions and platform services: networking, management, connectivity, security, monitoring, logs, backups.
-    - Application landing zone (subscription) distribution process
+    - Workload landing zone (subscription) distribution process
     - Governance and security baselines
   - Reference: https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/
 
@@ -45,8 +45,8 @@ description: How to adopt and integrate the Microsoft Azure cloud into your orga
   - Target audience: Anyone responsible for migrating or building workloads in Azure.
   - Scope: 
     - Migration: Strategies and tools for migrating existing workloads to Azure.
-    - Modernization: Modernizing applications to take advantage of cloud capabilities.
-    - Cloud-native: Building new cloud-native applications and services in Azure.
+    - Modernization: Modernizing workloads to take advantage of cloud capabilities.
+    - Cloud-native: Building new cloud-native workloads and services in Azure.
   - Reference: https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/adopt/overview
 
 

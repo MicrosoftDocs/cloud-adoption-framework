@@ -1,5 +1,5 @@
 ---
-title: Use infrastructure as code to update Azure landing zones
+title: Use infrastructure as code to update an Azure landing zone
 description: Learn about the benefits of using infrastructure as code to update your Azure landing zone to ensure configurations are correct.
 author: jtracey93
 ms.author: jatracey
@@ -7,11 +7,11 @@ ms.topic: concept-article
 ms.date: 03/03/2023
 ---
 
-# Use infrastructure as code to update Azure landing zones
+# Use infrastructure as code to update an Azure landing zone
 
-This article describes the benefits of using infrastructure as code (IaC) to update Azure landing zones. Organizations need to update their landing zones as they operate to ensure that configurations are correct and they respond to the need for changes.
+This article describes the benefits of using infrastructure as code (IaC) to update an Azure landing zone. Organizations need to update their landing zones as they operate to ensure that configurations are correct and they respond to the need for changes.
 
-IaC can manage the whole life cycle, and it excels at managing the resources that it deploys. Organizations should plan to deploy their Azure landing zones with IaC. It requires planning to align existing non-IaC resources with IaC resources that are backed with state management. You need to map the existing resources to the desired state.
+IaC can manage the whole life cycle, and it excels at managing the resources that it deploys. Organizations should plan to deploy their Azure landing zone with IaC. It requires planning to align existing non-IaC resources with IaC resources that are backed with state management. You need to map the existing resources to the desired state.
 
 For more information, see [Keep your Azure landing zone up to date](../landing-zone/design-area/keep-azure-landing-zone-up-to-date.md).
 
@@ -31,12 +31,12 @@ You can use IaC to restore the state by removing resources that are no longer ne
 > [!NOTE]
 > The specific mechanics to remove resources with IaC varies. For example, Azure Bicep requires the use of a `complete` deployment type to remediate out of scope resources. This command only works in specific scopes. For Terraform, resources have a `lifecycle` meta-argument that provides instructions for how Terraform should handle resources.
 
-For Azure landing zones, there are two main options for infrastructure as code:
+For Azure landing zone, there are two main options for infrastructure as code:
 
-- Azure Bicep, which is a domain-specific language that's used to deploy Microsoft developed Azure resources. For more information, see [Azure landing zones - Bicep modules design considerations](/azure/architecture/landing-zones/bicep/landing-zone-bicep).
-- Terraform, a product produced by Hashicorp, to deploy infrastructure to the cloud and on-premises. Terraform has specific Microsoft produced resource providers for the deployment of Azure resources. For more information, see [Azure landing zones - Terraform module design considerations](/azure/architecture/landing-zones/terraform/landing-zone-terraform).
+- Azure Bicep, which is a domain-specific language that's used to deploy Microsoft developed Azure resources. For more information, see [Azure landing zone - Bicep modules design considerations](/azure/architecture/landing-zones/bicep/landing-zone-bicep).
+- Terraform, a product produced by Hashicorp, to deploy infrastructure to the cloud and on-premises. Terraform has specific Microsoft produced resource providers for the deployment of Azure resources. For more information, see [Azure landing zone - Terraform module design considerations](/azure/architecture/landing-zones/terraform/landing-zone-terraform).
 
-## The benefits of updating Azure landing zones (ALZ) with infrastructure as code
+## The benefits of updating Azure landing zone (ALZ) with infrastructure as code
 
 The following benefits describe why you should use infrastructure as code to make your landing zone updates.
 
@@ -59,7 +59,7 @@ Due to the programmatic nature of the deployments, infrastructure as code reduce
 
 Infrastructure as code deployments are backed by a definition file, so you can use source control to manage the versions of your definitions. Depending on the method of IaC that you use, you can reference the deployments in Azure for Bicep or your state file for Terraform to review the history of previous deployments.
 
-When you use source control practices, it creates a new branch of your IaC to add changes and revisions. The branch's history in your source control system captures the iterations and changes. You can use it to deploy changes to a test environment until you’re ready to merge and deploy the changes to production. For more information, see [Testing approach for Azure landing zones](../enterprise-scale/testing-approach.md). Throughout this cycle, the deployment records capture the version that's used and the resources that are deployed, which provides a highly visible history.
+When you use source control practices, it creates a new branch of your IaC to add changes and revisions. The branch's history in your source control system captures the iterations and changes. You can use it to deploy changes to a test environment until you’re ready to merge and deploy the changes to production. For more information, see [Testing approach for Azure landing zone](../enterprise-scale/testing-approach.md). Throughout this cycle, the deployment records capture the version that's used and the resources that are deployed, which provides a highly visible history.
 
 Use these testing methods with Bicep for general testing purposes. With these methods, you can perform testing before you deploy the code, and you can test in non-production environments from your branch.
 

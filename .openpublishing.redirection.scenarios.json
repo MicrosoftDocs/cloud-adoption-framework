@@ -1349,6 +1349,296 @@
       "source_path": "docs/scenarios/app-platform/integration-services/security.md",
       "redirect_url": "/azure/architecture/browse/?azure_categories=integration",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/azure-vmware/azure-vmware-solution-network-basics.md",
+      "redirect_url": "/azure/cloud-adoption-framework/azure-vmware-solution/strategy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/azure-vmware/cross-tenant-network-connectivity.md",
+      "redirect_url": "/azure/cloud-adoption-framework/azure-vmware-solution/strategy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/azure-vmware/dual-region-virtual-wan-global-reach.md",
+      "redirect_url": "/azure/cloud-adoption-framework/azure-vmware-solution/strategy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/azure-vmware/dual-region-virtual-wan-without-global-reach.md",
+      "redirect_url": "/azure/cloud-adoption-framework/azure-vmware-solution/strategy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/azure-vmware/enterprise-scale-landing-zone.md",
+      "redirect_url": "/azure/cloud-adoption-framework/azure-vmware-solution/strategy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/azure-vmware/eslz-business-continuity-and-disaster-recovery.md",
+      "redirect_url": "/azure/cloud-adoption-framework/azure-vmware-solution/strategy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/azure-vmware/eslz-dual-region-network-topology.md",
+      "redirect_url": "/azure/cloud-adoption-framework/azure-vmware-solution/strategy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/azure-vmware/eslz-identity-and-access-management.md",
+      "redirect_url": "/azure/cloud-adoption-framework/azure-vmware-solution/strategy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/azure-vmware/eslz-management-and-monitoring.md",
+      "redirect_url": "/azure/cloud-adoption-framework/azure-vmware-solution/strategy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/azure-vmware/eslz-network-topology-connectivity.md",
+      "redirect_url": "/azure/cloud-adoption-framework/azure-vmware-solution/strategy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/azure-vmware/eslz-platform-automation-and-devops.md",
+      "redirect_url": "/azure/cloud-adoption-framework/azure-vmware-solution/strategy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/azure-vmware/eslz-security-governance-and-compliance.md",
+      "redirect_url": "/azure/cloud-adoption-framework/azure-vmware-solution/strategy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/azure-vmware/example-architectures.md",
+      "redirect_url": "/azure/cloud-adoption-framework/azure-vmware-solution/strategy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/azure-vmware/govern.md",
+      "redirect_url": "/azure/cloud-adoption-framework/azure-vmware-solution/strategy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/azure-vmware/index.md",
+      "redirect_url": "/azure/cloud-adoption-framework/azure-vmware-solution/strategy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/azure-vmware/introduction-virtual-wan-azure-vmware-solution.md",
+      "redirect_url": "/azure/cloud-adoption-framework/azure-vmware-solution/strategy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/azure-vmware/manage.md",
+      "redirect_url": "/azure/cloud-adoption-framework/azure-vmware-solution/strategy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/azure-vmware/migrate.md",
+      "redirect_url": "/azure/cloud-adoption-framework/azure-vmware-solution/strategy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/azure-vmware/network-design-guide-internet-inbound-connectivity.md",
+      "redirect_url": "/azure/cloud-adoption-framework/azure-vmware-solution/strategy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/azure-vmware/network-design-guide-internet-outbound-connectivity.md",
+      "redirect_url": "/azure/cloud-adoption-framework/azure-vmware-solution/strategy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/azure-vmware/network-design-guide-intro.md",
+      "redirect_url": "/azure/cloud-adoption-framework/azure-vmware-solution/strategy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/azure-vmware/network-get-started.md",
+      "redirect_url": "/azure/cloud-adoption-framework/azure-vmware-solution/strategy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/azure-vmware/network-hub-spoke.md",
+      "redirect_url": "/azure/cloud-adoption-framework/azure-vmware-solution/strategy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/azure-vmware/on-premises-connectivity.md",
+      "redirect_url": "/azure/cloud-adoption-framework/azure-vmware-solution/strategy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/azure-vmware/plan.md",
+      "redirect_url": "/azure/cloud-adoption-framework/azure-vmware-solution/strategy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/azure-vmware/ready.md",
+      "redirect_url": "/azure/cloud-adoption-framework/azure-vmware-solution/strategy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/azure-vmware/single-region-virtual-wan-global-reach.md",
+      "redirect_url": "/azure/cloud-adoption-framework/azure-vmware-solution/strategy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/azure-vmware/single-region-virtual-wan-without-global-reach.md",
+      "redirect_url": "/azure/cloud-adoption-framework/azure-vmware-solution/strategy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/azure-vmware/strategy.md",
+      "redirect_url": "/azure/cloud-adoption-framework/azure-vmware-solution/strategy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/azure-vmware/virtual-network-connectivity.md",
+      "redirect_url": "/azure/cloud-adoption-framework/azure-vmware-solution/strategy",
+      "redirect_document_id": false
+    },
+        {
+      "source_path": "docs/scenarios/app-platform/index.md",
+      "redirect_url": "/azure/architecture/browse/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/app-platform/aks/azure-billing-ad-tenant.md",
+      "redirect_url": "/azure/architecture/reference-architectures/containers/aks-start-here",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/app-platform/aks/cost-governance-with-kubecost.md",
+      "redirect_url": "/azure/architecture/reference-architectures/containers/aks-start-here",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/app-platform/aks/identity-and-access-management.md",
+      "redirect_url": "/azure/architecture/reference-architectures/containers/aks-start-here",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/app-platform/aks/landing-zone-accelerator.md",
+      "redirect_url": "/azure/architecture/reference-architectures/containers/aks-start-here",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/app-platform/aks/management.md",
+      "redirect_url": "/azure/architecture/reference-architectures/containers/aks-start-here",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/app-platform/aks/network-topology-and-connectivity.md",
+      "redirect_url": "/azure/architecture/reference-architectures/containers/aks-start-here",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/app-platform/aks/platform-automation-and-devops.md",
+      "redirect_url": "/azure/architecture/reference-architectures/containers/aks-start-here",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/app-platform/aks/resource-organization.md",
+      "redirect_url": "/azure/architecture/reference-architectures/containers/aks-start-here",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/app-platform/aks/scalability.md",
+      "redirect_url": "/azure/architecture/reference-architectures/containers/aks-start-here",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/app-platform/aks/security.md",
+      "redirect_url": "/azure/architecture/reference-architectures/containers/aks-start-here",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/app-platform/aks/storage.md",
+      "redirect_url": "/azure/architecture/reference-architectures/containers/aks-start-here",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/app-platform/azure-red-hat-enterprise-linux/business-continuity-disaster-recovery.md",
+      "redirect_url": "/azure/virtual-machines/workloads/redhat/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/app-platform/azure-red-hat-enterprise-linux/governance-compliance.md",
+      "redirect_url": "/azure/virtual-machines/workloads/redhat/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/app-platform/azure-red-hat-enterprise-linux/identity-access-management.md",
+      "redirect_url": "/azure/virtual-machines/workloads/redhat/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/app-platform/azure-red-hat-enterprise-linux/landing-zone-accelerator.md",
+      "redirect_url": "/azure/virtual-machines/workloads/redhat/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/app-platform/azure-red-hat-enterprise-linux/management-monitoring.md",
+      "redirect_url": "/azure/virtual-machines/workloads/redhat/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/app-platform/azure-red-hat-enterprise-linux/network-topology-connectivity.md",
+      "redirect_url": "/azure/virtual-machines/workloads/redhat/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/app-platform/azure-red-hat-enterprise-linux/platform-automation-devops.md",
+      "redirect_url": "/azure/virtual-machines/workloads/redhat/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/app-platform/azure-red-hat-enterprise-linux/resource-organization.md",
+      "redirect_url": "/azure/virtual-machines/workloads/redhat/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/app-platform/azure-red-hat-enterprise-linux/security.md",
+      "redirect_url": "/azure/virtual-machines/workloads/redhat/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/app-platform/azure-red-hat-openshift/identity-access-management.md",
+      "redirect_url": "/azure/architecture/reference-architectures/containers/aro/azure-redhat-openshift-financial-services-workloads",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/app-platform/azure-red-hat-openshift/landing-zone-accelerator.md",
+      "redirect_url": "/azure/architecture/reference-architectures/containers/aro/azure-redhat-openshift-financial-services-workloads",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/app-platform/azure-red-hat-openshift/network-topology-connectivity.md",
+      "redirect_url": "/azure/architecture/reference-architectures/containers/aro/azure-redhat-openshift-financial-services-workloads",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/app-platform/azure-red-hat-openshift/operations.md",
+      "redirect_url": "/azure/architecture/reference-architectures/containers/aro/azure-redhat-openshift-financial-services-workloads",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/app-platform/azure-red-hat-openshift/platform-automation-devops.md",
+      "redirect_url": "/azure/architecture/reference-architectures/containers/aro/azure-redhat-openshift-financial-services-workloads",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/app-platform/azure-red-hat-openshift/resource-organization.md",
+      "redirect_url": "/azure/architecture/reference-architectures/containers/aro/azure-redhat-openshift-financial-services-workloads",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/app-platform/azure-red-hat-openshift/security.md",
+      "redirect_url": "/azure/architecture/reference-architectures/containers/aro/azure-redhat-openshift-financial-services-workloads",
+      "redirect_document_id": false
     }
    ]   
 }

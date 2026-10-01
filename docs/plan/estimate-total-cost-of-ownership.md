@@ -17,9 +17,9 @@ An architecture plan provides the context required to estimate the total cost of
 
 1. **Align architecture with business and technical requirements.** Document constraints, performance expectations, and compliance needs. This alignment ensures that selected Azure services meet business goals and avoids costly rework after deployment.
 
-2. **Plan your Azure landing zone architecture.** A landing zone provides the shared services and governance foundation for all workloads. This architecture enables accurate estimation of platform-level costs and operational readiness.
+2. **Plan your Azure landing zone architecture.** An Azure landing zone provides the shared services and governance foundation for all workloads. This architecture enables accurate estimation of platform-level costs and operational readiness.
 
-    - **Use an Azure landing zone as the foundation for your platform architecture.** Azure landing zones provide a scalable and secure foundation for enterprise environments. They include critical components such as identity, network, and governance controls. Use the guidance in [What is an Azure landing zone?](/azure/cloud-adoption-framework/ready/landing-zone/).
+    - **Use an Azure landing zone as the foundation for your platform architecture.** Azure landing zone provides a scalable and secure foundation for enterprise environments. It includes critical components such as identity, network, and governance controls. Use the guidance in [What is an Azure landing zone?](/azure/cloud-adoption-framework/ready/landing-zone/).
 
     - **Start small for early-stage startups.** Startups or cloud-native businesses can begin without implementing shared services, hybrid or multicloud connectivity, or on-premises identity management. Instead, implement a resource hierarchy to organize and govern resources. As your environment scales, incrementally adopt Azure landing zone components to support growth and governance.
 
