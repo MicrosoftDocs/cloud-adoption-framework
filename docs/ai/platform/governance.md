@@ -21,7 +21,7 @@ AI platform governance uses policy controls to keep Foundry Tools operating cons
     - [Foundry Tools](/azure/ai-services/policy-reference)
     - [Azure AI Search](/azure/search/policy-reference)
     
-2. **Enable Azure landing zone AI policies for comprehensive coverage.** Azure landing zones provide curated policy sets for workload-specific governance. These policies use tested configurations that follow Microsoft recommendations for AI workloads. When you deploy an Azure landing zone, select the policy initiative under the *Workload Specific Compliance* category. Available options include:
+2. **Enable Azure landing zone AI policies for comprehensive coverage.** The platform landing zone accelerator provides curated policy sets for technology-specific governance. These policies use tested configurations that follow Microsoft recommendations. When you deploy a platform landing zone accelerator, select the policy initiative under the *Workload Specific Compliance* category. Available options include:
 
     - [Azure Machine Learning](https://www.azadvertizer.net/azpolicyinitiativesadvertizer/Enforce-Guardrails-MachineLearning.html)
     - [Azure AI Search](https://www.azadvertizer.net/azpolicyinitiativesadvertizer/Enforce-Guardrails-CognitiveServices.html)

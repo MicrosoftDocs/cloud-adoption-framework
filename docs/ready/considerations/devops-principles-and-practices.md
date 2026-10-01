@@ -10,13 +10,13 @@ ms.custom: internal
 
 # DevOps considerations
 
-This article provides considerations and recommendations for DevOps in Azure landing zones.
+This article provides considerations and recommendations for DevOps in an Azure landing zone.
 
 ## What is DevOps
 
 DevOps is the union of people, processes, and technology that provides continuous value to development (dev) and operations (ops). The DevOps approach encourages team collaboration that creates repeatable processes to help organizations operate efficiently and at scale.
 
-In the context of Azure landing zones, DevOps becomes the framework that guides your team (or teams) responsible for your entire Azure landing zones lifecycle management in areas such as:
+In the context of an Azure landing zone, DevOps becomes the framework that guides your team (or teams) responsible for your entire Azure landing zone lifecycle management in areas such as:
 
 - How to self-organize and define boundaries with other teams to achieve the appropriate balance between autonomy and governance
 - How to continuously evolve Azure landing zone architecture design [(Conway's Law)](devops-teams-topologies.md)
@@ -35,7 +35,7 @@ The decisions you make when reviewing cloud operating models can influence how y
 
 - Establish [metrics](#implement-desired-devops-metrics) that allow your team to improve their DevOps performance. High-performance teams use a hypothesis to test their ideas, measure it to see how the hypothesis works, then make changes as needed. DevOps' final intent is to improve aspects like deployment frequency, mean time to apply a change, or time to restore a degraded service. You must design all these metrics to eventually affect overall business performance.
 
-- Determine the [DevOps practices](#define-devops-practices-for-your-azure-landing-zones-management) your team should implement first based on their current skilling, and design a roadmap to incrementally apply new practices that help your team improve their DevOps metrics. Investing in engineering capabilities and resources is critical.
+- Determine the [DevOps practices](#define-devops-practices-for-your-azure-landing-zone-management) your team should implement first based on their current skilling, and design a roadmap to incrementally apply new practices that help your team improve their DevOps metrics. Investing in engineering capabilities and resources is critical.
 
 - Determine the [DevOps toolchain](#define-your-devops-technology-ecosystem) your team should use to implement the DevOps practices. Make sure that the tools are consistent with your overall DevOps strategy to avoid scenarios of heterogeneous DevOps ecosystems increasing the complexity of Azure landing zone or workload deployments.
 
@@ -78,11 +78,11 @@ To establish your DevOps framework, consider using the frameworks that are alrea
     - [Continuous Improvement](/training/modules/characterize-devops-continous-collaboration-improvement/3-explore-continuous-improvement?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.devops-dojo-white-belt-foundation)
     - [Continuous Collaboration](/training/modules/characterize-devops-continous-collaboration-improvement/2-explore-continuous-collaboration?ns-enrollment-type=learningpath&ns-enrollment-id=learn.wwl.devops-dojo-white-belt-foundation)
 
-### Define DevOps practices for your Azure landing zones management
+### Define DevOps practices for your Azure landing zone management
 
-Consider the following DevOps practices for your Azure landing zones:
+Consider the following DevOps practices for your Azure landing zone:
 
-- Review how to [manage the development lifecycle of Azure landing zones as code](./development-strategy-development-lifecycle.md).
+- Review how to [manage the development lifecycle of Azure landing zone as code](./development-strategy-development-lifecycle.md).
 - Review [security considerations](./security-considerations-overview.md) for Azure Landing Zones in the DevOps space.
 
 ### Plan your DevOps implementation journey

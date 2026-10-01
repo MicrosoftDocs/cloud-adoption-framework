@@ -14,8 +14,6 @@ ms.custom: e2e-hybrid, think-tank, e2e-arc-enabled-kubernetes
 
 This article contains key design considerations and best practices for managing extensions of Azure Arc-enabled Kubernetes deployments.
 
-Before you read this article, be sure you understand governance principles and review [Enterprise-scale for AKS](/azure/cloud-adoption-framework/scenarios/app-platform/aks/landing-zone-accelerator) to understand Azure landing zones in a container environment.
-
 ## Architecture
 
 You can think of extensions for Azure Arc-enabled Kubernetes as split into two categories: extensions for Azure Arc-enabled infrastructure services and extensions for Azure Arc-enabled services. This distinction isn't explicit in individual extension names.

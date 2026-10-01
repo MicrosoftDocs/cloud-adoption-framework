@@ -19,7 +19,7 @@ Migrating an organization's end-user desktops to the cloud is a common scenario 
 This scenario is designed to guide the end-to-end customer journey, throughout the cloud adoption lifecycle. Completing the journey requires a few key guidance sets:
 
 - **Cloud Adoption Framework**: These articles map Azure Virtual Desktop guidance across the Cloud Adoption Framework methodologies (strategy, plan, ready, adopt, govern, and manage). Use these articles to prepare decision makers, central IT, and the cloud center of excellence for the adoption of Azure Virtual Desktop as a central part of your technology strategy.
-- **Application landing zone accelerator**: The [Azure Virtual Desktop application landing zone accelerator](https://github.com/Azure/avdaccelerator) provides infrastructure-as-code templates and proven deployment patterns that implement enterprise-scale best practices.
+- **Workload landing zone accelerator**: The [Azure Virtual Desktop workload landing zone accelerator](https://github.com/Azure/avdaccelerator) provides infrastructure-as-code templates and proven deployment patterns that implement enterprise-scale best practices.
 - **Reference architectures**: These reference solutions help accelerate the deployment of Azure Virtual Desktop.
 
 - **Featured Azure products**: Learn more about the products that support your virtual desktop strategy in Azure.
@@ -29,7 +29,7 @@ This scenario is designed to guide the end-to-end customer journey, throughout t
 
 - **Azure Virtual Desktop reference architecture**: The [Azure Virtual Desktop reference architecture](./enterprise-scale-landing-zone.md) demonstrates how to deploy a proven architecture for Azure Virtual Desktop in your environment. This architecture is a suggested starting point for Azure Virtual Desktop.
 
-- **Prepare for enterprise-scale deployment**: Before migrating existing virtual desktops, establish an enterprise-scale Azure landing zone to help ensure consistent governance, security, and operations. The [application landing zone accelerator for Azure Virtual Desktop](https://github.com/Azure/avdaccelerator) provides infrastructure-as-code templates to implement best practices and accelerate deployment.
+- **Prepare for enterprise-scale deployment**: Before migrating existing virtual desktops, establish an enterprise-scale Azure landing zone to help ensure consistent governance, security, and operations. The [workload landing zone accelerator for Azure Virtual Desktop](https://github.com/Azure/avdaccelerator) provides infrastructure-as-code templates to implement best practices and accelerate deployment.
 
 - **Migrate existing virtual desktops to Azure**: A common use case for Azure Virtual Desktop is to modernize an existing virtual desktop environment. Because Azure Virtual Desktop uses a platform-as-a-service (PaaS) control plane that differs architecturally from traditional VDI solutions, there's no direct migration path from other VDI platforms. Instead, your migration will involve:
   - **Session hosts and images**: Migrate your golden images into Azure or create new ones, then provision new Azure Virtual Desktop host pools with session hosts.

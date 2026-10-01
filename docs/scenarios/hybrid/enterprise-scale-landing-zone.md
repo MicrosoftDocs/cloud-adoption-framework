@@ -35,7 +35,7 @@ Organizations must establish a well-structured Azure environment to govern and m
 Azure Arc landing zone guidance with decision points for organizations with and without existing Azure Landing Zones, outlining pathways for implementing Extended Security Updates through Azure Arc for on-premises servers.
 :::image-end:::
 
-## Integrate Azure Arc resources with application landing zones
+## Integrate Azure Arc resources with workload landing zones
 
 Azure Arc resources integrate into application architectures to provide unified management across environments. Common examples include Azure Arc-enabled servers, VMware vSphere, System Center Virtual Machine Manager, customer-managed Kubernetes clusters, and Azure Arc-enabled data services.
 
@@ -45,10 +45,10 @@ Azure Arc resources integrate into application architectures to provide unified 
 
 3. **Extend Azure capabilities to edge locations with Azure Arc-enabled services.** Azure Arc-enabled data, application, and machine learning services extend Azure capabilities to edge locations where data sovereignty or latency requirements exist. This extension provides consistent Azure experiences regardless of physical location.
 
-Application landing zone subscriptions include both native Azure resources and Azure Arc-enabled resources. Azure Arc resources run outside Azure but are projected into Azure Resource Manager for management with the same governance and security controls. Treat Azure Arc resources like any other Azure resource in your landing zone (whether platform or application) aligned with the [design principles](../../ready/landing-zone/design-principles.md).
+Workload landing zone subscriptions include both native Azure resources and Azure Arc-enabled resources. Azure Arc resources run outside Azure but are projected into Azure Resource Manager for management with the same governance and security controls. Treat Azure Arc resources like any other Azure resource in your landing zone (whether platform or application) aligned with the [design principles](../../ready/landing-zone/design-principles.md).
 
 :::image type="complex" source="./media/landing-zone-design-revised.png" alt-text="Diagram showing landing zone design architecture.":::
-Landing zone design architecture with management groups, subscriptions, and resource groups organized hierarchically to support Azure Arc integration, demonstrating how Azure Arc resources integrate into application landing zones as metadata resources.
+Landing zone design architecture with management groups, subscriptions, and resource groups organized hierarchically to support Azure Arc integration, demonstrating how Azure Arc resources integrate into workload landing zones as metadata resources.
 :::image-end:::
 
 ## Apply common patterns for Azure Arc resources in Azure landing zones
@@ -74,7 +74,7 @@ Organizations can treat their on-premises datacenters as normal landing zones an
 
 Organizations develop latency-sensitive applications or applications with data sovereignty requirements. These applications require resources to be hosted outside of Azure while maintaining centralized control, governance, security, and operations for all application components. Azure Arc enables organizations to achieve centralized management for distributed applications.
 
-Organizations must project Azure Arc resources for their applications into the same application landing zone subscription that hosts their Azure resources. Organizations can then apply one set of controls to all resources from a single control plane regardless of resource location. This unified approach simplifies operations and ensures consistent governance across all application components.
+Organizations must project Azure Arc resources for their applications into the same workload landing zone subscription that hosts their Azure resources. Organizations can then apply one set of controls to all resources from a single control plane regardless of resource location. This unified approach simplifies operations and ensures consistent governance across all application components.
 
 ### Example four: Project on-premises servers that reached end of support into Azure to use Extended Security Updates delivered through Azure Arc
 

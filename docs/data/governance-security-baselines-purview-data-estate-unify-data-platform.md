@@ -8,14 +8,38 @@ ms.reviewer: ssumner
 ms.date: 03/10/2026
 ms.topic: concept-article
 ms.collection: ce-skilling-ai-copilot
+ai-usage: ai-assisted
 ---
 
 # Data governance and security baselines with Microsoft Purview
 
-With the foundational strategy and architecture in place, establish strong governance and security practices from the very beginning. This approach makes sure that as data from all corners of the organization flows into your unified platform, it remains well managed, compliant, and secure. **Recommendation:** Set Microsoft Purview as the system of record for data governance and security so your organization can apply consistent policy, accountability, and compliance across the full data estate (see Figure 1). To apply this recommendation, use this article as a checklist:
+With the foundational strategy and architecture in place, establish strong governance and security practices from the very beginning. This approach makes sure that as data from all corners of the organization flows into your unified platform, it remains well managed, compliant, and secure. 
+
+**Recommendation:** Set Microsoft Purview as the system of record for data governance and security so your organization can apply consistent policy, accountability, and compliance across the full data estate.
+
+## Solution and decision tree
+
+# [Purview baseline](#tab/purview)
 
 :::image type="content" source="images/purview-architecture-governance-data-estate.svg" alt-text="Diagram showing how Microsoft Purview provides a single governance and security foundation for all organizational data. At the bottom, there are all data sources, including on‑premises systems, Dataverse, Microsoft 365, Azure, Google Cloud, and Amazon S3. These data sources belong to organizational data domains. Each data domain scans its data sources into the Microsoft Purview Data Map. The Data Map feeds the Unified Catalog, which acts as one catalog for all data across the organization. Inside the Unified Catalog, you organize data by Purview governance domains that align to data domains. Each governance domain is responsible for sensitivity labels, data classification, lineage, compliance, data retention, data loss prevention, and data use in AI. Shared governance capabilities include the data glossary, data classifiers, and the sensitivity label taxonomy. At the top, governed data products flow into Microsoft Fabric. Tools like Microsoft Copilot Studio and Microsoft 365 Copilot consume them." lightbox="images/purview-architecture-governance-data-estate.svg" border="false":::
-*Figure 1. Microsoft Purview's role in data governance and security baselines.*
+
+*Microsoft Purview's role in data governance and security baselines.*
+
+# [Conceptual](#tab/conceptual)
+
+:::image type="content" source="./images/executive-architecture-unified-data-platform-ai-analytics.svg" alt-text="High‑level diagram showing Microsoft Fabric at the center of a unified data platform. Data from enterprise sources, such as on‑premises systems, Microsoft services, and public cloud platforms, flows into Fabric, where you organize it as shared data products. These data products are then used across the organization to support analytics, AI systems, and reporting, including Power BI and data science workloads. Fabric connects with Azure for governance, security, and monitoring, while Azure workloads run alongside it as needed. The overall flow shows data coming into Fabric, being governed and standardized, and then powering AI, analytics, and business insights across the organization." lightbox="./images/executive-architecture-unified-data-platform-ai-analytics.svg" border="false":::
+
+*Conceptual architecture of a unified data platform for AI and analytics.*
+
+# [Decision tree](#tab/decision-tree)
+
+:::image type="complex" source="images/decision-tree-unify-data-platform.svg" alt-text="Diagram showing a decision tree for unifying your data platform for leaders and decision makers." lightbox="images/decision-tree-unify-data-platform.svg" border="false":::
+    The flow asks a series of yes-or-no questions. Each "Yes" leads to specific guidance. The first question asks whether the organization needs help with understanding data priorities or building skills to get more value from data. If yes, the guidance is to prepare people through roles, training, and readiness activities. The second question asks whether the organization needs a unified way to access data across clouds and workloads to support analytics and AI. If yes, the guidance is to use Microsoft Fabric as the unified data platform. The third question asks whether the organization needs help with turning operational data into business value or securely feeding data into AI systems, such as Microsoft Foundry. If yes, the guidance is to integrate Azure services with Fabric. Fourth question asks whether the organization needs help with controlling access to data or with securing data consistently. If yes, the guidance is to set governance and security baselines using Microsoft Purview and related controls. Fifth question asks whether the organization needs help with setting consistent organizational standards to process, secure, and consume data products for analytics and AI. If yes, the guidance is to set operational standards for data products, security, and lifecycle management. The flow ends by pointing to adopting AI and adopting AI agents once the unified data platform and standards are in place.
+:::image-end:::
+
+*Microsoft's decision tree to guide your unified data platform.*
+
+---
 
 ## 1. Data visibility baseline
 

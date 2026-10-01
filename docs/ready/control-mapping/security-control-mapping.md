@@ -7,7 +7,7 @@ ms.date: 12/19/2025
 ms.topic: concept-article
 ---
 
-# Security control mapping with Azure landing zones
+# Security control mapping with Azure landing zone
 
 Many organizations must comply with industry or regional regulations before adopting Azure cloud services. Each regulation defines compliance domains and specific controls. For example, **CMMC L3 AC 1.001** refers to the Access Control (AC) domain and control ID 1.001 in the Cybersecurity Maturity Model Certification (CMMC) framework. As a best practice, map your required compliance controls to the Microsoft cloud security benchmark (MCSB). Identify any custom controls that MCSB does not cover.
 
@@ -20,7 +20,7 @@ Mapping your required controls to MCSB can speed up your secure Azure onboarding
 
 The following diagram illustrates the control mapping process flow:
 
-:::image type="content" source="media/control-mapping-process-flow.png" alt-text="Diagram of control mapping process flow with Azure landing zones." lightbox="media/control-mapping-process-flow.png":::
+:::image type="content" source="media/control-mapping-process-flow.png" alt-text="Diagram of control mapping process flow with Azure landing zone." lightbox="media/control-mapping-process-flow.png":::
 
 ## Steps to map security controls in Azure
 
@@ -60,9 +60,6 @@ To quickly search a specific version of MCSB, download the [Excel files](/securi
 ### 3. Identify controls not mapped with Microsoft cloud security benchmark and respective policies
 
 Mark any controls that do not map directly as needing mitigation. Develop a custom policy or automation script for these controls during the guardrail implementation process.
-
-> [!TIP]
-> [AzAdvertizer](https://www.azadvertizer.net/azpolicyadvertizer_all.html#%7B%7D) is a community-driven tool endorsed by the Cloud Adoption Framework. Use it to discover built-in policies from Azure landing zones or from the [community Azure Policy repository](https://github.com/Azure/Community-Policy) in one place.
 
 ### 4. Perform platform and service-level assessment
 
@@ -133,7 +130,7 @@ The following sections describe how to identify, map, and implement regulatory c
 
 Learn more about [policies assigned as part of an Azure landing zone reference architecture deployment](https://aka.ms/alz/policies).
 
-### Guidance for implementing policy in Azure landing zones
+### Guidance for implementing policy in an Azure landing zone
 
 Depending on your control objectives, you may need to create custom [policy definitions](/azure/governance/policy/concepts/definition-structure), [policy initiative definitions](/azure/governance/policy/concepts/initiative-definition-structure), and [policy assignments](/azure/governance/policy/concepts/assignment-structure).
 
@@ -155,7 +152,7 @@ When using the [Azure Verified Modules (AVM) for Platform landing zone (ALZ) - T
 
 When using the [Azure Verified Modules (AVM) for Platform landing zone (ALZ) - Bicep](https://aka.ms/alz/acc/bicep), refer to the following guidance on [modifying policy assignments](https://azure.github.io/Azure-Landing-Zones/bicep/howtos/modifyingpolicyassignments/).
 
-### Implement custom policies when not using an Azure landing zones implementation
+### Implement custom policies when not using an Azure landing zone implementation
 
 #### Azure portal
 

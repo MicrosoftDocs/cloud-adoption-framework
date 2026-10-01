@@ -11,15 +11,15 @@ ms.custom: internal, UpdateFrequency.5
 
 # Subscription vending
 
-Subscription vending provides a platform mechanism for programmatically issuing subscriptions to application teams that need to deploy workloads. The following diagram shows where subscription vending fits in the platform and workload lifecycles.
+Subscription vending provides a platform mechanism for programmatically issuing subscriptions to workload teams that need to deploy workloads. The following diagram shows where subscription vending fits in the platform and workload lifecycles.
 
 :::image type="complex" source="./media/subscription-vending-high-res.png" alt-text="Diagram showing four steps." lightbox="./media/subscription-vending-high-res.png" border="false":::
-Step 1 is to create the platform subscriptions. Step 2 is to create the platform. Step 3 is to establish subscription vending. Step 4 is to deploy workloads. Steps 1 and 2 align with the platform. Step 3, subscription vending, overlaps with both the platform and application landing zone. Step 4 is an application focused step.
+Step 1 is to create the platform subscriptions. Step 2 is to create the platform. Step 3 is to establish subscription vending. Step 4 is to deploy workloads. Steps 1 and 2 align with the platform. Step 3, subscription vending, overlaps with both the platform and workload landing zone. Step 4 is an application focused step.
 :::image-end:::
 
-Subscription vending builds on the concept of subscription democratization and applies it to application landing zones. With subscription democratization, subscriptions, not resource groups, are the primary units of workload management and scale. For more information, see:
+Subscription vending builds on the concept of subscription democratization and applies it to workload landing zones. With subscription democratization, subscriptions, not resource groups, are the primary units of workload management and scale. For more information, see:
 
-- [Platform landing zones vs. application landing zones](../index.md#platform-landing-zone-vs-application-landing-zones)
+- [Platform landing zone](../index.md#platform-landing-zone)
 - [Democratized approach to subscriptions](../design-principles.md#subscription-democratization)
 - [How many subscriptions should I use in Azure (YouTube)?](https://www.youtube.com/watch?v=R-5oeguxFpo&t=13s)
 
@@ -27,19 +27,19 @@ Subscription vending builds on the concept of subscription democratization and a
 
 > [!VIDEO https://www.youtube.com/embed/OoC_0afxACg]
 
-Subscription vending offers several benefits to organizations that need to deploy workloads in Azure. It standardizes and automates the process for requesting, deploying, and governing subscriptions for application landing zones. Subscription vending simplifies the subscription creation process and places it under the governance of the organization, so app teams can focus on deploying their workloads with greater confidence and efficiency.
+Subscription vending offers several benefits to organizations that need to deploy workloads in Azure. It standardizes and automates the process for requesting, deploying, and governing subscriptions for workload landing zones. Subscription vending simplifies the subscription creation process and places it under the governance of the organization, so app teams can focus on deploying their workloads with greater confidence and efficiency.
 
-- **Streamlined process:** Subscription vending provides an official front door for application teams to request subscriptions, eliminating the need for them to navigate the subscription process on their own.
-- **Improved velocity:** Application teams can access application landing zones faster and onboard workloads quicker.
-- **Efficient governance:** The platform team can enforce governance on application landing zones with minimal overhead.
+- **Streamlined process:** Subscription vending provides an official front door for workload teams to request subscriptions, eliminating the need for them to navigate the subscription process on their own.
+- **Improved velocity:** Workload teams can access workload landing zones faster and onboard workloads quicker.
+- **Efficient governance:** The platform team can enforce governance on workload landing zones with minimal overhead.
 
 ## How to implement subscription vending
 
-Subscription vending involves three teams. The Cloud Center of Excellence (CCoE) establishes business logic and the approval process. When ready, the application teams make subscription requests. The platform team uses the request to create and configure the subscription before handing off the subscription to the application team. The application team updates the budget, deploys the workload, and establishes operations. The following guidance provides more details on each step of the subscription vending process. For more information, see [Subscription vending implementation guidance](/azure/architecture/landing-zones/subscription-vending).
+Subscription vending involves three teams. The Cloud Center of Excellence (CCoE) establishes business logic and the approval process. When ready, the workload teams make subscription requests. The platform team uses the request to create and configure the subscription before handing off the subscription to the workload team. The workload team updates the budget, deploys the workload, and establishes operations. The following guidance provides more details on each step of the subscription vending process. For more information, see [Subscription vending implementation guidance](/azure/architecture/landing-zones/subscription-vending).
 
 :::image type="content" source="./media/subscription-vending-process.png" alt-text="Diagram showing the subscription vending process." lightbox="./media/subscription-vending-process.png" border="false":::
 
-Platform teams can vend many options and subscription types to application teams. These types are referred to as *product lines* because they relate to platform-engineering principles and practices. For more information about choosing the option that best suits your needs, see [Common subscription vending product lines](./subscription-vending-product-lines.md).
+Platform teams can vend many options and subscription types to workload teams. These types are referred to as *product lines* because they relate to platform-engineering principles and practices. For more information about choosing the option that best suits your needs, see [Common subscription vending product lines](./subscription-vending-product-lines.md).
 
 ### Establish business logic and approval process
 
@@ -51,17 +51,17 @@ To implement the subscription vending model, you need to establish an approval p
 
 **Connect to deployment pipeline.** It's a best practice to tie the business logic of the approval process into the subscription deployment pipeline that the platform team manages. Azure Pipelines or GitHub Actions workflows are common solutions for the subscription deployment pipeline.
 
-**Gather requirements at intake.** The business logic should allow application teams to request a subscription and provide subscription requirements. These requirements should include anticipated budgets, subscription owners, networking expectations, and business criticality & confidentiality classification. Gathering this information at the beginning of the process informs your deployment parameters and stakeholder approval needs. The intake process should also give the platform team enough information to place the workload in the management group hierarchy.
+**Gather requirements at intake.** The business logic should allow workload teams to request a subscription and provide subscription requirements. These requirements should include anticipated budgets, subscription owners, networking expectations, and business criticality & confidentiality classification. Gathering this information at the beginning of the process informs your deployment parameters and stakeholder approval needs. The intake process should also give the platform team enough information to place the workload in the management group hierarchy.
 
-With the approval process in place, application teams can start making subscription requests.
+With the approval process in place, workload teams can start making subscription requests.
 
 ### Make a subscription request
 
-Subscription vending provides a standard process for application teams to request a subscription. It's important that you socialize the availability of subscription vending and ensure subscription requests are easy to make. After the application team submits a subscription request, the platform team assumes control of the process. The platform team maintains control until they create the subscription and deliver the subscription to the application team.
+Subscription vending provides a standard process for workload teams to request a subscription. It's important that you socialize the availability of subscription vending and ensure subscription requests are easy to make. After the workload team submits a subscription request, the platform team assumes control of the process. The platform team maintains control until they create the subscription and deliver the subscription to the workload team.
 
 ### Configure networking
 
-The subscription automation needs to set up the required networking components, and it needs to be flexible enough to meet the needs of each application team. As general guidance, never use overlapping IP addresses in a single routing domain. You can add or delete the address space of a virtual network without downtime if your size requirements change. For more information, see:
+The subscription automation needs to set up the required networking components, and it needs to be flexible enough to meet the needs of each workload team. As general guidance, never use overlapping IP addresses in a single routing domain. You can add or delete the address space of a virtual network without downtime if your size requirements change. For more information, see:
 
 - [IP address restrictions](/azure/virtual-network/virtual-networks-faq#are-there-any-restrictions-on-using-ip-addresses-within-these-subnets)
 - [Update address space of a peered virtual network](/azure/virtual-network/update-virtual-network-peering-address-space)
@@ -69,7 +69,7 @@ The subscription automation needs to set up the required networking components, 
 
 **Use IP address management (IPAM) tool.** You should use and integrate an IPAM system into the vending process to streamline IP address assignment. For more information and IPAM guidance, see [IP Address Management (IPAM) tools](../../azure-best-practices/plan-for-ip-addressing.md#ip-address-management-ipam-tools).
 
-**Grant the app team autonomy.** You should grant application teams with the rights to create subnets and even some virtual networks in the subscription. The platform team should always create virtual networks that peer to a central hub.
+**Grant the app team autonomy.** You should grant workload teams with the rights to create subnets and even some virtual networks in the subscription. The platform team should always create virtual networks that peer to a central hub.
 
 **Enforce networking governance.** The platform team should enforce virtual network governance via (1) Azure policy assigned to the management group hierarchy or (2) Azure Virtual Network Manager and Security Admin Rules. For more information, see [Policy-driven governance](../design-principles.md#policy-driven-governance) and [How to block high risk ports](/azure/virtual-network-manager/how-to-block-high-risk-ports).
 
@@ -115,7 +115,7 @@ There are subscription vending [Bicep](https://aka.ms/lz-vending/bicep) and [Ter
 
 - *Establish workload identities.* Workload identities (service principals) used for workload deployment often have elevated permissions at the subscription scope. The subscription request process should gather workload identity needs at intake. Your vending process should create these identities and assign appropriate subscription access. It's important to note that the workload identity can't use PIM and receives standing access to resources. We recommend you use managed identities to avoid the need to manage secrets. For more information, see [the identity design area](./identity-access.md).
 
-**Hand off to application team.** After the platform team creates the subscription, they should hand off the subscription to the application team.
+**Hand off to workload team.** After the platform team creates the subscription, they should hand off the subscription to the workload team.
 
 ### Update subscription budget
 
@@ -123,7 +123,7 @@ The platform and workload teams share responsibility for the financial health of
 
 ### Deploy workload and operate
 
-The application team should have autonomy to create the resources they need for their workload and manage operations. The platform team remains responsible for subscription governance. As the governance requirements of a workload change, the platform team should move subscriptions to the management group that best meets workload needs. You can automate the move by using Bicep or Terraform. For more information, see:
+The workload team should have autonomy to create the resources they need for their workload and manage operations. The platform team remains responsible for subscription governance. As the governance requirements of a workload change, the platform team should move subscriptions to the management group that best meets workload needs. You can automate the move by using Bicep or Terraform. For more information, see:
 
 - [Management groups overview](./resource-org-management-groups.md)
 - [Move subscription to new management group (Bicep)](/azure/templates/microsoft.management/managementgroups/subscriptions)
@@ -132,7 +132,7 @@ The application team should have autonomy to create the resources they need for 
 
 ## Next steps
 
-Review the subscriptions, or product lines, that you can vend to application teams. Establish a great starting point so you can cater to a number of different scenarios.
+Review the subscriptions, or product lines, that you can vend to workload teams. Establish a great starting point so you can cater to a number of different scenarios.
 
 > [!div class="nextstepaction"]
 > [Establish common subscription vending product lines](./subscription-vending-product-lines.md)

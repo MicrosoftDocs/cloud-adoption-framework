@@ -1,6 +1,6 @@
 ---
-title: Independent software vendor (ISV) considerations for Azure landing zones
-description: Discuss Independent Software Vendor (ISV) specific considerations for Azure landing zones.
+title: Independent software vendor (ISV) considerations for an Azure landing zone
+description: Discuss Independent Software Vendor (ISV) specific considerations for an Azure landing zone.
 author: arsenvlad
 ms.author: arsenv
 ms.date: 12/18/2025
@@ -8,22 +8,17 @@ ms.topic: concept-article
 ms.custom: internal
 ---
 
-# Independent software vendor (ISV) considerations for Azure landing zones
+# Independent software vendor (ISV) considerations for an Azure landing zone
 
-For many organizations, the [Azure landing zones](./index.md) conceptual architecture represents the destination of their cloud adoption journey. The landing zones describe how to build an Azure environment with multiple subscriptions. Each landing zone accounts for scale, security, governance, networking, and identity, and is based on feedback and lessons learned from many customers.
-
-> [!TIP]
-> It can be helpful to think of Azure landing zones as being like city plans. The architectures of workloads deployed into a landing zone are like plans for buildings in a city.
->
-> A city's water, gas, electricity, and transport systems all must be in place before buildings can be constructed. Similarly, an Azure landing zone's components, including management groups, policies, subscriptions, and role-based access control (RBAC), all must be in place before any production workloads can be deployed.
+For many organizations, the [Azure landing zone](./index.md) conceptual architecture represents the destination of their cloud adoption journey. The landing zones describe how to build an Azure environment with multiple subscriptions. Each landing zone accounts for scale, security, governance, networking, and identity, and is based on feedback and lessons learned from many customers.
 
 As an independent software vendor (ISV) building and operating your solution on Azure, you should refer to the following resources as you build your Azure environment:
 
-* [Azure landing zones](index.md): Provides guidance for your overall Azure environment.
+* [Azure landing zone](index.md): Provides guidance for your overall Azure environment.
 * [Azure Well-Architected Framework](/azure/architecture/framework/): Provides architectural guidance applicable to all workloads.
 * [Architecting multitenant solutions on Azure](/azure/architecture/guide/multitenant/overview): Provides specific architectural guidance for **multitenant** solutions on Azure.
 
-The Azure landing zones help you choose a direction for your overall Azure environment. But as an ISV, SaaS provider, or startup, your specific implementation needs might differ from more standard customer scenarios. The following are just a few different implementation scenario examples:
+The Azure landing zone guidance helps you choose a direction for your overall Azure environment. But as an ISV, SaaS provider, or startup, your specific implementation needs might differ from more standard customer scenarios. The following are just a few different implementation scenario examples:
 
 * You build software that customers deploy into their own subscriptions.
 * You have your own [control plane](/azure/architecture/guide/multitenant/considerations/control-planes) and use automation scripts or software to deploy and configure Azure resources for your SaaS solutions.
@@ -36,7 +31,7 @@ The Azure landing zones help you choose a direction for your overall Azure envir
 
 ## ISV deployment models
 
-ISV solutions often fit into one of three deployment models: pure SaaS, customer-deployed, or dual-deployment SaaS. This section describes each model's different considerations for Azure landing zones.
+ISV solutions often fit into one of three deployment models: pure SaaS, customer-deployed, or dual-deployment SaaS. This section describes each model's different considerations for an Azure landing zone.
 
 ### Pure SaaS
 
@@ -69,7 +64,7 @@ Examples of customer-deployed ISV products include the many [virtual machine ima
 
 For some customer-deployed solutions, an organization might provide management of and updates for the solution deployed within their end-customer Azure subscriptions by using [Azure Lighthouse](/azure/lighthouse/overview) or [Azure Managed Applications](/azure/azure-resource-manager/managed-applications/overview). ISVs, Solution Integrators (SIs), and Managed Service Providers (MSPs) all can use this strategy when it meets their particular needs.
 
-Customer-deployed ISV solutions are considered a standard application workload from the perspective of Azure landing zones. Consider the [Azure landing zones guidance](index.md) as you design your product to work with the [Azure landing zones design principles](../landing-zone/design-principles.md) your Azure customers adopt.
+Customer-deployed ISV solutions are considered a standard workload from the perspective of an Azure landing zone. Consider the [Azure landing zone guidance](index.md) as you design your product to work with the [Azure landing zone design principles](../landing-zone/design-principles.md) your Azure customers adopt.
 
 It's especially important for you to have a good understanding of the Azure landing zone concepts as you migrate your existing customers' workloads to Azure.
 
@@ -120,7 +115,7 @@ Each Azure landing zone and its management group hierarchy is rooted in a single
 > [!TIP]
 > The Microsoft Entra tenant you select for your landing zone doesn't affect your application-level authentication. You can still use other identity providers like Microsoft Entra External ID regardless of which tenant you choose.
 
-The [guidance for Azure landing zones and Microsoft Entra tenants](./design-area/azure-ad-define.md) strongly recommends using a single Microsoft Entra tenant, and this is the correct approach for most situations. However, as a SaaS ISV, you might have reason to use two tenants.
+The [guidance for Azure landing zone and Microsoft Entra tenants](./design-area/azure-ad-define.md) strongly recommends using a single Microsoft Entra tenant, and this is the correct approach for most situations. However, as a SaaS ISV, you might have reason to use two tenants.
 
 For some SaaS ISVs, one team manages corporate resources and a separate team operates the SaaS solution. This separation can be for operational reasons or to comply with regulatory requirements. Perhaps your corporate IT team isn't allowed to manage any SaaS-related subscriptions and resources, so they can't be administrators of the Microsoft Entra tenant. If this scenario applies to you, consider using two separate Microsoft Entra tenants: one tenant for corporate IT resources like Office 365, and one tenant for Azure resources that comprise your SaaS solution.
 
@@ -133,7 +128,7 @@ Each Microsoft Entra tenant must have its own domain name. If your organization 
 
 Avoid using separate Microsoft Entra tenants for pre-production and production environments. Rather than creating two tenants like `contoso-saas-ops-preprod.com` and `contoso-saas-ops-prod.com` with separate Azure subscriptions under each, you should create one Microsoft Entra tenant. You can use management groups and Azure RBAC to govern the access to subscriptions and resources under this single tenant.
 
-For more information on the using multiple Microsoft Entra tenants, see [Azure landing zones and multiple Microsoft Entra tenants](../landing-zone/design-area/multi-tenant/overview.md) and [resource isolation with multiple tenants](/entra/architecture/secure-multiple-tenants).
+For more information on the using multiple Microsoft Entra tenants, see [Azure landing zone in multiple Microsoft Entra tenants](../landing-zone/design-area/multi-tenant/overview.md) and [resource isolation with multiple tenants](/entra/architecture/secure-multiple-tenants).
 
 ## Management groups
 
@@ -198,7 +193,7 @@ SaaS ISVs often organize their cloud environments by modeling their software dev
 One common difference between the environments is their Azure RBAC rules, like who can access each group of subscriptions. For example, the DevOps, SaaSOps, development, and test teams might all have different levels of access to different environments.
 
 > [!IMPORTANT]
-> Most Azure customers have hundreds of applications and use separate Azure subscriptions for each application team. If each application had its own development, test, staging, and production management groups, there would be a large number of management groups with near-identical policies. For most customers, the [Enterprise-Scale Landing Zone FAQ](../enterprise-scale/faq.md#how-do-we-handle-devtestproduction-workload-landing-zones-in-azure-landing-zone-architecture) advises against using separate management groups for each environment. It recommends using separate subscriptions within a single management group instead.
+> Most Azure customers have hundreds of applications and use separate Azure subscriptions for each workload team. If each application had its own development, test, staging, and production management groups, there would be a large number of management groups with near-identical policies. For most customers, the [Enterprise-Scale Landing Zone FAQ](../enterprise-scale/faq.md#how-do-we-handle-devtestproduction-workload-landing-zones-in-azure-landing-zone-architecture) advises against using separate management groups for each environment. It recommends using separate subscriptions within a single management group instead.
 >
 > However, SaaS ISVs can have different requirements than most other Azure customers, and might have good reason to use environment-specific management groups in some situations.
 
@@ -239,10 +234,10 @@ This section includes two example Azure landing zone structures for a SaaS ISV. 
 
 #### [Minimal](#tab/minimal)
 
-The following diagram shows an example SaaS ISV Azure landing zones hierarchy with the following characteristics:
+The following diagram shows an example SaaS ISV platform landing zone hierarchy with the following characteristics:
 
 - The ISV keeps all their platform components in a single Azure subscription, instead of [splitting them into multiple platform management groups](#platform-management-group).
-- There is only one [landing zone management group](#landing-zones-management-group).
+- There is only one [workload landing zone management group](#landing-zones-management-group).
 - The landing zone includes [environment-specific management groups](#landing-zones-management-group) for organizing subscriptions and assigning different policies and roles.
 - The ISV didn't include the management groups for [decommissioned and sandbox subscriptions](#decommissioned-and-sandboxes-management-groups).
 

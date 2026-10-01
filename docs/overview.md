@@ -41,7 +41,7 @@ The Cloud Adoption Framework is designed for decision makers responsible for Azu
 | --- | --- |
 | Business leaders | Align cloud investments to business outcomes and organizational goals|
 |Technology leaders | Define cloud strategy, operating models, and platform direction|
-|Platform teams | Establish Azure landing zones and shared services| 
+|Platform teams | Establish an Azure landing zone and shared services| 
 |Security and governance teams | Define organizational standards, compliance requirements, and risk management approaches|
 
 ## Cloud Adoption Framework scenarios

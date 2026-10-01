@@ -1,6 +1,6 @@
 ---
 title: Document your cloud adoption plan
-description: Learn how to document your cloud adoption plan to ensure alignment, accountability, and traceability across stakeholders. This article provides actionable guidance for organizing plans, detailing Azure landing zones, aligning with standards, estimating timelines, and preparing for successful Azure adoption.
+description: Learn how to document your cloud adoption plan to ensure alignment, accountability, and traceability across stakeholders. This article provides actionable guidance for organizing plans, detailing Azure landing zone, aligning with standards, estimating timelines, and preparing for successful Azure adoption.
 author: stephen-sumner
 ms.author: pnp
 ms.date: 07/15/2025
@@ -49,7 +49,7 @@ A clear organizational and people plan ensures that the right teams are prepared
 
 A well-documented plan for your Azure environment ensures Azure meets your business objectives.
 
-1. **Record the Azure landing zone architecture.** Document the design of the foundational Azure environment, including networking, identity, security, and governance components. This documentation ensures that the landing zone supports scalability, compliance, and operational readiness.
+1. **Record the Azure landing zone architecture.** Document the design of the foundational Azure environment, including networking, identity, security, and governance components. This documentation ensures that the Azure landing zone supports scalability, compliance, and operational readiness.
 
 2. **Maintain a complete workload inventory.** List all workloads targeted for migration or cloud-native development. Include metadata such as workload owner, business criticality, and dependencies. This inventory provides visibility into workload priorities and interdependencies.
 

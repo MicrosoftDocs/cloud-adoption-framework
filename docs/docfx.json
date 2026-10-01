@@ -88,8 +88,6 @@
         "ready/control-mapping/**/*.md": "caf-alz",
         "ready/enterprise-scale/**/*.md": "caf-alz",
         "ready/landing-zone/**/*.md": "caf-alz",
-        "scenarios/app-platform/**/*.md": "caf-scenario-app-plat",
-        "scenarios/azure-vmware/**/*.md": "caf-scenario-vmware",
         "scenarios/cloud-scale-analytics/**/*.md": "caf-scenario-analytics",
         "scenarios/hybrid/**/*.md": "caf-scenario-hybrid",
         "scenarios/oracle-on-azure/**/*.md": "caf-scenario-oracle",

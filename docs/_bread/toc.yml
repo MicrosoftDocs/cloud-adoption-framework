@@ -19,15 +19,9 @@
       - name: Data
         tocHref: /azure/cloud-adoption-framework/data/
         topicHref: /azure/cloud-adoption-framework/data
-      - name: Azure VMware Solution
-        tocHref: /azure/cloud-adoption-framework/scenarios/azure-vmware/
-        topicHref: /azure/cloud-adoption-framework/scenarios/azure-vmware
       - name: Hybrid and multicloud
         tocHref: /azure/cloud-adoption-framework/scenarios/hybrid/
         topicHref: /azure/cloud-adoption-framework/scenarios/hybrid
-      - name: Modern app platform
-        tocHref: /azure/cloud-adoption-framework/scenarios/app-platform/
-        topicHref: /azure/cloud-adoption-framework/scenarios/app-platform
       - name: Oracle IaaS
         tocHref: /azure/cloud-adoption-framework/scenarios/overview/
         topicHref: /azure/cloud-adoption-framework/scenarios/overview

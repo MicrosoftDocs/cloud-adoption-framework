@@ -918,12 +918,12 @@
 						</g>
 						<g id="shape117-221" v:mID="117" v:groupContext="shape" transform="translate(746.672,-135.005)">
 							<title>Sheet.117</title>
-							<desc>Landing Zones</desc>
+							<desc>Workload LZs</desc>
 							<v:userDefs/>
 							<v:textBlock v:margins="rect(3.99999,3.99999,3.99999,3.99999)"/>
 							<v:textRect cx="50.203" cy="879.597" width="100.41" height="21.3749"/>
 							<rect x="0" y="868.908" width="100.406" height="21.3749" class="st7"/>
-							<text x="8.72" y="883.8" class="st8" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Landing Zones</text>						</g>
+							<text x="8.72" y="883.8" class="st8" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Workload LZs</text>						</g>
 						<g id="shape118-224" v:mID="118" v:groupContext="shape" v:layerMember="0"
 								transform="translate(289.897,-225.164)">
 							<title>Dynamic connector</title>
@@ -4317,12 +4317,12 @@
 						</g>
 						<g id="shape533-1114" v:mID="533" v:groupContext="shape" transform="translate(-3.51719E-13,-154.875)">
 							<title>Sheet.533</title>
-							<desc>Application 1 Subscription</desc>
+							<desc>Workload landing zone A1 subscription</desc>
 							<v:userDefs/>
 							<v:textBlock v:margins="rect(3.99999,3.99999,3.99999,3.99999)"/>
 							<v:textRect cx="84.6594" cy="878.978" width="169.32" height="22.5935"/>
 							<rect x="0" y="867.69" width="169.319" height="22.5935" class="st7"/>
-							<text x="30.28" y="881.98" class="st25" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Application 1 Subscription</text>						</g>
+							<text x="30.28" y="881.98" class="st25" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Workload landing zone A1 subscription</text>						</g>
 						<g id="group534-1117" transform="translate(38.6777,-14.0633)" v:mID="534" v:groupContext="group">
 							<title>Sheet.534</title>
 							<g id="group535-1118" v:mID="535" v:groupContext="group">

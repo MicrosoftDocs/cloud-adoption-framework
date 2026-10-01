@@ -354,12 +354,12 @@
 					</g>
 					<g id="shape55-100" v:mID="55" v:groupContext="shape" transform="translate(751.046,-135)">
 						<title>Sheet.55</title>
-						<desc>Landing Zones</desc>
+						<desc>Workload landing zones</desc>
 						<v:userDefs/>
 						<v:textBlock v:margins="rect(4,4,4,4)"/>
 						<v:textRect cx="50.2031" cy="649.875" width="100.42" height="21.375"/>
 						<rect x="0" y="639.188" width="100.406" height="21.375" class="st8"/>
-						<text x="8.72" y="654.08" class="st9" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Landing Zones</text>					</g>
+						<text x="8.72" y="654.08" class="st9" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Workload landing zones</text>					</g>
 					<g id="shape56-103" v:mID="56" v:groupContext="shape" v:layerMember="0" transform="translate(289.898,-225.164)">
 						<title>Dynamic connector</title>
 						<path d="M0 631.83 L0.28 660.56 L0 631.83 Z" class="st10"/>
@@ -1231,12 +1231,12 @@
 				</g>
 				<g id="shape233-457" v:mID="233" v:groupContext="shape" transform="translate(1414.59,-324.003)">
 					<title>Sheet.233</title>
-					<desc>Landing Zones Brownfield</desc>
+					<desc>Workload landing zones Brownfield</desc>
 					<v:userDefs/>
 					<v:textBlock v:margins="rect(4,4,4,4)"/>
 					<v:textRect cx="50.2031" cy="649.875" width="100.42" height="21.375"/>
 					<rect x="0" y="639.188" width="100.406" height="21.375" class="st8"/>
-					<text x="8.72" y="645.68" class="st9" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Landing Zones <tspan
+					<text x="8.72" y="645.68" class="st9" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Workload landing zones <tspan
 								x="18.12" dy="1.2em" class="st21">Brownfield</tspan></text>				</g>
 				<g id="shape234-461" v:mID="234" v:groupContext="shape" v:layerMember="0" transform="translate(1386.47,-376.462)">
 					<title>Dynamic connector.4270</title>

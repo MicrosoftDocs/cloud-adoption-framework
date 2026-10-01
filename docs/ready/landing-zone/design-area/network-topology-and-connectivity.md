@@ -23,7 +23,7 @@ The network topology and connectivity design area are critical for establishing 
 
 Network topology and connectivity are fundamental for organizations that are planning their landing zone design. Networking is central to almost everything inside a landing zone. It enables connectivity to other Azure services, external users, and on-premises infrastructure. Network topology and connectivity are in the [environmental group](../design-areas.md#environment-design-areas) of Azure landing zone design areas. This grouping is based on their importance in core design and implementation decisions.
 
-[![Diagram of networking areas of ALZ conceptual Management Group Hierarchy.](media/network-design-overview-mg.png)](media/network-design-overview-mg.png#lightbox)
+[![Diagram of networking areas of ALZ conceptual Management Group Hierarchy.](media/network-design-overview-mg.svg)](media/network-design-overview-mg.svg#lightbox)
 
 In the [conceptual Azure landing zone architecture](../../enterprise-scale/media/azure-landing-zone-architecture-diagram-hub-spoke.svg), there are two main management groups hosting workloads: Corp and Online. These management groups serve distinct purposes in organizing and governing Azure subscriptions. The networking relationship between the various Azure landing zones management groups depends on the organization's specific requirements and network architecture. 
 

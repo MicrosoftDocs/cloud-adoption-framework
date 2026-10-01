@@ -47,7 +47,7 @@ To transition from this scenario's current state to an Azure landing zone refere
 
 1. Deploy the [Azure landing zone](../landing-zone/index.md#deploying-and-managing-azure-landing-zone) into the same Microsoft Entra ID tenant in parallel with the current environment. This method provides a smooth and phased transition to the new landing zone architecture with minimal disruption to active workloads.
 
-   This deployment creates a new management group structure. This structure aligns with Azure landing zones design principles and recommendations. It also ensures that these changes don't affect the existing environment.
+   This deployment creates a new management group structure. This structure aligns with Azure landing zone design principles and recommendations. It also ensures that these changes don't affect the existing environment.
 
 2. (Optional) Work with application or service teams to migrate the workloads that are deployed in the original subscription into new Azure subscriptions. For more information, see [Transition existing Azure environments to the Azure landing zone reference architecture](./../enterprise-scale/transition.md#move-resources-in-azure). You can place workloads into the newly deployed Azure landing zone reference architecture management group hierarchy under the correct management group, such as *corporate* or *online* in the following diagram.
 

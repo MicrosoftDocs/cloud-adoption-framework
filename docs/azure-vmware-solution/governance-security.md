@@ -54,7 +54,7 @@ Every Azure VMware Solution deployment should inherit an approved security basel
 
 ## 4. Azure VMware Solution identity baseline
 
-Azure VMware Solution consumes your existing identity services, so the baseline refers to how you connect and your resources such as virtual machines, rather than deploying new identity services. This baseline relates to the identity services used by Azure VMware Solution itself, and doesn't affect the identity services used by individual application workloads running on VMware.
+Azure VMware Solution consumes your existing identity services, so the baseline refers to how you connect and your resources such as virtual machines, rather than deploying new identity services. This baseline relates to the identity services used by Azure VMware Solution itself, and doesn't affect the identity services used by individual workloads running on VMware.
 
 ### 4.1 Identity provider
 

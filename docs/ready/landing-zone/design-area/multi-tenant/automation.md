@@ -1,5 +1,5 @@
 ---
-title: Automate Azure landing zones across multiple tenants
+title: Automate Azure landing zone across multiple tenants
 description: Learn about the automation considerations and recommendations when handling multiple Microsoft Entra tenants alongside Azure landing zones.
 author: jtracey93
 ms.author: jatracey
@@ -8,13 +8,13 @@ ms.topic: concept-article
 ms.custom: think-tank
 ---
 
-# Automate Azure landing zones across multiple tenants
+# Automate an Azure landing zone across multiple tenants
 
-If your organization has multiple Microsoft Entra tenants with Azure landing zones (ALZ) in each of them, one or multiple times, automation is key. Automation helps to successfully operate and maintain the ALZ deployment at scale across all tenants. There are many approaches to automate ALZ deployments across multiple tenants. The approach you take depends on the reasons your organization has multiple Microsoft Entra tenants.
+If your organization has multiple Microsoft Entra tenants with an Azure landing zone (ALZ) in each of them, one or multiple times, automation is key. Automation helps to successfully operate and maintain the ALZ deployment at scale across all tenants. There are many approaches to automate ALZ deployments across multiple tenants. The approach you take depends on the reasons your organization has multiple Microsoft Entra tenants.
 
 For example, you might have multiple Microsoft Entra tenants if you're an independent software vendor. It's likely that you want to keep your corporate and SaaS solutions Microsoft Entra tenants separate. The risk of an operation or deployment affecting the other tenant, whether intended or by mistake, reduces.
 
-The following sections provide diagrams and guidance about the approaches that you can take. Choose which approach is best for you based on your requirements, considerations, and recommendations for automating your Azure landing zones deployments when handling multiple Microsoft Entra tenants.
+The following sections provide diagrams and guidance about the approaches that you can take. Choose which approach is best for you based on your requirements, considerations, and recommendations for automating your Azure landing zone deployments when handling multiple Microsoft Entra tenants.
 
 >[!NOTE]
 > Review the following articles first to get an overview of Microsoft Entra tenants:
@@ -34,7 +34,7 @@ There are two approaches to automate the deployment of Azure landing zones acros
 Both of these approaches are provided as examples and inspiration. You can mix and match the approaches in your deployments based on your organization's requirements.
 
 >[!IMPORTANT]
-> This article covers automating the deployment and operation of Azure landing zones as the platform in each Microsoft Entra tenant that your organization has. The approaches, recommendations, and considerations in this article are **not** intended to be used by application teams that deploy and operate their services and applications into their landing zones (subscriptions). For more information on the different types of landing zones, see [Platform vs. application landing zones](../../index.md#platform-landing-zone-vs-application-landing-zones).
+> This article covers automating the deployment and operation of Azure landing zones as the platform in each Microsoft Entra tenant that your organization has. The approaches, recommendations, and considerations in this article are **not** intended to be used by workload teams that deploy and operate their services and applications into their landing zones (subscriptions).
 
 ### Approach 1 – Complete isolation
 
@@ -44,7 +44,7 @@ In this approach, the primary objective is to keep each Microsoft Entra tenant i
 - GitHub Actions or Azure Pipelines (including self-hosted runners, if being utilized).
 - Identities that are used for performing tasks from automation, like managed identities assigned to self-hosted runners, service principal names (SPNs), users, or administrators.
 
-:::image type="content" source="media/automation-approach-1.png" alt-text="Diagram of multiple Microsoft Entra tenants with Azure landing zones deployed using the complete isolation automation approach." lightbox="media/automation-approach-1.png":::
+:::image type="content" source="media/automation-approach-1.svg" alt-text="Diagram of multiple Microsoft Entra tenants with Azure landing zones deployed using the complete isolation automation approach." lightbox="media/automation-approach-1.svg":::
 
 In this approach, there are more components to manage that are duplicated per a Microsoft Entra tenant. Some organizations might have regulatory compliance controls enforced on them that mandates this type of segregation and isolation.
 
@@ -66,7 +66,7 @@ In this approach, an application registration is created in the managing Microso
 >[!TIP]
 > For information about the relationship between application registrations and enterprise applications (service principals), see [Application and service principal objects in Microsoft Entra ID](/entra/identity-platform/app-objects-and-service-principals).
 
-:::image type="content" source="media/automation-approach-2.png" alt-text="Diagram of multiple Microsoft Entra tenants with Azure landing zones deployed using the shared application registration (multitenant) with multiple service principals automation approach." lightbox="media/automation-approach-2.png":::
+:::image type="content" source="media/automation-approach-2.svg" alt-text="Diagram of multiple Microsoft Entra tenants with Azure landing zones deployed using the shared application registration (multitenant) with multiple service principals automation approach." lightbox="media/automation-approach-2.svg":::
 
 >[!IMPORTANT]
 > In this approach, the single application registration and the associated enterprise applications (service principals) should be monitored for any abnormal activity in your security information and event management (SIEM) tooling because this is a highly privileged account. It should send alerts and potentially automatically take action, depending on the alert severity.

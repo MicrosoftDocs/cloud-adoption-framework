@@ -19,7 +19,7 @@ These resources are deployed within a single Microsoft Entra tenant. Management 
 
 Multiple subscriptions can rely on the same Microsoft Entra tenant. Each subscription can only rely on a single Microsoft Entra tenant. For more information, see [Add an existing Azure subscription to your tenant](/entra/fundamentals/how-subscriptions-associated-directory).
 
-[![Diagram of a single Microsoft Entra tenant with Azure landing zones deployed.](media/contoso-single-tenant.png)](media/contoso-single-tenant.png#lightbox)
+[![Diagram of a single Microsoft Entra tenant with Azure landing zones deployed.](media/contoso-single-tenant.svg)](media/contoso-single-tenant.svg#lightbox)
 
 In the previous diagram, management groups, Azure Policies, and Azure subscriptions are deployed following the [Azure landing zones conceptual architecture](../../index.md#azure-landing-zone-architecture) within a single Microsoft Entra tenant.
 

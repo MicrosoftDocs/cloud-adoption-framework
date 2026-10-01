@@ -347,12 +347,12 @@
 					<text x="2.56" y="475.78" class="st7" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Corp</text>				</g>
 				<g id="shape10-23" v:mID="10" v:groupContext="shape" transform="translate(1035,-322.642)">
 					<title>Sheet.10</title>
-					<desc>Landing Zones</desc>
+					<desc>Workload landing zones</desc>
 					<v:userDefs/>
 					<v:textBlock v:margins="rect(0,0,0,0)"/>
 					<v:textRect cx="31.1557" cy="473.367" width="62.32" height="9.63783"/>
 					<rect x="0" y="468.546" width="62.31" height="9.63999" class="st4"/>
-					<text x="5.17" y="475.78" class="st7" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Landing Zones</text>				</g>
+					<text x="5.17" y="475.78" class="st7" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Workload landing zones</text>				</g>
 				<g id="shape11-26" v:mID="11" v:groupContext="shape" transform="translate(600.157,-232.642)">
 					<title>Sheet.11</title>
 					<desc>Management</desc>
@@ -567,12 +567,12 @@
 				</g>
 				<g id="shape17-44" v:mID="17" v:groupContext="shape" transform="translate(1177.85,-186.811)">
 					<title>Sheet.17</title>
-					<desc>Landing Zone (n)</desc>
+					<desc>Workload landing zone (n)</desc>
 					<v:userDefs/>
 					<v:textBlock v:margins="rect(4,4,4,4)"/>
 					<v:textRect cx="43.8148" cy="472.216" width="87.63" height="11.9384"/>
 					<rect x="0" y="466.246" width="87.6299" height="11.94" class="st4"/>
-					<text x="9.25" y="475.22" class="st10" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Landing Zone (n)</text>				</g>
+					<text x="9.25" y="475.22" class="st10" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Workload landing zone (n)</text>				</g>
 				<g id="shape18-47" v:mID="18" v:groupContext="shape" transform="translate(1185.67,-149.376)">
 					<title>Sheet.18</title>
 					<rect v:rectContext="foreign" x="0" y="452.782" width="24.6114" height="25.4036" class="st9"/>

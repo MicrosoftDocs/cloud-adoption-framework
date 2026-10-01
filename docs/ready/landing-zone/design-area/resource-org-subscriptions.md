@@ -125,7 +125,7 @@ Configure your subscription policy by providing a list of [exempted users](/azur
 
 - Azure subscriptions that you transfer into a Microsoft Entra tenant are placed into the [default management group](/azure/governance/management-groups/how-to/protect-resource-hierarchy#setting---default-management-group) for that tenant.
 
-- If your organization approves, your application team can define a process to allow Azure subscriptions to be transferred to or from a Microsoft Entra tenant.
+- If your organization approves, your workload team can define a process to allow Azure subscriptions to be transferred to or from a Microsoft Entra tenant.
 
 ### Cost management design considerations
 
@@ -170,7 +170,7 @@ The following sections contain recommendations to help you plan and create subsc
 
   - Do not combine platform responsibilities into a single subscription. This approach ensures that you can apply different policies and role assignments to each platform area. It also ensures that billing is separated for each area.
 
-- Build a subscription vending process to automate the creation of subscriptions for application teams via a self-service request workflow. For more information, see [Subscription vending](subscription-vending.md).
+- Build a subscription vending process to automate the creation of subscriptions for workload teams via a self-service request workflow. For more information, see [Subscription vending](subscription-vending.md).
 
 - Avoid a rigid subscription model. Instead, use a set of flexible criteria to group subscriptions across your organization. This flexibility ensures that as your organization's structure and workload composition changes, you can create new subscription groups instead of using a fixed set of existing subscriptions. One size doesn't fit all for subscriptions, and what works for one business unit might not work for another. Some applications might coexist within the same landing zone subscription, while others might require their own subscription.
 

@@ -14,7 +14,7 @@ This article is part of the **SAP and Power Platform** article series:
 
 - Extend SAP by using Microsoft Power Platform
 - [SAP and Power Platform architecture workflow](./sap-power-platform-architecture-workflow.md)
-- [Extend your SAP landing zone to support Power Platform](./sap-power-platform-extend-landing-zone.md)
+- [Extend your workload landing zone to support Power Platform](./sap-power-platform-extend-landing-zone.md)
 
 ## Microsoft Power Platform components
 
