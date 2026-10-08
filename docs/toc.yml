@@ -398,12 +398,6 @@ items:
           href: cloud-native/deploy-cloud-native-solutions.md
         - name: 4. Optimize cloud-native solutions
           href: cloud-native/optimize-cloud-native-solutions.md
-      - name: Application landing zone accelerators
-        items:
-          - name: AI
-            href: /azure/architecture/ai-ml/architecture/baseline-azure-ai-foundry-landing-zone
-          - name: Azure Virtual Machines
-            href: /azure/architecture/virtual-machines/baseline-landing-zone
 
     - name: Govern
       items:
