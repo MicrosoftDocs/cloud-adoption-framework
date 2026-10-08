@@ -10,6 +10,8 @@ ms.topic: concept-article
 
 # The strategic impact of SAP in the cloud
 
+[!INCLUDE [SAP deprecation notice](./includes/sap-deprecation.md)]
+
 This article helps you understand why SAP cloud adoption matters, what motivates organizations to move SAP workloads to the cloud, and how to measure progress throughout your migration.
 
 ## Reasons to move an SAP platform to the cloud
