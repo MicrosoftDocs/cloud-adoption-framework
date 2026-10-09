@@ -98,7 +98,7 @@ Deploy the Microsoft Purview resource in a workload landing zone under the Inter
 
 ### 2.3 Azure workloads and Fabric
 
-**Management group placement: Internal, Online, Local.* Azure workloads can integrate with a unified data platform by either producing data for Microsoft Fabric or consuming governed data products from Fabric. The workload landing zone placement depends on the workload's purpose and business requirements, not on its integration with Fabric.
+*Management group placement: Internal, Online, Local.* Azure workloads can integrate with a unified data platform by either producing data for Microsoft Fabric or consuming governed data products from Fabric. The workload landing zone placement depends on the workload's purpose and business requirements, not on its integration with Fabric.
 
 - Workloads that create, transform, or manage shared data products typically reside in workload landing zones under the Internal management group.
 - Workloads that consume governed data products can reside in Internal, Online, or Local workload landing zones.
@@ -123,7 +123,7 @@ Regardless of placement, all workloads should use approved interfaces that prote
     - Machine learning workloads that use data products for training or inference.
     - Reporting solutions that consume certified business data.
 
-Azure workloads can access Fabric data products through capabilities such as [SQL analytics endpoint](/fabric/database/sql/sql-analytics-endpoint), OneLake access, [OneLake APIs](/fabric/onelake/onelake-access-api), and other integration mechanisms that align to workload requirements.
+    Azure workloads can access Fabric data products through capabilities such as [SQL analytics endpoint](/fabric/database/sql/sql-analytics-endpoint), OneLake access, [OneLake APIs](/fabric/onelake/onelake-access-api), and other integration mechanisms that align to workload requirements.
 
 #### 2.3.2 Producing data for Fabric
 
