@@ -17,19 +17,19 @@ Consistent deployment configurations enhance security, compliance, and operation
 
 1. **Deploy to regions that meet your requirements.** Model placement depends on specific latency, throughput, and compliance requirements that determine optimal performance. Check the Azure region [product availability](https://azure.microsoft.com/explore/global-infrastructure/products-by-region/table) table to confirm support for required hardware, features, and data-residency rules before deployment to ensure performance and regulatory alignment.
 
-2. **Monitor AI deployment resources continuously.** Resource monitoring captures performance data and identifies issues before they affect users. Diagnostic settings capture logs and metrics for all key services including [Foundry and Foundry Tools](/azure/ai-services/diagnostic-logging). This monitoring provides visibility into system health and enables proactive issue resolution.
+2. **Monitor AI deployment resources continuously.** Resource monitoring captures performance data and identifies issues before they affect users. Diagnostic settings capture logs and metrics for all key services including [Foundry Tools](/azure/ai-services/diagnostic-logging). This monitoring provides visibility into system health and enables proactive issue resolution.
 
 3. **Manage deployment resources centrally.** Centralized resource management provides consistent oversight and control across all AI deployments. For example, use the [Microsoft Foundry Control Plane](/azure/foundry/control-plane/overview) to centralize management for your AI agent fleet. This approach ensures standardized resource allocation and cost control. Also [manage costs in Foundry](/azure/foundry/concepts/manage-costs).
 
-4. **Use Azure API Management as a unified gateway for multiple deployments.** API Management provides consistent security, scalability, rate limiting, token quotas, and centralized monitoring when onboarding multiple applications or teams. This approach standardizes access patterns and reduces management overhead across your AI services.
+4. **Use Azure API Management.** API Management provides consistent security, scalability, rate limiting, token quotas, and centralized monitoring when onboarding multiple applications or teams. This approach standardizes access patterns and reduces management overhead across your AI services.
 
 ## Manage AI models
 
 Model monitoring ensures outputs align with Responsible AI principles and maintain accuracy over time. AI models experience drift due to changing data, user behaviors, or external factors that can lead to inaccurate results or ethical concerns. You must implement continuous monitoring to detect and address these changes proactively. Here's how:
 
-1. **Monitor model outputs for quality and alignment.** Monitoring processes ensure workloads remain aligned with responsible AI targets and deliver expected results. Use Foundry's [observability features](/azure/ai-foundry/concepts/observability) and [monitor applications](/azure/ai-foundry/how-to/monitor-applications). For Foundry Agent Service, [monitor agent deployments](/azure/ai-foundry/agents/how-to/metrics).
+1. **Monitor model outputs.** Monitoring processes ensure workloads remain aligned with responsible AI targets and deliver expected results. Use Foundry's [observability features](/azure/ai-foundry/concepts/observability). For Foundry Agent Service, [monitor agent deployments](/azure/ai-foundry/agents/how-to/metrics).
 
-2. **Track model performance metrics continuously.** Performance monitoring helps pinpoint issues when accuracy or response quality drops below acceptable thresholds. Monitor latency in response times and accuracy of vector search results through [tracing](/azure/ai-foundry/how-to/develop/trace-local-sdk) in Foundry.
+2. **Track model performance.** Performance monitoring helps pinpoint issues when accuracy or response quality drops below acceptable thresholds. Monitor latency in response times and accuracy of vector search results through [tracing](/azure/ai-foundry/how-to/develop/trace-local-sdk) in Foundry.
 
 3. **Consider implementing a generative AI gateway for enhanced monitoring.** Azure API Management enables logging and monitoring capabilities that platforms don't provide natively, including source IP collection, input text tracking, and output text analysis. This approach provides comprehensive audit trails and monitoring data.
 
