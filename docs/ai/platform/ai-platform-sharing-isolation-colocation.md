@@ -7,7 +7,7 @@ ms.author: ssumner
 ms.reviewer: ssumner
 ms.date: 05/26/2026
 ms.topic: concept-article
-ms.collection: ce-skilling-ai-copilot
+ai-usage: ai-assisted
 ---
 
 # AI platform sharing decision guidance
@@ -20,7 +20,7 @@ Your organization must decide how to place AI workload environments across AI pl
 
 **Decision guidance:**
 
-## 1. Define AI platform sharing boundaries
+## 1. AI platform sharing boundaries
 
 Every organization needs boundaries across which workloads must never share an AI platform instance. This boundary applies in every environment, including production and preproduction environments. Workloads inside the same boundary can potentially share a platform instance. Workloads in different boundaries can't.
 
@@ -38,7 +38,7 @@ Every organization needs boundaries across which workloads must never share an A
 
 - **Find what works best.** No single model is universally correct. Consistency matters more than which model you select, because a clearly enforced boundary model keeps governance understandable as the AI platform grows.
 
-## 2. Define a production AI platform sharing policy
+## 2. Production AI platform sharing policy
 
 AI platform sharing in production is the practice of running more than one production AI workload environment on the same Microsoft Foundry resource or Azure Machine Learning workspace. In Azure, the AI platform instance defines the network boundary, identity boundary, and quota boundary for the workload environments that use it. For that reason, organizations should define a specific policy for production AI platform sharing.
 
@@ -84,7 +84,7 @@ These constructs give each use case its own assets and role assignments. They sh
 
 For background on the constructs that anchor these decisions, see [Microsoft Foundry resources](/azure/foundry/how-to/create-projects) and [Azure Machine Learning workspaces](/azure/machine-learning/concept-hub-workspace).
 
-## 3. Define a preproduction AI platform sharing policy
+## 3. Preproduction AI platform sharing policy
 
 Preproduction environments invert the production default. Preproduction environments include development, test, and stage. These environments support experimentation and prerelease validation. Dedicated instances of AI platform resources rarely justify their cost in those tiers. Default to a shared instance per environment tier.
 

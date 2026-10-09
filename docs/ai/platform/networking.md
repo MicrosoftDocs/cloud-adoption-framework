@@ -37,18 +37,6 @@ Network traffic control defines how data flows between AI services and external 
 
 7. **Use Azure Web Application Firewall (WAF) for internet-facing workloads**. [Azure WAF](/azure/web-application-firewall/overview) protects AI workloads from common web vulnerabilities like SQL injections and cross-site scripting attacks. Configure Azure WAF on [Application Gateway](/azure/web-application-firewall/ag/ag-overview) to enhance security for workloads exposed to malicious web traffic.
 
-## Azure resources
-
-| Category | Tool | Description |
-|----------|------|-------------|
-| Network isolation | [Azure Virtual Network](/azure/virtual-network/virtual-networks-overview) | Creates secure network boundaries and enables private communication between Azure resources |
-| Private connectivity | [Azure Private Link](/azure/private-link/private-link-overview) | Provides private access to Azure services over the Microsoft backbone network |
-| Secure access | [Azure Bastion](/azure/bastion/bastion-overview) | Delivers secure RDP/SSH connectivity without public IP exposure |
-| DNS management | [Azure Private DNS](/azure/dns/private-dns-overview) | Manages private DNS zones for secure name resolution within virtual networks |
-| API gateway | [Azure API Management](/azure/api-management/api-management-key-concepts) | Centralizes API management and security for AI service endpoints |
-| Web security | [Azure Application Gateway](/azure/application-gateway/overview) | Provides secure HTTPS termination and web application firewall capabilities |
-| Global delivery | [Azure Front Door](/azure/frontdoor/front-door-overview) | Offers global load balancing and secure edge connectivity for AI applications |
-
 ## Next step
 
 > [!div class="nextstepaction"]

@@ -21,7 +21,7 @@ Operational frameworks provide structure for managing complex AI projects. These
 
 1. **Select the right operational framework for your workload type.** Different AI workloads require different operational approaches that affect team processes and tooling decisions. This choice determines your development methodology and technology stack integration. Use [MLOps](/azure/architecture/ai-ml/guide/machine-learning-operations-v2) frameworks for traditional machine learning workflows and [GenAIOps](/azure/architecture/ai-ml/guide/genaiops-for-mlops) for generative AI workloads.
 
-1. **Standardize development tools across all teams.** Consistent tooling eliminates compatibility problems between team environments and reduces learning curves for developers. This approach prevents integration issues and accelerates development cycles. Define and standardize the use of SDKs and APIs for consistency across development teams. For more information, see [Choose the right SDK to support your use case](/microsoft-365/agents-sdk/choose-agent-solution).
+1. **Standardize development tools across all teams.** Consistent tooling eliminates compatibility problems between team environments and reduces learning curves for developers. This approach prevents integration issues and accelerates development cycles. Define and standardize the use of SDKs and APIs for consistency across development teams.
 
 1. **Create dedicated sandbox environments for experimentation.** Sandbox environments allow safe testing without affecting production systems and provide teams freedom to test new approaches. These environments prevent experimental code from affecting stable workloads. Use a sandbox environment that remains distinct from dev, test, and production environments in the AI development lifecycle. Maintain consistency across dev, test, and prod environments to prevent breaking changes during promotion between environments.
 
@@ -31,7 +31,7 @@ Operational frameworks provide structure for managing complex AI projects. These
 
 AI deployment management defines who can deploy AI resources and governs these endpoints. A structured approach ensures organizations balance development speed with governance requirements. You must establish clear deployment authority to achieve consistent AI resource management. Here's how:
 
-1. **Grant workload teams deployment authority within defined governance boundaries.** Workload teams accelerate development when they control AI resource deployment without waiting for central approval processes. This autonomy reduces bottlenecks and enables rapid response to business requirements while maintaining organizational standards. Use [Azure Policy](/azure/governance/policy/overview) to enforce governance consistently across workload environments and create AI policies that address governance gaps.
+1. **Grant workload teams deployment authority within defined governance boundaries.** Workload teams accelerate development when they control AI resource deployment without waiting for central approval processes. This autonomy reduces bottlenecks and enables rapid response to business requirements while maintaining organizational standards. 
 
 1. **Define clear AI deployment policies for both management approaches.** AI policies provide guardrails that prevent configuration drift and security gaps while ensuring compliance with organizational standards. These policies reduce the risk of unauthorized AI resource usage. Create AI policies to enforce content filter settings and prevent the use of disallowed models, then communicate these policies clearly to all teams. Conduct regular audits to ensure compliance.
 
@@ -49,7 +49,7 @@ AI model management involves governance structures, continuous monitoring, and p
 
 1. **Establish model promotion processes with quality gates.** Quality gates ensure only validated models reach production environments. These processes prevent poorly performing models from affecting business operations and maintain consistent quality standards. Use performance criteria to promote trained, fine-tuned, and retrained models to higher environments. Define performance criteria that are unique to each application and establish clear promotion workflows that include testing and validation steps.
 
-1. **Track model retirement schedules to prevent service disruptions.** Model retirement tracking prevents performance issues when vendor support ends. Organizations that miss retirement dates face unexpected service degradation or compatibility problems. Monitor retirement dates for pretrained models to maintain functionality when vendors deprecate services. For instance, update generative AI models before deprecation to maintain system functionality. Use [Foundry portal](https://ai.azure.com?cid=learnDocs) to view model retirement dates for all deployments.
+1. **Track model retirement schedules to prevent service disruptions.** Model retirement tracking prevents performance issues when vendor support ends. Organizations that miss retirement dates face unexpected service degradation or compatibility problems. Monitor retirement dates for pretrained models to maintain functionality when vendors deprecate services. For instance, update generative AI models before deprecation to maintain system functionality.
 
 ## Manage AI costs
 
