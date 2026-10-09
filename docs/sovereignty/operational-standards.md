@@ -59,9 +59,9 @@ Sovereignty requirements don't end when a workload is deployed. Regulations chan
 
 | **Drift category** | **Examples** | **Preventative operational standard** |
 |---|---|---|
-| Deployment drift | Unapproved region.Unapproved service. | Service catalog |
-| Configuration drift | Control removed.Encryption setting changed.Classification mismatch. | Change management process |
-| Operational drift | Access review missed.Expired exception.Evidence not maintained. | Exception managementControl ownershipRisk management integration |
+| Deployment drift | Unapproved region. Unapproved service. | Service catalog |
+| Configuration drift | Control removed. Encryption setting changed. Classification mismatch. | Change management process |
+| Operational drift | Access review missed. Expired exception. Evidence not maintained. | Exception management. Control ownership. Risk management integration |
 
 Require your workload teams to implement monitoring and compliance capabilities that detect sovereignty drift, support operational reviews, and provide evidence for audits and regulatory reporting.
 

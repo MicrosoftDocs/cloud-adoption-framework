@@ -1,21 +1,16 @@
 ---
 title: Select Azure Platform as a Service (PaaS) Solutions for AI
-description: Learn how to select the right Foundry Tools, compute, and tools to build effective generative and nongenerative AI workloads.
+description: Compare Microsoft Foundry, Foundry Tools, and Azure Machine Learning for generative and nongenerative AI workloads.
 author: stephen-sumner
 ms.author: ssumner
-ms.date: 11/17/2025
+ms.date: 10/09/2026
 ms.topic: concept-article
+ai-usage: ai-assisted
 ---
 
 # Select Azure PaaS solutions for AI
 
-This article explains how to select resources for Azure AI platform as a service (PaaS) solutions. The following table summarizes the main Azure AI PaaS solutions and key decision criteria.
-
-| AI services | AI type | Description | Skills required |
-|---------|------------|---------| --- |
-| [Microsoft Foundry](/azure/ai-foundry/what-is-azure-ai-foundry) | Generative AI and nongenerative AI | A platform for building and deploying generative and nongenerative AI applications | Developer and data science skills |
-| [Foundry Tools](/azure/ai-services/what-are-ai-services) | Generative AI and nongenerative AI | Various services that provide prebuilt generative and nongenerative AI models | Developer skills |
-| [Azure Machine Learning](/azure/machine-learning/overview-what-is-azure-machine-learning) | Machine learning | A service for training and deploying machine learning models | Developer skills and advanced data science skills |
+This article explains how to select resources for Azure AI platform as a service (PaaS) solutions.
 
 ## Select resources for generative AI workloads
 
@@ -23,31 +18,27 @@ Generative AI uses multiple resources to process input data and produce meaningf
 
 :::image type="content" source="../images/generative-ai-app.svg" alt-text="Diagram that shows the basic components of a generative AI workload." lightbox="../images/generative-ai-app.svg" border="false":::
 
-### Generative AI workflow
+Here's a general generative AI workflow:
 
-The following workflow matches the diagram above:
-
-1. The AI app receives a user query.
-2. An orchestrator, such as Foundry Agent Service or the [Microsoft Agent Framework](/agent-framework/overview/agent-framework-overview), manages data flow.
-3. A search and retrieval mechanism finds the grounding data.
-4. The mechanism sends the grounding data to a generative AI platform.
-5. The generative AI platform creates a response using the user query and grounding data.
+1. Receive the user request. The AI app or agent receives a user query or prompt.
+2. Orchestrate the request. The orchestration layer coordinates retrieval and model invocation for the AI app or agent.
+3. Retrieve relevant content. When grounding is required, the orchestration layer uses a search and retrieval mechanism to retrieve relevant content from an index or vector database.
+4. Use grounding data. The index or vector database contains or indexes grounding data from sources such as Azure Storage, Azure SQL Database, or Azure Cosmos DB.
+5. Generate and return the response. The orchestration layer combines the user request with any retrieved content and sends the request to the generative AI endpoint. The model generates a response that returns to the AI app or agent.
 
 ### Generative AI resource selection
 
-Follow these steps to build generative RAG workloads:
+Use Microsoft Foundry to build and manage generative AI applications and agents. Foundry provides models, agents, tools, evaluation, observability, and management capabilities.
 
-1. **Select a generative AI platform.** Use Foundry to deploy and manage generative AI models. Foundry offers a code-first platform with built-in tools for development, deployment, and orchestration.
+1. **Select a model and deployment approach.** Choose a model that meets your functional, quality, compliance, and cost requirements. See [Deployment option](/azure/foundry/concepts/deployments-overview) and [Deployment type](/azure/foundry/foundry-models/concepts/deployment-types).
 
-2. **Select an AI compute type (optional).** You might need to create a [managed compute deployment](/azure/foundry-classic/how-to/deploy-models-managed?pivots=ai-foundry-portal) for your workloads. Pick a compute type that fits your performance and budget needs. See also [Create compute instances](/azure/foundry-classic/how-to/create-manage-compute).
+2. **Select an orchestrator.** Determine how your application or agent coordinates model requests, retrieval, tools, state, and application logic. Use [Foundry Agent Service](/azure/ai-foundry/agents/overview) when you need managed agent hosting and lifecycle capabilities. Use [Microsoft Agent Framework](/agent-framework/overview/agent-framework-overview) when your application owns the agent or workflow logic.
 
-3. **Select an orchestrator.** Use orchestrators like [Foundry Agent Service](/azure/ai-foundry/agents/overview) or [Microsoft Agent Framework](/agent-framework/overview/agent-framework-overview) to manage data flow and interactions. If your workload uses multiple agents, make sure your orchestrator supports the [AI agent orchestration patterns](/azure/architecture/ai-ml/guide/ai-agent-design-patterns) you need.
+3. **Select a search and knowledge retrieval mechanism.** Use Azure AI Search when you need a managed search index across one or more content sources. Consider a database with vector capabilities when embeddings must remain with operational data. Use the [Azure vector search decision guidance](/azure/architecture/guide/technology-choices/vector-search) to compare supported services by latency, scale, update frequency, and integration requirements.
 
-4. **Select a search and knowledge retrieval mechanism.** To ground generative AI models, create an index or vector database for relevant data. Use Azure AI Search to build traditional and vector indexes from various [data sources](/azure/search/search-indexer-overview#supported-data-sources), apply [data chunking](/azure/search/vector-search-integrated-vectorization), and use [multiple query types](/azure/search/search-query-overview#types-of-queries). For structured databases, consider [Azure Cosmos DB](/azure/cosmos-db/vector-database), [Azure Database for PostgreSQL](/azure/postgresql/flexible-server/how-to-use-pgvector), or [Azure Managed Redis](/azure/redis/overview-vector-similarity).
+4. **Select a data source for grounding data.** Store grounding data in Azure Blob Storage for images, audio, video, or large datasets. You can also use databases supported by [Azure AI Search](/azure/search/search-indexer-overview#supported-data-sources) or [vector databases](/dotnet/ai/conceptual/vector-databases#available-vector-database-solutions).
 
-5. **Select a data source for grounding data.** Store grounding data in Azure Blob Storage for images, audio, video, or large datasets. You can also use databases supported by [AI Search](/azure/search/search-indexer-overview#supported-data-sources) or [vector databases](/dotnet/ai/conceptual/vector-databases#available-vector-database-solutions).
-
-6. **Select a compute platform.** Use the Azure [compute decision tree](/azure/architecture/guide/technology-choices/compute-decision-tree) to choose the right platform for your workload.
+5. **Select application hosting.** Use the Azure [compute decision tree](/azure/architecture/guide/technology-choices/compute-decision-tree) to select a compute service for your application and supporting components.
 
 ## Select resources for nongenerative AI workloads
 
@@ -70,13 +61,13 @@ Follow these steps to build nongenerative AI workloads:
 
 1. **Select a nongenerative AI platform.** Use Foundry Tools or Machine Learning based on your needs. Foundry Tools offer prebuilt models that simplify deployment and reduce the need for advanced data science skills. Machine Learning lets you develop custom models with your data and integrate them into your workloads.
 
-2. **Select an AI compute type.** Machine Learning requires [compute resources](/azure/machine-learning/concept-azure-machine-learning-v2) to run jobs or host endpoints. Pick a compute type that fits your performance and budget needs. Foundry Tools do not require compute resources.
+2. **Select training and inference compute.** Azure Machine Learning uses [compute resources](/azure/machine-learning/concept-azure-machine-learning-v2) to run training jobs and deploy models. Select compute based on workload performance, scaling, and cost requirements. Most prebuilt Foundry Tools expose managed APIs, so you don't provision model-hosting compute for the service.
 
-3. **Select a data source.** Use supported [data sources](/azure/machine-learning/how-to-datastore) to host training data for Machine Learning. Many Foundry Tools do not require fine-tuning data. Some Foundry Tools, such as Azure AI Custom Vision, let you upload local files to managed storage.
+3. **Select a data source.** For Azure Machine Learning, select a supported [data sources](/azure/machine-learning/how-to-datastore) for training and validation data. For customizable Foundry Tools, review the selected tool's data, storage, and residency requirements.
 
-4. **Select a compute platform.** Use the Azure [compute decision tree](/azure/architecture/guide/technology-choices/compute-decision-tree) to choose the right platform for your workload.
+4. **Select application hosting.** Use the Azure [compute decision tree](/azure/architecture/guide/technology-choices/compute-decision-tree) to select a compute service for your application and supporting components.
 
-5. **Select a data processing service (optional).** Use Azure Functions to process serverless data. Use Azure Event Grid to trigger data processing pipelines.
+5. **Select a data processing approach (optional).** Determine whether the workload requires data transformation, event-driven processing, or other preprocessing before invoking the AI model. Select an Azure data processing service that meets the workload's processing requirements.
 
 ## Next steps
 
