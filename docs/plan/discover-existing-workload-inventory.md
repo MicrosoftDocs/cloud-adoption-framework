@@ -71,7 +71,7 @@ For an example, see [Migration adoption plan](./migration-adoption-plan.md#workl
 | Assessment | [CloudPilot](https://appsource.microsoft.com/product/web-apps/cloudatlasinc.36d534d9-ab47-4cd8-93d3-2be7df682782) | Analyzes applications for cloud readiness |
 | Code assessment | [AppCAT](/azure/migrate/appcat/overview) | Assesses .NET and Java applications for Azure compatibility |
 | Assessment | [CloudAtlas](https://appsource.microsoft.com/product/web-apps/unify-cloud-llc.cloudatlas_modernize_and_migrate?tab=Overview) | Provides modernization and migration assessment |
-| PaaS assessment | [Cloudockit](https://marketplace.microsoft.com/marketplace/apps/azure-dockit.cloudockit?tab=Overview) | Generates architecture diagrams and documentation for cloud environments |
+| PaaS assessment | [Cloudockit](https://marketplace.microsoft.com/product/aad.azuredockit?tab=Overview) | Generates architecture diagrams and documentation for cloud environments |
 | AWS to Azure migration | [AWS to Azure guidance](/azure/migration/migrate-from-aws) | Provides guidance for migrating from AWS to Azure |
 | Google Cloud to Azure migration | [Google Cloud to Azure guidance](/azure/migration/migrate-from-google-cloud) | Provides guidance for migrating from Google Cloud to Azure |
 | AWS to Azure migration | [AWS to Azure service mapping](/azure/architecture/aws-professional/#primary-topics) | Maps AWS services to equivalent Azure services |
