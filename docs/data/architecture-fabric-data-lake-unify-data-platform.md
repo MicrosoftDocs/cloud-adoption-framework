@@ -47,7 +47,7 @@ This article helps you make the right architecture decisions for designing **Mic
 
 Fabric compute runs on capacity, which defines available resources, performance, and concurrency for all workloads that share that capacity. Capacity choices directly affect cost control and service reliability. Allocate budgets to data domain teams and allow those teams to own Fabric capacities that match their business criticality. Each data domain should have it's own workload landing zone to manage or share it's Fabric capacity.
 
-## 2. Microsoft Fabric reliabiliry
+## 2. Microsoft Fabric reliability
 
 Each Fabric capacity runs in a single Azure region. That region determines where compute and OneLake data for workspaces on that capacity reside. Region decisions affect data residency, latency, and service availability. Treat region selection as a governance decision. Publish a short list of supported regions and enforce that list through policy. 
 
