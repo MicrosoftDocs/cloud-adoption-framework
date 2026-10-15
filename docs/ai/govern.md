@@ -11,7 +11,7 @@ ms.topic: concept-article
 
 This article helps you establish an organizational process for governing AI. You use this guidance to integrate AI risk management into your broader risk management strategies, creating a unified approach to AI, cybersecurity, and privacy governance. The process follows the [NIST Artificial Intelligence Risk Management Framework (AI RMF)](https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf) and [NIST AI RMF Playbook](https://airc.nist.gov/AI_RMF_Knowledge_Base/Playbook). The guidance aligns with the framework in [CAF Govern](/azure/cloud-adoption-framework/govern/).
 
-:::image type="content" source="./images/ai-govern.svg" alt-text="Diagram that shows the 6 phases of AI adoption: Strategy, Plan, Ready, Govern, Secure, Manage." lightbox="./images/ai-govern.svg" border="false":::
+:::image type="content" source="./images/ai-adoption-process.svg" alt-text="Diagram that shows the phases of AI adoption: Plan, Ready, Govern, Secure, Manage." lightbox="./images/ai-adoption-process.svg" border="false":::
 
 ## 1. Assess AI organizational risks
 

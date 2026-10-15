@@ -11,7 +11,31 @@ ms.topic: concept-article
 
 This article helps you create an AI adoption plan that transforms your organization's AI strategy into actionable steps. An AI adoption plan bridges the gap between AI vision and execution. The plan ensures alignment between AI initiatives and business goals while addressing skill gaps, resource requirements, and implementation timelines.
 
-:::image type="content" source="./images/ai-plan.svg" alt-text="Diagram that shows the 6 phases of AI adoption: Strategy, Plan, Ready, Govern, Secure, Manage." lightbox="./images/ai-plan.svg" border="false":::
+:::image type="content" source="./images/ai-adoption-process.svg" alt-text="Diagram that shows the phases of AI adoption: Plan, Ready, Govern, Secure, Manage." lightbox="./images/ai-adoption-process.svg" border="false":::
+
+<a name='identify-ai-use-cases'></a>
+
+## AI use case identification
+
+The first step in framing your AI strategy is use case identification. This step defines how decision makers discover where AI can improve business outcomes across the organization. The goal is to surface meaningful opportunities first. The list doesn't need to be exhaustive, though it can be. Its purpose is to give everyone a common view of what matters most to the business. Work through it in order so that every use case traces back to real value.
+
+1. **Start with business problems.** Look for where the organization needs better results before you consider AI at all. The clearest signals show up in how people work, such as repeated manual effort or slow approvals. Frame the search in plain terms such as "where do results miss expectations" or "where do people spend time on repetitive tasks." This approach keeps AI pointed at value rather than novelty. Tradeoff: A broad scan surfaces many opportunities, so stay focused on the outcome gaps that are both measurable and meaningful.
+
+2. **Translate problems into use cases.** Turn each business problem into a short statement that names the activity and the expected result, such as "help support agents answer from internal documents so resolution time drops." Confirm the activity happens often enough to justify the investment. Tradeoff: Early scenarios tend to be vague, so refine them into clear and actionable descriptions before you move on.
+
+3. **Classify use case.** Classify each use case based on how it creates value. Use this decision to guide later technology choices.
+
+    - **Individual work:** These use cases improve how individuals or teams work inside existing tools. Examples include writing assistance or meeting preparation. They align strongly to generative AI solutions such as Microsoft 365 Copilot.
+    
+    - **Business automation:** These use cases change how the organization operates or delivers value. Examples include automated customer routing or demand forecasting. They often need integration with other systems and can combine more than one AI type.
+    
+4. **Consider AI type needed.** This consideration isn't a final decision, and you can revisit it as the use case becomes clearer. A rough sense of how much consistency you want in the result narrows the technology choices that come next. You have the freedom to adjust it later.
+
+    - **Generative AI (non-deterministic)** produces outputs that can vary even for the same input, and it works well when inputs are unstructured such as natural language or documents. It fits cases where the workflow isn't fixed and where you want the system to create content or assist a human decision. Lean this way when you don't know the exact steps in advance and some variation in the output is acceptable.
+
+    - **Nongenerative AI (deterministic)** produces consistent and repeatable outputs from structured inputs. It fits cases where the workflow is defined and the same input should lead to the same result. Lean this way for tasks that depend on accuracy such as prediction or anomaly detection.
+
+Apply this same sequence across every business area. A repeatable flow reduces confusion, prevents you from reaching for generative AI where it isn't needed, and prepares you to choose a solution path next.
 
 ## Assess AI skills
 
@@ -56,7 +80,7 @@ Clear access requirements and licensing strategies prevent deployment delays and
 
 Strategic prioritization ensures you focus resources on projects that deliver maximum value while matching your organizational capabilities. Use case prioritization reduces implementation risk and accelerates time to value. Evaluate each use case against feasibility, strategic value, and resource requirements to create an achievable implementation roadmap. Here's how:
 
-1. **Evaluate use cases against your current AI maturity and available resources.** A realistic evaluation prevents overcommitting to projects beyond your current capabilities and ensures successful implementation. This assessment helps you focus on achievable goals that build momentum for future projects. Review your AI maturity level, data availability, technical infrastructure, and staffing capacity for each use case defined in your [AI Strategy](./strategy.md#identify-ai-use-cases).
+1. **Evaluate use cases against your current AI maturity and available resources.** A realistic evaluation prevents overcommitting to projects beyond your current capabilities and ensures successful implementation. This assessment helps you focus on achievable goals that build momentum for future projects. Review your AI maturity level, data availability, technical infrastructure, and staffing capacity for each use case.
 
 2. **Rank use cases by strategic value and implementation feasibility.** Strategic ranking helps you allocate limited resources to projects with the highest potential impact and success probability. This approach maximizes return on AI investments while building organizational confidence. Score each use case on business impact, technical complexity, resource requirements, and alignment with organizational goals.
 

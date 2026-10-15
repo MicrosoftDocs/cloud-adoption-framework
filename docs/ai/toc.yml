@@ -1,11 +1,11 @@
 items:
-  - name: AI Strategy
+  - name: AI adoption strategy
     href: strategy.md
   - name: AI Plan
     href: plan.md
-  - name: AI Ready
+  - name: AI Ready (Azure landing zone)
     items:
-    - name: Prepare AI environment
+    - name: Architecture and governance
       href: ready.md
     - name: AI on Azure platforms
       items:
