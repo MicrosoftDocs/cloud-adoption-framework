@@ -128,7 +128,7 @@ Azure infrastructure shouldn't be the default approach for AI adoption. Use mana
 
 | AI solution | When to use | Main cost factors |
 |---|---|---|
-| [AI on Azure infrastructure](https://copilotstudio.preview.microsoft.com/azure/cloud-adoption-framework/ai/infrastructure/ai-azure-infrastructure) | Use when you need to bring your own AI models or runtimes to Azure and require control that managed AI platforms don't provide. | [Compute](https://azure.microsoft.com/pricing/details/virtual-machines/windows/) and supporting components like model usage, storage, and data transfer |
+| [AI on Azure infrastructure](/azure/cloud-adoption-framework/ai/infrastructure/ai-azure-infrastructure) | Use when you need to bring your own AI models or runtimes to Azure and require control that managed AI platforms don't provide. | [Compute](https://azure.microsoft.com/pricing/details/virtual-machines/windows/) and supporting components like model usage, storage, and data transfer |
 
 ## 4. How to prepare an AI data foundation
 
