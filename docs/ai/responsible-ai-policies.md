@@ -15,6 +15,8 @@ ms.collection: ce-skilling-ai-copilot
 
 This article explains how to establish responsible AI policies that ensure ethical, transparent, and accountable AI deployment across your organization. You learn how to create practical governance standards that integrate into existing workflows rather than creating bureaucratic obstacles.
 
+:::image type="content" source="./images/ai-adoption-process.svg" alt-text="Diagram that shows the phases of AI adoption: Plan, Ready, Govern, Secure, Manage." lightbox="./images/ai-adoption-process.svg" border="false":::
+
 Without clear responsible AI policies, organizations face significant risks from AI. These risks include reputational damage from biased or harmful AI outputs, regulatory penalties from noncompliance with emerging AI laws, and erosion of stakeholder trust that undermines AI adoption efforts.
 
 ## Define responsible AI standards
