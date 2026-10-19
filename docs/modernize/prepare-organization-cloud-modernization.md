@@ -48,7 +48,7 @@ Organizations should establish a shared definition of modernization so teams eva
 
 *What's the difference between modernization and migration?* Migration and modernization can happen independently or as part of the same initiative. Migration changes where an organization runs a workload. Modernization improves how a workload meets requirements by expanding its capabilities or making it more efficient to maintain and evolve.
 
-Terms such as replatform, refactor, and rearchitect can appear in both contexts because organizations can make these changes during a migration or as a separate modernization effort. A rehost migration alone isn't modernization. A rehost changes where the workload runs but doesn't improve how the workload functions or how the organization maintains it. Decision makers should distinguish the objectives and expected benefits rather than rely on the treatment label.
+Terms such as replatform, refactor, and rearchitect can appear in both contexts because organizations can make these changes during a migration or as a separate modernization effort. A rehost migration alone isn't modernization. A rehost migration alone isn't modernization. A rehost changes where the workload runs but doesn't expand the workload's capabilities or improve how efficiently the workload team operates and evolves it.
 
 ## 2. Modernization outcomes
 
