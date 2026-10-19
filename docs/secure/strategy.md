@@ -32,9 +32,7 @@ Adopting [Zero Trust](/security/zero-trust/zero-trust-overview) as a strategy he
 
 - **Assume breach.** Minimize the blast radius and segment access. Verify end-to-end encryption, and use analytics to get visibility into activities related to your systems, drive threat detection, and improve defenses.
 
-If you apply these principles across the cloud adoption process, the transformation to modern security can be a smoother experience for the entire organization.
-
-Microsoft provides a [Zero Trust-based security modernization blueprint](/security/zero-trust/adopt/rapidly-modernize-security-posture) that organizations can use as a guide. Refer to the [Define strategy phase](/security/zero-trust/adopt/rapidly-modernize-security-posture#define-strategy-phase) for strategy recommendations.
+If you apply these principles across the cloud adoption process, the transformation to modern security can be a smoother experience for the entire organization. See [Modernize your security posture](/security/zero-trust/adopt/rapidly-modernize-security-posture).
 
 ## Defining a strategy for incident preparedness and response
 

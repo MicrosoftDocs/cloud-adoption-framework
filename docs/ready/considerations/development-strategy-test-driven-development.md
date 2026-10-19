@@ -66,22 +66,6 @@ To support these workloads, the cloud adoption team needs to meet the following 
 
 The last point isn't a feature or acceptance criterion, but an indicator that more expansions will be required and should be explored with other teams early.
 
-### More complex DoD examples
-
-The Govern methodology within the Cloud Adoption Framework provides a narrative journey through the natural maturity of a governance team. Embedded in that journey are several examples of DoD and acceptance criteria, in the form of policy statements.
-
-- [Initial policy statements](../../govern/guides/complex/initial-corporate-policy.md#policy-statements). Example of initial DoD based on corporate policies governing early stage adoption requirements.
-
-- [Incremental improvements to expand identity management](../../govern/guides/complex/identity-baseline-improvement.md#incremental-improvement-of-the-policy-statements). Example of corporate policies governing DoD to meet requirements to expand identity management for a landing zone.
-
-- [Incremental improvements to expand security requirements](../../govern/guides/complex/security-baseline-improvement.md#incremental-improvement-of-the-policy-statements). Example of corporate policies governing DoD to meet security requirements aligned to the reference cloud adoption plan.
-
-- [Incremental improvements to expand operations management](../../govern/guides/complex/resource-consistency-improvement.md#incremental-improvement-of-the-policy-statements). Example of corporate policies governing DoD to meet basic operations management requirements.
-
-- [Incremental improvements to expand cost management](../../govern/guides/complex/cost-management-improvement.md#changes-to-the-policy-statements). Example of corporate policies governing DoD to meet cost management requirements.
-
-The preceding examples are basic samples to help you develop a DoD for your landing zones.
-
 ## Azure tools and features to support landing zone TDD
 
 The following diagram shows available test-driven development tools in Azure:
