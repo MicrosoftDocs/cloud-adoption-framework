@@ -86,7 +86,7 @@ In addition to the measures recommended for confidentiality, consider implementi
 
 ## Plan for availability
 
-Your cloud adoption plan should address availability by adopting standards for architecture design and operations. These standards guide the implementation and future phases and provide a blueprint for how you can achieve availability requirements. Consider the following recommendations as you build out your cloud adoption plan:
+Your cloud adoption plan should address availability by adopting standards for architecture design and operations. These standards guide the implementation and future phases and provide a roadmap for how you can achieve availability requirements. Consider the following recommendations as you build out your cloud adoption plan:
 
 - **Standardize infrastructure and application design patterns:** Standardize infrastructure and application design patterns to help ensure that your workloads are reliable. Avoid unnecessary complexity to make designs repeatable and to discourage shadow IT behaviors. Follow best practices for [highly available infrastructure](/azure/well-architected/reliability/redundancy) and [resilient applications](/azure/well-architected/reliability/self-preservation) as you define your design standards.
 

@@ -33,7 +33,7 @@ A platform capability is a shared service that supports workload teams by accele
 
 2. **Define modular platform services based on common workload needs.** Platform services must address repeatable needs such as governance, networking, and developer enablement. These services reduce onboarding time and improve compliance across workloads. Examples include:
 
-    - Azure governance (management groups, policies, blueprints)
+    - Azure governance (management groups, Azure Policy definition)
     - Subscription vending
     - Hub-and-spoke networking
     - Inner-sourced infrastructure-as-code (IaC) modules based on Azure Verified Modules (AVM)
