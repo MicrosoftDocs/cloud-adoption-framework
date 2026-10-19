@@ -14,23 +14,15 @@ ai-usage: ai-assisted
 
 *This article helps decision makers determine when modernization is worth the investment.*
 
-Modernization can improve existing workloads when business needs change or the current state creates unacceptable cost or risk. Organizations need a consistent way to determine which modernization opportunities justify investment and how to prioritize them across the workload portfolio.
-
-**Outcome:** After preparing for modernization, your organization has a prioritized list of workload modernization investments.
+Organizations need a consistent way to determine which modernization opportunities justify investment and how to prioritize them across the workload portfolio. Without this consistency, modernization decisions can remain isolated within workload teams and direct investment toward opportunities that don't align with broader business priorities. This guidance helps organizations create a prioritized set of workload modernization investments supported by consistent business cases.
 
 ## 1. What is modernization?
 
-Modernization improves an existing workload or workload component to better meet current or future business requirements. It can change different parts of a workload, such as its platform, application, data, or operating model. Modernization isn't a specific technology destination. It can range from a targeted upgrade to a significant architectural change.
-
-The goal isn't to make every workload as modern as technically possible. Organizations should modernize enough to achieve the required improvement at an acceptable cost and level of risk. The appropriate level of modernization depends on the problem you need to solve and the value you expect from solving it.
-
-**Outcome:** You have a shared definition of modernization across your organization.
+Organizations should establish a shared definition of modernization so teams evaluate opportunities against the same standard. Modernization is improving how a workload meets requirements by expanding its capabilities or making it more efficient to maintain and evolve. It can range from a targeted improvement to a significant architectural change.
 
 ### 1.1 Modernization opportunities
 
-*Where should organizations look for modernization opportunities?* Common modernization opportunities include databases, application platforms, application code, data, security, sovereignty, and enterprise platforms such as SAP. Modernization can move these areas toward managed services, supported technologies, or other capabilities that better meet organizational requirements.
-
-The following examples help decision makers recognize modernization opportunities across their portfolio and understand the types of changes that might result. An opportunity doesn't by itself justify investment. Workload assessments should establish which changes are feasible and which modernization outcomes they could provide.
+*Where should organizations look for modernization opportunities?* Common modernization opportunities include databases, application platforms, sovereignty, data, security, application code, and enterprise platforms like SAP. Modernization can move these areas toward managed services, supported technologies, or other capabilities that better meet organizational requirements. The following examples help decision makers recognize modernization opportunities across their portfolio and understand the types of changes that might result.
 
 *Table. Modernization examples*
 
@@ -46,19 +38,23 @@ The following examples help decision makers recognize modernization opportunitie
 
 ### 1.2 Modern versus legacy
 
-*When is a workload modern?* Treat "modern" and "legacy" as conditions to assess rather than technology labels. A workload doesn't need to become as modern as technically possible. It needs to become modern enough for its purpose.
+*When is a workload modern?* Treat "modern" and "legacy" as conditions to assess rather than technology labels. A workload needs to be modern enough for its purpose.
 
-- **Modern:** A workload is modern enough when further changes wouldn't provide enough improvement to justify their cost, risk, or disruption. Modern workloads commonly use technologies and practices that reduce unnecessary effort or constraints. For example, managed services can reduce infrastructure-management responsibilities. Modern architectures can make workloads easier to change, scale, integrate, secure, or operate. These are characteristics of modernization, not requirements for calling a workload modern.
+- **Modern:** A workload is modern enough when it meets organizational requirements without constraints that justify further modernization. Further modernization wouldn't provide enough improvement to justify its cost or risk. For example, managed services can reduce infrastructure management. Modern architectures can make a workload easier to evolve. These characteristics can indicate modernization, but no single characteristic makes a workload modern.
 
-- **Legacy:** A legacy workload generally has characteristics that newer technologies or practices could improve. Unsupported technology is one example. Age alone doesn't determine whether modernization is necessary. An older workload might be modern enough if it meets its objectives efficiently and its cost and risk remain acceptable.
+- **Legacy:** A legacy workload has constraints that modernization could meaningfully improve. Unsupported technology is one example. Excessive management effort is another. Age alone doesn't make a workload legacy. An older workload can remain modern enough when it meets business requirements and further modernization wouldn't justify the investment.
 
 ### 1.3 Modernization versus migration
 
-*What's the difference between modernization and migration?* Migration changes where or how a workload runs. Modernization changes the workload to achieve a better outcome. An initiative can do both. A migration is also modernization when the change produces an approved improvement in business capability, cost, risk, operations, or another required outcome.
+*What's the difference between modernization and migration?* Migration and modernization can happen independently or as part of the same initiative. Migration changes where an organization runs a workload. Modernization improves how a workload meets requirements by expanding its capabilities or making it more efficient to maintain and evolve.
+
+Terms such as replatform, refactor, and rearchitect can appear in both contexts because organizations can make these changes during a migration or as a separate modernization effort. A rehost migration alone isn't modernization. A rehost changes where the workload runs but doesn't improve how the workload functions or how the organization maintains it. Decision makers should distinguish the objectives and expected benefits rather than rely on the treatment label.
 
 ## 2. Modernization outcomes
 
-*Why modernize?* Organizations modernize when the current state prevents a workload from achieving required outcomes efficiently enough. Modernization might reduce cost or risk, improve agility, or enable new capabilities. A specific modernization effort doesn't need to improve every outcome. Its business case should establish which improvements justify investment. Modernization can provide the following outcomes:
+*Why modernize?* Organizations should decide whether they need to actively identify modernization opportunities across their workload portfolio. For most organizations, modernization should be an ongoing consideration. Existing workloads can accumulate cost, risk, or constraints that prevent the organization from meeting its objectives effectively.
+
+Modernization can address these limitations or create new opportunities. It might reduce cost or risk. It can improve agility or enable capabilities that the existing workload can't support. These potential outcomes give organizations reasons to regularly look for modernization opportunities rather than wait for individual workload teams to propose them. Modernization can provide the following outcomes:
 
 - **Improve security posture:** Reduce security exposure by replacing unsupported technologies or introducing stronger security capabilities.
 - **Reduce operational cost and effort:** Reduce infrastructure management or recurring operational work through capabilities such as managed services and automation.
@@ -68,34 +64,30 @@ The following examples help decision makers recognize modernization opportunitie
 - **Simplify integration:** Reduce dependencies that make systems difficult or costly to connect and change.
 - **Improve workforce productivity:** Reduce unnecessary complexity or repetitive work so teams can focus more capacity on higher-value activities.
 
-**Outcome:** You understand the improvements modernization can provide and which ones matter to your organization.
-
 ## 3. Modernization roles and responsibilities
 
-*Who makes what decisions?* Modernization requires coordination across business and technical functions from investment decisions through delivery and ongoing operations. Clear responsibilities help decision makers retain accountability for business outcomes and organizational boundaries without taking responsibility for technical implementation. Modernization responsibilities generally include:
+*Who makes what decisions?* Organizations should assign decision rights and responsibilities. Modernization requires coordination across business and technical functions from investment decisions through delivery and ongoing operations. Clear responsibilities help decision makers retain accountability for business outcomes and organizational boundaries without taking responsibility for technical implementation. Modernization responsibilities generally include:
 
 - **Business decision makers:** Own modernization investment decisions and portfolio priorities.
 - **Platform teams:** Support onboarding of new technologies, update Azure Policy definitions, and provide workload landing zone subscriptions.
 - **Workload teams:** Develop modernization proposals and business cases, recommend the modernization approach, and execute approved modernization investments.
 
-**Outcome:** You have assigned roles and responsibilities across your organization for the modernization lifecycle.
-
 ## 4. Modernization approaches
 
-*How much change might be required?* Modernization should make the least amount of change needed to achieve the approved outcome within acceptable cost and risk. A targeted replatform might be sufficient when the platform causes the problem. [Refactoring](/azure/cloud-adoption-framework/plan/select-cloud-migration-strategy#4-refactor-modernize-code) or rearchitecting might be necessary when application or architectural constraints prevent the required outcome. Common modernization approaches include:
+*How much change might be required?* Decision makers should understand the different levels of change that modernization can require because the approach affects the investment, delivery effort, and risk of a modernization proposal. Modernization should make the least amount of change needed to achieve the required outcome. Some opportunities require a targeted platform change. Others require changes to application code or architecture. Common modernization approaches include:
 
 - **[Replatform](/azure/cloud-adoption-framework/plan/select-cloud-migration-strategy#3-replatform-modernize-hosting-environment):** Use when the existing functionality meets business needs, but the platform creates unnecessary cost, effort, or constraints.
 - **[Refactor](/azure/cloud-adoption-framework/plan/select-cloud-migration-strategy#4-refactor-modernize-code):** Use when code limitations or technical debt prevent the workload from achieving the required outcome.
 - **[Rearchitect](/azure/cloud-adoption-framework/plan/select-cloud-migration-strategy#5-rearchitect-modernize-architecture-and-code):** Use when fundamental architectural constraints prevent the workload from meeting required outcomes.
 - **Continue and reassess:** Use when the expected benefit doesn't justify modernization cost, risk, or disruption.
 
-Workload teams should recommend the least disruptive approach capable of achieving the approved outcome. Decision makers should evaluate whether the proposed level of change is proportionate to its expected value and risk.
-
-**Outcome:** You can evaluate whether the proposed level of change is proportionate to the expected modernization outcome.
+Workload teams should recommend the appropriate modernization approach. Decision makers should use the proposed approach to understand the approximate scale of change when evaluating the required investment and delivery feasibility in the modernization business case.
 
 ## 5. Modernization skilling
 
-*Can we deliver modernization?* Organizations need sufficient capability and capacity to deliver approved modernization investments at an acceptable level of risk. Gaps don't necessarily prevent modernization. They can affect sequencing, funding, or how expertise is sourced.
+*Can we deliver modernization?* Organizations should determine how they'll get the skills and capacity needed to deliver their modernization investments. Skill or capacity gaps don't necessarily prevent modernization. They can affect sequencing, funding, or how the organization sources expertise.
+
+Organizations generally have three options: develop internal capability, use Microsoft or partner expertise, or add dedicated expertise. The right approach depends on how quickly you need the capability and whether you expect to need it repeatedly.
 
 - **Develop internal capability:** Organizations can develop modernization capability by training existing staff and giving them time to apply new skills. AI-assisted modernization tools can increase productivity and make specialized modernization knowledge more accessible. For example, the [GitHub Copilot modernization agent](/azure/developer/github-copilot-app-modernization/modernization-agent/overview) can assist with application assessment, modernization planning, and code changes. These tools augment expertise rather than replace the skills and accountability required to validate modernization decisions and outcomes.
 
@@ -107,15 +99,13 @@ Workload teams should recommend the least disruptive approach capable of achievi
 
 - **Option 3. Add expertise:** Hire employees or contractors for specific gaps. This option can increase capacity faster than developing internal skills. **Choose this option when** you need sustained capacity or a defined specialist role. **Trade-off:** It adds recruitment costs and takes longer than partnering.
 
-**Outcome:** You understand whether your organization has the capacity and capabilities to deliver its modernization priorities and how you will address material gaps.
-
 ## 6. Modernization business case
 
-*Is this specific opportunity worth funding?* A modernization opportunity is worth funding when its expected organizational value justifies the required investment and delivery risk. Some investments are justified by financial return. Others are necessary because the current state creates unacceptable business or organizational risk.
+*Is this specific opportunity worth funding?* Organizations should require a consistent business case before approving a modernization investment. The business case should provide enough evidence to determine whether the expected organizational value justifies the required investment and delivery risk. It should also provide a consistent basis for comparing the proposal with other modernization opportunities. Some investments are justified by financial return. Others are necessary because delaying modernization creates unacceptable cost or risk.
 
 ### 6.1 Modernization intake
 
-*Where do modernization candidates come from?* **Successful organizations establish a common intake process for modernization proposals.** The process gives teams a defined way to submit modernization opportunities for consideration and gives decision makers visibility into modernization demand across the workload portfolio. Each proposal should identify the affected workload and why modernization is being considered.
+*Where do modernization candidates come from?* Successful organizations establish a common intake process for modernization proposals. The process gives teams a defined way to submit modernization opportunities for consideration and gives decision makers visibility into modernization demand across the workload portfolio. Each proposal should identify the affected workload and why modernization is being considered.
 
 Modernization candidates can originate anywhere an organization identifies a workload problem or improvement opportunity. Workload teams might identify technical debt, unsupported technology, excessive operational effort, or architectural constraints. Business decision makers might identify changing business requirements or new organizational priorities. Security, governance, or platform requirements can also create a need for modernization.
 
@@ -134,26 +124,22 @@ Business decision makers and workload teams develop the business case together. 
 | **Business need** | What problem or opportunity exists and why it matters. | 80 engineering hours per month spent on maintenance.<br><br>Unsupported technology creates security risk. |
 | **Expected outcome** | What should improve if modernization succeeds. | Reduce maintenance effort by 50%.<br><br>Improve the ability to release application changes quickly. |
 | **Expected value** | Why that improvement matters enough to justify investment. | Save $70,000 annually.<br><br>Free engineering capacity for higher-value work. |
-| **Current cost and risk** | What happens if the organization doesn't modernize. | Operating costs are increasing 12% annually.<br><br>Unsupported components increase the risk of disruption. |
 | **Financial impact** | The expected change in total cost of ownership and return on investment. | Reduce annual operating costs by $70,000.<br><br>Accept higher costs to address a critical security risk. |
+| **Current cost and risk** | What happens if the organization doesn't modernize. | Operating costs are increasing 12% annually.<br><br>Unsupported components increase the risk of disruption. |
 | **Required investment** | The expected funding and approximate time to value. | $140,000 over six months.<br><br>Six months of engineering capacity. |
 | **Delivery confidence** | Whether the organization has enough capability and capacity to deliver the expected outcome. | Existing team has the required skills.<br><br>Specialized external expertise is required. |
 
-**Outcome:** You have a consistent business case for determining whether each modernization opportunity justifies investment.
-
 ## 7. Modernization prioritization
 
-*How should organizations prioritize worthy modernization investments?* Prioritize modernization investments by comparing three factors from each business case: business impact, cost of delay, and delivery feasibility. These factors turn the business case into a consistent basis for deciding which investments should proceed first.
+*How should organizations prioritize worthy modernization investments?* Decision makers should use the completed business cases to produce a prioritized portfolio of modernization investments. Prioritize modernization investments by comparing three factors from each business case: business impact, cost of delay, and delivery feasibility. These factors turn the business case into a consistent basis for deciding which investments should proceed first.
 
-| Prioritization factor | Business case evidence | What to compare |
+| Prioritization factor | Business case sections to use | What to compare across different business cases |
 | --- | --- | --- |
 | **Business impact** | Business need, expected outcome, expected value, financial impact | How much value would modernization create? |
 | **Cost of delay** | Current cost and risk | What is the impact of postponing modernization? |
 | **Delivery feasibility** | Required investment, delivery confidence | How feasible is it to achieve the expected outcome? |
 
 Compare the three factors together to determine modernization priority. Give greater priority to investments that create more value or have a higher cost of delay, but consider whether the organization can realistically deliver the expected outcome. When investments have similar priority, return to the underlying business cases to make the decision.
-
-**Outcome:** You have a prioritized set of modernization investments based on consistent evidence from their business cases.
 
 ## Next step
 
