@@ -118,11 +118,7 @@ We are working on updates to improve the Cloud Adoption Framework guidance. Stay
 
 ### New guidance
 
-[**Unify your data platform for AI and analytics**](./data/executive-strategy-unify-data-platform.md): CAF has new guidance on how to unify your data platform with Microsoft Fabric. This guidance helps decision makers organize operating models around data domains, define clear data ownership and accountability, and establish standards for secure and governed data products. It also explains how high-quality data products support AI and analytics across the organization.
-
-### Deprecation notice
-
-**Cloud-scale analytics guidance is deprecated.** We replaced this guidance with [Unify your data platform for AI and analytics](./data/executive-strategy-unify-data-platform.md). The deprecation and deletion date was April 30, 2026.
+[**Unified data platform for AI and analytics**](./data/executive-strategy-unified-data-platform.md): CAF has new guidance on how to unify your data platform with Microsoft Fabric. This guidance helps decision makers organize operating models around data domains, define clear data ownership and accountability, and establish standards for secure and governed data products. It also explains how high-quality data products support AI and analytics across the organization.
 
 ## December 2025
 

@@ -1,6 +1,7 @@
 ---
 title: Cloud Adoption Framework for Azure
-description: Discover how the Microsoft Cloud Adoption Framework helps you adopt Azure, reduce risk, and accelerate cloud adoption. Get proven guidance for enterprise cloud strategy.
+description: Learn how the Microsoft Cloud Adoption Framework helps your organization prepare for Azure adoption, integrate existing systems, and adopt new technologies.
+#customer intent: As a decision maker, I want to understand how the Cloud Adoption Framework helps prepare my organization to adopt Azure and new technologies.
 author: stephen-sumner
 ms.author: pnp
 ms.date: 08/26/2026
@@ -12,8 +13,6 @@ ai-usage: ai-assisted
 # What is the Cloud Adoption Framework?
 
 The Microsoft Cloud Adoption Framework (CAF) helps decision makers make better decisions, faster. It provides proven guidance to reduce risk, accelerate adoption, and create a foundation that supports current and future workloads. It helps leaders create the conditions for workload teams to succeed.
-
-:::image type="content" source="caf-overview.png" alt-text="Diagram overview of the Cloud Adoption Framework for Azure showing seven core adoption phases: Strategy, Plan, Ready, Adopt, Govern, Secure, and Manage. These adoption phases flow sequentially. Operational phases run in parallel during operations." lightbox="caf-overview.png" border="false":::
 
 ## How the Cloud Adoption Framework works
 
@@ -39,7 +38,7 @@ The Cloud Adoption Framework is designed for decision makers responsible for Azu
 
 | Role | How CAF helps |
 | --- | --- |
-| Business leaders | Align cloud investments to business outcomes and organizational goals|
+|Business leaders | Align cloud investments to business outcomes and organizational goals|
 |Technology leaders | Define cloud strategy, operating models, and platform direction|
 |Platform teams | Establish an Azure landing zone and shared services| 
 |Security and governance teams | Define organizational standards, compliance requirements, and risk management approaches|
@@ -51,7 +50,7 @@ Azure adoption is the primary Cloud Adoption Framework scenario. It provides the
 | CAF Scenario | Purpose |
 |--------------|-----------------|----------------------------------|
 | [Azure adoption](./strategy/index.md) | How to adopt Azure (foundational) |
-| [Data platform](data/executive-strategy-unify-data-platform.md) | How to prepare your data for AI and analytics |
+| [Unified data platform](./data/executive-strategy-unified-data-platform.md) | How create a unified data platform for AI and analytics |
 | [AI adoption](./ai/strategy.md) | How to adopt AI (generative and nongenerative) workloads |
 | [AI agents](./ai-agents/index.md) | How and when to adopt AI agents |
 | [Sovereignty](./sovereignty/executive-strategy.md) | How to meet sovereignty requirements | 

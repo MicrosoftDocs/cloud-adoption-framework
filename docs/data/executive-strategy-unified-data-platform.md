@@ -1,23 +1,24 @@
 ---
-title: Data for AI and Analytics - Guidance to set your organization's data strategy for AI and analytics
-description: "Unified data platform: Discover how Microsoft Fabric, Microsoft Purview, and Azure help organizations get more business value out of their data and prepare their data and unify their data platform for AI and analytics."
-#customer intent: As a business decision maker (CEO, CTO, CFO, C-suite), I want to understand how a unified data platform with Microsoft Fabric can deliver value quickly so that I can justify investment and plan for incremental adoption for improved AI and analytics.
+title: Unified data platform adoption
+description: "Discover how Microsoft Fabric, Microsoft Purview, and Azure help organizations get more business value out of their data and prepare their data and unify their data platform for AI and analytics."
+#customer intent: As a business decision maker, I want to understand the value, investment, and adoption approach for a unified data platform so that I can decide whether to adopt Microsoft Fabric and plan an incremental path to analytics and AI.
 author: stephen-sumner
 ms.author: ssumner
 ms.reviewer: ssumner
-ms.date: 03/10/2026
+ms.date: 10/23/2026
 ms.topic: concept-article
-ms.collection: ce-skilling-ai-copilot
 ai-usage: ai-assisted
 ---
 
-# Data for AI and analytics - Guidance to set your organization's data strategy
+# Unified data platform adoption
 
-Every organization wants its data to drive confident business decisions. Data must be trusted, easy to reuse for analytics and AI, and secure by default. **Data challenge:** For most organizations, this goal is hard to achieve. Data is spread across systems and teams. Standards vary. Governance is inconsistent. These issues make analytics and AI difficult to use with confidence.
+*This article provides an executive overview of a unified data platform and answers the key questions decision makers need to make an informed adoption decision.*
 
-Many organizations are addressing this challenge by unifying their data platform with Microsoft Fabric. Fabric enables teams to create trusted data products that can be governed and securely used for analytics and AI across the organization (see Figure 1). This guidance provides decision makers with the framework they need to make that shift and establish a unified data foundation.
+Every organization wants its data to drive confident business decisions. Data must be trusted, easy to reuse for analytics and AI, and secure by default. For most organizations, this goal is hard to achieve. Data is spread across systems and teams. Standards vary. Governance is inconsistent. These issues make analytics and AI difficult to use with confidence.
 
-## Overview and decision tree
+Many organizations are addressing this challenge by unifying their data platform with Microsoft Fabric. Fabric enables teams to create trusted data products that can be governed and securely used for analytics and AI across the organization. This guidance provides decision makers with the framework they need to make that shift and establish a unified data foundation.
+
+## Solutions and decision tree
 
 # [Conceptual](#tab/conceptual)
 
@@ -35,7 +36,7 @@ Many organizations are addressing this challenge by unifying their data platform
 
 --- 
 
-## Why a unified data platform with Fabric?
+## Why a unified data platform?
 
 Most business and technology leaders understand the cost of fragmented data. What often holds them back is the belief that fixing it requires large, risky migrations. Microsoft Fabric takes a different approach and delivers value without disruption. Key benefits include:
 
@@ -67,23 +68,21 @@ Unifying the data platform is an investment in capability, not a wholesale repla
 
 Microsoft Fabric is designed to deliver value quickly. Time to value is short because unification doesn't depend on full migration. Teams can start with a small set of high‑value data products. Each step adds value while limiting risk. In practice, many organizations see value within weeks for initial analytics or AI scenarios. As Fabric becomes the standard foundation for data products, analytics, and AI, value grows through reuse and consistent standards across the organization.
 
-## How do you unify your data platform?
+## How to create a unified data platform?
 
 Microsoft's Cloud Adoption Framework outlines a four-step framework for unifying your data platform. The process spans planning and organizing your data strategy. It covers architecture decisions. It also helps you set governance and security baselines and define operational standards.
 
-1. **Organizational readiness.** Define your data strategy and establish data ownership and domains. Clarify how data creates business value and who is accountable for which data. See [Organizational readiness](./organizational-readiness-unify-data-platform.md).
+1. **[Planning](./planning-unified-data-platform.md)**: Learn how to establish data ownership and prioritize the resources needed to create and sustain valuable data products.
 
-2. **Architecture:** Provide the technology needed to unify your data platform. Set up Microsoft Fabric and required environments in Azure. See [Architecture](./architecture-fabric-data-lake-unify-data-platform.md).
+2. **[Architecture](./architecture-unified-data-platform.md)**: Learn how to design a unified data platform architecture across Azure, Microsoft Fabric, and Microsoft Purview.
 
-3. **Governance and security baselines:** Use Microsoft Purview to gain central visibility and governance across your data estate. Build security and compliance baselines into your Fabric architecture from the start. See [Governance and security baselines](./governance-security-baselines-purview-data-estate-unify-data-platform.md).
+3. **[Data governance](./data-governance-unified-data-platform.md)**: Learn how to establish organization-wide governance and security requirements for data across your data estate.
 
-4. **Operational standards.** Define consistent processes for ingesting raw data, creating data products, and managing their lifecycle. Establish how data products are published, secured, and consumed across the organization. See [Operational standards](./operational-standards-data-processing-standards-unify-data-platform.md).
+4. **[Fabric governance](./fabric-governance-unified-data-platform.md)**: Learn how to govern Microsoft Fabric so data domains can operate securely and reliably within organization-wide requirements.
 
-By following these steps, you can unify your data platform in a structured way. If you don't know where to start, use the following decision tree for guidance.
+4. **[Operational standards](./operational-standards-unified-data-platform.md)**: Learn how to establish consistent standards for creating and using trusted data products across your organization.
 
 ## Next step
 
-In the following sections, you'll find guidance, checklists, best practices, decision guidance, and trade-offs at each step. The guidance is for leaders and decision makers who oversee organizational strategy and governance.
-
 > [!div class="nextstepaction"]
-> [Organizational readiness](./organizational-readiness-unify-data-platform.md)
+> [Planning for a unified data platform](./planning-unified-data-platform.md)
