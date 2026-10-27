@@ -28,9 +28,6 @@
       - name: SAP
         tocHref: /azure/cloud-adoption-framework/scenarios/sap/
         topicHref: /azure/cloud-adoption-framework/scenarios/sap
-      - name: AVD
-        tocHref: /azure/cloud-adoption-framework/scenarios/azure-virtual-desktop/
-        topicHref: /azure/cloud-adoption-framework/scenarios/azure-virtual-desktop
     - name: Strategy
       tocHref: /azure/cloud-adoption-framework/strategy/
       topicHref: /azure/cloud-adoption-framework/strategy

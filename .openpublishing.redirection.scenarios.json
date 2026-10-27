@@ -1639,6 +1639,141 @@
       "source_path": "docs/scenarios/app-platform/azure-red-hat-openshift/security.md",
       "redirect_url": "/azure/architecture/reference-architectures/containers/aro/azure-redhat-openshift-financial-services-workloads",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/azure-virtual-desktop/index.md",
+      "redirect_url": "/azure/virtual-desktop/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/azure-virtual-desktop/strategy.md",
+      "redirect_url": "/azure/virtual-desktop/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/azure-virtual-desktop/plan.md",
+      "redirect_url": "/azure/virtual-desktop/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/azure-virtual-desktop/ready.md",
+      "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/azure-virtual-desktop/eslz-enterprise-enrollment.md",
+      "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/design-area/azure-billing-microsoft-entra-tenant",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/azure-virtual-desktop/eslz-identity-and-access-management.md",
+      "redirect_url": "/azure/virtual-desktop/authentication",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/azure-virtual-desktop/eslz-network-topology-and-connectivity.md",
+      "redirect_url": "/azure/virtual-desktop/network-connectivity",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/azure-virtual-desktop/eslz-resource-organization.md",
+      "redirect_url": "/azure/virtual-desktop/network-connectivity",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/azure-virtual-desktop/eslz-management-and-monitoring.md",
+      "redirect_url": "/azure/virtual-desktop/insights-costs",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/azure-virtual-desktop/eslz-business-continuity-and-disaster-recovery.md",
+      "redirect_url": "/azure/virtual-desktop/disaster-recovery-concepts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/azure-virtual-desktop/eslz-security-governance-and-compliance.md",
+      "redirect_url": "/azure/virtual-desktop/security-recommendations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/azure-virtual-desktop/eslz-platform-automation-and-devops.md",
+      "redirect_url": "/azure/virtual-desktop/host-pool-management-approaches",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/azure-virtual-desktop/enterprise-scale-landing-zone.md",
+      "redirect_url": "https://github.com/Azure/avdaccelerator",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/azure-virtual-desktop/landing-zone-citrix/citrix-enterprise-scale-landing-zone.md",
+      "redirect_url": "https://marketplace.microsoft.com/product/citrix.citrix-azure",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/azure-virtual-desktop/landing-zone-citrix/citrix-identity-access-management.md",
+      "redirect_url": "https://marketplace.microsoft.com/product/citrix.citrix-azure",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/azure-virtual-desktop/landing-zone-citrix/citrix-resource-organization.md",
+      "redirect_url": "https://marketplace.microsoft.com/product/citrix.citrix-azure",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/azure-virtual-desktop/landing-zone-citrix/citrix-network-topology-connectivity.md",
+      "redirect_url": "https://marketplace.microsoft.com/product/citrix.citrix-azure",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/azure-virtual-desktop/landing-zone-citrix/citrix-management-monitoring.md",
+      "redirect_url": "https://marketplace.microsoft.com/product/citrix.citrix-azure",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/azure-virtual-desktop/landing-zone-citrix/citrix-security-governance-compliance.md",
+      "redirect_url": "https://marketplace.microsoft.com/product/citrix.citrix-azure",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/azure-virtual-desktop/landing-zone-citrix/citrix-business-continuity-disaster-recovery.md",
+      "redirect_url": "https://marketplace.microsoft.com/product/citrix.citrix-azure",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/azure-virtual-desktop/proof-of-concept.md",
+      "redirect_url": "/azure/virtual-desktop/deploy-azure-virtual-desktop",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/azure-virtual-desktop/migrate-assess.md",
+      "redirect_url": "/azure/virtual-desktop/deploy-azure-virtual-desktop",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/azure-virtual-desktop/migrate-deploy.md",
+      "redirect_url": "/azure/virtual-desktop/deploy-azure-virtual-desktop",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/azure-virtual-desktop/migrate-release.md",
+      "redirect_url": "/azure/virtual-desktop/deploy-azure-virtual-desktop",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/azure-virtual-desktop/innovate.md",
+      "redirect_url": "/azure/virtual-desktop/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/azure-virtual-desktop/govern.md",
+      "redirect_url": "/azure/virtual-desktop/tag-virtual-desktop-resources",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/azure-virtual-desktop/manage.md",
+      "redirect_url": "/azure/virtual-desktop/customize-rdp-properties",
+      "redirect_document_id": false
     }
    ]   
 }

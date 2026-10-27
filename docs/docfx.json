@@ -92,7 +92,6 @@
         "scenarios/hybrid/**/*.md": "caf-scenario-hybrid",
         "scenarios/oracle-on-azure/**/*.md": "caf-scenario-oracle",
         "scenarios/sap/**/*.md": "caf-scenario-sap",
-        "scenarios/azure-virtual-desktop/**/*.md": "caf-scenario-virtual-desktop",
         "secure/**/*.md": "caf-methodology-secure",
         "strategy/**/*.md": "caf-methodology-strategy"
       }

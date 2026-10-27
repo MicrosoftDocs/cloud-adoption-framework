@@ -60,7 +60,7 @@ We deprecated several scenarios that will be removed from the Cloud Adoption Fra
 | Last available date | Scenarios to be removed |
 | --- | --- |
 | September 30, 2026 | Modern app platform |
-| October 30, 2026 | [Azure Virtual Desktop](/azure/cloud-adoption-framework/scenarios/azure-virtual-desktop/)<br>[SAP on Azure](/azure/cloud-adoption-framework/scenarios/sap/strategy)<br>[Hybrid and multicloud](/azure/cloud-adoption-framework/scenarios/hybrid/strategy)<br>[Oracle on Azure](/azure/cloud-adoption-framework/scenarios/oracle-on-azure/) |
+| October 30, 2026 | Azure Virtual Desktop<br>[SAP on Azure](/azure/cloud-adoption-framework/scenarios/sap/strategy)<br>[Hybrid and multicloud](/azure/cloud-adoption-framework/scenarios/hybrid/strategy)<br>[Oracle on Azure](/azure/cloud-adoption-framework/scenarios/oracle-on-azure/) |
 
 The Cloud Adoption Framework remains focused on helping decision makers make better and faster cloud adoption decisions for their organization. For workload architecture, implementation guidance, and product-specific recommendations, use the Azure Architecture Center, Microsoft Well-Architected Framework, and product documentation.
 
@@ -155,15 +155,3 @@ We are working on updates to improve the Cloud Adoption Framework guidance. Stay
 - [Assess your workloads for cloud migration](plan/assess-workloads-for-cloud-migration.md): Replaced AppCAT references with the GitHub Copilot app modernization tool and detailed its capabilities, including dependency capture, code revision, containerization, deployment file generation, and AI-assisted coding.
 
 - [Security teams, roles, and functions](secure/teams-roles.md): Added a new section about minimum viable security teams for small organizations and enhanced explanations about how security roles transform with cloud adoption and modern development practices.
-
-## November 2025
-
-### Updated articles
-
-- [Govern Azure platform as a service (PaaS) solutions for AI](scenarios/ai/platform/governance.md): Improved explanations of key concepts like provisioned throughput units (PTUs), retrieval-augmented generation (RAG), and role-based access control (RBAC) by adding definitions and practical examples. Reorganized content into clearer steps and added concrete examples, such as using a generative AI gateway to manage costs and implementing version control for training datasets.
-
-- [Business continuity and disaster recovery for Azure Virtual Desktop](scenarios/azure-virtual-desktop/eslz-business-continuity-and-disaster-recovery.md): Clarified the active-active host pool section by explaining the two-region setup with user assignment and failover procedures. Added guidance about FSLogix profile storage behavior in the active-passive scenario.
-
-- [Manage your cloud estate with enhanced security](secure/manage.md): Improved formatting consistency and clarity. Enhanced the business continuity and disaster recovery recommendation by clarifying the distinction between disaster recovery planning and resilient architecture design with more precise, actionable language.
-
-- [Prepare your secure cloud estate](secure/ready.md): Improved terminology and formatting. Changed *resiliency* to *reliability* throughout the availability section to align with Well-Architected Framework terminology. Clarified the distinction between resilience patterns and recoverability mechanisms in the design recommendation. Standardized spacing between bullet points for better readability.
