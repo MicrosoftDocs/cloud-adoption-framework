@@ -27,8 +27,6 @@ Implement a three-tier monitoring approach that provides visibility across datab
 
 1. **Enable diagnostic settings for enhanced observability.** Configure [diagnostic settings for Oracle Database@Azure](/azure/oracle/oracle-db/oracle-exadata-database-dedicated-infrastructure-logs) to collect comprehensive operational data. This configuration captures Exadata VM cluster life cycle management logs, database logs, infrastructure logs, and Data Guard logs through Azure Monitor and Log Analytics for centralized analysis.
 
-1. **Integrate Azure Arc for infrastructure monitoring.** Enable [Azure Arc-enabled server monitoring](/azure/cloud-adoption-framework/scenarios/hybrid/arc-enabled-servers/eslz-management-and-monitoring-arc-server) to monitor operating system level metrics, security events, and compliance status on each VM within the cluster. This integration provides unified governance while preserving existing OCI console functionality for database-specific operations.
-
 ## Configure critical performance monitoring
 
 Establish proactive monitoring for key performance indicators that directly affect business operations. Configure alerts and thresholds to detect problems before they affect availability.

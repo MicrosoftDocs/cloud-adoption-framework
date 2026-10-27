@@ -19,9 +19,6 @@
       - name: Data
         tocHref: /azure/cloud-adoption-framework/data/
         topicHref: /azure/cloud-adoption-framework/data
-      - name: Hybrid and multicloud
-        tocHref: /azure/cloud-adoption-framework/scenarios/hybrid/
-        topicHref: /azure/cloud-adoption-framework/scenarios/hybrid
       - name: Oracle IaaS
         tocHref: /azure/cloud-adoption-framework/scenarios/overview/
         topicHref: /azure/cloud-adoption-framework/scenarios/overview

@@ -459,8 +459,6 @@ items:
       href: azure-vmware-solution/strategy.md
     - name: Deprecated
       items:
-      - name: Hybrid and multicloud
-        href: scenarios/hybrid/index.md
       - name: Oracle
         href: scenarios/oracle-on-azure/index.md
       - name: SAP

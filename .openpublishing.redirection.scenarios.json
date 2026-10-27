@@ -1774,6 +1774,111 @@
       "source_path": "docs/scenarios/azure-virtual-desktop/manage.md",
       "redirect_url": "/azure/virtual-desktop/customize-rdp-properties",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/hybrid/strategy.md",
+      "redirect_url": "/azure/architecture/hybrid/hybrid-start-here",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/hybrid/enterprise-scale-landing-zone.md",
+      "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/hybrid/arc-enabled-servers/eslz-identity-and-access-management.md",
+      "redirect_url": "/azure/azure-arc/servers/cloud-native/identity-access",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/hybrid/arc-enabled-servers/eslz-resource-organization.md",
+      "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/hybrid/arc-enabled-servers/eslz-arc-servers-connectivity.md",
+      "redirect_url": "/azure/azure-arc/servers/arc-gateway",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/hybrid/arc-enabled-servers/eslz-security-governance-and-compliance.md",
+      "redirect_url": "/azure/azure-arc/servers/cloud-native/governance-policy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/hybrid/arc-enabled-servers/eslz-management-and-monitoring-arc-server.md",
+      "redirect_url": "/azure/azure-arc/servers/cloud-native/monitor-alerts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/hybrid/arc-enabled-servers/eslz-automation-arc-server.md",
+      "redirect_url": "/azure/azure-arc/servers/plan-at-scale-deployment",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/hybrid/arc-enabled-servers/eslz-cost-governance.md",
+      "redirect_url": "/azure/azure-arc/servers/cloud-native/licensing-cost-management",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-identity-access-management.md",
+      "redirect_url": "/azure/azure-arc/kubernetes/identity-access-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-network-connectivity.md",
+      "redirect_url": "/azure/azure-arc/kubernetes/arc-gateway-simplify-networking",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-resource-organization.md",
+      "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-governance-disciplines.md",
+      "redirect_url": "/azure/azure-arc/kubernetes/policy-reference",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-management-disciplines.md",
+      "redirect_url": "/azure/azure-arc/kubernetes/extensions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-automation-disciplines.md",
+      "redirect_url": "/azure/azure-arc/kubernetes/quickstart-deploy-gitops-argo-cd",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-extensions-management.md",
+      "redirect_url": "/azure/azure-arc/kubernetes/extensions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-cicd-gitops-disciplines.md",
+      "redirect_url": "/azure/azure-arc/kubernetes/conceptual-gitops-flux2-ci-cd",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-services-observability.md",
+      "redirect_url": "/azure/azure-monitor/containers/kubernetes-monitoring-enable",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-cost-governance.md",
+      "redirect_url": "/azure/azure-arc/kubernetes/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/hybrid/arc-enabled-kubernetes/enterprise-scale-landing-zone-sandbox.md",
+      "redirect_url": "/azure/azure-arc/kubernetes/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/hybrid/arc-enabled-servers/enterprise-scale-landing-zone-sandbox.md",
+      "redirect_url": "/azure/azure-arc/servers/overview",
+      "redirect_document_id": false
     }
    ]   
 }
