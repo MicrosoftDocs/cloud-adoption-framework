@@ -4074,6 +4074,51 @@
       "source_path": "docs/ready/index.md",
       "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/data/architecture-azure-landing-zones-unify-data-platform.md",
+      "redirect_url": "/azure/cloud-adoption-framework/data/architecture-unified-data-platform",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/data/architecture-fabric-data-lake-unify-data-platform.md",
+      "redirect_url": "/azure/cloud-adoption-framework/data/architecture-unified-data-platform",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/data/executive-strategy-unify-data-platform.md",
+      "redirect_url": "/azure/cloud-adoption-framework/data/executive-strategy-unified-data-platform",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/data/governance-security-baselines-fabric-data-lake-unify-data-platform.md",
+      "redirect_url": "/azure/cloud-adoption-framework/data/fabric-governance-unified-data-platform",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/data/governance-security-baselines-purview-data-estate-unify-data-platform.md",
+      "redirect_url": "/azure/cloud-adoption-framework/data/data-governance-unified-data-platform",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/data/operational-standards-data-processing-standards-unify-data-platform.md",
+      "redirect_url": "/azure/cloud-adoption-framework/data/operational-standards-unified-data-platform",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/data/operational-standards-data-product-consumption-unify-data-platform.md",
+      "redirect_url": "/azure/cloud-adoption-framework/data/operational-standards-unified-data-platform",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/data/operational-standards-data-product-security-standards-unify-data-platform.md",
+      "redirect_url": "/azure/cloud-adoption-framework/data/operational-standards-unified-data-platform",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/data/organizational-readiness-unify-data-platform.md",
+      "redirect_url": "/azure/cloud-adoption-framework/data/planning-unified-data-platform",
+      "redirect_document_id": false
     }
    ]  
 }

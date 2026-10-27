@@ -38,13 +38,13 @@ Effective Azure management spans two layers of accountability: **central (platfo
 
 Use the responsibilities outlined in *Table 1* to build an effective operational foundation. Clearly define teams, standards, and processes by following these steps:
 
-1. ***Define your cloud operations model.*** Choose a centralized, shared management, or decentralized cloud operating model based on your organization's size and maturity. For guidance, see [Choose a cloud operating model](/azure/cloud-adoption-framework/plan/prepare-organization-for-cloud#choose-a-cloud-operating-model)
+1. **Define your cloud operations model.** Choose a centralized, shared management, or decentralized cloud operating model based on your organization's size and maturity. For guidance, see [Choose a cloud operating model](/azure/cloud-adoption-framework/plan/prepare-organization-for-cloud#choose-a-cloud-operating-model).
 
-1. ***Assign central platform responsibilities.*** Form a dedicated team to handle central management tasks. Develop a skills matrix from *Table 1* to identify required expertise.
+1. **Assign central platform responsibilities.** Form a dedicated team to handle central management tasks. Develop a skills matrix from *Table 1* to identify required expertise.
 
-1. ***Assign workload responsibilities.*** Set up specialized teams for workload-specific tasks. Identify responsibilities using *Table 1* then recruit accordingly. Use the Azure Well-Architected Framework and its [Operational excellence](/azure/well-architected/operational-excellence/) pillar to guide your workload management responsibilities.
+1. **Assign workload responsibilities.** Set up specialized teams for workload-specific tasks. Identify responsibilities using *Table 1* then recruit accordingly. Use the Azure Well-Architected Framework and its [Operational excellence](/azure/well-architected/operational-excellence/) pillar to guide your workload management responsibilities.
 
-1. ***Assign responsibility.*** Name specific owners for all cloud management responsibilities. In a shared management model, workload teams should have autonomy to manage their subscriptions.
+1. **Assign responsibility.** Name specific owners for all cloud management responsibilities. In a shared management model, workload teams should have autonomy to manage their subscriptions.
 
 ## Document your cloud operations
 
@@ -54,21 +54,21 @@ Clearly document your cloud operations to enable efficient crisis response and s
 
 Define operational procedures for managing change, disaster recovery, and routine maintenance tasks that automation can't handle. Follow these steps:
 
-1. ***Define change management procedures.*** Change is the major cause of failure in the cloud. Develop a standardized process for managing changes to avoid failures in your cloud environment. See [Manage change](./administer.md#manage-change).
+1. **Define change management procedures.** Change is the major cause of failure in the cloud. Develop a standardized process for managing changes to avoid failures in your cloud environment. See [Manage change](./administer.md#manage-change).
 
-1. ***Define deployment procedures (release management).*** To maintain consistent configuration, standardize your deployments, releases, and environment promotions. See [Manage deployments](./administer.md#manage-cloud-resources).
+1. **Define deployment procedures (release management).** To maintain consistent configuration, standardize your deployments, releases, and environment promotions. See [Manage deployments](./administer.md#manage-cloud-resources).
 
-1. ***Define disaster recovery and business continuity procedures.*** To handle potential failures, prepare a standardized response plan. See [Manage disaster recovery and business continuity](./protect.md#manage-business-continuity).
+1. **Define disaster recovery and business continuity procedures.** To handle potential failures, prepare a standardized response plan. See [Manage disaster recovery and business continuity](./protect.md#manage-business-continuity).
 
-1. ***Define additional procedures.*** Document processes for managing service requests, patching, and configuration management. Clearly document these processes to ensure stakeholders know how to initiate or complete each task.
+1. **Define additional procedures.** Document processes for managing service requests, patching, and configuration management. Clearly document these processes to ensure stakeholders know how to initiate or complete each task.
 
 ### Document operational guides
 
 Create detailed step-by-step guides (runbooks or playbooks) for key operational tasks. This preparation ensures consistent execution, improves efficiency, and shortens resolution times during critical events.
 
-1. ***Define daily tasks.*** Prepare manuals covering daily responsibilities, such as privilege escalation requests and log reviews. Establish standard operating procedures (SOPs) for monitoring metrics, alert thresholds, and dashboards for each system.
+1. **Define daily tasks.** Prepare manuals covering daily responsibilities, such as privilege escalation requests and log reviews. Establish standard operating procedures (SOPs) for monitoring metrics, alert thresholds, and dashboards for each system.
 
-1. ***Create a library of Azure-centric runbooks.*** Create Azure-specific runbooks addressing scenarios such as:
+1. **Create a library of Azure-centric runbooks.** Create Azure-specific runbooks addressing scenarios such as:
 
     | Scenario | Example |
     |----------|-------------|
@@ -77,11 +77,11 @@ Create detailed step-by-step guides (runbooks or playbooks) for key operational 
     | Blue/green deployments | [Blue/green deployment in Azure Front Door](/azure/frontdoor/blue-green-deployment) |
     | Backup restoration | Backup restore in [Azure Blob Storage](/azure/storage/common/storage-disaster-recovery-guidance) and [Azure Cosmos DB](/azure/cosmos-db/restore-account-continuous-backup) |
 
-1. ***Store these runbooks in a central repository.*** Maintain runbooks in a central repository accessible by on-call engineers for immediate use during incidents.
+1. **Store these runbooks in a central repository.** Maintain runbooks in a central repository accessible by on-call engineers for immediate use during incidents.
 
-1. ***Implement operations programmatically.*** Integrate infrastructure-as-code into your runbooks to deploy common resources consistently and accurately each time.
+1. **Implement operations programmatically.** Integrate infrastructure-as-code into your runbooks to deploy common resources consistently and accurately each time.
 
-1. ***Review and update.*** Periodically review and revise documentation to reflect operational adjustments and cloud service updates.
+1. **Review and update.** Periodically review and revise documentation to reflect operational adjustments and cloud service updates.
 
 ### Document tools and solutions
 
@@ -97,9 +97,9 @@ Clear documentation ensures consistency, reduces operational risks, and enhances
 
 Effective cloud management optimizes operational efficiency, reduces downtime, and clarifies roles and responsibilities. Standardize your cloud operations through automation and structured support processes. Follow these operational guidelines:
 
-- ***Provide continuous cloud support.*** Establish 24/7 support coverage through either global teams adopting a follow-the-sun model or structured on-call rotations. Define responsibilities clearly to ensure timely response and resolution of critical incidents. Configure automated [alerts](/azure/cloud-adoption-framework/manage/monitor#configure-alerting) to notify designated support personnel immediately.
+- **Provide continuous cloud support.** Establish 24/7 support coverage through either global teams adopting a follow-the-sun model or structured on-call rotations. Define responsibilities clearly to ensure timely response and resolution of critical incidents. Configure automated [alerts](/azure/cloud-adoption-framework/manage/monitor#configure-alerting) to notify designated support personnel immediately.
 
-- ***Automate repetitive work.*** Use Azure automation capabilities to minimize manual processes and reduce operational overhead. Automate routine activities to eliminate errors, streamline workflows, and enable teams to concentrate on strategic priorities.
+- **Automate repetitive work.** Use Azure automation capabilities to minimize manual processes and reduce operational overhead. Automate routine activities to eliminate errors, streamline workflows, and enable teams to concentrate on strategic priorities.
 
     | Use Case            | Examples                                                                                       |
     |---------------------|------------------------------------------------------------------------------------------------|
@@ -113,47 +113,12 @@ Effective cloud management optimizes operational efficiency, reduces downtime, a
 
 Optimize your Azure cloud environment by promoting continuous improvement. Regularly evaluate operations and prioritize ongoing learning and feedback. Follow these steps:
 
-1. ***Review operations to improve.*** Follow best practices to [monitor](./monitor.md#configure-monitoring) the health, compliance, security, costs, data, and cloud resources. Conduct weekly operational reviews to discuss key metrics, recent incidents, deployed changes, and anticipated risks. Actively address [resource sprawl](./administer.md#manage-resource-sprawl) and [technical debt](/azure/well-architected/performance-efficiency/continuous-performance-optimize#address-technical-debt).
+1. **Review operations to improve.** Follow best practices to [monitor](./monitor.md#configure-monitoring) the health, compliance, security, costs, data, and cloud resources. Conduct weekly operational reviews to discuss key metrics, recent incidents, deployed changes, and anticipated risks. Actively address [resource sprawl](./administer.md#manage-resource-sprawl) and [technical debt](/azure/well-architected/performance-efficiency/continuous-performance-optimize#address-technical-debt).
 
-1. ***Train for operations.*** Foster ongoing skill development by prioritizing essential learning resources. Maintain dynamic cloud operations through practical training environments. The following table provides resources for operations training.
+1. **Train for operations.** Foster ongoing skill development by prioritizing essential learning resources. Maintain dynamic cloud operations through practical training environments. The following table provides resources for operations training.
 
     | Operations training   | Description  |
     |---|---|
     | Get credentials | Set goals for [Microsoft credentials](/credentials/), like applied skills and Microsoft Certifications to build expertise. |
-    | Use operational resources | See [Azure management resources](#azure-management-resources). |
     | Use product documentation | Use [Microsoft Learn](/azure/) to find guidance on [Azure services](/azure/?product=popular). |
     | Get hands-on practice | Encourage hands-on practice in nonproduction sandbox environments. |
-
-## Azure management resources
-
-| Category  | Management resource  | Description   |
-|---|---|---|
-| Compliance | [CAF Govern](../govern/index.md) | Microsoft's cloud governance framework |
-| Security| [Manage security operations](./protect.md#manage-security-operations)| Guidance to manage security operations  |
-| Security| [Microsoft security tool](./protect.md#azure-security-tools) | A list of Microsoft and Azure security tools |
-| Security | [Workload security](/azure/well-architected/security/checklist) | Workload guidance for security |
-| Resource management    | [Naming and tagging strategy](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming) | Naming and tagging recommendations to manage resources     |
-| Resource management | [Azure abbreviation](/azure/cloud-adoption-framework/ready/azure-best-practices/resource-abbreviations) | List of abbreviations for Azure resources |
-| Resource management | [Azure Advisor](/azure/advisor/advisor-overview) | A digital assistant to align with Azure best practices. |
-| Resource management    | [Azure naming rules](/azure/azure-resource-manager/management/resource-name-rules#microsoftnetwork) | Naming rules for all Azure resources |
-| Resource management | [Azure service guides](/azure/well-architected/service-guides/?product=popular) | Guidance for service configuration decisions |
-| Development | [Workload software development](/azure/well-architected/operational-excellence/formalize-development-practices) | Workload guidance for software development |
-| Development  | [Azure Architecture Center](/azure/architecture/) | Architectures and guides for different use cases    |
-| Development | [Developer resource hub](https://developer.microsoft.com/) | A hub for developer tools and resources |
-| Deployment   | [Bicep, Terraform, and ARM templates](/azure/templates/)   | IaC templates for every Azure resource    |
-| Deployment   | [Azure region pairs](/azure/reliability/regions-paired#list-of-region-pairs)| List of Azure paired regions    |
-| Deployment   | [Directory of Azure Cloud Services](https://azure.microsoft.com/products/) | Directory of all Azure services |
-| Deployment | [Workload deployment](/azure/well-architected/design-guides/release-engineering-continuous-integration) | Workload guidance for continuous integration |
-| Monitoring | [Monitor your Azure cloud estate](./monitor.md) | Comprehensive Azure monitoring guidance |
-| Monitoring | [Workload monitoring](/azure/well-architected/operational-excellence/observability) | Workload guidance for monitoring |
-| Cost | [Manage costs](./administer.md#manage-costs) | Cost management guidance |
-| Cost | [Workload cost optimization](/azure/well-architected/cost-optimization/checklist) | Workload guidance for cost optimization |
-| Reliability | [Manage data reliability](./protect.md#manage-data-reliability) | Guidance to maintain data reliability |
-| Reliability | [Manage cloud resource reliability](./protect.md#manage-cloud-resources-reliability) | Guidance to maintain resource reliability |
-| Reliability | [Manage security incidents](./protect.md#manage-security-incidents) | Recommendations to respond to security incidents |
-| Performance | [Workload performance efficiency](/azure/well-architected/performance-efficiency/checklist) | Workload guidance for performance efficiency |
-
-## Next steps
-
-> [!div class="nextstepaction"]
-> [Administer your Azure cloud estate](./administer.md)
