@@ -30,11 +30,13 @@ items:
 
     - name: Plan
       items:
-      - name: 1. Define operating model
+      - name: Operating model
         href: plan/prepare-organization-for-cloud.md
-      - name: 2. Gain cloud skills
+      - name: Data governance
+        href: ./data/data-governance-unified-data-platform.md
+      - name: Skilling
         href: plan/prepare-people-for-cloud.md
-      - name: 3. Plan migration (if applicable)
+      - name: Migration planning
         items: 
         - name: Discover inventory
           href: plan/discover-existing-workload-inventory.md
@@ -42,9 +44,9 @@ items:
           href: plan/select-cloud-migration-strategy.md
         - name : Assess workloads
           href: plan/assess-workloads-for-cloud-migration.md
-      - name: 4. Estimate cloud costs
+      - name: Cost estimation
         href: plan/estimate-total-cost-of-ownership.md
-      - name: 5. Document adoption plan
+      - name: Adoption plan documentation
         href: plan/document-cloud-adoption-plan.md
         
       - name: Resources
@@ -445,7 +447,7 @@ items:
   - name: Key adoption scenarios
     items:
     - name: Data platform
-      href: data/executive-strategy-unify-data-platform.md
+      href: data/executive-strategy-unified-data-platform.md
     - name: AI
       href: ai/strategy.md
     - name: Agents
