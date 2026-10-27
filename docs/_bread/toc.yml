@@ -22,9 +22,6 @@
       - name: Oracle IaaS
         tocHref: /azure/cloud-adoption-framework/scenarios/overview/
         topicHref: /azure/cloud-adoption-framework/scenarios/overview
-      - name: SAP
-        tocHref: /azure/cloud-adoption-framework/scenarios/sap/
-        topicHref: /azure/cloud-adoption-framework/scenarios/sap
     - name: Strategy
       tocHref: /azure/cloud-adoption-framework/strategy/
       topicHref: /azure/cloud-adoption-framework/strategy

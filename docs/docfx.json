@@ -88,7 +88,6 @@
         "ready/enterprise-scale/**/*.md": "caf-alz",
         "ready/landing-zone/**/*.md": "caf-alz",
         "scenarios/oracle-on-azure/**/*.md": "caf-scenario-oracle",
-        "scenarios/sap/**/*.md": "caf-scenario-sap",
         "secure/**/*.md": "caf-methodology-secure",
         "strategy/**/*.md": "caf-methodology-strategy"
       }

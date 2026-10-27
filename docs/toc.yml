@@ -461,8 +461,6 @@ items:
       items:
       - name: Oracle
         href: scenarios/oracle-on-azure/index.md
-      - name: SAP
-        href: scenarios/sap/index.md
 
   - name: Resources
     items:

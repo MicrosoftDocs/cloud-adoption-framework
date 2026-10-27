@@ -1879,6 +1879,121 @@
       "source_path": "docs/scenarios/hybrid/arc-enabled-servers/enterprise-scale-landing-zone-sandbox.md",
       "redirect_url": "/azure/azure-arc/servers/overview",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/sap/strategy.md",
+      "redirect_url": "/azure/sap/choose-sap-services-by-scenario",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/sap/plan.md",
+      "redirect_url": "/azure/sap/choose-sap-services-by-scenario",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/sap/ready.md",
+      "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/sap/eslz-identity-and-access-management.md",
+      "redirect_url": "/azure/sap/workloads/sap-security-identity",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/sap/eslz-network-topology-and-connectivity.md",
+      "redirect_url": "/azure/sap/center-sap-solutions/prepare-network",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/sapeslz-security-governance-and-compliance.md",
+      "redirect_url": "/azure/sap/sap-on-azure-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/sapeslz-business-continuity-and-disaster-recovery.md",
+      "redirect_url": "/azure/sap/workloads/disaster-recovery-overview-guide",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/sap/eslz-platform-automation-and-devops.md",
+      "redirect_url": "/azure/sap/workloads/deployment-checklist",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/sap/sap-lza-database-security.md",
+      "redirect_url": "/azure/sap/workloads/sap-security-infrastructure",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/sap/sap-lza-security-operations.md",
+      "redirect_url": "/azure/sap/workloads/sap-security-infrastructure",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/sap/enterprise-scale-landing-zone.md",
+      "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/sap/migrate.md",
+      "redirect_url": "/azure/sap/choose-sap-services-by-scenario",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/sap/sap-lza-identify-sap-data-sources.md",
+      "redirect_url": "/azure/sap/business-process-solutions/data-models-business-process-solutions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/sap/sap-lza-choose-azure-connectors.md",
+      "redirect_url": "/power-bi/connect-data/desktop-sap-bw-connector",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/sap/sap-lza-data-extraction-performance-troubleshooting.md",
+      "redirect_url": "/azure/sap/workloads/extract-sap-data",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/sap/sap-lza-data-integration-security.md",
+      "redirect_url": "/azure/sap/business-process-solutions/run-extraction-data-processing",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/sap/sap-lza-data-example-architecture.md",
+      "redirect_url": "/azure/sap/business-process-solutions/run-extraction-data-processing",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/sap/sap-power-platform-fundamental.md",
+      "redirect_url": "/power-query/connectors/sap-hana/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/sap/sap-power-platform-architecture-workflow.md",
+      "redirect_url": "/power-query/connectors/sap-hana/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/sap/sap-power-platform-extend-landing-zone.md",
+      "redirect_url": "/power-query/connectors/sap-hana/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/sap/eslz-business-continuity-and-disaster-recovery.md",
+      "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/design-area/management-business-continuity-disaster-recovery",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/sap/eslz-security-governance-and-compliance.md",
+      "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/design-area/management-operational-compliance",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/sap/sap-lza-sentinel-for-sap.md",
+      "redirect_url": "/azure/sentinel/sap/solution-overview",
+      "redirect_document_id": false
     }
    ]   
 }
