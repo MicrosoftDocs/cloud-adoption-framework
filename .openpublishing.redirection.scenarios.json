@@ -1994,6 +1994,141 @@
       "source_path": "docs/scenarios/sap/sap-lza-sentinel-for-sap.md",
       "redirect_url": "/azure/sentinel/sap/solution-overview",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/oracle-on-azure/application-connectivity-design.md",
+      "redirect_url": "/azure/oracle/oracle-azure-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/oracle-on-azure/azure-arc-connectivity-design.md",
+      "redirect_url": "/azure/oracle/oracle-azure-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/oracle-on-azure/business-continuity-disaster-recovery-connectivity-design.md",
+      "redirect_url": "/azure/oracle/oracle-azure-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/oracle-on-azure/core-network-design.md",
+      "redirect_url": "/azure/oracle/oracle-azure-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/oracle-on-azure/index.md",
+      "redirect_url": "/azure/oracle/oracle-azure-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/oracle-on-azure/manage-identity-access-azure-landing-zone.md",
+      "redirect_url": "/azure/oracle/oracle-azure-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/oracle-on-azure/migration-connectivity-design.md",
+      "redirect_url": "/azure/oracle/oracle-azure-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/oracle-on-azure/oracle-azure-key-vault-integration-exadata.md",
+      "redirect_url": "/azure/oracle/oracle-azure-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/oracle-on-azure/oracle-capacity-planning-oracle-database-azure-autonomous-database.md",
+      "redirect_url": "/azure/oracle/oracle-azure-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/oracle-on-azure/oracle-capacity-planning-oracle-database-azure-exadata.md",
+      "redirect_url": "/azure/oracle/oracle-azure-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/oracle-on-azure/oracle-capacity-planning.md",
+      "redirect_url": "/azure/oracle/oracle-azure-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/oracle-on-azure/oracle-disaster-recovery-iaas.md",
+      "redirect_url": "/azure/oracle/oracle-azure-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/oracle-on-azure/oracle-disaster-recovery-oracle-database-azure-autonomous.md",
+      "redirect_url": "/azure/oracle/oracle-azure-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/oracle-on-azure/oracle-disaster-recovery-oracle-database-azure.md",
+      "redirect_url": "/azure/oracle/oracle-azure-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/oracle-on-azure/oracle-iam-odaa.md",
+      "redirect_url": "/azure/oracle/oracle-azure-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/oracle-on-azure/oracle-landing-zone-accelerator.md",
+      "redirect_url": "/azure/oracle/oracle-azure-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/oracle-on-azure/oracle-landing-zone-plan.md",
+      "redirect_url": "/azure/oracle/oracle-azure-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/oracle-on-azure/oracle-landing-zone-strategy.md",
+      "redirect_url": "/azure/oracle/oracle-azure-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/oracle-on-azure/oracle-manage-monitor-iaas.md",
+      "redirect_url": "/azure/oracle/oracle-azure-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/oracle-on-azure/oracle-manage-monitor-oracle-database-azure.md",
+      "redirect_url": "/azure/oracle/oracle-azure-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/oracle-on-azure/oracle-migration-planning.md",
+      "redirect_url": "/azure/oracle/oracle-azure-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/oracle-on-azure/oracle-network-topology-iaas.md",
+      "redirect_url": "/azure/oracle/oracle-azure-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/oracle-on-azure/oracle-network-topology-odaa.md",
+      "redirect_url": "/azure/oracle/oracle-azure-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/oracle-on-azure/oracle-platform-automation-devops-oracle-database-azure.md",
+      "redirect_url": "/azure/oracle/oracle-azure-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/oracle-on-azure/oracle-resource-organization-oracle-database-azure.md",
+      "redirect_url": "/azure/oracle/oracle-azure-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/oracle-on-azure/oracle-security-overview-iaas.md",
+      "redirect_url": "/azure/oracle/oracle-azure-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/oracle-on-azure/oracle-security-overview-odaa.md",
+      "redirect_url": "/azure/oracle/oracle-azure-overview",
+      "redirect_document_id": false
     }
-   ]   
+  ]   
 }

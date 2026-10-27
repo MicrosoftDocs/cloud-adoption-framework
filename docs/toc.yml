@@ -457,10 +457,6 @@ items:
     - name: Azure VMware Solution
       displayName: AVS
       href: azure-vmware-solution/strategy.md
-    - name: Deprecated
-      items:
-      - name: Oracle
-        href: scenarios/oracle-on-azure/index.md
 
   - name: Resources
     items:
