@@ -11,6 +11,8 @@ ms.custom: internal, UpdateFrequency3
 
 # Build a cost-conscious organization
 
+[!INCLUDE [Organize deprecation notice](../includes/organize-deprecation.md)]
+
 As outlined in [Motivations: why are we moving to the cloud?](../strategy/motivations.md), there are many sound reasons for a company to adopt the cloud. When cost reduction is a primary driver, it's important to create a cost-conscious organization.
 
 Ensuring cost consciousness is not a one-time activity. Like other cloud-adoption topics, it's iterative. The following diagram outlines this process to focus on three interdependent activities: *visibility*, *accountability*, and *optimization*. These processes play out at macro and micro levels, which we describe in detail in this article.

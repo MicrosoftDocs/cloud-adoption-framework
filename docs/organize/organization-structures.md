@@ -11,6 +11,8 @@ ms.custom: internal, UpdateFrequency3
 
 # Mature team structures
 
+[!INCLUDE [Organize deprecation notice](../includes/organize-deprecation.md)]
+
 All cloud functions are provided by someone during every cloud adoption effort. These assignments and team structures can develop organically, or they can be intentionally designed to match a defined team structure.
 
 As adoption needs grow, so does the need for balance and structure. Watch this video to get an overview of common team structures at various stages of organizational maturity.

@@ -11,6 +11,8 @@ ms.custom: internal, UpdateFrequency3
 
 # Silos and fiefdoms
 
+[!INCLUDE [Organize deprecation notice](../includes/organize-deprecation.md)]
+
 Success in any major change to business practices, culture, or technology operations requires a growth mindset. At the heart of the growth mindset is the ability to accept change and provide leadership in spite of ambiguity.
 
 Some antipatterns block the growth mindset in organizations that want to grow and transform. These antipatterns include micromanagement, biased thinking, and exclusionary practices. Many of these blockers are personal challenges that create personal growth opportunities for everyone. But two common antipatterns in IT, silos and fiefdoms, require more than individual growth or maturity to address.

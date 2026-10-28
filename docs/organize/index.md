@@ -11,6 +11,8 @@ ms.custom: internal, UpdateFrequency3
 
 # Manage organizational alignment
 
+[!INCLUDE [Organize deprecation notice](../includes/organize-deprecation.md)]
+
 Cloud adoption can't happen without well-organized people. Successful cloud adoption comes from skilled people doing appropriate types of work. This work is in alignment with clearly defined business goals in a well-managed environment. To deliver an effective operating model for the cloud, it's important to establish appropriately staffed organizational structures. This article outlines an approach to establishing and maintaining the proper organizational structures in four steps.
 
 ## Structure type

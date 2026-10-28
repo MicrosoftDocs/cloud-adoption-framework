@@ -11,6 +11,8 @@ ms.custom: internal, UpdateFrequency3
 
 # Understand cloud operations functions
 
+[!INCLUDE [Organize deprecation notice](../includes/organize-deprecation.md)]
+
 This article helps you establish cloud operations functions that monitor, maintain, and optimize your cloud workloads. Cloud operations teams ensure your applications and infrastructure run reliably while controlling costs and meeting performance expectations.
 
 ## Identify who provides cloud operations
