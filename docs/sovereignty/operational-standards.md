@@ -18,7 +18,7 @@ ai-usage: ai-assisted
     Diagram showing the phases of the Microsoft Sovereign Cloud adoption process: Planning and readiness, Azure landing zone architecture and governance, and operational standards. An Azure landing zone is the prerequisite to start and each phase builds on the previous.
 :::image-end:::
 
-Sovereignty requirements don't end when a workload is deployed. Regulations change. Services evolve. People, processes, and configurations drift over time. Without operational standards, a workload that was sovereign at launch can gradually fall out of alignment, creating legal, regulatory, or geopolitical risk. This article builds on the Cloud Adoption Framework's [Manage methodology](/azure/cloud-adoption-framework/manage/ready-cloud-operations) and focuses only on the operational requirements that sovereignty adds to your existing management model.
+Sovereignty requirements don't end when a workload is deployed. Regulations change. Services evolve. People, processes, and configurations drift over time. Without operational standards, a workload that was sovereign at launch can gradually fall out of alignment, creating legal, regulatory, or geopolitical risk. This article focuses only on the operational requirements that sovereignty adds to your existing management model.
 
 **Outcome**: By the end of defining your operational standards, you have defined the expectations, responsibilities, and processes workload teams must follow to maintain alignment with sovereignty requirements over time.
 
