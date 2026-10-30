@@ -12,7 +12,46 @@ ms.custom: UpdateFrequency.5, historical
 
 # What's new in Microsoft's Cloud Adoption Framework
 
-Microsoft continuously updates the Cloud Adoption Framework with new guidance, enhanced content, and refined recommendations based on customer experiences and evolving cloud practices. This article lists announcements and information as the framework evolves.
+Microsoft regularly updates the Cloud Adoption Framework to reflect evolving cloud practices and customer needs. This article highlights recent updates and planned improvements to help you find relevant guidance and make informed cloud adoption decisions.
+
+## November 2026
+
+**Updated guidance**: We refined the AI adoption strategy article and simplified the unified data platform guidance to help decision makers evaluate options and make informed decisions.
+
+- [AI adoption strategy](./ai/strategy.md)
+- [Unified data platform](./data/executive-strategy-unified-data-platform.md)
+
+**Deleted articles**: We removed product-specific Cloud Adoption Framework articles for the following technologies:
+
+- SAP
+- Oracle
+- Azure Arc
+- Azure Virtual Desktop
+
+Associated GitHub repositories remain available. For service-specific guidance, refer to the relevant product documentation. This change reduces duplication and keeps the Cloud Adoption Framework focused on organizational cloud adoption decisions.
+
+**Deprecated articles**: We deprecated the following guidance and plan to remove it from Microsoft Learn on November 30, 2026. If you need to retain this content, download the source files from GitHub or save a PDF before the removal date. See the linked articles for more information.
+
+- [Organize](/azure/cloud-adoption-framework/organize/)
+- [Ready antipatterns](/azure/cloud-adoption-framework/antipatterns/ready-antipatterns)
+- [Tools and templates](/azure/cloud-adoption-framework/resources/tools-templates)
+
+**Deprecated assessments**: We deprecated several Cloud Adoption Framework assessments and plan to remove them in January 2027. Removing these assessments will also delete saved progress and previous results. Export or save any information you want to retain before the removal date.
+
+- Cloud Adoption Strategy Evaluator
+- Cloud Governance
+- Cloud Journey Tracker
+- Developer Velocity Assessment
+- Strategic Migration Assessment and Readiness Tool
+
+For ongoing cloud adoption planning, consider using AI tools to explore current Cloud Adoption Framework guidance and evaluate options relevant to your organization. Review AI-generated recommendations against the published guidance before making decisions. See [Deprecated assessments](/assessments/browse/?searchterm=deprecated&page=1&pagesize=30)
+
+**Roadmap**: We're working on the following improvements to help you find relevant guidance and make informed cloud adoption decisions. These plans reflect current priorities and might change.
+
+- **Azure region selection**: Improve guidance for selecting Azure regions across your organization and understanding the implications for your platform landing zone.
+- **Azure landing zone**: Update guidance to reflect current recommendations and support organizational platform architecture decisions.
+- **Framework organization**: Simplify the framework structure to help you find guidance relevant to your cloud adoption decisions.
+- **AI adoption and agents**: Refine guidance to help organizations make informed decisions about adopting AI and AI agents.
 
 ## October 2026
 
@@ -119,39 +158,3 @@ We are working on updates to improve the Cloud Adoption Framework guidance. Stay
 ### New guidance
 
 [**Unified data platform for AI and analytics**](./data/executive-strategy-unified-data-platform.md): CAF has new guidance on how to unify your data platform with Microsoft Fabric. This guidance helps decision makers organize operating models around data domains, define clear data ownership and accountability, and establish standards for secure and governed data products. It also explains how high-quality data products support AI and analytics across the organization.
-
-## December 2025
-
-### New guidance
-
-[AI agent adoption guidance for organizations](ai-agents/index.md): Discover how to adopt AI agents effectively by using a step-by-step framework for planning, governance, integration, and measurement that maximizes business impact.
-
-### Updated articles
-
-- [Security control mapping with Azure landing zone](ready/control-mapping/security-control-mapping.md): Improved clarity and readability throughout the article, simplified terminology for the Microsoft Cloud Security Benchmark, and updated implementation guidance to reference Azure Verified Modules for Terraform and Bicep deployments.
-
-- [Azure landing zone frequently asked questions (FAQs)](ready/enterprise-scale/faq.md): Broadened sovereign landing zone guidance to apply to all organizations that have sovereignty needs rather than only government organizations.
-
-- [Encryption and key management in Azure](ready/landing-zone/design-area/encryption-and-keys.md): Added guidance about choosing the right Azure Key Vault key management solution. Enhanced Key Vault recommendations by clarifying when to use Azure Key Vault Managed HSM for centralized scenarios and explaining the benefits of multiple key vaults.
-
-- [Azure workload management and monitoring](ready/landing-zone/design-area/management-workloads.md): Added guidance about using Azure service groups to organize workload resources across subscriptions and resource groups. Introduced health models in Azure Monitor (preview) to define and track resource health.
-
-- [Migrate Azure landing zone custom policies to Azure built-in policies](ready/landing-zone/design-area/migrate-azure-landing-zone-policies.md): Simplified the policy migration guidance by consolidating references to Azure Verified Modules for Terraform and Bicep update guides and removing redundant step-by-step instructions.
-
-- [Overview of network topology and connectivity for Azure](ready/landing-zone/design-area/network-topology-and-connectivity.md): Improved readability by adding better formatting to the Connectivity, Corp, and Online management group descriptions. Added a tip that simplifies understanding the Corp (internal-facing) and Online (public-facing) management groups.
-
-- [Subscription considerations and recommendations](ready/landing-zone/design-area/resource-org-subscriptions.md): Enhanced platform subscription guidance to include a separate dedicated security subscription and emphasized not combining platform responsibilities into a single subscription. Added recommendations for quota management using quota groups and automation. Introduced an operational excellence section that includes Azure Service Health guidance.
-
-- [Update Azure landing zone custom policies](ready/landing-zone/design-area/update-custom-policies.md): Simplified policy update guidance by consolidating Bicep update instructions and updating references to Azure Verified Modules for Terraform and Bicep.
-
-- [Independent software vendor (ISV) considerations for Azure landing zone](ready/landing-zone/isv-landing-zone.md): Added a recommendation for ISVs to include a separate Security management group under the Platform management group. Noted that the Security management group is planned for future updates.
-
-- [Platform landing zone implementation options](ready/landing-zone/implementation-options.md): Restructured the article to focus specifically on platform landing zone implementation and simplified guidance to two main approaches. It includes the recommended infrastructure as code (IaC) accelerator with a detailed four-phase approach, and the portal-based accelerator. Replaced multiple implementation variants with improved options and enhanced Azure Verified Modules guidance for both Bicep and Terraform.
-
-- [What is an Azure landing zone?](ready/landing-zone/index.md): Restructured deployment guidance to emphasize the IaC accelerator as the recommended approach. Enhanced workload landing zone descriptions with subscription vending details and clarified the *landing zone P1 subscription* purpose.
-
-- [Manage your cloud estate with enhanced security](secure/manage.md): Added guidance to review Microsoft Secure Future Initiative requirements and integrate them into security assessments.
-
-- [Assess your workloads for cloud migration](plan/assess-workloads-for-cloud-migration.md): Replaced AppCAT references with the GitHub Copilot app modernization tool and detailed its capabilities, including dependency capture, code revision, containerization, deployment file generation, and AI-assisted coding.
-
-- [Security teams, roles, and functions](secure/teams-roles.md): Added a new section about minimum viable security teams for small organizations and enhanced explanations about how security roles transform with cloud adoption and modern development practices.
