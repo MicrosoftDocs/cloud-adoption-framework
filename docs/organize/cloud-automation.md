@@ -11,6 +11,8 @@ ms.custom: internal, UpdateFrequency3
 
 # Cloud automation functions
 
+[!INCLUDE [Organize deprecation notice](../includes/organize-deprecation.md)]
+
 During cloud adoption efforts, cloud automation functions unlock the potential of DevOps and a cloud-native approach. Expertise in each of these areas can accelerate adoption and innovation.
 
 The skills needed to provide cloud automation functions can be provided by:

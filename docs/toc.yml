@@ -457,16 +457,6 @@ items:
     - name: Azure VMware Solution
       displayName: AVS
       href: azure-vmware-solution/strategy.md
-    - name: Deprecated
-      items:
-      - name: Azure Virtual Desktop
-        href: scenarios/azure-virtual-desktop/index.md
-      - name: Hybrid and multicloud
-        href: scenarios/hybrid/index.md
-      - name: Oracle
-        href: scenarios/oracle-on-azure/index.md
-      - name: SAP
-        href: scenarios/sap/index.md
 
   - name: Resources
     items:
