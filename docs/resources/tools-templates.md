@@ -10,6 +10,8 @@ ms.update-cycle: 1095-days
 
 # Tools and templates
 
+[!INCLUDE [Tools deprecation notice](../includes/tools-deprecation.md)]
+
 The Cloud Adoption Framework for Azure has tools, templates, and assessments that can help you quickly implement technical changes. Use this framework to accelerate your cloud adoption. You can use the following resources in several cloud adoption phases.
 
 ## Strategy

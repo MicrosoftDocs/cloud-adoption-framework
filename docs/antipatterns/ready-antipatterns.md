@@ -12,6 +12,8 @@ ms.custom: think-tank,UpdateFrequency5
 
 # Cloud readiness antipatterns
 
+[!INCLUDE [Pattern deprecation notice](../includes/pattern-deprecation.md)]
+
 Organizations often experience antipatterns during the readiness phase of cloud adoption. These antipatterns can lead to unexpected downtime, disaster recovery problems, and availability issues.
 
 ## Antipattern: Assume released services are ready for production

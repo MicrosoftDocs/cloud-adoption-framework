@@ -75,7 +75,6 @@
       "ms.subservice": {
         "ai/**/*.md": "caf-scenario-ai",
         "ai-agents/**/*.md": "caf-ai-agents",
-        "get-started/**/*.md": "caf-get-started",
         "govern/**/*.md": "caf-methodology-govern",
         "cloud-native/**/*.md": "caf-methodology-adopt-cloud-native",
         "data/**/*.md": "caf-data",
@@ -88,11 +87,6 @@
         "ready/control-mapping/**/*.md": "caf-alz",
         "ready/enterprise-scale/**/*.md": "caf-alz",
         "ready/landing-zone/**/*.md": "caf-alz",
-        "scenarios/cloud-scale-analytics/**/*.md": "caf-scenario-analytics",
-        "scenarios/hybrid/**/*.md": "caf-scenario-hybrid",
-        "scenarios/oracle-on-azure/**/*.md": "caf-scenario-oracle",
-        "scenarios/sap/**/*.md": "caf-scenario-sap",
-        "scenarios/azure-virtual-desktop/**/*.md": "caf-scenario-virtual-desktop",
         "secure/**/*.md": "caf-methodology-secure",
         "strategy/**/*.md": "caf-methodology-strategy"
       }

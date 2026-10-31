@@ -11,6 +11,8 @@ ms.custom: think-tank, UpdateFrequency3
 
 # Understand cloud data functions
 
+[!INCLUDE [Organize deprecation notice](../includes/organize-deprecation.md)]
+
 There are multiple audiences involved in an analytics conversation, including the typical seller, database architect, and infrastructure team. In addition, analytics solutions involve influencers, recommenders, and decision-makers from enterprise architecture, data science, business analysts, and executive leadership roles.
 
 ## Database administrators and architects

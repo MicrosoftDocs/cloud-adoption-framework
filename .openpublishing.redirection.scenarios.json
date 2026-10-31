@@ -1639,6 +1639,496 @@
       "source_path": "docs/scenarios/app-platform/azure-red-hat-openshift/security.md",
       "redirect_url": "/azure/architecture/reference-architectures/containers/aro/azure-redhat-openshift-financial-services-workloads",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/azure-virtual-desktop/index.md",
+      "redirect_url": "/azure/virtual-desktop/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/azure-virtual-desktop/strategy.md",
+      "redirect_url": "/azure/virtual-desktop/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/azure-virtual-desktop/plan.md",
+      "redirect_url": "/azure/virtual-desktop/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/azure-virtual-desktop/ready.md",
+      "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/azure-virtual-desktop/eslz-enterprise-enrollment.md",
+      "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/design-area/azure-billing-microsoft-entra-tenant",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/azure-virtual-desktop/eslz-identity-and-access-management.md",
+      "redirect_url": "/azure/virtual-desktop/authentication",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/azure-virtual-desktop/eslz-network-topology-and-connectivity.md",
+      "redirect_url": "/azure/virtual-desktop/network-connectivity",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/azure-virtual-desktop/eslz-resource-organization.md",
+      "redirect_url": "/azure/virtual-desktop/network-connectivity",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/azure-virtual-desktop/eslz-management-and-monitoring.md",
+      "redirect_url": "/azure/virtual-desktop/insights-costs",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/azure-virtual-desktop/eslz-business-continuity-and-disaster-recovery.md",
+      "redirect_url": "/azure/virtual-desktop/disaster-recovery-concepts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/azure-virtual-desktop/eslz-security-governance-and-compliance.md",
+      "redirect_url": "/azure/virtual-desktop/security-recommendations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/azure-virtual-desktop/eslz-platform-automation-and-devops.md",
+      "redirect_url": "/azure/virtual-desktop/host-pool-management-approaches",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/azure-virtual-desktop/enterprise-scale-landing-zone.md",
+      "redirect_url": "https://github.com/Azure/avdaccelerator",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/azure-virtual-desktop/landing-zone-citrix/citrix-enterprise-scale-landing-zone.md",
+      "redirect_url": "https://marketplace.microsoft.com/product/citrix.citrix-azure",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/azure-virtual-desktop/landing-zone-citrix/citrix-identity-access-management.md",
+      "redirect_url": "https://marketplace.microsoft.com/product/citrix.citrix-azure",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/azure-virtual-desktop/landing-zone-citrix/citrix-resource-organization.md",
+      "redirect_url": "https://marketplace.microsoft.com/product/citrix.citrix-azure",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/azure-virtual-desktop/landing-zone-citrix/citrix-network-topology-connectivity.md",
+      "redirect_url": "https://marketplace.microsoft.com/product/citrix.citrix-azure",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/azure-virtual-desktop/landing-zone-citrix/citrix-management-monitoring.md",
+      "redirect_url": "https://marketplace.microsoft.com/product/citrix.citrix-azure",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/azure-virtual-desktop/landing-zone-citrix/citrix-security-governance-compliance.md",
+      "redirect_url": "https://marketplace.microsoft.com/product/citrix.citrix-azure",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/azure-virtual-desktop/landing-zone-citrix/citrix-business-continuity-disaster-recovery.md",
+      "redirect_url": "https://marketplace.microsoft.com/product/citrix.citrix-azure",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/azure-virtual-desktop/proof-of-concept.md",
+      "redirect_url": "/azure/virtual-desktop/deploy-azure-virtual-desktop",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/azure-virtual-desktop/migrate-assess.md",
+      "redirect_url": "/azure/virtual-desktop/deploy-azure-virtual-desktop",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/azure-virtual-desktop/migrate-deploy.md",
+      "redirect_url": "/azure/virtual-desktop/deploy-azure-virtual-desktop",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/azure-virtual-desktop/migrate-release.md",
+      "redirect_url": "/azure/virtual-desktop/deploy-azure-virtual-desktop",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/azure-virtual-desktop/innovate.md",
+      "redirect_url": "/azure/virtual-desktop/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/azure-virtual-desktop/govern.md",
+      "redirect_url": "/azure/virtual-desktop/tag-virtual-desktop-resources",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/azure-virtual-desktop/manage.md",
+      "redirect_url": "/azure/virtual-desktop/customize-rdp-properties",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/hybrid/strategy.md",
+      "redirect_url": "/azure/architecture/hybrid/hybrid-start-here",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/hybrid/enterprise-scale-landing-zone.md",
+      "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/hybrid/arc-enabled-servers/eslz-identity-and-access-management.md",
+      "redirect_url": "/azure/azure-arc/servers/cloud-native/identity-access",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/hybrid/arc-enabled-servers/eslz-resource-organization.md",
+      "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/hybrid/arc-enabled-servers/eslz-arc-servers-connectivity.md",
+      "redirect_url": "/azure/azure-arc/servers/arc-gateway",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/hybrid/arc-enabled-servers/eslz-security-governance-and-compliance.md",
+      "redirect_url": "/azure/azure-arc/servers/cloud-native/governance-policy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/hybrid/arc-enabled-servers/eslz-management-and-monitoring-arc-server.md",
+      "redirect_url": "/azure/azure-arc/servers/cloud-native/monitor-alerts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/hybrid/arc-enabled-servers/eslz-automation-arc-server.md",
+      "redirect_url": "/azure/azure-arc/servers/plan-at-scale-deployment",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/hybrid/arc-enabled-servers/eslz-cost-governance.md",
+      "redirect_url": "/azure/azure-arc/servers/cloud-native/licensing-cost-management",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-identity-access-management.md",
+      "redirect_url": "/azure/azure-arc/kubernetes/identity-access-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-network-connectivity.md",
+      "redirect_url": "/azure/azure-arc/kubernetes/arc-gateway-simplify-networking",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-resource-organization.md",
+      "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-governance-disciplines.md",
+      "redirect_url": "/azure/azure-arc/kubernetes/policy-reference",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-management-disciplines.md",
+      "redirect_url": "/azure/azure-arc/kubernetes/extensions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-automation-disciplines.md",
+      "redirect_url": "/azure/azure-arc/kubernetes/quickstart-deploy-gitops-argo-cd",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-extensions-management.md",
+      "redirect_url": "/azure/azure-arc/kubernetes/extensions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-cicd-gitops-disciplines.md",
+      "redirect_url": "/azure/azure-arc/kubernetes/conceptual-gitops-flux2-ci-cd",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-services-observability.md",
+      "redirect_url": "/azure/azure-monitor/containers/kubernetes-monitoring-enable",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/hybrid/arc-enabled-kubernetes/eslz-arc-kubernetes-cost-governance.md",
+      "redirect_url": "/azure/azure-arc/kubernetes/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/hybrid/arc-enabled-kubernetes/enterprise-scale-landing-zone-sandbox.md",
+      "redirect_url": "/azure/azure-arc/kubernetes/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/hybrid/arc-enabled-servers/enterprise-scale-landing-zone-sandbox.md",
+      "redirect_url": "/azure/azure-arc/servers/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/sap/strategy.md",
+      "redirect_url": "/azure/sap/choose-sap-services-by-scenario",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/sap/plan.md",
+      "redirect_url": "/azure/sap/choose-sap-services-by-scenario",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/sap/ready.md",
+      "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/sap/eslz-identity-and-access-management.md",
+      "redirect_url": "/azure/sap/workloads/sap-security-identity",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/sap/eslz-network-topology-and-connectivity.md",
+      "redirect_url": "/azure/sap/center-sap-solutions/prepare-network",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/sapeslz-security-governance-and-compliance.md",
+      "redirect_url": "/azure/sap/sap-on-azure-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/sapeslz-business-continuity-and-disaster-recovery.md",
+      "redirect_url": "/azure/sap/workloads/disaster-recovery-overview-guide",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/sap/eslz-platform-automation-and-devops.md",
+      "redirect_url": "/azure/sap/workloads/deployment-checklist",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/sap/sap-lza-database-security.md",
+      "redirect_url": "/azure/sap/workloads/sap-security-infrastructure",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/sap/sap-lza-security-operations.md",
+      "redirect_url": "/azure/sap/workloads/sap-security-infrastructure",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/sap/enterprise-scale-landing-zone.md",
+      "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/sap/migrate.md",
+      "redirect_url": "/azure/sap/choose-sap-services-by-scenario",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/sap/sap-lza-identify-sap-data-sources.md",
+      "redirect_url": "/azure/sap/business-process-solutions/data-models-business-process-solutions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/sap/sap-lza-choose-azure-connectors.md",
+      "redirect_url": "/power-bi/connect-data/desktop-sap-bw-connector",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/sap/sap-lza-data-extraction-performance-troubleshooting.md",
+      "redirect_url": "/azure/sap/workloads/extract-sap-data",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/sap/sap-lza-data-integration-security.md",
+      "redirect_url": "/azure/sap/business-process-solutions/run-extraction-data-processing",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/sap/sap-lza-data-example-architecture.md",
+      "redirect_url": "/azure/sap/business-process-solutions/run-extraction-data-processing",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/sap/sap-power-platform-fundamental.md",
+      "redirect_url": "/power-query/connectors/sap-hana/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/sap/sap-power-platform-architecture-workflow.md",
+      "redirect_url": "/power-query/connectors/sap-hana/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/sap/sap-power-platform-extend-landing-zone.md",
+      "redirect_url": "/power-query/connectors/sap-hana/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/sap/eslz-business-continuity-and-disaster-recovery.md",
+      "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/design-area/management-business-continuity-disaster-recovery",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/sap/eslz-security-governance-and-compliance.md",
+      "redirect_url": "/azure/cloud-adoption-framework/ready/landing-zone/design-area/management-operational-compliance",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/sap/sap-lza-sentinel-for-sap.md",
+      "redirect_url": "/azure/sentinel/sap/solution-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/oracle-on-azure/application-connectivity-design.md",
+      "redirect_url": "/azure/oracle/oracle-azure-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/oracle-on-azure/azure-arc-connectivity-design.md",
+      "redirect_url": "/azure/oracle/oracle-azure-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/oracle-on-azure/business-continuity-disaster-recovery-connectivity-design.md",
+      "redirect_url": "/azure/oracle/oracle-azure-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/oracle-on-azure/core-network-design.md",
+      "redirect_url": "/azure/oracle/oracle-azure-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/oracle-on-azure/index.md",
+      "redirect_url": "/azure/oracle/oracle-azure-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/oracle-on-azure/manage-identity-access-azure-landing-zone.md",
+      "redirect_url": "/azure/oracle/oracle-azure-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/oracle-on-azure/migration-connectivity-design.md",
+      "redirect_url": "/azure/oracle/oracle-azure-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/oracle-on-azure/oracle-azure-key-vault-integration-exadata.md",
+      "redirect_url": "/azure/oracle/oracle-azure-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/oracle-on-azure/oracle-capacity-planning-oracle-database-azure-autonomous-database.md",
+      "redirect_url": "/azure/oracle/oracle-azure-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/oracle-on-azure/oracle-capacity-planning-oracle-database-azure-exadata.md",
+      "redirect_url": "/azure/oracle/oracle-azure-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/oracle-on-azure/oracle-capacity-planning.md",
+      "redirect_url": "/azure/oracle/oracle-azure-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/oracle-on-azure/oracle-disaster-recovery-iaas.md",
+      "redirect_url": "/azure/oracle/oracle-azure-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/oracle-on-azure/oracle-disaster-recovery-oracle-database-azure-autonomous.md",
+      "redirect_url": "/azure/oracle/oracle-azure-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/oracle-on-azure/oracle-disaster-recovery-oracle-database-azure.md",
+      "redirect_url": "/azure/oracle/oracle-azure-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/oracle-on-azure/oracle-iam-odaa.md",
+      "redirect_url": "/azure/oracle/oracle-azure-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/oracle-on-azure/oracle-landing-zone-accelerator.md",
+      "redirect_url": "/azure/oracle/oracle-azure-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/oracle-on-azure/oracle-landing-zone-plan.md",
+      "redirect_url": "/azure/oracle/oracle-azure-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/oracle-on-azure/oracle-landing-zone-strategy.md",
+      "redirect_url": "/azure/oracle/oracle-azure-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/oracle-on-azure/oracle-manage-monitor-iaas.md",
+      "redirect_url": "/azure/oracle/oracle-azure-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/oracle-on-azure/oracle-manage-monitor-oracle-database-azure.md",
+      "redirect_url": "/azure/oracle/oracle-azure-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/oracle-on-azure/oracle-migration-planning.md",
+      "redirect_url": "/azure/oracle/oracle-azure-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/oracle-on-azure/oracle-network-topology-iaas.md",
+      "redirect_url": "/azure/oracle/oracle-azure-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/oracle-on-azure/oracle-network-topology-odaa.md",
+      "redirect_url": "/azure/oracle/oracle-azure-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/oracle-on-azure/oracle-platform-automation-devops-oracle-database-azure.md",
+      "redirect_url": "/azure/oracle/oracle-azure-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/oracle-on-azure/oracle-resource-organization-oracle-database-azure.md",
+      "redirect_url": "/azure/oracle/oracle-azure-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/oracle-on-azure/oracle-security-overview-iaas.md",
+      "redirect_url": "/azure/oracle/oracle-azure-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/scenarios/oracle-on-azure/oracle-security-overview-odaa.md",
+      "redirect_url": "/azure/oracle/oracle-azure-overview",
+      "redirect_document_id": false
     }
-   ]   
+  ]   
 }

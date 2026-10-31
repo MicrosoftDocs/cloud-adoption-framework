@@ -11,6 +11,8 @@ ms.custom: internal, UpdateFrequency3
 
 # Cloud center of excellence (CCoE) functions
 
+[!INCLUDE [Organize deprecation notice](../includes/organize-deprecation.md)]
+
 Many IT organizations share the core objective of achieving business and technical agility. A cloud center of excellence (CCoE) is a function that helps organizations balance speed and stability while they pursue this objective.
 
 ## Function structure
