@@ -57,6 +57,6 @@ You can use centralized Azure Monitor components to manage and monitor workloads
 
 - Use [Azure Service Groups](/azure/governance/service-groups/overview) to organize workload resources for monitoring and management. Service groups enable you to group related resources across subscriptions and resource groups. You can use service groups to simplify monitoring.
 
-- Use [Health models in Azure Monitor (preview)](/azure/azure-monitor/health-models/overview) to define and track the health of the Azure resources in your service groups and the resources they depend on
+- Use [Health models in Azure Monitor](/azure/azure-monitor/health-models/overview) to define and track the health of the Azure resources in your service groups and the resources they depend on.
 
 For more workload management considerations and recommendations, see [Operational excellence](/azure/architecture/framework/#operational-excellence) in the Azure Well-Architected Framework.
