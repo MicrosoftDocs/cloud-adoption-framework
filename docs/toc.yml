@@ -451,7 +451,7 @@ items:
     - name: AI
       href: ai/strategy.md
     - name: Agents
-      href: ai-agents/index.md
+      href: ai-agents/executive-strategy.md
     - name: Sovereignty
       href: sovereignty/executive-strategy.md
     - name: Azure VMware Solution

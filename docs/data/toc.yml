@@ -6,7 +6,7 @@ items:
   - name: 2. Architecture
     href: architecture-unified-data-platform.md
 
-  - name: 3. Data Governance
+  - name: 3. Data governance
     href: data-governance-unified-data-platform.md
   - name: 4. Fabric governance
     href: fabric-governance-unified-data-platform.md
