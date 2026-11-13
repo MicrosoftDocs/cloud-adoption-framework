@@ -44,7 +44,9 @@ Associated GitHub repositories remain available. For service-specific guidance, 
 - Developer Velocity Assessment
 - Strategic Migration Assessment and Readiness Tool
 
-For ongoing cloud adoption planning, consider using AI tools to explore current Cloud Adoption Framework guidance and evaluate options relevant to your organization. Review AI-generated recommendations against the published guidance before making decisions. See [Deprecated assessments](/assessments/browse/?searchterm=deprecated&page=1&pagesize=30)
+For ongoing cloud adoption planning, consider using AI tools to explore current Cloud Adoption Framework guidance and evaluate options relevant to your organization. Review AI-generated recommendations against the published guidance before making decisions. See [Deprecated assessments](/assessments/browse/?searchterm=deprecated&page=1&pagesize=30).
+
+**External contributions**: As part of broader [Microsoft Learn updates](https://techcommunity.microsoft.com/blog/skills-hub-blog/changes-to-microsoft-learn%E2%80%99s-public-documentation-repositories/4554909), the Cloud Adoption Framework (CAF) public GitHub repository no longer accepts pull requests from external contributors. The public repository won't be accessible after December 2026.
 
 **Roadmap**: We're working on the following improvements to help you find relevant guidance and make informed cloud adoption decisions. These plans reflect current priorities and might change.
 
