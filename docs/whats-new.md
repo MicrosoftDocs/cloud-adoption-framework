@@ -21,7 +21,7 @@ Microsoft regularly updates the Cloud Adoption Framework to reflect evolving clo
 - [AI adoption strategy](./ai/strategy.md)
 - [Unified data platform](./data/executive-strategy-unified-data-platform.md)
 
-**External contributions**: As part of broader [Microsoft Learn updates](https://techcommunity.microsoft.com/blog/skills-hub-blog/changes-to-microsoft-learn%E2%80%99s-public-documentation-repositories/4554909), the Cloud Adoption Framework (CAF) public GitHub repository no longer accepts pull requests from external contributors. The public repository won't be accessible after December 2026.
+**External contributions**: As part of broader [Microsoft Learn updates](https://techcommunity.microsoft.com/blog/skills-hub-blog/changes-to-microsoft-learn%E2%80%99s-public-documentation-repositories/4554909), the Cloud Adoption Framework (CAF) public GitHub repository no longer accepts pull requests from external contributors. The public repository won't be accessible after December 2026. Please continue sharing feedback through the “Was this page helpful?” option on each CAF article on Microsoft Learn. We value your feedback and will continue to review it regularly.
 
 **Deleted articles**: We removed product-specific Cloud Adoption Framework articles for the following technologies:
 
