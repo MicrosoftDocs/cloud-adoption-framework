@@ -83,7 +83,11 @@ These types can work together. For example, an agent might use generative AI to 
 
 Microsoft provides solutions for both purposes. Organizations should approve the solution that meets their requirements with the least operational responsibility. Greater customization generally requires more specialized skills and greater operational ownership. Use the [Microsoft AI decision tree](#ai-decision-tree-and-architectures).
 
-### 3.1 Enhance individual efficiency
+### 3.1 Governance
+
+*How should we govern AI centrally?* Microsoft Agent 365 provides centralized visibility and governance for supported AI agents across different platforms. See [Overview of Microsoft Agent 365](/microsoft-agent-365/overview) [Agent 365 plans and pricing](https://www.microsoft.com/microsoft-agent-365#plans-and-pricing).
+
+### 3.2 Enhance individual efficiency
 
 *Do you want to enhance individual efficiency?* If the goal is to improve how employees work, identify where you need assistance. Microsoft provides AI experiences that can support employees across the organization, within specific products, or within specific roles.
 
@@ -94,13 +98,13 @@ Microsoft provides solutions for both purposes. Organizations should approve the
 | Role-based Copilots and agents | When you need role-specific help for [Security](/copilot/security/microsoft-security-copilot), [Sales agent](/microsoft-sales-copilot/sales-chat-overview), [Service](/microsoft-copilot-service/about-microsoft-copilot-for-service), and [Finance agent](/copilot/finance/welcome). | License or included |
 |[Copilot chat](https://copilot.microsoft.com/) | Use when you need secure AI chat grounded primarily in web data and don't need the full licensed Microsoft Copilot experience. | Free |
 
-### 3.2 Automate business functionality
+### 3.3 Automate business functionality
 
 *Do you want to automate business functionality?* If the goal is to augment or automate business processes, choose the AI solution that provides the required level of customization with the lowest operational responsibility.
 
 <a name='ai-on-low-code-platforms'></a>
 
-#### 3.2.1 AI on SaaS platforms
+#### 3.3.1 AI on SaaS platforms
 
 *Do you want to make SaaS (low-code, no-code) AI development platforms available?* SaaS and low-code platforms reduce the technical effort required to create AI capabilities. Start with these AI options when they provide enough customization for the business need. Microsoft Copilot Studio provides a managed platform for creating agents and connecting them to organizational data and systems.
 
@@ -109,7 +113,7 @@ Microsoft provides solutions for both purposes. Organizations should approve the
 | [Extensibility tools](/microsoft-365-copilot/extensibility/) for Microsoft Copilot | Use when your organization uses Microsoft Copilot and needs to customize it with specialized knowledge and agents. | [Microsoft Copilot licensing and metered usage](/microsoft-365/copilot/extensibility/cost-considerations) |
 | [Microsoft Copilot Studio](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio) | Use when you need a managed SaaS platform to create and deploy agents with low-code or natural-language development. | [Credits based on agent usage](/microsoft-copilot-studio/requirements-messages-management) |
 
-#### 3.2.2 AI on Azure platforms (PaaS)
+#### 3.3.2 AI on Azure platforms (PaaS)
 
 *Do you want to build AI with Azure platform-as-a-service solutions?* Managed Azure AI platforms provide greater customization than SaaS development without requiring organizations to manage the underlying compute infrastructure directly. Use this approach when SaaS capabilities don't provide enough control over models, application logic, data integration, or AI development.
 
@@ -122,7 +126,7 @@ Microsoft provides solutions for both purposes. Organizations should approve the
 
 <a name='ai-on-azure-infrastructure-services-iaas'></a>
 
-#### 3.2.3 AI on Azure infrastructure
+#### 3.3.3 AI on Azure infrastructure
 
 Azure infrastructure shouldn't be the default approach for AI adoption. Use managed AI platforms when they meet business and technical requirements. Azure infrastructure is appropriate when the organization requires control over models or runtime environments that managed platforms can't provide. It can also support specialized performance or compliance requirements. Organizations that choose this approach must plan for greater technical expertise and ongoing operational responsibility.
 

@@ -52,7 +52,7 @@ Azure adoption is the primary Cloud Adoption Framework scenario. It provides the
 | [Azure adoption](./strategy/index.md) | How to adopt Azure (foundational) |
 | [Unified data platform](./data/executive-strategy-unified-data-platform.md) | How create a unified data platform for AI and analytics |
 | [AI adoption](./ai/strategy.md) | How to adopt AI (generative and nongenerative) workloads |
-| [AI agents](./ai-agents/index.md) | How and when to adopt AI agents |
+| [AI agents](./ai-agents/executive-strategy.md) | How and when to adopt AI agents |
 | [Sovereignty](./sovereignty/executive-strategy.md) | How to meet sovereignty requirements | 
 | [Azure VMware Solution](./azure-vmware-solution/strategy.md) | How to adopt Azure VMware Solution |
 

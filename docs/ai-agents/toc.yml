@@ -1,23 +1,15 @@
 items:
-  - name: AI Agent adoption overview
-    href: index.md
-  - name: 1. Plan for agents
+  - name: AI agent adoption strategy
+    href: executive-strategy.md
+  - name: 1. Organizational readiness
+    href: organizational-readiness.md
+  - name: 2. Architecture and governance
+    href: architecture-governance.md
+  - name: 3. Operational standards
+    href: operational-standards.md
+  - name: 4. Workload design
     items:
-      - name: Business plan
-        href: business-strategy-plan.md
-      - name: Technology plan
-        href: technology-solutions-plan-strategy.md
-      - name: Organizational readiness
-        href: organization-people-readiness-plan.md
-      - name: Data architecture
-        href: data-architecture-plan.md 
-  - name: 2. Govern & secure agents
-    href: governance-security-across-organization.md
-  - name: 3. Build agents
-    items:
-      - name: Single or multiple agents?
-        href: single-agent-multiple-agents.md
-      - name: Process to build agents
-        href: build-secure-process.md
-  - name: 4. Manage agents
-    href: integrate-manage-operate.md
+      - name: AI workload (WAF)
+        href: /azure/well-architected/ai/
+      - name: AI architectures (AAC)
+        href: /azure/architecture/ai-ml/ai-get-started
