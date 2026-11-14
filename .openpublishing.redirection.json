@@ -4119,6 +4119,51 @@
       "source_path": "docs/data/organizational-readiness-unify-data-platform.md",
       "redirect_url": "/azure/cloud-adoption-framework/data/planning-unified-data-platform",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ai-agents/build-secure-process.md",
+      "redirect_url": "/azure/cloud-adoption-framework/ai-agents/operational-standards",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ai-agents/business-strategy-plan.md",
+      "redirect_url": "/azure/cloud-adoption-framework/ai-agents/organizational-readiness",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ai-agents/data-architecture-plan.md",
+      "redirect_url": "/azure/cloud-adoption-framework/ai-agents/architecture-governance",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ai-agents/governance-security-across-organization.md",
+      "redirect_url": "/azure/cloud-adoption-framework/ai-agents/architecture-governance",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ai-agents/index.md",
+      "redirect_url": "/azure/cloud-adoption-framework/ai-agents/executive-strategy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ai-agents/integrate-manage-operate.md",
+      "redirect_url": "/azure/cloud-adoption-framework/ai-agents/operational-standards",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ai-agents/organization-people-readiness-plan.md",
+      "redirect_url": "/azure/cloud-adoption-framework/ai-agents/organizational-readiness",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ai-agents/single-agent-multiple-agents.md",
+      "redirect_url": "/azure/cloud-adoption-framework/ai-agents/operational-standards",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ai-agents/technology-solutions-plan-strategy.md",
+      "redirect_url": "/azure/cloud-adoption-framework/ai-agents/executive-strategy",
+      "redirect_document_id": false
     }
    ]  
 }

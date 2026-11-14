@@ -97,7 +97,7 @@ additionalContent:
         url: ./ai/strategy.md
       - title: Agents
         summary: How to adopt and govern AI agents.
-        url: ./ai-agents/index.md
+        url: ./ai-agents/executive-strategy.md
       - title: Sovereignty
         summary: How to meet sovereignty requirements. 
         url: ./sovereignty/executive-strategy.md
