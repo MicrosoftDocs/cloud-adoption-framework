@@ -108,9 +108,9 @@ Technical feasibility shows whether teams can deliver and operate the agent with
 
 2. **Total cost**: Total cost includes implementation and ongoing operations. Licensing and consumption charges form part of it. Integration work and the effort to govern and monitor the agent form the rest. Prebuilt agents usually cost less to implement but offer less flexibility.
 
-3. **Net business value**: Productivity gains don't automatically become financial savings. An agent that saves each employee an hour a week creates capacity. Financial value depends on whether the organization uses that capacity to reduce cost or increase output. Business cases that count estimated time savings as cash often lose credibility at the first budget review.
+3. **Net business value**: Productivity gains don't automatically translate into financial savings. An agent that saves employees time creates additional capacity. The financial value depends on how the organization uses that capacity to reduce costs or increase output. Business cases should distinguish measurable financial benefits from productivity improvements that don't directly affect financial results.
 
-4. **Investment decisions**: Gates make scale and stop decisions explicit. A pilot gate tests whether the agent meets its acceptance criteria with real users. A scale gate tests whether measured value exceeds total cost at acceptable risk. Leaders agree on stop criteria at funding time, such as a target reduction in handling time within 90 days. Owners fix or retire agents that miss their criteria.
+4. **Further investment**: Organizations should use measured costs and business value to decide whether to continue investing in an agent. Initial deployments should validate expected benefits against the business baseline. Leaders should assess whether the results justify further investment at an acceptable level of risk. Based on the findings, organizations can expand the agent's use, improve it, or retire it.
 
 ## 4. Financial management and FinOps
 
