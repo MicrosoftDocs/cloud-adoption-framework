@@ -13,7 +13,7 @@ ai-usage: ai-assisted
 
 # Architecture and governance for AI agents
 
-*This article helps decision makers decide how to govern AI agents across their organization.*
+*This article helps decision makers determine agent architecture and governance across their organization.*
 
 :::image type="complex" border="false" source="./images/ai-agent-adoption-process.svg" alt-text="Diagram showing the Microsoft Cloud Adoption Framework process for AI agent adoption." lightbox="./images/ai-agent-adoption-process.svg":::
     Diagram showing the phases of AI agent adoption process: Organizational readiness, Architecture and governance, and operational standards.
@@ -87,4 +87,4 @@ See [Architecture for AI](../scenarios/ai/ready.md).
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Operational standards for AI agents](./architecture-governance.md)
+> [Operational standards for AI agents](./operational-standards.md)
