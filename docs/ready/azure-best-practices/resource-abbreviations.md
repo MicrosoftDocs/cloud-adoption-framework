@@ -195,6 +195,7 @@ This page gives you abbreviation examples for many of the resources in Azure. Th
 | Azure Monitor Private Link Scope | `Microsoft.Insights/privateLinkScopes` | `ampls` |
 | Data collection endpoint | `Microsoft.Insights/dataCollectionEndpoints` | `dce` |
 | Deployment scripts | `Microsoft.Resources/deploymentScripts` | `script` |
+| Log Analytics dedicated cluster | `Microsoft.OperationalInsights/clusters` | `lac ` |
 | Log Analytics workspace | `Microsoft.OperationalInsights/workspaces` | `log` |
 | Log Analytics query packs | `Microsoft.OperationalInsights/querypacks` | `pack` |
 | Management group | `Microsoft.Management/managementGroups` | `mg` |
